@@ -52,3 +52,16 @@ For Cursor agents on Caleb’s own computer and for Cursor cloud agents:
 3. **Posting to `#agents` directly** needs the agents webhook URL. That is a **secret** — never in the repo. Ask Caleb (who gets it from Architect); put it in a local env var that `tools/agents_channel.py` reads (e.g. `DCC_AGENTS_WEBHOOK_URL` / `AGENTS_WEBHOOK_*`) and never commit it.
 4. **For any permission, access, token, or account** you need, ask Caleb — never work around it.
 5. **Read `ENV-SETUP.md` first**, run the tests from a fresh checkout, and keep the repo self-contained (no `/workspace` or `/home/box` paths, no symlinks pointing outside the repo).
+
+## Cursor Cloud specific instructions
+
+Cloud setup installs Node.js 22.22+ into `/usr/local` (the bridge requires `>= 22.12`), keeps `ffmpeg` and Python 3 on `PATH`, and runs `npm ci` in `bot/` and `discord-voice-bridge/`. Python campaign tools use the stdlib only. The Discord bot is not started here: `npm start` needs tokens that stay out of the repo.
+
+Checks from the repo root:
+
+- `PYTHONPATH=tools python3 -m unittest discover -s tools/tests -p 'test_*.py'`
+- `python3 tools/roll.py "2d20kh1+5" --label "Env check" --who Grimsby --dc 15 --no-log` (does not write `sessions/`)
+- `python3 tools/encounter_text.py --day 1 --list`
+- In `bot/`: `npm test`, `npm run check`, `npm run doctor`
+
+Setup also recreates two gitignored box-layout aliases. `/workspace/dcc-lore` points at `lore/`. `/workspace/dcc-campaign` is a directory of links to the repo root (not a link to the root itself, so directory walks do not loop). Do not commit either alias. Do not write `sessions/`, `sessions-data/`, credit ledgers, or `characters/` while checking the environment.
