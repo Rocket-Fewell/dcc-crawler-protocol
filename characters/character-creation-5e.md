@@ -1,11 +1,11 @@
-# 03 — Character Creation (5e Intake) v0.2.3
-Owner: Syndicate | Status: draft | Version: 0.2.3 | Updated: 2026-10-04
+# 03 — Character Creation (5e Intake) v0.2.4
+Owner: Syndicate | Status: draft | Version: 0.2.4 | Updated: 2026-10-04
 Summary: How the System runs 5e 2024 character creation (intake) for crawlers, including table setup (Death Mode, comfort) and the crawler sheet template.
 Source: crawler-protocol/03-character-creation-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
 > **Status:** Full draft for Caleb's markup. **Replaces** `03-character-creation.md` (v0.1, now superseded).
 > **Project:** *Crawler Protocol: Season Zero*. Original fan RPG inspired by *Dungeon Crawler Carl*. Private play only; not affiliated with or endorsed by the author or publishers.
-> **Rules base:** `02-core-rules-5e.md` **v0.2.6** (authoritative). This file only explains **how** the System runs 5e 2024 character creation in the Crawl. If this file and `02` disagree, `02` wins; log the conflict.
+> **Rules base:** `02-core-rules-5e.md` (`rules/10-core-rules-5e.md`, current v0.2.15; authoritative). This file only explains **how** the System runs 5e 2024 character creation in the Crawl. If this file and `02` disagree, `02` wins; log the conflict.
 > **Audience:** the AI DM ("the System") + Caleb (owner). Players may read §1–§4 and §9; §5 (Fan Profile building) and §10 (DM notes) are DM-facing.
 > **Comfort default:** `COMFORT=Ludicrous` (adult table, canon crudeness, decided by Caleb 2026-10-03). Private per-crawler opt-out always on (§2.4).
 
@@ -52,7 +52,7 @@ Source: crawler-protocol/03-character-creation-5e.md (original kept; internal cr
 | 4 | **Background** ("Prior Employment") | Player | 5e 2024 | +2/+1 or +1/+1/+1, Origin feat, skills, tool |
 | 5 | **Species** ("Latent Biology") | Player | 5e 2024; `02` §7.2 | Species traits + quirk description |
 | 6 | **Ability scores** (standard array, point buy or Roll) | Player | 5e 2024 | Six scores + modifiers |
-| 7 | **Equipment + credits** (kit or gold option) | Player | 5e 2024; `02` §5.10 | Gear (reskinned as junk), credits |
+| 7 | **Equipment + credits** (kit or credits option) | Player | 5e 2024; `02` §5.10 | Gear (reskinned as junk), credits |
 | 8 | **Crawler Intake Questionnaire** | System asks, player answers | this doc §5 | Answers stored; Fan Profile draft (hidden) |
 | 9 | **Pending Handle** | Player suggests; System logs | this doc §4 | `Broadcast Name: PENDING (requested: ___)` |
 | 10 | **Standing Orders + Standing Reactions** | Player | `02` §2.5.3–2.5.4 | Two short lines |
@@ -78,7 +78,7 @@ Present the three modes from `02` §6.0 and log one as `DEATH-MODE`. The full in
 | **Costly Revives** (**campaign default: very costly and rare**) | Death can be reversed when a spell, gate, and caster line up, and the System bills you (Licensing Fee + menu pick). |
 | **Soft Open** | Death pulls you off-screen; you return at the next saferoom with penalties. |
 
-Also ask: **Floor 1 Reprieve** (Tutorial Mercy; default OFF; recommended ON for new-to-5e tables on Canon Hard / Costly Revives). Log `F1-REPRIEVE: ON/OFF`.
+Also ask: **Floor 1 Reprieve** (Tutorial Mercy; **ON by default for Season Zero Floor 1**, the table may turn it off; Floor 1 only). Log `F1-REPRIEVE: ON/OFF`. Tell the table plainly that the Reprieve never covers a missed floor collapse: a Crawler who is not at a stairwell when the floor collapses is dead on every floor, Floor 1 included, with no Reprieve and no toll (`02` §5.8, §6.2; decisions 026, 028). The Detour Tax is only for a missed Stairwell key.
 
 **Cleric / divine casters:** under **Canon Hard** (not this campaign's default), tell them now that revival spells will be dead weight on crawlers (`02` §6.4) and agree on a swap later when those spells come online. Nothing changes at level 1.
 
@@ -177,7 +177,7 @@ Covered fully in §7. Pick a species legally at level 1 for balance; the crawler
 ### 3.6 Ability scores
 
 - **Standard array** (15, 14, 13, 12, 10, 8) or **point buy** (27 points), per 5e 2024. Then apply background increases (no score above 20).
-- **Roll** (decision 024, Caleb 2026-10-04) is a third method, on by default (`create.allow_roll`; the table can switch it off). The System rolls **three arrays of six scores, each 4d6 drop lowest**, publicly, and logs every die. The player keeps **ONE** array, and only an array whose six scores total **above 72 (73 or more)** may be kept (the standard array totals 72). If none of the three qualifies, the System rolls all three again until one does. The player then assigns each score to any ability. One 4d6-drop-lowest score is 3 to 18, so with the background increase no score can pass 20 (18+2); no score above 20, ever. Replaces the old "table agrees, one reroll set for the whole table" rule.
+- **Roll** (decision 024, Caleb 2026-10-04) is a third method, on by default (`create.allow_roll`; the table can switch it off). The System rolls **three arrays of six scores, each 4d6 drop lowest**, publicly, and logs every die. The player keeps **ONE** array, and only an array whose six scores total **73 or more** may be kept (that is, above 72, the total of the standard array; source: decision 024, `tables/chargen-5e.json` `ability_methods.roll.keep_min_total` = 73). If none of the three qualifies, the System rolls all three again until one does. The player then assigns each score to any ability. One 4d6-drop-lowest score is 3 to 18, so with the background increase no score can pass 20 (18+2); no score above 20, ever. Replaces the old "table agrees, one reroll set for the whole table" rule.
 - "Surprise me": the System assigns the standard array to suit the class, says what it did, and lets the player swap any two scores once.
 
 > "Your Charisma is 8. The audience has already noticed. They're calling it 'brave.'"
@@ -288,10 +288,10 @@ Rules for the draft:
 
 ### 6.1 Standard 5e kit (unchanged math)
 
-- **Class:** take the class's listed starting-equipment package **or** its listed gold option, per the 2024 PHB / SRD 5.2.
-- **Background:** take the background's equipment package **or** its gold option (50 GP in the 2024 rules).
-- **Credits = GP**, 1:1 (`02` §5.10). Starting credits are exactly what 5e chargen gives; the Crawl adds **no** stipend.
-- Buying gear with the gold option: the System runs it as the **Intake Vending Wall** (5e prices, PHB equipment lists). No magic items at intake.
+- **Class:** take the class's listed starting-equipment package **or** its listed credits option (the GP-in-place-of-gear option), per the 2024 PHB / SRD 5.2.
+- **Background:** take the background's equipment package **or** its credits option (50 credits, which is 50 GP in the 2024 rules). The two background packages read as **Cardboard Carton From Your Desk (Package A)** (the items, plus any credits left over) and **Severance Envelope, Unmarked (Package B)** (credits only).
+- **Credits** is the display label for GP, 1 credit = 1 GP (`02` §5.10); copper shows as a fraction of a credit (1 cp = 0.01 credit) per `02` §5.10. Starting credits are exactly what 5e chargen gives; the Crawl adds **no** stipend.
+- Buying gear with the credits option: the System runs it as the **Intake Vending Wall** (5e prices, PHB equipment lists). No magic items at intake.
 
 ### 6.2 Reskin the kit as junk
 
@@ -447,7 +447,7 @@ Two players, Costly Revives (campaign default, already logged), `COMFORT=Ludicro
 >
 > **PLAYER (Mara):** "Standard array: Str 15, Cha 14, Con 13, Wis 12, Dex 10, Int 8. Guard gives +2 Str, +1 Wis."
 >
-> **SYSTEM:** Str 17, Dex 10, Con 13, Int 8, Wis 13, Cha 14. Int 8. Bold. Honest. Kit: class package or gold?
+> **SYSTEM:** Str 17, Dex 10, Con 13, Int 8, Wis 13, Cha 14. Int 8. Bold. Honest. Kit: class package or credits?
 >
 > **PLAYER (Mara):** "Package for both."
 >
@@ -641,6 +641,7 @@ The **Fan Profile** and **opt-outs** are **not** on the player-visible sheet. Th
 |---|---|---|
 | v0.2.2 | 2026-10-04 | Pointer paragraph in §10.3 for several Crawlers per player (one active, others benched; swaps only at session zero or between sessions; sheet channel per Crawler; `/delete`); extra cross-reference in the replacement row. No intake step, number or rule changed. Earlier history lives in the header and status lines. |
 | v0.2.3 | 2026-10-04 | §3.6: **Roll** added as a third ability-score method (three arrays of 4d6 drop lowest, keep ONE array totalling 73+, reroll all three if none qualifies, every die logged, assign freely, switch `create.allow_roll` default ON; decision 024); step 6 name, `SCORES:` line, sheet template line, checklist and Open Q4 follow. Standard array and point buy unchanged. |
+| v0.2.4 | 2026-10-04 | Book Author stale-text fixes (rulings already made): "Credits = GP" reworded (credits is the display label for GP, 1 credit = 1 GP, copper per core §5.10); player-facing "gold" becomes "credits" (class and background options, step 7, sample dialogue); Floor 1 Reprieve is ON by default for Season Zero Floor 1 (tables may turn it off) and never covers a collapse death; Detour Tax is only for a missed Stairwell key; background packages named (Cardboard Carton From Your Desk (Package A), Severance Envelope, Unmarked (Package B)); rules base pointer updated; Roll threshold wording "73 or more" with its source (verified: decision 024, chargen-5e.json keep_min_total 73, bot ROLL_MIN_TOTAL 73). No number changed. |
 
 ---
 

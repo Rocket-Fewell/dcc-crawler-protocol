@@ -1,5 +1,5 @@
-# 02 — Core Rules (5e Overlay) v0.2.14
-Owner: Syndicate | Status: draft | Version: 0.2.14 | Updated: 2026-10-04
+# 02 — Core Rules (5e Overlay) v0.2.15
+Owner: Syndicate | Status: draft | Version: 0.2.15 | Updated: 2026-10-04
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -606,9 +606,9 @@ Story flags first, mechanics only when needed. Track as `SEED-*` in session stat
 - Map upgrades are valid rewards (R3–R5): reveal a zone, show stairwells, mark saferooms, track mobs (a "minimap ping" every 10 minutes, etc.).
 - The AI logs revealed cells/zones in session state (`MAP`).
 
-### 5.8 Floor clock (optional, per floor doc)
+### 5.8 Floor clock (per floor doc)
 
-A floor may have a **collapse timer** (days/hours). When it runs out, the floor ends: crawlers not at an exit are dead or ejected per the floor doc. Off by default on Floor 1; floor docs set it. Show it as a System countdown.
+Floors are timed (decision 026): a **collapse timer** (days/hours) runs on each floor, and the floor doc sets its length and any steps (Floor 1: 5 days, `floors/f01/00-overview.md` §2 rule 6; Floor 2: 10 days, house timer, decision 029). When it runs out, the floor collapses. **A Crawler who is not at a stairwell when the floor collapses is dead, on every floor, Floor 1 included. No Reprieve, no toll, no Exhaustion exception** (decisions 026 and 028; early-descent stasis counts as reaching a stairwell). **Credits and items are destroyed with the floor.** Survivors may loot a body only while the floor still stands; nothing is looted after the collapse. NPCs and the AI in stasis lose nothing. The Detour Tax is only for a missed Stairwell key, never for a missed collapse. Show the clock as a System countdown.
 
 ### 5.9 System Inventory (homebrew, default ON)
 
@@ -624,7 +624,7 @@ Each crawler has an extradimensional **System Inventory**:
 
 ### 5.10 Credits, vendors, appraisal
 
-- **1 credit = 1 GP.** Use 5e prices. Starting credits per 5e chargen.
+- **1 credit = 1 GP.** *Credits* is the display label for GP in everything a Crawler sees. Use 5e prices. Starting credits per 5e chargen. Copper is shown as a fraction of a credit (1 cp = 0.01 credit): whole credits print without decimals (15 credits), fractions with decimals (0.5 credit, 0.05 credit), and "credit" is singular for 1 or less.
 - **Vendors:** buy at 5e prices ± the AI's mood; sell at half. Haggling = Charisma (Persuasion/Deception/Intimidation) vs. vendor DC (typically 12–18); success ≈ 10–25% off. Continuum vendors remember you.
 - **Identifying items:** 5e as written (*Identify*, Short Rest study). System terminals and dock appraisers can identify for a fee.
 
@@ -687,7 +687,7 @@ Independent toggles, usable in any mode:
 
 - **Near-death buffers** (§6.5): DM-granted only. Never a default feature of any class.
 - **Stairwell Checkpoint** (§6.6): **ON** in every mode.
-- **Floor 1 Reprieve** (§6.2): **OFF** by default in the rules; **ON for this campaign, Floor 1 only** (Caleb, 2026-10-04). Worth turning on for Canon Hard or Costly Revives tables with new-to-5e players.
+- **Floor 1 Reprieve** (§6.2): **ON by default for Season Zero, Floor 1 only** (Caleb, 2026-10-04); a table may turn it off at session zero. It never applies to a death from a missed floor collapse.
 
 ### 6.1 Dying
 
@@ -702,7 +702,7 @@ The base game is **5e 2024 as written**: **Death Saving Throws** (DC 10; three s
 - **Default: ON** (in **Canon Hard** and in **Costly Revives**, where a revival is a rare, costly exception). A crawler who fails their third death save, or dies outright from massive damage or a "you die" effect, is **dead for good.** No respawn. No "the System giggles and restarts you." The only ways back are the optional house rules in §6.4 and §6.7 (the campaign default, Costly Revives, has them switched on, under the Rarity Limits in §6.4.1).
 - **Unopened boxes (all modes).** On death, the crawler's unopened loot boxes are **reclaimed by the System** and vanish (boxes are bound to the crawler and can't be traded; §4.4). Their System Inventory drops as a corpse cache (§5.9); that cache is ordinary loot and the party may take it. An unopened **Story Box** is reclaimed the same way, and its Story Box cap slot is freed so another Crawler can be awarded one (`rules/45-story-boxes-5e.md` §6.3); an opened Story Box item is ordinary loot and stays lootable and not bound.
 - **Table option [HOUSE]: OFF ("Soft Open," also called "Syndicated" mode).** On death the crawler is pulled off-screen and returns at the next saferoom with one level of **Exhaustion** that can't be removed until descent, **loses all unopened boxes**, drops their System Inventory where they fell, and takes a −1 Ratings step. Death still matters; it just isn't final. (Not related to Floor 2, "Soft Open." The System reuses names. It's cheaper.)
-- **Floor 1 Reprieve [HOUSE] (Tutorial Mercy; option, default OFF; ON for this campaign, Floor 1 only, Caleb 2026-10-04).** Once per crawler, **on Floor 1 only**, a death becomes "unconscious, ejected to the nearest saferoom at 1 HP" with a humiliating Title. Floor 1 only means it is gone once the crawler descends. Turn on for new-to-5e tables. The System still posts a toast (§6.9).
+- **Floor 1 Reprieve [HOUSE] (Tutorial Mercy; ON by default for Season Zero Floor 1; tables may turn it off; Caleb 2026-10-04).** Once per crawler, **on Floor 1 only**, a death becomes "unconscious, ejected to the nearest saferoom at 1 HP" with a humiliating Title. Floor 1 only means it is gone once the crawler descends. **It never applies to a death from a missed floor collapse** (next bullet; decisions 026, 028, 029). Log `F1-REPRIEVE: ON/OFF`. The System still posts a toast (§6.9).
 - **Missed floor collapse [HOUSE, canon-shaped, tagged *inspired*] (Caleb, 2026-10-04; `decisions/028-collapse-death-loot.md`).** Death on every floor, no Reprieve. The final collapse is at a fixed 24 in-game hours into the last day (Floor 1: Day 5); the GM keeps a running floor-hour count (hours since floor start, hours into the current day) in the carry-on tracker. A dead Crawler's credits and items are destroyed with the floor; survivors may loot the body only while the floor still stands, and nothing is looted after the collapse. Story Box and Legendary items are lootable until then, then gone. The ledger logs a "floor lost" write-off (integer coins). NPCs and the AI in stasis lose nothing.
 
 ### 6.3 Replacement crawlers
@@ -954,7 +954,7 @@ The ring is a **cursed item**: the AI may place it in a box or on a corpse as a 
 
 - **Canon Hard:** On death, toast, corpse cache, reclaim boxes, replacement joins at the next saferoom. Buffers (§6.5) and the Stairwell Checkpoint (§6.6) are the only mercy.
 - **Costly Revives (campaign default):** On death, the AI states plainly whether any route is open: a Revival Voucher in hand (or a System Rare Offer), the floor gate and time window (§6.4.3), the cooldown and campaign cap (§6.4.1; log `REVIVALS-USED` and `LAST-REVIVAL-FLOOR`), and whether a Canon-verified exception (§6.4.6) or a canon true-revival story beat (§6.4.7) applies. Usually the answer is no. If yes, the party decides whether to pay the Fee and **two** picks; the System gloats. If no (or they decline), the crawler is dead and a replacement joins. The ring (§6.7) can replace one pick. After the third revival, play as Canon Hard.
-- **Soft Open:** On death, §6.2; no revival rules apply. Floor 1 Reprieve is off unless the table chose it.
+- **Soft Open:** On death, §6.2; no revival rules apply. Floor 1 Reprieve follows the table setting (ON by default in Season Zero; a missed-collapse death is never covered).
 
 ### 6.9 System snark: deaths
 
@@ -1201,6 +1201,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.12** | 2026-10-04 | **Roll method (pointer only):** §10.1 step 1 names Roll as a third ability-score method and points to `characters/character-creation-5e.md` §3.6 (decision 024, Caleb 2026-10-04). No other rule or number changed. |
 | **v0.2.13** | 2026-10-04 | **Missed-collapse loot (pointer only):** one bullet in §6.2 points to `decisions/028-collapse-death-loot.md` (Caleb, 2026-10-04): a Crawler's credits and items are destroyed with the floor, survivors may loot only while the floor stands, "floor lost" ledger write-off. No other rule or number changed. |
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
+| **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
 
 **v0.2.8 details**
 

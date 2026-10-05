@@ -8,7 +8,7 @@
     "floor": 1,
     "floor_name": "The Orientation Pit",
     "title": "Day {day} of {days}: Only the Corridor Stays",
-    "summary": "Floor 1 timed playthrough, Day {day} of {days}: only the Stairwell corridor (Z10, Z11, Z S) remains, plus the Green Room saferoom; Dean Thudd holds the stage, the Z S door has a toll, and the last six hours make descent free. Three routes, four encounters, key availability, early-descent handling, last-chance hooks and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline). Collapse notices use Lore's draft wording; the final collapse is fixed and a missed collapse is death on every floor, with no Reprieve.",
+    "summary": "Floor 1 timed playthrough, Day {day} of {days}: only the stairwell corridor (Z10, Z11, Z S) remains, plus the Green Room saferoom; Dean Thudd holds the stage, the Z S door has a toll, and the last six hours make descent free. Three routes, four encounters, key availability, early-descent handling, last-chance hooks and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline). Collapse notices use Lore's draft wording; the final collapse is fixed and a missed collapse is death on every floor, with no Reprieve.",
     "sources": [
       "decisions/026-timed-floor-clock-override.md (including the stairwell and zone rulings)",
       "floors/f01/00-overview.md (sections 2, 4, 5, 6, 7, 8, 9)",
@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.7 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -60,7 +60,7 @@
       },
       {
         "day": 5,
-        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "event": "Only the stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
         "tag": "inspired (house)"
       }
     ],
@@ -106,19 +106,24 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+    }
   },
   "canon_table": {
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
-    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
   },
   "day": {
     "number": 5,
     "start_zone": "z09",
     "start_zone_name": "The Green Room (Saferoom B)",
     "start_note": "Default start is the Green Room.",
-    "collapse_today": "Only the Stairwell corridor stays: Z10, Z11 and Z S, plus the Z9 saferoom. The floor collapses at 24 in-game hours into Day {days} (fixed; hour {floor_hours} of the floor), whatever the party is doing, and a Crawler not at a stairwell then is dead. Tagged inspired.",
+    "collapse_today": "Only the stairwell corridor stays: Z10, Z11 and Z S, plus the Z9 saferoom. The floor collapses at 24 in-game hours into Day {days} (fixed; hour {floor_hours} of the floor), whatever the party is doing, and a Crawler not at a stairwell then is dead. Tagged inspired.",
     "tomorrow_notice": {
       "text": "FINAL NOTICE. The floor collapses at the end of today's last hour, rested or not. A nap will not hold it, and the System will cut your rest short.",
       "tag": "[PLAYER-FACING]"
@@ -134,7 +139,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). The Green Room is where the day's Long Rest happens."
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). The Green Room is where the day's Long Rest happens. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -264,7 +269,7 @@
         }
       },
       {
-        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest where the spot is not already quiet, none where it is; no Long Rest)",
         "b70": {
           "kind": "party",
           "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
@@ -293,7 +298,31 @@
           "path": "floors.1.boss_variant_b_level1.xp_budget_total"
         }
       }
-    ]
+    ],
+    "warning_checks": {
+      "tag": "[GM-FACING]",
+      "audience": "gm",
+      "items": [
+        {
+          "id": "warn-floor-start",
+          "label": "Floor 1 start warning given (Day 1)",
+          "day": 1,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-penultimate",
+          "label": "Day 4 warning given",
+          "day": 4,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-last",
+          "label": "Day 5 warning given",
+          "day": 5,
+          "this_page": true
+        }
+      ]
+    }
   },
   "routes": [
     {
@@ -371,7 +400,7 @@
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
-          "text": "The Silver box is on the other side of a very large man. The audience has opinions about your priorities.",
+          "text": "The Silver loot box is on the other side of a very large man. The audience has opinions about your priorities.",
           "tag": "[PLAYER-FACING]"
         },
         "win": {
@@ -621,6 +650,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Hours left when the party leaves the Green Room (fill {hours})",
           "Plan declared",
           "GM Day 5 warning given"
@@ -787,6 +817,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Turnstile: paid, picked, forced or skipped",
           "Amount owed if the toll was paid",
           "Dean alerted by noise"
@@ -943,7 +974,7 @@
               {
                 "kind": "text",
                 "path": "floors.1.fixed_encounters.z10.cash_dice_per_crawler",
-                "note": "Boss cash per Crawler"
+                "note": "Boss credits per Crawler"
               },
               {
                 "kind": "cite",
@@ -1047,11 +1078,44 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Variant used (Dean or JV) and phase reached",
           "Dean outcome: down, thrown out, talked down or bypassed",
           "Boss Box and diploma cache claimed",
           "Deaths in the fight"
         ]
+      },
+      "set_piece_intro": {
+        "title": "Dean Thudd stage intro",
+        "tag": "[PLAYER-FACING]",
+        "audience": "player",
+        "canon_tag": "inspired",
+        "set_piece": true,
+        "source": "/workspace/dcc-lore/drafts/floor1-dean-thudd-intro.draft.md",
+        "paragraphs": [
+          {
+            "n": 1,
+            "text": "Ladies, gentlemen, and assorted off-world viewers, welcome to the Graduation Stage! The lights are hot, the orchestra pit is open, and tonight's final exam has a name.",
+            "optional": false
+          },
+          {
+            "n": 2,
+            "text": "Standing seven feet of tenure in a mortarboard that does not fit, with a flagpole in one fist and a podium in the other, the head of Orientation himself: Dean Thudd!",
+            "optional": false
+          },
+          {
+            "n": 3,
+            "text": "In the other corner, the class of Crawlers who skipped the syllabus, ignored the posted warnings, and somehow made it here anyway. Their record this floor is better than expected, and the Dean takes that personally.",
+            "optional": true
+          },
+          {
+            "n": 4,
+            "text": "Your final grade will be posted when the building stops shaking. Please silence your weapons. Or don't. Good luck, Crawlers.",
+            "optional": true
+          }
+        ],
+        "text": "Ladies, gentlemen, and assorted off-world viewers, welcome to the Graduation Stage! The lights are hot, the orchestra pit is open, and tonight's final exam has a name.\n\nStanding seven feet of tenure in a mortarboard that does not fit, with a flagpole in one fist and a podium in the other, the head of Orientation himself: Dean Thudd!\n\nIn the other corner, the class of Crawlers who skipped the syllabus, ignored the posted warnings, and somehow made it here anyway. Their record this floor is better than expected, and the Dean takes that personally.\n\nYour final grade will be posted when the building stops shaking. Please silence your weapons. Or don't. Good luck, Crawlers.",
+        "gm_note": "[GM-FACING] Paragraphs 1 and 2 alone work for a shorter table: stop after the first two paragraphs if the table is restless. Paragraphs 3 and 4 are optional (Lore's note). This is the only set piece on the page (Caleb's 3-4 sentence rule has this one exception)."
       }
     },
     {
@@ -1094,7 +1158,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "The Stairwell. The last six hours are free. Walk down like you own it, because the floor is about to belong to nobody.",
+          "text": "The stairwell. The last six hours are free. Walk down like you own it, because the floor is about to belong to nobody.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -1189,11 +1253,12 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Who is at a stairwell, and in stasis or free",
           "Hours left when each descent happens",
           "Anyone still on the floor at the fixed collapse (dead)",
           "Floor Summary posted",
-          "For anyone dead at the collapse: log a 'floor lost' write-off of the exact coins and items destroyed, and log anything a survivor looted before the collapse as a transfer first (decision 028)"
+          "For anyone dead at the collapse: log a 'floor lost' write-off of the exact credits and items destroyed, and log anything a survivor looted before the collapse as a transfer first (decision 028)"
         ]
       }
     }
@@ -1201,9 +1266,9 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
-      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
-      "status": "partly filled; remaining slots listed in the report"
+      "item": "rules/70-encounter-budget-5e.json v0.1.7 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.7 unless listed in the build report).",
+      "status": "filled"
     },
     {
       "owner": "Caleb",
@@ -1237,8 +1302,8 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "expected_sha256": "858b7c1d8e96c12491fc062e925d062ea3c075f0199195c6311b8c2e5b82f846",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.1"
+    "version": "0.1.7"
   }
 }

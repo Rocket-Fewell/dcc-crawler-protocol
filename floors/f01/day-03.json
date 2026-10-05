@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.7 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -27,11 +27,11 @@
     "days": 5,
     "days_left": 2,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-    "canon_table_sha256": "515d92e96d9bbbd5b85177b69e66031f95d220b4646191a3da990517ead41d7e",
-    "canon_ledger_version": "1.12",
+    "canon_table_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
+    "canon_ledger_version": "1.13",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.1",
-    "budget_file_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "budget_file_version": "0.1.7",
+    "budget_file_sha256": "858b7c1d8e96c12491fc062e925d062ea3c075f0199195c6311b8c2e5b82f846",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)"
   },
   "clock": {
@@ -70,7 +70,7 @@
       },
       {
         "day": 5,
-        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "event": "Only the stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
         "tag": "inspired (house)"
       }
     ],
@@ -154,16 +154,22 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+    },
+    "audience": "gm"
   },
   "canon_table": {
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
     "present": true,
     "schema": "canon-floor-1/0.1.0",
-    "ledger_version": "1.12",
-    "sha256": "515d92e96d9bbbd5b85177b69e66031f95d220b4646191a3da990517ead41d7e"
+    "ledger_version": "1.13",
+    "sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
   },
   "day": {
     "number": 3,
@@ -173,7 +179,8 @@
     "collapse_today": "Mid zones (Z5, Z7 and Z8) close: hooks and services there vanish and Bruiser's key is lost; the route is not cut. Tagged inspired.",
     "tomorrow_notice": {
       "text": "FLOOR NOTICE. Tomorrow the Break Room and every vendor in the building go dark. Buy what you need today. Buy it twice if you're nervous.",
-      "tag": "[PLAYER-FACING]"
+      "tag": "[PLAYER-FACING]",
+      "audience": "player"
     },
     "rest_options": [
       {
@@ -186,7 +193,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always)."
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -266,13 +273,15 @@
       "text": "Update: the middle of the floor is joining the outer parts in the afterlife. Loot and services there have ended. Your route is untouched, because we want you to see what's next. Sadly.",
       "tag": "[PLAYER-FACING]",
       "canon_tag": "inspired",
-      "status": "Lore draft v0.1 (floor1-collapse-notices.draft.md), house wording; Lore may still edit"
+      "status": "Lore draft v0.1 (floor1-collapse-notices.draft.md), house wording; Lore may still edit",
+      "audience": "player"
     },
     "early_descent": {
       "summary": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
       "player_prompt": {
         "text": "STAIRWELL NOTICE: go down now and you sit in stasis until the floor collapses, keeping the achievement and losing the rest of the floor. Each of you decides for yourself, and nobody can decide for you. The System won't judge anyone who waits. It will judge a few other things.",
-        "tag": "[PLAYER-FACING]"
+        "tag": "[PLAYER-FACING]",
+        "audience": "player"
       },
       "gm_override_note": "The GM may override a Crawler's choice only with a logged reason (decision 026, Syndicate ruling). Never push a Crawler toward early descent; the choice is theirs. A Crawler in stasis has finished the floor; their sheet and boxes follow the Floor 2 arrival rules (00-overview.md section 7.3).",
       "canon_refs": [
@@ -324,7 +333,9 @@
           "ledger_id": "A-151",
           "use": "Parallel canon: 'The Early Bird Gets To Squirm'.",
           "ledger_name": "The Early Bird Gets To Squirm"
-        }
+        },
+        "narration_audience": "player",
+        "audience": "gm"
       },
       {
         "name": "Slow Learner",
@@ -348,7 +359,9 @@
           }
         },
         "narration": "You cleared everything, twice over. Nobody asked you to be this thorough. Congratulations on your homework.",
-        "narration_tag": "[PLAYER-FACING]"
+        "narration_tag": "[PLAYER-FACING]",
+        "narration_audience": "player",
+        "audience": "gm"
       }
     ],
     "budget_table": [
@@ -431,7 +444,7 @@
         }
       },
       {
-        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest where the spot is not already quiet, none where it is; no Long Rest)",
         "b70": {
           "kind": "party",
           "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
@@ -520,7 +533,7 @@
       "achievements": [
         {
           "id": "ACH-0200",
-          "note": "Speed Clear: reach the Stairwell under the par time.",
+          "note": "Speed Clear: reach the stairwell under the par time.",
           "name": "Orientation Pit: Speed Clear",
           "rarity": "Rare",
           "floor": "1",
@@ -540,15 +553,18 @@
       "voice_lines": {
         "system_intro": {
           "text": "Half the building just stopped existing and you're still sprinting. Commitment! The Dean's still at the end of it, and he doesn't care what you left behind.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "midpoint_twist": {
           "text": "The halls shudder as the mid zones go dark behind you. Anything you meant to loot is now a rumor.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "win": {
           "text": "Past the dark and onto the stage. You made it with a light bag and a heavy heart. Statistically, that's a good day.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         }
       }
     },
@@ -600,15 +616,18 @@
       "voice_lines": {
         "system_intro": {
           "text": "Last call on the middle of the building. The bait stairs, the locker room and the gallery are gone by morning. Grab what you want and run.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "midpoint_twist": {
           "text": "The closing sign flips: everything must go, including you. Choose what's worth carrying.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "win": {
           "text": "You dragged half the day's value out before the doors shut. The System calls it 'theft'. The audience calls it 'content'.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         }
       }
     },
@@ -651,15 +670,18 @@
       "voice_lines": {
         "system_intro": {
           "text": "Today the terminal's offering one last special on the key. While supplies last, which is until tomorrow. Pay, sneak or scout the stage. The clever Crawler does all three.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "midpoint_twist": {
           "text": "Nobody knows what you're planning, which is exactly how the audience likes it. The betting has doubled.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "win": {
           "text": "You walked in with a plan and out with an edge. The System checked for loopholes. It found yours and gave a grudging nod.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         }
       }
     }
@@ -808,7 +830,8 @@
         ],
         "display": "Zone S door forcing fee (party): 2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
       }
-    }
+    },
+    "audience": "gm"
   },
   "encounters": [
     {
@@ -836,7 +859,8 @@
         ],
         "cover": [
           "Couch and fridge."
-        ]
+        ],
+        "audience": "gm"
       },
       "enemies": [],
       "enemies_note": "No enemies.",
@@ -864,15 +888,18 @@
       "voice_lines": {
         "system_intro": {
           "text": "LAST CALL at the Snakk-Matic. Everything must go, mostly your credits.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "midpoint_twist": {
           "text": "The terminal dims its menu one item at a time, like a bar at closing time. 'Spare keys' is the last line standing.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "win": {
           "text": "Receipts printed, shelves bare. Tomorrow the machine goes dark and the coffee finally wins.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         }
       },
       "loot_hooks": [
@@ -880,7 +907,8 @@
           "kind": "item",
           "srd_id": "potion-of-healing",
           "note": "Vendor stock is shared floor-wide; price cited at rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price.",
-          "display": "Sports Drink, Mystery Flavor (Potion of Healing)"
+          "display": "Sports Drink, Mystery Flavor (Potion of Healing)",
+          "audience": "gm"
         },
         {
           "kind": "card",
@@ -888,7 +916,8 @@
           "note": "Sports Drink, Blue Flavor: Welcome Box potion; the floor's vendor stock is separate.",
           "display": "Sports Drink, Blue Flavor (Potion of Healing)",
           "tier": "Bronze",
-          "deck": "f01-z06-break-room"
+          "deck": "f01-z06-break-room",
+          "audience": "gm"
         },
         {
           "kind": "card",
@@ -896,7 +925,8 @@
           "note": "Break-Room First-Aid Kit, Lightly Bitten.",
           "display": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
           "tier": "Bronze",
-          "deck": "f01-z06-break-room"
+          "deck": "f01-z06-break-room",
+          "audience": "gm"
         },
         {
           "kind": "card",
@@ -904,7 +934,8 @@
           "note": "Laminated Complaint Card: ask the System one yes or no question about the floor.",
           "display": "Laminated Complaint Card (Laminated Complaint Card (house: single-use oracle))",
           "tier": "Bronze",
-          "deck": "f01-z06-break-room"
+          "deck": "f01-z06-break-room",
+          "audience": "gm"
         },
         {
           "kind": "story_box",
@@ -913,7 +944,8 @@
           "note": "[GM-ONLY] Candidate hook for a party that has spent the floor buying and sneaking instead of killing. Record at award; one per floor.",
           "display": "Olive Branch Lanyard (Laminated, Nobody Got Hurt) (Olive Branch Lanyard (house: redirect charm))",
           "tier": "Legendary",
-          "deck": "f01-any-story-boxes"
+          "deck": "f01-any-story-boxes",
+          "audience": "gm"
         }
       ],
       "achievement_hooks": [
@@ -924,7 +956,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0188 Orientation Pit: Rumor Mill (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0899",
@@ -933,7 +966,8 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0197",
@@ -942,7 +976,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0197 Orientation Pit: Bleed Tax (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         }
       ],
       "scaling": {
@@ -996,7 +1031,9 @@
             }
           },
           "narration": "You read the terms, found the loophole, and paid the fee to use it. The System is almost proud. Almost.",
-          "narration_tag": "[PLAYER-FACING]"
+          "narration_tag": "[PLAYER-FACING]",
+          "narration_audience": "player",
+          "audience": "gm"
         }
       ],
       "quick_run": {
@@ -1006,7 +1043,8 @@
         "on_failure": "They leave empty-handed and must use the Detour Tax, tools or force at the door.",
         "minutes": 6,
         "tag": "pacing guide",
-        "cut_short": "Skip the receipts and the corkboard; take only the key and the supplies."
+        "cut_short": "Skip the receipts and the corkboard; take only the key and the supplies.",
+        "audience": "gm"
       },
       "carry_on": {
         "changes": [
@@ -1036,11 +1074,13 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 5 (floor hour 120). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Terminal key bought, by whom",
           "Vendor items bought",
           "Read the Fine Print awarded, or not",
           "Last-chance cards claimed"
-        ]
+        ],
+        "audience": "gm"
       },
       "canon": {
         "table_id": "z06",
@@ -1057,12 +1097,13 @@
           "M-282",
           "M-283"
         ],
-        "announcement_style": "Safe-room certification in a warm-hug-before-a-pickpocket voice; a game-show drumroll opens the first box.",
-        "staging": "A break-room-themed safe room: first box-opening ceremony, a vendor terminal and a rumor corkboard. Nothing may hurt Crawlers inside except each other.",
+        "announcement_style": "Saferoom certification in a warm-hug-before-a-pickpocket voice; a game-show drumroll opens the first box.",
+        "staging": "A break-room-themed saferoom: first box-opening ceremony, a vendor terminal and a rumor corkboard. Nothing may hurt Crawlers inside except each other.",
         "table_refs": [
           "f01-z06-break-room"
         ]
-      }
+      },
+      "audience_default": "gm"
     },
     {
       "id": "enc-d03-02",
@@ -1089,7 +1130,8 @@
         ],
         "cover": [
           "Benches and tipped lockers (half cover)."
-        ]
+        ],
+        "audience": "gm"
       },
       "enemies": [
         {
@@ -1098,7 +1140,32 @@
           "srd_name": "Giant Rat",
           "our_name": "Vent Rat (Giant Rat)",
           "name_source": "00-overview.md section 5.2 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.2 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+              "key": "giant-rat"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 2,
+                    "3": 3,
+                    "4": 4
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.d03_02.counts_by_party_size.2.giant-rat",
+                    "3": "floors.1.fixed_encounters.d03_02.counts_by_party_size.3.giant-rat",
+                    "4": "floors.1.fixed_encounters.d03_02.counts_by_party_size.4.giant-rat"
+                  },
+                  "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.counts_by_party_size.{2|3|4}.giant-rat)"
+                }
+              ],
+              "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.counts_by_party_size.{2|3|4}.giant-rat)"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -1117,7 +1184,8 @@
               "display": "CR 1/8 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z02.creatures[srd_id=giant-rat].cr)"
             }
           },
-          "srd_resolved": true
+          "srd_resolved": true,
+          "audience": "gm"
         },
         {
           "slot": "displaced-ticks",
@@ -1125,7 +1193,32 @@
           "srd_name": "Stirge",
           "our_name": "Ceiling Tick (Stirge)",
           "name_source": "00-overview.md section 5.11 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.2 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+              "key": "stirge"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 2,
+                    "3": 3,
+                    "4": 4
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.d03_02.counts_by_party_size.2.stirge",
+                    "3": "floors.1.fixed_encounters.d03_02.counts_by_party_size.3.stirge",
+                    "4": "floors.1.fixed_encounters.d03_02.counts_by_party_size.4.stirge"
+                  },
+                  "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.counts_by_party_size.{2|3|4}.stirge)"
+                }
+              ],
+              "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.counts_by_party_size.{2|3|4}.stirge)"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -1144,23 +1237,68 @@
               "display": "CR 1/8 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.creatures[srd_id=stirge].cr)"
             }
           },
-          "srd_resolved": true
+          "srd_resolved": true,
+          "audience": "gm"
         }
       ],
       "enemies_note": "Confirmed by Syndicate (decision 026, ruling 5), tagged inspired: creatures from closing zones crowd the route. Reuses existing identities only. Counts toward the floor's wandering cap of two if the GM uses the Ticks (00-overview.md section 5.11).",
-      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d03_02.fit"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "fit",
+              "values": {
+                "2": {
+                  "xp_used": 100,
+                  "tier_budget": 100,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "3": {
+                  "xp_used": 150,
+                  "tier_budget": 150,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "4": {
+                  "xp_used": 200,
+                  "tier_budget": 200,
+                  "over_by": 0,
+                  "within_tier": true
+                }
+              },
+              "tier": "standard",
+              "budget_level": 1,
+              "paths": {
+                "2": "floors.1.fixed_encounters.d03_02.fit.2",
+                "3": "floors.1.fixed_encounters.d03_02.fit.3",
+                "4": "floors.1.fixed_encounters.d03_02.fit.4"
+              },
+              "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.budget_level); 2: 100 XP used of 100 tier budget; 3: 150 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.fit.{2|3|4})"
+            }
+          ],
+          "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.budget_level); 2: 100 XP used of 100 tier budget; 3: 150 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_02.fit.{2|3|4})"
+        }
+      },
       "voice_lines": {
         "system_intro": {
           "text": "The hall is closing and so is your window. Rats and worse are leaving the zones that were turned off, and they're all headed your way.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "midpoint_twist": {
           "text": "A shutter slams down between you and the door you came through. The audience gasps, then shrugs. The other door is open.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "win": {
           "text": "Hall cleared, shutters stopped. The zone behind you is gone for good. Keep moving.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         }
       },
       "loot_hooks": [
@@ -1170,7 +1308,8 @@
           "note": "Welding Goggles, Night Shift (Silver): useful in the dark hall.",
           "display": "Welding Goggles, Night Shift (Goggles of Night)",
           "tier": "Silver",
-          "deck": "f01-any-orientation-pit"
+          "deck": "f01-any-orientation-pit",
+          "audience": "gm"
         },
         {
           "kind": "card",
@@ -1178,7 +1317,8 @@
           "note": "Big Honking Flashlight: Lights-Out answer.",
           "display": "Big Honking Flashlight (Lantern, Hooded)",
           "tier": "Bronze",
-          "deck": "f01-any-orientation-pit"
+          "deck": "f01-any-orientation-pit",
+          "audience": "gm"
         }
       ],
       "achievement_hooks": [
@@ -1189,7 +1329,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0860 Orientation Pit: Win initiative (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0861",
@@ -1198,7 +1339,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0205",
@@ -1207,7 +1349,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0205 Orientation Pit: Scenic Panic (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         }
       ],
       "scaling": {
@@ -1243,7 +1386,9 @@
             }
           },
           "narration": "Someone had to be the last one out, and it turned out to be you.",
-          "narration_tag": "[PLAYER-FACING]"
+          "narration_tag": "[PLAYER-FACING]",
+          "narration_audience": "player",
+          "audience": "gm"
         }
       ],
       "zone_color": {
@@ -1252,19 +1397,23 @@
         "lines": [
           {
             "text": "The walls start shedding old posters and warning signs. Under them is raw stone with tally marks scratched by earlier Crawlers. Some tallies stop mid-row.",
-            "tag": "[PLAYER-FACING]"
+            "tag": "[PLAYER-FACING]",
+            "audience": "player"
           },
           {
             "text": "A hallway you crossed this morning is now a gap with a clean edge. You can still see the doorway on the far side, which is its own kind of insult.",
-            "tag": "[PLAYER-FACING]"
+            "tag": "[PLAYER-FACING]",
+            "audience": "player"
           },
           {
             "text": "Emergency lights flip from white to a tired orange. The recorded voice announces the closing zone at the same cheerful volume as everything else.",
-            "tag": "[PLAYER-FACING]"
+            "tag": "[PLAYER-FACING]",
+            "audience": "player"
           },
           {
             "text": "A crowd of mobs has stopped to watch the floor fall. They look as unhappy about it as you do.",
-            "tag": "[PLAYER-FACING]"
+            "tag": "[PLAYER-FACING]",
+            "audience": "player"
           }
         ]
       },
@@ -1275,7 +1424,8 @@
         "on_failure": "The shutters seal and a Crawler is cut off, paying a lost round and a short-rest slot.",
         "minutes": 8,
         "tag": "pacing guide",
-        "cut_short": "Run one combat round and one hazard check; skip the second mob group."
+        "cut_short": "Run one combat round and one hazard check; skip the second mob group.",
+        "audience": "gm"
       },
       "carry_on": {
         "changes": [
@@ -1304,11 +1454,13 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 5 (floor hour 120). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Wandering encounters used (running count against two)",
           "Bruiser's key lost, held or never taken",
           "HP and short-rest slots entering Day 4",
           "Anyone who held the hall"
-        ]
+        ],
+        "audience": "gm"
       },
       "canon": {
         "table_id": "z08",
@@ -1322,7 +1474,8 @@
         "announcement_style": "Sports-broadcast mock-hype for the mascot; a stern \"this lesson is about dying\" aside from the guide.",
         "staging": "An empty mascot costume unhooks itself while name-badge blades take flight. The fight is built to be the first likely death-save lesson; the System switches to a dying-Crawler popup.",
         "table_refs": []
-      }
+      },
+      "audience_default": "gm"
     },
     {
       "id": "enc-d03-03",
@@ -1350,7 +1503,8 @@
         ],
         "cover": [
           "Trophy table and podium (half cover)."
-        ]
+        ],
+        "audience": "gm"
       },
       "enemies": [
         {
@@ -1359,7 +1513,32 @@
           "srd_name": "Skeleton",
           "our_name": "Usher (Skeleton)",
           "name_source": "00-overview.md section 6.4 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.3 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
+              "key": "skeleton"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 1,
+                    "3": 1,
+                    "4": 2
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.d03_03.counts_by_party_size.2.skeleton",
+                    "3": "floors.1.fixed_encounters.d03_03.counts_by_party_size.3.skeleton",
+                    "4": "floors.1.fixed_encounters.d03_03.counts_by_party_size.4.skeleton"
+                  },
+                  "display": "2 Crawlers: 1 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.counts_by_party_size.{2|3|4}.skeleton)"
+                }
+              ],
+              "display": "2 Crawlers: 1 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.counts_by_party_size.{2|3|4}.skeleton)"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -1378,23 +1557,68 @@
               "display": "CR 1/4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z10.creatures[srd_id=skeleton].cr)"
             }
           },
-          "srd_resolved": true
+          "srd_resolved": true,
+          "audience": "gm"
         }
       ],
       "enemies_note": "Ushers are on watch only if the party is spotted. Dean Thudd is on the stage, see enc-d05-03.",
-      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d03_03.fit"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "fit",
+              "values": {
+                "2": {
+                  "xp_used": 50,
+                  "tier_budget": 50,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "3": {
+                  "xp_used": 50,
+                  "tier_budget": 75,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "4": {
+                  "xp_used": 100,
+                  "tier_budget": 100,
+                  "over_by": 0,
+                  "within_tier": true
+                }
+              },
+              "tier": "trivial",
+              "budget_level": 1,
+              "paths": {
+                "2": "floors.1.fixed_encounters.d03_03.fit.2",
+                "3": "floors.1.fixed_encounters.d03_03.fit.3",
+                "4": "floors.1.fixed_encounters.d03_03.fit.4"
+              },
+              "display": "trivial tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.budget_level); 2: 50 XP used of 50 tier budget; 3: 50 XP used of 75 tier budget; 4: 100 XP used of 100 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.fit.{2|3|4})"
+            }
+          ],
+          "display": "trivial tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.budget_level); 2: 50 XP used of 50 tier budget; 3: 50 XP used of 75 tier budget; 4: 100 XP used of 100 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.d03_03.fit.{2|3|4})"
+        }
+      },
       "voice_lines": {
         "system_intro": {
           "text": "The wings. Where heroes wait and stagehands judge them. Take notes. The pit is right there.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "midpoint_twist": {
           "text": "A drone swings your way, its little red light blinking like a nervous bird. The audience would love for you to break it. So would the Dean.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         },
         "win": {
           "text": "You've seen enough. The stage is a plan, now, and not a surprise.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
         }
       },
       "loot_hooks": [
@@ -1404,7 +1628,8 @@
           "note": "Library Sneakers (Silent Edition): helpful for sneaking past the Ushers.",
           "display": "Library Sneakers (Silent Edition) (Boots of Elvenkind)",
           "tier": "Silver",
-          "deck": "f01-any-orientation-pit"
+          "deck": "f01-any-orientation-pit",
+          "audience": "gm"
         },
         {
           "kind": "card",
@@ -1412,7 +1637,8 @@
           "note": "Hi-Vis Safety Vest, Reflective: a funny disguise for a staff area.",
           "display": "Hi-Vis Safety Vest, Reflective (Cloak of Protection)",
           "tier": "Silver",
-          "deck": "f01-any-orientation-pit"
+          "deck": "f01-any-orientation-pit",
+          "audience": "gm"
         },
         {
           "kind": "story_box",
@@ -1421,7 +1647,8 @@
           "note": "[GM-ONLY] Candidate hook if a Crawler beats or drives off a named hostile using only the room (orchestra pit, trophy table), no weapon or spell of their own. One per floor; pick one deed; do not pre-promise.",
           "display": "Annotated Floor Plan (Coffee Ring Included) (Plan of Unfair Advantage (house: environment charm))",
           "tier": "Legendary",
-          "deck": "f01-any-story-boxes"
+          "deck": "f01-any-story-boxes",
+          "audience": "gm"
         }
       ],
       "achievement_hooks": [
@@ -1432,7 +1659,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0873 Orientation Pit: Destroy a camera or drone (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0173",
@@ -1441,7 +1669,8 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0173 Orientation Pit: Environmentalist (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         }
       ],
       "scaling": {
@@ -1457,7 +1686,8 @@
         "on_failure": "The Ushers spot them and raise the alert for Day 4.",
         "minutes": 6,
         "tag": "pacing guide",
-        "cut_short": "Give the three scouting facts (pit, spotlight, watch pattern) and roll one stealth check."
+        "cut_short": "Give the three scouting facts (pit, spotlight, watch pattern) and roll one stealth check.",
+        "audience": "gm"
       },
       "carry_on": {
         "changes": [
@@ -1485,10 +1715,12 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 5 (floor hour 120). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Cheese routes scouted (which ones)",
           "Spotted, and Ushers alerted",
           "Trophy or diploma items taken"
-        ]
+        ],
+        "audience": "gm"
       },
       "canon": {
         "table_id": "z10",
@@ -1513,96 +1745,262 @@
           "f01-any-story-boxes"
         ]
       },
-      "proposed_achievements": []
+      "proposed_achievements": [],
+      "audience_default": "gm"
     }
   ],
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
-      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
-      "status": "partly filled; remaining slots listed in the report"
+      "item": "rules/70-encounter-budget-5e.json v0.1.7 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.7 unless listed in the build report).",
+      "status": "filled",
+      "audience": "gm"
     },
     {
       "owner": "Caleb",
       "item": "Veto window on one Syndicate default (decision 026, ~9:45 PM CT)",
       "waiting_for": "The final collapse is fixed at 24 in-game hours into the last day and a Long Rest never ends or skips the floor. (The missed-collapse rule is no longer open: Caleb ruled at ~10:02 PM CT that it is death on every floor, no Reprieve.)",
-      "status": "open (default applies)"
+      "status": "open (default applies)",
+      "audience": "gm"
     },
     {
       "owner": "Day-count field",
       "item": "clock.days",
       "waiting_for": "Floor 1 is 5 (field set), Floor 2 is 10, Floor 3 is 20 (Caleb, decision 026). Page text takes the day count from the field; nothing is hard-coded.",
-      "status": "settled"
+      "status": "settled",
+      "audience": "gm"
     },
     {
       "owner": "Lore",
       "item": "Canon table, collapse notices, missed-floor line and zone color",
       "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
-      "status": "received"
+      "status": "received",
+      "audience": "gm"
     },
     {
       "owner": "Syndicate",
       "item": "ACH rows for canon A-044, A-151 and A-139",
       "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
-      "status": "waiting (backlog)"
+      "status": "waiting (backlog)",
+      "audience": "gm"
     },
     {
       "owner": "Encounter Bot",
       "item": "Days 1 to 5 pages",
       "waiting_for": "Built with budget citations, the death-on-miss rule, quick runs, carry-on and zone color. Next: a Floor 2 (10-day) spec using the same script (use --allow-other-floors).",
-      "status": "done"
+      "status": "done",
+      "audience": "gm"
     }
   ],
-  "slots": [
-    {
-      "label": "COUNT",
-      "text": "[COUNT: cite 00-overview.md section 9.2 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
-      "path": "/encounters[1]/enemies[0]/count_slot",
-      "kind": "slot"
-    },
-    {
-      "label": "COUNT",
-      "text": "[COUNT: cite 00-overview.md section 9.2 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
-      "path": "/encounters[1]/enemies[1]/count_slot",
-      "kind": "slot"
-    },
-    {
-      "label": "BUDGET",
-      "text": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
-      "path": "/encounters[1]/budget_slot",
-      "kind": "slot"
-    },
-    {
-      "label": "COUNT",
-      "text": "[COUNT: cite 00-overview.md section 9.3 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
-      "path": "/encounters[2]/enemies[0]/count_slot",
-      "kind": "slot"
-    },
-    {
-      "label": "BUDGET",
-      "text": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
-      "path": "/encounters[2]/budget_slot",
-      "kind": "slot"
-    }
-  ],
+  "slots": [],
   "proposal_fields": [],
+  "audience_manifest": {
+    "schema": "audience/1",
+    "default": "gm",
+    "rule": "Everything not listed in player_blocks is GM-only, including every key added later. Show a player only the named field of a listed block; never print a whole block (blocks carry GM metadata such as status, hours_note, gm_note, source).",
+    "tag_mechanism": "Blocks carry tag: '[PLAYER-FACING]' or '[GM-FACING]' (also audience: 'player'|'gm'). Other tag values (inspired, canon, dash, pacing guide, ...) are provenance labels, not audiences. Inline '[GM-ONLY]' prefixes exist only inside GM-only fields.",
+    "never_show_fields": [
+      "tag",
+      "canon_tag",
+      "status",
+      "timing",
+      "hours_note",
+      "source",
+      "source_sha256",
+      "gm_note",
+      "title",
+      "audience",
+      "set_piece",
+      "optional"
+    ],
+    "player_blocks": [
+      {
+        "path": "/routes/0/voice_lines/system_intro",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/0/voice_lines/midpoint_twist",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/0/voice_lines/win",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/system_intro",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/midpoint_twist",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/win",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/system_intro",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/midpoint_twist",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/win",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/encounters/0/voice_lines/system_intro",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-01"
+      },
+      {
+        "path": "/encounters/0/voice_lines/midpoint_twist",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-01"
+      },
+      {
+        "path": "/encounters/0/voice_lines/win",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-01"
+      },
+      {
+        "path": "/encounters/0/proposed_achievements/0",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d03-01",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/1/voice_lines/system_intro",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-02"
+      },
+      {
+        "path": "/encounters/1/voice_lines/midpoint_twist",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-02"
+      },
+      {
+        "path": "/encounters/1/voice_lines/win",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-02"
+      },
+      {
+        "path": "/encounters/1/zone_color/lines/0",
+        "kind": "zone_color",
+        "field": "text",
+        "encounter": "enc-d03-02",
+        "optional": true
+      },
+      {
+        "path": "/encounters/1/zone_color/lines/1",
+        "kind": "zone_color",
+        "field": "text",
+        "encounter": "enc-d03-02",
+        "optional": true
+      },
+      {
+        "path": "/encounters/1/zone_color/lines/2",
+        "kind": "zone_color",
+        "field": "text",
+        "encounter": "enc-d03-02",
+        "optional": true
+      },
+      {
+        "path": "/encounters/1/zone_color/lines/3",
+        "kind": "zone_color",
+        "field": "text",
+        "encounter": "enc-d03-02",
+        "optional": true
+      },
+      {
+        "path": "/encounters/1/proposed_achievements/0",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d03-02",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/2/voice_lines/system_intro",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-03"
+      },
+      {
+        "path": "/encounters/2/voice_lines/midpoint_twist",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-03"
+      },
+      {
+        "path": "/encounters/2/voice_lines/win",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d03-03"
+      },
+      {
+        "path": "/day/tomorrow_notice",
+        "kind": "system_notice",
+        "field": "text"
+      },
+      {
+        "path": "/day/collapse_notice",
+        "kind": "system_notice",
+        "field": "text"
+      },
+      {
+        "path": "/day/early_descent/player_prompt",
+        "kind": "system_notice",
+        "field": "text"
+      },
+      {
+        "path": "/day/proposed_achievements/0",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/day/proposed_achievements/1",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      }
+    ]
+  },
   "validation": {
     "result": "PASS",
-    "pass": 40,
+    "pass": 43,
     "warn": 2,
     "fail": 0,
-    "spec_sha256": "fca56c57e4ed94f5241c6db6ec3b3532a13c04c2b001fa5a1cea9d3ce88d4016",
+    "spec_sha256": "d7be4a33bd49f21d4dc851e060308c3dd33f30b7ed1949738b8de09261d160d3",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.1, sha256 26534aff2128f93d; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.7, sha256 858b7c1d8e96c124; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
         "check": "budget references resolve",
-        "detail": "15 distinct field paths cited, all present in rules/70-encounter-budget-5e.json"
+        "detail": "19 distinct field paths cited, all present in rules/70-encounter-budget-5e.json"
       },
       {
         "status": "PASS",
@@ -1667,12 +2065,12 @@
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "/workspace/dcc-lore/tables/canon-floor-1.json (ledger 1.12, 24 zones)"
+        "detail": "/workspace/dcc-lore/tables/canon-floor-1.json (ledger 1.13, 24 zones)"
       },
       {
         "status": "PASS",
         "check": "canon table hash recorded",
-        "detail": "sha256 515d92e96d9bbbd5, ledger v1.12"
+        "detail": "sha256 c5d67e380ca3e851, ledger v1.13"
       },
       {
         "status": "PASS",
@@ -1767,7 +2165,7 @@
       {
         "status": "PASS",
         "check": "Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on",
-        "detail": "29 player-facing and 35 GM extra blocks scanned"
+        "detail": "29 player-facing and 38 GM extra blocks scanned"
       },
       {
         "status": "PASS",
@@ -1796,6 +2194,16 @@
       },
       {
         "status": "PASS",
+        "check": "field-rest fee note",
+        "detail": "no fee if the spot is already quiet (GM ruling); stated on the clock and on all 1 text(s) that charge the fee"
+      },
+      {
+        "status": "PASS",
+        "check": "floor-hour tracker",
+        "detail": "every encounter's GM tracks carry the running floor-hour count against the fixed 24-hour final collapse"
+      },
+      {
+        "status": "PASS",
         "check": "any quote is 25 words or fewer",
         "detail": ""
       },
@@ -1803,6 +2211,11 @@
         "status": "PASS",
         "check": "Pending inputs section",
         "detail": "6 entries: budget file, clock numbers, collapse zone groups/costs, canon table, day-count field"
+      },
+      {
+        "status": "PASS",
+        "check": "audience manifest",
+        "detail": "29 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
       }
     ]
   }

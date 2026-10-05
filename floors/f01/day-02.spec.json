@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.7 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -60,7 +60,7 @@
       },
       {
         "day": 5,
-        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "event": "Only the stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
         "tag": "inspired (house)"
       }
     ],
@@ -106,12 +106,17 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+    }
   },
   "canon_table": {
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
-    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
   },
   "day": {
     "number": 2,
@@ -134,7 +139,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always)."
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -167,7 +172,7 @@
     ],
     "last_chance_hooks": {
       "heading": "last chance before the mid zones close on Day 3",
-      "note": "The mid zones (Z5, Z7, Z8) close on Day 3 and take Bruiser's key with them. The GM checks the sheets and ledger for what is already claimed; Encounter Bot does not read state.",
+      "note": "The mid zones (Z5, Z7, Z8) close on Day 3 and take Bruiser's key with them. Z5 was skipped in session one (Reprieve ejection to Z6), so its gallery hooks and the register are still unclaimed and open today; Z4 closed this morning with the outer zones. The GM checks the sheets and ledger for what is already claimed; Encounter Bot does not read state.",
       "achievements": [
         {
           "id": "ACH-0084",
@@ -179,11 +184,11 @@
         },
         {
           "id": "ACH-0867",
-          "note": "Block a hit with a shield or brace (Z5 gallery, if replayed)."
+          "note": "Block a hit with a shield or brace (Z5 gallery, skipped in session one, so still open until Z5 closes on Day 3)."
         },
         {
           "id": "ACH-0861",
-          "note": "Lose initiative and still win."
+          "note": "Lose initiative and still win (Z5 gallery or any fight; Z5 is still open today)."
         }
       ],
       "cards": [
@@ -201,7 +206,7 @@
       "status": "Lore draft v0.1 (floor1-collapse-notices.draft.md), house wording; Lore may still edit"
     },
     "stairwell_opening": {
-      "text": "ATTENTION, CRAWLERS: the Stairwell is open, the real one, behind the stage. Go down early and you sit in stasis until the floor falls, because management doesn't hand out head starts. Go down late and you get to walk. Choose like adults.",
+      "text": "ATTENTION, CRAWLERS: the stairwell is open, the real one, behind the stage. Go down early and you sit in stasis until the floor falls, because management doesn't hand out head starts. Go down late and you get to walk. Choose like adults.",
       "tag": "[PLAYER-FACING]",
       "timing": "about 32 hours in, early Day 2 (canon M-276, VERIFIED)"
     },
@@ -251,7 +256,7 @@
         }
       },
       {
-        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest where the spot is not already quiet, none where it is; no Long Rest)",
         "b70": {
           "kind": "party",
           "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
@@ -300,7 +305,7 @@
       "achievements": [
         {
           "id": "ACH-0200",
-          "note": "Speed Clear: reach the Stairwell under the par time (00-overview.md section 4.2: no more than one Long Rest); still open if only the Day 1 rest was taken."
+          "note": "Speed Clear: reach the stairwell under the par time (00-overview.md section 4.2: no more than one Long Rest); still open if only the Day 1 rest was taken."
         },
         {
           "id": "ACH-0868",
@@ -326,8 +331,8 @@
       "id": "route-loot",
       "tag": "loot",
       "name": "Slow loot-and-achievement route: the Last Pickings",
-      "path": "Z9 to Z8 and Z7 (closing on Day 3), then Z10 wings and Z S.",
-      "summary": "Spend Day 2 on the mid zones before they close tomorrow: the Locker Room (Bruiser's key and the elite fight), the bait stairs and the Back Office, then the service door. Expect to spend short-rest slots.",
+      "path": "Z9 to Z8, Z7 and the Z5 gallery (all closing on Day 3), then Z10 wings and Z S.",
+      "summary": "Spend Day 2 on the mid zones before they close tomorrow: the Z5 shooting gallery (skipped in session one), the Locker Room (Bruiser's key and the elite fight), the bait stairs and the Back Office, then the service door. Expect to spend short-rest slots.",
       "stairwell_access": "Zone S service door (key or forced), then the service stairwell to Z11.",
       "canon_refs": [
         {
@@ -685,10 +690,12 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Plan declared by each Crawler",
           "Outer-zone hooks claimed or lost (use the last-chance list)",
           "Anyone holding a closing zone",
-          "Early-descent prompt heard by each Crawler"
+          "Early-descent prompt heard by each Crawler",
+          "Z5 gallery hooks (skipped in session one) claimed before Z5 closes on Day 3; Z4 hooks are already gone"
         ]
       }
     },
@@ -726,7 +733,13 @@
           "srd_name": "Skeleton",
           "our_name": "Usher (Skeleton)",
           "name_source": "00-overview.md section 6.4 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.3 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d02_02.counts_by_party_size",
+              "key": "skeleton"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -737,7 +750,12 @@
         }
       ],
       "enemies_note": "Ushers come looking only if the door is forced or the party is loud; Dean Thudd follows a minute later (enc-d05-03). A quiet entry has no enemies.",
-      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d02_02.fit"
+        }
+      },
       "voice_lines": {
         "system_intro": {
           "text": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
@@ -882,6 +900,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "How the Zone S door was opened (key, tools, force or toll)",
           "Alarm raised, and whether the Dean is alerted",
           "Who paid the toll and the amount owed",
@@ -1057,6 +1076,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Per Crawler: waiting or in stasis (and when)",
           "Any override logged, with the reason",
           "Sideline scenes run for stasis players"
@@ -1067,9 +1087,9 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
-      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
-      "status": "partly filled; remaining slots listed in the report"
+      "item": "rules/70-encounter-budget-5e.json v0.1.7 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.7 unless listed in the build report).",
+      "status": "filled"
     },
     {
       "owner": "Caleb",
@@ -1103,8 +1123,8 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "expected_sha256": "858b7c1d8e96c12491fc062e925d062ea3c075f0199195c6311b8c2e5b82f846",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.1"
+    "version": "0.1.7"
   }
 }

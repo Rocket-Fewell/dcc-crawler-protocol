@@ -266,7 +266,7 @@ Example = Horn. Fields marked in §3.3 do not exist in state.py yet. Values come
     "pronouns": null,
     "look": "Cad Bane with long hair, a mullet; cowboy-hippie-wizard-rocket-scientist vibe",
     "hook": null,
-    "backstory": "(sample backstory text)",
+    "backstory": "Operations manager and full-time dad in real life.",
     "species_choice": null,
     "background_asi": null,
     "origin_feat": null,
@@ -319,7 +319,7 @@ Source: characters/hornn-wizard.md v0.4 and sessions/state.json. Blank = not rec
 | S11 | Magic Missile (his signature "Fuck 'Em"); other spells not recorded |
 | S12 | RETIRED, intentionally skipped. Horn has no tags; the System builds his hidden Fan Profile from the S13 answers below and from play |
 | S13 | Q1 My dog Pebbles; Q2 Bottles of sulfuric acid; Q3 Social events and bills; Q4 For not having any friends; Q5 Smell of rain coming (petrichor); Q6 Win and not be the one on the ground or dead; Bonus1 Whatever hill my kids are on |
-| S14 | Backstory: (sample text); Requested Handle not recorded; Broadcast Name PENDING |
+| S14 | Backstory: operations manager and full-time dad in real life; Requested Handle not recorded; Broadcast Name PENDING |
 | S15 | Orders: nearest available safe room unhindered by mobs, else follow the closest party member with the highest Strength. Reactions: Opportunity Attacks fire Fuck 'Em (variable-tuned Magic Missile). Signature: Fuck 'Em |
 | S16 | Card (gm-notes/30 format): `HORN - Human Wizard 1 (Hornn)   HP 8/8  AC 11  Credits 0  XP 0` / `STR 12 DEX 12 CON 15 INT 17 WIS 13 CHA 15` / `Conditions: none   Boxes: none   Titles: (none)` / `INVENTORY` with `Box Cutters x2 (Dagger): 1d4 piercing, finesse, light, thrown 20/60` and the rest of his intake items |
 | S17 | Credits ledger: +5, +22, then eight negatives totalling -27, balance 0. Intake Tag not recorded; the flow would assign one. Items later in his sheet (Snow Globe, Banner) are play loot, not intake |

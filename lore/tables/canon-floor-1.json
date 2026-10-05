@@ -39,7 +39,7 @@
     "T-002",
     "T-005"
    ],
-   "staging": "A giant square grid of halls split into neighborhoods; each neighborhood has one local mob type and one boss, and its mobs stop respawning when the boss dies. Stairwells only appear about a day and a half in, and safe rooms look like transplanted Earth rest stops.",
+   "staging": "A giant square grid of halls split into neighborhoods; each neighborhood has one local mob type and one boss, and its mobs stop respawning when the boss dies. Stairwells only appear about a day and a half in, and saferooms look like transplanted Earth rest stops.",
    "announcement": {
     "style": "Cascadia talks like a store manager opening for business; patch notes read as cheerful changelogs that scold Crawlers.",
     "quote": "Hello, Crawlers!",
@@ -79,7 +79,7 @@
    "features": [
     {
      "id": "feat-safe-room-rules",
-     "name": "Safe room rules",
+     "name": "Saferoom rules",
      "tag": "canon",
      "what": "Boxes open only inside; attackers get teleported away; three-strikes rule on violence/theft; explosives are inert.",
      "ledger_rows": [
@@ -92,7 +92,7 @@
     },
     {
      "id": "feat-safe-room-look",
-     "name": "Earth rest-stop safe rooms",
+     "name": "Earth rest-stop saferooms",
      "tag": "canon",
      "what": "Fast-food joints and waiting rooms from Earth, with three wall screens.",
      "ledger_rows": [
@@ -1295,7 +1295,7 @@
    "name": "Zone 6: The Break Room (Saferoom A)",
    "kind": "house_zone",
    "tag": "inspired",
-   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon. Safe-room rules themselves are canon.",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon. Saferoom rules themselves are canon.",
    "ledger_rows": [
     "A-184",
     "K-170",
@@ -1306,9 +1306,9 @@
     "M-282",
     "M-283"
    ],
-   "staging": "A break-room-themed safe room: first box-opening ceremony, a vendor terminal and a rumor corkboard. Nothing may hurt Crawlers inside except each other.",
+   "staging": "A break-room-themed saferoom: first box-opening ceremony, a vendor terminal and a rumor corkboard. Nothing may hurt Crawlers inside except each other.",
    "announcement": {
-    "style": "Safe-room certification in a warm-hug-before-a-pickpocket voice; a game-show drumroll opens the first box.",
+    "style": "Saferoom certification in a warm-hug-before-a-pickpocket voice; a game-show drumroll opens the first box.",
     "quote": null,
     "quote_row": null
    },
@@ -1317,7 +1317,7 @@
    "features": [
     {
      "id": "feat-saferoom-a",
-     "name": "Safe room services",
+     "name": "Saferoom services",
      "tag": "canon",
      "what": "Rest, box opening, protection from mobs; explosives inert.",
      "ledger_rows": [
@@ -1492,7 +1492,7 @@
    "name": "Zone 9: The Green Room (Saferoom B)",
    "kind": "house_zone",
    "tag": "inspired",
-   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon. Safe-room rules themselves are canon.",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon. Saferoom rules themselves are canon.",
    "ledger_rows": [
     "A-184",
     "K-170",
@@ -1503,9 +1503,9 @@
     "M-282",
     "M-283"
    ],
-   "staging": "Backstage safe room before the finale: rest, box opening and a creepy framed photo of the Dean with crossed-out crawlers.",
+   "staging": "Backstage saferoom before the finale: rest, box opening and a creepy framed photo of the Dean with crossed-out crawlers.",
    "announcement": {
-    "style": "Same safe-room certification voice as the Break Room, but with \"statistically, this is where we lose people\" gallows humor.",
+    "style": "Same saferoom certification voice as the Break Room, but with \"statistically, this is where we lose people\" gallows humor.",
     "quote": null,
     "quote_row": null
    },
@@ -1514,7 +1514,7 @@
    "features": [
     {
      "id": "feat-saferoom-b",
-     "name": "Safe room services",
+     "name": "Saferoom services",
      "tag": "canon",
      "what": "Rest, box opening, protection from mobs; explosives inert.",
      "ledger_rows": [

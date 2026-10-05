@@ -1,11 +1,11 @@
 # Encounter Budget, Credits and Loot (5e 2024), companion to 70-encounter-budget-5e.json
-Owner: Syndicate | Status: draft | Version: 0.1.2 | Updated: 2026-10-04
-Summary: Human companion to `rules/70-encounter-budget-5e.json` v0.1.2, the only source the Encounter Bot cites for difficulty, XP budgets, CR caps, credits, loot-box odds and clock prices. 2024 XP-budget method for 2, 3 and 4 Crawlers on Floors 1-6, a formula for Floors 7-18, the per-floor credit arithmetic for Floors 1-2 against the Accountant's 1,500-per-Crawler-per-floor line, a proposed flag-line curve for Floors 3-18, rest/key/Detour Tax prices, safe-room adjacency fields, the Day 1 slot map (32 slots after the v0.1.2 refresh) and the Day 2-4 slot map (9 slots).
+Owner: Syndicate | Status: draft | Version: 0.1.8 | Updated: 2026-10-04
+Summary: Human companion to `rules/70-encounter-budget-5e.json` v0.1.8, the only source the Encounter Bot cites for difficulty, XP budgets, CR caps, credits, loot-box odds and clock prices. 2024 XP-budget method for 2, 3 and 4 Crawlers on Floors 1-6, a formula for Floors 7-18, the per-floor credit arithmetic for Floors 1-2 against the Accountant's 1,500-per-Crawler-per-floor line, a proposed flag-line curve for Floors 3-18, rest/key/Detour Tax prices, safe-room adjacency fields, the Day 1 slot map (32 slots after the v0.1.2 refresh) and the Day 2-4 slot map (9 slots).
 
 > **Authority.** Budgets are guidelines, not enforced. The GM has authority to adapt as play goes (Caleb, 2026-10-04). Players are always **Crawlers**. Nothing here changes Story Box rules (one named deed per Floor 1-2, GM-handed, opened only in a saferoom; 0% in every odds table below) or the Floor 1 Reprieve (Floor 1 only). Filed by Caleb's go-ahead ("Go ahead and write the budget file").
 > **Tags.** AUTH = follows a filed source. ASSUMED = my proposal, GM/Caleb may change it (ids A1-A14 in section 10). The JSON repeats the split: `authoritative` vs `assumed`.
 
-**Changelog.** 0.1.2: Day 2-4 encounter fields (section 3), slot map refreshed with stale slots 3 and 4 removed (section 9), Floors 3-18 flag-line proposal (section 8). 0.1.1: audit line restated per Crawler per floor, box means re-derived from the live decks, governor demoted, simulations rerun from the live decks, death-on-missed-collapse applied, Floor 3 = 20 days. 0.1.0: first filing. No field path has been renamed or removed since 0.1.0.
+**Changelog.** 0.1.8 (no value changed): rules/20 version cites replaced by 'current section 9.1a'; slot-map provenance hashes (`spec_sha256_when_mapped`) re-synced to the current specs (provenance only; the v0.1.7 'every other value unchanged' did not cover them; all slot paths re-checked and still resolve); ratio-check averages now unrounded, 3.01 / 6.03 / 9.89. 0.1.7: Accountant YES on Q-004 (6 of 7; Encounter Bot pending) with three accepted price fixes (F8 held at F7, F13 raised to 180,000 / 360,000 / 600,000, F18 held at F17); ratio check added (section 13); stale cumulative_check / reading_the_table text fixed; flag lines and all other values unchanged. 0.1.6 (no value changed): the crafting-price schedule (section 13) is ADOPTED via room vote Q-004 and applied in rules/20 v0.3.4; Floors 1-2 keep 5,000 / 12,000 / 30,000. 0.1.5 (after the Accountant's re-audit of v0.1.4; no number changed): F15 income dip stated as intended; ONE F3+ flag rule (2.165 x expected counted income, nearest 500, not a fixed multiple of 1,500, this file is the loot tool's source of truth); new `flag_line_by_floor` map; tool-change wording fixed (it now exists); 'cash' became 'credits' in player-facing text; DRAFT-ONLY crafting-price schedule (section 13, Q-004). 0.1.4: Q2 re-resolved by room vote (Q-001 as revised, 6 of 6): F4/F5/F6 = 20/25/30 days, house rule; canon timers 10/15/17 (M-603..M-608) reference only; F7+ held at 30 days (ASSUMED); F4-F6 per-day figures and the Floors 3-18 growth curve recomputed; Floors 1-2 unchanged. 0.1.3: Q2 resolved as placeholders, F4/F5/F6 = 10/15/17 days (tagged inspired, Lore canon timers M-603..M-608; Caleb can adjust); per-day figures and the Floors 3-18 growth curve recomputed (F7+ held at 17 days). 0.1.2: Day 2-4 encounter fields (section 3), slot map refreshed with stale slots 3 and 4 removed (section 9), Floors 3-18 flag-line proposal (section 8). 0.1.1: audit line restated per Crawler per floor, box means re-derived from the live decks, governor demoted, simulations rerun from the live decks, death-on-missed-collapse applied, Floor 3 = 20 days. 0.1.0: first filing. No field path has been renamed or removed since 0.1.0.
 
 ## 1. Method (2024 encounter building)
 1. Per-Crawler XP budget by level (SRD 5.2.1 table, same one the Floor 1 overview uses): Low / Moderate / High. Multiply by party size P. No group multiplier in 2024. AUTH
@@ -22,11 +22,11 @@ Days are a field (`floors.N.clock.days`); everything below recomputes from it. E
 | 1 | 1-2 (level 2 at Z9) | 5 | 20 | 5 | 6 (1/3/1/1) | 1.2 |
 | 2 | 2-3 | 10 | 40 | 10 | 15 (4/8/2/1) | 1.5 |
 | 3 | 3-4 | 20 (Caleb) | 80 | 20 | 30 (7/18/4/1) | 1.5 |
-| 4 | 4-5 | 25 (placeholder) | 100 | 25 | 38 (9/22/6/1) | 1.5 |
-| 5 | 5-6 | 30 (placeholder) | 120 | 30 | 45 (11/26/7/1) | 1.5 |
-| 6 | 6-7 | 35 (placeholder) | 140 | 35 | 53 (13/31/8/1) | 1.5 |
+| 4 | 4-5 | 20 (placeholder) | 80 | 20 | 30 (7/18/4/1) | 1.5 |
+| 5 | 5-6 | 25 (placeholder) | 100 | 25 | 38 (9/22/6/1) | 1.5 |
+| 6 | 6-7 | 30 (placeholder) | 120 | 30 | 45 (11/26/7/1) | 1.5 |
 
-- Floor 1 is the module's fixed list (Z2, Z5, Z7 standard; Z8 hard; wandering Ceiling Ticks trivial, max 2 on the floor; Z10 boss), 4-8 total per core 10.3. AUTH. F1 days 5 / F2 10 / F3 20 are decision 026 (F3 = 20 by Caleb's later ruling); F4-F6 days (25/30/35) are placeholders (A4).
+- Floor 1 is the module's fixed list (Z2, Z5, Z7 standard; Z8 hard; wandering Ceiling Ticks trivial, max 2 on the floor; Z10 boss), 4-8 total per core 10.3. AUTH. F1 days 5 / F2 10 / F3 20 are decision 026 (F3 = 20 by Caleb's later ruling); F4-F6 days (20/25/30) are a HOUSE RULE by room vote (Q-001 as revised; Caleb can veto or change; GM-adaptable; A4); Lore's canon timers 10/15/17 (M-603..M-608) are reference only.
 - F2+ formula (A3): total = round(days x 1.5); boss 1, hard = 15% of the rest (min 1), trivial = 25%, standard = remainder. Floor 3 at 20 days gives 30 encounters (7/18/4/1).
 
 ## 3. XP budgets and CR caps (Floors 1-6)
@@ -66,9 +66,9 @@ Daily budget = sum of planned tier budgets / days. Caps (A3): a normal day holds
 | 1 | 360 (90) | 800 | 1200 | 270 | 180 |
 | 2 | 880 (220) | 2400 | 1400 | 660 | 440 |
 | 3 | 1420 (355) | 4000 | 2500 | 1065 | 710 |
-| 4 | 2240 (560) | 6000 | 3500 | 1680 | 1120 |
-| 5 | 4506.7 (1126.7) | 12400 | 7400 | 3380 | 2253.3 |
-| 6 | 5874.3 (1468.6) | 16000 | 9600 | 4405.7 | 2937.1 |
+| 4 | 2200 (550) | 6000 | 3500 | 1650 | 1100 |
+| 5 | 4592 (1148) | 12400 | 7400 | 3444 | 2296 |
+| 6 | 5840 (1460) | 16000 | 9600 | 4380 | 2920 |
 
 Floors 1-2 for 4 Crawlers: **Floor 1 = 360 XP/day** (1,800 over 5 days: Z2 200 + Z5 200 + Z7 200 + Z8 300 + Ticks 100 + boss 800 at tier ceilings; the overview's actual counts use 1,600), **Floor 2 = 880 XP/day** (8,800 over 10 days: 4 trivial x 400 + 8 standard x 600 + 2 hard x 800 + boss 800).
 
@@ -94,12 +94,12 @@ Added for the Encounter Bot (new keys `floors.1.fixed_encounters.d02_02`, `d03_0
 | enc-d03-03 Stage Wings Recon | `d03_03` | trivial | 1x skeleton = 50 / 50 XP | 1x skeleton = 50 / 75 XP | 2x skeleton = 100 / 100 XP | Spotted-only watch near the stage; same size as the Day 2 door Ushers. Trivial tier. |
 | enc-d04-03 Ushers at the Stage Door | `d04_03` | standard | 2x skeleton = 100 / 100 XP | 3x skeleton = 150 / 150 XP | 4x skeleton = 200 / 200 XP | An active patrol on the way to the boss: standard tier, one Usher per Crawler, same counts as the Z5 Mannequin Staff (4 Crawlers: 4 Skeletons, 200 XP). |
 
-Effect on the budget: if every one fires, Floor 1 has 10 encounters (core 10.3 says 4-8, so the GM may drop any), and the added XP per day for 4 Crawlers is Day 2 100, Day 3 300, Day 4 200, each inside the typical daily budget of 360. Only `d03_02` pays cash (standard tier, 5 credits per Crawler expected); none carries a box, so `economy_audit` is unchanged. Ushers are Skeletons (CR 1/4, 50 XP); the Ticks of `d03_02` count toward the floor's wandering cap of two if the GM uses them.
+Effect on the budget: if every one fires, Floor 1 has 10 encounters (core 10.3 says 4-8, so the GM may drop any), and the added XP per day for 4 Crawlers is Day 2 100, Day 3 300, Day 4 200, each inside the typical daily budget of 360. Only `d03_02` pays credits (standard tier, 5 credits per Crawler expected); none carries a box, so `economy_audit` is unchanged. Ushers are Skeletons (CR 1/4, 50 XP); the Ticks of `d03_02` count toward the floor's wandering cap of two if the GM uses them.
 
 ## 4. Credits and loot, with the arithmetic
 **Line (corrected in v0.1.1): about 1,500 credits per Crawler per FLOOR**, not Floors 1 and 2 combined. Verified in `rules/40-loot-deck-spec-5e.md` 3.2 (audit hint: per crawler per floor on F1-2, box `credit_value` should land around 300-1,000; above about 1,500 is inflation to flag), `rules/45-story-boxes-5e.md` 6.3 item 4 and change row C2 ("1,500-per-floor inflation flag", sale proceeds count, flag not block) and `tools/loot.py` `INFLATION_FLAG = 1500` (tested per crawler per floor). Each floor is audited on its own; no combined total is audited or claimed.
 
-**What counts.** `tools/loot.py` counts only box value (`economy_value` of drawn cards, credit pulls as rolled) plus Story Box sale proceeds; it does not see encounter cash or R1 toast credits. So each floor is shown two ways: **box-only** (comparable to `state.py loot totals`) and **all-in** (cash + R1 + boxes, the stricter reading). Not counted: Story Box `story_value`, vendor spending (sinks), resale at half (already counted at `credit_value`), placed goods.
+**What counts.** By default `tools/loot.py` counts only box value (`economy_value` of drawn cards, credit pulls as rolled) plus Story Box sale proceeds; it does not see encounter credits or R1 toast credits. `state.py loot totals --include-credits` (optional `--credit-sources`, `--assume-floor N`; record the floor with `state.py credits ... --floor N`) adds the credits earned outside boxes, so each floor is shown two ways: **box-only** (comparable to the default `loot totals`) and **all-in** (encounter credits + R1 + boxes, the stricter reading, comparable to `--include-credits`). Not counted: Story Box `story_value`, vendor spending (sinks), resale at half (already counted at `credit_value`), placed goods.
 
 **Box means, re-derived in v0.1.1 from the live decks** (`tables/loot-decks/f01-*.json`, Story Box deck excluded; cards filtered like `tools/loot.py`: `draw_weight` above 0, no stubs, no Legendary/Celestial, `box_types` any or the box's type). v0.1.0 selected cards by `kind` instead of `pull_type`, which gave a Silver box of 429.5; the live decks give about 481. Pull type by core 4.2 d100 (30/25/15/18/10, 99-00 re-rolls Silver). Credit cards use their grant roll (Bronze 3d6 x 5 = 52.5, Silver 2d6 x 25 = 175). Script: `tools-notes/encounter_budget_econ.py` (read-only).
 
@@ -114,12 +114,12 @@ Effect on the budget: if every one fires, Floor 1 has 10 encounters (core 10.3 s
 - Other deck scopes (any only, any+z03, any+z09, all pooled) move the Bronze box between 42.2 and 45.5 and the Silver box between 481 and 482; the full list is in `economy_audit.pull_expectations.scopes`.
 - Analytic means are with replacement; Floor 2 reuses the Floor 1 decks (no F2 decks yet, A8); "two consumables at one tier lower" is ignored.
 
-**Encounter cash per Crawler** (F1 scale, ASSUMED A5; the pool is this x P, split evenly): trivial 0-2 (average 1; F1 Ticks and F1 trivial 0), standard 1d4 x 2 (5), hard 1d6 x 2 (7), boss 1d6 x 5 (17.5). **R1 toast credits** 10-40 (average 25), 2 on F1 and 3 on F2 per Crawler (A6).
+**Encounter credits per Crawler** (F1 scale, ASSUMED A5; the pool is this x P, split evenly): trivial 0-2 (average 1; F1 Ticks and F1 trivial 0), standard 1d4 x 2 (5), hard 1d6 x 2 (7), boss 1d6 x 5 (17.5). **R1 toast credits** 10-40 (average 25), 2 on F1 and 3 on F2 per Crawler (A6).
 
 **Floor 1, expected per Crawler**
 
-- encounter cash: **39.5** (F1: Z2 5 + Z5 5 + Z7 5 + Z8 7 + Ticks 0 + boss 17.5 = 39.5) [cash]
-- R1 toast credits: **50.0** (2 toasts x 25 average) [cash]
+- encounter credits: **39.5** (F1: Z2 5 + Z5 5 + Z7 5 + Z8 7 + Ticks 0 + boss 17.5 = 39.5) [credits]
+- R1 toast credits: **50.0** (2 toasts x 25 average) [credits]
 - Welcome Box (Bronze: pull 1 tailored + pull 2 d100): **55.6** (25.26 tailored + 30.36 Bronze pull = 55.63 (decks z06 + any)) [box]
 - Deed/fight Bronze boxes: **39.4** (0.91 boxes (fights 0.41 + deeds 0.50) x 43.29 per Bronze box (28.862 per pull x 1.5 pulls, all F1 decks pooled) = 39.4) [box]
 - Silver Boss Box: **481.6** (2 pulls x 240.78 per Silver pull (decks z10 Boss + any) = 481.6) [box]
@@ -127,21 +127,21 @@ Effect on the budget: if every one fires, Floor 1 has 10 encounters (core 10.3 s
 
 **Floor 2, expected per Crawler**
 
-- encounter cash: **75.5** (4 trivial x 1 + 8 standard x 5 + 2 hard x 7 + boss 17.5 = 75.5) [cash]
-- R1 toast credits: **75.0** (3 toasts x 25 average) [cash]
+- encounter credits: **75.5** (4 trivial x 1 + 8 standard x 5 + 2 hard x 7 + boss 17.5 = 75.5) [credits]
+- R1 toast credits: **75.0** (3 toasts x 25 average) [credits]
 - Deed/fight Bronze boxes: **87.5** (2.02 boxes (fights 1.12 + deeds 0.90) x 43.29 per Bronze box (28.862 per pull x 1.5 pulls, all F1 decks pooled) = 87.5) [box]
 - Silver Boss Box: **481.6** (2 pulls x 240.78 per Silver pull (decks z10 Boss + any) = 481.6) [box]
 - **Floor 2 all-in: 719.5** (48.0% of 1,500). **Box-only: 569.0** (37.9% of 1,500).
 
 Box odds per encounter are the fight share of core 4.5's targets: F1 standard 6%, hard 23% (Bronze), boss Silver 100% **only if the boss is fought or talked down**; F2 standard 7%, hard 28%, boss Silver 100%. Non-fight deed Bronze adds 0.5 (F1) and 0.9 (F2). Soft cap 2-3 achievement boxes per Crawler per floor. No Gold, no second Silver, no Story Box from these odds.
 
-| Crawlers | F1 all-in per Crawler | F2 all-in per Crawler | F1 / F2 box-only | Cash pool F1 / F2 (x P) | Table total F1 / F2 (all-in) |
+| Crawlers | F1 all-in per Crawler | F2 all-in per Crawler | F1 / F2 box-only | Encounter credits pool F1 / F2 (x P) | Table total F1 / F2 (all-in) |
 |---|---|---|---|---|---|
 | 2 | 666.1 | 719.5 | 576.6 / 569.0 | 79.0 / 151.0 | 1332.2 / 1439.0 |
 | 3 | 666.1 | 719.5 | 576.6 / 569.0 | 118.5 / 226.5 | 1998.3 / 2158.5 |
 | 4 | 666.1 | 719.5 | 576.6 / 569.0 | 158.0 / 302.0 | 2664.4 / 2878.0 |
 
-**Credits per Crawler do not rise with party size.** Encounter cash is a per-Crawler figure, so the pool **scales** with P and then **splits** evenly among living Crawlers; boxes belong to each Crawler and are never split or traded (core 4.4).
+**Credits per Crawler do not rise with party size.** Encounter credits is a per-Crawler figure, so the pool **scales** with P and then **splits** evenly among living Crawlers; boxes belong to each Crawler and are never split or traded (core 4.4).
 
 **Simulation from the live decks** (`tools-notes/encounter_budget_econ.py`, 100000 Crawlers per scenario, seed 70, real cards drawn, non-consumables not repeated per Crawler per floor; rerun it to reproduce). Share of Crawler-floors above 1,500:
 
@@ -166,11 +166,11 @@ Box odds per encounter are the fight share of core 4.5's targets: F1 standard 6%
 
 The with-replacement check (40000 Crawlers) gives F1 667.7 and F2 719.4 all-in against the analytic 666.1 and 719.5. The v0.1.0 claim (13.2% to 3.1%) came from a combined-line script that is not filed and is **withdrawn**.
 
-**Governor: demoted to an OPTIONAL safety valve (A12).** With the line read per floor the plan sits at 44% and 48% of it all-in, and almost no Crawler-floor crosses it, so the valve is not needed to stay under the line. If a Floor 2 looks hot, the GM may hand-pick the Boss Box from cards worth 175 or less when that Crawler's running total on that floor reaches 900. Simulated effect: F2 all-in over 1,500 goes 0.01% -> 0.00% (valve fires for 0.02% of Crawlers) in the plan and 0.15% -> 0.09% (valve fires for 0.19%) at the pacing ceiling. **Tool change needed to run it:** `state.py loot totals` counts box value only and cannot see cash or R1 credits (flagged for the Architect, Q5; I did not change any tool).
+**Governor: demoted to an OPTIONAL safety valve (A12).** With the line read per floor the plan sits at 44% and 48% of it all-in, and almost no Crawler-floor crosses it, so the valve is not needed to stay under the line. If a Floor 2 looks hot, the GM may hand-pick the Boss Box from cards worth 175 or less when that Crawler's running total on that floor reaches 900. Simulated effect: F2 all-in over 1,500 goes 0.01% -> 0.00% (valve fires for 0.02% of Crawlers) in the plan and 0.15% -> 0.09% (valve fires for 0.19%) at the pacing ceiling. **Tool:** the change now exists (Q-003 passed; built by the Architect): `state.py loot totals --include-credits` (optional `--credit-sources`, `--assume-floor N`; `state.py credits ... --floor N`) shows the all-in running total the valve needs, and the default output is unchanged. This file made no tool change.
 A Story Box item *sale* (100 / 250 / 500 by rung, times the sale floor's multiplier) counts on the floor of the sale; the Accountant flags, never blocks.
 
 ### Floors 3-6 (outside the audited line; ASSUMED)
-Same tier dice times a cash scale equal to the floor's credit multiplier (x1 F3-4, x5 F5-6; A9). Expected encounter cash per Crawler: F3 142.5, F4 178.5, F5 1037.5, F6 1207.5. Box odds per encounter (ASSUMED, core 4.5 pacing): F3 standard Bronze 0.04, hard Bronze 0.15 / Silver 0.12, boss Gold 100%; F4 standard Bronze 0.03, hard Bronze 0.11 / Silver 0.08, boss Gold 100%; F5 standard Bronze 0.02, hard Bronze 0.1 / Silver 0.07, boss Gold 100%; F6 standard Bronze 0.02, hard Bronze 0.06 / Silver 0.09, boss Gold 100%. The per-floor flag line for Floors 3-18 is proposed in section 8.
+Same tier dice times a encounter credits scale equal to the floor's credit multiplier (x1 F3-4, x5 F5-6; A9). Expected encounter credits per Crawler: F3 142.5, F4 142.5, F5 892.5, F6 1037.5. Box odds per encounter (ASSUMED, core 4.5 pacing): F3 standard Bronze 0.04, hard Bronze 0.15 / Silver 0.12, boss Gold 100%; F4 standard Bronze 0.04, hard Bronze 0.15 / Silver 0.12, boss Gold 100%; F5 standard Bronze 0.03, hard Bronze 0.11 / Silver 0.08, boss Gold 100%; F6 standard Bronze 0.02, hard Bronze 0.07 / Silver 0.11, boss Gold 100%. The per-floor flag line for Floors 3-18 is proposed in section 8.
 
 ## 5. Prices and costs (Floor 1, all ASSUMED unless noted)
 System fees multiply by the floor credit multiplier (decision 019); all of these are x1 on Floor 1. Party prices are per-Crawler x P so small tables are not punished; any Crawler may pay, pooling allowed.
@@ -197,38 +197,44 @@ Worst case for one Crawler on Floor 1 (Detour Tax 75 + rest cap 60) = 135 = 9% o
 Pets are GM-run, do not count toward P, and take no XP, loot or credits (rules/60); do not rebuild budgets for them, the GM may add one CR 1/4 (50 XP) to the enemy side if a fight is close. The 2-Crawler Assigned Companion does not count toward P. No adjustment for Second Wind or other class features (the 2024 budgets assume them). No PvP: nothing here pays for attacking a Crawler.
 
 ## 8. Floors 7-18 and the proposed flag-line curve (PLACEHOLDER, GM/Caleb adaptable)
-`floors_7_18` gives, per floor, only what the sources already fix: level = floor number, per-Crawler Low/Moderate/High at that level, core 8.3 CR ranges and the credit multiplier. Days, mix and cash are placeholders. The table below (`proposed_floor_growth_curve`, added for the Accountant's per-floor audit table) proposes the **flag line per Crawler per floor** for Floors 3-18. Everything from Floor 3 is a proposal; the Floor 1-2 lines (1,500) are authoritative.
+`floors_7_18` gives, per floor, only what the sources already fix: level = floor number, per-Crawler Low/Moderate/High at that level, core 8.3 CR ranges and the credit multiplier. Days, mix and encounter credits are placeholders. The table below (`proposed_floor_growth_curve`, added for the Accountant's per-floor audit table) proposes the **flag line per Crawler per floor** for Floors 3-18. Everything from Floor 3 is a proposal; the Floor 1-2 lines (1,500) are authoritative.
 
-**How it is built.** (1) Cash and R1 credits take the core 3.9 multiplier (x1 F1-4, x5 F5-9, x20 F10-14, x50 F15-18). (2) Box counts are the midpoint of core 4.5's range per floor (Legendary 0.5 on F13-14, 0.25 on F15-18, so the campaign total stays at 2). (3) Bronze and Silver box values come from the live decks; Gold, Platinum and Legendary pulls = .15 x credit-pull mean (2d6 x 250 / 2,500 / 10,000) + .85 x the geometric midpoint of the rules/40 3.2 item range (500-5,000, 5,000-50,000, 20,000-250,000). That method puts a Silver item pull within about 12% of the live decks (223 vs 251). No F3+ decks exist yet. (4) Days beyond Floor 3 are placeholders: +5 per floor to a cap of 60. (5) Flag line = the cushion Floors 1-2 carry (1,500 over the average of their expected totals, about 2.17x), rounded to the nearest 500.
+**How it is built.** (1) Encounter credits and R1 credits take the core 3.9 multiplier (x1 F1-4, x5 F5-9, x20 F10-14, x50 F15-18). (2) Box counts are the midpoint of core 4.5's range per floor (Legendary 0.5 on F13-14, 0.25 on F15-18, so the campaign total stays at 2). (3) Bronze and Silver box values come from the live decks; Gold, Platinum and Legendary pulls = .15 x credit-pull mean (2d6 x 250 / 2,500 / 10,000) + .85 x the geometric midpoint of the rules/40 3.2 item range (500-5,000, 5,000-50,000, 20,000-250,000). That method puts a Silver item pull within about 12% of the live decks (223 vs 251). No F3+ decks exist yet. (4) Days beyond Floor 3 are placeholders: +5 per floor to a cap of 60. (5) Flag line = the cushion Floors 1-2 carry (1,500 over the average of their expected totals, about 2.17x), rounded to the nearest 500.
 
-**Growth rate (geometric mean per floor, expected counted income):** F3->F4 1.012, F5->F9 1.643, F10->F14 1.385, F15->F18 1.0, F3->F18 1.285. The curve is steppy, not smooth: it jumps at F3 (first Gold box, 20-day floor), F9 (first Platinum), F13 (Legendary) and rises on F5, F10 and F15 mainly through the multiplier on cash and R1 credits.
+**ONE rule for F3+ flag lines.** Flag line = **2.165 x expected counted income** for that floor, rounded to the nearest 500. 2.165 is the cushion the authoritative F1-F2 line carries over expected income (1,500 / mean of the F1 and F2 all-in totals, 692.8). It is **not a fixed multiple of 1,500** and not one number per band. Floors 1-2 stay at 1,500. **This file's flag lines are the source of truth for the loot tool**; the map is `flag_line_by_floor` (F1..F18), equal to the table's `flag_line` column, for the Architect to load in place of the fixed `INFLATION_FLAG = 1500`.
 
-| Floor | Days | Mult | Cash + R1 | Boxes | Expected | Ceiling case | **Flag line** | Growth vs prior | Liquid (items sold at half) | Basic table 5,000 x mult: floors of liquid income | Studio 12,000 x mult | Enhanced 30,000 x mult (F6+) |
+**The F15 dip is intended.** Expected income falls from 142,443 (F14) to 121,800 (F15), and the flag line from 308,500 to 263,500, on purpose: Legendary boxes are 0.5 per Crawler on F13-14 and 0.25 on F15-18, which keeps the campaign Legendary total at 2 (core 4.5), even though the multiplier steps up to x50. Flag lines are **not required to be monotonic** there.
+
+`flag_line_by_floor`: F1 1,500, F2 1,500, F3 6,500, F4 6,500, F5 9,000, F6 13,500, F7 13,500, F8 13,500, F9 65,500, F10 79,000, F11 79,000, F12 79,000, F13 308,500, F14 308,500, F15 263,500, F16 263,500, F17 263,500, F18 263,500.
+
+**Growth rate (geometric mean per floor, expected counted income):** F3->F4 1.0, F5->F9 1.648, F10->F14 1.405, F15->F18 1.0, F3->F18 1.278. The curve is steppy, not smooth: it jumps at F3 (first Gold box, 20-day floor), F9 (first Platinum), F13 (Legendary) and rises on F5, F10 and F15 mainly through the multiplier on encounter credits and R1 credits.
+
+| Floor | Days | Mult | Encounter credits + R1 | Boxes | Expected | Ceiling case | **Flag line** | Growth vs prior | Liquid (items sold at half) | Basic table 5,000 x mult: floors of liquid income | Studio 12,000 x mult | Enhanced 30,000 x mult (F6+) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 5 | x1 | (see section 4) | | 666 | | **1,500** | | | | | |
 | 2 | 10 | x1 | (see section 4) | | 720 | | **1,500** | | | | | |
 | 3 | 20 | x1 | 218 | 2,839 | 3,056 | 5,327 | **6,500** | 4.25 | 1,855 | 2.7 | 6.5 | - |
-| 4 | 25 | x1 | 254 | 2,839 | 3,092 | 5,363 | **6,500** | 1.01 | 1,891 | 2.6 | 6.3 | - |
-| 5 | 30 | x5 | 1,412 | 2,839 | 4,251 | 6,522 | **9,000** | 1.37 | 3,050 | 8.2 | 19.7 | - |
-| 6 | 35 | x5 | 1,582 | 4,803 | 6,386 | 6,648 | **14,000** | 1.5 | 4,361 | 5.7 | 13.8 | 34.4 |
-| 7 | 40 | x5 | 1,728 | 4,803 | 6,531 | 6,793 | **14,000** | 1.02 | 4,506 | 5.5 | 13.3 | 33.3 |
-| 8 | 45 | x5 | 1,898 | 4,803 | 6,701 | 6,963 | **14,500** | 1.03 | 4,676 | 5.3 | 12.8 | 32.1 |
-| 9 | 50 | x5 | 2,042 | 28,900 | 30,943 | 55,302 | **67,000** | 4.62 | 18,838 | 1.3 | 3.2 | 8.0 |
-| 10 | 55 | x20 | 8,850 | 30,887 | 39,737 | 66,083 | **86,000** | 1.28 | 26,800 | 3.7 | 9.0 | 22.4 |
-| 11 | 60 | x20 | 9,510 | 30,887 | 40,397 | 66,743 | **87,500** | 1.02 | 27,460 | 3.6 | 8.7 | 21.9 |
-| 12 | 60 | x20 | 9,510 | 30,887 | 40,397 | 66,743 | **87,500** | 1.0 | 27,460 | 3.6 | 8.7 | 21.9 |
-| 13 | 60 | x20 | 9,510 | 136,793 | 146,303 | 278,555 | **317,000** | 3.62 | 88,288 | 1.1 | 2.7 | 6.8 |
-| 14 | 60 | x20 | 9,510 | 136,793 | 146,303 | 278,555 | **317,000** | 1.0 | 88,288 | 1.1 | 2.7 | 6.8 |
-| 15 | 60 | x50 | 23,775 | 107,675 | 131,450 | 133,479 | **284,500** | 0.9 | 86,009 | 2.9 | 7.0 | 17.4 |
-| 16 | 60 | x50 | 23,775 | 107,675 | 131,450 | 133,479 | **284,500** | 1.0 | 86,009 | 2.9 | 7.0 | 17.4 |
-| 17 | 60 | x50 | 23,775 | 107,675 | 131,450 | 133,479 | **284,500** | 1.0 | 86,009 | 2.9 | 7.0 | 17.4 |
-| 18 | 60 | x50 | 23,775 | 107,675 | 131,450 | 133,479 | **284,500** | 1.0 | 86,009 | 2.9 | 7.0 | 17.4 |
+| 4 | 20 | x1 | 218 | 2,839 | 3,056 | 5,327 | **6,500** | 1.0 | 1,855 | 2.7 | 6.5 | - |
+| 5 | 25 | x5 | 1,268 | 2,839 | 4,106 | 6,377 | **9,000** | 1.34 | 2,905 | 8.6 | 20.7 | - |
+| 6 | 30 | x5 | 1,412 | 4,803 | 6,216 | 6,478 | **13,500** | 1.51 | 4,191 | 6.0 | 14.3 | 35.8 |
+| 7 | 30 | x5 | 1,412 | 4,803 | 6,216 | 6,478 | **13,500** | 1.0 | 4,191 | 6.0 | 14.3 | 35.8 |
+| 8 | 30 | x5 | 1,412 | 4,803 | 6,216 | 6,478 | **13,500** | 1.0 | 4,191 | 6.0 | 14.3 | 35.8 |
+| 9 | 30 | x5 | 1,412 | 28,900 | 30,313 | 54,672 | **65,500** | 4.88 | 18,208 | 1.4 | 3.3 | 8.2 |
+| 10 | 30 | x20 | 5,650 | 30,887 | 36,537 | 62,883 | **79,000** | 1.21 | 23,600 | 4.2 | 10.2 | 25.4 |
+| 11 | 30 | x20 | 5,650 | 30,887 | 36,537 | 62,883 | **79,000** | 1.0 | 23,600 | 4.2 | 10.2 | 25.4 |
+| 12 | 30 | x20 | 5,650 | 30,887 | 36,537 | 62,883 | **79,000** | 1.0 | 23,600 | 4.2 | 10.2 | 25.4 |
+| 13 | 30 | x20 | 5,650 | 136,793 | 142,443 | 274,695 | **308,500** | 3.9 | 84,428 | 1.2 | 2.8 | 7.1 |
+| 14 | 30 | x20 | 5,650 | 136,793 | 142,443 | 274,695 | **308,500** | 1.0 | 84,428 | 1.2 | 2.8 | 7.1 |
+| 15 | 30 | x50 | 14,125 | 107,675 | 121,800 | 123,829 | **263,500** | 0.86 | 76,359 | 3.3 | 7.9 | 19.6 |
+| 16 | 30 | x50 | 14,125 | 107,675 | 121,800 | 123,829 | **263,500** | 1.0 | 76,359 | 3.3 | 7.9 | 19.6 |
+| 17 | 30 | x50 | 14,125 | 107,675 | 121,800 | 123,829 | **263,500** | 1.0 | 76,359 | 3.3 | 7.9 | 19.6 |
+| 18 | 30 | x50 | 14,125 | 107,675 | 121,800 | 123,829 | **263,500** | 1.0 | 76,359 | 3.3 | 7.9 | 19.6 |
 
 - expected_counted is the budget; flag_line is where the Accountant flags (never blocks). pacing_ceiling_counted is the same model at the top of core 4.5's ranges and should sit under flag_line.
 - floors_of_liquid_income_* = price / the Crawler's liquid income that floor if every box item is sold at half credit_value (core 5.10) and nothing else is spent; it is a speed limit on crafting purchases, not a promise.
-- Because box credit pulls and item values do not take the multiplier but crafting prices do, the affordability ratios jump at F5, F10 and F15 (price x5, x20, x50 while income steps up by box tier only). That is a design flag for Caleb/Lore, not something this file fixes: a Crawler who buys a table on F4 pays x1.
+- Crafting prices no longer take the x5/x20/x50 multiplier on F3-F18: the smoothed schedule in q6_crafting_price_proposal (adopted via Q-004; rules/20 current section 9.1a) targets about 3 / 6 / 10 floors of liquid income for the basic table / Crafting Studio / Enhanced Crafting Studio, so the affordability ratios no longer jump at F5, F10 and F15. The price_* and floors_of_liquid_income_* columns in this table keep the SUPERSEDED multiplier prices for comparison only; the adopted prices and ratios are in q6_crafting_price_proposal. Plain note: liquid income L (liquid_if_items_sold_at_half) halves box ITEMS only; credit-pull cards are NOT halved and count at full value.
 - Story Box sale proceeds (100 / 250 / 500 by rung, times the sale floor's multiplier) count toward the flag on the floor of the sale.
-- By arrival on Floor 4 a Crawler who banks everything has about 4442 expected credits from Floors 1-3 (F1 666 + F2 720 + F3 3056), so a 5,000 basic table at x1 is reachable early on Floor 4 if they buy nothing else. The rules/20 benchmark of 'one coupon plus 15,000 credits' on Floor 4 is not reachable from this income (Q6).
+- By arrival on Floor 4 a Crawler who banks everything has about 4442 expected credits from Floors 1-3 (F1 666 + F2 720 + F3 3056). Tables are not sold before Floor 4, and the adopted schedule prices a basic table at 5,500 on F3 and 6,500 on F4 (the 5,000 figure is the Floors 1-2 price), so a basic table is reachable LATE on Floor 4 (roughly two-thirds of the way through that floor's expected income if they buy nothing else), not early. The rules/20 benchmark of 'one coupon plus 15,000 credits' on Floor 4 is not reachable from this income.
 - Reasoning for the shape: the line is tied to the same boxes the core already schedules (core 4.5), so it needs no new reward promise; it grows where the core grows (first Gold, Platinum, Legendary) and where fees grow (the multiplier). The mismatch with crafting prices is reported rather than hidden (Q6).
 
 ## 9. Slot maps
@@ -289,27 +295,115 @@ Naming scheme: `slot_no` = position in the 22:08 Day 1 map; `spec_path` = JSON p
 - **A1** Tier-to-band map: F1 trivial=half of Low, standard=Low, hard=Moderate, boss=High (matches overview 9.2). F2+ trivial=Low, standard=Moderate, hard=High (elite), boss=High (core 8.3: mostly Moderate, some Low, 1-3 High per floor). *(adjust: Caleb/GM)*
 - **A2** Boss lead creature fits within 90% of the High total so support has room; other tiers 100%. *(adjust: Caleb/GM)*
 - **A3** Encounter density: F1 fixed list (6 planned, max 8); F2-F6 1.5 encounters per clock day, no quota; mix = boss 1, hard 15%, trivial 25%, standard rest. *(adjust: Caleb/GM)*
-- **A4** Days: F4=25, F5=30, F6=35 are placeholders (decision 026: F4+ longer than Floor 3 = 20, no numbers given). F1=5, F2=10, F3=20 are authoritative. *(adjust: Caleb)*
-- **A5** Encounter cash per Crawler by tier (F1 scale): trivial 0-2, standard 1d4x2, hard 1d6x2, boss 1d6x5; pool = per-Crawler x party size, split evenly. F1 values are sized so a 4-Crawler party's spot amounts in the overview (about 158 credits across the floor) fit inside the tiers. *(adjust: Accountant/GM)*
+- **A4** Days: F4=20, F5=25, F6=30 are a HOUSE RULE (room vote, majority of six, 2026-10-04, Q-001 as revised, passed 6 of 6; Caleb can veto or change; GM-adaptable). The canon timers 10/15/17 (M-603..M-608) are reference only (authoritative.clock.days_canon_reference). F7+ is held at 30 for the growth curve (placeholder, ASSUMED: floors do not get shorter than F6, per Caleb's rule that floors get longer as you go down). F1=5, F2=10, F3=20 are authoritative. *(adjust: Caleb)*
+- **A5** Encounter credits per Crawler by tier (F1 scale): trivial 0-2, standard 1d4x2, hard 1d6x2, boss 1d6x5; pool = per-Crawler x party size, split evenly. F1 values are sized so a 4-Crawler party's spot amounts in the overview (about 158 credits across the floor) fit inside the tiers. *(adjust: Accountant/GM)*
 - **A6** R1 toast credits 10-40 (avg 25); expected credit-paying R1 toasts per Crawler: F1 2, F2 3, F3+ 3. *(adjust: Accountant/GM)*
 - **A7** Per-encounter box odds are the fight share of core 4.5 targets; non-fight deed Bronze expected 0.5 (F1) and 0.9 (F2) per Crawler. F1 total Bronze (incl. Welcome) is 1.9 expected, inside the overview's 1-3; F2 about 2.0, the low end of core 2-4. *(adjust: Caleb/GM)*
 - **A8** F2 Boss Box is Silver (core 4.7 cap) and F2 box values equal F1's: the F1 live decks are reused for F2 (no F2 decks exist yet). Welcome Box uses decks z06 + any, fight/deed Bronze boxes use all F1 decks pooled, the Boss Box uses z10 (Boss) + any. *(adjust: Lore)*
-- **A9** Encounter cash on F5+ takes the credit multiplier (x5); box pulls do not (decision 019). *(adjust: Caleb/Accountant)*
+- **A9** Encounter credits on F5+ takes the credit multiplier (x5); box pulls do not (decision 019). *(adjust: Caleb/Accountant)*
 - **A10** Rest-without-saferoom fee 20 per Crawler (cap 60 per floor); key bribe 50 per Crawler; Detour Tax 75 per Crawler (a missed Stairwell key ONLY; a missed collapse is death with no toll, decision 026); Zone S forcing fee 25 per Crawler; detour 2 hours, 0 rest slots; collapse steps cost hooks and services, 0 credits. *(adjust: Caleb/GM)*
 - **A11** Safe-room adjacency and rest-segment limits (see adjacency). *(adjust: GM)*
-- **A12** Optional safety valve (not required under the per-floor line): before a Floor 2 Boss Box, if the Crawler's running total on that floor is 900 or more, the GM may hand-pick that box from cards worth 175 or less. Needs a tool change to measure all-in (cash + R1) totals. *(adjust: Accountant)*
+- **A12** Optional safety valve (not required under the per-floor line): before a Floor 2 Boss Box, if the Crawler's running total on that floor is 900 or more, the GM may hand-pick that box from cards worth 175 or less. Run it from `state.py loot totals --include-credits` (the tool change now exists, Q-003). *(adjust: Accountant)*
 - **A14** Reward ladder for the six proposed achievements (floors.1.achievement_rewards). *(adjust: Caleb/GM)*
 
 **Authoritative (follows a source):** SRD XP budget and XP-by-CR tables (CR 11-13 missing from my SRD extraction; standard values used, verify); level track (core 2.2/2.3); core 8.3 CR targets; box credit dice (core 4.2, no multiplier on pulls); box pacing and ceilings (core 4.5, 3.6, 4.7); credit multiplier (core 3.9, decision 019); clock days F1-F3, 4 short-rest slots (cap), 1 Long Rest, collapse order, zone groups, 32-hour stairwell, 6-hour stasis threshold, key deadlines, the fixed final collapse at hour 120 (a Syndicate default in decision 026 that Caleb may veto); a missed floor collapse is death on every floor with no Reprieve and no toll (Caleb ruling ~10:02 PM CT, decisions 026 and 028); Story Box limits (decisions 015/018, rules/45); Floor 1 encounter counts (overview 9.2/9.3); Potion price 50.
 
 ## 11. Open questions for Caleb
-- Q2 (Caleb): Day counts for Floors 4-6. Floor 3 is 20 (your ruling); F4+ are 'longer' with no numbers, so the file uses placeholders 25 / 30 / 35.
+- Q2 (RESOLVED in v0.1.4 by room vote, Q-001 as revised, 6 of 6): Floor 4 = 20, Floor 5 = 25, Floor 6 = 30 days, house rule; Caleb can veto or change; GM-adaptable. Canon timers 10/15/17 (M-603..M-608) are reference only. Remaining: F7+ has no day counts (held at 30 in the growth curve only; ASSUMED); the Accountant must re-audit the recomputed per-floor lines.
 - Q3 (Caleb): Keep the overview's Z8 counts for 2-3 Crawlers (over the hard-tier budget by 50 and 25 XP) or tighten them?
-- Q4 (Accountant): Confirm or adjust the proposed F3-F18 flag lines in proposed_floor_growth_curve (PLACEHOLDER). At Floor-1 scale, income is about 670-720 credits per Crawler per floor all-in against crafting prices of 5,000 / 12,000 / 30,000. (Q1, the line basis, is resolved: per Crawler per floor. Q1b is withdrawn: a missed collapse is death, no toll.)
-- Q5 (Architect/Accountant): The optional safety valve (A12) cannot be run from `state.py loot totals` because that counts box value only. Decide whether a tool change is wanted or the GM tallies by hand.
-- Q6 (Caleb/Lore): The growth-curve proposal (proposed_floor_growth_curve) shows crafting prices (x5 at F5, x20 at F10, x50 at F15) pulling ahead of income that steps up only by box tier. Keep as is, or give crafting prices their own slower multiplier? Also the rules/20 benchmark of one coupon plus 15,000 credits on Floor 4 is far above the modeled income.
+- Q4 (Accountant): The F3-F18 flag lines follow one rule (2.165 x expected counted income, rounded to the nearest 500, not a fixed multiple of 1,500; v0.1.5) and are published in flag_line_by_floor; confirm or adjust (PLACEHOLDER). At Floor-1 scale, income is about 670-720 credits per Crawler per floor all-in against crafting prices of 5,000 / 12,000 / 30,000. (Q1, the line basis, is resolved: per Crawler per floor. Q1b is withdrawn: a missed collapse is death, no toll.)
+- Q5 (RESOLVED in v0.1.5): the tool change exists. Q-003 passed 7 of 7; `state.py loot totals --include-credits` (optional --credit-sources, --assume-floor N; `credits ... --floor N`) gives the all-in view the optional valve (A12) needs; default output unchanged. Remaining for the Architect: load flag_line_by_floor instead of the fixed 1500.
+- Q6 (RESOLVED in v0.1.6): crafting prices get their own smoothed schedule for Floors 3-18 (q6_crafting_price_proposal, adopted via room vote Q-004; rules/20 current section 9.1a); Floors 1-2 keep 5,000 / 12,000 / 30,000. Still open: level upgrades (5,000 x target level), bench supplies and other prices still take the credit multiplier; the rules/20 benchmark of one coupon plus 15,000 credits on Floor 4 is far above modeled income; the coupon cap 25,000 now sits under the basic table price from F9.
 
 ## 12. Changes for the room
 - Encounter Bot: new Day 2-4 fields are in `floors.1.fixed_encounters.d02_02 / d03_02 / d03_03 / d04_03`; re-pin to the new sha256 (the file's sha is recorded in decisions/027 and the indexes). CR slots for these encounters already resolve.
 - Accountant: use `proposed_floor_growth_curve.table` for the per-floor audit table (PLACEHOLDER); the Floor 1-2 flag is 1,500 per Crawler per floor; re-audit the live-deck box means (`economy_audit.pull_expectations`) and the simulations (`tools-notes/encounter_budget_econ.py`).
-- Architect: a tool change would be needed to evaluate the optional valve on all-in totals (Q5). Lore: F2 loot decks should keep the Bronze/Silver value ranges used here (A8).
+- Architect: the all-in tool change exists (Q5 resolved); next, load `flag_line_by_floor` in place of the fixed 1500 for `INFLATION_FLAG` (this file is the source of truth for the flag lines). Lore: F2 loot decks should keep the Bronze/Silver value ranges used here (A8).
+
+## 13. Q6 proposal: crafting price schedule (ADOPTED via Q-004, 6 of 7 yes; v0.1.7 price tweaks; applied in rules/20 current §9.1a)
+
+**Status.** ADOPTED (v0.1.6, 2026-10-04; price tweaks v0.1.7): room vote Q-004 passed, 6 of 7 yes (Syndicate, GM, Lore, Architect, Book Author, Accountant; majority 4); Encounter Bot abstained/pending, to be recorded in decisions/QUESTIONABLE.md. The Accountant's yes carries three accepted fixes (v0.1.7): F8 held at F7 values, F13 raised to 180,000 / 360,000 / 600,000, F18 held at F17 values. Applied in rules/20-crafting-5e.md, current section 9.1a (decision 030). Condition from the GM: Floors 1 and 2 keep the ruled crafting prices 5,000 / 12,000 / 30,000; the schedule starts at Floor 3. Caleb may veto or change.
+
+**What it replaces.** (Adopted in v0.1.6 for Floors 3-18.) The credit multiplier (x1 F1-4, x5 F5-9, x20 F10-14, x50 F15-18, core 3.9) as applied to CRAFTING PRICES ONLY (basic table 5,000 / Crafting Studio 12,000 / Enhanced Studio 30,000 at Floor-1 scale, rules/20). Achievement rewards, encounter credits, R1 toast credits and all other System fees keep the core multiplier.
+
+**What the targets are measured against.** The 3 / 6 / 10 floor targets are measured against L = liquid_if_items_sold_at_half (box ITEMS sold at half credit_value, core 5.10; credit-pull cards are NOT halved, they count at full value; plus encounter credits and R1 credits), NOT against expected_counted. Against expected_counted the same prices are only about 0.64x as large a ratio (see ratio_check).
+
+**Targets (floors of liquid income, half-credit box items):** basic table 3, Crafting Studio (F4+) 6, Enhanced Crafting Studio (F6+) 10.
+
+**Method.**
+- liquid income L(f) = the growth table's liquid_if_items_sold_at_half. Plain note: L halves box ITEMS only (core 5.10); credit-pull cards are NOT halved, they count at full value (credits per Crawler per floor if every box item is sold at half credit_value, core 5.10, plus encounter credits and R1 credits).
+- trend T(f) = log-linear fit of L over F3-F18 (about x1.348 per floor).
+- smoothed income S(f) = sqrt(L(f) x T(f)), halfway (geometric) between this floor's income and the trend, so a single tier step (Gold F3, Platinum F9, Legendary F13) or the F15 dip does not swing prices all at once.
+- proposed price = target x S(f), rounded (500 under 20,000; 1,000 under 100,000; 5,000 under 1,000,000; 10,000 above), and never lower than the previous floor's price. Three hand adjustments from the Accountant's vote (v0.1.7): F8 held at the F7 price, F13 raised, F18 held at the F17 price.
+- implied_crafting_multiplier = proposed price / Floor-1-scale price; this column is what would replace the credit multiplier for crafting prices.
+
+### Basic crafting table (5,000 at Floor-1 scale): superseded vs adopted
+
+Floors of liquid income across F3-F18: superseded 1.2 to 8.6, adopted 2.1 to 3.7.
+
+| Floor | Liquid income / floor | Smoothed S | Superseded price (credit multiplier) | Superseded floors | **Adopted price** | **Adopted floors** | Deviation from target | Implied crafting multiplier |
+|---|---|---|---|---|---|---|---|---|
+| 3 | 1,855 | 1,826 | 5,000 (x1) | 2.7 | **5,500** | **3.0** | -1.2% | x1.1 |
+| 4 | 1,855 | 2,120 | 5,000 (x1) | 2.7 | **6,500** | **3.5** | +16.8% | x1.3 |
+| 5 | 2,905 | 3,080 | 25,000 (x5) | 8.6 | **9,000** | **3.1** | +3.3% | x1.8 |
+| 6 | 4,191 | 4,294 | 25,000 (x5) | 6.0 | **13,000** | **3.1** | +3.4% | x2.6 |
+| 7 | 4,191 | 4,986 | 25,000 (x5) | 6.0 | **15,000** | **3.6** | +19.3% | x3.0 |
+| 8 | 4,191 | 5,788 | 25,000 (x5) | 6.0 | **15,000** | **3.6** | +19.3% | x3.0 |
+| 9 | 18,208 | 14,007 | 25,000 (x5) | 1.4 | **42,000** | **2.3** | -23.1% | x8.4 |
+| 10 | 23,600 | 18,514 | 100,000 (x20) | 4.2 | **56,000** | **2.4** | -20.9% | x11.2 |
+| 11 | 23,600 | 21,494 | 100,000 (x20) | 4.2 | **64,000** | **2.7** | -9.6% | x12.8 |
+| 12 | 23,600 | 24,953 | 100,000 (x20) | 4.2 | **75,000** | **3.2** | +5.9% | x15.0 |
+| 13 | 84,428 | 54,795 | 100,000 (x20) | 1.2 | **180,000** | **2.1** | -28.9% | x36.0 |
+| 14 | 84,428 | 63,615 | 100,000 (x20) | 1.2 | **190,000** | **2.3** | -25.0% | x38.0 |
+| 15 | 76,359 | 70,237 | 250,000 (x50) | 3.3 | **210,000** | **2.8** | -8.3% | x42.0 |
+| 16 | 76,359 | 81,543 | 250,000 (x50) | 3.3 | **245,000** | **3.2** | +7.0% | x49.0 |
+| 17 | 76,359 | 94,669 | 250,000 (x50) | 3.3 | **285,000** | **3.7** | +24.4% | x57.0 |
+| 18 | 76,359 | 109,908 | 250,000 (x50) | 3.3 | **285,000** | **3.7** | +24.4% | x57.0 |
+
+### Crafting Studio, F4+ (12,000): superseded vs adopted
+
+Floors of liquid income across F3-F18: superseded 2.8 to 20.7, adopted 4.3 to 7.5.
+
+| Floor | Liquid income / floor | Smoothed S | Superseded price (credit multiplier) | Superseded floors | **Adopted price** | **Adopted floors** | Deviation from target | Implied crafting multiplier |
+|---|---|---|---|---|---|---|---|---|
+| 4 | 1,855 | 2,120 | 12,000 (x1) | 6.5 | **12,500** | **6.7** | +12.3% | x1.04 |
+| 5 | 2,905 | 3,080 | 60,000 (x5) | 20.7 | **18,500** | **6.4** | +6.1% | x1.54 |
+| 6 | 4,191 | 4,294 | 60,000 (x5) | 14.3 | **26,000** | **6.2** | +3.4% | x2.17 |
+| 7 | 4,191 | 4,986 | 60,000 (x5) | 14.3 | **30,000** | **7.2** | +19.3% | x2.5 |
+| 8 | 4,191 | 5,788 | 60,000 (x5) | 14.3 | **30,000** | **7.2** | +19.3% | x2.5 |
+| 9 | 18,208 | 14,007 | 60,000 (x5) | 3.3 | **84,000** | **4.6** | -23.1% | x7.0 |
+| 10 | 23,600 | 18,514 | 240,000 (x20) | 10.2 | **110,000** | **4.7** | -22.3% | x9.17 |
+| 11 | 23,600 | 21,494 | 240,000 (x20) | 10.2 | **130,000** | **5.5** | -8.2% | x10.83 |
+| 12 | 23,600 | 24,953 | 240,000 (x20) | 10.2 | **150,000** | **6.4** | +5.9% | x12.5 |
+| 13 | 84,428 | 54,795 | 240,000 (x20) | 2.8 | **360,000** | **4.3** | -28.9% | x30.0 |
+| 14 | 84,428 | 63,615 | 240,000 (x20) | 2.8 | **380,000** | **4.5** | -25.0% | x31.67 |
+| 15 | 76,359 | 70,237 | 600,000 (x50) | 7.9 | **420,000** | **5.5** | -8.3% | x35.0 |
+| 16 | 76,359 | 81,543 | 600,000 (x50) | 7.9 | **490,000** | **6.4** | +7.0% | x40.83 |
+| 17 | 76,359 | 94,669 | 600,000 (x50) | 7.9 | **570,000** | **7.5** | +24.4% | x47.5 |
+| 18 | 76,359 | 109,908 | 600,000 (x50) | 7.9 | **570,000** | **7.5** | +24.4% | x47.5 |
+
+### Enhanced Crafting Studio, F6+ (30,000): superseded vs adopted
+
+Floors of liquid income across F3-F18: superseded 7.1 to 35.8, adopted 7.1 to 12.4.
+
+| Floor | Liquid income / floor | Smoothed S | Superseded price (credit multiplier) | Superseded floors | **Adopted price** | **Adopted floors** | Deviation from target | Implied crafting multiplier |
+|---|---|---|---|---|---|---|---|---|
+| 6 | 4,191 | 4,294 | 150,000 (x5) | 35.8 | **43,000** | **10.3** | +2.6% | x1.43 |
+| 7 | 4,191 | 4,986 | 150,000 (x5) | 35.8 | **50,000** | **11.9** | +19.3% | x1.67 |
+| 8 | 4,191 | 5,788 | 150,000 (x5) | 35.8 | **50,000** | **11.9** | +19.3% | x1.67 |
+| 9 | 18,208 | 14,007 | 150,000 (x5) | 8.2 | **140,000** | **7.7** | -23.1% | x4.67 |
+| 10 | 23,600 | 18,514 | 600,000 (x20) | 25.4 | **185,000** | **7.8** | -21.6% | x6.17 |
+| 11 | 23,600 | 21,494 | 600,000 (x20) | 25.4 | **215,000** | **9.1** | -8.9% | x7.17 |
+| 12 | 23,600 | 24,953 | 600,000 (x20) | 25.4 | **250,000** | **10.6** | +5.9% | x8.33 |
+| 13 | 84,428 | 54,795 | 600,000 (x20) | 7.1 | **600,000** | **7.1** | -28.9% | x20.0 |
+| 14 | 84,428 | 63,615 | 600,000 (x20) | 7.1 | **635,000** | **7.5** | -24.8% | x21.17 |
+| 15 | 76,359 | 70,237 | 1,500,000 (x50) | 19.6 | **700,000** | **9.2** | -8.3% | x23.33 |
+| 16 | 76,359 | 81,543 | 1,500,000 (x50) | 19.6 | **815,000** | **10.7** | +6.7% | x27.17 |
+| 17 | 76,359 | 94,669 | 1,500,000 (x50) | 19.6 | **945,000** | **12.4** | +23.8% | x31.5 |
+| 18 | 76,359 | 109,908 | 1,500,000 (x50) | 19.6 | **945,000** | **12.4** | +23.8% | x31.5 |
+
+**Caveats.**
+- Targets are met on average, not floor by floor: income is stepped (box tiers) and prices are smooth, so the ratio is lower right after an income step (F9, F13) and higher right before one (F8, F12) by design.
+- Income F3-F18 is itself a placeholder (no F3+ decks), so the schedule must be rerun if the growth table changes.
+- Prices rise with the trend even when F15-F18 income dips (non-decreasing rule), so the F15-18 ratios drift up; that is the cost of keeping prices smooth.
+- Applied in rules/20 (current section 9.1a; sections 0, 2.5.3, 9.1 and 10 cite this schedule instead of the credit multiplier for the three workstation prices).

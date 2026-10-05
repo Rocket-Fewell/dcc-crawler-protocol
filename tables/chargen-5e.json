@@ -1,6 +1,6 @@
 {
  "meta": {
-  "version": "0.1.5",
+  "version": "0.1.6",
   "stamp": "2026-10-04",
   "source": "Written from memory of the 2024 PHB / SRD 5.2 by the Borent build. Tables only list names, numbers and one-line plain effects; no book text.",
   "verify_todo": [
@@ -50,7 +50,7 @@
    },
    {
     "path": "scores",
-    "note": "spec S8: rolling reroll allowance (Open Q1) RESOLVED in 0.1.4: no allowance; Roll is ability_methods.roll, default ON (create.allow_roll)"
+    "note": "spec S8: rolling reroll allowance (Open Q1) RESOLVED (current 0.1.6; added in 0.1.4): no allowance; Roll is ability_methods.roll, default ON (create.allow_roll)"
    },
    {
     "path": "items.{gaming_set,musical_instrument,artisans_tools,spellbook}.cost_cp",
@@ -58,7 +58,7 @@
    }
   ],
   "srd_id_note": "0.1.3: the four header items no longer carry cost_cp (no flat placeholder; price keys off the chosen variant srd_id; needs_variant_choice stays). 0.1.2: every items.* entry now has srd_id (stable kebab-case SRD id from DCC Lore tables/item-reskins.json, schema item-reskins/0.1.0; built from each entry's chargen_keys). Existing item keys (snake_case) are unchanged and still used by packages/choices; srd_id is what the sheet stores and what prices/mechanics key off, never a display name. Four items are choice slots whose srd_id is a generic HEADER id (holy-symbol, gaming-set, musical-instrument, artisans-tools): they carry srd_id_kind='header', needs_variant_choice=true and srd_variant_ids; /create must make the player pick a variant and the sheet must store the variant srd_id (headers are never priced). Price fixes: arcane_focus_staff and druidic_focus_staff 20 cp -> 500 cp (SRD 5.2.1 Arcane Focus Staff / Druidic Focus Wooden staff 5 gp). Spellbook 50 gp kept (SRD 5.1 gear table; not in SRD 5.2.1 tables).",
-  "roll_method_note": "0.1.4: added ability_methods (Roll: three arrays of 4d6dl1, keep ONE with total above 72, no upper limit, reroll all three if none qualifies, every die logged; decision 024). No other table changed."
+  "roll_method_note": "Current 0.1.6 (ability_methods added in 0.1.4; text unchanged since): Roll = three arrays of 4d6dl1, keep ONE with total above 72 (keep_min_total 73), no upper limit, reroll all three if none qualifies, every die logged; decision 024). No other table changed."
  },
  "point_buy": {
   "budget": 27,
@@ -84,7 +84,7 @@
   8
  ],
  "ability_methods": {
-  "note": "0.1.4 (decision 024, spec v0.1.10): S8 methods. Standard array and point buy are unchanged (data in point_buy and standard_array). Roll is switched by the session setting create.allow_roll (default true). Background increases (+2/+1 or +1/+1/+1) are added after assignment under every method; no score above 20.",
+  "note": "Current 0.1.6 (decision 024, spec v0.1.10; Roll added in 0.1.4): S8 methods. Standard array and point buy are unchanged (data in point_buy and standard_array). Roll is switched by the session setting create.allow_roll (default true). Background increases (+2/+1 or +1/+1/+1) are added after assignment under every method; no score above 20.",
   "methods": [
    "standard_array",
    "point_buy",

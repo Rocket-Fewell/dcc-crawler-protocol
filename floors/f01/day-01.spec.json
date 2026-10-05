@@ -8,7 +8,7 @@
     "floor": 1,
     "floor_name": "The Orientation Pit",
     "title": "Day {day} of {days}: The Break Room, the Locker Room, and the Green Room",
-    "summary": "Floor 1 timed playthrough, Day {day} of {days}: the party starts in the Z6 Break Room, nothing collapses (tutorial pace), and three routes to the Stairwell (dash, loot, clever) are laid out with five encounters, a Stairwell key findable three ways, loot and achievement hooks from existing decks and tables, and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline).",
+    "summary": "Floor 1 timed playthrough, Day {day} of {days}: the party starts in the Z6 Break Room, nothing collapses (tutorial pace), and three routes to the stairwell (dash, loot, clever) are laid out with five encounters, a Stairwell key findable three ways, loot and achievement hooks from existing decks and tables, and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline).",
     "sources": [
       "decisions/026-timed-floor-clock-override.md (including the stairwell and zone rulings)",
       "floors/f01/00-overview.md (sections 2, 4, 5, 6, 7, 8, 9)",
@@ -18,10 +18,11 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.7 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
-      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
+      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
+      "sessions/session-01-recap-2026-10-04.md and gm-notes/10-open-threads.md (read for which zones session one covered)"
     ]
   },
   "clock": {
@@ -60,7 +61,7 @@
       },
       {
         "day": 5,
-        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "event": "Only the stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
         "tag": "inspired (house)"
       }
     ],
@@ -106,7 +107,11 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+    }
   },
   "day": {
     "number": 1,
@@ -124,7 +129,7 @@
       "Slot 4 (suggested): reserve; do not push the party to spend them."
     ],
     "last_chance_hooks": {
-      "note": "Outer zones (Z0 to Z4 plus 3b) close on Day 2 (confirmed grouping, inspired). The party has already played Z0 to Z5 in session one; the GM checks the sheets and ledger for which of these were already claimed. Encounter Bot does not read state.",
+      "note": "Outer zones (Z0 to Z4 plus 3b) close on Day 2 (confirmed grouping, inspired). In session one the party played Z0 to Z2 and part of Z3, then both Crawlers died to Ceiling Ticks and were ejected to Z6 by the Floor 1 Reprieve; Z4 and Z5 were skipped. The Z4 hooks are still unclaimed and stay claimable until the outer zones close on Day 2; the Z5 hooks stay claimable until the mid zones close on Day 3 (Z5 is on the Day 2 list). The GM checks the sheets and ledger for what is already claimed; Encounter Bot does not read state.",
       "achievements": [
         {
           "id": "ACH-0177",
@@ -141,6 +146,18 @@
         {
           "id": "ACH-0871",
           "note": "Find a journal or lore scrap (Z3 or Z7); the Z7 clipboard keeps this one alive a little longer."
+        },
+        {
+          "id": "ACH-0869",
+          "note": "Rescue a civilian NPC (Z4, Dale in the net); outer-zone hook, unclaimed, vanishes with the zone."
+        },
+        {
+          "id": "ACH-0198",
+          "note": "Poison Tolerant (Z4, the Ticket, Please turnstile); outer-zone hook, unclaimed."
+        },
+        {
+          "id": "ACH-0877",
+          "note": "Disarm an enemy trap with junk (Z4, the Welcome Mat plates); outer-zone hook, unclaimed."
         }
       ],
       "cards": [
@@ -152,7 +169,7 @@
       "heading": "last chance before the outer zones close on Day 2"
     },
     "stall_fallback": "Day 1 has no collapse, so stalling only costs clock. If the party loiters in the Break Room, the System posts short-rest and Long Rest reminders, the corkboard rumors repeat, and the Lights-Out hour arrives on schedule (enc-d01-04). If they refuse to pick a route, the vending terminal offers the bribe in enc-d01-01 and the speaker announces what the clock will do tomorrow. If the day rolls over at the 24-hour mark without a Long Rest, the System still posts the Day 2 notice; the party simply rests later at an honest saferoom. The Floor 1 Reprieve does not cover a missed collapse: that is death on every floor (decision 026), so say so at the start.",
-    "start_note": "Default start is the Break Room, where session one ended. Later days start in the Green Room if the party rested there, otherwise wherever the day rolled over.",
+    "start_note": "Default start is the Break Room (Z6), where session one ended after the Floor 1 Reprieve ejected both Crawlers there. Later days start in the Green Room if the party rested there, otherwise wherever the day rolled over.",
     "rest_options": [
       {
         "option": "Break Room (Z6) saferoom",
@@ -164,7 +181,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always)."
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [],
@@ -211,7 +228,7 @@
         }
       },
       {
-        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest where the spot is not already quiet, none where it is; no Long Rest)",
         "b70": {
           "kind": "party",
           "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
@@ -233,14 +250,38 @@
           ]
         }
       }
-    ]
+    ],
+    "warning_checks": {
+      "tag": "[GM-FACING]",
+      "audience": "gm",
+      "items": [
+        {
+          "id": "warn-floor-start",
+          "label": "Floor 1 start warning given (Day 1)",
+          "day": 1,
+          "this_page": true
+        },
+        {
+          "id": "warn-day-penultimate",
+          "label": "Day 4 warning given",
+          "day": 4,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-last",
+          "label": "Day 5 warning given",
+          "day": 5,
+          "this_page": false
+        }
+      ]
+    }
   },
   "routes": [
     {
       "id": "route-dash",
       "tag": "dash",
       "name": "Fast, dangerous dash: the Express Lane",
-      "path": "Z6 to Z8 (skip Z7) to Z9 to Z10 to the real Stairwell at Z11 (behind the stage).",
+      "path": "Z6 to Z8 (skip Z7) to Z9 to Z10 to the real stairwell at Z11 (behind the stage).",
       "summary": "Straight through the Locker Room and the Green Room, then the boss stage (full encounter on the Day 5 page, usable from Day 2). On Day 1 the party can reach the stage but the stairwells have not opened, so there is no descent yet. Reaching Z9 and resting there is when level 2 lands (00-overview.md section 5.9); a party that skips the rest meets the boss at level 1 and the GM uses Variant B (section 6.6).",
       "stairwell_access": "Not open on Day 1 (stairwells open early Day 2, canon M-276). Later: through Z10 (boss or the cheese routes in 00-overview.md section 6.4), then Z11.",
       "canon_refs": [
@@ -258,7 +299,7 @@
         },
         {
           "ledger_id": "M-016",
-          "use": "Canon: stairwells are scarce and halve with each floor. Fits the one real Stairwell plus a fake one at Z7."
+          "use": "Canon: stairwells are scarce and halve with each floor. Fits the one real stairwell plus a fake one at Z7."
         },
         {
           "ledger_id": "M-276",
@@ -272,7 +313,7 @@
       "achievements": [
         {
           "id": "ACH-0200",
-          "note": "Speed Clear: reach the Stairwell under the par time (00-overview.md section 4.2: no more than one Long Rest)."
+          "note": "Speed Clear: reach the stairwell under the par time (00-overview.md section 4.2: no more than one Long Rest)."
         },
         {
           "id": "ACH-0894",
@@ -281,7 +322,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "Oh, we're speed-running. Cute. The Stairwell is behind the stage, and the stage comes with a Dean. Every room between here and there wants to meet you, and none of them are polite about it.",
+          "text": "Oh, we're speed-running. Cute. The stairwell is behind the stage, and the stage comes with a Dean. Every room between here and there wants to meet you, and none of them are polite about it.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -298,8 +339,8 @@
       "id": "route-loot",
       "tag": "loot",
       "name": "Slow loot-and-achievement route: the Completionist's Detour",
-      "path": "Z6, then last-chance backtrack hooks in the outer zones, then Z7 (bait stairs and the Back Office), Z8, Z9 (rest, level 2), then the Z S service corridor and the service stairwell (skips the boss).",
-      "summary": "Spend the day collecting: outer-zone hooks before they close, the Greeters' Back Office, the Locker Room, the Green Room boxes. Ends at the service door in Zone S rather than the boss. Slow means the clock bites: each day the floor closes more of what you came to collect.",
+      "path": "Z6, then last-chance backtrack hooks (the unplayed Z4 and Z5 and the rest of Z3), then Z7 (bait stairs and the Back Office), Z8, Z9 (rest, level 2), then the Z S service corridor and the service stairwell (skips the boss).",
+      "summary": "Spend the day collecting: outer-zone hooks (Z4 and the rest of Z3 were never cleared) before they close, the Greeters' Back Office, the Locker Room, the Green Room boxes. Ends at the service door in Zone S rather than the boss. Slow means the clock bites: each day the floor closes more of what you came to collect.",
       "stairwell_access": "Zone S service door (key or forced) to the service stairwell that drops to Z11.",
       "canon_refs": [
         {
@@ -310,7 +351,7 @@
       "achievements": [
         {
           "id": "ACH-0180",
-          "note": "Stair Seeker: locate the Stairwell before defeating the boss (00-overview.md section 5.10)."
+          "note": "Stair Seeker: locate the stairwell before defeating the boss (00-overview.md section 5.10)."
         },
         {
           "id": "ACH-0084",
@@ -472,7 +513,7 @@
       "map_in_the_mind": {
         "layout": "One carpeted saferoom: couch and fridge along one wall, the vending terminal and corkboard on the other, a crackling ceiling speaker.",
         "exits": [
-          "Back door toward Z5 (outer zones, closing soon).",
+          "Back door toward Z5 (a mid zone, closes Day 3), and Z4 beyond it (outer, closes Day 2).",
           "Side passage to Z7 (the Big Green EXIT).",
           "Door to Z8 (Mascot Locker Room)."
         ],
@@ -506,7 +547,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "ATTENTION, CRAWLERS: the Orientation Pit is now on a schedule, with a countdown, because 'take your time' was ruining the pool. You have {days} days, and a day ends when you sleep or when the clock says so. Find the Stairwell. The floor will not wait politely.",
+          "text": "ATTENTION, CRAWLERS: the Orientation Pit is now on a schedule, with a countdown, because 'take your time' was ruining the pool. You have {days} days, and a day ends when you sleep or when the clock says so. Find the stairwell. The floor will not wait politely.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -648,6 +689,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Route announced (dash, loot or clever)",
           "Key way chosen so far: bruiser, terminal, mystery or none",
           "Terminal key bought, and by whom (price in Budget at a glance)",
@@ -847,6 +889,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Greeters cleared, bypassed or fled",
           "Back Office cache taken (recipe card, oil, tools)",
           "Anyone fell into the pit",
@@ -1101,6 +1144,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Bruiser's key: who holds it, or lost",
           "Death save used, and by whom",
           "Proctor Bell: friendly or hostile (hints still available?)",
@@ -1198,7 +1242,7 @@
         "3": "A small group.",
         "4": "A full group, as in 00-overview.md section 9.2."
       },
-      "if_they_do_something_dumb": "If the party insists on a Long Rest outside a saferoom, remind them a field rest can only be a Short Rest and the Ticks interrupt it (00-overview.md section 2 rule 7); the price is cited at {{b70:floors.1.prices.rest_without_saferoom}}. If they ignore the Lights-Out hour entirely, the Ticks show up anyway. Never a wipe.",
+      "if_they_do_something_dumb": "If the party insists on a Long Rest outside a saferoom, remind them a field rest can only be a Short Rest and the Ticks interrupt it (00-overview.md section 2 rule 7); the price is cited at {{b70:floors.1.prices.rest_without_saferoom}}. If they ignore the Lights-Out hour entirely, the Ticks show up anyway. Never a wipe. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "canon_zone": "zW",
       "quick_run": {
         "setup": "The Pit goes dark for an hour and Ceiling Ticks drop from the vents.",
@@ -1228,6 +1272,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Wandering encounters used so far (cap of two)",
           "Anyone hurt or out of short-rest slots after the dark hour",
           "Any rest tried outside a saferoom, and whether the fee was paid"
@@ -1350,7 +1395,7 @@
         "3": "Same room.",
         "4": "Full ceremony, as written."
       },
-      "if_they_do_something_dumb": "If they skip the Long Rest and push on, the day rolls over at the 24-hour mark anyway and the next collapse step posts; they simply are not rested and being unrested is the cost (a field rest is only a Short Rest; price at {{b70:floors.1.prices.rest_without_saferoom}}). If they refuse the rest to chase the stage, Bell's last hint is cheap and the boss variant for a level-1 party applies (00-overview.md section 6.6).",
+      "if_they_do_something_dumb": "If they skip the Long Rest and push on, the day rolls over at the 24-hour mark anyway and the next collapse step posts; they simply are not rested and being unrested is the cost (a field rest is only a Short Rest; price at {{b70:floors.1.prices.rest_without_saferoom}}). If they refuse the rest to chase the stage, Bell's last hint is cheap and the boss variant for a level-1 party applies (00-overview.md section 6.6). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "canon_zone": "z09",
       "quick_run": {
         "setup": "The party reaches the Green Room as the day ends.",
@@ -1373,7 +1418,7 @@
           },
           {
             "choice": "What they leave in the outer zones",
-            "effect": "Anything uncollected in Z0 to Z4 and 3b is gone when those zones close on Day 2; the notice names the loss.",
+            "effect": "Anything uncollected in Z0 to Z4 and 3b (the Z4 hooks were never reached) is gone when those zones close on Day 2; the notice names the loss. Z5 is a mid zone and stays open one more day.",
             "reacts_in": [
               "enc-d02-01"
             ]
@@ -1388,9 +1433,10 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Long Rest taken, and the level reached",
           "Boxes opened (list who got what)",
-          "Outer-zone hooks left unclaimed",
+          "Outer-zone hooks left unclaimed (Z4 was never visited; check Z3)",
           "Replacement Crawlers joined"
         ]
       }
@@ -1399,9 +1445,9 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
-      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
-      "status": "partly filled; remaining slots listed in the report"
+      "item": "rules/70-encounter-budget-5e.json v0.1.7 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.7 unless listed in the build report).",
+      "status": "filled"
     },
     {
       "owner": "Caleb",
@@ -1437,11 +1483,12 @@
   "canon_table": {
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
-    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
   },
   "budget_file": {
-    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "expected_sha256": "858b7c1d8e96c12491fc062e925d062ea3c075f0199195c6311b8c2e5b82f846",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.1"
+    "version": "0.1.7"
   }
 }

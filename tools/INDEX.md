@@ -39,3 +39,4 @@ Summary: Files in tools/ - the AI GM's dice roller and live-state manager (Pytho
 | check_repo_safe.py | Repo safety check (pre-commit hook `tools/hooks/pre-commit`, installer `install_hooks.sh`): blocks the secret GM notes folder, sessions/, credit-ledger*, .env, logs and secret-shaped content; never prints matched text | Borent | draft |
 | tests/test_check_repo_safe.py | check_repo_safe: path rules, content patterns, real pre-commit hook run in a temp repo | Borent | draft |
 | tests/test_loot_totals_credits.py | `loot totals --include-credits` (all-in view, A12 valve check, `credits --floor`), default output unchanged | Borent | draft |
+| tests/test_loot_flag_lines.py | Per-floor inflation flag lines from the budget file (F1, F2 byte-identical, F3, F15, v0.1.5 map shapes, missing/corrupt file fallback) | Borent | draft |

@@ -95,6 +95,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | guides/gm-malfunction-player-guide-short.md | One-page version of the same guide (v0.2). | DCC Lore | draft |
 | drafts/f01-legendary-oneoffs-research.md | Canon research for Floor 1 / tutorial Legendary boxes and candidate Story Box cards (prep; deck built in Pass 13, partly superseded). | DCC Lore | draft |
 | drafts/premise-verification.md | Premise verification pass for the Valtay Core Book opening chapter: five claims (Introduction event, dungeon shape/win condition, stairwell counts per floor, difficulty and Crawler counts, floor-collapse fate of NPCs vs Crawlers), each tagged canon / inspired / unverified with ledger rows (CANON-LEDGER section 9.3, M-525..M-650, X-066..X-075) and conflicts with Caleb's overview. | DCC Lore | draft |
+| drafts/srd-nonsrd-audit.md | Which of the 16 listed backgrounds and 12 origin-feat entries are in SRD 5.2.1 (4 backgrounds, 4 feats) and which are not, with a one-line appendix action for each non-SRD item. Names only. | DCC Lore | draft |
 
 ## audits/
 | Path | Description | Owner | Status |

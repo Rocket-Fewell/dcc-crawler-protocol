@@ -38,7 +38,7 @@
    "why_inspired": "The ten-day figure matches the length canon guides expected, so a ten-day house Floor 2 reads as the \"normal\" version of the floor rather than the shortened one.",
    "fixed_points_keep_absolute": [
     {
-     "rule": "Safe rooms close one hour before collapse and eject occupants.",
+     "rule": "Saferooms close one hour before collapse and eject occupants.",
      "ledger_rows": [
       "M-360",
       "M-012"
@@ -75,8 +75,8 @@
   },
   {
    "id": "diff-safe-room-closure",
-   "difference": "Safe rooms close one hour before collapse and eject everyone.",
-   "floor1": "Safe rooms stay open until the floor ends.",
+   "difference": "Saferooms close one hour before collapse and eject everyone.",
+   "floor1": "Saferooms stay open until the floor ends.",
    "floor2": "Closure by patch at about 4 d 17 h; countdown inside.",
    "ledger_rows": [
     "M-012",
@@ -147,7 +147,7 @@
   },
   {
    "id": "diff-mailbox",
-   "difference": "Safe rooms gain a mailbox for the Dungeon Book of the Floor Club.",
+   "difference": "Saferooms gain a mailbox for the Dungeon Book of the Floor Club.",
    "floor1": "No mailboxes.",
    "floor2": "Subscribers get one tome per floor; others see an error line.",
    "ledger_rows": [
@@ -260,7 +260,7 @@
    {
     "id": "ann-patch-safe-room",
     "when": "about 4 d 17 h before collapse (after episode 5)",
-    "what": "Satan's Lil' Hedgehogs relocated; safe rooms will close one hour before collapse.",
+    "what": "Satan's Lil' Hedgehogs relocated; saferooms will close one hour before collapse.",
     "ledger_rows": [
      "M-012",
      "M-360",
@@ -363,7 +363,7 @@
   {
    "id": "t-ep5",
    "countdown": "4 d 18 h",
-   "event": "Episode 5 airs (safe-room siege shown).",
+   "event": "Episode 5 airs (saferoom siege shown).",
    "ledger_rows": [
     "M-381"
    ],
@@ -372,7 +372,7 @@
   {
    "id": "t-patch",
    "countdown": "4 d 17 h",
-   "event": "Patch: Hedgehogs relocated; safe rooms will close one hour before collapse.",
+   "event": "Patch: Hedgehogs relocated; saferooms will close one hour before collapse.",
    "ledger_rows": [
     "M-360",
     "M-382"
@@ -405,7 +405,7 @@
   {
    "id": "t-sr-close",
    "countdown": "0 d 01 h",
-   "event": "Safe rooms eject everyone inside.",
+   "event": "Saferooms eject everyone inside.",
    "ledger_rows": [
     "M-012",
     "M-360"
@@ -455,7 +455,7 @@
     "M-375",
     "M-376"
    ],
-   "staging": "A giant grid of narrower cinderblock halls over cracked white concrete, cut into regions that never connect. All stairwells exist from minute one, so the floor is a race against the clock rather than a search for a key. Bosses may now leave their rooms, safe rooms close an hour before the end, and the audience machinery (follows, favorites, ratings) is live.",
+   "staging": "A giant grid of narrower cinderblock halls over cracked white concrete, cut into regions that never connect. All stairwells exist from minute one, so the floor is a race against the clock rather than a search for a key. Bosses may now leave their rooms, saferooms close an hour before the end, and the audience machinery (follows, favorites, ratings) is live.",
    "announcement": {
     "style": "Cascadia sounds like a cheerful corporate announcer padding bad news with sales language; the one stern note is scolding Crawlers about bathrooms.",
     "quote": null,
@@ -563,7 +563,7 @@
   },
   {
    "id": "c2-safe-rooms",
-   "name": "Floor 2 safe rooms (closure, mailbox, staffed and unstaffed)",
+   "name": "Floor 2 saferooms (closure, mailbox, staffed and unstaffed)",
    "kind": "canon_feature_set",
    "tag": "canon",
    "ledger_rows": [
@@ -583,9 +583,9 @@
     "M-363",
     "M-382"
    ],
-   "staging": "Safe rooms are lifted whole from Earth (a storm shelter, an industrial kitchen, a chicken restaurant). Some have a Bopca Protector who cooks and fusses; some are bare. The new things on this floor are the mailbox and the closing hour: an hour before collapse the room spits everyone out and a countdown tells you it is coming.",
+   "staging": "Saferooms are lifted whole from Earth (a storm shelter, an industrial kitchen, a chicken restaurant). Some have a Bopca Protector who cooks and fusses; some are bare. The new things on this floor are the mailbox and the closing hour: an hour before collapse the room spits everyone out and a countdown tells you it is coming.",
    "announcement": {
-    "style": "The closure arrives as a cheerful patch note after a recap episode; the System frames it as fixing Crawlers who stayed, partied and died in Floor 1 safe rooms.",
+    "style": "The closure arrives as a cheerful patch note after a recap episode; the System frames it as fixing Crawlers who stayed, partied and died in Floor 1 saferooms.",
     "quote": "Starting on the Second Floor, all safe rooms close one hour before level collapse, teleporting any crawlers still inside to just outside the room.",
     "quote_row": "M-012"
    },
@@ -593,7 +593,7 @@
    "hazards": [
     {
      "id": "haz2-safe-room-closure",
-     "name": "Safe room closure (one hour before collapse)",
+     "name": "Saferoom closure (one hour before collapse)",
      "tag": "canon",
      "what": "Anyone still inside is teleported just outside; a Time to Safe Room Closure countdown shows inside. Added by patch about 4 d 17 h before collapse, so before then a room could be used to wait out the clock.",
      "ledger_rows": [
@@ -609,7 +609,7 @@
    "features": [
     {
      "id": "feat2-storm-shelter",
-     "name": "Storm-shelter safe room with mailbox",
+     "name": "Storm-shelter saferoom with mailbox",
      "tag": "canon",
      "what": "Suburban-style mailbox with the flag up. Only Dungeon Book of the Floor Club (or similar) subscribers can open it; everyone else gets a System error line. One tome per floor.",
      "ledger_rows": [
@@ -626,7 +626,7 @@
      "id": "feat2-big-shot-chicken",
      "name": "Big Shot Chicken (staffed by Qwist)",
      "tag": "canon",
-     "what": "A dusty chicken restaurant safe room run by a Bopca Protector who grooms and feeds guests. Where the Rage Elemental sieges the door.",
+     "what": "A dusty chicken restaurant saferoom run by a Bopca Protector who grooms and feeds guests. Where the Rage Elemental sieges the door.",
      "ledger_rows": [
       "M-467",
       "M-468",
@@ -637,7 +637,7 @@
     },
     {
      "id": "feat2-mana-toast",
-     "name": "Unstaffed safe room with Mana Toast",
+     "name": "Unstaffed saferoom with Mana Toast",
      "tag": "canon",
      "what": "A toaster oven gives each Crawler one piece of mana-restoring toast; no food or staff.",
      "ledger_rows": [
@@ -651,7 +651,7 @@
      "id": "feat2-safe-room-beds",
      "name": "Cots or private rooms",
      "tag": "canon",
-     "what": "Every safe room has dusty cots or private rooms, free or rented on this floor.",
+     "what": "Every saferoom has dusty cots or private rooms, free or rented on this floor.",
      "ledger_rows": [
       "M-354",
       "M-356"
@@ -1233,7 +1233,7 @@
     "M-478",
     "M-485"
    ],
-   "staging": "Floating brain-jellyfish drift in slow packs on the way to the safe room; the danger is a psionic headache rather than a bite. Elsewhere the roster is thin: a hedgehog mob that was pulled, a rumoured acid-dart spitter, and a blimp-shaped neighborhood boss the party killed off-screen.",
+   "staging": "Floating brain-jellyfish drift in slow packs on the way to the saferoom; the danger is a psionic headache rather than a bite. Elsewhere the roster is thin: a hedgehog mob that was pulled, a rumoured acid-dart spitter, and a blimp-shaped neighborhood boss the party killed off-screen.",
    "announcement": {
     "style": "Mob nameplates stay in the deadpan-snarky voice; the hedgehog removal is a cheerful patch-note apology.",
     "quote": "The Satan's Lil' Hedgehogs mob is relocated to a deeper floor.",
@@ -1324,7 +1324,7 @@
      "id": "feat2-brandon-training",
      "name": "Meadow Lark trains on Mind Horrors",
      "tag": "canon",
-     "what": "The Meadow Lark fighters grind a Mind Horror quadrant between the first safe room and the stairwell hunt.",
+     "what": "The Meadow Lark fighters grind a Mind Horror quadrant between the first saferoom and the stairwell hunt.",
      "ledger_rows": [
       "M-405",
       "M-477",
@@ -1377,7 +1377,7 @@
     "T-007",
     "T-008"
    ],
-   "staging": "A stern announcement says anyone human who relieves themselves outside a bathroom summons a smoke monster that kills them and their party. It happens in front of a convoy of frail elderly residents. The monster shreds through fog and arrows, reverses gravity, and then camps outside a safe room pounding at the door, until it is lured into a stairwell hole with an oil slick and bombs.",
+   "staging": "A stern announcement says anyone human who relieves themselves outside a bathroom summons a smoke monster that kills them and their party. It happens in front of a convoy of frail elderly residents. The monster shreds through fog and arrows, reverses gravity, and then camps outside a saferoom pounding at the door, until it is lured into a stairwell hole with an oil slick and bombs.",
    "announcement": {
     "style": "Cascadia scolds with a prim \"we are disappointed in the disrespect\" and then states the penalty as a cheerful threat.",
     "quote": "This elemental will kill them and everyone in their party before they can get their pants back up.",
@@ -1436,9 +1436,9 @@
     },
     {
      "id": "haz2-safe-room-siege",
-     "name": "Siege of the safe room",
+     "name": "Siege of the saferoom",
      "tag": "canon",
-     "what": "The elemental pounds the door for hours; opening the door ejects it into the hall for 75 to 120 seconds, and the later closure rule removes the safe room as a refuge.",
+     "what": "The elemental pounds the door for hours; opening the door ejects it into the hall for 75 to 120 seconds, and the later closure rule removes the saferoom as a refuge.",
      "ledger_rows": [
       "M-360",
       "M-381",
@@ -1492,7 +1492,7 @@
     "T-007",
     "T-019"
    ],
-   "staging": "A convoy of frail residents on a ten-car wheelchair train threads a grub-choked hall toward a stairwell the Crawlers scouted. Everything goes right until one resident drops his pants. Survivors then wait in a safe room while the Crawlers kill the elemental, and descend together.",
+   "staging": "A convoy of frail residents on a ten-car wheelchair train threads a grub-choked hall toward a stairwell the Crawlers scouted. Everything goes right until one resident drops his pants. Survivors then wait in a saferoom while the Crawlers kill the elemental, and descend together.",
    "announcement": {
     "style": "Zev reports in as a producer: the elderly storyline is playing well with viewers.",
     "quote": null,
@@ -1613,7 +1613,7 @@
      "id": "haz2-time-freeze",
      "name": "Time Freeze and teleport points",
      "tag": "canon",
-     "what": "Guests are held in a Time Freeze; each correct guess earns one teleport point to send someone to the nearest safe room.",
+     "what": "Guests are held in a Time Freeze; each correct guess earns one teleport point to send someone to the nearest saferoom.",
      "ledger_rows": [
       "M-492",
       "M-493",
@@ -1787,7 +1787,7 @@
   "No named quadrants, neighborhoods or Borough/City bosses are recorded for Floor 2 beyond the Krakaren Clone and Ralph.",
   "The Giant Blimp boss has no attack, tier or chamber description (backlog rb-03).",
   "Rot Stickers are on the infobox but have no text or cite (rb-06).",
-  "Only three safe rooms are documented (rb-11).",
+  "Only three saferooms are documented (rb-11).",
   "Li Jun, Li Na, Zhang and their manager have no separate rows beyond the Death Watch scene (rb-12).",
   "Reward-room contents beyond Mongo are web-only (rb-08).",
   "Mob levels, challenge ratings, credit values and loot amounts are deliberately omitted (Syndicate rules/10 and loot decks).",
@@ -1911,9 +1911,9 @@
   {
    "id": "rb-11",
    "priority": "medium",
-   "item": "Complete the Floor 2 safe-room list.",
+   "item": "Complete the Floor 2 saferoom list.",
    "why": "Only Big Shot Chicken, the storm shelter and the unstaffed Mana Toast room are documented.",
-   "how": "Read B1 ch30, 38, 41, 47 and the Safe Rooms page; list every named safe room.",
+   "how": "Read B1 ch30, 38, 41, 47 and the Safe Rooms page; list every named saferoom.",
    "ledger_rows": [
     "M-357",
     "M-506",

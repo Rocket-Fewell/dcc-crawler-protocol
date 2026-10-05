@@ -1521,14 +1521,17 @@ def cmd_loot(a):
         sales = [e for e in ledgers.read("story-box") if (e.get("event") == "sold" or (e.get("event") == "transferred" and e.get("price")))
                  and (not a.crawler or (e.get("crawler") or "").lower() == a.crawler.lower()) and (a.totals_floor is None or e.get("floor") == a.totals_floor)]
         out = {"ok": True, "totals": {c: {str(f): v for f, v in fl.items()} for c, fl in t.items()}, "story_box_sales": sales}
-        text = loot.totals_text(t, sales)
+        flags = loot.FlagLines()      # per-floor flag lines from rules/70-encounter-budget-5e.json (1,500 fallback, never an error)
+        text = loot.totals_text(t, sales, flags, footer=not getattr(a, "include_credits", False))
         if getattr(a, "include_credits", False):    # optional all-in view (Q-003 / A12): boxes + sale proceeds + earned credits; the default output above is unchanged
-            srcs = [x.strip().lower() for x in (a.credit_sources or ",".join(loot.CREDIT_SOURCES)).split(",") if x.strip()]
+            srcs = _credit_sources_arg(a.credit_sources)
             af = None if a.assume_floor is None else _floor_arg(a.assume_floor, None)
             inc = loot.credit_income(read_ledger()[0], srcs, a.crawler, a.totals_floor, af)
             ai = loot.all_in(t, sales, inc)
             out["all_in"] = {c: {("unrecorded" if f is None else str(f)): v for f, v in fl.items()} for c, fl in ai.items()}
-            text += "\n" + loot.all_in_text(ai, srcs)
+            text += "\n" + loot.all_in_text(ai, srcs, flags, footer=False)
+            fl_shown = {f for fl in t.values() for f in fl} | loot.a_floors(ai)
+            text += "".join("\n" + x for x in flags.footer(fl_shown))
         return out, text
     if a.action == "deeds":
         rows = [r for r in ledgers.read("story-box") if r.get("event") == "awarded"]
@@ -2006,7 +2009,7 @@ MAX_FLOOR = 18
 
 def _ascii_uint(raw):
     """Whole number written with ASCII digits 0-9 only (no signs, decimals, spaces inside, or look-alike Unicode digits). Returns int or None."""
-    t = str(raw).strip()
+    t = str(raw)                      # no strip: " 5", "5 " and "5\n" are refused, as are look-alike Unicode digits, signs and decimals
     return int(t) if re.fullmatch(r"[0-9]+", t) else None
 
 
@@ -2018,6 +2021,20 @@ def _floor_arg(raw, default):
     if n is None or not 1 <= n <= MAX_FLOOR:
         raise StateError(f"--floor must be a whole number from 1 to {MAX_FLOOR} (got {str(raw).strip()!r})")
     return n
+
+
+def _credit_sources_arg(raw):
+    """--credit-sources: only the known earned-credit sources (loot.CREDIT_SOURCES). Anything else (loot_body, transfer, box, sale ...) is refused, never silently counted."""
+    if raw is None:
+        return list(loot.CREDIT_SOURCES)
+    names = [x.strip().lower() for x in raw.split(",")]
+    if not [n for n in names if n]:
+        raise StateError(f"--credit-sources needs at least one source name. Valid names: {', '.join(sorted(loot.CREDIT_SOURCES))}")
+    bad = [n or "(empty)" for n in names if n not in loot.CREDIT_SOURCES]
+    if bad:
+        raise StateError(f"--credit-sources: unknown source name(s): {', '.join(dict.fromkeys(bad))}. Valid names: {', '.join(sorted(loot.CREDIT_SOURCES))}. "
+                         "(Box pulls, sales, transfers and body loot are never counted as earned credits.)")
+    return list(dict.fromkeys(names))
 
 
 def _items_digest(items):
@@ -2095,12 +2112,12 @@ def cmd_loot_body(a):
     require_active(who, "loot a body (benched Crawlers cannot be mules)")
     coins = 0
     if a.coins is not None:
-        if a.coins.strip().lower() == "all":
+        if a.coins.lower() == "all":
             coins = dead["credits"]
         elif _ascii_uint(a.coins) is not None:
             coins = _ascii_uint(a.coins)
         else:
-            raise StateError("--coins must be a whole number of credits or 'all'")
+            raise StateError(f"--coins must be a whole number of credits written with the digits 0-9 only (no spaces, signs, decimals or other characters), or 'all' (got {a.coins!r})")
         if coins < 0 or coins > dead["credits"]:
             raise StateError(f"{dead['name']} has {dead['credits']} credits; cannot loot {coins}")
     wanted = []
@@ -2135,7 +2152,8 @@ def cmd_loot_body(a):
     if a.dry_run:
         return {"ok": True, "dry_run": True, "coins": coins, "items": moved}, f"DRY RUN: {who['name']} would take {coins} credits and {_items_text(moved)} from {dead['name']}"
     tid = "body-" + dt.datetime.now().strftime("%Y%m%dT%H%M%S") + f"-{random.randrange(16**4):04x}"
-    base = {"event": "body_loot", "transfer_id": tid, "floor": floor, "coins": coins, "items": copy.deepcopy(moved)}
+    base = {"event": "body_loot", "transfer_id": tid, "floor": floor, "coins": coins, "items": copy.deepcopy(moved),
+            "item_count": sum(m["qty"] for m in moved), "items_digest": _items_digest(moved)}
     _RUN.update(reason=f"Looted from the body of {dead['name']} by {who['name']} ({coins} credits, {_items_text(moved)}): {a.reason.strip()}", source="loot_body",
                 row_extra={dead["name"]: {**base, "role": "from", "counterparty": who["name"]}, who["name"]: {**base, "role": "to", "counterparty": dead["name"]}}, force_rows={dead["name"], who["name"]})
 
@@ -2664,10 +2682,41 @@ def cmd_use_revive(a):
     return {"ok": True, "message": text}, text
 
 
+def _check_item_record(tag, rows, rec, label, seq, required_from):
+    """Shared item check for floor_lost.destroyed and body_loot rows: well-formed rows, no duplicates, item_count == summed quantities, and the fingerprint (items_digest) matches.
+    A row without a fingerprint passes only if it predates the first fingerprinted row of its kind (required_from)."""
+    out = []
+    if not all(isinstance(i, dict) and isinstance(i.get("name"), str) and i["name"].strip() and _is_int(i.get("qty")) and i["qty"] >= 1 for i in rows):
+        return [f"{tag} has a malformed {label} item row (needs a name and a quantity of 1 or more)"]
+    names = [i["name"].lower() for i in rows]
+    if len(set(names)) != len(names):
+        out.append(f"{tag} lists the same {label} item twice")
+    total = sum(i["qty"] for i in rows)
+    if not _is_int(rec.get("item_count")):
+        if label == "destroyed" or rec.get("items_digest") is not None or (required_from is not None and _is_int(seq) and seq >= required_from):
+            out.append(f"{tag} does not record item_count")
+    elif rec["item_count"] != total:
+        out.append(f"{tag} says item_count {rec['item_count']} but the {label} items add up to {total} (items list or count was edited)")
+    dg = rec.get("items_digest")
+    if dg is not None:
+        if dg != _items_digest(rows):
+            out.append(f"{tag}: the {label} items list does not match its recorded fingerprint (edited after it was written)")
+    elif required_from is not None and _is_int(seq) and seq > required_from:
+        out.append(f"{tag} has no items fingerprint (required for entries after #{required_from})")
+    return out
+
+
 def _verify_floor_events(entries, balances):
     """floor_lost: balance 0 and destroyed.coins == -delta (the exact coins), items listed. body_loot: each transfer_id has one from and one to row whose deltas cancel
     (coins counted once, never twice or lost) and whose item lists agree. A missing side is tolerated only when that Crawler is no longer in state.json (deleted, archived)."""
     out = []
+    # Backward compatible: rows written before the item fingerprint existed stay verifiable without one. Once a digested row of a kind appears at seq S, every later row
+    # of that kind must carry one too (so stripping the fingerprint from a new row is itself caught).
+    req = {}
+    for kind in ("floor_lost", "body_loot"):
+        seqs = [e["seq"] for e in entries if e.get("event") == kind and _is_int(e.get("seq"))
+                and isinstance(((e.get("destroyed") or {}) if kind == "floor_lost" else e).get("items_digest"), str)]
+        req[kind] = min(seqs) if seqs else None
     for e in entries:
         if e.get("event") != "floor_lost":
             continue
@@ -2679,21 +2728,7 @@ def _verify_floor_events(entries, balances):
         elif d["coins"] != -e["delta"]:
             out.append(f"{e['crawler']}: floor_lost entry #{e.get('seq')} says {d['coins']} coins destroyed but the delta is {e['delta']:+d}")
         if isinstance(d, dict) and isinstance(d.get("items"), list):
-            tag = f"{e['crawler']}: floor_lost entry #{e.get('seq')}"
-            rows = d["items"]
-            if not all(isinstance(i, dict) and isinstance(i.get("name"), str) and i["name"].strip() and _is_int(i.get("qty")) and i["qty"] >= 1 for i in rows):
-                out.append(f"{tag} has a malformed destroyed item row (needs a name and a quantity of 1 or more)")
-            else:
-                names = [i["name"].lower() for i in rows]
-                if len(set(names)) != len(names):
-                    out.append(f"{tag} lists the same destroyed item twice")
-                total = sum(i["qty"] for i in rows)
-                if not _is_int(d.get("item_count")):
-                    out.append(f"{tag} does not record item_count")
-                elif d["item_count"] != total:
-                    out.append(f"{tag} says item_count {d['item_count']} but the destroyed items add up to {total} (items list or count was edited)")
-                if d.get("items_digest") is not None and d["items_digest"] != _items_digest(rows):
-                    out.append(f"{tag}: the destroyed items list does not match its recorded fingerprint (edited after the write-off)")
+            out += _check_item_record(f"{e['crawler']}: floor_lost entry #{e.get('seq')}", d["items"], d, "destroyed", e.get("seq"), req["floor_lost"])
     groups = {}
     for e in entries:
         if e.get("event") == "body_loot":
@@ -2715,6 +2750,13 @@ def _verify_floor_events(entries, balances):
             out.append(f"body_loot {tid}: {f['crawler']} {f['delta']:+d} and {t['crawler']} {t['delta']:+d} do not match the {coins} coins looted")
         if key(f.get("items")) != key(t.get("items")):
             out.append(f"body_loot {tid}: the item lists of the two rows differ")
+        for r in (f, t):
+            if isinstance(r.get("items"), list):
+                out += _check_item_record(f"body_loot {tid} ({r.get('role')} row, {r['crawler']}, entry #{r.get('seq')})", r["items"], r, "looted", r.get("seq"), req["body_loot"])
+            else:
+                out.append(f"body_loot {tid}: the {r.get('role')} row for {r['crawler']} does not list the looted items")
+        if f.get("items_digest") != t.get("items_digest") or f.get("item_count") != t.get("item_count"):
+            out.append(f"body_loot {tid}: the two rows disagree on item_count / items fingerprint")
     return out
 
 

@@ -341,6 +341,107 @@ class Data:
 
 
 # ---------------------------------------------------------------- validation + resolution
+AUD_SCHEMA = "audience/1"
+AUD_NEVER = ["tag", "canon_tag", "status", "timing", "hours_note", "source", "source_sha256", "gm_note", "title", "audience", "set_piece", "optional"]
+
+
+def add_audience(doc, rep):
+    """Structured audience marking, added on top of the existing tag fields (nothing is removed or renamed).
+    Rule for consumers: default is GM-only. A player may see ONLY the fields named in audience_manifest.player_blocks;
+    never print a whole block that contains one of them (blocks also hold GM metadata)."""
+    blocks = []
+
+    def add(path, kind, field, blk, **kw):
+        if not isinstance(blk, dict):
+            return
+        ent = {"path": path, "kind": kind, "field": field}
+        if "{hours}" in str(blk.get(field, "")):
+            ent["needs_fill"] = ["hours"]
+        ent.update(kw)
+        blocks.append(ent)
+        blk["audience"] = "player"
+    for i, r in enumerate(doc["routes"]):
+        for k, v in r.get("voice_lines", {}).items():
+            add("/routes/%d/voice_lines/%s" % (i, k), "route_voice_line", "text", v)
+    for i, e in enumerate(doc["encounters"]):
+        for k, v in e.get("voice_lines", {}).items():
+            add("/encounters/%d/voice_lines/%s" % (i, k), "voice_line", "text", v, encounter=e["id"])
+        for j, ln in enumerate((e.get("zone_color") or {}).get("lines", [])):
+            add("/encounters/%d/zone_color/lines/%d" % (i, j), "zone_color", "text", ln, encounter=e["id"], optional=True)
+        sp = e.get("set_piece_intro")
+        if sp:
+            add("/encounters/%d/set_piece_intro" % i, "set_piece", "paragraphs", sp, encounter=e["id"], set_piece=True,
+                paragraphs_optional=[bool(q.get("optional")) for q in sp["paragraphs"]], text_field_joined="text")
+            sp["gm_note_audience"] = "gm"
+        for j, pa in enumerate(e.get("proposed_achievements", [])):
+            if pa.get("narration_tag") == PF:
+                blocks.append({"path": "/encounters/%d/proposed_achievements/%d" % (i, j), "kind": "achievement_narration", "field": "narration",
+                               "encounter": e["id"], "show_only_when": "the achievement is awarded (proposal, GM discretion)"})
+                pa["narration_audience"] = "player"; pa["audience"] = "gm"
+        for key in ("map_in_the_mind", "quick_run", "carry_on"):
+            if isinstance(e.get(key), dict):
+                e[key]["audience"] = "gm"
+        for key in ("loot_hooks", "achievement_hooks", "enemies", "crawler_hooks"):
+            for q in e.get(key, []) or []:
+                if isinstance(q, dict):
+                    q["audience"] = "gm"
+        if isinstance(e.get("zone_color"), dict) and e["zone_color"].get("gm_note"):
+            e["zone_color"]["gm_note_audience"] = "gm"
+        e["audience_default"] = "gm"
+    d = doc["day"]
+    for key, kind in (("tomorrow_notice", "system_notice"), ("collapse_notice", "system_notice"), ("stairwell_opening", "system_notice")):
+        add("/day/%s" % key, kind, "text", d.get(key))
+        if key == "collapse_notice" and isinstance(d.get(key), dict) and d[key].get("hours_note"):
+            d[key]["hours_note_audience"] = "gm"
+    ed = d.get("early_descent") or {}
+    add("/day/early_descent/player_prompt", "system_notice", "text", ed.get("player_prompt"))
+    add("/day/early_descent/free_window", "system_notice", "text", ed.get("free_window"))
+    fe = d.get("floor_exit") or {}
+    add("/day/floor_exit/system_line", "system_notice", "text", fe.get("system_line"))
+    add("/day/floor_exit/gm_warning", "exit_warning_read_aloud", "text", fe.get("gm_warning"),
+        note="key is named gm_warning but the text is read to the players; the GM-only warning is /day/gm_warning")
+    for j, pa in enumerate(d.get("proposed_achievements", [])):
+        if pa.get("narration_tag") == PF:
+            blocks.append({"path": "/day/proposed_achievements/%d" % j, "kind": "achievement_narration", "field": "narration",
+                           "show_only_when": "the achievement is awarded (proposal, GM discretion)"})
+            pa["narration_audience"] = "player"; pa["audience"] = "gm"
+    for key in ("gm_warning", "warning_checks"):
+        if isinstance(d.get(key), dict):
+            d[key]["audience"] = "gm"
+    for key in ("clock", "stairwell_key"):
+        if isinstance(doc.get(key), dict):
+            doc[key]["audience"] = "gm"
+    for q in doc.get("pending_inputs", []):
+        q["audience"] = "gm"
+    doc["audience_manifest"] = {
+        "schema": AUD_SCHEMA, "default": "gm",
+        "rule": "Everything not listed in player_blocks is GM-only, including every key added later. Show a player only the named field of a listed block; never print a whole block (blocks carry GM metadata such as status, hours_note, gm_note, source).",
+        "tag_mechanism": "Blocks carry tag: '[PLAYER-FACING]' or '[GM-FACING]' (also audience: 'player'|'gm'). Other tag values (inspired, canon, dash, pacing guide, ...) are provenance labels, not audiences. Inline '[GM-ONLY]' prefixes exist only inside GM-only fields.",
+        "never_show_fields": AUD_NEVER,
+        "player_blocks": blocks,
+    }
+    # completeness: every PF-tagged block is in the manifest and every manifest entry resolves
+    listed = {b["path"] for b in blocks}
+    stray = []
+
+    def scan(o, path):
+        if isinstance(o, dict):
+            if o.get("tag") == PF and path not in listed and not path.endswith("/zone_color") and "/proposed_achievements/" not in path:
+                stray.append(path)
+            for k, v in o.items():
+                scan(v, "%s/%s" % (path, k))
+        elif isinstance(o, list):
+            for i, v in enumerate(o):
+                scan(v, "%s/%d" % (path, i))
+    scan({k: doc[k] for k in ("routes", "encounters", "day")}, "")
+    stray = [s for s in stray]
+    bad_gm = [k for k in ("gm_warning", "warning_checks") if isinstance(d.get(k), dict) and d[k].get("tag") != "[GM-FACING]"]
+    if stray or bad_gm:
+        rep.fail("audience manifest", "[PLAYER-FACING] blocks missing from audience_manifest: %s %s" % (stray, bad_gm))
+    else:
+        rep.ok("audience manifest", "%d player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm" % len(blocks))
+
+
 def build(spec, data, rep):
     clock = spec["clock"]
     days = clock.get("days")
@@ -570,6 +671,13 @@ def build(spec, data, rep):
             rep.ok("GM collapse warning", "present on Day %d (Floor 1 start, and the last two days): death on a missed collapse, no Reprieve" % daynum)
         else:
             rep.fail("GM collapse warning", "Day 1 and the last two days need day.gm_warning tagged [GM-FACING] saying a missed collapse is death with no Reprieve")
+        wc_ = dd.get("warning_checks", {})
+        its_ = wc_.get("items", [])
+        if (wc_.get("tag") == "[GM-FACING]" and wc_.get("audience") == "gm" and [i_.get("id") for i_ in its_] == ["warn-floor-start", "warn-day-penultimate", "warn-day-last"]
+                and all(i_.get("label") for i_ in its_) and sum(1 for i_ in its_ if i_.get("this_page")) == 1):
+            rep.ok("warning checkboxes", "Floor 1 start, Day %d and Day %d warning checkboxes present, tagged [GM-FACING]" % (days - 1, days))
+        else:
+            rep.fail("warning checkboxes", "day.warning_checks needs tag [GM-FACING], audience gm, items warn-floor-start / warn-day-penultimate / warn-day-last, one marked this_page")
     bt = dd.get("budget_table", [])
     if bt and all(r.get("label") and "resolved" in r and "(unresolved)" not in r["resolved"]["display"] for r in bt):
         rep.ok("budget table", "%d rows, each shown with its rules/70 field path (guideline)" % len(bt))
@@ -655,6 +763,28 @@ def build(spec, data, rep):
                     co_refs += 1
         if not good:
             co_bad.append(eid)
+        sp_ = e.get("set_piece_intro")
+        if sp_ is not None:
+            ps_ = sp_.get("paragraphs") or []
+            ok_sp = (sp_.get("tag") == PF and sp_.get("canon_tag") == "inspired" and sp_.get("set_piece") is True and sp_.get("audience") == "player"
+                     and len(ps_) >= 2 and not ps_[0].get("optional") and not ps_[1].get("optional") and any(p_.get("optional") for p_ in ps_[2:])
+                     and all(p_.get("text") for p_ in ps_) and sp_.get("text") == "\n\n".join(p_["text"] for p_ in ps_)
+                     and "first two" in sp_.get("gm_note", "") and sp_.get("source"))
+            if not ok_sp:
+                rep.fail("%s set piece" % eid, "set_piece_intro needs tag [PLAYER-FACING], canon_tag inspired, set_piece true, audience player, paragraphs 1-2 required and later ones optional, text = the paragraphs joined, and a GM note saying the first two paragraphs alone work")
+            else:
+                src_ = sp_["source"]
+                if os.path.exists(src_):
+                    raw_ = re.sub(r"\s+", " ", re.sub(r"(?m)^>\s?", "", open(src_, encoding="utf-8").read()))
+                    miss_ = [i_ + 1 for i_, p_ in enumerate(ps_) if re.sub(r"\s+", " ", p_["text"]) not in raw_]
+                    if miss_:
+                        rep.fail("%s set piece" % eid, "paragraph(s) %s are not Lore's text as written in %s" % (miss_, src_))
+                    else:
+                        out["set_piece_intro"] = dict(sp_, source_sha256=hashlib.sha256(open(src_, "rb").read()).hexdigest())
+                        rep.ok("%s set piece" % eid, "%d paragraphs quoted as written from Lore's draft (sha256 %s), [PLAYER-FACING], inspired; paragraphs %s optional" % (
+                            len(ps_), out["set_piece_intro"]["source_sha256"][:12], ",".join(str(i_ + 1) for i_, p_ in enumerate(ps_) if p_.get("optional"))))
+                else:
+                    rep.warn("%s set piece" % eid, "Lore's draft not found at %s; text not re-verified against it" % src_)
         zc = e.get("zone_color")
         if zc is not None and not (zc.get("tag") == "inspired" and zc.get("lines") and all(l_.get("tag") == PF and l_.get("text") for l_ in zc["lines"])):
             zc_bad.append(eid)
@@ -853,6 +983,9 @@ def build(spec, data, rep):
             addpf("%s %s" % (x["id"], k), v)
         for i_, ln in enumerate((x.get("zone_color") or {}).get("lines", [])):
             addpf("%s zone color %d" % (x["id"], i_ + 1), ln)
+    for x in encs:
+        if x.get("set_piece_intro"):
+            pfb.append(("%s set piece (Dean Thudd intro)" % x["id"], x["set_piece_intro"]["text"], True))
     for key in ("tomorrow_notice", "collapse_notice", "stairwell_opening"):
         addpf(key, spec["day"].get(key))
     fe_ = spec["day"].get("floor_exit")
@@ -914,6 +1047,18 @@ def build(spec, data, rep):
         rep.fail("carry-on on every encounter", "missing or incomplete (changes with reacts_in or later_note, gm_tracks): %s" % ", ".join(co_bad))
     else:
         rep.ok("carry-on on every encounter", "%d encounters, %d references to later encounters, all exist and are later" % (len(encs), co_refs))
+    rf_ = clk_.get("rest_fee_note", {}) if isinstance((clk_ := spec["clock"]), dict) else {}
+    fee_txt_ = [(p_, s_) for p_, s_ in full if "rest_without_saferoom}}" in s_ or "rest-without-a-saferoom price" in s_]
+    rf_bad = [p_ for p_, s_ in fee_txt_ if "already quiet" not in s_]
+    if rf_.get("tag") == "[GM-FACING]" and "already quiet" in rf_.get("text", "") and not rf_bad:
+        rep.ok("field-rest fee note", "no fee if the spot is already quiet (GM ruling); stated on the clock and on all %d text(s) that charge the fee" % len(fee_txt_))
+    else:
+        rep.fail("field-rest fee note", "clock.rest_fee_note must be [GM-FACING] 'already quiet' and every text that charges the rest fee must say so: %s" % ", ".join(rf_bad))
+    fh_bad = [x["id"] for x in spec["encounters"] if not any(str(g).startswith("Floor hour") and "24 in-game hours" in str(g) for g in x.get("carry_on", {}).get("gm_tracks", []))]
+    if fh_bad:
+        rep.fail("floor-hour tracker", "GM tracks need a 'Floor hour' running-count line (hours elapsed vs the fixed 24-hour final collapse, overview section 2 rule 6) on: %s" % ", ".join(fh_bad))
+    else:
+        rep.ok("floor-hour tracker", "every encounter's GM tracks carry the running floor-hour count against the fixed 24-hour final collapse")
     if zc_bad:
         rep.fail("zone color", "needs tag inspired and [PLAYER-FACING] lines: %s" % ", ".join(zc_bad))
     longq = [p for p, s in full for q in re.findall(r'"([^"]+)"', s) if len(q.split()) > 25]
@@ -955,6 +1100,7 @@ def build(spec, data, rep):
         "slots": slots,
         "proposal_fields": proposals,
     }
+    add_audience(doc, rep)
     return doc
 
 
@@ -1022,6 +1168,12 @@ def render_md(doc):
         if gwn.get("lore_line"):
             w("Lore's line for it: \"%s\"" % gwn["lore_line"])
         w("")
+        if day.get("warning_checks"):
+            wc = day["warning_checks"]
+            w("**Warnings given** %s (tick each when you have said it):\n" % wc["tag"])
+            for i_ in wc["items"]:
+                w("- [ ] %s%s" % (i_["label"], " (this page)" if i_.get("this_page") else ""))
+            w("")
     if day.get("stairwell_opening"):
         so = day["stairwell_opening"]
         w("**Stairwell-opening announcement** %s (%s): \"%s\"\n" % (so["tag"], so["timing"], so["text"]))
@@ -1029,9 +1181,11 @@ def render_md(doc):
     w("**Final collapse (fixed, tagged *inspired*):** %s (%s)\n" % (fc["text"], fc["status"]))
     w("**Saferoom rule:** %s\n" % sr_["text"])
     w("Prices on the clock (budget file, GM-adaptable guideline):\n")
-    for k, lab in (("collapse_cost_slot", "Detour Tax (party toll, missed Stairwell key only)"), ("rest_without_saferoom_slot", "Rest without a saferoom (party fee)")):
+    for k, lab in (("collapse_cost_slot", "Detour Tax (party toll, missed Stairwell key only)"), ("rest_without_saferoom_slot", "Rest without a saferoom (party fee; none if the spot is already quiet)")):
         if k in clk:
             w("- **%s:** %s" % (lab, fill_text(clk[k])))
+    if clk.get("rest_fee_note"):
+        w("- %s %s" % (clk["rest_fee_note"]["tag"], clk["rest_fee_note"]["text"]))
     w("")
     if day.get("budget_table"):
         w("### Budget at a glance (rules/70-encounter-budget-5e.json v%s, GM-adaptable guideline)\n" % m.get("budget_file_version"))
@@ -1042,7 +1196,7 @@ def render_md(doc):
     w("**Day close notice for tomorrow** %s: \"%s\"\n" % (day["tomorrow_notice"]["tag"], day["tomorrow_notice"]["text"]))
     # routes
     w("## Routes to the Stairwell\n")
-    w("Three ways to leave. The Big Green EXIT (Z7) is bait, not a Stairwell. %s\n" % doc["stairwell_key"]["availability"])
+    w("Three ways to leave. The Big Green EXIT (Z7) is bait, not a stairwell. %s\n" % doc["stairwell_key"]["availability"])
     for r in doc["routes"]:
         w("### Route `%s`: %s\n" % (r["tag"], r["name"]))
         w("- **Path:** %s" % r["path"])
@@ -1138,6 +1292,13 @@ def render_md(doc):
             if k in e["voice_lines"]:
                 v = e["voice_lines"][k]
                 w("- %s *%s*%s: \"%s\"" % (v["tag"], k.replace("_", " ").replace("win alt", "win (alternate: no fight)"), " (set piece)" if v.get("set_piece") else "", v["text"]))
+        spi = e.get("set_piece_intro")
+        if spi:
+            w("")
+            w("**Set piece: %s** %s (set piece, tagged *%s*; Lore's text as written, %s). Paragraphs marked optional can be skipped.\n" % (spi["title"], spi["tag"], spi["canon_tag"], spi["source"]))
+            for i_, p_ in enumerate(spi["paragraphs"]):
+                w("> %s%s\n" % ("*(optional)* " if p_.get("optional") else "", p_["text"]))
+            w("GM note: %s" % spi["gm_note"])
         zc = e.get("zone_color")
         if zc:
             w("")

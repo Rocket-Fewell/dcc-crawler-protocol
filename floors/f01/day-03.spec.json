@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.7 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -60,7 +60,7 @@
       },
       {
         "day": 5,
-        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "event": "Only the stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
         "tag": "inspired (house)"
       }
     ],
@@ -106,12 +106,17 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+    }
   },
   "canon_table": {
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
-    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
   },
   "day": {
     "number": 3,
@@ -134,7 +139,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always)."
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -273,7 +278,7 @@
         }
       },
       {
-        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest where the spot is not already quiet, none where it is; no Long Rest)",
         "b70": {
           "kind": "party",
           "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
@@ -318,7 +323,7 @@
       "achievements": [
         {
           "id": "ACH-0200",
-          "note": "Speed Clear: reach the Stairwell under the par time."
+          "note": "Speed Clear: reach the stairwell under the par time."
         },
         {
           "id": "ACH-0868",
@@ -670,6 +675,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Terminal key bought, by whom",
           "Vendor items bought",
           "Read the Fine Print awarded, or not",
@@ -711,7 +717,13 @@
           "srd_name": "Giant Rat",
           "our_name": "Vent Rat (Giant Rat)",
           "name_source": "00-overview.md section 5.2 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.2 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+              "key": "giant-rat"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -726,7 +738,13 @@
           "srd_name": "Stirge",
           "our_name": "Ceiling Tick (Stirge)",
           "name_source": "00-overview.md section 5.11 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.2 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+              "key": "stirge"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -737,7 +755,12 @@
         }
       ],
       "enemies_note": "Confirmed by Syndicate (decision 026, ruling 5), tagged inspired: creatures from closing zones crowd the route. Reuses existing identities only. Counts toward the floor's wandering cap of two if the GM uses the Ticks (00-overview.md section 5.11).",
-      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d03_02.fit"
+        }
+      },
       "voice_lines": {
         "system_intro": {
           "text": "The hall is closing and so is your window. Rats and worse are leaving the zones that were turned off, and they're all headed your way.",
@@ -861,6 +884,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Wandering encounters used (running count against two)",
           "Bruiser's key lost, held or never taken",
           "HP and short-rest slots entering Day 4",
@@ -903,7 +927,13 @@
           "srd_name": "Skeleton",
           "our_name": "Usher (Skeleton)",
           "name_source": "00-overview.md section 6.4 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.3 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
+              "key": "skeleton"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -914,7 +944,12 @@
         }
       ],
       "enemies_note": "Ushers are on watch only if the party is spotted. Dean Thudd is on the stage, see enc-d05-03.",
-      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d03_03.fit"
+        }
+      },
       "voice_lines": {
         "system_intro": {
           "text": "The wings. Where heroes wait and stagehands judge them. Take notes. The pit is right there.",
@@ -998,6 +1033,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Cheese routes scouted (which ones)",
           "Spotted, and Ushers alerted",
           "Trophy or diploma items taken"
@@ -1008,9 +1044,9 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
-      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
-      "status": "partly filled; remaining slots listed in the report"
+      "item": "rules/70-encounter-budget-5e.json v0.1.7 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.7 unless listed in the build report).",
+      "status": "filled"
     },
     {
       "owner": "Caleb",
@@ -1044,8 +1080,8 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "expected_sha256": "858b7c1d8e96c12491fc062e925d062ea3c075f0199195c6311b8c2e5b82f846",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.1"
+    "version": "0.1.7"
   }
 }

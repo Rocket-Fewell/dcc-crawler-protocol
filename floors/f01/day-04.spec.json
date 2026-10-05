@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.7 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -60,7 +60,7 @@
       },
       {
         "day": 5,
-        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "event": "Only the stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
         "tag": "inspired (house)"
       }
     ],
@@ -106,12 +106,17 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+    }
   },
   "canon_table": {
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
-    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
   },
   "day": {
     "number": 4,
@@ -134,7 +139,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). The Green Room is where the day's Long Rest happens."
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). The Green Room is where the day's Long Rest happens. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -275,7 +280,7 @@
         }
       },
       {
-        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest where the spot is not already quiet, none where it is; no Long Rest)",
         "b70": {
           "kind": "party",
           "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
@@ -297,7 +302,31 @@
           ]
         }
       }
-    ]
+    ],
+    "warning_checks": {
+      "tag": "[GM-FACING]",
+      "audience": "gm",
+      "items": [
+        {
+          "id": "warn-floor-start",
+          "label": "Floor 1 start warning given (Day 1)",
+          "day": 1,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-penultimate",
+          "label": "Day 4 warning given",
+          "day": 4,
+          "this_page": true
+        },
+        {
+          "id": "warn-day-last",
+          "label": "Day 5 warning given",
+          "day": 5,
+          "this_page": false
+        }
+      ]
+    }
   },
   "routes": [
     {
@@ -552,7 +581,7 @@
           "tag": "[PLAYER-FACING]"
         },
         "win": {
-          "text": "Last meal eaten, last crumb shared, last coin spent. Go on. The building isn't going to hold your hand.",
+          "text": "Last meal eaten, last crumb shared, last credit spent. Go on. The building isn't going to hold your hand.",
           "tag": "[PLAYER-FACING]"
         }
       },
@@ -589,7 +618,7 @@
         "3": "Same.",
         "4": "Same."
       },
-      "if_they_do_something_dumb": "If someone tries to use the dead terminal, the screen shows OUT OF ORDER and a snarky line. If they try to rest here as if it were still a saferoom, it is a field rest: only a Short Rest, with the price cited at {{b70:floors.1.prices.rest_without_saferoom}} and no Long Rest. Never a wipe.",
+      "if_they_do_something_dumb": "If someone tries to use the dead terminal, the screen shows OUT OF ORDER and a snarky line. If they try to rest here as if it were still a saferoom, it is a field rest: only a Short Rest, with the price cited at {{b70:floors.1.prices.rest_without_saferoom}} and no Long Rest. Never a wipe. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -635,6 +664,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Terminal key missed, and by whom",
           "Anyone who tried to rest in the Break Room",
           "Credits and potions left going into Day 5"
@@ -736,7 +766,7 @@
         "3": "A small group.",
         "4": "A full group, as in 00-overview.md section 9.2."
       },
-      "if_they_do_something_dumb": "Resting outside the Green Room is allowed, but it is only a Short Rest: the price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet one and grants no Long Rest. If the party tries to Long Rest in the open anyway, the System refuses and the Ticks interrupt. Never a wipe.",
+      "if_they_do_something_dumb": "Resting outside the Green Room is allowed, but it is only a Short Rest: the price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet one and grants no Long Rest. If the party tries to Long Rest in the open anyway, the System refuses and the Ticks interrupt. Never a wipe. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "zone_color": {
         "tag": "inspired",
         "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1, own words, optional read-aloud)",
@@ -788,6 +818,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Field rest taken, and whether the fee was paid (Budget at a glance)",
           "Wandering encounters used (cap of two)",
           "Short Rests used today (cap of four)"
@@ -828,7 +859,13 @@
           "srd_name": "Skeleton",
           "our_name": "Usher (Skeleton)",
           "name_source": "00-overview.md section 6.4 nameplate",
-          "count_slot": "[COUNT: cite 00-overview.md section 9.3 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.d04_03.counts_by_party_size",
+              "key": "skeleton"
+            }
+          },
           "cr_slot": {
             "b70": {
               "kind": "cr",
@@ -839,7 +876,12 @@
         }
       ],
       "enemies_note": "Ushers sweep the approach with flashlights. Dean Thudd is on the stage (enc-d05-03).",
-      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d04_03.fit"
+        }
+      },
       "voice_lines": {
         "system_intro": {
           "text": "The usher's flashlight finds you before you find the door. 'Please silence your screams,' says a polite voice from the dark. They don't mean the phones.",
@@ -916,6 +958,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Ushers cleared or avoided",
           "Dean alerted, yes or no",
           "Flashlights or lamps taken"
@@ -1028,7 +1071,7 @@
         "3": "Same.",
         "4": "Same."
       },
-      "if_they_do_something_dumb": "If they skip the rest and push on, the day rolls over at 24 in-game hours anyway; they start Day 5 unrested (a field rest is only a Short Rest, price cited at {{b70:floors.1.prices.rest_without_saferoom}}). If someone attacks another Crawler in the saferoom, the canon three-strikes freeze applies. Never a wipe.",
+      "if_they_do_something_dumb": "If they skip the rest and push on, the day rolls over at 24 in-game hours anyway; they start Day 5 unrested (a field rest is only a Short Rest, price cited at {{b70:floors.1.prices.rest_without_saferoom}}). If someone attacks another Crawler in the saferoom, the canon three-strikes freeze applies. Never a wipe. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -1066,6 +1109,7 @@
           }
         ],
         "gm_tracks": [
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Long Rest taken in the Green Room",
           "Plan for Day 5 (route, who waits, who descends)",
           "GM Day 4 warning given"
@@ -1076,9 +1120,9 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
-      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
-      "status": "partly filled; remaining slots listed in the report"
+      "item": "rules/70-encounter-budget-5e.json v0.1.7 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.7 unless listed in the build report).",
+      "status": "filled"
     },
     {
       "owner": "Caleb",
@@ -1112,8 +1156,8 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "expected_sha256": "858b7c1d8e96c12491fc062e925d062ea3c075f0199195c6311b8c2e5b82f846",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.1"
+    "version": "0.1.7"
   }
 }

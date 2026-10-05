@@ -1,11 +1,11 @@
 # Master Index
-Owner: Borent Corp Systems Architect | Status: draft | Version: 0.2 | Updated: 2026-10-04
+Owner: Borent Corp Systems Architect | Status: draft | Version: 0.2.1 | Updated: 2026-10-04
 Summary: Every file in the campaign workspace, one line each.
 
 | Path | Description | Owner | Status |
 |---|---|---|---|
 | NAMING-CONVENTIONS.md | Folder layout and file naming rules | Borent | final |
-| STATE-OF-BUILD.md | Handoff: who owns what, what needs Caleb, what is live vs pending, open questions, standing rulings, backlog, how to update, live/ops runbook (v0.1.4) | Syndicate + Architect | living |
+| STATE-OF-BUILD.md | Handoff: who owns what, what needs Caleb, what is live vs pending, open questions, standing rulings, backlog, how to update, live/ops runbook (v0.1.5) | Syndicate + Architect | living |
 | lore/INDEX.md | Canon catalogs, sources and research tools | DCC Lore | living |
 | lore/CANON-LEDGER.md | Verified/unverified canon findings with sources | DCC Lore | in progress |
 | rules/_source-crawler-protocol/02-core-rules-5e.md | 5e (2024) overlay: loot boxes, death and revival | Syndicate | draft v0.2.2 |
@@ -14,17 +14,17 @@ Summary: Every file in the campaign workspace, one line each.
 | decisions/002-death-mode.md | Death Mode decision: Costly Revives, very costly and rare | Borent | final |
 | decisions/003-death-bypasses.md | Earned death bypasses vs revives | Borent | final |
 | decisions/004-crafting-system.md | Crafting system added; ownership split | Borent | final |
-| rules/10-core-rules-5e.md | 5e (2024) overlay: achievements, loot boxes, death/revival, Floor 1 quickstart, crafting pointer, pets pointer, Roll method pointer | Syndicate | draft v0.2.14 |
-| characters/character-creation-5e.md | 5e character creation (intake) guide and crawler sheet template (§3.6: Roll method) | Syndicate | draft v0.2.3 |
+| rules/10-core-rules-5e.md | 5e (2024) overlay: achievements, loot boxes, death/revival, Floor 1 quickstart, crafting pointer, pets pointer, Roll method pointer | Syndicate | draft v0.2.15 |
+| characters/character-creation-5e.md | 5e character creation (intake) guide and crawler sheet template (§3.6: Roll method) | Syndicate | draft v0.2.4 |
 | characters/create-flow-spec-5e.md | Create flow spec: screen-by-screen build spec for the silent Discord /create flow (16 active screens, S12 retired; data model, edge cases, glossary, beta test script; section 8: several Crawlers per player; section 9: GM-filed pets, no pet question in /create; S8 Roll method (v0.1.10), active Crawler, session lock, text channel per Crawler, /delete, NEEDS BUILD list; acceptance and audit checklists) | Syndicate | draft v0.1.12 |
-| characters/hornn-wizard.md | (not in this repo: live player sheet) Hornn crawler sheet (Wizard, Human, Merchant) | AI GM | draft v0.4 |
-| characters/moses-barbarian.md | (not in this repo: live player sheet) Trailer Park Moses crawler sheet (Barbarian, Goliath, Artisan) | AI GM | draft v0.4 |
+| characters/hornn-wizard.md | Hornn crawler sheet (Wizard, Human, Merchant), intake sealed and registered in state | AI GM | draft v0.4 |
+| characters/moses-barbarian.md | Trailer Park Moses (John) crawler sheet (Barbarian, Goliath, Artisan), intake sealed and registered in state | AI GM | draft v0.4 |
 | floors/f01/00-overview.md | Floor 1 The Orientation Pit: full 5e module (zones, boss, announcements, goblin-workshop cache) | Syndicate | draft v0.2.5 |
 | floors/00-campaign-narrative.md | Campaign spine: Continuum floor structure and story arc | Syndicate | draft v0.3 |
 | tables/achievements.csv | Achievement catalog, 1,823 rows (data); card in tables/achievements.md | Syndicate | draft |
 | tables/achievements.xlsx | Achievement catalog, same data with filters (data) | Syndicate | draft |
 | tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.0 |
-| tables/chargen-5e.json | /create data (2024 PHB written from memory; see meta.verify_todo; v0.1.5 rewords Find Familiar (no pet hint); v0.1.4 added ability_methods.roll) | Syndicate | draft v0.1.5 |
+| tables/chargen-5e.json | /create data (2024 PHB written from memory; see meta.verify_todo; v0.1.5 rewords Find Familiar (no pet hint); v0.1.6 notes cite the current version; ability_methods.roll added in v0.1.4) | Syndicate | draft v0.1.6 |
 | tables/create-flow-lines.json | System lines and survey pool for the /create flow | Borent | draft |
 | tables/item-reskins.json | SRD item -> flavored name table (189 entries). A SYMLINK to ../../dcc-lore/tables/item-reskins.json (single source, owner Lore); hash in item-reskins.version.json | Lore | draft |
 | tables/pet-species.json | SRD Beast list (CR 1/4 or lower) for GM-run pets | Borent | draft |
@@ -63,6 +63,7 @@ Summary: Every file in the campaign workspace, one line each.
 | decisions/018-story-box-answers.md | Story Boxes approved with Caleb's answers (saferoom only, tradeable and sellable, rival rule, pet-Crawler, rota guideline, buyback by rung) | Syndicate | final |
 | decisions/019-credit-multiplier-fees.md | Floor credit multiplier: not on box credit pulls; on rewards and System fees (repairs, buyback, crafting prices) | Syndicate | final |
 | rules/60-pets-companions-5e.md | Pets and companions: GM-filed Beast CR 1/4 or lower, never offered, no pet field in /create, Biscuit link, two off-menu pet items, Assigned Companion compared | Syndicate | draft v0.1.0 |
+| decisions/029-book-source-conflicts.md | Book source conflicts: SRD-only printed, non-SRD backgrounds/feats = table/GM appendix with own reskin names, Floor 2 house timer 10 days, Floor 1 Reprieve ON by default and never covers a collapse death | Syndicate | final |
 | decisions/024-roll-method-ability-scores.md | Roll as a third ability-score method in /create (3 arrays of 4d6 drop lowest, keep ONE totalling 73+, reroll all if none, logged, switch `create.allow_roll` default ON) | Syndicate | final |
 | decisions/022-pets-and-companions.md | Pets and companions ruling (Caleb approved; never offered; GM files from the player's own free text) | Syndicate | final |
 | decisions/020-multiple-crawlers-active-swap.md | Many Crawlers per player, one active, swaps only outside an open session, text channel per Crawler, /delete (final-pending-Caleb-override) | Syndicate | final-pending-Caleb-override |
@@ -101,6 +102,7 @@ Summary: Every file in the campaign workspace, one line each.
 | tools/tests/test_ledger.py | Tests for the credit ledger | Borent | draft |
 | tools/tests/test_floor_lost.py | Tests for floor-lost and loot-body (decision 028) and the Accountant fixes (strict quantities, companions, ASCII digits, tamper detection, floor 1-18) | Borent | draft |
 | tools/tests/test_loot_totals_credits.py | Tests for `loot totals --include-credits` (all-in view, A12 valve check) | Borent | draft |
+| tools/tests/test_loot_flag_lines.py | Tests for the per-floor inflation flag line in `loot totals` (budget file, fallback 1,500) | Borent | draft |
 | tools/tests/test_publisher.py | Tests for publisher.py (cards, diffs, channels) | Borent | draft |
 | tools/tests/test_loot_ledgers.py | Tests for loot draws, box ledger, banner archive, achievement reward | Borent | draft |
 | tools/tests/test_story_box.py | Tests for Story Boxes (deeds, cap, rota, shared, restore, no credit conversion) | Borent | draft |

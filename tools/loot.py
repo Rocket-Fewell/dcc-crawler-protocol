@@ -124,7 +124,128 @@ def credits_amount(card, rng=None):
     return int(card.get("credit_value") or 0), None
 
 
-INFLATION_FLAG = 1500  # rules/40 section 3.2 audit hint: economy credit_value per crawler per floor on F1-2; story_value is excluded
+INFLATION_FLAG = 1500  # rules/40 section 3.2 audit hint: economy credit_value per crawler per floor on F1-2; story_value is excluded; also the fallback for every floor
+
+
+# --- per-floor flag line (Syndicate ruling): rules/70-encounter-budget-5e.json is the source of truth. Floors 1-2 stay 1,500; Floor 3+ = 2.165 x expected counted income
+# rounded to the nearest 500, which the file records per floor. Read order: (1) a per-floor flag map added in v0.1.5 or later (key name found by name, see _find_flag_map),
+# (2) proposed_floor_growth_curve.table[].flag_line (v0.1.4), (3) 1,500 with a note (never an error).
+BUDGET_REL = os.path.join("rules", "70-encounter-budget-5e.json")
+FLAG_MAP_KEYS = ("flag_lines", "flag_line_by_floor", "flag_lines_by_floor", "flag_by_floor", "per_floor_flag", "per_floor_flags", "per_floor_flag_lines", "floor_flag_lines", "flag_map")
+FLAG_VALUE_KEYS = ("flag_line", "flag", "line", "value")
+
+
+def budget_path():
+    return os.path.join(os.environ.get("DCC_CAMPAIGN_DIR") or "/workspace/dcc-campaign", BUDGET_REL)
+
+
+def _floor_of(key):
+    m = re.search(r"(\d+)$", str(key).strip())
+    return int(m.group(1)) if m else None
+
+
+def _flag_value(v):
+    if isinstance(v, dict):
+        for k in FLAG_VALUE_KEYS:
+            if k in v:
+                return _flag_value(v[k])
+        return None
+    return int(v) if isinstance(v, (int, float)) and not isinstance(v, bool) and v > 0 else None
+
+
+def _parse_flag_map(m):
+    out = {}
+    if isinstance(m, dict):
+        items = list(m.items())
+    elif isinstance(m, list):
+        items = [(r.get("floor"), r) for r in m if isinstance(r, dict) and r.get("floor") is not None]
+    else:
+        return out
+    for k, v in items:
+        f, val = _floor_of(k), _flag_value(v)
+        if f is not None and 1 <= f <= 18 and val:
+            out[f] = val
+    return out
+
+
+def _find_flag_map(d):
+    """(path, {floor: value}) of a per-floor flag map in the budget file (v0.1.5+), or (None, {}). Tries the likely names under the top level, economy_audit and
+    proposed_floor_growth_curve first, then any key containing 'flag' (skipping the v0.1.4 table rows) whose value looks like a floor-keyed map."""
+    for base_name, base in (("", d), ("economy_audit", d.get("economy_audit")), ("proposed_floor_growth_curve", d.get("proposed_floor_growth_curve")),
+                            ("economy_audit.governor", (d.get("economy_audit") or {}).get("governor") if isinstance(d.get("economy_audit"), dict) else None)):
+        if isinstance(base, dict):
+            for k in FLAG_MAP_KEYS:
+                m = _parse_flag_map(base.get(k))
+                if len(m) >= 2:
+                    return (base_name + "." if base_name else "") + k, m
+    found = []
+
+    def walk(o, path):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                p = f"{path}.{k}" if path else k
+                if "flag" in str(k).lower() and isinstance(v, (dict, list)) and not p.startswith("proposed_floor_growth_curve.table"):
+                    m = _parse_flag_map(v)
+                    if len(m) >= 2:
+                        found.append((p, m))
+                        continue
+                walk(v, p)
+        elif isinstance(o, list) and not path.startswith("proposed_floor_growth_curve.table"):
+            for i, v in enumerate(o):
+                walk(v, f"{path}[{i}]")
+    walk(d, "")
+    return found[0] if found else (None, {})
+
+
+class FlagLines:
+    """Per-floor inflation flag lines read from the budget file. Never raises: a missing/unreadable file or key means 1,500 (INFLATION_FLAG) plus a note for Floor 3+."""
+
+    def __init__(self, path=None):
+        self.map, self.source, self.version, self.problem = {}, None, None, None
+        path = path or budget_path()
+        try:
+            with open(path, encoding="utf-8") as f:
+                d = json.load(f)
+        except FileNotFoundError:
+            self.problem = "budget file rules/70-encounter-budget-5e.json not found"
+            return
+        except (OSError, ValueError) as e:
+            self.problem = f"budget file unreadable ({type(e).__name__})"
+            return
+        if not isinstance(d, dict):
+            self.problem = "budget file is not a JSON object"
+            return
+        self.version = d.get("version")
+        key, m = _find_flag_map(d)
+        if m:
+            self.map, self.source = m, f"{key} (v{self.version})"
+        else:
+            tbl = (d.get("proposed_floor_growth_curve") or {}).get("table") if isinstance(d.get("proposed_floor_growth_curve"), dict) else None
+            m = _parse_flag_map(tbl)
+            if m:
+                self.map, self.source = m, f"proposed_floor_growth_curve.table[].flag_line (v{self.version})"
+            else:
+                self.problem = "no per-floor flag line found in the budget file"
+
+    def line(self, floor):
+        """(value, note_or_None). Floor 1-2 without a file value is a silent 1,500; Floor 3+ without one is 1,500 plus a note."""
+        if isinstance(floor, int) and floor in self.map:
+            return self.map[floor], None
+        if isinstance(floor, int) and floor >= 3:
+            return INFLATION_FLAG, f"F{floor}: no flag line in the budget file ({self.problem or 'floor missing from its flag map'}); using the default {INFLATION_FLAG:,} credits, which is not floor-scaled"
+        return INFLATION_FLAG, None
+
+    def footer(self, floors):
+        """Lines naming the flag line used for each Floor 3+ shown (nothing for Floor 1-2, so their output is unchanged)."""
+        fl = sorted({f for f in floors if isinstance(f, int) and f >= 3})
+        if not fl:
+            return []
+        out = []
+        used = [f for f in fl if f in self.map]
+        if used:
+            out.append("FLAG LINES in use (credits per Crawler for the floor, source " + (self.source or "?") + "): " + ", ".join(f"F{f} {self.map[f]:,}" for f in used))
+        out += ["NOTE: " + self.line(f)[1] for f in fl if f not in self.map]
+        return out
 
 
 def deed_key(text):
@@ -247,10 +368,7 @@ def credit_income(entries, sources=CREDIT_SOURCES, crawler=None, floor=None, ass
 
 def all_in(t, sales, income):
     """{crawler: {floor: {boxes, sale_proceeds, earned_credits, all_in}}} from the box totals, Story Box sales and credit_income()."""
-    proceeds = {}
-    for e in sales:
-        k = (e.get("crawler"), e.get("floor"))
-        proceeds[k] = proceeds.get(k, 0) + (e.get("price") or 0)
+    proceeds = sale_proceeds(sales)
     keys = set()
     for c, fl in t.items():
         keys |= {(c, f) for f in fl}
@@ -265,24 +383,49 @@ def all_in(t, sales, income):
     return out
 
 
-def all_in_text(a, sources):
+def a_floors(a):
+    return {f for fl in a.values() for f in fl}
+
+
+def all_in_text(a, sources, flags=None, footer=True):
+    flags = flags or FlagLines()
     lines = ["ALL-IN credits per Crawler per floor (boxes + Story Box sale proceeds + earned credits from sources: " + ", ".join(sources) + "):"]
     unassigned = 0
     for c, floors in sorted(a.items()):
         for fl, v in sorted(floors.items(), key=lambda kv: (kv[0] is None, kv[0])):
             if fl is None:
                 unassigned += v["earned_credits"]
-            lines.append(f"- {c} " + (f"F{fl}" if fl is not None else "floor not recorded") + f": boxes {v['boxes']:g} + sale proceeds {v['sale_proceeds']:g} + earned credits {v['earned_credits']:g} = all-in {v['all_in']:g}")
-            if v["all_in"] > INFLATION_FLAG:
-                lines.append(f"FLAG: {c} F{fl} all-in {v['all_in']:g} is over {INFLATION_FLAG:,} credits for the floor")
+            lines.append(f"- {c} " + floor_label(fl) + f": boxes {v['boxes']:g} + sale proceeds {v['sale_proceeds']:g} + earned credits {v['earned_credits']:g} = all-in {v['all_in']:g}")
+            limit = flags.line(fl)[0]
+            if v["all_in"] > limit:
+                lines.append(f"FLAG: {c} {floor_label(fl)} all-in {v['all_in']:g} is over {limit:,} credits for the floor")
             if fl == VALVE_FLOOR:
-                lines.append(f"VALVE (optional, A12): {c} F{fl} all-in {v['all_in']:g} " + (f"has reached {VALVE_AT}: the GM may hand-pick the Boss Box from cards worth {VALVE_CARD_MAX} or less" if v["all_in"] >= VALVE_AT else f"is below {VALVE_AT}: no valve"))
+                lines.append(f"VALVE (optional, A12): {c} {floor_label(fl)} all-in {v['all_in']:g} " + (f"has reached {VALVE_AT}: the GM may hand-pick the Boss Box from cards worth {VALVE_CARD_MAX} or less" if v["all_in"] >= VALVE_AT else f"is below {VALVE_AT}: no valve"))
     if unassigned:
         lines.append(f"NOTE: {unassigned:g} earned credits have no floor recorded; pass --assume-floor N, or record --floor N on `credits` from now on")
+    if footer:
+        lines += flags.footer(a_floors(a))
     return "\n".join(lines)
 
 
-def totals_text(t, sales=()):
+def floor_label(fl):
+    """'F3' for a floor, 'no floor set' when none was recorded (never 'FNone')."""
+    return f"F{fl}" if fl is not None else "no floor set"
+
+
+def sale_proceeds(sales):
+    """{(crawler, floor): credits} from Story Box SALES to the System only. A priced Crawler-to-Crawler transfer moves credits between players; it is never income."""
+    out = {}
+    for e in sales:
+        if e.get("event") != "sold":
+            continue
+        k = (e.get("crawler"), e.get("floor"))
+        out[k] = out.get(k, 0) + (e.get("price") or 0)
+    return out
+
+
+def totals_text(t, sales=(), flags=None, footer=True):
+    flags = flags or FlagLines()
     if not t and not sales:
         return "no loot draws recorded"
     story = any(v["story_value"] or v["legendary"] for fl in t.values() for v in fl.values())
@@ -290,22 +433,22 @@ def totals_text(t, sales=()):
     ge = gs = 0
     for c, floors in sorted(t.items()):
         for fl, v in sorted(floors.items(), key=lambda kv: (kv[0] is None, kv[0])):
-            lines.append(f"- {c} F{fl}: economy {v['economy_value']:g} | " + (f"story {v['story_value']:g} | " if story else "") + f"{v['draws']} draw(s)" + (f" ({v['legendary']} Legendary)" if v["legendary"] else ""))
+            lines.append(f"- {c} {floor_label(fl)}: economy {v['economy_value']:g} | " + (f"story {v['story_value']:g} | " if story else "") + f"{v['draws']} draw(s)" + (f" ({v['legendary']} Legendary)" if v["legendary"] else ""))
             ge += v["economy_value"]
             gs += v["story_value"]
-    proceeds = {}
-    for e in sales:
-        k = (e.get("crawler"), e.get("floor"))
-        proceeds[k] = proceeds.get(k, 0) + (e.get("price") or 0)
+    proceeds = sale_proceeds(sales)
     for c, floors in sorted(t.items()):
         for fl, v in sorted(floors.items(), key=lambda kv: (kv[0] is None, kv[0])):
             pr = proceeds.get((c, fl), 0)
-            if v["economy_value"] + pr > INFLATION_FLAG:
-                lines.append(f"FLAG: {c} F{fl} economy value {v['economy_value']:g}" + (f" + {pr:g} Story Box sale proceeds" if pr else "") + f" is over {INFLATION_FLAG:,} (the award's story value is excluded; sale proceeds count)")
+            limit = flags.line(fl)[0]
+            if v["economy_value"] + pr > limit:
+                lines.append(f"FLAG: {c} {floor_label(fl)} economy value {v['economy_value']:g}" + (f" + {pr:g} Story Box sale proceeds" if pr else "") + f" is over {limit:,} (the award's story value is excluded; sale proceeds count)")
     for e in sales:
         lines.append(f"FLAG: {e.get('crawler')} " + ("sold" if e.get("event") == "sold" else f"transferred (for {e.get('price', 0)} credits) to {e.get('to')}") +
-                     f" Story Box item {e.get('item')} on F{e.get('floor')}: {e.get('price', 0)} credits received, story value {e.get('story_value', 0):g} is provenance only and was NOT credited ({e.get('reason', '')})")
+                     f" Story Box item {e.get('item')} on {floor_label(e.get('floor'))}: " + (f"{e.get('price', 0)} credits received" if e.get("event") == "sold" else f"{e.get('price', 0)} credits changed hands between Crawlers, NOT counted as income (a transfer is not a sale)") + f", story value {e.get('story_value', 0):g} is provenance only and was NOT credited ({e.get('reason', '')})")
     lines.append(f"TOTAL economy {ge:g} (what the Accountant audits)" + (f" | story {gs:g} (reported separately)" if story else ""))
+    if footer:
+        lines += flags.footer({fl for floors in t.values() for fl in floors})
     return "\n".join(lines)
 
 

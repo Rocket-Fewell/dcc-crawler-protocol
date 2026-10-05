@@ -2,8 +2,8 @@
 Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
 
 
-- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.14.
-- rules/20-crafting-5e.md: crafting rules (tables, levels, ingredients, recipes, potion limits, explosives, failure, System snark, quick reference). Owner: Syndicate. Status: review v0.3.3 (all open questions answered by Caleb 2026-10-04 and applied; decision 013-crafting).
+- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.15.
+- rules/20-crafting-5e.md: crafting rules (tables, levels, ingredients, recipes, potion limits, explosives, failure, System snark, quick reference). Owner: Syndicate. Status: review v0.3.5 (all open questions answered by Caleb 2026-10-04 and applied; decision 013-crafting; workstation prices follow the F3-18 schedule in 9.1a, decision 030).
 - rules/30-species-supplement-5e.md: species supplement (Floor 3 Offer of starting species + two oddities, free optional rebuild, 12 DCC-style oddities tagged CANON / CANON-INSPIRED / HOUSE, balance table, open questions, source map). Owner: Syndicate. Status: draft v0.1.4.
 - rules/40-loot-deck-spec-5e.md: loot deck spec (JSON card + deck-file schema with credit_value and draw_weight, GM draw rules, Floor 1-2 starter 5e item reference, 5 sample cards, open questions). Owner: Syndicate. Status: draft v0.1.5.
 - rules/42-house-items-f01.md: final rules text, card JSON and Lore diff list for four house items not in SRD 5.2 (Cloak of Many Fashions, Pole of Collapsing, Mystery Key, Potion of Fire Breath) plus the Enhanced Pet Biscuit Story Box item. Owner: Syndicate. Status: draft v0.2.2.
@@ -15,4 +15,4 @@ Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
 - rules/_source-crawler-protocol/: link to the original Crawler Protocol folder (working source; originals of every copied file stay there).
 
 **Path map** (cross-references inside the copied files use the source names): `02-core-rules-5e.md` = rules/10-core-rules-5e.md; `03-character-creation-5e.md` = characters/character-creation-5e.md; `floors/floor-01-5e.md` = floors/f01/00-overview.md; `05-campaign-narrative.md` = floors/00-campaign-narrative.md; `reference/achievements.csv|xlsx` = tables/achievements.csv|xlsx; `DECISION-death-mode.md` = decisions/005-death-mode-tuning.md.
-- rules/70-encounter-budget-5e.json (+ .md companion): encounter budget v0.1.0, the only source the Encounter Bot cites for difficulty, XP budgets, CR caps, credits, box odds and Floor 1 clock prices (decision 027).
+- rules/70-encounter-budget-5e.json (+ .md companion): encounter budget v0.1.7 (sha256 858b7c1d8e96...), the only source the Encounter Bot cites for difficulty, XP budgets, CR caps, credits, box odds and Floor 1 clock prices, and the source of truth for the loot tool's per-floor flag lines (`flag_line_by_floor`) and the adopted crafting-price schedule (`q6_crafting_price_proposal`) (decisions 027, 030). Audit line 1,500 per Crawler per floor on F1-2; F4-F6 days 20/25/30 are a house rule (Q-001).
