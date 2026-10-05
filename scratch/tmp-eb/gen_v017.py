@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
-import json, glob, hashlib, math, random, statistics, sys
-ROOT = "/workspace/dcc-campaign"
+import json, glob, hashlib, math, os, random, statistics, sys
+_HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
 OUT = ROOT + "/rules/70-encounter-budget-5e.json"
 
 # ---------- SRD 5.2.1 tables ----------
@@ -197,7 +198,7 @@ for fl in range(1,7):
 
 # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
 LINE=1500
-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
+SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
 def floor_econ(fl):
     F=floors[str(fl)]
     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]

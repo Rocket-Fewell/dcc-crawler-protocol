@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
-import json, glob, hashlib, math, random, statistics, sys
-ROOT = "/workspace/dcc-campaign"
+import json, glob, hashlib, math, os, random, statistics, sys
+_HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
 OUT = ROOT + "/rules/70-encounter-budget-5e.json"
 
 # ---------- SRD 5.2.1 tables ----------
@@ -240,7 +241,7 @@ econ["not_counted"]=["Story Box story_value (rules/45 6.3 excludes it from the f
 econ["counted_but_unplanned"]=["Story Box item sale proceeds (fixed sale_value 100/250/500 by rung, rules/45 4.6): count toward the flag. Headroom covers a rung 0 or rung 1 sale; a rung 2 sale (500) would flag, and the Accountant flags but never blocks."]
 
 # ---------- simulation (tail check) ----------
-sys.path.insert(0,"/workspace/tmp/eb")
+sys.path.insert(0, _HERE)
 import tail
 os_cwd = __import__("os").chdir(ROOT)
 o1=floors["1"]["boxes"]["odds_per_encounter_by_tier"]; o2=floors["2"]["boxes"]["odds_per_encounter_by_tier"]
