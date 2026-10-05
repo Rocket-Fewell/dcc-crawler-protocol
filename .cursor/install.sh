@@ -2,9 +2,9 @@
 # Cloud Agent install. Idempotent. Must exit.
 set -euo pipefail
 
-if ! command -v ffmpeg >/dev/null 2>&1; then
+if ! command -v ffmpeg >/dev/null 2>&1 || ! command -v rsync >/dev/null 2>&1; then
   sudo apt-get update
-  sudo apt-get install -y --no-install-recommends ffmpeg ca-certificates
+  sudo apt-get install -y --no-install-recommends ffmpeg ca-certificates rsync
 fi
 
 if ! command -v node >/dev/null 2>&1 || ! node -e 'const p=process.versions.node.split(".").map(Number); if (p[0]<22 || (p[0]===22 && p[1]<12)) process.exit(1)'; then
