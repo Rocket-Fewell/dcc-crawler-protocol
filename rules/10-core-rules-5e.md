@@ -1,4 +1,4 @@
-# 02 — Core Rules (5e Overlay) v0.2.18
+# 02 — Core Rules (5e Overlay) v0.2.19
 Owner: Syndicate | Status: draft | Version: 0.2.18 | Updated: 2026-10-05
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
@@ -130,7 +130,7 @@ The five custom stats (Strike / Grit / Wits / Sneak / Presence), the +3/+2/+1/+0
 
 ### 2.2 Level bands (suggested)
 
-**Standard track (default):** a crawler **arrives on Floor N at level N** and **descends at level N+1**. Floor 18 runs at level 18 and may hit 19–20 in the finale. This lines up nicely: the 2024 subclass feature at level 3 lands exactly when crawlers reach the Continuum on Floor 3 (see §7.3).
+**Standard track (default; decision 033):** a crawler **arrives on Floor N at level N** on Floors **1–3**, at level **N+1** on Floors **4–9**, and at level **N+2** on Floors **10–18**. Descent / Floor Onboarding still grants the next floor's arrival level, except Floor 1 (Green Room mid-floor; stairwell grants no extra level). **Floor 3** and **Floor 9** each grant an **extra +1 from the end boss** before that descent fires, so crawlers **arrive Floor 4 at level 5** and **Floor 10 at level 12**. The track **lands at level 20 on arrival at Floor 18**; finale bonus levels (old 19–20) are removed (already at cap). The 2024 subclass feature at level 3 still lands when crawlers reach the Continuum on Floor 3 (see §7.3).
 
 **Slow-burn track (table option):** for grittier play capping near level 15.
 
@@ -138,29 +138,29 @@ The five custom stats (Strike / Grit / Wits / Sneak / Presence), the +3/+2/+1/+0
 |------:|:------------------------:|:-------------------------:|--------------------|
 | 1 | 1 → 2 | 1 → 2 | Tier 1 |
 | 2 | 2 → 3 | 2 → 3 | Tier 1 |
-| 3 | 3 → 4 | 3 → 4 | Tier 1 |
-| 4 | 4 → 5 | 4 → 5 | Tier 1 → 2 |
-| 5 | 5 → 6 | 5 | Tier 2 |
-| 6 | 6 → 7 | 5 → 6 | Tier 2 |
-| 7 | 7 → 8 | 6 → 7 | Tier 2 |
-| 8 | 8 → 9 | 7 → 8 | Tier 2 |
-| 9 | 9 → 10 | 8 → 9 | Tier 2 |
-| 10 | 10 → 11 | 9 | Tier 2 → 3 |
-| 11 | 11 → 12 | 9 → 10 | Tier 3 |
-| 12 | 12 → 13 | 10 → 11 | Tier 3 |
-| 13 | 13 → 14 | 11 → 12 | Tier 3 |
-| 14 | 14 → 15 | 12 | Tier 3 |
-| 15 | 15 → 16 | 12 → 13 | Tier 3 |
-| 16 | 16 → 17 | 13 → 14 | Tier 3 → 4 |
-| 17 | 17 → 18 | 14 → 15 | Tier 4 |
-| 18 | 18 → 19/20 (finale) | 15 | Tier 4 |
+| 3 | 3 → 4 (boss); F4 onboarding → 5 | 3 → 4 | Tier 1 |
+| 4 | 5 → 6 | 4 → 5 | Tier 1 → 2 |
+| 5 | 6 → 7 | 5 | Tier 2 |
+| 6 | 7 → 8 | 5 → 6 | Tier 2 |
+| 7 | 8 → 9 | 6 → 7 | Tier 2 |
+| 8 | 9 → 10 | 7 → 8 | Tier 2 |
+| 9 | 10 → 11 (boss); F10 onboarding → 12 | 8 → 9 | Tier 2 → 3 |
+| 10 | 12 → 13 | 9 | Tier 3 |
+| 11 | 13 → 14 | 9 → 10 | Tier 3 |
+| 12 | 14 → 15 | 10 → 11 | Tier 3 |
+| 13 | 15 → 16 | 11 → 12 | Tier 3 |
+| 14 | 16 → 17 | 12 | Tier 3 |
+| 15 | 17 → 18 | 12 → 13 | Tier 3 → 4 |
+| 16 | 18 → 19 | 13 → 14 | Tier 4 |
+| 17 | 19 → 20 | 14 → 15 | Tier 4 |
+| 18 | 20 → 20 (cap) | 15 | Tier 4 |
 
 ### 2.3 Advancement: milestones (default) or XP (option)
 
 **Default: milestone leveling tied to floors.**
 
 - **Descent milestone:** reaching the floor's exit (stairwell / gate / objective) alive grants the level for the next floor, applied **at the first saferoom of the new floor** (the System calls it "Floor Onboarding").
-- **Mid-floor milestone (optional):** long floors (the AI's call, or the floor doc's) may split the level: half-way objective or floor boss = level up, descent = none. Never grant more than **one level per floor** on the standard track (Floor 18's finale is the exception).
+- **Mid-floor milestone (optional):** long floors (the AI's call, or the floor doc's) may split the level: half-way objective or floor boss = level up, descent = none. Never grant more than **one level per floor** on the standard track, **except** Floor **3** and Floor **9** end bosses (each +1, then normal descent/onboarding still fires — decision **033**) and Floor 1's Green Room mid-floor grant (stairwell grants no extra level). Floor 18's old finale 19–20 levels are **removed** (arrive at 20 already).
 - **Floor 1 uses this split (v0.2.4).** Floor 1's boss is CR 2 (§8.3, §10.3), beyond a High budget for four level-1 crawlers, so **level 2 is granted at Floor 1's second saferoom (the Green Room, "Midterm Onboarding"), before the boss**, as written in `floors/floor-01-5e.md` §2 rule 3. The Floor 1 stairwell grants **no extra level**; crawlers arrive on Floor 2 at level 2, matching §2.2. Floors 2+ use the Descent milestone as above unless their floor doc says otherwise.
 - **Catch-up:** a crawler who is behind (replacement, missed sessions with no autopilot) is brought to the party's lowest level at the next saferoom. No one levels above the band.
 
@@ -761,14 +761,14 @@ The old "saferoom revival service" is **retired**; the Rare Offer replaces it.
 
 #### 6.4.3 Floor gating (retained) [HOUSE]
 
-The System's "refund desk" opens as a spell level first becomes reachable on the standard track (a crawler arrives on Floor N at level N, §2.2). It applies to Vouchers and every other route: a *Revivify* Voucher found early is "not yet in warranty" and does nothing (it may be held).
+The System's "refund desk" opens when the **standard track first brings the party to the character level that can cast that spell** (§2.2 arrive levels after decision **033**; no longer "arrive Floor N at level N"). It applies to Vouchers and every other route: a *Revivify* Voucher found early is "not yet in warranty" and does nothing (it may be held).
 
-| Spell tier (as written) | System "refund" label | Earliest floor | Fee (credits, flat) | Pick weight (two picks) |
-|--------------------------|-----------------------|:--------------:|:-------------------:|:-----------------------:|
-| *Revivify* (3rd level; within 1 minute of death; returns at 1 HP) | Quick Refund | **5** | **5,000** | **Standard** (one step above Light) |
-| *Raise Dead* (5th; within 10 days; the d20 penalty as written) | Standard Refund | **9** | **15,000** | **Heavy** |
-| *Resurrection* (7th; within a century) | Full Refund | **13** | **40,000** | **Heavy** |
-| *True Resurrection* (9th) | Platinum Refund | **17** | **100,000** | **Heavy**, plus the AI adds one story consequence |
+| Spell tier (as written) | System "refund" label | Earliest floor (std track) | Fee (credits, flat) | Pick weight (two picks) |
+|--------------------------|-----------------------|:--------------------------:|:-------------------:|:-----------------------:|
+| *Revivify* (3rd level; within 1 minute of death; returns at 1 HP) | Quick Refund | **4** (arrive level 5) | **5,000** | **Standard** (one step above Light) |
+| *Raise Dead* (5th; within 10 days; the d20 penalty as written) | Standard Refund | **8** (arrive level 9) | **15,000** | **Heavy** |
+| *Resurrection* (7th; within a century) | Full Refund | **11** (arrive level 13) | **40,000** | **Heavy** |
+| *True Resurrection* (9th) | Platinum Refund | **15** (arrive level 17) | **100,000** | **Heavy**, plus the AI adds one story consequence |
 
 *Label: **HOUSE**: the floor gates, the spell-tier "refund" labels, and the Fees are invented; no canon revival spell is sold.* The 5e time windows and spell penalties apply as written. The Fee is **flat credits** (not multiplied by the §3.9 floor multiplier) and includes the spell's material components. Floor docs may move a gate (a floor with a "no refunds" rule). Always check the active floor doc first.
 
@@ -1205,6 +1205,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
 | **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
 | **v0.2.16** | 2026-10-04 | **Whole credits only (rules lead ruling, 2026-10-04):** §5.10 says balances are never fractional (matches `tools/state.py` and decision 028); sp/cp are list prices only (1 sp = 0.1, 1 cp = 0.01 credit, reference); the "0.5 credit, 0.05 credit" balance wording is removed; buying rounds UP per cart line (matches `bot/src/create/rules.js`), selling at half rounds DOWN per line (matches `tools/state.py` pet buyback). No price changed. |
+| **v0.2.19** | 2026-10-05 | **F3/F9 double level bumps (decision 033, Caleb executive):** §2.2 arrive bands N / N+1 / N+2; F3 and F9 end boss +1 then normal onboarding; arrive F4 at 5, F10 at 12, F18 at 20 (finale 19–20 levels removed). §2.3 one-level rule updated. §6.4.3 refund desk re-keyed to arrive levels (floors 4 / 8 / 11 / 15). Accountant re-cuts rules/70 + 75; Book Author Ch1/Ch2. |
 | **v0.2.18** | 2026-10-05 | **Field-rest fee clarified (Season Zero):** §5.6 — Short Rest free if already quiet; rules/70 fee buys quiet for a Short Rest in a noisy spot; never a Long Rest outside a saferoom. Decision 031. Day pages already matched. No number changed. |
 | **v0.2.17** | 2026-10-04 | **Rules lead rulings (2026-10-04):** (1) Platinum floors: §4.5 wins, no Platinum on F1–8. §4.1 Platinum row now says Legendary achievements F9+ (Gold row: Legendary achievements F3–8, Silver on F1–2); Appendix A maps a Legendary-loot achievement to Gold F3–8 (Silver F1–2) / Platinum F9–14. (2) Story Box cap override is the GM's with a logged reason, Caleb can veto (Caleb's later 2026-10-04 ruling: the rota is a guideline and the only hard Story Box rule is one per floor, which the GM can override with a logged reason; the GM may adapt as play goes). Same text in §4.1, §4.5 and §4.7. Unopened box still bound; item inside tradeable, lootable, sellable. No number changed. |
 

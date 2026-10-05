@@ -168,7 +168,13 @@ Ability scores, d20 tests, Advantage and Disadvantage, proficiency, Armor Class,
 
 ### Levels and Advancement
 
-The standard pace is **one level per floor**. A Crawler arrives on Floor N at level N and descends at level N + 1. By the time you reach Floor 3, that puts you at level 3, which is when the 2024 classes choose their subclasses, and when the Crawl lets you pick an Official Class Title. By Floor 18 you are level 18, with levels 19 and 20 saved for the finale.
+The standard pace is **one level per floor**, with two big exceptions. A Crawler arrives on Floor N at level N through Floor 3, which is when the 2024 classes choose their subclasses and the Crawl lets you pick an Official Class Title. **Beating Floor 3's end boss grants a bonus level**, and descending grants the usual one, so you arrive on **Floor 4 at level 5**. **Floor 9's end boss does the same**, so you arrive on **Floor 10 at level 12**. From there it is one level per floor again, and you reach **Floor 18 at level 20**. {{HOUSE}}
+
+| Floors | Arrival level |
+|---|---|
+| 1–3 | Floor number (1, 2, 3) |
+| 4–9 | Floor number + 1 (5 to 10) |
+| 10–18 | Floor number + 2 (12 to 20) |
 
 Leveling is **milestone-based**. You earn the level when you reach the floor's exit alive. It applies at the first saferoom of the next floor, which the System calls **Floor Onboarding**. Floor 1 uses a split rule: **level 2 arrives at Floor 1's second saferoom (the Green Room), before the boss**, which the System calls **Midterm Onboarding**, so that the boss is a fair fight for four Crawlers. The Floor 1 stairwell grants no extra level; you arrive on Floor 2 already at level 2. A Crawler who is behind (a replacement, a missed session) is brought up to the party's lowest level at the next saferoom. Nobody levels above the floor's band.
 
