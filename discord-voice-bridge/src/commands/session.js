@@ -39,7 +39,9 @@ export async function execute(interaction, ctx) {
   if (sub === 'status') return reply(describe(ctx));
   if (sub === 'list') {
     const active = ctx.config.campaign.sessionId;
-    return reply(listSessions().map((id) => `${id === active ? '▶' : '•'} **${id}**${readProfile(id).label ? ` - ${readProfile(id).label}` : ''}`).join('\n'));
+    const rows = listSessions().map((id) => `${id === active ? '▶' : '•'} **${id}**${readProfile(id).label ? ` - ${readProfile(id).label}` : ''}${id === 'alpha' ? ' (live table files under sessions/)' : ''}`);
+    rows.push('_Create a new empty campaign:_ `python3 tools/new-session.py <id>` (does not switch). Switch with `/session use <id>` after `/leave`.');
+    return reply(rows.join('\n'));
   }
   if (!canManage(interaction)) return reply('You need the **Manage Server** permission to switch campaign sessions.');
   const id = interaction.options.getString('id', true).trim().toLowerCase();

@@ -1,5 +1,7 @@
 # Floor 1 Legendary One-Offs: Canon Research and Candidate Cards (Prep Only)
-Owner: DCC Lore | Status: draft (prep; deck built, candidates LEG-05..07 superseded) | Version: 0.2 | Updated: 2026-10-04
+
+> Spelling note 2026-10-05: house prose uses **saferoom** (one word). Ledger quotes untouched.
+Owner: DCC Lore | Status: draft (prep; deck built, candidates LEG-05..07 superseded) | Version: 0.2 | Updated: 2026-10-05
 Summary: Every canon Legendary (and Celestial) box, item or achievement reward on Floor 1 or in the tutorial, with deed, box, contents, who got it, confidence and short quotes; plus 8 candidate Story Box cards (HOUSE mechanics, suggested story_value) ready to turn into a deck once Syndicate posts spec section 2.8 and Caleb approves the floor-ceiling exception.
 Depends on: CANON-LEDGER.md v1.8 (sections 3, 4c, 1, 16), rules/40-loot-deck-spec-5e.md v0.1.3 (section 2.8 draft, section 3.2 Legendary band), rules/42-house-items-f01.md (Enhanced Pet Biscuit card f01-any-0055). Consumers: Syndicate (spec 2.8), Caleb (approval), DCC Lore (deck build later).
 
@@ -26,7 +28,7 @@ Short quotes (exact, from local files):
 - Box 3: "It is given to Frank Q for killing his brother-in-law upon entering the Dungeon." (W:That's the Spirit Box). Item: "Legendary That's the Spirit Box awarded to Frank Q on the First Floor" (W:Enchanted Night Wyrm's Ring of Divine Suffering).
 
 ### 2.1 Item mechanics (canon, for adaptation)
-- **Enhanced Pet Biscuit** (I-007): consumable, 100+ random effects, "half of which are good and half of which lean toward neutral or disastrous" (M-235). Mordecai: sell it, or use only in a Safe Room (M-234). Donut got Enhanced Growth: "gives her four (automatically assigned) stat points each time she levels up" (M-238). Pet to Crawler rules: Paramour variant resets level to 1 and gives a crawler number (M-236, M-237, C-028). Donut's change is a melt into goo (R-037, B1). Prepotente got his on Floor 3 (R-062, M-037), not on Floor 1.
+- **Enhanced Pet Biscuit** (I-007): consumable, 100+ random effects, "half of which are good and half of which lean toward neutral or disastrous" (M-235). Mordecai: sell it, or use only in a saferoom (M-234). Donut got Enhanced Growth: "gives her four (automatically assigned) stat points each time she levels up" (M-238). Pet to Crawler rules: Paramour variant resets level to 1 and gives a crawler number (M-236, M-237, C-028). Donut's change is a melt into goo (R-037, B1). Prepotente got his on Floor 3 (R-062, M-037), not on Floor 1.
 - **Crown of the Sepsis Whore** (I-014): Fleeting, Unique tiara; +5 INT, +5 Good First Impression, 15% Sepsis on attacks; permanently places the wearer in the Blood Sultanate line of succession on Floor 9. "Because the crown is Fleeting, it crumbles to dust when removed and regenerates elsewhere in the Dungeon" (M-232).
 - **Ring of Divine Suffering** (I-025, S-011): +5% all stats, Marked for Death skill (mark a full-health crawler; wearer cannot heal while the mark lives; permanent stat gain when it dies). A Faction Wars artifact that makes the wearer a hunter target (Floor 6). It is cursed in play: it led to Yvette's death on Floor 1.
 

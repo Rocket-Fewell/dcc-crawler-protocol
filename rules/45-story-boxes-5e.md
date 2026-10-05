@@ -133,30 +133,30 @@ Use the Exchange framework: name the player you are addressing, set `sessions/fo
 
 **Step 3. Pick the card.** Hand-pick from the Story Box deck, never roll for it. Check the power note against §4.1. Tailor the reskin to the Crawler's hidden Fan Profile if it helps (§5.3). Run `state.py loot story-box ... --dry-run` to see the plan and any warnings.
 
-**Step 4. Announce** (text and voice in the same beat, calm moment: not mid-turn in combat; end of the round at the earliest). The deed is recorded and announced now, at award time; the box is **not** opened now (Step 6). The banner follows the Achievement announcements rule:
+**Step 4. Announce** (text and voice in the same beat, calm moment: not mid-turn in combat; end of the round at the earliest). The deed is recorded and announced now, at award time; the box is **not** opened now (Step 6). The banner follows the Achievement announcements rule (decision 032: **[GM]** voice for banner + description + Reward punchline; never [SYSTEM]):
 ```
-[SYSTEM] New achievement! <Deed Title>.
+[GM] New achievement! <Deed Title>.
 <one line, second person, what they did, with a jab at the choice>
 Reward: You've received a Legendary <Deed Taunt> Box!
 ```
 Pet case:
 ```
-[SYSTEM] New achievement! Four Paws Over the Threshold.
+[GM] New achievement! Four Paws Over the Threshold.
 You marched a creature with four legs into a building built to eat people. It did not consent. It looks great.
 Reward: You've received a Legendary Four Paws Over the Threshold Box!
 ```
 Family case:
 ```
-[SYSTEM] New achievement! Family Reunion, Now Streaming.
+[GM] New achievement! Family Reunion, Now Streaming.
 You met the rival you left behind and finished the argument in front of an audience. Seven million viewers just learned your whole childhood.
 Reward: You've received a Legendary Family Reunion, Now Streaming Box!
 ```
-**Step 5. Hold the box.** The box goes into the Crawler's System Inventory **unopened**, with one line (no dice):
-`[SYSTEM] Box held. Production will open it in a saferoom, where the lawyers can watch.`
+**Step 5. Hold the box.** The box goes into the Crawler's System Inventory **unopened**, with one snarky hold line (no dice) under **[GM]** (decision 032):
+`[GM] Box held. Production will open it in a saferoom, where the lawyers can watch.`
 Then let the table react for one beat and play on.
 
-**Step 6. Open in the next saferoom** (Caleb, 2026-10-04: loot boxes, Story Boxes included, can ONLY be opened in a saferoom; core §4.4 is unchanged). If the Crawler dies first, the unopened box is reclaimed with their other unopened boxes (core §6.2); the deed stays recorded (no second payout) but the box no longer counts toward the cap, so another Crawler can be awarded one (§6.3). At the opening give one beat of suspense, one line, no dice (the contents are already chosen; do not fake a roll):
-`[SYSTEM] Opening. Production asks the audience to hold its applause. The audience declines.`
+**Step 6. Open in the next saferoom** (Caleb, 2026-10-04: loot boxes, Story Boxes included, can ONLY be opened in a saferoom; core §4.4 is unchanged). If the Crawler dies first, the unopened box is reclaimed with their other unopened boxes (core §6.2); the deed stays recorded (no second payout) but the box no longer counts toward the cap, so another Crawler can be awarded one (§6.3). At the opening give one beat of suspense, one snarky line under **[GM]**, no dice (the contents are already chosen; do not fake a roll):
+`[GM] Opening. Production asks the audience to hold its applause. The audience declines.`
 Then read the item the way rules/40 §2.5 says, with the power note's player-visible parts:
 ```
 + <reskin_name>

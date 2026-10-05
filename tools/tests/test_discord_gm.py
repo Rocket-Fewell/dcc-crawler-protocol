@@ -22,7 +22,7 @@ class SpotlightTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.path = os.path.join(self.tmp.name, "sub", "spotlight.json")
-        env = mock.patch.dict(os.environ, {"SPOTLIGHT_FILE": self.path}, clear=False)
+        env = mock.patch.dict(os.environ, {"SPOTLIGHT_FILE": self.path, "DCC_SESSION": "alpha"}, clear=False)  # pin alpha: main() follows the live active session and would repoint the module defaults
         env.start()
         self.addCleanup(env.stop)
         os.environ.pop("GM_DISCORD_TOKEN", None)
@@ -132,7 +132,7 @@ class StopTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.path = os.path.join(self.tmp.name, "nested", "voice-control.json")
-        env = mock.patch.dict(os.environ, {"VOICE_CONTROL_FILE": self.path})
+        env = mock.patch.dict(os.environ, {"VOICE_CONTROL_FILE": self.path, "DCC_SESSION": "alpha"})  # pin alpha: main() follows the live active session and would repoint the module defaults
         env.start()
         self.addCleanup(env.stop)
         os.environ.pop("GM_DISCORD_TOKEN", None)

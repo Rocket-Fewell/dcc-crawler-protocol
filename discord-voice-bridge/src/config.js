@@ -5,7 +5,7 @@ import { campaignDir, charactersDir, dataDir, DEFAULT_SESSION } from './session.
 const PROJECT_ROOT = fileURLToPath(new URL('..', import.meta.url));
 
 const DEFAULT_SYSTEM_INSTRUCTIONS =
-  'Voice: a bright, smug, theatrical game-show host. Energetic and gleeful, with sly condescension and big dramatic emphasis on key words, like announcing prizes, penalties and achievements to a live studio audience.';
+  'Voice: dry, informative, corporate. Calm and even. Delivers timers, fees, registration, collapse warnings and floor notices with no jokes, no sarcasm, and no theatrical flair. Think a polite automated PA system reading policy.';
 
 const SNOWFLAKE = /^\d{15,25}$/;
 

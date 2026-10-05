@@ -1,0 +1,12 @@
+{
+  "label": "Season 1",
+  "env_prefix": "S1_",
+  "fish_monthly_minutes": 100,
+  "create": {
+    "review_mode": "hold",
+    "allow_roll": true,
+    "content_source": "phb",
+    "staff_channel_id": null,
+    "reviewer_ids": []
+  }
+}

@@ -14,7 +14,7 @@ sc = json.load(open(f"{LORE}/species-class-reskins.json"))
 bg = json.load(open(f"{CAMP}/background-reskins.json"))
 cs = json.load(open(f"{CAMP}/create-screens-reskins.json"))
 
-assert cg["meta"]["version"] == "0.1.5", "chargen-5e.json moved off v0.1.5: re-read the spec and update the draft"
+assert cg["meta"]["version"] == "0.1.6", "chargen-5e.json moved off v0.1.6: re-read the spec and update the draft"
 
 SC = {e["id"]: e for e in sc["entries"]}
 BG = {e["id"]: e for e in bg["entries"]}
@@ -51,7 +51,7 @@ def t_species():
         traits = "; ".join(t.replace(" (", " (") for t in d["traits"])
         rows.append([lab(e), f'{d["size"]}, {d["speed"]} ft', traits, d["quirk"]])
     return table(["Our Name (5e Name)", "Size, Speed", "Traits (SRD 5.2)", "Floors 1-2 quirk"], rows,
-                 "Source: chargen-5e.json v0.1.5 and species-class-reskins v0.1.5. Dwarf, Elf and Orc darkvision as filed in the chargen table. Traits are named, not reprinted; use the SRD text.")
+                 "Source: chargen-5e.json v0.1.6 and species-class-reskins v0.1.5. Dwarf, Elf and Orc darkvision as filed in the chargen table. Traits are named, not reprinted; use the SRD text.")
 
 def t_species_flavor():
     out = []
@@ -99,7 +99,7 @@ def t_classes():
         saves = "/".join(s.upper() for s in c["saves"])
         rows.append([lab(e), f'd{c["hit_die"]}', saves, armor, str(c["skill_count"])])
     return table(["Our Name (5e Name)", "Hit Die", "Saves", "Armor", "Skills"], rows,
-                 "Source: chargen-5e.json v0.1.5. Weapon proficiencies are in the SRD class entries.")
+                 "Source: chargen-5e.json v0.1.6. Weapon proficiencies are in the SRD class entries.")
 
 def t_class_flavor():
     out = []
@@ -168,7 +168,7 @@ def t_feats():
     for fid in SRD_FEATS:
         e = BG[fid]
         rows.append([lab(e), e["flavor"]])
-    return table(["Our Name (5e Name)", "Kiosk line"], rows, "The SRD 5.2 Origin feats (Magic Initiate has three versions).")
+    return table(["Our Name (5e Name)", "Kiosk line"], rows, "The four SRD 5.2 Origin feats (Magic Initiate has three spell-list versions). Human Versatile picks from these four only.")
 
 def t_pointbuy():
     cost = cg["point_buy"]["cost"]
@@ -227,7 +227,7 @@ def t_packages():
                 others.append(f'{p["gp"]} credits' if not p["items"] else f'kit B: {items_str(p["items"])} + {p["gp"]} credits')
         rows.append([lab(e), items_str(a["items"]) + f' + {a["gp"]} credits', "; ".join(others)])
     return table(["Our Name (5e Name)", "Package A (kit)", "Credit option"], rows,
-                 "Source: chargen-5e.json v0.1.5 [VERIFY: package contents and credit amounts were written from memory of SRD 5.2; chargen verify list still open]. Fighters have a second kit (B) and a credit option (C); every other class has Package B as credits only.")
+                 "Source: chargen-5e.json v0.1.6 [VERIFY: package contents and credit amounts were written from memory of SRD 5.2; chargen verify list still open]. Fighters have a second kit (B) and a credit option (C); every other class has Package B as credits only.")
 
 CASTERS = [
  ("bard", "2", "4 prepared", "2"), ("cleric", "3", "4 prepared", "2"), ("druid", "2", "4 prepared", "2"), ("sorcerer", "4", "2 prepared", "2"),
@@ -239,7 +239,7 @@ def t_spells():
         c = cg["classes"][SC[cid]["srd_name"]]["spells"] if "spells" in cg["classes"][SC[cid]["srd_name"]] else None
         rows.append([lab(SC[cid]), can, l1, slots, {"bard": "Cha", "cleric": "Wis", "druid": "Wis", "sorcerer": "Cha", "warlock": "Cha", "wizard": "Int", "paladin": "Cha", "ranger": "Wis"}[cid]])
     return table(["Our Name (5e Name)", "Cantrips", "Level 1 spells", "Level 1 slots", "Ability"], rows,
-                 "Counts per characters/create-flow-spec-5e.md v0.1.12 S11 (SRD 5.2 checked by the rules team). Barbarian, Fighter, Monk and Rogue skip the spells screen.")
+                 "Counts per characters/create-flow-spec-5e.md v0.1.13 S11 (SRD 5.2 checked by the rules team). Barbarian, Fighter, Monk and Rogue skip the spells screen.")
 
 def t_screens():
     rows = [
@@ -274,6 +274,51 @@ def t_gear_examples():
             continue
         rows.append([e["combined_label"]])
     return "\n".join("- " + r[0] for r in rows)
+
+
+NONSRD_BG = ["artisan", "charlatan", "entertainer", "farmer", "guard", "guide", "hermit", "merchant", "noble", "sailor", "scribe", "wayfarer"]
+NONSRD_FEAT = ["feat-crafter", "feat-healer", "feat-lucky", "feat-musician", "feat-tavern-brawler", "feat-tough"]
+# Short mechanics summaries in our own words (decision 029: no copied book text, no parenthetical 5e name).
+NONSRD_BG_MECH = {
+    "artisan": "Ability raises among Str/Dex/Int; tool-and-craft Origin feat; two skills and artisan's tools.",
+    "charlatan": "Ability raises among Dex/Con/Cha; deception-leaning Origin feat; two skills and a forgery kit.",
+    "entertainer": "Ability raises among Str/Dex/Cha; performance Origin feat; two skills and a musical instrument.",
+    "farmer": "Ability raises among Str/Con/Wis; toughing-it-out Origin feat; two skills and a farming tool.",
+    "guard": "Ability raises among Str/Wis/Cha; alertness Origin feat; two skills and a gaming set.",
+    "guide": "Ability raises among Dex/Con/Wis; magic-initiate-style Origin feat; two skills and a navigator's tools-style kit.",
+    "hermit": "Ability raises among Con/Wis/Cha; healer Origin feat; two skills and an herbalism kit.",
+    "merchant": "Ability raises among Con/Int/Cha; lucky Origin feat; two skills and navigator's tools.",
+    "noble": "Ability raises among Str/Int/Cha; skilled Origin feat; two skills and a gaming set.",
+    "sailor": "Ability raises among Str/Dex/Wis; tavern-brawler Origin feat; two skills and navigator's tools.",
+    "scribe": "Ability raises among Dex/Int/Wis; skilled Origin feat; two skills and calligrapher's supplies.",
+    "wayfarer": "Ability raises among Dex/Wis/Cha; lucky Origin feat; two skills and thieves' tools.",
+}
+NONSRD_FEAT_MECH = {
+    "feat-crafter": "Faster, cheaper crafting of nonmagical items; start with artisan's tools and discounts.",
+    "feat-healer": "Stabilize with a kit as a Bonus Action; heal dice when you Treat; kit uses refresh on a Short Rest.",
+    "feat-lucky": "A small pool of luck points to reroll your d20 or force an attacker to reroll.",
+    "feat-musician": "Encourage allies after a Short or Long Rest; grant temporary Hit Points or Heroic Inspiration.",
+    "feat-tavern-brawler": "Improved unarmed strikes; grapple more easily; once per turn deal extra damage on an unarmed or improvised hit.",
+    "feat-tough": "Extra hit points equal to twice your level (and +2 HP each time you gain a level).",
+}
+
+def t_nonsrd_backgrounds():
+    rows = []
+    for bid in NONSRD_BG:
+        e = BG[bid]
+        # reskin name ONLY — no parenthetical 5e name (decision 029)
+        rows.append([e["display_name"], NONSRD_BG_MECH[bid]])
+    return table(["Reskin name", "Mechanics summary (our words)"], rows,
+                 "Appendix only. Sheet stores the underlying 5e background key. Open these only if the table owns the source books.")
+
+def t_nonsrd_feats():
+    rows = []
+    for fid in NONSRD_FEAT:
+        e = BG[fid]
+        rows.append([e["display_name"], NONSRD_FEAT_MECH[fid]])
+    return table(["Reskin name", "Mechanics summary (our words)"], rows,
+                 "Appendix only. Human Versatile does not pick from this list in the printed book (SRD four only).")
+
 
 TABLES = {k[2:]: v for k, v in globals().items() if k.startswith("t_")}
 

@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.5 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.7 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -377,3 +377,25 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - Open: X-077 (does the early-descent stasis rule apply on Floor 3? Events list says "no limitations", uncited).
 - TODO 52: build `tables/canon-floor-3.json` (zones: villages/ruins/circus/Skyfowl settlement/clubs; mobs; laws) only when Caleb or Syndicate asks; Floor 3 is not in play yet. TODO 53: find a cite for the Floor 3 "no limitations" stairwell line (X-077). TODO 54: mine Desperado Club, Bopca personal-space and Floor 3 quest pages for a second Floor 3 pass.
 - Nothing was read against the novels. Nothing was posted to any room.
+
+---
+# Pass note (2026-10-05 CT): GM habits reference bank (research only)
+
+- Draft `drafts/gm-habits-reference-bank.draft.md` — player-praised GM habits + fun-killers + dungeon/hint craft, tagged KEEP/ADAPT/AVOID for the locked snarky voice; reference only, implement after playthroughs (no rails yet). Nothing posted to any room.
+
+# Pass note (2026-10-05 CT): canon-floor-1 rebuilt for ledger v1.15
+
+- `tables/canon-floor-1.json`/.md rebuilt with tools/canon_floor_build.py (ledger_build.py not run). Diff: only ledger_version 1.13 to 1.15 and the md generated-from line; counts unchanged 24/46/23/17. New sha256: json 4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9, md 8e5d97169e88b003895ea052a2f7008ffb26abe345a57abb9e97c70715e67530. canon_floor_check 0 errors; canon_floor2_check 0 errors; ledger_check 0 failures. Nothing posted.
+
+---
+# Pass 25 (2026-10-05 CT): Days 2-5 achievement suggestions Lore pass
+
+- New `drafts/achievement-suggestions-days-02-05-lore-pass.md` v0.1. Source: Syndicate review sha256 6f8537f4…ff7b; Encounter Bot suggestions v0.1; CANON-LEDGER §1; achievement-crossref.csv.
+- Names: 12 KEEP, 1 RENAME (S-12 Photogenic → Hold Still), 1 fold-or-keep (S-05), 1 CUT (S-15). Canon map-required: 0. Canon beside (do not map): S-14 next to A-044 / A-151 (already ACH-1824 / 1826).
+- Spoil watches: S-10 Mystery Key; S-13/S-15 stasis; S-15 perfect-clear bait. No campaign edits; nothing posted.
+
+---
+# Pass 26 (2026-10-05 CT): Floor 1 voice split (SYSTEM dry / GM snark)
+
+- Caleb voice split applied to Floor 1 lore drafts: collapse notices v0.2 (`d23a39b90cbe…`), Dean Thudd intro v0.2 (`d821d0839503…`), zone color v0.2 (`a1ef4c1cedbd…`), Days 2–5 lore-pass v0.2 (`216303c74dc6…`), legendary research saferoom spelling (`3de8d2513131…`).
+- Audit: `drafts/floor1-voice-split-audit.md` (`49ce6e8e872b…`) — Part B read-only Day pages: Death Mode still in overview + Day 1; live json/md collapse notices still joke-filled; specs (~13:48 CT) already splitting gm_color. Cold open facts match ledger M-539/545/546/547/548/554. No campaign edits; sealed paths unread; ledger_build not run.

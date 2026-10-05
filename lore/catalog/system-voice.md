@@ -9,6 +9,8 @@ Summary: System/AI voice catalog and style guide for emulating the dungeon annou
 > **Source tags:** `[W:Page]` = Fandom wiki page `raw/pages/Page.txt`; `[OS]` = mattdinniman.com (fetched Oct 3, 2026); `[YT:id]` = `sources/youtube/id.txt`; `[WQ]` = a quote box on a wiki character page.
 
 ---
+> **Table TTS tagging (decision 032 / Caleb, Oct 5 2026):** at this campaign table, dry clock/fee/registration/collapse/floor notices use `[SYSTEM]`; achievement banners+descriptions, loot-box callouts/openings, and jokes use `[GM]` (or untagged narrator). This catalog still describes the *fiction* System AI's snark for joke tone — those jokes are spoken under **[GM]** here, not [SYSTEM].
+
 ## 1. Style guide (how to write the voice)
 
 ### 1.1 Who is speaking

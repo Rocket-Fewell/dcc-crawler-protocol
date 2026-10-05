@@ -1,7 +1,10 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.1.11",
+  "version": "0.1.14",
   "changelog": [
+    "0.1.14 (2026-10-05): provenance only, no values changed: re-synced day01_slot_map and day02_to_04_slot_map day-02 spec_sha256_sans_pin_when_mapped for Encounter Bot's cold-open Day 1 (horn/beams/stairwell → Z6) and Day 2 Bone/Horn-neutralization (\"if not cleared on Day 1\"). Floor clock start = surface entrances open / prior floor timer expiry. Days 3–5 hashes unchanged. Previous day-02 was 171c19eab8cf….",
+    "0.1.13 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 specs after the v0.1.12 pin + Ch1 batch (Day 5 Reprieve soften, Ch1 pointers, early-descent Reprieve expiry, caps-sentence reword). Every slot path and price unchanged.",
+    "0.1.12 (2026-10-05): wording only, no values changed: floors.1.prices.rest_without_saferoom.applies_to (and long_rest_rule) aligned to decision 031 / core §5.6 — fee buys quiet for a Short Rest in a noisy spot (20/Crawler, cap 60); free if already quiet; never a Long Rest outside a saferoom. Numbers, field paths and every other value unchanged.",
     "0.1.11 (2026-10-04): wording only, no values changed: core v0.2.17 §4.5 reads the Legendary cap of 2 as PER CRAWLER, so live text now says each Crawler's total stays at 2 (0.5 per Crawler on F13-14 + 0.25 per Crawler on F15-18 = 2 per Crawler; Accountant confirmed no numbers move); added proposed_floor_growth_curve.story_boxes_note (Story Boxes F1-2 are a separate track outside the cap and outside this budget, core §4.1/4.5/4.7). Historical changelog lines left as written.",
     "0.1.10 (2026-10-04): provenance re-sync after Floor 1 achievement-ref swap to ACH-1824..1826; no values changed. spec_sha256_sans_pin_when_mapped re-synced in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map from tools/encounter_bot/spec_hash_sans_pin.py (method now also skips achievements_catalog.version and .expected_sha256); every slot path in the maps re-checked against the current specs.",
     "0.1.9 (2026-10-04): provenance-only: slot maps now match on sans-pin spec hash so budget bumps no longer break provenance; no values changed. spec_sha256_when_mapped in day01_slot_map and day02_to_04_slot_map is replaced by spec_sha256_sans_pin_when_mapped (helper tools/encounter_bot/spec_hash_sans_pin.py; method in day01_slot_map.spec_hash_method); new day05_slot_map holds only the Day 5 sans-pin hash (no slots mapped).",
@@ -19,7 +22,7 @@
     "title": "Encounter budget, credits and loot (5e 2024)",
     "owner": "Syndicate",
     "status": "draft",
-    "updated": "2026-10-04",
+    "updated": "2026-10-05",
     "file": "rules/70-encounter-budget-5e.json",
     "companion": "rules/70-encounter-budget-5e.md",
     "consumer": "Encounter Bot (tools/encounter_bot, local script, no model calls) cites this file for difficulty, credits and loot; it is the only source of those numbers",
@@ -54,7 +57,12 @@
     }
   },
   "tiers": {
-    "names": ["trivial", "standard", "hard", "boss"],
+    "names": [
+      "trivial",
+      "standard",
+      "hard",
+      "boss"
+    ],
     "meaning": {
       "trivial": "burns a little resource; wandering or filler",
       "standard": "the everyday fight",
@@ -62,10 +70,25 @@
       "boss": "the floor boss with support; at the top of the High band"
     },
     "band_maps": {
-      "F1": {"trivial": "half of Low", "standard": "Low", "hard": "Moderate", "boss": "High"},
-      "F2_plus": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"}
+      "F1": {
+        "trivial": "half of Low",
+        "standard": "Low",
+        "hard": "Moderate",
+        "boss": "High"
+      },
+      "F2_plus": {
+        "trivial": "Low",
+        "standard": "Moderate",
+        "hard": "High",
+        "boss": "High"
+      }
     },
-    "lead_share": {"trivial": 1.0, "standard": 1.0, "hard": 1.0, "boss": 0.9},
+    "lead_share": {
+      "trivial": 1.0,
+      "standard": 1.0,
+      "hard": 1.0,
+      "boss": 0.9
+    },
     "status": "band maps ASSUMED for F2+; F1 matches overview 9.2"
   },
   "authoritative": {
@@ -73,26 +96,106 @@
     "xp_budget_per_character": {
       "source": "SRD 5.2.1 'XP Budget per Character' (same table the overview 9.1 uses for levels 1-2). No group multiplier in 2024.",
       "by_level": {
-        "1": {"low": 50, "moderate": 75, "high": 100},
-        "2": {"low": 100, "moderate": 150, "high": 200},
-        "3": {"low": 150, "moderate": 225, "high": 400},
-        "4": {"low": 250, "moderate": 375, "high": 500},
-        "5": {"low": 500, "moderate": 750, "high": 1100},
-        "6": {"low": 600, "moderate": 1000, "high": 1400},
-        "7": {"low": 750, "moderate": 1300, "high": 1700},
-        "8": {"low": 1000, "moderate": 1700, "high": 2100},
-        "9": {"low": 1300, "moderate": 2000, "high": 2600},
-        "10": {"low": 1600, "moderate": 2300, "high": 3100},
-        "11": {"low": 1900, "moderate": 2900, "high": 4100},
-        "12": {"low": 2200, "moderate": 3700, "high": 4700},
-        "13": {"low": 2600, "moderate": 4200, "high": 5400},
-        "14": {"low": 2900, "moderate": 4900, "high": 6200},
-        "15": {"low": 3300, "moderate": 5400, "high": 7800},
-        "16": {"low": 3800, "moderate": 6100, "high": 9800},
-        "17": {"low": 4500, "moderate": 7200, "high": 11700},
-        "18": {"low": 5000, "moderate": 8700, "high": 14200},
-        "19": {"low": 5500, "moderate": 10700, "high": 17200},
-        "20": {"low": 6400, "moderate": 13200, "high": 22000}
+        "1": {
+          "low": 50,
+          "moderate": 75,
+          "high": 100
+        },
+        "2": {
+          "low": 100,
+          "moderate": 150,
+          "high": 200
+        },
+        "3": {
+          "low": 150,
+          "moderate": 225,
+          "high": 400
+        },
+        "4": {
+          "low": 250,
+          "moderate": 375,
+          "high": 500
+        },
+        "5": {
+          "low": 500,
+          "moderate": 750,
+          "high": 1100
+        },
+        "6": {
+          "low": 600,
+          "moderate": 1000,
+          "high": 1400
+        },
+        "7": {
+          "low": 750,
+          "moderate": 1300,
+          "high": 1700
+        },
+        "8": {
+          "low": 1000,
+          "moderate": 1700,
+          "high": 2100
+        },
+        "9": {
+          "low": 1300,
+          "moderate": 2000,
+          "high": 2600
+        },
+        "10": {
+          "low": 1600,
+          "moderate": 2300,
+          "high": 3100
+        },
+        "11": {
+          "low": 1900,
+          "moderate": 2900,
+          "high": 4100
+        },
+        "12": {
+          "low": 2200,
+          "moderate": 3700,
+          "high": 4700
+        },
+        "13": {
+          "low": 2600,
+          "moderate": 4200,
+          "high": 5400
+        },
+        "14": {
+          "low": 2900,
+          "moderate": 4900,
+          "high": 6200
+        },
+        "15": {
+          "low": 3300,
+          "moderate": 5400,
+          "high": 7800
+        },
+        "16": {
+          "low": 3800,
+          "moderate": 6100,
+          "high": 9800
+        },
+        "17": {
+          "low": 4500,
+          "moderate": 7200,
+          "high": 11700
+        },
+        "18": {
+          "low": 5000,
+          "moderate": 8700,
+          "high": 14200
+        },
+        "19": {
+          "low": 5500,
+          "moderate": 10700,
+          "high": 17200
+        },
+        "20": {
+          "low": 6400,
+          "moderate": 13200,
+          "high": 22000
+        }
       }
     },
     "xp_by_cr": {
@@ -138,31 +241,168 @@
     },
     "core_cr_targets_party_of_4": {
       "source": "core 8.3",
-      "columns": ["mob_lo", "mob_hi", "elite_lo", "elite_hi", "boss_lo", "boss_hi"],
+      "columns": [
+        "mob_lo",
+        "mob_hi",
+        "elite_lo",
+        "elite_hi",
+        "boss_lo",
+        "boss_hi"
+      ],
       "by_floor": {
-        "1": ["0", "1/4", "1/2", "1", "2", "2"],
-        "2": ["1/8", "1/2", "1", "2", "3", "4"],
-        "3": ["1/4", "1", "2", "3", "4", "5"],
-        "4": ["1/2", "1", "2", "3", "5", "6"],
-        "5": ["1", "2", "3", "4", "7", "8"],
-        "6": ["1", "2", "4", "6", "8", "9"],
-        "7": ["2", "3", "5", "6", "9", "10"],
-        "8": ["2", "3", "6", "7", "10", "11"],
-        "9": ["3", "4", "7", "8", "11", "12"],
-        "10": ["3", "5", "8", "9", "12", "13"],
-        "11": ["4", "5", "9", "10", "13", "14"],
-        "12": ["4", "6", "10", "11", "14", "16"],
-        "13": ["5", "6", "11", "12", "15", "16"],
-        "14": ["5", "7", "12", "13", "16", "17"],
-        "15": ["6", "8", "13", "14", "17", "19"],
-        "16": ["6", "8", "14", "15", "18", "20"],
-        "17": ["7", "9", "15", "16", "19", "21"],
-        "18": ["8", "10", "16", "18", "21", "24"]
+        "1": [
+          "0",
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "2"
+        ],
+        "2": [
+          "1/8",
+          "1/2",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "3": [
+          "1/4",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "4": [
+          "1/2",
+          "1",
+          "2",
+          "3",
+          "5",
+          "6"
+        ],
+        "5": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "7",
+          "8"
+        ],
+        "6": [
+          "1",
+          "2",
+          "4",
+          "6",
+          "8",
+          "9"
+        ],
+        "7": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "9",
+          "10"
+        ],
+        "8": [
+          "2",
+          "3",
+          "6",
+          "7",
+          "10",
+          "11"
+        ],
+        "9": [
+          "3",
+          "4",
+          "7",
+          "8",
+          "11",
+          "12"
+        ],
+        "10": [
+          "3",
+          "5",
+          "8",
+          "9",
+          "12",
+          "13"
+        ],
+        "11": [
+          "4",
+          "5",
+          "9",
+          "10",
+          "13",
+          "14"
+        ],
+        "12": [
+          "4",
+          "6",
+          "10",
+          "11",
+          "14",
+          "16"
+        ],
+        "13": [
+          "5",
+          "6",
+          "11",
+          "12",
+          "15",
+          "16"
+        ],
+        "14": [
+          "5",
+          "7",
+          "12",
+          "13",
+          "16",
+          "17"
+        ],
+        "15": [
+          "6",
+          "8",
+          "13",
+          "14",
+          "17",
+          "19"
+        ],
+        "16": [
+          "6",
+          "8",
+          "14",
+          "15",
+          "18",
+          "20"
+        ],
+        "17": [
+          "7",
+          "9",
+          "15",
+          "16",
+          "19",
+          "21"
+        ],
+        "18": [
+          "8",
+          "10",
+          "16",
+          "18",
+          "21",
+          "24"
+        ]
       }
     },
     "clock": {
       "source": "decision 026 (Caleb) + Syndicate confirmation",
-      "days": {"1": 5, "2": 10, "3": 20},
+      "days": {
+        "1": 5,
+        "2": 10,
+        "3": 20
+      },
       "days_f4_plus": "F4 = 20, F5 = 25, F6 = 30 house rule (v0.1.4, see days_f4_f5_f6); F7+ held at 30 in the growth curve; kept as a string so the v0.1.0-v0.1.3 field path still resolves",
       "days_f4_f5_f6": {
         "4": 20,
@@ -201,20 +441,53 @@
         "rule": "a Crawler who descends with more than 6 hours left is held in stasis until the floor collapses (M-277): banks the achievement, ends that Crawler's floor; in the last 6 hours descent is free; each Crawler chooses; the GM may log an override"
       },
       "collapse_order_floor_1": [
-        {"day": 1, "event": "nothing closes"},
-        {"day": 2, "event": "outer zones close"},
-        {"day": 3, "event": "mid zones close"},
-        {"day": 4, "event": "Break Room (Z6) and vendors lose service"},
-        {"day": 5, "event": "only the Stairwell corridor stays"}
+        {
+          "day": 1,
+          "event": "nothing closes"
+        },
+        {
+          "day": 2,
+          "event": "outer zones close"
+        },
+        {
+          "day": 3,
+          "event": "mid zones close"
+        },
+        {
+          "day": 4,
+          "event": "Break Room (Z6) and vendors lose service"
+        },
+        {
+          "day": 5,
+          "event": "only the Stairwell corridor stays"
+        }
       ],
       "zone_groups_floor_1": {
-        "outer_close_day_2": ["Z0", "Z1", "Z2", "Z3", "Z3b", "Z4"],
-        "mid_close_day_3": ["Z5", "Z7", "Z8"],
-        "corridor_stays_to_end": ["Z10", "Z11", "ZS"],
+        "outer_close_day_2": [
+          "Z0",
+          "Z1",
+          "Z2",
+          "Z3",
+          "Z3b",
+          "Z4"
+        ],
+        "mid_close_day_3": [
+          "Z5",
+          "Z7",
+          "Z8"
+        ],
+        "corridor_stays_to_end": [
+          "Z10",
+          "Z11",
+          "ZS"
+        ],
         "z6_break_room": "loses service Day 4",
         "z9_green_room": "saferoom stays open to the end",
         "route_rule": "closed means hooks and services vanish; the route (Z6, Z8, Z9, Z10, Z11) is never cut",
-        "key_deadlines": {"bruiser_key_gone_day": 3, "terminal_key_gone_day": 4}
+        "key_deadlines": {
+          "bruiser_key_gone_day": 3,
+          "terminal_key_gone_day": 4
+        }
       }
     },
     "box_credit_dice": {
@@ -224,21 +497,47 @@
       "Gold": "2d6 x 250",
       "Platinum": "2d6 x 2500",
       "Legendary": "2d6 x 10000",
-      "pulls": {"Bronze": "1-2", "Silver": 2, "Gold": "2-3", "Platinum": 3}
+      "pulls": {
+        "Bronze": "1-2",
+        "Silver": 2,
+        "Gold": "2-3",
+        "Platinum": 3
+      }
     },
     "box_pacing_per_crawler_per_floor": {
       "source": "core 4.5",
       "by_band": {
-        "1-2": {"Bronze": "2-4", "Silver": "0-1"},
-        "3-5": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
-        "6-9": {"Bronze": "1-2", "Silver": "1-2", "Gold": "1", "Platinum": "0-1 (F9)"}
+        "1-2": {
+          "Bronze": "2-4",
+          "Silver": "0-1"
+        },
+        "3-5": {
+          "Bronze": "2-3",
+          "Silver": "1-2",
+          "Gold": "0-1"
+        },
+        "6-9": {
+          "Bronze": "1-2",
+          "Silver": "1-2",
+          "Gold": "1",
+          "Platinum": "0-1 (F9)"
+        }
       }
     },
     "floor_rarity_ceiling": {
       "source": "core 3.6",
-      "F1-2": {"default": "Common", "peak": "Uncommon"},
-      "F3-5": {"default": "Uncommon", "peak": "Rare"},
-      "F6-9": {"default": "Rare", "peak": "Very Rare"}
+      "F1-2": {
+        "default": "Common",
+        "peak": "Uncommon"
+      },
+      "F3-5": {
+        "default": "Uncommon",
+        "peak": "Rare"
+      },
+      "F6-9": {
+        "default": "Rare",
+        "peak": "Very Rare"
+      }
     },
     "credit_multiplier": {
       "source": "core 3.9; decision 019",
@@ -246,17 +545,31 @@
       "x5": "F5-9",
       "x20": "F10-14",
       "x50": "F15-18",
-      "applies_to": ["achievement rewards", "System fees (repairs, Story Box buyback, crafting)"],
-      "does_not_apply_to": ["box credit pulls", "revive fees", "Upgrade Coupon cap"]
+      "applies_to": [
+        "achievement rewards",
+        "System fees (repairs, Story Box buyback, crafting)"
+      ],
+      "does_not_apply_to": [
+        "box credit pulls",
+        "revive fees",
+        "Upgrade Coupon cap"
+      ]
     },
     "story_box_constraints": {
       "source": "decisions 015/018; rules/45; core 4.1/4.5/4.7",
-      "floors": [1, 2],
+      "floors": [
+        1,
+        2
+      ],
       "cap_per_table_per_floor": 1,
       "awarded_by": "GM hand-pick only, one named one-time deed, never random",
       "opens_only_in": "a saferoom",
       "box_odds_in_this_file": 0,
-      "sale_value_by_rung": {"0": 100, "1": 250, "2": 500},
+      "sale_value_by_rung": {
+        "0": 100,
+        "1": 250,
+        "2": 500
+      },
       "sale_value_note": "Floor-1 scale; times the sale floor's multiplier; story_value is provenance only and excluded from the 1,500 flag, a sale is not"
     },
     "floor_1_reprieve": {
@@ -268,7 +581,10 @@
       "source": "core 5.6; overview rule 5/7",
       "long_rest": "saferooms only",
       "short_rest": "anywhere reasonably quiet; guaranteed in a saferoom",
-      "floor_1_saferooms": ["Z6 Break Room", "Z9 Green Room"],
+      "floor_1_saferooms": [
+        "Z6 Break Room",
+        "Z9 Green Room"
+      ],
       "honest_on_floor_1": true,
       "saferooms_can_lie_from": 2
     },
@@ -327,7 +643,11 @@
         "what": "Rest-without-saferoom fee 20 per Crawler (cap 60 per floor); key bribe 50 per Crawler; Detour Tax 75 per Crawler (a missed Stairwell key ONLY; a missed collapse is death with no toll, decision 026); Zone S forcing fee 25 per Crawler; detour 2 hours, 0 rest slots; collapse steps cost hooks and services, 0 credits.",
         "adapt": "Caleb/GM"
       },
-      {"id": "A11", "what": "Safe-room adjacency and rest-segment limits (see adjacency).", "adapt": "GM"},
+      {
+        "id": "A11",
+        "what": "Safe-room adjacency and rest-segment limits (see adjacency).",
+        "adapt": "GM"
+      },
       {
         "id": "A12",
         "what": "Optional safety valve (not required under the per-floor line): before a Floor 2 Boss Box, if the Crawler's running total on that floor is 900 or more, the GM may hand-pick that box from cards worth 175 or less. Run it from `state.py loot totals --include-credits` (the tool change now exists, Q-003).",
@@ -352,17 +672,52 @@
       }
     },
     "cash_per_crawler_f1_scale": {
-      "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
-      "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-      "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-      "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+      "trivial": {
+        "dice": "1d3-1",
+        "min": 0,
+        "avg": 1.0,
+        "max": 2
+      },
+      "standard": {
+        "dice": "1d4 x 2",
+        "min": 2,
+        "avg": 5.0,
+        "max": 8
+      },
+      "hard": {
+        "dice": "1d6 x 2",
+        "min": 2,
+        "avg": 7.0,
+        "max": 12
+      },
+      "boss": {
+        "dice": "1d6 x 5",
+        "min": 5,
+        "avg": 17.5,
+        "max": 30
+      }
     },
-    "r1_toast_credits": {"min": 10, "max": 40, "avg": 25.0},
-    "r1_expected_count": {"1": 2, "2": 3, "3_plus": 3},
-    "deed_bronze_expected_per_crawler": {"1": 0.5, "2": 0.9}
+    "r1_toast_credits": {
+      "min": 10,
+      "max": 40,
+      "avg": 25.0
+    },
+    "r1_expected_count": {
+      "1": 2,
+      "2": 3,
+      "3_plus": 3
+    },
+    "deed_bronze_expected_per_crawler": {
+      "1": 0.5,
+      "2": 0.9
+    }
   },
   "party_sizes": {
-    "supported": [2, 3, 4],
+    "supported": [
+      2,
+      3,
+      4
+    ],
     "note": "Encounter counts per floor do not change with party size; enemy counts and XP budgets do. Credits per Crawler stay flat; the encounter credits pool is per-Crawler x P (it scales and then splits evenly); boxes are per Crawler."
   },
   "floors": {
@@ -383,37 +738,116 @@
         "leave": 2,
         "track": "standard (core 2.2)",
         "status": "authoritative",
-        "budget_level": {"before_green_room_z9": 1, "boss_z10": 2},
+        "budget_level": {
+          "before_green_room_z9": 1,
+          "boss_z10": 2
+        },
         "note": "Floor 1 only: encounters before the Green Room (Z9) budget at level 1; the boss budgets at level 2 (overview rule 3). Floor N>=2: whole floor budgets at level N (descent level applies at the first saferoom of the next floor, core 2.3)."
       },
       "tier_band_map": {
-        "map": {"trivial": "half of Low", "standard": "Low", "hard": "Moderate", "boss": "High"},
+        "map": {
+          "trivial": "half of Low",
+          "standard": "Low",
+          "hard": "Moderate",
+          "boss": "High"
+        },
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
-      "xp_per_character": {"L1": {"low": 50, "moderate": 75, "high": 100}, "L2": {"low": 100, "moderate": 150, "high": 200}},
+      "xp_per_character": {
+        "L1": {
+          "low": 50,
+          "moderate": 75,
+          "high": 100
+        },
+        "L2": {
+          "low": 100,
+          "moderate": 150,
+          "high": 200
+        }
+      },
       "tiers": {
         "L1": {
           "xp_budget_total": {
-            "2": {"trivial": 50, "standard": 100, "hard": 150, "boss": 200},
-            "3": {"trivial": 75, "standard": 150, "hard": 225, "boss": 300},
-            "4": {"trivial": 100, "standard": 200, "hard": 300, "boss": 400}
+            "2": {
+              "trivial": 50,
+              "standard": 100,
+              "hard": 150,
+              "boss": 200
+            },
+            "3": {
+              "trivial": 75,
+              "standard": 150,
+              "hard": 225,
+              "boss": 300
+            },
+            "4": {
+              "trivial": 100,
+              "standard": 200,
+              "hard": 300,
+              "boss": 400
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "1/4", "standard": "1/4", "hard": "1/2", "boss": "1/2"},
-            "3": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "1"},
-            "4": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "1"}
+            "2": {
+              "trivial": "1/4",
+              "standard": "1/4",
+              "hard": "1/2",
+              "boss": "1/2"
+            },
+            "3": {
+              "trivial": "1/4",
+              "standard": "1/4",
+              "hard": "1",
+              "boss": "1"
+            },
+            "4": {
+              "trivial": "1/4",
+              "standard": "1/4",
+              "hard": "1",
+              "boss": "1"
+            }
           }
         },
         "L2": {
           "xp_budget_total": {
-            "2": {"trivial": 100, "standard": 200, "hard": 300, "boss": 400},
-            "3": {"trivial": 150, "standard": 300, "hard": 450, "boss": 600},
-            "4": {"trivial": 200, "standard": 400, "hard": 600, "boss": 800}
+            "2": {
+              "trivial": 100,
+              "standard": 200,
+              "hard": 300,
+              "boss": 400
+            },
+            "3": {
+              "trivial": 150,
+              "standard": 300,
+              "hard": 450,
+              "boss": 600
+            },
+            "4": {
+              "trivial": 200,
+              "standard": 400,
+              "hard": 600,
+              "boss": 800
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "1"},
-            "3": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "2"},
-            "4": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "2"}
+            "2": {
+              "trivial": "1/4",
+              "standard": "1/4",
+              "hard": "1",
+              "boss": "1"
+            },
+            "3": {
+              "trivial": "1/4",
+              "standard": "1/4",
+              "hard": "1",
+              "boss": "2"
+            },
+            "4": {
+              "trivial": "1/4",
+              "standard": "1/4",
+              "hard": "1",
+              "boss": "2"
+            }
           }
         }
       },
@@ -425,7 +859,12 @@
         "total_max_source": "core 10.3: 4-8 encounters on F1",
         "per_day_typical": 1.2,
         "per_day_max": 4,
-        "mix_planned": {"trivial": 1, "standard": 3, "hard": 1, "boss": 1},
+        "mix_planned": {
+          "trivial": 1,
+          "standard": 3,
+          "hard": 1,
+          "boss": 1
+        },
         "quota": false,
         "note": "Encounters are a ceiling envelope, not a quota. Unused days are fine."
       },
@@ -458,17 +897,42 @@
       },
       "credits": {
         "cash_per_crawler_per_encounter_f1_scale": {
-          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2, "avg_f01_override": 0.0},
-          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+          "trivial": {
+            "dice": "1d3-1",
+            "min": 0,
+            "avg": 1.0,
+            "max": 2,
+            "avg_f01_override": 0.0
+          },
+          "standard": {
+            "dice": "1d4 x 2",
+            "min": 2,
+            "avg": 5.0,
+            "max": 8
+          },
+          "hard": {
+            "dice": "1d6 x 2",
+            "min": 2,
+            "avg": 7.0,
+            "max": 12
+          },
+          "boss": {
+            "dice": "1d6 x 5",
+            "min": 5,
+            "avg": 17.5,
+            "max": 30
+          }
         },
         "cash_scale": 1,
         "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter credits; decision 019 names only achievement rewards and fees",
         "cash_expected_per_crawler": 39.5,
         "r1_toast_credits_per_crawler": {
           "count_expected": 2,
-          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "each_f1_scale": {
+            "min": 10,
+            "max": 40,
+            "avg": 25.0
+          },
           "expected": 50.0,
           "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
         },
@@ -476,10 +940,27 @@
         "status": "ASSUMED (GM may adapt)"
       },
       "boxes": {
-        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.06}, "hard": {"Bronze": 0.23}, "boss": {"Silver": 1.0}},
-        "expected_fight_boxes_per_crawler": {"Bronze": 0.41, "boss_box": "Silver"},
+        "odds_per_encounter_by_tier": {
+          "trivial": {},
+          "standard": {
+            "Bronze": 0.06
+          },
+          "hard": {
+            "Bronze": 0.23
+          },
+          "boss": {
+            "Silver": 1.0
+          }
+        },
+        "expected_fight_boxes_per_crawler": {
+          "Bronze": 0.41,
+          "boss_box": "Silver"
+        },
         "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
-        "core_pacing_per_crawler_per_floor": {"Bronze": "2-4", "Silver": "0-1"},
+        "core_pacing_per_crawler_per_floor": {
+          "Bronze": "2-4",
+          "Silver": "0-1"
+        },
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
@@ -499,13 +980,47 @@
           "name": "Vent Rats",
           "tier": "standard",
           "budget_level": 1,
-          "creatures": [{"srd_id": "giant-rat", "cr": "1/8"}],
-          "counts_by_party_size": {"2": {"giant-rat": 3}, "3": {"giant-rat": 4}, "4": {"giant-rat": 6}},
-          "xp_by_party_size": {"2": 75, "3": 100, "4": 150},
+          "creatures": [
+            {
+              "srd_id": "giant-rat",
+              "cr": "1/8"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-rat": 3
+            },
+            "3": {
+              "giant-rat": 4
+            },
+            "4": {
+              "giant-rat": 6
+            }
+          },
+          "xp_by_party_size": {
+            "2": 75,
+            "3": 100,
+            "4": 150
+          },
           "fit": {
-            "2": {"xp_used": 75, "tier_budget": 100, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 100, "tier_budget": 150, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 150, "tier_budget": 200, "over_by": 0, "within_tier": true}
+            "2": {
+              "xp_used": 75,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 100,
+              "tier_budget": 150,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 150,
+              "tier_budget": 200,
+              "over_by": 0,
+              "within_tier": true
+            }
           },
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2"
@@ -514,13 +1029,47 @@
           "name": "Mannequin Staff",
           "tier": "standard",
           "budget_level": 1,
-          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
-          "counts_by_party_size": {"2": {"skeleton": 2}, "3": {"skeleton": 3}, "4": {"skeleton": 4}},
-          "xp_by_party_size": {"2": 100, "3": 150, "4": 200},
+          "creatures": [
+            {
+              "srd_id": "skeleton",
+              "cr": "1/4"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "skeleton": 2
+            },
+            "3": {
+              "skeleton": 3
+            },
+            "4": {
+              "skeleton": 4
+            }
+          },
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
           "fit": {
-            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 150, "tier_budget": 150, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 150,
+              "tier_budget": 150,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 200,
+              "over_by": 0,
+              "within_tier": true
+            }
           },
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2"
@@ -529,17 +1078,54 @@
           "name": "Exit Greeters (Big Green EXIT)",
           "tier": "standard",
           "budget_level": 1,
-          "creatures": [{"srd_id": "goblin-warrior", "cr": "1/4"}, {"srd_id": "goblin-minion", "cr": "1/8"}],
+          "creatures": [
+            {
+              "srd_id": "goblin-warrior",
+              "cr": "1/4"
+            },
+            {
+              "srd_id": "goblin-minion",
+              "cr": "1/8"
+            }
+          ],
           "counts_by_party_size": {
-            "2": {"goblin-warrior": 1, "goblin-minion": 2},
-            "3": {"goblin-warrior": 1, "goblin-minion": 3},
-            "4": {"goblin-warrior": 2, "goblin-minion": 4}
+            "2": {
+              "goblin-warrior": 1,
+              "goblin-minion": 2
+            },
+            "3": {
+              "goblin-warrior": 1,
+              "goblin-minion": 3
+            },
+            "4": {
+              "goblin-warrior": 2,
+              "goblin-minion": 4
+            }
           },
-          "xp_by_party_size": {"2": 100, "3": 125, "4": 200},
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 125,
+            "4": 200
+          },
           "fit": {
-            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 125, "tier_budget": 150, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 125,
+              "tier_budget": 150,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 200,
+              "over_by": 0,
+              "within_tier": true
+            }
           },
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2"
@@ -548,17 +1134,54 @@
           "name": "The Elite (Mascot Locker Room)",
           "tier": "hard",
           "budget_level": 1,
-          "creatures": [{"srd_id": "animated-armor", "cr": "1"}, {"srd_id": "animated-flying-sword", "cr": "1/4"}],
+          "creatures": [
+            {
+              "srd_id": "animated-armor",
+              "cr": "1"
+            },
+            {
+              "srd_id": "animated-flying-sword",
+              "cr": "1/4"
+            }
+          ],
           "counts_by_party_size": {
-            "2": {"animated-armor": 1, "animated-flying-sword": 0},
-            "3": {"animated-armor": 1, "animated-flying-sword": 1},
-            "4": {"animated-armor": 1, "animated-flying-sword": 2}
+            "2": {
+              "animated-armor": 1,
+              "animated-flying-sword": 0
+            },
+            "3": {
+              "animated-armor": 1,
+              "animated-flying-sword": 1
+            },
+            "4": {
+              "animated-armor": 1,
+              "animated-flying-sword": 2
+            }
           },
-          "xp_by_party_size": {"2": 200, "3": 250, "4": 300},
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 250,
+            "4": 300
+          },
           "fit": {
-            "2": {"xp_used": 200, "tier_budget": 150, "over_by": 50, "within_tier": false},
-            "3": {"xp_used": 250, "tier_budget": 225, "over_by": 25, "within_tier": false},
-            "4": {"xp_used": 300, "tier_budget": 300, "over_by": 0, "within_tier": true}
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 150,
+              "over_by": 50,
+              "within_tier": false
+            },
+            "3": {
+              "xp_used": 250,
+              "tier_budget": 225,
+              "over_by": 25,
+              "within_tier": false
+            },
+            "4": {
+              "xp_used": 300,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true
+            }
           },
           "cash_per_crawler": 7.0,
           "cash_dice_per_crawler": "1d6 x 2"
@@ -567,13 +1190,47 @@
           "name": "Ceiling Ticks (Lights-Out)",
           "tier": "trivial",
           "budget_level": 1,
-          "creatures": [{"srd_id": "stirge", "cr": "1/8"}],
-          "counts_by_party_size": {"2": {"stirge": 2}, "3": {"stirge": 3}, "4": {"stirge": 4}},
-          "xp_by_party_size": {"2": 50, "3": 75, "4": 100},
+          "creatures": [
+            {
+              "srd_id": "stirge",
+              "cr": "1/8"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "stirge": 2
+            },
+            "3": {
+              "stirge": 3
+            },
+            "4": {
+              "stirge": 4
+            }
+          },
+          "xp_by_party_size": {
+            "2": 50,
+            "3": 75,
+            "4": 100
+          },
           "fit": {
-            "2": {"xp_used": 50, "tier_budget": 50, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 75, "tier_budget": 75, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true}
+            "2": {
+              "xp_used": 50,
+              "tier_budget": 50,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 75,
+              "tier_budget": 75,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            }
           },
           "cash_per_crawler": 0.0,
           "cash_dice_per_crawler": "none (overview: wandering Ticks carry no loot)",
@@ -583,17 +1240,61 @@
           "name": "Dean Thudd (boss)",
           "tier": "boss",
           "budget_level": 2,
-          "creatures": [{"srd_id": "ogre", "cr": "2"}, {"srd_id": "bugbear-warrior", "cr": "1"}, {"srd_id": "skeleton", "cr": "1/4"}],
+          "creatures": [
+            {
+              "srd_id": "ogre",
+              "cr": "2"
+            },
+            {
+              "srd_id": "bugbear-warrior",
+              "cr": "1"
+            },
+            {
+              "srd_id": "skeleton",
+              "cr": "1/4"
+            }
+          ],
           "counts_by_party_size": {
-            "2": {"ogre": 0, "bugbear-warrior": 1, "skeleton": 4},
-            "3": {"ogre": 1, "bugbear-warrior": 0, "skeleton": 2},
-            "4": {"ogre": 1, "bugbear-warrior": 0, "skeleton": 4}
+            "2": {
+              "ogre": 0,
+              "bugbear-warrior": 1,
+              "skeleton": 4
+            },
+            "3": {
+              "ogre": 1,
+              "bugbear-warrior": 0,
+              "skeleton": 2
+            },
+            "4": {
+              "ogre": 1,
+              "bugbear-warrior": 0,
+              "skeleton": 4
+            }
           },
-          "xp_by_party_size": {"2": 400, "3": 550, "4": 650},
+          "xp_by_party_size": {
+            "2": 400,
+            "3": 550,
+            "4": 650
+          },
           "fit": {
-            "2": {"xp_used": 400, "tier_budget": 400, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 550, "tier_budget": 600, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 650, "tier_budget": 800, "over_by": 0, "within_tier": true}
+            "2": {
+              "xp_used": 400,
+              "tier_budget": 400,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 550,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 650,
+              "tier_budget": 800,
+              "over_by": 0,
+              "within_tier": true
+            }
           },
           "cash_per_crawler": 17.5,
           "cash_dice_per_crawler": "1d6 x 5",
@@ -606,15 +1307,53 @@
           "spec_encounter_id": "enc-d02-02",
           "spec_file": "floors/f01/day-02.spec.json",
           "optional_conditional": true,
-          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
-          "counts_by_party_size": {"2": {"skeleton": 1}, "3": {"skeleton": 1}, "4": {"skeleton": 2}},
-          "xp_by_party_size": {"2": 50, "3": 50, "4": 100},
-          "fit": {
-            "2": {"xp_used": 50, "tier_budget": 50, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 50, "tier_budget": 75, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true}
+          "creatures": [
+            {
+              "srd_id": "skeleton",
+              "cr": "1/4"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "skeleton": 1
+            },
+            "3": {
+              "skeleton": 1
+            },
+            "4": {
+              "skeleton": 2
+            }
           },
-          "tier_budget_if_level_2": {"2": 100, "3": 150, "4": 200},
+          "xp_by_party_size": {
+            "2": 50,
+            "3": 50,
+            "4": 100
+          },
+          "fit": {
+            "2": {
+              "xp_used": 50,
+              "tier_budget": 50,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 50,
+              "tier_budget": 75,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            }
+          },
+          "tier_budget_if_level_2": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
           "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
           "cash_per_crawler": 0.0,
           "cash_dice_per_crawler": "none (F1 trivial tier carries no loot)",
@@ -628,15 +1367,60 @@
           "spec_encounter_id": "enc-d03-02",
           "spec_file": "floors/f01/day-03.spec.json",
           "optional_conditional": true,
-          "creatures": [{"srd_id": "giant-rat", "cr": "1/8"}, {"srd_id": "stirge", "cr": "1/8"}],
-          "counts_by_party_size": {"2": {"giant-rat": 2, "stirge": 2}, "3": {"giant-rat": 3, "stirge": 3}, "4": {"giant-rat": 4, "stirge": 4}},
-          "xp_by_party_size": {"2": 100, "3": 150, "4": 200},
-          "fit": {
-            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 150, "tier_budget": 150, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          "creatures": [
+            {
+              "srd_id": "giant-rat",
+              "cr": "1/8"
+            },
+            {
+              "srd_id": "stirge",
+              "cr": "1/8"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-rat": 2,
+              "stirge": 2
+            },
+            "3": {
+              "giant-rat": 3,
+              "stirge": 3
+            },
+            "4": {
+              "giant-rat": 4,
+              "stirge": 4
+            }
           },
-          "tier_budget_if_level_2": {"2": 200, "3": 300, "4": 400},
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 150,
+              "tier_budget": 150,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 200,
+              "over_by": 0,
+              "within_tier": true
+            }
+          },
+          "tier_budget_if_level_2": {
+            "2": 200,
+            "3": 300,
+            "4": 400
+          },
           "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2",
@@ -650,15 +1434,53 @@
           "spec_encounter_id": "enc-d03-03",
           "spec_file": "floors/f01/day-03.spec.json",
           "optional_conditional": true,
-          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
-          "counts_by_party_size": {"2": {"skeleton": 1}, "3": {"skeleton": 1}, "4": {"skeleton": 2}},
-          "xp_by_party_size": {"2": 50, "3": 50, "4": 100},
-          "fit": {
-            "2": {"xp_used": 50, "tier_budget": 50, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 50, "tier_budget": 75, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true}
+          "creatures": [
+            {
+              "srd_id": "skeleton",
+              "cr": "1/4"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "skeleton": 1
+            },
+            "3": {
+              "skeleton": 1
+            },
+            "4": {
+              "skeleton": 2
+            }
           },
-          "tier_budget_if_level_2": {"2": 100, "3": 150, "4": 200},
+          "xp_by_party_size": {
+            "2": 50,
+            "3": 50,
+            "4": 100
+          },
+          "fit": {
+            "2": {
+              "xp_used": 50,
+              "tier_budget": 50,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 50,
+              "tier_budget": 75,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            }
+          },
+          "tier_budget_if_level_2": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
           "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
           "cash_per_crawler": 0.0,
           "cash_dice_per_crawler": "none (F1 trivial tier carries no loot)",
@@ -672,35 +1494,86 @@
           "spec_encounter_id": "enc-d04-03",
           "spec_file": "floors/f01/day-04.spec.json",
           "optional_conditional": true,
-          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
-          "counts_by_party_size": {"2": {"skeleton": 2}, "3": {"skeleton": 3}, "4": {"skeleton": 4}},
-          "xp_by_party_size": {"2": 100, "3": 150, "4": 200},
-          "fit": {
-            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
-            "3": {"xp_used": 150, "tier_budget": 150, "over_by": 0, "within_tier": true},
-            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          "creatures": [
+            {
+              "srd_id": "skeleton",
+              "cr": "1/4"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "skeleton": 2
+            },
+            "3": {
+              "skeleton": 3
+            },
+            "4": {
+              "skeleton": 4
+            }
           },
-          "tier_budget_if_level_2": {"2": 200, "3": 300, "4": 400},
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 100,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "3": {
+              "xp_used": 150,
+              "tier_budget": 150,
+              "over_by": 0,
+              "within_tier": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 200,
+              "over_by": 0,
+              "within_tier": true
+            }
+          },
+          "tier_budget_if_level_2": {
+            "2": 200,
+            "3": 300,
+            "4": 400
+          },
           "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2",
           "boxes": "none: these conditional extras carry no box odds; the Boss Box and the planned fight/deed boxes in floors.1.boxes are unchanged",
           "reasoning": "An active patrol on the way to the boss: standard tier, one Usher per Crawler, same counts as the Z5 Mannequin Staff (4 Crawlers: 4 Skeletons, 200 XP)."
         },
-        "_day_encounter_index": {"enc-d02-02": "d02_02", "enc-d03-02": "d03_02", "enc-d03-03": "d03_03", "enc-d04-03": "d04_03"},
+        "_day_encounter_index": {
+          "enc-d02-02": "d02_02",
+          "enc-d03-02": "d03_02",
+          "enc-d03-03": "d03_03",
+          "enc-d04-03": "d04_03"
+        },
         "_day_encounter_economy": {
           "status": "v0.1.2, ASSUMED",
           "note": "Conditional extras on Days 2-4 sit on top of the six planned Floor 1 encounters (core 10.3 says 4-8 on F1, so if every one fires the floor has 10; the GM may drop any). Only d03_02 pays credits (standard tier, 1d4 x 2 per Crawler, expected 5); the trivial ones pay nothing and none carries a box.",
           "max_added_expected_cash_per_crawler": 5.0,
           "economy_audit_changed": false,
-          "xp_added_per_day_if_all_fire_4_crawlers": {"day_2": 100, "day_3": 300, "day_4": 200},
+          "xp_added_per_day_if_all_fire_4_crawlers": {
+            "day_2": 100,
+            "day_3": 300,
+            "day_4": 200
+          },
           "compare": "floors.1.xp.by_party_size.4.daily_xp_budget_typical (360) and daily_xp_cap_normal_day (800)"
         },
         "_status": "counts mirror floors/f01/00-overview.md 9.2/9.3 verbatim (authoritative for Floor 1 until Caleb says otherwise); fit flags show where the overview runs above the tier budget"
       },
       "boss_variant_b_level1": {
         "budget_level": 1,
-        "xp_budget_total": {"2": 200, "3": 300, "4": 400},
+        "xp_budget_total": {
+          "2": 200,
+          "3": 300,
+          "4": 400
+        },
         "note": "Boss at level 1 (table declines the Green Room milestone): Bugbear Warrior (CR 1) + Skeletons; 4 Crawlers = 400 XP = High (overview 6.6)."
       },
       "prices": {
@@ -712,13 +1585,21 @@
           "status": "authoritative (overview 5.6/8.3: 50 credits, 2 in stock for the whole floor, shared Z6/Z9)"
         },
         "rest_without_saferoom": {
-          "applies_to": "Floor 1: any Long Rest attempt outside an open saferoom (Z6 is a saferoom through Day 3; the Z9 Green Room stays open to the end, so a saferoom is always reachable)",
+          "applies_to": "Floor 1 (decision 031): fee buys quiet for a Short Rest outside an open saferoom when the spot is not already quiet; free if the spot is already quiet. Never grants a Long Rest (saferoom-only; Z6 is a saferoom through Day 3; the Z9 Green Room stays open to the end, so a saferoom is always reachable).",
           "long_rest_granted": false,
-          "long_rest_rule": "Long Rest only in saferooms (core 5.6; overview rule 7); a field attempt is interrupted by Ceiling Ticks after 1d4 hours",
+          "long_rest_rule": "Long Rest only in saferooms (core §5.6; decision 031). A field Long Rest attempt is interrupted by Ceiling Ticks after 1d4 hours; paying the fee does not purchase that Long Rest.",
           "unlicensed_rest_fee_per_crawler": 20,
           "fee_cap_per_crawler_per_floor": 60,
-          "party_fee_by_size": {"2": 40, "3": 60, "4": 80},
-          "interruption_encounter": {"tier": "trivial", "creature": "Ceiling Ticks", "counts_against_wandering_max": true},
+          "party_fee_by_size": {
+            "2": 40,
+            "3": 60,
+            "4": 80
+          },
+          "interruption_encounter": {
+            "tier": "trivial",
+            "creature": "Ceiling Ticks",
+            "counts_against_wandering_max": true
+          },
           "never_a_wipe": true,
           "status": "ASSUMED",
           "reasoning": "20 credits = 40% of one Potion of Healing (50) and below the R1 toast band (10-40); 3 billings cap at 60 = 4% of a floor's 1,500 line. A saferoom is free, so the fee only has to sting, not threaten."
@@ -726,7 +1607,11 @@
         "stairwell_key_terminal_bribe": {
           "where": "Floor 1 Break Room (Z6) Snakk-Matic terminal; gone on Day 4 when the Break Room and vendors lose service (decision 026)",
           "price_per_crawler": 50,
-          "party_price_by_size": {"2": 100, "3": 150, "4": 200},
+          "party_price_by_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
           "payable_by_pooling": true,
           "haggle": "allowed at the terminal's normal DC 13 / 15% off (core 5.10; overview 5.6), GM may refuse",
           "status": "ASSUMED",
@@ -737,7 +1622,11 @@
           "applies_to": "missed Stairwell key only",
           "does_not_apply_to": "a missed floor collapse (death, no toll)",
           "toll_per_crawler": 75,
-          "party_toll_by_size": {"2": 150, "3": 225, "4": 300},
+          "party_toll_by_size": {
+            "2": 150,
+            "3": 225,
+            "4": 300
+          },
           "payable_by_pooling": true,
           "shortfall": "a Crawler who cannot pay pays what they have and the GM logs the balance (no debt mechanic)",
           "scales_with_floor_multiplier": true,
@@ -747,7 +1636,11 @@
         "zone_s_door_forcing": {
           "mechanics_source": "overview 5.10: Thieves' Tools DC 15 or Strength (Athletics) DC 15, 10 minutes, loud; Dean Thudd and his Ushers come looking 1 minute later",
           "forcing_fee_per_crawler": 25,
-          "party_fee_by_size": {"2": 50, "3": 75, "4": 100},
+          "party_fee_by_size": {
+            "2": 50,
+            "3": 75,
+            "4": 100
+          },
           "status": "ASSUMED",
           "reasoning": "25 per Crawler is the cheapest in credits because forcing already pays in danger (the boss arrives at the Crawlers' worst moment). Ordering: forcing 25 < bribe 50 < Detour Tax 75."
         },
@@ -781,14 +1674,26 @@
           "XP (core 3.4)"
         ],
         "proposed": {
-          "slow_learner": {"trigger": "Clear every Day 1 to 3 encounter before descending", "reward": "R1: Title + 25 credits"},
-          "read_the_fine_print": {"trigger": "Use the Break Room terminal bribe route", "reward": "R0: snark-only Title"},
+          "slow_learner": {
+            "trigger": "Clear every Day 1 to 3 encounter before descending",
+            "reward": "R1: Title + 25 credits"
+          },
+          "read_the_fine_print": {
+            "trigger": "Use the Break Room terminal bribe route",
+            "reward": "R0: snark-only Title"
+          },
           "last_one_out": {
             "trigger": "Hold a closing zone until the party is clear, then reach the Green Room",
             "reward": "R2: Heroic Inspiration"
           },
-          "detour_tax": {"trigger": "Pay the missed-key toll and still descend", "reward": "R0: snark-only Title"},
-          "early_withdrawal": {"trigger": "Choose early-descent stasis", "reward": "R0: snark-only Title"},
+          "detour_tax": {
+            "trigger": "Pay the missed-key toll and still descend",
+            "reward": "R0: snark-only Title"
+          },
+          "early_withdrawal": {
+            "trigger": "Choose early-descent stasis",
+            "reward": "R0: snark-only Title"
+          },
           "hold_please": {
             "trigger": "Talk Dean Thudd down without a fight",
             "reward": "R5: Bronze box named for the deed (the Silver Boss Box still drops, overview 6.7)"
@@ -818,21 +1723,62 @@
         "note": "Whole floor budgets at level 2."
       },
       "tier_band_map": {
-        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "map": {
+          "trivial": "Low",
+          "standard": "Moderate",
+          "hard": "High",
+          "boss": "High"
+        },
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
-      "xp_per_character": {"L2": {"low": 100, "moderate": 150, "high": 200}},
+      "xp_per_character": {
+        "L2": {
+          "low": 100,
+          "moderate": 150,
+          "high": 200
+        }
+      },
       "tiers": {
         "L2": {
           "xp_budget_total": {
-            "2": {"trivial": 200, "standard": 300, "hard": 400, "boss": 400},
-            "3": {"trivial": 300, "standard": 450, "hard": 600, "boss": 600},
-            "4": {"trivial": 400, "standard": 600, "hard": 800, "boss": 800}
+            "2": {
+              "trivial": 200,
+              "standard": 300,
+              "hard": 400,
+              "boss": 400
+            },
+            "3": {
+              "trivial": 300,
+              "standard": 450,
+              "hard": 600,
+              "boss": 600
+            },
+            "4": {
+              "trivial": 400,
+              "standard": 600,
+              "hard": 800,
+              "boss": 800
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "1/2", "standard": "1/2", "hard": "1", "boss": "1"},
-            "3": {"trivial": "1/2", "standard": "1/2", "hard": "2", "boss": "2"},
-            "4": {"trivial": "1/2", "standard": "1/2", "hard": "2", "boss": "3"}
+            "2": {
+              "trivial": "1/2",
+              "standard": "1/2",
+              "hard": "1",
+              "boss": "1"
+            },
+            "3": {
+              "trivial": "1/2",
+              "standard": "1/2",
+              "hard": "2",
+              "boss": "2"
+            },
+            "4": {
+              "trivial": "1/2",
+              "standard": "1/2",
+              "hard": "2",
+              "boss": "3"
+            }
           }
         }
       },
@@ -841,7 +1787,12 @@
         "per_day_typical": 1.5,
         "per_day_max": 4,
         "total_planned": 15,
-        "mix_planned": {"trivial": 4, "standard": 8, "hard": 2, "boss": 1},
+        "mix_planned": {
+          "trivial": 4,
+          "standard": 8,
+          "hard": 2,
+          "boss": 1
+        },
         "quota": false,
         "wandering_max_per_day": 1,
         "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
@@ -875,17 +1826,41 @@
       },
       "credits": {
         "cash_per_crawler_per_encounter_f1_scale": {
-          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
-          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+          "trivial": {
+            "dice": "1d3-1",
+            "min": 0,
+            "avg": 1.0,
+            "max": 2
+          },
+          "standard": {
+            "dice": "1d4 x 2",
+            "min": 2,
+            "avg": 5.0,
+            "max": 8
+          },
+          "hard": {
+            "dice": "1d6 x 2",
+            "min": 2,
+            "avg": 7.0,
+            "max": 12
+          },
+          "boss": {
+            "dice": "1d6 x 5",
+            "min": 5,
+            "avg": 17.5,
+            "max": 30
+          }
         },
         "cash_scale": 1,
         "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter credits; decision 019 names only achievement rewards and fees",
         "cash_expected_per_crawler": 75.5,
         "r1_toast_credits_per_crawler": {
           "count_expected": 3,
-          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "each_f1_scale": {
+            "min": 10,
+            "max": 40,
+            "avg": 25.0
+          },
           "expected": 75.0,
           "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
         },
@@ -893,10 +1868,27 @@
         "status": "ASSUMED (GM may adapt)"
       },
       "boxes": {
-        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.07}, "hard": {"Bronze": 0.28}, "boss": {"Silver": 1.0}},
-        "expected_fight_boxes_per_crawler": {"Bronze": 1.12, "boss_box": "Silver"},
+        "odds_per_encounter_by_tier": {
+          "trivial": {},
+          "standard": {
+            "Bronze": 0.07
+          },
+          "hard": {
+            "Bronze": 0.28
+          },
+          "boss": {
+            "Silver": 1.0
+          }
+        },
+        "expected_fight_boxes_per_crawler": {
+          "Bronze": 1.12,
+          "boss_box": "Silver"
+        },
         "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
-        "core_pacing_per_crawler_per_floor": {"Bronze": "2-4", "Silver": "0-1"},
+        "core_pacing_per_crawler_per_floor": {
+          "Bronze": "2-4",
+          "Silver": "0-1"
+        },
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
@@ -933,21 +1925,62 @@
         "note": "Whole floor budgets at level 3."
       },
       "tier_band_map": {
-        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "map": {
+          "trivial": "Low",
+          "standard": "Moderate",
+          "hard": "High",
+          "boss": "High"
+        },
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
-      "xp_per_character": {"L3": {"low": 150, "moderate": 225, "high": 400}},
+      "xp_per_character": {
+        "L3": {
+          "low": 150,
+          "moderate": 225,
+          "high": 400
+        }
+      },
       "tiers": {
         "L3": {
           "xp_budget_total": {
-            "2": {"trivial": 300, "standard": 450, "hard": 800, "boss": 800},
-            "3": {"trivial": 450, "standard": 675, "hard": 1200, "boss": 1200},
-            "4": {"trivial": 600, "standard": 900, "hard": 1600, "boss": 1600}
+            "2": {
+              "trivial": 300,
+              "standard": 450,
+              "hard": 800,
+              "boss": 800
+            },
+            "3": {
+              "trivial": 450,
+              "standard": 675,
+              "hard": 1200,
+              "boss": 1200
+            },
+            "4": {
+              "trivial": 600,
+              "standard": 900,
+              "hard": 1600,
+              "boss": 1600
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "1", "standard": "1", "hard": "3", "boss": "3"},
-            "3": {"trivial": "1", "standard": "1", "hard": "3", "boss": "3"},
-            "4": {"trivial": "1", "standard": "1", "hard": "3", "boss": "4"}
+            "2": {
+              "trivial": "1",
+              "standard": "1",
+              "hard": "3",
+              "boss": "3"
+            },
+            "3": {
+              "trivial": "1",
+              "standard": "1",
+              "hard": "3",
+              "boss": "3"
+            },
+            "4": {
+              "trivial": "1",
+              "standard": "1",
+              "hard": "3",
+              "boss": "4"
+            }
           }
         }
       },
@@ -956,7 +1989,12 @@
         "per_day_typical": 1.5,
         "per_day_max": 4,
         "total_planned": 30,
-        "mix_planned": {"trivial": 7, "standard": 18, "hard": 4, "boss": 1},
+        "mix_planned": {
+          "trivial": 7,
+          "standard": 18,
+          "hard": 4,
+          "boss": 1
+        },
         "quota": false,
         "wandering_max_per_day": 1,
         "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
@@ -990,17 +2028,41 @@
       },
       "credits": {
         "cash_per_crawler_per_encounter_f1_scale": {
-          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
-          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+          "trivial": {
+            "dice": "1d3-1",
+            "min": 0,
+            "avg": 1.0,
+            "max": 2
+          },
+          "standard": {
+            "dice": "1d4 x 2",
+            "min": 2,
+            "avg": 5.0,
+            "max": 8
+          },
+          "hard": {
+            "dice": "1d6 x 2",
+            "min": 2,
+            "avg": 7.0,
+            "max": 12
+          },
+          "boss": {
+            "dice": "1d6 x 5",
+            "min": 5,
+            "avg": 17.5,
+            "max": 30
+          }
         },
         "cash_scale": 1,
         "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter credits; decision 019 names only achievement rewards and fees",
         "cash_expected_per_crawler": 142.5,
         "r1_toast_credits_per_crawler": {
           "count_expected": 3,
-          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "each_f1_scale": {
+            "min": 10,
+            "max": 40,
+            "avg": 25.0
+          },
           "expected": 75.0,
           "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
         },
@@ -1008,10 +2070,30 @@
         "status": "ASSUMED (GM may adapt)"
       },
       "boxes": {
-        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.04}, "hard": {"Bronze": 0.15, "Silver": 0.12}, "boss": {"Gold": 1.0}},
-        "expected_fight_boxes_per_crawler": {"Bronze": 1.32, "Silver": 0.48, "boss_box": "Gold"},
+        "odds_per_encounter_by_tier": {
+          "trivial": {},
+          "standard": {
+            "Bronze": 0.04
+          },
+          "hard": {
+            "Bronze": 0.15,
+            "Silver": 0.12
+          },
+          "boss": {
+            "Gold": 1.0
+          }
+        },
+        "expected_fight_boxes_per_crawler": {
+          "Bronze": 1.32,
+          "Silver": 0.48,
+          "boss_box": "Gold"
+        },
         "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
-        "core_pacing_per_crawler_per_floor": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "core_pacing_per_crawler_per_floor": {
+          "Bronze": "2-3",
+          "Silver": "1-2",
+          "Gold": "0-1"
+        },
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
@@ -1048,21 +2130,62 @@
         "note": "Whole floor budgets at level 4."
       },
       "tier_band_map": {
-        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "map": {
+          "trivial": "Low",
+          "standard": "Moderate",
+          "hard": "High",
+          "boss": "High"
+        },
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
-      "xp_per_character": {"L4": {"low": 250, "moderate": 375, "high": 500}},
+      "xp_per_character": {
+        "L4": {
+          "low": 250,
+          "moderate": 375,
+          "high": 500
+        }
+      },
       "tiers": {
         "L4": {
           "xp_budget_total": {
-            "2": {"trivial": 500, "standard": 750, "hard": 1000, "boss": 1000},
-            "3": {"trivial": 750, "standard": 1125, "hard": 1500, "boss": 1500},
-            "4": {"trivial": 1000, "standard": 1500, "hard": 2000, "boss": 2000}
+            "2": {
+              "trivial": 500,
+              "standard": 750,
+              "hard": 1000,
+              "boss": 1000
+            },
+            "3": {
+              "trivial": 750,
+              "standard": 1125,
+              "hard": 1500,
+              "boss": 1500
+            },
+            "4": {
+              "trivial": 1000,
+              "standard": 1500,
+              "hard": 2000,
+              "boss": 2000
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "1", "standard": "1", "hard": "3", "boss": "3"},
-            "3": {"trivial": "1", "standard": "1", "hard": "3", "boss": "4"},
-            "4": {"trivial": "1", "standard": "1", "hard": "3", "boss": "5"}
+            "2": {
+              "trivial": "1",
+              "standard": "1",
+              "hard": "3",
+              "boss": "3"
+            },
+            "3": {
+              "trivial": "1",
+              "standard": "1",
+              "hard": "3",
+              "boss": "4"
+            },
+            "4": {
+              "trivial": "1",
+              "standard": "1",
+              "hard": "3",
+              "boss": "5"
+            }
           }
         }
       },
@@ -1071,7 +2194,12 @@
         "per_day_typical": 1.5,
         "per_day_max": 4,
         "total_planned": 30,
-        "mix_planned": {"trivial": 7, "standard": 18, "hard": 4, "boss": 1},
+        "mix_planned": {
+          "trivial": 7,
+          "standard": 18,
+          "hard": 4,
+          "boss": 1
+        },
         "quota": false,
         "wandering_max_per_day": 1,
         "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
@@ -1105,17 +2233,41 @@
       },
       "credits": {
         "cash_per_crawler_per_encounter_f1_scale": {
-          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
-          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+          "trivial": {
+            "dice": "1d3-1",
+            "min": 0,
+            "avg": 1.0,
+            "max": 2
+          },
+          "standard": {
+            "dice": "1d4 x 2",
+            "min": 2,
+            "avg": 5.0,
+            "max": 8
+          },
+          "hard": {
+            "dice": "1d6 x 2",
+            "min": 2,
+            "avg": 7.0,
+            "max": 12
+          },
+          "boss": {
+            "dice": "1d6 x 5",
+            "min": 5,
+            "avg": 17.5,
+            "max": 30
+          }
         },
         "cash_scale": 1,
         "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter credits; decision 019 names only achievement rewards and fees",
         "cash_expected_per_crawler": 142.5,
         "r1_toast_credits_per_crawler": {
           "count_expected": 3,
-          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "each_f1_scale": {
+            "min": 10,
+            "max": 40,
+            "avg": 25.0
+          },
           "expected": 75.0,
           "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
         },
@@ -1123,10 +2275,30 @@
         "status": "ASSUMED (GM may adapt)"
       },
       "boxes": {
-        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.04}, "hard": {"Bronze": 0.15, "Silver": 0.12}, "boss": {"Gold": 1.0}},
-        "expected_fight_boxes_per_crawler": {"Bronze": 1.32, "Silver": 0.48, "boss_box": "Gold"},
+        "odds_per_encounter_by_tier": {
+          "trivial": {},
+          "standard": {
+            "Bronze": 0.04
+          },
+          "hard": {
+            "Bronze": 0.15,
+            "Silver": 0.12
+          },
+          "boss": {
+            "Gold": 1.0
+          }
+        },
+        "expected_fight_boxes_per_crawler": {
+          "Bronze": 1.32,
+          "Silver": 0.48,
+          "boss_box": "Gold"
+        },
         "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
-        "core_pacing_per_crawler_per_floor": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "core_pacing_per_crawler_per_floor": {
+          "Bronze": "2-3",
+          "Silver": "1-2",
+          "Gold": "0-1"
+        },
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
@@ -1163,21 +2335,62 @@
         "note": "Whole floor budgets at level 5."
       },
       "tier_band_map": {
-        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "map": {
+          "trivial": "Low",
+          "standard": "Moderate",
+          "hard": "High",
+          "boss": "High"
+        },
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
-      "xp_per_character": {"L5": {"low": 500, "moderate": 750, "high": 1100}},
+      "xp_per_character": {
+        "L5": {
+          "low": 500,
+          "moderate": 750,
+          "high": 1100
+        }
+      },
       "tiers": {
         "L5": {
           "xp_budget_total": {
-            "2": {"trivial": 1000, "standard": 1500, "hard": 2200, "boss": 2200},
-            "3": {"trivial": 1500, "standard": 2250, "hard": 3300, "boss": 3300},
-            "4": {"trivial": 2000, "standard": 3000, "hard": 4400, "boss": 4400}
+            "2": {
+              "trivial": 1000,
+              "standard": 1500,
+              "hard": 2200,
+              "boss": 2200
+            },
+            "3": {
+              "trivial": 1500,
+              "standard": 2250,
+              "hard": 3300,
+              "boss": 3300
+            },
+            "4": {
+              "trivial": 2000,
+              "standard": 3000,
+              "hard": 4400,
+              "boss": 4400
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "2", "standard": "2", "hard": "4", "boss": "5"},
-            "3": {"trivial": "2", "standard": "2", "hard": "4", "boss": "7"},
-            "4": {"trivial": "2", "standard": "2", "hard": "4", "boss": "8"}
+            "2": {
+              "trivial": "2",
+              "standard": "2",
+              "hard": "4",
+              "boss": "5"
+            },
+            "3": {
+              "trivial": "2",
+              "standard": "2",
+              "hard": "4",
+              "boss": "7"
+            },
+            "4": {
+              "trivial": "2",
+              "standard": "2",
+              "hard": "4",
+              "boss": "8"
+            }
           }
         }
       },
@@ -1186,7 +2399,12 @@
         "per_day_typical": 1.5,
         "per_day_max": 4,
         "total_planned": 38,
-        "mix_planned": {"trivial": 9, "standard": 22, "hard": 6, "boss": 1},
+        "mix_planned": {
+          "trivial": 9,
+          "standard": 22,
+          "hard": 6,
+          "boss": 1
+        },
         "quota": false,
         "wandering_max_per_day": 1,
         "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
@@ -1220,17 +2438,41 @@
       },
       "credits": {
         "cash_per_crawler_per_encounter_f1_scale": {
-          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
-          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+          "trivial": {
+            "dice": "1d3-1",
+            "min": 0,
+            "avg": 1.0,
+            "max": 2
+          },
+          "standard": {
+            "dice": "1d4 x 2",
+            "min": 2,
+            "avg": 5.0,
+            "max": 8
+          },
+          "hard": {
+            "dice": "1d6 x 2",
+            "min": 2,
+            "avg": 7.0,
+            "max": 12
+          },
+          "boss": {
+            "dice": "1d6 x 5",
+            "min": 5,
+            "avg": 17.5,
+            "max": 30
+          }
         },
         "cash_scale": 5,
         "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter credits; decision 019 names only achievement rewards and fees",
         "cash_expected_per_crawler": 892.5,
         "r1_toast_credits_per_crawler": {
           "count_expected": 3,
-          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "each_f1_scale": {
+            "min": 10,
+            "max": 40,
+            "avg": 25.0
+          },
           "expected": 375.0,
           "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
         },
@@ -1238,10 +2480,30 @@
         "status": "ASSUMED (GM may adapt)"
       },
       "boxes": {
-        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.03}, "hard": {"Bronze": 0.11, "Silver": 0.08}, "boss": {"Gold": 1.0}},
-        "expected_fight_boxes_per_crawler": {"Bronze": 1.32, "Silver": 0.48, "boss_box": "Gold"},
+        "odds_per_encounter_by_tier": {
+          "trivial": {},
+          "standard": {
+            "Bronze": 0.03
+          },
+          "hard": {
+            "Bronze": 0.11,
+            "Silver": 0.08
+          },
+          "boss": {
+            "Gold": 1.0
+          }
+        },
+        "expected_fight_boxes_per_crawler": {
+          "Bronze": 1.32,
+          "Silver": 0.48,
+          "boss_box": "Gold"
+        },
         "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
-        "core_pacing_per_crawler_per_floor": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "core_pacing_per_crawler_per_floor": {
+          "Bronze": "2-3",
+          "Silver": "1-2",
+          "Gold": "0-1"
+        },
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
@@ -1278,21 +2540,62 @@
         "note": "Whole floor budgets at level 6."
       },
       "tier_band_map": {
-        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "map": {
+          "trivial": "Low",
+          "standard": "Moderate",
+          "hard": "High",
+          "boss": "High"
+        },
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
-      "xp_per_character": {"L6": {"low": 600, "moderate": 1000, "high": 1400}},
+      "xp_per_character": {
+        "L6": {
+          "low": 600,
+          "moderate": 1000,
+          "high": 1400
+        }
+      },
       "tiers": {
         "L6": {
           "xp_budget_total": {
-            "2": {"trivial": 1200, "standard": 2000, "hard": 2800, "boss": 2800},
-            "3": {"trivial": 1800, "standard": 3000, "hard": 4200, "boss": 4200},
-            "4": {"trivial": 2400, "standard": 4000, "hard": 5600, "boss": 5600}
+            "2": {
+              "trivial": 1200,
+              "standard": 2000,
+              "hard": 2800,
+              "boss": 2800
+            },
+            "3": {
+              "trivial": 1800,
+              "standard": 3000,
+              "hard": 4200,
+              "boss": 4200
+            },
+            "4": {
+              "trivial": 2400,
+              "standard": 4000,
+              "hard": 5600,
+              "boss": 5600
+            }
           },
           "cr_caps": {
-            "2": {"trivial": "2", "standard": "2", "hard": "6", "boss": "6"},
-            "3": {"trivial": "2", "standard": "2", "hard": "6", "boss": "7"},
-            "4": {"trivial": "2", "standard": "2", "hard": "6", "boss": "9"}
+            "2": {
+              "trivial": "2",
+              "standard": "2",
+              "hard": "6",
+              "boss": "6"
+            },
+            "3": {
+              "trivial": "2",
+              "standard": "2",
+              "hard": "6",
+              "boss": "7"
+            },
+            "4": {
+              "trivial": "2",
+              "standard": "2",
+              "hard": "6",
+              "boss": "9"
+            }
           }
         }
       },
@@ -1301,7 +2604,12 @@
         "per_day_typical": 1.5,
         "per_day_max": 4,
         "total_planned": 45,
-        "mix_planned": {"trivial": 11, "standard": 26, "hard": 7, "boss": 1},
+        "mix_planned": {
+          "trivial": 11,
+          "standard": 26,
+          "hard": 7,
+          "boss": 1
+        },
         "quota": false,
         "wandering_max_per_day": 1,
         "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
@@ -1335,17 +2643,41 @@
       },
       "credits": {
         "cash_per_crawler_per_encounter_f1_scale": {
-          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
-          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
-          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
-          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+          "trivial": {
+            "dice": "1d3-1",
+            "min": 0,
+            "avg": 1.0,
+            "max": 2
+          },
+          "standard": {
+            "dice": "1d4 x 2",
+            "min": 2,
+            "avg": 5.0,
+            "max": 8
+          },
+          "hard": {
+            "dice": "1d6 x 2",
+            "min": 2,
+            "avg": 7.0,
+            "max": 12
+          },
+          "boss": {
+            "dice": "1d6 x 5",
+            "min": 5,
+            "avg": 17.5,
+            "max": 30
+          }
         },
         "cash_scale": 5,
         "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter credits; decision 019 names only achievement rewards and fees",
         "cash_expected_per_crawler": 1037.5,
         "r1_toast_credits_per_crawler": {
           "count_expected": 3,
-          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "each_f1_scale": {
+            "min": 10,
+            "max": 40,
+            "avg": 25.0
+          },
           "expected": 375.0,
           "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
         },
@@ -1353,10 +2685,31 @@
         "status": "ASSUMED (GM may adapt)"
       },
       "boxes": {
-        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.02}, "hard": {"Bronze": 0.07, "Silver": 0.11}, "boss": {"Gold": 1.0}},
-        "expected_fight_boxes_per_crawler": {"Bronze": 1.01, "Silver": 0.77, "boss_box": "Gold"},
+        "odds_per_encounter_by_tier": {
+          "trivial": {},
+          "standard": {
+            "Bronze": 0.02
+          },
+          "hard": {
+            "Bronze": 0.07,
+            "Silver": 0.11
+          },
+          "boss": {
+            "Gold": 1.0
+          }
+        },
+        "expected_fight_boxes_per_crawler": {
+          "Bronze": 1.01,
+          "Silver": 0.77,
+          "boss_box": "Gold"
+        },
         "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
-        "core_pacing_per_crawler_per_floor": {"Bronze": "1-2", "Silver": "1-2", "Gold": "1", "Platinum": "0-1 (F9)"},
+        "core_pacing_per_crawler_per_floor": {
+          "Bronze": "1-2",
+          "Silver": "1-2",
+          "Gold": "1",
+          "Platinum": "0-1 (F9)"
+        },
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
@@ -1390,8 +2743,25 @@
         "level_arrive": 7,
         "level_leave": 8,
         "budget_level": 7,
-        "xp_per_character_at_budget_level": {"low": 750, "moderate": 1300, "high": 1700},
-        "core_8_3_cr": {"mob": ["2", "3"], "elite": ["5", "6"], "boss": ["9", "10"]},
+        "xp_per_character_at_budget_level": {
+          "low": 750,
+          "moderate": 1300,
+          "high": 1700
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "2",
+            "3"
+          ],
+          "elite": [
+            "5",
+            "6"
+          ],
+          "boss": [
+            "9",
+            "10"
+          ]
+        },
         "credit_multiplier": 5,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1405,8 +2775,25 @@
         "level_arrive": 8,
         "level_leave": 9,
         "budget_level": 8,
-        "xp_per_character_at_budget_level": {"low": 1000, "moderate": 1700, "high": 2100},
-        "core_8_3_cr": {"mob": ["2", "3"], "elite": ["6", "7"], "boss": ["10", "11"]},
+        "xp_per_character_at_budget_level": {
+          "low": 1000,
+          "moderate": 1700,
+          "high": 2100
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "2",
+            "3"
+          ],
+          "elite": [
+            "6",
+            "7"
+          ],
+          "boss": [
+            "10",
+            "11"
+          ]
+        },
         "credit_multiplier": 5,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1420,8 +2807,25 @@
         "level_arrive": 9,
         "level_leave": 10,
         "budget_level": 9,
-        "xp_per_character_at_budget_level": {"low": 1300, "moderate": 2000, "high": 2600},
-        "core_8_3_cr": {"mob": ["3", "4"], "elite": ["7", "8"], "boss": ["11", "12"]},
+        "xp_per_character_at_budget_level": {
+          "low": 1300,
+          "moderate": 2000,
+          "high": 2600
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "3",
+            "4"
+          ],
+          "elite": [
+            "7",
+            "8"
+          ],
+          "boss": [
+            "11",
+            "12"
+          ]
+        },
         "credit_multiplier": 5,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1435,8 +2839,25 @@
         "level_arrive": 10,
         "level_leave": 11,
         "budget_level": 10,
-        "xp_per_character_at_budget_level": {"low": 1600, "moderate": 2300, "high": 3100},
-        "core_8_3_cr": {"mob": ["3", "5"], "elite": ["8", "9"], "boss": ["12", "13"]},
+        "xp_per_character_at_budget_level": {
+          "low": 1600,
+          "moderate": 2300,
+          "high": 3100
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "3",
+            "5"
+          ],
+          "elite": [
+            "8",
+            "9"
+          ],
+          "boss": [
+            "12",
+            "13"
+          ]
+        },
         "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1450,8 +2871,25 @@
         "level_arrive": 11,
         "level_leave": 12,
         "budget_level": 11,
-        "xp_per_character_at_budget_level": {"low": 1900, "moderate": 2900, "high": 4100},
-        "core_8_3_cr": {"mob": ["4", "5"], "elite": ["9", "10"], "boss": ["13", "14"]},
+        "xp_per_character_at_budget_level": {
+          "low": 1900,
+          "moderate": 2900,
+          "high": 4100
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "4",
+            "5"
+          ],
+          "elite": [
+            "9",
+            "10"
+          ],
+          "boss": [
+            "13",
+            "14"
+          ]
+        },
         "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1465,8 +2903,25 @@
         "level_arrive": 12,
         "level_leave": 13,
         "budget_level": 12,
-        "xp_per_character_at_budget_level": {"low": 2200, "moderate": 3700, "high": 4700},
-        "core_8_3_cr": {"mob": ["4", "6"], "elite": ["10", "11"], "boss": ["14", "16"]},
+        "xp_per_character_at_budget_level": {
+          "low": 2200,
+          "moderate": 3700,
+          "high": 4700
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "4",
+            "6"
+          ],
+          "elite": [
+            "10",
+            "11"
+          ],
+          "boss": [
+            "14",
+            "16"
+          ]
+        },
         "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1480,8 +2935,25 @@
         "level_arrive": 13,
         "level_leave": 14,
         "budget_level": 13,
-        "xp_per_character_at_budget_level": {"low": 2600, "moderate": 4200, "high": 5400},
-        "core_8_3_cr": {"mob": ["5", "6"], "elite": ["11", "12"], "boss": ["15", "16"]},
+        "xp_per_character_at_budget_level": {
+          "low": 2600,
+          "moderate": 4200,
+          "high": 5400
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "5",
+            "6"
+          ],
+          "elite": [
+            "11",
+            "12"
+          ],
+          "boss": [
+            "15",
+            "16"
+          ]
+        },
         "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1495,8 +2967,25 @@
         "level_arrive": 14,
         "level_leave": 15,
         "budget_level": 14,
-        "xp_per_character_at_budget_level": {"low": 2900, "moderate": 4900, "high": 6200},
-        "core_8_3_cr": {"mob": ["5", "7"], "elite": ["12", "13"], "boss": ["16", "17"]},
+        "xp_per_character_at_budget_level": {
+          "low": 2900,
+          "moderate": 4900,
+          "high": 6200
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "5",
+            "7"
+          ],
+          "elite": [
+            "12",
+            "13"
+          ],
+          "boss": [
+            "16",
+            "17"
+          ]
+        },
         "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1510,8 +2999,25 @@
         "level_arrive": 15,
         "level_leave": 16,
         "budget_level": 15,
-        "xp_per_character_at_budget_level": {"low": 3300, "moderate": 5400, "high": 7800},
-        "core_8_3_cr": {"mob": ["6", "8"], "elite": ["13", "14"], "boss": ["17", "19"]},
+        "xp_per_character_at_budget_level": {
+          "low": 3300,
+          "moderate": 5400,
+          "high": 7800
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "6",
+            "8"
+          ],
+          "elite": [
+            "13",
+            "14"
+          ],
+          "boss": [
+            "17",
+            "19"
+          ]
+        },
         "credit_multiplier": 50,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1525,8 +3031,25 @@
         "level_arrive": 16,
         "level_leave": 17,
         "budget_level": 16,
-        "xp_per_character_at_budget_level": {"low": 3800, "moderate": 6100, "high": 9800},
-        "core_8_3_cr": {"mob": ["6", "8"], "elite": ["14", "15"], "boss": ["18", "20"]},
+        "xp_per_character_at_budget_level": {
+          "low": 3800,
+          "moderate": 6100,
+          "high": 9800
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "6",
+            "8"
+          ],
+          "elite": [
+            "14",
+            "15"
+          ],
+          "boss": [
+            "18",
+            "20"
+          ]
+        },
         "credit_multiplier": 50,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1540,8 +3063,25 @@
         "level_arrive": 17,
         "level_leave": 18,
         "budget_level": 17,
-        "xp_per_character_at_budget_level": {"low": 4500, "moderate": 7200, "high": 11700},
-        "core_8_3_cr": {"mob": ["7", "9"], "elite": ["15", "16"], "boss": ["19", "21"]},
+        "xp_per_character_at_budget_level": {
+          "low": 4500,
+          "moderate": 7200,
+          "high": 11700
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "7",
+            "9"
+          ],
+          "elite": [
+            "15",
+            "16"
+          ],
+          "boss": [
+            "19",
+            "21"
+          ]
+        },
         "credit_multiplier": 50,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1555,8 +3095,25 @@
         "level_arrive": 18,
         "level_leave": "19-20 (finale)",
         "budget_level": 18,
-        "xp_per_character_at_budget_level": {"low": 5000, "moderate": 8700, "high": 14200},
-        "core_8_3_cr": {"mob": ["8", "10"], "elite": ["16", "18"], "boss": ["21", "24"]},
+        "xp_per_character_at_budget_level": {
+          "low": 5000,
+          "moderate": 8700,
+          "high": 14200
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "8",
+            "10"
+          ],
+          "elite": [
+            "16",
+            "18"
+          ],
+          "boss": [
+            "21",
+            "24"
+          ]
+        },
         "credit_multiplier": 50,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
@@ -1657,8 +3214,14 @@
       "expected_silver_boxes": 1
     },
     "per_floor_summary": {
-      "1": {"all_in": 666.1, "box_only": 576.6},
-      "2": {"all_in": 719.5, "box_only": 569.0},
+      "1": {
+        "all_in": 666.1,
+        "box_only": 576.6
+      },
+      "2": {
+        "all_in": 719.5,
+        "box_only": 569.0
+      },
       "reading": "each floor is audited separately against 1,500; no combined total is audited and none is claimed"
     },
     "by_party_size": {
@@ -1699,11 +3262,31 @@
       "script": "tools-notes/encounter_budget_econ.py",
       "script_sha256": "8941262f3513edb80512f8ff008ab555badd00b810ffd0672e26318042d0c2fa",
       "pull_type_table": [
-        {"d100": "01-30", "type": "consumable", "p": 0.3},
-        {"d100": "31-55", "type": "gear", "p": 0.25},
-        {"d100": "56-70", "type": "credits", "p": 0.15},
-        {"d100": "71-88", "type": "tailored", "p": 0.18},
-        {"d100": "89-98", "type": "weird", "p": 0.1},
+        {
+          "d100": "01-30",
+          "type": "consumable",
+          "p": 0.3
+        },
+        {
+          "d100": "31-55",
+          "type": "gear",
+          "p": 0.25
+        },
+        {
+          "d100": "56-70",
+          "type": "credits",
+          "p": 0.15
+        },
+        {
+          "d100": "71-88",
+          "type": "tailored",
+          "p": 0.18
+        },
+        {
+          "d100": "89-98",
+          "type": "weird",
+          "p": 0.1
+        },
         {
           "d100": "99-00",
           "type": "upgrade (re-roll one tier up; Silver is the F1-2 ceiling so it re-rolls Silver)",
@@ -1717,8 +3300,20 @@
         "silver_box": "2 pulls (core 4.1)",
         "welcome_box": "pull 1 tailored (cards of pull_type tailored) + pull 2 d100 (overview 8.1)"
       },
-      "pull_type_means_bronze_pooled": {"consumable": 28.79, "gear": 8.38, "credits": 52.5, "tailored": 25.19, "weird": 9.14},
-      "pull_type_means_silver_boss": {"consumable": 167.74, "gear": 289.55, "credits": 175.0, "tailored": 400.0, "weird": 150.0},
+      "pull_type_means_bronze_pooled": {
+        "consumable": 28.79,
+        "gear": 8.38,
+        "credits": 52.5,
+        "tailored": 25.19,
+        "weird": 9.14
+      },
+      "pull_type_means_silver_boss": {
+        "consumable": 167.74,
+        "gear": 289.55,
+        "credits": 175.0,
+        "tailored": 400.0,
+        "weird": 150.0
+      },
       "used_in_budget": {
         "bronze_pull_mean": 28.862,
         "bronze_box_mean_1_5_pulls": 43.293,
@@ -1733,7 +3328,9 @@
       },
       "scopes": {
         "any_only": {
-          "zones": ["any"],
+          "zones": [
+            "any"
+          ],
           "box_type": null,
           "cards": 50,
           "bronze_pull": 30.081,
@@ -1741,11 +3338,26 @@
           "silver_pull": 241.178,
           "silver_box_2_pulls": 482.355,
           "welcome_box": 55.344,
-          "bronze_pull_type_means": {"consumable": 32.55, "gear": 8.48, "credits": 52.5, "tailored": 25.26, "weird": 9.5},
-          "silver_pull_type_means": {"consumable": 173.91, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 32.55,
+            "gear": 8.48,
+            "credits": 52.5,
+            "tailored": 25.26,
+            "weird": 9.5
+          },
+          "silver_pull_type_means": {
+            "consumable": 173.91,
+            "gear": 283.72,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         },
         "any+z03": {
-          "zones": ["any", "z03"],
+          "zones": [
+            "any",
+            "z03"
+          ],
           "box_type": null,
           "cards": 58,
           "bronze_pull": 28.158,
@@ -1753,11 +3365,26 @@
           "silver_pull": 241.178,
           "silver_box_2_pulls": 482.355,
           "welcome_box": 53.42,
-          "bronze_pull_type_means": {"consumable": 27.61, "gear": 7.22, "credits": 52.5, "tailored": 25.26, "weird": 8.26},
-          "silver_pull_type_means": {"consumable": 173.91, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 27.61,
+            "gear": 7.22,
+            "credits": 52.5,
+            "tailored": 25.26,
+            "weird": 8.26
+          },
+          "silver_pull_type_means": {
+            "consumable": 173.91,
+            "gear": 283.72,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         },
         "any+z06": {
-          "zones": ["any", "z06"],
+          "zones": [
+            "any",
+            "z06"
+          ],
           "box_type": null,
           "cards": 57,
           "bronze_pull": 30.364,
@@ -1765,11 +3392,26 @@
           "silver_pull": 241.178,
           "silver_box_2_pulls": 482.355,
           "welcome_box": 55.626,
-          "bronze_pull_type_means": {"consumable": 33.02, "gear": 8.48, "credits": 52.5, "tailored": 25.26, "weird": 10.92},
-          "silver_pull_type_means": {"consumable": 173.91, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 33.02,
+            "gear": 8.48,
+            "credits": 52.5,
+            "tailored": 25.26,
+            "weird": 10.92
+          },
+          "silver_pull_type_means": {
+            "consumable": 173.91,
+            "gear": 283.72,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         },
         "any+z09": {
-          "zones": ["any", "z09"],
+          "zones": [
+            "any",
+            "z09"
+          ],
           "box_type": null,
           "cards": 63,
           "bronze_pull": 30.08,
@@ -1777,11 +3419,29 @@
           "silver_pull": 240.46,
           "silver_box_2_pulls": 480.92,
           "welcome_box": 55.266,
-          "bronze_pull_type_means": {"consumable": 32.3, "gear": 9.53, "credits": 52.5, "tailored": 25.19, "weird": 7.92},
-          "silver_pull_type_means": {"consumable": 171.57, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 32.3,
+            "gear": 9.53,
+            "credits": 52.5,
+            "tailored": 25.19,
+            "weird": 7.92
+          },
+          "silver_pull_type_means": {
+            "consumable": 171.57,
+            "gear": 283.72,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         },
         "pooled_floor": {
-          "zones": ["any", "z03", "z06", "z09", "z10"],
+          "zones": [
+            "any",
+            "z03",
+            "z06",
+            "z09",
+            "z10"
+          ],
           "box_type": null,
           "cards": 78,
           "bronze_pull": 28.862,
@@ -1789,11 +3449,26 @@
           "silver_pull": 240.46,
           "silver_box_2_pulls": 480.92,
           "welcome_box": 54.047,
-          "bronze_pull_type_means": {"consumable": 28.79, "gear": 8.38, "credits": 52.5, "tailored": 25.19, "weird": 9.14},
-          "silver_pull_type_means": {"consumable": 171.57, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 28.79,
+            "gear": 8.38,
+            "credits": 52.5,
+            "tailored": 25.19,
+            "weird": 9.14
+          },
+          "silver_pull_type_means": {
+            "consumable": 171.57,
+            "gear": 283.72,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         },
         "z10_boss": {
-          "zones": ["any", "z10"],
+          "zones": [
+            "any",
+            "z10"
+          ],
           "box_type": "Boss",
           "cards": 54,
           "bronze_pull": 30.073,
@@ -1801,11 +3476,29 @@
           "silver_pull": 240.776,
           "silver_box_2_pulls": 481.552,
           "welcome_box": 55.336,
-          "bronze_pull_type_means": {"consumable": 32.55, "gear": 8.48, "credits": 52.5, "tailored": 25.26, "weird": 9.5},
-          "silver_pull_type_means": {"consumable": 167.74, "gear": 289.55, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 32.55,
+            "gear": 8.48,
+            "credits": 52.5,
+            "tailored": 25.26,
+            "weird": 9.5
+          },
+          "silver_pull_type_means": {
+            "consumable": 167.74,
+            "gear": 289.55,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         },
         "pooled_incl_boss_only": {
-          "zones": ["any", "z03", "z06", "z09", "z10"],
+          "zones": [
+            "any",
+            "z03",
+            "z06",
+            "z09",
+            "z10"
+          ],
           "box_type": "Boss",
           "cards": 82,
           "bronze_pull": 28.86,
@@ -1813,8 +3506,20 @@
           "silver_pull": 240.371,
           "silver_box_2_pulls": 480.742,
           "welcome_box": 54.045,
-          "bronze_pull_type_means": {"consumable": 28.79, "gear": 8.38, "credits": 52.5, "tailored": 25.19, "weird": 9.14},
-          "silver_pull_type_means": {"consumable": 166.42, "gear": 289.55, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+          "bronze_pull_type_means": {
+            "consumable": 28.79,
+            "gear": 8.38,
+            "credits": 52.5,
+            "tailored": 25.19,
+            "weird": 9.14
+          },
+          "silver_pull_type_means": {
+            "consumable": 166.42,
+            "gear": 289.55,
+            "credits": 175.0,
+            "tailored": 400.0,
+            "weird": 150.0
+          }
         }
       },
       "v0_1_0_error": "v0.1.0 selected cards by `kind` instead of `pull_type`, which gave Silver 429.5 and wrong pull-type means. The live-deck Silver box is about 481."
@@ -1837,10 +3542,42 @@
         "base": {
           "what": "the plan in this file",
           "result": {
-            "f1_all": {"mean": 669.3, "p50": 659, "p90": 887, "p95": 955, "p99": 1089, "max": 1604, "pct_over_1500": 0.01},
-            "f2_all": {"mean": 720.0, "p50": 709, "p90": 941, "p95": 1011, "p99": 1156, "max": 1691, "pct_over_1500": 0.01},
-            "f1_box": {"mean": 579.8, "p50": 570, "p90": 800, "p95": 861, "p99": 1000, "max": 1503, "pct_over_1500": 0.0},
-            "f2_box": {"mean": 569.5, "p50": 556, "p90": 794, "p95": 856, "p99": 1003, "max": 1555, "pct_over_1500": 0.0}
+            "f1_all": {
+              "mean": 669.3,
+              "p50": 659,
+              "p90": 887,
+              "p95": 955,
+              "p99": 1089,
+              "max": 1604,
+              "pct_over_1500": 0.01
+            },
+            "f2_all": {
+              "mean": 720.0,
+              "p50": 709,
+              "p90": 941,
+              "p95": 1011,
+              "p99": 1156,
+              "max": 1691,
+              "pct_over_1500": 0.01
+            },
+            "f1_box": {
+              "mean": 579.8,
+              "p50": 570,
+              "p90": 800,
+              "p95": 861,
+              "p99": 1000,
+              "max": 1503,
+              "pct_over_1500": 0.0
+            },
+            "f2_box": {
+              "mean": 569.5,
+              "p50": 556,
+              "p90": 794,
+              "p95": 856,
+              "p99": 1003,
+              "max": 1555,
+              "pct_over_1500": 0.0
+            }
           },
           "n": 100000,
           "seed": 70,
@@ -1849,10 +3586,42 @@
         "pacing_ceiling": {
           "what": "core 4.5 ceiling: 4 Bronze per Crawler per floor (F1 count includes the Welcome Box) plus the Silver Boss Box, and 5 credit-paying R1 toasts per floor",
           "result": {
-            "f1_all": {"mean": 836.9, "p50": 824, "p90": 1070, "p95": 1146, "p99": 1303, "max": 1892, "pct_over_1500": 0.11},
-            "f2_all": {"mean": 856.9, "p50": 844, "p90": 1089, "p95": 1169, "p99": 1335, "max": 1940, "pct_over_1500": 0.15},
-            "f1_box": {"mean": 672.4, "p50": 658, "p90": 905, "p95": 980, "p99": 1135, "max": 1676, "pct_over_1500": 0.01},
-            "f2_box": {"mean": 656.4, "p50": 643, "p90": 886, "p95": 966, "p99": 1130, "max": 1710, "pct_over_1500": 0.01}
+            "f1_all": {
+              "mean": 836.9,
+              "p50": 824,
+              "p90": 1070,
+              "p95": 1146,
+              "p99": 1303,
+              "max": 1892,
+              "pct_over_1500": 0.11
+            },
+            "f2_all": {
+              "mean": 856.9,
+              "p50": 844,
+              "p90": 1089,
+              "p95": 1169,
+              "p99": 1335,
+              "max": 1940,
+              "pct_over_1500": 0.15
+            },
+            "f1_box": {
+              "mean": 672.4,
+              "p50": 658,
+              "p90": 905,
+              "p95": 980,
+              "p99": 1135,
+              "max": 1676,
+              "pct_over_1500": 0.01
+            },
+            "f2_box": {
+              "mean": 656.4,
+              "p50": 643,
+              "p90": 886,
+              "p95": 966,
+              "p99": 1130,
+              "max": 1710,
+              "pct_over_1500": 0.01
+            }
           },
           "n": 100000,
           "seed": 70,
@@ -1862,30 +3631,126 @@
         "base_with_valve_900": {
           "what": "base plan with the optional safety valve at 900",
           "result": {
-            "f1_all": {"mean": 669.3, "p50": 659, "p90": 887, "p95": 955, "p99": 1089, "max": 1604, "pct_over_1500": 0.01},
-            "f2_all": {"mean": 720.0, "p50": 709, "p90": 941, "p95": 1011, "p99": 1156, "max": 1691, "pct_over_1500": 0.0},
-            "f1_box": {"mean": 579.8, "p50": 570, "p90": 800, "p95": 861, "p99": 1000, "max": 1503, "pct_over_1500": 0.0},
-            "f2_box": {"mean": 569.5, "p50": 556, "p90": 794, "p95": 856, "p99": 1003, "max": 1555, "pct_over_1500": 0.0}
+            "f1_all": {
+              "mean": 669.3,
+              "p50": 659,
+              "p90": 887,
+              "p95": 955,
+              "p99": 1089,
+              "max": 1604,
+              "pct_over_1500": 0.01
+            },
+            "f2_all": {
+              "mean": 720.0,
+              "p50": 709,
+              "p90": 941,
+              "p95": 1011,
+              "p99": 1156,
+              "max": 1691,
+              "pct_over_1500": 0.0
+            },
+            "f1_box": {
+              "mean": 579.8,
+              "p50": 570,
+              "p90": 800,
+              "p95": 861,
+              "p99": 1000,
+              "max": 1503,
+              "pct_over_1500": 0.0
+            },
+            "f2_box": {
+              "mean": 569.5,
+              "p50": 556,
+              "p90": 794,
+              "p95": 856,
+              "p99": 1003,
+              "max": 1555,
+              "pct_over_1500": 0.0
+            }
           },
           "valve_triggered_pct_of_f2_floors": 0.02
         },
         "pacing_ceiling_with_valve_900": {
           "what": "pacing ceiling with the optional safety valve at 900",
           "result": {
-            "f1_all": {"mean": 836.9, "p50": 824, "p90": 1070, "p95": 1146, "p99": 1303, "max": 1892, "pct_over_1500": 0.11},
-            "f2_all": {"mean": 856.7, "p50": 844, "p90": 1089, "p95": 1169, "p99": 1327, "max": 1699, "pct_over_1500": 0.09},
-            "f1_box": {"mean": 672.4, "p50": 658, "p90": 905, "p95": 980, "p99": 1134, "max": 1676, "pct_over_1500": 0.01},
-            "f2_box": {"mean": 656.2, "p50": 643, "p90": 886, "p95": 966, "p99": 1125, "max": 1486, "pct_over_1500": 0.0}
+            "f1_all": {
+              "mean": 836.9,
+              "p50": 824,
+              "p90": 1070,
+              "p95": 1146,
+              "p99": 1303,
+              "max": 1892,
+              "pct_over_1500": 0.11
+            },
+            "f2_all": {
+              "mean": 856.7,
+              "p50": 844,
+              "p90": 1089,
+              "p95": 1169,
+              "p99": 1327,
+              "max": 1699,
+              "pct_over_1500": 0.09
+            },
+            "f1_box": {
+              "mean": 672.4,
+              "p50": 658,
+              "p90": 905,
+              "p95": 980,
+              "p99": 1134,
+              "max": 1676,
+              "pct_over_1500": 0.01
+            },
+            "f2_box": {
+              "mean": 656.2,
+              "p50": 643,
+              "p90": 886,
+              "p95": 966,
+              "p99": 1125,
+              "max": 1486,
+              "pct_over_1500": 0.0
+            }
           },
           "valve_triggered_pct_of_f2_floors": 0.19
         },
         "with_replacement_check": {
           "what": "base plan, 40000 Crawlers, cards drawn with replacement; should match the analytic means (F1 666.1, F2 719.5)",
           "result": {
-            "f1_all": {"mean": 667.7, "p50": 656, "p90": 889, "p95": 958, "p99": 1093, "max": 1660, "pct_over_1500": 0.01},
-            "f2_all": {"mean": 719.4, "p50": 708, "p90": 941, "p95": 1012, "p99": 1154, "max": 1760, "pct_over_1500": 0.02},
-            "f1_box": {"mean": 578.2, "p50": 562, "p90": 801, "p95": 866, "p99": 1001, "max": 1565, "pct_over_1500": 0.01},
-            "f2_box": {"mean": 568.9, "p50": 555, "p90": 793, "p95": 856, "p99": 1002, "max": 1610, "pct_over_1500": 0.01}
+            "f1_all": {
+              "mean": 667.7,
+              "p50": 656,
+              "p90": 889,
+              "p95": 958,
+              "p99": 1093,
+              "max": 1660,
+              "pct_over_1500": 0.01
+            },
+            "f2_all": {
+              "mean": 719.4,
+              "p50": 708,
+              "p90": 941,
+              "p95": 1012,
+              "p99": 1154,
+              "max": 1760,
+              "pct_over_1500": 0.02
+            },
+            "f1_box": {
+              "mean": 578.2,
+              "p50": 562,
+              "p90": 801,
+              "p95": 866,
+              "p99": 1001,
+              "max": 1565,
+              "pct_over_1500": 0.01
+            },
+            "f2_box": {
+              "mean": 568.9,
+              "p50": 555,
+              "p90": 793,
+              "p95": 856,
+              "p99": 1002,
+              "max": 1610,
+              "pct_over_1500": 0.01
+            }
           },
           "n": 40000
         }
@@ -1933,7 +3798,13 @@
     "story_boxes_note": "Story Boxes (F1-2) are a separate track outside the Legendary cap and outside this budget (core §4.1/4.5/4.7).",
     "growth_rate": {
       "summary": "Expected counted income per Crawler per floor jumps at F3 (first Gold box, first 20-day floor) and then rises mostly by box-tier steps (Gold, Platinum, Legendary) and by the credit multiplier acting on encounter credits and R1 credits. Geometric mean growth per floor between the endpoints of each band is given below.",
-      "per_band_geometric_mean": {"F3->F4": 1.0, "F5->F9": 1.648, "F10->F14": 1.405, "F15->F18": 1.0, "F3->F18": 1.278},
+      "per_band_geometric_mean": {
+        "F3->F4": 1.0,
+        "F5->F9": 1.648,
+        "F10->F14": 1.405,
+        "F15->F18": 1.0,
+        "F3->F18": 1.278
+      },
       "step_floors": {
         "F3": "first Gold box, Floor 3 = 20 days",
         "F5": "credit multiplier x5 (encounter credits, R1, fees)",
@@ -2320,7 +4191,10 @@
         "average_floors_of_liquid_income": 3.01,
         "average_floors_of_liquid_income_note": "unrounded per-floor ratios averaged (v0.1.8); v0.1.7 averaged the 1-decimal ratios and printed 3.02 / 6.04",
         "average_floors_of_expected_counted": 1.92,
-        "worst_deviation_pct": [-28.9, 24.4],
+        "worst_deviation_pct": [
+          -28.9,
+          24.4
+        ],
         "floors_outside_plus_minus_30pct": [],
         "floors_checked": 16,
         "never_falls_floor_to_floor": true
@@ -2330,7 +4204,10 @@
         "average_floors_of_liquid_income": 6.03,
         "average_floors_of_liquid_income_note": "unrounded per-floor ratios averaged (v0.1.8); v0.1.7 averaged the 1-decimal ratios and printed 3.02 / 6.04",
         "average_floors_of_expected_counted": 3.86,
-        "worst_deviation_pct": [-28.9, 24.4],
+        "worst_deviation_pct": [
+          -28.9,
+          24.4
+        ],
         "floors_outside_plus_minus_30pct": [],
         "floors_checked": 15,
         "never_falls_floor_to_floor": true
@@ -2340,7 +4217,10 @@
         "average_floors_of_liquid_income": 9.89,
         "average_floors_of_liquid_income_note": "unrounded per-floor ratios averaged (v0.1.8); v0.1.7 averaged the 1-decimal ratios and printed 3.02 / 6.04",
         "average_floors_of_expected_counted": 6.31,
-        "worst_deviation_pct": [-28.9, 23.8],
+        "worst_deviation_pct": [
+          -28.9,
+          23.8
+        ],
         "floors_outside_plus_minus_30pct": [],
         "floors_checked": 13,
         "never_falls_floor_to_floor": true
@@ -2356,7 +4236,11 @@
       "previous_price_columns": "the table's price_basic_table / price_crafting_studio / price_enhanced_studio and floors_of_liquid_income_* columns in proposed_floor_growth_curve keep the superseded credit-multiplier prices for comparison; the adopted prices are in this block"
     },
     "what_it_replaces": "(Adopted in v0.1.6 for Floors 3-18.) The credit multiplier (x1 F1-4, x5 F5-9, x20 F10-14, x50 F15-18, core 3.9) as applied to CRAFTING PRICES ONLY (basic table 5,000 / Crafting Studio 12,000 / Enhanced Studio 30,000 at Floor-1 scale, rules/20). Achievement rewards, encounter credits, R1 toast credits and all other System fees keep the core multiplier.",
-    "targets_floors_of_liquid_income": {"basic_table": 3, "crafting_studio": 6, "enhanced_studio": 10},
+    "targets_floors_of_liquid_income": {
+      "basic_table": 3,
+      "crafting_studio": 6,
+      "enhanced_studio": 10
+    },
     "method": [
       "liquid income L(f) = the growth table's liquid_if_items_sold_at_half. Plain note: L halves box ITEMS only (core 5.10); credit-pull cards are NOT halved, they count at full value (credits per Crawler per floor if every box item is sold at half credit_value, core 5.10, plus encounter credits and R1 credits).",
       "trend T(f) = log-linear fit of L over F3-F18 (about x1.348 per floor).",
@@ -2366,9 +4250,36 @@
     ],
     "trend_growth_per_floor": 1.348,
     "summary": {
-      "basic_table": {"current_floors_range": [1.2, 8.6], "proposed_floors_range": [2.1, 3.7]},
-      "crafting_studio": {"current_floors_range": [2.8, 20.7], "proposed_floors_range": [4.3, 7.5]},
-      "enhanced_studio": {"current_floors_range": [7.1, 35.8], "proposed_floors_range": [7.1, 12.4]}
+      "basic_table": {
+        "current_floors_range": [
+          1.2,
+          8.6
+        ],
+        "proposed_floors_range": [
+          2.1,
+          3.7
+        ]
+      },
+      "crafting_studio": {
+        "current_floors_range": [
+          2.8,
+          20.7
+        ],
+        "proposed_floors_range": [
+          4.3,
+          7.5
+        ]
+      },
+      "enhanced_studio": {
+        "current_floors_range": [
+          7.1,
+          35.8
+        ],
+        "proposed_floors_range": [
+          7.1,
+          12.4
+        ]
+      }
     },
     "caveats": [
       "Targets are met on average, not floor by floor: income is stepped (box tiers) and prices are smooth, so the ratio is lower right after an income step (F9, F13) and higher right before one (F8, F12) by design.",
@@ -2389,22 +4300,86 @@
         "enhanced_studio": 30000,
         "note": "ruled prices, x1 (Floors 1-2 keep them; tables are unusable until Floor 4 anyway)"
       },
-      "3": {"basic_table": 5500, "crafting_studio": null, "enhanced_studio": null},
-      "4": {"basic_table": 6500, "crafting_studio": 12500, "enhanced_studio": null},
-      "5": {"basic_table": 9000, "crafting_studio": 18500, "enhanced_studio": null},
-      "6": {"basic_table": 13000, "crafting_studio": 26000, "enhanced_studio": 43000},
-      "7": {"basic_table": 15000, "crafting_studio": 30000, "enhanced_studio": 50000},
-      "8": {"basic_table": 15000, "crafting_studio": 30000, "enhanced_studio": 50000},
-      "9": {"basic_table": 42000, "crafting_studio": 84000, "enhanced_studio": 140000},
-      "10": {"basic_table": 56000, "crafting_studio": 110000, "enhanced_studio": 185000},
-      "11": {"basic_table": 64000, "crafting_studio": 130000, "enhanced_studio": 215000},
-      "12": {"basic_table": 75000, "crafting_studio": 150000, "enhanced_studio": 250000},
-      "13": {"basic_table": 180000, "crafting_studio": 360000, "enhanced_studio": 600000},
-      "14": {"basic_table": 190000, "crafting_studio": 380000, "enhanced_studio": 635000},
-      "15": {"basic_table": 210000, "crafting_studio": 420000, "enhanced_studio": 700000},
-      "16": {"basic_table": 245000, "crafting_studio": 490000, "enhanced_studio": 815000},
-      "17": {"basic_table": 285000, "crafting_studio": 570000, "enhanced_studio": 945000},
-      "18": {"basic_table": 285000, "crafting_studio": 570000, "enhanced_studio": 945000}
+      "3": {
+        "basic_table": 5500,
+        "crafting_studio": null,
+        "enhanced_studio": null
+      },
+      "4": {
+        "basic_table": 6500,
+        "crafting_studio": 12500,
+        "enhanced_studio": null
+      },
+      "5": {
+        "basic_table": 9000,
+        "crafting_studio": 18500,
+        "enhanced_studio": null
+      },
+      "6": {
+        "basic_table": 13000,
+        "crafting_studio": 26000,
+        "enhanced_studio": 43000
+      },
+      "7": {
+        "basic_table": 15000,
+        "crafting_studio": 30000,
+        "enhanced_studio": 50000
+      },
+      "8": {
+        "basic_table": 15000,
+        "crafting_studio": 30000,
+        "enhanced_studio": 50000
+      },
+      "9": {
+        "basic_table": 42000,
+        "crafting_studio": 84000,
+        "enhanced_studio": 140000
+      },
+      "10": {
+        "basic_table": 56000,
+        "crafting_studio": 110000,
+        "enhanced_studio": 185000
+      },
+      "11": {
+        "basic_table": 64000,
+        "crafting_studio": 130000,
+        "enhanced_studio": 215000
+      },
+      "12": {
+        "basic_table": 75000,
+        "crafting_studio": 150000,
+        "enhanced_studio": 250000
+      },
+      "13": {
+        "basic_table": 180000,
+        "crafting_studio": 360000,
+        "enhanced_studio": 600000
+      },
+      "14": {
+        "basic_table": 190000,
+        "crafting_studio": 380000,
+        "enhanced_studio": 635000
+      },
+      "15": {
+        "basic_table": 210000,
+        "crafting_studio": 420000,
+        "enhanced_studio": 700000
+      },
+      "16": {
+        "basic_table": 245000,
+        "crafting_studio": 490000,
+        "enhanced_studio": 815000
+      },
+      "17": {
+        "basic_table": 285000,
+        "crafting_studio": 570000,
+        "enhanced_studio": 945000
+      },
+      "18": {
+        "basic_table": 285000,
+        "crafting_studio": 570000,
+        "enhanced_studio": 945000
+      }
     },
     "table": [
       {
@@ -2942,7 +4917,7 @@
   ],
   "day01_slot_map": {
     "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
-    "spec_sha256_sans_pin_when_mapped": "75f63abff9ab999546dd84d19cd0109b1c740eba4fba76eb16b2f674b454d3e0",
+    "spec_sha256_sans_pin_when_mapped": "db0d7536385776b73135e38f43e35c323d341511b8e7748c48e65c301dff8e39",
     "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version and achievements_catalog.expected_sha256 deleted if present (method updated by the Encounter Bot to also skip the achievements catalog version and sha; the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pins on this file and on the canon table and achievements catalog, so a budget or catalog bump no longer breaks this provenance; real slot content changes still do.",
     "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
     "count": 32,
@@ -3025,7 +5000,11 @@
         "label": "CREDITS (key price)",
         "fills_from": "floors.1.prices.stairwell_key_terminal_bribe",
         "mode": "number",
-        "value_by_party_size": {"2": 100, "3": 150, "4": 200}
+        "value_by_party_size": {
+          "2": 100,
+          "3": 150,
+          "4": 200
+        }
       },
       {
         "slot_no": 8,
@@ -3033,7 +5012,11 @@
         "label": "DETOUR TAX",
         "fills_from": "floors.1.prices.detour_tax",
         "mode": "number",
-        "value_by_party_size": {"2": 150, "3": 225, "4": 300}
+        "value_by_party_size": {
+          "2": 150,
+          "3": 225,
+          "4": 300
+        }
       },
       {
         "slot_no": 9,
@@ -3081,7 +5064,11 @@
         "label": "COUNT (greeter-warrior)",
         "fills_from": "floors.1.fixed_encounters.z07.counts_by_party_size",
         "mode": "number",
-        "value_by_party_size": {"2": 1, "3": 1, "4": 2}
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 2
+        }
       },
       {
         "slot_no": 15,
@@ -3097,7 +5084,11 @@
         "label": "COUNT (greeter-minion)",
         "fills_from": "floors.1.fixed_encounters.z07.counts_by_party_size",
         "mode": "number",
-        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
       },
       {
         "slot_no": 17,
@@ -3133,7 +5124,11 @@
         "label": "COUNT (elite-armor)",
         "fills_from": "floors.1.fixed_encounters.z08.counts_by_party_size",
         "mode": "number",
-        "value_by_party_size": {"2": 1, "3": 1, "4": 1}
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
       },
       {
         "slot_no": 21,
@@ -3149,7 +5144,11 @@
         "label": "COUNT (lanyard-blade)",
         "fills_from": "floors.1.fixed_encounters.z08.counts_by_party_size",
         "mode": "number",
-        "value_by_party_size": {"2": 0, "3": 1, "4": 2}
+        "value_by_party_size": {
+          "2": 0,
+          "3": 1,
+          "4": 2
+        }
       },
       {
         "slot_no": 23,
@@ -3193,7 +5192,11 @@
         "label": "COUNT (ticks)",
         "fills_from": "floors.1.fixed_encounters.wandering.counts_by_party_size",
         "mode": "number",
-        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
       },
       {
         "slot_no": 28,
@@ -3268,9 +5271,9 @@
   "day02_to_04_slot_map": {
     "status": "v0.1.2 addition (Encounter Bot request). The CR slots of these encounters already resolve (floors.1.fixed_encounters.z10.creatures key skeleton, z02.creatures key giant-rat, wandering.creatures key stirge) and are unchanged.",
     "spec_sha256_sans_pin_when_mapped": {
-      "day-02": "d13a71b8397547f8776bbffee9cc21bb4a0704e8cdfa4045d36fc58a9dd9c9ca",
-      "day-03": "ccccfed5db877cc72b95c91e2de4b4c68a2a814e678b186b5d51e658abb81c21",
-      "day-04": "fa6fc548b0fe239f3c97489c93d4cb5083805020755ec66cad0f62037123ab95"
+      "day-02": "fbca5883975c887c555197a2b35b8a5b52fc9abf99063b9cc568aad76bb5f888",
+      "day-03": "eaa66710ea39899b366c2bae0da16ca9c9e0cc5406d279f5ce93a93161162f7b",
+      "day-04": "3d957631dff62af97fdffc263774d2ff1b071ddc723319f746552355e8e25f0c"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 9,
@@ -3280,15 +5283,26 @@
         "spec_path": "/encounters[1]/enemies[0]/count_slot",
         "label": "COUNT (noise-ushers)",
         "fills_from": "floors.1.fixed_encounters.d02_02.counts_by_party_size",
-        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d02_02.counts_by_party_size", "key": "skeleton"},
-        "value_by_party_size": {"2": 1, "3": 1, "4": 2}
+        "cite": {
+          "kind": "count",
+          "path": "floors.1.fixed_encounters.d02_02.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 2
+        }
       },
       {
         "spec_file": "floors/f01/day-02.spec.json",
         "spec_path": "/encounters[1]/budget_slot",
         "label": "BUDGET (enc-d02-02)",
         "fills_from": "floors.1.fixed_encounters.d02_02.fit",
-        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d02_02.fit"},
+        "cite": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d02_02.fit"
+        },
         "value_by_party_size": {
           "2": "trivial tier, Low-band rule at level 1: budget 50 XP for 2 Crawlers; used 50 XP",
           "3": "trivial tier, Low-band rule at level 1: budget 75 XP for 3 Crawlers; used 50 XP",
@@ -3300,23 +5314,42 @@
         "spec_path": "/encounters[1]/enemies[0]/count_slot",
         "label": "COUNT (displaced-rats)",
         "fills_from": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
-        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size", "key": "giant-rat"},
-        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+        "cite": {
+          "kind": "count",
+          "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+          "key": "giant-rat"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
       },
       {
         "spec_file": "floors/f01/day-03.spec.json",
         "spec_path": "/encounters[1]/enemies[1]/count_slot",
         "label": "COUNT (displaced-ticks)",
         "fills_from": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
-        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size", "key": "stirge"},
-        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+        "cite": {
+          "kind": "count",
+          "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+          "key": "stirge"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
       },
       {
         "spec_file": "floors/f01/day-03.spec.json",
         "spec_path": "/encounters[1]/budget_slot",
         "label": "BUDGET (enc-d03-02)",
         "fills_from": "floors.1.fixed_encounters.d03_02.fit",
-        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d03_02.fit"},
+        "cite": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d03_02.fit"
+        },
         "value_by_party_size": {
           "2": "standard tier, Low-band rule at level 1: budget 100 XP for 2 Crawlers; used 100 XP",
           "3": "standard tier, Low-band rule at level 1: budget 150 XP for 3 Crawlers; used 150 XP",
@@ -3328,15 +5361,26 @@
         "spec_path": "/encounters[2]/enemies[0]/count_slot",
         "label": "COUNT (watch-ushers)",
         "fills_from": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
-        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size", "key": "skeleton"},
-        "value_by_party_size": {"2": 1, "3": 1, "4": 2}
+        "cite": {
+          "kind": "count",
+          "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 2
+        }
       },
       {
         "spec_file": "floors/f01/day-03.spec.json",
         "spec_path": "/encounters[2]/budget_slot",
         "label": "BUDGET (enc-d03-03)",
         "fills_from": "floors.1.fixed_encounters.d03_03.fit",
-        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d03_03.fit"},
+        "cite": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d03_03.fit"
+        },
         "value_by_party_size": {
           "2": "trivial tier, Low-band rule at level 1: budget 50 XP for 2 Crawlers; used 50 XP",
           "3": "trivial tier, Low-band rule at level 1: budget 75 XP for 3 Crawlers; used 50 XP",
@@ -3348,15 +5392,26 @@
         "spec_path": "/encounters[2]/enemies[0]/count_slot",
         "label": "COUNT (ushers)",
         "fills_from": "floors.1.fixed_encounters.d04_03.counts_by_party_size",
-        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d04_03.counts_by_party_size", "key": "skeleton"},
-        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+        "cite": {
+          "kind": "count",
+          "path": "floors.1.fixed_encounters.d04_03.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
       },
       {
         "spec_file": "floors/f01/day-04.spec.json",
         "spec_path": "/encounters[2]/budget_slot",
         "label": "BUDGET (enc-d04-03)",
         "fills_from": "floors.1.fixed_encounters.d04_03.fit",
-        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d04_03.fit"},
+        "cite": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.d04_03.fit"
+        },
         "value_by_party_size": {
           "2": "standard tier, Low-band rule at level 1: budget 100 XP for 2 Crawlers; used 100 XP",
           "3": "standard tier, Low-band rule at level 1: budget 150 XP for 3 Crawlers; used 150 XP",
@@ -3367,7 +5422,7 @@
   },
   "day05_slot_map": {
     "status": "PROVENANCE ONLY (v0.1.9): no slots are mapped for Day 5; its spec cites this file by field path (b70 cites) and needs no fills. Recorded so all five Day specs carry a provenance hash.",
-    "spec_sha256_sans_pin_when_mapped": "3b2a03d40eaad91895be29185cfb16f7cfd456f37f07d795c12dd08ba8a32678",
+    "spec_sha256_sans_pin_when_mapped": "9e97409cab5223324ca533e3954a665616ff162017e1c6a580444074a6635370",
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 0,
     "slots": []

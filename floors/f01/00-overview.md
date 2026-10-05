@@ -1,5 +1,5 @@
 # Floor 01 — The Orientation Pit (5e Module, Level 1 → 2)
-Owner: Syndicate | Status: draft | Version: 0.2.5 | Updated: 2026-10-04
+Owner: Syndicate | Status: draft | Version: 0.2.6 | Updated: 2026-10-05
 Summary: Floor 1 The Orientation Pit, full 5e module (level 1 to 2): zones, encounters, boss Dean Thudd, System announcements, achievements, scaling (single file until split into 10-/20-/30-).
 Source: crawler-protocol/floors/floor-01-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -18,7 +18,7 @@ Source: crawler-protocol/floors/floor-01-5e.md (original kept; internal cross-re
 ## Table of contents
 
 0. Module at a glance
-1. Before the start: Death Mode selection ("Service Plans")
+1. Before the start: revival plan confirmation ("Service Plans")
 2. Special floor rules
 3. Running the System on Floor 1 (cast, voice, popups)
 4. Map and flow
@@ -51,11 +51,11 @@ Source: crawler-protocol/floors/floor-01-5e.md (original kept; internal cross-re
 
 ---
 
-## 1. Before the start: Death Mode selection ("Service Plans")
+## 1. Before the start: revival plan confirmation ("Service Plans")
 
-> **Campaign default already picked:** this campaign runs **Costly Revives (very costly and rare)**. The table already chose it: `DEATH-MODE=Costly Revives` and `COMFORT=Ludicrous` are logged as defaults (Caleb, 2026-10-03; `02` §6.0, shared `decisions/002-death-mode.md`). **For this campaign, confirm and log them; skip the vote below** unless the table asks to change it. The "Canon Hard (default)" wording in the pitch below is the generic default for tables with nothing logged.
+> **Campaign default already picked:** this campaign runs **Costly Revives (very costly and rare)**. Logged defaults: `REVIVE-PLAN=Costly Revives` (legacy key `DEATH-MODE` still accepted by tooling) and `COMFORT=Ludicrous` (Caleb, 2026-10-03; `02` §6.0, shared `decisions/002-death-mode.md`). **Canon books have no difficulty settings** — this is a fee/revival plan, not Easy/Hardcore/Death Mode. **For this campaign, confirm and log them; skip the vote below** unless the table asks to change it. The "Canon Hard (default)" wording in the pitch below is the generic default for tables with nothing logged.
 
-**Do this before Zone 0, ideally as the first step of intake** (`03` §2.1). The table picks **one** mode (`02` §6.0) and the System logs `DEATH-MODE`. It can't change mid-campaign without table agreement. Run it **out of character first** (plain explanation, no snark), then replay it in voice for flavor.
+**Do this before Zone 0, ideally as the first step of intake** (`03` §2.1). The table picks **one** revival plan (`02` §6.0) and the System logs `REVIVE-PLAN` (and mirrors to `DEATH-MODE` for older tools). It can't change mid-campaign without table agreement. Run it **out of character first** (plain explanation, no snark), then the System may confirm the paperwork in a dry registration notice; any joke about the plan is **[GM]** color, not System.
 
 ### 1.1 Plain explanation (DM reads, no snark)
 
@@ -71,7 +71,7 @@ Source: crawler-protocol/floors/floor-01-5e.md (original kept; internal cross-re
 
 > The kiosk screen goes dark, then floods with sparkles. A cartoon gravestone with googly eyes bounces onscreen.
 >
-> "**SELECT YOUR SERVICE PLAN!** Every crawler is covered by one of our exciting death packages!
+> "**SELECT YOUR SERVICE PLAN!** Every Crawler is covered by one of our exciting revival packages!
 >
 > **CANON HARD:** Our most popular plan, mostly because it's free. You die, you stay dead, we play sad piano music for six seconds, and then we cut to someone hotter.
 >
@@ -88,7 +88,8 @@ If **Floor 1 Reprieve** is ON:
 ### 1.3 Log
 
 ```text
-DEATH-MODE: <Costly Revives (campaign default) | Canon Hard | Soft Open>
+REVIVE-PLAN: <Costly Revives (campaign default) | Canon Hard | Soft Open>
+DEATH-MODE: <same value; legacy mirror for older tools>
 F1-REPRIEVE: <ON | OFF>
 ```
 
@@ -276,7 +277,7 @@ Read-aloud is in quote blocks; adapt freely. **DM** notes are rules-facing.
 
 ### 5.0 Zone 0 — Intake Hall (Lesson 0: Paperwork)
 
-Run `03-character-creation-5e.md` (Death Mode first, §1 here). End intake with the booth doors opening.
+Run `03-character-creation-5e.md` (confirm revival plan first, §1 here; registration and nameplates, not a difficulty mode). End intake with the booth doors opening.
 
 > The booth door clunks open on its own. Beyond it: a long hallway of identical booths, most of them empty, a few of them... not empty, in a way you don't want to look at for long. Overhead, a banner sags: **ORIENTATION PIT — WHERE FUTURES BEGIN!** Someone has spray-painted "AND END" underneath, and someone else tried and failed to scrub it off.
 
@@ -898,8 +899,8 @@ Matches `02` §10.3: 4–8 encounters, mostly Low/Moderate, one High; mobs CR 0�
 
 ### 11.3 Pacing (chat play)
 
-- **Session 1 (as actually played, 2026-10-04):** Death Mode + intake (Zone 0), then Zones 1–2 and part of Zone 3 (Vending Gore Arcade). Both Crawlers died to the Ceiling Ticks in Z3 and were ejected to the Zone 6 Break Room by the Floor 1 Reprieve, so **Zones 4–5 were skipped** by the ejection to Z6 (source: `sessions/session-01-recap-2026-10-04.md`). Session 1 ended there; Z4 and Z5 hooks are still unclaimed.
-- **Planned pacing for a fresh table:** Session 1 = Death Mode + intake (Zone 0) → Zones 1–3. Session 2 = Zones 4–6 (Welcome Box ceremony) → maybe Zone 7.
+- **Session 1 (as actually played, 2026-10-04):** revival-plan confirm + intake (Zone 0), then Zones 1–2 and part of Zone 3 (Vending Gore Arcade). Both Crawlers died to the Ceiling Ticks in Z3 and were ejected to the Zone 6 Break Room by the Floor 1 Reprieve, so **Zones 4–5 were skipped** by the ejection to Z6 (source: `sessions/session-01-recap-2026-10-04.md`). Session 1 ended there; Z4 and Z5 hooks are still unclaimed.
+- **Planned pacing for a fresh table:** Session 1 = revival-plan confirm + intake (Zone 0) → Zones 1–3. Session 2 = Zones 4–6 (Welcome Box ceremony) → maybe Zone 7.
 - **Session 3:** Zones 8–11 (level 2 at the Green Room, boss, stairwell).
 - New-to-5e tables: add a session. Experienced tables: two sessions.
 
@@ -926,6 +927,8 @@ BOXES | <crawler> | <tier + deed name> | <unopened/opened>
 
 | Version | Date | Notes |
 |---------|------|-------|
+| **v0.2.6** | 2026-10-05 | Voice-split pass: rename §1 Death Mode → revival plan / Service Plans (not a difficulty setting; canon has none). Costly Revives remains campaign default. Aligns with Lore Floor 1 voice-split audit / drafts v0.2.
+| **v0.2.5** | 2026-10-04 | Prior draft header bump (session-plan and clock notes); superseded by v0.2.6 voice split.
 | stub | 2026-10-02 | `floors/floor-01.md`: objective + seed list only. **Superseded.** |
 | **v0.2** | 2026-10-03 | Full 5e 2024 module on `02` v0.2.2: Death Mode step; 12 zones + side path + wandering; SRD 5.2 reskins with 2024 XP math; 4 traps; two saferooms; Welcome and Silver Boss boxes; catalog + NEW achievement seeds; spine plants (Odd Coin, Benefactor Signal, Broadcast Name nickname plant, Black Box glimpse); Dean Thudd boss with Versus card, telegraphed Group Photo, three cheese routes, Variant B; stairwell + Checkpoint; scaling 2–6; `COMFORT=Ludicrous` with private opt-out. |
 | **v0.2.1** | 2026-10-03 | Consistency pass with `02` v0.2.4: rules base bumped; campaign-default Death Mode note (Costly Revives already picked); F1 achievement payout now `ACH-0022` (0076 retired duplicate); ACH-0190 note; open questions 1, 2, 14, 16 marked resolved. |
@@ -952,7 +955,7 @@ BOXES | <crawler> | <tier + deed name> | <unopened/opened>
 13. **Floor Bible alignment:** `04-floor-bible.md` F1 still says "No race/class selection yet; everyone is Baseline Crawler" (pre-5e) and has its own achievement ideas (Read the Manual, Witness Protocol, Coin Collector). Update the Bible row to point here?
 14. **Catalog fixes:** the ACH-0022/0076 duplicate is **done** (0076 retired; v0.2.4). Still open: re-rarity the generated-variant outliers (§10.3)?
 15. **Seed ID:** `02` says `SEED-BLACKBOX`; the Floor Bible says `SEED-HEATBLACKBOX`. Which one?
-16. **Death Mode recommendation:** **decided**, Costly Revives (very costly and rare) is the campaign default (`02` v0.2.3/§6.0). **Floor 1 Reprieve: decided, ON for this campaign, Floor 1 only** (Caleb, 2026-10-04; core §6.0, §6.2).
+16. **Revival plan (was labeled Death Mode in older drafts):** **decided**, Costly Revives (very costly and rare) is the campaign default (`02` v0.2.3/§6.0). Not a difficulty setting — canon has none. **Floor 1 Reprieve: decided, ON for this campaign, Floor 1 only** (Caleb, 2026-10-04; core §6.0, §6.2).
 
 ---
 

@@ -1,7 +1,7 @@
 # Welcome to the Crawl
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1 | Updated: 2026-10-04
-Summary: Chapter 1 first draft. The premise (Season Zero), the 18-floor Dungeon, the floor clock and collapse death, saferooms, credits, achievements, loot boxes, death, levels, Ratings, table tone, glossary, chapter map.
-Sources: dcc-campaign decisions 009, 013, 016, 019-022, 024-028; rules/10-core-rules-5e.md v0.2.13; floors/00-campaign-narrative.md; floors/f01/00-overview.md v0.2.4; characters/character-creation-5e.md v0.2.3; dcc-lore CANON-LEDGER v1.12 (M-016, M-275..M-277).
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
+Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (Silver/Gold/Platinum by floor; Legendary cap 2/Crawler), death, levels, Ratings, table tone, glossary.
+Sources: decisions 018, 026-030; rules/10-core-rules-5e.md v0.2.17; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
 
 <!-- BEGIN -->
 
@@ -84,23 +84,23 @@ Three things get worse as you descend:
 | 1 | Trainer floor | 5 days | The Orientation Pit |
 | 2 | Unique | 10 days | Soft Open |
 | 3 | **Kingdom Continuum** (Rural) | 20 days | |
-| 4 | Unique | Longer [VERIFY] | The Knotline |
-| 5 | Unique | Longer [VERIFY] | Bubble Farms |
-| 6 | **Kingdom Continuum** (Outskirts and Docks) | Longer [VERIFY] | |
-| 7 | Unique | Longer [VERIFY] | Greenlight Gauntlet |
-| 8 | Unique | Longer [VERIFY] | Remnant Parade |
-| 9 | **Kingdom Continuum** (Upper City and Castle) | Longer [VERIFY] | |
-| 10 | Unique | Longer [VERIFY] | Last Heat Standing |
-| 11 | Unique | Longer [VERIFY] | Ratings Jubilee |
-| 12 | **Kingdom Continuum** (Olympus and Spirit) | Longer [VERIFY] | |
-| 13 | Unique | Longer [VERIFY] | Ledger Depths |
-| 14 | Unique | Longer [VERIFY] | Continuity Auction |
-| 15 | Unique | Longer [VERIFY] | Ash Choir |
-| 16 | Unique | Longer [VERIFY] | Fracture Gallery |
-| 17 | Unique | Longer [VERIFY] | Rigging Catwalk |
-| 18 | Unique endgame | Longer [VERIFY] | The Cage Bottom |
+| 4 | Unique | 20 days {{HOUSE}} | The Knotline |
+| 5 | Unique | 25 days {{HOUSE}} | Bubble Farms |
+| 6 | **Kingdom Continuum** (Outskirts and Docks) | 30 days {{HOUSE}} | |
+| 7 | Unique | Longer | Greenlight Gauntlet |
+| 8 | Unique | Longer | Remnant Parade |
+| 9 | **Kingdom Continuum** (Upper City and Castle) | Longer | |
+| 10 | Unique | Longer | Last Heat Standing |
+| 11 | Unique | Longer | Ratings Jubilee |
+| 12 | **Kingdom Continuum** (Olympus and Spirit) | Longer | |
+| 13 | Unique | Longer | Ledger Depths |
+| 14 | Unique | Longer | Continuity Auction |
+| 15 | Unique | Longer | Ash Choir |
+| 16 | Unique | Longer | Fracture Gallery |
+| 17 | Unique | Longer | Rigging Catwalk |
+| 18 | Unique endgame | Longer | The Cage Bottom |
 
-Floor names are working titles and may change. Day counts for Floors 4 to 18 are not yet set.
+Floor names are working titles and may change. Day counts for Floors 1–6 are set (decision 026; Floors 4–6 are {{HOUSE}}). Day counts for Floors 7–18 are not printed here; each floor chapter carries its own clock when that chapter ships.
 
 ### Floor 1: The Trainer
 
@@ -157,7 +157,7 @@ Ability scores, d20 tests, Advantage and Disadvantage, proficiency, Armor Class,
 | Area | What changes | Where |
 |---|---|---|
 | Floors | Eighteen of them, with clocks, collapses and stairwells. | Ch. 1, Ch. 10 |
-| Rests | Long Rests only in saferooms. | Ch. 1, Ch. 9 |
+| Rests | Long Rests saferoom-only; field Short Rest free if quiet, else 20 cr/Crawler (cap 60/floor) buys quiet. | Ch. 1, Ch. 9 |
 | Money | Prices are paid in **credits**. | Ch. 1, Ch. 6 |
 | Achievements | The System rewards (and mocks) notable deeds. | Ch. 5 |
 | Loot boxes | Boxes of treasure, opened only in saferooms. | Ch. 6 |
@@ -170,7 +170,7 @@ Ability scores, d20 tests, Advantage and Disadvantage, proficiency, Armor Class,
 
 The standard pace is **one level per floor**. A Crawler arrives on Floor N at level N and descends at level N + 1. By the time you reach Floor 3, that puts you at level 3, which is when the 2024 classes choose their subclasses, and when the Crawl lets you pick an Official Class Title. By Floor 18 you are level 18, with levels 19 and 20 saved for the finale.
 
-Leveling is **milestone-based**. You earn the level when you reach the floor's exit alive. It applies at the first saferoom of the next floor, which the System calls **Floor Onboarding**. Floor 1 uses a split rule: level 2 arrives at the floor's second saferoom, before the boss, so that the boss is a fair fight for four Crawlers. A Crawler who is behind (a replacement, a missed session) is brought up to the party's lowest level at the next saferoom. Nobody levels above the floor's band.
+Leveling is **milestone-based**. You earn the level when you reach the floor's exit alive. It applies at the first saferoom of the next floor, which the System calls **Floor Onboarding**. Floor 1 uses a split rule: **level 2 arrives at Floor 1's second saferoom (the Green Room), before the boss**, which the System calls **Midterm Onboarding**, so that the boss is a fair fight for four Crawlers. The Floor 1 stairwell grants no extra level; you arrive on Floor 2 already at level 2. A Crawler who is behind (a replacement, a missed session) is brought up to the party's lowest level at the next saferoom. Nobody levels above the floor's band.
 
 ::: house Slow-Burn Track
 Tables who want a grittier game can slow the pace so that the party tops out around level 15 by Floor 18. Chapter 10 prints the full slow-burn table.
@@ -180,7 +180,7 @@ Tables who want a grittier game can slow the pace so that the party tops out aro
 
 **Every floor is timed.** This is the single most important rule in the book.
 
-When a Crawler enters a floor, a countdown begins. The countdown is measured in **days**, and the number of days is printed on the floor (see the table above). Floor 1 gives you **5 days**. Floor 2 gives you **10 days**. Floor 3 gives you **20 days**. Later floors give more, and ask for more.
+When a Crawler enters a floor, a countdown begins. The countdown is measured in **days**, and the number of days is printed on the floor (see the table above). Floor 1 gives you **5 days**. Floor 2 gives you **10 days**. Floor 3 gives you **20 days**. Floors 4, 5 and 6 give **20 / 25 / 30 days**. {{HOUSE}} Later floors ask for more; their day counts live in their own chapters.
 
 At the end of the last day the floor **collapses**. A Crawler who has not reached a stairwell by that moment is **dead**.
 
@@ -211,7 +211,7 @@ This is a house rule built on a canon shape: in the source series, the floor fal
 
 A stairwell is the only way down. You reach a stairwell when you step onto it, and it opens the way to the next floor. On Floor 1, the true stairwells appear about **32 hours after the floor opens**, early on Day 2. Other stairwells sit inside boss arenas, so every boss fight doubles as a very unfriendly front door. {{INSPIRED}}
 
-**Early descent.** A Crawler who goes down the stairs with **more than 6 hours left** on the clock is held in **stasis** until the floor collapses. They have reached a stairwell, so they live and bank the achievement for it, but their time on that floor is over. In the last 6 hours, descent is free. Each Crawler chooses for themselves. {{INSPIRED}}
+**Early descent.** A Crawler who goes down the stairs with **more than 6 hours left** on the clock is held in **stasis** until the floor collapses. They have reached a stairwell, so they live and bank the achievement for it, but their time on that floor is over. Descending also ends that Crawler's Floor 1 Reprieve if it was still unused. In the last 6 hours, descent is free. Each Crawler chooses for themselves. {{INSPIRED}}
 
 ::: system
 You went downstairs early. Bold. Boring. Your party will see you when the floor is done being on fire.
@@ -219,19 +219,21 @@ You went downstairs early. Bold. Boring. Your party will see you when the floor 
 
 ### Reprieve: Tutorial Deaths Only
 
-Tables may switch on the **Floor 1 Reprieve**. Once per Crawler, on Floor 1 only, a *death in the tutorial* becomes "unconscious, ejected to the nearest saferoom at 1 hit point, with an embarrassing Title." {{HOUSE}} It expires when you descend.
+The **Floor 1 Reprieve** is **ON by default** for Season Zero (a table may turn it off at session zero; log `F1-REPRIEVE: ON/OFF`). Once per Crawler, on Floor 1 only, a *death in the tutorial* becomes "unconscious, ejected to the nearest saferoom at 1 hit point, with an embarrassing Title." {{HOUSE}} It expires when you descend.
 
-The Reprieve covers tutorial deaths, such as a bad fight or a failed death save. It **never covers a missed collapse**. Missing the collapse is death, with no exceptions.
+The Reprieve covers tutorial deaths, such as a bad fight or a failed death save. It **never covers a missed collapse**. Missing the collapse is death on every floor, with no exceptions (decisions 026, 028, 029).
 
 ## Saferooms
 
 A **saferoom** is a place the System has certified as safe. (Certification is not a guarantee. Certification is a sticker.)
 
-- **Long Rests happen only in saferooms.** Outside one, a Long Rest is interrupted by a wandering threat, or the System declares the area "not rest-certified."
-- **Short Rests** can happen anywhere reasonably quiet, and are guaranteed uninterrupted in a saferoom.
+- **Long Rests happen only in saferooms.** A Long Rest attempt outside a saferoom is interrupted and never completes (on Floor 1, Ticks arrive after 1d4 hours). Paying the field fee does not buy a Long Rest.
+- **Short Rests** are the only rest you can take in the field. In a spot that is **already quiet**, a Short Rest is **free**. In a saferoom, Short Rests are guaranteed uninterrupted.
 - **Loot boxes open only in saferooms.** A box in the field is a box you are carrying.
 - Saferooms host **services**: achievement claims, vendors, a System terminal for appraisal, a bulletin board, and sometimes a bartender who has opinions about you.
 - The usual 5e limit of one Long Rest per 24 hours still applies.
+
+**Field rest fee (Floor 1).** The fee is **20 credits per Crawler**, capped at **60 credits per Crawler per floor**. It **buys quiet** so the party can take a Short Rest where the area is **not** already quiet. If the spot is already quiet, the Short Rest is free and no fee is charged. The fee never grants a Long Rest; Long Rests stay saferoom-only. {{HOUSE}} A saferoom rest is free. Later floors may print their own field fees; until they do, use the Floor 1 numbers at that floor's credit multiplier. (decision 031; core §5.6 v0.2.18)
 
 Saferooms on Floor 1 are honest. **From Floor 2 on, some saferooms lie.** A false saferoom gives no rest, and some are ambushes. Searching a saferoom is allowed, wise, and occasionally rewarded with an achievement. {{HOUSE}}
 
@@ -243,12 +245,17 @@ This saferoom is certified 100% safe.* (*Certification not valid in this room.)
 
 ### Credits
 
-Money in the Crawl is **credits**, always paid and counted in whole numbers. Every price in the SRD equipment lists is paid at face value in credits: an item the SRD prices at 15 costs 15 credits. Items the SRD prices below one full unit cost a fraction, printed with decimals (0.5 credit). Credits are the only money word in this book, because the System is proud of its currency and very sensitive about its branding.
+Money in the Crawl is **credits**, always paid and counted in **whole numbers only**. A balance is never fractional. Every price in the SRD equipment lists is paid in credits at face value: an item the SRD prices at 15 costs 15 credits. Copper and silver appear only as list prices on SRD gear (for reference: 1 sp = 0.1 credit, 1 cp = 0.01 credit); they are never a balance. Credits are the only money word in this book, because the System is proud of its currency and very sensitive about its branding.
 
+- **Rounding (whole credits per line).** *Buying:* a sub-credit list price is charged rounded **up** to whole credits per cart line (one Torch costs 1 credit; ten Torches on one line also cost 1 credit). *Selling at half:* rounded **down** to whole credits per line, so an item worth under 2 credits sells for 0 unless you group several on one line.
 - **Vendors** buy at standard prices (give or take the System's mood) and **sell back at half**.
 - **Haggling** is a Charisma check against the vendor (Persuasion, Deception or Intimidation). A success knocks roughly a tenth to a quarter off.
 - **Identifying items** works as 5e does (the *Identify* spell, or a Short Rest of study), or a System terminal will do it for a fee.
 - **System fees** and **achievement rewards** are multiplied by a floor multiplier as you descend. Box credit pulls are not. The multiplier table lives in Chapter 6.
+
+### Crafting Prices (Pointer)
+
+Crafting tables are saferoom workstations bought with credits or coupons. Floors 1–2 keep the ruled prices **5,000 / 12,000 / 30,000** credits (basic table / Crafting Studio / Enhanced Crafting Studio). Floors 3+ follow a printed per-floor schedule in Chapter 6 (decision 030). An **Upgrade Coupon** (cap **25,000** credits) covers a **basic table through Floor 8** and a **Crafting Studio through Floor 5**; it **never** covers an Enhanced Studio. Level upgrades still take the credit multiplier and a coupon covers them only on **Floors 1–4** (from Floor 5, pay in credits). {{HOUSE}}
 
 ### The System Inventory
 
@@ -284,7 +291,7 @@ The ladder tells the System how big a reward fits. It does not tell the System t
 
 ## Loot Boxes
 
-Loot boxes are the Crawl's treasure system. The System hands them out for achievements, bosses and floor clears, and each one is a small, shiny gamble.
+Loot boxes are the Crawl's treasure system. The System hands them out for achievements, bosses and floor clears, and each one is a small, shiny gamble. The first box most Crawlers ever open is a **Silver loot box** (Uncommon headline, two pulls): Floor 1's Boss Box is capped there, and a replacement Crawler's late-entry compensation is one Silver loot box too.
 
 | Box | Headline item rarity | Pulls |
 |---|---|---|
@@ -294,6 +301,10 @@ Loot boxes are the Crawl's treasure system. The System hands them out for achiev
 | Platinum | Very Rare | 3 (one guaranteed Very Rare) |
 | Legendary | Legendary | 3 (one guaranteed Legendary) |
 | Celestial | Legendary, plus a reward designed for you | 3, plus the reward |
+
+**Achievement box tier by floor.** When an achievement pays a loot box, the System uses **Silver** on Floors 1–2, **Gold** on Floors 3–8, and **Platinum** on Floors 9+ (no Platinum awards on Floors 1–8). Boss and clear boxes still respect the floor's rarity ceiling. {{HOUSE}}
+
+**Legendary cap.** Across the whole campaign a Crawler may receive at most **two** Legendary boxes from the ordinary pacing track. Story Boxes (Floors 1–2) are a **separate track** outside that cap; the GM handles Story Box awards and never prints deed lists in this book. {{HOUSE}}
 
 Box rules in brief:
 
@@ -363,10 +374,12 @@ Every player also has a **private opt-out**. At creation you can tell the System
 | **Latent Biology** | Your species. Traits work now; your body shows them on Floor 3. |
 | **Origin feat** | The feat your background gives. |
 | **Credits** | Money. Whole numbers. |
-| **Saferoom** | A certified safe room where Long Rests happen and loot boxes open. |
+| **Saferoom** | A System-certified rest area where Long Rests happen and loot boxes open. |
 | **Floor clock** | The countdown to a floor's collapse. |
 | **Collapse** | The end of a floor. Crawlers still on the floor die. |
-| **Stairwell** | The way down to the next floor. |
+| **stairwell** | The way down to the next floor. |
+| **Midterm Onboarding** | Floor 1's second saferoom level-up (level 2), before the boss. |
+| **Floor Onboarding** | The first-saferoom level-up on a new floor after a descent. |
 | **Active Crawler** | The one Crawler a player has in play this session. |
 | **Benched Crawler** | A Crawler on file that is not in play. |
 | **Standing Orders** | The default tactic your Crawler follows when you can't act. |

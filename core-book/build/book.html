@@ -276,6 +276,17 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
   @bottom-center { content: "DRAFT v0.1"; font-family: "Barlow Condensed"; font-size: 7.5pt; letter-spacing: 0.25em; color: #b4ad9b; }
 }
 
+@page ch4:left {
+  @top-left { content: "CRAWLER PROTOCOL: SEASON ZERO"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; border-bottom: 1px solid #d9cfb4; padding-bottom: 4pt; width: 100%; vertical-align: bottom; }
+  @bottom-left { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; color: #2b2f3a; }
+  @bottom-center { content: "DRAFT v0.1"; font-family: "Barlow Condensed"; font-size: 7.5pt; letter-spacing: 0.25em; color: #b4ad9b; }
+}
+@page ch4:right {
+  @top-right { content: "CLASSES AND BACKGROUNDS"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; border-bottom: 1px solid #d9cfb4; padding-bottom: 4pt; width: 100%; text-align: right; vertical-align: bottom; }
+  @bottom-right { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; color: #2b2f3a; }
+  @bottom-center { content: "DRAFT v0.1"; font-family: "Barlow Condensed"; font-size: 7.5pt; letter-spacing: 0.25em; color: #b4ad9b; }
+}
+
 @page toc:left { @top-left { content: "CRAWLER PROTOCOL: SEASON ZERO"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; } @bottom-left { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; } }
 @page toc:right { @top-right { content: "CONTENTS"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; } @bottom-right { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; } }
 @page frontmatter:left { @bottom-left { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; } }
@@ -288,7 +299,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
   <div class="art"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420"><polygon points="20.0,10.0 540.0,10.0 525.9,29.9 34.1,29.9" fill="rgb(60,66,82)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="70.4" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="122.2" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="174.0" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="225.7" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="329.3" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="381.0" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="432.8" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="484.6" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="34.1,32.4 525.9,32.4 511.9,52.4 48.1,52.4" fill="rgb(69,66,78)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="85.9" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="140.7" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="195.4" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="250.1" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="304.9" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="359.6" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="414.3" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="469.1" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="48.1,54.9 511.9,54.9 497.8,74.8 62.2,74.8" fill="rgb(79,67,75)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="101.9" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="160.4" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="219.0" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="336.0" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="394.6" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="453.1" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="62.2,77.3 497.8,77.3 483.8,97.3 76.2,97.3" fill="rgb(88,68,72)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="114.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="168.5" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="223.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="332.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="386.5" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="441.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="76.2,99.8 483.8,99.8 469.7,119.7 90.3,119.7" fill="rgb(98,69,69)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="130.2" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="189.1" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="248.0" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="307.0" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="365.9" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="424.8" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="90.3,122.2 469.7,122.2 455.7,142.2 104.3,142.2" fill="rgb(107,70,66)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="147.3" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="212.4" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="342.6" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="407.7" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="104.3,144.7 455.7,144.7 441.6,164.6 118.4,164.6" fill="rgb(117,71,63)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="158.6" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="218.0" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="337.0" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="396.4" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="118.4,167.1 441.6,167.1 427.6,187.1 132.4,187.1" fill="rgb(126,72,60)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="176.6" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="243.9" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="311.1" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="378.4" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="132.4,189.6 427.6,189.6 413.5,209.5 146.5,209.5" fill="rgb(136,73,57)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="187.1" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="247.4" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="307.6" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="367.9" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="146.5,212.0 413.5,212.0 399.4,231.9 160.6,231.9" fill="rgb(146,74,54)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="206.5" y="216.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="216.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="348.5" y="216.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="160.6,234.4 399.4,234.4 385.4,254.4 174.6,254.4" fill="rgb(155,75,50)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="231.3" y="238.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="323.7" y="238.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="174.6,256.9 385.4,256.9 371.3,276.8 188.7,276.8" fill="rgb(165,76,47)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="238.3" y="260.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="316.7" y="260.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="188.7,279.3 371.3,279.3 357.3,299.3 202.7,299.3" fill="rgb(174,77,44)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="245.3" y="283.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="309.7" y="283.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="202.7,301.8 357.3,301.8 343.2,321.7 216.8,321.7" fill="rgb(184,78,41)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="305.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="216.8,324.2 343.2,324.2 329.2,344.2 230.8,344.2" fill="rgb(193,79,38)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="328.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="230.8,346.7 329.2,346.7 315.1,366.6 244.9,366.6" fill="rgb(203,80,35)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="350.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="244.9,369.1 315.1,369.1 301.1,389.1 258.9,389.1" fill="rgb(212,81,32)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="373.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="258.9,391.6 301.1,391.6 287.0,411.5 273.0,411.5" fill="rgb(222,82,29)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/></svg></div>
   <h1 class="cover-title">Crawler Protocol<span>Core Rulebook</span></h1>
   <div class="subtitle">Eighteen floors. Fewer ways down each time.<br>A tabletop RPG of the Crawl, built on the 5e (2024) System Reference Document.</div>
-  <div class="byline"><b>Valtay Corp</b> &nbsp;·&nbsp; Draft v0.1 &nbsp;·&nbsp; Chapters 1&ndash;2</div>
+  <div class="byline"><b>Valtay Corp</b> &nbsp;·&nbsp; Draft v0.1 &nbsp;·&nbsp; Chapters 1, 2 &amp; 4</div>
 </section>
 
 <section class="frontmatter" id="front"><h1 class="nonum" id="front-legal-and-notices">Legal and Notices</h1>
@@ -329,11 +340,11 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tbody>
 </table>
 <h2 id="front-drafting-status">Drafting Status</h2>
-<p>This is <strong>Draft v0.1</strong> of the Core Rulebook. It contains Chapter 1 and Chapter 2 only. Page numbers, chapter order and many cross-references will move as the other chapters are written. If a rule in this draft disagrees with a campaign decision filed by the rules team, the filed decision wins; please report the conflict.</p>
+<p>This is <strong>Draft v0.2</strong> of the Core Rulebook. It contains Chapters 1, 2 and 4 (Chapter 3 Species is blocked on PROVISIONAL rulings). Page numbers, chapter order and many cross-references will move as the other chapters are written. If a rule in this draft disagrees with a campaign decision filed by the rules team, the filed decision wins; please report the conflict.</p>
 <div class="box system">
 <p>Welcome to the Crawl! Please keep your arms, legs and hopes inside the book at all times. The System is not responsible for dignity lost during reading.</p>
 </div></section>
-<section class="toc"><h1 class="toc-title">Contents</h1><ol><li class="l0"><span class="t">Front Matter</span><span class="dots"></span><span class="pg">2</span></li><li class="l1"><span class="num">1</span><span class="t">Welcome to the Crawl</span><span class="dots"></span><span class="pg">5</span></li><li class="l2"><span class="t">What This Book Is</span><span class="dots"></span><span class="pg">5</span></li><li class="l2"><span class="t">The Premise: Season Zero</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">The Dungeon</span><span class="dots"></span><span class="pg">7</span></li><li class="l2"><span class="t">Who Plays What</span><span class="dots"></span><span class="pg">8</span></li><li class="l2"><span class="t">How the Game Plays</span><span class="dots"></span><span class="pg">9</span></li><li class="l2"><span class="t">The Floor Clock</span><span class="dots"></span><span class="pg">10</span></li><li class="l2"><span class="t">Saferooms</span><span class="dots"></span><span class="pg">11</span></li><li class="l2"><span class="t">Credits, Vendors and Your System Inventory</span><span class="dots"></span><span class="pg">12</span></li><li class="l2"><span class="t">Achievements</span><span class="dots"></span><span class="pg">12</span></li><li class="l2"><span class="t">Loot Boxes</span><span class="dots"></span><span class="pg">13</span></li><li class="l2"><span class="t">Death and Revival</span><span class="dots"></span><span class="pg">14</span></li><li class="l2"><span class="t">Ratings and the Broadcast Name</span><span class="dots"></span><span class="pg">14</span></li><li class="l2"><span class="t">Table Tone and Safety</span><span class="dots"></span><span class="pg">15</span></li><li class="l2"><span class="t">Words You Will Need</span><span class="dots"></span><span class="pg">15</span></li><li class="l2"><span class="t">Where to Go Next</span><span class="dots"></span><span class="pg">16</span></li><li class="l1"><span class="num">2</span><span class="t">Crawler Creation</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Before You Start</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Table Settings (S1 and S2)</span><span class="dots"></span><span class="pg">19</span></li><li class="l2"><span class="t">Name, Look and Hook (S3 and S4)</span><span class="dots"></span><span class="pg">20</span></li><li class="l2"><span class="t">Species (S5) Provisional</span><span class="dots"></span><span class="pg">21</span></li><li class="l2"><span class="t">Class (S6)</span><span class="dots"></span><span class="pg">23</span></li><li class="l2"><span class="t">Background (S7)</span><span class="dots"></span><span class="pg">26</span></li><li class="l2"><span class="t">Ability Scores (S8)</span><span class="dots"></span><span class="pg">28</span></li><li class="l2"><span class="t">Skills and Proficiencies (S9)</span><span class="dots"></span><span class="pg">30</span></li><li class="l2"><span class="t">Equipment (S10)</span><span class="dots"></span><span class="pg">31</span></li><li class="l2"><span class="t">Spells (S11)</span><span class="dots"></span><span class="pg">33</span></li><li class="l2"><span class="t">The Survey (S13)</span><span class="dots"></span><span class="pg">33</span></li><li class="l2"><span class="t">Backstory and Handle (S14)</span><span class="dots"></span><span class="pg">34</span></li><li class="l2"><span class="t">Standing Orders (S15)</span><span class="dots"></span><span class="pg">34</span></li><li class="l2"><span class="t">Review and Confirm (S16 and S17)</span><span class="dots"></span><span class="pg">34</span></li><li class="l2"><span class="t">Several Crawlers, One Active</span><span class="dots"></span><span class="pg">35</span></li><li class="l2"><span class="t">Pre-Built Crawlers</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Worked Example: Tamsin Vale</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Level 1 Checklist</span><span class="dots"></span><span class="pg">37</span></li></ol></section>
+<section class="toc"><h1 class="toc-title">Contents</h1><ol><li class="l0"><span class="t">Front Matter</span><span class="dots"></span><span class="pg">2</span></li><li class="l1"><span class="num">1</span><span class="t">Welcome to the Crawl</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">What This Book Is</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">The Premise: Season Zero</span><span class="dots"></span><span class="pg">7</span></li><li class="l2"><span class="t">The Dungeon</span><span class="dots"></span><span class="pg">8</span></li><li class="l2"><span class="t">Who Plays What</span><span class="dots"></span><span class="pg">9</span></li><li class="l2"><span class="t">How the Game Plays</span><span class="dots"></span><span class="pg">10</span></li><li class="l2"><span class="t">The Floor Clock</span><span class="dots"></span><span class="pg">11</span></li><li class="l2"><span class="t">Saferooms</span><span class="dots"></span><span class="pg">12</span></li><li class="l2"><span class="t">Credits, Vendors and Your System Inventory</span><span class="dots"></span><span class="pg">13</span></li><li class="l2"><span class="t">Achievements</span><span class="dots"></span><span class="pg">14</span></li><li class="l2"><span class="t">Loot Boxes</span><span class="dots"></span><span class="pg">15</span></li><li class="l2"><span class="t">Death and Revival</span><span class="dots"></span><span class="pg">16</span></li><li class="l2"><span class="t">Ratings and the Broadcast Name</span><span class="dots"></span><span class="pg">16</span></li><li class="l2"><span class="t">Table Tone and Safety</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Words You Will Need</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Where to Go Next</span><span class="dots"></span><span class="pg">18</span></li><li class="l1"><span class="num">2</span><span class="t">Crawler Creation</span><span class="dots"></span><span class="pg">19</span></li><li class="l2"><span class="t">Before You Start</span><span class="dots"></span><span class="pg">19</span></li><li class="l2"><span class="t">Table Settings (S1 and S2)</span><span class="dots"></span><span class="pg">21</span></li><li class="l2"><span class="t">Name, Look and Hook (S3 and S4)</span><span class="dots"></span><span class="pg">22</span></li><li class="l2"><span class="t">Species (S5) Provisional</span><span class="dots"></span><span class="pg">23</span></li><li class="l2"><span class="t">Class (S6)</span><span class="dots"></span><span class="pg">25</span></li><li class="l2"><span class="t">Background (S7)</span><span class="dots"></span><span class="pg">28</span></li><li class="l2"><span class="t">Ability Scores (S8)</span><span class="dots"></span><span class="pg">30</span></li><li class="l2"><span class="t">Skills and Proficiencies (S9)</span><span class="dots"></span><span class="pg">32</span></li><li class="l2"><span class="t">Equipment (S10)</span><span class="dots"></span><span class="pg">33</span></li><li class="l2"><span class="t">Spells (S11)</span><span class="dots"></span><span class="pg">35</span></li><li class="l2"><span class="t">The Survey (S13)</span><span class="dots"></span><span class="pg">35</span></li><li class="l2"><span class="t">Backstory and Handle (S14)</span><span class="dots"></span><span class="pg">35</span></li><li class="l2"><span class="t">Standing Orders (S15)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Review and Confirm (S16 and S17)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Several Crawlers, One Active</span><span class="dots"></span><span class="pg">37</span></li><li class="l2"><span class="t">Pre-Built Crawlers</span><span class="dots"></span><span class="pg">38</span></li><li class="l2"><span class="t">Worked Example: Tamsin Vale</span><span class="dots"></span><span class="pg">38</span></li><li class="l2"><span class="t">Appendix: Non-SRD Backgrounds and Origin Feats</span><span class="dots"></span><span class="pg">39</span></li><li class="l2"><span class="t">Level 1 Checklist</span><span class="dots"></span><span class="pg">40</span></li><li class="l1"><span class="num">4</span><span class="t">Classes and Backgrounds</span><span class="dots"></span><span class="pg">41</span></li><li class="l2"><span class="t">How Classes Work in the Crawl</span><span class="dots"></span><span class="pg">41</span></li><li class="l2"><span class="t">Fighting Styles</span><span class="dots"></span><span class="pg">42</span></li><li class="l2"><span class="t">Reading a Class Entry</span><span class="dots"></span><span class="pg">43</span></li><li class="l2"><span class="t">Anger-Management Dropout (Barbarian)</span><span class="dots"></span><span class="pg">43</span></li><li class="l2"><span class="t">Open-Mic Menace (Bard)</span><span class="dots"></span><span class="pg">44</span></li><li class="l2"><span class="t">Urgent-Care Chaplain (Cleric)</span><span class="dots"></span><span class="pg">45</span></li><li class="l2"><span class="t">Community-Garden Zealot (Druid)</span><span class="dots"></span><span class="pg">46</span></li><li class="l2"><span class="t">Off-Duty Bouncer (Fighter)</span><span class="dots"></span><span class="pg">47</span></li><li class="l2"><span class="t">Barefoot Hot-Yoga Brawler (Monk)</span><span class="dots"></span><span class="pg">48</span></li><li class="l2"><span class="t">HOA Enforcement Crusader (Paladin)</span><span class="dots"></span><span class="pg">49</span></li><li class="l2"><span class="t">Seasonal Park Ranger (Ranger)</span><span class="dots"></span><span class="pg">50</span></li><li class="l2"><span class="t">Five-Finger Discount Specialist (Rogue)</span><span class="dots"></span><span class="pg">51</span></li><li class="l2"><span class="t">Leaky Power-Bank (Sorcerer)</span><span class="dots"></span><span class="pg">52</span></li><li class="l2"><span class="t">Unread Terms-and-Conditions Signer (Warlock)</span><span class="dots"></span><span class="pg">53</span></li><li class="l2"><span class="t">Perpetual Grad Student (Wizard)</span><span class="dots"></span><span class="pg">54</span></li><li class="l2"><span class="t">Class Options at Level 1</span><span class="dots"></span><span class="pg">55</span></li><li class="l2"><span class="t">Prior Employment (Backgrounds)</span><span class="dots"></span><span class="pg">56</span></li><li class="l2"><span class="t">Youth-Group Pizza Wrangler (Acolyte)</span><span class="dots"></span><span class="pg">57</span></li><li class="l2"><span class="t">Call-Center Gift-Card Fraud Specialist (Criminal)</span><span class="dots"></span><span class="pg">57</span></li><li class="l2"><span class="t">Adjunct Professor on Four Campuses (Sage)</span><span class="dots"></span><span class="pg">58</span></li><li class="l2"><span class="t">Black-Friday Mall Security (Soldier)</span><span class="dots"></span><span class="pg">58</span></li><li class="l2"><span class="t">Multiclassing and Subclasses</span><span class="dots"></span><span class="pg">59</span></li><li class="l2"><span class="t">Quick Picks (If You Are Stuck)</span><span class="dots"></span><span class="pg">59</span></li><li class="l2"><span class="t">Appendix: Non-SRD Backgrounds and Origin Feats</span><span class="dots"></span><span class="pg">60</span></li><li class="l2"><span class="t">Level 1 Feature Checklist by Class</span><span class="dots"></span><span class="pg">61</span></li><li class="l2"><span class="t">Sample Concepts (Legal, Not Pre-Written Heroes)</span><span class="dots"></span><span class="pg">63</span></li><li class="l2"><span class="t">Progression Through Floor 3 (Standard Track)</span><span class="dots"></span><span class="pg">63</span></li><li class="l2"><span class="t">Resources That Care About Saferooms</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Credits and Starting Kits</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Optional: Assigned Companion Tables</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Spellcasting Snapshot (Level 1)</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Armor and Defense Snapshot</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Skills That Matter Early</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Worked Micro-Examples (One Fight Each)</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Background Ability Triples (SRD Four)</span><span class="dots"></span><span class="pg">67</span></li><li class="l2"><span class="t">Common Intake Mistakes</span><span class="dots"></span><span class="pg">67</span></li><li class="l2"><span class="t">Table: When Features Arrive (Levels 1–3)</span><span class="dots"></span><span class="pg">67</span></li><li class="l2"><span class="t">Tone Reminders for Class Fantasy</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Building a Party of Four</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Divine Order and Primal Order Deep Dive</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Eldritch Invocation Picks (Level 1 Guidance)</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Species Interactions (Pointer)</span><span class="dots"></span><span class="pg">70</span></li><li class="l2"><span class="t">Official Class Titles (Floor 3 Preview)</span><span class="dots"></span><span class="pg">70</span></li><li class="l2"><span class="t">Comparing Martials at Level 1</span><span class="dots"></span><span class="pg">70</span></li><li class="l2"><span class="t">Comparing Casters at Level 1</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Background Play Patterns</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Multiclass Minimums (SRD Pointer)</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">What “Provisional” Means at the Table</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Cross-References</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Frequently Asked Intake Questions</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">One-Page Class Cards (Copy Block)</span><span class="dots"></span><span class="pg">72</span></li></ol></section>
 <section class="chapter ch1" id="ch1" style="page: ch1"><h1 id="ch1-top" data-num="One" id="ch1-welcome-to-the-crawl">Welcome to the Crawl</h1>
 <div class="epigraph">Congratulations on being selected! You weren&rsquo;t selected. You were scooped. But &ldquo;selected&rdquo; polls better.<span class="by">The System</span></div>
 
@@ -437,96 +448,96 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <tr>
 <td style="text-align: right;">4</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>20 days <span class="tag house">House</span></td>
 <td>The Knotline</td>
 </tr>
 <tr>
 <td style="text-align: right;">5</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>25 days <span class="tag house">House</span></td>
 <td>Bubble Farms</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
 <td><strong>Kingdom Continuum</strong> (Outskirts and Docks)</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>30 days <span class="tag house">House</span></td>
 <td></td>
 </tr>
 <tr>
 <td style="text-align: right;">7</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Greenlight Gauntlet</td>
 </tr>
 <tr>
 <td style="text-align: right;">8</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Remnant Parade</td>
 </tr>
 <tr>
 <td style="text-align: right;">9</td>
 <td><strong>Kingdom Continuum</strong> (Upper City and Castle)</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td></td>
 </tr>
 <tr>
 <td style="text-align: right;">10</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Last Heat Standing</td>
 </tr>
 <tr>
 <td style="text-align: right;">11</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Ratings Jubilee</td>
 </tr>
 <tr>
 <td style="text-align: right;">12</td>
 <td><strong>Kingdom Continuum</strong> (Olympus and Spirit)</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td></td>
 </tr>
 <tr>
 <td style="text-align: right;">13</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Ledger Depths</td>
 </tr>
 <tr>
 <td style="text-align: right;">14</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Continuity Auction</td>
 </tr>
 <tr>
 <td style="text-align: right;">15</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Ash Choir</td>
 </tr>
 <tr>
 <td style="text-align: right;">16</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Fracture Gallery</td>
 </tr>
 <tr>
 <td style="text-align: right;">17</td>
 <td>Unique</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>Rigging Catwalk</td>
 </tr>
 <tr>
 <td style="text-align: right;">18</td>
 <td>Unique endgame</td>
-<td>Longer <span class="verify">VERIFY</span></td>
+<td>Longer</td>
 <td>The Cage Bottom</td>
 </tr>
 </tbody>
 </table>
-<p>Floor names are working titles and may change. Day counts for Floors 4 to 18 are not yet set.</p>
+<p>Floor names are working titles and may change. Day counts for Floors 1–6 are set (decision 026; Floors 4–6 are <span class="tag house">House</span>). Day counts for Floors 7–18 are not printed here; each floor chapter carries its own clock when that chapter ships.</p>
 <h3 id="ch1-floor-1-the-trainer">Floor 1: The Trainer</h3>
 <p>Floor 1 is a tutorial with teeth. It teaches the System&rsquo;s habits (popups, boxes, saferooms, death saves) at a pace a new table can survive. It is also the first floor with a clock, and the clock is real. Everything on Floor 1 is built to be learned; nothing on Floor 1 is built to be forgiven.</p>
 <h3 id="ch1-the-kingdom-continuum">The Kingdom Continuum</h3>
@@ -575,7 +586,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 <tr>
 <td>Rests</td>
-<td>Long Rests only in saferooms.</td>
+<td>Long Rests saferoom-only; field Short Rest free if quiet, else 20 cr/Crawler (cap 60/floor) buys quiet.</td>
 <td>Ch. 1, Ch. 9</td>
 </tr>
 <tr>
@@ -617,14 +628,14 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </table>
 <h3 id="ch1-levels-and-advancement">Levels and Advancement</h3>
 <p>The standard pace is <strong>one level per floor</strong>. A Crawler arrives on Floor N at level N and descends at level N + 1. By the time you reach Floor 3, that puts you at level 3, which is when the 2024 classes choose their subclasses, and when the Crawl lets you pick an Official Class Title. By Floor 18 you are level 18, with levels 19 and 20 saved for the finale.</p>
-<p>Leveling is <strong>milestone-based</strong>. You earn the level when you reach the floor&rsquo;s exit alive. It applies at the first saferoom of the next floor, which the System calls <strong>Floor Onboarding</strong>. Floor 1 uses a split rule: level 2 arrives at the floor&rsquo;s second saferoom, before the boss, so that the boss is a fair fight for four Crawlers. A Crawler who is behind (a replacement, a missed session) is brought up to the party&rsquo;s lowest level at the next saferoom. Nobody levels above the floor&rsquo;s band.</p>
+<p>Leveling is <strong>milestone-based</strong>. You earn the level when you reach the floor&rsquo;s exit alive. It applies at the first saferoom of the next floor, which the System calls <strong>Floor Onboarding</strong>. Floor 1 uses a split rule: <strong>level 2 arrives at Floor 1&rsquo;s second saferoom (the Green Room), before the boss</strong>, which the System calls <strong>Midterm Onboarding</strong>, so that the boss is a fair fight for four Crawlers. The Floor 1 stairwell grants no extra level; you arrive on Floor 2 already at level 2. A Crawler who is behind (a replacement, a missed session) is brought up to the party&rsquo;s lowest level at the next saferoom. Nobody levels above the floor&rsquo;s band.</p>
 <div class="box house">
 <div class="box-title">Slow-Burn Track</div>
 <p>Tables who want a grittier game can slow the pace so that the party tops out around level 15 by Floor 18. Chapter 10 prints the full slow-burn table.</p>
 </div>
 <h2 id="ch1-the-floor-clock">The Floor Clock</h2>
 <p><strong>Every floor is timed.</strong> This is the single most important rule in the book.</p>
-<p>When a Crawler enters a floor, a countdown begins. The countdown is measured in <strong>days</strong>, and the number of days is printed on the floor (see the table above). Floor 1 gives you <strong>5 days</strong>. Floor 2 gives you <strong>10 days</strong>. Floor 3 gives you <strong>20 days</strong>. Later floors give more, and ask for more.</p>
+<p>When a Crawler enters a floor, a countdown begins. The countdown is measured in <strong>days</strong>, and the number of days is printed on the floor (see the table above). Floor 1 gives you <strong>5 days</strong>. Floor 2 gives you <strong>10 days</strong>. Floor 3 gives you <strong>20 days</strong>. Floors 4, 5 and 6 give <strong>20 / 25 / 30 days</strong>. <span class="tag house">House</span> Later floors ask for more; their day counts live in their own chapters.</p>
 <p>At the end of the last day the floor <strong>collapses</strong>. A Crawler who has not reached a stairwell by that moment is <strong>dead</strong>.</p>
 <div class="box system">
 <p>Final collapse is scheduled! The System regrets nothing and apologizes for even less. Please be on the other side of it.</p>
@@ -644,35 +655,39 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <p>This is a house rule built on a canon shape: in the source series, the floor falls and so does everything on it. <span class="tag inspired">Inspired</span> Our version makes the loot rule explicit so that nobody argues about it while the floor is crumbling.</p>
 <h3 id="ch1-reaching-a-stairwell">Reaching a Stairwell</h3>
 <p>A stairwell is the only way down. You reach a stairwell when you step onto it, and it opens the way to the next floor. On Floor 1, the true stairwells appear about <strong>32 hours after the floor opens</strong>, early on Day 2. Other stairwells sit inside boss arenas, so every boss fight doubles as a very unfriendly front door. <span class="tag inspired">Inspired</span></p>
-<p><strong>Early descent.</strong> A Crawler who goes down the stairs with <strong>more than 6 hours left</strong> on the clock is held in <strong>stasis</strong> until the floor collapses. They have reached a stairwell, so they live and bank the achievement for it, but their time on that floor is over. In the last 6 hours, descent is free. Each Crawler chooses for themselves. <span class="tag inspired">Inspired</span></p>
+<p><strong>Early descent.</strong> A Crawler who goes down the stairs with <strong>more than 6 hours left</strong> on the clock is held in <strong>stasis</strong> until the floor collapses. They have reached a stairwell, so they live and bank the achievement for it, but their time on that floor is over. Descending also ends that Crawler&rsquo;s Floor 1 Reprieve if it was still unused. In the last 6 hours, descent is free. Each Crawler chooses for themselves. <span class="tag inspired">Inspired</span></p>
 <div class="box system">
 <p>You went downstairs early. Bold. Boring. Your party will see you when the floor is done being on fire.</p>
 </div>
 <h3 id="ch1-reprieve-tutorial-deaths-only">Reprieve: Tutorial Deaths Only</h3>
-<p>Tables may switch on the <strong>Floor 1 Reprieve</strong>. Once per Crawler, on Floor 1 only, a <em>death in the tutorial</em> becomes &ldquo;unconscious, ejected to the nearest saferoom at 1 hit point, with an embarrassing Title.&rdquo; <span class="tag house">House</span> It expires when you descend.</p>
-<p>The Reprieve covers tutorial deaths, such as a bad fight or a failed death save. It <strong>never covers a missed collapse</strong>. Missing the collapse is death, with no exceptions.</p>
+<p>The <strong>Floor 1 Reprieve</strong> is <strong>ON by default</strong> for Season Zero (a table may turn it off at session zero; log <code>F1-REPRIEVE: ON/OFF</code>). Once per Crawler, on Floor 1 only, a <em>death in the tutorial</em> becomes &ldquo;unconscious, ejected to the nearest saferoom at 1 hit point, with an embarrassing Title.&rdquo; <span class="tag house">House</span> It expires when you descend.</p>
+<p>The Reprieve covers tutorial deaths, such as a bad fight or a failed death save. It <strong>never covers a missed collapse</strong>. Missing the collapse is death on every floor, with no exceptions (decisions 026, 028, 029).</p>
 <h2 id="ch1-saferooms">Saferooms</h2>
 <p>A <strong>saferoom</strong> is a place the System has certified as safe. (Certification is not a guarantee. Certification is a sticker.)</p>
 <ul>
-<li><strong>Long Rests happen only in saferooms.</strong> Outside one, a Long Rest is interrupted by a wandering threat, or the System declares the area &ldquo;not rest-certified.&rdquo;</li>
-<li><strong>Short Rests</strong> can happen anywhere reasonably quiet, and are guaranteed uninterrupted in a saferoom.</li>
+<li><strong>Long Rests happen only in saferooms.</strong> A Long Rest attempt outside a saferoom is interrupted and never completes (on Floor 1, Ticks arrive after 1d4 hours). Paying the field fee does not buy a Long Rest.</li>
+<li><strong>Short Rests</strong> are the only rest you can take in the field. In a spot that is <strong>already quiet</strong>, a Short Rest is <strong>free</strong>. In a saferoom, Short Rests are guaranteed uninterrupted.</li>
 <li><strong>Loot boxes open only in saferooms.</strong> A box in the field is a box you are carrying.</li>
 <li>Saferooms host <strong>services</strong>: achievement claims, vendors, a System terminal for appraisal, a bulletin board, and sometimes a bartender who has opinions about you.</li>
 <li>The usual 5e limit of one Long Rest per 24 hours still applies.</li>
 </ul>
+<p><strong>Field rest fee (Floor 1).</strong> The fee is <strong>20 credits per Crawler</strong>, capped at <strong>60 credits per Crawler per floor</strong>. It <strong>buys quiet</strong> so the party can take a Short Rest where the area is <strong>not</strong> already quiet. If the spot is already quiet, the Short Rest is free and no fee is charged. The fee never grants a Long Rest; Long Rests stay saferoom-only. <span class="tag house">House</span> A saferoom rest is free. Later floors may print their own field fees; until they do, use the Floor 1 numbers at that floor&rsquo;s credit multiplier. (decision 031; core §5.6 v0.2.18)</p>
 <p>Saferooms on Floor 1 are honest. <strong>From Floor 2 on, some saferooms lie.</strong> A false saferoom gives no rest, and some are ambushes. Searching a saferoom is allowed, wise, and occasionally rewarded with an achievement. <span class="tag house">House</span></p>
 <div class="box system">
 <p>This saferoom is certified 100% safe.<em> (</em>Certification not valid in this room.)</p>
 </div>
 <h2 id="ch1-credits-vendors-and-your-system-inventory">Credits, Vendors and Your System Inventory</h2>
 <h3 id="ch1-credits">Credits</h3>
-<p>Money in the Crawl is <strong>credits</strong>, always paid and counted in whole numbers. Every price in the SRD equipment lists is paid at face value in credits: an item the SRD prices at 15 costs 15 credits. Items the SRD prices below one full unit cost a fraction, printed with decimals (0.5 credit). Credits are the only money word in this book, because the System is proud of its currency and very sensitive about its branding.</p>
+<p>Money in the Crawl is <strong>credits</strong>, always paid and counted in <strong>whole numbers only</strong>. A balance is never fractional. Every price in the SRD equipment lists is paid in credits at face value: an item the SRD prices at 15 costs 15 credits. Copper and silver appear only as list prices on SRD gear (for reference: 1 sp = 0.1 credit, 1 cp = 0.01 credit); they are never a balance. Credits are the only money word in this book, because the System is proud of its currency and very sensitive about its branding.</p>
 <ul>
+<li><strong>Rounding (whole credits per line).</strong> <em>Buying:</em> a sub-credit list price is charged rounded <strong>up</strong> to whole credits per cart line (one Torch costs 1 credit; ten Torches on one line also cost 1 credit). <em>Selling at half:</em> rounded <strong>down</strong> to whole credits per line, so an item worth under 2 credits sells for 0 unless you group several on one line.</li>
 <li><strong>Vendors</strong> buy at standard prices (give or take the System&rsquo;s mood) and <strong>sell back at half</strong>.</li>
 <li><strong>Haggling</strong> is a Charisma check against the vendor (Persuasion, Deception or Intimidation). A success knocks roughly a tenth to a quarter off.</li>
 <li><strong>Identifying items</strong> works as 5e does (the <em>Identify</em> spell, or a Short Rest of study), or a System terminal will do it for a fee.</li>
 <li><strong>System fees</strong> and <strong>achievement rewards</strong> are multiplied by a floor multiplier as you descend. Box credit pulls are not. The multiplier table lives in Chapter 6.</li>
 </ul>
+<h3 id="ch1-crafting-prices-pointer">Crafting Prices (Pointer)</h3>
+<p>Crafting tables are saferoom workstations bought with credits or coupons. Floors 1–2 keep the ruled prices <strong>5,000 / 12,000 / 30,000</strong> credits (basic table / Crafting Studio / Enhanced Crafting Studio). Floors 3+ follow a printed per-floor schedule in Chapter 6 (decision 030). An <strong>Upgrade Coupon</strong> (cap <strong>25,000</strong> credits) covers a <strong>basic table through Floor 8</strong> and a <strong>Crafting Studio through Floor 5</strong>; it <strong>never</strong> covers an Enhanced Studio. Level upgrades still take the credit multiplier and a coupon covers them only on <strong>Floors 1–4</strong> (from Floor 5, pay in credits). <span class="tag house">House</span></p>
 <h3 id="ch1-the-system-inventory">The System Inventory</h3>
 <p>Every Crawler has a <strong>System Inventory</strong>: an extradimensional space that acts like a <em>Bag of Holding</em>. It holds 500 pounds and 64 cubic feet, and its contents weigh nothing. Putting an item in or taking one out takes your free object interaction, or the Utilize action if you have already used it. It will not hold a living creature. Unopened loot boxes take up no space.</p>
 <p>If you die, your inventory spills as a <strong>corpse cache</strong> that anyone can loot, including whatever killed you. The exception is a missed collapse, where the floor takes the cache with it (see above).</p>
@@ -732,7 +747,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </table>
 <p>The ladder tells the System how big a reward fits. It does not tell the System that a reward is <em>owed</em>. Chapter 5 covers the full ladder, rarity ceilings by floor, and a starter list of achievements.</p>
 <h2 id="ch1-loot-boxes">Loot Boxes</h2>
-<p>Loot boxes are the Crawl&rsquo;s treasure system. The System hands them out for achievements, bosses and floor clears, and each one is a small, shiny gamble.</p>
+<p>Loot boxes are the Crawl&rsquo;s treasure system. The System hands them out for achievements, bosses and floor clears, and each one is a small, shiny gamble. The first box most Crawlers ever open is a <strong>Silver loot box</strong> (Uncommon headline, two pulls): Floor 1&rsquo;s Boss Box is capped there, and a replacement Crawler&rsquo;s late-entry compensation is one Silver loot box too.</p>
 <table>
 <thead>
 <tr>
@@ -774,6 +789,8 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
+<p><strong>Achievement box tier by floor.</strong> When an achievement pays a loot box, the System uses <strong>Silver</strong> on Floors 1–2, <strong>Gold</strong> on Floors 3–8, and <strong>Platinum</strong> on Floors 9+ (no Platinum awards on Floors 1–8). Boss and clear boxes still respect the floor&rsquo;s rarity ceiling. <span class="tag house">House</span></p>
+<p><strong>Legendary cap.</strong> Across the whole campaign a Crawler may receive at most <strong>two</strong> Legendary boxes from the ordinary pacing track. Story Boxes (Floors 1–2) are a <strong>separate track</strong> outside that cap; the GM handles Story Box awards and never prints deed lists in this book. <span class="tag house">House</span></p>
 <p>Box rules in brief:</p>
 <ul>
 <li><strong>Boxes open only in saferooms.</strong> There are no emergency opens.</li>
@@ -905,7 +922,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 <tr>
 <td><strong>Saferoom</strong></td>
-<td>A certified safe room where Long Rests happen and loot boxes open.</td>
+<td>A System-certified rest area where Long Rests happen and loot boxes open.</td>
 </tr>
 <tr>
 <td><strong>Floor clock</strong></td>
@@ -916,8 +933,16 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <td>The end of a floor. Crawlers still on the floor die.</td>
 </tr>
 <tr>
-<td><strong>Stairwell</strong></td>
+<td><strong>stairwell</strong></td>
 <td>The way down to the next floor.</td>
+</tr>
+<tr>
+<td><strong>Midterm Onboarding</strong></td>
+<td>Floor 1&rsquo;s second saferoom level-up (level 2), before the boss.</td>
+</tr>
+<tr>
+<td><strong>Floor Onboarding</strong></td>
+<td>The first-saferoom level-up on a new floor after a descent.</td>
 </tr>
 <tr>
 <td><strong>Active Crawler</strong></td>
@@ -961,7 +986,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </div>
 <p>This chapter builds a level 1 Crawler at that kiosk, one decision at a time. It follows the order of the <strong>/create</strong> screens, so a player at the keyboard and a player at the table meet the same questions in the same order, with the same names.</p>
 <h2 id="ch2-before-you-start">Before You Start</h2>
-<p><strong>Creation is standard 5e (2024) character creation at level 1.</strong> You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a survey, and a story in which your species stays hidden until Floor 3.</p>
+<p><strong>Creation is standard 5e (2024) character creation at level 1.</strong> You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a private survey, and a story in which your species stays hidden until Floor 3. The System keeps a <strong>Fan Profile</strong> on every Crawler; players never see it and never set it (S12 is retired). Floor 1 later grants <strong>Midterm Onboarding</strong> (level 2 at the Green Room) — that is play, not creation.</p>
 <p><strong>Time.</strong> Plan on about 20 minutes per Crawler. A table of new players should plan on 45. Everyone can build at once, because each player works alone.</p>
 <p><strong>What you do not get at creation.</strong> No magic items. No loot boxes (the Welcome Box arrives at the first saferoom). No sponsors, no Broadcast Name, no Ratings above Unknown, and no multiclassing at level 1. A level 1 Crawler is a baseline 5e hero holding some very bad gear.</p>
 <div class="box system">
@@ -1103,7 +1128,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </div>
 <h2 id="ch2-table-settings-s1-and-s2">Table Settings (S1 and S2)</h2>
 <h3 id="ch2-what-s1-shows-you">What S1 Shows You</h3>
-<p>S1 is a read-only welcome. It shows the <strong>session</strong> you are joining, the table&rsquo;s <strong>Death Mode</strong> (<strong>Costly Revives</strong> by default: revival is rare and costly; see Chapter 1), the <strong>Comfort</strong> level (<strong>Ludicrous</strong> by default), whether the <strong>Floor 1 Reprieve</strong> is on, and how many of the four Crawler slots are taken (&ldquo;Party: 2 of 4 active Crawlers&rdquo;). If you already have Crawlers on file, it also shows how many and which one is active.</p>
+<p>S1 is a read-only welcome. It shows the <strong>session</strong> you are joining, the table&rsquo;s <strong>Death Mode</strong> (<strong>Costly Revives</strong> by default: revival is rare and costly; see Chapter 1), the <strong>Comfort</strong> level (<strong>Ludicrous</strong> by default), the <strong>Floor 1 Reprieve</strong> (<strong>ON by default</strong> for Season Zero Floor 1; a table may turn it off; it never covers a collapse death), and how many of the four Crawler slots are taken (&ldquo;Party: 2 of 4 active Crawlers&rdquo;). If you already have Crawlers on file, it also shows how many and which one is active.</p>
 <p>You will see four choices: <strong>Accept</strong>, <strong>Decline</strong> (both continue), <strong>Use a pre-built</strong>, and <strong>Read the Terms</strong>. Reading the Terms shows you nothing, because the Terms are not shown. It does earn you a snark achievement.</p>
 <div class="box achievement"><div class="ach-banner">New achievement!</div><div class="ach-body"><div class="ach-title">Don&rsquo;t Skip Intro</div>
 <p class="ach-desc">You asked to read the Terms of Service, all four hundred thousand words of them. The System did not know that was possible.</p>
@@ -1213,7 +1238,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
-<p><em>Source: chargen-5e.json v0.1.5 and species-class-reskins v0.1.5. Dwarf, Elf and Orc darkvision as filed in the chargen table. Traits are named, not reprinted; use the SRD text.</em></p>
+<p><em>Source: chargen-5e.json v0.1.6 and species-class-reskins v0.1.5. Dwarf, Elf and Orc darkvision as filed in the chargen table. Traits are named, not reprinted; use the SRD text.</em></p>
 <h3 id="ch2-meet-the-nine">Meet the Nine</h3>
 <p><strong>Welsh (Dragonborn).</strong> Your flag already has a dragon on it. You are the paperwork catching up. Every consonant is a threat. Choose a <strong>draconic ancestry</strong>: Ghanaian (Black Dragonborn), Uruguayan (Blue Dragonborn), Serbian (Brass Dragonborn), Italian (Bronze Dragonborn), Chilean (Copper Dragonborn), South African (Gold Dragonborn), Irish (Green Dragonborn), Peruvian (Red Dragonborn), Bolivian (Silver Dragonborn), Norwegian (White Dragonborn).</p>
 <p><strong>Vietnamese (Dwarf).</strong> Your country owns the biggest cave on Earth. Hauling a fridge on a scooter was just the warm-up.</p>
@@ -1472,7 +1497,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
-<p><em>Source: chargen-5e.json v0.1.5. Weapon proficiencies are in the SRD class entries.</em></p>
+<p><em>Source: chargen-5e.json v0.1.6. Weapon proficiencies are in the SRD class entries.</em></p>
 <h3 id="ch2-twelve-provisional-classes">Twelve Provisional Classes</h3>
 <p><strong>Anger-Management Dropout (Barbarian).</strong> Failed the course, kept the certificate, and now charges by the hour for the same thing. <em>Level 1:</em> Rage (2 uses, long-rest recharge); Unarmored Defense (10 + Dex + Con while unarmored); Weapon Mastery (2 weapons).</p>
 <p><strong>Open-Mic Menace (Bard).</strong> Unlicensed entertainer with a Bluetooth speaker and four fans. Two of them are family. <em>Level 1:</em> Bardic Inspiration (d6, Cha mod uses); Spellcasting (Cha).</p>
@@ -1633,7 +1658,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <p>Provisional Class: noted. Official Class Title: pending. Please do not put &ldquo;pending&rdquo; on a business card.</p>
 </div>
 <h2 id="ch2-background-s7">Background (S7)</h2>
-<p>Your background is your <strong>Prior Employment</strong>: the job you had before the world ended. It gives you ability score increases, an Origin feat, two skills, a tool, and an equipment option. You choose from the backgrounds the SRD provides, which is four.</p>
+<p>Your background is your <strong>Prior Employment</strong>: the job you had before the world ended. It gives you ability score increases, an Origin feat, two skills, a tool, and an equipment option. This book prints the <strong>four SRD 5.2 backgrounds</strong> in full below. Twelve more appear only as a reskin-name appendix at the end of this chapter (decision 029); their full 5e text is not reprinted here.</p>
 <table>
 <thead>
 <tr>
@@ -1685,10 +1710,6 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <p><strong>Call-Center Gift-Card Fraud Specialist (Criminal).</strong> Talked 400 strangers into reading you their card numbers &lsquo;for verification&rsquo;. Your headset is evidence now.</p>
 <p><strong>Adjunct Professor on Four Campuses (Sage).</strong> Taught intro rhetoric at four colleges for the combined salary of one decent sandwich. Parking cost more than the pay.</p>
 <p><strong>Black-Friday Mall Security (Soldier).</strong> Stood between a discount toaster and four hundred people. You lost the toaster but kept the vest.</p>
-<div class="box sidebar">
-<div class="box-title">More Backgrounds</div>
-<p>The 2024 Player&rsquo;s Handbook lists twelve more backgrounds, and the kiosk has reskins ready for them. This book prints only the four the SRD provides; your GM may open the others if your table owns the book. <span class="verify">VERIFY: the filed spec lists all sixteen backgrounds on S7; this draft restricts printed rules to SRD content and logs the question.</span></p>
-</div>
 <h3 id="ch2-ability-score-increases">Ability Score Increases</h3>
 <p>Your background lists three abilities. You apply <strong>one</strong> of these two patterns, picking among those three:</p>
 <ul>
@@ -1697,7 +1718,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </ul>
 <p>Increases are added <em>after</em> you assign your ability scores (next section), and <strong>no score can exceed 20</strong>. The preview screen shows the result live.</p>
 <h3 id="ch2-origin-feat">Origin Feat</h3>
-<p>Your background gives you a fixed Origin feat. If you are Human, you also pick one from the list below (your Versatile trait).</p>
+<p>Your background gives you a fixed Origin feat. If you are Human, you also pick one from the <strong>four SRD Origin feats</strong> below (your Versatile trait): Alert, Magic Initiate, Savage Attacker, or Skilled. Magic Initiate has three spell-list versions. Non-SRD Origin feats appear only in the appendix under our reskin names (decision 029).</p>
 <table>
 <thead>
 <tr>
@@ -1732,7 +1753,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
-<p><em>The SRD 5.2 Origin feats (Magic Initiate has three versions).</em></p>
+<p><em>The four SRD 5.2 Origin feats (Magic Initiate has three spell-list versions). Human Versatile picks from these four only.</em></p>
 <h3 id="ch2-reskin-the-reason">Reskin the Reason</h3>
 <p>You may rename your old job to fit your story, as long as you keep the skills the background gives. A Sage can be a podcast researcher. A Soldier can be mall security. The System will not change what the background does, only why you have it.</p>
 <blockquote>
@@ -2090,7 +2111,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
-<p><em>Source: chargen-5e.json v0.1.5 <span class="verify">VERIFY: package contents and credit amounts were written from memory of SRD 5.2; chargen verify list still open</span>. Fighters have a second kit (B) and a credit option (C); every other class has Package B as credits only.</em></p>
+<p><em>Source: chargen-5e.json v0.1.6 <span class="verify">VERIFY: package contents and credit amounts were written from memory of SRD 5.2; chargen verify list still open</span>. Fighters have a second kit (B) and a credit option (C); every other class has Package B as credits only.</em></p>
 <p>Your starting credits are exactly what the options give you. The Crawl adds no stipend.</p>
 <h3 id="ch2-the-intake-vending-wall">The Intake Vending Wall</h3>
 <p>If you hold credits, you can spend them at the <strong>Intake Vending Wall</strong>. It sells equipment at SRD prices. It never sells magic items. Spend any amount up to what you hold; what is left stays on your sheet. Every purchase subtracts from your credits, and the total can never go below zero.</p>
@@ -2186,7 +2207,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
-<p><em>Counts per characters/create-flow-spec-5e.md v0.1.12 S11 (SRD 5.2 checked by the rules team). Barbarian, Fighter, Monk and Rogue skip the spells screen.</em></p>
+<p><em>Counts per characters/create-flow-spec-5e.md v0.1.13 S11 (SRD 5.2 checked by the rules team). Barbarian, Fighter, Monk and Rogue skip the spells screen.</em></p>
 <ul>
 <li><strong>Cantrips</strong> are <em>Party Tricks</em>: free, repeatable and slightly embarrassing.</li>
 <li><strong>Level 1 spells</strong> are <em>Real Magic</em>.</li>
@@ -2195,7 +2216,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <li>Spell lists and effects come from the SRD. <span class="verify">VERIFY: the filed chargen table&rsquo;s spell lists were written from memory and are not reprinted here. Check them against the SRD before the spell chapter goes to print.</span></li>
 </ul>
 <h2 id="ch2-the-survey-s13">The Survey (S13)</h2>
-<p>S13 is a <strong>short, private customer satisfaction survey</strong>. Your answers are private notes. The System does not read them aloud, does not put them on your card, and does not share them with other players. You may <strong>pass</strong> on any question, or skip the whole screen. The System keeps a hidden file of its own about each Crawler, and you never see it and never set it. Nothing in the survey is required, and nothing in it is a test.</p>
+<p>S13 is a <strong>short, private customer satisfaction survey</strong>. Your answers are private notes. The System does not read them aloud, does not put them on your card, and does not share them with other players. You may <strong>pass</strong> on any question, or skip the whole screen. <strong>S12 is retired</strong> on purpose (the old public-tags screen); the numbers stay so the tools never renumber. From your private notes and from play, the System builds a <strong>Fan Profile</strong> that stays <strong>hidden</strong> — players never see it, never set it, and never ask for a specific reward. Nothing in the survey is required, and nothing in it is a test.</p>
 <h2 id="ch2-backstory-and-handle-s14">Backstory and Handle (S14)</h2>
 <p>The screen is <strong>Your Sob Story and Handle Request</strong>. It asks for two things.</p>
 <ul>
@@ -2242,7 +2263,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </ul>
 <h3 id="ch2-swapping">Swapping</h3>
 <p>The active Crawler is <strong>locked for the whole session</strong>. It changes only at <strong>session zero or between sessions</strong>, never mid-session, not even in a saferoom. You ask with <code>/crawlers</code>, which lists your Crawlers (name, class, level, active or benched, floor) with links to their sheets. It files a <em>request</em>; the GM approves and runs the swap, and logs it. You get <strong>one swap per window</strong>.</p>
-<p>A Crawler swapped in keeps its own level, kit and credits as filed. If it is behind the party, it is brought up to the party&rsquo;s lowest level at the next saferoom. A swapped-in benched Crawler does not get the gear package or Silver late-entry loot box that a brand-new replacement gets.</p>
+<p>A Crawler swapped in keeps its own level, kit and credits as filed. If it is behind the party, it is brought up to the party&rsquo;s lowest level at the next saferoom. A swapped-in benched Crawler does not get the gear package or Silver loot box as late-entry compensation that a brand-new replacement gets.</p>
 <h3 id="ch2-when-a-crawler-dies">When a Crawler Dies</h3>
 <p>Death is permanent (see Chapter 1). During the session you cannot bring in a benched Crawler. You either sit out, or, if the GM offers it, you run a GM-assigned companion until the next between-session window. At that window you may swap in a benched Crawler as your replacement.</p>
 <h3 id="ch2-delete">/delete</h3>
@@ -2275,6 +2296,104 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <p><strong>Orders:</strong> Hold the doorway; use Second Wind below half hit points. <strong>Reactions:</strong> Opportunity Attacks on.</p>
 </div>
 <p>Notice what she does not have: no magic items, no loot boxes, no Ratings. She is a competent, tough, slightly overqualified security guard with a very bad pair of shoes, and she is about to go downstairs.</p>
+<h2 id="ch2-appendix-non-srd-backgrounds-and-origin-feats">Appendix: Non-SRD Backgrounds and Origin Feats</h2>
+<p>The kiosk lists twelve more backgrounds and six more Origin feats that are <strong>not</strong> in the SRD 5.2. Per decision 029 they appear here under <strong>our reskin names only</strong>, with a one-line mechanics summary in our own words. No parenthetical 5e name and no book text. Your GM may open them if the table owns the source books; the sheet still stores the underlying 5e key.</p>
+<h3 id="ch2-non-srd-backgrounds-reskin-names">Non-SRD Backgrounds (reskin names)</h3>
+<table>
+<thead>
+<tr>
+<th>Reskin name</th>
+<th>Mechanics summary (our words)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Etsy Shop Founder, Three Sales</td>
+<td>Ability raises among Str/Dex/Int; tool-and-craft Origin feat; two skills and artisan&rsquo;s tools.</td>
+</tr>
+<tr>
+<td>Pyramid-Scheme Boss Babe</td>
+<td>Ability raises among Dex/Con/Cha; deception-leaning Origin feat; two skills and a forgery kit.</td>
+</tr>
+<tr>
+<td>Wedding DJ With One Playlist</td>
+<td>Ability raises among Str/Dex/Cha; performance Origin feat; two skills and a musical instrument.</td>
+</tr>
+<tr>
+<td>Farm-to-Table Influencer</td>
+<td>Ability raises among Str/Con/Wis; toughing-it-out Origin feat; two skills and a farming tool.</td>
+</tr>
+<tr>
+<td>Hospital Parking-Garage Attendant</td>
+<td>Ability raises among Str/Wis/Cha; alertness Origin feat; two skills and a gaming set.</td>
+</tr>
+<tr>
+<td>Trailhead Guide With a Laminated Map</td>
+<td>Ability raises among Dex/Con/Wis; magic-initiate-style Origin feat; two skills and a navigator&rsquo;s tools-style kit.</td>
+</tr>
+<tr>
+<td>Doomsday Prepper, Collapse Postponed</td>
+<td>Ability raises among Con/Wis/Cha; healer Origin feat; two skills and an herbalism kit.</td>
+</tr>
+<tr>
+<td>Warehouse Operations Manager</td>
+<td>Ability raises among Con/Int/Cha; lucky Origin feat; two skills and navigator&rsquo;s tools.</td>
+</tr>
+<tr>
+<td>Trust-Fund Gallery Owner</td>
+<td>Ability raises among Str/Int/Cha; skilled Origin feat; two skills and a gaming set.</td>
+</tr>
+<tr>
+<td>Cruise-Ship Buffet Deckhand</td>
+<td>Ability raises among Str/Dex/Wis; tavern-brawler Origin feat; two skills and navigator&rsquo;s tools.</td>
+</tr>
+<tr>
+<td>Law-Firm Paralegal in Redline Hell</td>
+<td>Ability raises among Dex/Int/Wis; skilled Origin feat; two skills and calligrapher&rsquo;s supplies.</td>
+</tr>
+<tr>
+<td>Couch-Surfing Burrito Courier</td>
+<td>Ability raises among Dex/Wis/Cha; lucky Origin feat; two skills and thieves&rsquo; tools.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Appendix only. Sheet stores the underlying 5e background key. Open these only if the table owns the source books.</em></p>
+<h3 id="ch2-non-srd-origin-feats-reskin-names">Non-SRD Origin Feats (reskin names)</h3>
+<table>
+<thead>
+<tr>
+<th>Reskin name</th>
+<th>Mechanics summary (our words)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot-Glue Gunslinger</td>
+<td>Faster, cheaper crafting of nonmagical items; start with artisan&rsquo;s tools and discounts.</td>
+</tr>
+<tr>
+<td>Weekend CPR-Class Graduate</td>
+<td>Stabilize with a kit as a Bonus Action; heal dice when you Treat; kit uses refresh on a Short Rest.</td>
+</tr>
+<tr>
+<td>Scratch-Ticket Gambler</td>
+<td>A small pool of luck points to reroll your d20 or force an attacker to reroll.</td>
+</tr>
+<tr>
+<td>Karaoke Night Regular</td>
+<td>Encourage allies after a Short or Long Rest; grant temporary Hit Points or Heroic Inspiration.</td>
+</tr>
+<tr>
+<td>HOA-Meeting Brawler</td>
+<td>Improved unarmed strikes; grapple more easily; once per turn deal extra damage on an unarmed or improvised hit.</td>
+</tr>
+<tr>
+<td>Gym Bro Who Spots at Dawn</td>
+<td>Extra hit points equal to twice your level (and +2 HP each time you gain a level).</td>
+</tr>
+</tbody>
+</table>
+<p><em>Appendix only. Human Versatile does not pick from this list in the printed book (SRD four only).</em></p>
 <h2 id="ch2-level-1-checklist">Level 1 Checklist</h2>
 <ul>
 <li>[ ] Table settings read; comfort lines set (or skipped).</li>
@@ -2292,5 +2411,1426 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </ul>
 <div class="box system">
 <p>Files locked! Please exit your booth. Watch your step. The step is lying.</p>
+</div></section><section class="chapter ch4" id="ch4" style="page: ch4"><h1 id="ch4-top" data-num="Four" id="ch4-classes-and-backgrounds">Classes and Backgrounds</h1>
+<div class="epigraph">Your Provisional Class is a talent that fell out of you. Your Prior Employment is what you were paid to be. Neither is a personality. Please acquire one.<span class="by">The System</span></div>
+
+<p>This chapter is the deep dive behind Chapter 2&rsquo;s intake screens. Chapter 2 gets a Crawler legal at level 1. Here you get the twelve <strong>Provisional Classes</strong> with play notes for Season Zero, the Fighting Styles Fighters pick now (and Paladins and Rangers pick at level 2), the four <strong>SRD Prior Employments</strong> printed in full, and an appendix of non-SRD reskin names your GM may open later.</p>
+<p><strong>Display names</strong> always read <strong>Our Name (5e Name)</strong>. Rules key on the parenthesized 5e name. Flavor and System lines stay short (a few sentences). Everything mechanical that is not summarized here lives in the <strong>SRD 5.2</strong>. Where this book and the SRD conflict on the floor, this book wins for Crawl overlays (rests, credits, clocks, boxes).</p>
+<div class="box sidebar">
+<div class="box-title">What This Chapter Is Not</div>
+<p>No pet rules. No Story Box deed lists. No survey questions and no Fan Profile fields. Those stay out of the printed player book on purpose.</p>
+</div>
+<h2 id="ch4-how-classes-work-in-the-crawl">How Classes Work in the Crawl</h2>
+<ul>
+<li><strong>Provisional Class</strong> at level 1 means the full SRD class features for that level. Nothing is delayed except the story paint.</li>
+<li><strong>Official Class Title</strong> arrives on Floor 3 with your subclass. The Title is flavor. The subclass is rules.</li>
+<li><strong>Milestone leveling:</strong> one level per floor on the standard track. Floor 1 grants <strong>Midterm Onboarding</strong> (level 2 at the Green Room) before the boss; you arrive on Floor 2 already at level 2. Later floors use <strong>Floor Onboarding</strong> at the first saferoom after descent.</li>
+<li><strong>Multiclassing</strong> follows 5e, including ability score prerequisites. The System will mock the paperwork and still enforce it.</li>
+<li><strong>Spell lists</strong> are SRD. Spell names stay plain; only kiosk headings get reskins.</li>
+<li><strong>Death and replacement.</strong> A dead Crawler&rsquo;s player usually brings a replacement at the next saferoom (Chapter 1). The new sheet uses this chapter the same way Chapter 2 does, plus late-entry gear and one <strong>Silver loot box</strong>.</li>
+</ul>
+<h3 id="ch4-the-twelve-at-a-glance">The Twelve at a Glance</h3>
+<table>
+<thead>
+<tr>
+<th>Our Name (5e Name)</th>
+<th style="text-align: center;">Hit Die</th>
+<th>Saves</th>
+<th>Armor</th>
+<th style="text-align: center;">Skills</th>
+<th>Level 1 hook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| Anger-Management Dropout (Barbarian) | d12 | STR/CON | light, medium, shield; Unarmored Defense | 2 | Rage; Unarmored Defense; Mastery 2 |
+| Open-Mic Menace (Bard) | d8 | DEX/CHA | light | 3 | Inspiration; Spellcasting |
+| Urgent-Care Chaplain (Cleric) | d8 | WIS/CHA | light, medium, shield | 2 | Spellcasting; Divine Order |
+| Community-Garden Zealot (Druid) | d8 | INT/WIS | light, shield | 2 | Spellcasting; Druidic; Primal Order |
+| Off-Duty Bouncer (Fighter) | d10 | STR/CON | light, medium, heavy, shield | 2 | Fighting Style; Second Wind; Mastery 3 |
+| Barefoot Hot-Yoga Brawler (Monk) | d8 | STR/DEX | Unarmored Defense | 2 | Martial Arts; Unarmored Defense |
+| HOA Enforcement Crusader (Paladin) | d10 | WIS/CHA | light, medium, heavy, shield | 2 | Lay on Hands; Spellcasting; Mastery 2 |
+| Seasonal Park Ranger (Ranger) | d10 | STR/DEX | light, medium, shield | 3 | Hunter&rsquo;s Mark; Spellcasting; Mastery 2 |
+| Five-Finger Discount Specialist (Rogue) | d8 | DEX/INT | light | 4 | Expertise; Sneak Attack; Cant; Mastery 2 |
+| Leaky Power-Bank (Sorcerer) | d6 | CON/CHA | none | 2 | Spellcasting; Innate Sorcery |
+| Unread Terms-and-Conditions Signer (Warlock) | d8 | WIS/CHA | light | 2 | Pact Magic; 1 Invocation |
+| Perpetual Grad Student (Wizard) | d6 | INT/WIS | none | 2 | Spellbook; Rituals; Arcane Recovery |</p>
+<p><em>Weapon and tool proficiencies: SRD 5.2. Tables: chargen-5e.json v0.1.6, species-class-reskins v0.1.5.</em></p>
+<h2 id="ch4-fighting-styles">Fighting Styles</h2>
+<p>Fighters pick a Fighting Style at <strong>level 1</strong>. <strong>Paladins and Rangers pick at level 2</strong>, not during intake. Each style is a feat in 2024 terms; take the SRD benefit as written. Names below are kiosk labels.</p>
+<table>
+<thead>
+<tr>
+<th>Our Name (5e Name)</th>
+<th>Benefit (summary)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| Carnival-Booth Sharpshooter (Archery) | +2 to attack rolls with ranged weapons. |
+| Power-Outage Brawler (Blind Fighting) | Blindsight 10 feet while conscious (as SRD). |
+| Bubble-Wrap Enthusiast (Defense) | +1 Armor Class while wearing armor. |
+| Single-Hand Swagger (Dueling) | +2 damage with a single one-handed melee weapon and a free other hand. |
+| Two-Handed Overcompensation (Great Weapon Fighting) | Reroll 1s and 2s on damage dice for two-handed melee weapons. |
+| Human Airbag Reflex (Interception) | Reaction: reduce damage to a nearby ally when they are hit (as SRD). |
+| Crowd-Control Shield Shove (Protection) | Reaction with a shield: impose Disadvantage on an attack against a nearby ally. |
+| Dart-League Menace (Thrown Weapon Fighting) | Draw thrown weapons as part of the attack; +2 damage on thrown weapon attacks. |
+| Double-Fisting Menace (Two-Weapon Fighting) | Add your ability modifier to the extra attack&rsquo;s damage when you Two-Weapon Fight. |
+| Bar-Fight Haymaker (Unarmed Fighting) | Stronger unarmed strikes; special grapple options as SRD. |</p>
+<div class="box house">
+<div class="box-title">Ability Scores Cross-Reference</div>
+<p>Ability scores still use Factory Preset, Layaway Plan, or Dice Gamble (Roll). Roll is <span class="tag house">House</span>: keep an array only if it totals <strong>73 or more</strong>. Full procedure in Chapter 2.</p>
+</div>
+<h2 id="ch4-reading-a-class-entry">Reading a Class Entry</h2>
+<p>Each class section below uses the same shape:</p>
+<ol>
+<li><strong>Kiosk flavor</strong> (short).</li>
+<li><strong>Chassis</strong> — Hit Die, abilities, saves, armor, skills.</li>
+<li><strong>Level 1 features</strong> — what intake gives you.</li>
+<li><strong>Level 2 preview</strong> — what Midterm Onboarding usually adds.</li>
+<li><strong>In the party / On Floor 1 / Rests / Build / Do not</strong> — Season Zero play notes.</li>
+<li><strong>System toast</strong> — one jab.</li>
+</ol>
+<p>Feature text is a summary for table use. When precision matters, open the SRD entry.</p>
+<hr />
+<h2 id="ch4-anger-management-dropout-barbarian">Anger-Management Dropout (Barbarian)</h2>
+<p><em>Failed the course, kept the certificate, and now charges by the hour for the same thing.</em></p>
+<p><strong>Hit Die:</strong> d12. <strong>Saving throws:</strong> STR/CON. <strong>Armor training:</strong> light, medium, shield. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features">Level 1 Features</h3>
+<ul>
+<li><strong>Rage.</strong> Bonus Action to enter Rage. While raging you gain the SRD Rage benefits (damage resistance, bonus damage, and the usual restrictions). <strong>2 uses</strong> at level 1; recharged on a Long Rest.</li>
+<li><strong>Unarmored Defense.</strong> Without armor, AC = <strong>10 + Dexterity modifier + Constitution modifier</strong>. A shield is allowed.</li>
+<li><strong>Weapon Mastery.</strong> Choose <strong>2</strong> weapons; you can use their Mastery properties.</li>
+</ul>
+<h3 id="ch4-level-2-preview">Level 2 Preview</h3>
+<p><strong>Reckless Attack</strong> and <strong>Danger Sense</strong>. You swing with Advantage and take the consequences; you also gain Advantage on Dexterity saves against effects you can see.</p>
+<h3 id="ch4-in-the-party">In the Party</h3>
+<p>You are the front door and the fire alarm. Take hits, open Rage when the camera is rolling, and drag downed friends to a saferoom. You are not the planner; you are why the plan survives contact.</p>
+<h3 id="ch4-on-floor-1">On Floor 1</h3>
+<p>Midterm Onboarding (level 2 at the Green Room) is your first big power spike — Reckless Attack and Danger Sense land before the Floor 1 boss. Do not spend both Rage uses on rats. Save one for the stairwell fight.</p>
+<h3 id="ch4-rests-and-resources">Rests and Resources</h3>
+<p>Rage recharges on a Long Rest at early levels. Long Rests only count in a saferoom. A field rest fee on Floor 1 (20 credits per Crawler, cap 60) never grants the rest; it only bills you and then interrupts you.</p>
+<h3 id="ch4-build-notes">Build Notes</h3>
+<p>Strength and Constitution first. Unarmored Defense if you refuse a shirt; medium armor if you want fewer jokes about your torso. Weapon Mastery on a greataxe or greatsword plus a thrown handaxe covers most Floor 1 rooms.</p>
+<h3 id="ch4-do-not">Do Not</h3>
+<p>Do not dump Constitution. Do not Rage every fight. Do not stand in a collapsing zone arguing about honor — collapse death is death on every floor, Reprieve or not.</p>
+<div class="box system">
+<p>Rage logged. Property damage logged. Empathy: not found.</p>
+</div>
+<hr />
+<h2 id="ch4-open-mic-menace-bard">Open-Mic Menace (Bard)</h2>
+<p><em>Unlicensed entertainer with a Bluetooth speaker and four fans. Two of them are family.</em></p>
+<p><strong>Hit Die:</strong> d8. <strong>Saving throws:</strong> DEX/CHA. <strong>Armor training:</strong> light. <strong>Skill picks:</strong> 3 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_1">Level 1 Features</h3>
+<ul>
+<li><strong>Bardic Inspiration.</strong> Bonus Action; grant an ally a <strong>d6</strong> Inspiration die. Uses = Charisma modifier (minimum 1). Long Rest recharge at level 1.</li>
+<li><strong>Spellcasting (Charisma).</strong> <strong>2</strong> cantrips; <strong>4</strong> prepared level 1 spells; <strong>2</strong> level 1 slots. Ritual casting as SRD.</li>
+</ul>
+<h3 id="ch4-level-2-preview_1">Level 2 Preview</h3>
+<p><strong>Expertise</strong> (2 skills) and a bigger Inspiration budget. Your jokes get proficiency.</p>
+<h3 id="ch4-in-the-party_1">In the Party</h3>
+<p>You are control, support, and the reason the audience stays. Bardic Inspiration is a resource; spend it on the swing that matters, not on the swing that looks cool.</p>
+<h3 id="ch4-on-floor-1_1">On Floor 1</h3>
+<p>Your spell list is your toolbox: healing words, locks of sleep, and one insult that deals damage. Midterm Onboarding adds Expertise and more Inspiration — perfect timing for the boss.</p>
+<h3 id="ch4-rests-and-resources_1">Rests and Resources</h3>
+<p>Inspiration and slots want Long Rests. Short Rests help teammates more than you at level 1. Sit in the saferoom; open boxes there; do not try emergency opens in a hallway.</p>
+<h3 id="ch4-build-notes_1">Build Notes</h3>
+<p>Charisma first, then Dexterity for armor and initiative. Take light armor. Skills: pick three that cover talking, noticing, and one sneaky option. Cantrips should include a damage option and a utility option.</p>
+<h3 id="ch4-do-not_1">Do Not</h3>
+<p>Do not treat Inspiration like confetti. Do not ask the System for a loot guitar — Fan Profiles are hidden and requests are Customer Feedback, not orders.</p>
+<div class="box system">
+<p>Bluetooth speaker detected. Licensing: none. Fans: four. Two are family.</p>
+</div>
+<hr />
+<h2 id="ch4-urgent-care-chaplain-cleric">Urgent-Care Chaplain (Cleric)</h2>
+<p><em>Somebody up there signed for you. Pastoral care, triage, and a surprisingly effective hand-sanitizer miracle.</em></p>
+<p><strong>Hit Die:</strong> d8. <strong>Saving throws:</strong> WIS/CHA. <strong>Armor training:</strong> light, medium, shield. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_2">Level 1 Features</h3>
+<ul>
+<li><strong>Spellcasting (Wisdom).</strong> <strong>3</strong> cantrips; <strong>4</strong> prepared level 1 spells; <strong>2</strong> level 1 slots.</li>
+<li><strong>Divine Order.</strong> Choose once:</li>
+<li><strong>Hallway Bodyguard (Protector):</strong> martial weapons and heavy armor.</li>
+<li><strong>Church Rummage-Sale Mystic (Thaumaturge):</strong> extra cantrip; add Wisdom modifier to spell attack bonus and save DC while presenting a holy symbol as a focus (as SRD).</li>
+</ul>
+<h3 id="ch4-level-2-preview_2">Level 2 Preview</h3>
+<p><strong>Channel Divinity</strong> and Channel options. Turn the undead; empower a damage cantrip; look very certified.</p>
+<h3 id="ch4-in-the-party_2">In the Party</h3>
+<p>You are triage with a holy symbol. Keep people standing, turn the worst undead jokes into actual turning later, and decide who gets the last Cure Wounds.</p>
+<h3 id="ch4-on-floor-1_2">On Floor 1</h3>
+<p>Divine Order is a permanent fork: Protector for armor and martial weapons, Thaumaturge for extra cantrip punch. Midterm Onboarding brings Channel Divinity before the boss — plan to be alive for it.</p>
+<h3 id="ch4-rests-and-resources_2">Rests and Resources</h3>
+<p>Slots and Channel Divinity key off Long Rests. Saferoom Long Rests are the only ones that count. If the Break Room loses service on Floor 1 Day 4, the Green Room is your last honest bed.</p>
+<h3 id="ch4-build-notes_2">Build Notes</h3>
+<p>Wisdom first, then Constitution. Protectors can lean Strength; Thaumaturges can lean more Wisdom. Prepare a heal, a buff, and a damage spell every day.</p>
+<h3 id="ch4-do-not_2">Do Not</h3>
+<p>Do not hoard every slot for a boss that might not come. Do not refuse to heal because someone &ldquo;deserved it&rdquo; — the audience grades cruelty differently than you think.</p>
+<div class="box system">
+<p>Pastoral care ticket opened. Estimated wait: forever. Please hold.</p>
+</div>
+<hr />
+<h2 id="ch4-community-garden-zealot-druid">Community-Garden Zealot (Druid)</h2>
+<p><em>Smells like a compost bin with ambition. Has a plot, a hose, and opinions about your lawn.</em></p>
+<p><strong>Hit Die:</strong> d8. <strong>Saving throws:</strong> INT/WIS. <strong>Armor training:</strong> light, shield. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_3">Level 1 Features</h3>
+<ul>
+<li><strong>Spellcasting (Wisdom).</strong> <strong>2</strong> cantrips; <strong>4</strong> prepared level 1 spells; <strong>2</strong> level 1 slots.</li>
+<li><strong>Druidic.</strong> Secret language. System file: &ldquo;conspiring with plants.&rdquo;</li>
+<li><strong>Primal Order.</strong> Choose once:</li>
+<li><strong>Farmers-Market Hedge Magician (Magician):</strong> extra cantrip; focus-based casting bonus as SRD.</li>
+<li><strong>Trail-Crew Warden (Warden):</strong> martial weapons and medium armor.</li>
+</ul>
+<h3 id="ch4-level-2-preview_3">Level 2 Preview</h3>
+<p><strong>Wild Shape</strong> and Wild Shape options. You become a beast; the audience rates the costume.</p>
+<h3 id="ch4-in-the-party_3">In the Party</h3>
+<p>You control space and patch holes. Entangle, Faerie Fire, and Goodberry do more for Floor 1 survival than another damage cantrip.</p>
+<h3 id="ch4-on-floor-1_3">On Floor 1</h3>
+<p>Primal Order forks Magician vs Warden the same way Cleric forks. Wild Shape is level 2 — Midterm Onboarding is when you become a problem with teeth.</p>
+<h3 id="ch4-rests-and-resources_3">Rests and Resources</h3>
+<p>Slots refresh on Long Rests. Herbalism and crafting (later chapters) want saferoom time. Field rest fees do not grow berries.</p>
+<h3 id="ch4-build-notes_3">Build Notes</h3>
+<p>Wisdom first. Warden can wear medium armor; Magician leans harder into spells. Keep a melee backup (shillelagh or a shield) for when slots are gone.</p>
+<h3 id="ch4-do-not_3">Do Not</h3>
+<p>Do not wear metal armor if your table enforces the SRD restriction. Do not Wild Shape into something that cannot climb the route you need.</p>
+<div class="box system">
+<p>Conspiracy with plants: confirmed. Hose pressure: excessive.</p>
+</div>
+<hr />
+<h2 id="ch4-off-duty-bouncer-fighter">Off-Duty Bouncer (Fighter)</h2>
+<p><em>Fell into it, kept falling. Checks IDs, breaks up fights, and holds a grudge about the cover charge.</em></p>
+<p><strong>Hit Die:</strong> d10. <strong>Saving throws:</strong> STR/CON. <strong>Armor training:</strong> light, medium, heavy, shield. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_4">Level 1 Features</h3>
+<ul>
+<li><strong>Fighting Style.</strong> Pick one from the table above. This is a level 1 Fighter feature; Paladins and Rangers wait until level 2.</li>
+<li><strong>Second Wind.</strong> Bonus Action: regain <strong>1d10 + Fighter level</strong> hit points. <strong>2 uses</strong>; recovery as SRD (Short Rest / Long Rest split).</li>
+<li><strong>Weapon Mastery.</strong> Choose <strong>3</strong> weapons.</li>
+</ul>
+<h3 id="ch4-level-2-preview_4">Level 2 Preview</h3>
+<p><strong>Action Surge</strong> (extra action, Short Rest recharge) and a Fighting Style bump if your table uses the 2024 progression. The Green Room exists so you have this for the boss.</p>
+<h3 id="ch4-in-the-party_4">In the Party</h3>
+<p>You are reliable damage and a movable wall. Second Wind is your panic button; Fighting Style is your identity.</p>
+<h3 id="ch4-on-floor-1_4">On Floor 1</h3>
+<p>You already have your Fighting Style at level 1. Midterm Onboarding adds Action Surge right before the boss. That is not subtle. That is the point.</p>
+<h3 id="ch4-rests-and-resources_4">Rests and Resources</h3>
+<p>Second Wind partially returns on Short Rests; Action Surge wants Short Rests too once you have it. Saferoom Short Rests are uninterrupted. Use them.</p>
+<h3 id="ch4-build-notes_4">Build Notes</h3>
+<p>Strength or Dexterity first, Constitution second. Defense style plus heavy armor is the boring good choice. Archery or Dueling if you want a concept. Mastery on three weapons you will actually carry.</p>
+<h3 id="ch4-do-not_4">Do Not</h3>
+<p>Do not Action Surge a trash fight. Do not leave the Green Room before Midterm Onboarding if the party can help it.</p>
+<div class="box system">
+<p>Cover charge unpaid. Bouncer status: provisional. Please step aside.</p>
+</div>
+<hr />
+<h2 id="ch4-barefoot-hot-yoga-brawler-monk">Barefoot Hot-Yoga Brawler (Monk)</h2>
+<p><em>Barefoot by choice. Teaches breathing, punches stress, and makes a living off Namaste and a credits-only mat.</em></p>
+<p><strong>Hit Die:</strong> d8. <strong>Saving throws:</strong> STR/DEX. <strong>Armor training:</strong> none. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_5">Level 1 Features</h3>
+<ul>
+<li><strong>Martial Arts.</strong> Unarmored and unarmed (or monk weapons): Dexterity for attack and damage; unarmed die <strong>1d6</strong> at level 1; Bonus Action unarmed strike after the Attack action (as SRD).</li>
+<li><strong>Unarmored Defense.</strong> AC = <strong>10 + Dexterity modifier + Wisdom modifier</strong> while unarmored and not using a shield.</li>
+</ul>
+<h3 id="ch4-level-2-preview_5">Level 2 Preview</h3>
+<p><strong>Monk&rsquo;s Focus</strong> (Focus points), <strong>Unarmored Movement</strong>, and <strong>Uncanny Metabolism</strong>. Patient Defense, Step of the Wind, and Flurry become available as SRD.</p>
+<h3 id="ch4-in-the-party_5">In the Party</h3>
+<p>You are mobile damage and a sticky controller. You win by not being where the enemy swung.</p>
+<h3 id="ch4-on-floor-1_5">On Floor 1</h3>
+<p>Martial Arts and Unarmored Defense are your whole kit until Midterm Onboarding adds Focus points. Play careful until then.</p>
+<h3 id="ch4-rests-and-resources_5">Rests and Resources</h3>
+<p>Focus points (from level 2) want Short Rests. Long Rests still need a saferoom. Do not pay a field rest fee expecting Focus back — you will get neither rest nor dignity.</p>
+<h3 id="ch4-build-notes_5">Build Notes</h3>
+<p>Dexterity and Wisdom. Dump Strength only if you accept the joke. Carry a simple weapon that counts as a monk weapon for Mastery tricks if your table uses them.</p>
+<h3 id="ch4-do-not_5">Do Not</h3>
+<p>Do not stand still. Do not wear armor &ldquo;just in case&rdquo; and lose Unarmored Defense. Do not forget death saves are public.</p>
+<div class="box system">
+<p>Mat not found. Namaste billed anyway. Credits-only.</p>
+</div>
+<hr />
+<h2 id="ch4-hoa-enforcement-crusader-paladin">HOA Enforcement Crusader (Paladin)</h2>
+<p><em>Took an oath. Probably to the bylaws. Clipboard, shining armor, and a fine schedule for unauthorized mailboxes.</em></p>
+<p><strong>Hit Die:</strong> d10. <strong>Saving throws:</strong> WIS/CHA. <strong>Armor training:</strong> light, medium, heavy, shield. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_6">Level 1 Features</h3>
+<ul>
+<li><strong>Lay on Hands.</strong> Pool of <strong>5 × Paladin level</strong> hit points. Action to heal by touch, or spend 5 to clear one poison or disease (as SRD).</li>
+<li><strong>Spellcasting (Charisma).</strong> No cantrips. <strong>2</strong> prepared level 1 spells; <strong>2</strong> level 1 slots.</li>
+<li><strong>Weapon Mastery.</strong> Choose <strong>2</strong> weapons.</li>
+</ul>
+<h3 id="ch4-level-2-preview_6">Level 2 Preview</h3>
+<p><strong>Fighting Style</strong> (finally), <strong>Divine Smite</strong>, and Paladin spell growth. Midterm Onboarding is when the vest starts glowing on purpose.</p>
+<h3 id="ch4-in-the-party_6">In the Party</h3>
+<p>You are a durable frontliner who can patch allies and smite problems. Lay on Hands is a pool — spend it like rent money, not like a tip jar.</p>
+<h3 id="ch4-on-floor-1_6">On Floor 1</h3>
+<p>No Fighting Style at level 1; you get it at level 2 with Divine Smite after Midterm Onboarding. Survive to the Green Room.</p>
+<h3 id="ch4-rests-and-resources_6">Rests and Resources</h3>
+<p>Slots and Lay on Hands want Long Rests. Smite wants slots. Saferoom culture will save your oath.</p>
+<h3 id="ch4-build-notes_6">Build Notes</h3>
+<p>Strength and Charisma. Heavy armor. Prepare a smite spell and a utility spell. Weapon Mastery on a longsword and a javelin covers indoors and hallways.</p>
+<h3 id="ch4-do-not_6">Do Not</h3>
+<p>Do not empty Lay on Hands on scrapes. Do not lecture the party mid-collapse — reach the stairwell.</p>
+<div class="box system">
+<p>Bylaw violation recorded. Fine schedule pending. Aura: judgmental.</p>
+</div>
+<hr />
+<h2 id="ch4-seasonal-park-ranger-ranger">Seasonal Park Ranger (Ranger)</h2>
+<p><em>Knows which way is north. Has been told it is a rare skill. Drives a truck with a bad radio.</em></p>
+<p><strong>Hit Die:</strong> d10. <strong>Saving throws:</strong> STR/DEX. <strong>Armor training:</strong> light, medium, shield. <strong>Skill picks:</strong> 3 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_7">Level 1 Features</h3>
+<ul>
+<li><strong>Spellcasting (Wisdom).</strong> No cantrips. <strong>2</strong> prepared level 1 spells; <strong>2</strong> level 1 slots.</li>
+<li><strong>Favored Enemy.</strong> <em>Hunter&rsquo;s Mark</em> is always prepared and does not count against your prepared number.</li>
+<li><strong>Weapon Mastery.</strong> Choose <strong>2</strong> weapons.</li>
+</ul>
+<h3 id="ch4-level-2-preview_7">Level 2 Preview</h3>
+<p><strong>Fighting Style</strong> at level 2 (not at intake) and <strong>Deft Explorer</strong>. You become the person who finds the stairwell while everyone else argues.</p>
+<h3 id="ch4-in-the-party_7">In the Party</h3>
+<p>You are scout, striker, and the person who finds the route. Hunter&rsquo;s Mark is free prep for you — use it.</p>
+<h3 id="ch4-on-floor-1_7">On Floor 1</h3>
+<p>Fighting Style arrives at level 2, not intake. Midterm Onboarding is your style + exploration bump. Mark the boss; do not mark every rat.</p>
+<h3 id="ch4-rests-and-resources_7">Rests and Resources</h3>
+<p>Slots on Long Rest. Exploration features want you alive more than rested. Still: saferoom Long Rests only.</p>
+<h3 id="ch4-build-notes_7">Build Notes</h3>
+<p>Dexterity and Wisdom. Archery or Two-Weapon Fighting at level 2. Skills: Perception plus two that match your joke (Survival, Stealth, Insight).</p>
+<h3 id="ch4-do-not_7">Do Not</h3>
+<p>Do not split from the party without a plan to rejoin before collapse. Early descent into stasis is survival, not cowardice, if the clock is cruel.</p>
+<div class="box system">
+<p>North: that way. Radio: still broken. Pathfinding invoice: sent.</p>
+</div>
+<hr />
+<h2 id="ch4-five-finger-discount-specialist-rogue">Five-Finger Discount Specialist (Rogue)</h2>
+<p><em>Your record says &lsquo;opportunist.&rsquo; Your references say &lsquo;talented.&rsquo; The mall says &lsquo;please leave.&rsquo;</em></p>
+<p><strong>Hit Die:</strong> d8. <strong>Saving throws:</strong> DEX/INT. <strong>Armor training:</strong> light. <strong>Skill picks:</strong> 4 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_8">Level 1 Features</h3>
+<ul>
+<li><strong>Expertise.</strong> Choose <strong>2</strong> skills you are proficient in; double the proficiency bonus for them.</li>
+<li><strong>Sneak Attack.</strong> Once per turn, on a finesse or ranged hit with Advantage (or an eligible ally within 5 feet), deal <strong>+1d6</strong> damage.</li>
+<li><strong>Thieves&rsquo; Cant.</strong> Coded cant. System file: &ldquo;conspiracy, petty.&rdquo;</li>
+<li><strong>Weapon Mastery.</strong> Choose <strong>2</strong> weapons.</li>
+</ul>
+<h3 id="ch4-level-2-preview_8">Level 2 Preview</h3>
+<p><strong>Cunning Action</strong> (Dash, Disengage, or Hide as a Bonus Action). The cameras hate you and the Ratings love you.</p>
+<h3 id="ch4-in-the-party_8">In the Party</h3>
+<p>You are precision damage and locked doors. Sneak Attack once per turn — set it up every turn.</p>
+<h3 id="ch4-on-floor-1_8">On Floor 1</h3>
+<p>Expertise and Sneak Attack are enough to matter immediately. Cunning Action at Midterm Onboarding makes you slippery before the boss.</p>
+<h3 id="ch4-rests-and-resources_8">Rests and Resources</h3>
+<p>You need fewer Long Rest resources than casters, but hit points still want saferooms. Short Rests help everyone you just dragged out of a fight.</p>
+<h3 id="ch4-build-notes_8">Build Notes</h3>
+<p>Dexterity first. Expertise on Stealth and Thieves&rsquo; Tools or Perception. Finesse weapon Mastery plus a shortbow. Light armor.</p>
+<h3 id="ch4-do-not_8">Do Not</h3>
+<p>Do not Sneak Attack the camera. Do not die alone in a side hallway with unopened boxes — they vanish with you.</p>
+<div class="box system">
+<p>Opportunist tag applied. Mall ban: interdimensional. References: glowing.</p>
+</div>
+<hr />
+<h2 id="ch4-leaky-power-bank-sorcerer">Leaky Power-Bank (Sorcerer)</h2>
+<p><em>Over-charged at birth and leaking sparks into everything. Do not plug into the wall.</em></p>
+<p><strong>Hit Die:</strong> d6. <strong>Saving throws:</strong> CON/CHA. <strong>Armor training:</strong> none. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_9">Level 1 Features</h3>
+<ul>
+<li><strong>Spellcasting (Charisma).</strong> <strong>4</strong> cantrips; <strong>2</strong> prepared level 1 spells; <strong>2</strong> level 1 slots.</li>
+<li><strong>Innate Sorcery.</strong> Bonus Action; for the duration your spell attacks have Advantage and targets have Disadvantage on saves against your spells (as SRD). <strong>2 uses</strong> per Long Rest at level 1.</li>
+</ul>
+<h3 id="ch4-level-2-preview_9">Level 2 Preview</h3>
+<p><strong>Font of Magic</strong> and Metamagic access as SRD. You get a dial, not just a switch.</p>
+<h3 id="ch4-in-the-party_9">In the Party</h3>
+<p>You are burst magic. Innate Sorcery is a rare Advantage window — open it for the fight that is on the poster.</p>
+<h3 id="ch4-on-floor-1_9">On Floor 1</h3>
+<p>Four cantrips do a lot of Floor 1 work. Midterm Onboarding adds Font of Magic; suddenly you have a dial, not just a switch.</p>
+<h3 id="ch4-rests-and-resources_9">Rests and Resources</h3>
+<p>Everything you care about wants a Long Rest. Pay the saferoom tax in time, not the field fee in credits.</p>
+<h3 id="ch4-build-notes_9">Build Notes</h3>
+<p>Charisma and Constitution. Mage Armor or a borrowed shieldbearer friend. Damage cantrip + control spell + one panic button (Shield, if available to you).</p>
+<h3 id="ch4-do-not_9">Do Not</h3>
+<p>Do not Innate Sorcery a single goblin. Do not stand in melee because &ldquo;the vibe.&rdquo;</p>
+<div class="box system">
+<p>Overcharge warning. Wall outlet: do not. OSHA: crying.</p>
+</div>
+<hr />
+<h2 id="ch4-unread-terms-and-conditions-signer-warlock">Unread Terms-and-Conditions Signer (Warlock)</h2>
+<p><em>Clicked &lsquo;I agree&rsquo; without reading. Your patron read it. Your patron has notes.</em></p>
+<p><strong>Hit Die:</strong> d8. <strong>Saving throws:</strong> WIS/CHA. <strong>Armor training:</strong> light. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_10">Level 1 Features</h3>
+<ul>
+<li><strong>Pact Magic (Charisma).</strong> <strong>2</strong> cantrips; <strong>2</strong> prepared level 1 spells; <strong>1</strong> Pact Magic slot (level 1), recharged on a Short Rest.</li>
+<li><strong>Eldritch Invocations.</strong> Choose <strong>1</strong> (Armor of Shadows, Eldritch Mind, Fiendish Vigor, Gaze of Two Minds, Lessons of the First Ones, Misty Visions, Pact of the Blade, Pact of the Chain, Pact of the Tome, Devil&rsquo;s Sight, or Mask of Many Faces).</li>
+</ul>
+<h3 id="ch4-level-2-preview_10">Level 2 Preview</h3>
+<p>A second invocation and <strong>Magical Cunning</strong>. Your patron escalates the ticket.</p>
+<h3 id="ch4-in-the-party_10">In the Party</h3>
+<p>You are short-rest magic and a weird contract. Your one slot is a scalpel. Eldritch Blast (if you took it) is the day job.</p>
+<h3 id="ch4-on-floor-1_10">On Floor 1</h3>
+<p>One Pact slot and one invocation. Midterm Onboarding adds another invocation and Magical Cunning — your patron escalates the ticket.</p>
+<h3 id="ch4-rests-and-resources_10">Rests and Resources</h3>
+<p>Pact slots return on Short Rests. Saferoom Short Rests are invaluable. Long Rests still need a saferoom when you want hit points and the non-Pact world to make sense.</p>
+<h3 id="ch4-build-notes_10">Build Notes</h3>
+<p>Charisma. Light armor. Invocation: Armor of Shadows if naked; Devil&rsquo;s Sight if dark; Pact of the Blade if melee cosplay. Cantrips: Eldritch Blast unless you have a concept.</p>
+<h3 id="ch4-do-not_10">Do Not</h3>
+<p>Do not spend your only slot on a joke. Do not ignore the collapse clock because you &ldquo;feel fine after a Short Rest.&rdquo;</p>
+<div class="box system">
+<p>Terms accepted. Terms unread. Patron notes: attached. Attachment size: hostile.</p>
+</div>
+<hr />
+<h2 id="ch4-perpetual-grad-student-wizard">Perpetual Grad Student (Wizard)</h2>
+<p><em>Reads. Gross. Seven years into a thesis nobody asked for, powered by bad coffee and unfunded curiosity.</em></p>
+<p><strong>Hit Die:</strong> d6. <strong>Saving throws:</strong> INT/WIS. <strong>Armor training:</strong> none. <strong>Skill picks:</strong> 2 from the class list (see Chapter 2).</p>
+<h3 id="ch4-level-1-features_11">Level 1 Features</h3>
+<ul>
+<li><strong>Spellcasting (Intelligence).</strong> <strong>3</strong> cantrips. <strong>Spellbook</strong> with <strong>6</strong> level 1 spells; prepare <strong>4</strong>. <strong>2</strong> level 1 slots. Kiosk name for the book: <em>Cracked Phone App</em>.</li>
+<li><strong>Ritual Adept.</strong> Cast ritual-tagged wizard spells as rituals from the book without preparing them.</li>
+<li><strong>Arcane Recovery.</strong> Once per day on a Short Rest, recover spell slots whose combined level ≤ half your Wizard level (rounded up), no slot above level 5 (as SRD). At level 1: one level 1 slot.</li>
+</ul>
+<h3 id="ch4-level-2-preview_11">Level 2 Preview</h3>
+<p>More prepared spells and scholarly features as SRD. Your thesis still is not funded.</p>
+<h3 id="ch4-in-the-party_11">In the Party</h3>
+<p>You are prepared answers. Your spellbook is the campaign&rsquo;s second brain. Rituals save slots; prepared lists win days.</p>
+<h3 id="ch4-on-floor-1_11">On Floor 1</h3>
+<p>Six spells in the book, four prepared, two slots. Midterm Onboarding deepens the toolkit. Arcane Recovery on a Short Rest stretches Floor 1.</p>
+<h3 id="ch4-rests-and-resources_11">Rests and Resources</h3>
+<p>Slots on Long Rest; Arcane Recovery on Short Rest once per day. Saferoom both. Field fees buy you Ceiling Ticks, not slots.</p>
+<h3 id="ch4-build-notes_11">Build Notes</h3>
+<p>Intelligence and Constitution. Cantrips: damage, utility, control. Book: Shield, Detect Magic, a damage spell, a control spell, a ritual, a panic option.</p>
+<h3 id="ch4-do-not_11">Do Not</h3>
+<p>Do not prepare only damage. Do not drop the spellbook. Do not try to cast an Upgrade Coupon.</p>
+<div class="box system">
+<p>Thesis progress: 4%. Funding: 0%. Fire Bolt: employed.</p>
+</div>
+<hr />
+<h2 id="ch4-class-options-at-level-1">Class Options at Level 1</h2>
+<h3 id="ch4-cleric-divine-order">Cleric: Divine Order</h3>
+<table>
+<thead>
+<tr>
+<th>Our Name (5e Name)</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| Hallway Bodyguard (Protector) | Armor and martial weapons. Stands between the bleeding and the elevator. |
+| Church Rummage-Sale Mystic (Thaumaturge) | Extra cantrip and sharper at religion. Reads a tarot deck with the price tags still on. |</p>
+<h3 id="ch4-druid-primal-order">Druid: Primal Order</h3>
+<table>
+<thead>
+<tr>
+<th>Our Name (5e Name)</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| Farmers-Market Hedge Magician (Magician) | Extra cantrip and nature smarts. Sells heirloom tomatoes that are, technically, still cursed. |
+| Trail-Crew Warden (Warden) | Medium armor, shield and martial weapons. Maintains the trail and slaps anyone who feeds the wildlife. |</p>
+<h3 id="ch4-warlock-eldritch-invocations-pick-one-at-level-1">Warlock: Eldritch Invocations (pick one at level 1)</h3>
+<p>Invocations use SRD text. Kiosk names live in the create-screens table; rules key on the plain 5e invocation name. Pick one you can use at level 1 under SRD prerequisites.</p>
+<h3 id="ch4-weapon-mastery-counts">Weapon Mastery Counts</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th style="text-align: center;">Mastery weapons at level 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anger-Management Dropout (Barbarian)</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td>Off-Duty Bouncer (Fighter)</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>HOA Enforcement Crusader (Paladin)</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td>Seasonal Park Ranger (Ranger)</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td>Five-Finger Discount Specialist (Rogue)</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<p>Mastery property names stay plain. Chapter 6 lists weapons.</p>
+<h3 id="ch4-expertise-timing">Expertise Timing</h3>
+<p>Rogues pick Expertise at <strong>level 1</strong>. Bards pick Expertise at <strong>level 2</strong> (Midterm Onboarding), not during intake.</p>
+<hr />
+<h2 id="ch4-prior-employment-backgrounds">Prior Employment (Backgrounds)</h2>
+<p>Your background is the job you had before the world ended. It gives ability score increases among its three listed scores, a fixed <strong>Origin feat</strong>, two skills, a tool proficiency, and an equipment option.</p>
+<p>This book prints the <strong>four SRD 5.2 backgrounds</strong> in full. Twelve more appear only in the appendix under <strong>reskin names</strong> (decision 029).</p>
+<h3 id="ch4-ability-score-increases">Ability Score Increases</h3>
+<p>After you assign base scores, apply one pattern among the background&rsquo;s three abilities:</p>
+<ul>
+<li><strong>Merit Raise and a Gift Card (+2 / +1)</strong></li>
+<li><strong>Everyone Gets a Participation Trophy (+1 / +1 / +1)</strong></li>
+</ul>
+<p>No score above 20.</p>
+<h3 id="ch4-origin-feats-srd-four">Origin Feats (SRD Four)</h3>
+<p>Printed in full enough to play; SRD wins on edge cases.</p>
+<table>
+<thead>
+<tr>
+<th>Our Name (5e Name)</th>
+<th>Benefit (summary)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Night-Shift Insomniac (Alert)</td>
+<td>Add proficiency bonus to Initiative; you cannot be surprised while conscious; other creatures do not gain Advantage on attack rolls against you for being hidden from you (as SRD).</td>
+</tr>
+<tr>
+<td>Group-Chat Prayer Warrior (Magic Initiate — Cleric)</td>
+<td>Two Cleric cantrips and one level 1 Cleric spell; cast that level 1 spell once without a slot per Long Rest; further casts spend slots; spellcasting ability as SRD for this feat.</td>
+</tr>
+<tr>
+<td>Houseplant Whisperer (Magic Initiate — Druid)</td>
+<td>As above, using the Druid list.</td>
+</tr>
+<tr>
+<td>Wikipedia Rabbit-Hole Scholar (Magic Initiate — Wizard)</td>
+<td>As above, using the Wizard list.</td>
+</tr>
+<tr>
+<td>Drive-Thru Fry-Station Veteran (Savage Attacker)</td>
+<td>Once per turn when you hit with a weapon, you may reroll the weapon&rsquo;s damage dice and use either total (as SRD).</td>
+</tr>
+<tr>
+<td>Tech-Support Jack-of-All-Trades (Skilled)</td>
+<td>Gain proficiency in any combination of three skills or tools (as SRD).</td>
+</tr>
+</tbody>
+</table>
+<p>Human <strong>Versatile</strong> picks a second Origin feat from <strong>these four feats only</strong> (Magic Initiate counts as one feat with a list choice). Non-SRD Origin feats are appendix-only.</p>
+<h3 id="ch4-equipment-options">Equipment Options</h3>
+<ul>
+<li><strong>Cardboard Carton From Your Desk (Package A):</strong> the kit and leftover credits.</li>
+<li><strong>Severance Envelope, Unmarked (Package B):</strong> <strong>50 credits</strong>, no kit items.</li>
+</ul>
+<p><strong>Whole credits only.</strong> Buying rounds <strong>up</strong> per cart line; selling at half rounds <strong>down</strong> per line (Chapter 1; core §5.10). The Intake Vending Wall never sells magic items.</p>
+<h3 id="ch4-reskin-the-reason">Reskin the Reason</h3>
+<p>You may rename the old job to fit your story. Keep the skills, tool, feat, and increases. A Sage can be a podcast researcher. A Soldier can be mall security. The System snarks at the job, not at you.</p>
+<hr />
+<h2 id="ch4-youth-group-pizza-wrangler-acolyte">Youth-Group Pizza Wrangler (Acolyte)</h2>
+<p><em>Ran Wednesday-night youth group on two pizzas and divine patience. Found out heaven has no petty credits.</em></p>
+<ul>
+<li><strong>Ability raises among:</strong> Intelligence, Wisdom, Charisma.</li>
+<li><strong>Origin feat:</strong> Group-Chat Prayer Warrior (Magic Initiate — Cleric).</li>
+<li><strong>Skills:</strong> Insight, Religion.</li>
+<li><strong>Tool:</strong> Calligrapher&rsquo;s Supplies.</li>
+<li><strong>Package A:</strong> Calligrapher&rsquo;s Supplies, a book, a holy symbol, 10 sheets of parchment, a robe, and <strong>8 credits</strong> leftover.</li>
+<li><strong>Package B:</strong> <strong>50 credits</strong> (Severance Envelope, Unmarked).</li>
+</ul>
+<h3 id="ch4-playing-this-background">Playing This Background</h3>
+<p>You know how to calm a room, read a ritual, and keep a group from melting down. On Floor 1 you are often the person who remembers to ask the System what a word means — that can earn a snark achievement and zero credits.</p>
+<h3 id="ch4-on-floor-1_12">On Floor 1</h3>
+<p>Prepare utility and healing. Midterm Onboarding does not change your background; it changes your class power. Your Broadcast Name on Floor 3 may sound like a youth-group nickname you cannot escape.</p>
+<h3 id="ch4-in-the-party_12">In the Party</h3>
+<p>You pair well with frontliners who forget they have hit points and with Warlocks who forget they have friends.</p>
+<hr />
+<h2 id="ch4-call-center-gift-card-fraud-specialist-criminal">Call-Center Gift-Card Fraud Specialist (Criminal)</h2>
+<p><em>Talked 400 strangers into reading you their card numbers &lsquo;for verification&rsquo;. Your headset is evidence now.</em></p>
+<ul>
+<li><strong>Ability raises among:</strong> Dexterity, Constitution, Intelligence.</li>
+<li><strong>Origin feat:</strong> Night-Shift Insomniac (Alert).</li>
+<li><strong>Skills:</strong> Sleight of Hand, Stealth.</li>
+<li><strong>Tool:</strong> Thieves&rsquo; Tools.</li>
+<li><strong>Package A:</strong> Two daggers, thieves&rsquo; tools, a crowbar, two pouches, traveler&rsquo;s clothes, and <strong>16 credits</strong> leftover.</li>
+<li><strong>Package B:</strong> <strong>50 credits</strong>.</li>
+</ul>
+<h3 id="ch4-playing-this-background_1">Playing This Background</h3>
+<p>You notice cameras. The System <em>is</em> cameras. Alert helps you act first; Stealth helps you not be the highlight reel for the wrong reason.</p>
+<h3 id="ch4-on-floor-1_13">On Floor 1</h3>
+<p>Open locks, spot ambushes, and do not die in a side hallway with unopened boxes. Boxes are bound; death reclaims them.</p>
+<h3 id="ch4-in-the-party_13">In the Party</h3>
+<p>You set up Rogues and Rangers. You also set up disasters. Label your disasters.</p>
+<hr />
+<h2 id="ch4-adjunct-professor-on-four-campuses-sage">Adjunct Professor on Four Campuses (Sage)</h2>
+<p><em>Taught intro rhetoric at four colleges for the combined salary of one decent sandwich. Parking cost more than the pay.</em></p>
+<ul>
+<li><strong>Ability raises among:</strong> Constitution, Intelligence, Wisdom.</li>
+<li><strong>Origin feat:</strong> Wikipedia Rabbit-Hole Scholar (Magic Initiate — Wizard).</li>
+<li><strong>Skills:</strong> Arcana, History.</li>
+<li><strong>Tool:</strong> Calligrapher&rsquo;s Supplies.</li>
+<li><strong>Package A:</strong> A quarterstaff, calligrapher&rsquo;s supplies, a book, 8 parchment sheets, a robe, and <strong>8 credits</strong> leftover.</li>
+<li><strong>Package B:</strong> <strong>50 credits</strong>.</li>
+</ul>
+<h3 id="ch4-playing-this-background_2">Playing This Background</h3>
+<p>You read plaques, contracts, and bad ideas. Magic Initiate gives you cantrips even if your class is martial — a Fighter with <em>Fire Bolt</em> is a Season Zero classic.</p>
+<h3 id="ch4-on-floor-1_14">On Floor 1</h3>
+<p>Identify problems before they identify you. Rituals and Detect Magic save lives and credits.</p>
+<h3 id="ch4-in-the-party_14">In the Party</h3>
+<p>You make Wizards redundant or terrifying. Either is entertainment.</p>
+<hr />
+<h2 id="ch4-black-friday-mall-security-soldier">Black-Friday Mall Security (Soldier)</h2>
+<p><em>Stood between a discount toaster and four hundred people. You lost the toaster but kept the vest.</em></p>
+<ul>
+<li><strong>Ability raises among:</strong> Strength, Dexterity, Constitution.</li>
+<li><strong>Origin feat:</strong> Drive-Thru Fry-Station Veteran (Savage Attacker).</li>
+<li><strong>Skills:</strong> Athletics, Intimidation.</li>
+<li><strong>Tool:</strong> One Gaming Set.</li>
+<li><strong>Package A:</strong> A spear, a shortbow, arrows, a gaming set, a Healer&rsquo;s Kit, a quiver, traveler&rsquo;s clothes, and <strong>14 credits</strong> leftover.</li>
+<li><strong>Package B:</strong> <strong>50 credits</strong>.</li>
+</ul>
+<h3 id="ch4-playing-this-background_3">Playing This Background</h3>
+<p>Hold lines, bark orders, survive Midterm Onboarding. Savage Attacker rewards the hit that already mattered.</p>
+<h3 id="ch4-on-floor-1_15">On Floor 1</h3>
+<p>You are built for the Orientation Pit. Keep the Healer&rsquo;s Kit for the person who ignored Standing Orders.</p>
+<h3 id="ch4-in-the-party_15">In the Party</h3>
+<p>You glue parties that dump Charisma. Intimidation is a tool; cruelty about a player is not.</p>
+<hr />
+<h2 id="ch4-multiclassing-and-subclasses">Multiclassing and Subclasses</h2>
+<p><strong>Multiclassing</strong> uses the SRD prerequisites and rules. You gain the features of each class for the levels you hold. Spell slots combine as 5e says. The Crawl adds no multiclass tax and offers no forgiveness for a bad split.</p>
+<p><strong>Subclasses</strong> arrive at <strong>level 3</strong> for every class in this book, together with your <strong>Official Class Title</strong> and the Floor 3 Identity Market. Subclass text is SRD; Titles are flavor and ship with Continuum material. Until then, play the Provisional Class straight.</p>
+<div class="box sidebar">
+<div class="box-title">Season Zero Cast</div>
+<p>Season Zero&rsquo;s cast is <strong>your</strong> Crawlers. This book never inserts a pre-written hero from any novel. Pre-built intake concepts in Chapter 2 are blank templates, not NPCs with plot armor.</p>
+</div>
+<h2 id="ch4-quick-picks-if-you-are-stuck">Quick Picks (If You Are Stuck)</h2>
+<table>
+<thead>
+<tr>
+<th>If you want…</th>
+<th>Try…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>To hit things and not die</td>
+<td>Off-Duty Bouncer (Fighter) or HOA Enforcement Crusader (Paladin)</td>
+</tr>
+<tr>
+<td>To heal and boss people kindly</td>
+<td>Urgent-Care Chaplain (Cleric)</td>
+</tr>
+<tr>
+<td>To be loud and hard to kill</td>
+<td>Anger-Management Dropout (Barbarian)</td>
+</tr>
+<tr>
+<td>To talk, buff, and scheme</td>
+<td>Open-Mic Menace (Bard)</td>
+</tr>
+<tr>
+<td>To open doors and vanish</td>
+<td>Five-Finger Discount Specialist (Rogue)</td>
+</tr>
+<tr>
+<td>To prepare answers</td>
+<td>Perpetual Grad Student (Wizard)</td>
+</tr>
+<tr>
+<td>Short Rest magic</td>
+<td>Unread Terms-and-Conditions Signer (Warlock)</td>
+</tr>
+<tr>
+<td>Burst caster fantasy</td>
+<td>Leaky Power-Bank (Sorcerer)</td>
+</tr>
+<tr>
+<td>Scout and mark</td>
+<td>Seasonal Park Ranger (Ranger)</td>
+</tr>
+<tr>
+<td>Mobile unarmored striker</td>
+<td>Barefoot Hot-Yoga Brawler (Monk)</td>
+</tr>
+<tr>
+<td>Terrain and summons-of-sorts later</td>
+<td>Community-Garden Zealot (Druid)</td>
+</tr>
+</tbody>
+</table>
+<p>Pair any class with any of the four SRD backgrounds. The sheet will be legal; the joke is on you.</p>
+<h2 id="ch4-appendix-non-srd-backgrounds-and-origin-feats">Appendix: Non-SRD Backgrounds and Origin Feats</h2>
+<p>Per decision 029 these entries use <strong>our reskin names only</strong>, with short mechanics summaries in our own words. No parenthetical 5e name. No copied book text. Open them only if your table owns the source books; the sheet still stores the underlying key.</p>
+<h3 id="ch4-non-srd-backgrounds">Non-SRD Backgrounds</h3>
+<table>
+<thead>
+<tr>
+<th>Reskin name</th>
+<th>Mechanics summary (our words)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Etsy Shop Founder, Three Sales</td>
+<td>Ability raises among Str/Dex/Int; craft Origin feat; two skills and artisan&rsquo;s tools.</td>
+</tr>
+<tr>
+<td>Pyramid-Scheme Boss Babe</td>
+<td>Ability raises among Dex/Con/Cha; deception Origin feat; two skills and a forgery kit.</td>
+</tr>
+<tr>
+<td>Wedding DJ With One Playlist</td>
+<td>Ability raises among Str/Dex/Cha; performance Origin feat; two skills and a musical instrument.</td>
+</tr>
+<tr>
+<td>Farm-to-Table Influencer</td>
+<td>Ability raises among Str/Con/Wis; toughness Origin feat; two skills and a farming tool.</td>
+</tr>
+<tr>
+<td>Hospital Parking-Garage Attendant</td>
+<td>Ability raises among Str/Wis/Cha; alertness Origin feat; two skills and a gaming set.</td>
+</tr>
+<tr>
+<td>Trailhead Guide With a Laminated Map</td>
+<td>Ability raises among Dex/Con/Wis; initiate-style Origin feat; two skills and navigator-style tools.</td>
+</tr>
+<tr>
+<td>Doomsday Prepper, Collapse Postponed</td>
+<td>Ability raises among Con/Wis/Cha; healer Origin feat; two skills and an herbalism kit.</td>
+</tr>
+<tr>
+<td>Warehouse Operations Manager</td>
+<td>Ability raises among Con/Int/Cha; lucky Origin feat; two skills and navigator&rsquo;s tools.</td>
+</tr>
+<tr>
+<td>Trust-Fund Gallery Owner</td>
+<td>Ability raises among Str/Int/Cha; skilled Origin feat; two skills and a gaming set.</td>
+</tr>
+<tr>
+<td>Cruise-Ship Buffet Deckhand</td>
+<td>Ability raises among Str/Dex/Wis; tavern-brawler Origin feat; two skills and navigator&rsquo;s tools.</td>
+</tr>
+<tr>
+<td>Law-Firm Paralegal in Redline Hell</td>
+<td>Ability raises among Dex/Int/Wis; skilled Origin feat; two skills and calligrapher&rsquo;s supplies.</td>
+</tr>
+<tr>
+<td>Couch-Surfing Burrito Courier</td>
+<td>Ability raises among Dex/Wis/Cha; lucky Origin feat; two skills and thieves&rsquo; tools.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch4-non-srd-origin-feats">Non-SRD Origin Feats</h3>
+<table>
+<thead>
+<tr>
+<th>Reskin name</th>
+<th>Mechanics summary (our words)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot-Glue Gunslinger</td>
+<td>Faster, cheaper nonmagical crafting; artisan&rsquo;s tools and discounts.</td>
+</tr>
+<tr>
+<td>Weekend CPR-Class Graduate</td>
+<td>Bonus Action stabilize; heal when you Treat; kit uses refresh on a Short Rest.</td>
+</tr>
+<tr>
+<td>Scratch-Ticket Gambler</td>
+<td>Luck points to reroll your d20 or force an attacker reroll.</td>
+</tr>
+<tr>
+<td>Karaoke Night Regular</td>
+<td>Encourage allies after a rest; temporary Hit Points or Heroic Inspiration.</td>
+</tr>
+<tr>
+<td>HOA-Meeting Brawler</td>
+<td>Better unarmed strikes; easier grapples; once-per-turn extra unarmed/improvised damage.</td>
+</tr>
+<tr>
+<td>Gym Bro Who Spots at Dawn</td>
+<td>Extra hit points equal to twice your level (+2 HP each level).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch4-level-1-feature-checklist-by-class">Level 1 Feature Checklist by Class</h2>
+<p>Use this when reviewing a sheet at S16. Every box should be true before Confirm.</p>
+<h3 id="ch4-anger-management-dropout-barbarian_1">Anger-Management Dropout (Barbarian)</h3>
+<ul>
+<li>[ ] Rage uses recorded (2)</li>
+<li>[ ] Unarmored Defense understood, or armor chosen instead</li>
+<li>[ ] Two Weapon Mastery picks named</li>
+<li>[ ] Two skills from the class list</li>
+</ul>
+<h3 id="ch4-open-mic-menace-bard_1">Open-Mic Menace (Bard)</h3>
+<ul>
+<li>[ ] Bardic Inspiration die and uses recorded</li>
+<li>[ ] Two cantrips and four prepared level 1 spells listed</li>
+<li>[ ] Two level 1 slots noted</li>
+<li>[ ] Three skills (any)</li>
+</ul>
+<h3 id="ch4-urgent-care-chaplain-cleric_1">Urgent-Care Chaplain (Cleric)</h3>
+<ul>
+<li>[ ] Divine Order chosen (Protector or Thaumaturge)</li>
+<li>[ ] Three cantrips; four prepared spells; two slots</li>
+<li>[ ] Two skills from the class list</li>
+<li>[ ] Holy symbol or focus on the kit</li>
+</ul>
+<h3 id="ch4-community-garden-zealot-druid_1">Community-Garden Zealot (Druid)</h3>
+<ul>
+<li>[ ] Primal Order chosen (Magician or Warden)</li>
+<li>[ ] Two cantrips; four prepared spells; two slots</li>
+<li>[ ] Druidic noted</li>
+<li>[ ] Armor choice respects table metal rules</li>
+</ul>
+<h3 id="ch4-off-duty-bouncer-fighter_1">Off-Duty Bouncer (Fighter)</h3>
+<ul>
+<li>[ ] Fighting Style chosen</li>
+<li>[ ] Second Wind uses recorded (2)</li>
+<li>[ ] Three Weapon Mastery picks</li>
+<li>[ ] Two skills from the class list</li>
+</ul>
+<h3 id="ch4-barefoot-hot-yoga-brawler-monk_1">Barefoot Hot-Yoga Brawler (Monk)</h3>
+<ul>
+<li>[ ] Martial Arts die noted (1d6)</li>
+<li>[ ] Unarmored Defense formula on the sheet</li>
+<li>[ ] Two skills from the class list</li>
+<li>[ ] No armor if you want Unarmored Defense</li>
+</ul>
+<h3 id="ch4-hoa-enforcement-crusader-paladin_1">HOA Enforcement Crusader (Paladin)</h3>
+<ul>
+<li>[ ] Lay on Hands pool = 5</li>
+<li>[ ] Two prepared spells; two slots (no cantrips)</li>
+<li>[ ] Two Weapon Mastery picks</li>
+<li>[ ] Fighting Style <strong>not</strong> taken yet (level 2)</li>
+</ul>
+<h3 id="ch4-seasonal-park-ranger-ranger_1">Seasonal Park Ranger (Ranger)</h3>
+<ul>
+<li>[ ] Hunter&rsquo;s Mark always prepared noted</li>
+<li>[ ] Two prepared spells; two slots</li>
+<li>[ ] Two Weapon Mastery picks</li>
+<li>[ ] Fighting Style <strong>not</strong> taken yet (level 2)</li>
+<li>[ ] Three skills from the class list</li>
+</ul>
+<h3 id="ch4-five-finger-discount-specialist-rogue_1">Five-Finger Discount Specialist (Rogue)</h3>
+<ul>
+<li>[ ] Expertise on two skills</li>
+<li>[ ] Sneak Attack 1d6 noted</li>
+<li>[ ] Thieves&rsquo; Cant noted</li>
+<li>[ ] Two Weapon Mastery picks</li>
+<li>[ ] Four skills from the class list</li>
+</ul>
+<h3 id="ch4-leaky-power-bank-sorcerer_1">Leaky Power-Bank (Sorcerer)</h3>
+<ul>
+<li>[ ] Four cantrips; two prepared spells; two slots</li>
+<li>[ ] Innate Sorcery uses recorded (2)</li>
+<li>[ ] Two skills from the class list</li>
+</ul>
+<h3 id="ch4-unread-terms-and-conditions-signer-warlock_1">Unread Terms-and-Conditions Signer (Warlock)</h3>
+<ul>
+<li>[ ] One Pact Magic slot noted (Short Rest recharge)</li>
+<li>[ ] One Eldritch Invocation chosen</li>
+<li>[ ] Two cantrips; two prepared spells</li>
+<li>[ ] Two skills from the class list</li>
+</ul>
+<h3 id="ch4-perpetual-grad-student-wizard_1">Perpetual Grad Student (Wizard)</h3>
+<ul>
+<li>[ ] Spellbook has six level 1 spells</li>
+<li>[ ] Four prepared; two slots; three cantrips</li>
+<li>[ ] Ritual Adept understood</li>
+<li>[ ] Arcane Recovery noted</li>
+<li>[ ] Two skills from the class list</li>
+</ul>
+<h2 id="ch4-sample-concepts-legal-not-pre-written-heroes">Sample Concepts (Legal, Not Pre-Written Heroes)</h2>
+<p>These are starting points, not Season Zero cast members. Rename them. Make them yours.</p>
+<h3 id="ch4-concept-door-policy">Concept: Door Policy</h3>
+<p><strong>Off-Duty Bouncer (Fighter)</strong> + <strong>Black-Friday Mall Security (Soldier)</strong> + <strong>Canadian (Human)</strong>. Defense Fighting Style. Savage Attacker + Alert (Versatile). Holds doorways; Midterm Onboarding Action Surge ends arguments.</p>
+<h3 id="ch4-concept-hold-music">Concept: Hold Music</h3>
+<p><strong>Open-Mic Menace (Bard)</strong> + <strong>Youth-Group Pizza Wrangler (Acolyte)</strong>. Charisma focus. Inspiration for the tank; <em>Healing Word</em> for the mistake; Insight for the liar.</p>
+<h3 id="ch4-concept-unpaid-internship">Concept: Unpaid Internship</h3>
+<p><strong>Perpetual Grad Student (Wizard)</strong> + <strong>Adjunct Professor on Four Campuses (Sage)</strong>. Intelligence focus. Rituals first, Fire Bolt second, Shield when the camera zooms.</p>
+<h3 id="ch4-concept-verified-account">Concept: Verified Account</h3>
+<p><strong>Unread Terms-and-Conditions Signer (Warlock)</strong> + <strong>Call-Center Gift-Card Fraud Specialist (Criminal)</strong>. Charisma + Alert. Eldritch Blast as the day job; one slot as the special.</p>
+<h3 id="ch4-concept-compost-ambition">Concept: Compost Ambition</h3>
+<p><strong>Community-Garden Zealot (Druid)</strong> + <strong>Black-Friday Mall Security (Soldier)</strong> (reskin the reason: park volunteer who got &ldquo;promoted&rdquo; to crowd control). Wisdom focus. Entangle first; Wild Shape at Midterm Onboarding.</p>
+<div class="box sidebar">
+<div class="box-title">Pre-Builts</div>
+<p>Chapter 2&rsquo;s <strong>Use a pre-built</strong> option fills legal defaults for each class. These concepts are the same idea in prose. Neither is a named NPC with plot armor.</p>
+</div>
+<h2 id="ch4-progression-through-floor-3-standard-track">Progression Through Floor 3 (Standard Track)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Floor</th>
+<th style="text-align: center;">Typical level after onboarding</th>
+<th>What usually unlocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1 (start)</td>
+<td style="text-align: center;">1</td>
+<td>Intake kit; Provisional Class</td>
+</tr>
+<tr>
+<td style="text-align: right;">1 (Green Room)</td>
+<td style="text-align: center;">2</td>
+<td><strong>Midterm Onboarding</strong> — level 2 features (Fighting Style for Paladin/Ranger; Action Surge; Wild Shape; etc.)</td>
+</tr>
+<tr>
+<td style="text-align: right;">2 (arrival)</td>
+<td style="text-align: center;">2</td>
+<td>No extra level from Floor 1 stairwell</td>
+</tr>
+<tr>
+<td style="text-align: right;">2 clear → 3</td>
+<td style="text-align: center;">3</td>
+<td>Subclass + Official Class Title + Identity Market offer</td>
+</tr>
+</tbody>
+</table>
+<p>Slow-Burn Track (Chapter 1 house option) stretches levels; if your table uses it, Midterm Onboarding timing may shift — log the table&rsquo;s choice at session zero.</p>
+<h2 id="ch4-resources-that-care-about-saferooms">Resources That Care About Saferooms</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Recharges on</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long Rest features (Rage uses at L1, most slots, Lay on Hands, Innate Sorcery)</td>
+<td>Long Rest</td>
+<td>Only in a saferoom</td>
+</tr>
+<tr>
+<td>Short Rest features (Second Wind partial, Pact slots, Arcane Recovery window, many Focus recoveries)</td>
+<td>Short Rest</td>
+<td>Field OK if quiet; saferoom guaranteed</td>
+</tr>
+<tr>
+<td>Bardic Inspiration (early)</td>
+<td>Long Rest</td>
+<td>Later levels may change; SRD wins</td>
+</tr>
+<tr>
+<td>Hit points</td>
+<td>Rests / features</td>
+<td>Death saves are public</td>
+</tr>
+</tbody>
+</table>
+<p>Field rest fee reminder (Floor 1): <strong>20 credits per Crawler</strong> per failed Long Rest attempt outside a saferoom, <strong>cap 60 per Crawler per floor</strong>. Never grants the Long Rest.</p>
+<h2 id="ch4-credits-and-starting-kits">Credits and Starting Kits</h2>
+<p>Starting credits come only from class and background packages (Chapter 2). The Crawl adds <strong>no</strong> stipend. Vendor prices use whole credits with per-line rounding (Chapter 1). Crafting table prices and the <strong>25,000</strong> Upgrade Coupon (basic through Floor 8 / Studio through Floor 5; never Enhanced; level upgrades coupon-eligible on Floors 1–4 only) live in Chapter 6.</p>
+<h2 id="ch4-optional-assigned-companion-tables">Optional: Assigned Companion Tables</h2>
+<p>With two players, the System may add an <strong>Assigned Companion</strong> (Chapter 1): GM-run, takes no loot, has opinions. Companions are not pets and not Story Box awards. They do not use this chapter&rsquo;s class entries unless the GM builds them as full Crawlers (rare).</p>
+<h2 id="ch4-spellcasting-snapshot-level-1">Spellcasting Snapshot (Level 1)</h2>
+<p>Casters skip nothing below that applies. Noncasters skip S11 entirely.</p>
+<table>
+<thead>
+<tr>
+<th>Our Name (5e Name)</th>
+<th>Ability</th>
+<th style="text-align: center;">Cantrips</th>
+<th>Level 1 prepared / known</th>
+<th style="text-align: center;">Slots</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open-Mic Menace (Bard)</td>
+<td>Cha</td>
+<td style="text-align: center;">2</td>
+<td>4 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Rituals as SRD</td>
+</tr>
+<tr>
+<td>Urgent-Care Chaplain (Cleric)</td>
+<td>Wis</td>
+<td style="text-align: center;">3</td>
+<td>4 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Divine Order may add a cantrip</td>
+</tr>
+<tr>
+<td>Community-Garden Zealot (Druid)</td>
+<td>Wis</td>
+<td style="text-align: center;">2</td>
+<td>4 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Primal Order may add a cantrip</td>
+</tr>
+<tr>
+<td>HOA Enforcement Crusader (Paladin)</td>
+<td>Cha</td>
+<td style="text-align: center;">0</td>
+<td>2 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Half-caster; smite at 2</td>
+</tr>
+<tr>
+<td>Seasonal Park Ranger (Ranger)</td>
+<td>Wis</td>
+<td style="text-align: center;">0</td>
+<td>2 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Hunter&rsquo;s Mark always prepared</td>
+</tr>
+<tr>
+<td>Leaky Power-Bank (Sorcerer)</td>
+<td>Cha</td>
+<td style="text-align: center;">4</td>
+<td>2 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Innate Sorcery window</td>
+</tr>
+<tr>
+<td>Unread Terms-and-Conditions Signer (Warlock)</td>
+<td>Cha</td>
+<td style="text-align: center;">2</td>
+<td>2 prepared</td>
+<td style="text-align: center;">1 Pact</td>
+<td>Slot on Short Rest</td>
+</tr>
+<tr>
+<td>Perpetual Grad Student (Wizard)</td>
+<td>Int</td>
+<td style="text-align: center;">3</td>
+<td>6 in book / 4 prepared</td>
+<td style="text-align: center;">2</td>
+<td>Ritual Adept; Arcane Recovery</td>
+</tr>
+</tbody>
+</table>
+<p>Spell lists are SRD. This book does not reprint spell text. If a chargen list and the SRD disagree, the SRD wins until Chapter 5/6 verify passes.</p>
+<h2 id="ch4-armor-and-defense-snapshot">Armor and Defense Snapshot</h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Classes that often use it</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heavy armor</td>
+<td>Fighter, Paladin, Cleric (Protector)</td>
+<td>Highest AC; Stealth disadvantage on many sets</td>
+</tr>
+<tr>
+<td>Medium armor</td>
+<td>Barbarian (if armored), Ranger, Cleric, Druid (Warden)</td>
+<td>Dex cap usually +2</td>
+</tr>
+<tr>
+<td>Light armor</td>
+<td>Bard, Rogue, Warlock, Ranger</td>
+<td>Dexterity does the work</td>
+</tr>
+<tr>
+<td>Unarmored Defense</td>
+<td>Barbarian, Monk</td>
+<td>Formula on the sheet; shields only for Barbarian</td>
+</tr>
+<tr>
+<td>Mage Armor / Armor of Shadows</td>
+<td>Sorcerer, Wizard, Warlock (invocation)</td>
+<td>Slot or invocation tax</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch4-skills-that-matter-early">Skills That Matter Early</h2>
+<p>You can pick what you want. Floor 1 rewards these more often than your pride does:</p>
+<ul>
+<li><strong>Perception</strong> — traps, ticks, lying saferooms later</li>
+<li><strong>Athletics / Acrobatics</strong> — doors, climbs, grabs</li>
+<li><strong>Stealth</strong> — cameras still see you; enemies sometimes do not</li>
+<li><strong>Insight</strong> — vendors, Continuum later, party members always</li>
+<li><strong>Intimidation / Persuasion</strong> — vendors, hostages, bad ideas that become good television</li>
+</ul>
+<p>Background skills are fixed. Class picks fill holes.</p>
+<h2 id="ch4-worked-micro-examples-one-fight-each">Worked Micro-Examples (One Fight Each)</h2>
+<h3 id="ch4-barbarian-the-vestibule">Barbarian: The Vestibule</h3>
+<p>Two rats. You Rage on round one, greataxe Mastery, Reckless not yet (level 1). Second Wind if you are already embarrassed. Save the second Rage for the named fight.</p>
+<h3 id="ch4-bard-the-argument">Bard: The Argument</h3>
+<p>Ally misses by 2. Bonus Action Inspiration. You <em>Vicious Mockery</em> the boss. You do not Inspiration yourself unless the SRD and your table agree you can — read your feature.</p>
+<h3 id="ch4-cleric-the-bleed">Cleric: The Bleed</h3>
+<p>Ally at 0. Spare the Dying or Cure Wounds. If Protector, you also stood in front. If Thaumaturge, your cantrip already softened the enemy.</p>
+<h3 id="ch4-druid-the-hallway">Druid: The Hallway</h3>
+<p><em>Entangle</em> the chokepoint. Allies shoot into it. You do not Wild Shape yet. You look smug anyway.</p>
+<h3 id="ch4-fighter-the-door">Fighter: The Door</h3>
+<p>Defense style, chain mail, Second Wind after the second swing hits you. Action Surge is tomorrow&rsquo;s problem (Midterm Onboarding).</p>
+<h3 id="ch4-monk-the-lane">Monk: The Lane</h3>
+<p>Dash with movement, unarmed Bonus Action, do not eat opportunity attacks you can avoid. Focus points tomorrow.</p>
+<h3 id="ch4-paladin-the-pool">Paladin: The Pool</h3>
+<p>Lay on Hands 5 into an ally at 1 HP. Spell slot saved for the boss. Fighting Style tomorrow.</p>
+<h3 id="ch4-ranger-the-mark">Ranger: The Mark</h3>
+<p>Bonus Action <em>Hunter&rsquo;s Mark</em>, bow attack, relocate. Fighting Style tomorrow. Do not lose the marked target in a joke chase into a closed zone.</p>
+<h3 id="ch4-rogue-the-flank">Rogue: The Flank</h3>
+<p>Ally adjacent to target. Sneak Attack lands. Hide afterward if Cunning Action exists yet; if not, Disengage the old-fashioned way.</p>
+<h3 id="ch4-sorcerer-the-poster-fight">Sorcerer: The Poster Fight</h3>
+<p>Innate Sorcery up. Fire Bolt with Advantage. Ordinary rats get ordinary cantrips.</p>
+<h3 id="ch4-warlock-the-scalpel">Warlock: The Scalpel</h3>
+<p>Eldritch Blast for the shift. Pact slot for <em>Hex</em> or <em>Armor of Agathys</em> when the camera says so. Short Rest after.</p>
+<h3 id="ch4-wizard-the-door-marked-do-not">Wizard: The Door Marked Do Not</h3>
+<p><em>Detect Magic</em> ritual if you have time. <em>Shield</em> when you do not. Fire Bolt when philosophy fails.</p>
+<h2 id="ch4-background-ability-triples-srd-four">Background Ability Triples (SRD Four)</h2>
+<table>
+<thead>
+<tr>
+<th>Background</th>
+<th>Raise among</th>
+<th>Origin feat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Youth-Group Pizza Wrangler (Acolyte)</td>
+<td>Int / Wis / Cha</td>
+<td>Magic Initiate (Cleric)</td>
+</tr>
+<tr>
+<td>Call-Center Gift-Card Fraud Specialist (Criminal)</td>
+<td>Dex / Con / Int</td>
+<td>Alert</td>
+</tr>
+<tr>
+<td>Adjunct Professor on Four Campuses (Sage)</td>
+<td>Con / Int / Wis</td>
+<td>Magic Initiate (Wizard)</td>
+</tr>
+<tr>
+<td>Black-Friday Mall Security (Soldier)</td>
+<td>Str / Dex / Con</td>
+<td>Savage Attacker</td>
+</tr>
+</tbody>
+</table>
+<p>Pick <strong>+2 / +1</strong> or <strong>+1 / +1 / +1</strong> among the three. Preview the final modifiers before you Confirm.</p>
+<h2 id="ch4-common-intake-mistakes">Common Intake Mistakes</h2>
+<ol>
+<li><strong>Taking Fighting Style on Paladin or Ranger at level 1.</strong> Illegal. Wait for level 2.</li>
+<li><strong>Forgetting Dwarven Toughness +1 HP.</strong> If Vietnamese (Dwarf), add it.</li>
+<li><strong>Preparing Ranger spells without noting Hunter&rsquo;s Mark is free.</strong> It is always prepared.</li>
+<li><strong>Wizard preparing six spells instead of four.</strong> Six live in the book; four are prepared.</li>
+<li><strong>Spending all credits at the Vending Wall and holding 0 with no ball bearings.</strong> Legal, unwise.</li>
+<li><strong>Writing species tells into the Floor 1 Look.</strong> Latent Biology stays quiet until Floor 3.</li>
+<li><strong>Asking for a Fan Profile reward.</strong> Hidden. Survey notes are private. Customer Feedback is not a loot menu.</li>
+<li><strong>Planning to Long Rest in a hallway.</strong> Saferoom only. Field fee does not equal rest.</li>
+</ol>
+<h2 id="ch4-table-when-features-arrive-levels-1-3">Table: When Features Arrive (Levels 1–3)</h2>
+<p>This is a reminder map, not a full progression table. SRD feature names win.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Level</th>
+<th>Typical unlock examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Full Provisional chassis (this chapter)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Midterm Onboarding on Floor 1: Action Surge; Wild Shape; Focus; Fighting Style (Paladin/Ranger); Channel Divinity; Font of Magic; Cunning Action; Expertise (Bard); etc.</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Subclass; Official Class Title; Continuum Identity Market offer</td>
+</tr>
+</tbody>
+</table>
+<p>Exact feature lists by class are in the SRD. Do not invent a level 2 feature because a novel character had one.</p>
+<h2 id="ch4-tone-reminders-for-class-fantasy">Tone Reminders for Class Fantasy</h2>
+<ul>
+<li>Roast the <strong>choice</strong>, not the player.</li>
+<li>Class fantasy may be crude; it is never about a player&rsquo;s real identity.</li>
+<li>&ldquo;Cut&rdquo; works instantly.</li>
+<li>Season Zero original cast only: your table&rsquo;s Crawlers.</li>
+</ul>
+<div class="box house">
+<div class="box-title">HOUSE Labels in This Chapter</div>
+<p>Roll&rsquo;s 73+ keep threshold, Floor 1 field rest fees, Midterm Onboarding timing, and coupon notes that wander in from crafting are <span class="tag house">House</span> overlays on SRD chassis. Class math is SRD.</p>
+</div>
+<h2 id="ch4-building-a-party-of-four">Building a Party of Four</h2>
+<p>Season Zero assumes <strong>four active Crawlers</strong>. Two-player tables may receive an Assigned Companion; five or six need a firmer initiative hand (Chapter 1). Use this section when the table is staring at twelve class names and panicking.</p>
+<h3 id="ch4-coverage-checklist">Coverage Checklist</h3>
+<p>A resilient Floor 1 party usually covers:</p>
+<ol>
+<li><strong>Someone who can take a hit</strong> — Barbarian, Fighter, Paladin, or Protector Cleric.</li>
+<li><strong>Someone who can heal or stabilize</strong> — Cleric, Paladin, Druid, Bard, or a Healer&rsquo;s Kit user.</li>
+<li><strong>Someone who can open or bypass</strong> — Rogue, Bard, Wizard rituals, or raw Athletics.</li>
+<li><strong>Someone who can deal reliable damage every round</strong> — any martial with Mastery, or a cantrip-heavy caster.</li>
+</ol>
+<p>You do not need one class per bullet. A Fighter/Cleric/Rogue/Wizard square is classic. Four Barbarians is a documentary.</p>
+<h3 id="ch4-role-overlap-is-fine">Role Overlap Is Fine</h3>
+<p>Two Face characters (Bard + Warlock) will fight over the microphone and the Ratings will rise. Two tanks will argue about the doorway and survive longer. The System prefers spectacle over optimization.</p>
+<h3 id="ch4-who-carries-the-clock">Who Carries the Clock</h3>
+<p>Someone must watch the floor clock. Rangers and Rogues often notice exits; Clerics and Paladins often notice dying friends; Wizards often notice bad ideas. Assign the clock out of character if nobody wants it in character.</p>
+<h3 id="ch4-replacement-math">Replacement Math</h3>
+<p>If someone dies, the replacement joins at the next saferoom at the party&rsquo;s lowest level with a late-entry kit and one <strong>Silver loot box</strong>. Build replacements with this chapter the same way you built the original. Do not inherit the dead Crawler&rsquo;s unopened boxes — those were reclaimed.</p>
+<h2 id="ch4-divine-order-and-primal-order-deep-dive">Divine Order and Primal Order Deep Dive</h2>
+<h3 id="ch4-hallway-bodyguard-protector">Hallway Bodyguard (Protector)</h3>
+<p>You train with martial weapons and heavy armor. Your Wisdom still drives spells; your Armor Class looks like a professional. Take this if you want to stand next to the Fighter without flinching. You are still a full caster — do not forget to prepare spells because you found a greataxe.</p>
+<h3 id="ch4-church-rummage-sale-mystic-thaumaturge">Church Rummage-Sale Mystic (Thaumaturge)</h3>
+<p>You lean into the holy symbol. Extra cantrip, stronger save DCs and attack bonuses while the symbol is presented as a focus (as SRD). Take this if you want the sacred equivalent of a customer-service headset that actually works.</p>
+<h3 id="ch4-farmers-market-hedge-magician-magician">Farmers-Market Hedge Magician (Magician)</h3>
+<p>Druid version of the mystic fork: more cantrip pressure, focus-based casting bonus. Your hose is a focus. Your opinions about lawns remain unwelcome.</p>
+<h3 id="ch4-trail-crew-warden-warden">Trail-Crew Warden (Warden)</h3>
+<p>Druid version of the bodyguard fork: martial weapons and medium armor. You can stand in a doorway and still prepare <em>Entangle</em>. Metal armor restrictions still apply if your table enforces them.</p>
+<h2 id="ch4-eldritch-invocation-picks-level-1-guidance">Eldritch Invocation Picks (Level 1 Guidance)</h2>
+<p>All invocations use SRD text and prerequisites. Practical Season Zero notes:</p>
+<ul>
+<li><strong>Armor of Shadows</strong> — <em>Mage Armor</em> at will. Good if you refuse real armor.</li>
+<li><strong>Devil&rsquo;s Sight</strong> — see in magical darkness. Situational on Floor 1; hilarious later.</li>
+<li><strong>Eldritch Mind</strong> — Advantage on Constitution saves to maintain concentration. Quietly excellent.</li>
+<li><strong>Fiendish Vigor</strong> — false life on yourself. Padding for the first week.</li>
+<li><strong>Pact of the Blade</strong> — weapon bond fantasy. You still need to hit.</li>
+<li><strong>Pact of the Chain</strong> — familiar. This is not a pet rules chapter; use the SRD familiar and stop there.</li>
+<li><strong>Pact of the Tome</strong> — extra cantrips. For people who click agree and also read appendices.</li>
+<li><strong>Mask of Many Faces</strong> — <em>Disguise Self</em> at will. Cameras still know. Audiences sometimes do not.</li>
+<li><strong>Misty Visions</strong> — <em>Silent Image</em> at will. Make a hallway look closed. Pray.</li>
+<li><strong>Gaze of Two Minds</strong> — share senses. Support and scouting.</li>
+<li><strong>Lessons of the First Ones</strong> — Origin feat access as SRD. Powerful; check prerequisites.</li>
+</ul>
+<p>Pick one. You get more later. Do not try to pick two at intake.</p>
+<h2 id="ch4-species-interactions-pointer">Species Interactions (Pointer)</h2>
+<p>Species rules are <span class="tag provisional">Provisional</span> in Chapter 2. Class features do not change that. Notable mechanical nubs:</p>
+<ul>
+<li><strong>Dwarven Toughness</strong> adds +1 HP per level on top of class Hit Dice.</li>
+<li><strong>Human Versatile</strong> adds a second Origin feat from the <strong>SRD four</strong> only in this book.</li>
+<li><strong>Elf Keen Senses</strong> and <strong>Human Skillful</strong> add skills that may overlap class picks — the tool asks for a different skill if a duplicate appears.</li>
+<li>Darkvision quirks are filed as mundane on Floors 1–2. They still work.</li>
+</ul>
+<p>Chapter 3 will expand species once Caleb&rsquo;s answers land. Until then, use Chapter 2&rsquo;s PROVISIONAL section.</p>
+<h2 id="ch4-official-class-titles-floor-3-preview">Official Class Titles (Floor 3 Preview)</h2>
+<p>At level 3 the System certifies your class and hands you an <strong>Official Class Title</strong>: a flashy, nonmechanical name. Subclass choice is real; Title is paint. Examples of tone (not a locked list):</p>
+<ul>
+<li>Off-Duty Bouncer → &ldquo;Union-Busting Vestigial Authority&rdquo;</li>
+<li>Perpetual Grad Student → &ldquo;Defended, Barely&rdquo;</li>
+<li>Unread Terms-and-Conditions Signer → &ldquo;Preferred Customer (Hostile)&rdquo;</li>
+</ul>
+<p>Your table invents Titles with the System. This book does not assign them at creation.</p>
+<h2 id="ch4-comparing-martials-at-level-1">Comparing Martials at Level 1</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Barbarian</th>
+<th>Fighter</th>
+<th>Monk</th>
+<th>Paladin</th>
+<th>Ranger</th>
+<th>Rogue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best early defensive trick</td>
+<td>Rage resist / Unarmored</td>
+<td>Armor + Style</td>
+<td>Mobility + Unarmored</td>
+<td>Heavy armor + Lay on Hands</td>
+<td>Medium/light + Mark kite</td>
+<td>Light armor + positioning</td>
+</tr>
+<tr>
+<td>Burst</td>
+<td>Rage damage</td>
+<td>Second Wind sustain</td>
+<td>Bonus unarmed</td>
+<td>Lay on Hands / later Smite</td>
+<td>Hunter&rsquo;s Mark</td>
+<td>Sneak Attack</td>
+</tr>
+<tr>
+<td>Fighting Style when?</td>
+<td>—</td>
+<td>Level 1</td>
+<td>—</td>
+<td>Level 2</td>
+<td>Level 2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mastery count</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Wants Short Rests?</td>
+<td>Less at L1</td>
+<td>Yes (Second Wind)</td>
+<td>Yes (from L2)</td>
+<td>Mild</td>
+<td>Mild</td>
+<td>Mild</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch4-comparing-casters-at-level-1">Comparing Casters at Level 1</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Bard</th>
+<th>Cleric</th>
+<th>Druid</th>
+<th>Sorcerer</th>
+<th>Warlock</th>
+<th>Wizard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cantrip count</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Slot recharge</td>
+<td>Long</td>
+<td>Long</td>
+<td>Long</td>
+<td>Long</td>
+<td>Short (Pact)</td>
+<td>Long (+ Recovery)</td>
+</tr>
+<tr>
+<td>Signature button</td>
+<td>Inspiration</td>
+<td>Divine Order + heals</td>
+<td>Control spells</td>
+<td>Innate Sorcery</td>
+<td>Invocation + Pact slot</td>
+<td>Rituals + book</td>
+</tr>
+<tr>
+<td>Armor</td>
+<td>Light</td>
+<td>Light/med (+heavy Protector)</td>
+<td>Light (+med Warden)</td>
+<td>None</td>
+<td>Light</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch4-background-play-patterns">Background Play Patterns</h2>
+<h3 id="ch4-youth-group-pizza-wrangler-acolyte_1">Youth-Group Pizza Wrangler (Acolyte)</h3>
+<p>You are social infrastructure. People tell you things. Use Insight before Intimidation. Magic Initiate (Cleric) means even a Rogue can cast <em>Guidance</em> and feel holy about lockpicking.</p>
+<h3 id="ch4-call-center-gift-card-fraud-specialist-criminal_1">Call-Center Gift-Card Fraud Specialist (Criminal)</h3>
+<p>You are procedural paranoia. Check ceilings. Check vents. Check the nicer saferoom twice from Floor 2 on. Alert means you act before the surprise round becomes a podcast.</p>
+<h3 id="ch4-adjunct-professor-on-four-campuses-sage_1">Adjunct Professor on Four Campuses (Sage)</h3>
+<p>You are the footnote that saves the party. Read the plaque. Ask the System. Prepare <em>Detect Magic</em>. Accept that your Origin feat cantrips will be asked for every session.</p>
+<h3 id="ch4-black-friday-mall-security-soldier_1">Black-Friday Mall Security (Soldier)</h3>
+<p>You are crowd control with a paycheck history. Athletics to move people; Intimidation to stop people; Savage Attacker when the toaster metaphor becomes a greataxe.</p>
+<h2 id="ch4-multiclass-minimums-srd-pointer">Multiclass Minimums (SRD Pointer)</h2>
+<p>If you multiclass later, you still need the SRD ability score minimums for each class. The Crawl does not waive them because your story is sad. Record levels separately on the sheet. Spell slots combine; Pact Magic stays weird; Extra Attack features do not stack beyond what 5e allows.</p>
+<h2 id="ch4-what-provisional-means-at-the-table">What &ldquo;Provisional&rdquo; Means at the Table</h2>
+<p>Until Floor 3, NPCs and the System treat your class as an accident. You still get every mechanical feature. A Provisional Paladin can Lay on Hands on Floor 1 Day 1. The story paint says &ldquo;unlicensed&rdquo;; the rules say &ldquo;yes.&rdquo;</p>
+<h2 id="ch4-cross-references">Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Chapter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intake screens S1–S17</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Species (PROVISIONAL)</td>
+<td>2 / 3</td>
+</tr>
+<tr>
+<td>Skills and achievements</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Gear, boxes, crafting prices</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Combat procedure</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Death, Reprieve, saferooms</td>
+<td>1 / 9</td>
+</tr>
+<tr>
+<td>Floors and clocks</td>
+<td>1 / 10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch4-frequently-asked-intake-questions">Frequently Asked Intake Questions</h2>
+<p><strong>Can I start with a subclass?</strong> No. Level 3.</p>
+<p><strong>Can I start with magic items?</strong> No. Welcome Box and other boxes arrive in play, opened in a saferoom.</p>
+<p><strong>Can I retrain Fighting Style later?</strong> Follow the SRD / table ruling. Intake does not offer a free swap.</p>
+<p><strong>Does Midterm Onboarding require a quest?</strong> No. It is the Green Room level-up before the Floor 1 boss on the standard track.</p>
+<p><strong>Do Paladins and Rangers see Fighting Styles on S6?</strong> The kiosk may show a preview; the pick unlocks at level 2.</p>
+<p><strong>Can Human Versatile take Lucky?</strong> Not in the printed book. Versatile picks from the four SRD Origin feats. Lucky is appendix-only under its reskin name.</p>
+<p><strong>Are the twelve non-SRD backgrounds on the Discord kiosk?</strong> The live tool may list them; this book prints SRD four in full and appendix reskin names only (decision 029).</p>
+<p><strong>What if my table owns the 2024 Player&rsquo;s Handbook?</strong> The GM may open appendix entries. Still no copied book text in this PDF — use your PHB at the table.</p>
+<p><strong>Can I multiclass at level 1?</strong> No.</p>
+<p><strong>Does collapse death care about my class?</strong> No. If you miss the stairwell, you die. Rage does not help. <em>Feather Fall</em> does not help. Being entertaining does not help.</p>
+<h2 id="ch4-one-page-class-cards-copy-block">One-Page Class Cards (Copy Block)</h2>
+<p>Each card is a reminder, not a replacement sheet.</p>
+<h3 id="ch4-anger-management-dropout-barbarian-l1">Anger-Management Dropout (Barbarian) — L1</h3>
+<p>HD d12 · Saves STR/CON · Rage 2/Long · Unarmored 10+Dex+Con · Mastery 2 · Skills 2</p>
+<h3 id="ch4-open-mic-menace-bard-l1">Open-Mic Menace (Bard) — L1</h3>
+<p>HD d8 · Saves DEX/CHA · Inspiration d6 · Spells Cha 2 cantrips / 4 prep / 2 slots · Skills 3 (any)</p>
+<h3 id="ch4-urgent-care-chaplain-cleric-l1">Urgent-Care Chaplain (Cleric) — L1</h3>
+<p>HD d8 · Saves WIS/CHA · Divine Order · Spells Wis 3 / 4 / 2 · Skills 2</p>
+<h3 id="ch4-community-garden-zealot-druid-l1">Community-Garden Zealot (Druid) — L1</h3>
+<p>HD d8 · Saves INT/WIS · Primal Order · Druidic · Spells Wis 2 / 4 / 2 · Skills 2</p>
+<h3 id="ch4-off-duty-bouncer-fighter-l1">Off-Duty Bouncer (Fighter) — L1</h3>
+<p>HD d10 · Saves STR/CON · Fighting Style · Second Wind 2 · Mastery 3 · Skills 2</p>
+<h3 id="ch4-barefoot-hot-yoga-brawler-monk-l1">Barefoot Hot-Yoga Brawler (Monk) — L1</h3>
+<p>HD d8 · Saves STR/DEX · Martial Arts d6 · Unarmored 10+Dex+Wis · Skills 2</p>
+<h3 id="ch4-hoa-enforcement-crusader-paladin-l1">HOA Enforcement Crusader (Paladin) — L1</h3>
+<p>HD d10 · Saves WIS/CHA · Lay on Hands 5 · Spells Cha 0 / 2 / 2 · Mastery 2 · Style at L2</p>
+<h3 id="ch4-seasonal-park-ranger-ranger-l1">Seasonal Park Ranger (Ranger) — L1</h3>
+<p>HD d10 · Saves STR/DEX · Favored Enemy (Hunter&rsquo;s Mark) · Spells Wis 0 / 2 / 2 · Mastery 2 · Style at L2 · Skills 3</p>
+<h3 id="ch4-five-finger-discount-specialist-rogue-l1">Five-Finger Discount Specialist (Rogue) — L1</h3>
+<p>HD d8 · Saves DEX/INT · Expertise 2 · Sneak 1d6 · Cant · Mastery 2 · Skills 4</p>
+<h3 id="ch4-leaky-power-bank-sorcerer-l1">Leaky Power-Bank (Sorcerer) — L1</h3>
+<p>HD d6 · Saves CON/CHA · Innate Sorcery 2 · Spells Cha 4 / 2 / 2 · Skills 2</p>
+<h3 id="ch4-unread-terms-and-conditions-signer-warlock-l1">Unread Terms-and-Conditions Signer (Warlock) — L1</h3>
+<p>HD d8 · Saves WIS/CHA · Pact slot 1 (Short) · Invocation 1 · Spells Cha 2 / 2 / 1 · Skills 2</p>
+<h3 id="ch4-perpetual-grad-student-wizard-l1">Perpetual Grad Student (Wizard) — L1</h3>
+<p>HD d6 · Saves INT/WIS · Book 6 / prep 4 · Rituals · Arcane Recovery · Spells Int 3 cantrips · Skills 2</p>
+<div class="box system">
+<p>That concludes class and employment counseling. Please proceed to the stairwell brochure. It is also lying.</p>
 </div></section>
 </body></html>

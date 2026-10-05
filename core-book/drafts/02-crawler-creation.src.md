@@ -1,7 +1,7 @@
 # Crawler Creation
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1 | Updated: 2026-10-04
-Summary: Chapter 2 first draft (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 character creation at the Intake Kiosk, screen by screen (S1-S17, S12 retired), with the Roll house option, many-Crawlers rules, /delete, and a worked example.
-Sources (versions pinned by the rules team): characters/character-creation-5e.md v0.2.3; characters/create-flow-spec-5e.md v0.1.12; tables/chargen-5e.json v0.1.5; decisions 009, 016, 020, 024, 025; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3. Generated from: <<STAMP>>.
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
+Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species PROVISIONAL, Fan Profile hidden, Midterm Onboarding pointer.
+Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–030; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.17. Generated from: <<STAMP>>.
 
 <!-- BEGIN -->
 
@@ -21,7 +21,7 @@ This chapter builds a level 1 Crawler at that kiosk, one decision at a time. It 
 
 ## Before You Start
 
-**Creation is standard 5e (2024) character creation at level 1.** You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a survey, and a story in which your species stays hidden until Floor 3.
+**Creation is standard 5e (2024) character creation at level 1.** You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a private survey, and a story in which your species stays hidden until Floor 3. The System keeps a **Fan Profile** on every Crawler; players never see it and never set it (S12 is retired). Floor 1 later grants **Midterm Onboarding** (level 2 at the Green Room) — that is play, not creation.
 
 **Time.** Plan on about 20 minutes per Crawler. A table of new players should plan on 45. Everyone can build at once, because each player works alone.
 
@@ -59,7 +59,7 @@ Welcome, Crawler. This is your private intake booth. Nobody else can see this. P
 
 ### What S1 Shows You
 
-S1 is a read-only welcome. It shows the **session** you are joining, the table's **Death Mode** (**Costly Revives** by default: revival is rare and costly; see Chapter 1), the **Comfort** level (**Ludicrous** by default), whether the **Floor 1 Reprieve** is on, and how many of the four Crawler slots are taken ("Party: 2 of 4 active Crawlers"). If you already have Crawlers on file, it also shows how many and which one is active.
+S1 is a read-only welcome. It shows the **session** you are joining, the table's **Death Mode** (**Costly Revives** by default: revival is rare and costly; see Chapter 1), the **Comfort** level (**Ludicrous** by default), the **Floor 1 Reprieve** (**ON by default** for Season Zero Floor 1; a table may turn it off; it never covers a collapse death), and how many of the four Crawler slots are taken ("Party: 2 of 4 active Crawlers"). If you already have Crawlers on file, it also shows how many and which one is active.
 
 You will see four choices: **Accept**, **Decline** (both continue), **Use a pre-built**, and **Read the Terms**. Reading the Terms shows you nothing, because the Terms are not shown. It does earn you a snark achievement.
 
@@ -187,15 +187,11 @@ Provisional Class: noted. Official Class Title: pending. Please do not put "pend
 
 ## Background (S7)
 
-Your background is your **Prior Employment**: the job you had before the world ended. It gives you ability score increases, an Origin feat, two skills, a tool, and an equipment option. You choose from the backgrounds the SRD provides, which is four.
+Your background is your **Prior Employment**: the job you had before the world ended. It gives you ability score increases, an Origin feat, two skills, a tool, and an equipment option. This book prints the **four SRD 5.2 backgrounds** in full below. Twelve more appear only as a reskin-name appendix at the end of this chapter (decision 029); their full 5e text is not reprinted here.
 
 <<TABLE:backgrounds>>
 
 <<TABLE:bg_flavor>>
-
-::: sidebar More Backgrounds
-The 2024 Player's Handbook lists twelve more backgrounds, and the kiosk has reskins ready for them. This book prints only the four the SRD provides; your GM may open the others if your table owns the book. [VERIFY: the filed spec lists all sixteen backgrounds on S7; this draft restricts printed rules to SRD content and logs the question.]
-:::
 
 ### Ability Score Increases
 
@@ -208,7 +204,7 @@ Increases are added *after* you assign your ability scores (next section), and *
 
 ### Origin Feat
 
-Your background gives you a fixed Origin feat. If you are Human, you also pick one from the list below (your Versatile trait).
+Your background gives you a fixed Origin feat. If you are Human, you also pick one from the **four SRD Origin feats** below (your Versatile trait): Alert, Magic Initiate, Savage Attacker, or Skilled. Magic Initiate has three spell-list versions. Non-SRD Origin feats appear only in the appendix under our reskin names (decision 029).
 
 <<TABLE:feats>>
 
@@ -356,7 +352,7 @@ This screen is **The Magic You Admit To (Spells)**, and only casters see it. Bar
 
 ## The Survey (S13)
 
-S13 is a **short, private customer satisfaction survey**. Your answers are private notes. The System does not read them aloud, does not put them on your card, and does not share them with other players. You may **pass** on any question, or skip the whole screen. The System keeps a hidden file of its own about each Crawler, and you never see it and never set it. Nothing in the survey is required, and nothing in it is a test.
+S13 is a **short, private customer satisfaction survey**. Your answers are private notes. The System does not read them aloud, does not put them on your card, and does not share them with other players. You may **pass** on any question, or skip the whole screen. **S12 is retired** on purpose (the old public-tags screen); the numbers stay so the tools never renumber. From your private notes and from play, the System builds a **Fan Profile** that stays **hidden** — players never see it, never set it, and never ask for a specific reward. Nothing in the survey is required, and nothing in it is a test.
 
 ## Backstory and Handle (S14)
 
@@ -419,7 +415,7 @@ A player may create **as many Crawlers as they like** (the soft guideline is ten
 
 The active Crawler is **locked for the whole session**. It changes only at **session zero or between sessions**, never mid-session, not even in a saferoom. You ask with `/crawlers`, which lists your Crawlers (name, class, level, active or benched, floor) with links to their sheets. It files a *request*; the GM approves and runs the swap, and logs it. You get **one swap per window**.
 
-A Crawler swapped in keeps its own level, kit and credits as filed. If it is behind the party, it is brought up to the party's lowest level at the next saferoom. A swapped-in benched Crawler does not get the gear package or Silver late-entry loot box that a brand-new replacement gets.
+A Crawler swapped in keeps its own level, kit and credits as filed. If it is behind the party, it is brought up to the party's lowest level at the next saferoom. A swapped-in benched Crawler does not get the gear package or Silver loot box as late-entry compensation that a brand-new replacement gets.
 
 ### When a Crawler Dies
 
@@ -468,6 +464,18 @@ Here is the whole flow for one Crawler, from first screen to locked sheet.
 :::
 
 Notice what she does not have: no magic items, no loot boxes, no Ratings. She is a competent, tough, slightly overqualified security guard with a very bad pair of shoes, and she is about to go downstairs.
+
+## Appendix: Non-SRD Backgrounds and Origin Feats
+
+The kiosk lists twelve more backgrounds and six more Origin feats that are **not** in the SRD 5.2. Per decision 029 they appear here under **our reskin names only**, with a one-line mechanics summary in our own words. No parenthetical 5e name and no book text. Your GM may open them if the table owns the source books; the sheet still stores the underlying 5e key.
+
+### Non-SRD Backgrounds (reskin names)
+
+<<TABLE:nonsrd_backgrounds>>
+
+### Non-SRD Origin Feats (reskin names)
+
+<<TABLE:nonsrd_feats>>
 
 ## Level 1 Checklist
 

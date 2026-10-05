@@ -191,33 +191,36 @@ The AI GM is an agent that only runs when woken. With the wake notifier enabled,
 
 ## GM output tag contract
 
-Messages in `GM_OUTPUT_CHANNEL_ID` may tag lines to choose who speaks them:
+Messages in `GM_OUTPUT_CHANNEL_ID` may tag lines to choose who speaks them. **Decision 032 (Caleb, Oct 5 2026)** splits what each voice is for:
 
 | Tag | Behaviour |
 |---|---|
-| `[SYSTEM] text` | Spoken in the **System** voice (game-show host: bright, smug, theatrical by default) |
-| `[GM] text` | Spoken in the **narrator** voice |
+| `[SYSTEM] text` | Spoken in the **System** voice: **dry, informative, corporate** (game clock/timers, fees, registration, collapse warnings, floor notices, welcome/registration announcements). **No jokes.** |
+| `[GM] text` | Spoken in the **narrator** voice: **snarky** (achievement banner **and** mocking description, loot-box callouts/openings, all jokes and color) |
 | *(no tag)* | Narrator voice (same as `[GM]`) |
 | `[ROLL] text` | **Never spoken** (dice math, mechanics bookkeeping) |
 
 Rules:
 * Tags are matched **per line**, case-insensitively, at the **start** of a line. Leading whitespace and markdown such as `**[SYSTEM]**` or `> [GM]` is tolerated; an optional `:` after the tag is stripped. A tag in the middle of a line (`He said [SYSTEM] aloud`) is plain text.
 * **A tag applies until the next tag**: untagged lines after `[SYSTEM]` stay in the System voice; untagged lines after `[ROLL]` stay silent. Lines before any tag are narrator voice. A message may contain any number of tagged lines.
+* **Mixed messages:** if a System line is followed by snark in the same message, **re-tag `[GM]`** before the snark so carry-over does not keep speaking it as System.
 * The tag is **stripped** before speaking. Tag-looking lines inside ``` code fences are ignored (code is never spoken anyway).
 * Message text and each embed (if `TTS_READ_EMBEDS=true`) are parsed independently, so a `[ROLL]` in the body doesn't silence an embed.
 * Voice order is preserved: `[SYSTEM] a` / `[GM] b` / `[SYSTEM] c` plays a, b, c in that order, each in its own voice.
 
 Example message:
 ```
-[SYSTEM] Achievement unlocked: **Doormat**! Reward: one (1) lukewarm box.
+[SYSTEM] The floor collapses in 6 hours. Crawlers, move.
 [ROLL] Carl: d20+3 = 17 vs DC 14, success
+[GM] New achievement! **Doormat**. You held the door. The audience held its laughter.
+Reward: one (1) lukewarm box.
 [GM] Carl kicks the door open. The goblin inside looks up, deeply offended.
 ```
-speaks the first line in the System voice, skips the roll, and speaks the last line as the narrator.
+speaks the clock line in the System voice, skips the roll, and speaks the achievement and narration as the narrator.
 
 **Length limits** (after tags and markdown are stripped): messages are split at sentence boundaries into chunks of at most `TTS_CHUNK_MAX_CHARS` (default **600**; a single sentence longer than that is split at commas/spaces). The total spoken text per message is hard-capped at `TTS_MAX_MESSAGE_CHARS` (default **1500**); anything beyond is dropped, cutting at the last complete sentence that fits (a warning is logged). Chunks stay sentence-sized for low latency rather than being packed up to the maximum.
 
-**Voices:** the System voice has its own settings: `OPENAI_TTS_SYSTEM_MODEL/VOICE/INSTRUCTIONS/SPEED` (defaults: narrator's model, `coral`, game-show-host instructions) or, for ElevenLabs, `ELEVENLABS_SYSTEM_VOICE_ID/MODEL_ID/STABILITY/SIMILARITY` (if `ELEVENLABS_SYSTEM_VOICE_ID` is empty, System lines use the narrator voice and a warning is logged). `/say` takes an optional `voice` (`gm` default, or `system`) used for untagged text; tags inside the `/say` text still apply.
+**Voices:** the System voice has its own settings: `OPENAI_TTS_SYSTEM_MODEL/VOICE/INSTRUCTIONS/SPEED` (defaults: narrator's model, `coral`, dry corporate instructions per decision 032) or, for ElevenLabs, `ELEVENLABS_SYSTEM_VOICE_ID/MODEL_ID/STABILITY/SIMILARITY` (if `ELEVENLABS_SYSTEM_VOICE_ID` is empty, System lines use the narrator voice and a warning is logged). `/say` takes an optional `voice` (`gm` default, or `system`) used for untagged text; tags inside the `/say` text still apply.
 
 ---
 
@@ -251,7 +254,7 @@ See `.env.example` — every variable is documented there. Highlights:
 | `GM_WAKE_DEBOUNCE_MS` / `GM_WAKE_MAX_WAIT_MS` / `GM_WAKE_MIN_INTERVAL_MS` / `GM_WAKE_IDLE_MAX_WAIT_MS` | `2500` / `8000` / `4000` / `15000` | Wake batching and rate limits |
 | `TTS_USAGE_LOG` / `FISH_MONTHLY_CAP_MINUTES` | `logs/tts-usage.jsonl` / `200` | Usage log path; monthly minutes budget for `npm run usage` |
 | `OPENAI_TTS_MODEL` / `_VOICE` / `_INSTRUCTIONS` | `gpt-4o-mini-tts` / `onyx` / grim announcer | Narrator voice; `instructions` only applies to gpt-4o-mini-tts |
-| `OPENAI_TTS_SYSTEM_MODEL` / `_VOICE` / `_INSTRUCTIONS` / `_SPEED` | narrator's / `coral` / game-show host / narrator's | `[SYSTEM]` voice |
+| `OPENAI_TTS_SYSTEM_MODEL` / `_VOICE` / `_INSTRUCTIONS` / `_SPEED` | narrator's / `coral` / dry corporate (decision 032) / narrator's | `[SYSTEM]` voice |
 | `ELEVENLABS_VOICE_ID` / `_MODEL_ID` | – / `eleven_flash_v2_5` | Narrator voice (needed for ElevenLabs) |
 | `ELEVENLABS_SYSTEM_VOICE_ID` / `_MODEL_ID` / `_STABILITY` / `_SIMILARITY` | narrator's / narrator's / `0.35` / narrator's | `[SYSTEM]` voice |
 | `TTS_CHUNK_MAX_CHARS` | `600` | Max characters per synthesized chunk (split at sentence boundaries) |

@@ -1,5 +1,5 @@
 # decisions index
-Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
+Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-05
 
 - 002-death-mode.md: Costly Revives, very costly and rare
 - 003-death-bypasses.md: earned death bypasses
@@ -29,3 +29,5 @@ Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
 - 028-collapse-death-loot.md: missed collapse = death; the dead Crawler's credits and items are destroyed with the floor, survivors may loot only while it stands (Story Box and Legendary items too), "floor lost" ledger write-off must record exact coins and items so the balance reconciles to zero, and pre-collapse loot is logged as a transfer first (canon-shaped, tagged inspired; Caleb, 2026-10-04). Owner: Syndicate.
 - 029-book-source-conflicts.md: book source conflicts: SRD-only content is printed; non-SRD backgrounds/feats are table/GM appendix material (own reskin names, mechanics summaries, no copied text); Floor 2 house timer 10 days (canon 6 is reference); Floor 1 Reprieve ON by default for Season Zero Floor 1, never covers a collapse death; Roll threshold 73+. Owner: Syndicate.
 - 030-crafting-price-schedule.md: smoothed crafting-price schedule for Floors 3-18 replaces the credit multiplier on the basic table, Crafting Studio and Enhanced Crafting Studio only (about 3 / 6 / 10 floors of liquid income, box items sold at half); Floors 1-2 keep 5,000 / 12,000 / 30,000; 'tables upgrade on any floor' unchanged; passed on room vote Q-004 (6 of 7; current section 9.1a of rules/20; numbers in rules/70 `q6_crafting_price_proposal`). Owner: Syndicate.
+- 031-field-rest-fee.md: field-rest fee — Short Rest free if already quiet; rules/70 fee buys quiet for Short Rest in a noisy spot; never a Long Rest outside a saferoom. Owner: Syndicate.
+- 032-voice-split-system-gm.md: dry [SYSTEM] vs snarky [GM] (Caleb, 2026-10-05). Owner: rules designer / Borent.

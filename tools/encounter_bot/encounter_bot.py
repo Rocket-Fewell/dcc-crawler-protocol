@@ -15,6 +15,7 @@ floors/f01/day-NN.md and day-NN.json (never 00-overview.md, INDEX.md, rules/, se
 """
 import argparse
 import copy
+import datetime as dt
 import csv
 import glob
 import hashlib
@@ -596,6 +597,15 @@ def build(spec, data, rep):
     else:
         rep.fail("clock cites decision 026", "clock.authority must cite decision 026")
 
+    # ---- Core Book Ch1 alignment (decision 031 / core v0.2.18 batch)
+    blob_ = json.dumps(spec, ensure_ascii=False)
+    stale_ = [s_ for s_ in ("Core section 5.6", "Core section 6 (", "pretty much game over") if s_ in blob_]
+    rd_ = [m_.group(0) for m_ in re.finditer(r"real death[^\"]{0,80}", blob_) if "Reprieve" not in m_.group(0)]
+    rn_ = [x_ for x_ in ((spec["day"].get("early_descent") or {}).get("reprieve_note"), spec.get("stairwell_key", {}).get("reprieve_note")) if x_]
+    if stale_ or rd_ or len(rn_) != 1 or not all("Reprieve" in x_ and "descend" in x_ and x_.startswith(GM) for x_ in rn_):
+        rep.fail("Core Book Ch1 alignment", "stale pointers %s; unqualified 'real death' %s; Reprieve-expiry GM notes found %d (need exactly one, starting [GM-ONLY])" % (stale_, rd_, len(rn_)))
+    else:
+        rep.ok("Core Book Ch1 alignment", "no old Core section pointers; fight deaths name the unused Reprieve; one [GM-ONLY] Reprieve-expiry note on the early-descent block")
     # ---- achievements catalog pin (optional; tables/achievements.csv)
     acp = spec.get("achievements_catalog", {}).get("expected_sha256")
     if acp and acp != data.ach_sha256:
@@ -1377,7 +1387,10 @@ def render_md(doc):
     for n in sk.get("canon_stairwell_notes", []):
         w("- **Canon (%s, %s):** %s" % (n["ledger_id"], n["tag"], n["text"]))
     w("- **Stairwell timing:** %s" % sk["availability"])
-    w("- **Early descent:** %s\n" % sk["early_descent"])
+    w("- **Early descent:** %s" % sk["early_descent"])
+    if sk.get("reprieve_note"):
+        w("- " + gm(sk["reprieve_note"]))
+    w("")
     ed = day.get("early_descent")
     if ed:
         w("### Early descent and stasis (Day %d)\n" % m["day"])
@@ -1386,6 +1399,8 @@ def render_md(doc):
         if ed.get("free_window"):
             w("- %s *free-descent window*: \"%s\"" % (ed["free_window"]["tag"], ed["free_window"]["text"]))
         w("- **GM override:** %s" % ed["gm_override_note"])
+        if ed.get("reprieve_note"):
+            w("- " + gm(ed["reprieve_note"]))
         for c in ed["canon_refs"]:
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
         for a in ed.get("achievements", []):
@@ -1607,9 +1622,16 @@ def main(argv=None):
     if missing:
         print("FAIL: spec missing keys %s" % missing)
         return 1
-    for k, v in (("owner", "Encounter Bot"), ("status", "draft"), ("updated", "2026-10-04")):
+    for k, v in (("owner", "Encounter Bot"), ("status", "draft")):
         if spec["meta"].get(k) != v:
             rep.warn("front matter %s" % k, "expected '%s', got '%s'" % (v, spec["meta"].get(k)))
+    upd_ = str(spec["meta"].get("updated", ""))
+    try:
+        ok_upd = dt.date.fromisoformat(upd_) <= dt.date.today()
+    except ValueError:
+        ok_upd = False
+    if not ok_upd:
+        rep.warn("front matter updated", "expected an ISO date (YYYY-MM-DD) not in the future, got '%s'" % upd_)
     if not str(spec["meta"].get("version", "")).startswith("0."):
         rep.warn("front matter version", "expected 0.x, got '%s'" % spec["meta"].get("version"))
     doc = build(spec, data, rep)

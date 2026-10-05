@@ -1,17 +1,17 @@
 # Source Map
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1 | Updated: 2026-10-04
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
 Summary: Which source fed which chapter, with versions and known conflicts.
 
 | Chapter | Sources |
 |---|---|
-| 1 | rules core v0.2.13; decisions 020, 026, 027, 028; floors/f01/00-overview v0.2.4; Lore ledger (M-016, M-333/X-062) |
-| 2 | characters/character-creation-5e.md v0.2.3; characters/create-flow-spec-5e.md v0.1.12; tables/chargen-5e.json v0.1.5; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; item-reskins; decisions 009, 016, 020, 024, 025 |
+| 1 | rules/10-core-rules-5e.md v0.2.17; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; decisions 018, 026-030; characters/character-creation-5e.md v0.2.5 |
+| 2 | characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 029 |
+| 4 | same chargen + reskins as Ch2; decisions 024, 029; core v0.2.17 overlays (rests, Midterm Onboarding, credits); SRD 5.2 class/background chassis |
 
 ## Conflicts (superseded text, resolved in favor of decisions)
-- Core 5.8 "dead or ejected per the floor doc" and "off by default on Floor 1": superseded by decisions 026/028 (clock on, 5 days, missed collapse = death everywhere).
-- character-creation-5e v0.2.3 stale: "Credits = GP", Floor 1 Reprieve/Detour Tax collapse text, "Cardboard Box", gold wording, roll "above 72" (= 73+).
-- floors/f01/00-overview v0.2.4 rule 6 Detour Tax for missed collapse: Detour Tax now covers only a missed Stairwell key.
-- Spec S7 16 backgrounds / chargen 12 Origin feats vs SRD 4 / 6.
-- Canon Floor 2 timer 6 days vs house 10 days: house wins.
-- reskin meta lists 12 supplement species: not printed in Ch2.
-- chargen-5e.json notes still cite v0.1.4 ability-method text.
+- Core older "Reprieve default OFF" / haul-down: superseded by 026/028/029 (ON default; collapse death everywhere).
+- character-creation stale "Credits = GP" display / Cardboard Box / gold wording: fixed in v0.2.4–0.2.5.
+- Spec S7 16 backgrounds / 12 Origin feats vs SRD 4 / 4: printed SRD full; non-SRD appendix reskin-only (029).
+- Canon Floor 2 timer 6 days vs house 10 days: house wins (029).
+- F4-6 day counts: house 20/25/30 (027/budget v0.1.4+); F7-18 not printed.
+- Legendary cap 2 is per Crawler; Story Boxes separate track (018, budget v0.1.11, core §4.5).

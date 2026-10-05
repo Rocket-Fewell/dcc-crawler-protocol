@@ -14,8 +14,11 @@ export const MAX_MESSAGES = 12;       // refuse to preview more than this at onc
 export const SYSTEM_TAG = '**[SYSTEM]** ';
 export const GM_TAG = '**[GM]** ';
 
-/** Voice by manifest kind: System lines get the bold [SYSTEM] tag (bridge tag contract, src/tags.js); the rest is narration. */
-const SYSTEM_KINDS = new Set(['voice_line', 'route_voice_line', 'system_notice', 'achievement_narration']);
+/** Voice by manifest kind (decision 032 / Caleb Oct 5 2026): dry System lines get **[SYSTEM]**; everything else is narrator/GM.
+ * SYSTEM_KINDS is an allow-list only. Unknown or new kinds (e.g. optional [GM] color beats Encounter Bot may add) are narration — never System.
+ * Achievements and loot-box color are GM. Collapse/exit warnings stay System. */
+const SYSTEM_KINDS = new Set(['voice_line', 'route_voice_line', 'system_notice', 'exit_warning_read_aloud']);
+export { SYSTEM_KINDS };
 
 export class EncounterError extends Error {}
 

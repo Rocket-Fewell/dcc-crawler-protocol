@@ -185,9 +185,9 @@ Examples of `ledger.text`: `credits +50 Bronze box`; `item +1 Bronze box: Lamina
 ### 2.5 Announcing: reskin freely, never drop the mechanics
 - The GM **may** rename (`reskin_name`), rephrase `spoken_line`/`snark_line`, and add flavor.
 - The GM **must not** change `real_5e_name`, `plain_mechanics`, `rarity`, `credit_value`, or omit them. Changing mechanics requires a logged override.
-- **Announcement = speak and post in the same beat:**
+- **Announcement = speak and post in the same beat** (decision 032: loot-box callouts are **[GM]** / narrator, not [SYSTEM]):
 ```
-[SYSTEM] <Tier> <deed-named> Box. Pull 1 of 2.
+[GM] <Tier> <deed-named> Box. Pull 1 of 2.
 Reward: <reward>   (the card's `reward` field; the item read-out itself uses <spoken_line>)
 ```
 then the text channel gets (reskin first; real name and mechanics beneath, matching gm-notes/30):
@@ -358,7 +358,7 @@ All deck-file entries (fields from §1; showing only the `cards` entries). Sampl
   "notes": "Reskin of mundane gear; price from 2024 PHB. SRD 5.2 checked (Dex save, burning timing)." }
 ```
 ```
-[SYSTEM] Bronze Stabbed the Vending Machine Box. Pull 1 of 2.
+[GM] Bronze Stabbed the Vending Machine Box. Pull 1 of 2.
 Reward: Flaming Hot Nacho Cheese Pouch, Alchemist's Fire. Thrown twenty feet; a failed save means one d four fire damage each turn until doused.
 ```
 
@@ -380,7 +380,7 @@ Reward: Flaming Hot Nacho Cheese Pouch, Alchemist's Fire. Thrown twenty feet; a 
   "notes": "SRD 5.2 checked: each extra charge raises the spell level by 1, and Magic Missile gains one dart per level above 1. The crawler may not know Gary." }
 ```
 ```
-[SYSTEM] Silver Brave, Loud, and Mostly Lucky Box. Pull 2 of 2.
+[GM] Silver Brave, Loud, and Mostly Lucky Box. Pull 2 of 2.
 Reward: Pre-Owned Laser Pointer, Wand of Magic Missiles. Seven charges; one charge fires three darts, one d four plus one force each.
 ```
 
@@ -402,7 +402,7 @@ Reward: Pre-Owned Laser Pointer, Wand of Magic Missiles. Seven charges; one char
   "notes": "Rare is above the F1-2 ceiling (peak Uncommon), so Benefactor-only or hand-picked (core §3.6, §4.7). Unique: one per party." }
 ```
 ```
-[SYSTEM] Gold Benefactor Box. A sponsor is feeling generous. Do not ask why.
+[GM] Gold Benefactor Box. A sponsor is feeling generous. Do not ask why.
 Reward: Class Ring, Graduating Class of Nobody: Ring of Protection. Attune it for plus one Armor Class and plus one on all saving throws.
 ```
 
@@ -424,7 +424,7 @@ Reward: Class Ring, Graduating Class of Nobody: Ring of Protection. Attune it fo
   "notes": "Pre-rolled with tools/roll.py: [ROLL] 3d6 -> [2, 3, 1] = 6, x5 = 30 (--no-log, spec sample only). Prefer credits:null and roll at draw. Credit boxes are canon-shaped (tiered boxes, L-001); the amount math is HOUSE core §4.2." }
 ```
 ```
-[SYSTEM] Bronze Participation Trophy Box. Pull 1 of 1.
+[GM] Bronze Participation Trophy Box. Pull 1 of 1.
 Reward: Thirty credits, added to your balance. They are damp. Do not ask what from.
 Credits: 25 -> 55 (+30, Bronze box pull)
 ```

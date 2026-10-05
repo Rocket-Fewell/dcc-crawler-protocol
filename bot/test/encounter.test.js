@@ -169,7 +169,9 @@ test('show_only_when blocks are held back with an ephemeral note until confirm:t
   const r = buildPreview(doc, { encounter: 'enc-t-01', block: 'achievement_narration' });
   assert.equal(r.messages.length, 0);
   assert.match(r.notes.join(' '), /1 block held back: shown only when the achievement is awarded\. Add `confirm:true`/);
-  assert.match(buildPreview(doc, { encounter: 'enc-t-01', block: 'achievement_narration', confirm: true }).messages[0], /\*\*\[SYSTEM\]\*\* Achievement unlocked: Test Pilot\./);
+  const conf = buildPreview(doc, { encounter: 'enc-t-01', block: 'achievement_narration', confirm: true }).messages[0];
+  assert.match(conf, /Achievement unlocked: Test Pilot\./);
+  assert.doesNotMatch(conf, /\[SYSTEM\]/);
 });
 
 test('collapse_notice needs hours: refused with a clear message when missing, filled (and trimmed to a plain number) when given', () => {

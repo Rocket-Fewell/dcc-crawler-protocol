@@ -1,5 +1,5 @@
 # Lore Tables Index
-Owner: DCC Lore | Status: draft | Version: 0.28 | Updated: 2026-10-05
+Owner: DCC Lore | Status: draft | Version: 0.29 | Updated: 2026-10-05
 Summary: Machine-readable tables for the campaign bots (JSON is exempt from headers; schema is documented in the catalog file).
 
 | Path | Description | Owner | Status |
@@ -84,3 +84,5 @@ Change note v0.26 (2026-10-04): house spelling "saferoom" (Syndicate ruling): pr
 Change note v0.27 (2026-10-04): house spelling "saferoom" swept through the loot decks. Prose in `tools/loot_decks_build.py` changed (7 spots) and the decks rebuilt: `loot-decks/f01-any-orientation-pit.json` v0.1.1 (4 replacements) and `loot-decks/f01-any-story-boxes.json` v0.1.1 (23 replacements); no other deck changed (byte-identical rebuild). Also 3 spots in older change notes above (v0.8, v0.14). Ids, ledger quotes, the label "Time to Safe Room Closure" and wiki page titles untouched. deck_check 0 errors. Read-only check vs rules/40 v0.1.8: no deck awards Platinum (2 canon-reference mentions in Story Box notes only); version pins to an older spec remain in notes (`spec v0.1.1 §2.6` in the orientation-pit pacing note and the achievement deck pacing note; builder comments cite rules/40 v0.1.1 and v0.1.3).
 
 Change note v0.28 (2026-10-05): `canon-floor-2.json` v0.1.1 (sha256 744d2ac6612d…, reserve, not announced) rebuilt after the Pass 22 scheduled refinement: ledger section 9.5 (M-707..M-733, X-080) wired in, 4 entries added, reward-room cages retagged canon, backlog progress notes. New `canon-floor-2.version.json` and `canon-floor-2.CHANGELOG.md`.
+
+Change note v0.29 (2026-10-05): `canon-floor-1.json` rebuilt by tools/canon_floor_build.py because CANON-LEDGER.md moved to v1.15 (check had failed only on staleness). Only `ledger_version` (1.13 to 1.15) and the md generated-from line changed; counts unchanged (24 zones, 46 mobs, 23 hazards, 17 features). json sha256 c5d67e380ca3… to 4a8a3c92a967…, md 4b4916ad3088… to 8e5d97169e88…. canon_floor_check and canon_floor2_check 0 errors.

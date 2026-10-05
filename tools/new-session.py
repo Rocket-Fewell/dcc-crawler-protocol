@@ -6,8 +6,10 @@
 
 Creates sessions-data/<id>/ with: empty state (state.py init), a NEW sealed GM quirk roll + zeroed affinity under
 gm-notes/secret/sessions/<id>/, empty ledgers, session.json (no secrets), characters/ (+INDEX.md) and create-drafts/.
-It does NOT switch the bridge: use `/session use <id>` (leave voice first). Discord channels: run
+It does NOT switch the bridge or write active-session.json: use `/session use <id>` (leave voice first),
+or `python3 tools/campaign_session.py use <id>` then restart / `/session use`. Discord channels: run
 `python3 tools/discord_gm.py --session <id> setup-channels` once the guild id is in session.json.
+Sheet channels use category "Crawler Sheets (<id>)" and names prefixed with "<id>-" so they never collide with alpha.
 """
 import argparse
 import json
@@ -66,11 +68,16 @@ def main(argv=None):
             profile[k] = v
     with open(os.path.join(data, "session.json"), "w", encoding="utf-8") as f:
         json.dump(profile, f, indent=2)
+    # Session-scoped sheet category + empty channel map (never share alpha's "Crawler Sheets" / #hornn-sheet).
+    pc = {"guild_id": a.guild or "", "category_name": cs.sheet_category_name(sid), "category_id": "", "crawlers": {}}
+    with open(os.path.join(data, "player-channels.json"), "w", encoding="utf-8") as f:
+        json.dump(pc, f, indent=2)
+        f.write("\n")
     idx = os.path.join(data, "characters", "INDEX.md")
     with open(idx, "w", encoding="utf-8") as f:
         f.write(f"# characters index (session {sid})\nOwner: see NAMING-CONVENTIONS.md | Updated: {__import__('datetime').date.today()}\n\n")
-    out.append("session.json written (no secrets). Secrets go in .env as %sGM_WEBHOOK_URL / %sGM_WEBHOOK_KEY / %sGM_DISCORD_TOKEN" % ((profile["env_prefix"],) * 3))
-    out.append("next: set guild/channel ids in session.json, `discord_gm.py --session %s setup-channels`, then `/session use %s` in Discord" % (sid, sid))
+    out.append("session.json + player-channels.json written (category %r; no secrets). Secrets go in .env as %sGM_WEBHOOK_URL / %sGM_WEBHOOK_KEY / %sGM_DISCORD_TOKEN" % (pc["category_name"], profile["env_prefix"], profile["env_prefix"], profile["env_prefix"]))
+    out.append("next: set guild/channel ids in session.json, `discord_gm.py --session %s setup-channels`, then `/session use %s` (or campaign_session.py use %s + restart)" % (sid, sid, sid))
     print("\n".join(out))
 
 

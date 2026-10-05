@@ -204,11 +204,13 @@ def slug(s):
 
 
 def load_config():
+    import campaign_session
+    cat = campaign_session.sheet_category_name()
     cfg = read_json(channels_path(), None)
     if cfg is None:
-        cfg = {"guild_id": "", "category_name": "Crawler Sheets", "category_id": "", "crawlers": {}}
+        cfg = {"guild_id": "", "category_name": cat, "category_id": "", "crawlers": {}}
     cfg.setdefault("guild_id", "")
-    cfg.setdefault("category_name", "Crawler Sheets")
+    cfg.setdefault("category_name", cat)  # non-alpha defaults to "Crawler Sheets (<id>)" so sheets never share alpha's category
     cfg.setdefault("category_id", "")
     cfg.setdefault("crawlers", {})
     return cfg
@@ -676,11 +678,17 @@ def protected_channel_ids():
 
 
 def default_channel_name(crawler, m):
+    """Sheet channel slug. Alpha: <player>-<crawler> (or pet ...-sheet). Other campaigns: <session>-<player>-<crawler> so names cannot collide with alpha in the same guild."""
     if m and m.get("channel_name"):
         return slug(m["channel_name"])
+    import campaign_session
+    prefix = campaign_session.sheet_channel_prefix()  # "" for alpha, "s1-" etc. otherwise
+    budget = max(1, 100 - len(prefix))
     if crawler.get("kind") == "pet-crawler":  # <player>-<pet>-sheet keeps it with its owner's channels
-        return f"{slug(crawler.get('player') or crawler['name'])}-{slug(crawler['name'])}"[:94] + "-sheet"
-    return f"{slug(crawler.get('player') or crawler['name'])}-{slug(crawler['name'])}"[:100]  # one channel per Crawler: <player>-<crawler>, e.g. hornn-horn
+        body = f"{slug(crawler.get('player') or crawler['name'])}-{slug(crawler['name'])}"[: max(1, budget - 6)] + "-sheet"
+    else:
+        body = f"{slug(crawler.get('player') or crawler['name'])}-{slug(crawler['name'])}"[:budget]
+    return (prefix + body)[:100]
 
 
 CATEGORY_LIMIT, CATEGORY_WARN = 50, 45   # Discord allows 50 channels per category; warn at 45, then open "Crawler Sheets 2", 3, ...

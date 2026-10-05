@@ -14,7 +14,9 @@ Usage:
   python3 tools/discord_gm.py channels                                   # show the crawler -> channel map and bot access
   python3 tools/discord_gm.py stop                                      # kill switch: bridge stops talking + clears its queue
 
-Tags: start a post with [SYSTEM] for the System voice, [GM] (or nothing) for the narrator.
+Tags (decision 032 / Caleb Oct 5 2026): [SYSTEM] = dry corporate System voice (clock, fees,
+registration, collapse/floor notices; no jokes). [GM] or untagged = snarky narrator (achievements,
+loot-box callouts, jokes). After a [SYSTEM] line, re-tag [GM] before any snark (tag carry-over).
 [ROLL] lines are posted but never spoken. Needs env GM_DISCORD_TOKEN (never print it).
 Posts over 2000 chars are split into several messages. State of 'new' is kept in sessions/.discord-cursor.
 """
@@ -240,8 +242,9 @@ def use_session(argv):
                 cfg = json.load(f)
         except (OSError, ValueError):
             cfg = {}
-        MOUTH = str(cfg.get("mouth_channel_id") or os.environ.get("DCC_MOUTH_CHANNEL_ID") or "")
-        EARS = str(cfg.get("ears_channel_id") or os.environ.get("DCC_EARS_CHANNEL_ID") or "")
+        # Same-table sessions (env_prefix "") share alpha's .env channel names; prefer session.json, then DCC_*, then bridge names.
+        MOUTH = str(cfg.get("mouth_channel_id") or os.environ.get("DCC_MOUTH_CHANNEL_ID") or os.environ.get("GM_OUTPUT_CHANNEL_ID") or "")
+        EARS = str(cfg.get("ears_channel_id") or os.environ.get("DCC_EARS_CHANNEL_ID") or os.environ.get("TRANSCRIPT_CHANNEL_ID") or "")
         if not (MOUTH and EARS):
             sys.exit(f"session '{sid}' has no mouth/ears channel ids: set mouth_channel_id and ears_channel_id in {cs.session_file(sid)}")
         CURSOR = os.path.join(cs.data_dir(sid), ".discord-cursor")

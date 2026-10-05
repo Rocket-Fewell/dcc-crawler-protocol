@@ -1,14 +1,17 @@
 /**
- * GM-output tag contract.
+ * GM-output tag contract (decision 032 / Caleb Oct 5 2026).
  *
- *   [SYSTEM] ...  -> spoken in the "system" voice (game-show host)
- *   [GM] ...      -> spoken in the narrator ("gm") voice
+ *   [SYSTEM] ...  -> spoken in the "system" voice (dry, informative, corporate: clock, fees,
+ *                    registration, collapse warnings, floor notices, welcome/registration). No jokes.
+ *   [GM] ...      -> spoken in the narrator ("gm") voice (snarky: achievements banner+description,
+ *                    loot-box callouts/openings, jokes and color)
  *   [ROLL] ...    -> never spoken
- *   (no tag)      -> narrator voice (or the caller's default voice)
+ *   (no tag)      -> narrator voice (or the caller's default voice) — same as [GM]
  *
  * Tags are matched per line, case-insensitively, at the start of a line (optionally preceded by
  * whitespace and markdown such as `**[SYSTEM]**` or `> [GM]`). A tag applies to its own line and to
  * every following line until the next tag. Tags inside ``` code fences are ignored.
+ * Mixed messages: after a [SYSTEM] line, re-tag [GM] before any snark so carry-over stays correct.
  */
 
 export const VOICE_GM = 'gm';

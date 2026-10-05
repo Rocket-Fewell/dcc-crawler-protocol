@@ -1,0 +1,17 @@
+{
+  "label": "Season 1",
+  "env_prefix": "",
+  "fish_monthly_minutes": 100,
+  "create": {
+    "species_class_reskin": true,
+    "background_reskin": true,
+    "screens_reskin": true,
+    "review_mode": "off",
+    "allow_roll": true,
+    "content_source": "phb"
+  },
+  "guild_id": "1556163673469222942",
+  "ears_channel_id": "1556163778788462602",
+  "mouth_channel_id": "1556163836879568946",
+  "voice_channel_id": "1556163675000279043"
+}

@@ -9,7 +9,7 @@ export const data = new SlashCommandBuilder()
     o
       .setName('voice')
       .setDescription('Which voice to use (default: gm). [SYSTEM]/[GM]/[ROLL] tags inside the text still apply.')
-      .addChoices({ name: 'GM (narrator)', value: 'gm' }, { name: 'System (announcer)', value: 'system' })
+      .addChoices({ name: 'GM (narrator)', value: 'gm' }, { name: 'System (dry/corporate)', value: 'system' })
       .setRequired(false)
   );
 

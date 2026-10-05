@@ -34,13 +34,39 @@ SINGLE_FILES = [  # (source file, repo-relative destination)
     ("/workspace/backup-push.sh", "ops/backup-push.sh"),
     ("/workspace/backup-sync.py", "ops/backup-sync.py"),
 ]
-# Files that live only in the staging repo (never deleted by delete-sync).
+# Files that live only in the staging repo (never deleted by delete-sync, never overwritten by a source file).
 STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md"}
+
+# Repo paths kept as git SYMLINKS (repo-relative path -> relative link target) instead of copies of the real file.
+# Remote commit 12df0bc (2026-10-05, Cursor cloud agent, co-authored by Caleb) turned these two into symlinks into the
+# lore/ mirror so the voice bridge and GM tools see one Lore copy of the item table. On the box,
+# dcc-campaign/tables/<name> -> ../../dcc-lore/tables/<name>; without this the mirror would copy real content back.
+# A link is only written when its target is part of this sync (lore/tables/<name> is mirrored from /workspace/dcc-lore),
+# so it never dangles; otherwise the file falls back to a normal copy with a WARN.
+KEEP_SYMLINKS = {
+    "tables/item-reskins.json": "../lore/tables/item-reskins.json",
+    "tables/item-reskins.version.json": "../lore/tables/item-reskins.version.json",
+}
+
+# Top-level names that must never exist in the staging repo. 12df0bc ignores /dcc-campaign/ and /dcc-lore (path aliases
+# the Cloud Agent install recreates in ITS checkout); backup-push.sh uses `git add -A --force`, which bypasses
+# .gitignore, so the sync refuses to run if they show up here and never writes anything under them.
+FORBIDDEN_ROOT_NAMES = {"dcc-campaign", "dcc-lore"}
+
+# Lines that must stay in the staging-owned .gitignore (added by 12df0bc). Re-appended if ever missing.
+GITIGNORE_REQUIRED_BLOCK = """
+# Path aliases recreated by the Cloud Agent install. The git root is the
+# flattened backup; the GM tools and voice bridge still look up
+# /workspace/dcc-campaign (decisions, sessions, tools) and /workspace/dcc-lore.
+/dcc-campaign/
+/dcc-lore
+"""
 
 SECRET_SRC = "/workspace/dcc-campaign/gm-notes/secret"   # copy only; never read for scanning, never print names
 
 EXC_DIRS = {"node_modules", "__pycache__", ".venv", ".git"}
-EXC_FILE_GLOBS = ["*.pyc", ".env", ".env.*"]          # .env.* covers .env.example too (literal rule)
+EXC_FILE_GLOBS = ["*.pyc", ".env", ".env.*", ".env.agents"]   # .env.* covers .env.example too (literal rule);
+# .env.agents (per-agent #agents webhook URLs, 2026-10-05) is listed explicitly as well so it stays out even if .env.* changes
 MAX_BYTES = 50 * 1024 * 1024
 
 # Named credential excludes (repo-relative path -> reason). A file lands here when the credential scan / secret grep
@@ -51,6 +77,9 @@ CREDENTIAL_EXCLUDES = {
     # Caleb can re-include it after review.
     "discord-voice-bridge/test/wake.test.js": "secret-assignment pattern (test fixture, likely false positive)",
     "bot/test/wake.test.js": "secret-assignment pattern (same file via the dcc-campaign/bot symlink)",
+    # 2026-10-05: per-agent Discord webhook URLs for #agents (live credentials). Also caught by the .env.* name rule.
+    "discord-voice-bridge/.env.agents": "live Discord webhook URLs (agents_channel.py post --as)",
+    "bot/.env.agents": "live Discord webhook URLs (same file via the dcc-campaign/bot symlink)",
 }
 
 _spec = importlib.util.spec_from_file_location("crs", os.path.join(REPO, "ops", "check_repo_safe.py"))
@@ -121,6 +150,10 @@ def build_want():
                     hits = scan_file(s, rel)
                     if hits:
                         report["cred_auto"].append((rel, hits)); continue
+                if rel.split(os.sep)[0] in FORBIDDEN_ROOT_NAMES:
+                    print("WARN skipped path under a forbidden root alias:", rel); continue
+                if rel in STAGING_OWNED:
+                    print("WARN source file ignored, staging repo owns this path:", rel); continue
                 if rel in want:
                     if open(want[rel], "rb").read() != open(s, "rb").read():
                         report["collisions"].append(rel)
@@ -146,16 +179,54 @@ def copy_if_changed(s, d):
     return True
 
 
+def ensure_symlink(d, target):
+    """Make d a symlink to target (relative). Returns True if anything changed."""
+    if os.path.islink(d) and os.readlink(d) == target:
+        return False
+    if os.path.islink(d) or os.path.isfile(d):
+        os.remove(d)
+    elif os.path.isdir(d):
+        shutil.rmtree(d)
+    os.makedirs(os.path.dirname(d), exist_ok=True)
+    os.symlink(target, d)
+    return True
+
+
+def ensure_gitignore_block():
+    """Never lose the 12df0bc alias-ignore lines in the staging-owned .gitignore."""
+    p = os.path.join(REPO, ".gitignore")
+    cur = open(p).read() if os.path.isfile(p) else ""
+    need = [l for l in GITIGNORE_REQUIRED_BLOCK.strip().splitlines() if not l.startswith("#")]
+    if all(l in cur.splitlines() for l in need):
+        return
+    with open(p, "a") as fh:
+        fh.write(("" if cur.endswith("\n") or not cur else "\n") + GITIGNORE_REQUIRED_BLOCK)
+    print("restored .gitignore alias lines (12df0bc)")
+
+
 def main():
+    bad = [n for n in sorted(FORBIDDEN_ROOT_NAMES) if os.path.lexists(os.path.join(REPO, n))]
+    if bad:
+        # Do not delete-sync into them (could be a bind mount/symlink to live data) and do not let `git add --force` take them.
+        sys.exit("STOP: forbidden alias path(s) at staging repo root: %s - remove by hand after checking what they are" % ", ".join(bad))
     want = build_want()
+    links = {}
+    for rel, target in KEEP_SYMLINKS.items():
+        tgt_rel = os.path.normpath(os.path.join(os.path.dirname(rel), target))
+        if tgt_rel in want:
+            want.pop(rel, None); links[rel] = target
+        else:
+            print("WARN KEEP_SYMLINKS target %s not mirrored; %s kept as a plain copy" % (tgt_rel, rel))
     changed = sum(copy_if_changed(s, os.path.join(REPO, rel)) for rel, s in want.items())
+    changed += sum(ensure_symlink(os.path.join(REPO, rel), t) for rel, t in links.items())
+    ensure_gitignore_block()
     deleted = 0
     for root, dirs, files in os.walk(REPO, topdown=True):
         if root == REPO:
             dirs[:] = [d for d in dirs if d != ".git"]
         for f in files:
             rel = os.path.relpath(os.path.join(root, f), REPO)
-            if rel not in want and rel not in STAGING_OWNED:
+            if rel not in want and rel not in STAGING_OWNED and rel not in links:
                 os.remove(os.path.join(root, f)); deleted += 1
                 if not rel.startswith("gm-notes/secret/"): print("deleted", rel)
     for root, dirs, files in os.walk(REPO, topdown=False):
@@ -163,6 +234,7 @@ def main():
         if root != REPO and not os.listdir(root): os.rmdir(root)
     total = sum(os.path.getsize(s) for s in want.values())
     print("mirror: %d files wanted (%.1f MB), %d copied/updated, %d deleted" % (len(want), total / 1e6, changed, deleted))
+    for rel, t in links.items(): print("symlink kept (KEEP_SYMLINKS, 12df0bc): %s -> %s" % (rel, t))
     for rel in report["name"]: print("EXCLUDED (.env name rule):", rel)
     if report["secret_name_excluded"]: print("EXCLUDED (.env name rule) inside gm-notes/secret: %d file(s)" % report["secret_name_excluded"])
     for rel, sz in report["big"]: print("EXCLUDED (>50 MB, %.1f MB): %s" % (sz / 1e6, rel))

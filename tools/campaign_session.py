@@ -87,6 +87,43 @@ def list_sessions():
     return out
 
 
+
+def sheet_category_name(sid=None):
+    """Discord category for Crawler sheet channels. Alpha keeps the historical name; others are session-scoped so they never share alpha's category."""
+    sid = sid or session_id()
+    return "Crawler Sheets" if is_alpha(sid) else f"Crawler Sheets ({sid})"
+
+
+def sheet_channel_prefix(sid=None):
+    """Prefix for new sheet channel names. Empty for alpha; "<id>-" otherwise so names cannot collide with alpha's #hornn-sheet etc. in the same guild."""
+    sid = sid or session_id()
+    return "" if is_alpha(sid) else f"{sid}-"
+
+
+def write_active(sid, by=None):
+    """Persist the active session (same file the bridge `/session use` writes). Tools without --session / DCC_SESSION follow this. Does not restart the bot."""
+    sid = (sid or "").strip().lower()
+    if sid != DEFAULT_SESSION and not valid_id(sid):
+        raise SessionError(f"bad session id {sid!r}")
+    path = active_file()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = f"{path}.{os.getpid()}.tmp"
+    payload = {"session": sid, "updated": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "by": by}
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(payload, f)
+        f.write("\n")
+    os.replace(tmp, path)
+    return path
+
+
+def session_exists(sid=None):
+    sid = sid or session_id()
+    if sid == DEFAULT_SESSION:
+        return True
+    d = data_dir(sid)
+    return os.path.exists(os.path.join(d, "state.json")) or os.path.exists(session_file(sid))
+
+
 def apply_cli_session(argv=None):
     """Pick the session from the command line, export it as $DCC_SESSION (so child processes and every path helper see it) and
     return argv without the flag. Call first thing in main() of every tool.
@@ -113,3 +150,58 @@ def apply_cli_session(argv=None):
         i += 1
     session_id()  # validates
     return out
+
+
+def _cli(argv=None):
+    """list | show | use <id> — inspect / mark the active campaign session (alpha stays at sessions/; others under sessions-data/<id>/)."""
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if not argv or argv[0] in ("-h", "--help", "help"):
+        print(__doc__.strip())
+        print()
+        print("Usage:")
+        print("  python3 tools/campaign_session.py list")
+        print("  python3 tools/campaign_session.py show")
+        print("  python3 tools/campaign_session.py use <id>   # writes sessions/active-session.json; bridge picks it up on /session use or restart")
+        print("Create a new empty campaign: python3 tools/new-session.py <id>")
+        return 0
+    cmd = argv[0]
+    if cmd == "list":
+        active = session_id()
+        for sid in list_sessions():
+            mark = "▶" if sid == active else "•"
+            label = ""
+            try:
+                with open(session_file(sid), encoding="utf-8") as f:
+                    label = (json.load(f) or {}).get("label") or ""
+            except (OSError, ValueError):
+                pass
+            extra = f" - {label}" if label else ""
+            where = data_dir(sid)
+            print(f"{mark} {sid}{extra}  ({where})")
+        return 0
+    if cmd == "show":
+        sid = session_id()
+        print(f"active: {sid}")
+        print(f"data:   {data_dir(sid)}")
+        print(f"chars:  {characters_dir(sid)}")
+        print(f"source: {'DCC_SESSION' if os.environ.get('DCC_SESSION') else ('active-session.json' if persisted_active() else 'default')}")
+        return 0
+    if cmd == "use":
+        if len(argv) < 2:
+            raise SessionError("use needs a session id")
+        sid = argv[1].strip().lower()
+        if not session_exists(sid):
+            raise SessionError(f"no session {sid!r}; create with: python3 tools/new-session.py {sid}")
+        path = write_active(sid, by="cli")
+        print(f"marked active: {sid} (wrote {path})")
+        print("Bridge: /leave then /session use", sid, "(or set DCC_SESSION="+sid+" and restart). Tools without --session follow this file.")
+        return 0
+    raise SessionError(f"unknown command {cmd!r} (list|show|use)")
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(_cli())
+    except SessionError as e:
+        print(f"campaign_session: {e}", file=sys.stderr)
+        raise SystemExit(2)

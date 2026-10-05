@@ -1,5 +1,5 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.8 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.11 | Updated: 2026-10-05
 Summary: One line per file in the lore folder: path, description, owner, status.
 
 Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (symlink to `/workspace/dcc-lore`). Rules: `/workspace/dcc-campaign/NAMING-CONVENTIONS.md`.
@@ -95,9 +95,15 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 |---|---|---|---|
 | guides/gm-malfunction-player-guide.md | Spoiler-free Crawler's guide to the GM degeneration ladder and the five repairs, with costs, DCs and the Busted callout from rules/50 v0.1.2 (v0.2). | DCC Lore | draft |
 | guides/gm-malfunction-player-guide-short.md | One-page version of the same guide (v0.2). | DCC Lore | draft |
-| drafts/f01-legendary-oneoffs-research.md | Canon research for Floor 1 / tutorial Legendary boxes and candidate Story Box cards (prep; deck built in Pass 13, partly superseded). | DCC Lore | draft |
+| drafts/f01-legendary-oneoffs-research.md | Floor 1 Legendary / Story Box research (saferoom spelling note 2026-10-05). sha256 3de8d2513131… | DCC Lore | draft |
 | drafts/premise-verification.md | Premise verification pass for the Valtay Core Book opening chapter: five claims (Introduction event, dungeon shape/win condition, stairwell counts per floor, difficulty and Crawler counts, floor-collapse fate of NPCs vs Crawlers), each tagged canon / inspired / unverified with ledger rows (CANON-LEDGER section 9.3, M-525..M-650, X-066..X-075) and conflicts with Caleb's overview. | DCC Lore | draft |
+| drafts/floor-bible-v0.4-canon-check.md | Read-only review of Syndicate's floors/04-floor-bible.md v0.4: 6 hard conflicts with house rulings, 12 canon departures (OK/FLAG with ledger IDs), canon facts for the 8 section-10 questions. | DCC Lore | draft |
+| drafts/floor1-collapse-notices.draft.md | Floor 1 collapse/zone-close notices + Day 1 working achievement frames, voice-split v0.2 ([SYSTEM] dry / [GM] snark). sha256 d23a39b90cbe… | DCC Lore | draft |
+| drafts/floor1-dean-thudd-intro.draft.md | Dean Thudd Graduation Stage intro set piece, voice-split v0.2 (dry [SYSTEM] open + [GM] banter). sha256 d821d0839503… | DCC Lore | draft |
+| drafts/floor1-zone-color.draft.md | Floor 1 Day 2–4 optional zone color beats, voice-split v0.2. sha256 a1ef4c1cedbd… | DCC Lore | draft |
 | drafts/srd-nonsrd-audit.md | Which of the 16 listed backgrounds and 12 origin-feat entries are in SRD 5.2.1 (4 backgrounds, 4 feats) and which are not, with a one-line appendix action for each non-SRD item. Names only. | DCC Lore | draft |
+| drafts/achievement-suggestions-days-02-05-lore-pass.md | Lore names-and-flavor pass on Days 2–5 achievement suggestions; v0.2 marks banners/flavor [GM] end to end. sha256 216303c74dc6… | DCC Lore | draft |
+| drafts/floor1-voice-split-audit.md | Voice-split Part A change log + Part B read-only Day-page slip list (Death Mode, System jokes, mtimes/sha256). sha256 49ce6e8e872b… | DCC Lore | draft |
 
 ## audits/
 | Path | Description | Owner | Status |

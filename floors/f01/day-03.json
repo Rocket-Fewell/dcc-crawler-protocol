@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.11 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.14 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -27,14 +27,14 @@
     "days": 5,
     "days_left": 2,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-    "canon_table_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
+    "canon_table_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9",
     "achievements_csv_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e",
-    "canon_ledger_version": "1.13",
+    "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.11",
-    "budget_file_sha256": "3c272ca334e1a80cff6bcce93483581fbfe7e993dc52c901770b241c8bd06cab",
+    "budget_file_version": "0.1.14",
+    "budget_file_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "ccccfed5db877cc72b95c91e2de4b4c68a2a814e678b186b5d51e658abb81c21",
+    "spec_sha256_sans_pin": "eaa66710ea39899b366c2bae0da16ca9c9e0cc5406d279f5ce93a93161162f7b",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -148,7 +148,7 @@
       "death": true,
       "reprieve_applies": false,
       "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
-      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death rules follow Core section 6 (death is pretty much game over). Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death and revival follow Core Book Ch1, Death and Revival: death is permanent, Costly Revives are the default (rare and expensive), and a Replacement Crawler is the usual outcome. Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
       "stasis_counts": "Early-descent stasis (canon M-277) counts as reaching a stairwell.",
       "detour_tax_scope": "The Detour Tax now covers only a missed Stairwell key, never a missed collapse."
     },
@@ -157,7 +157,7 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
     "rest_fee_note": {
       "tag": "[GM-FACING]",
       "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
@@ -168,11 +168,11 @@
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
-    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
+    "expected_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9",
     "present": true,
     "schema": "canon-floor-1/0.1.0",
-    "ledger_version": "1.13",
-    "sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
+    "ledger_version": "1.15",
+    "sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9"
   },
   "day": {
     "number": 3,
@@ -196,7 +196,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+        "note": "A field rest can only be a Short Rest (Core Book Ch1, The Floor Clock and Saferooms: Long Rests only in saferooms). The rest-without-a-saferoom price (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -317,7 +317,8 @@
           "canon_ledger_name": "The Early Bird Gets To Squirm",
           "audience": "gm"
         }
-      ]
+      ],
+      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
     },
     "proposed_achievements": [
       {
@@ -1785,8 +1786,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.11 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.11 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.1.14 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.14 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -2013,15 +2014,15 @@
   },
   "validation": {
     "result": "PASS",
-    "pass": 49,
+    "pass": 50,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "5b1955d4dea675937a80d63d806c2fc830de0f56b598c1d01014f752973607b2",
+    "spec_sha256": "a55d85164ab8d0a7634f4734693950cc6027093175a263e32ec2dcad624ba58f",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.11, sha256 3c272ca334e1a80c; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.14, sha256 3096be23394258dc; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2090,18 +2091,23 @@
       },
       {
         "status": "PASS",
+        "check": "Core Book Ch1 alignment",
+        "detail": "no old Core section pointers; fight deaths name the unused Reprieve; one [GM-ONLY] Reprieve-expiry note on the early-descent block"
+      },
+      {
+        "status": "PASS",
         "check": "achievements catalog pinned",
         "detail": "tables/achievements.csv v1.3.1, sha256 11ae2445df90e767, 1826 rows"
       },
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "/workspace/dcc-lore/tables/canon-floor-1.json (ledger 1.13, 24 zones)"
+        "detail": "/workspace/dcc-lore/tables/canon-floor-1.json (ledger 1.15, 24 zones)"
       },
       {
         "status": "PASS",
         "check": "canon table hash recorded",
-        "detail": "sha256 c5d67e380ca3e851, ledger v1.13"
+        "detail": "sha256 4a8a3c92a967b980, ledger v1.15"
       },
       {
         "status": "PASS",
@@ -2251,7 +2257,7 @@
       {
         "status": "PASS",
         "check": "slot-map provenance",
-        "detail": "meta.spec_sha256_sans_pin ccccfed5db877cc7 matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
+        "detail": "meta.spec_sha256_sans_pin eaa66710ea39899b matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
       },
       {
         "status": "PASS",

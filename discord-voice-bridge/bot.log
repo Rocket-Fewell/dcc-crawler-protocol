@@ -1383,3 +1383,156 @@
 2026-10-05T07:42:42.304Z INFO  [fish] Fish balance: $9.28 (interval)
 2026-10-05T08:12:42.207Z INFO  [fish] Fish balance: $9.28 (interval)
 2026-10-05T08:42:42.011Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T09:12:42.467Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T09:42:42.242Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T10:12:42.094Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T10:42:42.262Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T11:12:42.322Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T11:42:42.788Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T12:12:47.072Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T12:42:42.693Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T13:00:01.657Z ERROR Uncaught exception: Error: Opening handshake has timed out
+    at ClientRequest.<anonymous> (/workspace/discord-voice-bridge/node_modules/ws/lib/websocket.js:904:7)
+    at ClientRequest.emit (node:events:519:28)
+    at TLSSocket.emitRequestTimeout (node:_http_client:931:9)
+    at Object.onceWrapper (node:events:633:28)
+    at TLSSocket.emit (node:events:519:28)
+    at Socket._onTimeout (node:net:605:8)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+2026-10-05T13:18:47.779Z WARN  [fish] Fish balance check (interval) failed: balance request failed: The operation was aborted due to timeout
+2026-10-05T13:18:47.800Z ERROR Uncaught exception: Error: socket hang up
+    at TLSSocket.socketOnEnd (node:_http_client:599:25)
+    at TLSSocket.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'ECONNRESET'
+}
+2026-10-05T13:20:05.208Z ERROR Uncaught exception: TypeError: Cannot read properties of null (reading 'setHeader')
+    at abortHandshake (/workspace/discord-voice-bridge/node_modules/ws/lib/websocket.js:1122:14)
+    at ClientRequest.<anonymous> (/workspace/discord-voice-bridge/node_modules/ws/lib/websocket.js:904:7)
+    at ClientRequest.emit (node:events:519:28)
+    at TLSSocket.emitRequestTimeout (node:_http_client:931:9)
+    at Object.onceWrapper (node:events:633:28)
+    at TLSSocket.emit (node:events:519:28)
+    at Socket._onTimeout (node:net:605:8)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+2026-10-05T14:01:18.132Z WARN  [fish] Fish balance check (interval) failed: balance request failed: The operation was aborted due to timeout
+2026-10-05T14:56:09.293Z ERROR Uncaught exception: Error: socket hang up
+    at TLSSocket.socketOnEnd (node:_http_client:599:25)
+    at TLSSocket.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'ECONNRESET'
+}
+2026-10-05T14:56:53.932Z ERROR Uncaught exception: TypeError: Cannot read properties of null (reading 'setHeader')
+    at abortHandshake (/workspace/discord-voice-bridge/node_modules/ws/lib/websocket.js:1122:14)
+    at ClientRequest.<anonymous> (/workspace/discord-voice-bridge/node_modules/ws/lib/websocket.js:904:7)
+    at ClientRequest.emit (node:events:519:28)
+    at TLSSocket.emitRequestTimeout (node:_http_client:931:9)
+    at Object.onceWrapper (node:events:633:28)
+    at TLSSocket.emit (node:events:519:28)
+    at Socket._onTimeout (node:net:605:8)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+2026-10-05T15:19:08.603Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T17:44:25.507Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T17:44:25.510Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T17:44:25.511Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T17:44:25.513Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T17:44:25.518Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T17:44:25.519Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T17:44:25.564Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T17:44:25.565Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T174425-ada8)
+2026-10-05T17:44:25.565Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T17:44:25.566Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T17:44:25.567Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T17:44:25.567Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T17:44:25.568Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T17:44:26.115Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T17:44:26.538Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T18:13:06.876Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T18:13:07.179Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T18:13:07.183Z INFO  [voice] Joined voice channel General
+2026-10-05T18:13:07.184Z INFO  [stt] STT listening for speakers
+2026-10-05T18:14:26.375Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T18:15:23.046Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-05T18:24:12.641Z INFO  SIGTERM received, shutting down
+2026-10-05T18:24:12.836Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T18:24:12.837Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T18:24:14.486Z INFO  Campaign session: s1 (data /workspace/dcc-campaign/sessions-data/s1)
+2026-10-05T18:24:14.489Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T18:24:14.490Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T18:24:14.490Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T18:24:14.494Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T18:24:14.494Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T18:24:14.529Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T18:24:14.530Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T182414-4cc4)
+2026-10-05T18:24:14.530Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T18:24:14.532Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions-data/s1/voice-control.json
+2026-10-05T18:24:14.536Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T18:24:14.536Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions-data/s1/spotlight.json, stale after 20 min; fails open)
+2026-10-05T18:24:14.536Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T18:24:15.080Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T18:24:15.395Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T18:28:40.906Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T18:28:41.169Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T18:28:41.184Z INFO  [voice] Joined voice channel General
+2026-10-05T18:28:41.184Z INFO  [stt] STT listening for speakers
+2026-10-05T18:31:07.595Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (14 chunk(s), voice: system+gm)
+2026-10-05T18:38:20.692Z INFO  SIGTERM received, shutting down
+2026-10-05T18:38:20.992Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T18:38:20.992Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T18:38:25.199Z INFO  Campaign session: s1 (data /workspace/dcc-campaign/sessions-data/s1)
+2026-10-05T18:38:25.205Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T18:38:25.206Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T18:38:25.208Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T18:38:25.213Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T18:38:25.214Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T18:38:25.240Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=d34f92f3b3134a439c1052d06378fa8e
+2026-10-05T18:38:25.241Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T183825-7f3a)
+2026-10-05T18:38:25.241Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T18:38:25.243Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions-data/s1/voice-control.json
+2026-10-05T18:38:25.244Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T18:38:25.245Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions-data/s1/spotlight.json, stale after 20 min; fails open)
+2026-10-05T18:38:25.245Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T18:38:25.696Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T18:38:26.180Z INFO  [fish] Fish balance: $9.24 (startup)
+2026-10-05T18:41:22.136Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T18:41:25.655Z INFO  Campaign session: s1 (data /workspace/dcc-campaign/sessions-data/s1)
+2026-10-05T18:41:25.657Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T18:41:25.658Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T18:41:25.658Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T18:41:25.659Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T18:41:25.659Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T18:41:25.672Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=d34f92f3b3134a439c1052d06378fa8e
+2026-10-05T18:41:25.672Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T184125-bc92)
+2026-10-05T18:41:25.672Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T18:41:25.673Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions-data/s1/voice-control.json
+2026-10-05T18:41:25.674Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T18:41:25.674Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions-data/s1/spotlight.json, stale after 20 min; fails open)
+2026-10-05T18:41:25.674Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T18:41:26.148Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T18:41:26.454Z INFO  [fish] Fish balance: $9.24 (startup)
+2026-10-05T18:42:49.954Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T18:42:50.202Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T18:42:50.215Z INFO  [voice] Joined voice channel General
+2026-10-05T18:42:50.216Z INFO  [stt] STT listening for speakers
+2026-10-05T18:43:24.062Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (19 chunk(s), voice: system+gm)

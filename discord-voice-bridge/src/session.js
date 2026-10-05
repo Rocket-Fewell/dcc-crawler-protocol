@@ -11,6 +11,7 @@
  *     "fish_session_cap_minutes": 40, "fish_monthly_minutes": 100, "env_prefix": "BETA_" }
  * Secrets stay in .env under the prefix: BETA_GM_WEBHOOK_URL, BETA_GM_WEBHOOK_KEY, BETA_GM_ALLOWED_AUTHOR_IDS, BETA_GM_DISCORD_TOKEN ...
  * Any env var named <PREFIX><NAME> overrides <NAME> while that session is active.
+ * Set "env_prefix": "" to share the process env (same guild/channels/GM wake as alpha). Omitted defaults to "<ID>_".
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -99,15 +100,17 @@ export function sessionEnv(env, id) {
   out.SPOTLIGHT_FILE = join(dir, 'spotlight.json');
   out.VOICE_CONTROL_FILE = join(dir, 'voice-control.json');
   out.GM_WAKE_STATE_FILE = join(dir, 'gm-wake-state.json');
+  // env_prefix "" = same Discord table as the process env (keep GM wake webhook / allow-list).
+  // Non-empty / omitted (defaults to "<ID>_") = separate table: PREFIX* overrides, and unscoped webhooks are cleared
+  // unless PREFIXGM_WEBHOOK_* exist, so a new campaign cannot silently inherit alpha's wake.
   const prefix = typeof profile.env_prefix === 'string' ? profile.env_prefix : `${id.toUpperCase().replace(/[^A-Z0-9]/g, '_')}_`;
   if (prefix) {
     for (const [k, v] of Object.entries(env)) {
       if (k.startsWith(prefix) && k.length > prefix.length && v !== undefined && v !== '') out[k.slice(prefix.length)] = v;
     }
-  }
-  // A new table must never inherit another table's webhook / author allow-list by accident.
-  for (const name of ['GM_WEBHOOK_URL', 'GM_WEBHOOK_KEY', 'GM_ALLOWED_AUTHOR_IDS']) {
-    if (!(prefix && env[`${prefix}${name}`])) delete out[name];
+    for (const name of ['GM_WEBHOOK_URL', 'GM_WEBHOOK_KEY', 'GM_ALLOWED_AUTHOR_IDS']) {
+      if (!env[`${prefix}${name}`]) delete out[name];
+    }
   }
   return out;
 }

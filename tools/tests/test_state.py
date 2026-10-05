@@ -489,9 +489,13 @@ class WriteSafetyTests(StateTestCase):
 
     def test_default_dir_is_workspace_when_env_unset(self):
         with mock.patch.dict(os.environ):
-            os.environ.pop("DCC_CAMPAIGN_DIR")
+            os.environ.pop("DCC_CAMPAIGN_DIR", None)
+            os.environ.pop("DCC_SESSION", None)
             self.assertEqual(state.campaign_dir(), "/workspace/dcc-campaign")
-            self.assertEqual(state.state_path(), "/workspace/dcc-campaign/sessions/state.json")
+            # Data dir follows DCC_SESSION / sessions/active-session.json / alpha (not hard-coded to alpha).
+            import campaign_session as cs
+            self.assertEqual(state.state_path(), os.path.join(cs.data_dir(), "state.json"))
+            self.assertTrue(state.state_path().startswith("/workspace/dcc-campaign/"))
 
 
 if __name__ == "__main__":

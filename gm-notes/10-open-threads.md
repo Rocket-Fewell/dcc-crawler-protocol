@@ -164,7 +164,7 @@ Summary: Things still waiting on a decision or on another bot.
 
 ## Syndicate audit follow-ups (2026-10-04) - PENDING, left unchanged on purpose
 - Deletion flagging: Syndicate's audit item 1 asked to flag suspected Crawler-cycling. Caleb ruled `/delete` is housekeeping: no flags, log for audit only. Kept as-is; the ruling overrides the audit item.
-- GM voice: 20-gm-persona.md vs 00-gm-principles.md (System as game-show host, GM voice line) vs the 2026-10-04 persona merge note above disagree. Waiting on Caleb.
+- GM voice: RESOLVED by decision 032 (Caleb, 2026-10-05): [SYSTEM] dry corporate (no jokes); [GM] snarky narrator (achievements, loot boxes, jokes). Earlier "share one voice" note superseded for spoken tagging. See decisions/032-voice-split-system-gm.md.
 - Floor 1 Reprieve: core default is OFF; ON for Floor 1 only in this campaign. RECORDED in core v0.2.10 (§6.0, §6.2) and the Floor 1 module v0.2.4 (§13 item 16).
 - Rewards vs dice/DCs/damage/saves: wording unchanged, marked "under review by Caleb" (core 3.4 pays Heroic Inspiration, consumables, charms, items).
 - Crafting station prices: Caleb's 12,000 / 30,000. DONE: filed in rules/20 v0.3.3 and decision 019 v1.2.
@@ -173,7 +173,7 @@ Summary: Things still waiting on a decision or on another bot.
 - Reward limits stay as written; GM may adapt as play goes (the 'under review' note on P:52 is cleared).
 - Deleting a Crawler: log only, no flagging.
 - Floor 1 Reprieve stays ON for Floor 1.
-- GM and System share one voice; no persona change.
+- GM and System share one voice; no persona change. **SUPERSEDED for spoken tagging by decision 032 (Oct 5 2026):** dry [SYSTEM] vs snarky [GM]; personas stay distinct.
 - Studio pricing: Caleb confirmed 12,000 / Enhanced 30,000 in popups at 6:38 and 6:46 PM CT. Syndicate's message that 20,000/50,000 stays filed conflicts with that; flagged to the room.
 - Floor 1 Reprieve: ON for Floor 1 only (Caleb, via Lore 6:51 PM CT).
 - Unopened Story Box when its Crawler dies: box is reclaimed and the slot is freed so another can be awarded (Caleb, via Lore). Rules filed: rules/45 v0.2.2, decision 020 v1.2, core v0.2.10, spec v0.1.7 (the ledger row for a reclaimed box is the Accountant's / Lore's). Tool side: Architect.

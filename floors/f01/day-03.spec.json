@@ -3,8 +3,8 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.3",
-    "updated": "2026-10-04",
+    "version": "0.5",
+    "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
     "title": "Day {day} of {days}: Mid Zones Close, Last Call at the Break Room",
@@ -17,11 +17,12 @@
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
       "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
-      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
+      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
       "rules/70-encounter-budget-5e.json v{budget_version} and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
-      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
-      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
+      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
+      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
+      "/workspace/dcc-lore/drafts/achievement-suggestions-days-02-05-lore-pass.md (Lore draft v0.2, sha256 216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146: Days 2–5 achievement frames, [GM] end to end)"
     ]
   },
   "clock": {
@@ -64,7 +65,7 @@
         "tag": "inspired (house)"
       }
     ],
-    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a snarky notice (Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
+    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a dry floor notice (optional GM color may follow; Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
     "collapse_cost_slot": {
       "b70": {
         "kind": "party",
@@ -97,7 +98,7 @@
       "death": true,
       "reprieve_applies": false,
       "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
-      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death rules follow Core section 6 (death is pretty much game over). Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death and revival follow Core Book Ch1, Death and Revival: death is permanent, Costly Revives are the default (rare and expensive), and a Replacement Crawler is the usual outcome. Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
       "stasis_counts": "Early-descent stasis (canon M-277) counts as reaching a stairwell.",
       "detour_tax_scope": "The Detour Tax now covers only a missed Stairwell key, never a missed collapse."
     },
@@ -106,7 +107,7 @@
       "break_room_not_saferoom_from_day": 4,
       "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
     "rest_fee_note": {
       "tag": "[GM-FACING]",
       "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
@@ -116,7 +117,7 @@
     "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
-    "expected_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe"
+    "expected_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9"
   },
   "day": {
     "number": 3,
@@ -125,8 +126,12 @@
     "start_note": "Default start is the Green Room. If the day rolled over elsewhere, start there.",
     "collapse_today": "Mid zones (Z5, Z7 and Z8) close: hooks and services there vanish and Bruiser's key is lost; the route is not cut. Tagged inspired.",
     "tomorrow_notice": {
-      "text": "FLOOR NOTICE. Tomorrow the Break Room and every vendor in the building go dark. Buy what you need today. Buy it twice if you're nervous.",
-      "tag": "[PLAYER-FACING]"
+      "text": "FLOOR NOTICE. Tomorrow the Break Room and all vendors go offline. Purchase requirements today.",
+      "tag": "[PLAYER-FACING]",
+      "gm_color": {
+        "text": "Buy what you need today. Buy it twice if you're nervous.",
+        "tag": "[GM-FACING]"
+      }
     },
     "rest_options": [
       {
@@ -139,7 +144,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
+        "note": "A field rest can only be a Short Rest (Core Book Ch1, The Floor Clock and Saferooms: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always). GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5)."
       }
     ],
     "carry_over": [
@@ -195,16 +200,24 @@
     },
     "stall_fallback": "If the party stalls, the System posts the next-collapse countdown (Break Room and vendors lose service tomorrow), the Lights-Out hour arrives, and the day rolls over at 24 in-game hours. A party that has not bought the key still has the Mystery Key (if drawn), tools, force, or the toll at the door. A Crawler who is not at a stairwell when the floor collapses is dead, with no Reprieve (decision 026); keep the warning in view.",
     "collapse_notice": {
-      "text": "Update: the middle of the floor is joining the outer parts in the afterlife. Loot and services there have ended. Your route is untouched, because we want you to see what's next. Sadly.",
+      "text": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
       "tag": "[PLAYER-FACING]",
       "canon_tag": "inspired",
-      "status": "Lore draft v0.1 (floor1-collapse-notices.draft.md), house wording; Lore may still edit"
+      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md, sha256 d23a39b90cbe…), house wording; voice-split [SYSTEM] dry + [GM] color",
+      "gm_color": {
+        "text": "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly.",
+        "tag": "[GM-FACING]"
+      }
     },
     "early_descent": {
       "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
       "player_prompt": {
-        "text": "STAIRWELL NOTICE: go down now and you sit in stasis until the floor collapses, keeping the achievement and losing the rest of the floor. Each of you decides for yourself, and nobody can decide for you. The System won't judge anyone who waits. It will judge a few other things.",
-        "tag": "[PLAYER-FACING]"
+        "text": "STAIRWELL NOTICE. Descent with more than {stasis_hours} hours remaining places you in stasis until the floor collapses. Achievement credit is retained; remaining floor time is forfeited. Each Crawler chooses independently.",
+        "tag": "[PLAYER-FACING]",
+        "gm_color": {
+          "text": "The System won't judge anyone who waits. It will judge a few other things.",
+          "tag": "[GM-FACING]"
+        }
       },
       "gm_override_note": "The GM may override a Crawler's choice only with a logged reason (decision 026, Syndicate ruling). Never push a Crawler toward early descent; the choice is theirs. A Crawler in stasis has finished the floor; their sheet and boxes follow the Floor 2 arrival rules (00-overview.md section 7.3).",
       "canon_refs": [
@@ -225,7 +238,8 @@
           "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
           "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
         }
-      ]
+      ],
+      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
     },
     "proposed_achievements": [
       {
@@ -336,7 +350,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "Half the building just stopped existing and you're still sprinting. Commitment! The Dean's still at the end of it, and he doesn't care what you left behind.",
+          "text": "Route logged: advance toward the stage. Mid-zone services are offline. Stairwell remains behind the stage.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -345,6 +359,10 @@
         },
         "win": {
           "text": "Past the dark and onto the stage. You made it with a light bag and a heavy heart. Statistically, that's a good day.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Half the building just stopped existing and you're still sprinting. Commitment! The Dean's still at the end of it, and he doesn't care what you left behind.",
           "tag": "[PLAYER-FACING]"
         }
       }
@@ -379,7 +397,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "Last call on the middle of the building. The bait stairs, the locker room and the gallery are gone by morning. Grab what you want and run.",
+          "text": "Route logged: remaining open-zone loot before mid-zone close. Terminal key is on its last day.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -388,6 +406,10 @@
         },
         "win": {
           "text": "You dragged half the day's value out before the doors shut. The System calls it 'theft'. The audience calls it 'content'.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Last call on the middle of the building. The bait stairs, the locker room and the gallery are gone by morning. Grab what you want and run.",
           "tag": "[PLAYER-FACING]"
         }
       }
@@ -418,7 +440,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "Today the terminal's offering one last special on the key. While supplies last, which is until tomorrow. Pay, sneak or scout the stage. The clever Crawler does all three.",
+          "text": "Route logged: last call at vendors and terminal. Priced bypasses remain available today.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -427,6 +449,10 @@
         },
         "win": {
           "text": "You walked in with a plan and out with an edge. The System checked for loopholes. It found yours and gave a grudging nod.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Today the terminal's offering one last special on the key. While supplies last, which is until tomorrow. Pay, sneak or scout the stage. The clever Crawler does all three.",
           "tag": "[PLAYER-FACING]"
         }
       }
@@ -559,7 +585,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "LAST CALL at the Snakk-Matic. Everything must go, mostly your credits.",
+          "text": "LAST CALL. Snakk-Matic and vendor services close at end of day. Complete purchases now.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -568,6 +594,10 @@
         },
         "win": {
           "text": "Receipts printed, shelves bare. Tomorrow the machine goes dark and the coffee finally wins.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Everything must go, mostly your credits.",
           "tag": "[PLAYER-FACING]"
         }
       },
@@ -769,7 +799,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "The hall is closing and so is your window. Rats and worse are leaving the zones that were turned off, and they're all headed your way.",
+          "text": "Zone-close traffic. Hostile units are exiting offline zones into this hall. Clear the corridor.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -778,6 +808,10 @@
         },
         "win": {
           "text": "Hall cleared, shutters stopped. The zone behind you is gone for good. Keep moving.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "The hall is closing and so is your window. Rats and worse are leaving the zones that were turned off, and they're all headed your way.",
           "tag": "[PLAYER-FACING]"
         }
       },
@@ -834,7 +868,7 @@
       ],
       "zone_color": {
         "tag": "inspired",
-        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1, own words, optional read-aloud)",
+        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd…, own words, optional read-aloud)",
         "lines": [
           {
             "text": "The walls start shedding old posters and warning signs. Under them is raw stone with tally marks scratched by earlier Crawlers. Some tallies stop mid-row.",
@@ -845,7 +879,11 @@
             "tag": "[PLAYER-FACING]"
           },
           {
-            "text": "Emergency lights flip from white to a tired orange. The recorded voice announces the closing zone at the same cheerful volume as everything else.",
+            "text": "Zone closing.",
+            "tag": "[PLAYER-FACING]"
+          },
+          {
+            "text": "Emergency lights flip from white to a tired orange. The recorded voice uses the same cheerful volume as everything else. Underpromise, over-demolish.",
             "tag": "[PLAYER-FACING]"
           },
           {
@@ -958,7 +996,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "The wings. Where heroes wait and stagehands judge them. Take notes. The pit is right there.",
+          "text": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -967,6 +1005,10 @@
         },
         "win": {
           "text": "You've seen enough. The stage is a plan, now, and not a surprise.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "The wings. Where heroes wait and stagehands judge them. Take notes. The pit is right there.",
           "tag": "[PLAYER-FACING]"
         }
       },
@@ -1069,7 +1111,7 @@
     {
       "owner": "Lore",
       "item": "Canon table, collapse notices, missed-floor line and zone color",
-      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
+      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md v0.2 (sha256 d23a39b90cbe…; Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames; voice-split), floor1-zone-color.draft.md v0.2 (sha256 a1ef4c1cedbd…; read-aloud color) and floor1-dean-thudd-intro.draft.md v0.2 (sha256 d821d0839503…). If Lore edits any of them, re-run the script.",
       "status": "received"
     },
     {
@@ -1080,13 +1122,30 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "3c272ca334e1a80cff6bcce93483581fbfe7e993dc52c901770b241c8bd06cab",
+    "expected_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.11"
+    "version": "0.1.14"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",
     "version": "1.3.1",
     "expected_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e"
+  },
+  "lore_drafts": {
+    "collapse_notices": {
+      "path": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "version": "0.2",
+      "expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
+    },
+    "zone_color": {
+      "path": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
+      "version": "0.2",
+      "expected_sha256": "a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4"
+    },
+    "achievement_suggestions_days_02_05": {
+      "path": "/workspace/dcc-lore/drafts/achievement-suggestions-days-02-05-lore-pass.md",
+      "version": "0.2",
+      "expected_sha256": "216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146"
+    }
   }
 }
