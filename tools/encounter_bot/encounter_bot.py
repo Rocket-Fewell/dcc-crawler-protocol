@@ -687,10 +687,13 @@ def build(spec, data, rep):
             rep.ok("saferoom rule", "Break Room not a saferoom from Day %s; the Green Room is the only saferoom to the end" % sr["break_room_not_saferoom_from_day"])
         else:
             rep.fail("saferoom rule", "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room")
-    elif sr.get("text"):
-        rep.ok("saferoom rule", "floor %s names its own saferoom; the Floor 1 Green Room check is not applied" % spec["meta"].get("floor"))
     else:
-        rep.warn("saferoom rule", "no saferoom_rule text; the Floor 1 Green Room check is not applied")
+        day_ = sr.get("break_room_not_saferoom_from_day")
+        if sr.get("only_saferoom") and isinstance(day_, int) and not isinstance(day_, bool) and sr.get("text"):
+            rep.ok("saferoom rule", "floor %s saferoom %s; break room not a saferoom from day %s (99 = never); Floor 1 Green Room check not applied" % (
+                spec["meta"].get("floor"), sr.get("only_saferoom"), day_))
+        else:
+            rep.fail("saferoom rule", "floor %s needs saferoom_rule.only_saferoom, break_room_not_saferoom_from_day (int, 99 = never), and text" % spec["meta"].get("floor"))
     if "Silver" in clock.get("achievement_caps", "") and "Story Box" in clock.get("achievement_caps", "") and "snark" in clock.get("achievement_caps", ""):
         rep.ok("achievement caps noted", "soft cap, Silver ceiling, one Story Box per floor, snark-only allowed")
     else:
@@ -1257,11 +1260,20 @@ def build(spec, data, rep):
             overlap.append(w)
     rep.ok("voice lines are original (no 10-word run copied from the overview)") if not overlap \
         else rep.fail("voice lines copy the overview", ", ".join(overlap))
-    too_long = ["%s (%d sentences)" % (w, len(sentences(t_))) for w, t_, sp in pfb if not sp and len(sentences(t_)) > MAX_SENTENCES]
-    if too_long:
-        for m_ in too_long:
-            rep.warn("read-aloud length", "%s: over %d sentences and not tagged set_piece (soft guideline)" % (m_, MAX_SENTENCES))
-    else:
+    too_long = []
+    for w, t_, sp in pfb:
+        if sp:
+            continue
+        n_ = len(sentences(t_))
+        if n_ > MAX_SENTENCES:
+            too_long.append((w, n_))
+    hard_ = [pair for pair in too_long if pair[1] > 10]
+    soft_ = [pair for pair in too_long if pair[1] <= 10]
+    for w, n_ in hard_:
+        rep.fail("read-aloud length", "%s: %d sentences, past 10 and not tagged set_piece" % (w, n_))
+    for w, n_ in soft_:
+        rep.warn("read-aloud length", "%s: %d sentences, over %d and not tagged set_piece (soft guideline)" % (w, n_, MAX_SENTENCES))
+    if not too_long:
         rep.ok("read-aloud blocks are %d sentences or fewer" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
     sps = [w for w, _, sp in pfb if sp]
     if len(sps) > 1:
