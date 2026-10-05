@@ -20,10 +20,14 @@ do
 done
 
 tables=/workspace/dcc-campaign/tables
+if mountpoint -q "$tables"; then
+  sudo umount "$tables"
+fi
 if [ -L "$tables" ]; then
   rm "$tables"
 fi
 mkdir -p "$tables"
-if ! mountpoint -q "$tables"; then
-  sudo mount --bind /workspace/tables "$tables"
-fi
+# A bind mount is not stored in the environment snapshot. Keep a real copy on
+# disk, then mount the live tables over it when this machine is running.
+rsync -a --delete /workspace/tables/ "$tables/"
+sudo mount --bind /workspace/tables "$tables"
