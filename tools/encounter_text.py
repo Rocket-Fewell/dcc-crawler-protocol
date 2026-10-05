@@ -22,9 +22,10 @@ import sys
 CAMPAIGN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GM_HEADER = "GM ONLY - DO NOT POST"
 SYSTEM_TAG, GM_TAG = "**[SYSTEM]** ", "**[GM]** "
-# Allow-list only (mirrors extract.js). Unknown/new kinds (incl. Encounter Bot gm_color) = GM narration. Decision 032 / Caleb Oct 5 2026.
-# Safety net: kind == "gm_color" OR path ending in "/gm_color" is always GM, even if a stale manifest still says voice_line.
-SYSTEM_KINDS = {"voice_line", "route_voice_line", "system_notice", "exit_warning_read_aloud"}
+# Allow-list only (mirrors extract.js). ONLY system_notice + exit_warning_read_aloud are System.
+# voice_line, route_voice_line, gm_narration, gm_color, and unknown kinds → GM. Decision 032 / agreed Oct 5 2026.
+# Safety net: kind == "gm_color" OR path ending in "/gm_color" is always GM (even if mis-tagged as system_notice).
+SYSTEM_KINDS = {"system_notice", "exit_warning_read_aloud"}
 GM_SKIP_KEYS = {"tag", "audience", "audience_default"}   # rendering noise in --gm output
 
 

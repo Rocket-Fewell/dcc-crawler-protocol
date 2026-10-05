@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.11 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.13 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -424,3 +424,15 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 # Pass 30 (2026-10-05 CT): Core Book magic-item shortlist v0.1
 
 - Wrote drafts/core-book-magic-items-v0.1.md (sha256 300717bd77df4d5e81f7a941e4449e57454ff474dd72cdc77d1450dcbb699df1) and .json (sha256 9900c7394fd8bc141d2a0e2bc9ad40c4e482baff1182176452b12158dda09067): 50 entries for Valtay Ch.6. Tags {'CANON': 21, 'HOUSE': 6, 'SRD': 23}. Deck cross-refs for six F01 cards; skipped needs_verify + wiki-only + late celestials.
+
+---
+# Pass 31 (2026-10-05 CT): Core Book monster table v0.1
+
+- Wrote drafts/core-book-monster-table-v0.1.md (sha256 e325850cfed5ff0c197caff072e106f54613d817be0400c5bbdb40bb60315178) and .json (sha256 fd47ce83adf719ee9e39873e371823c868b738a0596be3e5715d9a8bfed999db): 60 entries. Status {'READY': 47, 'STUB-ONLY': 9, 'OPEN-CONFLICT': 4}. Conflicts ['X-059', 'X-060', 'X-063', 'X-080', 'rb-03']. Ten F01 stubs keep exact Encounter Bot SRD maps. No campaign edits.
+
+---
+# Pass 32 (2026-10-05 CT): Monster table v0.2 + F3–7 bestiary v0.1
+
+- Caleb rulings folded: X-059/060/063/080 → closers X-081..X-084 / M-762..M-765. Monster table `drafts/core-book-monster-table-v0.2` (sha256 aab24a95f9b3… / a21ca645bfbb…).
+- F3–7 bestiary `drafts/core-book-bestiary-f3-f7-v0.1` (94 rows; sha256 2181aceb6409… / c06a12cc2be0…).
+- CANON-LEDGER.md → v1.16 section 9.6. ledger_build.py not run. No campaign edits.

@@ -3,7 +3,7 @@ Owner: Syndicate | Status: draft | Version: 0.1 | Updated: 2026-10-04
 Summary: Findings only. Compares the `plain_mechanics` of every non-HOUSE card in the five Floor 1 loot decks (`tables/loot-decks/f01-*.json`, owned by DCC Lore, not edited) with the free SRD 5.2.1 (CC-BY-4.0). Table of card id, claim, result (OK / DIFF / NOT IN SRD), corrected text, plus a summary and the follow-ups for DCC Lore.
 Depends on: rules/40-loot-deck-spec-5e.md v0.1.2 (stat reference, already checked against the same SRD), the five deck files in tables/loot-decks/. Consumers: DCC Lore (owns the decks and decides what to change), AI GM, Valtay Corp.
 
-> **Status:** DRAFT. This file only reports. No deck file was changed. The decks live in /workspace/dcc-lore/tables/loot-decks/ and belong to DCC Lore.
+> **Status:** DRAFT. This file only reports. No deck file was changed. The decks live in tables/loot-decks/ and belong to DCC Lore.
 > **Method:** SRD 5.2.1 PDF (media.dndbeyond.com, Wizards of the Coast, CC-BY-4.0) read in full for each card's item or spell. Wording below is paraphrased; no SRD text is copied. HOUSE cards (21) have no 5e mechanics to check and are skipped. **NOT IN SRD** = the item is not in SRD 5.2.1, so it cannot be confirmed from the SRD; where a secondary 2024 DMG listing exists it is noted but is not an official source.
 
 ## Summary

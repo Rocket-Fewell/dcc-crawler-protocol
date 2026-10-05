@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """One-shot dev patch (kept for the record): applies decision 026 final rulings + Lore's collapse-notice draft
-to floors/f01/day-0N.spec.json. Run from floors/f01/. Pure local, no model calls.
+to floors/f01/day-0N.spec.json. Run from anywhere (spec paths come from tools/dcc_paths.py). Pure local, no model calls.
 Current ruling (Caleb, decision 026 ~10:02 PM CT; decisions/028): missing the floor collapse = the Crawler is dead, game over, on EVERY floor including Floor 1,
 no Reprieve; NPCs and the AI go into stasis and lose nothing. The Detour Tax covers only a missed Stairwell key. This script no longer writes any
 soft-penalty missed-collapse default."""
-import json, copy
+import json, copy, os, sys
+# Portable paths (fresh-checkout safe): campaign root via tools/dcc_paths.py, never a box-only absolute path.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))  # tools/
+import dcc_paths  # noqa: E402
+SPEC_DIR = os.path.join(dcc_paths.CAMPAIGN_ROOT, "floors", "f01")
 
 PT = "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
 REW = "[REWARD: slot for Syndicate; snark-only allowed]"
@@ -48,7 +52,7 @@ PENDING = [
   "waiting_for": "Floor 1 is 5 (field set), Floor 2 is 10, Floor 3 is 15 or 20 (Caleb to pick). Page text takes the day count from the field; nothing is hard-coded.",
   "status": "Floor 1 set; Floor 3 open (Caleb)"},
  {"owner": "Lore", "item": "Canon table and collapse-notice draft",
-  "waiting_for": "Received and used: /workspace/dcc-lore/tables/canon-floor-1.json (rebuilt; sha256 and ledger version recorded in the page meta) and /workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (draft v0.1: Day 2 to 5 notices, six-hours warning, missed-floor line, achievement frames). If Lore edits either, re-run the script.",
+  "waiting_for": "Received and used: lore/tables/canon-floor-1.json (rebuilt; sha256 and ledger version recorded in the page meta) and lore/drafts/floor1-collapse-notices.draft.md (draft v0.1: Day 2 to 5 notices, six-hours warning, missed-floor line, achievement frames). If Lore edits either, re-run the script.",
   "status": "received"},
  {"owner": "Syndicate", "item": "Rewards for the six proposed achievements; ACH rows for canon A-044, A-151 and A-139",
   "waiting_for": "Each proposed achievement (Hold Please, Last One Out, Early Withdrawal, Detour Tax, Read the Fine Print, Slow Learner) has a reward slot; snark-only is allowed and the floor caps apply. A-044/A-151/A-139 stay canon references only until ACH rows are added (A-044 is not attainable on Floor 1; A-151 only in the stasis form).",
@@ -68,11 +72,11 @@ def add(e, *items):
 
 BR_SAFE = "Honest saferoom through Day 3; it stops being a saferoom when it loses service on Day 4 (decision 026)."
 for n in range(1, 6):
-    fn = "day-%02d.spec.json" % n
+    fn = os.path.join(SPEC_DIR, "day-%02d.spec.json" % n)
     s = json.load(open(fn))
     m, c, d = s["meta"], s["clock"], s["day"]
     m["version"] = "0.3" if n == 1 else "0.2"
-    src = "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)"
+    src = "lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)"
     if src not in m["sources"]:
         m["sources"].append(src)
     if n > 1 and "Lore's draft notices" not in m["summary"]:

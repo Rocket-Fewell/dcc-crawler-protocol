@@ -1,14 +1,12 @@
 {
- "version": "0.1.3",
- "sha256": "c0e7d1f5ab860cf7d03f486c156602875cd6b6821af2651c4e51f57e419f3cae",
- "built_at": "2026-10-04T21:39:37-05:00",
+ "version": "0.1.4",
+ "sha256": "31ca335b476402dcc09d3ad9ef5b65eac6ded95f5a1ed4500f7831cc56cb9a0b",
+ "built_at": "2026-10-05T15:11:56-05:00",
  "entry_count": 201,
- "note": "v0.1.3: cp rule resolved (money-cp-rule), new row hint-money-cp, needs_code detail on both money rows",
+ "note": null,
  "diff": {
-  "since_version": "0.1.2",
-  "added": [
-   "hint-money-cp"
-  ],
+  "since_version": "0.1.3",
+  "added": [],
   "removed": [],
   "renamed": []
  },
@@ -19,7 +17,7 @@
    "total_keys": 38
   },
   "tables/create-screens-reskins.audit.md": {
-   "sha256": "4b7f6984a591a20f83f177c802719a9691bebc14132c2516886f36f2f3918e33"
+   "sha256": "fe9643f80bbf1ee015979fb9afaba8c77eb95f10b91ba75dcb77546e8ce60df2"
   }
  },
  "snapshot": {

@@ -26,7 +26,7 @@ The ledger is `CANON-LEDGER.md` in this folder (reachable as `lore/CANON-LEDGER.
 | Prefix | Section | Last used | Next free |
 |---|---|---|---|
 | A- | 1 Achievements | A-190 | A-191 |
-| M- | 2 Mechanics rulings (also sec 13–17 process; sec 9.1 Floor 1 creatures/hazards; sec 9.2 Floor 2 rules/creatures/NPCs; sec 9.3 premise verification; sec 9.4 Floor 3; sec 9.5 Floor 2 refinement) | M-733 | M-734 |
+| M- | 2 Mechanics rulings (also sec 13–17 process; sec 9.1 Floor 1 creatures/hazards; sec 9.2 Floor 2 rules/creatures/NPCs; sec 9.3 premise verification; sec 9.4 Floor 3; sec 9.5 Floor 2 refinement; sec 9.6 Floors 3–7 bestiary) | M-765 | M-766 |
 | L- | 3 Loot box facts (also sec 13 examples) | L-023 (L-023 sits in sec 3 after L-020; L-021..L-022 are in sec 13) | L-024 |
 | L-B | 3b Loot box type index | (see table) | L-B76 (L-B01..L-B75 used) |
 | S- / P- / I- / C- / R- | 4a Skills / 4b Spells / 4c Items (I- also sec 13–14) / 4d Classes (C- also sec 12) / 4e Races (R- also sec 11) | S-018 / P-016 / I-035 / C-050 / R-081 | S-019 / P-017 / I-036 / C-051 / R-082 |

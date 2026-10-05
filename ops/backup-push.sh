@@ -21,9 +21,11 @@ git add -A --force
 # safety checks (on the staged tree): credentials only
 python3 ops/check_repo_safe.py --staged
 # Secret grep. gm-notes/secret/ is skipped by design (GM etiquette: roll/affinity data, never read; copied byte-for-byte).
-if git ls-files -z -- . ':(exclude)gm-notes/secret' | xargs -0 grep -IlE \
-   -e 'github_pat_[A-Za-z0-9_]{20,}' -e 'gh[pousr]_[A-Za-z0-9]{30,}' -e 'sk-[A-Za-z0-9_-]{20,}' -e 'sk_[0-9a-f]{40,}' \
-   -e 'discord(app)?\.com/api/(v[0-9]+/)?webhooks/[0-9]+' -e '[MNO][A-Za-z0-9_-]{23,27}\.[A-Za-z0-9_-]{6,7}\.[A-Za-z0-9_-]{27,}' ; then
+# -- ends options so a tracked file named like --help cannot make grep print usage (and trip this check).
+if git ls-files -z -- . ':(exclude)gm-notes/secret' | xargs -0 -r sh -c 'grep -IlE \
+   -e "github_pat_[A-Za-z0-9_]{20,}" -e "gh[pousr]_[A-Za-z0-9]{30,}" -e "sk-[A-Za-z0-9_-]{20,}" -e "sk_[0-9a-f]{40,}" \
+   -e "discord(app)?\.com/api/(v[0-9]+/)?webhooks/[0-9]+" -e "[MNO][A-Za-z0-9_-]{23,27}\.[A-Za-z0-9_-]{6,7}\.[A-Za-z0-9_-]{27,}" \
+   -- "$@"' sh ; then
   echo "STOP: secret-looking pattern found in files listed above" >&2; exit 1
 fi
 if [ -n "${DRY_RUN:-}" ]; then

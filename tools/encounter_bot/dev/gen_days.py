@@ -1,5 +1,9 @@
-import json, copy
-base=json.load(open('day-01.spec.json'))
+import json, copy, os, sys
+# Portable paths (fresh-checkout safe): campaign root via tools/dcc_paths.py, never a box-only absolute path.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))  # tools/
+import dcc_paths  # noqa: E402
+SPEC_DIR = os.path.join(dcc_paths.CAMPAIGN_ROOT, "floors", "f01")
+base=json.load(open(os.path.join(SPEC_DIR, 'day-01.spec.json')))
 PF="[PLAYER-FACING]"
 BUD="[BUDGET: cite rules/70-encounter-budget-5e.json when filed]"
 CR="[CR: see 00-overview.md section 9; pending rules/70-encounter-budget-5e.json]"
@@ -53,7 +57,7 @@ def mkday(n,title,summary,start,startname,startnote,today,notice,tomorrow,rest,c
     sk=copy.deepcopy(base['stairwell_key'])
     if key_edit: key_edit(sk)
     s['stairwell_key']=sk; s['encounters']=encs; s['pending_inputs']=copy.deepcopy(base['pending_inputs'])
-    json.dump(s,open('day-%02d.spec.json'%n,'w'),indent=2,ensure_ascii=False)
+    json.dump(s,open(os.path.join(SPEC_DIR, 'day-%02d.spec.json'%n),'w'),indent=2,ensure_ascii=False)
 
 REST_GR={"option":"Green Room (Z9) saferoom","note":"Honest saferoom and open to the end of the floor (inspired). Short Rests and the Long Rest that closes the day."}
 REST_BR_OPEN={"option":"Break Room (Z6) saferoom","note":"Honest saferoom through Day 3; the terminal, vendors and corkboard stop on Day 4."}

@@ -14,12 +14,11 @@ export const MAX_MESSAGES = 12;       // refuse to preview more than this at onc
 export const SYSTEM_TAG = '**[SYSTEM]** ';
 export const GM_TAG = '**[GM]** ';
 
-/** Voice by manifest kind (decision 032 / Caleb Oct 5 2026): dry System lines get **[SYSTEM]**; everything else is narrator/GM.
- * SYSTEM_KINDS is an allow-list only. Unknown or new kinds (including Encounter Bot's `gm_color` optional joke beats) are narration — never System.
- * Achievements and loot-box color are GM. Collapse/exit warnings stay System.
- * Safety net: any entry whose kind is `gm_color` OR whose path ends with `/gm_color` is always GM voice, even if a stale
- * manifest still labels it `voice_line` / `route_voice_line` (Encounter Bot is fixing those kinds at the source). */
-export const SYSTEM_KINDS = new Set(['voice_line', 'route_voice_line', 'system_notice', 'exit_warning_read_aloud']);
+/** Voice by manifest kind (decision 032 / agreed Oct 5 2026): dry System lines get **[SYSTEM]**; everything else is narrator/GM.
+ * SYSTEM_KINDS allow-list is ONLY `system_notice` and `exit_warning_read_aloud`.
+ * `voice_line`, `route_voice_line`, `gm_narration`, `gm_color`, achievements, loot, and any unknown kind → GM.
+ * Safety net: kind `gm_color` OR path ending `/gm_color` is always GM (even if mis-tagged as system_notice). */
+export const SYSTEM_KINDS = new Set(['system_notice', 'exit_warning_read_aloud']);
 
 /** True when this manifest entry is GM color (kind or path), regardless of a mis-tagged System kind. */
 export function isGmColor(e) {

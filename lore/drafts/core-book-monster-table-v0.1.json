@@ -1,0 +1,1234 @@
+{
+  "schema": "dcc-lore/core-book-monster-table/0.1",
+  "title": "Core Book Chapter 12 — Monster Table",
+  "version": "0.1",
+  "updated": "2026-10-05",
+  "owner": "DCC Lore",
+  "audience": "Core Book Author (Valtay); player-facing Core Rulebook",
+  "scope_note": "Starts from 10 playable Floor 1 Encounter Bot stubs (exact SRD ids), then Floor 1–2 canon-floor tables. Skip unverified-only roster rows (Thorn Cadaver, Hobgoblin maze, dingo-control spell). NPCs (Maestro, Mexx-55, Team Li Na, Mind Horror guides, Mongo pet prize) omitted from this combat table.",
+  "entry_count": 60,
+  "counts": {
+    "by_floor": {
+      "1": 44,
+      "2": 16
+    },
+    "by_tag": {
+      "INSPIRED": 10,
+      "CANON": 50
+    },
+    "by_status": {
+      "READY": 47,
+      "STUB-ONLY": 9,
+      "OPEN-CONFLICT": 4
+    }
+  },
+  "open_conflicts_cited": [
+    "X-059",
+    "X-060",
+    "X-063",
+    "X-080",
+    "rb-03"
+  ],
+  "entries": [
+    {
+      "id": "cmm-001",
+      "display_name": "Vent Rat",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-vent-rat; analog M-265/M-266",
+      "source_row": "hmob-vent-rat",
+      "srd_name": "Giant Rat",
+      "srd_id": "giant-rat",
+      "cr": "1/8",
+      "mapping_note": "Exact Encounter Bot Floor 1 mapping (enc-d01-08 / budget z02).",
+      "flavor": "Ankle specialists from the HVAC. They hiss like the ducts are laughing at you.",
+      "reskin_tweaks": "Poisonous bite flavor only if you also run the canon Rat; otherwise SRD Giant Rat as written.",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-002",
+      "display_name": "Mannequin Staff",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-mannequin-staff; M-273",
+      "source_row": "hmob-mannequin-staff",
+      "srd_name": "Skeleton",
+      "srd_id": "skeleton",
+      "cr": "1/4",
+      "mapping_note": "Exact Encounter Bot mapping (enc-d01-11 / budget z05).",
+      "flavor": "Department-store smiles glued to wrong bones. The polo shirts are a war crime.",
+      "reskin_tweaks": "Vulnerable to bludgeoning as Skeleton. Bows and staff badges, not rusted swords.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-003",
+      "display_name": "Exit Greeter",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-exit-greeter; analog M-286/M-287",
+      "source_row": "hmob-exit-greeter",
+      "srd_name": "Goblin Warrior",
+      "srd_id": "goblin-warrior",
+      "cr": "1/4",
+      "mapping_note": "Exact Encounter Bot mapping (enc-d01-02 / budget z07).",
+      "flavor": "Clipboard, EXIT-sign hat, customer-service voice. The ambush is the only honest part of the job.",
+      "reskin_tweaks": "None required beyond nameplate.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-004",
+      "display_name": "Exit Greeter (Trainee)",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-exit-greeter-trainee",
+      "source_row": "hmob-exit-greeter-trainee",
+      "srd_name": "Goblin Minion",
+      "srd_id": "goblin-minion",
+      "cr": "1/8",
+      "mapping_note": "Exact Encounter Bot mapping (enc-d01-02 / budget z07).",
+      "flavor": "Same smile, worse benefits. Dies for tips the veteran will steal.",
+      "reskin_tweaks": "None.",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-005",
+      "display_name": "Bruiser the Mascot (Unoccupied)",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "elite",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-bruiser-mascot; M-273/M-274",
+      "source_row": "hmob-bruiser-mascot",
+      "srd_name": "Animated Armor",
+      "srd_id": "animated-armor",
+      "cr": "1",
+      "mapping_note": "Exact Encounter Bot mapping (enc-d01-03 / budget z08).",
+      "flavor": "Empty pit-bull costume with opinions. Foam outside, felony inside.",
+      "reskin_tweaks": "Describe padded foam shell; stats remain Animated Armor.",
+      "xp": 200,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-006",
+      "display_name": "Lanyard Blade",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-lanyard-blade",
+      "source_row": "hmob-lanyard-blade",
+      "srd_name": "Animated Flying Sword",
+      "srd_id": "animated-flying-sword",
+      "cr": "1/4",
+      "mapping_note": "Exact Encounter Bot mapping (enc-d01-03 / budget z08).",
+      "flavor": "An ID badge that files itself in your arteries. HR finally found a use for compliance.",
+      "reskin_tweaks": "Cosmetic: plastic badge on a razor lanyard.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-007",
+      "display_name": "Ceiling Tick",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-ceiling-tick",
+      "source_row": "hmob-ceiling-tick",
+      "srd_name": "Stirge",
+      "srd_id": "stirge",
+      "cr": "1/8",
+      "mapping_note": "Exact Encounter Bot mapping (wandering / Days 2–4).",
+      "flavor": "Ceiling girlfriend energy. Attaches, drinks, reviews your hemoglobin.",
+      "reskin_tweaks": "None beyond nameplate. Cannot enter saferooms.",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-008",
+      "display_name": "Usher",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hmob-usher",
+      "source_row": "hmob-usher",
+      "srd_name": "Skeleton",
+      "srd_id": "skeleton",
+      "cr": "1/4",
+      "mapping_note": "Exact Encounter Bot mapping (enc-d04-03 / enc-d05-03 / budget z10).",
+      "flavor": "Flashlight, hush tone, zero mercy. Shows you to your seats and then to your grave.",
+      "reskin_tweaks": "Flashlights instead of shortswords if you want the bit; damage can stay piercing.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-009",
+      "display_name": "Dean Thudd, Head of Orientation",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hboss-dean-thudd",
+      "source_row": "hboss-dean-thudd",
+      "srd_name": "Ogre",
+      "srd_id": "ogre",
+      "cr": "2",
+      "mapping_note": "Exact Encounter Bot mapping Variant A (enc-d05-03 / budget z10). House stage boss.",
+      "flavor": "Oversized academic who flunks Crawlers with a podium. The group-photo attack is telegraphed and still somehow your fault.",
+      "reskin_tweaks": "Greatclub as podium/flagpole. One telegraphed AoE \"class photo\" slam (house telegraph; same damage budget as Ogre greatclub).",
+      "xp": 450,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-010",
+      "display_name": "Dean Thudd (JV)",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "INSPIRED",
+      "status": "READY",
+      "canon_ref": "tables/canon-floor-1 hboss-dean-thudd (Variant B)",
+      "source_row": "hboss-dean-thudd",
+      "srd_name": "Bugbear Warrior",
+      "srd_id": "bugbear-warrior",
+      "cr": "1",
+      "mapping_note": "Exact Encounter Bot mapping Variant B for level-1 dash parties (enc-d05-03).",
+      "flavor": "Same tenure, smaller grant. Still wants you off the stage.",
+      "reskin_tweaks": "Use instead of Ogre Dean when the party is still level 1.",
+      "xp": 200,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-011",
+      "display_name": "Rat",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-265; M-266",
+      "source_row": "mob-rat",
+      "srd_name": "Giant Rat",
+      "srd_id": "giant-rat",
+      "cr": "1/8",
+      "mapping_note": "House mapping (same SRD family as Vent Rat; this is the floor-wide janitor).",
+      "flavor": "Janitors with teeth. They eat the dead because nobody else applied for the job.",
+      "reskin_tweaks": "Add poison on bite (DC 10 Con, 1d4 poison) to match poisonous-bite lore; pack tactics as SRD.",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-012",
+      "display_name": "Scatterer",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-267",
+      "source_row": "mob-scatterer",
+      "srd_name": "Swarm of Insects",
+      "srd_id": "swarm-of-insects",
+      "cr": "1/2",
+      "mapping_note": "House mapping: bread-loaf cockroach swarm ≈ insect swarm.",
+      "flavor": "Cockroaches the size of lunch meat with union density. Step on one, interview the rest.",
+      "reskin_tweaks": "Reskin visuals to cockroaches; keep swarm resistances and bite.",
+      "xp": 100,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-013",
+      "display_name": "Scatterer Brood Guardian",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-268",
+      "source_row": "mob-scatterer-brood-guardian",
+      "srd_name": "Giant Centipede",
+      "srd_id": "giant-centipede",
+      "cr": "1/4",
+      "mapping_note": "House mapping: cat-sized charging cockroach ≈ giant centipede.",
+      "flavor": "The middle manager of the nest. Faster, meaner, still a bug.",
+      "reskin_tweaks": "Poison bite as centipede; describe as oversized cockroach.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-014",
+      "display_name": "The Hoarder",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "B-001; M-269; M-271",
+      "source_row": "boss-hoarder",
+      "srd_name": "Ogre",
+      "srd_id": "ogre",
+      "cr": "2",
+      "mapping_note": "House mapping. Signature: vomit Scatterers; choke the mouth to stop the flow.",
+      "flavor": "Garbage troll with a recycling policy written in bile. One trick, one weakness, infinite trash.",
+      "reskin_tweaks": "Once per round while mouth free: vomit 1 Scatterer swarm (or 1d4 individual cockroach tokens). Blocking/stuffing the mouth stops spawns. Door seals the arena.",
+      "xp": 450,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-015",
+      "display_name": "Goblin",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-286; M-287",
+      "source_row": "mob-goblin",
+      "srd_name": "Goblin Warrior",
+      "srd_id": "goblin-warrior",
+      "cr": "1/4",
+      "mapping_note": "House mapping (same SRD as Exit Greeter; this is the clan version).",
+      "flavor": "Pineapple clubs and collective revenge. Kill one, interview the whole HOA.",
+      "reskin_tweaks": "Clubs over scimitars if you want the pineapple bit; damage stays bludgeoning.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-016",
+      "display_name": "Goblin Engineer",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-288",
+      "source_row": "mob-goblin-engineer",
+      "srd_name": "Goblin Warrior",
+      "srd_id": "goblin-warrior",
+      "cr": "1/4",
+      "mapping_note": "House mapping + operator trait.",
+      "flavor": "Weird hat, worse OSHA record. If the Murder Dozer is rolling, this is who put the key in.",
+      "reskin_tweaks": "While piloting the Murder Dozer, use the Dozer entry instead. On foot: Goblin Warrior with thieves' tools flavor.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-017",
+      "display_name": "Goblin Bomb Bard",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-290; I-013",
+      "source_row": "mob-goblin-bomb-bard",
+      "srd_name": "Goblin Warrior",
+      "srd_id": "goblin-warrior",
+      "cr": "1/4",
+      "mapping_note": "House mapping; ranged explosives.",
+      "flavor": "Percussion section for people who hate buildings. Sparking bombs, zero encore.",
+      "reskin_tweaks": "Replace shortbow with thrown Goblin Dynamite / alchemist's fire (same attack bonus). Explosives inert in saferooms.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-018",
+      "display_name": "Goblin Shamanka",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-291",
+      "source_row": "mob-goblin-shamanka",
+      "srd_name": "Priest",
+      "srd_id": "priest",
+      "cr": "2",
+      "mapping_note": "House mapping: clan caster. Priest is a judgment call for a focused-blast shaman.",
+      "flavor": "Clan magic with a blast radius and a god nobody invited. Loud faith, louder boom.",
+      "reskin_tweaks": "Swap radiant spells for fire/force blasts of equal level slots; keep CR 2 action economy. Drop if too hot for early F1 and use Goblin Warrior + 2× leveled slots instead.",
+      "xp": 450,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-019",
+      "display_name": "Goblin Murder Dozer",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-289",
+      "source_row": "mob-murder-dozer",
+      "srd_name": "Ogre",
+      "srd_id": "ogre",
+      "cr": "2",
+      "mapping_note": "House mapping: spiked steam juggernaut treated as a CR 2 construct chassis.",
+      "flavor": "Steam, spikes, and a recruitment poster for roadkill. It does not stop for pedestrians.",
+      "reskin_tweaks": "Construct immunities (poison, charm, fatigue). Replace greatclub with spiked ram (same damage, bludgeoning+piercing). Trample: move through hostile spaces, Dex save DC 12 or take ram damage once per turn.",
+      "xp": 450,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-020",
+      "display_name": "Goblin War Chieftain",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-293",
+      "source_row": "boss-goblin-war-chieftain",
+      "srd_name": "Hobgoblin Captain",
+      "srd_id": "hobgoblin-captain",
+      "cr": "3",
+      "mapping_note": "House mapping. Canon win is clever explosives (munitions cart), not a fair duel.",
+      "flavor": "Clan boss who expects a duel and deserves a munitions accident. Cleverness is the real DPS.",
+      "reskin_tweaks": "Keep Hobgoblin Captain chassis. Reward cart-of-explosives plans: environmental kill should be possible without a full HP slog.",
+      "xp": 700,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-021",
+      "display_name": "Bad Llama",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-295; M-296",
+      "source_row": "mob-bad-llama",
+      "srd_name": "Giant Goat",
+      "srd_id": "giant-goat",
+      "cr": "1/2",
+      "mapping_note": "House mapping (confidence WIKI-ONLY on lore row; still on canon-floor-1). Lava spit = fire damage.",
+      "flavor": "Horse-sized, meth-adjacent, lava-spitting livestock. Aim for the throat pouch like you mean it.",
+      "reskin_tweaks": "Replace charge gore once per short rest with a spit: ranged 30 ft, +4 to hit, 2d6 fire. Weak-point: critical hits or aimed shots to the pouch (called shot / vulnerable) deal max weapon die once per round.",
+      "xp": 100,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-022",
+      "display_name": "Rot Sticker",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-297; M-298",
+      "source_row": "mob-rot-sticker",
+      "srd_name": "Stirge",
+      "srd_id": "stirge",
+      "cr": "1/8",
+      "mapping_note": "House mapping: wall-running kamikaze ravioli.",
+      "flavor": "Pasta-shaped suicide with legs. Climbs walls, latches on, makes a point.",
+      "reskin_tweaks": "Climb speed 30 ft. On death while attached: 1d6 acid splash to the host (house death burst).",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-023",
+      "display_name": "Troglodyte Basher",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-301",
+      "source_row": "mob-troglodyte-basher",
+      "srd_name": "Troglodyte",
+      "srd_id": "troglodyte",
+      "cr": "1/4",
+      "mapping_note": "House mapping (SRD Troglodyte).",
+      "flavor": "Gym bro lizard with a weight-room smell. Hits like a kettlebell with daddy issues.",
+      "reskin_tweaks": "Keep stench; clubs/weights as melee.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-024",
+      "display_name": "Troglodyte Virtuoso",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-300",
+      "source_row": "mob-troglodyte-virtuoso",
+      "srd_name": "Troglodyte",
+      "srd_id": "troglodyte",
+      "cr": "1/4",
+      "mapping_note": "House mapping + reach poison tongue.",
+      "flavor": "Tiny conductor energy, whip tongue, poison encore. Reach is rude.",
+      "reskin_tweaks": "Add 10-ft tongue attack: +4, 1d4 piercing + DC 11 Con or poisoned until end of next turn. Slightly lower HP (−4) to pay for it.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-025",
+      "display_name": "Troglodyte Pygmy",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-302",
+      "source_row": "mob-troglodyte-pygmy",
+      "srd_name": "Giant Rat",
+      "srd_id": "giant-rat",
+      "cr": "1/8",
+      "mapping_note": "House mapping: tiny leaping biter on Giant Rat chassis.",
+      "flavor": "Pocket lizard. Leaps, bites, ruins personal space.",
+      "reskin_tweaks": "Describe as Tiny troglodyte; jump 20 ft as part of move without long-jump check once per turn.",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-026",
+      "display_name": "The Juicer",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "B-002; M-304; M-305",
+      "source_row": "boss-juicer",
+      "srd_name": "Ogre",
+      "srd_id": "ogre",
+      "cr": "2",
+      "mapping_note": "House mapping. Burning free weights; veins are the tell.",
+      "flavor": "Steroid lizard who benches flaming plates. Hit the veins before he hits your resume.",
+      "reskin_tweaks": "Replace javelin with flaming plate: ranged 30/60, +6, 2d6 bludgeoning + 1d6 fire. Called shots to strained veins: once per round a hit can impose disadvantage on his next attack (house). Arena doors seal; red lights; support trogs poison/tie up.",
+      "xp": 450,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-027",
+      "display_name": "Ball of Swine",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "borough boss",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "B-003; M-307; M-308",
+      "source_row": "boss-ball-of-swine",
+      "srd_name": "Ogre",
+      "srd_id": "ogre",
+      "cr": "2",
+      "mapping_note": "House mapping for the fused rolling formation; pop it to spill Tusklings.",
+      "flavor": "A rolling HOA of pig aristocrats. One attack pattern: become traffic.",
+      "reskin_tweaks": "Single HP pool (Ogre). Move + slam as trample (Dex DC 13, 2d8 bludgeoning). At 0 HP, splits into remaining Tusklings (see below) instead of dying clean.",
+      "xp": 450,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-028",
+      "display_name": "Tuskling Knight",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-311; M-324",
+      "source_row": "mob-tuskling-knight",
+      "srd_name": "Boar",
+      "srd_id": "boar",
+      "cr": "1/4",
+      "mapping_note": "House mapping: weak tuxedo pig once the ball pops.",
+      "flavor": "Tuxedo, tusks, no weapons, all entitlement. Catastrophic only in bulk.",
+      "reskin_tweaks": "Drop charge if you want them pathetic post-ball; keep gore.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-029",
+      "display_name": "Tuskling Courtesan",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-311",
+      "source_row": "mob-tuskling-courtesan",
+      "srd_name": "Boar",
+      "srd_id": "boar",
+      "cr": "1/4",
+      "mapping_note": "House mapping; slightly tougher than Knight.",
+      "flavor": "Gowned pig politics. Slightly more HP, same bad attitude.",
+      "reskin_tweaks": "+5 HP over Knight.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-030",
+      "display_name": "Tuskling Dominatrix",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "B-003",
+      "source_row": "mob-tuskling-dominatrix",
+      "srd_name": "Boar",
+      "srd_id": "boar",
+      "cr": "1/4",
+      "mapping_note": "House mapping; last pig standing / formation leader.",
+      "flavor": "Last Tuskling with a management title. Still a pig in boots.",
+      "reskin_tweaks": "+10 HP; pack leader: allies within 10 ft get +1 to attack while she lives.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-031",
+      "display_name": "Chilly Goat",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-318",
+      "source_row": "mob-chilly-goat",
+      "srd_name": "Giant Goat",
+      "srd_id": "giant-goat",
+      "cr": "1/2",
+      "mapping_note": "House mapping.",
+      "flavor": "White goat, fang mouth, winter branding. Bites like a blizzard with hooves.",
+      "reskin_tweaks": "Bite instead of horns if you want fangs; same damage, piercing.",
+      "xp": 100,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-032",
+      "display_name": "Scat Thug",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-319",
+      "source_row": "mob-scat-thug",
+      "srd_name": "Goblin Warrior",
+      "srd_id": "goblin-warrior",
+      "cr": "1/4",
+      "mapping_note": "House mapping: raccoon-headed spear goblin-tier.",
+      "flavor": "Raccoon face, spear, goblin pay grade. Trash-panda union enforcer.",
+      "reskin_tweaks": "Spear stats; otherwise Goblin Warrior.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-033",
+      "display_name": "Green Slime",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-320",
+      "source_row": "mob-green-slime",
+      "srd_name": "Gray Ooze",
+      "srd_id": "gray-ooze",
+      "cr": "1/2",
+      "mapping_note": "House mapping (acidic cloth-dissolving blob).",
+      "flavor": "Laundry day from hell. Dissolves cloth, skin, and optimism.",
+      "reskin_tweaks": "Emphasize acid; corrodes nonmagical armor on hit as Gray Ooze.",
+      "xp": 100,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-034",
+      "display_name": "Vine Creeper",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-321",
+      "source_row": "mob-vine-creeper",
+      "srd_name": "Constrictor Snake",
+      "srd_id": "constrictor-snake",
+      "cr": "1/4",
+      "mapping_note": "House mapping: pod-burst plant that swallows ≈ constrictor.",
+      "flavor": "Thorny plant that leaps from pods and tries to wear you as fertilizer.",
+      "reskin_tweaks": "Plant type; describe constriction as vine wrap. Optional: emerge from a pod as surprise.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-035",
+      "display_name": "Spine-Covered Wolf",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-316",
+      "source_row": "mob-spine-wolf",
+      "srd_name": "Dire Wolf",
+      "srd_id": "dire-wolf",
+      "cr": "1",
+      "mapping_note": "House mapping (seen early; thin detail).",
+      "flavor": "Wolf that lost an argument with a cactus. The spines are not decorative.",
+      "reskin_tweaks": "Melee attackers who hit it take 1d4 piercing (house spines).",
+      "xp": 200,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-036",
+      "display_name": "Fire Blob",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-316",
+      "source_row": "mob-fire-blob",
+      "srd_name": "Magmin",
+      "srd_id": "magmin",
+      "cr": "1/2",
+      "mapping_note": "House mapping.",
+      "flavor": "Shapeless flaming mood. Hugs are a war crime.",
+      "reskin_tweaks": "Keep Magmin ignition; drop death burst intensity if packs feel mean.",
+      "xp": 100,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-037",
+      "display_name": "Floating Stingray",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-316",
+      "source_row": "mob-floating-stingray",
+      "srd_name": "Giant Bat",
+      "srd_id": "giant-bat",
+      "cr": "1/4",
+      "mapping_note": "House mapping + Magic Missile eye-stalks.",
+      "flavor": "Hover-ray with eye-stalks that file Magic Missiles like expense reports.",
+      "reskin_tweaks": "Fly speed; once per turn cast magic missile at 1st level (force) instead of bite when it can see a target.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-038",
+      "display_name": "Floating Crystal",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-313",
+      "source_row": "boss-floating-crystal",
+      "flavor": "Neighborhood boss that looks like a hovering crystal. The ledger has the nameplate, not the fight.",
+      "mapping_note": "No fight description captured — do not invent attacks for print beyond a placeholder.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-039",
+      "display_name": "Street Preacher",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "borough boss",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-314",
+      "source_row": "boss-street-preacher",
+      "flavor": "Promoted by patch, still waiting on a sermon script. Nameplate yes, choreography no.",
+      "mapping_note": "Patched upward in tier; no fight description in canon-floor-1.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-040",
+      "display_name": "Blender Fiend (Patched Out)",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-315",
+      "source_row": "mob-blender-fiend",
+      "flavor": "Collective mob the System yanked after a mass kill. Rumor fuel, not a fair fight.",
+      "mapping_note": "Do not field on Floor 1. Historical/patch note only.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-041",
+      "display_name": "Brindle Grub",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-384; M-385; M-387; M-388; M-389",
+      "source_row": "mob2-brindle-grub",
+      "srd_name": "Giant Centipede",
+      "srd_id": "giant-centipede",
+      "cr": "1/4",
+      "mapping_note": "House mapping: fuzzy corpse-eating worm.",
+      "flavor": "Cat-sized janitor worm. Eats corpses, squeaks, bursts into goo, tips the alchemist.",
+      "reskin_tweaks": "Remove centipede poison or keep mild; death: harmless goo + optional hemolymph reagent drop.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-042",
+      "display_name": "Cow-Tailed Brindle Grub",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-390",
+      "source_row": "mob2-cow-tailed-grub",
+      "srd_name": "Giant Wolf Spider",
+      "srd_id": "giant-wolf-spider",
+      "cr": "1/4",
+      "mapping_note": "House mapping (WIKI-ONLY row; pre-pupa form).",
+      "flavor": "Final soft form before the sac. Whip tails for show, teeth for payroll.",
+      "reskin_tweaks": "Cosmetic tails; no web needed.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-043",
+      "display_name": "Grub Pupa",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "OPEN-CONFLICT",
+      "canon_ref": "M-391; M-392; M-393; M-394; M-469",
+      "source_row": "mob2-grub-pupa",
+      "conflict_ref": "X-060",
+      "srd_name": "Ochre Jelly",
+      "srd_id": "ochre-jelly",
+      "cr": "2",
+      "mapping_note": "House mapping for a wet countdown sac. Burst contents disputed (X-060).",
+      "flavor": "Human-sized wet timer with party lights. Pop early, meet convulsing regrets.",
+      "reskin_tweaks": "Immobile; HP as Ochre Jelly. On timer end: release Brindled Vespas. On early destroy: preferred ruling — uncooked convulsing creatures (not Vespas); see X-060.",
+      "xp": 450
+    },
+    {
+      "id": "cmm-044",
+      "display_name": "Brindled Vespa",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-393; M-395; M-397; M-499",
+      "source_row": "mob2-brindled-vespa",
+      "srd_name": "Giant Wasp",
+      "srd_id": "giant-wasp",
+      "cr": "1/2",
+      "mapping_note": "House mapping; population halved by patch.",
+      "flavor": "Hornet graduation ceremony. Acid spit included. Population was cut and they are still rude.",
+      "reskin_tweaks": "Swap poison sting damage type to acid (same dice) or add 1d4 acid on hit.",
+      "xp": 100,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-045",
+      "display_name": "Unvaccinated Clurichaun Rev-Up Consultant",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-432; M-433; M-434; M-435; M-436; M-437",
+      "source_row": "mob2-clurichaun",
+      "srd_name": "Goblin Warrior",
+      "srd_id": "goblin-warrior",
+      "cr": "1/4",
+      "mapping_note": "House mapping (WIKI-ONLY confidence). Contact Taint.",
+      "flavor": "Runny-nosed fairy cousin in green overalls. Slingshot, grapple, and a five-minute healing ban called the Taint.",
+      "reskin_tweaks": "Speed 40 ft. On melee hit or start grappling: target cannot regain HP for 5 minutes (Taint). Corpses ooze; touching them refreshes Taint.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-046",
+      "display_name": "Laminak Rev-Up Consultant Elite",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "elite",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-428; M-438; M-439; M-440; M-441",
+      "source_row": "mob2-laminak",
+      "srd_name": "Sprite",
+      "srd_id": "sprite",
+      "cr": "1/4",
+      "mapping_note": "House mapping: crow-sized winged soccer-mom fairy.",
+      "flavor": "Leaf pantsuit, Magic Missile, MLM brainworms. Believes Floor 3 is a promotion.",
+      "reskin_tweaks": "Replace shortbow with magic missile (1st level) 2/day. Resistance to necrotic/\"health-seeping\" if you track Taint-style drains.",
+      "xp": 50,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-047",
+      "display_name": "Krakaren Clone (Second Floor)",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "OPEN-CONFLICT",
+      "canon_ref": "B-004; M-442; M-443; M-444; M-445; M-446; M-447; M-450; M-452; M-709",
+      "source_row": "boss2-krakaren-clone",
+      "conflict_ref": "X-059",
+      "srd_name": "Chuul",
+      "srd_id": "chuul",
+      "cr": "4",
+      "mapping_note": "House mapping for a twenty-foot tentacle boss. Preferred tier: Neighborhood (X-059), not Borough.",
+      "flavor": "Immobile octopus with screaming mouth-tentacles, snot, and measles mist. Nameplate insists it is a copy. At least three exist.",
+      "reskin_tweaks": "Mostly stationary. Multiattack tentacles; on hit apply Taint. Aura/mist: Con save or catch Vigorous Measles (house disease: fever + disadvantage on checks until cured). Bursts through walls to start.",
+      "xp": 1100
+    },
+    {
+      "id": "cmm-048",
+      "display_name": "Danger Dingo",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-407; M-408; M-410; M-411",
+      "source_row": "mob2-danger-dingo",
+      "srd_name": "Dire Wolf",
+      "srd_id": "dire-wolf",
+      "cr": "1",
+      "mapping_note": "House mapping (WIKI-ONLY). Pet biscuit can flip hostility in the pound.",
+      "flavor": "Mastiff-sized, corpse-paint face, kobold optional. Feed the caged ones a biscuit and rewrite the fight.",
+      "reskin_tweaks": "Caged dingoes: indifferent after a Pet Biscuit (M-410). Ridden dingoes act on kobold rider initiative.",
+      "xp": 200,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-049",
+      "display_name": "Kobold Rider",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-412; M-413",
+      "source_row": "mob2-kobold-rider",
+      "srd_name": "Kobold",
+      "srd_id": "kobold",
+      "cr": "1/8",
+      "mapping_note": "House mapping; lance charge while mounted.",
+      "flavor": "Yappy chihuahua energy on a painted wolf. Feathered lance, zero impulse control.",
+      "reskin_tweaks": "While mounted on a Danger Dingo, lance deals 1d12 once per charge (house); on foot use Kobold stats.",
+      "xp": 25,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-050",
+      "display_name": "Ralph the Frenzied Gerbil",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "B-005; M-414; M-415; M-416; M-417; M-418; M-419; M-420",
+      "source_row": "boss2-ralph",
+      "srd_name": "Giant Hyena",
+      "srd_id": "giant-hyena",
+      "cr": "1",
+      "mapping_note": "House mapping (WIKI-ONLY). Cute until the jaw unhinges; survives being swallowed.",
+      "flavor": "Champion pit gerbil. Adorable. Mouth opens like a luggage fault. Being eaten is a commute.",
+      "reskin_tweaks": "Bite; if swallowed by a dingo/ally beast, reappears from inside after 1 round at half HP instead of dying (house).",
+      "xp": 200,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-051",
+      "display_name": "Mind Horror",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "M-401; M-402; M-403; M-404; M-405",
+      "source_row": "mob2-mind-horror",
+      "srd_name": "Specter",
+      "srd_id": "specter",
+      "cr": "1",
+      "mapping_note": "House mapping: floating jam-filled brain; psychic headache scales with low Int.",
+      "flavor": "Slow kickball full of thoughts you did not order. High Intelligence shrugs; everyone else gets a migraine with teeth.",
+      "reskin_tweaks": "Replace life drain with psychic: DC 12 Int save or 2d6 psychic and speed −10 ft until end of next turn. Creatures with Int 16+ auto-succeed. Fly/hover; low physical damage.",
+      "xp": 200,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-052",
+      "display_name": "Giant Blimp (Meadow Lark)",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "neighborhood boss",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-477; M-478; M-707; M-708",
+      "source_row": "boss2-blimp",
+      "conflict_ref": "rb-03",
+      "flavor": "Warehouse blimp boss the Meadow Lark crew sniped before it left the garage. Wood later became a float frame.",
+      "mapping_note": "No attack, AI text, or chamber write-up (backlog rb-03). Do not invent a full kit for Core print yet.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null
+    },
+    {
+      "id": "cmm-053",
+      "display_name": "Satan's Lil' Hedgehogs",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-382; M-383",
+      "source_row": "mob2-hedgehog",
+      "flavor": "Armor-piercing quills with a cute name. Seeded, then patched to a deeper floor.",
+      "mapping_note": "Do not field on Floor 2 after the relocation announcement (~4 d 17 h before collapse).",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-054",
+      "display_name": "Shambling Acid Impaler",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "OPEN-CONFLICT",
+      "canon_ref": "M-475; M-476; X-063",
+      "source_row": "mob2-impaler",
+      "conflict_ref": "X-063",
+      "flavor": "Mordecai's \"everywhere\" warning: hairy green four-legs with acid darts. No confirmed Floor 2 sighting in the ledger.",
+      "mapping_note": "Treat as rumor until novels are checked (X-063). Optional unused map: Giant Lizard + acid spit.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null
+    },
+    {
+      "id": "cmm-055",
+      "display_name": "Rot Stickers (Floor 2 Listing)",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "OPEN-CONFLICT",
+      "canon_ref": "M-297; X-080",
+      "source_row": "mob2-rot-stickers-f2",
+      "conflict_ref": "X-080",
+      "flavor": "Same exploding ravioli, wrong floor on an infobox. Do not double-dip the roster.",
+      "mapping_note": "Preferred: Floor 1 only (see cmm-022). X-080.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null
+    },
+    {
+      "id": "cmm-056",
+      "display_name": "Rage Elemental",
+      "floors": [
+        "2"
+      ],
+      "creature_type": "floor boss",
+      "tag": "CANON",
+      "status": "READY",
+      "canon_ref": "B-029; M-461..M-470",
+      "source_row": "boss2-rage-elemental",
+      "srd_name": "Air Elemental",
+      "srd_id": "air-elemental",
+      "cr": "5",
+      "mapping_note": "House mapping for the bathroom-penalty smoke horror. Summoned, not a random wanderer.",
+      "flavor": "Fifteen feet of black-purple smoke, obsidian claws, horned skull. Arrows are opinions. Peeing outside is how you cast it.",
+      "reskin_tweaks": "Resistance to nonmagical weapons emphasized. Fire damage slows regeneration (house: no regen on any turn it took fire). Once per fight: reverse gravity in a 30-ft cylinder for 1 round (Str save DC 15). Lure into stairwell holes works.",
+      "xp": 1800,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-057",
+      "display_name": "Axebeak",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-323",
+      "source_row": "mob-axebeak",
+      "flavor": "Named on the roster. Personality: TBD by whoever survives meeting one.",
+      "mapping_note": "Name only in ledger. Tentative unused map: Giant Eagle or Warhorse if you must run it.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-058",
+      "display_name": "Floating Eyeball",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-316",
+      "source_row": "mob-floating-eyeball",
+      "flavor": "Drifting eyeballs from the cold open montage. Creepy wallpaper with agency.",
+      "mapping_note": "No combat kit captured. Optional unused map: Flumph or Specter without drain.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-059",
+      "display_name": "Three-Headed Baboon",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-317",
+      "source_row": "mob-three-headed-baboon",
+      "flavor": "Later-recap cameo. Three heads, one bad decision tree.",
+      "mapping_note": "No kit. Optional unused map: Ape with Multiattack ×3 at reduced damage.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    },
+    {
+      "id": "cmm-060",
+      "display_name": "Eggplant with Teeth",
+      "floors": [
+        "1"
+      ],
+      "creature_type": "mob",
+      "tag": "CANON",
+      "status": "STUB-ONLY",
+      "canon_ref": "M-317",
+      "source_row": "mob-toothy-eggplant",
+      "flavor": "Produce aisle horror. Chewable metaphor for the tutorial.",
+      "mapping_note": "No kit. Optional unused map: Awakened Shrub with a bite.",
+      "srd_name": null,
+      "srd_id": null,
+      "cr": null,
+      "xp": null,
+      "reskin_tweaks": null,
+      "conflict_ref": null
+    }
+  ]
+}

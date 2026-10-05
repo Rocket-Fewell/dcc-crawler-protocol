@@ -1,7 +1,11 @@
 """One-off: Day 1 cold start (Caleb lock 2026-10-05; Lore cold-open beats M-539/541/545/546/547/548/554).
 Edits floors/f01/day-01.spec.json only."""
-import json, copy
-P = "/workspace/dcc-campaign/floors/f01/day-01.spec.json"
+import json, copy, os, sys
+# Portable paths (fresh-checkout safe): campaign root via tools/dcc_paths.py, never a box-only absolute path.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))  # tools/
+import dcc_paths  # noqa: E402
+SPEC_DIR = os.path.join(dcc_paths.CAMPAIGN_ROOT, "floors", "f01")
+P = os.path.join(SPEC_DIR, "day-01.spec.json")
 s = json.load(open(P))
 FH = None
 for e in s["encounters"]:
@@ -34,7 +38,7 @@ m["summary"] = ("Floor 1 timed playthrough, Day {day} of {days}, cold start: the
                 "rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline). A shared template: no live party is assumed.")
 m["sources"] = [x for x in m["sources"] if not x.startswith("sessions/session-01-recap")]
 m["sources"] += [
-    "/workspace/dcc-lore/CANON-LEDGER.md rows M-546, M-539, M-541, M-545, M-547, M-548 and M-554 (Lore's cold-open beats: horn and light-beam stairwells, one-hour entrance window, Natives, Crawler on the first step onto Floor 1, stairwell opening under someone, animals registered)",
+    "lore/CANON-LEDGER.md rows M-546, M-539, M-541, M-545, M-547, M-548 and M-554 (Lore's cold-open beats: horn and light-beam stairwells, one-hour entrance window, Natives, Crawler on the first step onto Floor 1, stairwell opening under someone, animals registered)",
     "Caleb cold-start lock (2026-10-05): new campaigns open at the surface stairwell; one live table at a time, many saved campaigns; day pages are shared templates and never hardcode a party",
     "floors/f01/00-overview.md sections 5.0 to 5.5 (Intake Hall, Atrium, Vent Row, Vending Gore Arcade, Hall of Fair Warnings, Shooting Gallery)",
 ]

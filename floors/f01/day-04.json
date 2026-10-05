@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.5",
+    "version": "0.6",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -15,14 +15,14 @@
       "tables/loot-decks/*.json",
       "tables/achievements.csv",
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
-      "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
-      "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
-      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
-      "rules/70-encounter-budget-5e.json v0.1.15 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
+      "lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
+      "lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
+      "rules/70-encounter-budget-5e.json v0.1.17 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
-      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
+      "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
-      "/workspace/dcc-lore/drafts/achievement-suggestions-days-02-05-lore-pass.md (Lore draft v0.2, sha256 216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146: Days 2–5 achievement frames, [GM] end to end)"
+      "lore/drafts/achievement-suggestions-days-02-05-lore-pass.md (Lore draft v0.2, sha256 216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146: Days 2–5 achievement frames, [GM] end to end)"
     ],
     "day": 4,
     "days": 5,
@@ -32,10 +32,10 @@
     "achievements_csv_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.15",
-    "budget_file_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
+    "budget_file_version": "0.1.17",
+    "budget_file_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "ffc748d3028de33d7b5a77e3239e9ad64d9bcf5b2cb6a90f792c435337e4bf12",
+    "spec_sha256_sans_pin": "87aa8d6335dd1d4088e6a1cc9fe757229aef77de210fbfd6b6969e5cd8b0fda0",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -166,7 +166,7 @@
     "audience": "gm"
   },
   "canon_table": {
-    "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
+    "path": "lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
     "expected_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9",
@@ -186,7 +186,8 @@
       "tag": "[PLAYER-FACING]",
       "gm_color": {
         "text": "After that the floor goes. No extensions.",
-        "tag": "[GM-FACING]"
+        "tag": "[GM-FACING]",
+        "audience": "player"
       },
       "audience": "player"
     },
@@ -275,9 +276,10 @@
       "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md), house wording; voice-split [SYSTEM] dry + [GM] color",
       "gm_color": {
         "text": "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability.",
-        "tag": "[GM-FACING]"
+        "tag": "[GM-FACING]",
+        "audience": "player"
       },
-      "source": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "source": "lore/drafts/floor1-collapse-notices.draft.md",
       "source_version": "0.2",
       "source_expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c",
       "audience": "player"
@@ -289,7 +291,8 @@
         "tag": "[PLAYER-FACING]",
         "gm_color": {
           "text": "The System won't judge anyone who waits. It will judge a few other things.",
-          "tag": "[GM-FACING]"
+          "tag": "[GM-FACING]",
+          "audience": "player"
         },
         "audience": "player"
       },
@@ -621,7 +624,7 @@
         },
         "gm_color": {
           "text": "The Break Room just went dark and you're one door closer to the stage. No snacks, no vending, no excuses.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       }
@@ -687,7 +690,7 @@
         },
         "gm_color": {
           "text": "Pickings are slim. The Break Room's closed, the vendors are dead, and the only boxes left are the ones you've already earned. Make them count.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       }
@@ -753,7 +756,7 @@
         },
         "gm_color": {
           "text": "Services are down but the building still has favors to trade. Pay what you owe, steal what's left, and keep a straight face.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       }
@@ -974,7 +977,7 @@
         },
         "gm_color": {
           "text": "The coffee has finally won. We apologize for nothing.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       },
@@ -1265,7 +1268,7 @@
         },
         "gm_color": {
           "text": "Resting outside the Green Room. Bold. Sleep is for people with walls.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       },
@@ -1319,7 +1322,7 @@
       "if_they_do_something_dumb": "Resting outside the Green Room is allowed, but it is only a Short Rest: the price (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom) buys a quiet one and grants no Long Rest. If the party tries to Long Rest in the open anyway, the System refuses and the Ticks interrupt. Never a wipe. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "zone_color": {
         "tag": "inspired",
-        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
+        "source": "lore/drafts/floor1-zone-color.draft.md",
         "lines": [
           {
             "text": "The lights go out in sections, one hall at a time, until only your own lantern is left. The dark makes a sound, a slow settling, like a building thinking.",
@@ -1545,7 +1548,7 @@
         },
         "gm_color": {
           "text": "The usher's flashlight finds you before you find the door. 'Please silence your screams,' says a polite voice from the dark. They don't mean the phones.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       },
@@ -1737,7 +1740,7 @@
         },
         "gm_color": {
           "text": "The building is leaning toward you.",
-          "tag": "[PLAYER-FACING]",
+          "tag": "[GM-FACING]",
           "audience": "player"
         }
       },
@@ -1926,8 +1929,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.15 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.15 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.1.17 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.17 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -1984,109 +1987,109 @@
     "player_blocks": [
       {
         "path": "/routes/0/voice_lines/system_intro",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/0/voice_lines/midpoint_twist",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/0/voice_lines/win",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/0/voice_lines/gm_color",
-        "kind": "route_voice_line",
+        "kind": "gm_color",
         "field": "text"
       },
       {
         "path": "/routes/1/voice_lines/system_intro",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/1/voice_lines/midpoint_twist",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/1/voice_lines/win",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/1/voice_lines/gm_color",
-        "kind": "route_voice_line",
+        "kind": "gm_color",
         "field": "text"
       },
       {
         "path": "/routes/2/voice_lines/system_intro",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/2/voice_lines/midpoint_twist",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/2/voice_lines/win",
-        "kind": "route_voice_line",
+        "kind": "gm_narration",
         "field": "text"
       },
       {
         "path": "/routes/2/voice_lines/gm_color",
-        "kind": "route_voice_line",
+        "kind": "gm_color",
         "field": "text"
       },
       {
         "path": "/encounters/0/voice_lines/system_intro",
-        "kind": "voice_line",
+        "kind": "system_notice",
         "field": "text",
         "encounter": "enc-d04-01"
       },
       {
         "path": "/encounters/0/voice_lines/midpoint_twist",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-01"
       },
       {
         "path": "/encounters/0/voice_lines/win",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-01"
       },
       {
         "path": "/encounters/0/voice_lines/gm_color",
-        "kind": "voice_line",
+        "kind": "gm_color",
         "field": "text",
         "encounter": "enc-d04-01"
       },
       {
         "path": "/encounters/1/voice_lines/system_intro",
-        "kind": "voice_line",
+        "kind": "system_notice",
         "field": "text",
         "encounter": "enc-d04-02"
       },
       {
         "path": "/encounters/1/voice_lines/midpoint_twist",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-02"
       },
       {
         "path": "/encounters/1/voice_lines/win",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-02"
       },
       {
         "path": "/encounters/1/voice_lines/gm_color",
-        "kind": "voice_line",
+        "kind": "gm_color",
         "field": "text",
         "encounter": "enc-d04-02"
       },
@@ -2127,49 +2130,49 @@
       },
       {
         "path": "/encounters/2/voice_lines/system_intro",
-        "kind": "voice_line",
+        "kind": "system_notice",
         "field": "text",
         "encounter": "enc-d04-03"
       },
       {
         "path": "/encounters/2/voice_lines/midpoint_twist",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-03"
       },
       {
         "path": "/encounters/2/voice_lines/win",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-03"
       },
       {
         "path": "/encounters/2/voice_lines/gm_color",
-        "kind": "voice_line",
+        "kind": "gm_color",
         "field": "text",
         "encounter": "enc-d04-03"
       },
       {
         "path": "/encounters/3/voice_lines/system_intro",
-        "kind": "voice_line",
+        "kind": "system_notice",
         "field": "text",
         "encounter": "enc-d04-04"
       },
       {
         "path": "/encounters/3/voice_lines/midpoint_twist",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-04"
       },
       {
         "path": "/encounters/3/voice_lines/win",
-        "kind": "voice_line",
+        "kind": "gm_narration",
         "field": "text",
         "encounter": "enc-d04-04"
       },
       {
         "path": "/encounters/3/voice_lines/gm_color",
-        "kind": "voice_line",
+        "kind": "gm_color",
         "field": "text",
         "encounter": "enc-d04-04"
       },
@@ -2179,13 +2182,28 @@
         "field": "text"
       },
       {
+        "path": "/day/tomorrow_notice/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      },
+      {
         "path": "/day/collapse_notice",
         "kind": "system_notice",
         "field": "text"
       },
       {
+        "path": "/day/collapse_notice/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      },
+      {
         "path": "/day/early_descent/player_prompt",
         "kind": "system_notice",
+        "field": "text"
+      },
+      {
+        "path": "/day/early_descent/player_prompt/gm_color",
+        "kind": "gm_color",
         "field": "text"
       },
       {
@@ -2207,12 +2225,12 @@
     "pass": 52,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "dba6299dfba78b3cfc8e9e75b3814b38a8b0233af92486c73c783fc74a15989b",
+    "spec_sha256": "5442c764800e5ca46b49de774397ea05d19b7392c40f72ecce76e424f755a1a8",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.15, sha256 25bb26b4d6d63474; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.17, sha256 113dcdbedb3cbbcf; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2292,7 +2310,7 @@
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "/workspace/dcc-lore/tables/canon-floor-1.json (ledger 1.15, 24 zones)"
+        "detail": "lore/tables/canon-floor-1.json (ledger 1.15, 24 zones)"
       },
       {
         "status": "PASS",
@@ -2452,17 +2470,17 @@
       {
         "status": "PASS",
         "check": "audience manifest",
-        "detail": "38 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
+        "detail": "41 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
       },
       {
         "status": "PASS",
         "check": "slot-map provenance",
-        "detail": "meta.spec_sha256_sans_pin ffc748d3028de33d matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
+        "detail": "meta.spec_sha256_sans_pin 87aa8d6335dd1d40 matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
       },
       {
         "status": "PASS",
         "check": "rendered audience separation",
-        "detail": "38 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
+        "detail": "41 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
       },
       {
         "status": "PASS",

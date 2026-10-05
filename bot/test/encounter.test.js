@@ -38,9 +38,9 @@ function fixtureDoc(over = {}) {
     audience_manifest: {
       schema: 'audience/1', default: 'gm',
       player_blocks: [
-        { path: '/routes/0/voice_lines/system_intro', kind: 'route_voice_line', field: 'text' },
-        { path: '/encounters/0/voice_lines/system_intro', kind: 'voice_line', field: 'text', encounter: 'enc-t-01' },
-        { path: '/encounters/0/voice_lines/win', kind: 'voice_line', field: 'text', encounter: 'enc-t-01' },
+        { path: '/routes/0/voice_lines/system_intro', kind: 'gm_narration', field: 'text' },
+        { path: '/encounters/0/voice_lines/system_intro', kind: 'system_notice', field: 'text', encounter: 'enc-t-01' },
+        { path: '/encounters/0/voice_lines/win', kind: 'gm_narration', field: 'text', encounter: 'enc-t-01' },
         { path: '/encounters/0/zone_color/lines/0', kind: 'zone_color', field: 'text', encounter: 'enc-t-01', optional: true },
         { path: '/encounters/0/zone_color/lines/1', kind: 'zone_color', field: 'text', encounter: 'enc-t-01', optional: true },
         { path: '/encounters/0/set_piece_intro', kind: 'set_piece', field: 'paragraphs', encounter: 'enc-t-01', set_piece: true, paragraphs_optional: [false, false, true], text_field_joined: 'text' },
@@ -140,8 +140,10 @@ test('encounter scope: none = day-level notices only, id = that encounter, route
 test('block filter matches a kind or a slot name', () => {
   const doc = fixtureDoc();
   assert.match(buildPreview(doc, { encounter: 'enc-t-01', block: 'win' }).messages[0], /You won/);
-  const kind = buildPreview(doc, { encounter: 'enc-t-01', block: 'voice_line' }).messages.join('\n');
-  assert.match(kind, /test room[\s\S]*You won/);
+  const sys = buildPreview(doc, { encounter: 'enc-t-01', block: 'system_notice' }).messages.join('\n');
+  assert.match(sys, /test room/);
+  const narr = buildPreview(doc, { encounter: 'enc-t-01', block: 'gm_narration' }).messages.join('\n');
+  assert.match(narr, /You won/);
   assert.match(buildPreview(doc, { block: 'floor_exit_warning' }).messages[0], /Reach a stairwell/);   // the key is called gm_warning, the text is for players
   assert.match(buildPreview(doc, { encounter: 'enc-t-01', block: 'nonsense' }).error, /No "nonsense" block/);
 });
@@ -180,6 +182,10 @@ test('decision 032 voice split: achievements and gm_color are GM; clock/collapse
   // Allow-list only: unknown/new kinds (including Encounter Bot's gm_color) are narration
   assert.ok(SYSTEM_KINDS.has('system_notice'));
   assert.ok(SYSTEM_KINDS.has('exit_warning_read_aloud'));
+  assert.equal(SYSTEM_KINDS.size, 2);
+  assert.ok(!SYSTEM_KINDS.has('voice_line'));
+  assert.ok(!SYSTEM_KINDS.has('route_voice_line'));
+  assert.ok(!SYSTEM_KINDS.has('gm_narration'));
   assert.ok(!SYSTEM_KINDS.has('achievement_narration'));
   assert.ok(!SYSTEM_KINDS.has('gm_color'));
 
@@ -232,17 +238,17 @@ test('decision 032 voice split: achievements and gm_color are GM; clock/collapse
 });
 
 
-test('safety net: path ending /gm_color or kind gm_color is GM even when kind is voice_line (stale manifest)', () => {
+test('safety net: path ending /gm_color or kind gm_color is GM even when kind is system_notice (stale manifest)', () => {
   const doc = fixtureDoc();
   const joke = 'The System wishes the surface crowd luck with that. Also: yes, the dog gets a nameplate.';
   doc.encounters[0].voice_lines = { ...(doc.encounters[0].voice_lines || {}), gm_color: { text: joke } };
-  // Stale generator bug: path is .../gm_color but kind is still voice_line (would be System without the safety net)
+  // Stale generator bug: path is .../gm_color but kind is still system_notice (would be System without the safety net)
   doc.audience_manifest.player_blocks.push({
-    path: '/encounters/0/voice_lines/gm_color', kind: 'voice_line', field: 'text', encounter: 'enc-t-01',
+    path: '/encounters/0/voice_lines/gm_color', kind: 'system_notice', field: 'text', encounter: 'enc-t-01',
   });
   const entry = listEntries(doc).find((e) => String(e.path).endsWith('/gm_color'));
   assert.ok(entry, 'gm_color path entry present');
-  assert.equal(entry.voice, 'gm', 'path /gm_color must force GM voice even when kind is voice_line');
+  assert.equal(entry.voice, 'gm', 'path /gm_color must force GM voice even when kind is system_notice');
   const preview = buildPreview(doc, { encounter: 'enc-t-01', block: 'gm_color', includeOptional: true });
   assert.equal(preview.error, undefined, preview.error);
   const blob = preview.messages.join('\n');
@@ -369,12 +375,12 @@ test('non-GMs are refused, ephemerally, before any file is read', async () => {
 
 test('preview is ephemeral, shows the exact text, lists kinds (names only) and offers Post/Cancel; nothing is public until Post', async () => {
   const dir = campaignWith({ 1: fixtureDoc() });
-  const i = fakeSlash({ day: 1, encounter: 'enc-t-01', block: 'voice_line' });
+  const i = fakeSlash({ day: 1, encounter: 'enc-t-01', block: 'system_notice' });
   await enc.execute(i, ctxFor(dir));
   const all = [...i.log.replies, ...i.log.followUps];
   assert.ok(all.every(isEph), 'every preview message is ephemeral');
   assert.ok(all.every((m) => m.allowedMentions?.parse?.length === 0));
-  assert.match(i.log.replies[0].content, /Preview \(only you can see this\)[\s\S]*Groups and block kinds[\s\S]*`enc-t-01`: voice_line, zone_color, set_piece, achievement_narration/);
+  assert.match(i.log.replies[0].content, /Preview \(only you can see this\)[\s\S]*Groups and block kinds[\s\S]*`enc-t-01`: system_notice, gm_narration, zone_color, set_piece, achievement_narration/);
   assert.doesNotMatch(i.log.replies[0].content, /Welcome to the test room/, 'the hint carries kind names only, no text');
   assert.match(i.log.followUps[0].content, /^\*\*\[SYSTEM\]\*\* Welcome to the test room\./);
   const row = i.log.followUps.at(-1).components[0].components;

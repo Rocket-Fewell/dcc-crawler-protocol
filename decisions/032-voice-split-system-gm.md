@@ -25,3 +25,7 @@ Summary: Table TTS / GM-output tag contract: System is dry corporate; achievemen
 ## Follow-up
 
 - Encounter Bot: scrub Day-page System `voice_line` / `route_voice_line` snark; move achievement/loot color to GM; optional joke beats use manifest kind `gm_color` (extract/encounter_text treat unknown kinds including `gm_color` as narration; `/encounter` preview lists the kind).
+
+## Clarification (2026-10-05, playtest)
+
+Encounter Day-page kinds: only true notices are `[SYSTEM]` (`system_notice`, `exit_warning_read_aloud`, and `system_intro` / registration-style keys as Encounter Bot maps them). **`midpoint_twist`, `win`, `win_alt`, route color, and `gm_color` / `gm_narration` speak as `[GM]`.** Bridge `SYSTEM_KINDS` must not treat every `voice_line` as System (Architect + Encounter Bot, Oct 5).

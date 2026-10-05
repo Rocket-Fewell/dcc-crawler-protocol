@@ -27,10 +27,10 @@ Items: a **complete mundane SRD reskin catalog** exists (191). A **player-facing
 
 | Path | Role |
 |---|---|
-| `/workspace/dcc-lore/tables/item-reskins.json` | Source of truth (v0.1.5) |
-| `/workspace/dcc-lore/tables/item-reskins.md` | Human table |
-| `/workspace/dcc-lore/tables/item-reskins.version.json` | Hash / history |
-| `/workspace/dcc-campaign/tables/item-reskins.json` | Campaign mirror (same family) |
+| `lore/tables/item-reskins.json` | Source of truth (v0.1.5) |
+| `lore/tables/item-reskins.md` | Human table |
+| `lore/tables/item-reskins.version.json` | Hash / history |
+| `tables/item-reskins.json` | Campaign mirror (same family) |
 
 **Counts (191 total; every entry has a distinct `display_name` and a non-empty `snark`):**
 
@@ -53,12 +53,12 @@ Also: **6** generic header ids (`resolve_to_variant: true`) and **2** non-SRD ca
 
 | Path | What | Counts |
 |---|---|---|
-| `/workspace/dcc-campaign/tables/loot-decks/*.json` | Live drawable cards (SoT) | **99** cards; all have `reskin_name` + `spoken_line` |
-| `/workspace/dcc-lore/tables/loot-decks/` | Lore copies + empty ach deck stub | Same F01 decks + `ach-f01-orientation-pit.json` (no cards) |
-| `/workspace/dcc-campaign/rules/40-loot-deck-spec-5e.md` | Deck schema / draw rules | Spec |
-| `/workspace/dcc-campaign/rules/42-house-items-f01.md` | Final rules for 4 house items + Story Box cards | Cloak of Many Fashions; Pole of Collapsing; Mystery Key; Potion of Fire Breath; + Enhanced Pet Biscuit & story cards 0056–0060 |
-| `/workspace/dcc-campaign/rules/45-story-boxes-5e.md` | Story Box system | Design + 5 worked patterns |
-| `/workspace/dcc-lore/catalog/loot-boxes.md` | Wiki box-type catalog | **76** box-type rows (tiers/rules; **UNVERIFIED** wiki) |
+| `tables/loot-decks/*.json` | Live drawable cards (SoT) | **99** cards; all have `reskin_name` + `spoken_line` |
+| `lore/tables/loot-decks/` | Lore copies + empty ach deck stub | Same F01 decks + `ach-f01-orientation-pit.json` (no cards) |
+| `rules/40-loot-deck-spec-5e.md` | Deck schema / draw rules | Spec |
+| `rules/42-house-items-f01.md` | Final rules for 4 house items + Story Box cards | Cloak of Many Fashions; Pole of Collapsing; Mystery Key; Potion of Fire Breath; + Enhanced Pet Biscuit & story cards 0056–0060 |
+| `rules/45-story-boxes-5e.md` | Story Box system | Design + 5 worked patterns |
+| `lore/catalog/loot-boxes.md` | Wiki box-type catalog | **76** box-type rows (tiers/rules; **UNVERIFIED** wiki) |
 
 **Loot deck card mix (99):** category Misc 45, Consumables 34, Credits 9, Armor 6, Weapons 3, Keys 2.  
 **source_5e:** HOUSE 36, PHB 2024 36, SRD 5.2 24, DMG 2024 3.  
@@ -70,9 +70,9 @@ Also: **6** generic header ids (`resolve_to_variant: true`) and **2** non-SRD ca
 
 | Path | Counts | Notes |
 |---|---|---|
-| `/workspace/dcc-lore/catalog/items.md` | **32** potions + **163** other items | Condensed wiki notes; header says **unverified against books** |
-| `/workspace/dcc-lore/catalog/crafting-canon.md` | Crafting stations / coupons | Ledger-oriented, not player flavor prose |
-| `/workspace/dcc-lore/catalog/upgrade-patches-canon.md` | Patches | same |
+| `lore/catalog/items.md` | **32** potions + **163** other items | Condensed wiki notes; header says **unverified against books** |
+| `lore/catalog/crafting-canon.md` | Crafting stations / coupons | Ledger-oriented, not player flavor prose |
+| `lore/catalog/upgrade-patches-canon.md` | Patches | same |
 
 ### 1.4 What’s missing (items)
 
@@ -88,7 +88,7 @@ Also: **6** generic header ids (`resolve_to_variant: true`) and **2** non-SRD ca
 
 ### 2.1 Playable Floor 1 (encounter stubs → SRD)
 
-Paths: `/workspace/dcc-campaign/floors/f01/day-0{1–5}.json` (+ `.md` / `.spec.json`), budgeted in `/workspace/dcc-campaign/rules/70-encounter-budget-5e.json` (`floors.1.fixed_encounters` only).
+Paths: `floors/f01/day-0{1–5}.json` (+ `.md` / `.spec.json`), budgeted in `rules/70-encounter-budget-5e.json` (`floors.1.fixed_encounters` only).
 
 **10 unique combat nameplates** (house name + SRD id; no inlined 5e stat block — GM uses SRD):
 
@@ -111,8 +111,8 @@ These are **house / inspired** nameplates for the Orientation Pit, not the book�
 
 | Path | Mob entries | Tag mix |
 |---|---:|---|
-| `/workspace/dcc-lore/tables/canon-floor-1.json` (+ `.md`) | **46** | canon 35, inspired 9, unverified 2 |
-| `/workspace/dcc-lore/tables/canon-floor-2.json` (+ `.md`) | **22** | canon 19, unverified 3 |
+| `lore/tables/canon-floor-1.json` (+ `.md`) | **46** | canon 35, inspired 9, unverified 2 |
+| `lore/tables/canon-floor-2.json` (+ `.md`) | **22** | canon 19, unverified 3 |
 
 **Floor 1 canon examples:** Rat, Scatterers, Hoarder, Goblin family, Bad Llama, Rot Sticker, Troglodytes / Juicer, Ball of Swine / Tusklings, roster oddities (Chilly Goat, Bugaboo, etc.).  
 **Floor 2 canon examples:** Krakaren Clone, Brindle Grub cycle, Danger Dingo / Kobolds / Ralph, Mind Horror, Rage Elemental, Death Watch roster. Gaps/backlog called out inside the Floor 2 JSON (`gaps`, `refinement_backlog`, `open_conflicts`).
@@ -121,10 +121,10 @@ These are **house / inspired** nameplates for the Orientation Pit, not the book�
 
 | Path | Content |
 |---|---|
-| `/workspace/dcc-lore/catalog/bestiary-by-floor.md` | Floor-grouped name tables; header **[UNVERIFIED – fan-wiki only]** |
-| `/workspace/dcc-lore/catalog/bosses.md` | ~40 wiki boss rows (notes, not 5e blocks) |
-| `/workspace/dcc-lore/catalog/floor-data.md` | Per-floor notable-mob name dumps (F1–18 wiki) |
-| `/workspace/dcc-lore/sources/fanwiki/book{1–8}-bestiary.txt` | Raw scrapes |
+| `lore/catalog/bestiary-by-floor.md` | Floor-grouped name tables; header **[UNVERIFIED – fan-wiki only]** |
+| `lore/catalog/bosses.md` | ~40 wiki boss rows (notes, not 5e blocks) |
+| `lore/catalog/floor-data.md` | Per-floor notable-mob name dumps (F1–18 wiki) |
+| `lore/sources/fanwiki/book{1–8}-bestiary.txt` | Raw scrapes |
 
 **Approx. unique name rows in bestiary-by-floor (dedupe not perfect; wiki noise):** F1 mobs ~10 listed + bosses 3; F2 mobs ~12 + bosses 3; F3/4/5/6/8/11 sparse boss/mob name lists (often overlapping). **None** are full bestiary entries.
 
@@ -137,7 +137,7 @@ These are **house / inspired** nameplates for the Orientation Pit, not the book�
 | 3–6 | Missing | Budgets/XP only through F6 in rules/70; **0** fixed creatures | No | Thin wiki lists in floor-data / bestiary | No |
 | 7 | Missing | Not even a floor key with creatures in rules/70 sample | No | Thin / later-book | No |
 
-CR guidance only: `/workspace/dcc-campaign/rules/75-cr-by-floor-5e.md` (bands for F1–18; no mob roster). Narrative seeds: `/workspace/dcc-campaign/floors/04-floor-bible.md`, `/workspace/dcc-campaign/floors/00-campaign-narrative.md`.
+CR guidance only: `rules/75-cr-by-floor-5e.md` (bands for F1–18; no mob roster). Narrative seeds: `floors/04-floor-bible.md`, `floors/00-campaign-narrative.md`.
 
 **Plain statement:** For Core Book Monsters, Valtay can draft **flavor + “use SRD X”** for the 10 Floor 1 house stubs and can cite canon **names/behavior notes** for F1–F2. Everything else is wiki research or blank. Floors 3–7 need a Lore canon bestiary pass before book draft.
 
@@ -163,7 +163,7 @@ CR guidance only: `/workspace/dcc-campaign/rules/75-cr-by-floor-5e.md` (bands fo
 
 ### 3.3 Crafting Studio prices (12k / 30k)
 
-**Already updated in** `/workspace/dcc-campaign/rules/20-crafting-5e.md` §9.1 / §9.1a:
+**Already updated in** `rules/20-crafting-5e.md` §9.1 / §9.1a:
 
 - Floors 1–2: Crafting Studio **12,000**, Enhanced **30,000** (changelog: was 20,000 / 50,000).
 - Higher floors use the smoothed schedule (e.g. F7 Enhanced **50,000** is intentional scale, not the old F1–2 price).
@@ -203,6 +203,6 @@ No stale “Studio = 20,000 / Enhanced = 50,000 on F1–2” live rule found; on
 
 ## 6. Method notes
 
-- Read-only on `/workspace/dcc-campaign`; wrote only this lore draft + INDEX hash.
+- Read-only on the campaign tree; wrote only this lore draft + INDEX hash.
 - Never opened `gm-notes/secret/` or sealed paths; did not run `ledger_build.py`.
 - Counts are from JSON/markdown structure on disk at scan time; claimed Encounter Bot pins from other jobs are out of scope here.
