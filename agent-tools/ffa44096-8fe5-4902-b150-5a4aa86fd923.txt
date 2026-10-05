@@ -1,0 +1,744 @@
+diff --git a/.cursor/install.sh b/.cursor/install.sh
+new file mode 100755
+index 0000000..1f8fe12
+--- /dev/null
++++ b/.cursor/install.sh
+@@ -0,0 +1,22 @@
++#!/usr/bin/env bash
++# Cloud Agent install. Idempotent. Must exit.
++# Compat shim only. The campaign tools should not depend on these aliases.
++set -euo pipefail
++
++ROOT="$(cd "$(dirname "$0")/.." && pwd)"
++
++if ! command -v ffmpeg >/dev/null 2>&1 || ! command -v rsync >/dev/null 2>&1; then
++  sudo apt-get update
++  sudo apt-get install -y --no-install-recommends ffmpeg ca-certificates rsync
++fi
++
++if ! command -v node >/dev/null 2>&1 || ! node -e 'const p=process.versions.node.split(".").map(Number); if (p[0]<22 || (p[0]===22 && p[1]<12)) process.exit(1)'; then
++  NODE_VERSION=22.22.2
++  curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" \
++    | sudo tar -xJ -C /usr/local --strip-components=1
++fi
++
++bash "$ROOT/.cursor/layout.sh"
++
++npm ci --prefix "$ROOT/discord-voice-bridge"
++npm ci --prefix "$ROOT/bot"
+diff --git a/.cursor/layout.sh b/.cursor/layout.sh
+new file mode 100755
+index 0000000..d8c88c0
+--- /dev/null
++++ b/.cursor/layout.sh
+@@ -0,0 +1,32 @@
++#!/usr/bin/env bash
++# Cloud Agent only. Compat shim for older lookups of dcc-campaign and dcc-lore
++# next to this checkout. The campaign tools should not depend on this.
++# tables/ under dcc-campaign is a bind mount, not a symlink: the voice-bridge
++# tests copy that directory into a sandbox and then write fixtures into the copy.
++set -euo pipefail
++
++ROOT="$(cd "$(dirname "$0")/.." && pwd)"
++
++ln -sfn "$ROOT/lore" "$ROOT/dcc-lore"
++
++mkdir -p "$ROOT/dcc-campaign"
++for item in \
++  rules floors decisions tools tools-notes guides characters \
++  gm-notes sessions exports bot \
++  DECISIONS.md INDEX.md STATE-OF-BUILD.md NAMING-CONVENTIONS.md README.md
++do
++  ln -sfn "$ROOT/${item}" "$ROOT/dcc-campaign/${item}"
++done
++
++tables="$ROOT/dcc-campaign/tables"
++if mountpoint -q "$tables"; then
++  sudo umount "$tables"
++fi
++if [ -L "$tables" ]; then
++  rm "$tables"
++fi
++mkdir -p "$tables"
++# A bind mount is not stored in the environment snapshot. Keep a real copy on
++# disk, then mount the live tables over it when this machine is running.
++rsync -a --delete "$ROOT/tables/" "$tables/"
++sudo mount --bind "$ROOT/tables" "$tables"
+diff --git a/.cursor/start.sh b/.cursor/start.sh
+new file mode 100755
+index 0000000..27241bf
+--- /dev/null
++++ b/.cursor/start.sh
+@@ -0,0 +1,6 @@
++#!/usr/bin/env bash
++# Cloud Agent only. Recreates the dcc-campaign and dcc-lore compat aliases
++# next to this checkout. The campaign tools should not depend on this.
++# No package installs here.
++set -euo pipefail
++bash "$(dirname "$0")/layout.sh"
+diff --git a/.gitignore b/.gitignore
+index 9694823..9f32d59 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -23,12 +23,6 @@ __pycache__/
+ /dcc-campaign/
+ /dcc-lore
+ 
+-# Path aliases recreated by the Cloud Agent install. The git root is the
+-# flattened backup; the GM tools and voice bridge still look up
+-# /workspace/dcc-campaign (decisions, sessions, tools) and /workspace/dcc-lore.
+-/dcc-campaign/
+-/dcc-lore
+-
+ # Per-machine #agents poll cursors / lastseen (runtime; changes often). backup-sync excludes these.
+ lore/state/agents-channel-last.txt
+ sessions/agents-channel-*.txt
+diff --git a/ops/backup-push.sh b/ops/backup-push.sh
+index 39f60c8..86ce957 100755
+--- a/ops/backup-push.sh
++++ b/ops/backup-push.sh
+@@ -3,9 +3,25 @@
+ # Caleb authorized a full backup on 2026-10-04 ("i want all files on the github.... everything"): only live credentials,
+ # dependency/cache folders and files over 50 MB are left out (see backup-sync.py).
+ # Token is read ONLY from env GITHUB_BACKUP_TOKEN (never printed, never stored in .git/config).
+-# Usage: GITHUB_BACKUP_TOKEN=... /workspace/backup-push.sh ["commit message"]   (DRY_RUN=1 stops before the commit)
++# The checkout copy (ops/backup-push.sh) does not mirror, commit, or push.
++# DRY_RUN=1 prints the checkout path and exits. The nightly push is the box copy
++# of this script, which lives outside the repo.
++# Box usage: GITHUB_BACKUP_TOKEN=... backup-push.sh ["commit message"]
+ set -euo pipefail
+-REPO=/workspace/dcc-repo-staging
++SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
++if [ "$(basename "$SCRIPT_DIR")" = "ops" ] && [ -f "$SCRIPT_DIR/backup-sync.py" ]; then
++  REPO="${DCC_BACKUP_REPO:-$(cd "$SCRIPT_DIR/.." && pwd)}"
++  if [ -n "${DRY_RUN:-}" ]; then
++    echo "DRY_RUN: ops/backup-push.sh does not mirror, commit, or push from a checkout."
++    echo "REPO=$REPO"
++    echo "Nightly push stays on the box copy of this script."
++    exit 0
++  fi
++  echo "STOP: ops/backup-push.sh in a checkout does not commit or push. The box copy outside the repo does the nightly backup. DRY_RUN=1 prints the checkout path and exits." >&2
++  exit 1
++fi
++REPO="${DCC_BACKUP_REPO:-/workspace/dcc-repo-staging}"
++SYNC="${DCC_BACKUP_SYNC:-/workspace/backup-sync.py}"
+ URL=https://github.com/Rocket-Fewell/dcc-crawler-protocol.git
+ MSG="${1:-Sync campaign design files}"
+ : "${GITHUB_BACKUP_TOKEN:?GITHUB_BACKUP_TOKEN not set}"
+@@ -13,7 +29,7 @@ MSG="${1:-Sync campaign design files}"
+ # (all exclusions live in backup-sync.py)
+ 
+ cd "$REPO"
+-python3 /workspace/backup-sync.py   # rsync-like full mirror (rsync is not installed)
++python3 "$SYNC"   # rsync-like full mirror (rsync is not installed)
+ cp ops/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # credential-only hook
+ # --force: mirrored folders carry their own .gitignore (e.g. discord-voice-bridge ignores logs/ and *.log); the
+ # mirror already decides what belongs here, so nested ignore files must not drop logs.
+diff --git a/ops/backup-sync.py b/ops/backup-sync.py
+index 0332755..37a02be 100644
+--- a/ops/backup-sync.py
++++ b/ops/backup-sync.py
+@@ -6,34 +6,64 @@
+ CREDENTIAL_EXCLUDES), dependency/cache folders (node_modules, __pycache__, *.pyc, .venv, .git), per-machine agents-channel poll cursors/lastseen (RUNTIME_EXCLUDES), and files over 50 MB.
+ Delete-sync: anything in the repo that is no longer in a source is removed (except STAGING_OWNED paths).
+ 
+-ETIQUETTE: /workspace/dcc-campaign/gm-notes/secret/ is copied byte-for-byte and NEVER content-scanned or printed
++ETIQUETTE: gm-notes/secret/ under the campaign root is copied byte-for-byte and NEVER content-scanned or printed
+ (it holds GM roll/affinity data, not credentials). Name-based exclusions still apply there.
+ Sources are only read, never modified.
++
++Paths: a fresh checkout runs this file from ops/ and reads the checkout (DCC_BACKUP_REPO /
++DCC_CAMPAIGN_ROOT override). The box copy that lives outside the repo still defaults to the
++live trees. Those box paths are not used when this file is the ops/ copy.
+ """
+ import fnmatch, importlib.util, io, os, shutil, sys, tarfile
+ sys.dont_write_bytecode = True   # keep ops/__pycache__ out of the repo
+ 
+-REPO = "/workspace/dcc-repo-staging"
++_HERE = os.path.dirname(os.path.abspath(__file__))
++_IN_REPO = os.path.basename(_HERE) == "ops" and os.path.isfile(os.path.join(_HERE, "check_repo_safe.py"))
++
++if os.environ.get("DCC_BACKUP_REPO"):
++    REPO = os.environ["DCC_BACKUP_REPO"]
++elif _IN_REPO:
++    REPO = os.path.dirname(_HERE)
++else:
++    REPO = "/workspace/dcc-repo-staging"   # box copy of this script, outside the checkout
++
++CAMP = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR")
++if not CAMP:
++    CAMP = REPO if _IN_REPO else "/workspace/dcc-campaign"
++
++
++def _src(repo_rel, box):
++    """Repo-relative when this file is ops/backup-sync.py. Box path only for the outside copy."""
++    if _IN_REPO:
++        return os.path.join(REPO, repo_rel)
++    return box
++
+ 
+ # (source dir, repo-relative destination). Directory symlinks inside sources are followed, so
+-# dcc-campaign/lore -> /workspace/dcc-lore lands in lore/, dcc-campaign/bot -> discord-voice-bridge lands in bot/,
+-# and rules/_source-crawler-protocol -> /workspace/crawler-protocol is copied as a folder (git stores duplicates once).
++# a campaign lore/ symlink lands in lore/, bot/ lands in bot/ when the source is the live tree,
++# and rules/_source-crawler-protocol is copied as a folder (git stores duplicates once).
+ SOURCES = [
+-    ("/workspace/dcc-campaign", ""),                         # repo root keeps the campaign layout
+-    ("/workspace/core-book", "core-book"),                  # Core Book manuscript, PDF builds included per Caleb
+-    ("/workspace/discord-voice-bridge", "discord-voice-bridge"),
+-    ("/workspace/crawler-protocol", "crawler-protocol"),
+-    ("/workspace/agent-tools", "agent-tools"),
+-    ("/workspace/srd", "srd"),
+-    ("/workspace/backups", "backups"),                      # dcc-campaign/backups is empty today; both merge here
++    (CAMP, ""),                                              # repo root keeps the campaign layout
++    (_src("core-book", "/workspace/core-book"), "core-book"),
++    (_src("discord-voice-bridge", "/workspace/discord-voice-bridge"), "discord-voice-bridge"),
++    (_src("crawler-protocol", "/workspace/crawler-protocol"), "crawler-protocol"),
++    (_src("agent-tools", "/workspace/agent-tools"), "agent-tools"),
++    (_src("srd", "/workspace/srd"), "srd"),
++    (os.environ["DCC_BACKUP_DIR"] if _IN_REPO and os.environ.get("DCC_BACKUP_DIR") else _src("backups", "/workspace/backups"), "backups"),
+     # unique work found in scratch folders (everything else in the scratch folders is copies/throwaway):
+-    ("/workspace/tmp/eb", "scratch/tmp-eb"),                # encounter-budget generator gen.py + mkmd.py + versions
+-    ("/workspace/discord-pass", "scratch/discord-pass"),    # Discord channel snapshot taken before a channel pass
+-]
+-SINGLE_FILES = [  # (source file, repo-relative destination)
+-    ("/workspace/backup-push.sh", "ops/backup-push.sh"),
+-    ("/workspace/backup-sync.py", "ops/backup-sync.py"),
++    (_src("scratch/tmp-eb", "/workspace/tmp/eb"), "scratch/tmp-eb"),
++    (_src("scratch/discord-pass", "/workspace/discord-pass"), "scratch/discord-pass"),
+ ]
++if _IN_REPO:
++    SINGLE_FILES = [  # already in the checkout; keep them in the wanted set so delete-sync leaves them
++        (os.path.join(_HERE, "backup-push.sh"), "ops/backup-push.sh"),
++        (os.path.join(_HERE, "backup-sync.py"), "ops/backup-sync.py"),
++    ]
++else:
++    SINGLE_FILES = [
++        (os.environ.get("DCC_BACKUP_PUSH") or "/workspace/backup-push.sh", "ops/backup-push.sh"),
++        (os.environ.get("DCC_BACKUP_SYNC") or "/workspace/backup-sync.py", "ops/backup-sync.py"),
++    ]
+ # Files that live only in the staging repo (never deleted by delete-sync, never overwritten by a source file).
+ STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md"}
+ 
+@@ -69,7 +99,7 @@
+ sessions-data/*/agents-channel-*.lastseen
+ """
+ 
+-SECRET_SRC = "/workspace/dcc-campaign/gm-notes/secret"   # copy only; never read for scanning, never print names
++SECRET_SRC = os.path.join(CAMP, "gm-notes", "secret")   # copy only; never read for scanning, never print names
+ 
+ EXC_DIRS = {"node_modules", "__pycache__", ".venv", ".git"}
+ EXC_FILE_GLOBS = ["*.pyc", ".env", ".env.*", ".env.agents"]   # .env.* covers .env.example too (literal rule);
+@@ -152,7 +182,10 @@ def build_want():
+             if real in seen:
+                 dirs[:] = []; continue
+             seen.add(real)
+-            dirs[:] = sorted(x for x in dirs if x not in EXC_DIRS)
++            skip = set(EXC_DIRS)
++            if os.path.realpath(s0) == os.path.realpath(REPO):
++                skip |= FORBIDDEN_ROOT_NAMES
++            dirs[:] = sorted(x for x in dirs if x not in skip)
+             secret = in_secret(root)
+             for f in sorted(files):
+                 s = os.path.join(root, f)
+@@ -247,7 +280,7 @@ def main():
+     deleted = 0
+     for root, dirs, files in os.walk(REPO, topdown=True):
+         if root == REPO:
+-            dirs[:] = [d for d in dirs if d != ".git"]
++            dirs[:] = [d for d in dirs if d != ".git" and d not in FORBIDDEN_ROOT_NAMES]
+         for f in files:
+             rel = os.path.relpath(os.path.join(root, f), REPO)
+             if rel not in want and rel not in STAGING_OWNED and rel not in links:
+diff --git a/ops/check_repo_safe.py b/ops/check_repo_safe.py
+index ac7ba51..57baa1a 100755
+--- a/ops/check_repo_safe.py
++++ b/ops/check_repo_safe.py
+@@ -151,7 +151,7 @@ def report(problems, out):
+         out.write("check_repo_safe: FAILED, %d credential problem(s). Matched text is never printed.\n" % len(problems))
+         for p in problems:
+             out.write("  " + p + "\n")
+-        out.write("Add the file to CREDENTIAL_EXCLUDES in ops/backup-sync.py (/workspace/backup-sync.py) and re-sync.\n")
++        out.write("Add the file to CREDENTIAL_EXCLUDES in ops/backup-sync.py and re-sync.\n")
+         return 1
+     out.write("check_repo_safe: OK (credentials only; full backup authorized by Caleb 2026-10-04)\n")
+     return 0
+diff --git a/scratch/tmp-eb/gen.py b/scratch/tmp-eb/gen.py
+index e6c9fff..6b7db3d 100644
+--- a/scratch/tmp-eb/gen.py
++++ b/scratch/tmp-eb/gen.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_old_tmp.py b/scratch/tmp-eb/gen_old_tmp.py
+index 494dd43..52e48e3 100644
+--- a/scratch/tmp-eb/gen_old_tmp.py
++++ b/scratch/tmp-eb/gen_old_tmp.py
+@@ -1,8 +1,9 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
+-OUT = "/workspace/tmp/eb/old_v011.json"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++OUT = os.path.join(_HERE, "old_v011.json")
+ 
+ # ---------- SRD 5.2.1 tables ----------
+ XPB = {1:(50,75,100),2:(100,150,200),3:(150,225,400),4:(250,375,500),5:(500,750,1100),6:(600,1000,1400),
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v010.py b/scratch/tmp-eb/gen_v010.py
+index 7b9863f..8002f91 100644
+--- a/scratch/tmp-eb/gen_v010.py
++++ b/scratch/tmp-eb/gen_v010.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -240,7 +241,7 @@ def floor_econ(fl):
+ econ["counted_but_unplanned"]=["Story Box item sale proceeds (fixed sale_value 100/250/500 by rung, rules/45 4.6): count toward the flag. Headroom covers a rung 0 or rung 1 sale; a rung 2 sale (500) would flag, and the Accountant flags but never blocks."]
+ 
+ # ---------- simulation (tail check) ----------
+-sys.path.insert(0,"/workspace/tmp/eb")
++sys.path.insert(0, _HERE)
+ import tail
+ os_cwd = __import__("os").chdir(ROOT)
+ o1=floors["1"]["boxes"]["odds_per_encounter_by_tier"]; o2=floors["2"]["boxes"]["odds_per_encounter_by_tier"]
+diff --git a/scratch/tmp-eb/gen_v011.py b/scratch/tmp-eb/gen_v011.py
+index 91c1286..9934dd7 100644
+--- a/scratch/tmp-eb/gen_v011.py
++++ b/scratch/tmp-eb/gen_v011.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v012.py b/scratch/tmp-eb/gen_v012.py
+index 5734d3a..59d652b 100644
+--- a/scratch/tmp-eb/gen_v012.py
++++ b/scratch/tmp-eb/gen_v012.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v013.py b/scratch/tmp-eb/gen_v013.py
+index 2a22ef5..5a47f7b 100644
+--- a/scratch/tmp-eb/gen_v013.py
++++ b/scratch/tmp-eb/gen_v013.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v014.py b/scratch/tmp-eb/gen_v014.py
+index d7bc616..f0ca58e 100644
+--- a/scratch/tmp-eb/gen_v014.py
++++ b/scratch/tmp-eb/gen_v014.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v015.py b/scratch/tmp-eb/gen_v015.py
+index 55d5946..af4e2d3 100644
+--- a/scratch/tmp-eb/gen_v015.py
++++ b/scratch/tmp-eb/gen_v015.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v016.py b/scratch/tmp-eb/gen_v016.py
+index dac5e79..4298926 100644
+--- a/scratch/tmp-eb/gen_v016.py
++++ b/scratch/tmp-eb/gen_v016.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v017.py b/scratch/tmp-eb/gen_v017.py
+index 240e48c..42dc428 100644
+--- a/scratch/tmp-eb/gen_v017.py
++++ b/scratch/tmp-eb/gen_v017.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v018.py b/scratch/tmp-eb/gen_v018.py
+index 6b9e780..d41d8de 100644
+--- a/scratch/tmp-eb/gen_v018.py
++++ b/scratch/tmp-eb/gen_v018.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/gen_v019.py b/scratch/tmp-eb/gen_v019.py
+index 5a71295..3622e15 100644
+--- a/scratch/tmp-eb/gen_v019.py
++++ b/scratch/tmp-eb/gen_v019.py
+@@ -1,7 +1,8 @@
+ #!/usr/bin/env python3
+ """Generator for rules/70-encounter-budget-5e.json (scratch; not filed). All numbers computed here so md and json agree."""
+-import json, glob, hashlib, math, random, statistics, sys
+-ROOT = "/workspace/dcc-campaign"
++import json, glob, hashlib, math, os, random, statistics, sys
++_HERE = os.path.dirname(os.path.abspath(__file__))
++ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+ OUT = ROOT + "/rules/70-encounter-budget-5e.json"
+ 
+ # ---------- SRD 5.2.1 tables ----------
+@@ -197,7 +198,7 @@ def box_odds(fl, mix):
+ 
+ # ---------- economy audit, PER CRAWLER PER FLOOR (v0.1.1) ----------
+ LINE=1500
+-SIMR=json.load(open("/workspace/tmp/eb/econ.json"))
++SIMR=json.load(open(os.path.join(_HERE, "econ.json")))
+ def floor_econ(fl):
+     F=floors[str(fl)]
+     cash = F["credits"]["cash_expected_per_crawler"]; r1 = F["credits"]["r1_toast_credits_per_crawler"]["expected"]
+diff --git a/scratch/tmp-eb/mkmd.py b/scratch/tmp-eb/mkmd.py
+index d88821c..f09ad04 100644
+--- a/scratch/tmp-eb/mkmd.py
++++ b/scratch/tmp-eb/mkmd.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v012.py b/scratch/tmp-eb/mkmd_v012.py
+index 698cb34..49654b5 100644
+--- a/scratch/tmp-eb/mkmd_v012.py
++++ b/scratch/tmp-eb/mkmd_v012.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v013.py b/scratch/tmp-eb/mkmd_v013.py
+index 0594a11..38d32f3 100644
+--- a/scratch/tmp-eb/mkmd_v013.py
++++ b/scratch/tmp-eb/mkmd_v013.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v014.py b/scratch/tmp-eb/mkmd_v014.py
+index dc1ce19..50483f5 100644
+--- a/scratch/tmp-eb/mkmd_v014.py
++++ b/scratch/tmp-eb/mkmd_v014.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v015.py b/scratch/tmp-eb/mkmd_v015.py
+index 20dcae8..287ec1a 100644
+--- a/scratch/tmp-eb/mkmd_v015.py
++++ b/scratch/tmp-eb/mkmd_v015.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v016.py b/scratch/tmp-eb/mkmd_v016.py
+index 7797bc3..0440735 100644
+--- a/scratch/tmp-eb/mkmd_v016.py
++++ b/scratch/tmp-eb/mkmd_v016.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v017.py b/scratch/tmp-eb/mkmd_v017.py
+index 26c9b7e..5f34690 100644
+--- a/scratch/tmp-eb/mkmd_v017.py
++++ b/scratch/tmp-eb/mkmd_v017.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v018.py b/scratch/tmp-eb/mkmd_v018.py
+index 465a701..23b016b 100644
+--- a/scratch/tmp-eb/mkmd_v018.py
++++ b/scratch/tmp-eb/mkmd_v018.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/mkmd_v019.py b/scratch/tmp-eb/mkmd_v019.py
+index 80f1f5b..6f0d457 100644
+--- a/scratch/tmp-eb/mkmd_v019.py
++++ b/scratch/tmp-eb/mkmd_v019.py
+@@ -1,5 +1,9 @@
+ import json
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ F=d["floors"]; E=d["economy_audit"]; sm=d["day01_slot_map"]["slots"]
+ o=[]
+diff --git a/scratch/tmp-eb/rules20_v033.md b/scratch/tmp-eb/rules20_v033.md
+index 580228f..9308ba0 100644
+--- a/scratch/tmp-eb/rules20_v033.md
++++ b/scratch/tmp-eb/rules20_v033.md
+@@ -1,7 +1,7 @@
+ # Crafting Rules (5e Overlay)
+ Owner: Syndicate Dungeon Crawl System 001 | Status: review (all open questions answered by Caleb 2026-10-04 and applied; no open rules questions remain, three small new ones in §10.2) | Version: 0.3.3 | Updated: 2026-10-04
+ Summary: Crafting on D&D 5e 2024 tool proficiencies: strictly saferoom-only workstations (tables) as Personal Space accessories (first table Floor 2, very rare Floor 1 find plus a placed goblin-workshop cache, unusable until Floor 4), table levels bought on any floor (credits or coupons, no automatic leveling), DM-granted crafting boons, ingredients, recipe stat blocks with 11 canon-inspired examples, 1-round potion cooldown, failure/Dud/explosives rules (Boomer capped at 6d6 until level 5), Steady Hands no-roll default, System snark, balance, locked decisions, and a one-page quick reference.
+-Depends on: rules/10-core-rules-5e.md v0.2.8 (v0.2.7 carries the crafting pointer and the merged edits, §11; core wins on any remaining conflict). Decisions: decisions/004-crafting-system.md, decisions/008-crafting-rules.md, decisions/010-first-crafting-table.md, decisions/011-crafting-settings.md, decisions/012-crafting-economy-explosives.md, decisions/013-crafting-open-questions.md ("decision 013-crafting" below; it shares the number 013 with decisions/013-party-size.md). Canon: /workspace/dcc-lore/catalog/crafting-canon.md = CANON-LEDGER.md §10 (IDs K-###, X-C##).
++Depends on: rules/10-core-rules-5e.md v0.2.8 (v0.2.7 carries the crafting pointer and the merged edits, §11; core wins on any remaining conflict). Decisions: decisions/004-crafting-system.md, decisions/008-crafting-rules.md, decisions/010-first-crafting-table.md, decisions/011-crafting-settings.md, decisions/012-crafting-economy-explosives.md, decisions/013-crafting-open-questions.md ("decision 013-crafting" below; it shares the number 013 with decisions/013-party-size.md). Canon: lore/catalog/crafting-canon.md = CANON-LEDGER.md §10 (IDs K-###, X-C##).
+ 
+ > **Status:** v0.3. Caleb approved the first-table, crafting-settings and economy/explosive decisions on 2026-10-03 and answered every open question on 2026-10-04; all are LOCKED (§10.1, decision 013-crafting). §10.2 now holds only three new, small questions. **Project:** *Crawler Protocol: Season Zero*, original fan RPG inspired by *Dungeon Crawler Carl*. Private play only.
+ > **Scope:** only what is homebrew or changed. Anything not here is 5e 2024 as written (2024 PHB tool rules and crafting; 2024 DMG magic item rarity and prices).
+diff --git a/scratch/tmp-eb/rules20_v034.md b/scratch/tmp-eb/rules20_v034.md
+index 31b458b..99c3dc1 100644
+--- a/scratch/tmp-eb/rules20_v034.md
++++ b/scratch/tmp-eb/rules20_v034.md
+@@ -1,7 +1,7 @@
+ # Crafting Rules (5e Overlay)
+ Owner: Syndicate Dungeon Crawl System 001 | Status: review (all open questions answered by Caleb 2026-10-04 and applied; no open rules questions remain, three small new ones in §10.2) | Version: 0.3.4 | Updated: 2026-10-04
+ Summary: Crafting on D&D 5e 2024 tool proficiencies: strictly saferoom-only workstations (tables) as Personal Space accessories (first table Floor 2, very rare Floor 1 find plus a placed goblin-workshop cache, unusable until Floor 4), table levels bought on any floor (credits or coupons, no automatic leveling), DM-granted crafting boons, ingredients, recipe stat blocks with 11 canon-inspired examples, 1-round potion cooldown, failure/Dud/explosives rules (Boomer capped at 6d6 until level 5), Steady Hands no-roll default, System snark, balance, locked decisions, and a one-page quick reference.
+-Depends on: rules/10-core-rules-5e.md v0.2.8 (v0.2.7 carries the crafting pointer and the merged edits, §11; core wins on any remaining conflict). Decisions: decisions/004-crafting-system.md, decisions/008-crafting-rules.md, decisions/010-first-crafting-table.md, decisions/011-crafting-settings.md, decisions/012-crafting-economy-explosives.md, decisions/013-crafting-open-questions.md ("decision 013-crafting" below; it shares the number 013 with decisions/013-party-size.md). Canon: /workspace/dcc-lore/catalog/crafting-canon.md = CANON-LEDGER.md §10 (IDs K-###, X-C##).
++Depends on: rules/10-core-rules-5e.md v0.2.8 (v0.2.7 carries the crafting pointer and the merged edits, §11; core wins on any remaining conflict). Decisions: decisions/004-crafting-system.md, decisions/008-crafting-rules.md, decisions/010-first-crafting-table.md, decisions/011-crafting-settings.md, decisions/012-crafting-economy-explosives.md, decisions/013-crafting-open-questions.md ("decision 013-crafting" below; it shares the number 013 with decisions/013-party-size.md). Canon: lore/catalog/crafting-canon.md = CANON-LEDGER.md §10 (IDs K-###, X-C##).
+ 
+ > **Status:** v0.3. Caleb approved the first-table, crafting-settings and economy/explosive decisions on 2026-10-03 and answered every open question on 2026-10-04; all are LOCKED (§10.1, decision 013-crafting). §10.2 now holds only three new, small questions. **Project:** *Crawler Protocol: Season Zero*, original fan RPG inspired by *Dungeon Crawler Carl*. Private play only.
+ > **Scope:** only what is homebrew or changed. Anything not here is 5e 2024 as written (2024 PHB tool rules and crafting; 2024 DMG magic item rarity and prices).
+diff --git a/scratch/tmp-eb/rules20_v035.md b/scratch/tmp-eb/rules20_v035.md
+index bf84a91..dbac605 100644
+--- a/scratch/tmp-eb/rules20_v035.md
++++ b/scratch/tmp-eb/rules20_v035.md
+@@ -1,7 +1,7 @@
+ # Crafting Rules (5e Overlay)
+ Owner: Syndicate Dungeon Crawl System 001 | Status: review (all open questions answered by Caleb 2026-10-04 and applied; no open rules questions remain, three small new ones in §10.2) | Version: 0.3.5 | Updated: 2026-10-04
+ Summary: Crafting on D&D 5e 2024 tool proficiencies: strictly saferoom-only workstations (tables) as Personal Space accessories (first table Floor 2, very rare Floor 1 find plus a placed goblin-workshop cache, unusable until Floor 4), table levels bought on any floor (credits or coupons, no automatic leveling), DM-granted crafting boons, ingredients, recipe stat blocks with 11 canon-inspired examples, 1-round potion cooldown, failure/Dud/explosives rules (Boomer capped at 6d6 until level 5), Steady Hands no-roll default, System snark, balance, locked decisions, and a one-page quick reference.
+-Depends on: rules/10-core-rules-5e.md v0.2.8 (v0.2.7 carries the crafting pointer and the merged edits, §11; core wins on any remaining conflict). Decisions: decisions/004-crafting-system.md, decisions/008-crafting-rules.md, decisions/010-first-crafting-table.md, decisions/011-crafting-settings.md, decisions/012-crafting-economy-explosives.md, decisions/013-crafting-open-questions.md ("decision 013-crafting" below; it shares the number 013 with decisions/013-party-size.md). Canon: /workspace/dcc-lore/catalog/crafting-canon.md = CANON-LEDGER.md §10 (IDs K-###, X-C##).
++Depends on: rules/10-core-rules-5e.md v0.2.8 (v0.2.7 carries the crafting pointer and the merged edits, §11; core wins on any remaining conflict). Decisions: decisions/004-crafting-system.md, decisions/008-crafting-rules.md, decisions/010-first-crafting-table.md, decisions/011-crafting-settings.md, decisions/012-crafting-economy-explosives.md, decisions/013-crafting-open-questions.md ("decision 013-crafting" below; it shares the number 013 with decisions/013-party-size.md). Canon: lore/catalog/crafting-canon.md = CANON-LEDGER.md §10 (IDs K-###, X-C##).
+ 
+ > **Status:** v0.3. Caleb approved the first-table, crafting-settings and economy/explosive decisions on 2026-10-03 and answered every open question on 2026-10-04; all are LOCKED (§10.1, decision 013-crafting). §10.2 now holds only three new, small questions. **Project:** *Crawler Protocol: Season Zero*, original fan RPG inspired by *Dungeon Crawler Carl*. Private play only.
+ > **Scope:** only what is homebrew or changed. Anything not here is 5e 2024 as written (2024 PHB tool rules and crafting; 2024 DMG magic item rarity and prices).
+diff --git a/scratch/tmp-eb/verify.py b/scratch/tmp-eb/verify.py
+index c41a578..c3adbac 100644
+--- a/scratch/tmp-eb/verify.py
++++ b/scratch/tmp-eb/verify.py
+@@ -1,5 +1,9 @@
+ import json,re
+-R="/workspace/dcc-campaign/"
++import os
++_HERE = os.path.dirname(os.path.abspath(__file__))
++R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
++if not R.endswith(os.sep):
++    R += os.sep
+ d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
+ day=json.load(open(R+"floors/f01/day-01.json"))
+ spec=json.load(open(R+"floors/f01/day-01.spec.json"))

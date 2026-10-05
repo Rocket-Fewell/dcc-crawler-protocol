@@ -21,3 +21,8 @@ Resolve via `DCC_CAMPAIGN_ROOT` / `DCC_LORE_ROOT` (or sibling folders next to th
 - Carry canon tags into the text of the book source so you can decide at print time what to label as HOUSE vs canon.
 - Never include GM-only content: nothing from campaign `gm-notes/` (especially `gm-notes/secret/`: GM quirk roll and player affinity are hidden by design). The book may describe the quirk/affinity system only at the level Lore has published as player-facing.
 - Do not paste secrets or tokens. Do not use real player names or private comfort settings from gm-notes.
+
+## Building from a fresh checkout
+Needs Python 3, `pip install -r core-book/requirements.txt`, `google-chrome` (headless PDF), and `pdftotext` (poppler-utils, for TOC page numbers).
+1. `python3 core-book/drafts/gen-ch2-tables.py` (regenerates Ch2 tables; finds `tables/` and `lore/tables/` from the repo root, or set `DCC_CAMPAIGN_ROOT` / `DCC_LORE_ROOT`)
+2. `python3 core-book/build/build.py --version 0.1` (writes `build/dcc-core-rulebook-v0.1.pdf`)
