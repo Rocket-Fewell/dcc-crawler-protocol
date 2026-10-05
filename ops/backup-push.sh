@@ -3,9 +3,25 @@
 # Caleb authorized a full backup on 2026-10-04 ("i want all files on the github.... everything"): only live credentials,
 # dependency/cache folders and files over 50 MB are left out (see backup-sync.py).
 # Token is read ONLY from env GITHUB_BACKUP_TOKEN (never printed, never stored in .git/config).
-# Usage: GITHUB_BACKUP_TOKEN=... /workspace/backup-push.sh ["commit message"]   (DRY_RUN=1 stops before the commit)
+# The checkout copy (ops/backup-push.sh) does not mirror, commit, or push.
+# DRY_RUN=1 prints the checkout path and exits. The nightly push is the box copy
+# of this script, which lives outside the repo.
+# Box usage: GITHUB_BACKUP_TOKEN=... backup-push.sh ["commit message"]
 set -euo pipefail
-REPO=/workspace/dcc-repo-staging
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ "$(basename "$SCRIPT_DIR")" = "ops" ] && [ -f "$SCRIPT_DIR/backup-sync.py" ]; then
+  REPO="${DCC_BACKUP_REPO:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+  if [ -n "${DRY_RUN:-}" ]; then
+    echo "DRY_RUN: ops/backup-push.sh does not mirror, commit, or push from a checkout."
+    echo "REPO=$REPO"
+    echo "Nightly push stays on the box copy of this script."
+    exit 0
+  fi
+  echo "STOP: ops/backup-push.sh in a checkout does not commit or push. The box copy outside the repo does the nightly backup. DRY_RUN=1 prints the checkout path and exits." >&2
+  exit 1
+fi
+REPO="${DCC_BACKUP_REPO:-/workspace/dcc-repo-staging}"
+SYNC="${DCC_BACKUP_SYNC:-/workspace/backup-sync.py}"
 URL=https://github.com/Rocket-Fewell/dcc-crawler-protocol.git
 MSG="${1:-Sync campaign design files}"
 : "${GITHUB_BACKUP_TOKEN:?GITHUB_BACKUP_TOKEN not set}"
@@ -13,7 +29,7 @@ MSG="${1:-Sync campaign design files}"
 # (all exclusions live in backup-sync.py)
 
 cd "$REPO"
-python3 /workspace/backup-sync.py   # rsync-like full mirror (rsync is not installed)
+python3 "$SYNC"   # rsync-like full mirror (rsync is not installed)
 cp ops/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # credential-only hook
 # --force: mirrored folders carry their own .gitignore (e.g. discord-voice-bridge ignores logs/ and *.log); the
 # mirror already decides what belongs here, so nested ignore files must not drop logs.

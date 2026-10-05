@@ -1,5 +1,9 @@
 import json,re
-R="/workspace/dcc-campaign/"
+import os
+_HERE = os.path.dirname(os.path.abspath(__file__))
+R = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or os.path.abspath(os.path.join(_HERE, "..", ".."))
+if not R.endswith(os.sep):
+    R += os.sep
 d=json.load(open(R+"rules/70-encounter-budget-5e.json"))
 day=json.load(open(R+"floors/f01/day-01.json"))
 spec=json.load(open(R+"floors/f01/day-01.spec.json"))

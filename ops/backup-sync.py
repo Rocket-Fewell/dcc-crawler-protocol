@@ -6,34 +6,64 @@ Everything is mirrored EXCEPT: live credentials (.env/.env.*, files matching a c
 CREDENTIAL_EXCLUDES), dependency/cache folders (node_modules, __pycache__, *.pyc, .venv, .git), per-machine agents-channel poll cursors/lastseen (RUNTIME_EXCLUDES), and files over 50 MB.
 Delete-sync: anything in the repo that is no longer in a source is removed (except STAGING_OWNED paths).
 
-ETIQUETTE: /workspace/dcc-campaign/gm-notes/secret/ is copied byte-for-byte and NEVER content-scanned or printed
+ETIQUETTE: gm-notes/secret/ under the campaign root is copied byte-for-byte and NEVER content-scanned or printed
 (it holds GM roll/affinity data, not credentials). Name-based exclusions still apply there.
 Sources are only read, never modified.
+
+Paths: a fresh checkout runs this file from ops/ and reads the checkout (DCC_BACKUP_REPO /
+DCC_CAMPAIGN_ROOT override). The box copy that lives outside the repo still defaults to the
+live trees. Those box paths are not used when this file is the ops/ copy.
 """
 import fnmatch, importlib.util, io, os, shutil, sys, tarfile
 sys.dont_write_bytecode = True   # keep ops/__pycache__ out of the repo
 
-REPO = "/workspace/dcc-repo-staging"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_IN_REPO = os.path.basename(_HERE) == "ops" and os.path.isfile(os.path.join(_HERE, "check_repo_safe.py"))
+
+if os.environ.get("DCC_BACKUP_REPO"):
+    REPO = os.environ["DCC_BACKUP_REPO"]
+elif _IN_REPO:
+    REPO = os.path.dirname(_HERE)
+else:
+    REPO = "/workspace/dcc-repo-staging"   # box copy of this script, outside the checkout
+
+CAMP = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR")
+if not CAMP:
+    CAMP = REPO if _IN_REPO else "/workspace/dcc-campaign"
+
+
+def _src(repo_rel, box):
+    """Repo-relative when this file is ops/backup-sync.py. Box path only for the outside copy."""
+    if _IN_REPO:
+        return os.path.join(REPO, repo_rel)
+    return box
+
 
 # (source dir, repo-relative destination). Directory symlinks inside sources are followed, so
-# dcc-campaign/lore -> /workspace/dcc-lore lands in lore/, dcc-campaign/bot -> discord-voice-bridge lands in bot/,
-# and rules/_source-crawler-protocol -> /workspace/crawler-protocol is copied as a folder (git stores duplicates once).
+# a campaign lore/ symlink lands in lore/, bot/ lands in bot/ when the source is the live tree,
+# and rules/_source-crawler-protocol is copied as a folder (git stores duplicates once).
 SOURCES = [
-    ("/workspace/dcc-campaign", ""),                         # repo root keeps the campaign layout
-    ("/workspace/core-book", "core-book"),                  # Core Book manuscript, PDF builds included per Caleb
-    ("/workspace/discord-voice-bridge", "discord-voice-bridge"),
-    ("/workspace/crawler-protocol", "crawler-protocol"),
-    ("/workspace/agent-tools", "agent-tools"),
-    ("/workspace/srd", "srd"),
-    ("/workspace/backups", "backups"),                      # dcc-campaign/backups is empty today; both merge here
+    (CAMP, ""),                                              # repo root keeps the campaign layout
+    (_src("core-book", "/workspace/core-book"), "core-book"),
+    (_src("discord-voice-bridge", "/workspace/discord-voice-bridge"), "discord-voice-bridge"),
+    (_src("crawler-protocol", "/workspace/crawler-protocol"), "crawler-protocol"),
+    (_src("agent-tools", "/workspace/agent-tools"), "agent-tools"),
+    (_src("srd", "/workspace/srd"), "srd"),
+    (os.environ["DCC_BACKUP_DIR"] if _IN_REPO and os.environ.get("DCC_BACKUP_DIR") else _src("backups", "/workspace/backups"), "backups"),
     # unique work found in scratch folders (everything else in the scratch folders is copies/throwaway):
-    ("/workspace/tmp/eb", "scratch/tmp-eb"),                # encounter-budget generator gen.py + mkmd.py + versions
-    ("/workspace/discord-pass", "scratch/discord-pass"),    # Discord channel snapshot taken before a channel pass
+    (_src("scratch/tmp-eb", "/workspace/tmp/eb"), "scratch/tmp-eb"),
+    (_src("scratch/discord-pass", "/workspace/discord-pass"), "scratch/discord-pass"),
 ]
-SINGLE_FILES = [  # (source file, repo-relative destination)
-    ("/workspace/backup-push.sh", "ops/backup-push.sh"),
-    ("/workspace/backup-sync.py", "ops/backup-sync.py"),
-]
+if _IN_REPO:
+    SINGLE_FILES = [  # already in the checkout; keep them in the wanted set so delete-sync leaves them
+        (os.path.join(_HERE, "backup-push.sh"), "ops/backup-push.sh"),
+        (os.path.join(_HERE, "backup-sync.py"), "ops/backup-sync.py"),
+    ]
+else:
+    SINGLE_FILES = [
+        (os.environ.get("DCC_BACKUP_PUSH") or "/workspace/backup-push.sh", "ops/backup-push.sh"),
+        (os.environ.get("DCC_BACKUP_SYNC") or "/workspace/backup-sync.py", "ops/backup-sync.py"),
+    ]
 # Files that live only in the staging repo (never deleted by delete-sync, never overwritten by a source file).
 STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md"}
 
@@ -69,7 +99,7 @@ sessions-data/*/agents-channel-*.txt
 sessions-data/*/agents-channel-*.lastseen
 """
 
-SECRET_SRC = "/workspace/dcc-campaign/gm-notes/secret"   # copy only; never read for scanning, never print names
+SECRET_SRC = os.path.join(CAMP, "gm-notes", "secret")   # copy only; never read for scanning, never print names
 
 EXC_DIRS = {"node_modules", "__pycache__", ".venv", ".git"}
 EXC_FILE_GLOBS = ["*.pyc", ".env", ".env.*", ".env.agents"]   # .env.* covers .env.example too (literal rule);
@@ -152,7 +182,10 @@ def build_want():
             if real in seen:
                 dirs[:] = []; continue
             seen.add(real)
-            dirs[:] = sorted(x for x in dirs if x not in EXC_DIRS)
+            skip = set(EXC_DIRS)
+            if os.path.realpath(s0) == os.path.realpath(REPO):
+                skip |= FORBIDDEN_ROOT_NAMES
+            dirs[:] = sorted(x for x in dirs if x not in skip)
             secret = in_secret(root)
             for f in sorted(files):
                 s = os.path.join(root, f)
@@ -247,7 +280,7 @@ def main():
     deleted = 0
     for root, dirs, files in os.walk(REPO, topdown=True):
         if root == REPO:
-            dirs[:] = [d for d in dirs if d != ".git"]
+            dirs[:] = [d for d in dirs if d != ".git" and d not in FORBIDDEN_ROOT_NAMES]
         for f in files:
             rel = os.path.relpath(os.path.join(root, f), REPO)
             if rel not in want and rel not in STAGING_OWNED and rel not in links:

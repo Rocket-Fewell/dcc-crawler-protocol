@@ -151,7 +151,7 @@ def report(problems, out):
         out.write("check_repo_safe: FAILED, %d credential problem(s). Matched text is never printed.\n" % len(problems))
         for p in problems:
             out.write("  " + p + "\n")
-        out.write("Add the file to CREDENTIAL_EXCLUDES in ops/backup-sync.py (/workspace/backup-sync.py) and re-sync.\n")
+        out.write("Add the file to CREDENTIAL_EXCLUDES in ops/backup-sync.py and re-sync.\n")
         return 1
     out.write("check_repo_safe: OK (credentials only; full backup authorized by Caleb 2026-10-04)\n")
     return 0
