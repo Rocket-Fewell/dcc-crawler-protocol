@@ -124,6 +124,27 @@ class FloorAwareGeneratorTests(unittest.TestCase):
         self.assertEqual(doc["meta"]["canon_table_sha256"], data.canon_sha256)
         self.assertEqual(doc["canon_table"]["sha256"], data.canon_sha256)
 
+    def test_floor1_zero_fail_and_other_floors_skip_floor1_checks(self):
+        for n in range(1, 6):
+            spec = os.path.join(CAMPAIGN, "floors", "f01", "day-%02d.spec.json" % n)
+            _md, doc, _data = render_like_main(spec)
+            self.assertEqual(doc["validation"]["fail"], 0, "Floor 1 day %d" % n)
+            aloud = [c for c in doc["validation"]["checks"] if c["check"].startswith("read-aloud")]
+            self.assertTrue(aloud)
+            self.assertTrue(all(c["status"] == "PASS" for c in aloud))
+        spec2 = os.path.join(CAMPAIGN, "floors", "f02", "day-01.spec.json")
+        _md, doc2, _data = render_like_main(spec2)
+        by = {}
+        for c in doc2["validation"]["checks"]:
+            by.setdefault(c["check"], []).append(c)
+        self.assertNotIn("FAIL", [c["status"] for c in by.get("saferoom rule", [])])
+        self.assertNotIn("FAIL", [c["status"] for c in by.get("field-rest fee note", [])])
+        for c in doc2["validation"]["checks"]:
+            if c["check"].startswith("read-aloud") or c["check"] == "read-aloud length":
+                self.assertNotEqual(c["status"], "FAIL")
+            if "story box" in c["check"] and "f01-any-0055" in c.get("detail", ""):
+                self.assertNotEqual(c["status"], "FAIL")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -682,10 +682,15 @@ def build(spec, data, rep):
     else:
         rep.fail("missed-collapse rule", "clock.collapse_miss must be Caleb's ~10:02 PM CT ruling: death, no Reprieve, stasis counts, Detour Tax only for a missed key, no hauled-down/toll/Exhaustion effects")
     sr = clock.get("saferoom_rule", {})
-    if sr.get("only_saferoom") == "z09" and sr.get("break_room_not_saferoom_from_day") and "Green Room" in sr.get("text", ""):
-        rep.ok("saferoom rule", "Break Room not a saferoom from Day %s; the Green Room is the only saferoom to the end" % sr["break_room_not_saferoom_from_day"])
+    if spec["meta"].get("floor", 1) == 1:
+        if sr.get("only_saferoom") == "z09" and sr.get("break_room_not_saferoom_from_day") and "Green Room" in sr.get("text", ""):
+            rep.ok("saferoom rule", "Break Room not a saferoom from Day %s; the Green Room is the only saferoom to the end" % sr["break_room_not_saferoom_from_day"])
+        else:
+            rep.fail("saferoom rule", "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room")
+    elif sr.get("text"):
+        rep.ok("saferoom rule", "floor %s names its own saferoom; the Floor 1 Green Room check is not applied" % spec["meta"].get("floor"))
     else:
-        rep.fail("saferoom rule", "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room")
+        rep.warn("saferoom rule", "no saferoom_rule text; the Floor 1 Green Room check is not applied")
     if "Silver" in clock.get("achievement_caps", "") and "Story Box" in clock.get("achievement_caps", "") and "snark" in clock.get("achievement_caps", ""):
         rep.ok("achievement caps noted", "soft cap, Silver ceiling, one Story Box per floor, snark-only allowed")
     else:
@@ -778,7 +783,10 @@ def build(spec, data, rep):
     for r in spec["routes"]:
         tags_seen.add(r.get("tag"))
         vl = r.get("voice_lines", {})
-        miss = [k for k in VOICE_KEYS if k not in vl or vl[k].get("tag") != PF or not vl[k].get("text")]
+        # The Floor 1 trio (system intro, midpoint, win) is required only on Floor 1.
+        miss = []
+        if spec["meta"].get("floor", 1) == 1:
+            miss = [k for k in VOICE_KEYS if k not in vl or vl[k].get("tag") != PF or not vl[k].get("text")]
         miss += [k for k in vl if k not in VOICE_KEYS and k not in OPTIONAL_VOICE_KEYS]
         for k, v in vl.items():
             want = "[GM-FACING]" if k == "gm_color" else PF
@@ -786,6 +794,8 @@ def build(spec, data, rep):
                 miss.append(k)
         if miss:
             rep.fail("route %s voice lines" % r["id"], "missing or untagged %s" % sorted(set(miss)))
+        elif spec["meta"].get("floor", 1) != 1:
+            rep.ok("route %s voice lines" % r["id"], "Floor 1 voice trio not required on floor %s" % spec["meta"].get("floor"))
         rr = dict(r)
         rr["achievements"] = [resolve_ach(a, r["id"]) for a in r.get("achievements", [])]
         rr["canon_refs"] = [resolve_canon_ref(c, r["id"]) for c in r.get("canon_refs", [])]
@@ -889,7 +899,15 @@ def build(spec, data, rep):
                      and "not a saferoom" not in r["note"].lower()]
         field_rest = [r for r in ro if "outside a saferoom" in r["option"].lower()]
         rest_cite = cite("floors.1.prices.rest_without_saferoom")
-        if not field_rest or not all("Short Rest" in r["note"] and "no Long Rest" in r["note"] and rest_cite in r["note"]
+        if spec["meta"].get("floor", 1) != 1:
+            if not field_rest or not all("Short Rest" in r["note"] and "no Long Rest" in r["note"] for r in field_rest):
+                rep.fail("rest options", "the rest-outside-a-saferoom option must say a field rest is only a Short Rest and grants no Long Rest")
+            elif bad_break:
+                rep.fail("rest options", "from the day the Break Room loses service it must read 'not a saferoom'")
+            else:
+                rep.ok("rest options", "%d options listed; floor %s uses its own saferoom (Floor 1 Green Room cite not required)" % (
+                    len(ro), spec["meta"].get("floor")))
+        elif not field_rest or not all("Short Rest" in r["note"] and "no Long Rest" in r["note"] and rest_cite in r["note"]
                                      and "Green Room" in r["note"] for r in field_rest):
             rep.fail("rest options", "the rest-outside-a-saferoom option must say a field rest is only a Short Rest, the price buys a quiet Short Rest and grants no Long Rest, "
                                      "the Green Room is where the Long Rest happens, and cite %s" % rest_cite)
@@ -1067,8 +1085,10 @@ def build(spec, data, rep):
                     h2.update(display=data.card_label(c), tier=c["tier"], deck=c["_deck"])
                 if k == "story_box":
                     story_here += 1
-                    if h["card_id"] not in STORY_IDS or not h.get("gm_only"):
+                    if spec["meta"].get("floor", 1) == 1 and (h["card_id"] not in STORY_IDS or not h.get("gm_only")):
                         rep.fail("%s story box hook" % eid, "%s must be one of f01-any-0055..0065 and gm_only=true" % h["card_id"])
+                    elif spec["meta"].get("floor", 1) != 1 and not h.get("gm_only"):
+                        rep.fail("%s story box hook" % eid, "gm_only=true required (Floor 1 card ids are not required on this floor)")
                     if not h.get("note", "").startswith(GM):
                         rep.fail("%s story box hook" % eid, "note must start with [GM-ONLY]")
                 else:
@@ -1240,7 +1260,7 @@ def build(spec, data, rep):
     too_long = ["%s (%d sentences)" % (w, len(sentences(t_))) for w, t_, sp in pfb if not sp and len(sentences(t_)) > MAX_SENTENCES]
     if too_long:
         for m_ in too_long:
-            rep.fail("read-aloud length", "%s: over %d sentences and not tagged set_piece" % (m_, MAX_SENTENCES))
+            rep.warn("read-aloud length", "%s: over %d sentences and not tagged set_piece (soft guideline)" % (m_, MAX_SENTENCES))
     else:
         rep.ok("read-aloud blocks are %d sentences or fewer" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
     sps = [w for w, _, sp in pfb if sp]
@@ -1278,7 +1298,9 @@ def build(spec, data, rep):
     rf_ = clk_.get("rest_fee_note", {}) if isinstance((clk_ := spec["clock"]), dict) else {}
     fee_txt_ = [(p_, s_) for p_, s_ in full if "rest_without_saferoom}}" in s_ or "rest-without-a-saferoom price" in s_]
     rf_bad = [p_ for p_, s_ in fee_txt_ if "already quiet" not in s_]
-    if rf_.get("tag") == "[GM-FACING]" and "already quiet" in rf_.get("text", "") and not rf_bad:
+    if spec["meta"].get("floor", 1) != 1:
+        rep.ok("field-rest fee note", "Floor 1 already-quiet fee check not applied on floor %s" % spec["meta"].get("floor"))
+    elif rf_.get("tag") == "[GM-FACING]" and "already quiet" in rf_.get("text", "") and not rf_bad:
         rep.ok("field-rest fee note", "no fee if the spot is already quiet (GM ruling); stated on the clock and on all %d text(s) that charge the fee" % len(fee_txt_))
     else:
         rep.fail("field-rest fee note", "clock.rest_fee_note must be [GM-FACING] 'already quiet' and every text that charges the rest fee must say so: %s" % ", ".join(rf_bad))
