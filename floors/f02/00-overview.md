@@ -17,7 +17,7 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 | Level | Arrive 2; F3 onboarding → 3 |
 | Clock | 10 days HOUSE (canon expected 10 / cut to 6) |
 | Regions | Soft Lobby z20, Rec-Hall Bazaar z21, Grub Alleys z22, Mind Drift z23, Storm Shelter A z24, Rev-Up z25–z26, Big Shot Chicken B z27, Dog Pound z28, Menagerie z29, Stair z30, Death Watch optional |
-| Bosses | Krakaren Clone Neighborhood Boss (cmm-047); Ralph (cmm-050); Rage Elemental summoned (cmm-056) |
+| Bosses | **Planned:** Krakaren Clone Neighborhood Boss (cmm-047, CR 3 — **sole Silver Boss Box**); Ralph (cmm-050, Days 7–8 — normal Silver / non-Boss-Box). **Not a boss:** Rage Elemental (cmm-056, CR 5) = bathroom **trigger spawn** / out-of-budget |
 | Saferooms | Storm Shelter A (mailbox M-358); Big Shot Chicken B (Qwist M-506). May lie elsewhere (Core Ch1) |
 | Seeds | SEED-STATICSIGIL; SEED-GUIDECONTRACT; Benefactor echo optional |
 | Sources | lore/tables/canon-floor-2.json (RESERVE); lore/drafts/core-book-monster-table-v0.2.md; floors/04-floor-bible.md Soft Open |
@@ -27,13 +27,13 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 1. HOUSE clock 10 days (026; Core Ch1). Canon cut to 6 (X-062) — do not print 6 as house clock.
 2. All stairwells from minute one (M-364). >6h descent = stasis (M-366). Last 6h free (M-368).
 3. Saferooms close at T-1h and eject (M-012, M-360). Enforce Day 10.
-4. Bathroom penalty → Rage Elemental (M-346); pets exempt; ends at collapse.
+4. **Bathroom penalty (M-346):** If a Crawler urinates or defecates anywhere other than a **saferoom** or **designated bathroom**, spawn the **Rage Elemental (CR 5)** as an avoidable **punishment/trigger spawn**. Pets exempt. Ends at collapse. Available **any Soft Open day** (not a planned encounter). Likely kills everyone. **Out-of-budget; does not count as a floor boss; no Silver Boss Box.** Foreshadow on Day 1; escort reminders on Day 9.
 5. Bosses may leave chambers (M-374); first time fires A-123.
 6. Ratings/follows/favorites on after open announcement (M-342).
 7. Grubs replace rats; pupa: timer→Vespas, early pop→half-formed (X-060 closed / Caleb).
 8. Rot Stickers Floor 1 only; F2 swarm = HOUSE Fizz Grub cmm-055 (X-080).
 9. Acid Impaler not on F2 — F3 (X-063).
-10. Krakaren Clone = Neighborhood Boss (Caleb; X-059).
+10. Krakaren Clone = Neighborhood Boss (Caleb; X-059). **Pays the floor's single Silver Boss Box** (Caleb 18:14 CT via Accountant). Ralph is a planned boss with normal Silver / non-Boss-Box reward.
 11. Hedgehogs: do not field after relocate patch (M-382; cmm-053).
 12. Giant Blimp: rumor/STUB only (cmm-052); no invented kit.
 13. Saferooms can lie from F2 on (Core Ch1).
@@ -68,11 +68,11 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 | Krakaren Clone (Second Floor) | chuul (HOUSE CR 3) | 3 | cmm-047 | Neighborhood Boss; Caleb CR 3 |
 | Danger Dingo | dire-wolf | 1 | cmm-048 | CANON |
 | Kobold Rider | kobold | 1/8 | cmm-049 | CANON |
-| Ralph the Frenzied Gerbil | giant-hyena | 1 | cmm-050 | Neighborhood Boss |
+| Ralph the Frenzied Gerbil | giant-hyena | 1 | cmm-050 | Planned boss (Days 7–8); normal Silver — not Boss Box |
 | Mind Horror | specter | 1 | cmm-051 | CANON |
 | Giant Blimp | — | — | cmm-052 | STUB rumor |
 | Satan's Lil' Hedgehogs | — | — | cmm-053 | STUB after patch |
-| Rage Elemental | air-elemental | 5 | cmm-056 | summoned |
+| Rage Elemental | air-elemental | 5 | cmm-056 | **Trigger spawn** (bathroom rule); any day; out-of-budget; not planned; no Boss Box |
 | Fizz Grub (Hemolymph Burster) | stirge | 1/8 | cmm-055 | HOUSE |
 
 ## 4. Conflicts
@@ -87,13 +87,23 @@ X-059 Neighborhood Boss (closed); X-060 pupa dual-burst (closed); X-061 patronag
 | 2 | Mind Horror + Storm Shelter A | Mailbox M-358; saferoom skepticism; stair peek / stasis warning |
 | 3 | Cow-tails + Pupa choice | A-136 trap; X-060 burst rules; blimp rumor only |
 | 4 | Rev-Up clurichauns + Laminak blender + Chicken saferoom | Taint; A-034 smoothie; Qwist |
-| 5 | Krakaren Clone Neighborhood Boss | A-123 burst; Silver Boss Box; Measles/Taint |
+| 5 | Krakaren Clone Neighborhood Boss | A-123 burst; **sole Silver Boss Box**; Measles/Taint |
 | 6 | Patch morning + Vespa/Guide + optional Death Watch | M-382 hedgehogs out; M-012 closure preview; M-396 grub nerf |
 | 7 | Pound gates + biscuits | A-091 setup; loud music M-414 |
-| 8 | Ralph + Menagerie | A-083; A-056 HOUSE; pet key |
-| 9 | Escort + lure prep + Rage Elemental | A-047, A-071, A-131, A-136, A-034 |
+| 8 | Ralph + Menagerie | A-083; A-056 HOUSE; pet key; Ralph = normal Silver (not Boss Box) |
+| 9 | Escort + lure prep + **stair claim** (planned) | A-034, A-136; A-047/A-071/A-131 only if bathroom trigger fires |
 | 10 | T-1h eject + free descent + collapse | M-360, M-368; Soft Open exit |
+
+
+## 5b. Rage Elemental trigger spawn (not a planned encounter)
+
+- **CR 5** (`air-elemental` / cmm-056). Stays CR 5.
+- **Trigger only:** a Crawler urinates or defecates anywhere other than a saferoom or designated bathroom (Day 1 bathroom rule / M-346).
+- **Any Soft Open day** until collapse; pets exempt.
+- **Avoidable punishment** — will likely kill everyone. Prefer never seeing it.
+- **Out-of-budget / off boss count / no Silver Boss Box.** Do not pin as `floors.2` planned boss.
+- Soft Open has **exactly one Silver Boss Box**: Krakaren Clone (Day 5).
 
 ## 6. Open questions
 
-Accountant: floors.2.fixed_encounters pins. Lore: RESERVE release + A-056. Syndicate: achievement rewards. Architect: encounter_bot multi-floor overview/canon. Caleb (2026-10-05): Soft Open FINAL district name; Krakaren HOUSE CR 3 (fits L2 boss caps).
+Accountant: floors.2.fixed_encounters pins. Lore: RESERVE release + A-056. Syndicate: achievement rewards. Architect: encounter_bot multi-floor overview/canon. Caleb (2026-10-05): Soft Open FINAL; Krakaren HOUSE CR 3; 18:14 CT via Accountant: Rage Elemental = CR 5 bathroom trigger spawn (off-boss/off-budget); Krakaren = sole Silver Boss Box; Ralph = normal Silver.

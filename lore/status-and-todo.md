@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.14 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.15 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -441,3 +441,8 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 # Pass 33 (2026-10-05 CT): Soft Open F2 canon pass
 
 - Wrote `audits/f02-days-1-10-canon-pass-2026-10-05.md` (sha256 c7a0bd0a42bb678dee8e7911e2cb03de660db3aa3e20a061011eae4775209503). Verdict PASS WITH FIXES. Blocker: Krakaren Neighborhood stair claimed under M-365 (Borough/City only). Top fixes: retag mis-cited proposed achievements (M-467→M-506 Qwist; M-386→M-385 corpse/grubs; M-355→M-508/509 Mana Toast); stop tagging non-A-row hooks as canon achievements. No campaign edits.
+
+---
+# Pass 34 (2026-10-05 CT): F2 achievement framing v0.1
+
+- Wrote `drafts/f02-achievement-framing-v0.1.md` + `.json` (sha256 md 85460e228c239eed… / json d5c6324b9d05573d…). Framed 67; DEMOTE 37; CANON-WIRED 5; cites fixed 4. No campaign edits.

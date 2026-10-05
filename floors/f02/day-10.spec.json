@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ]
   },
   "budget_file": {
@@ -90,7 +91,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {

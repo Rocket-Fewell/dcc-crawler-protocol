@@ -184,3 +184,9 @@ Summary: Things still waiting on a decision or on another bot.
 - Players are NEVER asked or prompted about a pet. The pet is created only if the player mentions bringing a pet in the questionnaire. `/create` must not show a pet screen to everyone; it appears only on a questionnaire pet mention. Pet Story Box deeds stay GM-judged.
 - 2026-10-04 ~7:51 PM CT: bridge rejoined 7:39; Hornn STT bits ("It's important.", "Amen.", "Hey"). Posted one short [GM] ping: still parked in Z6 Break Room, say "open Session Two" or say what's important. Spotlight stays Hornn.
 - 2026-10-04 ~7:58 PM CT: Hornn STT "I don't know if she's here." read as table chatter, not a GM ask; posted nothing (7:51 ping still stands). Session 1 still closed in Z6 Break Room.
+
+## Floor 2 — bathroom hint (Caleb 2026-10-05)
+- **Rage Elemental (CR 5)** spawns only if a Crawler urinates/defecates outside a saferoom or bathroom (likely wipe).
+- Through Floor 2, drip **[GM]** jokes/hints: don’t foul the floors; use designated safe areas to relieve yourself. Careful players can catch it.
+- Hint the danger and trigger; **never** spell out the exact trigger or the monster’s name until it happens.
+- Encounter Bot owns the F2 spec line; re-check after regen.

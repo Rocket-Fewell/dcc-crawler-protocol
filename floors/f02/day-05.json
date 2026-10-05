@@ -8,7 +8,7 @@
     "floor": 2,
     "floor_name": "Soft Open",
     "title": "Day 5 of 10: Krakaren Clone Leaves the Room",
-    "summary": "Neighborhood Boss day; A-123; Silver Boss Box.",
+    "summary": "Neighborhood Boss day; A-123; floor's single Silver Boss Box (Krakaren).",
     "sources": [
       "floors/04-floor-bible.md Soft Open",
       "lore/tables/canon-floor-2.json RESERVE",
@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ],
     "day": 5,
     "days": 10,
@@ -29,9 +30,9 @@
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.0",
-    "budget_file_sha256": "11a243b1b67737498a6ed434feaf91868dc558b0abc8a4277d8aecbd20a6114c",
+    "budget_file_sha256": "0c4e5ee1440675349c2006ba41b61d498b174e215f281dbb1381e878267de953",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "c53a4134b9f4762bb583a416690d35b4ae0f54e7689b7e3ade711ea075fc1a3a",
+    "spec_sha256_sans_pin": "09ac75e8a962d4dd522f293b1cc408bcdecddda2620ad800e67c968ac9210d3e",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -91,7 +92,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -237,7 +238,7 @@
       "cards": []
     },
     "stall_fallback": "Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always exist (M-364).",
-    "start_note": "Neighborhood Boss day; A-123; Silver Boss Box.",
+    "start_note": "Neighborhood Boss day; A-123; floor's single Silver Boss Box (Krakaren).",
     "rest_options": [
       {
         "option": "Storm Shelter Saferoom A (z24)",
@@ -969,7 +970,7 @@
           "audience": "gm"
         }
       ],
-      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE CR 3 (Caleb 2026-10-05): Chuul chassis with CR 3 adjustment (−1 Multiattack tentacle or −25 HP; XP as 700). Fits floors.2 L2 boss cr_caps (2C:1 / 3C:2 / 4C:3). Silver Boss Box if fought or talked down. A-123 / ACH-1833 on first chamber burst.",
+      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE CR 3. **Pays the floor's single Silver Boss Box** if fought or talked down (Caleb 18:14 CT via Accountant). Ralph pays normal Silver / non-boss reward instead. Rage Elemental pays none (trigger spawn). A-123 / ACH-1833 on first chamber burst.",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -1039,7 +1040,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Silver Boss Box per Crawler who fought or talked down.",
+          "text": "Silver Boss Box (floor's only Boss Box) per Crawler who fought or talked down.",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -1048,7 +1049,7 @@
               "paths": [
                 "floors.2.boxes"
               ],
-              "note": "Silver F1-2"
+              "note": "Silver Boss Box F1-2 — Krakaren only on Soft Open"
             },
             "resolved": {
               "parts": [
@@ -1057,10 +1058,10 @@
                   "paths": [
                     "floors.2.boxes"
                   ],
-                  "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+                  "display": "Silver Boss Box F1-2 — Krakaren only on Soft Open: see rules/70-encounter-budget-5e.json#floors.2.boxes"
                 }
               ],
-              "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+              "display": "Silver Boss Box F1-2 — Krakaren only on Soft Open: see rules/70-encounter-budget-5e.json#floors.2.boxes"
             }
           },
           "audience": "gm"
@@ -1242,7 +1243,7 @@
           "Floor hour",
           "A-123",
           "Measles/Taint",
-          "Boss Box",
+          "Silver Boss Box (Krakaren = floor's only)",
           "Budget: HOUSE CR 3 within floors.2 L2 boss caps (2/3/4)"
         ],
         "audience": "gm"
@@ -1443,7 +1444,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Open Silver Boss Boxes in a saferoom — not the hall.",
+          "text": "Open the Silver Boss Box (Krakaren's — floor's only) in a saferoom — not the hall.",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -1970,12 +1971,12 @@
     "pass": 37,
     "warn": 4,
     "fail": 43,
-    "spec_sha256": "2dd59f639fa0baeee10bd5e7c39fc19b7f0b3821c640d3ffe23fb49d5906b95b",
+    "spec_sha256": "a38ed675808ab75bb1f82e9d01784698178369586ab54452ba34d58f1e431d94",
     "checks": [
       {
         "status": "WARN",
         "check": "budget file hash",
-        "detail": "spec pins 113dcdbedb3c but the file is 11a243b1b677 (Syndicate changed it; re-check the cited paths, then update the pin)"
+        "detail": "spec pins 113dcdbedb3c but the file is 0c4e5ee14406 (Syndicate changed it; re-check the cited paths, then update the pin)"
       },
       {
         "status": "PASS",

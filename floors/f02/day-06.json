@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ],
     "day": 6,
     "days": 10,
@@ -29,9 +30,9 @@
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.0",
-    "budget_file_sha256": "11a243b1b67737498a6ed434feaf91868dc558b0abc8a4277d8aecbd20a6114c",
+    "budget_file_sha256": "0c4e5ee1440675349c2006ba41b61d498b174e215f281dbb1381e878267de953",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "e412ab8de745c8c65a6dafb7c778b943ba4b8b8e50a5a6208e39aadde1957d31",
+    "spec_sha256_sans_pin": "85f4e5ad67fad4e7ae4ca226bab457ec6bd971e2b46c33607b8b1fd9b692fd7b",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -91,7 +92,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -1876,12 +1877,12 @@
     "pass": 36,
     "warn": 4,
     "fail": 28,
-    "spec_sha256": "280ae1f97a9bcc26d9c71d02b70bc05d29a81aced504da2fee1fb50d0f4b6a1c",
+    "spec_sha256": "f0ededda4929cbf85a13a6209cfb7b1138d8eec47dcba84323c1a767bcc581ed",
     "checks": [
       {
         "status": "WARN",
         "check": "budget file hash",
-        "detail": "spec pins 113dcdbedb3c but the file is 11a243b1b677 (Syndicate changed it; re-check the cited paths, then update the pin)"
+        "detail": "spec pins 113dcdbedb3c but the file is 0c4e5ee14406 (Syndicate changed it; re-check the cited paths, then update the pin)"
       },
       {
         "status": "PASS",

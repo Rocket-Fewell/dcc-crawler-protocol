@@ -8,7 +8,7 @@
     "floor": 2,
     "floor_name": "Soft Open",
     "title": "Day 9 of 10: Escort, Prep, and Rage",
-    "summary": "Convoy, trap prep, Rage Elemental.",
+    "summary": "Convoy escort, trap/lure prep, stair-claim fight. Rage Elemental = any-day bathroom trigger only.",
     "sources": [
       "floors/04-floor-bible.md Soft Open",
       "lore/tables/canon-floor-2.json RESERVE",
@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ],
     "day": 9,
     "days": 10,
@@ -29,9 +30,9 @@
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.0",
-    "budget_file_sha256": "11a243b1b67737498a6ed434feaf91868dc558b0abc8a4277d8aecbd20a6114c",
+    "budget_file_sha256": "0c4e5ee1440675349c2006ba41b61d498b174e215f281dbb1381e878267de953",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "31fb09e9079ee5b94aac2f3fd0072abcaf393e7d33539b24e1730ee4c71f95ff",
+    "spec_sha256_sans_pin": "958185f43c7a9f7c04384e6771cb999fb2729af6e3ea5a7cff583c3264e4e36a",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -91,7 +92,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -237,7 +238,7 @@
       "cards": []
     },
     "stall_fallback": "Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always exist (M-364).",
-    "start_note": "Convoy, trap prep, Rage Elemental.",
+    "start_note": "Convoy escort, trap/lure prep, stair-claim fight. Rage Elemental = any-day bathroom trigger only.",
     "rest_options": [
       {
         "option": "Storm Shelter Saferoom A (z24)",
@@ -398,6 +399,71 @@
         }
       ],
       "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
+    },
+    "trigger_spawns": {
+      "rage_elemental": {
+        "id": "trigger-rage-elemental",
+        "name": "Rage Elemental (Bathroom Penalty)",
+        "monster_table_id": "cmm-056",
+        "srd_id": "air-elemental",
+        "srd_name": "Air Elemental",
+        "our_name": "Rage Elemental (Air Elemental)",
+        "cr": 5,
+        "kind": "trigger spawn / punishment",
+        "planned_encounter": false,
+        "counts_as_boss": false,
+        "silver_boss_box": false,
+        "available_any_day": true,
+        "note_not_planned": "Not a planned Soft Open encounter. Available as a trigger on any day until collapse. Day 9's planned third slot is the stair-claim fight, not this.",
+        "trigger": "Spawns ONLY if a Crawler urinates or defecates anywhere other than a saferoom or a designated bathroom (Day 1 bathroom rule / M-346). Pets exempt. Ends at collapse. Likely kills everyone — treat as avoidable TPK risk.",
+        "foreshadow": "Day 1 Soft Lobby bathroom popup warns human-born Crawlers; Day 9 escort midpoint reminds NPCs/Crawlers not to use corners.",
+        "resolution_hints": [
+          "Prefer lure into a stairwell (destroys it; M-470 vibe) if it ever spawns.",
+          "Fire slows regen; Reverse Gravity = ACH-1834 / A-131 if survived.",
+          "Opening a saferoom door may eject it briefly (M-468)."
+        ],
+        "achievement_hooks_if_spawned": [
+          {
+            "id": "ACH-1828",
+            "note": "Grease Monkey (A-047): deploy wheeled lure vs Rage Elemental if spawned.",
+            "tag": "canon",
+            "ledger_row": "A-047"
+          },
+          {
+            "id": "ACH-1830",
+            "note": "Like a Moth to the Flame (A-071): damage the over-level elemental if spawned.",
+            "tag": "canon",
+            "ledger_row": "A-071"
+          },
+          {
+            "id": "ACH-1834",
+            "note": "What Goes Up (A-131): survive Reverse Gravity if spawned.",
+            "tag": "canon",
+            "ledger_row": "A-131"
+          }
+        ],
+        "budget_math": {
+          "kind": "trigger spawn / out-of-budget",
+          "cr": 5,
+          "xp_as": 1800,
+          "counts_toward_day_budget": false,
+          "counts_toward_boss_count": false,
+          "silver_boss_box": false,
+          "by_party": {
+            "2": {
+              "note": "CR 5 vs L2 caps — out-of-budget punishment; do not pin as planned encounter"
+            },
+            "3": {
+              "note": "CR 5 vs L2 caps — out-of-budget punishment; do not pin as planned encounter"
+            },
+            "4": {
+              "note": "CR 5 vs L2 boss cap 3 — out-of-budget; not a planned boss"
+            }
+          },
+          "ruling": "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
+        },
+        "loot": "No Silver Boss Box. No planned Boss Box. If somehow survived/lured, Syndicate may frame a toast/Silver (not Boss Box) — not promised."
+      }
     },
     "proposed_achievements": []
   },
@@ -615,7 +681,7 @@
         ],
         "hazards": [
           "Slow convoy",
-          "Bathroom penalty live"
+          "Bathroom penalty live (any-day Rage Elemental trigger — not a planned encounter)"
         ],
         "cover": [
           "Train cars"
@@ -952,13 +1018,13 @@
         "3": "As written.",
         "4": "Full train; Fizz latch risk."
       },
-      "if_they_do_something_dumb": "NPC or Crawler bathroom break → Rage Elemental (enc-d09-03).",
+      "if_they_do_something_dumb": "NPC or Crawler urinates/defecates outside saferoom/bathroom → Rage Elemental trigger spawn (CR 5; out-of-budget; any day; likely TPK). Not the Day 9 planned stair-claim fight.",
       "canon_zone": "c2-escort",
       "quick_run": {
         "setup": "Convoy.",
         "decision": "Guard, rush, abort?",
         "on_success": "Near stair.",
-        "on_failure": "Elemental or NPC wipe.",
+        "on_failure": "NPC wipe and/or bathroom trigger spawn.",
         "minutes": 20,
         "tag": "pacing guide",
         "cut_short": "One wave; skill challenge.",
@@ -975,10 +1041,8 @@
           },
           {
             "choice": "Bathroom incident",
-            "effect": "Rage Elemental.",
-            "reacts_in": [
-              "enc-d09-03"
-            ]
+            "effect": "Rage Elemental trigger spawn (out-of-budget; see trigger_spawns).",
+            "later_note": "Any-day trigger; not enc-d09-03 planned slot."
           }
         ],
         "gm_tracks": [
@@ -1075,7 +1139,7 @@
           "Stair"
         ],
         "hazards": [
-          "Prep for Rage Elemental"
+          "Prep for stair claim + optional bathroom-trigger defense"
         ],
         "cover": [
           "Booths"
@@ -1260,7 +1324,7 @@
         },
         {
           "id": "ACH-1828",
-          "note": "Grease Monkey (catalog ACH-1828; ledger A-047): Wheeled device for stair lure (A-047).",
+          "note": "Grease Monkey (ACH-1828; A-047): wheeled lure for stair claim and/or if Rage Elemental trigger-spawns.",
           "tag": "canon",
           "ledger_row": "A-047",
           "name": "Grease Monkey",
@@ -1288,8 +1352,8 @@
         "3": "As written.",
         "4": "As written."
       },
-      "if_they_do_something_dumb": "Skip prep: raw CR 5; lure cheese still offered.",
-      "canon_zone": "c2-rage-elemental",
+      "if_they_do_something_dumb": "Skip prep: stair claim is harder. Bathroom rule still live — off-bathroom waste summons CR 5 Rage Elemental (trigger spawn / out-of-budget). Lure cheese still helps if that happens.",
+      "canon_zone": "c2-stair-prep",
       "quick_run": {
         "setup": "Prep montage.",
         "decision": "How fancy?",
@@ -1304,7 +1368,7 @@
         "changes": [
           {
             "choice": "Prep level",
-            "effect": "d09-03.",
+            "effect": "Stair-claim fight (enc-d09-03).",
             "reacts_in": [
               "enc-d09-03"
             ]
@@ -1312,7 +1376,8 @@
         ],
         "gm_tracks": [
           "Floor hour",
-          "A-047/136/034"
+          "A-047/136/034",
+          "Bathroom trigger live"
         ],
         "audience": "gm"
       },
@@ -1354,42 +1419,42 @@
     },
     {
       "id": "enc-d09-03",
-      "name": "Rage Elemental: Bathroom Penalty Made Flesh",
-      "zone": "z27",
-      "zone_name": "Chicken Saferoom Door / Hall / Stair Hole",
+      "name": "Stair Claim: Convoy Cap",
+      "zone": "z30",
+      "zone_name": "Scouted Stair / Convoy Cap",
       "route": [
         "dash",
         "loot",
         "clever"
       ],
       "route_primary": "clever",
-      "kind": "floor boss (summoned)",
+      "kind": "combat (planned)",
       "map_in_the_mind": {
-        "layout": "Fifteen-foot black-purple smoke, six claws, horned skull. Siege door; reverse gravity; lure to stair destroys it (M-470). Canon no XP — still toast achievements.",
+        "layout": "Convoy reaches the scouted stair. Vespas and leftover grubs contest the mouth. Oil/lure from prep still useful as hallway control — not because a planned Rage Elemental is waiting.",
         "exits": [
-          "Saferoom temporary eject",
-          "Stair hole"
+          "Stair down (stasis if >6h)",
+          "Abort to Chicken saferoom"
         ],
         "hazards": [
-          "Reverse Gravity A-131",
-          "Fire slows regen",
-          "Stair lure",
-          "CR 5 summoned"
+          "Slow escorted NPCs",
+          "Bathroom penalty still live (ANY-DAY trigger spawn — see trigger_spawns.rage_elemental; NOT this fight)",
+          "Stair stasis warning if early"
         ],
         "cover": [
-          "Doorway",
-          "Oil"
+          "Stair lip",
+          "Oil slick if prepped",
+          "Train cars"
         ],
         "audience": "gm"
       },
       "enemies": [
         {
-          "slot": "rage-elemental",
-          "srd_id": "air-elemental",
-          "srd_name": "Air Elemental",
-          "our_name": "Rage Elemental (Air Elemental)",
-          "name_source": "00-overview.md; monster-table-v0.2 cmm-056",
-          "monster_table_id": "cmm-056",
+          "slot": "vespa",
+          "srd_id": "giant-wasp",
+          "srd_name": "Giant Wasp",
+          "our_name": "Brindled Vespa (Giant Wasp)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-044",
+          "monster_table_id": "cmm-044",
           "count_slot": {
             "b70": {
               "kind": "cite",
@@ -1397,7 +1462,7 @@
                 "floors.2.tiers.L2.xp_budget_total",
                 "floors.2.encounters"
               ],
-              "note": "COUNT PIN PENDING (rage-elemental)"
+              "note": "COUNT PIN PENDING (vespa) — stair-claim wave"
             },
             "resolved": {
               "parts": [
@@ -1407,10 +1472,10 @@
                     "floors.2.tiers.L2.xp_budget_total",
                     "floors.2.encounters"
                   ],
-                  "display": "COUNT PIN PENDING (rage-elemental): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+                  "display": "COUNT PIN PENDING (vespa) — stair-claim wave: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
                 }
               ],
-              "display": "COUNT PIN PENDING (rage-elemental): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+              "display": "COUNT PIN PENDING (vespa) — stair-claim wave: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
             }
           },
           "cr_slot": {
@@ -1419,7 +1484,7 @@
               "paths": [
                 "floors.2.tiers.L2.cr_caps"
               ],
-              "note": "Table CR 5 (cmm-056) pin pending"
+              "note": "Table CR 1/2 (cmm-044) pin pending"
             },
             "resolved": {
               "parts": [
@@ -1428,24 +1493,78 @@
                   "paths": [
                     "floors.2.tiers.L2.cr_caps"
                   ],
-                  "display": "Table CR 5 (cmm-056) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+                  "display": "Table CR 1/2 (cmm-044) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
                 }
               ],
-              "display": "Table CR 5 (cmm-056) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+              "display": "Table CR 1/2 (cmm-044) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+            }
+          },
+          "srd_resolved": true,
+          "audience": "gm"
+        },
+        {
+          "slot": "brindle-grub",
+          "srd_id": "giant-centipede",
+          "srd_name": "Giant Centipede",
+          "our_name": "Brindle Grub (Giant Centipede)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-041",
+          "monster_table_id": "cmm-041",
+          "count_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.encounters"
+              ],
+              "note": "COUNT PIN PENDING (brindle-grub) — stair-claim wave"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.tiers.L2.xp_budget_total",
+                    "floors.2.encounters"
+                  ],
+                  "display": "COUNT PIN PENDING (brindle-grub) — stair-claim wave: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+                }
+              ],
+              "display": "COUNT PIN PENDING (brindle-grub) — stair-claim wave: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "note": "Table CR 1/4 (cmm-041) pin pending"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.tiers.L2.cr_caps"
+                  ],
+                  "display": "Table CR 1/4 (cmm-041) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+                }
+              ],
+              "display": "Table CR 1/4 (cmm-041) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
             }
           },
           "srd_resolved": true,
           "audience": "gm"
         }
       ],
-      "enemies_note": "cmm-056 summoned by bathroom rule/escort fail. Prefer lure. Canon no XP note; Syndicate frames any box.",
+      "enemies_note": "Planned Day 9 closer (Caleb 18:14 CT via Accountant): replace former Rage Elemental planned boss slot. Hard-tier stair contest within floors.2 L2 budgets. Rage Elemental is NOT here — see day.trigger_spawns / overview.",
       "cr_slot": {
         "b70": {
           "kind": "cite",
           "paths": [
             "floors.2.tiers.L2.cr_caps"
           ],
-          "note": "boss"
+          "note": "hard"
         },
         "resolved": {
           "parts": [
@@ -1454,10 +1573,10 @@
               "paths": [
                 "floors.2.tiers.L2.cr_caps"
               ],
-              "display": "boss: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+              "display": "hard: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
             }
           ],
-          "display": "boss: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+          "display": "hard: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
         }
       },
       "budget_slot": {
@@ -1467,7 +1586,7 @@
             "floors.2.tiers.L2.xp_budget_total",
             "floors.2.xp.by_party_size"
           ],
-          "note": "tier boss; fixed_encounters pin pending"
+          "note": "tier hard; fixed_encounters pin pending (Accountant re-pin after Rage Elemental demotion)"
         },
         "resolved": {
           "parts": [
@@ -1477,30 +1596,51 @@
                 "floors.2.tiers.L2.xp_budget_total",
                 "floors.2.xp.by_party_size"
               ],
-              "display": "tier boss; fixed_encounters pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+              "display": "tier hard; fixed_encounters pin pending (Accountant re-pin after Rage Elemental demotion): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
             }
           ],
-          "display": "tier boss; fixed_encounters pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+          "display": "tier hard; fixed_encounters pin pending (Accountant re-pin after Rage Elemental demotion): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+        }
+      },
+      "budget_math": {
+        "kind": "planned hard",
+        "replaces": "former enc-d09-03 Rage Elemental planned boss",
+        "by_party": {
+          "2": {
+            "tier": "hard",
+            "budget_cite": "floors.2.tiers.L2.xp_budget_total.2.hard (=400)",
+            "note": "Vespa + grub wave; pin pending"
+          },
+          "3": {
+            "tier": "hard",
+            "budget_cite": "floors.2.tiers.L2.xp_budget_total.3.hard (=600)",
+            "note": "Vespa + grub wave; pin pending"
+          },
+          "4": {
+            "tier": "hard",
+            "budget_cite": "floors.2.tiers.L2.xp_budget_total.4.hard (=800)",
+            "note": "Vespa + grub wave; pin pending"
+          }
         }
       },
       "voice_lines": {
         "system_intro": {
-          "text": "FLOOR NOTICE. Penalty entity active.",
+          "text": "FLOOR NOTICE. Stair contested. Clear the mouth or lose the convoy.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
         "midpoint_twist": {
-          "text": "Gravity argues with you.",
+          "text": "A resident eyes a corner. Bathrooms exist. Use them.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
         "win": {
-          "text": "Smoke tears in the stairwell — or you did.",
+          "text": "Stair access logged. Convoy breathing.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
         "gm_color": {
-          "text": "Peeing outside is how you cast this. Don't.",
+          "text": "This is the planned fight. The Rage Elemental only shows if someone pees wrong — and then budget is a rumor.",
           "tag": "[GM-FACING]",
           "audience": "player"
         }
@@ -1508,7 +1648,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Toast box on solve if Syndicate frames — not normal Boss Box.",
+          "text": "Silver box odds on clear (normal Silver — not Boss Box).",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -1517,7 +1657,7 @@
               "paths": [
                 "floors.2.boxes"
               ],
-              "note": "Silver F1-2"
+              "note": "Silver F1-2; not Boss Box (Krakaren holds the only Silver Boss Box)"
             },
             "resolved": {
               "parts": [
@@ -1526,10 +1666,38 @@
                   "paths": [
                     "floors.2.boxes"
                   ],
-                  "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+                  "display": "Silver F1-2; not Boss Box (Krakaren holds the only Silver Boss Box): see rules/70-encounter-budget-5e.json#floors.2.boxes"
                 }
               ],
-              "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+              "display": "Silver F1-2; not Boss Box (Krakaren holds the only Silver Boss Box): see rules/70-encounter-budget-5e.json#floors.2.boxes"
+            }
+          },
+          "audience": "gm"
+        },
+        {
+          "kind": "placed",
+          "text": "Escort tip credits.",
+          "overview_ref": "00-overview.md",
+          "check_text": "credits",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+              ],
+              "note": "by tier"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                  ],
+                  "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                }
+              ],
+              "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
             }
           },
           "audience": "gm"
@@ -1538,14 +1706,14 @@
           "kind": "story_box",
           "card_id": "f02-any-story-09",
           "gm_only": true,
-          "note": "[GM-ONLY] Story Box candidate (F1-2): Lure a floor boss into a stairwell without a wipe. Cap one/floor; hand-pick; new F2 deck ids need Lore/Syndicate.",
+          "note": "[GM-ONLY] Story Box candidate (F1-2): Get the convoy to a stair without a bathroom-penalty wipe. Cap one/floor; hand-pick; F2 deck ids need Lore/Syndicate.",
           "audience": "gm"
         }
       ],
       "achievement_hooks": [
         {
           "id": "ACH-0233",
-          "note": "No Wipe vs elemental.",
+          "note": "No Wipe on stair claim.",
           "tag": "house",
           "name": "Soft Open: No Wipe",
           "rarity": "Common",
@@ -1632,92 +1800,71 @@
           "audience": "gm"
         },
         {
-          "id": "ACH-1828",
-          "note": "Grease Monkey (catalog ACH-1828; ledger A-047): Deploy wheeled lure (A-047).",
+          "id": "ACH-1835",
+          "note": "You Call That a Trap? (ACH-1835; A-136): injure with staged oil/trap at stair.",
           "tag": "canon",
-          "ledger_row": "A-047",
-          "name": "Grease Monkey",
+          "ledger_row": "A-136",
+          "name": "You Call That a Trap?",
           "rarity": "Rare",
           "floor": "2",
-          "label": "ACH-1828 Grease Monkey (Floor 2, Rare)",
-          "valid": true,
-          "audience": "gm"
-        },
-        {
-          "id": "ACH-1830",
-          "note": "Like a Moth to the Flame (catalog ACH-1830; ledger A-071): Damage over-level elemental (A-071).",
-          "tag": "canon",
-          "ledger_row": "A-071",
-          "name": "Like a Moth to the Flame",
-          "rarity": "Legendary",
-          "floor": "2",
-          "label": "ACH-1830 Like a Moth to the Flame (Floor 2, Legendary)",
-          "valid": true,
-          "audience": "gm"
-        },
-        {
-          "id": "ACH-1834",
-          "note": "What Goes Up (catalog ACH-1834; ledger A-131). Soft Open wire.",
-          "tag": "canon",
-          "ledger_row": "A-131",
-          "name": "What Goes Up",
-          "rarity": "Rare",
-          "floor": "2",
-          "label": "ACH-1834 What Goes Up (Floor 2, Rare)",
+          "label": "ACH-1835 You Call That a Trap? (Floor 2, Rare)",
           "valid": true,
           "audience": "gm"
         }
       ],
       "scaling": {
-        "2": "Emphasize lure; fire cuts regen.",
+        "2": "1 Vespa wave + few grubs; emphasize NPC guard.",
         "3": "As written.",
-        "4": "As written; escort NPCs panic."
+        "4": "Full Vespa + grub pressure; oil slick shines."
       },
-      "if_they_do_something_dumb": "Opening door ejects elemental briefly (M-468). Sitting forever fails at Day 10 T-1h.",
-      "canon_zone": "c2-rage-elemental",
+      "if_they_do_something_dumb": "Crawler or escorted NPC urinates/defecates outside saferoom/bathroom → spawn Rage Elemental (trigger-rage-elemental; CR 5; out-of-budget; likely TPK). Do not treat that spawn as this planned fight.",
+      "canon_zone": "c2-stair-claim",
       "quick_run": {
-        "setup": "Smoke at door.",
-        "decision": "Siege, fight, or lure?",
-        "on_success": "Gone.",
-        "on_failure": "Casualties.",
-        "minutes": 25,
+        "setup": "Convoy at stair mouth.",
+        "decision": "Clear, lure pests aside, or abort?",
+        "on_success": "Stair logged; Day 10 setup.",
+        "on_failure": "Convoy loss and/or bathroom incident → trigger spawn.",
+        "minutes": 20,
         "tag": "pacing guide",
-        "cut_short": "Skip to lure check.",
+        "cut_short": "One Vespa wave; skill challenge for NPCs.",
         "audience": "gm"
       },
       "carry_on": {
         "changes": [
           {
-            "choice": "Lure success",
-            "effect": "A-047/071/131.",
+            "choice": "Stair claimed",
+            "effect": "Day 10 descent path ready.",
             "reacts_in": [
-              "enc-d10-01"
+              "enc-d10-01",
+              "enc-d10-03"
             ]
           },
           {
-            "choice": "Wipe risk",
-            "effect": "Replacement at saferoom."
+            "choice": "Bathroom incident",
+            "effect": "Rage Elemental trigger spawn (out-of-budget).",
+            "later_note": "See day.trigger_spawns.rage_elemental — any day, not a planned slot."
           }
         ],
         "gm_tracks": [
           "Floor hour",
-          "A-047 A-071 A-131",
-          "Elemental"
+          "Escort HP",
+          "Bathroom penalty live",
+          "Stair claim"
         ],
         "audience": "gm"
       },
       "proposed_achievements": [
         {
-          "name": "What Goes Up (wired)",
-          "trigger": "Survive Reverse Gravity (A-131).",
+          "name": "Stair Mouth Clear",
+          "trigger": "Clear the scouted stair for the convoy.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": "A-131",
+          "canon_or_house": "house",
+          "ledger_row": null,
           "reward_slot": {
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "narration": "Survive Reverse Gravity (A-131).",
+          "narration": "Clear the scouted stair for the convoy.",
           "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "narration_audience": "player",
@@ -1725,15 +1872,15 @@
         },
         {
           "name": "Siege Hours",
-          "trigger": "Endure door pounding (M-467).",
+          "trigger": "Hold the stair lip while NPCs pass (M-467 vibe without elemental).",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
           "reward_slot": {
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "narration": "Endure door pounding (M-467).",
+          "narration": "Hold the stair lip while NPCs pass.",
           "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "narration_audience": "player",
@@ -1996,15 +2143,15 @@
   },
   "validation": {
     "result": "FAIL",
-    "pass": 39,
+    "pass": 40,
     "warn": 4,
-    "fail": 31,
-    "spec_sha256": "611d1f95a8489b1f8167f111ee93637e1d6e87042cbc7046b6c07095d2be1f27",
+    "fail": 41,
+    "spec_sha256": "569b1f132907b88cf934cc66cb52e0914d7dbadc2f9634e960f6483a1b8665cf",
     "checks": [
       {
         "status": "WARN",
         "check": "budget file hash",
-        "detail": "spec pins 113dcdbedb3c but the file is 11a243b1b677 (Syndicate changed it; re-check the cited paths, then update the pin)"
+        "detail": "spec pins 113dcdbedb3c but the file is 0c4e5ee14406 (Syndicate changed it; re-check the cited paths, then update the pin)"
       },
       {
         "status": "PASS",
@@ -2174,22 +2321,27 @@
       {
         "status": "FAIL",
         "check": "enc-d09-02 canon_zone",
-        "detail": "c2-rage-elemental not in canon-floor-1.json"
+        "detail": "c2-stair-prep not in canon-floor-1.json"
       },
       {
         "status": "FAIL",
         "check": "enc-d09-03 canon_zone",
-        "detail": "c2-rage-elemental not in canon-floor-1.json"
+        "detail": "c2-stair-claim not in canon-floor-1.json"
       },
       {
         "status": "FAIL",
         "check": "enc-d09-03 enemy display",
-        "detail": "'Rage Elemental' not found in 00-overview.md (monster names come from its nameplates)"
+        "detail": "'Brindled Vespa' not found in 00-overview.md (monster names come from its nameplates)"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d09-03 enemy display",
+        "detail": "'Brindle Grub' not found in 00-overview.md (monster names come from its nameplates)"
       },
       {
         "status": "PASS",
         "check": "enc-d09-03 enemies",
-        "detail": "air-elemental=resolved"
+        "detail": "giant-wasp=resolved, giant-centipede=resolved"
       },
       {
         "status": "FAIL",
@@ -2233,7 +2385,7 @@
       },
       {
         "status": "FAIL",
-        "check": "proposed achievement What Goes Up (wired)",
+        "check": "proposed achievement Stair Mouth Clear",
         "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d09-03)"
       },
       {
@@ -2254,12 +2406,32 @@
       {
         "status": "PASS",
         "check": "achievement ids resolve",
-        "detail": "30 hooks checked against tables/achievements.csv"
+        "detail": "28 hooks checked against tables/achievements.csv"
       },
       {
         "status": "PASS",
         "check": "Story Box hooks are GM-only",
         "detail": "f02-any-story-09 tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/day/trigger_spawns/rage_elemental/budget_math/by_party/2/note: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/day/trigger_spawns/rage_elemental/budget_math/by_party/3/note: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/day/trigger_spawns/rage_elemental/budget_math/by_party/4/note: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/day/trigger_spawns/rage_elemental/budget_math/ruling: CR number 'CR 5'"
       },
       {
         "status": "FAIL",
@@ -2274,17 +2446,47 @@
       {
         "status": "FAIL",
         "check": "no invented numbers",
+        "detail": "/encounters[0]/if_they_do_something_dumb: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
         "detail": "/encounters[1]/if_they_do_something_dumb: CR number 'CR 5'"
       },
       {
         "status": "FAIL",
         "check": "no invented numbers",
-        "detail": "/encounters[2]/map_in_the_mind/hazards[3]: CR number 'CR 5'"
+        "detail": "/encounters[2]/enemies[0]/cr_slot/b70/note: CR number 'CR 1'"
       },
       {
         "status": "FAIL",
         "check": "no invented numbers",
-        "detail": "/encounters[2]/enemies[0]/cr_slot/b70/note: CR number 'CR 5'"
+        "detail": "/encounters[2]/enemies[1]/cr_slot/b70/note: CR number 'CR 1'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/encounters[2]/if_they_do_something_dumb: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/trigger_spawns/rage_elemental/budget_math/by_party/2/note: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/trigger_spawns/rage_elemental/budget_math/by_party/3/note: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/trigger_spawns/rage_elemental/budget_math/by_party/4/note: CR number 'CR 5'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/trigger_spawns/rage_elemental/budget_math/ruling: CR number 'CR 5'"
       },
       {
         "status": "PASS",
@@ -2294,7 +2496,7 @@
       {
         "status": "PASS",
         "check": "Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on",
-        "detail": "23 player-facing and 28 GM extra blocks scanned"
+        "detail": "23 player-facing and 30 GM extra blocks scanned"
       },
       {
         "status": "PASS",
@@ -2317,9 +2519,9 @@
         "detail": "3 encounters; minutes are tagged 'pacing guide' (pacing, not difficulty)"
       },
       {
-        "status": "FAIL",
+        "status": "PASS",
         "check": "carry-on on every encounter",
-        "detail": "missing or incomplete (changes with reacts_in or later_note, gm_tracks): enc-d09-03"
+        "detail": "3 encounters, 4 references to later encounters, all exist and are later"
       },
       {
         "status": "PASS",

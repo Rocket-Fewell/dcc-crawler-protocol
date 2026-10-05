@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ]
   },
   "budget_file": {
@@ -90,7 +91,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -467,7 +468,8 @@
         "hazards": [
           "Bathroom penalty live M-346",
           "Stairwells already exist M-364",
-          "Saferooms can lie Core Ch1"
+          "Saferooms can lie Core Ch1",
+          "Bathroom rule foreshadow: off-bathroom waste → Rage Elemental CR 5 (any day; not a planned boss; likely TPK)"
         ],
         "cover": [
           "Kiosks half cover"
@@ -507,7 +509,7 @@
           "tag": "[PLAYER-FACING]"
         },
         "gm_color": {
-          "text": "Dry System. Cheerful kill branding still sold separately.",
+          "text": "Foreshadow hard: human-born Crawlers who pee/poop outside saferoom/bathroom summon a CR 5 Rage Elemental (trigger spawn, out-of-budget, no Boss Box). It is avoidable. It will likely wipe the table.",
           "tag": "[GM-FACING]"
         },
         "system_registration": {
@@ -591,7 +593,7 @@
         "3": "As written.",
         "4": "One ratings beat each."
       },
-      "if_they_do_something_dumb": "Hall bathroom use summons Rage Elemental procedure (Day 9). Digging cinderblock fails (M-329). Never wipe on briefing.",
+      "if_they_do_something_dumb": "Urinating or defecating anywhere other than a saferoom or designated bathroom summons the Rage Elemental (CR 5 trigger spawn / out-of-budget; available any Soft Open day; likely kills everyone). Digging cinderblock fails (M-329). Never wipe on briefing.",
       "canon_zone": "c2-floor",
       "quick_run": {
         "setup": "Arrive from F1 stair.",
@@ -606,11 +608,12 @@
         "changes": [
           {
             "choice": "Bathroom popup read",
-            "effect": "Roast priority if broken.",
+            "effect": "Bathroom rule live: off-bathroom waste → Rage Elemental trigger spawn (any day).",
             "reacts_in": [
               "enc-d09-01",
               "enc-d09-03"
-            ]
+            ],
+            "later_note": "See Soft Open trigger_spawns.rage_elemental (overview + Day 9)."
           },
           {
             "choice": "F1 callbacks shown",
@@ -624,7 +627,8 @@
           "Floor hour vs Day 10 h24",
           "Ratings on",
           "Bathroom posted",
-          "F1 carry flags"
+          "F1 carry flags",
+          "Bathroom → Rage Elemental trigger (CR 5, any day)"
         ]
       },
       "proposed_achievements": [
@@ -644,7 +648,7 @@
         },
         {
           "name": "Bathroom Briefing",
-          "trigger": "Read full bathroom popup (M-346).",
+          "trigger": "Read full bathroom popup (M-346): waste only in saferoom or designated bathroom — anywhere else summons the Rage Elemental (CR 5; likely fatal).",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "canon",
           "ledger_row": null,
@@ -652,7 +656,7 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "narration": "Read full bathroom popup (M-346).",
+          "narration": "Read full bathroom popup (M-346): waste only in saferoom or designated bathroom — anywhere else summons the Rage Elemental (CR 5; likely fatal).",
           "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },

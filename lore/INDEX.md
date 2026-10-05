@@ -1,5 +1,5 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.18 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.19 | Updated: 2026-10-05
 Summary: One line per file in the lore folder: path, description, owner, status.
 
 Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (repo-relative; on some boxes a symlink into this tree). Rules: campaign root `NAMING-CONVENTIONS.md` (sibling of `lore/` in a fresh checkout, or set `DCC_CAMPAIGN_ROOT`).
@@ -117,6 +117,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 ## audits/
 | Path | Description | Owner | Status |
 |---|---|---|---|
+| drafts/f02-achievement-framing-v0.1.md | Soft Open F2 proposed achievement framing (HOUSE callouts). json sha d5c6324b9d05… | DCC Lore | draft |
 | audits/f02-days-1-10-canon-pass-2026-10-05.md | Soft Open F2 Days 1–10 canon pass (PASS WITH FIXES). sha256 c7a0bd0a42bb… | DCC Lore | draft |
 | audits/gm-achievement-loot-audit.md | GM achievement and loot box audit (Floor 1 alpha, Session 1): canon baseline with ledger IDs, drift findings O1-O24, fixes R1-R9 with sample wording, audit checklist. | DCC Lore | draft |
 | audits/full-audit-2026-10-04.md | Full audit of every file in dcc-lore (checklist, findings by severity, fixes, hand-offs), including rules/45 power-ladder conflicts for the Story Box cards. | DCC Lore | review |

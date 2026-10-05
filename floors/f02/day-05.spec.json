@@ -8,7 +8,7 @@
     "floor": 2,
     "floor_name": "Soft Open",
     "title": "Day {day} of {days}: Krakaren Clone Leaves the Room",
-    "summary": "Neighborhood Boss day; A-123; Silver Boss Box.",
+    "summary": "Neighborhood Boss day; A-123; floor's single Silver Boss Box (Krakaren).",
     "sources": [
       "floors/04-floor-bible.md Soft Open",
       "lore/tables/canon-floor-2.json RESERVE",
@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ]
   },
   "budget_file": {
@@ -90,7 +91,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -329,7 +330,7 @@
       ]
     },
     "stall_fallback": "Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always exist (M-364).",
-    "start_note": "Neighborhood Boss day; A-123; Silver Boss Box.",
+    "start_note": "Neighborhood Boss day; A-123; floor's single Silver Boss Box (Krakaren).",
     "rest_options": [
       {
         "option": "Storm Shelter Saferoom A (z24)",
@@ -703,7 +704,7 @@
           "cr_adjustment_note": "HOUSE CR 3 (Caleb 2026-10-05): use Chuul chassis at CR 3 — drop one Multiattack tentacle OR −25 HP and treat XP as 700; fits floors.2 L2 boss cr_caps for 2/3/4 Crawlers (boss cap 1/2/3)."
         }
       ],
-      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE CR 3 (Caleb 2026-10-05): Chuul chassis with CR 3 adjustment (−1 Multiattack tentacle or −25 HP; XP as 700). Fits floors.2 L2 boss cr_caps (2C:1 / 3C:2 / 4C:3). Silver Boss Box if fought or talked down. A-123 / ACH-1833 on first chamber burst.",
+      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE CR 3. **Pays the floor's single Silver Boss Box** if fought or talked down (Caleb 18:14 CT via Accountant). Ralph pays normal Silver / non-boss reward instead. Rage Elemental pays none (trigger spawn). A-123 / ACH-1833 on first chamber burst.",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -744,7 +745,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Silver Boss Box per Crawler who fought or talked down.",
+          "text": "Silver Boss Box (floor's only Boss Box) per Crawler who fought or talked down.",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -753,7 +754,7 @@
               "paths": [
                 "floors.2.boxes"
               ],
-              "note": "Silver F1-2"
+              "note": "Silver Boss Box F1-2 — Krakaren only on Soft Open"
             }
           }
         },
@@ -865,7 +866,7 @@
           "Floor hour",
           "A-123",
           "Measles/Taint",
-          "Boss Box",
+          "Silver Boss Box (Krakaren = floor's only)",
           "Budget: HOUSE CR 3 within floors.2 L2 boss caps (2/3/4)"
         ]
       },
@@ -1027,7 +1028,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Open Silver Boss Boxes in a saferoom — not the hall.",
+          "text": "Open the Silver Boss Box (Krakaren's — floor's only) in a saferoom — not the hall.",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {

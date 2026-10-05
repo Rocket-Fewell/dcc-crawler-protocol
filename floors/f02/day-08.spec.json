@@ -8,7 +8,7 @@
     "floor": 2,
     "floor_name": "Soft Open",
     "title": "Day {day} of {days}: Ralph and the Menagerie",
-    "summary": "Ralph boss, A-083/A-056 HOUSE, pet key.",
+    "summary": "Ralph planned boss (normal Silver, not Boss Box) + Menagerie; A-083/A-056 HOUSE.",
     "sources": [
       "floors/04-floor-bible.md Soft Open",
       "lore/tables/canon-floor-2.json RESERVE",
@@ -18,7 +18,8 @@
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
-      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
     ]
   },
   "budget_file": {
@@ -90,7 +91,7 @@
       },
       {
         "day": 9,
-        "event": "Escort / Rage Elemental window.",
+        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -329,7 +330,7 @@
       ]
     },
     "stall_fallback": "Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always exist (M-364).",
-    "start_note": "Ralph boss, A-083/A-056 HOUSE, pet key.",
+    "start_note": "Ralph planned boss (normal Silver, not Boss Box) + Menagerie; A-083/A-056 HOUSE.",
     "rest_options": [
       {
         "option": "Storm Shelter Saferoom A (z24)",
@@ -703,9 +704,9 @@
         "clever"
       ],
       "route_primary": "dash",
-      "kind": "boss",
+      "kind": "boss (planned; non-Boss-Box reward)",
       "map_in_the_mind": {
-        "layout": "Arena, loud music, cute gerbil, impossible mouth. Neighborhood Boss cmm-050.",
+        "layout": "Arena, loud music, cute gerbil, impossible mouth. Planned boss cmm-050 (normal Silver reward; Krakaren holds the only Silver Boss Box).",
         "exits": [
           "Reward room",
           "Exit halls"
@@ -748,7 +749,7 @@
           }
         }
       ],
-      "enemies_note": "cmm-050. Silver Boss Box if fought/talked. Fire A-123 if not yet fired and he enters hall.",
+      "enemies_note": "cmm-050 planned Soft Open boss (Days 7–8). **Normal Silver box / non-boss reward** if fought or talked down — NOT a Silver Boss Box (Caleb 18:14 CT via Accountant: Krakaren pays the floor's single Silver Boss Box). Fire A-123 / ACH-1833 if not yet fired and he enters the hall.",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -789,7 +790,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Silver Boss Box.",
+          "text": "Silver box (normal Soft Open Silver — not Boss Box).",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -798,13 +799,13 @@
               "paths": [
                 "floors.2.boxes"
               ],
-              "note": "Silver F1-2"
+              "note": "Silver F1-2 normal; Boss Box reserved for Krakaren Day 5"
             }
           }
         },
         {
           "kind": "placed",
-          "text": "Boss credits.",
+          "text": "Fight credits (planned boss tier, not Boss Box).",
           "overview_ref": "00-overview.md",
           "check_text": "boss credits",
           "amount": {
@@ -901,7 +902,7 @@
         "gm_tracks": [
           "Floor hour",
           "A-123",
-          "Boss Box"
+          "Silver box (not Boss Box)"
         ]
       },
       "proposed_achievements": [
