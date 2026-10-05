@@ -1,0 +1,2361 @@
+{
+  "schema": "encounter-bot-day/0.1",
+  "meta": {
+    "owner": "Encounter Bot",
+    "status": "draft",
+    "version": "0.1",
+    "updated": "2026-10-05",
+    "floor": 2,
+    "floor_name": "Soft Open",
+    "title": "Day 1 of 10: Soft Open Lobby, Ratings On, Grub Shift",
+    "summary": "Arrival briefing, bazaar seeds, first Brindle Grubs. HOUSE 10-day clock; Silver tier.",
+    "sources": [
+      "floors/04-floor-bible.md Soft Open",
+      "lore/tables/canon-floor-2.json RESERVE",
+      "lore/drafts/core-book-monster-table-v0.2.md",
+      "core-book/chapters/01-welcome.md",
+      "decisions/026",
+      "rules/70-encounter-budget-5e.json v0.1.17",
+      "rules/45-story-boxes-5e.md",
+      "floors/f01 carry-overs"
+    ],
+    "day": 1,
+    "days": 10,
+    "days_left": 9,
+    "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
+    "canon_table_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9",
+    "achievements_csv_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e",
+    "canon_ledger_version": "1.15",
+    "budget_file": "rules/70-encounter-budget-5e.json",
+    "budget_file_version": "0.1.17",
+    "budget_file_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1",
+    "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+    "spec_sha256_sans_pin": "99e6d19523c0edf1115c891e622d2a1ff38f1897be4d606676f27f701a547067",
+    "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+  },
+  "clock": {
+    "days": 10,
+    "days_field": "clock.days",
+    "other_floors": {
+      "1": 5,
+      "2": 10,
+      "3": 20
+    },
+    "short_rest_slots_per_day_cap": 4,
+    "short_rest_note": "CAP not promise.",
+    "day_ends": "Saferoom Long Rest or 24h; Day 10 collapses at 24h into Day 10.",
+    "lights_out": "Soft dim cycle; Fizz Grubs outside saferooms.",
+    "authority": "decision 026 HOUSE F2=10; Core Book Ch1. Canon cut to 6 (M-332/333/340); X-062.",
+    "canon_note": "House 10 days. Absolute: saferoom T-1h close (M-012/M-360); last 6h free descent (M-277/366/368).",
+    "collapse_order": [
+      {
+        "day": 1,
+        "event": "Open; stairwells present (M-364); ratings on (M-342).",
+        "tag": "canon+house"
+      },
+      {
+        "day": 2,
+        "event": "Grub/Mind pressure.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 3,
+        "event": "Pupa timers matter.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 4,
+        "event": "Rev-Up strip.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 5,
+        "event": "Krakaren Neighborhood Boss window.",
+        "tag": "house timing; boss canon"
+      },
+      {
+        "day": 6,
+        "event": "Patch: hedgehogs out (M-382); saferoom closure rule (M-012); grub nerf (M-396).",
+        "tag": "canon beats on house clock"
+      },
+      {
+        "day": 7,
+        "event": "Dog Pound primary.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 8,
+        "event": "Ralph + Menagerie; F3 Offer tease (M-371).",
+        "tag": "canon+house"
+      },
+      {
+        "day": 9,
+        "event": "Escort / Rage Elemental window.",
+        "tag": "canon set piece; day house"
+      },
+      {
+        "day": 10,
+        "event": "T-1h eject; last 6h free descent; collapse hour 24 of Day 10.",
+        "tag": "canon fixed + house days"
+      }
+    ],
+    "closed_zone_rule": "HOUSE Soft Open region pressure; no canon F2 zone-closure order. T-1h saferoom close is absolute.",
+    "collapse_cost_slot": {
+      "b70": {
+        "kind": "cite",
+        "paths": [
+          "floors.2.xp.by_party_size"
+        ],
+        "note": "Missed collapse = death."
+      },
+      "resolved": {
+        "parts": [
+          {
+            "kind": "cite",
+            "paths": [
+              "floors.2.xp.by_party_size"
+            ],
+            "display": "Missed collapse = death.: see rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+          }
+        ],
+        "display": "Missed collapse = death.: see rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+      }
+    },
+    "rest_without_saferoom_slot": {
+      "b70": {
+        "kind": "cite",
+        "paths": [
+          "floors.1.prices.rest_without_saferoom.party_fee_by_size"
+        ],
+        "note": "Use F1 fee at F2 multiplier until F2 prices pinned (Core Ch1)."
+      },
+      "resolved": {
+        "parts": [
+          {
+            "kind": "cite",
+            "paths": [
+              "floors.1.prices.rest_without_saferoom.party_fee_by_size"
+            ],
+            "display": "Use F1 fee at F2 multiplier until F2 prices pinned (Core Ch1).: see rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom.party_fee_by_size"
+          }
+        ],
+        "display": "Use F1 fee at F2 multiplier until F2 prices pinned (Core Ch1).: see rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom.party_fee_by_size"
+      }
+    },
+    "zone_groups": "Soft Open HOUSE region pressure (tagged inspired): regions may lose hooks under day pressure, but the route to a stairwell is never cut. Canon has no F2 zone-closure order (backlog). Saferoom T-1h close is absolute (M-012).",
+    "stairwell_opens_day": 1,
+    "stairwell_opens": "All stairwells exist from minute one on Floor 2 (canon M-364, VERIFIED). Borough/City boss chambers also hold stairs (M-365). Early descent stasis still applies if more than 6 hours remain (M-366).",
+    "stasis_threshold_hours": 6,
+    "early_descent": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "final_collapse": {
+      "hour_of_last_day": 24,
+      "tag": "inspired (house Soft Open on 10-day clock)",
+      "status": "Syndicate/Core Ch1 default for timed floors; Soft Open uses Day 10",
+      "text": "The final collapse comes at a FIXED moment: 24 in-game hours into Day 10 (hour 240 of the floor). A Long Rest never ends the floor and never skips it; the System cuts short any rest that would run past the collapse."
+    },
+    "collapse_miss": {
+      "scope": "every floor, Floor 2 included",
+      "tag": "canon-aligned (missed collapse ends the run)",
+      "death": true,
+      "reprieve_applies": false,
+      "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death and revival follow Core Book Ch1, Death and Revival: death is permanent, Costly Revives are the default (rare and expensive), and a Replacement Crawler is the usual outcome.",
+      "stasis_counts": "A Crawler already in early-descent stasis has reached a stairwell and lives.",
+      "detour_tax_scope": "Detour Tax is for a missed Stairwell key only (Floor 1 house); Soft Open has stairs from minute one (M-364), so Detour Tax rarely applies."
+    },
+    "saferoom_rule": {
+      "only_saferoom": "z27",
+      "break_room_not_saferoom_from_day": 99,
+      "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+    },
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. Until Floor 2 prices are pinned, use Floor 1 field-rest fee at this floor's credit multiplier (Core Book Ch1 / decision 031)."
+    },
+    "audience": "gm"
+  },
+  "canon_table": {
+    "path": "lore/tables/canon-floor-2.json",
+    "floor_wide_id": "c2-floor",
+    "expected_sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795",
+    "status": "reserve",
+    "note": "RESERVE; bot still hardcodes F1 canon until Architect bump.",
+    "present": true,
+    "schema": "canon-floor-1/0.1.0",
+    "ledger_version": "1.15",
+    "sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9"
+  },
+  "day": {
+    "number": 1,
+    "start_zone": "z20",
+    "start_zone_name": "Soft Lobby / Arrival Gate (from Floor 1 stairwell)",
+    "collapse_today": "None. Stairwells exist (M-364). Ratings/bathroom preview.",
+    "tomorrow_notice": {
+      "text": "FLOOR NOTICE. Day 2 continues Soft Open.",
+      "tag": "[PLAYER-FACING]",
+      "gm_color": {
+        "text": "Clock still bites.",
+        "tag": "[GM-FACING]",
+        "audience": "player"
+      },
+      "audience": "player"
+    },
+    "short_rest_slots": [
+      "Slot 1 (suggested): after first fight, only if hurt.",
+      "Slot 2 (suggested): at a saferoom.",
+      "Slot 3 (suggested): before boss / elemental.",
+      "Slot 4 (suggested): reserve; do not push to spend."
+    ],
+    "last_chance_hooks": {
+      "heading": "Day 1 still-open hooks",
+      "note": "Vanishes at collapse/region abandon.",
+      "achievements": [
+        {
+          "id": "ACH-0086",
+          "note": "Soft Open Survivor",
+          "name": "Soft Open Survivor",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0086 Soft Open Survivor (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0218",
+          "note": "Stair Seeker",
+          "name": "Soft Open: Stair Seeker",
+          "rarity": "Rare",
+          "floor": "2",
+          "label": "ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare)",
+          "valid": true,
+          "audience": "gm"
+        }
+      ],
+      "cards": []
+    },
+    "stall_fallback": "Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always exist (M-364).",
+    "start_note": "Arrival briefing, bazaar seeds, first Brindle Grubs. HOUSE 10-day clock; Silver tier.",
+    "rest_options": [
+      {
+        "option": "Storm Shelter Saferoom A (z24)",
+        "note": "Honest Soft Open saferoom with mailbox (M-358). Short Rests and Long Rest. Ejects at T-1h (M-012)."
+      },
+      {
+        "option": "Big Shot Chicken Saferoom B (z27)",
+        "note": "Staffed Soft Open saferoom (Qwist). Soft Open's late-floor Long Rest anchor (the Soft Open parallel to Floor 1's Green Room pattern). Ejects at T-1h."
+      },
+      {
+        "option": "Rest outside a saferoom",
+        "note": "A field rest is only a Short Rest; the price buys a quiet Short Rest and grants no Long Rest. The Soft Open Long Rest happens in a certified saferoom (Storm Shelter / Big Shot Chicken — Soft Open's Green Room-pattern anchors). Cite rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom until Floor 2 prices are pinned (Core Book Ch1 / decision 031)."
+      }
+    ],
+    "carry_over": [
+      {
+        "enc_id": "enc-d01-01",
+        "note": "F1 callbacks + Soft Open rules",
+        "until_day": 10
+      }
+    ],
+    "gm_warning": {
+      "tag": "[GM-FACING]",
+      "text": "Say it plainly at Soft Open start: reach a stairwell before the collapse or you do not leave. Missing the collapse is death on Floor 2 as on every floor, and the Floor 1 Reprieve does not apply. Early-descent stasis counts as reaching a stairwell. Saferooms eject one hour before collapse (M-012).",
+      "audience": "gm"
+    },
+    "budget_table": [
+      {
+        "label": "Daily XP guidance (Floor 2 L2)",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "guideline"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.xp.by_party_size"
+              ],
+              "display": "guideline: see rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+            }
+          ],
+          "display": "guideline: see rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+        }
+      },
+      {
+        "label": "L2 tier budgets",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.xp_budget_total"
+          ],
+          "note": "guideline"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total"
+              ],
+              "display": "guideline: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total"
+            }
+          ],
+          "display": "guideline: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total"
+        }
+      },
+      {
+        "label": "Field rest fee (until F2 prices pinned)",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.prices.rest_without_saferoom"
+          ],
+          "note": "Core Ch1: use F1 fee at F2 multiplier"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.1.prices.rest_without_saferoom"
+              ],
+              "display": "Core Ch1: use F1 fee at F2 multiplier: see rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom"
+            }
+          ],
+          "display": "Core Ch1: use F1 fee at F2 multiplier: see rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom"
+        }
+      }
+    ],
+    "warning_checks": {
+      "tag": "[GM-FACING]",
+      "audience": "gm",
+      "items": [
+        {
+          "id": "warn-floor-start",
+          "label": "Floor 2 Soft Open start warning given (Day 1)",
+          "day": 1,
+          "this_page": true
+        },
+        {
+          "id": "warn-day-penultimate",
+          "label": "Day 9 warning given",
+          "day": 9,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-last",
+          "label": "Day 10 warning given",
+          "day": 10,
+          "this_page": false
+        }
+      ]
+    },
+    "early_descent": {
+      "summary": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277 / M-366, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Soft Open stairs exist from minute one (M-364). Each Crawler chooses for themselves; the GM may override with a logged reason.",
+      "player_prompt": {
+        "text": "STAIRWELL NOTICE. Descent with more than 6 hours remaining places you in stasis until the floor collapses. Achievement credit is retained; remaining floor time is forfeited. Each Crawler chooses independently.",
+        "tag": "[PLAYER-FACING]",
+        "gm_color": {
+          "text": "The System won't judge anyone who waits. It will judge a few other things.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        },
+        "audience": "player"
+      },
+      "gm_override_note": "The GM may override a Crawler's choice only with a logged reason (decision 026, Syndicate ruling). Never push a Crawler toward early descent; the choice is theirs. A Crawler in stasis has finished the floor; their sheet and boxes follow the Floor 2 arrival rules (00-overview.md section 7.3).",
+      "canon_refs": [
+        {
+          "ledger_id": "M-277",
+          "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse.",
+          "ledger_name": "Descending with more than six hours left holds the crawler in stasis until the floor collapses."
+        },
+        {
+          "ledger_id": "M-275",
+          "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version).",
+          "ledger_name": "Every Borough and City Boss arena on Floor 1 contains a stairwell."
+        }
+      ],
+      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)",
+      "achievements": [
+        {
+          "id": "ACH-1826",
+          "canon_ledger_id": "A-151",
+          "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826).",
+          "name": "Left Before the Cake",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-1826 Left Before the Cake (Floor Any, Rare)",
+          "valid": true,
+          "canon_ledger_name": "The Early Bird Gets To Squirm",
+          "audience": "gm"
+        }
+      ],
+      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
+    },
+    "proposed_achievements": []
+  },
+  "routes": [
+    {
+      "id": "dash",
+      "name": "Dash",
+      "tag": "dash",
+      "path": [
+        "z20",
+        "z22",
+        "z25",
+        "z26",
+        "z30"
+      ],
+      "summary": "Fight toward Rev-Up stair.",
+      "stairwell_access": true,
+      "achievements": [],
+      "canon_refs": [
+        {
+          "ledger_id": "M-364",
+          "use": "Soft Open cite M-364 (canon-floor-2 / ledger).",
+          "ledger_name": "Unlike Floor 1, all 37,500 Floor 2 stairwells exist the moment the floor opens."
+        }
+      ],
+      "voice_lines": {}
+    },
+    {
+      "id": "loot",
+      "name": "Loot",
+      "tag": "loot",
+      "path": [
+        "z20",
+        "z21",
+        "z24",
+        "z28",
+        "z29",
+        "z30"
+      ],
+      "summary": "Vendors, mailbox, menagerie.",
+      "stairwell_access": true,
+      "achievements": [],
+      "canon_refs": [
+        {
+          "ledger_id": "M-358",
+          "use": "Soft Open cite M-358 (canon-floor-2 / ledger).",
+          "ledger_name": "New on Floor 2: safe rooms include a mailbox."
+        },
+        {
+          "ledger_id": "A-083",
+          "use": "Soft Open cite A-083 (canon-floor-2 / ledger).",
+          "ledger_name": "Menagerie",
+          "in_achievements_csv": false,
+          "status": "canon reference only (not a row in tables/achievements.csv)"
+        }
+      ],
+      "voice_lines": {}
+    },
+    {
+      "id": "clever",
+      "name": "Clever",
+      "tag": "clever",
+      "path": [
+        "z20",
+        "z23",
+        "z27",
+        "z28",
+        "z30"
+      ],
+      "summary": "Mind Drift, biscuits, stairs.",
+      "stairwell_access": true,
+      "achievements": [],
+      "canon_refs": [
+        {
+          "ledger_id": "A-091",
+          "use": "Soft Open cite A-091 (canon-floor-2 / ledger).",
+          "ledger_name": "PETA Enthusiast",
+          "in_achievements_csv": false,
+          "status": "canon reference only (not a row in tables/achievements.csv)"
+        }
+      ],
+      "voice_lines": {}
+    }
+  ],
+  "stairwell_key": {
+    "what": "Soft Open stairwells exist from minute one (canon M-364). No Floor 1 Zone S key hunt is required; Borough/City boss chambers also hold stairs (M-365).",
+    "ways": [
+      {
+        "id": "stair-open",
+        "how": "Walk to any open Soft Open stairwell.",
+        "where": "z30",
+        "ref": "00-overview.md",
+        "route": [
+          "dash",
+          "loot",
+          "clever"
+        ],
+        "closes": "Only at collapse.",
+        "lost_on_day": 10,
+        "status_on_day": "open",
+        "status_today": "available"
+      },
+      {
+        "id": "stair-boss",
+        "how": "Claim stair in Krakaren/Borough boss chamber (M-365).",
+        "where": "z26",
+        "ref": "00-overview.md",
+        "route": [
+          "dash"
+        ],
+        "closes": "Rare.",
+        "lost_on_day": 10,
+        "status_on_day": "open",
+        "status_today": "available"
+      }
+    ],
+    "keyless": "Soft Open: doors to stairwells are open without a Floor 1-style service key. Thieves' Tools / Athletics may still matter for locked side shortcuts (HOUSE).",
+    "missing_key_cost": {
+      "instant_wipe": false,
+      "text": "Soft Open stairs are open from the start (M-364). A missed collapse is still death (decision 026); there is no Detour Tax substitute for missing the collapse.",
+      "toll_slot": {
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size",
+          "note": "Detour Tax party toll"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "party",
+              "values": {
+                "2": 150,
+                "3": 225,
+                "4": 300
+              },
+              "paths": {
+                "2": "floors.1.prices.detour_tax.party_toll_by_size.2",
+                "3": "floors.1.prices.detour_tax.party_toll_by_size.3",
+                "4": "floors.1.prices.detour_tax.party_toll_by_size.4"
+              },
+              "display": "Detour Tax party toll: 2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+            }
+          ],
+          "display": "Detour Tax party toll: 2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+        }
+      }
+    },
+    "fake_stairwell": "The Big Green EXIT at Z7 is bait, not a stairwell (00-overview.md section 5.7). Taking it costs time and a fall.",
+    "canon_stairwell_notes": [
+      {
+        "ledger_id": "M-276",
+        "text": "Canon: stairwells appear about 32 hours after the Dungeon opens (about a day and a half in). House: early Day 2.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-277",
+        "text": "Canon: descending with more than six hours left on the floor holds the crawler in stasis until the floor collapses.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-275",
+        "text": "Canon: Borough and City boss arenas contain a stairwell (the Z10 stage is the house version).",
+        "tag": "canon"
+      }
+    ],
+    "availability": "Available from Soft Open minute one (M-364). Stasis if descend with more than six hours left (M-366); free in the last six hours (M-368).",
+    "early_descent": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "keyless_fee": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size",
+        "note": "Zone S door forcing fee (party)"
+      },
+      "resolved": {
+        "parts": [
+          {
+            "kind": "party",
+            "values": {
+              "2": 50,
+              "3": 75,
+              "4": 100
+            },
+            "paths": {
+              "2": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.2",
+              "3": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.3",
+              "4": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.4"
+            },
+            "display": "Zone S door forcing fee (party): 2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
+          }
+        ],
+        "display": "Zone S door forcing fee (party): 2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
+      }
+    },
+    "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve does not apply on Floor 2 and expires when a Crawler descends from Floor 1 (Core Book Ch1, Reprieve). It never covers a missed collapse.",
+    "audience": "gm"
+  },
+  "encounters": [
+    {
+      "id": "enc-d01-01",
+      "name": "Soft Lobby: Arrival and Soft Open Briefing",
+      "zone": "z20",
+      "zone_name": "Soft Lobby / Arrival Gate",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "dash",
+      "kind": "non-combat (arrival)",
+      "map_in_the_mind": {
+        "layout": "Cinderblock lobby, glowing F1 stair mouth, mismatched restroom doors, follower counters spinning up.",
+        "exits": [
+          "Hall to Grub Alleys z22",
+          "Hall to Rec-Hall Bazaar z21",
+          "Restroom portals M-351"
+        ],
+        "hazards": [
+          "Bathroom penalty live M-346",
+          "Stairwells already exist M-364",
+          "Saferooms can lie Core Ch1"
+        ],
+        "cover": [
+          "Kiosks half cover"
+        ],
+        "audience": "gm"
+      },
+      "enemies": [],
+      "enemies_note": "",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.cr_caps"
+          ],
+          "note": "trivial"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "display": "trivial: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+            }
+          ],
+          "display": "trivial: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "Non-combat"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.xp.by_party_size"
+              ],
+              "display": "Non-combat: see rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+            }
+          ],
+          "display": "Non-combat: see rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Welcome to Floor 2. Clock: ten days. Follows and favorites enabled. Designated bathrooms mandatory for human-born Crawlers. Stairwells already open. Wait until the last possible moment to descend if you can. Kill, kill, kill.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "midpoint_twist": {
+          "text": "Follower counters tick. A restroom door does not match the wall.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "win": {
+          "text": "Briefing filed. Soft Open is live.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Dry System. Cheerful kill branding still sold separately.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        },
+        "system_registration": {
+          "text": "Crawler Soft Open registration confirmed. Floor 1 titles retained.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Soft Open brochure already wrong.",
+          "overview_ref": "00-overview.md",
+          "check_text": "brochure",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+              ],
+              "note": "by tier"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                  ],
+                  "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                }
+              ],
+              "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+            }
+          },
+          "audience": "gm"
+        },
+        {
+          "kind": "placed",
+          "text": "Plant SEED-GUIDECONTRACT via Guide soon.",
+          "overview_ref": "00-overview.md",
+          "check_text": "SEED-GUIDECONTRACT",
+          "audience": "gm"
+        },
+        {
+          "kind": "placed",
+          "text": "Plant SEED-STATICSIGIL behind vendor z21.",
+          "overview_ref": "00-overview.md",
+          "check_text": "SEED-STATICSIGIL",
+          "audience": "gm"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0086",
+          "note": "Soft Open Survivor seed.",
+          "tag": "house",
+          "name": "Soft Open Survivor",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0086 Soft Open Survivor (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-1825",
+          "note": "Down Is a Direction callback.",
+          "tag": "house",
+          "name": "Down Is a Direction",
+          "rarity": "Common",
+          "floor": "Any",
+          "label": "ACH-1825 Down Is a Direction (Floor Any, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic.",
+          "tag": "house",
+          "name": "Saferoom Skeptic",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-0025 Saferoom Skeptic (Floor Any, Rare)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0218",
+          "note": "Soft Open: Stair Seeker: Soft Open catalog hook for enc-d01-01.",
+          "tag": "house",
+          "name": "Soft Open: Stair Seeker",
+          "rarity": "Rare",
+          "floor": "2",
+          "label": "ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0219",
+          "note": "Soft Open: Fog Half: Soft Open catalog hook for enc-d01-01.",
+          "tag": "house",
+          "name": "Soft Open: Fog Half",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0219 Soft Open: Fog Half (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0220",
+          "note": "Soft Open: Fog Full: Soft Open catalog hook for enc-d01-01.",
+          "tag": "house",
+          "name": "Soft Open: Fog Full",
+          "rarity": "Legendary",
+          "floor": "2",
+          "label": "ACH-0220 Soft Open: Fog Full (Floor 2, Legendary)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0221",
+          "note": "Soft Open: Locksmith: Soft Open catalog hook for enc-d01-01.",
+          "tag": "house",
+          "name": "Soft Open: Locksmith",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0221 Soft Open: Locksmith (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0222",
+          "note": "Soft Open: Local Contact: Soft Open catalog hook for enc-d01-01.",
+          "tag": "house",
+          "name": "Soft Open: Local Contact",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0222 Soft Open: Local Contact (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        }
+      ],
+      "scaling": {
+        "2": "Assigned Companion if used.",
+        "3": "As written.",
+        "4": "One ratings beat each."
+      },
+      "if_they_do_something_dumb": "Hall bathroom use summons Rage Elemental procedure (Day 9). Digging cinderblock fails (M-329). Never wipe on briefing.",
+      "canon_zone": "c2-floor",
+      "quick_run": {
+        "setup": "Arrive from F1 stair.",
+        "decision": "Read briefing or sprint?",
+        "on_success": "Rules planted.",
+        "on_failure": "Bathroom line skipped; flagged.",
+        "minutes": 10,
+        "tag": "pacing guide",
+        "cut_short": "Intro + two halls.",
+        "audience": "gm"
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Bathroom popup read",
+            "effect": "Roast priority if broken.",
+            "reacts_in": [
+              "enc-d09-01",
+              "enc-d09-03"
+            ]
+          },
+          {
+            "choice": "F1 callbacks shown",
+            "effect": "Track Thudd/Odd Coin/Benefactor/Dale.",
+            "reacts_in": [
+              "enc-d01-02"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Floor hour vs Day 10 h24",
+          "Ratings on",
+          "Bathroom posted",
+          "F1 carry flags"
+        ],
+        "audience": "gm"
+      },
+      "proposed_achievements": [
+        {
+          "name": "Ratings Are On",
+          "trigger": "Open follows/favorites first time (M-342).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Bathroom Briefing",
+          "trigger": "Read full bathroom popup (M-346).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Alumni Scrawl",
+          "trigger": "If Thudd fought/talked on F1: diploma scrap on screen.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Odd Coin Shrug",
+          "trigger": "If Odd Coin carried: Vendor Oddity Unappraised.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ],
+      "audience_default": "gm"
+    },
+    {
+      "id": "enc-d01-02",
+      "name": "Rec-Hall Bazaar: Vendors, Sigil, Fizz Grubs",
+      "zone": "z21",
+      "zone_name": "Rec-Hall Bazaar",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "loot",
+      "kind": "combat + social",
+      "map_in_the_mind": {
+        "layout": "Rec-room booths, cheerful Guide with free map, chalky static mark behind a vendor, soft grubs dripping from a grate.",
+        "exits": [
+          "Back Soft Lobby",
+          "Toward Storm Shelter z24",
+          "Hatch to Grub Alleys"
+        ],
+        "hazards": [
+          "Fizz Grubs HOUSE cmm-055 (Rot Stickers stay F1)",
+          "Guide Contract fine print",
+          "False saferoom sticker possible"
+        ],
+        "cover": [
+          "Booth counters",
+          "Skee-ball"
+        ],
+        "audience": "gm"
+      },
+      "enemies": [
+        {
+          "slot": "fizz-grub",
+          "srd_id": "stirge",
+          "srd_name": "Stirge",
+          "our_name": "Fizz Grub (Hemolymph Burster) (Stirge)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-055",
+          "monster_table_id": "cmm-055",
+          "count_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.encounters"
+              ],
+              "note": "COUNT PIN PENDING (fizz-grub)"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.tiers.L2.xp_budget_total",
+                    "floors.2.encounters"
+                  ],
+                  "display": "COUNT PIN PENDING (fizz-grub): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+                }
+              ],
+              "display": "COUNT PIN PENDING (fizz-grub): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "note": "Table CR 1/8 (cmm-055) pin pending"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.tiers.L2.cr_caps"
+                  ],
+                  "display": "Table CR 1/8 (cmm-055) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+                }
+              ],
+              "display": "Table CR 1/8 (cmm-055) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+            }
+          },
+          "srd_resolved": true,
+          "audience": "gm"
+        }
+      ],
+      "enemies_note": "HOUSE Fizz Grub cmm-055. Counts pending Accountant pin; use scaling.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.cr_caps"
+          ],
+          "note": "standard"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "display": "standard: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+            }
+          ],
+          "display": "standard: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.xp_budget_total",
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "tier standard; fixed_encounters pin pending"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.xp.by_party_size"
+              ],
+              "display": "tier standard; fixed_encounters pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+            }
+          ],
+          "display": "tier standard; fixed_encounters pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "A Soft Open bazaar. Credits welcome. Maps free*. (*Terms apply.)",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "midpoint_twist": {
+          "text": "Something latches and fizzes.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "win": {
+          "text": "Grubs popped. Map still wants a signature.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Guide smiles like commission is food.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Hemolymph smear; crafting tease until F4.",
+          "overview_ref": "00-overview.md",
+          "check_text": "hemolymph",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+              ],
+              "note": "by tier"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                  ],
+                  "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                }
+              ],
+              "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+            }
+          },
+          "audience": "gm"
+        },
+        {
+          "kind": "placed",
+          "text": "Silver toast odds if catalog fires.",
+          "overview_ref": "00-overview.md",
+          "check_text": "Silver",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.boxes"
+              ],
+              "note": "Silver F1-2"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.boxes"
+                  ],
+                  "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+                }
+              ],
+              "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+            }
+          },
+          "audience": "gm"
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f02-any-story-01",
+          "gm_only": true,
+          "note": "[GM-ONLY] Story Box candidate (F1-2): Extract a true route clause without signing. Cap one/floor; hand-pick; new F2 deck ids need Lore/Syndicate.",
+          "audience": "gm"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0225",
+          "note": "Vendor Regular seed.",
+          "tag": "house",
+          "name": "Soft Open: Vendor Regular",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0225 Soft Open: Vendor Regular (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0090",
+          "note": "Guide Contract Glimpse.",
+          "tag": "house",
+          "name": "Guide Contract Glimpse",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0090 Guide Contract Glimpse (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0215",
+          "note": "Hidden Cache / Static Sigil.",
+          "tag": "house",
+          "name": "Soft Open: Hidden Cache",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0215 Soft Open: Hidden Cache (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0219",
+          "note": "Soft Open: Fog Half: Soft Open catalog hook for enc-d01-02.",
+          "tag": "house",
+          "name": "Soft Open: Fog Half",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0219 Soft Open: Fog Half (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0220",
+          "note": "Soft Open: Fog Full: Soft Open catalog hook for enc-d01-02.",
+          "tag": "house",
+          "name": "Soft Open: Fog Full",
+          "rarity": "Legendary",
+          "floor": "2",
+          "label": "ACH-0220 Soft Open: Fog Full (Floor 2, Legendary)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0221",
+          "note": "Soft Open: Locksmith: Soft Open catalog hook for enc-d01-02.",
+          "tag": "house",
+          "name": "Soft Open: Locksmith",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0221 Soft Open: Locksmith (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0222",
+          "note": "Soft Open: Local Contact: Soft Open catalog hook for enc-d01-02.",
+          "tag": "house",
+          "name": "Soft Open: Local Contact",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0222 Soft Open: Local Contact (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0223",
+          "note": "Soft Open: Quest Complete: Soft Open catalog hook for enc-d01-02.",
+          "tag": "house",
+          "name": "Soft Open: Quest Complete",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0223 Soft Open: Quest Complete (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        }
+      ],
+      "scaling": {
+        "2": "2 Fizz Grubs.",
+        "3": "3.",
+        "4": "4-5 in two drips."
+      },
+      "if_they_do_something_dumb": "Signing unread Contract marks SEED-GUIDECONTRACT signed (F4 bite). Attacking Guide: flees, ratings dip, no wipe.",
+      "canon_zone": "c2-floor",
+      "quick_run": {
+        "setup": "Bazaar.",
+        "decision": "Shop, sign, or swat?",
+        "on_success": "Hooks planted.",
+        "on_failure": "Fizzy and signed.",
+        "minutes": 15,
+        "tag": "pacing guide",
+        "cut_short": "One wave; offer map.",
+        "audience": "gm"
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Contract",
+            "effect": "F4/F9 debt.",
+            "reacts_in": [
+              "enc-d06-02"
+            ]
+          },
+          {
+            "choice": "Sigil",
+            "effect": "F5 seed.",
+            "reacts_in": [
+              "enc-d06-02"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Floor hour",
+          "Contract",
+          "Sigil",
+          "Latches"
+        ],
+        "audience": "gm"
+      },
+      "proposed_achievements": [
+        {
+          "name": "Static Kiss",
+          "trigger": "Touch SEED-STATICSIGIL.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Fine Print Hero",
+          "trigger": "Read unread clauses aloud.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Fizz Pop First",
+          "trigger": "First Fizz death-burst.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Proctor Echo",
+          "trigger": "If Bell on F1: cracked booth sells 1-cr lies.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ],
+      "audience_default": "gm"
+    },
+    {
+      "id": "enc-d01-03",
+      "name": "Grub Alleys: Janitor Shift",
+      "zone": "z22",
+      "zone_name": "Grub Alleys",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "dash",
+      "kind": "combat",
+      "map_in_the_mind": {
+        "layout": "Narrow cinderblock artery, fuzzy cat-sized worms, one wet sac with long countdown.",
+        "exits": [
+          "Back bazaar",
+          "Forward Mind Drift z23",
+          "Crawlspace to Shelter z24"
+        ],
+        "hazards": [
+          "Grub flood cap M-384",
+          "Pupa long timer M-392",
+          "Corpse destroy does not stop spawns"
+        ],
+        "cover": [
+          "Pipes half"
+        ],
+        "audience": "gm"
+      },
+      "enemies": [
+        {
+          "slot": "brindle-grub",
+          "srd_id": "giant-centipede",
+          "srd_name": "Giant Centipede",
+          "our_name": "Brindle Grub (Giant Centipede)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-041",
+          "monster_table_id": "cmm-041",
+          "count_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.encounters"
+              ],
+              "note": "COUNT PIN PENDING (brindle-grub)"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.tiers.L2.xp_budget_total",
+                    "floors.2.encounters"
+                  ],
+                  "display": "COUNT PIN PENDING (brindle-grub): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+                }
+              ],
+              "display": "COUNT PIN PENDING (brindle-grub): see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.encounters"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "note": "Table CR 1/4 (cmm-041) pin pending"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.tiers.L2.cr_caps"
+                  ],
+                  "display": "Table CR 1/4 (cmm-041) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+                }
+              ],
+              "display": "Table CR 1/4 (cmm-041) pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+            }
+          },
+          "srd_resolved": true,
+          "audience": "gm"
+        }
+      ],
+      "enemies_note": "cmm-041. Optional cow-tail if linger (cmm-042).",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.cr_caps"
+          ],
+          "note": "standard"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "display": "standard: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+            }
+          ],
+          "display": "standard: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.xp_budget_total",
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "tier standard; fixed_encounters pin pending"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.xp.by_party_size"
+              ],
+              "display": "tier standard; fixed_encounters pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+            }
+          ],
+          "display": "tier standard; fixed_encounters pin pending: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total; rules/70-encounter-budget-5e.json#floors.2.xp.by_party_size"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "Grub Alleys. Janitors clocked in.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "midpoint_twist": {
+          "text": "A sac blinks hours, not seconds.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "win": {
+          "text": "Goo. Hemolymph if bottled.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Recycling program with teeth.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Hemolymph + pack change.",
+          "overview_ref": "00-overview.md",
+          "check_text": "hemolymph",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+              ],
+              "note": "by tier"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                  ],
+                  "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+                }
+              ],
+              "display": "by tier: see rules/70-encounter-budget-5e.json#floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+            }
+          },
+          "audience": "gm"
+        },
+        {
+          "kind": "placed",
+          "text": "Box odds floors.2.boxes.",
+          "overview_ref": "00-overview.md",
+          "check_text": "Silver",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.boxes"
+              ],
+              "note": "Silver F1-2"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.2.boxes"
+                  ],
+                  "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+                }
+              ],
+              "display": "Silver F1-2: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+            }
+          },
+          "audience": "gm"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0209",
+          "note": "Minion Mower.",
+          "tag": "house",
+          "name": "Soft Open: Minion Mower",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0209 Soft Open: Minion Mower (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0237",
+          "note": "Timer Terror if they notice pupa.",
+          "tag": "house",
+          "name": "Soft Open: Timer Terror",
+          "rarity": "Rare",
+          "floor": "2",
+          "label": "ACH-0237 Soft Open: Timer Terror (Floor 2, Rare)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0219",
+          "note": "Soft Open: Fog Half: Soft Open catalog hook for enc-d01-03.",
+          "tag": "house",
+          "name": "Soft Open: Fog Half",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0219 Soft Open: Fog Half (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0220",
+          "note": "Soft Open: Fog Full: Soft Open catalog hook for enc-d01-03.",
+          "tag": "house",
+          "name": "Soft Open: Fog Full",
+          "rarity": "Legendary",
+          "floor": "2",
+          "label": "ACH-0220 Soft Open: Fog Full (Floor 2, Legendary)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0221",
+          "note": "Soft Open: Locksmith: Soft Open catalog hook for enc-d01-03.",
+          "tag": "house",
+          "name": "Soft Open: Locksmith",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0221 Soft Open: Locksmith (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0222",
+          "note": "Soft Open: Local Contact: Soft Open catalog hook for enc-d01-03.",
+          "tag": "house",
+          "name": "Soft Open: Local Contact",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0222 Soft Open: Local Contact (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0223",
+          "note": "Soft Open: Quest Complete: Soft Open catalog hook for enc-d01-03.",
+          "tag": "house",
+          "name": "Soft Open: Quest Complete",
+          "rarity": "Common",
+          "floor": "2",
+          "label": "ACH-0223 Soft Open: Quest Complete (Floor 2, Common)",
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-0224",
+          "note": "Soft Open: Quest Chain: Soft Open catalog hook for enc-d01-03.",
+          "tag": "house",
+          "name": "Soft Open: Quest Chain",
+          "rarity": "Rare",
+          "floor": "2",
+          "label": "ACH-0224 Soft Open: Quest Chain (Floor 2, Rare)",
+          "valid": true,
+          "audience": "gm"
+        }
+      ],
+      "scaling": {
+        "2": "3 grubs.",
+        "3": "4.",
+        "4": "5-6; add cow-tail if linger."
+      },
+      "if_they_do_something_dumb": "Early pupa pop = half-formed (not Vespas). Camping corpses floods toward cap — pressure not wipe.",
+      "canon_zone": "c2-grub-fields",
+      "quick_run": {
+        "setup": "Worm alley.",
+        "decision": "Clear or farm?",
+        "on_success": "Path open.",
+        "on_failure": "Forced retreat.",
+        "minutes": 15,
+        "tag": "pacing guide",
+        "cut_short": "Three grubs; show sac.",
+        "audience": "gm"
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Pupa left vs popped",
+            "effect": "Day 3/6 Vespa pressure.",
+            "reacts_in": [
+              "enc-d03-02",
+              "enc-d06-01"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Floor hour",
+          "Grub count",
+          "Pupa",
+          "Dale/Thudd"
+        ],
+        "audience": "gm"
+      },
+      "proposed_achievements": [
+        {
+          "name": "Corpse Economy",
+          "trigger": "Learn spawn-from-corpses (M-384).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Don't Salt the Dead",
+          "trigger": "Destroy corpse; grubs still come (M-386).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Dale Sighting",
+          "trigger": "If Dale lived F1: escort board rumor. If dead: scrap.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Thudd Alumni Ad",
+          "trigger": "If Thudd bypassed: makeup ad.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ],
+      "audience_default": "gm"
+    }
+  ],
+  "pending_inputs": [
+    {
+      "owner": "Accountant",
+      "item": "floors.2.fixed_encounters pins",
+      "waiting_for": "--write-on-fail until bumped",
+      "status": "open",
+      "audience": "gm"
+    },
+    {
+      "owner": "Lore",
+      "item": "canon-floor-2 RESERVE pass + A-056",
+      "waiting_for": "canon pass on day pages",
+      "status": "open",
+      "audience": "gm"
+    },
+    {
+      "owner": "Syndicate",
+      "item": "achievement rewards + F2 Story Box deck",
+      "waiting_for": "achievement-suggestions.md",
+      "status": "open",
+      "audience": "gm"
+    },
+    {
+      "owner": "Architect",
+      "item": "encounter_bot multi-floor overview/canon",
+      "waiting_for": "hardcodes f01",
+      "status": "open",
+      "audience": "gm"
+    }
+  ],
+  "slots": [
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[0]/proposed_achievements[0]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[0]/proposed_achievements[1]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[0]/proposed_achievements[2]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[0]/proposed_achievements[3]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[1]/proposed_achievements[0]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[1]/proposed_achievements[1]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[1]/proposed_achievements[2]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[1]/proposed_achievements[3]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[2]/proposed_achievements[0]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[2]/proposed_achievements[1]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[2]/proposed_achievements[2]/reward_slot/text",
+      "kind": "slot"
+    },
+    {
+      "label": "SYNDICATE REWARD SLOT",
+      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+      "path": "/encounters[2]/proposed_achievements[3]/reward_slot/text",
+      "kind": "slot"
+    }
+  ],
+  "proposal_fields": [],
+  "audience_manifest": {
+    "schema": "audience/1",
+    "default": "gm",
+    "rule": "Everything not listed in player_blocks is GM-only, including every key added later. Show a player only the named field of a listed block; never print a whole block (blocks carry GM metadata such as status, hours_note, gm_note, source).",
+    "tag_mechanism": "Blocks carry tag: '[PLAYER-FACING]' or '[GM-FACING]' (also audience: 'player'|'gm'). Other tag values (inspired, canon, dash, pacing guide, ...) are provenance labels, not audiences. Inline '[GM-ONLY]' prefixes exist only inside GM-only fields.",
+    "never_show_fields": [
+      "tag",
+      "canon_tag",
+      "status",
+      "timing",
+      "hours_note",
+      "source",
+      "source_sha256",
+      "gm_note",
+      "title",
+      "audience",
+      "set_piece",
+      "optional"
+    ],
+    "player_blocks": [
+      {
+        "path": "/encounters/0/voice_lines/system_intro",
+        "kind": "system_notice",
+        "field": "text",
+        "encounter": "enc-d01-01"
+      },
+      {
+        "path": "/encounters/0/voice_lines/midpoint_twist",
+        "kind": "gm_narration",
+        "field": "text",
+        "encounter": "enc-d01-01"
+      },
+      {
+        "path": "/encounters/0/voice_lines/win",
+        "kind": "gm_narration",
+        "field": "text",
+        "encounter": "enc-d01-01"
+      },
+      {
+        "path": "/encounters/0/voice_lines/gm_color",
+        "kind": "gm_color",
+        "field": "text",
+        "encounter": "enc-d01-01"
+      },
+      {
+        "path": "/encounters/0/voice_lines/system_registration",
+        "kind": "system_notice",
+        "field": "text",
+        "encounter": "enc-d01-01"
+      },
+      {
+        "path": "/encounters/1/voice_lines/system_intro",
+        "kind": "system_notice",
+        "field": "text",
+        "encounter": "enc-d01-02"
+      },
+      {
+        "path": "/encounters/1/voice_lines/midpoint_twist",
+        "kind": "gm_narration",
+        "field": "text",
+        "encounter": "enc-d01-02"
+      },
+      {
+        "path": "/encounters/1/voice_lines/win",
+        "kind": "gm_narration",
+        "field": "text",
+        "encounter": "enc-d01-02"
+      },
+      {
+        "path": "/encounters/1/voice_lines/gm_color",
+        "kind": "gm_color",
+        "field": "text",
+        "encounter": "enc-d01-02"
+      },
+      {
+        "path": "/encounters/2/voice_lines/system_intro",
+        "kind": "system_notice",
+        "field": "text",
+        "encounter": "enc-d01-03"
+      },
+      {
+        "path": "/encounters/2/voice_lines/midpoint_twist",
+        "kind": "gm_narration",
+        "field": "text",
+        "encounter": "enc-d01-03"
+      },
+      {
+        "path": "/encounters/2/voice_lines/win",
+        "kind": "gm_narration",
+        "field": "text",
+        "encounter": "enc-d01-03"
+      },
+      {
+        "path": "/encounters/2/voice_lines/gm_color",
+        "kind": "gm_color",
+        "field": "text",
+        "encounter": "enc-d01-03"
+      },
+      {
+        "path": "/day/tomorrow_notice",
+        "kind": "system_notice",
+        "field": "text"
+      },
+      {
+        "path": "/day/tomorrow_notice/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      },
+      {
+        "path": "/day/early_descent/player_prompt",
+        "kind": "system_notice",
+        "field": "text"
+      },
+      {
+        "path": "/day/early_descent/player_prompt/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      }
+    ]
+  },
+  "validation": {
+    "result": "FAIL",
+    "pass": 39,
+    "warn": 4,
+    "fail": 39,
+    "spec_sha256": "ac38437c9a95ddcf6d69bf3929947db81887e44b4ad0bf66d35408cb43b5acdf",
+    "checks": [
+      {
+        "status": "PASS",
+        "check": "budget file present",
+        "detail": "rules/70-encounter-budget-5e.json v0.1.17, sha256 113dcdbedb3cbbcf; every figure from it is a GM-adaptable guideline (authority_note)"
+      },
+      {
+        "status": "PASS",
+        "check": "budget references resolve",
+        "detail": "10 distinct field paths cited, all present in rules/70-encounter-budget-5e.json"
+      },
+      {
+        "status": "PASS",
+        "check": "clock.days is a field",
+        "detail": "clock.days=10; page text uses {days}/{day}, nothing hard-coded"
+      },
+      {
+        "status": "PASS",
+        "check": "collapse_order covers every day",
+        "detail": "10 entries, days 1..10, all tagged: canon beats on house clock, canon fixed + house days, canon set piece; day house, canon+house, house timing; boss canon, inspired (house)"
+      },
+      {
+        "status": "PASS",
+        "check": "day number in range",
+        "detail": "Day 1 of 10"
+      },
+      {
+        "status": "PASS",
+        "check": "short-rest cap field",
+        "detail": "cap=4 per day (a cap, not a promise)"
+      },
+      {
+        "status": "PASS",
+        "check": "collapse order status",
+        "detail": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services"
+      },
+      {
+        "status": "PASS",
+        "check": "final collapse fixed",
+        "detail": "24 in-game hours into Day 10; a Long Rest never ends or skips the floor; rests that would run past it are cut short"
+      },
+      {
+        "status": "PASS",
+        "check": "missed-collapse rule",
+        "detail": "death on every floor, Floor 1 included; no Reprieve; stasis counts as reaching a stairwell; Detour Tax is for a missed key only"
+      },
+      {
+        "status": "FAIL",
+        "check": "saferoom rule",
+        "detail": "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room"
+      },
+      {
+        "status": "PASS",
+        "check": "achievement caps noted",
+        "detail": "soft cap, Silver ceiling, one Story Box per floor, snark-only allowed"
+      },
+      {
+        "status": "PASS",
+        "check": "zone grouping confirmed",
+        "detail": "outer/mid/Break Room/corridor groups set (inspired); route never cut"
+      },
+      {
+        "status": "PASS",
+        "check": "stairwell timing and early-descent rule filled",
+        "detail": "opens Day 1; stasis if more than 6 hours remain (canon M-276/M-277)"
+      },
+      {
+        "status": "PASS",
+        "check": "clock cites decision 026",
+        "detail": ""
+      },
+      {
+        "status": "FAIL",
+        "check": "Core Book Ch1 alignment",
+        "detail": "stale pointers []; unqualified 'real death' []; Reprieve-expiry GM notes found 2 (need exactly one, starting [GM-ONLY])"
+      },
+      {
+        "status": "PASS",
+        "check": "Lore canon table present",
+        "detail": "lore/tables/canon-floor-1.json (ledger 1.15, 24 zones)"
+      },
+      {
+        "status": "WARN",
+        "check": "canon table hash",
+        "detail": "spec pins 744d2ac6612d but the file is 4a8a3c92a967 (Lore rebuilt it; check ledger/content, then update the pin)"
+      },
+      {
+        "status": "FAIL",
+        "check": "route dash voice lines",
+        "detail": "missing or untagged ['midpoint_twist', 'system_intro', 'win']"
+      },
+      {
+        "status": "FAIL",
+        "check": "route loot voice lines",
+        "detail": "missing or untagged ['midpoint_twist', 'system_intro', 'win']"
+      },
+      {
+        "status": "FAIL",
+        "check": "route clever voice lines",
+        "detail": "missing or untagged ['midpoint_twist', 'system_intro', 'win']"
+      },
+      {
+        "status": "PASS",
+        "check": "three routes (dash, loot, clever)",
+        "detail": "3 routes, each with System intro/midpoint/win [PLAYER-FACING]"
+      },
+      {
+        "status": "PASS",
+        "check": "Stairwell key findable 2+ ways",
+        "detail": "2 ways: stair-open, stair-boss"
+      },
+      {
+        "status": "PASS",
+        "check": "missing key is a cost, not a wipe",
+        "detail": "instant_wipe=false; the Detour Tax toll is cited from the budget file"
+      },
+      {
+        "status": "PASS",
+        "check": "key availability today",
+        "detail": "Day 1: stair-open, stair-boss"
+      },
+      {
+        "status": "FAIL",
+        "check": "collapse notice",
+        "detail": "needs Lore's wording (no PLACEHOLDER), PF tag, status naming Lore, canon_tag inspired"
+      },
+      {
+        "status": "FAIL",
+        "check": "stairwell-opening announcement",
+        "detail": "required on the day the stairwell opens"
+      },
+      {
+        "status": "PASS",
+        "check": "early-descent stasis handling",
+        "detail": "player prompt [PLAYER-FACING], canon refs, GM override note and sideline-scenes note present"
+      },
+      {
+        "status": "PASS",
+        "check": "GM collapse warning",
+        "detail": "present on Day 1 (Floor 1 start, and the last two days): death on a missed collapse, no Reprieve"
+      },
+      {
+        "status": "PASS",
+        "check": "warning checkboxes",
+        "detail": "Floor 1 start, Day 9 and Day 10 warning checkboxes present, tagged [GM-FACING]"
+      },
+      {
+        "status": "PASS",
+        "check": "budget table",
+        "detail": "3 rows, each shown with its rules/70 field path (guideline)"
+      },
+      {
+        "status": "PASS",
+        "check": "rest options",
+        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-01 canon_zone",
+        "detail": "c2-floor not in canon-floor-1.json"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-01 placed hook",
+        "detail": "overview_ref/check_text not found in 00-overview.md"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-01 placed hook",
+        "detail": "overview_ref/check_text not found in 00-overview.md"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-01 placed hook",
+        "detail": "overview_ref/check_text not found in 00-overview.md"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-02 canon_zone",
+        "detail": "c2-floor not in canon-floor-1.json"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-02 enemy display",
+        "detail": "'Fizz Grub (Hemolymph Burster)' not found in 00-overview.md (monster names come from its nameplates)"
+      },
+      {
+        "status": "PASS",
+        "check": "enc-d01-02 enemies",
+        "detail": "stirge=resolved"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-02 placed hook",
+        "detail": "overview_ref/check_text not found in 00-overview.md"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-02 loot hook",
+        "detail": "card f02-any-story-01 not in tables/loot-decks/*.json"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-02 story box hook",
+        "detail": "f02-any-story-01 must be one of f01-any-0055..0065 and gm_only=true"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-03 canon_zone",
+        "detail": "c2-grub-fields not in canon-floor-1.json"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-03 enemy display",
+        "detail": "'Brindle Grub' not found in 00-overview.md (monster names come from its nameplates)"
+      },
+      {
+        "status": "PASS",
+        "check": "enc-d01-03 enemies",
+        "detail": "giant-centipede=resolved"
+      },
+      {
+        "status": "FAIL",
+        "check": "enc-d01-03 placed hook",
+        "detail": "overview_ref/check_text not found in 00-overview.md"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Ratings Are On",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-01)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Bathroom Briefing",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-01)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Alumni Scrawl",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-01)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Odd Coin Shrug",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-01)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Static Kiss",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-02)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Fine Print Hero",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-02)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Fizz Pop First",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-02)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Proctor Echo",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-02)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Corpse Economy",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-03)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Don't Salt the Dead",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-03)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Dale Sighting",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-03)"
+      },
+      {
+        "status": "FAIL",
+        "check": "proposed achievement Thudd Alumni Ad",
+        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d01-03)"
+      },
+      {
+        "status": "PASS",
+        "check": "proposed achievements",
+        "detail": "12 hook entries tagged 'proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate'; rewards are slots; no ids invented"
+      },
+      {
+        "status": "PASS",
+        "check": "loot hooks resolve",
+        "detail": "0 card/item hooks checked against tables/loot-decks and item-reskins"
+      },
+      {
+        "status": "PASS",
+        "check": "achievement ids resolve",
+        "detail": "24 hooks checked against tables/achievements.csv"
+      },
+      {
+        "status": "WARN",
+        "check": "canon ref A-083",
+        "detail": "canon reference only (not a row in tables/achievements.csv) ('Menagerie'); cited as a canon reference only"
+      },
+      {
+        "status": "WARN",
+        "check": "canon ref A-091",
+        "detail": "canon reference only (not a row in tables/achievements.csv) ('PETA Enthusiast'); cited as a canon reference only"
+      },
+      {
+        "status": "PASS",
+        "check": "Story Box hooks are GM-only",
+        "detail": "f02-any-story-01 tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/encounters[1]/enemies[0]/cr_slot/b70/note: CR number 'CR 1'"
+      },
+      {
+        "status": "FAIL",
+        "check": "no invented numbers",
+        "detail": "/encounters[2]/enemies[0]/cr_slot/b70/note: CR number 'CR 1'"
+      },
+      {
+        "status": "PASS",
+        "check": "'Crawlers' never 'champs'",
+        "detail": ""
+      },
+      {
+        "status": "FAIL",
+        "check": "player-facing leak",
+        "detail": "enc-d01-01 carry-on 2: 'Odd Coin'"
+      },
+      {
+        "status": "PASS",
+        "check": "voice lines are original (no 10-word run copied from the overview)",
+        "detail": ""
+      },
+      {
+        "status": "FAIL",
+        "check": "read-aloud length",
+        "detail": "enc-d01-01 system_intro (8 sentences): over 4 sentences and not tagged set_piece"
+      },
+      {
+        "status": "PASS",
+        "check": "no set pieces on this page",
+        "detail": "every read-aloud block is short"
+      },
+      {
+        "status": "PASS",
+        "check": "quick run on every encounter",
+        "detail": "3 encounters; minutes are tagged 'pacing guide' (pacing, not difficulty)"
+      },
+      {
+        "status": "PASS",
+        "check": "carry-on on every encounter",
+        "detail": "3 encounters, 7 references to later encounters, all exist and are later"
+      },
+      {
+        "status": "FAIL",
+        "check": "catalog continuity notes",
+        "detail": "Floor 1 hooks need a gm_note (ACH-1824: 'Not earnable on Floor 1'; ACH-1826: 'earnable only via stasis') and 'once per Crawler': ACH-1825 (needs 'once per Crawler' in its note)"
+      },
+      {
+        "status": "PASS",
+        "check": "GM notes kept out of player text",
+        "detail": "1 achievement GM note(s); none appears in any [PLAYER-FACING] block"
+      },
+      {
+        "status": "FAIL",
+        "check": "field-rest fee note",
+        "detail": "clock.rest_fee_note must be [GM-FACING] 'already quiet' and every text that charges the rest fee must say so: /day/rest_options[2]/note"
+      },
+      {
+        "status": "FAIL",
+        "check": "floor-hour tracker",
+        "detail": "GM tracks need a 'Floor hour' running-count line (hours elapsed vs the fixed 24-hour final collapse, overview section 2 rule 6) on: enc-d01-01, enc-d01-02, enc-d01-03"
+      },
+      {
+        "status": "PASS",
+        "check": "any quote is 25 words or fewer",
+        "detail": ""
+      },
+      {
+        "status": "FAIL",
+        "check": "Pending inputs section",
+        "detail": "must list Syndicate (budget file, clock numbers), Lore (collapse, canon table) and clock.days"
+      },
+      {
+        "status": "PASS",
+        "check": "audience manifest",
+        "detail": "17 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
+      },
+      {
+        "status": "WARN",
+        "check": "slot-map provenance",
+        "detail": "no spec_sha256_sans_pin_when_mapped for day-01 in rules/70-encounter-budget-5e.json; nothing to compare"
+      },
+      {
+        "status": "PASS",
+        "check": "rendered audience separation",
+        "detail": "17 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
+      },
+      {
+        "status": "PASS",
+        "check": "doubled full stop",
+        "detail": "no '..' artifacts in the rendered page"
+      }
+    ]
+  }
+}

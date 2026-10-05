@@ -1,0 +1,1171 @@
+{
+  "schema": "encounter-bot-day-spec/0.1",
+  "meta": {
+    "owner": "Encounter Bot",
+    "status": "draft",
+    "version": "0.1",
+    "updated": "2026-10-05",
+    "floor": 2,
+    "floor_name": "Soft Open",
+    "title": "Day {day} of {days}: Rev-Up Strip and the Smoothie Desk",
+    "summary": "Clurichauns, Laminaks, blender, chicken saferoom.",
+    "sources": [
+      "floors/04-floor-bible.md Soft Open",
+      "lore/tables/canon-floor-2.json RESERVE",
+      "lore/drafts/core-book-monster-table-v0.2.md",
+      "core-book/chapters/01-welcome.md",
+      "decisions/026",
+      "rules/70-encounter-budget-5e.json v0.1.17",
+      "rules/45-story-boxes-5e.md",
+      "floors/f01 carry-overs"
+    ]
+  },
+  "budget_file": {
+    "path": "rules/70-encounter-budget-5e.json",
+    "version": "0.1.17",
+    "expected_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1"
+  },
+  "canon_table": {
+    "path": "lore/tables/canon-floor-2.json",
+    "floor_wide_id": "c2-floor",
+    "expected_sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795",
+    "status": "reserve",
+    "note": "RESERVE; bot still hardcodes F1 canon until Architect bump."
+  },
+  "clock": {
+    "days": 10,
+    "days_field": "clock.days",
+    "other_floors": {
+      "1": 5,
+      "2": 10,
+      "3": 20
+    },
+    "short_rest_slots_per_day_cap": 4,
+    "short_rest_note": "CAP not promise.",
+    "day_ends": "Saferoom Long Rest or 24h; Day 10 collapses at 24h into Day 10.",
+    "lights_out": "Soft dim cycle; Fizz Grubs outside saferooms.",
+    "authority": "decision 026 HOUSE F2=10; Core Book Ch1. Canon cut to 6 (M-332/333/340); X-062.",
+    "canon_note": "House 10 days. Absolute: saferoom T-1h close (M-012/M-360); last 6h free descent (M-277/366/368).",
+    "collapse_order": [
+      {
+        "day": 1,
+        "event": "Open; stairwells present (M-364); ratings on (M-342).",
+        "tag": "canon+house"
+      },
+      {
+        "day": 2,
+        "event": "Grub/Mind pressure.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 3,
+        "event": "Pupa timers matter.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 4,
+        "event": "Rev-Up strip.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 5,
+        "event": "Krakaren Neighborhood Boss window.",
+        "tag": "house timing; boss canon"
+      },
+      {
+        "day": 6,
+        "event": "Patch: hedgehogs out (M-382); saferoom closure rule (M-012); grub nerf (M-396).",
+        "tag": "canon beats on house clock"
+      },
+      {
+        "day": 7,
+        "event": "Dog Pound primary.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 8,
+        "event": "Ralph + Menagerie; F3 Offer tease (M-371).",
+        "tag": "canon+house"
+      },
+      {
+        "day": 9,
+        "event": "Escort / Rage Elemental window.",
+        "tag": "canon set piece; day house"
+      },
+      {
+        "day": 10,
+        "event": "T-1h eject; last 6h free descent; collapse hour 24 of Day 10.",
+        "tag": "canon fixed + house days"
+      }
+    ],
+    "closed_zone_rule": "HOUSE Soft Open region pressure; no canon F2 zone-closure order. T-1h saferoom close is absolute.",
+    "collapse_cost_slot": {
+      "b70": {
+        "kind": "cite",
+        "paths": [
+          "floors.2.xp.by_party_size"
+        ],
+        "note": "Missed collapse = death."
+      }
+    },
+    "rest_without_saferoom_slot": {
+      "b70": {
+        "kind": "cite",
+        "paths": [
+          "floors.1.prices.rest_without_saferoom.party_fee_by_size"
+        ],
+        "note": "Use F1 fee at F2 multiplier until F2 prices pinned (Core Ch1)."
+      }
+    },
+    "zone_groups": "Soft Open HOUSE region pressure (tagged inspired): regions may lose hooks under day pressure, but the route to a stairwell is never cut. Canon has no F2 zone-closure order (backlog). Saferoom T-1h close is absolute (M-012).",
+    "stairwell_opens_day": 1,
+    "stairwell_opens": "All stairwells exist from minute one on Floor 2 (canon M-364, VERIFIED). Borough/City boss chambers also hold stairs (M-365). Early descent stasis still applies if more than {stasis_hours} hours remain (M-366).",
+    "stasis_threshold_hours": 6,
+    "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "final_collapse": {
+      "hour_of_last_day": 24,
+      "tag": "inspired (house Soft Open on 10-day clock)",
+      "status": "Syndicate/Core Ch1 default for timed floors; Soft Open uses Day 10",
+      "text": "The final collapse comes at a FIXED moment: 24 in-game hours into Day {days} (hour {floor_hours} of the floor). A Long Rest never ends the floor and never skips it; the System cuts short any rest that would run past the collapse."
+    },
+    "collapse_miss": {
+      "scope": "every floor, Floor 2 included",
+      "tag": "canon-aligned (missed collapse ends the run)",
+      "death": true,
+      "reprieve_applies": false,
+      "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death and revival follow Core Book Ch1, Death and Revival: death is permanent, Costly Revives are the default (rare and expensive), and a Replacement Crawler is the usual outcome.",
+      "stasis_counts": "A Crawler already in early-descent stasis has reached a stairwell and lives.",
+      "detour_tax_scope": "Detour Tax is for a missed Stairwell key only (Floor 1 house); Soft Open has stairs from minute one (M-364), so Detour Tax rarely applies."
+    },
+    "saferoom_rule": {
+      "only_saferoom": "z27",
+      "break_room_not_saferoom_from_day": 99,
+      "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+    },
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+    "rest_fee_note": {
+      "tag": "[GM-FACING]",
+      "text": "GM ruling: no fee if the spot is already quiet. Until Floor 2 prices are pinned, use Floor 1 field-rest fee at this floor's credit multiplier (Core Book Ch1 / decision 031)."
+    }
+  },
+  "routes": [
+    {
+      "id": "dash",
+      "name": "Dash",
+      "tag": "dash",
+      "path": [
+        "z20",
+        "z22",
+        "z25",
+        "z26",
+        "z30"
+      ],
+      "summary": "Fight toward Rev-Up stair.",
+      "stairwell_access": true,
+      "achievements": [],
+      "canon_refs": [
+        {
+          "ledger_id": "M-364",
+          "use": "Soft Open cite M-364 (canon-floor-2 / ledger)."
+        }
+      ],
+      "voice_lines": {}
+    },
+    {
+      "id": "loot",
+      "name": "Loot",
+      "tag": "loot",
+      "path": [
+        "z20",
+        "z21",
+        "z24",
+        "z28",
+        "z29",
+        "z30"
+      ],
+      "summary": "Vendors, mailbox, menagerie.",
+      "stairwell_access": true,
+      "achievements": [],
+      "canon_refs": [
+        {
+          "ledger_id": "M-358",
+          "use": "Soft Open cite M-358 (canon-floor-2 / ledger)."
+        },
+        {
+          "ledger_id": "A-083",
+          "use": "Soft Open cite A-083 (canon-floor-2 / ledger)."
+        }
+      ],
+      "voice_lines": {}
+    },
+    {
+      "id": "clever",
+      "name": "Clever",
+      "tag": "clever",
+      "path": [
+        "z20",
+        "z23",
+        "z27",
+        "z28",
+        "z30"
+      ],
+      "summary": "Mind Drift, biscuits, stairs.",
+      "stairwell_access": true,
+      "achievements": [],
+      "canon_refs": [
+        {
+          "ledger_id": "A-091",
+          "use": "Soft Open cite A-091 (canon-floor-2 / ledger)."
+        }
+      ],
+      "voice_lines": {}
+    }
+  ],
+  "stairwell_key": {
+    "what": "Soft Open stairwells exist from minute one (canon M-364). No Floor 1 Zone S key hunt is required; Borough/City boss chambers also hold stairs (M-365).",
+    "ways": [
+      {
+        "id": "stair-open",
+        "how": "Walk to any open Soft Open stairwell.",
+        "where": "z30",
+        "ref": "00-overview.md",
+        "route": [
+          "dash",
+          "loot",
+          "clever"
+        ],
+        "closes": "Only at collapse.",
+        "lost_on_day": 10,
+        "status_on_day": "open"
+      },
+      {
+        "id": "stair-boss",
+        "how": "Claim stair in Krakaren/Borough boss chamber (M-365).",
+        "where": "z26",
+        "ref": "00-overview.md",
+        "route": [
+          "dash"
+        ],
+        "closes": "Rare.",
+        "lost_on_day": 10,
+        "status_on_day": "open"
+      }
+    ],
+    "keyless": "Soft Open: doors to stairwells are open without a Floor 1-style service key. Thieves' Tools / Athletics may still matter for locked side shortcuts (HOUSE).",
+    "missing_key_cost": {
+      "instant_wipe": false,
+      "text": "Soft Open stairs are open from the start (M-364). A missed collapse is still death (decision 026); there is no Detour Tax substitute for missing the collapse.",
+      "toll_slot": {
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size",
+          "note": "Detour Tax party toll"
+        }
+      }
+    },
+    "fake_stairwell": "The Big Green EXIT at Z7 is bait, not a stairwell (00-overview.md section 5.7). Taking it costs time and a fall.",
+    "canon_stairwell_notes": [
+      {
+        "ledger_id": "M-276",
+        "text": "Canon: stairwells appear about 32 hours after the Dungeon opens (about a day and a half in). House: early Day 2.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-277",
+        "text": "Canon: descending with more than six hours left on the floor holds the crawler in stasis until the floor collapses.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-275",
+        "text": "Canon: Borough and City boss arenas contain a stairwell (the Z10 stage is the house version).",
+        "tag": "canon"
+      }
+    ],
+    "availability": "Available from Soft Open minute one (M-364). Stasis if descend with more than six hours left (M-366); free in the last six hours (M-368).",
+    "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "keyless_fee": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size",
+        "note": "Zone S door forcing fee (party)"
+      }
+    },
+    "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve does not apply on Floor 2 and expires when a Crawler descends from Floor 1 (Core Book Ch1, Reprieve). It never covers a missed collapse."
+  },
+  "day": {
+    "number": 4,
+    "start_zone": "z25",
+    "start_zone_name": "Rev-Up Strip",
+    "collapse_today": "None.",
+    "tomorrow_notice": {
+      "text": "FLOOR NOTICE. Day 5 continues Soft Open.",
+      "tag": "[PLAYER-FACING]",
+      "gm_color": {
+        "text": "Clock still bites.",
+        "tag": "[GM-FACING]"
+      }
+    },
+    "short_rest_slots": [
+      "Slot 1 (suggested): after first fight, only if hurt.",
+      "Slot 2 (suggested): at a saferoom.",
+      "Slot 3 (suggested): before boss / elemental.",
+      "Slot 4 (suggested): reserve; do not push to spend."
+    ],
+    "last_chance_hooks": {
+      "heading": "Day 4 still-open hooks",
+      "note": "Vanishes at collapse/region abandon.",
+      "achievements": [
+        {
+          "id": "ACH-0086",
+          "note": "Soft Open Survivor"
+        },
+        {
+          "id": "ACH-0218",
+          "note": "Stair Seeker"
+        }
+      ]
+    },
+    "stall_fallback": "Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always exist (M-364).",
+    "start_note": "Clurichauns, Laminaks, blender, chicken saferoom.",
+    "rest_options": [
+      {
+        "option": "Storm Shelter Saferoom A (z24)",
+        "note": "Honest Soft Open saferoom with mailbox (M-358). Short Rests and Long Rest. Ejects at T-1h (M-012)."
+      },
+      {
+        "option": "Big Shot Chicken Saferoom B (z27)",
+        "note": "Staffed Soft Open saferoom (Qwist). Soft Open's late-floor Long Rest anchor (the Soft Open parallel to Floor 1's Green Room pattern). Ejects at T-1h."
+      },
+      {
+        "option": "Rest outside a saferoom",
+        "note": "A field rest is only a Short Rest; the price buys a quiet Short Rest and grants no Long Rest. The Soft Open Long Rest happens in a certified saferoom (Storm Shelter / Big Shot Chicken — Soft Open's Green Room-pattern anchors). Cite {{b70:floors.1.prices.rest_without_saferoom}} until Floor 2 prices are pinned (Core Book Ch1 / decision 031)."
+      }
+    ],
+    "carry_over": [
+      {
+        "enc_id": "enc-d01-01",
+        "note": "F1 callbacks + Soft Open rules",
+        "until_day": 10
+      }
+    ],
+    "gm_warning": {
+      "text": "Missed collapse=death. No F2 Reprieve. Saferooms eject at T-1h.",
+      "tag": "[GM-FACING]"
+    },
+    "budget_table": [
+      {
+        "label": "Daily XP guidance (Floor 2 L2)",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "guideline"
+        }
+      },
+      {
+        "label": "L2 tier budgets",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.xp_budget_total"
+          ],
+          "note": "guideline"
+        }
+      },
+      {
+        "label": "Field rest fee (until F2 prices pinned)",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.prices.rest_without_saferoom"
+          ],
+          "note": "Core Ch1: use F1 fee at F2 multiplier"
+        }
+      }
+    ],
+    "warning_checks": {
+      "tag": "[GM-FACING]",
+      "audience": "gm",
+      "items": [
+        {
+          "id": "warn-floor-start",
+          "label": "Floor 2 Soft Open start warning given (Day 1)",
+          "day": 1,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-penultimate",
+          "label": "Day 9 warning given",
+          "day": 9,
+          "this_page": false
+        },
+        {
+          "id": "warn-day-last",
+          "label": "Day 10 warning given",
+          "day": 10,
+          "this_page": false
+        }
+      ]
+    },
+    "early_descent": {
+      "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277 / M-366, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Soft Open stairs exist from minute one (M-364). Each Crawler chooses for themselves; the GM may override with a logged reason.",
+      "player_prompt": {
+        "text": "STAIRWELL NOTICE. Descent with more than {stasis_hours} hours remaining places you in stasis until the floor collapses. Achievement credit is retained; remaining floor time is forfeited. Each Crawler chooses independently.",
+        "tag": "[PLAYER-FACING]",
+        "gm_color": {
+          "text": "The System won't judge anyone who waits. It will judge a few other things.",
+          "tag": "[GM-FACING]"
+        }
+      },
+      "gm_override_note": "The GM may override a Crawler's choice only with a logged reason (decision 026, Syndicate ruling). Never push a Crawler toward early descent; the choice is theirs. A Crawler in stasis has finished the floor; their sheet and boxes follow the Floor 2 arrival rules (00-overview.md section 7.3).",
+      "canon_refs": [
+        {
+          "ledger_id": "M-277",
+          "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
+        },
+        {
+          "ledger_id": "M-275",
+          "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version)."
+        }
+      ],
+      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)",
+      "achievements": [
+        {
+          "id": "ACH-1826",
+          "canon_ledger_id": "A-151",
+          "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
+        }
+      ],
+      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-d04-01",
+      "name": "Rev-Up Strip: Unvaccinated Consultants",
+      "zone": "z25",
+      "zone_name": "Rev-Up Strip",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "dash",
+      "kind": "combat",
+      "map_in_the_mind": {
+        "layout": "Moonshine billboards, green overalls, slingshots; Live-Laugh-Love farther down.",
+        "exits": [
+          "Shelter route",
+          "Distillery z26",
+          "Chicken saferoom z27"
+        ],
+        "hazards": [
+          "Taint on contact M-434",
+          "Corpse ooze"
+        ],
+        "cover": [
+          "Jugs",
+          "Bike frames"
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "clurichaun",
+          "srd_id": "goblin-warrior",
+          "srd_name": "Goblin Warrior",
+          "our_name": "Unvaccinated Clurichaun Rev-Up Consultant (Goblin Warrior)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-045",
+          "monster_table_id": "cmm-045",
+          "count_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.encounters"
+              ],
+              "note": "COUNT PIN PENDING (clurichaun)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "note": "Table CR 1/4 (cmm-045) pin pending"
+            }
+          }
+        }
+      ],
+      "enemies_note": "cmm-045 Speed 40; Taint on hit.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.cr_caps"
+          ],
+          "note": "standard"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.xp_budget_total",
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "tier standard; fixed_encounters pin pending"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "Rev-Up cares about your future. Also your sinuses.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Lime residue. Healing UI grays out.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Consultants down.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "MLM with teeth.",
+          "tag": "[GM-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Moonshine jug (Buzzed; smoothie ingredient).",
+          "overview_ref": "00-overview.md",
+          "check_text": "moonshine",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+              ],
+              "note": "by tier"
+            }
+          }
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0210",
+          "note": "Status Stacker if Taint lands.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0240",
+          "note": "Soft Open: Field Craft: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0241",
+          "note": "Soft Open: Kit Bash: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0242",
+          "note": "Soft Open: Floor Bit: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0243",
+          "note": "Soft Open: Scenic Panic: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0906",
+          "note": "Soft Open: Open a marked red door: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0907",
+          "note": "Soft Open: Open a marked blue door: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0908",
+          "note": "Soft Open: Survive a night cycle: Soft Open catalog hook for enc-d04-01.",
+          "tag": "house"
+        }
+      ],
+      "scaling": {
+        "2": "3.",
+        "3": "4.",
+        "4": "5-6."
+      },
+      "if_they_do_something_dumb": "Looting corpses bare-handed refreshes Taint.",
+      "canon_zone": "c2-rev-up",
+      "quick_run": {
+        "setup": "MLM fairies.",
+        "decision": "Push or kite?",
+        "on_success": "Strip open.",
+        "on_failure": "Retreat Tainted.",
+        "minutes": 15,
+        "tag": "pacing guide",
+        "cut_short": "Three consultants."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Who Tainted",
+            "effect": "No-heal into next.",
+            "reacts_in": [
+              "enc-d04-02"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Floor hour",
+          "Taint timers"
+        ]
+      },
+      "proposed_achievements": [
+        {
+          "name": "Taint Lesson",
+          "trigger": "No heal 5 minutes (M-434).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Slingshot Consultant",
+          "trigger": "First clurichaun down.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Lime Residue",
+          "trigger": "Corpse goo refreshes Taint.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Damien!",
+          "trigger": "Laminaks scream for Damien; he never comes (M-430).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ]
+    },
+    {
+      "id": "enc-d04-02",
+      "name": "Distillery Prep: Laminak Elite and the Blender",
+      "zone": "z25",
+      "zone_name": "Rev-Up Distillery Antechamber",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "clever",
+      "kind": "combat + crafting-tease",
+      "map_in_the_mind": {
+        "layout": "Moonshine tub, Alchemy Table, bicycle blenders, recipe; leaf-pantsuit fairies on mezzanine.",
+        "exits": [
+          "Boss door under letters z26",
+          "Back strip"
+        ],
+        "hazards": [
+          "Magic Missile elites cmm-046",
+          "Smoothie needs Laminak+moonshine M-449"
+        ],
+        "cover": [
+          "Tub",
+          "Rail"
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "laminak",
+          "srd_id": "sprite",
+          "srd_name": "Sprite",
+          "our_name": "Laminak Rev-Up Consultant Elite (Sprite)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-046",
+          "monster_table_id": "cmm-046",
+          "count_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.xp_budget_total",
+                "floors.2.encounters"
+              ],
+              "note": "COUNT PIN PENDING (laminak)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.tiers.L2.cr_caps"
+              ],
+              "note": "Table CR 1/4 (cmm-046) pin pending"
+            }
+          }
+        }
+      ],
+      "enemies_note": "cmm-046. Blender set-piece exception; full crafting still F4-gated.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.cr_caps"
+          ],
+          "note": "standard"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.xp_budget_total",
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "tier standard; fixed_encounters pin pending"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "Managers wear leaves. Workers wear snot.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Magic Missile introduces itself.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Blender ready.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Damien still isn't coming.",
+          "tag": "[GM-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Recipe + moonshine.",
+          "overview_ref": "00-overview.md",
+          "check_text": "recipe",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.credits.cash_per_crawler_per_encounter_f1_scale"
+              ],
+              "note": "by tier"
+            }
+          }
+        },
+        {
+          "kind": "placed",
+          "text": "Immunity Smoothie if blended (Taint/Measles immunity; Buzzed).",
+          "overview_ref": "00-overview.md",
+          "check_text": "Immunity Smoothie"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0230",
+          "note": "Junk Architect blender.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0223",
+          "note": "Quest Complete smoothie.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0242",
+          "note": "Soft Open: Floor Bit: Soft Open catalog hook for enc-d04-02.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0243",
+          "note": "Soft Open: Scenic Panic: Soft Open catalog hook for enc-d04-02.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0906",
+          "note": "Soft Open: Open a marked red door: Soft Open catalog hook for enc-d04-02.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0907",
+          "note": "Soft Open: Open a marked blue door: Soft Open catalog hook for enc-d04-02.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0908",
+          "note": "Soft Open: Survive a night cycle: Soft Open catalog hook for enc-d04-02.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0909",
+          "note": "Soft Open: Survive a day cycle: Soft Open catalog hook for enc-d04-02.",
+          "tag": "house"
+        }
+      ],
+      "scaling": {
+        "2": "2 elites.",
+        "3": "3.",
+        "4": "3-4."
+      },
+      "if_they_do_something_dumb": "Blend without Laminak corpse = sludge. Boss without smoothie = Measles/Taint spike.",
+      "canon_zone": "c2-rev-up",
+      "quick_run": {
+        "setup": "Antechamber.",
+        "decision": "Blend or barge?",
+        "on_success": "Prepped.",
+        "on_failure": "Underprepped.",
+        "minutes": 15,
+        "tag": "pacing guide",
+        "cut_short": "One elite; handwave blender."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Smoothie made",
+            "effect": "Boss difficulty.",
+            "reacts_in": [
+              "enc-d05-02"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Floor hour",
+          "Smoothie",
+          "A-034"
+        ]
+      },
+      "proposed_achievements": [
+        {
+          "name": "Dungeonpreneur (wired)",
+          "trigger": "Invent Immunity Smoothie (A-034).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": "A-034",
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Leaf Pantsuit Down",
+          "trigger": "Drop Laminak Elite.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Buzzed and Blessed",
+          "trigger": "Drink smoothie.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Recipe Thief",
+          "trigger": "Copy card without fight.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ]
+    },
+    {
+      "id": "enc-d04-03",
+      "name": "Big Shot Chicken Saferoom B",
+      "zone": "z27",
+      "zone_name": "Big Shot Chicken (staffed saferoom)",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "loot",
+      "kind": "non-combat (saferoom)",
+      "map_in_the_mind": {
+        "layout": "Dusty chicken restaurant; Bopca fusses; cots back.",
+        "exits": [
+          "Rev-Up boss door",
+          "Pound signs"
+        ],
+        "hazards": [
+          "Honest today",
+          "Future Rage siege Day 9"
+        ],
+        "cover": [
+          "Booths"
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.tiers.L2.cr_caps"
+          ],
+          "note": "trivial"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.2.xp.by_party_size"
+          ],
+          "note": "Non-combat"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Saferoom certified. Staffed services available.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Bopca asks if you've eaten.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Rest logged.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Free grease is still a negotiation.",
+          "tag": "[GM-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Open boxes; buy food with credits.",
+          "overview_ref": "00-overview.md",
+          "check_text": "Silver",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.2.boxes"
+              ],
+              "note": "Silver F1-2"
+            }
+          }
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0088",
+          "note": "Saferoom check.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0242",
+          "note": "Soft Open: Floor Bit: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0243",
+          "note": "Soft Open: Scenic Panic: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0906",
+          "note": "Soft Open: Open a marked red door: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0907",
+          "note": "Soft Open: Open a marked blue door: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0908",
+          "note": "Soft Open: Survive a night cycle: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0909",
+          "note": "Soft Open: Survive a day cycle: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        },
+        {
+          "id": "ACH-0910",
+          "note": "Soft Open: Use a consumable in combat: Soft Open catalog hook for enc-d04-03.",
+          "tag": "house"
+        }
+      ],
+      "scaling": {
+        "2": "As written.",
+        "3": "As written.",
+        "4": "As written."
+      },
+      "if_they_do_something_dumb": "Robbing Qwist may revoke hospitality; not a wipe.",
+      "canon_zone": "c2-safe-rooms",
+      "quick_run": {
+        "setup": "Chicken saferoom.",
+        "decision": "Rest hard or skim?",
+        "on_success": "Ready.",
+        "on_failure": "Thin into boss day.",
+        "minutes": 10,
+        "tag": "pacing guide",
+        "cut_short": "Rest; one Qwist line."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Rested",
+            "effect": "Day 5 resources.",
+            "reacts_in": [
+              "enc-d05-01"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Floor hour",
+          "Qwist"
+        ]
+      },
+      "proposed_achievements": [
+        {
+          "name": "Qwist Fusses",
+          "trigger": "Meet Bopca Qwist (M-506).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Siege Foreshadow",
+          "trigger": "Door-pounding stories (M-381 vibe).",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "canon",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "Rest Before Boss",
+          "trigger": "Adjacency rest.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        },
+        {
+          "name": "False Sticker Next Door",
+          "trigger": "Refuse a lying sticker.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": {
+            "kind": "slot",
+            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          },
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ]
+    }
+  ],
+  "achievements_catalog": {
+    "path": "tables/achievements.csv",
+    "note": "Soft Open + F2 catalog; A-rows via proposed"
+  },
+  "lore_drafts": {
+    "monster_table": {
+      "path": "lore/drafts/core-book-monster-table-v0.2.md",
+      "version": "0.2"
+    },
+    "canon_floor_2": {
+      "path": "lore/tables/canon-floor-2.json",
+      "status": "reserve"
+    }
+  },
+  "pending_inputs": [
+    {
+      "owner": "Accountant",
+      "item": "floors.2.fixed_encounters pins",
+      "waiting_for": "--write-on-fail until bumped",
+      "status": "open"
+    },
+    {
+      "owner": "Lore",
+      "item": "canon-floor-2 RESERVE pass + A-056",
+      "waiting_for": "canon pass on day pages",
+      "status": "open"
+    },
+    {
+      "owner": "Syndicate",
+      "item": "achievement rewards + F2 Story Box deck",
+      "waiting_for": "achievement-suggestions.md",
+      "status": "open"
+    },
+    {
+      "owner": "Architect",
+      "item": "encounter_bot multi-floor overview/canon",
+      "waiting_for": "hardcodes f01",
+      "status": "open"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Crawler Creation
 Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species PROVISIONAL, Fan Profile hidden, Midterm Onboarding pointer.
-Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–030; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.17. Generated from: <<STAMP>>.
+Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species PROVISIONAL, Fan Profile hidden, Midterm Onboarding pointer; standard level track lives in Chapter 1 (core v0.2.19 / decision 033).
+Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–031, 033; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.19. Generated from: <<STAMP>>.
 
 <!-- BEGIN -->
 
@@ -21,7 +21,7 @@ This chapter builds a level 1 Crawler at that kiosk, one decision at a time. It 
 
 ## Before You Start
 
-**Creation is standard 5e (2024) character creation at level 1.** You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a private survey, and a story in which your species stays hidden until Floor 3. The System keeps a **Fan Profile** on every Crawler; players never see it and never set it (S12 is retired). Floor 1 later grants **Midterm Onboarding** (level 2 at the Green Room) — that is play, not creation.
+**Creation is standard 5e (2024) character creation at level 1.** You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a private survey, and a story in which your species stays hidden until Floor 3. The System keeps a **Fan Profile** on every Crawler; players never see it and never set it (S12 is retired). Floor 1 later grants **Midterm Onboarding** (level 2 at the Green Room) — that is play, not creation. The rest of the standard level track (arrival bands, Floor 3 and Floor 9 end-boss bumps, Floor 18 at level 20) is in Chapter 1.
 
 **Time.** Plan on about 20 minutes per Crawler. A table of new players should plan on 45. Everyone can build at once, because each player works alone.
 

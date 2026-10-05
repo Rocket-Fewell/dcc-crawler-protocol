@@ -1,7 +1,7 @@
 # Classes and Backgrounds
 Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1 | Updated: 2026-10-05
 Summary: Chapter 4. Twelve SRD classes under Crawl reskins with play guidance, Fighting Styles, four SRD backgrounds in full, non-SRD appendix under reskin names only. No pets, no Story Box deeds, no survey reprint.
-Sources: characters/character-creation-5e.md v0.2.5; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 026–030; rules/10-core-rules-5e.md v0.2.17; SRD 5.2 (CC-BY-4.0).
+Sources: characters/character-creation-5e.md v0.2.5; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 026–031, 033; rules/10-core-rules-5e.md v0.2.19; SRD 5.2 (CC-BY-4.0).
 
 <!-- BEGIN -->
 
@@ -23,7 +23,7 @@ No pet rules. No Story Box deed lists. No survey questions and no Fan Profile fi
 
 - **Provisional Class** at level 1 means the full SRD class features for that level. Nothing is delayed except the story paint.
 - **Official Class Title** arrives on Floor 3 with your subclass. The Title is flavor. The subclass is rules.
-- **Milestone leveling:** one level per floor on the standard track. Floor 1 grants **Midterm Onboarding** (level 2 at the Green Room) before the boss; you arrive on Floor 2 already at level 2. Later floors use **Floor Onboarding** at the first saferoom after descent.
+- **Milestone leveling:** on the standard track a Crawler arrives at level **N** on Floors **1–3**, **N+1** on Floors **4–9**, and **N+2** on Floors **10–18**. Floor 3 and Floor 9 end bosses each grant an extra level before Floor Onboarding. Floor 1 grants **Midterm Onboarding** (level 2 at the Green Room) before the boss; you arrive on Floor 2 already at level 2. Later floors use **Floor Onboarding** at the first saferoom after descent. Full arrival table in Chapter 1.
 - **Multiclassing** follows 5e, including ability score prerequisites. The System will mock the paperwork and still enforce it.
 - **Spell lists** are SRD. Spell names stay plain; only kiosk headings get reskins.
 - **Death and replacement.** A dead Crawler's player usually brings a replacement at the next saferoom (Chapter 1). The new sheet uses this chapter the same way Chapter 2 does, plus late-entry gear and one **Silver loot box**.
@@ -919,7 +919,7 @@ Chapter 2's **Use a pre-built** option fills legal defaults for each class. Thes
 | 2 (arrival) | 2 | No extra level from Floor 1 stairwell |
 | 2 clear → 3 | 3 | Subclass + Official Class Title + Identity Market offer |
 
-Slow-Burn Track (Chapter 1 house option) stretches levels; if your table uses it, Midterm Onboarding timing may shift — log the table's choice at session zero.
+After Floor 3 the standard track keeps climbing (arrive Floor 4 at level 5; arrive Floor 10 at level 12; land at level 20 on Floor 18). Slow-Burn Track (Chapter 1 house option) stretches levels; if your table uses it, Midterm Onboarding timing may shift — log the table's choice at session zero.
 
 ## Resources That Care About Saferooms
 

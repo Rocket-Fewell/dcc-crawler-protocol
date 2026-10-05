@@ -1,0 +1,30 @@
+{
+  "f1_hook_instances": 107,
+  "f1_unique": 46,
+  "f1_per_day_avg": 21.4,
+  "f2_hook_instances": 380,
+  "f2_unique": 208,
+  "f2_per_day": {
+    "1": 38,
+    "2": 38,
+    "3": 38,
+    "4": 38,
+    "5": 38,
+    "6": 38,
+    "7": 38,
+    "8": 38,
+    "9": 38,
+    "10": 38
+  },
+  "f2_per_day_avg": 38.0,
+  "ratio_vs_f1_daily_avg": 17.76,
+  "f2_total_exceeds_f1": true,
+  "f2_per_day_avg_vs_f1_per_day_avg": 1.78,
+  "generator": {
+    "PASS": 387,
+    "WARN": 42,
+    "FAIL": 326,
+    "mode": "--allow-other-floors --write-on-fail",
+    "note": "Generator still Floor-1-hardcoded (overview/canon/render). Architect bump needed. Accountant needs floors.2.fixed_encounters pins."
+  }
+}

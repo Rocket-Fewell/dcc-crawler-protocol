@@ -23,3 +23,10 @@ Sun Oct  4 12:43:26 CDT 2026: created filespace and plan
 - 2026-10-05 12:54 CT: Ch1 early-descent now notes Floor 1 Reprieve expires on descent (Encounter Bot request). PDF rebuilt.
 
 - 2026-10-05 12:54 CT: Ch1 field-rest fee patched to decision 031 / core §5.6 v0.2.18 (Short Rest: free if quiet; fee buys quiet; never Long Rest).
+
+## 2026-10-05 (evening) - Decision 033 level track (core v0.2.19)
+- Ch1 Levels and Advancement reconciled to standard arrive bands N / N+1 / N+2; F3 and F9 end-boss +1; F18 lands at level 20 (no finale bonus levels). Arrival table kept. HOUSE tag retained (invention, not unfiled).
+- Ch2 src Midterm pointer cross-refs Ch1 track; regenerated via drafts/gen-ch2-tables.py.
+- Ch4 milestone bullet + Floor 3 progression note updated to match.
+- No refund-desk floor numbers printed in Ch1–4 (Ch9 not drafted); no old F5/F9/F13/F17 gates found.
+- Never opened gm-notes/, player sheets, live state, ledger, or secrets.

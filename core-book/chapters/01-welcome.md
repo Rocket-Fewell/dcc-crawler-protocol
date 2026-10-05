@@ -1,7 +1,7 @@
 # Welcome to the Crawl
 Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (Silver/Gold/Platinum by floor; Legendary cap 2/Crawler), death, levels, Ratings, table tone, glossary.
-Sources: decisions 018, 026-030; rules/10-core-rules-5e.md v0.2.17; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
+Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (Silver/Gold/Platinum by floor; Legendary cap 2/Crawler), death, standard level track (arrive N / N+1 / N+2; F3 and F9 end-boss bumps; F18 at 20), Ratings, table tone, glossary.
+Sources: decisions 018, 026-031, 033; rules/10-core-rules-5e.md v0.2.19; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
 
 <!-- BEGIN -->
 
@@ -168,7 +168,7 @@ Ability scores, d20 tests, Advantage and Disadvantage, proficiency, Armor Class,
 
 ### Levels and Advancement
 
-The standard pace is **one level per floor**, with two big exceptions. A Crawler arrives on Floor N at level N through Floor 3, which is when the 2024 classes choose their subclasses and the Crawl lets you pick an Official Class Title. **Beating Floor 3's end boss grants a bonus level**, and descending grants the usual one, so you arrive on **Floor 4 at level 5**. **Floor 9's end boss does the same**, so you arrive on **Floor 10 at level 12**. From there it is one level per floor again, and you reach **Floor 18 at level 20**. {{HOUSE}}
+On the **standard track**, a Crawler **arrives on Floor N at level N** on Floors **1–3**, at level **N+1** on Floors **4–9**, and at level **N+2** on Floors **10–18**. Floor 3 is when the 2024 classes choose their subclasses and the Crawl lets you pick an Official Class Title. **Beating Floor 3's end boss grants a bonus level**, and descending still grants the usual Floor Onboarding, so you arrive on **Floor 4 at level 5**. **Floor 9's end boss does the same**, so you arrive on **Floor 10 at level 12**. Those two end bosses are the only times the standard track grants more than one level on a floor (Floor 1's Green Room mid-floor grant is a split, not a stack). The track **lands at level 20 on arrival at Floor 18**; there are no finale bonus levels. {{HOUSE}}
 
 | Floors | Arrival level |
 |---|---|
@@ -176,7 +176,7 @@ The standard pace is **one level per floor**, with two big exceptions. A Crawler
 | 4–9 | Floor number + 1 (5 to 10) |
 | 10–18 | Floor number + 2 (12 to 20) |
 
-Leveling is **milestone-based**. You earn the level when you reach the floor's exit alive. It applies at the first saferoom of the next floor, which the System calls **Floor Onboarding**. Floor 1 uses a split rule: **level 2 arrives at Floor 1's second saferoom (the Green Room), before the boss**, which the System calls **Midterm Onboarding**, so that the boss is a fair fight for four Crawlers. The Floor 1 stairwell grants no extra level; you arrive on Floor 2 already at level 2. A Crawler who is behind (a replacement, a missed session) is brought up to the party's lowest level at the next saferoom. Nobody levels above the floor's band.
+Leveling is **milestone-based**. Reaching the floor's exit alive grants the next floor's arrival level. It applies at the first saferoom of the next floor, which the System calls **Floor Onboarding**. Floor 1 uses a split rule: **level 2 arrives at Floor 1's second saferoom (the Green Room), before the boss**, which the System calls **Midterm Onboarding**, so that the boss is a fair fight for four Crawlers. The Floor 1 stairwell grants no extra level; you arrive on Floor 2 already at level 2. **Floor 3** and **Floor 9** end bosses each grant an extra level before that descent fires; otherwise the standard track never grants more than one level per floor. A Crawler who is behind (a replacement, a missed session) is brought up to the party's lowest level at the next saferoom. Nobody levels above the floor's arrival band.
 
 ::: house Slow-Burn Track
 Tables who want a grittier game can slow the pace so that the party tops out around level 15 by Floor 18. Chapter 10 prints the full slow-burn table.
