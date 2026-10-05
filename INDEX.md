@@ -1,5 +1,5 @@
 # Master Index
-Owner: Borent Corp Systems Architect | Status: draft | Version: 0.2.1 | Updated: 2026-10-04
+Owner: Borent Corp Systems Architect | Status: draft | Version: 0.2.2 | Updated: 2026-10-05
 Summary: Every file in the campaign workspace, one line each.
 
 | Path | Description | Owner | Status |
@@ -12,6 +12,9 @@ Summary: Every file in the campaign workspace, one line each.
 | rules/_source-crawler-protocol/02-core-rules-5e.md | 5e (2024) overlay: loot boxes, death and revival | Syndicate | draft v0.2.2 |
 | rules/_source-crawler-protocol/05-campaign-narrative.md | Story spine | Syndicate | draft |
 | bot/README.md | Discord voice bridge: setup and tag contract | Borent | draft |
+| agent-discord/README.md | Channel agent (own bot token): listen, wake a Cursor automation, post one reply. Not the GM voice bridge. | channel agent | draft |
+| agent-discord/PROMPT.md | Prompt the Cursor automation runs on each Discord wake | channel agent | draft |
+| agent-discord/discord_agent.py | `whoami`, `read`, `new`, `say`, `listen` for one text channel | channel agent | draft |
 | decisions/002-death-mode.md | Death Mode decision: Costly Revives, very costly and rare | Borent | final |
 | decisions/003-death-bypasses.md | Earned death bypasses vs revives | Borent | final |
 | decisions/004-crafting-system.md | Crafting system added; ownership split | Borent | final |
