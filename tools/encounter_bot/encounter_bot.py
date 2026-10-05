@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""Encounter Bot: day-page generator and validator for the timed Floor 1 playthrough.
+"""Encounter Bot: day-page generator and validator for a timed floor playthrough.
 
-Owner: Encounter Bot | Status: draft | Version: 0.1 | Updated: 2026-10-04
+Owner: Encounter Bot | Status: draft | Version: 0.1 | Updated: 2026-10-05
 Summary: Pure local Python 3 (standard library only, no network, no model/API calls). Reads a Day spec (JSON) plus the
-reskin tables, loot decks, achievements.csv, Lore's Floor 1 canon table and the SRD text, validates everything, and writes
-floors/f01/day-NN.md and a sibling day-NN.json with the same content. Prints a plain PASS/FAIL summary.
+reskin tables, loot decks, achievements.csv, Lore's canon table for that floor and the SRD text, validates everything, and writes
+floors/fNN/day-NN.md and a sibling day-NN.json with the same content. Prints a plain PASS/FAIL summary.
+The floor comes from meta.floor (1 when the spec omits it): floors/fNN/ and lore/tables/canon-floor-N.json.
 
 Usage:
   python3 tools/encounter_bot/encounter_bot.py --spec floors/f01/day-01.spec.json
   python3 tools/encounter_bot/encounter_bot.py --spec floors/f01/day-01.spec.json --check-only
 
 Safety: reads only the allowed inputs (never gm-notes/secret, .env or token files, sessions/, state). Writes only
-floors/f01/day-NN.md and day-NN.json (never 00-overview.md, INDEX.md, rules/, sessions/, the ledger or Lore (via dcc_paths / lore/)).
+floors/fNN/day-NN.md and day-NN.json (never 00-overview.md, INDEX.md, rules/, sessions/, the ledger or Lore (via dcc_paths / lore/)).
 """
 import argparse
 import copy
@@ -42,7 +43,6 @@ _srd_cand = [
     "/workspace/srd/raw.txt",
 ]
 SRD_RAW = next((p for p in _srd_cand if p and os.path.isfile(p)), _srd_cand[-1])
-CANON_TABLE = os.path.join(LORE, "tables", "canon-floor-1.json")
 LEDGER = os.path.join(LORE, "CANON-LEDGER.md")
 _BOX_LORE_PREFIX = "/workspace/dcc-lore/"  # legacy box-only spec prefix; mapped onto LORE, never written
 
@@ -75,7 +75,34 @@ def display_path(path):
     return path
 
 
-CANON_TABLE_DISPLAY = display_path(CANON_TABLE) if display_path(CANON_TABLE) != CANON_TABLE else "lore/tables/canon-floor-1.json"
+def floor_number(floor):
+    """meta.floor as an integer. Missing or unusable values stay on Floor 1."""
+    try:
+        n = int(floor)
+    except (TypeError, ValueError):
+        n = 1
+    return n if n >= 1 else 1
+
+
+def canon_table_path(floor):
+    return os.path.join(LORE, "tables", "canon-floor-%d.json" % floor_number(floor))
+
+
+def canon_table_display(floor):
+    path = canon_table_path(floor)
+    shown = display_path(path)
+    if shown == path:
+        return "lore/tables/canon-floor-%d.json" % floor_number(floor)
+    return shown
+
+
+def floor_pages_dir(floor):
+    return os.path.join(ROOT, "floors", "f%02d" % floor_number(floor))
+
+
+# Floor 1 aliases. Per-spec loads use canon_table_path(meta.floor).
+CANON_TABLE = canon_table_path(1)
+CANON_TABLE_DISPLAY = canon_table_display(1)
 
 SLOT_RE = re.compile(r"\[([A-Z][A-Z0-9 \-/&']*):\s[^\]]*\]")
 TOKEN_RE = re.compile(r"\{(days|day|days_left|stasis_hours|floor_hours|budget_version)\}")  # {hours} is deliberately NOT a token: the GM fills it from the clock
@@ -138,12 +165,17 @@ def read_json(path):
 
 
 def check_write_allowed(path, floor=1, days=5, allow_other_floors=False):
-    """Only floors/f01/day-NN.md|json for NN <= days (other floor dirs only with --allow-other-floors)."""
+    """Only floors/fNN/day-NN.md|json for NN <= days. The directory is meta.floor.
+
+    --allow-other-floors is accepted so older commands keep working. The spec floor
+    selects the directory either way.
+    """
     r = _real(path)
     name = os.path.basename(r)
-    d = _real(os.path.join(ROOT, "floors", "f%02d" % (floor if allow_other_floors else 1)))
+    fl = floor_number(floor)
+    d = _real(floor_pages_dir(fl))
     if os.path.dirname(r) != d:
-        raise PermissionError("write only under floors/f01/ (or floors/fNN/ with --allow-other-floors): %s" % path)
+        raise PermissionError("write only under floors/f%02d/: %s" % (fl, path))
     m = re.match(r"^day-(\d\d)\.(md|json)$", name)
     if not m:
         raise PermissionError("write only day-NN.md / day-NN.json (never 00-overview.md or INDEX.md): %s" % name)
@@ -336,7 +368,10 @@ class Report:
 
 # ---------------------------------------------------------------- data
 class Data:
-    def __init__(self):
+    def __init__(self, floor=1):
+        self.floor = floor_number(floor)
+        self.canon_path = canon_table_path(self.floor)
+        self.canon_display = canon_table_display(self.floor)
         t = os.path.join(ROOT, "tables")
         self.items = {e["srd_id"]: e for e in read_json(os.path.join(t, "item-reskins.json"))["entries"]}
         sc = read_json(os.path.join(t, "species-class-reskins.json"))["entries"]
@@ -364,7 +399,11 @@ class Data:
         for r in self.ach.values():
             for lid in re.findall(r"Canon ref (A-\d{3})", r.get("Notes", "")):
                 self.ach_by_canon.setdefault(lid, r["ID"])
-        self.overview = read_text(os.path.join(ROOT, "floors", "f01", "00-overview.md"))
+        overview_path = os.path.join(floor_pages_dir(self.floor), "00-overview.md")
+        if not os.path.isfile(overview_path):
+            overview_path = os.path.join(floor_pages_dir(1), "00-overview.md")
+        self.overview_path = overview_path
+        self.overview = read_text(overview_path)
         self.ov_grams = set()
         w = words(self.overview)
         for i in range(len(w) - 9):
@@ -385,11 +424,11 @@ class Data:
         self.budget = Budget()
         self.canon = None
         self.canon_sha256 = None
-        if os.path.exists(CANON_TABLE):
-            with open(check_read_allowed(CANON_TABLE), "rb") as fh:
+        if os.path.exists(self.canon_path):
+            with open(check_read_allowed(self.canon_path), "rb") as fh:
                 self.canon_sha256 = hashlib.sha256(fh.read()).hexdigest()
             try:
-                self.canon = read_json(CANON_TABLE)
+                self.canon = read_json(self.canon_path)
             except ValueError:
                 self.canon = None
         self.canon_zones = {z["id"]: z for z in self.canon["zones"]} if self.canon else {}
@@ -688,14 +727,14 @@ def build(spec, data, rep):
     # ---- canon table
     if data.canon:
         rep.ok("Lore canon table present", "%s (ledger %s, %d zones)" % (
-            CANON_TABLE_DISPLAY, data.canon.get("ledger_version"), len(data.canon["zones"])))
+            data.canon_display, data.canon.get("ledger_version"), len(data.canon["zones"])))
         pin = spec.get("canon_table", {}).get("expected_sha256")
         if pin and pin != data.canon_sha256:
             rep.warn("canon table hash", "spec pins %s but the file is %s (Lore rebuilt it; check ledger/content, then update the pin)" % (pin[:12], (data.canon_sha256 or "?")[:12]))
         else:
             rep.ok("canon table hash recorded", "sha256 %s, ledger v%s" % ((data.canon_sha256 or "?")[:16], data.canon.get("ledger_version")))
     else:
-        rep.warn("Lore canon table present", "%s not found; canon tags omitted" % CANON_TABLE_DISPLAY)
+        rep.warn("Lore canon table present", "%s not found; canon tags omitted" % data.canon_display)
 
     def check_ledger(lid, where):
         if lid in data.ledger:
@@ -964,7 +1003,7 @@ def build(spec, data, rep):
         # canon
         cz = data.canon_zones.get(e.get("canon_zone"))
         if e.get("canon_zone") and data.canon and not cz:
-            rep.fail("%s canon_zone" % eid, "%s not in canon-floor-1.json" % e["canon_zone"])
+            rep.fail("%s canon_zone" % eid, "%s not in %s" % (e["canon_zone"], os.path.basename(data.canon_path)))
         if cz:
             for lid in cz.get("ledger_rows") or []:
                 if lid not in data.ledger and data.ledger:
@@ -980,7 +1019,7 @@ def build(spec, data, rep):
         canon_mobs = [m["name"] for m in (cz or {}).get("mobs", [])]
         for mz in e.get("canon_mob_zones", []):
             if mz not in data.canon_zones and data.canon:
-                rep.fail("%s canon_mob_zones" % eid, "%s not in canon-floor-1.json" % mz)
+                rep.fail("%s canon_mob_zones" % eid, "%s not in %s" % (mz, os.path.basename(data.canon_path)))
             canon_mobs += [m["name"] for m in data.canon_zones.get(mz, {}).get("mobs", [])]
         ens = []
         for en in e["enemies"]:
@@ -1368,8 +1407,8 @@ def render_md(doc):
     w("# Floor %d (%s) - %s\n" % (m["floor"], m["floor_name"], m["title"]))
     w("Owner: %s | Status: %s | Version: %s | Updated: %s\n" % (m["owner"], m["status"], m["version"], m["updated"]))
     w("Summary: %s\n" % m["summary"])
-    w("Source: %s. Generated by `tools/encounter_bot/encounter_bot.py` from `floors/f01/day-%02d.spec.json`; edit the spec, not this file.\n" % (
-        "; ".join(m["sources"]), day["number"]))
+    w("Source: %s. Generated by `tools/encounter_bot/encounter_bot.py` from `floors/f%02d/day-%02d.spec.json`; edit the spec, not this file.\n" % (
+        "; ".join(m["sources"]), m.get("floor", 1), day["number"]))
     w("Budget file: `%s` v%s, sha256 `%s`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.\n" % (
         B70, m.get("budget_file_version"), m.get("budget_file_sha256")))
     w("> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. "
@@ -1488,7 +1527,7 @@ def render_md(doc):
     w("")
     fe = day.get("floor_exit")
     if fe:
-        w("### Floor 1 exit (Day %d)\n" % m["day"])
+        w("### Floor %d exit (Day %d)\n" % (m.get("floor", 1), m["day"]))
         w("- %s *GM warning at the exit* [GM] (say this out loud first, before the missed-floor line / early descent): %s" % (fe["gm_warning"]["tag"], fe["gm_warning"]["text"]))
         w("- %s *missed-floor line* [SYSTEM] (read only when the floor collapses with a Crawler still on it: they are dead): \"%s\"" % (fe["system_line"]["tag"], fe["system_line"]["text"]))
         w("")
@@ -1638,7 +1677,7 @@ def render_md(doc):
         w("- **Card** `%s` %s [%s]: %s" % (c["card_id"], c.get("display", ""), c.get("tier", "?"), c["note"]))
     if day.get("proposed_achievements") or any(x.get("proposed_achievements") for x in doc["encounters"]):
         w("")
-        w("**Proposed achievements on this page** (Floor 1 seed list, GM discretion). %s" % clk["achievement_caps"])
+        w("**Proposed achievements on this page** (Floor %d seed list, GM discretion). %s" % (m.get("floor", 1), clk["achievement_caps"]))
     for pa in day.get("proposed_achievements", []):
         for l_ in render_proposed_lines(pa):
             w(l_)
@@ -1663,7 +1702,8 @@ def render_md(doc):
     v = doc["validation"]
     w("---\n")
     ct = doc["canon_table"]
-    w("*Canon table: `%s`, ledger v%s, sha256 `%s` (recorded at build time).*\n" % (CANON_TABLE_DISPLAY, ct.get("ledger_version"), ct.get("sha256")))
+    w("*Canon table: `%s`, ledger v%s, sha256 `%s` (recorded at build time).*\n" % (
+        canon_table_display(m.get("floor", 1)), ct.get("ledger_version"), ct.get("sha256")))
     w("*Build note: validation %s (%d PASS, %d WARN, %d FAIL) by `encounter_bot.py`; spec sha256 %s. Warnings: %s*\n" % (
         v["result"], v["pass"], v["warn"], v["fail"], v["spec_sha256"][:12],
         "; ".join("%s" % x["check"] for x in v["checks"] if x["status"] == "WARN") or "none"))
@@ -1704,8 +1744,8 @@ def check_slot_map_provenance(spec, sans_pin, bud, rep):
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Encounter Bot: validate a Day spec and write the day page + JSON.")
     ap.add_argument("--spec", required=True, help="path to the Day spec JSON")
-    ap.add_argument("--out-dir", default=None, help="default floors/f01/; other floors need --allow-other-floors")
-    ap.add_argument("--allow-other-floors", action="store_true", help="allow floors/fNN/ (NN = meta.floor) as the output dir")
+    ap.add_argument("--out-dir", default=None, help="default floors/fNN/ where NN is meta.floor")
+    ap.add_argument("--allow-other-floors", action="store_true", help="accepted for older commands; output still follows meta.floor")
     ap.add_argument("--check-only", action="store_true", help="validate only, write nothing")
     ap.add_argument("--write-on-fail", action="store_true", help="write outputs even if validation fails")
     a = ap.parse_args(argv)
@@ -1714,7 +1754,8 @@ def main(argv=None):
     spec_path = a.spec if os.path.isabs(a.spec) else os.path.join(os.getcwd(), a.spec)
     raw = read_text(spec_path)
     spec = json.loads(raw)
-    data = Data()
+    meta = spec.get("meta") if isinstance(spec, dict) else None
+    data = Data(floor_number(meta.get("floor", 1)) if isinstance(meta, dict) else 1)
     required = ("meta", "clock", "day", "routes", "stairwell_key", "encounters", "pending_inputs")
     missing = [k for k in required if k not in spec]
     if missing:
@@ -1758,8 +1799,8 @@ def main(argv=None):
         print("Nothing written (%s)." % ("check-only" if a.check_only else "validation failed"))
         return 0 if rep.passed else 1
     n = "day-%02d" % doc["meta"]["day"]
-    fl = doc["meta"]["floor"]
-    out_dir = a.out_dir or os.path.join(ROOT, "floors", "f%02d" % (fl if a.allow_other_floors else 1))
+    fl = floor_number(doc["meta"].get("floor", 1))
+    out_dir = a.out_dir or floor_pages_dir(fl)
     kw = dict(floor=fl, days=doc["meta"]["days"], allow_other_floors=a.allow_other_floors)
     md_path = check_write_allowed(os.path.join(out_dir, n + ".md"), **kw)
     js_path = check_write_allowed(os.path.join(out_dir, n + ".json"), **kw)
