@@ -409,8 +409,8 @@ def all_in_text(a, sources, flags=None, footer=True):
 
 
 def floor_label(fl):
-    """'F3' for a floor, 'no floor set' when none was recorded (never 'FNone')."""
-    return f"F{fl}" if fl is not None else "no floor set"
+    """'F3' for a floor, '(no floor set)' when none was recorded (never 'FNone')."""
+    return f"F{fl}" if fl is not None else "(no floor set)"
 
 
 def sale_proceeds(sales):

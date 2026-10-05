@@ -103,6 +103,7 @@ Summary: Every file in the campaign workspace, one line each.
 | tools/tests/test_floor_lost.py | Tests for floor-lost and loot-body (decision 028) and the Accountant fixes (strict quantities, companions, ASCII digits, tamper detection, floor 1-18) | Borent | draft |
 | tools/tests/test_loot_totals_credits.py | Tests for `loot totals --include-credits` (all-in view, A12 valve check) | Borent | draft |
 | tools/tests/test_loot_flag_lines.py | Tests for the per-floor inflation flag line in `loot totals` (budget file, fallback 1,500) | Borent | draft |
+| tools/tests/test_accountant_job7.py | Tests for Accountant round 3 (body_loot fingerprint, transfers not income, --credit-sources and --coins validation, no-floor wording) | Borent | draft |
 | tools/tests/test_publisher.py | Tests for publisher.py (cards, diffs, channels) | Borent | draft |
 | tools/tests/test_loot_ledgers.py | Tests for loot draws, box ledger, banner archive, achievement reward | Borent | draft |
 | tools/tests/test_story_box.py | Tests for Story Boxes (deeds, cap, rota, shared, restore, no credit conversion) | Borent | draft |

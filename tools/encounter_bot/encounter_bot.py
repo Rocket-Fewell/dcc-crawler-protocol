@@ -23,6 +23,12 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Provenance hash that ignores the budget/canon pins (see spec_hash_sans_pin.py for the exact method):
+# sha256 of json.dumps(spec minus budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256,
+# sort_keys=True, separators=(',', ':'), ensure_ascii=False) in UTF-8. Recorded as meta.spec_sha256_sans_pin.
+from spec_hash_sans_pin import METHOD as SANS_PIN_METHOD, spec_sha256_sans_pin  # noqa: E402
+
 SCRIPT = os.path.realpath(__file__)
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SCRIPT)))  # /workspace/dcc-campaign
 LORE = "/workspace/dcc-lore"
@@ -31,7 +37,7 @@ CANON_TABLE = os.path.join(LORE, "tables", "canon-floor-1.json")
 LEDGER = os.path.join(LORE, "CANON-LEDGER.md")
 
 SLOT_RE = re.compile(r"\[([A-Z][A-Z0-9 \-/&']*):\s[^\]]*\]")
-TOKEN_RE = re.compile(r"\{(days|day|days_left|stasis_hours|floor_hours)\}")  # {hours} is deliberately NOT a token: the GM fills it from the clock
+TOKEN_RE = re.compile(r"\{(days|day|days_left|stasis_hours|floor_hours|budget_version)\}")  # {hours} is deliberately NOT a token: the GM fills it from the clock
 TAGS = ("dash", "loot", "clever")
 PF = "[PLAYER-FACING]"
 B70 = "rules/70-encounter-budget-5e.json"
@@ -446,7 +452,7 @@ def build(spec, data, rep):
     clock = spec["clock"]
     days = clock.get("days")
     daynum = spec["day"]["number"]
-    ctx = {"days": days, "day": daynum, "days_left": (days - daynum) if isinstance(days, int) else "?",
+    ctx = {"budget_version": (spec.get("budget_file") or {}).get("version", "?"), "days": days, "day": daynum, "days_left": (days - daynum) if isinstance(days, int) else "?",
            "stasis_hours": clock.get("stasis_threshold_hours", "?"),
            "floor_hours": (days * 24) if isinstance(days, int) else "?"}
     spec = subst(spec, ctx)
@@ -1429,6 +1435,8 @@ def main(argv=None):
     doc["validation"] = {
         "result": "PASS" if rep.passed else "FAIL", "pass": rep.count("PASS"), "warn": rep.count("WARN"), "fail": rep.count("FAIL"),
         "spec_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(), "checks": checks}
+    doc["meta"]["spec_sha256_sans_pin"] = spec_sha256_sans_pin(json.loads(raw))
+    doc["meta"]["spec_sha256_sans_pin_method"] = SANS_PIN_METHOD
     md = render_md(doc)
 
     for s, c, d in rep.items:

@@ -54,8 +54,8 @@ class TotalsCreditsCase(StateTestCase):
         self.run_cmd("credits", "Ann", "+7", "--reason", "gift", "--source", "transfer", "--floor", "1")
         j, _ = self.run_cmd("loot", "totals", "--include-credits", "--json")
         self.assertEqual(json.loads(j)["all_in"]["Ann"]["1"]["earned_credits"], 40)
-        j, _ = self.run_cmd("loot", "totals", "--include-credits", "--credit-sources", "transfer,encounter", "--json")
-        self.assertEqual(json.loads(j)["all_in"]["Ann"]["1"]["earned_credits"], 47)
+        j, _ = self.run_cmd("loot", "totals", "--include-credits", "--credit-sources", "r1,encounter", "--json")
+        self.assertEqual(json.loads(j)["all_in"]["Ann"]["1"]["earned_credits"], 40)
 
     def test_floors_and_crawlers_are_kept_apart_and_filters_work(self):
         self.earn("Ann", 10, "encounter", 1)
@@ -70,11 +70,11 @@ class TotalsCreditsCase(StateTestCase):
     def test_unrecorded_floor_is_flagged_and_assume_floor_places_it(self):
         self.earn("Ann", 40, "encounter")                # no --floor on this entry
         out, _ = self.run_cmd("loot", "totals", "--include-credits")
-        self.assertIn("floor not recorded", out)
+        self.assertIn("Ann (no floor set): boxes 0", out)
         self.assertIn("--assume-floor", out)
         out, _ = self.run_cmd("loot", "totals", "--include-credits", "--assume-floor", "1")
         self.assertIn("Ann F1: boxes 0 + sale proceeds 0 + earned credits 40 = all-in 40", out)
-        self.assertNotIn("floor not recorded", out)
+        self.assertNotIn("no floor set", out)
         self.run_cmd("loot", "totals", "--include-credits", "--assume-floor", "19", expect=1)
         self.run_cmd("loot", "totals", "--include-credits", "--assume-floor", "x", expect=1)
 
