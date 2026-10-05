@@ -1,6 +1,6 @@
 # Core Rulebook Plan (Valtay Corp - Core Book Author)
 Target: PDF, 300+ pages (goal ~340 for margin). Model: D&D 5e Core Rulebooks. Built from markdown chapters -> HTML -> PDF via headless Chrome.
-Sources (read-only): /workspace/crawler-protocol, /workspace/dcc-campaign, /workspace/dcc-lore (CANON-LEDGER wins on lore conflicts; dcc-campaign/DECISIONS.md wins on rules).
+Sources (read-only): campaign repo + lore tree via `DCC_CAMPAIGN_ROOT` / `DCC_LORE_ROOT` (CANON-LEDGER wins on lore conflicts; campaign `DECISIONS.md` wins on rules). Never hardcode box-only paths.
 Daily loop: 1) verify sources vs. chapters (new decisions, ledger changes, achievements/monster/item data) 2) write ~25 pages 3) rebuild PDF 4) log in notes/LOG.md.
 Chapters (target pages): Front matter 6 | 1 Welcome to the Crawl 14 | 2 Crawler Creation 24 | 3 Species 20 | 4 Classes & Backgrounds 30 | 5 Skills & Achievements 24 | 6 Equipment, Loot Boxes & Crafting 34 | 7 Playing the Game (core rules) 30 | 8 Combat 20 | 9 Death, Revival & Safe Rooms 14 | 10 The Dungeon & Floors (1-18) 36 | 11 Running the Game (GM) 26 | 12 Monster Compendium 50 | 13 NPCs, Factions & the System AI 14 | Appendices (tables, achievements, glossary, index, sheets) 24
 Schedule: Day 1 skeleton+style+build pipeline+ch1; D2 ch2-3; D3 ch4; D4 ch5; D5-6 ch6; D7-8 ch7-8; D9 ch9+13; D10-11 ch10; D12 ch11; D13-14 ch12; D15 appendices; D16-17 editing, layout, art, QA; final delivery ~D17.

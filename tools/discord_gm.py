@@ -14,10 +14,13 @@ Usage:
   python3 tools/discord_gm.py channels                                   # show the crawler -> channel map and bot access
   python3 tools/discord_gm.py stop                                      # kill switch: bridge stops talking + clears its queue
 
-Tags (decision 032 / Caleb Oct 5 2026): [SYSTEM] = dry corporate System voice (clock, fees,
+Tags (decision 032 / agreed Oct 5 2026): [SYSTEM] = dry corporate System voice (clock, fees,
 registration, collapse/floor notices; no jokes). [GM] or untagged = snarky narrator (achievements,
-loot-box callouts, jokes). After a [SYSTEM] line, re-tag [GM] before any snark (tag carry-over).
-[ROLL] lines are posted but never spoken. Needs env GM_DISCORD_TOKEN (never print it).
+loot-box callouts, gm_narration, gm_color, jokes). After a [SYSTEM] line, re-tag [GM] before any snark.
+Manifest kinds (same allow-list as extract.js / encounter_text.py): ONLY `system_notice` and
+`exit_warning_read_aloud` map to [SYSTEM]; `voice_line`, `route_voice_line`, `gm_narration`,
+`gm_color`, and unknown kinds map to [GM]. [ROLL] lines are posted but never spoken.
+Needs env GM_DISCORD_TOKEN (never print it).
 Posts over 2000 chars are split into several messages. State of 'new' is kept in sessions/.discord-cursor.
 """
 import argparse, json, os, sys, tempfile, urllib.request, urllib.error

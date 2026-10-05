@@ -1,5 +1,5 @@
 # Canon Ledger - Dungeon Crawler Carl
-Owner: DCC Lore | Status: review | Version: 1.15 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 1.16 | Updated: 2026-10-05
 Summary: Master "hard memory" of DCC canon findings, each with a source quote (<=25 words), source tag and VERIFIED / WIKI-ONLY / UNVERIFIED confidence. Spoilers through Book 8.
 
 ## 0. How to read this ledger (rules in brief; full procedure in `ledger-rules.md`)
@@ -1424,6 +1424,58 @@ Source: local Fandom mirror pages (Chris Andrews, Second Floor, Krakaren Clone (
 | 2026-10-04 | 19 | DCC Lore | Added section 9.2 Floor 2 rules, creatures, hazards, NPCs and set-pieces: M-327..M-524 (198 rows; 4 are web-only, UNVERIFIED, with no quote) and conflicts X-059..X-065 (9.2c). New web snippet file sources/web/f02-web-snippets.txt. Feeds tables/canon-floor-2.json (status "reserve"). Levels, difficulty, credits and loot amounts deliberately not captured. Append-only; no existing entries touched. Houses the Floor 2 clock conflict (canon 6 days vs house decision 026 = 10 days) as X-062. |
 | 2026-10-04 | 20 | DCC Lore | Added section 9.3 Premise verification (Transformation/Introduction, dungeon shape and win condition, stairwell counts per floor, difficulty and Crawler counts, floor-collapse fate of Crawlers vs NPCs): M-525..M-650 (126 rows; 6 are web-only, UNVERIFIED, with no quote; 19 per-floor stairwell rows come from the wiki table and carry no quote) and conflicts X-066..X-075 (9.3c; conflicts with the overview are X-066..X-070). New web snippet file sources/web/premise-web-snippets.txt. Feeds drafts/premise-verification.md. Appended by script work/pass20_rows.py; ledger_build.py was not run. Next free: M-651, X-076. |
 | 2026-10-05 | 21 | DCC Lore | Added section 9.4 Floor 3 (The Over City): M-651..M-706 (56 rows: setting, size, fake sky, random arrival, 20-day traditional timer cut to 8, opening-announcement rules (restrooms, early sponsor bids, zero-XP citizens, guard buff), village law and guards, Gate Pass, safe rooms, conditional stairwells, NPC nature, guildhalls, stores, day-night cycle, night mobs, stealth/corrupt mobs, Elites, nightclubs) and conflicts X-076..X-079 (9.4c). Script work/pass21_rows.py (do not re-run), map work/pass21-row-map.json. ledger_check failures: 0. Append-only; no existing rows touched. |
+
+### 9.6 Floors 3–7 bestiary anchors (Pass 32, 2026-10-05; prefix M- continues; feeds drafts/core-book-bestiary-f3-f7-v0.1)
+
+Name-plus-notes harvest for Core Book Chapter 12 gap list. Quotes from local Fandom mirrors only. House clock: RPG Floor 3 = 20 days (decision 026); season AI cut to 8 days remains M-659. Continuum house titles in the floor bible are separate from book-canon floor names below.
+
+| ID | Topic | Fact (paraphrase) | Source quote (<=25 words) | Source | Confidence | Date |
+|---|---|---|---|---|---|---|
+| M-734 | Brain Boiler | Third Floor psionic mob; advanced Mind Horror relative. | "Brain Boilers are a Third Floor mob that specializes in psionic attacks. They are a more advanced form" | W:Brain Boiler | VERIFIED (page cite B2 ch14; extends M-717) | 2026-10-05 |
+| M-735 | Former Circus Lemur | Floor 3 Grimaldi circus lemur mob. | "Former Circus Lemur – Level" | W:Former Circus Lemur | VERIFIED (page cite B2 ch3) | 2026-10-05 |
+| M-736 | Mold Lion | Floor 3 circus mold-lion mob. | "Mold Lion – Level" | W:Mold Lion | VERIFIED (page cite B2 ch6) | 2026-10-05 |
+| M-737 | Terror the Clown | Floor 3 tall clown mob from Grimaldi's circus. | "Terror the Clown – Level" | W:Terror the Clown | VERIFIED (page cite B2) | 2026-10-05 |
+| M-738 | Red Cornet | Auditory Cornet mob; Queasy attack (seen F3/F4). | "Red Cornet. Level 21." | W:Cornets | VERIFIED (page cite B3 ch6) | 2026-10-05 |
+| M-739 | Festering Ghoul | Floor 4 Stage-1 DT death result (ghoul class). | "Festering Ghoul – Level" | W:Festering Ghoul | VERIFIED (cite B3 ch17; extends M-082) | 2026-10-05 |
+| M-740 | Blister Ghoul | Floor 4 tenacious ghoul (stairwell/generator pressure). | "Blister Ghoul – Level" | W:Blister Ghoul | VERIFIED (page cite B3) | 2026-10-05 |
+| M-741 | Wrath Ghoul Province merge | Wrath ghouls can merge into a Province Boss at a station. | "The wrath ghouls form a a Province Boss at station 36 if" | W:Wrath Ghouls | WIKI-ONLY | 2026-10-05 |
+| M-742 | Psycho Sticker | Early Floor 4 sticky-attack mob. | "They attack the Royal Court of Princess Donut at the start of the Fourth Floor." | W:Psycho Sticker | WIKI-ONLY | 2026-10-05 |
+| M-743 | Pooka | Fuzzy goblin-like mobs that become giant goats when attacked. | "fuzzy, goblin-like creatures that turn into giant goats when attacked. They" | W:Pooka | WIKI-ONLY | 2026-10-05 |
+| M-744 | Levi the 7th | F4 neighborhood boss: troll flesher + hobgoblin skellie symbiote. | "Levi the Seventh – Troll Flesher and Hobgoblin Skellie" | W:Levi the 7th | VERIFIED (page cite B3 ch12) | 2026-10-05 |
+| M-745 | Dismember the War Mage | F4 wandering elf war-mage necromancer. | "Dismember appears to be an elf with long, silver hair." | W:Dismember | VERIFIED (page cite B3 ch12) | 2026-10-05 |
+| M-746 | Concierge Shark | F5 water-quadrant shark security mob. | "Concierge Sharks are a mob found in water quadrants on the Fifth Floor, and" | W:Concierge Shark | VERIFIED (page cite B4) | 2026-10-05 |
+| M-747 | Male Thorny Devil | F5 common desert exterior mob. | "Male Thorny Devil. Level 34." | W:Male Thorny Devil | VERIFIED (page cite B4) | 2026-10-05 |
+| M-748 | Feral Goose (neighborhood) | F5 level-45 feral goose neighborhood boss. | "{{PAGENAME}}  is a level 45 neighborhood boss.  ==Story==" | W:Feral Goose | VERIFIED (cite B4 ch3) | 2026-10-05 |
+| M-749 | Denise the Feral Goose Mother | F5 air-quadrant Borough Boss (feral goose mother). | "Denise! The Feral Goose Mother!" | W:Denise | VERIFIED (cite B4 ch16; extends B-012/T-024) | 2026-10-05 |
+| M-750 | Mrs. Ghazi | F5 land-quadrant Borough Boss sand ooze. | "Mrs. Ghazi is a sand ooze, a Fifth Floor Borough" | W:Mrs. Ghazi | VERIFIED (cite B4 ch21) | 2026-10-05 |
+| M-751 | Lusca | F5 water-quadrant City Boss; Octo-Shark Brood Mother Queen. | "Lusca! Octo-Shark Brood Mother Queen! Level 82 City" | W:Lusca | VERIFIED (cite B4 ch26; extends B-014) | 2026-10-05 |
+| M-752 | Bubbles structure | Each F5 bubble is a self-contained world with four quadrants. | "Every bubble is its own self-contained world. Each" | W:Fifth Floor | VERIFIED (page cite B4) | 2026-10-05 |
+| M-753 | Iron Tangle structure | F4 subterranean train-tube network of platforms and stations. | "The Iron Tangle is a subterranean network of hundreds of kilometers of twisting, turning train tubes," | W:Fourth Floor | VERIFIED (page cite B3) | 2026-10-05 |
+| M-754 | Floor 7 late substitution | Great Race was a late substitution; clock collapsed to minutes. | "The Seventh Floor was a late substitution." | W:Seventh Floor | VERIFIED (page cite B5; extends M-040) | 2026-10-05 |
+| M-755 | Funeral Bell | F6 mushroom-headed settlement guards (day and night). | "{{PAGENAME}} are the guards tasked with protecting the settlements of the 6th floor, they" | W:Funeral Bell | WIKI-ONLY | 2026-10-05 |
+| M-756 | Odious Creepers | F6 city-boss creeper swarm; Creeping Apocalypse. | "Odious Creepers are a city boss, their level varies between 130-173. They" | W:Odious Creepers | WIKI-ONLY | 2026-10-05 |
+| M-757 | Hunters | Outworlders who enter F6 to hunt Crawlers for Faction Wars gear. | "Sixth Floor to hunt Crawlers for their gear to sell to the Faction leaders" | W:Hunters | VERIFIED (page cite B5; extends M-021) | 2026-10-05 |
+| M-758 | Mongolienses | F6 pack-hunting dinosaur mobs/pets. | "Mongolienses are pack hunters and voracious carnivores.[1\|47]" | W:Mongoliensis | VERIFIED (page cite B1 ch46; extends R-010) | 2026-10-05 |
+| M-759 | Ruckus | F5 mechanical Chicken Hawk Sentinel (Borough Boss, air). | "species = Spring-operated Chicken Hawk" | W:Ruckus | VERIFIED (page cite B4 ch9; extends B-011) | 2026-10-05 |
+| M-760 | Claude Sludgington IV | F6 Borough Boss Eryops Gigantis (river squatter). | "Level 65 Borough Boss!" | W:Claude Sludgington the Fourth | VERIFIED (page cite B5; extends B-016) | 2026-10-05 |
+| M-761 | Gore-Gore | F4 Ochre Line Mantaur neighborhood boss / train engineer. | "Gore-Gore is a neighborhood boss and Mantaur train engineer on the Ochre Line of the Fourth Floor Iron" | W:Gore-Gore | VERIFIED (page cite B3 ch11; extends B-010) | 2026-10-05 |
+| M-762 | House ruling X-059 | Caleb (2026-10-05): Krakaren Clone (Second Floor) is a Neighborhood Boss for the RPG. Closes X-059 preferred reading. | — (house ruling; no novel quote) | house:Caleb-2026-10-05 | HOUSE | 2026-10-05 |
+| M-763 | House ruling X-060 | Caleb (2026-10-05): Grub pupa timer end = Brindled Vespas; early destroy = convulsing half-formed creatures. Closes X-060. | — (house ruling; no novel quote) | house:Caleb-2026-10-05 | HOUSE | 2026-10-05 |
+| M-764 | House ruling X-063 | Caleb (2026-10-05): Shambling Acid Impaler is fielded on Floor 3 as CANON-RUMOR (Mordecai warning placed). Closes X-063 for RPG. | — (house ruling; no novel quote) | house:Caleb-2026-10-05 | HOUSE | 2026-10-05 |
+| M-765 | House ruling X-080 | Caleb (2026-10-05): Rot Stickers are Floor 1 only. Floor 2 slot filled by HOUSE Fizz Grub (Hemolymph Burster), not canon. Closes X-080. | — (house ruling; no novel quote) | house:Caleb-2026-10-05 | HOUSE | 2026-10-05 |
+
+#### 9.6b House rulings closing F2 conflicts (X-081..X-084; Caleb 2026-10-05)
+
+Append-only closers. Original X-059, X-060, X-063, X-080 rows stay OPEN historically; these record the RPG table decision.
+
+| ID | Topic | Reading A (quote or note) | Source A | Reading B (quote or note) | Source B | Status | Date |
+|---|---|---|---|---|---|---|---|
+| X-081 | X-059 closer: Krakaren Clone tier | Preferred Neighborhood Boss (M-709 / prior X-059) | W:Krakaren Clone (Second Floor) | Caleb house ruling 2026-10-05: treat as Neighborhood Boss at the table | house:Caleb-2026-10-05 | CLOSED (house). RPG uses Neighborhood Boss. See M-762. | 2026-10-05 |
+| X-082 | X-060 closer: damaged grub pupa contents | Wiki: uncooked convulsing creatures on early burst; Vespas on timer (prior X-060) | W:Brindle Grub | Caleb house ruling 2026-10-05: timer end = Brindled Vespas; early destroy = convulsing half-formed creatures | house:Caleb-2026-10-05 | CLOSED (house). Matches preferred wiki split. See M-763. | 2026-10-05 |
+| X-083 | X-063 closer: Acid Impaler placement | Wiki rumor / Mordecai warning; no F2 sighting (prior X-063) | W:Shambling Acid Impaler | Caleb house ruling 2026-10-05: field on Floor 3 as CANON-RUMOR | house:Caleb-2026-10-05 | CLOSED (house). F3 READY stub. See M-764. | 2026-10-05 |
+| X-084 | X-080 closer: Rot Stickers vs F2 | Floor 1 only preferred (prior X-080) | W:Rot Stickers | Caleb house ruling 2026-10-05: F1 only; F2 uses HOUSE Fizz Grub instead | house:Caleb-2026-10-05 | CLOSED (house). See M-765. | 2026-10-05 |
+
+| 2026-10-05 | 32 | DCC Lore | Added section 9.6 Floors 3–7 bestiary anchors M-734..M-761 plus house closers M-762..M-765 and X-081..X-084 (Caleb rulings on X-059/060/063/080). Feeds drafts/core-book-bestiary-f3-f7-v0.1 and monster-table-v0.2. Append-only; ledger_build.py was not run. Next free: M-766, X-085. |
 | 2026-10-05 | 22 | DCC Lore | Added section 9.5 Floor 2 refinement (scheduled reserve pass): M-707..M-733 (27 rows: blimp boss lair, clone nameplate, pet reward room cage count/key/pet list, unbonded-pet rule, Mind Horror Intelligence note and Brain Boiler relative, no quests before Floor 3, Team Li Na and the Death Watch guessing game, Mexx trailers, Kobold-quadrant kitchen safe room) and conflict X-080 (Rot Stickers on the Floor 2 infobox vs the Floor 1-only mob page) in 9.5c. Live wiki revisions of 48 Floor 2 pages were compared with the mirror; only Donut/Floor 2 changed (not mined). Feeds tables/canon-floor-2.json (status "reserve"). Append-only; no existing rows touched. Next free: M-734, X-081. |
 
 

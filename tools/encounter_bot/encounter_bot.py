@@ -11,7 +11,7 @@ Usage:
   python3 tools/encounter_bot/encounter_bot.py --spec floors/f01/day-01.spec.json --check-only
 
 Safety: reads only the allowed inputs (never gm-notes/secret, .env or token files, sessions/, state). Writes only
-floors/f01/day-NN.md and day-NN.json (never 00-overview.md, INDEX.md, rules/, sessions/, the ledger or /workspace/dcc-lore/).
+floors/f01/day-NN.md and day-NN.json (never 00-overview.md, INDEX.md, rules/, sessions/, the ledger or Lore (via dcc_paths / lore/)).
 """
 import argparse
 import copy
@@ -44,6 +44,38 @@ _srd_cand = [
 SRD_RAW = next((p for p in _srd_cand if p and os.path.isfile(p)), _srd_cand[-1])
 CANON_TABLE = os.path.join(LORE, "tables", "canon-floor-1.json")
 LEDGER = os.path.join(LORE, "CANON-LEDGER.md")
+_BOX_LORE_PREFIX = "/workspace/dcc-lore/"  # legacy box-only spec prefix; mapped onto LORE, never written
+
+
+def resolve_spec_path(path):
+    """Resolve a path cited in a spec (set piece / draft sources) so it works from a fresh checkout.
+
+    Absolute and existing -> unchanged; legacy /workspace/dcc-lore/... -> under LORE; relative
+    (e.g. lore/drafts/...) -> under the campaign ROOT; anything else -> unchanged.
+    """
+    if not path:
+        return path
+    if os.path.isabs(path) and os.path.exists(path):
+        return path
+    if path.startswith(_BOX_LORE_PREFIX):
+        return os.path.join(LORE, path[len(_BOX_LORE_PREFIX):])
+    if not os.path.isabs(path):
+        return os.path.join(ROOT, path)
+    return path
+
+
+def display_path(path):
+    """Repo-relative display form of a path (no box-only absolute prefixes in pages or reports)."""
+    for base, prefix in ((LORE, "lore"), (ROOT, "")):
+        b = os.path.abspath(base)
+        a = os.path.abspath(path)
+        if a == b or a.startswith(b + os.sep):
+            rel = os.path.relpath(a, b)
+            return os.path.join(prefix, rel) if prefix else rel
+    return path
+
+
+CANON_TABLE_DISPLAY = display_path(CANON_TABLE) if display_path(CANON_TABLE) != CANON_TABLE else "lore/tables/canon-floor-1.json"
 
 SLOT_RE = re.compile(r"\[([A-Z][A-Z0-9 \-/&']*):\s[^\]]*\]")
 TOKEN_RE = re.compile(r"\{(days|day|days_left|stasis_hours|floor_hours|budget_version)\}")  # {hours} is deliberately NOT a token: the GM fills it from the clock
@@ -57,7 +89,14 @@ MAX_SENTENCES = 4
 PROPOSED_TAG = "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
 GM = "[GM-ONLY]"
 VOICE_KEYS = ("system_intro", "midpoint_twist", "win")
-OPTIONAL_VOICE_KEYS = ("win_alt", "gm_color")  # optional spoken beats; gm_color = [GM] snark after dry System
+OPTIONAL_VOICE_KEYS = ("win_alt", "gm_color", "system_registration")  # optional spoken beats; gm_color = [GM] snark after dry System
+# system_registration: dry [SYSTEM] registration chime, spoken before the [GM] midpoint narration (GM spot-check 2026-10-05, enc-d01-06)
+VOICE_RENDER_ORDER = ("system_intro", "system_registration", "midpoint_twist", "win", "win_alt", "gm_color")
+# Lore/GM 2026-10-05 / decision 032: scene system_intros spoken as GM narration (not dry System).
+SYSTEM_INTRO_AS_GM_NARRATION = frozenset({
+    "enc-d01-07", "enc-d01-08", "enc-d01-09", "enc-d01-10", "enc-d01-11",
+    "enc-d02-02",
+})
 STORY_IDS = {"f01-any-%04d" % n for n in range(55, 66)}  # 0055 (pet biscuit pair) .. 0065
 
 NUMERIC_LINTS = [
@@ -385,12 +424,22 @@ def add_audience(doc, rep):
         blk["audience"] = "player"
     for i, r in enumerate(doc["routes"]):
         for k, v in r.get("voice_lines", {}).items():
-            # gm_color is spoken GM snark after dry System — never System kinds (decision 032)
-            kind = "gm_color" if k == "gm_color" else "route_voice_line"
+            # decision 032: only dry notices are System; route voice (twists/wins/color) is GM
+            # gm_color stays gm_color; every other route voice_line is gm_narration (not route_voice_line)
+            kind = "gm_color" if k == "gm_color" else "gm_narration"
             add("/routes/%d/voice_lines/%s" % (i, k), kind, "text", v)
     for i, e in enumerate(doc["encounters"]):
         for k, v in e.get("voice_lines", {}).items():
-            kind = "gm_color" if k == "gm_color" else "voice_line"
+            # decision 032: system_intro = dry System notice by default; scene intros in
+            # SYSTEM_INTRO_AS_GM_NARRATION are gm_narration; twists/wins = GM narration; gm_color unchanged
+            if k == "gm_color":
+                kind = "gm_color"
+            elif k == "system_intro":
+                kind = "gm_narration" if e["id"] in SYSTEM_INTRO_AS_GM_NARRATION else "system_notice"
+            elif k == "system_registration":
+                kind = "system_notice"  # registration is a dry System notice (decision 032)
+            else:
+                kind = "gm_narration"  # midpoint_twist, win, win_alt, and any other non-gm_color key
             add("/encounters/%d/voice_lines/%s" % (i, k), kind, "text", v, encounter=e["id"])
         for j, ln in enumerate((e.get("zone_color") or {}).get("lines", [])):
             add("/encounters/%d/zone_color/lines/%d" % (i, j), "zone_color", "text", ln, encounter=e["id"], optional=True)
@@ -420,21 +469,24 @@ def add_audience(doc, rep):
         if isinstance(parent_blk, dict) and isinstance(parent_blk.get("gm_color"), dict):
             add("%s/gm_color" % parent_path, "gm_color", "text", parent_blk["gm_color"], **kw)
 
+    fe = d.get("floor_exit") or {}
     for key, kind in (("tomorrow_notice", "system_notice"), ("collapse_notice", "system_notice"), ("stairwell_opening", "system_notice")):
         add("/day/%s" % key, kind, "text", d.get(key))
         add_nested_gm_color("/day/%s" % key, d.get(key))
         if key == "collapse_notice" and isinstance(d.get(key), dict) and d[key].get("hours_note"):
             d[key]["hours_note_audience"] = "gm"
+    # GM spot-check 2026-10-05: table warning is GM narration; always after collapse/tomorrow
+    # (and stairwell_opening when present), before early_descent and the missed-floor system line.
+    # Do not hitch this to the stairwell_opening key (Day 5 has floor_exit but no stairwell_opening).
+    add("/day/floor_exit/gm_warning", "gm_narration", "text", fe.get("gm_warning"),
+        note="key is named gm_warning but the text is read to the players by the GM, after collapse/tomorrow notices and before early descent / missed-floor system line; the GM-only warning is /day/gm_warning")
     ed = d.get("early_descent") or {}
     add("/day/early_descent/player_prompt", "system_notice", "text", ed.get("player_prompt"))
     add_nested_gm_color("/day/early_descent/player_prompt", ed.get("player_prompt"))
     add("/day/early_descent/free_window", "system_notice", "text", ed.get("free_window"))
     add_nested_gm_color("/day/early_descent/free_window", ed.get("free_window"))
-    fe = d.get("floor_exit") or {}
     add("/day/floor_exit/system_line", "system_notice", "text", fe.get("system_line"))
     add_nested_gm_color("/day/floor_exit/system_line", fe.get("system_line"))
-    add("/day/floor_exit/gm_warning", "exit_warning_read_aloud", "text", fe.get("gm_warning"),
-        note="key is named gm_warning but the text is read to the players; the GM-only warning is /day/gm_warning")
     for j, pa in enumerate(d.get("proposed_achievements", [])):
         if pa.get("narration_tag") == PF:
             blocks.append({"path": "/day/proposed_achievements/%d" % j, "kind": "achievement_narration", "field": "narration",
@@ -636,14 +688,14 @@ def build(spec, data, rep):
     # ---- canon table
     if data.canon:
         rep.ok("Lore canon table present", "%s (ledger %s, %d zones)" % (
-            CANON_TABLE, data.canon.get("ledger_version"), len(data.canon["zones"])))
+            CANON_TABLE_DISPLAY, data.canon.get("ledger_version"), len(data.canon["zones"])))
         pin = spec.get("canon_table", {}).get("expected_sha256")
         if pin and pin != data.canon_sha256:
             rep.warn("canon table hash", "spec pins %s but the file is %s (Lore rebuilt it; check ledger/content, then update the pin)" % (pin[:12], (data.canon_sha256 or "?")[:12]))
         else:
             rep.ok("canon table hash recorded", "sha256 %s, ledger v%s" % ((data.canon_sha256 or "?")[:16], data.canon.get("ledger_version")))
     else:
-        rep.warn("Lore canon table present", "%s not found; canon tags omitted" % CANON_TABLE)
+        rep.warn("Lore canon table present", "%s not found; canon tags omitted" % CANON_TABLE_DISPLAY)
 
     def check_ledger(lid, where):
         if lid in data.ledger:
@@ -886,18 +938,19 @@ def build(spec, data, rep):
             if not ok_sp:
                 rep.fail("%s set piece" % eid, "set_piece_intro needs tag [PLAYER-FACING], canon_tag inspired, set_piece true, audience player, paragraphs 1-2 required and later ones optional, text = the paragraphs joined, and a GM note saying the first two paragraphs alone work")
             else:
-                src_ = sp_["source"]
+                src_ = resolve_spec_path(sp_["source"])
                 if os.path.exists(src_):
-                    raw_ = re.sub(r"\s+", " ", re.sub(r"(?m)^>\s?", "", open(src_, encoding="utf-8").read()))
+                    raw_ = re.sub(r"\s+", " ", re.sub(r"(?m)^>\s?", "", read_text(src_)))
                     miss_ = [i_ + 1 for i_, p_ in enumerate(ps_) if re.sub(r"\s+", " ", p_["text"]) not in raw_]
                     if miss_:
-                        rep.fail("%s set piece" % eid, "paragraph(s) %s are not Lore's text as written in %s" % (miss_, src_))
+                        rep.fail("%s set piece" % eid, "paragraph(s) %s are not Lore's text as written in %s" % (miss_, sp_["source"]))
                     else:
-                        out["set_piece_intro"] = dict(sp_, source_sha256=hashlib.sha256(open(src_, "rb").read()).hexdigest())
+                        out["set_piece_intro"] = dict(sp_, source_sha256=hashlib.sha256(open(check_read_allowed(src_), "rb").read()).hexdigest())
                         rep.ok("%s set piece" % eid, "%d paragraphs quoted as written from Lore's draft (sha256 %s), [PLAYER-FACING], inspired; paragraphs %s optional" % (
                             len(ps_), out["set_piece_intro"]["source_sha256"][:12], ",".join(str(i_ + 1) for i_, p_ in enumerate(ps_) if p_.get("optional"))))
                 else:
-                    rep.warn("%s set piece" % eid, "Lore's draft not found at %s; text not re-verified against it" % src_)
+                    rep.warn("%s set piece" % eid, "Lore's draft not found at %s%s; text not re-verified against it" % (
+                        sp_["source"], "" if display_path(src_) == sp_["source"] else " (resolved %s)" % display_path(src_)))
         zc = e.get("zone_color")
         if zc is not None and not (zc.get("tag") == "inspired" and zc.get("lines") and all(l_.get("tag") == PF and l_.get("text") for l_ in zc["lines"])):
             zc_bad.append(eid)
@@ -1403,7 +1456,7 @@ def render_md(doc):
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
         w("")
         w("**Voice lines**\n")
-        for k in VOICE_KEYS + OPTIONAL_VOICE_KEYS:
+        for k in VOICE_RENDER_ORDER:
             if k not in r["voice_lines"]:
                 continue
             v = r["voice_lines"][k]
@@ -1433,6 +1486,12 @@ def render_md(doc):
     if sk.get("reprieve_note"):
         w("- " + gm(sk["reprieve_note"]))
     w("")
+    fe = day.get("floor_exit")
+    if fe:
+        w("### Floor 1 exit (Day %d)\n" % m["day"])
+        w("- %s *GM warning at the exit* [GM] (say this out loud first, before the missed-floor line / early descent): %s" % (fe["gm_warning"]["tag"], fe["gm_warning"]["text"]))
+        w("- %s *missed-floor line* [SYSTEM] (read only when the floor collapses with a Crawler still on it: they are dead): \"%s\"" % (fe["system_line"]["tag"], fe["system_line"]["text"]))
+        w("")
     ed = day.get("early_descent")
     if ed:
         w("### Early descent and stasis (Day %d)\n" % m["day"])
@@ -1455,12 +1514,6 @@ def render_md(doc):
     for r_ in day["rest_options"]:
         w("- **%s:** %s" % (r_["option"], r_["note"]))
     w("")
-    fe = day.get("floor_exit")
-    if fe:
-        w("### Floor 1 exit (Day %d)\n" % m["day"])
-        w("- %s *missed-floor line* (read when the floor collapses with a Crawler still on it: they are dead): \"%s\"" % (fe["system_line"]["tag"], fe["system_line"]["text"]))
-        w("- %s *GM warning at the exit* (say this out loud before anyone goes down): %s" % (fe["gm_warning"]["tag"], fe["gm_warning"]["text"]))
-        w("")
     if day.get("carry_over"):
         w("### Still playable from earlier pages\n")
         for c in day["carry_over"]:
@@ -1497,7 +1550,7 @@ def render_md(doc):
         if e.get("budget_variant_b"):
             w("**Variant B at level 1 (guideline):** %s\n" % fill_text(e["budget_variant_b"]))
         w("#### Voice lines\n")
-        for k in VOICE_KEYS + OPTIONAL_VOICE_KEYS:
+        for k in VOICE_RENDER_ORDER:
             if k in e["voice_lines"]:
                 v = e["voice_lines"][k]
                 label = k.replace("_", " ").replace("win alt", "win (alternate: no fight)")
@@ -1610,7 +1663,7 @@ def render_md(doc):
     v = doc["validation"]
     w("---\n")
     ct = doc["canon_table"]
-    w("*Canon table: `%s`, ledger v%s, sha256 `%s` (recorded at build time).*\n" % (CANON_TABLE.replace("/workspace/", ""), ct.get("ledger_version"), ct.get("sha256")))
+    w("*Canon table: `%s`, ledger v%s, sha256 `%s` (recorded at build time).*\n" % (CANON_TABLE_DISPLAY, ct.get("ledger_version"), ct.get("sha256")))
     w("*Build note: validation %s (%d PASS, %d WARN, %d FAIL) by `encounter_bot.py`; spec sha256 %s. Warnings: %s*\n" % (
         v["result"], v["pass"], v["warn"], v["fail"], v["spec_sha256"][:12],
         "; ".join("%s" % x["check"] for x in v["checks"] if x["status"] == "WARN") or "none"))

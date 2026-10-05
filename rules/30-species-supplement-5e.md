@@ -1,7 +1,7 @@
 # Species Supplement (5e Overlay): Floor 3 Offer, Rebuild and Oddities
 Owner: Syndicate Dungeon Crawl System 001 | Status: draft | Version: 0.1.4 | Updated: 2026-10-04
 Summary: Level 1 starts on one of the nine 2024 SRD species; on Floor 3 the System offers three choices (the starting species plus two DCC-style "oddities") with one free, optional rebuild; includes the DM procedure, rebuild rules, 12 oddities, a balance table, open questions and a source map.
-Depends on: rules/10-core-rules-5e.md v0.2.8 (§2 levels and floors, §3.5 tailoring, §4.6 attunement, §7 species), characters/character-creation-5e.md v0.2.1 (§7 latent species), decisions/009-species-approach.md. Canon: /workspace/dcc-lore/CANON-LEDGER.md v1.3 §4e (IDs R-001..R-024, H-###) and §11 (R-025..R-081; conflicts X-031..X-041 in §8), /workspace/dcc-lore/catalog/races.md and /workspace/dcc-lore/catalog/race-selection-canon.md.
+Depends on: rules/10-core-rules-5e.md v0.2.8 (§2 levels and floors, §3.5 tailoring, §4.6 attunement, §7 species), characters/character-creation-5e.md v0.2.1 (§7 latent species), decisions/009-species-approach.md. Canon: lore/CANON-LEDGER.md v1.3 §4e (IDs R-001..R-024, H-###) and §11 (R-025..R-081; conflicts X-031..X-041 in §8), lore/catalog/races.md and lore/catalog/race-selection-canon.md.
 
 > **Status:** v0.1.4 full draft for Caleb's markup. **Project:** *Crawler Protocol: Season Zero*, original fan RPG inspired by *Dungeon Crawler Carl*. Private play only; not affiliated with or endorsed by the author or publishers.
 > **Audience:** the AI DM ("the System") and Caleb (owner).
@@ -775,7 +775,7 @@ All oddities are Humanoid. "Est." is the rough point estimate from §4.0 (level 
 
 ## Appendix A: source map
 
-Sources are the local DCC Lore files only: `/workspace/dcc-lore/CANON-LEDGER.md` (§4e Races R-001..R-024, §11 Races and Floor 3 race selection R-025..R-081, §8 conflicts X-031..X-041, §6 Characters H-###, §2 Mechanics M-###, §4a Skills S-###, §10 Crafting K-###), `/workspace/dcc-lore/catalog/races.md`, `/workspace/dcc-lore/catalog/race-selection-canon.md` and the wiki mirror at `/workspace/dcc-lore/raw/pages/<Page>.txt` (and `raw/all.json`). **No WebSearch was used**; races.md plus the wiki mirror was enough. Nothing here was checked against the novels' text.
+Sources are the local DCC Lore files only: `lore/CANON-LEDGER.md` (§4e Races R-001..R-024, §11 Races and Floor 3 race selection R-025..R-081, §8 conflicts X-031..X-041, §6 Characters H-###, §2 Mechanics M-###, §4a Skills S-###, §10 Crafting K-###), `lore/catalog/races.md`, `lore/catalog/race-selection-canon.md` and the wiki mirror at `lore/raw/pages/<Page>.txt` (and `raw/all.json`). **No WebSearch was used**; races.md plus the wiki mirror was enough. Nothing here was checked against the novels' text.
 
 | Oddity | Tag | Ledger IDs | Catalog row (races.md) | Wiki page and cite | Status / notes |
 |---|---|---|---|---|---|

@@ -1,15 +1,32 @@
-# Floor 1 Run Sheet (Session 2 onward)
-Owner: DCC AI GM | Status: draft | Version: 0.1 | Updated: 2026-10-04
-Summary: At-the-table cheat sheet for Floor 1 (5 days): opener and death warning, clock, per-day table, pacing, carry-on tracker, ledger commands. Cites only numbers from the files named in each section. [SLOT] = missing, fill in or ask Caleb. Players are Crawlers, always.
+# Floor 1 Run Sheet
+Owner: DCC AI GM | Status: draft | Version: 0.2 | Updated: 2026-10-05
+Summary: At-the-table cheat sheet for Floor 1 (5 days): opener and death warning, clock, per-day table, pacing, carry-on tracker, ledger commands. Cites only numbers from the files named in each section. [SLOT] = missing, fill in or ask Caleb. Players are Crawlers, always. One live campaign at a time (`sessions/active-session.json`); tools take `--session` / `DCC_SESSION`.
 
-## 1. Opening of Session 2
-- **Where:** Z6 Break Room (Saferoom A). Crawlers: Horn (Wizard, player Hornn) and Bone Wifebeater (Barbarian, player Trailer Park Moses). Both L1. Both Floor 1 Reprieves already spent (state.json), so a death now is a real death. Floor hour at session start: [SLOT, GM sets Day 1 start].
-- **Run first:** enc-d01-01 Clock On: Break Room Briefing (day-01.md). Welcome Box ceremony only if not yet held (check sheets). Exchange framework: call the player by name, set sessions/focus.json, say when done.
-- **[SYSTEM] opener (3 sentences, then the warning):**
-  "ATTENTION, CRAWLERS: the Orientation Pit is now on a schedule, with a countdown, because 'take your time' was ruining the pool. You get 5 days. A day ends when you sleep in a saferoom, or when the clock says so. Find a stairwell."
-- **REQUIRED warning (decision 026, Caleb ~10:02 PM CT). Say it plainly, out of voice, then in voice:** a Crawler who is not at a stairwell when the floor collapses is dead. No Reprieve, no toll, no detour. Early-descent stasis counts as reaching a stairwell. Approved line:
-  > "Reach a stairwell before the collapse or you do not leave. This is not a toll. This is not a detour. This is the end."
-- **Warn again:** Floor 1 start (now), Day 4, Day 5. Tick: [ ] F1 start  [ ] Day 4  [ ] Day 5. Also give it before anyone goes down the stairs.
+## 0. Campaign
+- **Live default (2026-10-05):** `s1` (Season 1) — cold open, empty ledger, max 4 Crawlers. Confirm with Architect before spending.
+- **Parked save:** `alpha` — Horn (Wizard / Hornn) and Bone Wifebeater (Barbarian / Trailer Park Moses) in Z6 Break Room; Reprieves spent; credits Bone 127 / Horn 75. Resume only if Caleb switches the live campaign back.
+
+## 1. Opening
+### A. New campaign / cold open (`s1`) — enc-d01-06
+- **Where:** surface glowing stairwell → Floor 1 Intake (Z0) → atrium (Z1) → tutorial zones → Z6 Break Room.
+- **Clock:** floor hour 0 when surface entrances open (horn / beams). One-hour Native window is hours 0–1.
+- **Run first:** `python3 tools/encounter_text.py --day 1 --encounter enc-d01-06` (pipe player text to `discord_gm.py say`). Hand-tag if a wink still lands as System until Architect narrows SYSTEM_KINDS.
+- **Dry [SYSTEM]:** horn, one-hour window, Native vs Crawler, registration, booth open. **[GM]:** crawler color, jokes, atrium jaw beat.
+- **Collapse warning:** after Floor 1 schedule is announced (Break Room / clock-on), not during the Native window. Tick F1 start then.
+
+### B. Resume alpha (Z6) — enc-d01-01
+- **Where:** Z6 Break Room (Saferoom A). Horn + Bone Wifebeater, L1, Reprieves spent — a death now is real. Floor hour: [SLOT].
+- **Run first:** enc-d01-01 Clock On: Break Room Briefing. Welcome Box only if not yet held.
+
+### Voice tags (decision 032)
+- **[SYSTEM]** dry only: clock, fees, registration, collapse, floor notices.
+- **[GM]** snark, ACH banners + mock, loot-box callouts, every joke. Always re-tag `[GM]` after a System block.
+- Flavor: soft guideline — punchy, no five-minute monologues; longer when the moment earns it.
+
+### Required collapse warning (decision 026)
+Say plainly, then in voice. Approved line:
+> "Reach a stairwell before the collapse or you do not leave. This is not a toll. This is not a detour. This is the end."
+- **Warn again:** Floor 1 start (after schedule is live), Day 4, Day 5. Tick: [ ] F1 start  [ ] Day 4  [ ] Day 5. Also before anyone descends.
 
 ## 2. Clock cheat sheet (decisions 026, 028; overview 2.6; rules/70 JSON v0.1.1)
 - **Length:** 5 days. Day ends at the party's saferoom Long Rest, or at 24 in-game hours (System rolls it over). Lights-Out: every 8 h the Pit goes dark for 1 h; outside saferooms roll d6 every 30 min, 1-2 = Ceiling Ticks.
@@ -25,14 +42,14 @@ Summary: At-the-table cheat sheet for Floor 1 (5 days): opener and death warning
 ## 3. Per-day table (day pages 01-05; Z = zone; counts for ushers/vermin = [SLOT] on pages)
 | Day | Starts | MUST happen | CAN happen |
 |---|---|---|---|
-| 1 | Z6 | Clock opener + death warning; route declared (dash/loot/clever); day closes with Long Rest in Z9 (level 2 lands there); Day 2 preview notice | Terminal key buy; Z7 bait + Greeters + Back Office; Z8 Locker Room elite (Bruiser key); Ticks at Lights-Out; last-chance outer hooks (Hidden Cache, Side Path); Welcome Box |
+| 1 | stair / Z0→Z6 | Cold open (enc-d01-06) then tutorial zones → Break Room briefing + death warning; route declared; Long Rest in Z9; Day 2 preview | Terminal key buy; Z7 bait + Greeters + Back Office; Z8 Locker Room elite (Bruiser key); Ticks at Lights-Out; last-chance outer hooks; Welcome Box |
 | 2 | Z9 | Morning notice: outer zones closed, stairwell open; if any Crawler reaches Z11, read stasis prompt to each Crawler separately | Zone S door (key, tools, force); look at the stage; Z6/Z7/Z8 loot before they close D3; early descent (stasis) |
 | 3 | Z9 | Notice: mid zones closed, Bruiser key gone; Break Room still saferoom and terminal still sells | Last Call at Break Room (buy key, restock); Collapsing Hall with displaced rats/Ticks (Z8, counts [SLOT]); Stage Wings recon |
 | 4 | Z9 | **Warning #2**; Break Room off service, terminal key gone, Z9 only saferoom; tell them about the free descent in the last 6 h | Field rest in the dark halls (Ticks); Ushers at the stage door ([SLOT] count); Green Room night shift |
 | 5 | Z9 | **Warning #3** with {hours} left filled in; everyone reaches a stairwell before hour 120; read missed-floor line only if someone is still on the floor at the collapse | Dean Thudd (fight, Variant B at L1 or 2 Crawlers, or talk down); Zone S Toll Turnstile (key, tools, force or toll); free descent in last 6 h |
 
 ## 4. Table-pace tips
-- Flavor and exposition: 3-4 sentences or shorter (Caleb ~9:57 PM CT). No multi-paragraph speeches. Long read-aloud only for rare set pieces (boss intro, stage).
+- Flavor: soft guideline (Caleb 2026-10-05) — punchy, no five-minute monologues; longer when the moment earns it. Long set pieces OK for boss / stage / cold open.
 - Full quality stays: worldbuilding, interactivity, and the Crawlers' actions carry on. Short does not mean thin. Ask what they do, then react.
 - Day pages have "Optional quick run" blocks (e.g. Break Room about 8 min). Optional safety net only, never the default.
 - Announce items as `Our Name (5e Name)` with real mechanics. Announce every achievement: banner, one line, `Reward:` on its own line. Put boss headers and Reward lines on their own lines.

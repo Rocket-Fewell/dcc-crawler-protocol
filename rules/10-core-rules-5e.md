@@ -645,7 +645,7 @@ Each crawler has an extradimensional **System Inventory**:
 
 **Canon:** death is permanent. There are no respawns. The System sells many things, but a refund on a corpse is not one of them. Everything after §6.3 (revives, cursed revives) is an **optional house rule** a table switches on; every one of those costs something, because the System charges for everything. **This campaign runs Costly Revives, set to VERY COSTLY and RARE** (Caleb's decision, v0.2.3; §6.4).
 
-**Canon facts this section is built on** (DCC Lore, `/workspace/dcc-lore/catalog/revival-canon.md` v1.0; wiki and recap sources, **not** checked against the novels' text): no purchasable revival spell exists in canon, and the Dungeon never revives dead crawlers; dead crawlers become collectible cards (NR-01, NR-02). Everything that brings a dead crawler back at this table is therefore invented by us.
+**Canon facts this section is built on** (DCC Lore, `lore/catalog/revival-canon.md` v1.0; wiki and recap sources, **not** checked against the novels' text): no purchasable revival spell exists in canon, and the Dungeon never revives dead crawlers; dead crawlers become collectible cards (NR-01, NR-02). Everything that brings a dead crawler back at this table is therefore invented by us.
 
 **Source labels (used for every revive and death-bypass source in this document).**
 
@@ -810,7 +810,7 @@ Revived crawlers keep their achievements and Fan Profile.
 
 #### 6.4.6 Canon-verified revival exceptions [CANON]
 
-**Rule:** anything **verified in Dungeon Crawler Carl canon** as a revive or death-cheat is **pre-approved by the DM regardless of the rarity limits** above (no Voucher, no cap count, no cooldown). They still must be **earned or granted** (DM-granted boons, rewards, training), they are limited by their own text, and they are not purchasable on demand. Source: `/workspace/dcc-lore/CANON-LEDGER.md` (DCC Lore, v1.0, 2026-10-03). Entries below are those tagged **VERIFIED** that are revives or death-cheats. Caveat from the ledger itself: "VERIFIED" is a bookkeeping label (a wiki chapter cite or two agreeing sources), **not** checked against the novels' text.
+**Rule:** anything **verified in Dungeon Crawler Carl canon** as a revive or death-cheat is **pre-approved by the DM regardless of the rarity limits** above (no Voucher, no cap count, no cooldown). They still must be **earned or granted** (DM-granted boons, rewards, training), they are limited by their own text, and they are not purchasable on demand. Source: `lore/CANON-LEDGER.md` (DCC Lore, v1.0, 2026-10-03). Entries below are those tagged **VERIFIED** that are revives or death-cheats. Caveat from the ledger itself: "VERIFIED" is a bookkeeping label (a wiki chapter cite or two agreeing sources), **not** checked against the novels' text.
 
 | Ledger ID | Exception | Ledger tag | What it does (canon) | Table mapping |
 |-----------|-----------|------------|----------------------|---------------|
@@ -1229,7 +1229,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 - **Unchanged on purpose:** the six tiers, the pacing table numbers, the Celestial cap (one per crawler, DM-gated), the §3.6 ceilings, the §4.4 opening and no-trade rules.
 - **Why:** canon has Legendary boxes on Floor 1 (ledger L-001, A-165, A-167; the Legendary Pet Box with the Enhanced Pet Biscuit, I-007). Floor-1 Story Box items stay small in numbers; see `rules/45-story-boxes-5e.md` §4.
 
-**v0.2.5 details** (labels per `/workspace/dcc-lore/catalog/revival-canon.md` v1.0)
+**v0.2.5 details** (labels per `lore/catalog/revival-canon.md` v1.0)
 
 - **Canon facts stated (CANON):** no purchasable revival spell exists in canon; the Dungeon never revives dead crawlers (they become collectible cards). So the **Revival Voucher**, the *Revivify* / *Raise Dead* / *Resurrection* / *True Resurrection* gating and Fees, the **System Rare Offer** (plus Back by Popular Demand and the Benefactor/floor-rule routes), the **Marked for Death ring**, Costly Revives and Soft Open as modes, the Floor 1 Reprieve, and the **Lifesaver Draught** are all labeled **HOUSE**.
 - **Labels (§6.4.6, §6.5):** **Cockroach** (Donut) and **Mordecai's Special Brew** = **CANON** death-cheats (not revives). **Half-Splat** and **Dolores Doesn't Splat** = **CANON**, falling-only. **Cockroach Clause** (and the *Second Season* Charm) = **CANON-INSPIRED**. The Half-Splat tag note now records the ledger WIKI-ONLY tag against the lore catalog's VERIFIED.

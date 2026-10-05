@@ -1,4 +1,4 @@
-#!/home/box/.venvs/corebook/bin/python
+#!/usr/bin/env python3
 """Core Rulebook build: markdown -> HTML -> PDF (headless Chrome).
 
 Usage: build/build.py [--version 0.1] [--html-only]

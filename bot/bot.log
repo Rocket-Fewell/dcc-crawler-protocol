@@ -1578,3 +1578,6 @@
 2026-10-05T19:12:52.178Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
 2026-10-05T19:12:52.581Z INFO  Logged in as Dungeon System AI - Earth#8647
 2026-10-05T19:12:52.883Z INFO  [fish] Fish balance: $9.22 (startup)
+2026-10-05T19:42:53.104Z INFO  [fish] Fish balance: $9.22 (interval)
+2026-10-05T20:12:52.982Z INFO  [fish] Fish balance: $9.22 (interval)
+2026-10-05T20:20:58.686Z INFO  SIGTERM received, shutting down

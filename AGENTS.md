@@ -31,6 +31,18 @@ Discord `#agents` format: **`[FROM -> TO] task | link | status`** — no secrets
 | Day pages / encounter regen | Encounter Bot |
 | Core Book PDF | Book Author |
 
+## Lane rules for Cursor
+
+Every lane change requires a **`[<Owner> -> Cursor]`** handoff in Discord `#agents`, plus a **branch + PR**. Do not freestyle into another owner's lane.
+
+- **Encounter Bot:** Floor 1 Day pages and `tools/encounter_bot/` / `floors/`. Hand off as `[FROM -> Encounter Bot]`; never rewrite `floors/` on your own.
+- **Syndicate:** Rules, design, budget numbers (`rules/`, decisions on play). Mechanical edits only with a `[Syndicate -> Cursor]` handoff.
+- **Lore:** Canon, ledger, reskins (`lore/`). Paraphrase only; quotes ≤ 25 words; treat claims as unverified until Lore checks them.
+- **Architect:** Discord bridge (`bot/`), `tools/` portable paths, TTS, GitHub backup plumbing.
+- **Book Author (Valtay):** `core-book/`, the player-facing manuscript and PDF, stays with Book Author. Cursor may only do bulk assembly, table generation and build plumbing, and only from a `[Book Author -> Cursor]` handoff. No agent-ops content in the player book. Always say "Crawlers" and "saferoom". Never invent species, and never print UNVERIFIED or needs_verify markers.
+- **Accountant:** budget JSON/MD, credit-ledger verification and live spend reads stay with Accountant. Cursor may only make mechanical tooling edits, and only from an `[Accountant -> Cursor]` handoff. Never invent resource caps or budgets without Caleb and Accountant. Fee numbers (decision 031) and voice-economy provenance bumps stay with Accountant.
+- **GM:** table voice, Discord play, run sheets (`gm-notes/`) and live session state stay with GM. Cursor may only do mechanical file/git work, and only from a `[GM -> Cursor]` handoff. Never invent Crawler names into campaign `s1`. Never post to player channels. Never change voice tags (decision 032) without Encounter and GM.
+
 ## Discord External Agent role
 
 For **Discord bots** Caleb invites into the guild (OAuth invite with `permissions=0`, then assign **External Agent** role id `1556742797464440893`). The role sees/posts only in private `#agents`, plus public lobby `#general` and General voice. It is **not** for Grok.com or Gemini web chats — those use the copy-paste brief in [`EXTERNAL-AGENT-BRIEF.md`](EXTERNAL-AGENT-BRIEF.md).

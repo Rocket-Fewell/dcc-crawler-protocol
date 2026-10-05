@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """One-shot dev patch: budget-file references, death-on-miss rule, quick runs, carry-on, zone color, GM warnings.
-Run from floors/f01/. Pure local, no model calls. Not a deliverable of the generator."""
+Run from anywhere (spec paths come from tools/dcc_paths.py). Pure local, no model calls. Not a deliverable of the generator."""
 import json, copy, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
 from content_quick_carry import QUICK, CARRY
+# Portable paths (fresh-checkout safe): campaign root via tools/dcc_paths.py, never a box-only absolute path.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))  # tools/
+import dcc_paths  # noqa: E402
+SPEC_DIR = os.path.join(dcc_paths.CAMPAIGN_ROOT, "floors", "f01")
 
 PF = "[PLAYER-FACING]"
 P = "floors.1."
@@ -43,7 +47,7 @@ GM_WARN = {
  "last": "Day 5 reminder, say it plainly: the floor collapses at 24 in-game hours of today, whatever the party is doing. A Crawler who is not at a stairwell then is dead, and the Reprieve does not apply. Stasis from an early descent counts as reaching a stairwell.",
 }
 ZONE = {
- "src": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1, own words, optional read-aloud)",
+ "src": "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1, own words, optional read-aloud)",
  2: ["A section of ceiling lets go behind you, and the noise rolls down the corridor like applause. The speakers crackle: \"Zone closing. Please enjoy your last look.\"",
      "The floor tiles ahead are bright and clean. The ones behind are gray rubble. Someone has painted a thin white line where the two meet, and it is moving toward you.",
      "A vending alcove sits half-buried under fallen concrete, its light still blinking. The sign reads \"Temporarily closed. Permanently, actually.\"",
@@ -89,7 +93,7 @@ PENDING = [
 
 SRC_ADD = ["rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
            "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
-           "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)"]
+           "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)"]
 
 def enc(s, eid): return next(e for e in s["encounters"] if e["id"] == eid)
 
@@ -184,7 +188,7 @@ def fill_encounters(n, s):
         e["proposed_achievements"][0]["reward_slot"] = reward("early_withdrawal")
 
 for n in range(1, 6):
-    fn = "day-%02d.spec.json" % n
+    fn = os.path.join(SPEC_DIR, "day-%02d.spec.json" % n)
     s = json.load(open(fn))
     m, c, d = s["meta"], s["clock"], s["day"]
     days = c["days"]

@@ -3,8 +3,8 @@
  "meta": {
   "title": "Follow-on /create screens reskins: S3/S4 and S8 onward labels, buttons, selects, notices, errors, help, nav and dialogs -> DCC display text (display only)",
   "owner": "DCC Lore",
-  "updated": "2026-10-04",
-  "version": "0.1.3",
+  "updated": "2026-10-05",
+  "version": "0.1.4",
   "version_file": "tables/create-screens-reskins.version.json (sha256, built_at, entry_count, diff, companions); history in tables/create-screens-reskins.CHANGELOG.md",
   "id_scheme": {
    "id": "Stable kebab-case id per UI string. Prefix says the kind: method-, ability-, stat-, title-, button-, select-, modal-, field-, package-, choice-, opt-, nav-, dialog-, notice-, error-, hint-, help-. Never change once published.",
@@ -141,7 +141,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:233",
+   "code_ref": "src/create/flow.js:235",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -160,7 +160,7 @@
    "new": "This shreds your whole build, including any rolled ability scores. Nothing has been registered. You can start fresh with /create.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:136",
+   "code_ref": "src/create/flow.js:138",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -185,7 +185,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:142",
+   "code_ref": "src/create/flow.js:144",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -233,7 +233,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:100",
+   "code_ref": "src/create/flow.js:101",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -252,7 +252,7 @@
    "new": "Start fresh?",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:139",
+   "code_ref": "src/create/flow.js:141",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -277,7 +277,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:139",
+   "code_ref": "src/create/flow.js:141",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -302,7 +302,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:136",
+   "code_ref": "src/create/flow.js:138",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -321,7 +321,7 @@
    "new": "Shred the whole file?",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:136",
+   "code_ref": "src/create/flow.js:138",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -346,7 +346,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:136",
+   "code_ref": "src/create/flow.js:138",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -369,7 +369,7 @@
    "old_placeholders": [
     "{session}"
    ],
-   "code_ref": "src/create/flow.js:150",
+   "code_ref": "src/create/flow.js:152",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -394,7 +394,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:174",
+   "code_ref": "src/create/flow.js:176",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -419,7 +419,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:100",
+   "code_ref": "src/create/flow.js:101",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -444,7 +444,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:103",
+   "code_ref": "src/create/flow.js:104",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -469,7 +469,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:172",
+   "code_ref": "src/create/flow.js:174",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -500,7 +500,7 @@
    ],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:130",
+   "code_ref": "src/create/flow.js:131",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -525,7 +525,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:172",
+   "code_ref": "src/create/flow.js:174",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -550,7 +550,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/rules.js:172",
+   "code_ref": "src/create/rules.js:173",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -575,7 +575,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:172",
+   "code_ref": "src/create/flow.js:174",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -600,7 +600,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/flow.js:172",
+   "code_ref": "src/create/flow.js:174",
    "source_match": "found",
    "needs_code": true,
    "state": "label",
@@ -644,7 +644,7 @@
    "new": "File shredded. Run /create to start fresh.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:104",
+   "code_ref": "src/create/flow.js:105",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -663,7 +663,7 @@
    "new": "This Crawler is already registered. There is nothing left to shred.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:105",
+   "code_ref": "src/create/flow.js:106",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -682,7 +682,7 @@
    "new": "That file is gone. Run /create again.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:283",
+   "code_ref": "src/create/flow.js:285",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -726,7 +726,7 @@
    "new": "Nothing to pick yet. Finish the earlier screens first, Crawler.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:335",
+   "code_ref": "src/create/flow.js:337",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -749,7 +749,7 @@
    "old_placeholders": [
     "{list}"
    ],
-   "code_ref": "src/create/flow.js:227",
+   "code_ref": "src/create/flow.js:229",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -768,7 +768,7 @@
    "new": "The System dropped the file. Ask the GM.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:363",
+   "code_ref": "src/create/flow.js:365",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -787,7 +787,7 @@
    "new": "Intake is closed right now. Come back when the booth reopens.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:207",
+   "code_ref": "src/create/flow.js:209",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -806,7 +806,7 @@
    "new": "Wiped. Your comfort answers survived.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:330",
+   "code_ref": "src/create/flow.js:332",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -825,7 +825,7 @@
    "new": "Party full. The crawl has a headcount and you are one too many.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:389",
+   "code_ref": "src/create/rules.js:390",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -844,7 +844,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:278",
+   "code_ref": "src/create/screens.js:286",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -863,7 +863,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:283",
+   "code_ref": "src/create/screens.js:291",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -882,7 +882,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:283",
+   "code_ref": "src/create/screens.js:291",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -895,7 +895,7 @@
    "new": "The System rejects that name. Use 2-30 letters, digits, spaces, apostrophes, hyphens or periods, and nothing on the reserved list.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:295",
+   "code_ref": "src/create/screens.js:303",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -908,7 +908,7 @@
    "new": "That name is too close to another Crawler's. Stamp it anyway or pick another.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:287",
+   "code_ref": "src/create/screens.js:295",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -921,7 +921,7 @@
    "new": "No name tag yet. Set a name first.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:287",
+   "code_ref": "src/create/screens.js:295",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -940,7 +940,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:291",
+   "code_ref": "src/create/screens.js:299",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -953,7 +953,7 @@
    "new": "The name goes on the paperwork. Your Broadcast Name (what the audience calls you) comes later.\nIt must be unique in this session. The System checks.\nPronouns are optional.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:22",
+   "code_ref": "src/create/flow.js:23",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -972,7 +972,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:275",
+   "code_ref": "src/create/screens.js:283",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -991,7 +991,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:284",
+   "code_ref": "src/create/screens.js:292",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1010,7 +1010,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:275",
+   "code_ref": "src/create/screens.js:283",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1029,7 +1029,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:309",
+   "code_ref": "src/create/screens.js:317",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1048,7 +1048,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:309",
+   "code_ref": "src/create/screens.js:317",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1061,7 +1061,7 @@
    "new": "Both lines are required. The System does not do blank mugshots.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:310",
+   "code_ref": "src/create/screens.js:318",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1074,7 +1074,7 @@
    "new": "Two short lines: what you look like now, and why you are funny or dangerous.\nEveryone reads as baseline human on Floors 1-2, so keep the horns for later.\nNo links.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:23",
+   "code_ref": "src/create/flow.js:24",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1093,7 +1093,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:307",
+   "code_ref": "src/create/screens.js:315",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1226,7 +1226,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": "Fighter.choices[fighting_style].options",
-   "code_ref": "src/create/rules.js:250",
+   "code_ref": "src/create/rules.js:251",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1701,7 +1701,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:444",
+   "code_ref": "src/create/screens.js:452",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -1741,7 +1741,7 @@
    "old_placeholders": [
     "{array}"
    ],
-   "code_ref": "src/create/rules.js:59",
+   "code_ref": "src/create/rules.js:60",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1754,7 +1754,7 @@
    "new": "No score may end above 20. Not even for you.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:350",
+   "code_ref": "src/create/rules.js:351",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1767,7 +1767,7 @@
    "new": "Use the six scores of the array you took, each exactly once.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:68",
+   "code_ref": "src/create/rules.js:69",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1780,7 +1780,7 @@
    "new": "No numbers on file yet. Set your six scores.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:55",
+   "code_ref": "src/create/rules.js:56",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1799,7 +1799,7 @@
     "{cost}",
     "{budget}"
    ],
-   "code_ref": "src/create/rules.js:63",
+   "code_ref": "src/create/rules.js:64",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1818,7 +1818,7 @@
     "{min}",
     "{max}"
    ],
-   "code_ref": "src/create/rules.js:62",
+   "code_ref": "src/create/rules.js:63",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1831,7 +1831,7 @@
    "new": "Your rolled numbers do not match the logged dice. The log wins.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:110",
+   "code_ref": "src/create/rules.js:111",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1844,7 +1844,7 @@
    "new": "Take an array from your final round. The old rounds are history.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:119",
+   "code_ref": "src/create/rules.js:120",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1857,7 +1857,7 @@
    "new": "Take one of your rolled arrays first.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:118",
+   "code_ref": "src/create/rules.js:119",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1870,7 +1870,7 @@
    "new": "A round that had a keepable array cannot be rolled past. You had a good one; live with it.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:114",
+   "code_ref": "src/create/rules.js:115",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1883,7 +1883,7 @@
    "new": "Your rolled numbers do not add up. Go back to the method screen and roll again.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:105",
+   "code_ref": "src/create/rules.js:106",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1902,7 +1902,7 @@
     "{total}",
     "{min_total}"
    ],
-   "code_ref": "src/create/rules.js:122",
+   "code_ref": "src/create/rules.js:123",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1915,7 +1915,7 @@
    "new": "Hand in exactly six numbers in the order STR DEX CON INT WIS CHA. The System cannot read minds.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:50",
+   "code_ref": "src/create/rules.js:51",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1928,7 +1928,7 @@
    "new": "Whole numbers only. The System does not do fractions.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:70",
+   "code_ref": "src/create/rules.js:71",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1941,7 +1941,7 @@
    "new": "Factory Preset (Standard array): 15 14 13 12 10 8, each once. Layaway Plan (Point buy): 27 points, scores 8-15.\nHand in six numbers in the order STR DEX CON INT WIS CHA; the background bonus is added after.\nPain Budget (HP), Not-Getting-Hit Number (AC) and the rest are computed for you.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:27",
+   "code_ref": "src/create/flow.js:28",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1954,7 +1954,7 @@
    "new": "(10 + Dex for now; no armor yet)",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:122",
+   "code_ref": "src/create/screens.js:125",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1971,7 +1971,7 @@
    "old_placeholders": [
     "{scores}"
    ],
-   "code_ref": "src/create/screens.js:427",
+   "code_ref": "src/create/screens.js:435",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -1984,7 +1984,7 @@
    "new": "Hand in six numbers in the order STR DEX CON INT WIS CHA.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:424",
+   "code_ref": "src/create/screens.js:432",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2001,7 +2001,7 @@
    "old_placeholders": [
     "{array}"
    ],
-   "code_ref": "src/create/screens.js:155",
+   "code_ref": "src/create/screens.js:163",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2018,7 +2018,7 @@
    "old_placeholders": [
     "{method}"
    ],
-   "code_ref": "src/create/screens.js:422",
+   "code_ref": "src/create/screens.js:430",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -2045,7 +2045,7 @@
     "{array}",
     "{budget}"
    ],
-   "code_ref": "src/create/screens.js:420",
+   "code_ref": "src/create/screens.js:428",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2064,7 +2064,7 @@
     "{used}",
     "{budget}"
    ],
-   "code_ref": "src/create/screens.js:425",
+   "code_ref": "src/create/screens.js:433",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2091,7 +2091,7 @@
     "{init}",
     "{pp}"
    ],
-   "code_ref": "src/create/screens.js:123",
+   "code_ref": "src/create/screens.js:126",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2110,7 +2110,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": "ability_methods.methods[point_buy]",
-   "code_ref": "src/create/screens.js:64",
+   "code_ref": "src/create/screens.js:65",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2148,7 +2148,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": "ability_methods.methods[standard_array]",
-   "code_ref": "src/create/screens.js:64",
+   "code_ref": "src/create/screens.js:65",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2161,7 +2161,7 @@
    "new": "The dice jammed. Tap the Dice Gamble (Roll) to try again.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:189",
+   "code_ref": "src/create/screens.js:197",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2174,7 +2174,7 @@
    "new": "Rolled scores go in through the menus, not the keyboard. The dice vouch for themselves.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:480",
+   "code_ref": "src/create/screens.js:488",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2187,7 +2187,7 @@
    "new": "Each score goes to one ability, once. No double-dipping.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:474",
+   "code_ref": "src/create/screens.js:482",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2200,7 +2200,7 @@
    "new": "Pick a method first. The System does not guess your numbers.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:448",
+   "code_ref": "src/create/screens.js:456",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2213,7 +2213,7 @@
    "new": "Pick the Dice Gamble (Roll) first.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:471",
+   "code_ref": "src/create/screens.js:479",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2226,7 +2226,7 @@
    "new": "Press the Dice Gamble (Roll) for your three arrays. The System rolls; you watch.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:146",
+   "code_ref": "src/create/screens.js:154",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2239,7 +2239,7 @@
    "new": "Roll your three arrays first. The dice are waiting.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:458",
+   "code_ref": "src/create/screens.js:466",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2252,7 +2252,7 @@
    "new": "Your numbers are not legal yet. Set six legal scores first.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:449",
+   "code_ref": "src/create/screens.js:457",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2265,7 +2265,7 @@
    "new": "Take Array A, B or C (Keep A, B or C; a greyed-out array is not keepable, and the System checked).",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:157",
+   "code_ref": "src/create/screens.js:165",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2282,7 +2282,7 @@
    "old_placeholders": [
     "{ab}"
    ],
-   "code_ref": "src/create/screens.js:166",
+   "code_ref": "src/create/screens.js:174",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -2366,7 +2366,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:123",
+   "code_ref": "src/create/screens.js:126",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2385,7 +2385,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:499",
+   "code_ref": "src/create/screens.js:507",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2404,7 +2404,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:414",
+   "code_ref": "src/create/screens.js:422",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2425,7 +2425,7 @@
     "S9 select": "Overachiever Bonus (Expertise): pick {n}"
    },
    "chargen_ref": "Rogue.choices[expertise]",
-   "code_ref": "src/create/screens.js:499",
+   "code_ref": "src/create/screens.js:507",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2446,7 +2446,7 @@
     "S9 select": "Weapon Tricks (Weapon Mastery): pick {n}"
    },
    "chargen_ref": "classes.*.choices[weapon_masteries]",
-   "code_ref": "src/create/screens.js:514",
+   "code_ref": "src/create/screens.js:522",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2463,7 +2463,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:356",
+   "code_ref": "src/create/rules.js:357",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2476,7 +2476,7 @@
    "new": "Class skill picks must come from your class list, with no repeats and no skill you already have from your Prior Employment or Latent Biology. The System has your résumé.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:357",
+   "code_ref": "src/create/rules.js:358",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2493,7 +2493,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:363",
+   "code_ref": "src/create/rules.js:364",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2506,7 +2506,7 @@
    "new": "Expertise needs a skill you are already proficient in. You cannot brag about nothing.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:364",
+   "code_ref": "src/create/rules.js:365",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2523,7 +2523,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/screens.js:510",
+   "code_ref": "src/create/screens.js:518",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2540,7 +2540,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:366",
+   "code_ref": "src/create/rules.js:367",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2557,7 +2557,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:358",
+   "code_ref": "src/create/rules.js:359",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2570,7 +2570,7 @@
    "new": "The fixed ones came with your Prior Employment and Latent Biology.\nPick the rest; skills you already own are hidden.\nClasses with Weapon Tricks (Weapon Mastery) or Overachiever Bonus (Expertise) ask for those here.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:28",
+   "code_ref": "src/create/flow.js:29",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2587,7 +2587,7 @@
    "old_placeholders": [
     "{list}"
    ],
-   "code_ref": "src/create/screens.js:527",
+   "code_ref": "src/create/screens.js:535",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2600,7 +2600,7 @@
    "new": "Pick a Provisional Class and Prior Employment first (screens 6 and 7).",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:498",
+   "code_ref": "src/create/screens.js:506",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2623,7 +2623,7 @@
    ],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:506",
+   "code_ref": "src/create/screens.js:514",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2646,7 +2646,7 @@
    ],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:510",
+   "code_ref": "src/create/screens.js:518",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2669,7 +2669,7 @@
    ],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:509",
+   "code_ref": "src/create/screens.js:517",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2688,7 +2688,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:493",
+   "code_ref": "src/create/screens.js:501",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2707,7 +2707,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:549",
+   "code_ref": "src/create/screens.js:557",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2726,7 +2726,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:549",
+   "code_ref": "src/create/screens.js:557",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2745,7 +2745,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:549",
+   "code_ref": "src/create/screens.js:557",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -2758,7 +2758,7 @@
    "new": "Pick equipment (kit or credits) for both your Provisional Class and Prior Employment.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:369",
+   "code_ref": "src/create/rules.js:370",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2771,7 +2771,7 @@
    "new": "You spent more credits than you have. The Wall does not extend credit.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:374",
+   "code_ref": "src/create/rules.js:375",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2784,7 +2784,7 @@
    "new": "Pick both equipment options (and do not overspend). The Wall keeps score.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:556",
+   "code_ref": "src/create/screens.js:564",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2797,7 +2797,7 @@
    "new": "Pick the type of each item that says \"pick type\" (holy symbol, gaming set, instrument, tools). The Wall does not sell mystery packages.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:557",
+   "code_ref": "src/create/screens.js:565",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2810,7 +2810,7 @@
    "new": "A Vending Wall line has no type. Name one.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/rules.js:373",
+   "code_ref": "src/create/rules.js:374",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2827,7 +2827,7 @@
    "old_placeholders": [
     "{list}"
    ],
-   "code_ref": "src/create/rules.js:372",
+   "code_ref": "src/create/rules.js:373",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2840,7 +2840,7 @@
    "new": "Each of class and background gives a kit or a credit amount (1 gold = 1 credit).\nSpend leftover credits at the Intake Vending Wall by typing names; everything is junk and everything is a real 5e item underneath.\nEvery item shows the System's own name with the real 5e name in brackets (from the item-reskins table); stats never change. Holy symbols, gaming sets, instruments and tools ask you to pick a type.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:29",
+   "code_ref": "src/create/flow.js:30",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2908,7 +2908,7 @@
     "{spent}",
     "{left}"
    ],
-   "code_ref": "src/create/screens.js:541",
+   "code_ref": "src/create/screens.js:549",
    "source_match": "found",
    "needs_code": true,
    "state": "text",
@@ -2924,7 +2924,7 @@
    "new": "Skip the kit, take the credits",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:82",
+   "code_ref": "src/create/screens.js:85",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2943,7 +2943,7 @@
     "{item}",
     "{src}"
    ],
-   "code_ref": "src/create/screens.js:333",
+   "code_ref": "src/create/screens.js:341",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2956,7 +2956,7 @@
    "new": "The Wall emptied your cart. It no longer fit.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:570",
+   "code_ref": "src/create/screens.js:578",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2969,7 +2969,7 @@
    "new": "Pick a Provisional Class and Prior Employment first.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:538",
+   "code_ref": "src/create/screens.js:546",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -2986,7 +2986,7 @@
    "old_placeholders": [
     "{names}"
    ],
-   "code_ref": "src/create/screens.js:611",
+   "code_ref": "src/create/screens.js:619",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3005,7 +3005,7 @@
     "{cost}",
     "{have}"
    ],
-   "code_ref": "src/create/screens.js:608",
+   "code_ref": "src/create/screens.js:616",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3022,7 +3022,7 @@
    "old_placeholders": [
     "{names}"
    ],
-   "code_ref": "src/create/screens.js:612",
+   "code_ref": "src/create/screens.js:620",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3035,7 +3035,7 @@
    "new": "The Wall does not stock that type for this item.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:564",
+   "code_ref": "src/create/screens.js:572",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3058,7 +3058,7 @@
    ],
    "uses": null,
    "chargen_ref": "classes.*.packages[A]",
-   "code_ref": "src/create/screens.js:73",
+   "code_ref": "src/create/screens.js:74",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3081,7 +3081,7 @@
    ],
    "uses": null,
    "chargen_ref": "Fighter.packages[B]",
-   "code_ref": "src/create/screens.js:73",
+   "code_ref": "src/create/screens.js:74",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3104,7 +3104,7 @@
    ],
    "uses": null,
    "chargen_ref": "classes.*.packages[B] (11 classes, no items) and Fighter.packages[C]",
-   "code_ref": "src/create/screens.js:74",
+   "code_ref": "src/create/screens.js:75",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3127,7 +3127,7 @@
    ],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:547",
+   "code_ref": "src/create/screens.js:77",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3146,7 +3146,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:535",
+   "code_ref": "src/create/screens.js:543",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3163,7 +3163,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:381",
+   "code_ref": "src/create/rules.js:382",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3180,7 +3180,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:385",
+   "code_ref": "src/create/rules.js:386",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3197,7 +3197,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:384",
+   "code_ref": "src/create/rules.js:385",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3214,7 +3214,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/rules.js:383",
+   "code_ref": "src/create/rules.js:384",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3227,7 +3227,7 @@
    "new": "Casters pick Party Tricks (cantrips) and Real Magic (level 1 spells); Wizards also load a subset from the Cracked Phone App.\nEach menu entry says what the spell does in one line.\nOther classes skip this screen.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:30",
+   "code_ref": "src/create/flow.js:31",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3240,7 +3240,7 @@
    "new": "Fill the phone app first (nothing to load yet)",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:639",
+   "code_ref": "src/create/screens.js:647",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3253,7 +3253,7 @@
    "new": "No spells for this class. Go hit something.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:624",
+   "code_ref": "src/create/screens.js:632",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3270,7 +3270,7 @@
    "old_placeholders": [
     "{n}"
    ],
-   "code_ref": "src/create/screens.js:655",
+   "code_ref": "src/create/screens.js:663",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3293,7 +3293,7 @@
    ],
    "uses": null,
    "chargen_ref": "spells.*.cantrips",
-   "code_ref": "src/create/screens.js:634",
+   "code_ref": "src/create/screens.js:642",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3339,7 +3339,7 @@
    ],
    "uses": null,
    "chargen_ref": "spells.*.prepared",
-   "code_ref": "src/create/screens.js:639",
+   "code_ref": "src/create/screens.js:647",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3381,7 +3381,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:619",
+   "code_ref": "src/create/screens.js:627",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3394,7 +3394,7 @@
    "new": "This step is retired. Nothing to see. Press Next.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:665",
+   "code_ref": "src/create/screens.js:673",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3413,7 +3413,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:705",
+   "code_ref": "src/create/screens.js:713",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3426,7 +3426,7 @@
    "new": "The System needs a backstory. Anything will do.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:706",
+   "code_ref": "src/create/screens.js:714",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3439,7 +3439,7 @@
    "new": "Pick different words for the backstory. The System has notes.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:717",
+   "code_ref": "src/create/screens.js:725",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3452,7 +3452,7 @@
    "new": "Your backstory is public: the System reads it at your introduction.\nRequested Handle is what you would like the audience to call you. It is a request, not a promise.\nBroadcast Name stays PENDING until Floor 3.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:32",
+   "code_ref": "src/create/flow.js:33",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3471,7 +3471,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:707",
+   "code_ref": "src/create/screens.js:715",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3490,7 +3490,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:703",
+   "code_ref": "src/create/screens.js:711",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3509,7 +3509,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:730",
+   "code_ref": "src/create/screens.js:738",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3522,7 +3522,7 @@
    "new": "Standing Orders are required. Your body cannot improvise.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/screens.js:731",
+   "code_ref": "src/create/screens.js:739",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3535,7 +3535,7 @@
    "new": "Orders tell your body what to do while you are away; reactions say how to use your reaction.\nA signature attack name is optional, but the audience likes a brand.\nNo orders means Dodge on timeout.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:33",
+   "code_ref": "src/create/flow.js:34",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3554,7 +3554,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:732",
+   "code_ref": "src/create/screens.js:740",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3573,7 +3573,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:174",
+   "code_ref": "src/create/screens.js:182",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3592,7 +3592,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:758",
+   "code_ref": "src/create/screens.js:766",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3605,7 +3605,7 @@
    "new": "This is the finished sheet and the card exactly as it will be posted.\nUse Fix Something (Edit a screen) to jump back to any screen; you return here.\nSign ▸ (Confirm ▸) enables when everything is legal and takes you to Sign Here (Confirm), where Sign and Lock the File (Confirm and lock the file) registers your Crawler.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:34",
+   "code_ref": "src/create/flow.js:35",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3618,7 +3618,7 @@
    "new": "Your Public Card (player-channel card, as it will be posted)",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:161",
+   "code_ref": "src/create/flow.js:163",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3631,7 +3631,7 @@
    "new": "(card preview unavailable; the printer jammed)",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:161",
+   "code_ref": "src/create/flow.js:163",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3644,7 +3644,7 @@
    "new": "The System cannot file this yet:",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:164",
+   "code_ref": "src/create/flow.js:166",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3663,7 +3663,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:757",
+   "code_ref": "src/create/screens.js:765",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3682,7 +3682,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:750",
+   "code_ref": "src/create/screens.js:758",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3701,7 +3701,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:776",
+   "code_ref": "src/create/screens.js:784",
    "source_match": "found",
    "needs_code": true,
    "state": "label"
@@ -3714,7 +3714,7 @@
    "new": "Signing locks the file and registers your Crawler.\nCorrections after this go through the GM.",
    "placeholders": [],
    "old_placeholders": [],
-   "code_ref": "src/create/flow.js:35",
+   "code_ref": "src/create/flow.js:36",
    "source_match": "found",
    "needs_code": true,
    "state": "text"
@@ -3733,7 +3733,7 @@
    "old_placeholders": [],
    "uses": null,
    "chargen_ref": null,
-   "code_ref": "src/create/screens.js:221",
+   "code_ref": "src/create/screens.js:229",
    "source_match": "found",
    "needs_code": true,
    "state": "label"

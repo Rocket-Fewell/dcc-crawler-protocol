@@ -5,14 +5,60 @@ Replaces <<TABLE:name>> placeholders with markdown tables generated LIVE from th
 create-screens-reskins.json. Re-run whenever a source version moves.
 """
 import json, os, re, sys, hashlib
-CAMP = "/workspace/dcc-campaign/tables"
-LORE = "/workspace/dcc-lore/tables"
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-cg = json.load(open(f"{CAMP}/chargen-5e.json"))
-sc = json.load(open(f"{LORE}/species-class-reskins.json"))
-bg = json.load(open(f"{CAMP}/background-reskins.json"))
-cs = json.load(open(f"{CAMP}/create-screens-reskins.json"))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_PARENT = os.path.abspath(os.path.join(ROOT, ".."))
+
+
+def _dir_or_none(path):
+    return path if path and os.path.isdir(path) else None
+
+
+def _campaign_root():
+    env = os.environ.get("DCC_CAMPAIGN_ROOT")
+    if env:
+        return os.path.abspath(env)
+    for cand in (
+        os.path.join(_PARENT, "dcc-campaign"),
+        os.path.join(_PARENT, "dcc-crawler-protocol"),
+        _PARENT if os.path.isdir(os.path.join(_PARENT, "tables")) else None,
+    ):
+        hit = _dir_or_none(cand)
+        if hit and os.path.isdir(os.path.join(hit, "tables")):
+            return hit
+    raise SystemExit(
+        "Cannot find campaign root. Set DCC_CAMPAIGN_ROOT to the repo root "
+        "(the folder that contains tables/)."
+    )
+
+
+def _lore_root(campaign_root):
+    env = os.environ.get("DCC_LORE_ROOT")
+    if env:
+        return os.path.abspath(env)
+    for cand in (
+        os.path.join(campaign_root, "lore"),
+        os.path.join(_PARENT, "dcc-lore"),
+        os.path.join(campaign_root, "..", "dcc-lore"),
+    ):
+        hit = _dir_or_none(os.path.abspath(cand))
+        if hit and os.path.isdir(os.path.join(hit, "tables")):
+            return hit
+    raise SystemExit(
+        "Cannot find lore root. Set DCC_LORE_ROOT to the lore folder "
+        "(the folder that contains tables/)."
+    )
+
+
+CAMP_ROOT = _campaign_root()
+LORE_ROOT = _lore_root(CAMP_ROOT)
+CAMP = os.path.join(CAMP_ROOT, "tables")
+LORE = os.path.join(LORE_ROOT, "tables")
+
+cg = json.load(open(os.path.join(CAMP, "chargen-5e.json")))
+sc = json.load(open(os.path.join(LORE, "species-class-reskins.json")))
+bg = json.load(open(os.path.join(CAMP, "background-reskins.json")))
+cs = json.load(open(os.path.join(CAMP, "create-screens-reskins.json")))
 
 assert cg["meta"]["version"] == "0.1.6", "chargen-5e.json moved off v0.1.6: re-read the spec and update the draft"
 

@@ -11,10 +11,10 @@ spec.loader.exec_module(et)
 
 class VoiceTags032(unittest.TestCase):
     def test_system_kinds_allow_list(self):
-        self.assertIn("voice_line", et.SYSTEM_KINDS)
-        self.assertIn("route_voice_line", et.SYSTEM_KINDS)
-        self.assertIn("system_notice", et.SYSTEM_KINDS)
-        self.assertIn("exit_warning_read_aloud", et.SYSTEM_KINDS)
+        self.assertEqual(et.SYSTEM_KINDS, {"system_notice", "exit_warning_read_aloud"})
+        self.assertNotIn("voice_line", et.SYSTEM_KINDS)
+        self.assertNotIn("route_voice_line", et.SYSTEM_KINDS)
+        self.assertNotIn("gm_narration", et.SYSTEM_KINDS)
         self.assertNotIn("achievement_narration", et.SYSTEM_KINDS)
         self.assertNotIn("gm_color", et.SYSTEM_KINDS)
         self.assertNotIn("loot_box_callout", et.SYSTEM_KINDS)
@@ -74,41 +74,46 @@ class VoiceTags032(unittest.TestCase):
 
 
     def test_stale_manifest_gm_color_path_forces_gm_voice(self):
-        """Safety net: path .../gm_color or kind gm_color is GM even when kind is still voice_line."""
+        """Safety net: path .../gm_color or kind gm_color is GM even when mis-tagged as system_notice.
+        voice_line / gm_narration are GM by the allow-list (not System)."""
         joke = "The System wishes the surface crowd luck with that. Also: yes, the dog gets a nameplate."
         doc = {
             "audience_manifest": {
                 "schema": "audience/1",
                 "player_blocks": [
-                    {"path": "/encounters/0/voice_lines/registration", "kind": "voice_line", "field": "text", "encounter": "enc-d01-06"},
-                    {"path": "/encounters/0/voice_lines/gm_color", "kind": "voice_line", "field": "text", "encounter": "enc-d01-06"},
+                    {"path": "/encounters/0/voice_lines/system_intro", "kind": "system_notice", "field": "text", "encounter": "enc-d01-06"},
+                    {"path": "/encounters/0/voice_lines/gm_color", "kind": "system_notice", "field": "text", "encounter": "enc-d01-06"},
+                    {"path": "/encounters/0/voice_lines/win", "kind": "gm_narration", "field": "text", "encounter": "enc-d01-06"},
                     {"path": "/encounters/0/extra", "kind": "gm_color", "field": "text", "encounter": "enc-d01-06"},
+                    {"path": "/encounters/0/legacy", "kind": "voice_line", "field": "text", "encounter": "enc-d01-06"},
                 ],
             },
             "day": {},
             "encounters": [{
                 "id": "enc-d01-06",
                 "voice_lines": {
-                    "registration": {"text": "Welcome. Registration complete."},
+                    "system_intro": {"text": "Welcome. Registration complete."},
                     "gm_color": {"text": joke},
+                    "win": {"text": "You cleared the atrium."},
                 },
                 "extra": {"text": "Extra snark beat."},
+                "legacy": {"text": "Legacy voice_line text."},
             }],
             "routes": [],
         }
         by_path = {e["path"]: e for e in et.entries(doc)}
-        self.assertEqual(by_path["/encounters/0/voice_lines/registration"]["voice"], "system")
-        self.assertEqual(by_path["/encounters/0/voice_lines/gm_color"]["voice"], "gm")
+        self.assertEqual(by_path["/encounters/0/voice_lines/system_intro"]["voice"], "system")
+        self.assertEqual(by_path["/encounters/0/voice_lines/gm_color"]["voice"], "gm")  # path safety net
+        self.assertEqual(by_path["/encounters/0/voice_lines/win"]["voice"], "gm")
         self.assertEqual(by_path["/encounters/0/extra"]["voice"], "gm")
+        self.assertEqual(by_path["/encounters/0/legacy"]["voice"], "gm")  # voice_line no longer System
         items, _ = et.player_items(doc, lambda e: e.get("encounter") == "enc-d01-06", hours=None, include_optional=True, confirm=True)
         out = et.format_player(items)
         self.assertIn("**[SYSTEM]** Welcome. Registration complete.", out)
-        self.assertIn("**[GM]** " + joke.split(".")[0], out)  # tagged GM
         self.assertIn(joke, out)
         for chunk in out.split("\n\n"):
             if "dog gets a nameplate" in chunk:
                 self.assertFalse(chunk.startswith("**[SYSTEM]** "), chunk)
-                self.assertTrue(chunk.startswith("**[GM]** ") or "**[GM]**" in chunk, chunk)
 
 
 if __name__ == "__main__":

@@ -15,14 +15,14 @@
       "tables/loot-decks/*.json",
       "tables/achievements.csv",
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
-      "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
-      "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
-      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
+      "lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
+      "lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
+      "lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
       "rules/70-encounter-budget-5e.json v{budget_version} and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
-      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
+      "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
-      "/workspace/dcc-lore/drafts/achievement-suggestions-days-02-05-lore-pass.md (Lore draft v0.2, sha256 216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146: Days 2–5 achievement frames, [GM] end to end)"
+      "lore/drafts/achievement-suggestions-days-02-05-lore-pass.md (Lore draft v0.2, sha256 216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146: Days 2–5 achievement frames, [GM] end to end)"
     ]
   },
   "clock": {
@@ -114,7 +114,7 @@
     }
   },
   "canon_table": {
-    "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
+    "path": "lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
     "expected_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9"
@@ -208,7 +208,7 @@
         "text": "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly.",
         "tag": "[GM-FACING]"
       },
-      "source": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "source": "lore/drafts/floor1-collapse-notices.draft.md",
       "source_version": "0.2",
       "source_expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
     },
@@ -871,7 +871,7 @@
       ],
       "zone_color": {
         "tag": "inspired",
-        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
+        "source": "lore/drafts/floor1-zone-color.draft.md",
         "lines": [
           {
             "text": "The walls start shedding old posters and warning signs. Under them is raw stone with tally marks scratched by earlier Crawlers. Some tallies stop mid-row.",
@@ -1127,9 +1127,9 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
+    "expected_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.15"
+    "version": "0.1.17"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",
@@ -1138,17 +1138,17 @@
   },
   "lore_drafts": {
     "collapse_notices": {
-      "path": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "path": "lore/drafts/floor1-collapse-notices.draft.md",
       "version": "0.2",
       "expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
     },
     "zone_color": {
-      "path": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
+      "path": "lore/drafts/floor1-zone-color.draft.md",
       "version": "0.2",
       "expected_sha256": "a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4"
     },
     "achievement_suggestions_days_02_05": {
-      "path": "/workspace/dcc-lore/drafts/achievement-suggestions-days-02-05-lore-pass.md",
+      "path": "lore/drafts/achievement-suggestions-days-02-05-lore-pass.md",
       "version": "0.2",
       "expected_sha256": "216303c74dc6b659fdafd06f8a1ad6f757b53e5beb88402afc365c57d57a8146"
     }
