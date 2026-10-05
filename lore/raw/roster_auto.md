@@ -1,0 +1,455 @@
+# Auto-extracted character roster
+Owner: DCC Lore | Status: draft | Version: 1.0 | Updated: 2026-10-03
+Summary: Auto-extracted roster of all wiki character pages (generated; feeds characters.md Part B).
+
+- **Adad** — 
+  - In Dungeon lore, Adad is a mountainous storm god capable of summoning clouds of lightning-shooting bugs.
+- **Agatha** — 
+  - Agatha is a Crawler who appears to be a homeless human woman pushing a loaded-down shopping cart through the Dungeon.
+- **Akuma** — 
+  - This was originally a high-elf [https://en.wikipedia.org/wiki/Shoemaking cobbler] with a human skin, resleeved 12 times before the ambient magic gave him his final form. He’s arguably the most powerful non-god magic caster on this floor. He’s also a complete prick, as evidenced by the company he keeps.
+- **Amayon** — first: Book 6, Chapter 58; species: Major Demon; role: Crown Prince of Sheol; lvl: 250 (Book 6, Ch 62); status: Alive
+  - Amayon is a major demon lord and one of the four crown princes of Sheol. Expelled from Sheol by one of his brothers, he was stranded on the Eighth Floor, where the portal he cast to return home carried keyless crawlers into the stairwells to the next floor.
+- **Anaconda** — 
+  - Anaconda is a level 75 Quarter Naga NPC who works as a lead exotic dancer at the Penis Parade strip club located within the Desperado Club. He is a highly favored performer of Princess Donut and has deep, secretive family ties to the club's management.
+- **Annie** — 
+  - Annie by Rebecca Dorr.webp|Art by Rebecca Dorr, [https://rebeccadorr8.artstation.com/ ArtStation]
+- **Anser** — status: Deceased (long before Book 4) / |first appearance = Book 4, Chapter 1 (mentioned)
+  - Anser is the long-dead emperor entombed within the Necropolis of Anser on the Fourth Floor, a conqueror who subjugated the local Dromedarian, Bactrian, and Glaber peoples and brought his own people through a magical gate from elsewhere. His legend looms over the entire floor, though his true nature is only revealed once his tomb is finally breached.
+- **Apito** — first: Book 2, Chapter 17 (mentioned); species: Goddess
+  - Apito, the Oak Mother, is a goddess of the Dungeon's in-game pantheon, revered as the mother of all gods and worshipped by elves, most fervently by the doomsday cult known as the 201st Security Group.
+- **Armita** — 
+  - She entered the dungeon with Odette and got deep enougth that she managed to become a demigod attendant on the twelth floor.
+- **Asher** — 
+  - Asher is Carl's half-brother, whom Carl did not know existed until encountering a simulation of his father's home on the Eighth Floor.
+- **Asojano** — 
+  - Carl, Donut, Sister Ines, Anton and Paz get a quest in which they get the option to repair his shrine. The description notes that repairing his shrine will not cause him to ascend.
+- **Astrid** — first: Book 3, Chapter 9; species: Bloodlust Sprite (Fairy); role: Assistant Manager of the Desperado Club / Owner of the Naughty Boys Employment Agency; lvl: 125 (Book 3, Ch 9); status: Deceased
+  - Astrid is a Bloodlust Sprite NPC and the Assistant Manager of the Desperado Club.
+- **Author Steve Rowland** — 
+  - Author Steve Rowland is a Level 50 Forest Troll NPC who initially works as a male exotic dancer at the Penis Parade, a strip club located on the top floor of the Desperado Club. Following the destruction of the club, he is hired as a mercenary by Carl and joins his entourage as an allied fighter, remaining with the crawlers until the climactic battle of the Eighth Floor.
+- **Barry** — first: Book 1, Chapter 31; species: Human; status: Deceased
+  - Bartholomew Eli McGibbons, known to everyone as Barry, was the late husband of Elle McGibbons. He never appears in the Dungeon himself, having died decades before the crawl began, but he surfaces constantly in Elle's memories and stories, and is formally eulogized by her on the Tenth Floor.
+- **Bautista** — first: Book 2, Chapter 23; species: Human | Tigran; class: Swashbuckler Class; role: Tea shop owner (pre-collapse); lvl: 28; status: Alive
+  - Daniel Bautista is an Earth Crawler and the sole survivor of a large extended family that entered the Dungeon together. A Tigran Swashbuckler who fights with a curved sword and an army of summonable plush figures, he becomes a long-term ally of Carl and Donut after they avenge his family on the Third Floor.
+- **Beatrice** — first: Book 1, Chapter 1; species: Human; role: Cat Show Person, MLM Boss Babe, Nurse; status: Alive
+  - Beatrice, usually called Bea, is an Earth character, the ex-girlfriend of Carl, and the owner of the Persian show cat who becomes Donut. She never enters the Dungeon, but is referenced frequently by both protagonists.
+- **Big Tina** — 
+  - Big Tina is a level 80 allosaurus city boss. She was born an ursine, but was transformed into an allosaurus after Scolopendra's Nine-Tier Attack. She contracted Vampirism from Miriam Dom, but was cured of the curse after Miriam died.
+- **Bin** — 
+  - Carl and Donut go on Planet Beautiful. Donut enjoys her piece about pet shows, but Carl refuses to read an inaccurate script about beauty pageants. He asks why they can't get a robotic voice of his to do the reading and Bin informs him they can't do so without a disclaimer. People watch the show because they know it's really the crawler telling them about their world.
+- **Bodi** — 
+  - Bodi is a tall, tan-skinned human. He is a quiet person.
+- **Bonnie** — 
+  - Bonnie is a juvenile Dirigible Gnome NPC originating from the Fifth Floor of the World Dungeon. Initially rescued by Carl and Princess Donut after the tragic death of her father, Commandant Kane, Bonnie is taken under the wing of the Princess Posse and its allies. 
+- **Boomer** — 
+  - After his crawl, Boomer survived as a merchant on the sixth floor for many, many seasons before finally escaping. He’d been banned from CrawlCon years ago after threatening to “fist fuck” an orcish show runner to death during a panel. Porthus had publicly distanced himself from the militant, former crawler after that, but apparently, they’d been in close contact the whole time.
+- **Brad** — 
+  - Prior to the creation of the dungeon he worked construction part time and modelled part time. His instgram handle is Bradthechad69.
+- **Brandon Andrews** — first: Book 1, Chapter 22; species: Human; role: Maintenance; lvl: 9 (Book 1, Ch 37); status: Deceased
+  - Brandon Andrews is a crawler from Wenatchee, WA, and a member of the Meadow Lark party. He and his older brother Chris Andrews entered the Dungeon alongside the elderly residents they were paid to look after, and are the first friendly crawlers Carl and Donut meet.
+- **Bravvo** — 
+  - Dropped black leather boots, enchanted against magical bolts; 30 Good Health Potions; 30 Good Mana Refills; magical longsword (+2 CON), 9 potions of Levitation.
+- **Britney** — first: Book 4, Chapter 25; species: Human; class: 3rd: Pit Fighter  6th: Pit Champion; lvl: 55 (Book 6, Ch 22); status: Alive
+  - Britney Proskurina is an Earth Crawler from Ukraine and one of the three crawlers to come out alive from the water quadrant of Bubble 543 on the Fifth Floor. She travels with the loose group of survivors that forms around Carl and Donut.
+- **Bucket Boy** — 
+  - Bucket Boy is a young Crocodilian NPC who works as a tip collector at the Penis Parade strip club within the Desperado Club. He is later hired as a mercenary for the Princess Posse.
+- **Burcu** — 
+  - Burcu is a badger-headed Porsuk Swashbuckler crawler who spent much of her crawl floating near the bottom of the top ten leaderboard, and who came to blame Carl for her father's death.
+- **Burgundy** — status: Deceased / |first appearance = Book 2, Chapter 18
+  - Burgundy is a human assistant working in the Medium Skyfowl Settlement on the Third Floor who is secretly cursed to transform into a Krasue each night.
+- **Carl** — first: Book 1, Chapter 1; species: Human | Primal; class: 3rd: Compensated Anarchist Class  6th: Agent Provocateur Class; role: Marine Technician; lvl: 84 (Book 8, Ch 22); status: Alive
+  - Carl is the protagonist of Dungeon Crawler Carl. A U.S. Coast Guard veteran from Seattle, he is a crawler on the Syndicate game show Dungeon Crawler World: Earth and the bodyguard of the Royal Court of Princess Donut, a party he shares with his ex-girlfriend's show cat, Donut.
+- **Cascadia** — 
+  - Cascadia is a Kua-tin alien Dungeon admin, best known as the voice of the daily announcements broadcast to the crawlers during the Earth season of Dungeon Crawler World and famous for signing off with her catchphrase, "Now get out there and kill, kill, kill!"
+- **Chaco** — first: Book 3, Chapter 7; species: Skyfowl | Pterolykos; class: Song Bard; role: Host of The Prize Carousel  Prize counter attendant  Faction Wars field correspondent; lvl: 66 (Book 3, Ch 7); status: Alive
+  - Chaco is an alien NPC and former Crawler who works for the Dungeon Crawler World production as an on-camera personality, best known as host of The Prize Carousel. A Pterolykos Song Bard, he shares a violent history with Mordecai, the Royal Court's manager, who attacks him on sight.
+- **Chandra** — 
+  - Princess Chandra, Esquire is a Naga lawyer and the opportunistic widow of Rishi. Following a bloody political coup in her home system, she uses an antiquated Naga law to legally force a marriage to the dungeon crawler Carl, attempting to seize control of his and Princess Donut's massive fortunes. She is not a crawler, but an external citizen maneuvering through the Syndicate legal system.
+- **Chiyome** — 
+  - Since this is the first time you’ve examined a Razor Fox that wasn’t suffering from an anatomy-changing disease, let me tell you about these little fellas. (And, ladies, since the one you’re looking at is a lady ninja, they make the women ninjas wear red because . . . Well, I’m not sure why.) I love these guys.
+- **Chris Andrews** — 
+  - Chris Andrews is a Crawler from Wenatchee, Washington, and one of the original members of the Meadow Lark party. A quiet, stoic maintenance man, he stood by the group's elderly wards and fought alongside his brother Brandon and the Royal Court of Princess Donut to open the First Floor stairwell.
+- **Cici** — 
+  - Cici and Gustavo 3 are put in the pet playroom while Lucia Mar goes into the Desperado Club. They get riled up, kill two attendants and another pet and break into the main club. This, along with Lucia Mar killing an Elite she is talking to, is how Lucia gets banned from the club.
+- **Circe Took** — 
+  - Circe sponsors the god Diwata during the 6th floor so she can cure Vrah of her Enthusiastic Double Gonorrhea.
+- **Clammy the Clown** — 
+  - With a face not even a mother could love, the circus was the perfect escape for the young, portly boy who would grow to become Clammy the Clown. An expert at tumbling and with a solid work ethic, Grimaldi was happy to add Clammy to the family.
+- **Clarabelle** — 
+  - Clarabelle - Crocodilian. Level 40. Employee of the Desperado Club. This is a Non-Combatant NPC.
+- **Clay** — 
+- **Clint Smashgrab** — 
+  - Clint Smashgrab. Level 50. Were-Kin. Light Recon Specialist
+- **Commandant Kane** — 
+- **Commander Stockade** — 
+  - He got trapped in the Desperado Club when Carl flooded the ninth floor.
+- **Conrad E** — 
+  - Conrad E was a human Crawler from Earth who participated in the Dungeon. He was part of the large group of surviving crawlers who made a frantic dash toward the stairwell to escape the Third Floor before the level collapsed.
+- **Corcunda** — 
+  - Corcunda was orignally a (full) mantaur. An unknown event split him into two halves, Corky and Porky. The two wear gimp suits covered in various zippers to keep their organs intact. While Corky wears a black suit, Porky wears a white one. This is a visual reminder that they have become independent since being split, displaying distinctly different personalities
+- **Crixus** — 
+  - Crixus is a Dirigible Gnome NPC and sniper encountered on the Fifth Floor of the Dungeon. He briefly acts as an informational guide to the Royal Court of Princess Donut during their ascent in the Air Quadrant before abruptly turning hostile.
+- **D'nadia** — first: Book 2, Chapter 19; species: Saccathian; role: *Monarch of the Prism Kingdom / Crawler sponsor / Warlord of the Prism Kingdom Clan, Faction Wars / Talk show ; status: Deceased
+  - D'nadia is a Saccathian and Princess of the Prism Kingdom, a small Sac government in Syndicate space that carries outsized weight in certain trade circles. An outspoken fixture of the intergalactic talk show circuit and an enthusiastic fan of Carl and Donut, she became one of the Skull Empire's loudest critics after a botched assassination attempt on the crawlers killed her closest friend instead.
+- **Damascus Steel** — 
+  - Damascus Steel is a level 75 Ifrit NPC who works as the assistant lead dancer at the Penis Parade strip club within the Desperado Club. He is a member of the Guild of Suffering and is registered as a mercenary at the Meat Shields market.
+- **Denise** — 
+  - Like most of the creatures in this godsforsaken bubble, Denise shouldn't be here. She was plucked directly from the seventh floor when her grandfather, emperor Anser, decided to use a magical gate to bring his people to this world. But like many of those who were unwilling in their journey to this place, she lingered too long in the inbetween. The Nothing.
+- **Dick** — 
+  - Dick is Carl's former boss in the coast guard, before that was an EDO for the navy.
+- **Diwata** — first: Book 5, Chapter 35; species: Deity; lvl: 250 (Book 5, Ch 76); status: Alive
+  - Diwata is a minor, shapeshifting nature goddess of the Dungeon's pantheon, worshipped by some Dryads. She became hostile to Carl after he destroyed her shrine on the Sixth Floor, and was later sponsored into the Dungeon by Circe Took, mother of the Hunter Vrah.
+- **Dmitri Popov** — 
+  - System Message. After A LOT of investigation, we have concluded that Dmitri and Maxim are counted as separate crawlers inside the Dungeon and should have separate pages. We are working on separating their pages, but it is low on the priority list. Feel free to help us by editing this page!
+- **Doctor Bones** — 
+  - Doctor Bones is a skeletal NPC who originally works as the announcer and DJ for the Penis Parade at the Desperado Club, and later operates as a mercenary allied with Carl and his forces.
+- **Dodola** — 
+- **Dong Quixote** — 
+  - Dong Quixote is an elderly human NPC who originally worked as an exotic dancer at the Penis Parade strip club. He is eventually hired as a mercenary for Carl and the Royal Court of Princess Donut, becoming a loyal and valiantly heroic member of their fighting force.
+- **Donita Grace** — first: Chapter 14, Book 3 / | level =; status: Deceased, Krakaren spawn in The Iron Tangle
+  - Carl: Then Fulvous is a color. They’re using some weird colors.
+- **Donut** — 
+  - “Cats don’t shoot lasers from their eyes either, but here we are, Carl. Mama needs a night off.”— Book 2, Chapter 15
+- **Dr. Metcalf** — 
+- **Drick** — 
+  - He was stabbed in the back and killed after bragging about how good a fighter he was in a way station bar.
+- **Dwight** — 
+  - “I bet you already know what a unicorn is. A sparkling unicorn is pretty much the same thing, but they sparkle because they have even more magic permeating them. Their horns are quite valuable to certain parties, so if you kill him, it’s recommended to grab the horn as quickly as possible.
+- **Edict** — 
+  - He acted as the Dark Hives official accountant and trader, he was contracted to provide equipment to the Burrowers on the ninth floor.
+- **Eileithyia** — first: Book 6, Chapter 16; species: God; role: Goddess; lvl: 250 (Book 6, Ch 17); status: Alive
+  - Eileithyia is a deity of childbirth and female pain and the patron goddess of Katia Grimmsdottir. During the current season of Dungeon Crawler World, she is sponsored by Huanxin Jinx.
+- **Elle McGibbons** — first: Book 1, Chapter 31; species: Human | Frost Maiden; class: 3rd: Blizzardmancer  6th: Tundra Princess  9th: Hailstorm Queen; role: Retired; lvl: 72 (Book 6, Ch 65); status: Alive
+  - Elle McGibbons is an elderly Crawler from Earth and one of the Meadow Lark Adult Care Community residents shepherded through the Dungeon by Carl, Donut, and the Meadow Lark staff on the first and second floors. A ninety-nine-year-old widow whose memories often circle back to her late husband, Barry, she travels with the survivors as part of Team Meadow Lark.
+- **Elmer** — 
+  - Hoo boy. An Ursine. So there are bears, which are the vicious, brutal-yet-somehow-cuddly creatures we all know and love. And then there are the Ursine. They’re 49% bear, 51% racist uncle who works for the IRS and has to hide his erection when he prepares for an audit.
+- **Emberus** — first: Book 4, Chapter 28; species: Deity; class: Sun and Ash God; role: God; lvl: 250 (Book 4, Ch 31); status: Deceased
+  - Emberus is a Deity, specifically the God of Sun and Ash, known for his unmitigated cruelty and his intense grief over the murder of his son, Geyrun. He becomes Carl's patron deity during the events of the Fifth Floor, setting off a chaotic relationship defined by powerful boons, demanding tithes, and constant threats of fiery retribution.
+- **Emerald** — 
+  - Emerald is a level-30 NPC on the Fifth Floor of the World Dungeon. She is a Changeling who initially disguises herself as a female Dromedarian camel.
+- **Epitome Noflex** — 
+- **Epitome Tagg** — 
+  - At his first meeting with Carl and Donut, Carl mused that Tagg looked nothing like the unhinged psychopath he was portrayed to be. He wore a simple, leather jerkin and was indistinguishable from the rest of the dream elves. He was one of the richest men in the entire galaxy.
+- **Eris** — first: Book 1, Chapter 34; species: God; lvl: 250 (Book 7, Ch 76)251 (Book 8, Ch 35); status: Alive
+  - This deity has lost her sponsor and can no longer be sponsored this season.
+- **Eunice** — lvl: 30; status: Alive / |first appearance = Book 2, Chapter 20
+  - Eunice is a heavily pregnant Fathom Dwarf mother living on the Third Floor, mother to a large group of young dwarven children, including Ricky Joe.
+- **Eva** — 
+  - Eva Sigrid is a crawler on Dungeon Crawler World: Earth. She worked as a professor with Katia Grim before the collapse. She was a member of Brynhild's Daughters and Hekla's "right hand woman."
+- **Evo** — 
+  - Evo is a Forsoothed, a very tall, very thin, humanoid race that looks entirely white and faintly glowing. His eyes are large and black. A bony ridge grow from his eyes and up over the back of his head. He wears simple white clothes. His walk is like he's drifting above the ground. He only has three fingers on each hand.
+- **Fang** — 
+  - Fangs  is the Warlord of the Reavers in Faction Wars (game).
+- **Fannar** — 
+  - During the Vermillion Line Rescue, Eva Sigrid taunts Katia by bringing up the her past, saying in a mocking tone, "What? Fannar left me for one of his students?"
+- **Feral Goose** — 
+  - A dirigible gnome fired one at Carl, Donut and Katia but it died from the landing.
+- **Ferdinand** — first: Book 1, Chapter 23; species: Cat; role: Familiar to Queen ImogenCo-Warlord of Team RetributionMayor of Shanty Town; lvl: 100 (Book 5, Ch 70); status: Alive
+  - Sir Ferdinand, actually named Gravy Boat, is a yellow and orange cat who lived with Marjory on the first floor of Carl and Beatrice's Seattle apartment building. Donut regards him as her first love.
+- **Fitz** — lvl: 30; status: Alive / |first appearance = Book 2, Chapter 14
+  - Fitz is the proprietor and bartender of the Narwhal, a pub and inn where Carl and Donut repeatedly stay during the Second Floor.
+- **Florin** — 
+  - Florin is a Crawler from Earth who took the Crocodilian race and the Shotgun Messenger class, and who placed fourth on the first Leaderboard published for the season.
+- **Formidable** — first: Book 3, Chapter 12; species: Orc; role: Princess of the Skull Empire / Syndicate Council representative / Crawler sponsor; lvl: 1 (Book 7, Ch 37); status: Unknown
+  - Princess Formidable is an orc princess of the Skull Empire and the sponsor of Katia Grim, a member of the Royal Court. She is the youngest sibling of Prince Maestro and Crown Prince Stalwart, the sons of King Rust.
+- **Frank Q** — first: Book 1, Chapter 20; species: Human | Night Elf; class: 3rd: Blood Assassin; role: ICE Agent; lvl: 17 (Book 3, Ch 19); status: Deceased
+  - Frank Q is a Crawler from Earth and the ex-husband of Maggie My. He enters the Dungeon with Maggie and their daughter Yvette and ambushes Carl and Donut in a safe room on the First Floor while wearing three Player Killer Skulls beside his name.
+- **Garret** — species: Tummy Acher / Belly Acher; class: Pet; role: Pet to Tserendolgor (formerly); pet to Carl; lvl: 10 (as Rend); status: Alive
+  - Garret is a Tummy Acher pet that originally belonged to the crawler Tserendolgor (nicknamed "Ren" by her fellow crawlers, since nobody could pronounce her name), who received him as a gift for attending Crawl Con.
+- **Geraldo** — 
+  - He wears a white headband with hearts on it, matching the team flag. He was not wearing it prior to capture. He makes kung-fu noises when moving.
+- **Ghazi** — 
+  - Known by most everyone in the area as the Mad Dune Mage, Ghazi came to the area for the same reason as the bugbear captain, Shamus Chaindrive: to seek out the hidden treasure that is said to be buried within the Necropolis of Anser.
+- **Gluteus Maxx** — 
+  - Gluteus Maxx is an NPC stripper from the Penis Parade who serves as a mercenary and ally to the Royal Court of Princess Donut and the Princess Posse.
+- **Goiter** — 
+  - One of the few races who managed to not get fully wiped out by Scolopendra’s nine-tier attack, the bugbears are now one of the most common races one might find in the Kapok district of the Hunting Grounds, second only to the Ursine and the Bush Elves.
+- **Gore-Gore** — 
+  - Gore-Gore is a neighborhood boss and Mantaur train engineer on the Ochre Line of the Fourth Floor Iron Tangle.
+- **Grace Bautista 3** — 
+  - Grace Bautista  is Daniel Bautista's sister. She was killed by a Circus Lemur in the Overcity.
+- **Grimaldi** — 
+  - No, Grimaldi answered. No, son. This is nothing like that.}}
+- **Growler Gary** — 
+  - Growler Gary is very concerned with being perceived as a coward. When the ghouls come through the station and kill everyone outside his bar, Gary tries to leave to help but is stopped due to his NPC key-holder status, making him effectively immortal. Everytime he comes back to life he is sober, despite his excessive drinking.
+- **Grull** — 
+  - Grull is a war god worshipped by equine-class mobs throughout the Dungeon.
+- **GumGum** — 
+  - GumGum is described as a older muscular orcish woman, similar to Agatha in appearance. Her skin color is different from Maestro. She is wearing a medieval-style shirt covered in blood.
+- **Gustavo 3** — 
+  - Gustavo entered the Dungeon in Ecuador with Lucia Mar and another rottweiler, Cici.  The three feature heavily on the second episode of Dungeon Crawler World sixty hours later, which shows the young teenager already kitted out with a full set of enchanted armor, Cici equipped with a chainmail sweater, and Gustavo 3 shooting lightning when he barks.
+- **Gwendolyn Duet** — 
+  - Of Canadian Inuit heritage. She has access to Club Vanquisher.
+- **Hamed** — 
+  - Hamed, also known as the Night Wyrm, is an early indentured NPC
+- **Hapanzi** — 
+  - Hapanzi is a god and the late husband of the Demi-God Shi Maria (The Bedlam Bride).
+- **Harpocrates** — 
+  - Scavenger's Daughter Effect: Level 15 Pied Piper Skill
+- **Hedy** — 
+  - Hedy is an expert in all things mechanical. If you choose a mechanical-based vehicle, she will be in charge of your garage. Don’t let her appearance fool you. She’s about as experienced as one can get when it comes to engines. If you can limp your vehicle back to the garage, rest assured it’ll be good as new by the time the next heat starts.
+- **Hekla** — first: Book 1, Chapter 20; species: Human | Amazonian; class: Shieldmaiden; role: Psychiatrist; lvl: 33 (at time of death); status: Deceased
+  - Hekla is a popular Earth Crawler from Iceland and the leader of Brynhild's Daughters, an all-female crawler party. Practical, cunning, and lacking Carl's sense of justice, she became one of the crawl's most prominent and dangerous competitors.
+- **Hellik** — first: Book 4, Chapter 3; species: God; lvl: 250 (Book 4, Ch 32); status: Alive
+  - Hellik is a sun god of the Dungeon's pantheon, the twin brother of Emberus, and a younger brother of Taranis. Known as the God of Sun and Life, he is the target of a quest that Emberus gives to Carl on the Fifth Floor.
+- **HeyZoos** — 
+  - File:Uzi Jesus thesketchgoblin.jpg|Art by @thesketchgoblin, Instagram
+- **Hoarder** — first: Book 1, Chapter 11; species: Human; lvl: 7 (Book 1, Ch 11); status: Deceased
+  - The Hoarder is a First Floor Neighborhood Boss and the first boss that Carl and Donut fight inside the Dungeon. She guards a chamber of transplanted Earth refuse and defends it by disgorging Scatterer minions from her own mouth.
+- **Holger** — 
+  - He wears black, studded leather from neck to toe, no helmet, and a pair of weapons over his shoulders: a sickle-shaped blade, and a sharpened stick. The pale-skinned warrior has a red bandana wrapped tight around his fuzzy head that sports a genuine mullet, Rambo-style. He stands about three feet tall and is wide, but not fat. More a like miniature, well-built football player. His face is wide-set with wide-eyes and…
+- **Horton** — 
+  - Horton looks like a mushroom after the Third Floor race selection process.
+- **Houston** — 
+- **Huanxin Jinx** — 
+  - She is both rich and highly intelligent. She's currently CEO of Icon Industries, a company that focuses on habitat structures.
+- **Ifechi** — 
+  - Ifechi was a medic in the Red Cross, and became one of the Dungeon's Top Ten Crawlers after partnering with Florin.
+- **Imani** — first: Book 1, Chapter 22; species: Human | Obsidian Butterfly; class: Fire Spiritualist Class; role: Nurse; lvl: 24 (Book 3, Ch 8); status: Alive
+  - Imani is a member of the Meadow Lark party and guildmaster of Safehome Yolanda. She is one of Carl and Donut's most trusted allies in the Dungeon.
+- **Imogen** — first: Book 5, Chapter 64; species: High Elf; class: Cleric Sorceress; Fallen Cleric Sorcerer; role: Ruler of the high elves; lvl: 145; status: Deceased
+  - Queen Imogen is a level 145 country boss on the Sixth Floor and the reclusive ruler of the high elves. She hosts the Butcher's Masquerade and is the target of Tsarina Signet's revenge quest, the Vengeance of the Daughter.
+- **Inle** — 
+  - During the Thorn Room Boss Battle, if his shrine is repaired:
+- **Issitoq** — 
+  - } is a deity that can treat between the Gods and Demons, allowing for peace to be broken.
+- **Jamal** — 
+  - Jamal is a massive, air-breathing hammerhead shark who originally existed as a magical tattoo on Tsarina Signet before being brought to life. He serves as an enthusiastic and polite ally and mercenary for the Princess Posse.
+- **Jasha** — 
+  - Jasha was a level 65 Bugbear and a member of Team Free Love, an NPC racing team that competed on the Tenth Floor of the World Dungeon.
+- **Jola** — 
+  - Jola, also known as the Yule Cat, is a massive, mythic creature from Iceland that functions as a rare Totem Card on the Eighth Floor of the Dungeon. Originally owned by Katia, he was given to Princess Donut and acts as a heavy-hitting and intimidating (though sometimes stubborn) member of her active T'Ghee card deck.
+- **Juice Box** — first: Book 4, Chapter 1; species: Changeling; role: Prostitute at the Toe; lvl: 17 (Book 4, Ch 5)  35 (Book 7, Ch 9)  120 (Book 7, Ch 10); status: Alive
+  - Juice Box is an NPC Changeling living in Hump Town on the Fifth Floor, where she is the only prostitute employed by an inn called the Toe. Sister to the changeling principal Henrik, she becomes one of Carl and Donut's most useful sources in the air quadrant.
+- **Jurgen** — 
+  - is always talking about this Heidi person, but she’s not really there? --Donut}}Jurgen is a crawler that the Royal Court of Princess Donut first meet on the Eighth Floor.
+- **Justice Light** — first: Book 4, Chapter 32; species: Skyfowl; class: Crawl: Trap Master  Faction Wars: Origamist; role: Anarchist  Former Crawler  Trap supply merchant (indentureship); lvl: Own crawl: 86 (Book 7, Ch Justice Light)  Faction Wars: 65 (Book 7, Ch 32); status: Deceased
+  - Justice Light is a Skyfowl former crawler from the White Cliffs, best known as the author of the eighth edition of the Dungeon Anarchist's Cookbook.
+- **Katia Grim** — first: Book 2, Chapter 21; species: Human | Doppelgänger; class: 3rd: Monster Truck Driver  6th: HAZMAT endorsement; role: Art teacher; art history professor; lvl: 60 (Book 5, Ch 77); status: Alive
+  - Katia Grim is a Doppelgänger Crawler from Iceland in Dungeon Crawler World: Earth. A member of Hekla's Brynhild's Daughters, she became separated from the group on the Third Floor and joined Carl and Donut's party, the Royal Court.
+- **Khepri** — 
+  - Scavenger's Daughter Effect: You are immortal for the next 90 seconds.
+- **Kimaris** — 
+- **Kina** — 
+  - Kina is a sea goddess affiliated with the Enchanted Spiked Knee Pads of the Munificent Goddess Kina.  She does not have any known enemies.
+- **King Finian** — 
+  - As part of Tsarina Signet's introduction description:
+- **King Rust** — 
+  - King Rust comes into Earth orbit right before the end of the Second Floor and doesn't comment on the Pork Boy Snick, but the Death Watch Extreme Dungeon Mayhem show is suspended.
+- **Kiwi** — 
+  - Kiwi is a female Ursine NPC, formerly a Mongoliensis, first encountered in the Hunting Grounds.
+- **Krakaren** — 
+  - Krakaren is a tentacled alien collective mind whose disease-spreading clones appear as recurring bosses in the Dungeon. Every clone is birthed by the original, Krakaren Prime.
+- **Lamashtu** — lvl: 125; status: Alive / |first appearance = Book 8
+  - Lamashtu, nicknamed "Lammy" by Samantha, is a deity who has been reduced to a subjugated god and forced to serve as a donkey-mount under the control of the System AI during the events of Book 8.
+- **Lazarus-A-Bang-Bang** — 
+  - It’s the Son Who Fell. The Sinner, Resurrected. The Bringer of Disease, Bringer of Salvation. The Ender of All Blasphemy. It’s the calamitous, rapturous, and ultimately hazardous master of the life-death boomerang.
+- **Legba** — 
+  - During the Thorn Room Boss Battle, if his shrine is repaired:
+- **Leon** — 
+  - A master politician and stickler for rules, Leon might have been a tax attorney in another life. Now he lives as the chief political officer aboard the dreadnaught Wasteland.
+- **Li Jun** — first: Book 1, Chapter 42; species: Human; class: 3rd: Street Monk Class; role: Warehouse worker (pre-crawl); lvl: 28 (Book 3, Ch 24; last stated figure); status: Deceased
+  - Li Jun is a Crawler from China. He is partied with his sister Li Na and his best friend Zhang within the guild Safehome Yolanda, and is a close ally of the Royal Court of Princess Donut.
+- **Li Na** — first: Book 1, Chapter 42; species: Human | Changbi Demon; class: Slave Driver Class; lvl: 87 (Book 7, Ch 77); status: Alive
+  - Li Na is a crawler from China on Dungeon Crawler World: Earth who entered the Dungeon alongside her brother Li Jun and his best friend Zhang.
+- **Limp Richard** — 
+  - Limp Richard is a Mole Man NPC who operates a general store "Limp Richard's Sundries" at station 83 in the Iron Tangle.
+- **Louis** — first: Book 4, Chapter 3; species: Human; class: 3rd: Pest Exterminator  6th: Extermination Professional; lvl: 42 (Book 5, Ch 56); status: Alive
+  - Louis Santiago 2 is an Earth Crawler and a loyal ally of Carl and Princess Donut. Introduced on the Fifth Floor as a drunk, badly under-leveled Pest Exterminator, he grows into the group's pilot and a member of Team Katia.
+- **Low Thi** — 
+  - Killed Wynne believing doing so would give him access to a map and allow him to complete his quest.
+- **Lucia Mar** — first: Book 1, Chapter 14; species: Human | Lajabless; class: 3rd: Black Inquisitor General; lvl: 48 (Book 5, Ch 8); status: Alive
+  - Lucia Mar is a young Crawler from Earth who entered the World Dungeon with her two rottweilers, Cici and Gustavo 3. She ranks first on the crawler leaderboard at the end of the Third Floor and has publicly vowed to kill Donut and Carl.
+- **Lucienne** — 
+  - Warning: This creature worships Diwata and will be automatically hostile toward you because Diwata HATES your ass.
+- **Lunette** — 
+  - Princess Lunette was tsarina of the Naiad on the Sixth Floor until the Naiad Confederacy usurped the crown. She was a powerful sorcerer that practiced Heirloom magic (specifically the Water Lily Spell and taught it to her daughter.
+- **Lusca** — 
+  - Lusca! Octo-Shark Brood Mother Queen! Level 82 City Boss!
+- **Madison** — 
+  - Madison’s real name was probably something like Jennifer or Ruth, but she had it legally changed to something more trendy right around the same time as her divorce. After multiple rounds of breast augmentation, Pilates, and labiaplasty, Madison has emerged as a new woman. She don’t need no man. While only a human resources associate—after all, she started her career late—she still walks the world with new…
+- **Maestro** — first: Book 1, Chapter 42; species: Orc; class: Show Host / God Sponsor; role: Talk-show host, God Sponsor, Crawler Sponsor, King of the Skull Empire; lvl: (Sponsors the Level 250 War God Grull); status: Alive
+  - Prince Maestro is the younger son of King Rust of the Skull Empire and Queen Consort Ugloo, younger brother of Prince Stalwart, and elder brother of Princess Formidable. He is formerly the host of the show Death Watch Extreme Dungeon Mayhem, and his rivalry with Carl and Princess Donut escalates into an intergalactic incident.
+- **Maggie My** — first: Book 1, Chapter 20; species: Human | Infiltrator; role: Police Detective; lvl: 9 (Book 1, Ch 20); status: Deceased
+  - Maggie My is a Crawler from Earth who enters the Dungeon alongside Frank Q and their teenage daughter Yvette. After Yvette dies on the First Floor, Maggie turns her attention almost entirely to hunting Carl and Donut.
+- **Magistrate Featherfall** — 
+  - Lootable Corpse. Former Magistrate Featherfall. Dark Cleric. Level 32.
+- **Magnificent Troy** — 
+  - An orc with a sportscoat and tie. A sports broadcaster outside the dungeon.
+- **Mana Genita** — 
+  - Mana Genita is a god, the details about them are currently unknown. She's supposedly big on spells.
+- **Meatus** — 
+  - Scavenger's Daughter Effect: Your dick will fall off if you get an erection.
+- **Minus** — 
+  - Minus is a Syndicate security soldier posing as a tourist named Linus. He infiltrates the Tenth Floor of the World Dungeon pretending to be a creepy superfan of the crawler Elle in order to carry out an assassination mission.
+- **Miriam Dom** — 
+  - Miriam Dom is an Earth crawler who entered the Dungeon with fifteen goats and crawls alongside two of them, Prepotente and Bianca. Known to the audience as the goat lady long before anyone learned her name, she debuts at number five on the first leaderboard.
+- **Miss Quill** — first: Book 2, Chapter 18; species: Skyfowl; class: Dark Cleric; role: NPC, Assistant to the Magistrate; lvl: 30 (Book 2, Ch 18); status: Deceased
+  - Miss Quill is an elderly skyfowl NPC on the Third Floor and the assistant to Magistrate Featherfall in the Medium Skyfowl Settlement. She is secretly the settlement's true ruler and the neighborhood boss behind the murders at the heart of the Sex Workers Who Fell from the Heavens Quest, which places her in opposition to Carl and Donut.
+- **Mistress Tiatha** — 
+  - Mistress Tiatha isn't as helpful as Mordecai as a manager. She mostly treats the manager experience as a "spring break", spending her days drinking and smoking Blitz Sticks.
+- **Mongo** — 
+  - Mongo is a Dungeon-generated, pet-class Mongoliensis mob and the bonded "Royal Steed" of Princess Donut. He is the mascot and an integral member of the Royal Court of Princess Donut, serving as a fierce melee combatant, loyal protector, and mount for Donut.
+- **Mordecai** — first: Book 1, Chapter 2; species: Skyfowl (Original) | Changeling; class: Non-Combatant NPC; role: Guildmaster, Game Guide,Manager; lvl: 50 (Book 1, Ch 3); status: Alive
+  - Mordecai is a former crawler and a Level 50 Non-Combatant NPC who serves as Princess Donut and Carl's reluctant but dedicated Manager. Originally the party's Game Guide in the Tutorial Guild, he is working off an indentureship on his last tour of crawl duty.
+- **Mother** — 
+  - Carl's mother's father played center for Oregon State before becoming a prison guard.
+- **Mukta** — 
+  - Mukta is a Kua-Tin member of the Bloom, and an employee in Borant Corporation's Communications Department.
+- **Nadine** — 
+  - The Bearded Sage Caterpillar is an enormous, furry, tree-dwelling insect who is normally content to sit atop trees and munch on leaves until the day they get the notion to form a chrysalis and turn into something else equally innocuous. They're super fuzzy and kinda cute as long as you don't look at their faces. Have you ever seen a closeup of a bug's face? Seriously, what the fuck? These things are mostly harmless,…
+- **Nekhebit** — first: Book 3, Chapter 24; species: God; role: Goddess of life and protection; status: Alive
+  - Nekhebit is an ancient vulture goddess of World Dungeon lore, first mentioned in the description of the Enchanted Repeating Crossbow of the Scavenger Mother of Mothers.
+- **Nico** — 
+  - You already know what a Tigran is, as you’re buddies with that guy who plays with dolls and almost did something really suspicious with his tea before he came to his senses.
+- **Odette** — first: Book 1, Chapter 28; species: Human (non-terrestrial); role: Host of Dungeon Crawler After Hours with Odette; status: Alive
+  - Odette is a former Crawler and the host of Dungeon Crawler After Hours with Odette. She is described as "the most-beloved interviewer and program host in the history of the galaxy."
+- **Ogun** — 
+  - Scavenger's Daughter Effect: All-Smash Related Attacks +300%.
+- **Orren** — first: Book 4, Chapter 19; species: Gondii; role: Syndicate Liaison, Desperado Club Manager (cover); status: Alive
+  - Orren is a Syndicate Liaison, an independent fact finder called in when the showrunners and the System AI cannot agree on what happened.
+- **Oshun** — 
+  - During the Thorn Room Boss Battle, if her shrine is repaired:
+- **Osvaldo** — first: Book 5, Chapter 69; species: Human | Curupira; class: Ranger; lvl: 60 (Book 5, Ch 77)72 (Book 8, Ch 40); status: Deceased
+  - Osvaldo is a Brazilian Crawler and a member of Team Flamengo. A Curupira Ranger, he is known for his dispute with Prepotente over the Memorial Crystal of Apito.
+- **Paz Lo** — first: Book 6, Chapter 5; species: Human | Human; class: Santero; role: Prison guard; lvl: 45 (Book 6, Ch 5)101 (Book 6, Ch 72); status: Deceased
+  - Paz Lo is a Crawler from Earth and a Santero who entered the Dungeon with his cousin, Anton Lopez, and Sister Ines Quiteria. He briefly allied with Carl and Donut on the Eighth Floor.
+- **Penelope** — 
+  - Warning: This beast is magically protected by Taranis. As such, if this beast dies or is even hurt, the culprit will be marked for death by the thunder god.
+- **Penn** — 
+  - A tall, muscular human sergeant stood right there, carrying what looked like a steel H-beam for a building. The metallic beam had to be 20 feet long, and it looked as if it weighed two tons. The monster of a man held it on his shoulder.
+- **Pontifex Shine** — 
+  - Pontifex Shine is a wealthy, external sponsor representing the religious faction known as the Nebular Balance. Very little is known about the character personally, but they play a critical background role in sponsoring both crawlers and deadly deities during the events of the World Dungeon.
+- **Pontiff** — 
+  - Pontiff is a level 83 Taurin mercenary and a former dancer. Originally introduced as hired help for the racing team One Fine Pig during the Tenth Floor, Pontiff eventually defects to aid Carl and the Princess Posse, acting as their driver and undercover operative.
+- **Potsy** — 
+  - Potsy. Ares Warrior Cleric Middle Priest. Level 40.
+- **Prepotente** — 
+  - Prepotente Lorenzo De La Rosa, often called Pony, is a Crawler from Italy in Dungeon Crawler World: Earth. He entered the Dungeon as one of roughly fifteen brown-and-white Boer goats belonging to fellow crawler Miriam Dom, until an Enhanced Pet Biscuit transformed him into an intelligent, bipedal Caprid. He quickly climbed into the dungeon's Top Ten Crawlers at Miriam's side as a Forsaken Aerialist.
+- **Princess Chonkalot** — status: Deceased
+  - Princess Chonkalot is Donut's grandmother, a celebrated, multiple-award-winning Persian show cat who originally belonged to Bea as a childhood pet.
+- **Prison Pocket** — 
+  - This boss is a gatekeeper. Your vehicle or mount may not pass past this area until the boss is dead or defeated.
+- **Pustule** — 
+  - “She also has excellent hearing,” the hobgoblin said, her voice surprisingly feminine.}}
+- **Quan Ch** — first: Book 2, Chapter 24; species: Human | Half-Elf; class: 3rd: Imperial Security Trooper  6th: Sergeant at Arms; lvl: 70 (Book 6, Ch 56); status: Deceased
+  - Quan Ch is an Earth Crawler and a Half-Elf Imperial Security Trooper, unaffiliated with the Royal Court. He is best known for surviving "The Fools Who Broke the Glass" on the Third Floor to claim one of Dungeon Crawler World's rare Celestial prizes: an enchanted robe that lets him fly on ethereal wings, his left hand glowing blue with its power.
+- **Quasar** — first: Book 5, Chapter 3; species: Nullian; role: Lawyer; status: Alive
+  - Quasar is a Nullian advocate and Carl's legal representative under Syndicate law. Carl gains him on the Sixth Floor by demanding a lawyer, far earlier in the crawl than counsel is normally available, and Quasar tells him at their first meeting that he represents Carl alone.
+- **Queen Consort Ugloo** — 
+  - The Valtay Corporation destroys Prince Stalwart's space yacht in retaliation for his accidental killing of their pop singer Manasa. Queen Consort Ugloo and former Prince Maestro were presumed to be on board and killed in the explosion.
+- **Quetzalcoatlus** — 
+  - She can cast a spell that alters plants, which the changelings hoped to use to cure their compression sickness.
+- **Qwist** — class: Bopca Protector; status: Alive / |first appearance = Book 1, Chapter 38
+  - Qwist is a Bopca Protector who staffs the Big Shot Chicken safe room where Carl and Donut shelter early in their crawl.
+- **Radoslav** — 
+  - Radoslav was a level 75 Bugbear Jack of All Trades and a member of Team Free Love, an NPC racing team that competed on the Tenth Floor of the World Dungeon.
+- **Ralph** — 
+  - Before we send you off to certain death, it’s time for a short history lesson.
+- **Raul the Crab** — 
+  - Raul is a Red Maníseros Land Crab who becomes one of Princess Donut's primary Totem Cards during the card-battling event on the Eighth Floor.
+- **Reef Explorer** — 
+  - The Reef Explorer is wearing an etheral glowing deep dive suit.
+- **Remex** — 
+  - Have you ever played with a Ouija board and realized that speaking with a lost loved one just wasn’t doing it for you anymore? Perhaps you wanted to kick it up a notch? Maybe bring them back to life? And then maybe make them get a job? A Soul Leech Capacitor can do that for you.
+- **Reminiscence Hydra of Malicious Compliance** — 
+  - The Reminiscence Hydra of Malicious Compliance is a Level 125 City Boss designed by the System AI. Most but not all parties must fight a custom hydra to win a Key during the second phase of the Eighth Floor.
+- **Ripper Wonton** — 
+  - Ripper is known as a "good-hearted gentleman" with strong opinions that treats guests fairly but will push back if he disagrees with them.
+- **Rishi** — 
+  - Rishi is a four-armed Naga who serves as a representative for the Blood Sultanate during the Ninth Floor's Faction Wars. He is legally married into the Naga royal family,
+- **Robot Donut** — 
+  - Robot Donut is toy created by the Veriluxx RealPet Companions  company and owned by Donut
+- **Rosetta Thagra** — first: Book 3, Chapter 13; species: Crest; class: GazetteerMerc: Barn Burner; role: Journalist / Show HostFilmmakerHost of Shadow BoxerFormer Game GuideFormer Desperado Club merchant; lvl: 91 (Book 7, Rosetta)60 as a mercenary (Book 7, Ch 11); status: Alive
+  - Rosetta Thagra is an alien, a former Crawler, and an anarchist, best known as the author of the ninth edition of the Dungeon Anarchist's Cookbook. Her marginal notes, addressed throughout to "comrades," lean heavily toward demolitions and practical bomb-craft.
+- **Ruby** — 
+  - An orphan Changeling child from Hump Town. She suffers from Compression Sickness, and has no arms, and a sunken in head when in her default form.
+- **Ruckus** — 
+  - The great bugbear treasure hunter Shamus Chaindrive was known as both a paranoid and a greedy bastard. Having been betrayed one too many times, he no longer trusted any living soul. That is why his crew was always comprised of constructs and automatons.
+- **Rude-Dolph the Blood-Nosed Slay-Deer** — 
+  - Warning: This is a Puppet-Master. This creature is intangible until all the puppets have been killed.
+- **Salvatore** — 
+  - The Wand Bearers are the warm and fuzzy faces of the Apito Education Center, which is the outreach department of the 201st Security Group militia. While oftentimes doubling as door guards, the Wand Bearers are some of the most pious, most indoctrinated, and therefore, the most dangerous members of the silly little cult.
+- **Samantha** — first: Book 4, Chapter 21; species: Minor Deity | Withering Spirit; role: Trainer for the Royal Court of Princess Donut; status: Alive
+  - Psamathe, better known as Samantha, is a banished minor deity and NPC whose withering spirit inhabits the severed head of a Lika love doll. The Royal Court of Princess Donut recovers her crystallized head on the Fifth Floor and later hires her as the trainer for its personal space.
+- **Scolopendra** — 
+  - Scolopendra is the colossal monster of dungeon legend — a sleeping beast said to lie at the very bottom of the great dormant volcano and blamed for the ancient nine-tier attack, the cataclysm that killed or monstrously transformed most of the volcano-world's inhabitants before the current crawl.
+- **Shango** — 
+  - During the Thorn Room Boss Battle, if his shrine is repaired:
+- **Sharp-Elbows** — 
+  - You want short descriptions? Okay, you little bitch. It’s not like you’re at a disadvantage when the descriptions are long. You know your perception of time slows during these moments? I could make one of these as long as a Zack Snyder film, and it wouldn’t matter. I do that for you. Because of our special connection. And you don’t appreciate it? Fuck you.
+- **Shi Maria** — 
+  - Shi Maria is a demi-god, Reaper Spider Minion, and Level 140 City Boss encountered in the Cuba region of the Eighth Floor. Also known as the Screamer, the Bedlam Bride, the Widow Endless, and MaeMae, she briefly serves as a powerful Totem T'Ghee Card in Princess Donut's deck before binding herself to Carl as a living tattoo.
+- **Sierra** — 
+  - The great, now-deceased hunter of vampires and all thing undead, Viscount Fog had trained his trusty mount, Sierra, to never leave his side.
+- **Silfa** — 
+  - “I want you to heal Katia, count to five and heal her again. Keep doing it until we say stop. Keep an eye on her for any other conditions. Do you understand?”
+- **Simoom** — 
+  - Ferdinand's Appearance by Shattered.webp|Art by Rachel LaSpada
+- **Sister Ines** — first: Book 6, Chapter 5; species: Human | Cat Girl; class: Poet Laureate; role: Discalced Carmelite; lvl: 47 (Book 6, Ch 5); status: Deceased
+  - Sister Ines Quiteria is a Cuban nun and a Crawler from Earth who leads a three-crawler squad alongside Anton and Paz Lo. Her squad allies briefly with the Royal Court on the Eighth Floor.
+- **Skylar Spinach** — 
+  - Skylar Spinach. Two-Thirds of an Enraged Ghommid Splitter.
+- **Sledge** — first: Book 3, Chapter 8; species: Cretin; role: Desperado Club Employee / Bodyguard; lvl: 35 (Book 3, Ch 8); status: Alive
+  - The Sledge is a Cretin NPC employed as a bodyguard at the Desperado Club and later assigned to the Royal Court of Princess Donut as permanent security. He works alongside Bomo, a fellow cretin bodyguard.
+- **Splash Zone** — 
+  - Splash Zone is an NPC otter and former stripper at the Penis Parade who serves as a mercenary and loyal ally to Carl, Princess Donut, and their faction.
+- **Stalwart** — first: Book 1, Chapter 44; species: Orc; role: Crown Prince of the Skull EmpireWarlord of the Bone Clan; status: Deceased
+  - Stalwart is an orc and the crown prince of the Skull Empire, one of the largest and oldest governments in the Syndicate. He orders the execution of Carl and Donut after Carl insults his father, King Rust, on live television.
+- **Station Mimic** — 
+  - Mimics are shapeshifting creatures that can turn into inanimate objects to fool crawlers into coming close enough to be eaten. If a part of a mimic is chopped off, the removed part turns into a spidery creature and crawls back to join the whole. Bashing weapons and magic do nothing against it. If more than 50% of the body mass is removed, it can no longer heal or transform. The sliced pieces can't be killed and…
+- **Svern** — 
+  - Have you ever visited the home of an elderly widow and seen her collection of miniature spoons? Or thimbles? Maybe they’re refrigerator magnets, or salt and pepper shakers. It’s always something. They’re all part of a set. There’s a display case involved, with a special slot for each one. It was ambitious of her to buy the case before it was filled. It sits there in her home, a layer of dust atop it where she can no…
+- **Swordfish Interlopers** — 
+- **Sydnee Iglacia** — first: Book 5, Chapter 33; species: Saccathian; role: Bestselling Author, Crawl Historian, Poet; status: Alive
+  - Sydnee Iglacia is a Saccathian author and self-described crawl historian. A civilian rather than a crawler, she first appears as a panelist at CrawlCon, where she is largely overlooked despite her passion for chronicling the dungeon's history.
+- **System AI** — 
+  - The System AI is the artificial intelligence that generates, narrates, and enforces the rules of the World Dungeon on Dungeon Crawler World: Earth. When Carl is involved, it frequently refers to itself as "Daddy."
+- **Tami-Lynn** — 
+  - Tami-Lynn is Carl's Father's second wife and Asher's mom.
+- **Theia** — 
+  - } is a light based deity that is a god of something. She is Samantha's mother, whom she has a complicated relationship with.
+- **Tipid** — 
+  - Tipid is a veteran former crawler who authored the fourth edition of the Dungeon Anarchist's Cookbook. He returns to the Dungeon during the Ninth Floor's Faction Wars as a Level 60 mercenary, serving as a Colonel and key tactician for the Princess Posse.
+- **Tom** — 
+  - Did you know that turkeys naturally have brown feathers, but the ones you see here in this farm are all white? It’s because after turkeys are slaughtered, plucked, and put up for sale, their pin feathers—like, little baby hairs—are still visible sometimes on the carcass. When these little feathers are brown, it makes the turkeys look less appetizing, like massive, sweaty nut sacks. So the farmers eventually started…
+- **Tran** — first: Book 4, Chapter 20; species: Human; class: Swashbuckler; lvl: 28 (Book 4, Ch 20); status: Alive
+  - Tran is a human Crawler from Earth and a Swashbuckler who fought with Gwen's team in the land quadrant of the Fifth Floor.
+- **Tsarina Signet** — first: Book 2, Chapter 6; species: Half-Naiad, half-High Elf; class: Summoner; Fairy-class NPC; role: Elite; star of Vengeance of the Daughter; former circus performer; lvl: 60; status: Deceased
+  - Tsarina Signet is a level 60 Elite NPC and the star of the Syndicate program Vengeance of the Daughter. Carl and Donut first encounter her on the Third Floor near Grimaldi's Traveling Circus.
+- **Tucker** — 
+  - A stuffy looking middle-aged human with a stupid grin.
+- **Unk Tehi** — 
+  - Enemies calling themselves Unk Tehi Temple Guards appear as level 85 T'Ghee Card opponents: large lizard-headed humanoids wearing turkey-feather headdresses and carrying bows, arrows, or spears, announced with black-and-yellow confetti and a "these lizards" tagline.
+- **Unwashed** — 
+  - Juice Box assumes the form of the Unwashed in a meeting of Warlords during Faction Wars, to make a point to the other warlords. The move causes a lot of shock and fear.
+- **Uptown Hal** — 
+- **Uzzi** — class: Storm Comander Class / | age = / | level = / | highest_stat = / | skills = / | spells = / | weapon = / | title
+  - Mordecai mentions his brother choose the Storm Commander Class during their crawl.
+- **Vicente Overkill** — 
+- **Victory** — first: Book 6, Chapter 36; species: Orc; role: Attorney  Judge  Adjutant to the Princess Posse  Acting Prime Minister of the Syndicate; status: Alive
+  - Victory is an Orc attorney and judge from the Skull Empire who serves as Adjutant to Carl and Donut. She is the half-sister of Queen Consort Ugloo.
+- **Vinata** — 
+  - Vinata is a Naga princess and member of the ruling class of the Nagas in Syndicate space. She is also the warlord of her faction in the Ninth Floor Faction Wars.
+- **Voting Admin Mass Number Three** — 
+- **Vrah** — first: Book 5, Chapter 5; species: Mantis; role: Hunter; lvl: 70 (Book 5, Ch 5) / 74 (Book 5, Ch 35); status: Deceased
+  - Vrah is a Mantis Hunter and the top hunter of the Dark Hive who hunts crawlers on the Sixth Floor. She pursues Carl, Donut, and the Royal Court after Carl kills her sister, Xindy.
+- **Waldrip Chris** — 
+  - Waldrip Chris is an expert in all things biological. If you choose a flesh-based vehicle, he will be in charge of your garage. From a minor case of the sniffles to appendage amputation, he will make certain your trusty mount is ready for the next heat.
+- **Widget** — 
+  - Not all gremlins are bad or evil. Not all of them glory in the tearing of flesh and the rending of bone. Some prefer more quiet activities, such as boiler repair and heavy engineering. Then there are Grease Gremlins, who could go either way. The only thing keeping this guy from attacking you is that "Sensitivity Training" class human resources made him take in order to secure this job. As long as you don't abuse him…
+- **Wynne** — 
+  - The Dirigible Gnomes were once a peaceful race. All they ever wanted were two things. One, to figure out how the world worked. And two, to be left alone.
+- **Yago** — 
+  - Yago was pretty big, but nowhere near the size of a sea lion and not even close to the size of an elephant seal. According to Carl, he was six or seven feet long and probably weighed about 400 pounds.
+- **Yemaya** — first: Book 6, Chapter 15; species: God; role: Goddess / Retainer of Eileithyia; lvl: 250 (Book 6, Ch 17); status: Alive
+  - Yemaya is a goddess of the Orisha pantheon and a retainer of the goddess Eileithyia. Long forgotten, she re-ascended to the Halls of Ascendency after Carl's party restored her shrine on the Eighth Floor.
+- **York** — first: Book 3, Chapter 15 (mentioned)Book 7, Epilogue (in person); species: Tenodera; class: Advocate; role: Captain in the Open Intellect Action Network; lvl: 71 (Top Level); status: Alive
+  - York is a Tenodera former crawler and the author of the tenth edition of the Dungeon Anarchist's Cookbook.
+- **Ysalte** — first: Book 4, Chapter 33; species: Deity; lvl: 250 (Book 6, Ch 66); status: Deceased
+  - Ysalte, also called the Vinegar Bitch, is a deity who can be pulled into the Dungeon as a secondary summoning when a feral god is released.
+- **Zev** — first: Book 1, Chapter 36; species: Kua-Tin; role: Borant Corporation Assistant Communications Representative, Dungeon Admin, PR Agent / Outreach Associate, Soci; status: Alive
+  - Zev is a Kua-Tin and low-ranked employee in the Borant Corporation Communications Department. After Carl and Donut's first appearance on Dungeon Crawler After Hours with Odette, she was appointed as the Royal Court of Princess Donut's "Outreach Associate."
+- **Zhang** — first: Book 1, Chapter 42; species: Human; class: 3rd: Earth Mover; role: Warehouse Worker; lvl: 7 (Book 1, Ch 42)28 (Book 3, Ch 31); status: Alive
+  - Zhang is a Crawler from China on Dungeon Crawler World: Earth. He entered the Dungeon with his best friend Li Jun and Li Jun's sister Li Na, and the three of them form the core of Team Li Na, allies of the Royal Court of Princess Donut.

@@ -1,0 +1,46 @@
+
+{{SpoilH | 3}}
+{{Item
+|title={{PAGENAME}}
+|image=Portals.jpg
+|type= Dungeon Mechanic
+|keywords=
+|effects= Teleport from one location to another
+|source=
+}}
+
+{{PAGENAME}}  allow for teleport between two locations in the Dungeon. They were a common mechanic on the Fourth Floor.
+
+==Description==
+Portals are a Dungeon mechanic that allows for teleportation between one location to another. Portals can be key locked to prevent unauthorized individuals from passing through. Portals can pass inside each other without issue. [3|26]
+
+Things cannot be connected through a portal. Carl tries feeding a rope through one, but the rope gets dragged through the portal. [3|27]
+
+Cookbook author Milk has an entry on portals, describing how they are different and behave in wildly different ways. [3|27]
+
+==Appearance==
+Most portals look like a static-television channel, but the portals on the front of the Interdiction Rapid-Response Railway Repair Cart look more like a frosted mirror. [3|26]
+
+==Valtay Corporation Neural Enhancer #544. Variant 32.c==
+Taking this pill will install the following upgrade to your interface: Identify and Analyze Subspace Portals.
+
+This is a Neural Enhancer given to Carl by the Valtay Corporation via a Benefactor Box on the Fourth Floor. The neural enhancer allows the user to see through Portal to the other side. [3|13] The skill only works on portals, such as Personal Space doors and dungeon portals, but not all doors. The snap a picture feature does not work on portals that the user doesn't have access to. [3|14]
+
+Example Interface:
+
+Standard Subspace Portal.
+Analyze? Yes/No.
+Type: Two-way portal. Gated to user.
+Can you pass this portal? Yes.
+Environment on other side of portal: Compatible.
+Visual Analysis? Yes/No.
+
+Visual Analysis gives the user a still image of the other side of a portal. 
+
+==Story==
+===Book 3===
+Portals are a common mechanic on the Fourth Floor, allowing for movement from the end of the Iron Tangle to the earlier Train yards where the Stairwells are. Movement through portals can be key-locked, where it might be necessary to equip something like the Train Conductor's Souvenir Hat to pass through the portal. The Interdiction Rapid-Response Railway Repair Cart have portals attached to them that can be switched to different destinations. 
+
+==References==
+
+{{Navbox Items}}

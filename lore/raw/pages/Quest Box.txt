@@ -1,0 +1,89 @@
+{{Item
+|title=
+|image=
+|imagecaption=
+|type=Loot Box
+|keywords=
+|effects=
+* Pays out gold and one or more items scaled to the box's tier[2|13]
+* Tier can be raised before delivery by certain achievements[2|13][2|Epilogue]
+|source=
+* Completing a Quest[2|4]
+* Surviving a group quest, which pays every qualifying participant[2|24]
+* Quest-related achievements, such as the CockBlock Achievement[2|22]
+|buy=
+|sell=
+}}
+
+{{Quote|Silver? The last quest was a gold box.|Donut[2|14]}}
+
+A Quest Box is a type of Loot Box awarded to crawlers for completing a Quest or for quest-related achievements.
+
+==Description==
+Quest boxes arrived with the Quests tab of the crawler interface, which unlocked for Carl and Donut on the Third Floor with their first quest.[2|4] The System AI generally determines a box's contents.[2|Epilogue]
+
+Tier tracks the difficulty of the quest rather than the crawler who completes it.[2|14] The tiers seen so far, in ascending order:
+* Silver: smaller local objectives, such as investigating a string of NPC deaths.[2|14]
+* Gold: larger floor quests involving elites and a city boss.[2|4]
+* Platinum: high-stakes and event quests; one held 5,000 gold coins plus two further items.[2|13]
+* Celestial: the top of the ladder, and costly enough that the award was contested in Syndicate court.[2|Epilogue]
+
+{{Spoiler|book=6|spoiler=A Legendary tier also exists, first promised for the Hell Comes to Crawler Town Quest on the Eighth Floor.[6|54]}}
+
+Group quests pay a box of the stated tier to every qualifying participant rather than splitting a single prize.[2|24] A promised box is not a guaranteed box: rulings can be appealed to a Syndicate court, and a host company may spend its single seasonal veto to reverse one, in which case nothing is delivered at all.[2|Epilogue]
+
+{{Spoiler|book=4|spoiler=Not every quest pays a box. A quest can be failed outright, as Carl's was when another crawler killed the NPC he had been tasked with freeing,[4|6] and a quest's stated reward may be nothing more than another quest.[4|30]}}
+
+{{Spoiler|book=5|spoiler=Finishing an objective before the System AI has formally issued the quest forfeits the box. Carl's reward for doing so was the Premature Questjaculation Achievement and nothing else.[5|28]}}
+
+==Operation==
+Quest boxes follow the standard rules for all loot boxes: a crawler may only open them inside a safe area, unopened boxes cannot be sold or transferred, and a queue opens all or nothing, single file, in ascending tier order.[1|5]
+
+Completing a quest in an unintended fashion can trigger an achievement that upgrades the box before it is handed over. The Hadji achievement raises a box one tier and can be awarded more than once.[2|13] The Bandit achievement, given to crawlers who profit from a quest without doing the work, raises it two tiers. Both were disabled by patch after they produced a mass Celestial payout.[2|Epilogue]
+
+==Story==
+The first quest Carl and Donut received, the Show Must Go On Quest, promised a Gold Quest Box.[2|4] Completing it in an unusual way triggered the Hadji Achievement for both of them, upgrading each box to Platinum.[2|13]
+
+The group quest Fools Who Broke the Glass Quest promised a Platinum Quest Box to every crawler who survived the wild magic explosion.[2|24] Survivors instead triggered the Bandit Achievement, double-upgrading the prize to Celestial for 83 crawlers. Quan Ch opened his before the Borant Corporation could act, and Borant's appeal was overruled by the Syndicate court. The company then spent its seasonal veto to negate the remaining prizes, leaving Carl, Donut, and Katia with nothing, and both upgrade achievements were patched out that same night.[2|Epilogue]
+
+{| class="mw-collapsible mw-collapsed sortable fandom-table"
+|+Known Quest Boxes (contains spoilers through Book 7)
+!Floor !!Source !!Crawler !!Tier !!Contents
+|-
+|Third Floor ||Show Must Go On Quest ||Carl ||Platinum ||5,000 gold; Scroll of Upgrade[2|13]
+|-
+|Third Floor ||Show Must Go On Quest ||Donut ||Platinum ||5,000 gold; level 3 potion of Acute Ears Skill; Enchanted Fang Caps of the Expectorating Tizheruk[2|13]
+|-
+|Third Floor ||Sex Workers Who Fell from the Heavens Quest or CockBlock Achievement ||Carl ||Silver ||1,000 gold; (3) Confusing Fog Spell scrolls[3|2]
+|-
+|Third Floor ||Sex Workers Who Fell from the Heavens Quest or CockBlock Achievement ||Carl ||Silver ||1,000 gold; (3) heal scrolls[3|2]
+|-
+|Third Floor ||Fools Who Broke the Glass Quest ||Quan Ch ||Celestial ||a glowing robe granting flight and lightning,[2|Epilogue] later identified as the Cloak of the Benevolent Champion and recorded as the first Celestial item awarded during Dungeon Crawler World: Earth[7|3]
+|-
+|Fourth Floor ||Levi Is on the Menu Quest ||Carl ||Silver ||healing scrolls; (2) alarm traps; trap supplies[3|13]
+|-
+|Fifth Floor ||Squeeze out the Juice Box Quest ||Carl ||Platinum ||5,000 gold; (20) healing scrolls; Platinum Sharpening Stone[4|13]
+|-
+|Fifth Floor ||Squeeze out the Juice Box Quest ||Donut ||Platinum ||an unnamed set of fang caps; potion raising Animal Wrangling Skill to level 8[4|13]
+|-
+|Fifth Floor ||Dumber of the Flunkies Quest ||Donut ||Platinum ||tome of Twinkle Toes Spell[4|32]
+|-
+|Fifth Floor ||Dumber of the Flunkies Quest ||Katia ||Platinum ||tome of Hanzo Spell[4|32]
+|-
+|Fifth Floor ||Dumber of the Flunkies Quest ||Gwen ||Platinum ||a new spear[4|32]
+|-
+|Fifth Floor ||Dumber of the Flunkies Quest ||Tran ||Platinum ||a scroll subscription box[4|32]
+|-
+|Sixth Floor ||Recital Quest ||Carl ||Gold ||coupon for a free town upgrade[6|3]
+|-
+|Sixth Floor ||Recital Quest ||Donut ||Gold ||coupon for a free town upgrade[6|3]
+|-
+|Sixth Floor ||Vengeance of the Daughter Quest ||Carl ||Gold ||Enchanted Prison Tattoo Kit[6|3]
+|-
+|Eighth Floor ||Hell Comes to Crawler Town Quest ||Donut ||Legendary ||an unenchanted, cat-sized green and black tartan kilt; tome of You're Not Done Yet Spell[7|3]
+|}
+
+==References==
+
+{{Navbox Items}}
+

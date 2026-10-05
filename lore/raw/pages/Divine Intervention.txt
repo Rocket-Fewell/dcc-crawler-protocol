@@ -1,0 +1,20 @@
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Buff
+  | causes = Gods
+  | effect = * Complete Invulnerability
+* Not visible to other parties
+  | duration = 60 Seconds
+}}Divine Intervention is a buff that makes the target completely invulnerable for one minute (60 seconds).  If a crawler is granted Divine Intervention, they can view the countdown timer in their Heads-Up Display (HUD); however, this is one of few buffs that is not displayed over the crawler's head, and is not visible to others.
+
+==AI Notification==
+You have been imbued with Divine Intervention. You are invulnerable for sixty seconds.
+
+==Trivia==
+* This buff is granted if you detonate a Celestial Grenade, but only if you worship a god.
+
+==References==
+

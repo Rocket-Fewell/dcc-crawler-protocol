@@ -1,0 +1,19 @@
+{{SpoilH | 5}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=Takeitback.jpg
+|imagecaption=
+|type= Potion
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a potion that removes any effects of Scolopendra's transmutation spell.
+
+==References==
+
+{{Navbox Items}}

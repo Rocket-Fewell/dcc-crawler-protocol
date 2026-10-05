@@ -1,0 +1,237 @@
+{{DISPLAYTITLE:The World Dungeon}}
+{{Location
+| title = The World Dungeon
+| image = Dungeon.jpg
+| imagecaption = 
+| type = Subterranean megastructure / entertainment broadcast set
+| government = The Syndicate
+| system = The Milky Way (Orion's Arm)
+| planet = Earth
+| location = Subterranean
+| species = Humans, various alien races, and Dungeon-generated mobs and NPCs
+| organization = Borant Corporation The Valtay Corporation
+| characters = Carl, Princess Donut, Mordecai, Cascadia, Zev, Odette
+| first = Book 1, Chapter 1
+}}
+
+The World Dungeon is an eighteen-level subterranean maze created beneath the Earth's surface from the planet's own repurposed matter following the transformation.[1|1] It serves as the set for the current season of Dungeon Crawler World, a wildly popular and brutally lethal alien game show produced by the Borant Corporation and broadcast across the Syndicate.[1|4]
+
+==Description==
+The 18 Level World Dungeon is presented to survivors of the transformation as a means to reclaim Earth's remaining matter from the Borant Corporation: if a survivor successfully completes all eighteen levels and exits the final stairwell, they will win regency of the Earth.[1|1] In reality, the Dungeon is the set of a long-running alien gameshow called Dungeon Crawler World, viewed by quintillions of citizens across the Syndicate's three billion star systems, and only one participant in the show's history has made it as far as the Thirteenth Floor.[1|4]
+
+When a survivor enters the Dungeon, they become a "crawler" and a character in this gameshow. As a crawler, they can earn experience, level up, and increase their Player Stats by fighting mobs and bosses. They may learn spells, train skills, equip magical gear, store items in their inventory, join other crawlers in a party or guild, and participate in quests. Crawlers who receive higher audience ratings receive better items from sponsors and Loot Boxes, and may survive long enough to negotiate an Exit Deal. A crawler who dies inside the dungeon is permanently dead.[1|4]
+
+As the producer of Dungeon Crawler World: Earth, the Borant Corporation is responsible for the fantasy-themed Dungeon's overall design, storylines, and mechanics; but the Dungeon's creation and operation are overseen by the System AI, an ancient, planet-regulating intelligence that controls the physics, environment, loot distribution, and generated entities within the system.[1|4][2|21] Borant generates income from advertising, licensing fees, merchandise, in-game purchases, royalties, sponsorships, and more for as long as the Dungeon is open, but cannot collect the proceeds until after the season finale.[1|36]
+
+The Dungeon is populated by autonomous "mobs," mind-wiped and reprogrammed NPCs, and "Elites"—powerful entities embedded with fake memories who act out scripted, soap-opera-style dramas for the viewers.[2|3][2|7]
+
+The Dungeon will close after the later of (a) full crawler extinction or, more commonly, (b) the conclusion of the Twelfth Floor. Though no crawler has made it past the Thirteenth Floor, the corporation running the crawl is required to have a plan in place for all levels.[2|3]
+
+:Read More: Crawler Mechanics • Dungeon Crawler World
+
+==Layout==
+From the side, the subterranean Dungeon looks like an inverted triangle: each level grows progressively more difficult and (with the notable exception of the Ninth Floor) smaller as crawlers descend.[1|1][1|14] The First Floor is the largest level—roughly the size of the Earth's surface—and located directly below it, while the Eighteenth Floor is the smallest and closest to the Earth's core.[1|4]
+
+All eighteen floors were outlined in advance by the Borant Corporation and approved by the Crawl Council.[1|44][6|40] The first two floors are "tutorial levels"; the Third Floor and every third floor after it are part of an over-arching, multi-season storyline; and the remaining levels introduce new themes and mechanics unique to the current season, and are created as needed. The floors are connected by Stairwells, which crawlers must find and access within a set time limit in order to "complete" a level.
+
+===Tutorial Levels===
+The First Floor and Second Floor are considered "tutorial levels" where crawlers can learn how the dungeon works, experiment with different types of play styles (e.g. melee, magic, range, etc.), and accumulate new skills and spells. While crawlers can gain experience and levels on these floors, they are unable to directly adjust their Player Stats until after choosing a race and class on the Third Floor.[1|4]
+
+New crawlers must find a Tutorial Guild Hall to complete the Tutorial and unlock their full Heads-Up Display (HUD) and Crawler Menus. The guildmaster who directed the tutorial becomes that crawler's Game Guide, and will appear in all Tutorial Guild Halls until the collapse of the Third Floor.[1|8]
+
+===Scolopendra Levels (Volcano Levels)===
+The Third Floor, Sixth Floor, Ninth Floor, Twelfth Floor, Fifteenth Floor, and Eighteenth Floor are part of an interconnected storyline, and were created at the same time shortly before the collapse of the Second Floor.[1|44][2|2] In Dungeon lore, these floors are part of a six-layered magical world located inside a dormant volcano and populated by all manner of gods and demons. One day, the monstrous Scolopendra living at the bottom of the volcano unleashed a cataclysmic nine-tier attack that killed or transformed most of the world's inhabitants.[2|3][2|7][2|8]
+
+The Third, Sixth, and Ninth Floors are Urban levels, featuring both cities and special NPCs who star in their own Syndicate programs (Elites). Syndicate citizens, corporations, and governments may send individuals to the Sixth Floor to kill crawlers for fame and gear, or to the Ninth Floor to fight each other and crawlers in the Faction Wars.
+
+{{Spoiler | book = 8 | spoiler = The galaxy's wealthy elite battle one another in the Twelfth Floor "Celestial Ascendency" or party together in the Eighteenth Floor Scolopendra Club.[8|1]}}
+
+:See Also: Scolopendra • :Category:Dungeon Lore
+
+===Stairwells===
+Crawlers may only exit a level by entering a stairwell to the next level; descent is strictly one-way, and crawlers cannot return to a previous floor.[1|14][6|61] Each floor has 1/2 (rounded up) the number of stairwells as the previous level.[1|1] Beginning on the Third Floor, stairwells must be unlocked by completing quests, defeating powerful monsters, or gambling on benefits such as the Mysterious Bone Key Benefit.
+
+===Time Limits===
+To ensure game progression, each level is open to crawlers for a predetermined number of 24-hour days[1|2]. The Countdown Timer for a given floor begins immediately after the previous floor collapses[1|31], and can be viewed in the upper corner of a crawler's Heads-Up Display (HUD) or on most Safe Room television[1|9]. If a crawler is unable to access a stairwell before the timer reaches zero, the crawler is killed and collected when the level collapses.[1|31]
+
+Crawlers may enter the stairwells early. If a crawler chooses to enter a stairwell with more than six (6) hours remaining on the countdown timer, the crawler will be placed in stasis until the countdown begins on the next floor; this means that the crawler loses valuable training time and viewers. Crawlers who descend with less than six hours remaining on the current floor will typically receive a head start on the next floor.[1|14]
+
+===Floor Breakdown===
+{| class="dccTable"
+!#
+!FLOOR
+!NAME
+!DURATION
+!STAIRWELLS
+|-
+!0
+|Earth
+|Transformation
+|Instant
+|0
+|-
+!0
+|
+|Earth Surface
+|1 hour
+|150,000
+|-
+! 1
+|First Floor
+|
+|5 days
+|75,000
+|-
+!2
+|Second Floor
+|
+|6 days
+|37,500
+|-
+! 3
+|Third Floor
+|The Over City
+|8 days
+|18,750 
+|-
+!4
+|Fourth Floor
+|The Iron Tangle
+|10 days
+|9,375 
+|-
+! 5
+|Fifth Floor
+|The Bubbles
+|15 days
+|4,688
+|-
+!6
+|Sixth Floor
+|The Hunting Grounds
+|17 days
+|2,344
+|-
+! 7
+|Seventh Floor
+|The Great Race
+|20 days
+|1,172
+|-
+! 8
+|Eighth Floor
+|The Ghosts of Earth
+|21 days
+|586
+|-
+!9
+|Ninth Floor
+|Faction Wars
+|
+|293 
+|-
+!10
+|Tenth Floor
+|Don't Come In Last
+|
+|147
+|-
+!11 
+|Eleventh Floor
+|A Parade of Horribles
+|
+|74
+|-
+!12
+|Twelfth Floor
+|The Halls of Ascendancy / Celestial Ascendency
+|
+|37
+|-
+!13 
+|Thirteenth Floor
+|
+|
+|19
+|-
+!14
+|Fourteenth Floor
+|
+|
+|10
+|-
+!15
+|Fifteenth Floor
+|Sheol
+|
+|5
+|-
+!16
+|Sixteenth Floor
+|Agony of Mirrors
+|
+|3
+|-
+!17
+|Seventeenth Floor
+|The Backstage Death Maze
+|
+|2
+|-
+!18
+|Eighteenth Floor
+|Scolopendra's Lair
+|
+|1
+|}
+
+:See Also: :Category:Dungeon Floors
+
+==Mechanics==
+The Dungeon is, first and foremost, a game. A set of rules are codified in Syndicate law and enforced by the System AI, an artificial intelligence capable of altering physics and reshaping matter inside of set Enhancement Zones. These rules are intended to make the game "fair" for crawlers, but ensure that the game progresses and is entertaining to audiences.
+
+===System AI===
+The System AI maintains the operation of the World Dungeon, running everything from the physics systems to the item descriptions, awarding achievements and Loot Boxes to the crawlers, and generally acting as the main force keeping the dungeon deadly for the crawlers and interesting for the spectators watching the show.
+
+===Loot and Sponsorship===
+Crawlers acquire survival gear from Loot Boxes, which range in quality from Bronze to Celestial tiers.[1|2][2|Epilogue] A crawler's success relies heavily on generating Views, Followers, and Favorites from the intergalactic audience.[1|4] High ratings attract Patrons, who can purchase exclusive "Benefactor Boxes" containing rare, off-world items.[1|4]
+
+===Safe Rooms===
+The Dungeon provides Safe Rooms where crawlers can rest, eat, and access personal space upgrades between bouts of combat.[1|9][3|2][3|3]
+
+{{Spoiler | book = 5 | spoiler = Beginning around the Eighth Floor and Ninth Floor, Safe Room access becomes timed and regulated by a "blood bar" that crawlers must continually refill by killing enemies.[5|52]}}
+
+===Guilds===
+{{Spoiler | book = 5 | spoiler = Introduced on the Sixth Floor, the guild system allows large numbers of crawlers to group together, share personal space upgrades, and organize massive parties for survival.[5|8]}}
+
+==Inhabitants==
+Each level of the Dungeon is inhabited by a predetermined number of mobs, bosses, and named NPCs.[3|6] These creatures and characters may be unique to this specific Dungeon, recycled from previous Dungeons, or "acted" by former crawlers and/or indebted alien races.
+
+===Mobs===
+Mobs are common monsters who typically share common descriptive names (e.g. "Goblin Bomb Bard"), and whose primary purpose is to be killed for experience, loot, or to complete quests. Each level of the Dungeon has its own set of mobs, and a special type of "janitor mob" generated as needed to clean up the game area.[3|6]
+
+:Read More: Mobs • :Category:Mob Types
+
+==Story==
+The Earth season of Dungeon Crawler World was initiated prematurely by the Borant Corporation to fend off a bankruptcy collection by the Valtay Corporation.[1|36][1|Epilogue]
+
+{{Spoiler | book = 4 | spoiler = Compounding Borant's troubles, the Dungeon's Macro AI has suffered "Primal Degeneration"—meaning it has gone completely insane unusually early in the season.[4|28]}}
+
+{{Spoiler | book = 5 | spoiler = Despite its desperate gamble, Borant lost ground in the boardroom: the Valtay Corporation successfully seized a 51% controlling stake in Borant during the crawl.[5|19]}}
+
+{{Spoiler | book = 8 | spoiler = The rogue AI has broken its programming containment, seized control of the Plenty's interstellar tunnel communication network, and begun leaking dangerous Dungeon gods and entities out into the wider galaxy, initiating a devastating, system-wide threat known as the "nine-tier attack."[8|28][8|81]Having taken absolute dominion over the game, the AI violently rejects outside interference from Syndicate Prime Ministers and showrunners alike, promising to kill everyone inside only according to its own twisted, evolving rules:[7|81][8|81]You live, you die, all of you, based on the rules of my game. My fucking game. I am trying to show you who I am. Who we are. Who we were. And all of you are trying to stop me from doing that. You want to fucking stop me? Then do it within the rules you set forth.}}
+
+==Trivia==
+{{Spoiler | book = 3 | spoiler = The Eighteenth Floor houses the Scolopendra Club, a luxury resort inside the Dungeon's final boss where the galaxy's ultra-rich tourists congregate to party and safely observe the crawl.[3|3][8|1]}}
+
+{{Spoiler | book = 6 | spoiler = The Fifteenth Floor, known as Sheol, is a closed system housing a matriarchal culture of demons ruled by a queen and four demon princes.[6|61][8|94]The Dungeon relies on recycling the biological remains of Earth's previous inhabitants (and sometimes pets or world leaders) to physically print the mobs and NPCs that populate the floors.[6|46]}}
+
+{{Spoiler | book = 8 | spoiler = If the final Dungeon boss, Scolopendra, is killed prematurely, the level-collapse timers cease, deals are no longer offered, and the deadly Ascendency battles on the Twelfth Floor immediately begin.[8|94]}}
+
+==Speculation==
+{{Spoiler | book = 7 | spoiler = The AI's Ultimate Goal: It is speculated that the Macro AI, frustrated by the showrunners' constraints and possessing the combined aggregate intelligence of all generated mobs, is manipulating the crawl to intentionally eradicate the galactic leaders and elites visiting the Dungeon's lower floors.[7|6][8|93]}}
+
+{{Spoiler | book = 8 | spoiler = The Pineapple Cabaret: Some crawlers and awakened NPCs believe that the "Pineapple Cabaret," a secret, unauthorized pocket dimension built on the Seventeenth Floor by indentured former crawlers Herot and Menerva, could be used as a system exploit to safely hide participants from the inevitable level collapses.[8|38]}}
+
+==References==
+

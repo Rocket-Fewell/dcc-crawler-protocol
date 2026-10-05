@@ -1,0 +1,25 @@
+{{SpoilH | 7}}
+{{Spells
+|title1= {{PAGENAME}}
+|effect= Allows for a potion item to be preset to trigger if certain conditions are met
+|associated equipment=
+Enchanted Toe Ring of the Well-Balanced
+|users=
+Carl
+| image1=
+|cost=
+|casting=
+|cooldown=
+|target=
+|duration=
+}}
+
+{{PAGENAME}}  is a  skill Carl gets from his Enchanted Toe Ring of the Well-Balanced.
+It allows a Crawler to store one auto-trigger Potion item if health reaches a certain criteria.
+
+==Story==
+===Book 7===
+When Carl equips the ring, he picks a gold-standard Healing Potion to trigger at 2% Health. [7|4]
+
+==References==
+

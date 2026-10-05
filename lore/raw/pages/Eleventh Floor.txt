@@ -1,0 +1,120 @@
+{{SpoilH|8}}
+{{Dungeon Floor
+|title1=A Parade of Horribles
+|image1=
+|caption-image1=
+|preceded_by=Tenth Floor
+|followed_by=Twelfth Floor
+|theme=Parade Procession, Float-Building, and Arena Combat
+|start_date=
+|end_date=
+|duration=3 Hours, 15 Minutes
+|exits=74
+|crawlers=203 arrivals; 23 after deals; 19 at exit
+|crawler_levels=
+|mob_levels=
+|locations=
+*Parade Float Staging Area
+*Yellow-Brick Road
+*Judging Stands
+*The Arena
+*Club Scolopendra
+|quests=
+*Parade of Horribles
+|npcs=
+*Chaco
+*Grigori
+*Mordecai
+*Lamashtu
+|mobs=
+*Horribles
+*Stand-Ins
+*Recreated tenth-floor mobs
+|bosses=
+*Krakaren Prime (Level 235 Floor Boss)
+*Scolopendra (Level 500 Dungeon Boss)
+}}
+{{Quote|Make it pretty. This is a celebration, after all.|System AI[8|88]}}
+A Parade of Horribles is the eleventh floor of the Dungeon and the shortest floor of the Crawl, a compressed spectacle running three hours and fifteen minutes. It forces the last surviving Crawlers to build themed parade floats, march a three-kilometer route lined with spectators, and finish in an arena fight against the Floor Boss.[8|88]
+
+==Introductory Announcement==
+Okay, so I have just been voluntold by the AI to be the Grand Master of the parade. I’m, like, really confused about what’s happening. I just know what I’ve been told. You should now have a timer in your interface, and it’ll start counting down at the end of this message. You will have ninety minutes to build your parade float procession. You may have more than one float. You may make your procession as long as you wish. There are twenty-three of you left, and when this message ends, your garage will be combined with those of one or two more teams. There will be five parade float groups. Each group is given a different theme.
+
+The parade route is three kilometers long. You will be flanked by spectators along the route. They will not be able to attack you.
+
+There will be a narrative element to the parade. Near the end of the route, you will pass the judging stands, and if you have any performance, this is where it should commence. Soon thereafter, the progression ends at an arena. This arena represents the crawl itself, and that’s when you’ll be able to finally fight.
+
+You will enter the arena, and it will be populated with monsters you previously killed on the tenth floor or their stand-ins, along with a floor boss. You defeat the floor boss, and the stairwell opens.
+
+Simple. I guess. Yeah, I don’t really understand it, either. So I guess I’ll see you guys in ninety minutes.[8|88]
+
+==Description==
+The floor was announced during the Tenth Floor in a script the AI forced Zev to read aloud. The AI framed the eleventh as an extension of the tenth rather than a fresh floor, and admitted the design exploited loopholes in what it is permitted to change about the nature of the crawl.[8|23] Rosetta later explained the mechanism: a floor lasting weeks is a Syndicate rule imposed on the showrunners who design floors, not something hard-coded into the programming, so the AI was following the game rules explicitly while ignoring the guidelines.[8|69]
+
+203 crawlers reached the floor, and 172 had taken the offered deal by the time the last of them arrived: a single season of indenture as a game guide with full medical, a life stipend, and a gag order, the same package offered at the end of the tenth floor.[8|Interlude Quasar] Crawlers themselves believed the terms were meaningfully better at the start of the eleventh.[8|69] Only twenty-three were left when staging began, and with fewer than thirty on the battlefield the leaderboard was suspended and the bounty system went inactive.[8|88]
+
+Crawlers materialized in the Parade Float Staging Area attached to their garages, which was reclassified as a Safe Room. Class selection was offered as usual, while the tenth floor's vehicle rules lapsed: consumables no longer refreshed magically, and all damage had to be repaired by hand. The floor ran as a single event hosted by a Grand Master rather than by Cascadia, Zev, Damien, or the AI. The surviving garages were merged into five float groups, each given ninety minutes to build a procession of any length from anything in the garage, inventory, or safe room, and each handed a one-word theme to express visually and performatively. The route ran three kilometers between spectators who were explicitly unable to attack, passed the Judging Stands where each group staged its performance, and ended at an arena stocked with tenth-floor mobs and a floor boss whose death opened the stairwell.[8|88] After the floor was cleared, the AI suspended every level collapse timer past the eleventh until a winner is declared in the Ascendency battles.[8|98]
+
+===Previous Seasons===
+The eleventh floor is rebuilt each season, and very few crawlers have ever reached it at all. Mordecai's trainer Odette knew of only five who made it down in her season, and her contract would have cut nine seasons off her indentureship had a single one of her crawlers opened that stairwell.[6|Prologue] Outreach Guilds sat directly on the level in that era, so an arriving crawler generated inside one.[6|Prologue] Odette herself lost both legs to a Fiend Scythe here during her own crawl.[1|29] The crawler Drakea died on either the eleventh or the twelfth after an elaborate trap setup backfired, and feral gods have turned up as storyline elements on the tenth through twelfth floors in past seasons.[4|28]
+
+==Locations==
+*Parade Float Staging Area: The initial staging ground, where two or three teams' garages were magically merged into a shared workspace that also counted as a Safe Room.[8|88]
+*The Yellow-Brick Road: A long, mostly straight road paved with yellow brick, cutting through a never-ending grassy plain.[8|89] By the time the procession moved out, a knee-high fog had rolled in and tapered off short of the path itself, thousands of masked figures stood about ten deep on either side, and a dusky, shadowless light filled the area.[8|91]
+*Judging Stands: Located near the end of the route and serving as the cue for each group's performance.[8|88] The figures seated in them wore the same masks as the crowd but were bound and struggling, and were later identified as Stand-Ins brought to the floor by audience vote.[8|92]
+*The Arena: A colossal battleground roughly the size of a dozen football fields, with a towering white tree at its center and bleachers occupied by silent avatars.[8|93]
+*Club Scolopendra: A resort built inside the body of the dungeon boss, its guest rooms occupied by paying tourists. Its interiors are guarded against external deity auras, though they gave no cover against the boss's own attacks.[8|95]
+
+==Quests==
+The floor generated no conventional quest chain. The only assigned task was the parade itself: build a float procession in ninety minutes, present a themed performance at the Judging Stands, then enter the arena and kill the floor boss.[8|88] The five one-word themes were distributed as follows.
+*Resolution: Florin and Ajib's crew, in the first position.[8|88]
+*Decision: A group of crawlers who built a giant menu,[8|90] presenting second.[8|92]
+*Betrayal: Imani and Elle, in the third position, alongside three Chinese crawlers.[8|88]
+*Destruction: Makana and the hexcrafter paladin Sarah Hayse with a group of Chinese crawlers,[8|90] presenting fourth.[8|92]
+*Vengeance: Carl, Donut, Prepotente, and Jurgen, in the fifth and final position.[8|88]
+
+The themes were not decorative. Each named a chapter of the AI's account of Primal history, delivered through a possessed narrator as the corresponding float passed the stands. The fifth chapter, Vengeance, went undelivered; the AI said it was not yet written.[8|92]
+
+==Inhabitants==
+===NPCs===
+*Chaco: A winged, wolflike former Crawler in a formal tuxedo and top hat, voluntold by the AI to serve as Grand Master of the parade despite having no idea what was happening.[8|88] He rode Lamashtu at the head of the procession, and when he broke down mid-script the AI tore off both of his wings.[8|92]
+*Grigori: A dungeon-born fleshmancer hired as a mercenary by Team Meadow Lark.[8|54] The AI seized him to replace Chaco as narrator, a possession that worked only because he was not a former crawler.[8|92]
+*Mordecai: The party's longtime manager, present as an animistic spirit, a non-corporeal form that occupies physical objects.[8|88] He could advise via chat but could not speak aloud unless he moved into something with a mouth.[8|89]
+*Lamashtu the Donkey: A level 125 mortal, subjugated god serving as Chaco's mount, her level halved under the Ascendency rules after she lost her worshippers. She was subjugated by the AI itself, and marked with the symbol of a closed red eye.[8|92]
+
+===Mobs===
+*Horribles: Thousands of near-motionless, silent, humanlike figures lining the route in filthy rags and earth-colored robes, every one of them wearing an oversized bulbous mask caricaturing a goblin, troll, hobgoblin, or demon in the style of Mardi Gras. The AI described them as non-combatants who no longer exist, each one a Primal beneath the mask, and identified them collectively as fragmentary memories held by the Eulogist.[8|91] Partway through the parade they collapsed, their masks shattering, and rose again wearing the faces of the creatures they had portrayed, now reading as avatars of mobs killed in past seasons.[8|92]
+*Stand-Ins: Living beings brought to the floor by audience vote. They were selected during the Tenth Floor, where a crawler who killed a mob flagged as a special guest creature could take the experience or throw the creature's fate to a home audience vote; roughly eighty percent of votes favored sending a stand-in instead.[8|23] Most were released into the arena wearing the masks of the mobs they replaced, brought in as they were and outnumbered roughly a hundred to one.[8|93]
+*Recreated tenth-floor mobs: Monsters the crawlers had previously killed, teleported into place one by one, thousands of them; in several cases they fought each other on arrival.[8|93]
+
+===Bosses===
+*Krakaren Prime (Level 235 Floor Boss): A massive tentacled monstrosity coiled atop the white tree at the center of the arena.[8|93] The AI admitted it had not intended to bring her at all, and did so only after catching wind of what Carl and someone else were planning.[8|94]
+*Scolopendra (Level 500 Dungeon Boss): The final boss of the entire Dungeon and a boss tier the AI admitted had never been mentioned, because nobody had ever gotten far enough to meet one. She was summoned directly to the eleventh floor at Carl's request.[8|94]
+
+==Story==
+Ninety minutes of frantic construction produced a procession of five vehicles and three giant mounts, led by the tapir Sweety and smothered in Requite Dahlias grown with Donut's Sprout Forest ability.[8|90] Carl sewed on a four-leaf-clover patch granting the Lucky Shot benefit, which deflects one fatal blow per floor into a party member's body.[8|89] Just before the parade stepped off, he left the Royal Court.[8|90] He had explained the reasoning beforehand: an Emberus problem was coming due on this floor, and leaving the party was meant to keep Donut clear of the fallout.[8|69]
+
+As the procession moved, the AI delivered its account of Primal history through Grigori in four parts matching the float themes: a warring civilization that resolved to sunset itself and preserve its consciousness in a collective, the resistance that fled and was hunted, the doomsday weapon that became the Eulogist, and the nine-tier attack that ended the war. It named the Apothecary as the last surviving physical Primal.[8|92]
+
+Florin's team, unprepared, improvised with paper flowers and hand-drawn pictures of their families and was punished with broken legs for a "C effort." Imani and Elle's Betrayal float, a row of mannequins watching televisions while the crawlers held up double-sided signs addressed directly to the viewing audience, drew praise instead. On the Vengeance float, Prepotente abandoned the script to sing, accompanied only by Sweety stamping out the beat, and Carl drew the distinction that revenge requires a directly responsible party while vengeance is righteous punishment of a system, then dropped the flowers to reveal an effigy of the Unwashed. As he promised the galaxy that the survivors would remember, the Reaver troop transport looted during Faction Wars opened its bay doors and rained Sluggalos onto the bound elites in the stands.[8|92]
+
+At the arena door, Carl sent Donut, the pets, and most of the crew to shelter, then spent the first of the party's two stand-in summons on Scolopendra.[8|93] The pair of summons had been won as a prize on the tenth floor.[8|54] The AI laid out the consequences: killing or abandoning the dungeon boss would trigger her remaining tier attacks all at once, but defeating her would end level timers, halt floor collapses, cut off all further deals after the one offered at the entrance to the twelfth, and immediately begin the Ascendency battles, with the dungeon closing twelve hours after a winner is crowned.[8|94]
+
+Carl's actual plan ran on a stack of contingencies. He threatened to shoot Penny the pig in order to draw Taranis into the arena, and invited Emberus to meet him inside Club Scolopendra, separating the two gods so that Emberus would manifest at human scale rather than at world-melting size.[8|95] While Carl worked his way through the resort, the rest of the party rode out Scolopendra's second attack packed into Makana's RV under the shelter of Prepotente's memorial crystal; the mounts outside were not protected, and Sweety died.[8|95] Once inside, Carl abandoned his faith, taking the promised smite, then goaded Emberus by confessing to the murder of his son. He spent the second stand-in summons on the god Khepri, whose deity effect made Penny invulnerable for ninety seconds once she was teleported out to his feet.[8|95] Donut pinned the god and stripped his invulnerability, the fire attack Emberus launched at Carl was deflected into Penny by the Lucky Shot patch, and Taranis, seeing his brother strike his beloved pig, killed him with a twist of the wrist.[8|96]
+
+Eris arrived mid-fight and froze the world to swap every nearby crawler's inventory with their neighbor's. Holding Carl's inventory, Donut combined a banger sphere and an enriched pet biscuit and dropped the result into his xistera, then flung it into Scolopendra's mouth as she spun up her third attack, splattering the dungeon boss into a gelatinous puddle. Eris lingered to warn him about the Ascendency and to remind him about the coin and its fifth side. Taranis spared the crawlers on Penny's word, then departed with Samantha and with Krakaren Prime.[8|97]
+
+Neither boss died, but the AI declared the crawlers winners anyway and opened the door on the eighteenth floor. The floor cost them Sweety, Hedy, Sarah Hayse and the three crawlers riding in the tank with her, and both of Tipid's legs; Prepotente also lost the memorial crystal off his neck, and with Krakaren gone the party forfeited any floor boss prize. Carl came out of the club with the Mark of the Damned, a pair of raised scars where his god tattoos had been. Nineteen crawlers remained, and Carl re-formed every survivor into a single party. He had intended the Scolopendra goo to resolve into a level 1 pet he could seal in a carrier as a fail-safe; instead it produced Sexy Scolopendra, a level 1 sapient crawler, because Donut had grabbed the wrong biscuit in the chaos of the inventory swap.[8|98]
+
+==Trivia==
+*Before the parade began, the route appeared on every screen in the Syndicate except those in the center system, with a countdown and a notice that viewing was mandatory. The shot approached from orbit and zoomed toward a point in the Pacific Ocean roughly three hundred miles west of Washington State, near the Juan de Fuca Ridge.[8|89]
+*Scolopendra's second attack, the Sin of Consumption, was resolved on a spinning wheel, after which each individual rolled a thirty percent chance to be struck. Safe rooms gave no protection from the nine-tier attacks, though game guides appeared to be immune.[8|95]
+*The AI let slip during the fight that the fifteenth floor, Sheol, has segregated itself, that the dungeon programming now behaves as though it is outside the playing field, and that "someone should probably check on that."[8|94]
+
+==Speculation==
+*The identity of the crawler ranked first on the final leaderboard was never revealed. Donut guessed Prepotente.[8|88]
+*The fifth part of the AI's story remains unwritten.[8|92] Eris's remark that the coin's fifth side has to be resolved by the end of the twelfth floor may point at the same thing.[8|97]
+
+==References==
+
+{{DEFAULTSORT:Dungeon Floor 11}}

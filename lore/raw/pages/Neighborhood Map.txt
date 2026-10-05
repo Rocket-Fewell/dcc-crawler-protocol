@@ -1,0 +1,17 @@
+{{Item
+|image=00833.jpg
+|type=Map
+|keywords=Persistent Loot
+|effects=reveals area on map
+|source=Neighborhood Boss}}
+{{Quote | quote = “All bosses drop persistent loot, and their corpses stay there for any crawler to pick it up. A neighborhood boss will drop a neighborhood map, as you’ve discovered. Higher bosses will drop other public items, which I’m not allowed to tell you about yet. But the ones who actually kill the boss also receive an achievement and a Boss Box. Bronze for Neighborhood, Silver for Borough, and so forth. Also, as you can now see, there’s a bronze star after your name in all notifications. You’ll get a star after each boss you kill.” -- Mordecai}}
+The Neighborhood Map is a persistent item dropped by slain  Neighborhood Bosses, meaning that every crawler who loots the boss's corpse can pick up the map.  The Neighborhood Map looks like a scrap of paper.  When a crawler touches it, it adds the boss's "neighborhood" and all mobs in the area to the crawler's minimap.[1|12] 
+
+On the First and Second Floors, the "neighborhood" is approximately one square mile.[1|12]  On other floors,  "neighborhood" can mean different things: for example, on the Fourth Floor, train conductors are neighborhood bosses, and each map shows the entire length of the train's line.  
+==Story==
+===Book 1===
+Carl and Donut gain a Neighborhood map from the Hoarder fight. 
+==References==
+
+{{Navbox Items}}
+

@@ -1,44 +1,18 @@
-# Live campaign state, secrets and generated junk. NEVER commit these.
-# (tools/check_repo_safe.py and the pre-commit hook also block them even with `git add -f`.)
+# FULL backup repo. Caleb authorized a full backup on 2026-10-04: gm-notes (incl. secret), sessions, ledgers,
+# state, player sheets, logs and exports ARE tracked. Only live credentials and dependency/cache junk stay out.
+# (backup-push.sh uses `git add -A --force`; the real filter is ops/backup-sync.py + ops/check_repo_safe.py.)
 
-# secrets
-gm-notes/secret/
+# live credentials
 .env
 .env.*
-!.env.example
-!.env.sample
-!.env.template
 *.pem
 *.key
 *.p12
 *.pfx
-token
-tokens
-token.txt
-tokens.txt
-token.json
-tokens.json
-*.token
 
-# live session data
-sessions/
-sessions-data/
-credit-ledger*
-state.json
-state.*.json
-session.json
-backups/
-exports/
-*.bak
-
-# logs, deps, caches
-bot.log
-*.log
+# dependencies / caches
 node_modules/
 __pycache__/
 *.pyc
+.venv/
 .DS_Store
-
-# live player sheets (kept in the campaign folder, not in this repo)
-characters/hornn-wizard.md
-characters/moses-barbarian.md

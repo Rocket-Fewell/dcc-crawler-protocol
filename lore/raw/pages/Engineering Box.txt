@@ -1,0 +1,84 @@
+
+{{Item
+
+|type=Loot Boxes
+|effects=
+|source=
+|image=Engine.jpg}}
+
+The Engineering Loot Box (also called the Mechanic’s Box in early books) is a specialized loot category focused on crafting, repair, and mechanical enhancements. It is commonly awarded for constructing objects, utilizing workbenches, or completing engineering-based tasks.
+----
+
+=== Engineering Box Mechanics & Trends ===
+
+# Boxes scale with crafting achievements
+#* Early rewards = Basic tools (Goo-Inator 3000, Gorgon Marital Aid).
+#* Mid-game = Workbenches & crafting stations (Engineering Table, Sapper’s Table).
+#* Late-game = Advanced robotics & weapon crafting (Automaton Table, Fabricator).
+# Proximity to Explosive Skills
+#* Sapper’s Table is frequently awarded alongside Engineering Boxes.
+#* Traps, proximity triggers, and explosives are common loot items.
+# Tied to Carl’s Strength Progression
+#* As Carl’s Strength stat increases, he can use heavier and more powerful equipment from Engineering Boxes.
+
+----
+
+=== Book 1 - Dungeon Crawler Carl ===
+
+*Gorgon Marital Aid[1]
+
+*Goo-Inator 3000
+
+* Sapper’s Table
+** Description: A workstation dedicated to building explosives and traps.
+** Effect: Prevents premature detonation or stability loss in bombs and mechanical traps. 
+
+*Proximity Trigger x10
+
+----
+
+=== Book 3 - The Dungeon Anarchist’s Cookbook ===
+{{Spoiler | book = 3 | spoiler =
+* Engineering Table[3]
+** Description: A general-use crafting table for mechanical modifications.
+** Effect: Allows shaping and customizing armor/weapons.
+
+* Armorer’s Table[3]
+** Description: A workbench upgrade that allows armor modifications.
+** Effect: Items crafted at an Engineering Table must be transferred here to be recognized as equippable gear.
+
+* Scrap Metal Crafting[3]
+** Description: Carl begins using the Engineering Table to reshape salvaged armor.
+** Effect: Allows custom-fitted gear and enhancements for NPC allies.
+
+}}
+----
+
+=== Book 4 - The Gate of the Feral Gods ===
+{{Spoiler | book = 4 | spoiler =
+* Sapper’s Table Upgrade[4]
+** Description: Carl upgrades the Sapper’s Table to Level 3.
+** Effect: Improves trap efficiency, allows bigger explosions.
+
+* Engineering Table Use on Bombs
+** Description: Carl crafts custom bombs using stabilization techniques.
+** Effect: Increases bomb reliability, preventing early detonation.
+
+}}
+----
+
+=== Book 7 - This Inevitable Ruin ===
+{{Spoiler | book = 7 | spoiler =
+* Automaton Table (Engineering Box Reward)[7]
+** Description: A high-tier crafting station for building and modifying robotic constructs.
+** Effect: Essential for advanced automation and mechanical weaponry.
+
+* XL Engineering Box (Fabricator Parts)[7]
+** Description: A high-value loot box containing parts for a Fabricator.
+** Effect: Allows advanced mechanical item production.
+
+}}
+----
+
+=== Final Thoughts ===
+The Engineering Loot Box is one of the most valuable non-combat loot categories, enabling crafting, modifications, and automated defenses. Carl’s use of these tools evolves throughout the books, eventually allowing full-scale mechanical engineering.

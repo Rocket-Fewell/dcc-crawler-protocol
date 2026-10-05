@@ -1,0 +1,89 @@
+{{Item
+|title=
+|image=Mordecai skyfowl.png
+|imagecaption=Art by u/Mashermello, Reddit
+|type=Potion
+|keywords=Consumable (Single-Use)
+|effects=
+|source=Crafting, Loot, Loot Boxes, Store
+|buy=varies
+|sell=varies
+}}
+{{Quote|Remember this, because some of these potions taste like shit.|Mordecai[1|5]}}
+
+In the Dungeon, Potions are single-use consumable items that produce a magical effect, usually a buff or debuff, and act on crawlers, pets, mobs, and NPCs alike. They can be drunk, triggered through the hotlist, or thrown as weapons.
+
+Potions are looted, brewed, purchased, or pulled from Loot Boxes, and they stack up to 999 per inventory slot in time-locked storage, so a stored potion does not degrade.[1|5] Grades run Good, Great, and Superb, with Superb the ceiling an accomplished brewer can reach; Cosmic is a separate type rather than a further rung on the same ladder.[3|7]
+:See Also: :Category:Potions
+
+==AI Description==
+The system issues no description for potions as a category. The readout for the Standard Healing Potion, the first potion most crawlers ever receive, is representative of the format:
+
+Increases your health by at least 50%. Doesn't cure poison or other health-seeping conditions.[1|5]
+
+==Consumption and Cool-Down==
+A potion on a crawler's hotlist applies its effect on a mental click and registers no taste at all, while one pulled from the inventory has to be uncorked and swallowed, which matters because many of them taste foul.[1|5][6|66] An emptied bottle vanishes on its own.[1|24]
+
+Afterward the drinker enters a potion cool-down period; taking another of any kind before the countdown expires inflicts the Poisoned status effect.[1|24] Its length is set by Constitution, so sturdier crawlers recover faster.[1|25] Mobs do not get potion sickness, but NPCs do, and some of the most powerful brews trade on the mechanic deliberately, extending the countdown by many hours as the price of their effect.[3|7] Not every drinkable item is bound by it: Splooge is technically a potion but is processed as a food-based buff.[8|95] Healing scrolls sidestep the system entirely, with no countdown between uses and the ability to be read on a party member.[1|25]
+
+Standard potions and heal scrolls have no effect on pet-class creatures; reviving a dying pet requires a purpose-brewed variant such as the Heal Critter Potion.[2|12]
+
+The hotlist itself can be expanded. A platinum-tier skill potion widens it from twenty slots to twenty-five and unlocks the Contingency skill, which allows up to ten programmed automations, each capable of firing several hotlist items at once.[8|25] The Heart Balance benefit offers a more limited version through gear, triggering one designated potion automatically once health falls below a chosen threshold.[7|4]
+
+==Common Varieties==
+*Healing potions, issued in standard grade from the tutorial onward[1|5], in Good grade among deep-floor hunter loot[5|14], and in Gold Standard grade as a component of higher-tier brews[3|7]
+*Mana potions, which refill spell points instantly, and Mana Refills, which restore roughly 200 points over two minutes[5|14]
+*Poison Antidotes[1|5]
+*Invisibility[3|33] and Levitation potions[5|14], each running twice the drinker's intelligence in seconds
+*Phase Through Wall[6|3], Size-Up[7|4], and anti-oxygen-deprivation potions[8|95]
+*Rapid Detox, which clears alcohol and most drugs for a single floor[4|5]
+*Multi-dose concoctions such as the Rev-Up Immunity Smoothie, brewed ten doses at a time[1|34]
+
+==Permanent and Skill Potions==
+Some potions permanently increase a crawler's base stats. These can only be taken a limited number of times regardless of quality, and only Superb-grade versions grant as much as four points, such as the Superb Constitution Buff Potion. Cosmic Buff potions, which raise a random stat by ten, count as a separate type rather than a higher grade and are not bound by that limit.[3|7]
+
+Skill potions and tonics grant or raise a skill outright: a tonic pushes an already-known skill up a level[1|25], a skill potion installs a new one at level three[2|13], and celestial-tier versions award a random combat skill at level ten to fifteen.[7|4]
+
+==Brewing==
+Advanced or complex potions must be brewed at an Alchemy Table; the dividing line is whether the recipe calls for boiling or higher-difficulty emulsifying.[2|17] Simpler recipes can be assembled in the field with all of the ingredients on hand, many of them using an ordinary healing potion as a base, and brewing one in the field adds the recipe permanently to the crawler's crafting menu.[2|12] Table level dictates capability: level three is the minimum for fragmenting potion balls, level five adds a second heating element and halves brewing time, and level six brings a full autoclave capable of producing a hundred units at once.[3|7]
+
+Adding sage beetle ichor strips a potion of its description entirely, at the cost of the potion spoiling within an hour, which has practical value in venues that bar specific potion types, such as battle arenas that forbid healing.[4|5]
+
+Syndicate rules governing potion brewing were rewritten after a crawler mixed the Dolores Doesn't Splat Potion while falling during an early season of Dungeon Crawler World.[4|12] The Dungeon Anarchist's Cookbook devotes an entire curated chapter to recipes.[3|8]
+
+==Potion Balls and Infusion==
+Contained in a delivery device such as a Fragmenting Potion Ball, a potion becomes a weapon. Thrown potions work on mobs, are not expected to function on fellow crawlers, and should work on NPCs and pets.[3|7]
+
+The Infusion skill soaks a tossable explosive in a potion and lets it dry. A hobgoblin smoke curtain soaked in a healing potion becomes a mass killer of undead[3|8]; soaked in an invisibility potion, the same curtain produces a concealing, light-reactive smoke.[4|18] Infusing a tossable renders it inherently unstable, which is why the technique is not attempted on live explosives at low skill.[4|18]
+
+==Story==
+Mordecai activated Carl's inventory on the first floor and gifted him a single healing potion as his first stocked item.[1|5] Carl worked out the cool-down mechanic by experiment, drinking two potions in quick succession to see what the Poisoned status actually did.[1|24] His first brew came during the Krakaren clone fight: a Rev-Up Immunity Smoothie blended from a laminak corpse and moonshine, which granted immunity to disease and health-seeping conditions at the cost of leaving both crawlers fighting a boss drunk.[1|34] On the third floor he mixed a Heal Critter Potion in the field under Mordecai's instruction, reviving Mongo and unlocking the recipe permanently.[2|12]
+
+{{Spoiler|book=3|spoiler=Mordecai's Special Brew, produced at his alchemy table in the Iron Tangle personal space, is a thirty-second stream of accelerated healing and rapid regeneration that functions as de facto immortality against anything short of instant death. He could only make two, each one adds roughly ten hours to the drinker's countdown, and no crawler can benefit from more than two before they stop working entirely.[3|7]
+Carl spent one in the trainyard to survive being stepped on, run over, and shockwaved repeatedly, locking himself out of potions for the following ten hours.[3|33]}}
+
+{{Spoiler|book=4|spoiler=Escaping the hijacked Vahana required all three members of the Royal Court to drink Dolores Doesn't Splat in freefall, a potion that only activates above 200 kilometers per hour and slams the drinker into the ground five consecutive times.[4|12]
+A toraline root received from a sponsor was later brewed into a Phase Lava Rock potion, which let Carl reach through the body of Chris the igneous and pull out the Scree worm controlling him.[4|34]}}
+
+{{Spoiler|book=6|spoiler=During the eighth-floor boss battle, the goddess Ysalte entered the realm carrying a debuff that turned every potion Carl quaffed or handled outside his inventory into vinegar, forcing him onto his Heal spell and rare healing scrolls instead.[6|66][6|67] The affected potions were restored, and upgraded, the moment she left the realm.[6|69]}}
+
+{{Spoiler|book=7|spoiler=A Hell-Kissed Celestial Skill Potion of the Prince of Woe came out of Carl's celestial box at the start of the ninth floor; Mordecai examined it long enough to learn the recipe before Carl drank it for Gloom Wraith Phase at level thirteen.[7|4]}}
+
+{{Spoiler|book=8|spoiler=Splooge became a staple of the eleventh floor as protection against environmental hazards, with a full gulp granting an hour of coverage.[8|77] It does not confer the ability to breathe.[8|95]}}
+
+==Trivia==
+*The first healing potion Carl physically drank rather than clicking from the hotlist tasted, to him, oddly like kiwi juice.[1|24]
+*Dolores Doesn't Splat is named for the crocodilian crawler alchemist who devised it mid-fall, and its recipe incorporates a quirk of rock buffalo breeding that dictates the five successive impacts.[4|12]
+
+{{Spoiler|book=6|spoiler=Drinking a vinegar-cursed potion earns the Kombucha achievement.[6|67]}}
+
+{{Spoiler|book=7|spoiler=The Hell-Kissed Celestial Skill Potion talks to its owner and urges them to drink it, then lets out a groan as it dissipates.[7|4]}}
+
+==Speculation==
+*Mordecai expected a thrown potion ball to function on NPCs and on pets, which sits awkwardly against the established rule that potions have no effect on pets when administered directly[2|12]; the delivery method may matter more than the target. Neither case appears to have been tested on-page.[3|7]
+*Splooge being processed as a food-based buff rather than a true potion suggests other consumables may sidestep the cool-down in the same way, though no second example is confirmed.[8|95]
+
+==References==
+
+{{Navbox Items}}
+

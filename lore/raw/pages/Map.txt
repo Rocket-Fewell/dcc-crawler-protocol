@@ -1,0 +1,83 @@
+{{Item
+|title=
+|image=Minimap Sketch.jpg
+|imagecaption=Minimap - Low quality diagram by Sandboy
+|type=
+|keywords= Minimap, Map
+|effects= Map that shows the surrounding area
+|source= Heads-Up Display (HUD)
+}}
+
+By default, the Minimap appears in the bottom right corner of a crawler's Heads-Up Display (HUD). The basic minimap is a simple blue and gray map which shows the cardinal directions (North/South/East/West) and represents nearby creatures as dots.[1|8]
+
+==Mechanics==
+Crawlers gain access to the Minimap during the Tutorial. Focusing on the map enlarges it; it can be expanded to fill the crawler's entire vision.  The basic unenhanced map shows roughly a square mile when fully zoomed out, and maybe a quarter of mile in its regular view.[1|14]  
+
+The map only shows areas the crawler has seen; the rest of the minimap is grayed out by the "fog of war," which obscures mobs, stairwells, and most locations.  Safe Rooms are always visible, even when located inside the fog of war.[1|4][1|5]  The fog of war grows narrower when crawlers travel at higher speeds, such as when driving a Goblin Copper Chopper.[1|21]
+
+==Key==
+{| class="dccTable"
+!Symbol
+!Description
+|-
+|Dot - Green
+|self [1|4]
+|-
+|Dot - Blue
+|other crawlers.[1|4]  Crawlers sleeping in Safe Rooms do not appear on the minimap.[1|20]
+|-
+|Dot - Orange
+|Pets & Dungeon Familiars [1|47] 
+|-
+|Dot - Purple
+|Hunters on the Sixth Floor[5|5] (presumably will apply to other "tourists" on the 9th floor as well)
+|-
+|Dot - Red
+|mobs, bosses, and hostile NPCs [1|4] 
+|-
+|Dot - White
+|friendly or nonhostile NPCs [1|4]
+|-
+|Dot - White with Green X
+|a mercenary or minion 
+|-
+|Dot with Black Cross
+|Elites.  The Dot will be Red, Orange, or White, depending on the Elite's status. (Note: if crawler has not earned the Meet an Elite Achievement, the Elite appears as a regular dot)[2|6]
+|-
+|Dot with Star
+|A town mayor or Grand.  The dot's color is determined by friendliness if it is an NPC, or by whether the mayor is a crawler or a hunter.[5|5]
+|-
+|Square - White
+|stairwells[1|21]
+|-
+|Yellow Star
+|Manager [2|2]
+|-
+|Pulsing Star
+|A pulsing, spinning star indicates a god.  The star will be Red, Orange, or White depending the god's status.[4|29][5|62]  A massive god will also have a massive star.[4|29]
+|-
+|X
+|corpses.[1|4]  The X disappears if the body is significantly destroyed.[2|6] Crawler corpses appear twice the size of mob corpses and pulse; hovering over the "X" shows "Corpse of Crawler _ - Level _".[1|12]
+|}
+
+==Map Enhancements==
+Various skills and items can alter the Minimap's appearance, breadth, and functionality. These include but are not limited to:
+
+===Achievements===
+* You've Discovered and Read an Official Dungeon Sign Achievement highlights guilds on the minimap.
+
+===Items===
+* Neighborhood Map.  Dropped by slain Neighborhood Bosses, the Neighborhood Map removes the "fog of war" from the boss's entire neighborhood on the crawler's minimap.[1|12]
+* Borough Field Guide.  Dropped by slain Borough Bosses, the Borough Field Guide does not remove the fog of war, but does allow crawlers to see the levels and types of mobs in the area.
+
+===Skills===
+* Acute Ears Skill 
+* Find Crawler Skill 
+* Pathfinder Skill
+
+===Spells===
+* Camouflage Spell
+* Ping Spell
+
+==References==
+

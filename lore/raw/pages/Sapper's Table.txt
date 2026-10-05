@@ -1,0 +1,49 @@
+
+{{Item
+|type=Crafting Workbench, Personal Space Item
+|image=Sappers Table.jpg
+|effects=
+* build/modify/deconstruct bombs
+* build/modify/deconstruct traps
+* brew poisons
+|source=
+* Marketplace
+* Loot Boxes
+}}{{Quote | quote = I hear you wanna learn how to blow things up and disarm traps and maybe brew a poison or two using this table.}}
+
+A Sapper's Table is a Crafting Workbench that can be purchased from a Safe Room Marketplace or received from a Sapper's Box, and installed in a crawler's Personal Space. It allows crawlers to create stable traps, explosive items, and poisons, or to modify existing explosives and traps with modules or triggers.[1|41][1|44] 
+
+==Description==
+===Levels===
+Workbenches gain one level each time the crawler descends to a new floor.
+*Level 1. Crawlers can add modules to traps, deconstruct bombs for parts (assuming they have the Bomb Surgeon Skill, and modify bombs. Bomb stability will not decay while the crawler is standing at the table, and bombs and traps cannot prematurely detonate.[3|10][1|41]
+*Level 3. Crawlers can now infuse bombs.[3|8]
+
+===Skill Interactions===
+After reaching an Explosives Handling Skill of 5+, crawlers can access the Demolitions Workshop Crawler Menu while using a Sapper's Table.[1|19] The menu allows crawlers to safely remove bombs from their inventory and examine their properties (including schematics, contents, yield, rate of destabilization under certain conditions).
+
+===Actions===
+*Alarm Module: When worked at a Sapper's Table, can program which song is playing. Can also imbue traps with Fear Spell.[3|1]
+
+==Story==
+===Book 1===
+Carl receives his Sapper's Table in a Gold Sapper's Box for the You Call That a Trap? Achievement on the Second Floor of the Dungeon after escaping from the Rage Elemental.[1|41]  
+
+===Book 3===
+{{Spoiler
+| book = 3
+| spoiler = 
+He later installs it against one wall of the Royal Palace of Princess Donut's crafting room, and the Engineer's Table against the opposite wall, and upgrades the table to level 3 before the Fourth Floor collapses.[3|4]
+
+In the Dungeon Anarchist's Cookbook (Item), Sinjin mentions a level 3 sappers table allows for bombs to be infused.[3|8]
+
+Carl practices his Bomb Surgeon Skill by taking apart several fused Hob-lobbers. Since he is standing at his Sapper's Table, the bombs do not degrade at all, allowing him to cut sticks apart or bundle them together. He crafts the Jelly Bomb at the table.[3|10]
+
+Carl upgrades his Sapper's Table to level 3 using his two upgrade coupons from the It's Not My Fault You Fish-Headed Assholes Don't Properly Program Your Quests Box.[3|13]
+
+}}
+
+==References==
+
+{{Navbox Items}}
+

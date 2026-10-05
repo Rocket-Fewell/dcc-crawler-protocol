@@ -1,0 +1,148 @@
+{{Item
+|title=Inventory
+|image=
+|imagecaption=
+|type=Crawler Interface
+|keywords=Dungeon Mechanic, Dimensional Space, Hotlist, Loot, UI
+|effects=Stores an effectively unlimited amount of non-living items of almost any size/weight indefinitely, pausing time decay for perishables
+|source=System AI / Borant Corporation
+|buy=
+|sell=
+}}{{Quote | And if you can physically lift it off the ground by yourself for about four seconds, you can put it in your space, no matter how big it is.|Mordecai[1|5]}}
+Inventory is a dimensional storage interface and AI cataloging system that the System AI grants to crawlers upon entering the World Dungeon, replacing the slot-based systems used in previous seasons.[1|5] After completing the Tutorial, crawlers access and manage it entirely through a mental Heads-Up Display (HUD) menu.[1|5]
+
+:See Also: Crawler Mechanics • :Category:Items
+
+==AI Description==
+A dimensional inventory and AI cataloging system.[1|5]
+
+==Description==
+The Inventory is a massive dimensional storage space and organization system linked to a crawler's neural interface. Introduced experimentally for the Earth season by the Borant Corporation, it abolishes the restrictive slot-based item management seen in past crawls and offers effectively unlimited storage capacity for non-living objects.[1|5] Crawlers may view, organize, add, and remove items at will, and consumables such as potions can be stacked up to 999 per slot and pinned to a crawler's hotlist.[1|5]
+
+Crucially, the inventory is time-locked: food and organic materials will not spoil, and explosives neither destabilize nor go out while stored. If an explosive is lit when placed in inventory, it will still be lit when removed.[1|5][1|20] This was implemented because in previous seasons crawlers would slowly starve while waiting out level timers, which made for terrible television.[1|5]
+
+A crawler may only view another crawler's inventory while looting their corpse, though party members can view one another's equipped gear through the Party Menu.[1|7]
+
+:See Also: Torch (Item) for HUD/item interaction. • :Category:Explosives
+
+===Submenus & Tabs===
+The System AI automatically catalogs items as they are collected, sorting them into tabs and submenus that shift as a crawler's haul changes. Common early tabs include Food Items, Healing, Pharmaceuticals, Potions, Quest Clues, and Worthless Garbage.[1|8][1|5][2|18][1|27] Unopened Loot Boxes appear in an "Awards and Boxes" tab marked Ready to Open, which glows until the crawler reviews it.[1|5] Crawlers may also unlock additional sorting options and tabs, such as "History", by leveling the Determine Value Skill.[1|47]
+
+{{Spoiler | book = 3 | spoiler = Later submenus include a "Gross Shit" tab for the dungeon's more revolting odds and ends.[3|22]}}
+
+{{Spoiler | book = 5 | spoiler = Deeper floors add specialized tabs as well, including "Crafting Items", "Siege Equipment", and a "Mob Morgue".[4|3][5|24]}}
+
+===Adding Items===
+Items are added by opening the Inventory Menu and mentally clicking an "Add Item to Inventory" button; the physical object then vanishes and appears in the crawler's item list, flagged under a New tab.[1|5][1|30] If a full container is added, its contents are automatically indexed and sorted, and the crawler can keep everything bundled, empty the container, or add and remove individual items from it.[1|25]
+
+A few rules govern what can go in:
+*The crawler must be able to physically lift the item off the ground for roughly four seconds.[1|5]
+*A living creature placed in inventory (without a Pet Carrier) dies instantly.[1|5]
+**Following a patch implemented ~32 hours after the Dungeon opened, mobs cannot be added to inventory to kill them.[1|14]
+*Fine powders (such as gunpowder and meth) must be placed in containers.[1|17]
+*A crawler can add currently equipped gear directly to inventory.[2|25]
+
+{{Spoiler | book = 3 | spoiler = A patch added roughly 35 hours before the Fourth Floor collapses requires liquids to be stored in containers as well.[3|29]}}
+
+===Removing Items===
+Clicking an item in the menu teleports it into the crawler's hand or immediate vicinity and removes it from the list.[1|5] The average crawler cannot view an Inventory History; once an item is removed, they can no longer see its properties or any record that they ever held it.[1|47]
+
+A First Floor patch implemented ~32 hours after the Dungeon opened notes that items no longer preserve momentum when added to inventory, so "it's now safe to extract items you put into inventory while moving at a high rate of speed."[1|14]
+
+===Exception: Quadrupeds===
+Quadruped species such as Cats use a different interface with different rules. They do not need to touch loose, lightweight items (slingshots, dice, and the like) to store them; simply being near the object is enough.[1|32] The same interface lets quadrupeds equip gear, retrieve items, and even perform actions like opening doors straight from their HUD, without hands.[1|7]
+
+==Appearance==
+To a crawler, the Inventory has no physical presence in the real world; it is a purely mental HUD that can be opened, closed, and navigated by thought.[1|2][1|4] When a crawler wants to store something, an "Add Item to Inventory" prompt appears in their vision, and on mental confirmation the item vanishes from the physical world.[1|5] Retrieved items instantly materialize in the crawler's hand or directly in front of them.[1|5][1|25]
+
+==Operation==
+The single most important rule is the weight-and-size limit: a crawler must be able to lift an item off the ground unassisted for about four seconds in order to store it.[1|5] As a crawler's Strength climbs, so does the absurdity of what they can stash.
+
+The Living Creature Ban. The inventory cannot hold living biological creatures; anything alive placed inside dies instantly.[1|5] The known workarounds are specialized stasis mechanics such as Pet Carriers.[2|14]
+
+{{Spoiler | book = 4 | spoiler = Gnomish Live Ammo Balls provide another way to keep a living creature in stasis inside inventory.[4|13]}}
+
+The Hotlist. A secondary quick-access menu, the "Hotlist", lets crawlers consume pinned items (like potions) with a thought, skipping the business of uncapping and drinking.[1|5]
+
+{{Spoiler | book = 8 | spoiler = The base Hotlist holds 10 items but can be expanded with Skill Potions to 20 or 25 slots, eventually unlocking "Contingency" automations that fire items off under specific conditions.[8|10][8|25]}}
+
+Containers. If a crawler stores a filled container (a filing cabinet, a backpack), they can later pull it back out either with or without its contents.[1|25]
+
+Exploits and Patches. Initially, items kept their physical momentum on the way in and out, which let crawlers use the inventory as a weapon. The System AI patched this quickly to head off game-breaking tactics.[1|14]
+
+{{Spoiler | book = 6 | spoiler = Because the four-second rule scales with Strength, Carl ends up storing thousands of pounds of scrap metal,[3|6] heavy dwarven automaton parts,[4|22] and even an entire motorcycle.[6|44]}}
+
+===Equipped Gear===
+A crawler can move equipped gear straight from their body into inventory. Bipedal (humanoid) crawlers, however, cannot equip an item directly from inventory — even if it's in their hotlist — and must remove it first, then physically put it on.[2|25] Quadruped crawlers (e.g. cats) get around this entirely: their interface lets them equip items and perform actions directly from the HUD.[1|7]
+
+{{Spoiler | book = 5 | spoiler = Crawlers have a finite number of "Equipment Slots" in which enchanted or buffed items can be worn, with only one magical item allowed per slot at a time. They include, but aren't limited to: Head, Face, Neck, Chest, Nipples, Arms, Legs, Hands, Fingers, Feet, and Toes.[5|11]}}
+
+:See Also: :Category:Equipped Items
+
+==Loot==
+The crawler who lands the killing blow (or deals the most damage) has first rights to loot a corpse after combat, but those exclusive rights lapse after roughly ten minutes — or the moment they "X" out the creature's inventory box in their HUD — after which the body is fair game.[1|8][1|20][1|30] Crawlers can freely add or remove items from a corpse's inventory.[1|8][1|20]
+
+When a crawler dies, others can loot everything from their inventory except unopened Loot Boxes, and they must have physical access to the body to do so.[1|13] NPCs, mobs, and "non-Dungeon generated combatants" (such as tourists) can loot the bodies of dead mobs and crawlers, but cannot access a dead crawler's inventory.[1|13]
+
+==Related Mechanics==
+The System AI hands out various achievements for looting, using inventory, and equipping gear, and several skills and status effects shape how a crawler interacts with their inventory.
+
+===Achievements===
+{| class="dccProgTable mw-collapsible mw-collapsed" style="width:100%"
+!ACHIEVEMENT
+!FOR
+!REWARD
+|-
+|Loot Achievement
+|equipping something found in the dungeon for the first time.
+|none[1|6]
+|-
+|Oooh, Magic Achievement
+|equipping magical gear for the first time.
+|Bronze Adventurer Box[1|6]
+|-
+|N/A
+|looting a corpse for the first time.
+|Bronze Adventurer Box[1|8]
+|-
+|N/A
+|equipping jewelry for the first time.
+|none[1|6]
+|-
+|N/A
+|storing more than 1 ton of weight in inventory.
+|Gold Looter Box[1|19]
+|-
+|N/A
+|storing more than 10 tons of weight in inventory.
+|Gold Looter Box[1|25]
+|}
+
+===Skills & Spells===
+* Determine Value Skill unlocks sorting options and the "History" tab.[1|47]
+
+===Status Effects===
+{{Spoiler | book = 5 | spoiler =* Peace-Bonded prevents crawlers from accessing their inventory.[5|66]}}
+
+==Story==
+{{Spoiler | book = 3 | spoiler = The inventory's limitless capacity shapes how Carl and the Royal Court survive. Carl routinely loots entire rooms clean — doors, tables, heavy machinery, scrap metal — and later repurposes the haul at his crafting tables.[1|17][3|4]It doubles as a containment vault for unstable explosives: Carl safely carries the volatile "Carl's Doomsday Scenario" device in inventory, since pulling it out would set it off.[2|25][3|13]Carl and Katia also bend the equipping rules hard. Carl builds a massive open-top basket packed with heavy metal poles; by staging it just right and using the "equip" function from her inventory interface, Katia merges thousands of pounds of metal into her own mass and transforms into a towering juggernaut.[3|13]}}
+
+{{Spoiler | book = 8 | spoiler = Later, the chaotic goddess Eris scrambles the crawlers' interfaces mid-battle, swapping Carl's meticulously organized inventory with Donut's — leaving him staring at a useless pile of hats and rocks at the exact moment he needs explosives.[8|97]}}
+
+==Trivia==
+NPCs, Elites, and Hunters do not get dimensional inventories; they are stuck with the older grid- or slot-based systems, where larger items eat more space and total capacity and weight are sharply limited.[1|5][1|20]
+
+A crawler cannot natively sort their inventory by monetary value — they first have to consume a Determine Value Skill Potion to unlock item worth and rarity.[1|19]
+
+{{Spoiler | book = 5 | spoiler = That older interface leaves NPCs and similar combatants at a massive disadvantage against current-season crawlers.[5|14][6|64]}}
+
+{{Spoiler | book = 3 | spoiler = The inventory is normally inaccessible outside the dungeon (for instance, during talk-show appearances in production trailers), but it occasionally stays active if the trailer happens to sit within the planet's primary sea-level enhancement zone — a side effect of Borant's cost-cutting infrastructure.[3|20]}}
+
+==Speculation==
+
+* The System AI has explicitly called the dimensional inventory a "privilege" and actively patches exploits.[1|14] Given the AI's increasingly erratic, "primal" turn, some fans speculate that the showrunners — or the AI itself — might eventually lock, wipe, or scramble crawler inventories on the deepest, most punishing floors as a final act of sabotage.
+
+==References==
+
+{{Navbox Items}}
+

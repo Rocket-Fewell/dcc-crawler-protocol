@@ -1,0 +1,30 @@
+{{SpoilH | 5}}
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Buff / Debuff
+  | causes = Cured of Vampirism
+  | effect = Varies (see text)
+  | duration = 30 Hours (presumed)
+}}Immortalized is a timed status condition that affects creatures newly cured of  vampirism. Its effects change based on the time of day and whether or not the creature is exposed to nature light.[5|49]
+
+==Effects==
+===Sunlight===
+While the creature is in direct sunlight, Immortalized is a debuff.  The effects are:
+* Strength reduced by 50%;
+* Mana reduced by 50%;
+* Creature is unable to heal.[5|49] 
+
+===Indirect Lighting===
+When the creature is in shadow, under an overcast sky, or otherwise in indirect lighting, Immortalized has no effect.[5|49]
+
+===Moonlight===
+When the creature is in direct moonlight, Immortalized is a buff. The creature gains:
+* +50% strength
+* +50% mana
+* double healing speed.[5|49]
+
+== References ==
+

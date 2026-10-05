@@ -1,0 +1,46 @@
+{{Quote | quote = “Using the chat is quite enjoyable to me. Now I understand why Miss Beatrice was always on her phone. I wish it was connected to the internet. I think I'd have a lot of fun on the internet.”}} 
+The Chat allows crawlers to interact with other crawlers, NPCs, and Borant Corporation outreach associates while inside the Dungeon and its System AI-controlled Enhancement Zones. After completing the tutorial, crawlers may access the chat using the "Messaging Menu" or Party Menu in their interface.  
+
+:See Also:  Crawler Mechanics • Party Mechanics • Heads-Up Display (HUD)
+
+==Messaging Menu==
+Although the Messaging Menu is not shown during the tutorial (which introduces group chat as a feature exclusive to the Party Menu), it appears to be the only chat interface used on later floors.[3|8]  
+
+==Chat Mechanics==
+When a crawler first begins to use the party chat, a virtual keyboard materializes in front of them; however, most crawlers soon learn that they can simply focus on the chat window and think the words they want to send.[1|15][1|20] Receiving a message feels like a "haptic buzz" in the brain.[1|15]
+
+When the Dungeon opens, viewers cannot see private chats between crawlers; however, Borant Corporation and the System AI can.[1|40]
+
+===Chats with Admins===
+After crawlers are entered into the Crawler Assisted Outreach Program and assigned a PR agent, the PR agent can create a special chat in the Messaging Menu.[1|36] 
+
+The admin has the ability to close the chat at any time, which causes the chat to disappear from the crawler's log. The crawler cannot respond to or open a new chat with the admin until the admin re-opens the connection.[1|41]  Zev never closes the chat, so Carl and Donut can message her at any time.
+
+===Chats with Crawlers===
+Crawlers may use the Chat function to initiate chats with fellow crawlers, regardless of whether or not they share a party or guild. With the exception of special circumstances (e.g. Quest Chats), crawlers who do not share a Party must physically shake hands or fist-bump before they can begin communicating by chat.[2|21]  Once two crawlers have each other's contact information, they can add each other to group chats.
+
+====Deceased Crawlers====
+When a crawler is killed, any messages from that crawler are automatically moved to a folder in the top corner of the interface called Messages from deceased Crawlers.  Any unread or new messages are still visible, but a strike appears through the Crawler's name.[3|3]  The message is followed by a System notification:
+Note: This message is from a deceased crawler. When you close this message, the crawler will be removed from your message list. Hey, at least you’re still kickin’.
+
+===Chats with NPCs===
+Managers have private protected chats with their crawlers which are not accessible to viewers.  
+
+Intelligent NPCs, including those currently employed in clubs such as the Desperado Club, can also communicate by chat; however, crawlers may need to teach them how to use the Chat feature first.[3|20]
+
+===God Messages===
+God messages have a faint golden glow, and are read in the god's voice.[4|32]  These messages vanish as soon as the crawler closes them, but can be copied and pasted into the scratchpad. Gods and god sponsors can send messages to crawlers who worship them or who are actively engaged in quest for them.  The System AI cannot monitor god messages, but it and the host company can view the crawler's responses to the message.[6|17]
+
+===Quest Chats===
+All crawlers engaged in a group quest are lumped into a Quest Chat, which - similar to Discord - lists all participants on one side of the screen.[2|24]  The party designated to host the group chat has the ability to remove or silence users from the chat.[2|epilogue]
+
+==Scratchpad==
+The standard Messaging Menu contains a scratchpad.  The scratchpad is a single page, but allows crawlers to copy/paste notifications, take notes, record recipes, or even make crude drawings and diagrams.[3|8][4|13]
+
+Items such as the Dungeon Anarchist's Cookbook or Coffee Shop Author Kit may add an additional page to the crawler's scratchpad.  The page appears as a second (or third or fourth) tab, and typically allows the crawler to add text or diagrams to the item.[4|13]
+
+==Rule Changes==
+At the end of the Fourth Floor, viewers can, for a fee view the messages between crawlers. [3|29]
+
+==References==
+

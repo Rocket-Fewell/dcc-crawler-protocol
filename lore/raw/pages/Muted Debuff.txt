@@ -1,0 +1,31 @@
+{{SpoilH | 5}}
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Debuff
+  | causes = * Administrative Action
+* Mute Spell
+  | effect = Target cannot cast spells
+  | duration = 
+}}Muted is a status effect and debuff that prevents the target from casting spells.  It may be caused by spells such as the Mute Spell, magical items such as Soul Crystals, or by administrative action.[5|66]
+
+When the debuff is active, it appears above the target's head as an icon featuring a speaker with a cross through it.[6|4]
+
+==AI Notification==
+You’ve been muted! You may not cast spells in this room.
+
+When cancelled:
+You are no longer muted. You may now cast spells.
+
+==Story==
+===Book 2===
+Carl and Donut find a room full of Krasue under the ruins of the administrative building in the Medium Skyfowl Settlement, and attempt to cast spells into the room, only to find the room muted. [2|22]
+
+===Book 5===
+{{Spoiler | book = 5 | spoiler =
+When Carl enters Ballroom A of the High Elf Castle on the Sixth Floor, he receives notifications that he has been Muted and Peace-Bonded, and the room is under a protection seal.[5|66] The status is removed from the room after Samantha pulls the soul crystals.[5|73]
+}}
+==References==
+

@@ -1,0 +1,16 @@
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Attack Effect
+  | causes = Melee Attacks
+  | effect = Knocks target to ground
+  | duration = Instant
+}}Take Down is a melee-damage effect that knocks the target to the ground.[1|19]
+
+Take Down can be inflicted by crawler attacks or by mobs such as Rot Stickers.  The effect can be negated by any skill or equipped gear that negates melee-damage debuffs, such as the Enchanted Trollskin Shirt of Pummeling.
+
+==References==
+  
+

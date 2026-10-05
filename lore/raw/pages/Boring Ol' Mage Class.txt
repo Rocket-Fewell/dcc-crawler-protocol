@@ -1,0 +1,30 @@
+#redirect List of Classes
+<!--
+{{Class
+| title1 = {{PAGENAME}}
+| image1 =Boring Ol Mage.jpg
+| type = Mage
+| skills =
+* Increased magic skills (presumed)
+| effects =
+NEGATIVES
+* Lack of Fighter or Melee Skills (presumed)
+| crawlers =
+Zeynep
+| subclass_of =
+| stats =
+| skills =
+| effects =
+| benefits =
+| Prerequisites =
+}}<!--{{Quote | quote = }}
+
+{{PAGENAME}} is a Class offered on the Third Floor. If the class works similar to Boring Ol' Fighter, the crawler trades increased magic Skills for a complete lack of Fighter based skills. 
+
+<!--==Description==
+
+==Story==
+Zeynep chooses this class during Third Floor class selection.
+
+==References==
+

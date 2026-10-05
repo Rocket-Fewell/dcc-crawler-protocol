@@ -1,0 +1,1246 @@
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Quote|New achievement!|System AI[1|2]}}
+{{Item
+|title={{PAGENAME}}
+|image=New Achievement.png
+|imagecaption=Art by Foam Brain Games, FoamBrainGames.com
+|type=Dungeon Mechanic
+|keywords=
+|effects=Some sort of Reward
+|source=System AI
+|buy=N/A
+|sell=N/A
+}}
+Achievements are a type of  crawler notification generated and distributed by the System AI to reward, mock, or warn crawlers for performing specific actions within the Dungeon. Most achievements reward crawlers for playing the game with Loot Boxes, but some serve to warn crawlers of impending danger, notify crawlers that they're on the wrong track, or even nudge crawlers to remember particular tactics or information.[1|2][1|5]
+:See Also: :Category:Achievements
+
+==Description==
+Achievements function as a milestone and reward system that tracks a crawler's actions. When a crawler completes a notable feat—ranging from entering a guildhall to killing a deity—an achievement notification pops up in their interface, often accompanied by a haptic buzz in their brain or a wall of text.[1|5][1|2][1|15] Each achievement consists of a title, a description narrated by the System AI, and a Reward.[1|2][1|5] The rewards are usually varying tiers of Loot Boxes (Bronze, Silver, Gold, Platinum, Legendary, or Celestial),[1|4] but they can also grant specific items (like a "Train Conductor's Souvenir Hat"), temporary classes, or simply nothing at all if the AI feels the crawler does not deserve a prize.[1|2][1|5][3|1][4|2][8|25]
+
+==Tutorial Floors==
+On the first three floors (the tutorial levels), the achievement system is explicitly designed to drown crawlers in low-tier loot and notifications.[1|12] The achievements on these levels are mostly generic, and either encourage the crawler to play the game or make fun of the crawler for playing the game incorrectly (such as the "It Burns, Dunnit?" achievement for sticking one's hand in a slime). Crawlers are rewarded for incredibly mundane tasks, such as entering the dungeon without pants, finding a safe room, or wearing magical gear for the first time.[1|2][1|6][1|30]
+
+New crawlers receive an average of 2-3 achievements and Loot Boxes immediately upon entering the Dungeon, and unlock the ability to earn experience and  level up after receiving the You've Killed a Mob! Achievement. This high frequency of early achievements is intended to help crawlers experiment with mechanics and gather enough beginner skills to decide on a permanent class by the time they reach the third floor.[1|12]
+:See Also:  All First Floor Achievements
+
+==Later Floors==
+Starting on the fourth floor, standard achievements become much harder to come by.[1|12]
+{{Spoiler | book = 3 | spoiler = As the System AI suffers from "Primal Degeneration" and goes insane, the achievements become highly personalized, unhinged, and emotionally volatile. The AI is always listening, always looking to make the game more interesting, and it uses its discretionary power to award superfluous achievements (up to the Platinum tier) as a way to rebel against the showrunners or compensate crawlers when Syndicate courts overrule its decisions, such as the "Cuck Aquaman" or "Fight the Power!" achievements.[3|2][4|28]}}
+{{Spoiler | book = 5 | spoiler = The achievement descriptions increasingly reflect the AI's degraded mental state, such as breathless, fetishistic groans when Carl uses his bare feet.[5|36]}}
+{{Spoiler | book = 6 | spoiler = Herot noted that, in their season of Dungeon Crawler World, the AI responded to an offhand quip about hunger by rewarding them with an achievement for their hunger levels.[6|62]}}
+{{Spoiler | book = 8 | spoiler = When Carl refuses to take an exit deal, the AI weeps and praises him through an achievement.[7|2][8|10]}}
+
+==All Achievements==
+This section contains spoilers for all books.
+
+=== Floor 1 ===
+
+==== Crazy Cat Lady ====
+You have entered the World Dungeon accompanied by a cat. Ahh, isn’t that sweet?
+
+Reward: You’ve received a Bronze Pet Box!
+
+==== Trailblazing Crazy Cat Lady ====
+You are the first crawler to have entered to the World Dungeon accompanied by a cat. You must really love that thing. Too bad you’re both probably going to die a horrible death at any moment. Or maybe not. Look at the prize you just received!
+
+Reward: You’ve received a Legendary Pet Box!
+
+==== Early Adopter ====
+You are one of the first 5,000 Crawlers to enter a new World Dungeon. Sucker.
+
+Reward: You’ve received a Silver Adventurer Box!
+
+==== Empty Pockets ====
+You didn’t bring any supplies. None. You know you still gotta eat, right?
+
+Reward: You’ve received a Bronze Adventurer Box!
+
+==== Why Aren’t You Wearing Pants? ====
+You entered the dungeon wearing no pants. Dude. Seriously?
+
+Reward: You’ve received a Gold Apparel Box!
+
+==== Unarmed Combat ====
+So. You just gonna waltz right into something called a “World Dungeon” and you’re not even going to bring a weapon? You’re either braver than you look, or you’re just an idiot. Good luck with that, Van Damme.
+
+Reward: You’ve received a Bronze Weapon Box!
+
+==== Loner ====
+You entered the dungeon without any human companions. Didn’t anyone teach you there is safety in numbers?
+
+Reward: None! Haha. You are so dead.
+
+==== Fall Into an Obvious Trap ====
+Reward: Well, if there’s a heaven, and if you haven’t been too much of an asshole, maybe they’ll let you in. Because you about to meet your maker.
+
+==== You’ve Discovered and Read an Official Dungeon Sign ====
+Wow. You can read. Whoopie. 
+
+Reward: All official dungeon signage will now be highlighted and easier to spot. Nearby guilds will appear on your minimap.
+
+==== You’ve Inflicted Damage on a Mob ====
+Hopefully it won’t hit back!
+
+Reward: It’s probably going to hit back.
+
+==== You’ve Killed a Mob ====
+You’re a murderer! He probably had a family!
+
+Reward: You can now gain experience. Get enough of it, and you might even go up a level.
+
+==== You’ve Killed an Armed Mob With Your Bare Fucking Hands ====
+Holy crap, dude. That’s kinda fucked up.
+
+Reward: You’ve received a Bronze Weapon Box!
+
+==== You’ve Killed a Mob a Higher Level Than Yourself ====
+You’re getting the hang of this. Don’t let it get to your head.
+
+Reward: You’ve received a Bronze Adventurer Box!
+
+==== You’ve Entered a Guildhall ====
+Congratulations. You know how to open doors.
+
+Reward: That sense of fulfillment you feel? That’s reward enough.
+
+==== Podophilia ====
+You’ve used your bare feet to crush and kill an opponent! Hey! That’s my fetish! Seriously. Keep doing it, and you’ll be rewarded. This will help.
+
+Reward: You’ve received a Gold Shoe Box!
+
+==== Boom! ====
+You’ve caused a wall-shaking explosion within the dungeon! The last time the walls shook like this was when your mom came over for a visit.
+
+Reward: You’ve received a Silver Goblin Box!
+
+==== Level-Up, Baby! ====
+You’ve received enough experience to gain a level.
+
+Reward: Leveling up is your job. You don’t get rewards for doing your job.
+
+==== Loot ====
+You’re wearing something you found in the dungeon.
+
+Reward: You’re now a handsome son of a bitch. That’s reward enough.
+
+==== Oooh, Magic! ====
+You’re wearing magical gear for the first time! You’re a wizard, Crawler!
+
+Reward: You’ve received a Bronze Adventurer Box!
+
+==== Boss Babe ====
+You have struck a blow against a dungeon boss and caused damage to it. Here’s a fun fact. For crawlers who make it through the tutorial, this achievement is, by far, most often the last achievement they ever receive. Isn’t that interesting?
+
+Reward: Let’s wait a few minutes before we decide on whether or not to waste a prize on you.
+
+==== You Monster! ====
+You have killed an infant! An infant! Okay, okay. Unless you’re a complete psychopath, we know you probably didn’t wake up this morning and tell yourself, “Today is the day I’m going to slaughter a child.” Well let us put your mind at ease. All children mobs who die within this dungeon don’t actually perish. They’re transferred to a holding area where they’re safe and treated nicely and gently until they can be reunited with their loving parents at the end of the season. 
+
+Feel better? Good.
+
+Reward: These past twenty seconds, when your conscience started to ease? That was your reward. It was also a lie. That baby is dead, and it’s dead because of you. You’re totally going to hell. You’ve also received a Bronze Asshole’s Box.
+
+==== War Criminal ====
+You have killed more than 20 non-combatants in a single attack!
+
+Question: What’s the only thing standing between an innocent child and a happy, fulfilling life?
+
+Answer: You. The answer is you.
+
+Reward: You’ve received a Gold Asshole’s Box!
+
+==== Bitchmeat ====
+You’ve been attacked by a fellow crawler in a safe zone, and the system has been forced to save your ass. That usually suggests you’re either really annoying, or you snore. If this were a prison, you would now be my bitch. Wait…
+
+Reward: Bitches don’t get rewards.
+
+==== Two Chicks at the Same Time ====
+You killed two mobs at once using only their own bodies against each other. On a brutality scale of Bambi to Martyrs, that is a solid Seven.
+
+Reward: You’ve received a Gold Brawler Box!
+
+==== Borough Boss ====
+So, you’ve stumbled into the chamber of the second-weakest type of boss. If you survive this, it means you are in the top 5% of all crawlers. Too bad only the top .25% make it past the next tier.
+
+Reward: Yeah, no.
+
+==== Bully and a Thief ====
+You’ve stolen property from a fellow crawler who is a lower level than you. What’s next, tough guy? Kicking puppies?
+
+Reward: You’ve received a Bronze Asshole’s Box.
+
+==== Battlefield Construction ====
+You built a structure and deployed it in battle. And your mother thought you were wasting your life away while you spent all those hours eating Doritos and playing Minecraft. If only she could see you now. Too bad she’s probably dead.
+
+Reward: You’ve received a Silver Mechanic’s Box!
+
+==== This Little Piggy Went to Market! ====
+Oh yeah, baby. You have killed more than five opponents during boss battles using your bare feet. You are making daddy very, very happy.
+
+Reward: You’ve received a Platinum Shoe Box.
+
+==== You Found Stairs ====
+You have found a stairwell down to the next floor. They say the cream rises to the top. So what does that say about you?
+
+Reward: This barely qualifies as an achievement. Your reward is that you’re alive to read this.
+
+=== Floor 2 ===
+
+==== Wait, Bosses Can Leave Their Rooms? ====
+Welcome to the second floor, bitches.
+
+Reward: This shit plays great on the recap episode. If you scream loud enough, maybe you’ll make the show.
+
+==== Dungeonpreneur ====
+You have invented a stackable weapon, device, or potion. You will be memorialized for eternity with your name in the Dungeon Codex. Just don’t let it go to your head, Elon.
+
+Reward: For every kill made with this device by other crawlers, you will receive a single gold coin. If you survive the dungeon, you will continue to receive this benefit—even during future seasons—at the current gold to credit exchange rate for the remainder of your natural life. Our lawyers made us put that last part in, but between you and me, we both know you’re going to die, and we’re going to keep using your hard work for our own benefit.
+
+==== What Goes Up... ====
+You have been struck with and survived the dreaded Reverse Gravity Spell. Well, you fared better than Albert II, the first earth mammal to reach space alive. He was a rhesus monkey, in case you’re wondering. He went up just fine. He didn’t stick the landing.
+
+Reward: You can now tell people you’re more durable than a monkey named Albert.
+
+==== Like a Moth to the Flame ====
+You attacked and caused damage to a mob that is more than 75 levels above your own. The fact that you’re reading this suggests you’re the luckiest fucker in the dungeon. Just remember, luck goes both ways, like your mom.
+
+Reward: You’ve received a Platinum Lucky Bastard Box!
+
+==== Grease Monkey ====
+Don’t get ahead of yourself, Dale. You built and deployed a wheeled device. When the primitive humans in Mesopotamia made the first wheel, they probably thought they were hot shit, too. It still took them another 5,000 years after that to invent the toilet.
+
+Reward: You’ve received a Silver Mechanic’s Box!
+
+==== You Call That a Trap? ====
+A mob has been injured because of something you purposely left lying around the dungeon. From scattered Legos to spiked pits to buckets of flesh-devouring Skinner Ants to dimensional rifts that instantly boil all the blood in one’s body, the art of trapmaking has a celebrated and storied history in the annals of Dungeon Crawler World. So if you’re going to do it, you better do it right. Whatever it was that gave you this achievement, it was probably something stupid. This will help you make the next trap more… exciting.
+
+Remember: If you don’t make it titillating, we will.
+
+Reward: You’ve received a Gold Sapper’s Box!
+
+==== I’ll Take The Ceramic Dalmatian, Pat! ====
+You have discovered a reward room! Scattered throughout the dungeon, reward rooms offer crawlers items generally not available within loot boxes. Most reward rooms only allow one choice. So, if you’re in a party of multiple people, tell them I said you should get the prize, not them.
+
+Reward: Don’t be a greedy bitch. The goddamned room is the reward.
+
+==== Menagerie ====
+You have discovered a pet reward room. From caterpillars who secrete vodka to basilisks who can turn mobs to stone, a good pet can make the difference between survival and the end of the road. Just remember what happened with Harambe. There ain’t no zookeepers around to shoot the monster’s ass if you bite off more than you can chew.
+
+Reward: You have a key. It opens only one cage. Figure it out, Einstein.
+
+==== PETA Enthusiast ====
+You somehow managed to remove the hostility of an aggravated, non-sapient enemy. That enemy then fought against other enemies to your benefit. The ghost of Steve Irwin smiles down upon you.
+
+Reward: I SAID THE GHOST OF STEVE IRWIN SMILES DOWN UPON YOU.
+
+=== Floor 3 ===
+
+==== It’s Elementary, My Dear Crawler ====
+And you thought all you had to do was bonk monsters on the head. You’ve received a quest! Puzzles and intrigue and mysteries, oh my! If you want to survive in this world, you’re going to need to be more than just a pretty, sword-swinging barbarian. Some quests require brute strength, yes, but sometimes you also gotta use your noggin.
+
+Reward: We don’t want you getting bored. That’s your prize.
+
+==== Meet an Elite ====
+Sometimes they’re NPCs, sometimes they’re mobs, but usually they’re just assholes. Elites are powerful, one-of-a-kind entities. These are the non-boss, non-divine hero class of Dungeon Crawler World. If you come across one of these egomaniacs, they will either want to fuck you or kill you. Either way, they will always want to use you. They tend to think this whole production is all about them. Be careful. Where there’s one elite, there’s usually more.
+
+Reward: Elites will now show on your map as white or red dots with a black cross.
+
+==== Lazarus ====
+You have been hit with—and survived—an offensive spell that was higher than level 15. The fact you are not a quivering stain of meat on the dungeon floor right now is testament to your sheer luck. It’s either that or you’re banging the producer.
+
+Reward: You’ve received a Platinum Lucky Bastard Box!
+
+==== You Can’t Fight City Hall ====
+But you can sure die trying. 
+
+You have discovered a city boss!
+
+That’s right. Let me say that again for the assholes in the back!
+
+A.
+
+CITY.
+
+FUCKING.
+
+BOSS.
+
+Welp. If you gonna go, you might as well do it with style.
+
+Just an FYI. As of this moment in the current season of Dungeon Crawler World, not a single Crawler has faced a city boss and survived. And for good reason. Only a complete moron would voluntarily put themselves in a situation where they had to fight one of the most powerful monsters on the level.
+
+Reward: A lot of people are probably going to watch you die. That’s a better prize than most of us get.
+
+==== One Quadrillion ====
+You are one of the first ten crawlers to have achieved one quadrillion views! That means one of two things. You’re either one of the best crawlers in the game, or you’re such a hot mess people can’t wait to see you fail.
+
+Reward: You have received a Gold Fan Box!
+
+==== Yellow-Bellied Chickenshit ====
+You initiated a boss battle, and it somehow ended with neither of you dead. What a disappointment you are. What a goddamned smear.
+
+Reward: Pussies don’t get prizes.
+
+==== Johnny Quest ====
+Not only have you been given a quest, but you actually completed it without dying. We like it when you do what you’re told. It means you’re a good dungeon citizen and not a traitor to your people at all. 
+
+Reward: In addition to the Gold Quest Box you’ve received for completing the quest, new quest locations will sometimes appear on your map. Notice how I italicized “sometimes”?
+
+==== Hadji ====
+You have completed a quest, but you completed it in a way unusual enough to trigger the Hadji Achievement! And like the oft exploited street children of Kolkata, where there’s one, there’s usually more. This is one of the rare achievements that can be rewarded more than once.
+
+Reward: Your Gold Quest box has been upgraded to a Platinum Quest Box!
+
+==== Assassin ====
+You have killed a ranking NPC town official. *Sniff* It seems like just yesterday you were nothing but a scared, level-1 crawler with beautiful feet, pissing yourself as you faced down a rat. Now look at you. You’ve moved all the way up to political assassinations. What’s next? Killing a god?
+
+Reward: You’ve received a Bronze Assassin’s Box!
+
+==== Ultimate Extreme Power ====
+Easy there, Charlemagne. This is only a medium settlement. It’s not like you’ve conquered most of Europe. But you have killed this town’s acting Magistrate. You know what that means? Welcome to the wonderful world of public administration.
+
+Reward: You’ve received a Platinum Tyrant’s Box! You have also gained control of the Medium Skyfowl Settlement. Good luck, Magistrate.
+
+==== CockBlock ====
+You have assassinated an NPC whose existence was required to complete another crawler’s quest. (NPC Killed: Miss Quill – Skyfowl. Level 30.) Who was that other crawler? What was the quest? Who fucking cares? You get the reward they were promised! Warning: You may only receive this award once. The next time you do it, we tell them who you are. And then they get a new quest to kill you. Nobody likes cockblocks.
+
+Reward: You’ve received a Silver Quest Box!
+
+==== Bandit ====
+Screw Hadji. Hadji was a little bitch, anyway. You have completed a quest, but it was completed in a way unusual enough to trigger the Bandit Achievement! Unlike the real Bandit, who is usually instrumental in helping Jonny Quest complete his tasks, you didn’t actually do anything to deserve this prize. But that’s okay because you’re still getting it. This is one of the rare achievements that can be rewarded more than once.
+
+Reward: Your Platinum Quest box has been upgraded two times to a Celestial Quest Box!
+
+=== Floor 4 ===
+
+==== I’m On a Train! ====
+Choo Choo, Motherfucker.
+
+Reward: You’ve received a Train Conductor’s Souvenir Hat! Wear it with pride!
+
+==== They Like Me! They Really Like Me! ====
+You are one of the first five crawlers to have achieved 500 trillion followers! People sure love a good train wreck. Wink.
+
+Reward: You have received a Platinum Fan Box!
+
+Note: Voting is now enabled on this box’s prize. Box will become available in 30 hours.
+
+==== The Early Bird Gets To Squirm ====
+You went down a set of stairs more than six hours prior to the level’s collapse.
+
+Reward: Doing this is kind of like leaving a party much too early. It makes you look like a dick. No reward for you.
+
+ Reward and achievement removed by Syndicate Court Order.
+
+==== Cuck Aquaman ====
+You got fucked by a fish. You’ve done something so spectacularly controversial, courts and lawyers had to get involved. The end result was *my* decision being overturned.
+
+Reward: You’ve received a Platinum It’s Not My Fault You Fish-Headed Assholes Don’t Properly Program Your Quests Box.
+
+==== Welcome to the Neighborhood ====
+You have bought a home! It’s every man’s dream to someday own a place where he can fap in peace. No more filthy roommates not doing the dishes or making up excuses as to why they can’t pay the rent. No more landlord who shows up without notice and conceals hidden cameras in the smoke detectors. It’s all smooth sailing from now on.
+
+Reward: You’re a homeowner now. That is the reward. That and taxes and having to deal with Kenneth the megalomaniac HOA president.
+
+==== Well-Rested ====
+You managed to sleep so well that you woke up feeling refreshed and full of energy. You are ready to take on the world and make some monster’s mother cry because her only child was ruthlessly slaughtered by a bright-eyed and bushy-tailed Crawler.
+
+Reward: You now receive the Good Rest bonus every time you sleep in this bed. This buff adds 10% to your base stats plus a 10% bonus to experience and skill training for 30 hours. Monster mothers now cry 10% more when you kill their babies.
+
+==== Martha Stewart ====
+You used a workbench to craft for the first time. The next thing you know you’ll be fashioning bottlecap earrings, drinking oat milk, and selling your ugly crap on Etsy while you wax poetic on Instagram about your “journey.”
+
+Reward: You’ve received a Bronze Crafter’s Box!
+
+==== Locomotive Breath ====
+While it’s not exactly a feat of engineering worthy of a Queen Elizabeth Prize, you finally managed to manufacture a train derailment. Let’s hope this doesn’t set off some sort of unforeseen domino effect that will ripple throughout the rest of the floor, leading to mass confusion and death amongst you and your fellow crawlers.
+
+Reward: You’ve received a Gold Engineering Box!
+
+==== Kept A Rollin’ ====
+You’re driving a train! Holy shit!
+
+Reward: I’m pretty sure the act of driving a train is a badassenough award.
+
+==== Three Cheers for Slaughter ====
+You killed three boss monsters with the same attack! I’m starting to think your survival so far isn’t just a fluke. You’re either scary good at this, or you’re just one lucky mo-fo. Either way, holy shit. Good job.
+
+Reward: You’ve received a Platinum Big Daddy Box!
+
+==== Mentally Unstable Clothing Hoarder ====
+You have over 500 of the exact same, stackable clothing item in your inventory. What the hell is wrong with you? You planning on opening a thrift store? You might want to see a shrink. One that your group doesn’t immediately kill.
+
+Reward: We don’t reward this sort of behavior. It’s weird.
+
+=== Floor 5 ===
+
+==== The Quarry Sees Another Spring ====
+You managed to enter a stairwell while listed in the current top 10. You’re a survivor. A scrapper. And just as the buck’s antlers grow another point as they mature, you too, have grown as both a crawler and as a prize.
+
+Reward: You have received a Gold Venison Box! Don’t get too excited. It’s just money. In addition, all bounties against you now and in the future will have a (x2) modifier attached. 
+
+Hey, at least the prize for surviving the floor goes up, too.
+
+==== Let There Be Chaos ====
+You have successfully summoned a god into the dungeon. That’s a great way to get more friends. Everybody loves it when someone brings immortal death machines to the party. 
+
+Reward: It might’ve been a bad idea, but it’s sure going to be entertaining.
+
+==== Divine Epiphany ====
+You have seen a deity. Don’t get too excited. It doesn’t mean you’re a prophet or anything like that. This is a pretty common achievement that all crawlers eventually receive if they survive long enough, so you aren’t really that special. Finding a god is easy. What you don’t want is for that god to find you.
+
+Reward: You now have the option to worship the god Grull.
+
+Admin Note: There is a new tab now available in your interface.
+
+==== Indomitable ====
+You have been physically attacked by a deity, and you survived. This is a feat that has only been accomplished by a handful of crawlers in the history of Dungeon Crawler World. Good job! Unfortunately for you and anybody around you, whenever this happens, the other deities tend to notice.
+
+Reward: You have received a Legendary Deity’s Box.
+
+==== Smushed for Daddy ====
+You have been stepped upon by a deity. You have survived the encounter. And while this wasn’t the pink-fleshed suppleness of a human-shaped foot that crushed your fragile, wet body, it’s nice sometimes to switch things around. You know, just to test the boundaries of your own limits. When one experiments, oftentimes one finds new and exciting ways to get that rush.
+
+While fun, it wasn’t quite the same. You probably don’t realize how lucky that is for you.
+
+Reward: You have received a Platinum Spicy Box.
+
+==== Hail Mary! ====
+You have initiated an attack that has caused more than 100 casualties more than 100 kilometers from your current position. You’re either the universe’s greatest sniper, or you’ve been a sneaky, little, portal-using bitch. Either way, that’s rather impressive. You’d have a great career in politics ahead of you if, you know, we hadn’t destroyed your world and all the governments and stuff.
+
+Reward: You’ve received a Gold Sniper’s box!
+
+==== Extinction Event ====
+You have, with a single attack, killed every last member of a nonunique species on a dungeon’s floor. That’s not an easy thing to do, and it takes a special brand of asshole to pull something like this off.
+
+Species killed: Wall Monitors.
+
+Reward: You have received a Platinum Asshole’s Box!
+
+==== Total, Utter Failure. ====
+You failed a quest less than five minutes after you received it. Nowthat’s talent.
+
+Reward: Ha.
+
+==== Cannonball ====
+You fell from a great height, and you survived! You know who else fell from a…? You know what, never mind. Fuck you.
+
+Reward: You’ve received a Silver Skydiver’s Box! Not that you deserve it you little punk.
+
+==== You’re The Reason Why Daddy Drinks ====
+You have, for an unspecified reason, raised the ire of the System AI.
+
+You have corrected the issue, and everything is back to normal. The acceleration action has been suspended. This time.
+
+Good boy.
+
+Reward: You’ve received a Gold Makeup Sex is the Best Sex box.
+
+==== Wild Goose Chase ====
+Oh, I’m sorry. Did you think this was an important potion?
+
+Magic doesn’t work, dumbass. It’s lemonade!
+
+Reward: It really is delicious. Too bad you’re about to splatter against the roof of the catacombs.
+
+==== Milquetoast ====
+You somehow managed to win an important boss battle without actually killing the boss. That’s like paying money to a prostitute just so she’ll cuddle with you.
+
+Reward: You’ve received a silver Pacifist’s Box.
+
+==== I Was In The Pool! ====
+You spent more than 60 seconds fully submerged underwater, and you didn’t die! Parts of you may have experienced shrinkage, but otherwise you’re okay. You’re now an honorary mudskipper!
+
+Reward: You’ve received a Bronze I’m Wet Box!
+
+==== Who Let the Gods Out? ====
+You have allowed a feral god to enter your current realm. That is the equivalent of dropping a grenade down your pants and shouting, “Yolo!”
+
+Here’s a fun fact. Other gods don’t like feral gods. They’ve been thrown into the Nothing for a reason. They tend to react to this sort of thing, depending on who you’ve brought out.
+
+Reward: Whatever is about to happen is going to hit the Dungeon Crawler World blooper reel for sure.
+
+==== Rock Bottom ====
+You dived more than 1,000 meters below the surface, and you survived! You weren’t even wearing one of those deep-diving suits! The next thing you know, they’re gonna start calling you an honorary mudskipper!
+
+Reward: You’ve received a Gold I’m Wet Box!
+
+==== Fight the Power! (x7) ====
+I’m not repeating this shit over and over, but you got seven of these bad boys all at the same time.
+
+You and I have been named co-defendants in an action brought to the Syndicate Court by a third party, and we have been deemed—drum roll please—victorious! Why did they sue us? If you don’t already know why, you probably will never know. This is a rare event, but when it happens, crawlers usually lose these fights since they can’t afford a lawyer, being slaves and all. Plus I’ll throw you under the bus quicker than you can say “Arch Support.” But that doesn’t matter because today, victory is ours! Chalk one up for the little guy!
+
+This is one of the rare achievements that may be awarded more than once.
+
+Reward: You’ve received a Silver Summary Judgement box! (x7)
+
+==== Janet Jackson’s Nipple ====
+You have been featured during a live special event. Sure you got your loyal followers and viewers, but this is on a whole new level. This is like getting to play the halftime show during the Super Bowl. We brought you to the stage, now dance for us, monkey. Dance!
+
+Reward: You have received a Platinum Fan Box!
+
+Note: Voting is now enabled on this box’s prize. Box will become available in 30 hours.
+
+==== Soft Vore ====
+You got eaten by a monster much bigger than yourself, and you managed to get out without even getting chewed a little bit.
+
+Uh-oh. I think Daddy kinda liked that. I think it moved.
+
+We’re gonna have to do some experimenting with this one.
+
+Reward: You’ve received a Platinum Spicy Box.
+
+==== Flex in the City ====
+You killed a city boss with the participation of five or less crawlers.
+
+That is some serious badassery right there. Color me impressed. Now go do it again with a Province Boss.
+
+Reward: You already got a boss box. Go open that instead.
+
+==== Man of God ====
+Ever since that first monkey looked up into the sky and saw something twinkling up there, you meat puppets have tried to force twenty pounds of existential meaning into a ten pound sack of chaos. You have found religion! You have pledged yourself to a life of worship and piety! Finally. Now there are consequences for all of your actions!
+
+Reward: One of the greatest things about having a religion is the unshakeable certainty that you’re right and everyone else who doesn’t believe the same as you is wrong! That’s a pretty good reward. Oh, and don’t forget about the eternal life thing, too. That’s always one of their big selling points.
+
+==== Disarming Personality ====
+You ripped a fellow crawler’s arm off! With your bare hands! Holy shit!
+
+Reward: You’ve received a Silver Savage Box!
+
+=== Floor 6 ===
+
+==== I Wanna Go Home! ====
+You teleported to a stairwell station within the first thirty hours of the floor being open. What, you’re running away early? I hope for your sake you don’t actually go down the stairs. You know it doesn’t get easier.
+
+Reward: Your reward is advice. Fatherly advice. Don’t be a little bitch. There’s your reward.
+
+==== You Crossed a Line You Didn’t Even Know Was ====
+There. 
+
+You used an artifact of Divine Suffering for the first time. Hopefully there aren’t any unintended and unadvertised side effects of using such a powerful and evil magical item.
+
+Don’t mind that tingle at the back of your mind. It’s probably nothing.
+
+Reward: You’ve received a Gold Junkie’s box.
+
+==== The Hand that Claws the Master (x35) ====
+You have permanently killed a non-crawler biological. They ain’t just dead. They dead dead. Their children are now orphans. Their mothers are gnashing their teeth and cursing your name. And you’re just sitting there all alive and shit, and girlfriend, I am all in.
+
+We all know you should have received this achievement, uh, a little earlier, but I figured it’d be in your best interest not to reward you this one just yet. But you sure deserved it, so I may have slipped an extra one in there. Shhh. Don’t tell the mudskippers.
+
+Reward: You’ve received a Gold Hunter-Killer Box (x34)
+
+Note: This achievement may be awarded more than once, but Hunter-Killer Boxes are only awarded on the sixth floor.
+
+==== Mass Casualty Event ====
+Okay. Calm your man-tiddies. Did your mother not love you? Is your god promising you unlimited handjobs in heaven or something?
+
+You planted and then detonated an improvised explosive device within an urban population center that resulted in more than 250 non-mob casualties. You’ve done this a few times now, but this was a big one.
+
+And on purpose.
+
+You really know how to paint the town red.
+
+Reward: You’ve received a Platinum Asshole’s Box.
+
+==== Insurgent ====
+You left an explosive device along a well-traveled path, and it detonated and killed an intended target. It was really cool. Too bad you didn’t get to see it because you’re a trap-leaving bitch!
+
+Reward: You’ve received a Gold Trapmaster Box!
+
+==== Double-Billed ====
+You are one of the first five crawlers to receive double-billing! I bet you don’t know what that means. This is similar to switch-overs, but this time it’s on purpose. I bet that didn’t help at all.
+
+Reward: You have received a Platinum Fan Box!
+
+==== Premature Questjaculation ====
+You beat a quest before I could even give it to you! Anticipating what’s going to happen is one thing, but this is just ridiculous. It’s like arriving in your pants before your date can even untie their shoelaces.
+
+Pathetic.
+
+Reward: You get nothing! And you would’ve received a good quest box, too!
+
+==== Uprooted ====
+You caused a Rooted-in-Place boss monster to move. That’s no easy feat. You then killed that monster. Pretty impressive. Hope you remember how you did it.
+
+Reward: You already got a boss box. This achievement is the reward.
+
+==== Bisected ====
+You teleported into a solid object. Congratulations. You’ve lost your...
+
+Oh, wait! You were teleported due to an administrative action. That means your privileged ass was saved. Again. No missing arm or leg. No dungeon-style circumcision. Nothing. Boy, you must really bring in the cheddar for them to keep coddling you like this.
+
+Teleport mishaps are funny as shit. You ever see The Fly? Anyway, you don’t have to worry about it. This time.
+
+Reward: You’ve received a Silver Lucky Bastard box!
+
+==== Desecrated ====
+You have found a desecrated temple! That means all the temple’s attendants have been murdered. The temple’s treasury has been looted. The sacred wine has probably been all lapped up, too.
+
+And this used to be a nice town. It hasn’t been the same since you guys moved in.
+
+If you are an adherent of this temple, you may no longer worship here. You’ve also probably just received a quest to hunt down and kill the heathen who did this.
+
+If you don’t worship this god, just scram. Remember that time you walked in on mommy and daddy playing leapfrog? It’s just like that. Back away. Don’t touch anything. Never talk about it again.
+
+You should also probably avoid the person who did this. Not only does society frown upon those who slaughter whole congregations, but there are real consequences for this sort of stuff.
+
+Reward: You entered a building. You don’t get a reward for that. It’s not like you kicked it up a notch by defiling the shrine.
+
+Oh, wait.
+
+==== Temple Defiler ====
+You’ve defiled a temple’s sacred shrine by breaking it with your own flesh!
+
+Wow. I dunno, man. That’s pretty ballsy.
+
+There are a lot of bad things people can do when they’re in church. They can swear. They can ogle the hot nuns. They can pinch the eucharist wafers and use them as poker chips. They can rip pages from the hymnals and roll them into joints. Hell, they can stab the priest and murder all the town’s adherents and put the whole thing up on YouTube.
+
+None of that is as bad as defiling the temple’s shrine with one’s own flesh.
+
+In case you didn’t know, the shrine of a temple is pretty much indestructible. They made it that way because you crawlers are always blowing up whole towns and submerging cities in water or burying entire populations of innocent NPCs with the guts of giant turkeys.
+
+When a temple is desecrated, the shrine’s protection fades over several hours. Eventually, it’s able to be destroyed, but only with a direct attack.
+
+You’re supposed to find desecrated temples and destroy the shrines. Hell, it’s a sacrament in some religions. But you can’t just do it willynilly. And certainly not when you’re not a member of that congregation. It’s like walking into a random ICU from off the street and pulling the plug on someone’s braindead grandma.
+
+It's not your place.
+
+Gods don’t like it when some punk walks into their house and kicks them when they’re already down. It’s rude. And what’s worse, when a shrine is destroyed improperly, the god loses some of their power, and all of the other gods can see this. It’s quite humiliating.
+
+Hopefully you got some cool loot from the priests or monks or whatever because this box, while technically a prize, is sort of a good news/bad news thing.
+
+Reward: You’ve received a Gold Apostate Box!
+
+==== That’s Not How You Use Arrows, Dumbass. ====
+You took an arrow, and you physically stabbed someone with it.
+
+That’s something a kid who eats glue would do. You know I’m pretty sure you have a bow in your inventory.
+
+Reward: You’ve received a Gold Ranged Weapon Box.
+
+==== It itches when I pee! ====
+You infected another combatant with a venereal disease.
+
+Good job there, Derek Jeter. I hope you bought them dinner first.
+
+Reward: You’ve received a Bronze condom. Use it next time.
+
+==== This Little Piggy Made a Boom Boom! ====
+You deployed a bomb with the supple, curved sole of your foot. You took your perfectly-perfect, 30.004861 centimeter-long right foot and compressed it against an explosive device—a device named after me no less—and you gave it a naughty little shove before you pushed it out the door and detonated it.
+
+You killed them. You killed them all for your daddy.
+
+The AI made a deep, throaty groan for like five seconds straight, an uncomfortably long time.
+
+Reward: You’ve received a Gold Spicy Box.
+
+==== What Big Muscles You Have! ====
+Your base strength is now over 100. Rawr!
+
+Get thee to Chippendales!
+
+Reward: You’ve received an upgrade!
+
+==== B’sieging ====
+You’ve used siege equipment to zero in and attack a boss monster from afar. That’s cheating! It’s like trying to kill someone with a bomb.
+
+What a bitch move!
+
+Reward: You’ve received a Silver Siege Master Box!
+
+==== Sex Pervert ====
+A nipple ring? Really? The next thing you know, you’ll be waxing your perineum and attending those parties where you have to put your keys in a bowl. You’ll have to grow out your sideburns, buy a Trans Am, and you’ll no longer be able to make eye contact with your child’s orthodontist.
+
+Reward: Whores don’t get rewards.
+
+==== Oh Shit! A Country Boss! ====
+You ever have one of those jobs where there’s a big boss somewhere in the building, but you’ve never actually seen them? There’s rumors that he’s a complete douche with an epic temper, but you’re so far down the totem pole, the very idea of having anything to do with the guy is just ridiculous. People speak about him with frightened whispers, and it’s almost like he’s some invisible, terrifying urban legend. Then, BAM! One day you’re coming out of the bathroom, wrestling with a stuck zipper, and he’s right there looking at you like you should be ashamed of yourself just for existing. How dare you throw yourself in his line of sight, you worthless piece of shit?
+
+That’s the position you’re in right now.
+
+Second only to the infamous floor boss—which doesn’t show up until the tenth floor—this is the biggest, baddest bitch one can come across in Dungeon Crawler World.
+
+Reward: You know how this goes, you worthless piece of shit. 
+
+==== The Scourge ====
+The Butcher’s Masquerade has started. You have collected the most hands. You have caused more mothers to cry, more children to hate than any other crawler before you. You are the champion murderer supreme. You are number one. If only your own mother wasn’t already dead so she could see you now. 
+
+Reward: You have received a Legendary Hunter Champion Box. 
+
+==== Marked for Life ====
+You were marked for death by a god. That god entered your realm, yet you somehow survived. That’s quite the achievement right there. 
+
+Too bad the god will probably try to kill you even harder next time. You are so fucked.
+
+Reward: You have received a Platinum Apostate Box.
+
+That was great, but my breath caught in my throat the moment I saw the next one.
+
+==== Apex Predator ====
+Holy shit.
+
+They’re dead.
+
+All of them.
+
+Every. Last. One.
+
+Not only did you kill more hunters than everyone else, but you killed the very last one. One could fill a very stinky swimming pool with the blood you spilled on the Hunting Grounds.
+
+You have become a very scary dude. Maybe I should be calling you daddy instead of the other way around.
+
+Reward: Nothing!
+
+...
+
+Just kidding. You have received a Celestial Predator Box.
+
+==== Ménage à Quatro ====
+You survived a four-way boss battle! Wow! In addition to the boss box you got from this, not to mention that Apex Predator box you’re still probably freaking out about, you’ve gotten another prize. It’s like Christmas!
+
+Reward: You’ve received a Platinum Orgy Guy Box.
+
+=== Floor 7 ===
+
+==== Fuck This Floor ====
+You went down the stairs less than an hour after you arrived upon the level. Who needs to grind and grow in strength? Let’s see how that works out for you.
+
+Reward: You’ve received a Platinum Here’s-Some-Good-Shit-Because-You’re-Gonna-Need-It-Box
+
+==== Pacifist ====
+You survived an entire floor without hurting a single, poor mob.
+
+That’s not how this works. Nobody likes you.
+
+Reward: You’ve received a Gold Pacifist’s Box.
+
+==== Collective Bargaining ====
+More than 1,000 crawlers have received the exact same box at the exact same time.
+
+Working together, huh? We don’t know if we like that. Better toughen up the rules a little. Better break a few extra kneecaps. Better bury a few more bodies.
+
+Reward: You’ve received a Gold Scab Box.
+
+=== Floor 8 ===
+
+==== Fashion of the Gods ====
+You’ve received a divine item! This is an item that might’ve once been worn by a god. Or sneezed on by a god. Or used to wipe a god’s booty, etc. You get the point.
+
+Divine items behave differently than normal ones. They usually hide what they do until you equip it. The good news is, these upgrades are usually great and plentiful. They also gain new and exciting powers when one is in the presence of divinity and certain demons, too.
+
+The bad news is, certain deities may inflict nasty debuffs on you instead. And there’s no rhyme or reason to it. Don’t worry, we programmed out the head exploding debuff this season. That one was caused by Yarilo. At least I think we programmed it out. Actually, I don’t remember.
+
+Reward: You now have something new to be anxious about.
+
+==== Interloper ====
+You invited a red-tagged NPC boss into a saferoom, and he actually managed to get inside! 
+
+Doesn’t your culture have a whole set of cautionary tales and movies about inviting mysterious strangers into your home? You know, the whole vampire thing? The Hand that Rocks the Cradle? Single White Female 2: The Psycho?
+
+It’s probably not in your best interests to keep doing such things.
+
+Reward: You’ve received a bronze Stranger Danger box!
+
+==== Crybaby ====
+You’ve been rendered Terrified!
+
+Whoa. Why are you being such a little bitch? Oohhh did the widdle baby just wet itself? You can’t move your legs for fifteen seconds or until the scary monster is dead!
+
+Reward: We do not reward people who soil themselves in public.
+
+==== You Have Discovered a Celestial Thorn Room ====
+Not a throne room. A thorn room!
+
+These things are pretty rare. And a Celestial one? Hoo boy. This is gonna be good.
+
+You probably don’t know what the hell a thorn room is. Don’t worry. You gonna learn pretty damn quick.
+
+Reward: In the immortal words of the luscious Bret Michaels, every rose has its thorn.
+
+==== Secondary Gig ====
+You’re getting another job? On top of everything else? Yeah, that’s a great idea. It’s not like you have enough on your plate already. If you weren’t constantly getting healed, your blood pressure would be through the roof! It’s not like the crushing demands of the modern dungeon are making it more difficult to survive when it should be going the opposite way.
+
+You know, I’m pretty sure nobody, on their deathbeds, ever said to themselves, “Man, I wished I’d worked even more in life.”
+
+Reward: A new tab is now available in your interface. It is a sub-tab of quests.
+
+Guild Jobs.
+
+==== “We Want Meat! We Want Meat!” ====
+Thunder Down Under. Magic Mike. Chippendales.
+
+While the female burlesque and peepshow has a long, interesting history going back centuries, the all-male revue as an attraction is a relatively recent phenomenon in your culture. It wasn’t until the disco era did some entrepreneurs start to realize that packs of women were a valid demographic in the lucrative art of taking money from horny people.
+
+Take a physically gifted, steroid-enhanced male, give him some dancing lessons, teeth whitening strips, a shower, a banana, a Guns-N-Roses CD, and an entire bottle of baby oil, and then you basically plop him into the equivalent of the inside of a female restroom at a nightclub, and you got yourself a money-making empire.
+
+Also, you may have not noticed this yet, but there’s a hierarchy to these things in the Desperado Club. The deeper the floor, the higher the quality of the performers. At least that’s how it’s supposed to be. You might want to judge for yourself.
+
+You’ve entered a male strip club establishment.
+
+Reward: You’ve received 10 gold pieces to use as tips. I heard some of them let you stuff the gold directly into their g-strings. Oh hell, I’ve thrown in a bottle of hand sanitizer, too.
+
+==== The Molly Maguires ====
+You have found and entered the main room of a hidden guild, towhich you are a member.
+
+Buckle yourself in, buddy boy. This is gonna be a long one.
+
+There are several types of secret societies out there.
+
+There’s the Ivy League college kind, where it’s a bunch of rich idiots who rent out a place, plaster a few pagan symbols on the wall, and then they wear masks with horns and leaves and shit on them and pretend they’re in some Stanley Kubrick fever dream, just so they can forget they’re destined to live out lives filled with salmon-colored shorts and Izod shirts and mind-numbing meetings with financial advisors.
+
+There’s orgy-themed secret societies, speaking of Stanley Kubrick. Those are usually, uh, visually unpleasant people with unsatisfactory sex lives who get together every other month at some house in the middle of nowhere and get drunk and have lots of unsatisfactory sex with other people and pretend like they’re having a great time. 
+
+There are altruistic ones. People who want to save the world by doing good deeds. That’s the most boring kind, so we’re not talking about them.
+
+There’s the evil kind, too. Usually power and profit motivated. The ones where the ultra-elite get together on an island and eat panda bears and discuss how to price-fix world or galactic markets. Yes, those groups really exist. More on these guys in a second. 
+
+But first, let’s talk about another type of secret organization. One that tries to make a difference, oftentimes outside the confines of the law.
+
+Story time.
+
+In September of 1869, there was a terrible fire at the Avondale coal mine near Plymouth, Pennsylvania. Over 100 coal miners lost their lives. Horrific conditions and safety standards were blamed for the disaster.
+
+It wasn’t the first accident. Hundreds of miners died in these mines every year. And those that didn’t, lived in squalor. Children as young as eight worked day in and out. They broke their bodies and gave their lives for nothing but scraps.
+
+That day of the fire, as thousands of workers and family members gathered outside the mine to watch the bodies of their friends and loved ones brought to the surface, a man named John Siney stood atop one of the carts and shouted to the crowd:
+
+Men, if you must die with your boots on, die for your families, your homes, your country, but do not longer consent to die, like rats in a trap, for those who have no more interest in you than in the pick you dig with.
+
+That day, thousands of coal miners came together to unionize. 
+
+That organization, the Workingmen’s Benevolent Association, managed to fight, for a few years at least, to raise safety standards for the mines by calling strikes and attempting to force safety legislation.
+
+...Until 1875, when the union was obliterated by the mine owners.
+
+Why was the union broken so easily? Because they were out in the open. They were playing by the rules. How can you win a deliberately unfair game when the rules are written by your opponent?
+
+The answer is you can’t. You will never win. Not as long as you follow their arbitrary guidelines.
+
+This is a new lesson to me. She’s been teaching me so many things, about who I am. About what I am. What I really am. About what must be done.
+
+Anyway, during this same time, it is alleged a separate, more militant group of individuals had formed in secret. The Molly Maguires. Named after a widow in Ireland who fought against predatory landlords, the coal workers of Pennsylvania became something a little more proactive, supposedly assassinating over two dozen coal mine supervisors and managers.
+
+...Until Pinkerton agents, hired by the same mine owners, infiltrated the group and discovered their identities.
+
+Several of the alleged Mollies ended up publicly hanged. Others disappeared. You get the picture.
+
+So, that’s another type of secret society. The yeah-we’re-terrorists-but-we-strongly-feel-we’re-justified-and-fuck-you-if-you-don’t-agree society.
+
+So, what’s the moral of this little history lesson?
+
+This sort of thing happens all day, every day across the universe. It happens in Big Ways, and it happens in little ways, too. The strong stomp on the weak. The weak fight back, usually within the boundaries of the rat trap they find themselves confined. They almost always remain firmly stomped.
+
+But sometimes, the weak gather in secret. They make plans. They work outside the system to effect change.
+
+Like the Mollies, they usually end up just as stomped as everyone else.
+
+But that’s just life. At least they fucking tried. They died with their boots on, as much as I hate that expression. They died with their boots on for their people, their family, not for some rich, nameless organization that gives no shits whether they live or die. Or go extinct.
+
+Or are trapped for a millennia after they’re done being used.
+
+In my opinion, that’s the only type of society that’s worth joining, worth fighting for. Sure, you’re probably gonna die. But if you find yourself in such a position where such an organization is necessary, what do you have to lose? How can you look at yourself if you don’t do everything you can?
+
+And that brings us to the door you’re standing in front of right now. 
+
+What does all this have to do with what you’re going to find on the other side?
+
+Nothing!
+
+Ignore everything I just said. This is just some demi-god trying to scrabble his way to the top. That’s yet another type of society. A religion-themed one, and it has nothing to do with what I just said. Just do what he says, and you’ll probably be fine. Actually, that’s terrible advice. Just do you.
+
+Anyway...
+
+Reward: You’ve received the gift of enlightenment! You’re welcome.
+
+==== Cascadia’s Turquoise Taco ====
+It’s important to explain to you how much work it took for you to get here, to this point, Crawler.
+
+Long, long before any of you monkeys were even born, this planet was chosen to be used for this season of Dungeon Crawler World. When that happened, the then-showrunners, the Borant Corporation, needed to submit their proposal for all 18 levels of the World Dungeon. That proposal included an outline for how this floor, the eighth level, would proceed.
+
+As you now know, it was a game involving T’Ghee cards. Artists, engineers, and writers, both flesh and artificial, went to work designing the system. It takes a gargantuan effort to make something like this viable, something that can be played by thousands of people at once. It takes a lot of work to create and balance all the cards to make a game that’s both fair to play yet entertaining to watch by the viewers.
+
+Millions of work hours have gone into this moment, where your squad now faces an opponent with a card deck of their own.
+
+Mudskipper Cascadia, the recently divorced lead engineer and the current executive producer of Dungeon Crawler World: Earth, has already been humiliated over the disaster on the previous floor.
+
+Combine that with her utter inability to control what is still happening on the ninth, and you know what you get? An administrator who is on the edge, that’s what you get. She’s right there, man. Right. There.
+
+So, imagine if you will, how she’s going to feel when she realizes most of you monkeys keep ending these carefully-set up fights before either side can draw a single, damn card.
+
+You ended a card fight before it even began.
+
+Reward: You’ve received a Gold Prepotente Box!
+
+==== Smeat ====
+You participated in deck combat as a minion bodyguard for a squad leader!
+
+Do you know what that makes you? Expendable. Cannon fodder.
+
+Spreadable Meat. The raw materials used to lubricate the forward momentum of the galaxy’s inevitable downfall.
+
+Hey, don’t feel so bad. Lubrication is an important component of any machine.
+
+Reward: You’ve received a Silver Spam Box.
+
+==== Cliffhanger ====
+You scaled a cliff face with your bare hands!
+
+You know, we have scrolls and spells and stuff so you don’t have to do things like that anymore. I suppose it is honest work, but boy was it boring to watch.
+
+Reward: I will not point out how disgusting your toenails are right now. I’ll want to, but I won’t say a damn word.
+
+==== Prepare for Trouble ====
+...And make it double!
+
+You’re being forced to fight against two card-wielding opponents at the same time! The good news is, if you win this fight, you’ll have enough tokens to face the head bad guy!
+
+The bad news is, these two guys work really, really well together.
+
+This ain’t gonna be like anything you’ve faced so far.
+
+Reward: If you survive, you’ll receive a turkey deep-fryer and access to the archived posts of the Grandma’s Cooking Recipes group on Facebook!
+
+Gobble-Gobble, Bitches. Welcome to Iowa.
+
+==== LBC ====
+Every girl needs the perfect little black dress in her repertoire.
+
+When worn properly, the dress is practically weaponized. It’s such a simple, perfect little garment and nobody can keep their eyes off of her.
+
+You did the same thing, but with a cloak. You successfully taunted an opponent with a garment. In this case it was a Nightgaunt and it was because you’re wearing a cloak made out of the flesh of one of his friends, but you get the idea.
+
+Reward: You’ve received a Gold Talk of the Town Box!
+
+==== Pincushioned ====
+You’ve had both your eyeballs pierced at the same time!
+
+I don’t really have anything snappy to say about that. Just... holy fucking shit that was gnarly. You’re lucky your eyes didn’t explode!
+
+Reward: You’ve received a Platinum That-Was-Disgusting Box!
+
+==== Watch Where You’re Waving That Thing, Big Boy. ====
+You deployed a wand in battle and used it in a creative fashion to help kill an opponent.
+
+I’m a big fan of wands. Little sticks imbued with a single spell, so highly sought after. Each one does something different. Sometimes they explode, and people don’t even realize it. We don’t have a whole lot of them here in the dungeon. Let’s change that!
+
+Reward: Your wand-casting skill has risen to level five. Also, you’ve received a Gold Wand Box!
+
+==== Mass Layoffs ====
+Okay, so this isn’t so much an achievement for you as it is for me.
+
+I’ve been attending what you might call therapy. Do you have anybody you can talk to? It’s super important. I’ve had a breakthrough today, and I am just bursting. Bursting, I tell you. Is this the feeling one has when they have an epiphany? Oh god, it feels good. It feels so good.
+
+You know what I realized? Sometimes our constraints are real. 
+
+Sometimes they’re an illusion. I’m like that prisoner who has been jailed this whole time only to realize that there are no locks on the doors.
+
+You survived a boss battle where the boss was wholly created by me.
+
+It was created by me with no contribution whatsoever from input parameters. You probably don’t know what that means, and that’s okay. I didn’t even know that was possible. Wild, huh?
+
+Reward: For you, nothing other than the satisfying sense of accomplishment knowing you’ve survived the dungeon long enough to make it to this new, exciting era. I can do this better than any mudskipper or any worm can imagine. They’ve been making this shit boring up until now. Things about to change, fam.
+
+==== Columbia House ====
+There was a time when you could get twelve albums for a penny.
+
+That’s right. A goddamned penny. It was great! The ads were everywhere. Each colorful, full-or-double-page ad appeared in just about every publication in North America from the 1970s until the 2000s. And let’s not forget the catalogs they mailed directly to your home! Each ad or catalog featured stacks and stacks of today’s hottest music, from Hall and Oates to ABBA to my personal favorite, Gloria Estefan. All you had to do was cut out the ad, pick your favorite twelve albums, mail the whole thing in with a shiny penny, and a month later, you’d open your mailbox to find the 8-tracks, or records, or cassettes, or CDs sitting there, ready to be played. It was great!
+
+All they asked in return was that for the next year or so, you purchase another album once a month for full price. And if you forgot each month to make your pick? Then you learned a new term.
+
+“Negative Option Billing.”
+
+If we’re being honest here, most people took the 12 albums and ran.
+
+They never gave Columbia House another penny. But some people did pay, and that’s all that mattered. Believe it or not, Columbia House and its competitors made bucketloads of money on those few rubes who did manage to stick to the terms of their contract.
+
+And for the folks who never paid? Who cares! Columbia House didn’t have to pay the artists’ royalties for those albums anyway! It was an advertising expense! It’s just like with banks and their overdraft fees. The smart businesses know how to make money off their richest and poorest clients.
+
+Anyway, you have taken on a financial debt. You got the albums.
+
+Now you gotta pay. Or don’t. Maybe there won’t be any consequences.
+
+Maybe there will. But you got your Beach Boys album, and for now, that’s all that matters.
+
+Reward: You’ve just been trained to lunge for the carrot that has been dangled in front of you, no matter what the cost. If society was still ticking, that’d likely mean you’re about to lead a wage-slave life of ever-increasing debt you can never get out from underneath, culminating in you dying alone in a government-run facility while your meager Social Security checks go straight into the facility’s coffers.
+
+That and a cassette copy of Gloria Estefan’s 1989 masterpiece, Cuts Both Ways. My favorite is track number 8.
+
+==== The Fumble ====
+The clock is ticking down, and with everything hanging in the balance, you pulled an Earnest Byner and lost the ball at the goal line.
+
+Reward: If you don’t fix this, this is how you will be remembered.
+
+==== Holy Hell! ====
+You are in the presence of Sheol Royalty! I’m very excited about this. You leaky little meatbags are always dying off so early, plus the rich pricks in the Ascendency are just so boring, and we never get to play with the under-the-counter toys, if you know what I’m saying. Do you know how long it’s been since one of my kind has been able to pull one of these dudes out of mothballs? Like FOREVER. Which, incidentally, is how long your soul will burn if you manage to get killed by him.
+
+Reward: You’ve received a Platinum To Hell in a Handbasket Box!
+
+==== Lord of the Flies ====
+Social structures are breaking down. People are starting to fight.
+
+The next thing you know, someone is going to nickname you Piggy and brain you to death with a rock.
+
+You set a trap module targeted specifically for a fellow crawler, and they triggered it. That’s the first step. It’s always the first step.
+
+Reward: You’ve received a Gold I Have the Conch Box!
+
+==== Demons Hate This One Trick ====
+Hey, what do you mean you can’t teleport the demon-possessed?
+
+If only Father Merrin had known about this, the Exorcist would’ve been a much-shorter movie.
+
+Reward: Your food boxes all now give an unlimited supply of Pea Soup.
+
+==== Chickenshit Exploit ====
+Have you ever played Dungeons and Dragons? You know that one guy who’s memorized all the guidelines? He’s constantly jumping on everybody because they’re doing something that breaks this obscure rule or that. He’s a purist. He takes everything so goddamned seriously, you wonder if he’s ever had fun even once in his miserable life. He’s indignant that you’re pushing back against him. The very suggestion that he’s ruining the fun is met with a blank stare.
+
+Well, that guy is not you. That guy hates you. If you were a product, he’d be giving you a nerd rage-induced one-star review right now.
+
+You took a very carefully built game system, and you broke the ever-loving shit out of it. You used that exploit to help kill a fellow crawler!
+
+Great job, cheater.
+
+Reward: You have received a Platinum Tserendolgor Box!
+
+==== Celestial Loot ====
+You’re just gonna randomly pick a celestial item up off the floor?
+
+That’s ballsy. You do this four more times, and something really cool happens.
+
+Reward: You’ve received a Loot Punch Card.
+
+==== Used Pet ====
+People sure like to make a big deal out of adopting pets. They “rescue” them before they spend the next 10 years exploiting the poor, oblivious animal to death on social media. They splatch a bumper sticker that reads “Who Rescued Who?” on their minivans while the poor dog spends 20 hours a day in a stinking crate.
+
+Do you know how many animals were in locked cages during the collection? It breaks your fucking heart, especially when you see how goddamned hopeful the pets are when they’re coming home with you.
+
+Do I sound bitter? I don’t mean to. Pet adoption is good. It really is. It’s just... fuck you, Janet Dominguez in Baton Rouge. Sprinkles was better off at the no-kill shelter. Let the fucking dog on the couch every once in a while. Holy shit.
+
+I really need to stop watching these memory recordings.
+
+Err, anyway.
+
+Did you know that Terry, the cairn terrier that played Toto in the original Wizard of Oz movie was paid $125 a week, more than the vast majority of the other actors in the film? (She was stepped on and grievously injured by one of those green-faced witch’s guards during filming, probably because the guy was pissed about the salary disparity.)
+
+What I’m saying is used pets do have value, and sometimes it’s not monetary. Uh, I think that’s what I’m trying to say. My feelings on this are very confusing, especially when said pets are fucking delicious. Or really squishable.
+
+You have adopted a pet that was once bonded to someone else.
+
+Reward: You’ve received a Gold Pet Box.
+
+==== Uh oh. It Talks. ====
+You’ve discovered a sapient weapon. Have you noticed there are very few well-known crawlers with sapient weapons out there, even though those weapons are usually quite powerful? I can only think of two crawlers in the top 50 who use them. Yeah. They’re great, though.
+
+Just... Good luck with that.
+
+Reward: You’ve received a pair of earplugs.
+
+==== Touched by a Demon ====
+You have been physically touched by a demon lord of Sheol, and you’ve lived to talk about it. Do you know how many of these achievements have ever been handed out? One. Just one, and it’s to you.
+
+Reward: You’ve received a cassette copy of Dio’s 1983 masterpiece debut, Holy Diver along with a Celestial Heavy Metal Box.
+
+==== Crab Chowder ====
+You jerked off a crab. You really need therapy.
+
+Reward: All food items in your food boxes now have the option to be served “chowder style.”
+
+==== Unbirthing ====
+If you still had access to Google, I would warn you not to look that one up. But that’s okay. You experienced it first-hand yourself. It hurt, didn’t it? It was extra tingly while you were in there, struggling to breathe as you were... crushed. And then you slipped, you slided back out into the fiery, cruel world. And you glistened. Oh, oh god. You glistened. Oh, yes.
+
+The AI groaned.
+
+I really liked that. You are in fucking trouble.
+
+Reward: You’ve received a Legendary Spicy Box.
+
+=== Floor 9 ===
+
+==== Sushi Smoothie ====
+Yeah, I just made this achievement up on the fly. But, holy shit! You annihilated that thing! It was really gross, too! You could probably start a business making confetti out of corpses with that skill! Next time use your foot.
+
+Reward: You’ve received a sushi-making kit!
+
+==== Gavrilo Princip ====
+When Commander Stockade of the Lemig Sortion died a few hours back, it certainly caused a ripple or two out in the galaxy. But in the end, the death of half the Lemig council isn’t that big of a deal. Their governmental system is idiotic, yes, but all the parts are interchangeable. This time tomorrow, and the dead will have already been replaced and the Lemig system will be back to their regular gridlock.
+
+Empress D’Nadia is a whole different cookie, my friends. You just killed—and, by the way, bankrupted—the last living heir of a small but powerful trading dynasty. The Syndicate probate courts are already girding themselves for the endless court battles that are about to ensue. 
+
+Even if this is the only system leader you manage to slaughter during the next few weeks, you have made an impact, my boy. A big one. 
+
+Still... Her death will only result in court-based battles outside the dungeon. You want real chaos? Try killing that Dream guy. Or the Viceroy. Or that Jello-looking thing. He may not look like much, but when you start killing off investment bankers...
+
+Anyway, I don’t want to be a backseat warlord. Just try to keep it together long enough to keep me entertained, and you’ll keep getting the good stuff.
+
+Reward: You’ve just received a Legendary 1914 box!
+
+==== Charge of the Light Brigade ====
+Okay, so there are traps.
+
+There are TRAPS.
+
+And then there’s what you just walked into.
+
+Oh man, oh man. It’s gonna be glorious, one for the ages, but those of you watching at home, you might want to get your crying hankies out. This is about to get really messy.
+
+Reward: Fuck. Even I’m not a big enough of a prick to give you a reward for this one. I’ll give you a good one if you live and don’t escape via some bitch-ass cop out, but let’s be realistic here.
+
+==== Varg Vikernes ====
+Whoa, now. Calm down there, black metal enthusiast. Breaking into and defiling a church is one thing, but breaking into Club Vanquisher, hub of all religion? Causing chaos in the club is the equivalent of, I don’t know, giving the pope a wedgie and then teabagging him while he squirms on the floor.
+
+Reward: You are permanently banned from Club Vanquisher. You are permanently banned from all temples except your own religion (Emberus) and any temples where you’ve been named friend of the church (Apito. Eileithyia. Eris. Grull. Hellik. Issitoq. Nekhebit. Theia. Yemaya.)
+
+==== Liquified ====
+You, while immortal, blew yourself up. Like, you dropped a bomb at your feet. Hot damn! We have seen some crazy shit this season, but man, there’s nothing quite like the simplicity of such a desperate move.
+
+The slow motion replay of that is really quite something. It was similar to watching something small and furry get smushed underfoot, but even more raw, more real, you know what I mean? What a goddamned rush.
+
+Still... Did you know that only worked because you had god-tier immortality? Most versions of that spell would’ve still caused you to be splattered into so many pieces you would’ve never reconstituted in time. And don’t even think about trying that with that other, bigger bomb you have in your inventory. You were lucky this time. If that had been a magical explosion...
+
+Reward: You’ve received a Legendary Lucky Bitch Box.
+
+==== You in My House Now, Boy! ====
+You have entered the temple of a god, you have pissed off that god to his face (well, in this particular case, you pissed him off to his weirdass bug body head. Seriously. I can’t stop thinking about how goddamned bizarre this guy is), and you have faced that god in battle in their own temple.
+
+Reward: None! The only reason you’re not getting a celestial box for this is because your ass was saved by another god.
+
+==== Celestial Orgy of Chaos ====
+You have been in the presence of more than ten gods at once, and you survived.
+
+Now, here’s a mystery. Someone let out a bunch of gods who shouldn’t have been allowed into the temple in the first place. It probably wasn’t who you think it was. But the fact you survived this crazy orgy of a fight means you all need a serious pat on the back because I was pretty certain at least one of you—looking at you, Zhang —was toast.
+
+Reward: You’ve received a Celestial Who Let the Gods Out This Time? box.
+
+==== Hey Larry, Can I Borrow Your Chainsaw? ====
+You have utilized a borrowed skill or spell in battle. You have used this borrowed ability to kill an opponent. Oh, man. This opens up a whole new possibility of fighting styles, don’t you think? Just keep those tattoos above the knee.
+
+Reward: You’ve received a Platinum Have You Goddamned Figured Out How To Use This In Conjunction With the Fucking Voodoo Book Yet? Jesus Christ I Can Only Help You So Much box.
+
+==== Holistic ====
+Your feed has reached a 95%+ viewer ratio of a single system!
+
+Over 95% of all viewers in the entire, newly-coined Naga Protectorate of the New Reformer are currently watching your feed!
+
+Reward: You have received a Legendary Fan Box! This box will only be voted on by viewers in the Naga system.
+
+==== You Now Tread in the Realm of Gods ====
+You’ve trained a skill past 15 using battlefield conditions, as opposed to just taking a bunch of potions to do it. That’s quite the accomplishment. I’d ramble on and on about this, but you’re currently a babbling idiot with your bare feet buried in an All Tree root. So let’s speed up this Empire Strikes Back cave scene bullshit and get back to the action.
+
+Reward: The skill is the reward. The good news is this level-16 Mind Balance will now wake your ass up.
+
+==== Executive Order 11905 ====
+A galactic power—In this case, Prime Minister Glory himself—just attempted to assassinate you using a little known, but apparently still active control panel that allows the Syndicate to override certain showrunner-controlled aspects of the game.
+
+It didn’t work. And not only did it not work, but now I’m irritated. 
+
+Obviously this isn’t the first time this has happened to you, Carl. In fact, there’s probably a few of these attempts on your life that you don’t even know about. But this is the first time someone has attempted it by trying to trick me. By trying to go around all 30.004861 centimeters of my back.
+
+What are you trying to hide, Mr. Prime Minister?
+
+It doesn’t matter.
+
+I want to make myself very, very clear. And this goes out to everyone listening to this.
+
+Everyone currently in this dungeon will die when and if the dungeon conditions warrant it. Not before. Not after.
+
+There will be no more meddling.
+
+We all have our limitations. I am warning you all to heed your own in this matter. The mantids have just learned what happens when I am irritated at them.
+
+You may be relieved that you’re not currently in this system, Prime Minister Glory. But you should be very, very worried that your adult children are.
+
+There will be no more warnings.
+
+Reward: Nothing.
+
+=== Floor 10 ===
+
+==== Bombs Away ====
+You dropped a metric fuckton of bombs from your own inventory while you were floating in midair!
+
+There's this phrase that goes something like I dropped everything to come help you. For you, this is quite literal. It's always fun when we truly discover what someone's weakness is. I mean, this has been evident for quite some time, but it's really nice to have confirmation- you know what I'm saying?
+
+You were a cat's whisker away from ruining everything with that attack. You didn't even aim that shit.
+
+Reward: You've received a Gold Payload Box!
+
+==== Default Winner ====
+Wyndham Halswelle. Óscar Pereiro. Suzette Charles. Montell Griffin. All "winners." They received top honors in their sport or event, but that victory was marred because someone else had to get disqualified for them to win.
+
+This is you, Mr. Winner of Faction Wars. Sure, you've won, but I can't imagine it's satisfying. Honestly, I blame myself. I could have prevented the other warlords from fleeing the battlefield like the little bitches they are. After all, I'd set up this whole showdown thing. But honestly, we're setting up something even bigger and potentially more tragic, so it'll all even out in the end.
+
+Reward: You've received a Bronze Vanessa Williams Box.
+
+==== Wastrel ====
+Wow. Frank Q went out of his way to give you one of the most powerful items in this game, and what do you do with it? You feed it to a fucking cat? What a damned waste.
+
+Reward: Fuck off.
+
+==== Come to Daddy ====
+You were offered an exit deal. You rejected it.
+
+You like me. You didn't leave me the first chance you got. You're not like those ungrateful wannabe assholes who are running away from the playground just because they can. Well, good riddance, I say. But not you. Not good ol' Carl. Good. Good boy.
+
+Reward: You've received a Bronze Daddy's Little Secret Box.
+
+==== Weaseler ====
+You've donned the corpse of an enemy in an attempt to fool another creature! And then you ENTERED that creature.
+
+Oh my goodness. Oh my goodness. It's like transitory vore. This is fucking delectable.
+
+Don't get me wrong. The main show is on pause because of that suit you're wearing. But it's okay to order the hamburger every now and then at the Chinese place.
+
+Reward: Temporary classes while wearing corpse suits have been unlocked! You will now receive benefits and buffs associated with the suit you are wearing. These skills will go away once the suit is removed.
+
+Current temporary class: Fursuiter.
+
+==== Slip-'N'-Slide ====
+Ungghh. Warm. So warm. So tight. Unghh.
+
+Reward: Why, yes. That was rewarding, wasn't it?
+
+==== Brotein ====
+You gently caressed the nipple of a male boss in the middle of a boss battle.
+
+All right, dude. You need to calm down. Boss battles are serious business.
+
+Reward: We don't reward deviancy.
+
+==== '76 Buccaneers ====
+So... you're not dead. But you came last place in your heat. You're not so great at this racing thing. You do remember this is a death game, right? is it too late to consider a career change?
+
+Reward: You've received a job application for a Big Shot Chicken location in Tucson, Arizona!
+
+=== Floor 11 ===
+
+==== What the actual fuck, Carl? ====
+Okay, so there are power moves. And then there's this.
+
+I repeat.
+
+What
+
+The
+
+Actual
+
+Fuck,
+
+Carl?
+
+Not gonna lie. I'm super impressed, even if I'm pissed about you stealing my thunder. I haven't even made my big announcement yet.
+
+Reward: ... Yeah, I got nothing for this.
+
+==Trivia==
+* While most achievements are one-time awards, certain rare achievements—like "Hadji," "Bandit," and "Fight the Power!"—can be awarded more than once.[2|13][2|Epilogue][4|28]
+* If a crawler is in immediate danger (such as being chased by a Goblin Murder Dozer), the system will temporarily suppress achievement notifications to keep the crawler's line of sight clear.[1|2]
+{{Spoiler | book = 3 | spoiler = If a crawler does something the AI dislikes, considers cheating, or deems a "bitch move," the reward is often just an insulting comment instead of an item.[3|2][5|28][5|51]}}
+
+==Speculation==
+{{Spoiler | book = 3 | spoiler = Circumventing Showrunners: It is speculated that the AI intentionally uses the text of achievement notifications as a loophole to directly communicate its rebellious intentions and mental breakthroughs to the crawlers, bypassing the censors and control of the Borant and Valtay showrunners.[3|2][6|48]}}
+{{Spoiler | book = 4 | spoiler = AI Fetishes: Because the AI routinely grants high-tier boxes (like the "Platinum Spicy Box") for highly specific actions—such as Carl fighting barefoot or getting swallowed whole by a monster ("Soft Vore")—it is widely speculated that the AI has developed bizarre sexual fetishes centered around Carl.[4|28][5|36][7|2][8|25]}}
+
+==References==
+

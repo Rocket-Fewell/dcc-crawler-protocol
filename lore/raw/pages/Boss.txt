@@ -1,0 +1,359 @@
+{{Quote |B-b-b-b Boss Battle!|System AI[1|11]}}
+
+{{Race Infobox
+| title1 = Boss
+| image1 = 
+| caption-image1 = 
+| type = Dungeon Mechanic / Entity Classification
+| class = Elite / Boss
+| floors = 1-18
+| racial_traits_(dungeon) = High Health, Unique Mechanics, Superior Loot Drops
+| height = Varies vastly (from human-sized to towering kaiju)
+| weight = Varies vastly
+| bonuses = 
+| penalties = 
+| skills = 
+| deities = 
+| natural_enemies = Crawlers, The Showrunners
+| culture = Varies by Floor Theme
+| organizations = 
+| crawlers = 
+| syndicate = 
+| npcs = 
+}}
+
+In the Dungeon, bosses are powerful mobs that crawlers may need to defeat to complete quests or access stairwells in Boss Battles. When defeated, bosses drop a single item of "persistent loot" that each and every crawler can receive a copy of by looting the boss's body.[1|12]
+
+:See Also: Elites • Mobs • NPCs • :Category:Bosses
+
+==Description==
+Bosses are formidable entities specifically placed in the Dungeon to challenge crawlers and entertain the galactic audience. There are six main types of standard bosses, scaling up in difficulty and jurisdiction: Neighborhood, Borough, City, Province, Country, and Floor bosses.[1|12]
+
+Bosses are often caricatures or exaggerated stereotypes created by a team of writers.[1|25][1|35] Their backstories and mechanics are tailored to fit the specific theme of the floor or area they inhabit.[2|3] However, not all bosses are manufactured fabrications; some, like the Ball of Swine, are real alien creatures ported directly into the Dungeon from their home worlds.[1|26][1|35]
+
+==Boss Tiers==
+Bosses are classified as one of six tiers based on strength level. Neighborhood Boss are the most common and easiest to defeat, whereas a Floor Boss is "the biggest, baddest bitch one can come across in Dungeon Crawler World."[1|12][6|2]
+
+The first three floors of the Dungeon contain only Neighborhood, Borough, and City Bosses. New crawlers are typically unable to fight Borough Bosses without a large group, and City Bosses can annihilate even large groups of unprepared crawlers. On the First Floor only, bosses are confined to a set arena or chamber, and Borough and City bosses will always guard a stairwell; on all other floors, bosses can wander.[1|22][1|33]
+
+{| class="dccProgTable"
+!Tier
+!Loot Box
+!Star Color
+!Persistent Loot
+!First Appear
+|-
+!Neighborhood Boss
+|Bronze Boss Box
+|Bronze
+|Neighborhood Map
+|First Floor
+|-
+!Borough Boss
+|Silver Boss Box
+|Silver
+|Borough Field Guide
+|First Floor
+|-
+!City Boss
+|Gold Boss Box
+|Gold
+|Map of the Stars
+|First Floor
+|}
+
+{{Spoiler | book = 6 | spoiler = 
+TierLoot BoxStar ColorPersistent LootFirst Appear
+Province BossPlatinum Boss BoxFourth Floor
+Country BossLegendary Boss BoxTreasure MapSixth Floor
+Floor BossCelestial Boss BoxTenth Floor[6|2]
+}}
+
+{{Spoiler | book = 5 | spoiler = Not every boss is tagged as hostile by the System AI. Many white-tagged bosses can be charmed by characters with high charisma; even Province Bosses can be beguiled, provided that the crawler's charisma is 100 points higher than the boss's total charisma plus constitution. To the best of anyone's knowledge, it is not possible to charm a Country or Floor Boss.[5|74]}}
+
+{{Spoiler | book = 8 | spoiler = Beyond the six standard tiers lies a seventh, ultimate classification: the Dungeon Boss.[8|94] The Dungeon Boss of the eighteen-floor crawl is Scolopendra (Level 500); it is possible for a crawler to bypass the Floor Boss at the end of the tenth floor only to end up facing it.[8|94]
+If a crawler manages to kill the Dungeon Boss, special rules trigger: level timers cease, floors no longer collapse automatically, no more exit deals are offered, and the Ascendency battles immediately begin.[8|94]}}
+
+==Boss Battles==
+Boss Battles are announced when a crawler is locked into an arena with a boss or, on the Third Floor and lower, engages a boss in combat. The System AI proclaims "B-B-B-Boss Battle!" as though through a loudspeaker as strange, EDM-ish music begins to play. Time freezes as (like something straight from a video game) the combatants' round-framed mugshots appear in the air, followed by "Versus", then stylized metallic font bearing the boss's name. When the announcement ends, all combatants can move again.[1|11]
+
+After a boss is defeated, the world briefly freezes again as the AI declares the winner. The music stops, the door (if applicable) explodes, and the boss's remaining minions may drop dead or leave.[1|11]
+
+===Boss Rooms===
+Bosses are typically found inside designated "boss rooms" or lairs. On the early floors, entering a boss room usually triggers an automatic door closure, locking the crawlers inside until the boss is defeated or the crawlers die.[1|24] Crawlers quickly learn, however, that bosses are not always confined to their rooms; some can break out and chase crawlers through the Dungeon.[1|33]
+
+===Loot and Rewards===
+Defeating a boss yields two kinds of reward. First, the boss drops a single piece of "persistent loot" on the ground that any crawler can collect a copy of by looting the body, usually a map of the surrounding area: a Neighborhood Map from a Neighborhood Boss,[1|12] a Field Guide from a Borough Boss,[1|27] and a Map of the Stars from a City Boss.[1|12] Second, every crawler who actively participates in the kill receives a Boss Box directly in their inventory, an achievement, and a permanent star beside their name. The tier of the Boss Box and the color of the star are determined by the boss's rank—Bronze for Neighborhood, Silver for Borough, and so on.[1|12]
+
+==Notable Boss Battles==
+
+===Book 1===
+{| class="fandom-table"
+|+Book 1 Boss Fights
+!Boss
+!Type
+!Combatants
+!Chapter
+|-
+|Hoarder[1|11]
+|Neighborhood
+|Carl, Donut
+|11
+|-
+|Goblin Chieftain[1|18]
+|Neighborhood
+|Carl, Donut
+|18
+|-
+|Juicer[1|24]
+|Neighborhood
+|Carl, Donut
+|24
+|-
+|Ball of Swine[1|26]
+|Borough
+|Carl, Donut, Brandon Andrews, Chris Andrews, Yolanda Martinez, Imani, Agatha
+|26
+|-
+|Krakaren Clone
+|Neighborhood 
+|Carl, Donut
+|34
+|-
+|Ralph
+|Neighborhood
+|Carl, Donut
+|45
+|}
+
+===Book 2===
+{| class="fandom-table"
+|+Book 2 Boss Fights
+!Boss
+!Type
+!Combatants
+!Chapter
+|-
+|Heather the Bear
+|Neighborhood
+|Carl
+|9
+|-
+|Grimaldi
+|City
+|Carl
+|10
+|-
+|Dispenser
+|Neighborhood
+|Carl, Donut
+|14
+|-
+|Miss Quill
+|Neighborhood
+|Carl, Donut
+|22
+|}
+
+===Book 3===
+{{Spoiler
+| book = 3
+| spoiler = 
+Book 3 Boss Fights
+
+Boss
+Type
+Combatants
+Chapter
+
+Gore-Gore[3|11]
+Neighborhood
+Carl, Katia Grim, Donut
+11
+
+Nightmare Express
+3 Neighborhood Bosses
+Carl
+14
+
+Station Mimic Mimic Rex
+City
+Carl
+33
+
+}}
+
+===Book 4===
+{{Spoiler
+| book = 4
+| spoiler = 
+Book 4 Boss Fights
+
+Boss
+Description
+Type
+Combatants
+Chapter
+
+Ruckus
+Level 55 spring-operated Chicken Hawk Sentinel 
+Borough
+Carl, Donut, Katia
+9
+
+Denise
+Level 53 Feral Goose Mother
+Borough
+Carl, Donut
+16
+
+Mrs. Ghazi
+Level 52 Sand Ooze
+Borough
+Carl, Donut, Katia
+22
+
+Lusca
+Level 82 Octo-Shark Brood Mother
+City
+Carl, Katia, Tran, Vadim
+26
+
+}}
+
+===Book 5===
+{{Spoiler
+| book = 5
+| spoiler = 
+Book 5 Boss Fights
+
+Boss
+Description
+Type
+Combatants
+Chapter
+
+Claude Sludgington the Fourth 
+Level 65 Eryops Gigantis
+Borough
+Carl, Donut
+27
+
+Sierra
+Level 65 Northropi Vampire
+Neighborhood
+Carl, Donut
+46
+
+Odious Creeper
+Level 138 #20 out of 50
+?
+Carl, Donut
+51
+
+Sir Ferdinand
+Level 100 Cat
+Province
+Donut
+74
+
+Queen Imogen 
+Level 145 High Elf Fallen Cleric Sorceress
+Country
+Carl, Donut, Katia Grim, Prepotente, Imani, Elle McGibbons, Popov Brothers (Maxim & Dmitri), Bautista, Britney, Li Na, Li Jun, Zhang, Florin, Eva, Louis, Firas, Osvaldo, Tran, Tserendolgor and various other top 50 crawlers 
+76
+
+}}
+
+===Book 6===
+{{Spoiler
+| book = 6
+| spoiler = 
+Book 4 Boss Fights
+
+Boss
+Description
+Type
+Combatants
+Chapter
+
+Thorn Room with Asojano
+Level 130 Orisha Lord of Smallpox 
+City
+Carl, Donut, Paz Lo, Anton Lopez, Sister Ines
+15
+
+Reminiscence Hydra of Malicious Compliance
+Level 125 Hydra containing 9 heads of people and a cat either Carl or Donut knew from before the dungeon 
+City
+Carl, Donut
+46
+
+Survival Royal Special Edition
+teleported beach combatants including Level 125 Madre de Aguas snake, Sister Ines, and a mix of zombies, demons, monk seals, and Maniseros crabs plus Quan Ch
+City
+Carl, Donut
+55
+
+Ysalte and  the enslaved Amayon
+Level 250 goddess and Prince of Sheol 
+?
+Carl, Donut, Katia, Imani, Elle, Louis, Li Na, Li Jun, Bautista, Tran
+66
+
+}}
+
+===Book 7===
+{{Spoiler | book = 7 | spoiler =
+
+Book 7 Boss Fights
+
+Boss
+Type
+Combatants
+Chapter
+
+}}
+
+===Book 8===
+{{Spoiler | book = 8 | spoiler =
+
+Book 8 Boss Fights
+
+Boss
+Type
+Combatants
+Chapter
+
+Scolopendra[8|94]
+Dungeon Boss
+Carl
+94
+
+}}
+
+==Dungeon Lore==
+Bosses are deeply tied to the overarching, multi-floor storylines designed by the Borant Corporation.[2|7] For example, the Volcano Level storyline spans the third and sixth floors: the third floor (the Over City) represents the crater of the volcano, while the sixth floor (the Hunting Grounds) represents the next level down into the same jungle-ruin environment.[2|3] Bosses within these floors are explicitly themed around their environments, though the writers often rely on lazy tropes—such as "Pestiferous Vines"—to fill out the roster.[2|10]
+
+{{Spoiler | book = 5 | spoiler = Responsibility for these storylines later passes from Borant to the Valtay.[5|19]}}
+
+{{Spoiler | book = 7 | spoiler = Because the System AI is tasked with generating the environments for these bosses, it occasionally expresses intense frustration at the showrunners' instructions—such as complaining about having to generate an "endless" banquet table for the god Khepri's temple.[7|53]}}
+
+==Story==
+The Royal Court of Princess Donut has a long history of encountering and defeating bosses using highly unconventional and explosive methods. On the first floor, Carl bypassed traditional combat by blowing up the Goblin War Chieftain with a cart full of explosives.[1|16][1|17] They later defeated the Dispenser using a tactic dubbed "The Boomy Boy," which involved sending a clockwork Mongo strapped with dynamite directly at the boss.[2|14]
+
+{{Spoiler | book = 8 | spoiler = As the floors progressed, the bosses became exponentially more dangerous. On the eleventh floor, the AI orchestrated a massive showdown by summoning Scolopendra, the Level 500 Dungeon Boss.[8|94] Despite the impossibility of the fight, Carl managed to defeat the colossal centipede by throwing a banger sphere containing a "Paramour"-enriched pet biscuit directly into its mouth, transforming the apocalyptic monster into a Level 1 crawler.[8|97][8|98]}}
+
+==Trivia==
+* Bosses are notoriously difficult to escape on the early floors, as the System AI generally prevents crawlers from fleeing once a boss battle has been initiated.[1|12]
+
+{{Spoiler | book = 4 | spoiler = When Carl survived a boss battle without actually killing the boss—melting the Sand Ooze Mrs. Ghazi without dealing a lethal blow—the AI awarded him the "Milquetoast" achievement and a Silver Pacifist's Box.[4|23]
+If a crawler manages to defeat a god (Level 250), they are rewarded with a Celestial God Box, though doing so can have catastrophic unintended consequences for the rest of the Dungeon.[4|32]}}
+
+==Speculation==
+{{Spoiler | book = 6 | spoiler = The star color for defeating a Country Boss is not defined in the text (as far as we can tell). In influential games such as World of Warcraft, Borderlands, and Fortnite, "Legendary" is marked by the color orange, and the tier above legendary is typically a light gold or a cyan / pearlescent color.}}
+
+{{Spoiler | book = 6 | spoiler = AI Independence: Near the end of the narrative, the System AI begins generating entirely new boss monsters without any input parameters from the showrunners, such as the Reminiscence Hydra.[6|48] It is highly speculated that as the AI continues to experience "Primal Degeneration" (going insane / independent), it will completely abandon the Syndicate's intended boss hierarchy in favor of creating its own twisted, insurmountable challenges to punish both the crawlers and the showrunners.[6|48][4|28]}}
+
+==References==
+

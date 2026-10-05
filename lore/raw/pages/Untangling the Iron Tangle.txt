@@ -1,0 +1,2841 @@
+{{SpoilH | 3}}
+
+{{DISPLAYTITLE:Untangling the Iron Tangle}}
+{{Dungeon Floor
+|title1={{PAGENAME}}
+|image1=Floor 4 map by Burnt Out Hippo.webp
+|caption-image1=Map by u/Burnt_Out_Hippo, Reddit
+}}{{Quote| quote =“I couldn’t imagine how anybody could make sense of this confusing bullshit. I had the sense whoever designed this let it get away from them. I hoped the same asshole wasn’t in charge of the next floor, too.”[3|30]}}
+System Message: This is our best attempt at untangling this mess of a floor. The floor is designed to be viewed in 3D, so here is the best attempt at describing it in a spreadsheet format. 
+
+For details about the Fourth Floor, see: Fourth Floor
+
+==Map==
+
+Imagine a target with 436 rings. Each ring is a station number with 1 being the outermost ring and 436 being the target. At ring 10 we have the Trainyard ring, with a number of train yards ranging from A to at least Q, but possibly more. The colored trains come from these yards and travel towards 436, the bullseye in the middle. Multiple colored lines can come from one train yard. As the train winds its way towards the center, it crosses other lines at transfer points, marked with blue X's.
+
+Stairwells are at stations 12, 24, 36, 48, and 72. All crawlers were spawned into the level beyond station 72, so a big part of the level is how to travel backwards. One way is to travel via an Exit-only cavern, which on this map is marked at a blue line running all the way back to a trainyard. (Exit-only caverns allow monsters to travel back to the nearest base 5 number station, but also have a "rollercoaster" back to the trainyard).
+
+Named trains like the Nightmare express sit on top of this mess and travel in wild patterns. Keep in mind, this whole thing was designed to be viewed in 3D and this is a 2D drawing. There's also some rules to saferoom locations, Desperado Club / Club vanquisher locations, but those aren't strictly map related.
+
+==Stops on the Iron Tangle==
+{| class="mw-collapsible fandom-table"
+|+Tracking all the Lines
+!Number
+!Name
+!Connection
+!Locations
+!Mobs / NPCs
+|-
+|1
+|
+|
+|
+|
+|-
+|2
+|
+|
+|
+|
+|-
+|3
+|
+|
+|
+|
+|-
+|4
+|
+|
+|
+|
+|-
+|5
+|
+|
+|
+|
+|-
+|6
+|
+|
+|
+|
+|-
+|7
+|
+|
+|
+|
+|-
+|8
+|
+|
+|
+|
+|-
+|9
+|
+|
+|
+|
+|-
+|10
+| Trainyard
+|
+|
+|Train Conductors and Porters enter the train
+|-
+|11
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|12 [3|17] [3|22]
+|Jikiniki Peak Station 12
+|
+*Escape Velocity line (runs backwards)
+*Homeward Bound Employee Only line
+|Stairwell Location
+|Jikininki Generator
+|-
+|13[3|17]
+|Transfer Station
+|
+*Homeward Bound Employee Only line
+|Safe Room Location
+|
+|-
+|14
+|
+|
+|
+|
+|-
+|15
+|Exit-only Cavern
+|
+|
+|
+|-
+|16
+|
+|
+|
+|
+|-
+|17
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|18[3|17]
+|Barren Station
+|
+|
+|
+|-
+|19
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|20
+|Exit-only Cavern
+|
+|
+|
+|-
+|21
+|
+|
+|
+|
+|-
+|22
+|
+|
+|
+|
+|-
+|23
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|24 [3|27]
+|Krakaren Staion
+|
+*Escape Velocity line (runs backwards)
+*Homeward Bound Employee Only line
+|Stairwell Location
+|Krakaren Crotch Dumplings
+|-
+|25
+|Exit-only Cavern
+|
+|
+|
+|-
+|26
+|
+|
+|
+|
+|-
+|27
+|
+|
+|
+|
+|-
+|28
+|
+|
+|
+|
+|-
+|29
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|30
+|Exit-only Cavern
+|
+|
+|
+|-
+|31
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|32
+|
+|
+|
+|
+|-
+|33
+|
+|
+|
+|
+|-
+|34
+|
+|
+|
+|
+|-
+|35
+|Exit-only Cavern
+|
+|
+|
+|-
+|36 [3|22]
+|Wrath Ghoul Station
+|
+*Escape Velocity line (runs backwards)
+|Stairwell Location
+| Wrath Ghoul
+|-
+|37
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|38
+|
+|
+|
+|
+|-
+|39
+|
+|
+|
+|
+|-
+|40
+|Exit-only Cavern
+|
+|
+|
+|-
+|41 [3|19]
+|Transfer Station
+|
+|
+*Greek cafe Everest Safe Room Location
+*Desperado Club
+|
+|-
+|42
+|
+|
+|
+|
+|-
+|43
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|44
+|
+|
+|
+|
+|-
+|45
+|Exit-only Cavern
+|
+|
+|
+|-
+|46
+|
+|
+|
+|
+|-
+|47
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|48
+|Festering Ghoul Station
+|
+*Escape Velocity line (runs backwards)
+|Stairwell Location
+|Festering Ghoul's combine and transform into Province Boss
+|-
+|49
+|
+|
+|
+|
+|-
+|50 [3|18]
+|Not an Exit-only Cavern
+|
+*Homeward Bound Employee Only line
+| Tiny room, leading to 9 platforms
+|
+|-
+|51
+|
+|
+|
+|
+|-
+|52
+|
+|
+|
+|
+|-
+|53
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|54
+|
+|
+|
+|
+|-
+|55
+|Exit-only Cavern
+|
+|
+|
+|-
+|56
+|
+|
+|
+|
+|-
+|57
+|
+|
+|
+|
+|-
+|58[3|18]
+|
+|
+*Homeward Bound Employee Only line
+|
+| No Mobs (weird)
+|-
+|59[3|18]
+|Transfer Station
+|
+*27 different lines
+*Homeward Bound Employee Only line
+|
+*Safe Room Location
+*Club Vanquisher
+*General Store
+|
+|-
+|60[3|18]
+|Employee Station
+|
+*All colored Lines stop there
+*Homeward Bound Employee Only line
+| 
+*Supposed to have dormitories, shops, restaurants for Iron Tangle Employees
+*Actually abandoned station
+|
+|-
+|61
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|62
+|
+|
+|
+|
+|-
+|63
+|
+|
+|
+|
+|-
+|64
+|
+|
+|
+|
+|-
+|65
+|Exit-only Cavern
+|
+|
+|
+|-
+|66
+|
+|
+|
+|
+|-
+|67
+|
+|
+|Safe Room Location
+|
+|-
+|68
+|
+|
+|
+|
+|-
+|69
+|
+|
+|
+|
+|-
+|70
+|Exit-only Cavern
+|
+|
+|
+|-
+|71
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|72 [3|22]
+|
+|
+*Escape Velocity line (runs backwards)
+|Stairwell Location
+|Blister Ghoul Generator
+|-
+|73
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|74
+|
+|
+|
+|
+|-
+|75 [3|22] [3|25]
+|Crash Interdiction Teams
+|
+* Vermillion Line
+|
+* Gnoll armory
+* Hobgoblin Repair shop
+* "The Downward Dog" Saferoom
+|
+* Growler Gary
+*Dead Hobgoblins
+*Dead Gnolls
+|-
+|76
+|
+|
+|
+|
+|-
+|77
+|
+|
+|
+|
+|-
+|78
+|
+|
+|
+|
+|-
+|79
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|80
+|Exit-only Cavern
+|
+|
+|
+|-
+|81[3|1]
+|Sirin Station - Red Line
+|Red Line
+|
+|Drek
+|-
+|81 [3|4]
+|Unknown Station - Yellow Line
+|Red Line
+|
+|Cave Mudge Bonker or Shock Chomper
+|-
+|82[3|1]
+|Mora Station - Red Line
+|Yellow Line
+|
+|Psycho Sticker
+|-
+|82[3|4]
+|Unknown Station - Yellow Line
+|Yellow Line
+|
+|Cave Mudge Bonker or Shock Chomper
+|-
+|83[3|1]
+|Transfer Station - Royal Court of Princess Donut Location
+|
+*Red Line
+*Yellow Line
+*Nightmare Express - First Stop
+|Safe Room Location
+|
+*Limp Richard
+*Wendita
+|-
+|83[3|3]
+|Transfer Station - Brynhild's Daughters's Location
+|
+*Orange
+*Indigo
+|Safe Room Location
+|
+|-
+|83[3|1]
+|Transfer Station- Nightmare Express Fifth Stop Location
+|
+*Nightmare Express Fifth Stop
+*Tangerine Line
+*Plumb Line
+|Safe Room Location
+|
+|-
+|84[3|1]
+|Rusalka Station - Red Line
+|Red Line
+|
+|
+|-
+|84[3|5]
+|Phantom Kangaroo Station - Yellow Line
+|Yellow Line
+|
+|Pollyslog
+|-
+|85
+|Exit-only Cavern
+|
+|
+|
+|-
+|86 [3|5]
+|Unnamed Station - Yellow Line
+|
+|
+|Snakeheads
+|-
+|87[3|5]
+|
+|
+|
+|Snakeheads
+|-
+|88[3|5]
+|Mothman Station
+|
+|
+| Skinned Mollies
+|-
+|89[3|5]
+|Transfer Station 
+|
+*Yellow Line
+*Indigo Line
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|89[3|17]
+|Transfer Station 
+|
+*Tangerine Line
+*Escape Velocity
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|90
+|Exit-only Cavern
+|
+|
+|
+|-
+|91
+|
+|
+|
+|
+|-
+|92
+|
+|
+|
+|
+|-
+|93
+|
+|
+|
+|
+|-
+|94
+|
+|
+|
+|
+|-
+|95
+|Exit-only Cavern
+|
+|
+|
+|-
+|96
+|
+|
+|
+|
+|-
+|97
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|98
+|
+|
+|
+|
+|-
+|99
+|
+|
+|
+|
+|-
+|100
+|Exit-only Cavern
+|
+|
+|
+|-
+|101 [3|21]
+|Transfer Station
+|
+*Vermillion Line
+* (Stopped Line)
+* (Stopped Line)
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|102
+|
+|
+|
+|
+|-
+|103
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|104
+|
+|
+|
+|
+|-
+|105
+|Exit-only Cavern
+|
+|
+|
+|-
+|106
+|
+|
+|
+|
+|-
+|107
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|108
+|
+|
+|
+|
+|-
+|109
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|110
+|Exit-only Cavern
+|
+|
+|
+|-
+|111
+|
+|
+|
+|
+|-
+|112
+|
+|
+|
+|
+|-
+|113
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|114
+|
+|
+|
+|
+|-
+|115
+|Exit-only Cavern
+|
+|
+|
+|-
+|116 [3|5]
+|Banshee Station - Yellow Line
+|
+|
+| Cornets
+|-
+|117
+|
+|
+|
+|
+|-
+|118
+|
+|
+|
+|
+|-
+|119
+|
+|
+|
+|
+|-
+|120
+|Exit-only Cavern
+|
+|
+|
+|-
+|121
+|
+|
+|
+|
+|-
+|122
+|
+|
+|
+|
+|-
+|123
+|
+|
+|
+|
+|-
+|124
+|
+|
+|
+|
+|-
+|125
+|Exit-only Cavern
+|
+|
+|
+|-
+|126
+|
+|
+|
+|
+|-
+|127
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|128
+|
+|
+|
+|
+|-
+|129
+|
+|
+|
+|
+|-
+|130
+|Exit-only Cavern
+|
+|
+|
+|-
+|131 [3|7]
+|Transfer Station
+|
+*Yellow Line
+|
+*[https://www.arbys.com/ Arby's] Safe Room Location
+*Desperado Club
+*Ford's Fighting Supplies General Store
+*Longbow Training Guild
+*"Druids Only" Training Guild
+*Store specializing in clothing for elves
+|
+|-
+|132
+|
+|
+|
+|
+|-
+|133
+|
+|
+|
+|
+|-
+|134
+|
+|
+|
+|
+|-
+|135
+|Exit-only Cavern
+|
+|
+|
+|-
+|136
+|
+|
+|
+|
+|-
+|137
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|138
+|
+|
+|
+|
+|-
+|139
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|140
+|Exit-only Cavern
+|
+|
+|
+|-
+|141
+|
+|
+|
+|
+|-
+|142
+|
+|
+|
+|
+|-
+|143
+|
+|
+|
+|
+|-
+|144
+|
+|
+|
+|
+|-
+|145
+|Exit-only Cavern
+|
+|
+|
+|-
+|146
+|
+|
+|
+|
+|-
+|147
+|
+|
+|
+|
+|-
+|148
+|
+|
+|
+|
+|-
+|149[3|10], [3|11]
+|Transfer Station
+|
+*Ochre Line
+*Dismemberment Limited
+|
+*Pho Restaurant Safe Room Location
+*Club Vanquisher
+*General Store
+|Gore-Gore
+|-
+|150
+|Exit-only Cavern
+|
+|
+|
+|-
+|151
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|152
+|
+|
+|
+|
+|-
+|153
+|
+|
+|
+|
+|-
+|154
+|
+|
+|
+|
+|-
+|155
+|Exit-only Cavern
+|
+|
+|
+|-
+|156
+|
+|
+|
+|
+|-
+|157
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|158
+|
+|
+|
+|
+|-
+|159
+|
+|
+|
+|
+|-
+|160
+|Exit-only Cavern
+|
+|
+|
+|-
+|161
+|
+|
+|
+|
+|-
+|162
+|
+|
+|
+|
+|-
+|163
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|164
+|
+|
+|
+|
+|-
+|165
+|Exit-only Cavern
+|
+|
+|
+|-
+|166
+|
+|
+|
+|
+|-
+|167
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|168
+|
+|
+|
+|
+|-
+|169
+|
+|
+|
+|
+|-
+|170
+|Exit-only Cavern
+|
+|
+|
+|-
+|171
+|
+|
+|
+|
+|-
+|172
+|
+|
+|
+|
+|-
+|173
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|174
+|
+|
+|
+|
+|-
+|175
+|Exit-only Cavern
+|
+|
+|
+|-
+|176
+|
+|
+|
+|
+|-
+|177
+|
+|
+|
+|
+|-
+|178
+|
+|
+|
+|
+|-
+|179
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|180
+|Exit-only Cavern
+|
+|
+|
+|-
+|181
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|182
+|
+|
+|
+|
+|-
+|183
+|
+|
+|
+|
+|-
+|184
+|
+|
+|
+|
+|-
+|185
+|Exit-only Cavern
+|
+|
+|
+|-
+|186
+|
+|
+|
+|
+|-
+|187
+|
+|
+|
+|
+|-
+|188
+|
+|
+|
+|
+|-
+|189
+|
+|
+|
+|
+|-
+|190
+|Exit-only Cavern
+|
+|
+|
+|-
+|191
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|192
+|
+|
+|
+|
+|-
+|193
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|194
+|
+|
+|
+|
+|-
+|195
+|Exit-only Cavern
+|
+|
+|
+|-
+|196
+|
+|
+|
+|
+|-
+|197
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|198
+|
+|
+|
+|
+|-
+|199
+|Transfer Station-Daniel Bautista [3|4]
+|
+*Azure
+*Brown
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|200
+|Exit-only Cavern
+|
+|
+|
+|-
+|201
+|
+|
+|
+|
+|-
+|202
+|
+|
+|
+|
+|-
+|203
+|
+|
+|
+|
+|-
+|204
+|
+|
+|
+|
+|-
+|205
+|Exit-only Cavern
+|
+|
+|
+|-
+|206
+|
+|
+|
+|
+|-
+|207
+|
+|
+|
+|
+|-
+|208
+|
+|
+|
+|
+|-
+|209
+|
+|
+|
+|
+|-
+|210
+|Exit-only Cavern
+|
+|
+|
+|-
+|211
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|212 [3|5]
+|Unnamed Station - Yellow Line
+|
+|
+|Goateo
+|-
+|213
+|
+|
+|
+|
+|-
+|214
+|
+|
+|
+|
+|-
+|215
+|Exit-only Cavern
+|
+|
+|
+|-
+|216
+|
+|
+|
+|
+|-
+|217
+|
+|
+|
+|
+|-
+|218
+|
+|
+|
+|
+|-
+|219
+|
+|
+|
+|
+|-
+|220
+|Exit-only Cavern
+|
+|
+|
+|-
+|221
+|
+|
+|
+|
+|-
+|222
+|
+|
+|
+|
+|-
+|223
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|224
+|
+|
+|
+|
+|-
+|225
+|Exit-only Cavern
+|
+|
+|
+|-
+|226
+|
+|
+|
+|
+|-
+|227
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|228
+|
+|
+|
+|
+|-
+|229
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|230
+|Exit-only Cavern
+|
+|
+|
+|-
+|231
+|
+|
+|
+|
+|-
+|232
+|
+|
+|
+|
+|-
+|233
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|234
+|
+|
+|
+|
+|-
+|235
+|Exit-only Cavern
+|
+|
+|
+|-
+|236
+|
+|
+|
+|
+|-
+|237
+|
+|
+|
+|
+|-
+|238
+|
+|
+|
+|
+|-
+|239
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|240
+|Exit-only Cavern
+|
+|
+|
+|-
+|241
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|242
+|
+|
+|
+|
+|-
+|243
+|
+|
+|
+|
+|-
+|244
+|
+|
+|
+|
+|-
+|245
+|Exit-only Cavern
+|
+|
+|
+|-
+|246
+|
+|
+|
+|
+|-
+|247
+|
+|
+|
+|
+|-
+|248
+|
+|
+|
+|
+|-
+|249
+|
+|
+|
+|
+|-
+|250
+|Exit-only Cavern
+|
+|
+|
+|-
+|251
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|252
+|
+|
+|
+|
+|-
+|253
+|
+|
+|
+|
+|-
+|254
+|
+|
+|
+|
+|-
+|255
+|Exit-only Cavern
+|
+|
+|
+|-
+|256
+|
+|
+|
+|
+|-
+|257
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|258
+|
+|
+|
+|
+|-
+|259
+|
+|
+|
+|
+|-
+|260
+|Exit-only Cavern
+|
+|
+|
+|-
+|261
+|
+|
+|
+|
+|-
+|262
+|
+|
+|
+|
+|-
+|263
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|264
+|
+|
+|
+|
+|-
+|265
+|Exit-only Cavern
+|
+|
+|
+|-
+|266
+|
+|
+|
+|
+|-
+|267
+|
+|
+|
+|
+|-
+|268
+|
+|
+|
+|
+|-
+|269
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|270
+|Exit-only Cavern
+|
+|
+|
+|-
+|271[3|15]
+|Transfer Station
+|
+*Camel Line
+*Cobalt Line
+*The Eviscerator
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|272 [3|15]
+|Unnamed Station - Camel Line- Meadow Lark
+|
+*Camel Line
+|
+| Gross Atomizers
+|-
+|273
+|
+|
+|
+|
+|-
+|274
+|
+|
+|
+|
+|-
+|275 [3|15]
+|Exit-only Cavern - Meadow Lark
+|
+*Camel Line
+|
+| Krakaren Clone (Fourth Floor) and Pooka
+|-
+|276- [3|15]
+|
+|
+|
+|
+|-
+|277 [3|15]
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|278
+|
+|
+|
+|
+|-
+|279
+|
+|
+|
+|
+|-
+|280
+|Exit-only Cavern
+|
+|
+|
+|-
+|281 [3|23]
+|Transfer Station- Mauve Line
+|
+*Dismemberment Limited
+*Mauve Line
+|
+*J.CO Donuts and Coffee Safe Room Location
+*Desperado Club
+|Nodd - Bopca Proprietor 
+|-
+|282
+|
+|
+|
+|
+|-
+|283 [3|4] [3|15]
+|Transfer Station-Nightmare Express Second Stop
+|
+*Nightmare Express
+*Mauve Line
+*Purple Line
+|Mall Food Court Safe Room Location
+|Babababoon
+|-
+|283 [3|4]
+|Transfer Station - Nightmare Express Fourth Stop
+|
+*Nightmare Express
+*Green Line
+*Yellow Line
+|Safe Room Location
+|
+|-
+|284
+|
+|
+|
+|
+|-
+|285
+|Exit-only Cavern
+|
+|
+|
+|-
+|286
+|
+|
+|
+|
+|-
+|287
+|
+|
+|
+|
+|-
+|288
+|
+|
+|
+|
+|-
+|289
+|
+|
+|
+|
+|-
+|290
+|Exit-only Cavern
+|
+|
+|
+|-
+|291
+|
+|
+|
+|
+|-
+|292
+|
+|
+|
+|
+|-
+|293
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|294
+|
+|
+|
+|
+|-
+|295
+|Exit-only Cavern
+|
+|
+|
+|-
+|296
+|
+|
+|
+|
+|-
+|297
+|
+|
+|
+|
+|-
+|298
+|
+|
+|
+|
+|-
+|299
+|
+|
+|
+|
+|-
+|300
+|Exit-only Cavern
+|
+|
+|
+|-
+|301
+|
+|
+|
+|
+|-
+|302
+|
+|
+|
+|
+|-
+|303
+|
+|
+|
+|
+|-
+|304
+|
+|
+|
+|
+|-
+|305
+|Exit-only Cavern
+|
+|
+|
+|-
+|306
+|
+|
+|
+|
+|-
+|307
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|308
+|
+|
+|
+|
+|-
+|309
+|
+|
+|
+|
+|-
+|310
+|Exit-only Cavern
+|
+|
+|
+|-
+|311
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|312
+|
+|
+|
+|
+|-
+|313
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|314
+|
+|
+|
+|
+|-
+|315
+|Exit-only Cavern
+|
+|
+|
+|-
+|316
+|
+|
+|
+|
+|-
+|317 [3|3]
+|Transfer Station - Daniel Bautista
+|
+*Yellow Line
+*Emerald Line
+*Misery Line
+|Safe Room Location
+|
+|-
+|318
+|
+|
+|
+|
+|-
+|319
+|
+|
+|
+|
+|-
+|320
+|Exit-only Cavern
+|
+|
+|
+|-
+|321
+|
+|
+|
+|
+|-
+|322
+|
+|
+|
+|
+|-
+|323
+|
+|
+|
+|
+|-
+|324
+|
+|
+|
+|
+|-
+|325
+|Exit-only Cavern
+|
+|
+|
+|-
+|326
+|
+|
+|
+|
+|-
+|327
+|
+|
+|
+|
+|-
+|328
+|
+|
+|
+|
+|-
+|329
+|
+|
+|
+|
+|-
+|330
+|Exit-only Cavern
+|
+|
+|
+|-
+|331
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|332
+|
+|
+|
+|
+|-
+|333
+|
+|
+|
+|
+|-
+|334
+|
+|
+|
+|
+|-
+|335
+|Exit-only Cavern
+|
+|
+|
+|-
+|336
+|
+|
+|
+|
+|-
+|337
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|338
+|
+|
+|
+|
+|-
+|339
+|
+|
+|
+|
+|-
+|340
+|Exit-only Cavern
+|
+|
+|
+|-
+|341
+|
+|
+|
+|
+|-
+|342
+|
+|
+|
+|
+|-
+|343
+|
+|
+|
+|
+|-
+|344
+|
+|
+|
+|
+|-
+|345
+|Exit-only Cavern
+|
+|
+|
+|-
+|346
+|
+|
+|
+|
+|-
+|347
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|348
+|
+|
+|
+|
+|-
+|349
+|
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|350
+|Exit-only Cavern
+|
+|
+|
+|-
+|351
+|
+|
+|
+|
+|-
+|352
+|
+|
+|
+|
+|-
+|353
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|354
+|Chupacabre Station - Yellow Line
+|Yellow Line
+|
+|Brain Amoeba
+|-
+|355
+|Exit-only Cavern
+|
+|
+|
+|-
+|356
+|
+|
+|
+|
+|-
+|357
+|
+|
+|
+|
+|-
+|358
+|
+|
+|
+|
+|-
+|359
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|360
+|Exit-only Cavern
+|
+|
+|
+|-
+|361
+|
+|
+|
+|
+|-
+|362
+|
+|
+|
+|
+|-
+|363
+|
+|
+|
+|
+|-
+|364
+|
+|
+|
+|
+|-
+|365
+|Exit-only Cavern
+|
+|
+|
+|-
+|366
+|
+|
+|
+|
+|-
+|367
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|368
+|
+|
+|
+|
+|-
+|369
+|
+|
+|
+|
+|-
+|370
+|Exit-only Cavern
+|
+|
+|
+|-
+|371
+|
+|
+|
+|
+|-
+|372
+|
+|
+|
+|
+|-
+|373
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|374
+|
+|
+|
+|
+|-
+|375
+|Exit-only Cavern
+|
+|
+|
+|-
+|376
+|
+|
+|
+|
+|-
+|377
+|
+|
+|
+|
+|-
+|378
+|
+|
+|
+|
+|-
+|379
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|380
+|Exit-only Cavern
+|
+|
+|
+|-
+|381
+|
+|
+|
+|
+|-
+|382
+|
+|
+|
+|
+|-
+|383
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|384
+|
+|
+|
+|
+|-
+|385
+|Exit-only Cavern
+|
+|
+|
+|-
+|386
+|
+|
+|
+|
+|-
+|387
+|
+|
+|
+|
+|-
+|388
+|
+|
+|
+|
+|-
+|389
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|390
+|Exit-only Cavern
+|
+|
+|
+|-
+|391
+|
+|
+|
+|
+|-
+|392
+|
+|
+|
+|
+|-
+|393
+|
+|
+|
+|
+|-
+|394
+|
+|
+|
+|
+|-
+|395
+|Exit-only Cavern
+|
+|
+|
+|-
+|396
+|
+|
+|
+|
+|-
+|397
+|Transfer Station
+|
+|Safe Room Location
+|
+|-
+|398
+|
+|
+|
+|
+|-
+|399
+|
+|
+|
+|
+|-
+|400
+|Exit-only Cavern
+|
+|
+|
+|-
+|401
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|402
+|
+|
+|
+|
+|-
+|403
+|
+|
+|
+|
+|-
+|404
+|
+|
+|
+|
+|-
+|405
+|Exit-only Cavern
+|
+|
+|
+|-
+|406
+|
+|
+|
+|
+|-
+|407
+|
+|
+|
+|
+|-
+|408
+|
+|
+|
+|
+|-
+|409
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|410
+|Exit-only Cavern
+|
+|
+|
+|-
+|411
+|
+|
+|
+|
+|-
+|412
+|
+|
+|
+|
+|-
+|413
+|
+|
+|
+|
+|-
+|414
+|
+|
+|
+|
+|-
+|415
+|Exit-only Cavern
+|
+|
+|
+|-
+|416
+|
+|
+|
+|
+|-
+|417
+|
+|
+|
+|
+|-
+|418
+|
+|
+|
+|
+|-
+|419
+|Transfer Station
+|
+|
+*Safe Room Location
+*Club Vanquisher
+|
+|-
+|420
+|Exit-only Cavern
+|
+|
+|
+|-
+|421
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|422
+|
+|
+|
+|
+|-
+|423
+|
+|
+|
+|
+|-
+|424
+|
+|
+|
+|
+|-
+|425
+|Exit-only Cavern
+|
+|
+|
+|-
+|426
+|
+|
+|
+|
+|-
+|427
+|
+|
+|
+|
+|-
+|428
+|
+|
+|
+|
+|-
+|429
+|
+|
+|
+|
+|-
+|430
+|Exit-only Cavern
+|
+|
+|
+|-
+|431
+|Transfer Station
+|
+|
+*Safe Room Location
+*Desperado Club
+|
+|-
+|432
+|
+|
+|
+|
+|-
+|433 [3|11][3|17][3|18]
+|Terminus Station - Transfer Station
+Recommended all passengers disembark
+|
+|Safe Room Location
+|Station Mimic
+|-
+|434
+|Barren Station
+|
+|
+|
+|-
+|435
+|End of the Line
+|
+|Employees depart and portal to Trainyard
+|Kravyad
+|-
+|436
+|Abyss Station
+|
+*Nightmare Express Third Stop
+|
+|
+|-
+|}
+
+===Continuity Error ===
+During the Vermillion Line Rescue, Carl asks why the trapped crawlers at station 101 don't hike to 102 and use the Exit only cavern to escape. There is not an Exit only cavern at 102, but there is one at 100. [3|21]
+==References==

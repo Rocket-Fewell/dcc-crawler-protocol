@@ -15,10 +15,10 @@
       "tables/loot-decks/*.json",
       "tables/achievements.csv",
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
-      "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
+      "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.9 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.10 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -28,13 +28,14 @@
     "days_left": 1,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
     "canon_table_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
+    "achievements_csv_sha256": "15f7495dda7249a17afb2dde4ed1ca42f1eb5a5b66beb1c62f6335b81d89f98d",
     "canon_ledger_version": "1.13",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.9",
-    "budget_file_sha256": "8767822d4c882bfafcba4e94f932f1cf6d01184a1dd9fc835060dc502396941a",
+    "budget_file_version": "0.1.10",
+    "budget_file_sha256": "b71bb9b56bf53355774c43c6bcfaf14c5257f62f8e1d7b1dedd22db181b2c45b",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "2b6216f51a9324652294b0ff0045de4a59f032d3d33d69e462fcf1cfb03215ec",
-    "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+    "spec_sha256_sans_pin": "fa6fc548b0fe239f3c97489c93d4cb5083805020755ec66cad0f62037123ab95",
+    "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
     "days": 5,
@@ -237,7 +238,8 @@
           "rarity": "Rare",
           "floor": "Any",
           "label": "ACH-0025 Saferoom Skeptic (Floor Any, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0189",
@@ -246,7 +248,8 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0189 Orientation Pit: Peaceful Path (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         }
       ],
       "cards": [
@@ -282,19 +285,27 @@
           "ledger_name": "Descending with more than six hours left holds the crawler in stasis until the floor collapses."
         },
         {
-          "ledger_id": "A-151",
-          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv.",
-          "ledger_name": "The Early Bird Gets To Squirm",
-          "in_achievements_csv": false,
-          "status": "canon reference only (not a row in tables/achievements.csv)"
-        },
-        {
           "ledger_id": "M-275",
           "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version).",
           "ledger_name": "Every Borough and City Boss arena on Floor 1 contains a stairwell."
         }
       ],
-      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)"
+      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)",
+      "achievements": [
+        {
+          "id": "ACH-1826",
+          "canon_ledger_id": "A-151",
+          "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826).",
+          "name": "Left Before the Cake",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-1826 Left Before the Cake (Floor Any, Rare)",
+          "valid": true,
+          "canon_ledger_name": "The Early Bird Gets To Squirm",
+          "audience": "gm"
+        }
+      ]
     },
     "proposed_achievements": [
       {
@@ -320,10 +331,12 @@
         },
         "narration": "You left early. The floor is still here. So are you, in a closet.",
         "narration_tag": "[PLAYER-FACING]",
-        "canon_ref": {
-          "ledger_id": "A-151",
-          "use": "Parallel canon: 'The Early Bird Gets To Squirm'.",
-          "ledger_name": "The Early Bird Gets To Squirm"
+        "catalog_parallel": {
+          "id": "ACH-1826",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826).",
+          "name": "Left Before the Cake",
+          "rarity": "Rare",
+          "label": "ACH-1826 Left Before the Cake (Floor Any, Rare)"
         },
         "narration_audience": "player",
         "audience": "gm"
@@ -559,7 +572,8 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0200 Orientation Pit: Speed Clear (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0868",
@@ -568,7 +582,8 @@
           "rarity": "Common",
           "floor": "1",
           "label": "ACH-0868 Orientation Pit: Dodge a telegraphed AoE (Floor 1, Common)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         }
       ],
       "voice_lines": {
@@ -596,15 +611,7 @@
       "path": "Z9, then the stage wings and Z S.",
       "summary": "Pickings are slim. The Break Room and vendors are gone, the mid zones are gone, and the only boxes left are the ones already earned. The Green Room, the stage and the service hall are what remain.",
       "stairwell_access": "Zone S service door (Mystery Key, tools, force or the toll) then the service stairwell.",
-      "canon_refs": [
-        {
-          "ledger_id": "A-139",
-          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv.",
-          "ledger_name": "You Found Stairs!",
-          "in_achievements_csv": false,
-          "status": "canon reference only (not a row in tables/achievements.csv)"
-        }
-      ],
+      "canon_refs": [],
       "achievements": [
         {
           "id": "ACH-0025",
@@ -613,7 +620,8 @@
           "rarity": "Rare",
           "floor": "Any",
           "label": "ACH-0025 Saferoom Skeptic (Floor Any, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0180",
@@ -622,7 +630,21 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0180 Orientation Pit: Stair Seeker (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-1825",
+          "canon_ledger_id": "A-139",
+          "note": "Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait.",
+          "gm_note": "Reward: see the catalog row (tables/achievements.csv, ACH-1825).",
+          "name": "Down Is a Direction",
+          "rarity": "Common",
+          "floor": "Any",
+          "label": "ACH-1825 Down Is a Direction (Floor Any, Common)",
+          "valid": true,
+          "canon_ledger_name": "You Found Stairs!",
+          "audience": "gm"
         }
       ],
       "voice_lines": {
@@ -650,15 +672,7 @@
       "path": "Z9 to the stage wings to Zone S, with whatever key you still have.",
       "summary": "The terminal key is gone. What remains is the Mystery Key (if drawn), tools, force, a toll at the door (price from the budget file) or getting past the boss by wits.",
       "stairwell_access": "Zone S service door by the remaining ways; or the stage by the cheese routes in 00-overview.md section 6.4.",
-      "canon_refs": [
-        {
-          "ledger_id": "A-139",
-          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv.",
-          "ledger_name": "You Found Stairs!",
-          "in_achievements_csv": false,
-          "status": "canon reference only (not a row in tables/achievements.csv)"
-        }
-      ],
+      "canon_refs": [],
       "achievements": [
         {
           "id": "ACH-0189",
@@ -667,7 +681,8 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0189 Orientation Pit: Peaceful Path (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
         },
         {
           "id": "ACH-0173",
@@ -676,7 +691,21 @@
           "rarity": "Rare",
           "floor": "1",
           "label": "ACH-0173 Orientation Pit: Environmentalist (Floor 1, Rare)",
-          "valid": true
+          "valid": true,
+          "audience": "gm"
+        },
+        {
+          "id": "ACH-1825",
+          "canon_ledger_id": "A-139",
+          "note": "Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait.",
+          "gm_note": "Reward: see the catalog row (tables/achievements.csv, ACH-1825).",
+          "name": "Down Is a Direction",
+          "rarity": "Common",
+          "floor": "Any",
+          "label": "ACH-1825 Down Is a Direction (Floor Any, Common)",
+          "valid": true,
+          "canon_ledger_name": "You Found Stairs!",
+          "audience": "gm"
         }
       ],
       "voice_lines": {
@@ -815,7 +844,7 @@
         "tag": "canon"
       }
     ],
-    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so canon A-044 (stairs within an hour of arrival) is not attainable on Floor 1; it stays a canon reference only.",
+    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so ACH-1824 Not Unpacking (catalog row for canon A-044) is not earnable on Floor 1; it is listed for continuity only.",
     "early_descent": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
     "keyless_fee": {
       "b70": {
@@ -1838,8 +1867,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.9 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.9 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.1.10 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.10 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -1862,13 +1891,6 @@
       "item": "Canon table, collapse notices, missed-floor line and zone color",
       "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
       "status": "received",
-      "audience": "gm"
-    },
-    {
-      "owner": "Syndicate",
-      "item": "ACH rows for canon A-044, A-151 and A-139",
-      "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
-      "status": "waiting (backlog)",
       "audience": "gm"
     },
     {
@@ -2077,15 +2099,15 @@
   },
   "validation": {
     "result": "PASS",
-    "pass": 46,
-    "warn": 2,
+    "pass": 51,
+    "warn": 0,
     "fail": 0,
-    "spec_sha256": "ab3019b90ff0c59bbb6ab66638685393225c53c67e77dc3ab32558f4f62210d4",
+    "spec_sha256": "e92555b886bbef705f9926e7d4f22f5d4ac47e881f6c1a78dc5f0d5fb7e52254",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.9, sha256 8767822d4c882bfa; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.10, sha256 b71bb9b56bf53355; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2151,6 +2173,11 @@
         "status": "PASS",
         "check": "clock cites decision 026",
         "detail": ""
+      },
+      {
+        "status": "PASS",
+        "check": "achievements catalog pinned",
+        "detail": "tables/achievements.csv v1.3, sha256 15f7495dda7249a1, 1826 rows"
       },
       {
         "status": "PASS",
@@ -2235,17 +2262,7 @@
       {
         "status": "PASS",
         "check": "achievement ids resolve",
-        "detail": "13 hooks checked against tables/achievements.csv"
-      },
-      {
-        "status": "WARN",
-        "check": "canon ref A-139",
-        "detail": "canon reference only (not a row in tables/achievements.csv) ('You Found Stairs!'); cited as a canon reference only"
-      },
-      {
-        "status": "WARN",
-        "check": "canon ref A-151",
-        "detail": "canon reference only (not a row in tables/achievements.csv) ('The Early Bird Gets To Squirm'); cited as a canon reference only"
+        "detail": "15 hooks checked against tables/achievements.csv"
       },
       {
         "status": "PASS",
@@ -2294,6 +2311,16 @@
       },
       {
         "status": "PASS",
+        "check": "catalog continuity notes",
+        "detail": "4 hook(s) for ACH-1824/1825/1826; ACH-1824 and ACH-1826 carry their Floor 1 GM-only notes"
+      },
+      {
+        "status": "PASS",
+        "check": "GM notes kept out of player text",
+        "detail": "2 achievement GM note(s); none appears in any [PLAYER-FACING] block"
+      },
+      {
+        "status": "PASS",
         "check": "field-rest fee note",
         "detail": "no fee if the spot is already quiet (GM ruling); stated on the clock and on all 4 text(s) that charge the fee"
       },
@@ -2310,7 +2337,7 @@
       {
         "status": "PASS",
         "check": "Pending inputs section",
-        "detail": "6 entries: budget file, clock numbers, collapse zone groups/costs, canon table, day-count field"
+        "detail": "5 entries: budget file, clock numbers, collapse zone groups/costs, canon table, day-count field"
       },
       {
         "status": "PASS",
@@ -2320,7 +2347,17 @@
       {
         "status": "PASS",
         "check": "slot-map provenance",
-        "detail": "meta.spec_sha256_sans_pin 2b6216f51a932465 matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
+        "detail": "meta.spec_sha256_sans_pin fa6fc548b0fe239f matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
+      },
+      {
+        "status": "PASS",
+        "check": "rendered audience separation",
+        "detail": "30 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
+      },
+      {
+        "status": "PASS",
+        "check": "doubled full stop",
+        "detail": "no '..' artifacts in the rendered page"
       }
     ]
   }

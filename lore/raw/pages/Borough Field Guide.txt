@@ -1,0 +1,13 @@
+{{Item|type=Persistent Loot|effects=Shows Mob Types and Levels in area on crawler's Minimap|source=Borough Boss}}
+
+The Borough Field Guide is a persistent loot item dropped by slain Borough Bosses.  Once a crawler picks up the item, the boss's borough will be outlined on the crawler's minimap.  The individual rooms and hallways are obscured by the "fog of war" but, when a crawler zooms in on an area, a tooltip pops up showing the mob types and levels there as (for example) Mobs Level 2-5. Axebeak.[1|27]
+
+==AI Description==
+The AI seemed to be doing a whispery David Attenborough impersonation as he read the description of the item: 
+Borough Field Guide. Ahh, look at you. The intrepid explorer. Alone. Lost. Afraid.
+But there is no reason to be frightened. Not today, not now. Not when the trusty field guide has added monster types to this area of the map. Now when you gaze upon the unknown, that fear is somewhat lessened. Instead of delving into the strange, mysterious dark, being devoured by an unseen horror, you will now know exactly what it is as it chews upon your tasty innards. 
+
+==References==
+
+{{Navbox Items}}
+

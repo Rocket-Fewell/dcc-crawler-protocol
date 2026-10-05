@@ -1,0 +1,49 @@
+{{Item
+
+|type=Loot Boxes
+|effects=
+|source=
+}}
+
+=== Explosives Box - Full Description & Citations ===
+(As seen throughout Dungeon Crawler Carl series)
+----
+
+=== Explosives Boxes Overview ===
+Explosives boxes are specialized loot boxes that contain bombs, grenades, detonators, and other incendiary devices. These boxes are typically awarded for combat achievements related to explosive kills, demolition-based challenges, and advanced trap-building. Some variations of these boxes include additional engineering supplies to craft custom explosives.
+----
+
+== Types of Explosives Boxes ==
+{| class="fandom-table"
+!Box Type
+!Common Contents
+!Notes
+|-
+|Bronze Explosives Box
+|Basic dynamite sticks, weak smoke bombs, crude grenades.
+|Found early in the dungeon. Limited effectiveness.
+|-
+|Silver Explosives Box
+|Medium-yield explosives, timed grenades, incendiary charges.
+|Usually granted after achieving multiple explosive kills.
+|-
+|Gold Explosives Box
+|High-yield bombs, directional charges, cluster explosives.
+|Rewards for large-scale destruction or strategic demolition.
+|-
+|Platinum Explosives Box
+|Advanced military-grade explosives, remote detonation gear, thermobaric charges.
+|Rare, often associated with late-game achievements.
+|-
+|Legendary Explosives Box
+|Custom-engineered explosives, AI-designed bombs, world-ending ordinance.
+|Extremely rare. Theoretical weapons capable of altering entire dungeon zones.
+|}
+----
+
+=== Notable Explosive Box Drops (With Citations) ===
+
+==== Basic Explosives ====
+
+# Goblin Dynamite (Unstable, prone to misfires)
+#* Drop from Silver Goblin Box​

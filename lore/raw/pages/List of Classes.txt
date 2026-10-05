@@ -1,0 +1,620 @@
+{{SpoilH | 7}}
+
+ Wiki note: This is a comprehensive list, including material through Book 7.
+
+See Also: Class Mechanics
+
+== List of Classes ==
+The following is a table of all classes mentioned in order of appearance. Classes with additional information have links to a unique page. 
+
+{| class="sortable fandom-table"
+|+ List of Classes
+! Class 
+!Type!! Crawlers
+!Description
+|-
+|Monk Class[1|6]
+|Base
+|
+| 
+|-
+|Bard Class[1|7]
+|Base 
+|
+| 
+|-
+| Fighter Class[1|47]
+| Base
+|
+| 
+|-
+| Mage Class[1|47]
+| Base
+|
+| 
+|-
+| Rogue Class[1|47]
+| Base
+|Porthus [7|Porthus]
+| 
+|-
+| Cleric Class[1|47]
+| Base
+|
+| No Desperado Club members [2|2]
+|-
+| Arcanist Class[1|47]
+| Base
+|
+| Allows for exploring different magic schools
+|-
+| Fire Mage Arcanist Class[1|47]
+| Arcanist
+| Mordecai (during Crawl)
+| Fire Magic, Allows for exploring different magic schools
+|-
+|Storm Commander Class[1|47]
+| Skyfowl Planet
+| Uzzi (during crawl)
+|Limited Magic, party protection spell [6|prologue]
+|-
+|NecroBard Class[2|1]
+| Bard, Necromancer
+|
+|See page for full description
+|-
+|Magic User Class[2|1]
+|Base
+|
+| 
+|-
+|Barbarian Class[2|1]
+|Base
+|
+| 
+|-
+| Necromancer Class[2|1]
+| Base
+|
+| 
+|-
+| Wind Mage Class[2|1]
+| Mage, Magic User
+|
+| 
+|-
+| Warlock Class[2|1]
+| Mage
+|
+| Solid choice for skills, Loose a point in Constitution
+|-
+| Feral Cat Berserker Class[2|1]
+| Berserker
+|
+|
+|-
+| Animal Test Subject Class[2|1]
+|
+|
+| Mage Specializing in Poison, Crawler glows green
+|-
+| Roller Derby Jammer Class[2|1]
+|
+|
+|
+|-
+|Artist Alley Mogul Class[2|1]
+| Earth
+| Donut Floor 3
+| See page for full description
+|-
+|Former Child Actor Class[2|1]
+| Bard, Rogue, Earth
+| Donut
+| See page for full description
+|-
+| Paladin Class[2|2]
+| Base
+|
+| No Desperado Club members [2|2]
+|-
+|Bomb Squad Tech Class[2|2]
+| Earth
+|
+| See page for full description
+|-
+|Prizefighter Class[2|2]
+| Monk, Earth
+|
+|See page for full description
+|-
+|Compensated Anarchist Class[2|2]
+|Earth
+|Carl
+|See page for full description
+|-
+|Riot Forces Support Class[2|2]
+| Earth
+|
+|
+|-
+|Trebuchet Commander Class[2|2]
+| Earth
+|
+|
+|-
+|Rogue Trapmaster Class[2|2]
+|Rogue
+|
+| 
+|-
+|Trickster Class[2|2]
+|
+|
+|Pathfinder Skill [2|2]
+|-
+|Shieldmaiden Class[2|7]
+| Earth
+| Hekla
+|
+|-
+| Kabaddi Raider Class[2|7]
+| Earth
+| Unnamed Crawler
+| Assumed related to Earth sport [https://en.wikipedia.org/wiki/Kabaddi Kabaddi]
+|-
+|Black Inquisitor General Class[2|7]
+| Cleric, Magic-User, Warrior
+| Lucia Mar
+|
+|-
+|Monster Truck Driver Class[2|21]
+|Juggernaut, Earth
+|Katia Grim
+|See page for description
+|-
+|Staunch Barrier Class[2|21]
+|
+|
+|See: Monster Truck Driver Class
+|-
+|Jouster Class[2|21]
+|
+|
+|See: Monster Truck Driver Class
+|-
+|Juggernaut Class[2|21]
+|Mixed
+|
+|Common mixed class, See: Monster Truck Driver Class
+|-
+|Swashbuckler Class[2|23]
+|
+|
+* Daniel Bautista
+* Tran
+* Burcu
+| Sword Based Stats
+|-
+|Imperial Security Trooper Class[2|Epilogue]
+|
+|Quan Ch
+|Can upgrade to Sergant-at-arms on the 6th floor
+|-
+|Alley Cat Brawler Class[3|1]
+|Melee
+|
+|Offered to Donut on Fourth Floor
+|-
+|Nec-Cat-Mancer Class[3|1]
+|
+|
+|Offered to Donut on Fourth Floor
+|-
+|Football Hooligan Class[3|1]
+|
+|Donut Floor 4
+|See page for description
+|-
+|Firecracker Class[3|1]
+|
+|Offered to Donut on Fourth Floor
+|
+|-
+|Forsaken Aerialist Class[3|3]
+|
+|Prepotente
+|Something to do with magic.[5|6]
+|-
+|Shotgun Messenger Class[3|3]
+|Earth, Fighter
+|Florin
+|Presuambly tied to shotguns (accuracy, speed, reloading)
+|-
+|Shepherd Class[3|3]
+|Healer, Earth
+|Miriam Dom
+|Presumably tied to shepherds pre-collapse
+|-
+|Physicker Class[3|3]
+|Healer
+|Ifechi
+|Includes Walk on Air Skill
+|-
+|Street Monk Class[3|3]
+|Monk
+|Li Jun
+|
+|-
+|Blizzardmancer Class[3|3]
+|
+|Elle McGibbons
+|Ice-based class, part of Four Seasons build
+|-
+|Fire Spiritualist Class[3|8]
+|Support
+|Imani
+|Support Class: Juiced Buff, Shrouded Buff, Trolled Buff
+|-
+|Knife Sharpener Class[3|9]
+| 
+|Ji-Hoon
+|Assumed Knife specialty, assassin class
+|-
+|Sapper Class[3|13]
+|
+|Forkith (during Crawl)
+|Trap making
+|-
+|Blood Assassin Class[3|19]
+|
+|Frank Q
+|
+|-
+|Nimblefoot Enforcer Class[3|21]
+|
+|Eva
+|
+|-
+|Holistic Healer Class[3|22]
+|Healer
+|Silfa
+|
+|-
+|Crisper Class[3|31]
+|
+|Tserendolgor
+|Fire-based class
+|-
+|Slave Driver Class[3|32]
+|
+|Li Na
+|
+|-
+|Nine Tails Class[4|1]
+|
+|Offered to Donut on the (Fifth Floor)
+|
+|-
+|Demigod Attendant Class[4|1]
+|
+|Offered to Donut on the (Fifth Floor)
+|
+|-
+|Vape Shop Counter Jockey Class[4|1]
+|
+|Offered to Donut on the (Fifth Floor)
+|
+|-
+|Glass Cannon Class[4|1]
+|
+|Donut (Fifth Floor)
+| Increases constitution, Increases training speed on spells and reduces cost to cast
+|-
+|Boring Ol' Fighter Class[4|2]
+|Fighter
+|
+*Gwendolyn Duet
+*Future Huntress [5|25]
+|Upgrade to fighting, Cannot use Magic & Spells
+|-
+|Archer Class[4|3]
+|
+|Langley & archers
+|Skills to archers
+|-
+|Legatus Class[4|4]
+|Earth
+|Bogdon Ro, Boomer
+|Presumably refers to the [https://en.wikipedia.org/wiki/Legate_(ancient_Rome) roman officer], allows Buffs to large number of soldiers at once
+|-
+|Pest Exterminator Class[4|5]
+|
+|Louis
+|Cloud-based spells have faster cooldowns
+|-
+|Hammersmith Class[4|6]
+|Melee
+|Firas
+|Hammer based skills
+|-
+|D-Bag Geek Class[4|6]
+|
+|Low Thi
+|
+|-
+|Weather Engineer Class[4|6]
+|
+|Tyler Storm
+|
+|-
+|Banana Farmer Class[4|6]
+|Druid
+|Mike Barnes
+|Shoot Banana tree seeds from their hands
+|-
+|Freelance Psychiatrist [4|6]
+|Psionic
+|Morris Sp
+|Psionic skills, 
+|-
+|Spy Class[4|7]
+|Rogue
+|Bobby D.J.
+|Trap-finding class
+|-
+|Flesh Mechanic [4|11]
+|
+|Wynne
+|Ability to give flesh to ghosts and incorporeal spirits
+|-
+|Zulu Warrior Class[4|11]
+|Warrior, Earth
+|Chris Andrews
+|Possibly related to [https://en.wikipedia.org/wiki/Impi impi/tribal zulu warriors], who were known to wield spears and shields
+|-
+|Sacred Paladin Class[4|17]
+|Cleric
+|Chirag Ali
+|
+|-
+|Pit Fighter Class[4|25]
+|Fighter
+|Britney
+|Can upgrade to Pit Champion Classon Sixth Floor
+|-
+|Gut Rearranger Class[4|25]
+|Healer, Rogue, Earth
+|Vadim
+|Presumably connected to surgery pre-collapse
+|-
+|Legendary Diva Class[5|1]
+|Bard
+|Donut (Sixth Floor)
+|
+|-
+|Prodromoi Class[5|1]
+|Earth
+|Ajib
+|Assumed to be based on the [https://en.wikipedia.org/wiki/Prodromoi light cavalry in the Greek army by the same name], traditionally used for scouting missions.
+|-
+|Revolutionary Class[5|1]
+|
+|
+|See page for description
+|-
+|Guerilla Class[5|1]
+|
+|
+|See page for description
+|-
+|Agent Provocateur Class[5|1]
+|
+|Carl (Sixth Floor)
+|See page for description
+|-
+|Striver Class[5|5]
+|
+|Chin'Dua
+|Undescribed Class for a Hunter
+|-
+|Profane Vitiate Class[5|6]
+|
+|Prepotente (Sixth Floor)
+|Upgrade from Forsaken Aerialist Class
+|-
+|Pit Champion Class[5|8]
+|Fighter
+|Britney (Sixth Floor)
+|Upgrade for Pit Fighter
+|-
+|Extermination Professional Class[5|8]
+|
+|Louis (Sixth Floor)
+|Upgrade from Pest-Exterminator Class, Tent the House Skill
+|-
+|Tundra Princess Class[5|8]
+|
+|Elle McGibbons (Sixth Floor)
+|Ice and Earth Class, part of Four Seasons build
+|-
+|Visionary Class[5|40]
+|Mage
+|Dmitri Popov
+|
+|-
+|Bogatyr Class[5|40]
+|Melee
+|Maxim Popov
+|Could be based on [https://en.wikipedia.org/wiki/Bogatyr bogatyr]
+|-
+|Beastmaster Class[5|67]
+|
+|Zabit (Hunter)
+|Gains better control over animals
+|-
+|Ranger Class[5|75]
+|
+|Osvaldo
+|
+|-
+|Viper Queen Class[5|Epilogue]
+|
+|Donut (Seventh Floor)
+|Spit Poison Skill
+|-
+|Agony Urchin Class[6|1]
+|
+|Offered to Donut on Eighth Floor
+|Changes the crawler's appearance
+|-
+|Master Telephone Psychic Class[6|1]
+|
+|Donut (Eighth Floor)
+|Psionic Attacks, See page for description
+|-
+|Santero Class[6|5]
+|Cleric, Necromancer
+|Paz Lo
+|Healing and Protection Spells, [https://en.wikipedia.org/wiki/Santer%C3%ADa Santería] is a Cuban religion, Priest is called a Santero
+|-
+|Fugitive Class 
+|Rogue
+|Anton Lopez [6|5]
+|Good at finding traps, escaping tough situations
+|-
+|Poet Laureate Class[6|5]
+|Bard, Healer
+|Sister Ines 
+|Requires a patron
+|-
+|Boring Ol' Mage Class[6|32]
+|Mage
+|Zeynep
+|Only Magic skills, no fighting skills
+|-
+|Ghazi Class[6|32]
+|
+|Emir Akbas
+[https://en.wikipedia.org/wiki/Ghazi_(warrior)#:~:text=In%20pre%2DIslamic%20Bedouin%20culture,livestock%20(see%20cattle%20raiding). "Ghazi"] is an Arabic word meaning "warrior" or "raider".
+|-
+|Consecrated Enchantress Class[7|1]
+|
+|Offered to Donut on Ninth Floor
+|Comes with a sash, related to Gods
+|-
+|Halloween Aficionado Class[7|1]
+|
+|Offered to Donut on Ninth Floor
+|Comes with black lipstick and a boxcutter
+|-
+|Deathbed Hellcat Class[7|1]
+|
+|Donut (Ninth Floor)
+|See page for description
+|-
+|Hailstorm Queen Class[7|1]
+|
+|Elle McGibbons (Ninth Floor)
+|Adds element of Wind Magic
+|-
+|Thief Class[7|Dante]
+|Rogue
+|Dante
+|
+|-
+|Harii Class[7|8]
+|Barbarian, Earth
+|Jurgen
+|Assumed based off [https://en.wikipedia.org/wiki/Harii Western Germanic warriors]
+|-
+|Poisoner Class[7|Tipid]
+|
+|Tipid
+|
+|-
+|Hired Mercenary Class[7|11]
+|
+|All non-Princess Posse faction wars members
+|Keep weapons, basic spells
+|-
+|Fortification Engineer Class[7|11]
+|
+|Penn, Some members of Princess Posse
+|
+|-
+|Big Game Spear Hunter[7|15]
+|
+|Bodi
+|
+|-
+|Eviscerator Class[7|15]
+|
+|Griffin
+|
+|-
+|Plumbing Specialist Class[7|15]
+|Healer
+|Morales
+|
+|-
+|Explosives Engineer Class[7|Everly]
+|
+|Everly
+|
+|-
+|Origamist Class[7|20]
+|
+|Justice Light
+|
+|-
+|Bombardier Class[7|22]
+|
+|Members of the Dream
+|
+|-
+|Cartographer Class[7|Milk]
+|
+|Milk
+|
+|-
+|Armored Mage Class[7|29]
+|
+|Charles Andrew
+|
+|-
+|Tank Buttress Class[7|Volteeg]
+|
+|Volteeg
+|
+|-
+|Trap Master Class[7|Justice Light]
+|
+|Justice Light (during crawl)
+|
+|-
+|Valide Class[7|68]
+|Healer
+|Selvi
+|
+|-
+|Gazetteer Class[7|Rosetta]
+|
+|Rosetta Thagra
+|
+|-
+|Oak Fell Class[7|77]
+|
+|Donut (additional class)
+|
+|-
+|Advocate Class[7|York]
+|
+|York
+|
+|}
+
+==Class Selection Rules ==
+* Mordecai mentions that having a Desperado Pass Tattoo prevents Class options that are either Cleric or Paladin based [2|2]
+
+==References==

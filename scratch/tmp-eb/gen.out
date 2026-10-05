@@ -1,0 +1,99 @@
+3373 lines
+{
+ "line": {
+  "value": 1500,
+  "basis": "per Crawler per FLOOR (not Floors 1+2 combined)",
+  "verified_in": [
+   "rules/40-loot-deck-spec-5e.md 3.2 (Audit hint: per crawler per floor on F1-2, total credit_value granted by boxes 300-1,000, anything above about 1,500 is inflation to flag)",
+   "rules/45-story-boxes-5e.md 6.3 item 4 and change row C2 ('1,500-per-floor inflation flag', sale proceeds count, flag not block)",
+   "tools/loot.py INFLATION_FLAG = 1500, tested per crawler per floor"
+  ],
+  "what_loot_py_counts": "box economy_value only (credit_value of drawn cards, credit pulls as rolled) plus Story Box sale proceeds; by default it does NOT see encounter credits or R1 toast credits. 'box_only' below is the figure comparable to the default `state.py loot totals`; 'all_in' (encounter credits + R1 + boxes) is the stricter reading, comparable to `state.py loot totals --include-credits` (v0.1.5: that option now exists), and is shown too.",
+  "status": "authoritative as the Accountant's flag; v0.1.0 wrongly read it as F1+F2 combined"
+ },
+ "floor_1": {
+  "rows": [
+   {
+    "item": "encounter cash",
+    "expected_credits": 39.5,
+    "arithmetic": "F1: Z2 5 + Z5 5 + Z7 5 + Z8 7 + Ticks 0 + boss 17.5 = 39.5",
+    "counts_in_loot_totals": false
+   },
+   {
+    "item": "R1 toast credits",
+    "expected_credits": 50.0,
+    "arithmetic": "2 toasts x 25 average",
+    "counts_in_loot_totals": false
+   },
+   {
+    "item": "Welcome Box (Bronze: pull 1 tailored + pull 2 d100)",
+    "expected_credits": 55.6,
+    "arithmetic": "25.26 tailored + 30.36 Bronze pull = 55.63 (decks z06 + any)",
+    "counts_in_loot_totals": true
+   },
+   {
+    "item": "Deed/fight Bronze boxes",
+    "expected_credits": 39.4,
+    "arithmetic": "0.91 boxes (fights 0.41 + deeds 0.50) x 43.29 per Bronze box (28.862 per pull x 1.5 pulls, all F1 decks pooled) = 39.4",
+    "counts_in_loot_totals": true
+   },
+   {
+    "item": "Silver Boss Box",
+    "expected_credits": 481.6,
+    "arithmetic": "2 pulls x 240.78 per Silver pull (decks z10 Boss + any) = 481.6",
+    "counts_in_loot_totals": true
+   }
+  ],
+  "expected_total_per_crawler": 666.1,
+  "expected_box_only_per_crawler": 576.6,
+  "line": 1500,
+  "share_of_line_all_in": 0.444,
+  "share_of_line_box_only": 0.384,
+  "expected_bronze_boxes": 1.91,
+  "expected_silver_boxes": 1
+ },
+ "floor_2": {
+  "rows": [
+   {
+    "item": "encounter cash",
+    "expected_credits": 75.5,
+    "arithmetic": "4 trivial x 1 + 8 standard x 5 + 2 hard x 7 + boss 17.5 = 75.5",
+    "counts_in_loot_totals": false
+   },
+   {
+    "item": "R1 toast credits",
+    "expected_credits": 75.0,
+    "arithmetic": "3 toasts x 25 average",
+    "counts_in_loot_totals": false
+   },
+   {
+    "item": "Deed/fight Bronze boxes",
+    "expected_credits": 87.5,
+    "arithmetic": "2.02 boxes (fights 1.12 + deeds 0.90) x 43.29 per Bronze box (28.862 per pull x 1.5 pulls, all F1 decks pooled) = 87.5",
+    "counts_in_loot_totals": true
+   },
+   {
+    "item": "Silver Boss Box",
+    "expected_credits": 481.6,
+    "arithmetic": "2 pulls x 240.78 per Silver pull (decks z10 Boss + any) = 481.6",
+    "counts_in_loot_totals": true
+   }
+  ],
+  "expected_total_per_crawler": 719.5,
+  "expected_box_only_per_crawler": 569.0,
+  "line": 1500,
+  "share_of_line_all_in": 0.48,
+  "share_of_line_box_only": 0.379,
+  "expected_bronze_boxes": 2.02,
+  "expected_silver_boxes": 1
+ },
+ "per_floor_summary": {
+  "1": {
+   "all_in": 666.1,
+   "box_only": 576.6
+  },
+  "2": {
+   "all_in": 719.5,
+   "box_only": 569.0
+
+ok

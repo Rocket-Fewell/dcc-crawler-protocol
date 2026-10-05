@@ -1,0 +1,25 @@
+{{SpoilH|6}}
+{{Item
+ | title         = Eye in the sky scroll
+ | image         = 
+ | type          = Scroll
+ | effects       = Pinpoints the location of a Crawler
+}}
+
+The Eye in the Sky spell is very powerfull and is usually cast using a scroll.
+
+==Description==
+Mordecai describes it as a mixture between Find Crawler Skill and Ping Spell but covering a much wider area. He says that the scrolls are really rare and come in three different varients. The targeted crawler receives a different level notification depending on the varient of scroll used.
+*The level 5 spell gives the target infomation on the caster.
+*The level 10 spell just tells the target that they've been spotted.
+*The level 15 spell gives no notification to the target.
+[6|53]
+
+==Story==
+===Book 6===
+Quan Ch uses the level 10 varient to locate Carl and Donut on the Eighth Floor.[6|53]
+
+==References==
+
+{{Navbox Items}}
+

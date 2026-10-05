@@ -1,0 +1,19 @@
+{{SpoilH | 5}}
+
+{{Status_Effects
+|type=Debuff
+|causes=
+* Various Attacks
+* Weapon oils (presumed)
+|effect=
+* Health continuously decreases
+* All open wounds continue bleeding
+|duration=n/a}}
+
+Blood Trail is a debuff and insidious bleed effect typically imparted by ranged weapons.  The target ends up smelling terrible and soaked in blood, and feels their health leaking.[5|6] 
+
+==AI Description==
+A favorite of game hunters and medical debt collectors chasing after deadbeats, this magical, bleeding debuff is usually applied to ranged weapons. Your health seeps downward at a slow, steady pace. You may heal, but all open wounds at the time you receive this debuff will continue to weep, allowing for you to be tracked easily. It also makes you smell really bad. Or really good, depending on who’s doing the sniffin’.
+
+==References==
+

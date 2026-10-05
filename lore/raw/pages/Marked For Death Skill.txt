@@ -1,0 +1,161 @@
+{{SpoilH | 3}}
+{{Spells
+|title1= {{PAGENAME}}
+|effect=
+Marks individual for death, stat points gained upon death
+|associated equipment=
+Enchanted Night Wyrm's Ring of Divine Suffering
+|users=
+Carl
+Prepotente
+{{Spoiler | book = 7 | spoiler =
+Li Na
+}}
+| image1=Marked for death icon.webp
+|cost=
+|casting=
+|cooldown=
+|target=
+|duration=
+}}
+
+{{PAGENAME}}  is a  skill associated with the Enchanted Night Wyrm's Ring of Divine Suffering
+
+== AI Description ==
+
+The Marked for Death Skill
+It's not just Steven Seagal's magnum opus. It's also one of the dungeon's greatest, most infamous skills! 
+
+Once activated, you will be presented with a list of all crawlers within your map's range. Only crawlers with 100% health will be selectable. Once a crawler is chosen, they will be marked. It takes 30 seconds for the mark to fully set and become active. When a crawler with an active mark dies, no matter the cause, you will receive a permanent +1 stat point to whatever that crawler's current highest stat is.
+
+The +1 stat benefit increases by one for every three marks you kill.
+
+Warning. Once a mark is set, you may no longer heal. If you are injured, or poisoned, or if you get a hangnail, you will suffer the ill effects and pain of that injury until the moment your prey is killed. So choose your marks carefully. Don't let them get away.
+
+You may only mark those designated as crawlers, except on the Scolopendra Lair levels (3, 6, 9, 12, 15, and 18) where you may also mark any non-dungeon-generated combatatants. You may only mark one crawler at a time except on the ninth floor. This skill has a 5-hour cooldown on floors 1,2,3,4,5,7, and 8. It has no cooldown on the 6th floor. Also on the sixth floor, marks form instantly. There is a 15-minute cooldown on the 9th floor, but there is no limit to the number of simultaneous marks. All remaining floors have no cooldown or delay to mark formation.
+Confused yet? Here’s a cheat sheet:
+Current Marks killed: 0
+Current Mark benefit: +1 Stat Point.
+Current floor cooldown: 5 hours.
+Marks take 30 seconds to form on this floor.
+
+Happy Hunting. [3|19]
+
+{| class="fandom-table"
+|+Floor Marking
+!Floor
+!Marks
+!Time Limits
+|-
+|1
+|Only Crawlers
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|2
+|Only Crawlers
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|3
+|Crawlers & Non-Dungeon generated combatants
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|4
+|Only Crawlers
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|5
+|Only Crawlers
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|6
+|Crawlers & Non-Dungeon generated combatants
+Only one at a time
+|No Cooldown
+Marks Form Instantly
+|-
+|7
+|Only Crawlers
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|8
+|Only Crawlers
+Only one at a time
+|5-Hour Cooldown
+30 seconds to Mark
+|-
+|9
+|Crawlers & Non-Dungeon generated combatants
+Multiple Marks at a time
+|15 Minute Cooldown
+30 seconds to Mark
+|-
+|10
+|Only Crawlers
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|11
+|Only Crawlers
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|12
+|Crawlers & Non-Dungeon generated combatants
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|13
+|Only Crawlers
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|14
+|Only Crawlers
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|15
+|Crawlers & Non-Dungeon generated combatants
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|16
+|Only Crawlers
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|17
+|Only Crawlers
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|-
+|18
+|Crawlers & Non-Dungeon generated combatants
+Only one at a time
+|No Cooldown
+No Delay to Mark
+|}
+[3|19]
+
+==References==
+

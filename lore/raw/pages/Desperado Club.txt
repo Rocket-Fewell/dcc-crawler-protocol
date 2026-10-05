@@ -1,0 +1,298 @@
+{{Group
+|name=
+|image1=Desperado Club by Ondrej Hrdina.png
+|caption-image1=Official Art by Ondrej Hrdina
+|aliases=
+|part_of=Dungeon
+|type=Nightclub
+|industry=
+|base_location=Urban floors of the Dungeon
+|first=Book 1, Chapter 19
+|status=Operational
+|head=
+*Hamed (Manager)
+*Orren (Former Manager)
+*Astrid (Former Assistant Manager)
+|members=
+*Carl, Donut, Katia Grim
+*Imani, Elle McGibbons
+*Bautista
+*Florin
+*Li Na
+|former_members=
+*Lucia Mar
+*Chris Andrews
+|sponsored_crawlers=
+}}{{Quote|This place is like your Las Vegas Strip mixed in with Mardi Gras and the discos of the 1970s.|Mordecai[2|15]}}
+
+The Desperado Club is a massive, multi-level nightclub and entertainment complex found throughout the urban floors of the Dungeon.[2|15] It is one of two Dungeon-based clubs that crawlers can gain membership to; the types of people with access to the Desperado Club and the more exclusive Club Vanquisher are mutually exclusive, and obtaining a Desperado Pass automatically negates a crawler's ability to earn a Vanquisher pass.[1|19] A members-only hub for crawlers and NPCs alike, it offers dancing, gambling, drinking, shopping, and access to a variety of rogue-themed guilds. Its logo is a stylized knife dripping blood, and its tagline is "So fun it hurts."[2|12]
+
+==Description==
+The Desperado Club functions as a sprawling center for vice, commerce, and entertainment within the Dungeon. Unlike the more sedate Club Vanquisher, Mordecai describes it as a mix of the Las Vegas Strip, Mardi Gras, and a 1970s disco.[2|15] A club appears in most settlement locations, and on the Iron Tangle it can be found at any transfer station whose number ends in a 1 (stations ending in 9 instead hold a Club Vanquisher).[3|6][3|8]
+
+The first room of the club is a public pub open to any local of the specific town; no Desperado Pass is required to enter it, and crawlers without access can pick up quests here to win themselves the tattoo.[2|15] A second, members-only door leads into the club proper. This inner area exists in a pocket dimension, the same as a guild hall: the moment a crawler enters, they are in the same room as everyone in every club location across the entire floor, so patrons come from all corners of the level. However, exiting always returns a crawler to the door they came in through, so the club cannot be used for fast travel.[2|15]
+
+Pets are prohibited inside, though the club maintains a "playroom" for familiars whose safety is not guaranteed.[2|14][8|85]
+
+==Layout==
+The members-only club descends through three main internal levels, each opening to Crawlers as they progress: the top level (entered from the Third Floor), the middle "Hunting Grounds" level (opening on the Sixth Floor), and the bottom "Larracos" level (opening on the Ninth Floor). Crawlers always enter on the top level.[3|9]
+
+===Top Level===
+The main room is a loud, smoke-filled dance hall lit by flashing lights, packed with patrons. The vast majority are generated "bot" NPCs used to keep the floor full; the club maintains the appearance of roughly 200 people at all times, backfilling with bots when there aren't enough real crawlers and NPCs present, with a bot disappearing each time a real patron enters.[2|15] The main room is not a safe room, and crawlers can be injured within it.[2|15]
+
+Branching off the main room are numerous themed rooms and attractions, most labeled with floating, 1920s speakeasy-style neon signs:
+*Bitches — a female strip club and brothel.[2|15]
+*Penis Parade — its all-male revue counterpart.[2|15]
+*Jobs — a room offering rogue-themed gigs such as NPC assassination and theft quests.[2|15]
+*The Silk Road — a marketplace selling supplies, magical gear, and potions.[2|15]
+*Guild-O-Rama — a hallway of rogue-themed guild rooms, including an explosives guild; more specialized guilds (such as Dodge, Lockpicking, and Sleight of Hand) open as crawlers descend the floors.[2|15][3|9]
+*The Pharmacist — a drug dealer, originally Quint, offering addictive substances such as blitz sticks.[2|15]
+*The Casino — opens on the Fourth Floor.[2|15][3|9]
+*Restrooms, a guarded set of back offices (used by management), and a familiar playroom.[2|15]
+
+{{Spoiler|book=3|spoiler=The casino offers earth-based games, including roulette, craps, card tables, and a vertical Wheel of Fortune. The wheel mixes lucrative prizes with brutal punishments, such as being stabbed by the croupier or being made to "vomit blood for ten minutes straight." On the roulette wheel, landing on a "Nothing!" space opens a trap door that drops the player into the Nothing.[3|9]A pair of spiral staircases descend from the casino to the lower levels, one to the Hunting Grounds and one to Larracos.[3|9]}}
+
+===Lower Levels===
+{{Spoiler|book=5|spoiler=A separate venue called the Cosmic Lounge sits in the club's basement and operates under stricter entry rules than the upper floors.[5|58][7|46]}}
+
+{{Spoiler|book=6|spoiler=The middle Hunting Grounds level is more upscale than the top level, with a carpeted full restaurant, a second casino, the Silk Pavilion marketplace, and a hallway of skill guilds. Higher-class versions of the strip clubs appear here, including the Girls of Ill Refute and the Penis Palace.[6|34][5|58]A Meat Shields mercenary market operates on the top floor under a dwarf woman named Rosemarie.[6|31][6|34]The bottom Larracos level holds a hotel and the main casino, and is guarded by the Sai, rhinoceros-like samurai such as Walter.[5|58][6|32]The club also secretly houses the entrance to the Guild of Suffering, concealed within a private cubicle in the Penis Parade, along with a network of secret passageways, drug dens, and a covert potion market.[6|23][6|24]}}
+
+{{Spoiler|book=7|spoiler=A hidden bazaar called the Gray Market sits on the middle level, and the Midnight Market, reached via a Reaper Spider Minion upgrade patch, is located on the bottom regular level.[7|4]}}
+
+==Mechanics==
+===Privacy Bubbles===
+When inside the Desperado Club, a patron can wave their hand in a circle to form a basic privacy bubble that dims the pounding music to background level and lets them converse with anyone else in the room without shouting. Poking the bubble pops it, restoring the full volume.[2|15]
+
+===Backfill NPCs===
+The club uses generated bot NPCs to keep the dance floor full, maintaining the appearance of a packed venue even when few real patrons are present.[2|15]
+
+{{Spoiler|book=3|spoiler=Private Security
+Beginning on the Fourth Floor, the Desperado Club offers private security for 300 gold per crawler or 500 gold for a pair, per visit; if a crawler spends more than that at the tables, the next visit's security is free. The security consists of two bodyguards who accompany the crawler anywhere in the club. For most crawlers it's a rip-off, but for those on the Leaderboard it can be worthwhile.[3|8]}}
+
+==History==
+The Desperado Club appears across many of the Dungeon's urban floors, adapting its exterior architecture to match the local environment while maintaining a consistent internal layout.[2|15][5|5]
+
+{{Spoiler|book=3|spoiler=A Level 125 Bloodlust Sprite named Astrid served as the club's Assistant Manager.[3|9]}}
+
+{{Spoiler|book=5|spoiler=The club was overseen by Orren, a Syndicate liaison who used the manager position as a cover and conducted liaison duties from a cluttered office within the club.[5|1]}}
+
+{{Spoiler|book=6|spoiler=While crawling the eighth floor, Carl and Katia Grim conspired to assassinate Astrid in order to complete a Guild of Suffering assassination quest.[6|19][6|32] During the attempt, Samantha accidentally released a feral demon named Minge from the Nothing inside the casino. Management responded by unleashing celestial "vorpals" against the demon, and the resulting battle caused catastrophic damage, gutting the club and forcing a total evacuation.[6|32][6|33][6|34]}}
+
+{{Spoiler|book=7|spoiler=Following the club's destruction and Astrid's death, it underwent a major restructuring and temporary closure. Management was taken over by Hamed, better known as the Night Wyrm, the leader of the Guild of Suffering and Astrid's husband.[7|10]Under Hamed's rule, crawlers were temporarily banned from the club and security was heavily increased, staffed by his own bodyguards who were neither standard NPCs nor former crawlers.[7|10]}}
+
+{{Spoiler|book=8|spoiler=On the tenth floor, the club's new croupier Mitch Fiorelli was revealed to be an adolescent Shadow Mimic planted as an enforcer to undermine Hamed's operations. The Wheel of Fortune "Nothing!" spot had been rigged as a trap to lure and consume crawlers.[8|85][8|86]}}
+
+==Story==
+The Desperado Club is a recurring hub for Carl, Princess Donut, and their allies, who visit to gather supplies, trade information, and unwind.[2|15]
+
+{{Spoiler|book=3|spoiler=Imani meets Bautista in the club on the Iron Tangle and has him send word to Carl to meet at the bar after the Recap Episode to talk about Chris Andrews and Brandon Andrews' death.[3|6]On their first visit, Carl and Donut hire the cretin bodyguards Bomo and The Sledge for private security. While at the club, Ji-Hoon and an accomplice attack the group; Donut kills Ji-Hoon, earning her first Player Killer Skull, and Elle McGibbons takes out the accomplice. Astrid comes out to apologize on management's behalf, refunds the security fee, and grants the duo complimentary security and their choice of Bomo and the Sledge from then on.[3|8][3|9]In the casino, Carl plays the Wheel of Fortune game, run by the croupier Tito, and wins a Scroll of Upgrade.[3|9] The pair become regular patrons across their later visits to spread knowledge among crawlers and train at the guilds.[3|14][3|19]On a later visit, Carl meets a despondent Frank Q at the bar, who gives him the Night Wyrm's Ring of Divine Suffering. Shortly afterward, Chris Andrews kills Frank and is banned from the club.[3|19][3|20] Katia Grim later earns her own Desperado Pass Tattoo for killing Hekla.[3|25]}}
+
+{{Spoiler|book=5|spoiler=Because the club's interior is comparatively secure, hunted crawlers and stranded hunters have used it as a refuge; several hunters became trapped inside after Carl bombed the club's entrance in Zockau. To reach the Hunting Grounds level, Carl and Donut used a secret stairwell hidden behind a latch in the last stall of the women's bathroom to meet with changeling contacts.[5|5][5|58]}}
+
+{{Spoiler|book=6|spoiler=Princess Donut became a frequent patron of the Penis Parade, lavishing gold on its dancers and befriending performers such as Damascus Steel and Anaconda, later revealed to be Astrid and Hamed's sons.[6|23][6|34]The most catastrophic event in the club's history was the assassination of Astrid. During the attempt, Samantha's release of the feral demon Minge from the casino's Nothing portal, combined with management's deployment of the vorpals, destroyed much of the club.[6|32][6|33][6|34]}}
+
+{{Spoiler|book=8|spoiler=On the tenth floor, Carl and his allies returned to the casino, using the Wheel of Fortune's "Nothing!" portal to send several companions out of the dungeon. The new croupier, Mitch Fiorelli, sprang an ambush, transforming the casino's furniture, machines, and patrons into Shadow Mimics, which the crawlers fought off.[8|85][8|86]}}
+
+==Individuals==
+===Members===
+{| class="sortable mw-collapsible mw-collapsed fandom-table"
+|+Crawlers with Desperado Club Access (contains spoilers through Book 6)
+!Crawler
+!Access Granted via
+!Floor 3
+!4
+!5
+!6
+!7
+!8
+|-
+|Carl
+|Killing Babies
+|X
+|X
+|X
+|X
+|X
+|X
+|-
+|Donut
+|Killing Babies
+|X
+|X
+|X
+|X
+|X
+|X
+|-
+|Lucia Mar
+|
+|X
+|Banned for Life
+|
+|
+|
+|
+|-
+|Imani
+|Killing Crawlers
+|X
+|X
+|X
+|X
+|X
+|X
+|-
+|Elle McGibbons
+|Icicle up a Keister[3|8]
+|
+|X
+|X
+|X
+|X
+|X
+|-
+|Bautista
+|
+|
+|X
+|X
+|X
+|X
+|X
+|-
+|Chris Andrews
+|
+|
+|X
+|Banned for killing Frank Q
+|
+|
+|
+|-
+|Katia Grim
+|Killing Hekla[3|25]
+|
+|X
+|X
+|X
+|X
+|X
+|-
+|Li Na
+|
+|
+|
+|
+|
+|
+|
+|}
+
+===Employees===
+{| class="sortable mw-collapsible mw-collapsed fandom-table"
+|+Employees of the Desperado Club (contains spoilers through Book 6)
+!Name
+!Role
+|-
+|Clarabelle
+|Front Door Bouncer
+|-
+|Astrid
+|Assistant Manager
+|-
+|Orren
+|Manager
+|-
+|Sledge
+|Private Security
+|-
+|Bomo
+|Private Security
+|-
+|Clay-ton
+|Private Security
+|-
+|Very Sullen
+|Private Security
+|-
+|Walter
+|Bouncer, Larracos Level
+|-
+|Quint
+|Pharmacist
+|-
+|Charles
+|Bartender
+|-
+|Tito
+|Wheel of Fortune Croupier
+|-
+|Rosemarie
+|Meat Shields Manager
+|-
+|Anaconda
+|Stripper at Penis Parade
+|-
+|Damascus Steel
+|Stripper at Penis Parade
+|-
+|Dong Quixote
+|Stripper at Penis Parade
+|-
+|Gluteus Maxx
+|Stripper at Penis Parade
+|-
+|Splash Zone
+|Stripper at Penis Parade
+|-
+|Author Steve Rowland
+|Stripper at Penis Parade
+|-
+|Doctor Bones
+|DJ at Penis Parade
+|-
+|Bucket Boy
+|Tip Collector at Penis Parade
+|-
+|Darla No-Dentures
+|Stripper at Bitches
+|-
+|Patty Pump-It-Up
+|Stripper at Bitches
+|-
+|Tuesday Two-For-One
+|Stripper at Bitches
+|-
+|Pustule
+|Proprietor at Silk Road
+|}
+
+==Pop Culture==
+The Desperado Club's exterior magically adapts to fit the theme of the floor or settlement where it appears. On the third-floor Over City, it resembled a 1920s New York Art Deco building, with square concrete columns and triangular, sun-like rays similar to the top of the Empire State Building.[2|15]
+
+{{Spoiler|book=5|spoiler=In the city of Zockau on the sixth-floor Hunting Grounds, the entrance took the form of a 1950s mid-century-modern drive-in diner.[5|5]}}
+
+{{Spoiler|book=7|spoiler=On the ninth floor in Larracos, it appeared as a 1960s modernist building incongruously dropped into a Renaissance-France setting.[7|8]}}
+
+==Trivia==
+*The "drink tickets" awarded from loot boxes for the Desperado Club place quotation marks around the word "drink," hinting at the club's seedier offerings.[1|30]
+*Although the inner club exists in a pocket dimension that connects all of a floor's entrances, crawlers cannot use it for fast travel; exiting always returns a crawler to the door they entered through.[2|15]
+
+{{Spoiler|book=5|spoiler=One of the club's secret stairwells can be accessed by pulling a hidden latch inside the toilet tank in the last stall of the women's bathroom.[5|58]}}
+
+{{Spoiler|book=6|spoiler=The club hides a sprawling network of secret passageways, drug dens, and a covert potion market.[6|24]}}
+
+==Speculation==
+{{Spoiler|book=7|spoiler=Given that Orren, a Syndicate liaison, used the club as a cover and that Hamed, a demigod cult leader, later took over as manager, the Desperado Club may serve as a major front for covert Syndicate operations, backroom political dealings, and the Guild of Suffering's machinations rather than functioning purely as an entertainment venue for crawlers.[6|19][7|10]}}
+
+==Gallery==
+
+Desperado club.webp|Official Logo of the Desperado Club
+Desperado Club Logo.jpg|Art by u/Remarkable-Oil-9407, Reddit
+Desperado drinks.png|Art by u/Mashermello
+Shirley Temple Art by sealestial-k.webp|Art by @sealestial-k, Tumblr
+
+==References==
+
+{{Navbox Char}}
+

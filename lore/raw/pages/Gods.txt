@@ -1,0 +1,290 @@
+{{Race Infobox
+|title1=Gods / Deities
+|image1=
+|caption-image1=
+|type=Dungeon Entities
+|class=Deity / Immortal
+|floors=Appear from the Fourth Floor onward; predominantly the Twelfth Floor
+|height=Variable (human-sized to kaiju-sized)
+|weight=Variable
+|bonuses=Grant worshippers unique spells, stat boosts, and floor boons
+|penalties=Can inflict devastating Smites and permanent debuffs
+|deities=
+|natural_enemies=Feral Gods, rival pantheon factions, the Unwashed
+|organizations=Various mythological pantheons (Greek, Egyptian, etc.)
+|crawlers=Carl (Emberus), Katia (Eileithyia), Prepotente (The Midnight Epicure), Jurgen (Donar)
+|syndicate=Sponsored and piloted by wealthy Inner System elites and corporate entities
+|npcs=Retainer Deities, Bijou fairies, Vorpals
+}}
+
+{{Quote|There are no gods here. Just those who pay for the privilege.|Mordecai[1|25]}}
+
+Gods, also known as Deities, are immensely powerful beings that reside within the Dungeon, many of them drawn from real-world mythologies. Despite their name, they are not truly divine: many are controlled by  wealthy Syndicate sponsors who have paid for the privilege of wielding their power.[1|25]
+
+== Description ==
+{{Spoiler|book=3|spoiler=Standard gods are level-250 immortals who possess strict invulnerability on every floor before the 12th, rendering them unkillable by conventional crawler means.[3|33][3|32] They are, in fact, biological "Soul Armor" worn by off-world sponsors, much like the bodies used by the Intellect Hunters, the Scree, and the Valtay -- the aliens wear the gods like clothing.[3|32]
+The primary purpose of the deities is to compete in the Celestial Ascendency, a high-stakes game contained on the 12th floor whose winner ascends to rule the heavens from the Celestial Throne. Individual gods are sometimes called away from it, and the game keeps its own followers and storyline, separate from the Faction Wars.[3|32][3|33]}}
+{{Spoiler|book=4|spoiler=Gods build their power by taking on worshippers. A Crawler can choose to worship a god after encountering it in person or obtaining an item that grants worship; upon pledging, the crawler becomes an adherent and gains access to that god's temples, class-tier spells, stat boosts, and periodic boons.[4|32]
+Adherence comes with binding rules. When Carl becomes an adherent of Emberus, the system enters him at the rank of Acolyte and warns that, without a cleric or paladin class, he can never ascend past the next rank, Devotee. His obligations are representative of the faith's demands: he may not harm a fellow worshipper; he must offer a drop of blood at an Emberus temple (or the sun shrine in his personal space) at least once every 30 hours; he must tithe five percent of all looted gold; he may not own or wield gear blessed by Hellik; and he must complete every church quest the god issues. Failing those rules or quests risks a devastating "Smite."[4|32]}}
+{{Spoiler|book=6|spoiler=When a deity enters an area, its presence triggers a massive, realm-wide aura that affects divine items, imparting temporary and wildly unpredictable buffs or debuffs to anyone carrying such items nearby.[6|16][8|66]}}
+{{Spoiler|book=6|spoiler=Thousands of gods exist, but only around a hundred are typically sponsored and equipped to seriously contest a given season's Ascendency, and the raw power of individual deities varies wildly.[6|19]}}
+{{Spoiler|book=7|spoiler=The bond between a worshipper and their god is physical: an invisible thread of light connects the adherent's heart to the deity by way of a tiny fairy called a Bijou.[7|49]}}
+
+== Appearance ==
+{{Spoiler|book=3|spoiler=The physical appearance of the deities varies wildly, matching the cultural mythology each represents. They can also alter their size dramatically; when Grull was involuntarily summoned, he grew until he filled the chamber, standing roughly four stories tall -- and even that was described as a miniature of his true form.[3|33]}}
+{{Spoiler|book=4|spoiler=The sun and ash god Emberus is a towering, asymmetrical figure whose skin is normally a gooey, blue-hued rock but bursts into curls of orange and red fire when his temper flares. A massive curved horn erupts from one side of his head, while the other side is caved in like an old, poorly-healed injury.[4|31]}}
+{{Spoiler|book=6|spoiler=Others appear humanoid but distinctly alien, such as the river goddess Yemaya, who manifests as a beautiful, dark-skinned siren with neck gills, pointed ears, and a lower body that splits into twin scaled tails, evoking the Starbucks logo.[6|17]
+Crucially, because the gods are Soul Armor, the sponsors driving them can drop the illusion and appear in their true alien forms. When Huanxin Jinx of the Grixist Swarm piloted Eileithyia, she appeared not in the goddess's soul armor but in her own shape: a roughly five-foot, hairy alien covered in coarse blue and black hairs, with six black eyes set in a V across a bug-like face, four three-fingered arms, a long thin neck, and a distended, pregnant-looking belly, draped in a blood-red toga and laurel.[6|17]}}
+{{Spoiler|book=7|spoiler=The god of rebirth and the sunrise, Khepri, sports the disturbing head of a bug and stands barely five feet tall while within his own temple.[7|53]
+On an open battlefield, by contrast, gods can expand to the size of skyscrapers; when the god Harpocrates manifested at Larracos, he loomed as a kaiju taller even than the city's Nest tower.[7|71]}}
+
+== Subraces ==
+{{Spoiler|book=3|spoiler=Sponsored Gods: Deities whose bodies are actively inhabited and controlled by wealthy tourists, corporations, or Syndicate elites paying for a chance at the Ascendent throne. God-summoning equipment is sprinkled throughout the dungeon partly to sell these "special guest appearances," which are often purchased by celebrities.[3|32]}}
+{{Spoiler|book=4|spoiler=Feral Gods: Ancient, immortal beasts -- the gods from before -- who roamed the heavens until the current pantheon banished them into the Nothing and built the world. Their imprisonment has driven them mad, and other deities react with extreme alarm when one is loosed.[4|15][4|27]
+Locked / Un-sponsored Gods: Some deities are "locked," with no sponsor for a given season, and run purely on their baseline AI programming.[4|31]}}
+{{Spoiler|book=8|spoiler=On the later floors, the dungeon's operators normally hold a separate ability to control un-sponsored gods, exercised liberally to rein in such destructive creatures -- a checks-and-balances mechanism distinct from the hard-coded limitation that keeps the macro AI itself from ever touching a deity's mind. That operator-held control has recently been turned off; with the override gone and the AI still locked out by its hard limitation, the un-sponsored deities now act independently, beyond anyone's control.[8|28]
+Subjugated Gods: Defeated deities who have lost their worshippers. Their power and level are halved, and they are forced into servitude under a new master, such as Lamashtu the Donkey, who was subjugated by the AI.[8|92]}}
+
+== Subclasses ==
+{{Spoiler|book=6|spoiler=Retainer Deities: Under a new seasonal rule, a sponsored deity may recruit a second, unsponsored god as a retainer once the Ascendency games begin, pushing that contest further toward intrigue and alliance and away from raw violence.[6|19] Such retainers have either allied with -- or been forced into the service of -- a more powerful, sponsored deity. Yemaya, resurrected through her sponsor's machinations, serves as a willing retainer to her old friend Eileithyia.[6|17][6|19]}}
+{{Spoiler|book=7|spoiler=Likewise, Khepri was forced to become a retainer to Adrasteia. He had previously served as a retainer to Khnum, but was driven to take a new master after Khnum mysteriously dropped dead.[7|53]}}
+
+== Story ==
+{{Spoiler|book=3|spoiler=Carl first runs afoul of the pantheon when he involuntarily summons the war god Grull using the Enchanted War Gauntlet of the Exalted Grull, channeling the summoning through Mantaur vessels. Grull -- a sanctum-tier, level-250 deity and child of Taranis and Apito, sponsored on his debut by Prince Maestro of the Skull Empire -- battles a Mimic Rex while Carl barely survives by turning invisible.[3|33][3|32]}}
+{{Spoiler|book=4|spoiler=Carl repeatedly entangles himself with the gods on the fifth floor. After assembling the Gate of the Feral Gods, he uses it to escape the city boss Lusca, tearing a hole in the Nothing that drops a feral god into the world he leaves behind and earning the "Who Let the Gods Out?" achievement. He later weaponizes the gate on a mass scale, ferrying trapped crawlers out of sealed bubbles and leaving a feral god behind in each emptied one.[4|27][4|15][4|32]
+Desperate to save the puppy Orthrus from the crawler Quan Ch, Carl pledges himself to the sun and ash god Emberus and uses a celestial grenade to summon him. The grateful god -- reunited with his dead son's lost pet -- grants Carl a boon and tasks him with two church quests: find out who murdered his son Geyrun, and slay his rival twin, the sun god Hellik. Emberus's mere presence superheats and melts the entire bubble world.[4|31][4|32]}}
+{{Spoiler|book=5|spoiler=Carl is branded an enemy of the church of Diwata after he accidentally shatters the nature goddess's sacred temple shrine with his own body, and is later marked for death when Diwata -- piloted by Circe Took of the Dark Hive -- makes an appearance in the realm to hunt him.[5|36][5|61]}}
+{{Spoiler|book=6|spoiler=The gods become a far larger problem as the dungeon ramps toward the Ascendency. On the eighth floor, a grinding war of attrition piles up enough death to draw the attention of gods and demons alike: previously-forgotten deities rise, gods are involuntarily summoned from their halls to walk the land, and some begin acting in ways they should not. The escalation -- normally held back until only the final teams of Faction Wars remain -- arrives early here, all part of the setup for the Ascendency contest.[6|54]
+Their invulnerability holds firm through most of the eighth floor. When the unsponsored old god Ogun is summoned to Havana to punish his failed worshippers, Sister Ines brandishes her trident at him in disgust -- only for the deity to freeze her with a wave of his hand and crush the crawler Anton underfoot, as untouchable as ever.[6|16]
+The true milestone comes at the floor's end. During the desperate battle to free the demon Amayon, the former crawler Paz -- the goddess's own totem, armed with Katia's god-slaying Bolt of Ophiotaurus -- drives the bolt into the eye of the Vinegar Bitch, Ysalte, and detonates himself against her neck, taking off her head. Credit for the kill goes to Paz Lo, proving for the first time that a deity, otherwise immortal on the floor, can be slain outright.[6|69][6|72]}}
+{{Spoiler|book=7|spoiler=On the Ninth Floor, the warlord Vinata of the Blood Sultanate exploits a light-god worship loophole to hide her court inside the temple of Khepri within Club Vanquisher. Carl, Katia, Prepotente, and Samantha storm the temple to kill her, only to spring a trap: Vinata had worshipped Khepri and arranged to summon the god into his own temple, turning the crawlers into trespassers in a deity's sanctum. Invulnerable on the floor and honor-bound toward his guests yet enraged, the bug god goes berserk, and a chaotic temple battle erupts.[7|49][7|53]
+At the floor's end, the crawler Justice Light springs a trap that breaks the in-game Nothing, loosing its long-imprisoned inhabitants -- gods and demons among them -- as it drains into the Halls of the Ascendency (the twelfth floor), Sheol (the fifteenth), and Scolopendra's Lair (the eighteenth).[7|87][8|28]}}
+{{Spoiler|book=8|spoiler=Across the tenth and eleventh floors, the chaos goddess Eris repeatedly courts Carl, pressing him to abandon Emberus and become her true worshipper. She promises to shield him from Emberus's spite and to deliver him and his friends to safety should she win the Ascendency. When Carl snatches her five-sided coin out of the air, it dissolves into a slowly spinning swirl pattern tattooed on his palm.[8|35]
+Carl's Kill Hellik church quest hardens into an impossible bind. Completing it means Emberus will kill him for daring to slay his brother; abandoning the quest or leaving the church earns a smite. The only escape is to kill Emberus himself -- which would in turn mark Carl for death by every other god.[8|35]
+During a deadly tenth-floor race, the war god Grull rampages after Carl while also hunting the mantaur Corcunda, who lapsed in his faith after splitting and rejoining. Donut casts Laundry Day to eject Prince Maestro from Grull's body, though the orc cannot truly die on the tenth floor and simply regenerates. To satisfy the smite and end Grull's pursuit, Corcunda and the elderly stripper Dong Quixote charge the god together on a great lance, sacrificing themselves for a good death.[8|66]}}
+
+== Dungeon Lore ==
+{{Spoiler|book=3|spoiler=Crawlers and NPCs can summon gods in three ways:
+Celestial Boons: a worshipper prays for their god to intervene.[3|32]Indentured Summonings: a powerful mage forces a deity to fight for them, which usually enrages the god.[3|32]Involuntary Summonings: triggered by traps, celestial grenades, or cursed items; the god arrives untethered and destroys everything in sight for a number of seconds equal to the vessel's level plus the god's level.[3|32][3|33]
+An involuntarily summoned god grows to fill whatever chamber it is summoned into. In theory it could be summoned into a tiny vessel and emerge small, but it would still be strong enough to break free unless contained by a proper summoning sigil drawn by a level-20 summoner. Once unsummoned, a god can be summoned again immediately, and it can even be stolen mid-containment -- if a god trapped in a sigil is summoned again by another means, it will break free and move to the new vessel.[3|33][3|32]
+Because the gods are biomechanical Soul Armor, crawlers have theorized that spells designed to strip biological armor -- such as Take That Shit Off or Laundry Day -- could physically rip the sponsoring alien out of the god's body, provided the deity's invulnerability is first bypassed.[3|32]}}
+{{Spoiler|book=4|spoiler=Outside the 12th floor, gods tend to fight or mate -- usually both -- whenever they encounter one another, after which they are unsummoned fairly quickly. As a result, the surest way to be rid of a rampaging god is to lure another god nearby.[4|32]}}
+{{Spoiler|book=5|spoiler=The armor-stripping theory is first borne out during the battle against Diwata. The Royal Court had assumed the god's invulnerability would need to be brought down first, but further research established that spells aimed at the driver rather than the god itself bypass that protection entirely. Donut casts Laundry Day to peel Circe Took out of Diwata's soul armor, and the exposed alien -- no longer shielded by the deity -- is immediately torn apart by her own mantis children.[5|74]}}
+{{Spoiler|book=6|spoiler=A deity standing within its own temple operates under special "temple appearance rules" and commands powers that, in some cases, exceed even those of the macro AI; within her own temple, Yemaya teleported the rock creature Bomo clear to the Ninth Floor with a single word.[6|17]}}
+{{Spoiler|book=7|spoiler=The worship link between an adherent and their god is not direct. It runs from the deity to the strongest temple on the floor, and from that temple to the worshipper, routed by a Bijou fairy in a process that takes about two minutes. From the third floor through the eleventh, that strongest temple is almost always located inside Club Vanquisher. As a worshipper moves about, additional tendrils sprout to connect them to other temples, and in some cases to other worshippers.[7|49]
+A Hell-Kissed Potion of Conscription can bind nearly any non-affiliated entity regardless of its protections, including most deities. Conscription potions only function on the 9th, 12th, 15th, 17th, and 18th floors.[7|71]
+On the Ninth Floor, the Laundry Day tactic claims a sponsor for good: during Katia's rescue, Donut strips Huanxin Jinx out of the goddess Eileithyia and, with the CEO pinned inside a word-of-power circle that blocks her escape, kills her permanently with an ash-tipped crossbow bolt. Because that floor's rules allow outside tourists to die, the sponsor does not come back.[7|86]}}
+{{Spoiler|book=8|spoiler=The gods exist as a fundamental checks-and-balances system for the dungeon. To stop the macro AI from turning these ultimate weapons against the crawlers, the AI is hard-coded so that it cannot manually interfere with the minds of the gods. The same hard limitation is what allows sponsors to drive the gods in the first place, and it makes the deities extreme wildcards.[8|28]
+Within a dungeon enhancement zone, the deities are genuinely more powerful than the macro AI, which is locked out of their controls.[8|Epilogue Interlude: Prime Minister Victory]
+Whether stripping a sponsor loose actually kills them comes down to the floor's rules. During a tenth-floor race, Donut ejects Prince Maestro from Grull with Laundry Day, but the tenth floor forbids the death of outside tourists, so the orc simply regenerates minutes later -- surviving where Circe Took and Huanxin Jinx did not.[8|66]}}
+
+== Trivia ==
+The war god Grull is worshipped by equine-class creatures -- horses, centaurs, and tikbalangs among them -- who smear themselves with blue makeup and talk endlessly of wenches and dying gloriously in battle.[1|25]
+
+{{Spoiler|book=3|spoiler=Though strictly invulnerable on floors 1 through 11, gods still feel pain and can be made to bleed, inflicting immense suffering on the tourists piloting them.[3|32]}}
+{{Spoiler|book=5|spoiler=Attacking or shedding blood inside a god's personal temple is considered a grave insult and a desecration that strips the temple of its protections.[5|36][6|17]
+When a god is slain, it leaves behind a "Memorial Crystal" containing god-tier spells and knowledge that crawlers can loot.[5|67][6|69]}}
+{{Spoiler|book=6|spoiler=Slaying a deity carries heavy consequences: the killer is marked for death by every other god save the slain deity's sworn enemies, and all of that god's worshippers are permanently afflicted with the Despondent debuff.[6|69]}}
+{{Spoiler|book=8|spoiler=The gods are universally described as immature, fractured, and unpredictable; the system AI despises them, comparing the entire pantheon to a "dorm full of college freshmen" at an academy whose only programs are drinking, philosophy, and weird fetishes.[8|86]}}
+
+== Speculation ==
+{{Spoiler|book=6|spoiler=Political Proxy Wars: The Celestial Ascendency may be less a game than a mirror of real-world Syndicate politics. Pacifist factions such as the Nebulars are said to sponsor gods chiefly to win a seat on the Syndicate crawl council, secretly plotting to take the game so they can shut the dungeon down for good. Far from benevolent, however, the Nebulars reportedly preach the eradication of every world capable of hosting a crawl -- this planet included -- along with everyone living on it.[6|64]}}
+{{Spoiler|book=8|spoiler=AI Manipulation: The AI openly chafes at its lack of control over the gods, especially the sponsored ones. It seems plausible that the AI deliberately steers crawler quests -- handing Carl the Scavenger's Daughter patch, for instance -- to engineer situations where crawlers can bypass divine invulnerability and assassinate the tourists driving the gods.[8|66][6|19]}}
+
+== List of known Gods ==
+{| class="fandom-table mw-collapsible mw-collapsed"
+|+List of mentioned Gods (first named through Book 7)
+!Name
+!God Of
+!First Mentioned
+|-
+|Grull
+|War
+|Book 1, Chapter 25
+|-
+|Eris
+|Chaos
+|Book 1, Chapter 34
+|-
+|Apito
+|Mother of All Gods
+|Book 2, Chapter 17
+|-
+|Mana Genita
+|Unknown
+|Book 3, Chapter 2
+|-
+|Nekhebit
+|Unknown
+|Book 3, Chapter 24
+|-
+|Taranis
+|Thunder, Regent of the Heavens
+|Book 3, Chapter 33
+|-
+|Pawna
+|Peace
+|Book 4, Chapter 2
+|-
+|Hellik
+|Sun and Life, Half of the Sun Duology
+|Book 4, Chapter 3
+|-
+|Algos
+|Pain
+|Book 4, Chapter 14
+|-
+|Yarilo
+|Lust
+|Book 4, Chapter 21
+|-
+|Psamathe
+|Unrequited Love (Unknown)
+|Book 4, Chapter 21
+|-
+|Emberus
+|Fire and Ash, Half of the Sun Duology
+|Book 4, Chapter 28
+|-
+|Orthrus
+|Guard Dog
+|Book 4, Chapter 28
+|-
+|Cerberus
+|Guard Dog
+|Book 4, Chapter 29
+|-
+|Geyrun
+|Unknown
+|Book 4, Chapter 29
+|-
+|Wakinyan aka Meleagris Gallopavo Rex
+|Turkeys
+|Book 4, Chapter 33
+|-
+|Ysalte
+|Hopelessness and Insanity
+|Book 4, Chapter 33
+|-
+|Capa
+|Unknown
+|Book 5, Chapter 24
+|-
+|Hehaka
+|Unknown
+|Book 5, Chapter 24
+|-
+|Diwata
+|Forest Protector
+|Book 5, Chapter 35
+|-
+|Eileithyia
+|Childbirth and Female Pain
+|Book 5, Chapter 35
+|-
+|Inpewt
+|Unknown
+|Book 5, Chapter 56
+|-
+|Adad
+|Storms
+|Book 6, Prologue
+|-
+|Dodola
+|Storms
+|Book 6, Prologue
+|-
+|Ogun
+|Blacksmiths and Protection
+|Book 6, Chapter 5
+|-
+|Shi Maria
+|Insanity
+|Book 6, Chapter 8
+|-
+|Asojano
+|Smallpox
+|Book 6, Chapter 11
+|-
+|Inle
+|Healing
+|Book 6, Chapter 15
+|-
+|Legba
+|Unknown
+|Book 6, Chapter 15
+|-
+|Oshun
+|Unknown
+|Book 6, Chapter 15
+|-
+|Shango
+|Unknown
+|Book 6, Chapter 15
+|-
+|Yemaya
+|Rivers, Oceans, and All Bodies of Water; Queen of Love and Bringer of Life
+|Book 6, Chapter 15
+|-
+|Semiramis
+|Unk Tehi
+|Unknown
+|Book 6, Chapter 42
+|-
+|Áine
+|Unknown
+|Book 6, Chapter 42
+|-
+|Ibeji
+|Unknown
+|Book 6, Chapter 64
+|-
+|Kuraokami
+|Ocean
+|Book 6, Chapter 64
+|-
+|Issitoq
+|Envoy between Gods and Demons
+|Book 7, Chapter 2
+|-
+|Donar
+|Unknown
+|Book 7, Chapter 8
+|-
+|Theia
+|Light
+|Book 7, Chapter 49
+|-
+|Khepri
+|Light, Rebirth, and Sunrise
+|Book 7, Chapter 52
+|-
+|Adrasteia
+|Unknown
+|Book 7, Chapter 53
+|-
+|Khnum
+|Unknown
+|Book 7, Chapter 53
+|-
+|Kina
+|The Sea
+|Book 7, Chapter 56
+|-
+|Meatus
+|Unknown
+|Book 7, Chapter 59
+|-
+|Harpocrates
+|Silence
+|Book 7, Chapter 59
+|}
+
+== See also ==
+* Celestial Ascendency
+* Twelfth Floor
+* :Category:Deities
+* :Category:God Sponsors
+
+== References ==
+

@@ -1,0 +1,1372 @@
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T04:40:53.306Z INFO  TTS provider: openai:gm=gpt-4o-mini-tts/onyx,system=gpt-4o-mini-tts/coral
+2026-10-04T04:40:53.676Z INFO  Logged in as DCC Ears#8647
+2026-10-04T04:41:42.455Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T04:41:42.717Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T04:41:42.717Z INFO  [voice] Joined voice channel General
+2026-10-04T04:41:42.718Z INFO  [stt] STT listening for speakers
+2026-10-04T04:42:01.547Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:42:27.233Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:43:01.097Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:43:10.038Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:43:12.377Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:44:01.815Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:44:06.243Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:44:16.802Z ERROR [stt] Transcription failed for 376517850724040714: OpenAI transcription failed: HTTP 429 {
+    "error": {
+        "message": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "credit_balance_exhausted"
+    }
+}
+
+2026-10-04T04:46:34.576Z INFO  [stt] Transcript: **Hornn**: "We're trying this again. I'm giving you another test at your transcriptions."
+2026-10-04T05:03:46.714Z INFO  SIGTERM received, shutting down
+2026-10-04T05:03:46.717Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T05:03:46.718Z INFO  Left voice channel
+2026-10-04T05:03:47.579Z INFO  TTS provider: openai:gm=gpt-4o-mini-tts/onyx,system=gpt-4o-mini-tts/coral
+2026-10-04T05:03:47.580Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T050347-988e)
+2026-10-04T05:03:47.943Z INFO  Logged in as DCC Ears#8647
+2026-10-04T05:34:07.046Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T05:34:13.860Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T05:34:13.861Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T053413-a04d)
+2026-10-04T05:34:14.384Z INFO  Logged in as DCC Ears#8647
+2026-10-04T05:34:45.272Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T05:34:45.509Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T05:34:45.518Z INFO  [voice] Joined voice channel General
+2026-10-04T05:34:45.518Z INFO  [stt] STT listening for speakers
+2026-10-04T05:34:54.413Z INFO  [stt] Transcript: **Hornn**: "Well, well, well, look what the cat dragged in."
+2026-10-04T05:35:30.986Z INFO  [stt] Transcript: **Hornn**: "The AI can hear what I'm saying, and it's transcribing it into text in the Discord channel."
+2026-10-04T05:35:40.785Z INFO  [stt] Transcript: **Hornn**: "But I'm not hearing it talk."
+2026-10-04T05:40:43.024Z INFO  [stt] Transcript: **Hornn**: "Cait's goan."
+2026-10-04T05:40:45.385Z INFO  [stt] Transcript: **Hornn**: "It's going."
+2026-10-04T05:47:38.592Z INFO  SIGTERM received, shutting down
+2026-10-04T05:47:38.595Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T05:47:38.595Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T05:47:42.117Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T05:47:42.119Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T054742-02d3)
+2026-10-04T05:47:42.613Z INFO  Logged in as DCC Ears#8647
+2026-10-04T05:48:27.633Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T05:48:27.865Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T05:48:27.866Z INFO  [voice] Joined voice channel General
+2026-10-04T05:48:27.866Z INFO  [stt] STT listening for speakers
+2026-10-04T05:48:36.723Z INFO  [stt] Transcript: **Hornn**: "Well, well, well, look what the cat dragged in."
+2026-10-04T05:49:37.745Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T05:51:08.344Z INFO  [stt] Transcript: **Hornn**: "Dungeon Crawler AI GM, can you hear me? And if you can hear me, then respond with "I can hear you.""
+2026-10-04T05:52:12.801Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T05:52:54.128Z INFO  [stt] Transcript: **Hornn**: "Okay, well, you are officially poked awake, and I need you to respond. I shouldn't have to go back into the text chat to get you to respond to my voice prompts. Respond to my voice prompts and all voice prompts every time you hear them."
+2026-10-04T05:59:33.119Z INFO  SIGTERM received, shutting down
+2026-10-04T05:59:33.122Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T05:59:33.122Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T05:59:36.586Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T05:59:36.587Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T055936-9754)
+2026-10-04T05:59:36.587Z INFO  GM wake webhook: ON (debounce 2500ms, max wait 8000ms, min interval 4000ms)
+2026-10-04T05:59:36.967Z INFO  Logged in as DCC Ears#8647
+2026-10-04T06:00:12.316Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T06:00:12.599Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T06:00:12.607Z INFO  [voice] Joined voice channel General
+2026-10-04T06:00:12.607Z INFO  [stt] STT listening for speakers
+2026-10-04T06:00:26.194Z INFO  [stt] Transcript: **Hornn**: "Okay, I didn't get to hear you the last time, but now got my ears on for sure. So what did you have to say? Throwing out some threats?"
+2026-10-04T06:00:28.846Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T06:00:56.409Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T06:00:57.004Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T06:01:29.734Z INFO  [stt] Transcript: **Hornn**: "What would you say your average response time from after I finish speaking is going to be?"
+2026-10-04T06:01:32.411Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T06:01:51.279Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T06:02:24.108Z INFO  [stt] Transcript: **Hornn**: "So,"
+2026-10-04T06:02:26.780Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T06:02:39.295Z INFO  [stt] Transcript: **Hornn**: "Again, we're just running a little test session here. I'm about to invite a friend. Do you think we can run a floor one exercise?"
+2026-10-04T06:02:41.955Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T06:03:10.822Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T06:03:44.590Z INFO  [stt] Transcript: **Hornn**: "If you got some time tomorrow, Mr. White, I think we can run a test session."
+2026-10-04T06:03:47.282Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T06:26:49.416Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T06:26:49.417Z INFO  Left voice channel
+2026-10-04T17:30:19.901Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T17:30:20.386Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T17:30:20.388Z INFO  [voice] Joined voice channel General
+2026-10-04T17:30:20.388Z INFO  [stt] STT listening for speakers
+2026-10-04T17:30:52.738Z INFO  [stt] Transcript: **Hornn**: "Good morning, Duncan Crawler AI system."
+2026-10-04T17:30:55.392Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T17:31:06.855Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T17:31:50.118Z INFO  [stt] Transcript: **Hornn**: "Just flirting with the PA system, gonna kind of test you out today. We're in pre-dungeon checkouts right now."
+2026-10-04T17:31:52.779Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T17:32:05.080Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (6 chunk(s), voice: gm)
+2026-10-04T17:32:47.539Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T17:32:47.539Z INFO  Left voice channel
+2026-10-04T17:57:04.686Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T17:57:04.889Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T17:57:04.890Z INFO  [voice] Joined voice channel General
+2026-10-04T17:57:04.890Z INFO  [stt] STT listening for speakers
+2026-10-04T17:57:23.533Z INFO  [stt] Transcript: **Hornn**: "Okay, let's see, test run, voice bot is running."
+2026-10-04T17:57:26.205Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T17:57:40.683Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T17:57:45.197Z INFO  [stt] Transcript: **Hornn**: "Yeah, we're joining. So it should be listening to me and let's say wake up and do, let's seal this game, do the GM roles or whatever the GM needs to do. And let's get this test campaign of floor one started."
+2026-10-04T17:57:54.126Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T17:58:03.435Z INFO  [stt] Transcript: **Hornn**: "Okay, let's start the test campaign, floor one."
+2026-10-04T17:58:06.096Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T17:58:20.916Z INFO  [stt] Transcript: **Hornn**: "It takes about 10 to 30 seconds for replies usually."
+2026-10-04T17:58:23.374Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay."
+2026-10-04T17:58:26.101Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T17:58:33.857Z INFO  [stt] Transcript: **Trailer Park Moses**: "All right, I can see us talking in the ears."
+2026-10-04T17:58:35.400Z INFO  [stt] Transcript: **Hornn**: "嗯嗯"
+2026-10-04T17:58:35.600Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: system)
+2026-10-04T17:58:40.689Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (8 chunk(s), voice: gm)
+2026-10-04T17:58:43.138Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system)
+2026-10-04T17:58:43.712Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T17:58:44.008Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system)
+2026-10-04T17:58:44.299Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T17:58:45.703Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hello"
+2026-10-04T17:58:53.053Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T17:59:07.278Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:00:52.048Z INFO  [stt] Transcript: **Hornn**: "I don't know why it's going off like this."
+2026-10-04T18:01:04.188Z INFO  [stt] Transcript: **Trailer Park Moses**: "The AI does like to go on a tangent."
+2026-10-04T18:01:09.721Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:01:18.904Z INFO  [stt] Transcript: **Hornn**: "Forgot my man."
+2026-10-04T18:01:23.350Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:01:27.422Z INFO  [stt] Transcript: **Trailer Park Moses**: "at school."
+2026-10-04T18:01:30.088Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:01:31.725Z INFO  [stt] Transcript: **Hornn**: "You're talking way too much and I don't know what we need to do."
+2026-10-04T18:01:34.161Z INFO  [stt] Transcript: **Trailer Park Moses**: "哈哈哈"
+2026-10-04T18:01:36.834Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:01:44.768Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, but that little talking about you saying was kind of cool."
+2026-10-04T18:01:46.197Z INFO  [stt] Transcript: **Hornn**: "哈哈。"
+2026-10-04T18:01:48.860Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:02:07.592Z INFO  [stt] Transcript: **Hornn**: "So our AI is on Mars"
+2026-10-04T18:02:09.586Z INFO  [stt] Transcript: **Trailer Park Moses**: "It's okay."
+2026-10-04T18:02:12.293Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:02:15.025Z INFO  [stt] Transcript: **Trailer Park Moses**: "Just gotta transcribe what all we say first."
+2026-10-04T18:02:17.730Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:02:18.001Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:02:22.041Z INFO  [stt] Transcript: **Hornn**: "And then also I can already see."
+2026-10-04T18:02:23.780Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T18:02:39.695Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:03:18.349Z INFO  [stt] Transcript: **Hornn**: "Okay, my name is Horn. My look is like Cad Bane from Star Wars, but with long hair. And my class is cowboy hippie wizard rocket scientist."
+2026-10-04T18:03:21.032Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:03:24.792Z INFO  [stt] Transcript: **Trailer Park Moses**: "I didn't think that far ahead."
+2026-10-04T18:03:27.449Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:03:27.993Z INFO  [stt] Transcript: **Trailer Park Moses**: "啊"
+2026-10-04T18:03:28.961Z INFO  [stt] Transcript: **Hornn**: "I just made that shit up."
+2026-10-04T18:03:30.369Z INFO  [stt] Transcript: **Trailer Park Moses**: "ああ。"
+2026-10-04T18:03:32.271Z INFO  [stt] Transcript: **Hornn**: "Hi."
+2026-10-04T18:03:34.548Z INFO  [stt] Transcript: **Trailer Park Moses**: "Name's John."
+2026-10-04T18:03:36.169Z INFO  [wake] GM wake sent: HTTP 200 (5 lines)
+2026-10-04T18:03:38.532Z INFO  [stt] Transcript: **Trailer Park Moses**: "A look would be"
+2026-10-04T18:03:41.232Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:03:45.849Z INFO  [stt] Transcript: **Trailer Park Moses**: "I don't know."
+2026-10-04T18:03:48.514Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:03:49.658Z INFO  [stt] Transcript: **Trailer Park Moses**: "Bane from Batman"
+2026-10-04T18:03:52.506Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:03:53.252Z INFO  [stt] Transcript: **Trailer Park Moses**: "啊"
+2026-10-04T18:03:53.453Z INFO  [stt] Transcript: **Hornn**: "Nice."
+2026-10-04T18:03:56.363Z INFO  [stt] Transcript: **Trailer Park Moses**: "class would be"
+2026-10-04T18:03:56.512Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:03:59.677Z INFO  [stt] Transcript: **Trailer Park Moses**: "Crawler"
+2026-10-04T18:04:02.367Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:04:13.307Z INFO  [stt] Transcript: **Hornn**: "Haha, it's at your class's crawler. That's awesome."
+2026-10-04T18:04:15.994Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:04:16.971Z INFO  [stt] Transcript: **Hornn**: "哈哈"
+2026-10-04T18:04:19.975Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:04:20.261Z INFO  [stt] Transcript: **Trailer Park Moses**: "Not crawler, brawler, like fighting."
+2026-10-04T18:04:23.171Z INFO  [stt] Transcript: **Trailer Park Moses**: "tank"
+2026-10-04T18:04:25.832Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:04:27.962Z INFO  [stt] Transcript: **Trailer Park Moses**: "Explosive expert."
+2026-10-04T18:04:30.633Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:04:30.808Z INFO  [stt] Transcript: **Hornn**: "Hell yeah."
+2026-10-04T18:04:32.312Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (6 chunk(s), voice: system)
+2026-10-04T18:04:37.176Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:04:37.517Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:04:37.787Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:04:37.846Z INFO  [stt] Transcript: **Trailer Park Moses**: "Oh, hold on."
+2026-10-04T18:04:39.142Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: system)
+2026-10-04T18:04:40.364Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ja, gerne."
+2026-10-04T18:04:43.550Z INFO  [stt] Transcript: **Hornn**: "Hi"
+2026-10-04T18:04:48.380Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (8 chunk(s), voice: gm)
+2026-10-04T18:04:49.623Z INFO  [wake] GM wake sent: HTTP 200 (4 lines)
+2026-10-04T18:04:52.017Z INFO  [stt] Transcript: **Hornn**: "えっ"
+2026-10-04T18:04:53.901Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T18:04:58.974Z INFO  [stt] Transcript: **Trailer Park Moses**: "どうしたの?"
+2026-10-04T18:04:59.130Z INFO  [stt] Transcript: **Hornn**: "If"
+2026-10-04T18:05:09.664Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T18:05:16.424Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:05:16.704Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:05:57.098Z INFO  [stt] Transcript: **Hornn**: "Okay, then I will go ahead and pick wizard as my class."
+2026-10-04T18:06:14.775Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:07:09.201Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, I'll pick Barbarian."
+2026-10-04T18:07:16.307Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system)
+2026-10-04T18:07:16.869Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T18:07:19.599Z INFO  [stt] Transcript: **Hornn**: "He should fix himself on the next task."
+2026-10-04T18:07:23.949Z INFO  [stt] Transcript: **Trailer Park Moses**: "Nice."
+2026-10-04T18:07:26.862Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T18:07:36.249Z INFO  [stt] Transcript: **Hornn**: "We're locking it in at us two."
+2026-10-04T18:07:53.895Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:08:22.364Z INFO  [stt] Transcript: **Trailer Park Moses**: "We're picking a race now?"
+2026-10-04T18:08:24.602Z INFO  [stt] Transcript: **Hornn**: "Yeah, John said he wanted to be a barbarian."
+2026-10-04T18:08:25.870Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah."
+2026-10-04T18:08:28.576Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T18:08:45.980Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: system+gm)
+2026-10-04T18:08:47.420Z INFO  [stt] Transcript: **Trailer Park Moses**: "And for race, I guess I'm going to pick Goliath since that would be the closest to Bane."
+2026-10-04T18:08:49.086Z INFO  [stt] Transcript: **Hornn**: "keep"
+2026-10-04T18:08:51.401Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (7 chunk(s), voice: system+gm)
+2026-10-04T18:09:06.740Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:09:52.007Z INFO  [stt] Transcript: **Hornn**: "Prior employment is operations manager, real 2024 background, full-time dad, latent biology human."
+2026-10-04T18:09:56.589Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: system+gm)
+2026-10-04T18:10:09.683Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:10:20.432Z INFO  [stt] Transcript: **Trailer Park Moses**: "Job for me is a smelter,"
+2026-10-04T18:10:24.494Z INFO  [stt] Transcript: **Trailer Park Moses**: "I like to eat."
+2026-10-04T18:10:32.923Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:11:07.577Z INFO  [stt] Transcript: **Hornn**: "Already did that, and it looks like he took your Goliath. The only way I'm going to be able to run the voice transcription faster is on a local model. It's pretty decent, just needs to be a little better. Anyways, so keep it short, AI. We have our jobs, our prior whatever the fuck."
+2026-10-04T18:11:11.454Z INFO  [stt] Transcript: **Hornn**: "Shortly tell us what we need to do."
+2026-10-04T18:11:15.244Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:11:15.423Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:11:26.326Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (9 chunk(s), voice: system+gm)
+2026-10-04T18:12:01.318Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:12:32.510Z INFO  [stt] Transcript: **Trailer Park Moses**: "I guess ours would be the closest."
+2026-10-04T18:12:35.173Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:12:49.124Z INFO  [stt] Transcript: **Trailer Park Moses**: "You said they pick up a Goliath?"
+2026-10-04T18:12:51.793Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:12:59.506Z INFO  [stt] Transcript: **Hornn**: "They put you in as Goliath, but for the first two floors you'll be a human."
+2026-10-04T18:13:00.250Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ok"
+2026-10-04T18:13:02.938Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:13:05.464Z INFO  [stt] Transcript: **Hornn**: "You look baseline human until floor three."
+2026-10-04T18:13:08.137Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:13:21.576Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: system+gm)
+2026-10-04T18:13:54.583Z INFO  [stt] Transcript: **Hornn**: "Point buy for me."
+2026-10-04T18:13:57.326Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:04.236Z INFO  [stt] Transcript: **Trailer Park Moses**: "Roll three"
+2026-10-04T18:14:06.909Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:09.260Z INFO  [stt] Transcript: **Trailer Park Moses**: "Pick above 69."
+2026-10-04T18:14:11.927Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:13.533Z INFO  [stt] Transcript: **Trailer Park Moses**: "I think you'll get that."
+2026-10-04T18:14:16.193Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:17.318Z INFO  [stt] Transcript: **Hornn**: "I don't get that."
+2026-10-04T18:14:17.900Z INFO  [stt] Transcript: **Trailer Park Moses**: "No."
+2026-10-04T18:14:20.599Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:14:25.076Z INFO  [stt] Transcript: **Hornn**: "Maybe, let's see."
+2026-10-04T18:14:27.775Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:28.625Z INFO  [stt] Transcript: **Trailer Park Moses**: "Well, no, yeah."
+2026-10-04T18:14:31.750Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:51.584Z INFO  [stt] Transcript: **Hornn**: "Architects askin"
+2026-10-04T18:14:54.236Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:14:57.796Z INFO  [stt] Transcript: **Hornn**: "drop tool"
+2026-10-04T18:15:00.461Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:15:30.018Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (8 chunk(s), voice: system+gm)
+2026-10-04T18:15:34.544Z INFO  [stt] Transcript: **Hornn**: "So yeah, I locked in at I would like to do point by."
+2026-10-04T18:15:52.288Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:15:57.791Z INFO  [stt] Transcript: **Trailer Park Moses**: "Oh, I got it."
+2026-10-04T18:16:12.615Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:16:19.373Z INFO  [stt] Transcript: **Trailer Park Moses**: "Béal Tuiré."
+2026-10-04T18:16:22.312Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:16:34.957Z INFO  [stt] Transcript: **Trailer Park Moses**: "So it did actually get what I meant."
+2026-10-04T18:16:37.107Z INFO  [stt] Transcript: **Hornn**: "It did, yeah."
+2026-10-04T18:16:39.863Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:16:43.418Z INFO  [stt] Transcript: **Trailer Park Moses**: "Apparently the dice were not in my favor."
+2026-10-04T18:16:45.881Z INFO  [stt] Transcript: **Hornn**: "Yeah, so"
+2026-10-04T18:16:48.546Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:17:14.167Z INFO  [stt] Transcript: **Hornn**: "So for my roll, I want to roll three, pick above 69, but the three need to be intelligence, charisma, constitution."
+2026-10-04T18:17:16.834Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:17:40.068Z INFO  [stt] Transcript: **Trailer Park Moses**: "So I'm gonna do the same thing, roll three, pick above 69, and the highest stats will go into strength, dex."
+2026-10-04T18:17:42.916Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:17:44.210Z INFO  [stt] Transcript: **Trailer Park Moses**: "And then"
+2026-10-04T18:17:46.881Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:17:52.011Z INFO  [stt] Transcript: **Trailer Park Moses**: "The second highest will go into Charisma."
+2026-10-04T18:17:54.752Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:17:57.331Z INFO  [stt] Transcript: **Trailer Park Moses**: "And then the dump rolls will fill the rest."
+2026-10-04T18:18:00.369Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:18:26.764Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (7 chunk(s), voice: system+gm)
+2026-10-04T18:18:56.475Z INFO  [stt] Transcript: **Trailer Park Moses**: "84."
+2026-10-04T18:19:02.641Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:19:10.760Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (9 chunk(s), voice: system+gm)
+2026-10-04T18:19:14.394Z INFO  [stt] Transcript: **Hornn**: "Roll."
+2026-10-04T18:19:14.458Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:19:32.055Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:20:46.356Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, Todd gets the twelve, and Jason with twin nines."
+2026-10-04T18:20:49.021Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:20:57.950Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:21:02.768Z INFO  [stt] Transcript: **Hornn**: "Pretty much go the same."
+2026-10-04T18:21:20.424Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:21:29.263Z INFO  [stt] Transcript: **Hornn**: "Yes, I'm picking the 84 set one."
+2026-10-04T18:21:46.221Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:21:50.932Z INFO  [stt] Transcript: **Hornn**: "Iari āta."
+2026-10-04T18:21:51.721Z INFO  [stt] Transcript: **Trailer Park Moses**: "Tagesschau."
+2026-10-04T18:21:54.481Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:21:54.884Z INFO  [stt] Transcript: **Trailer Park Moses**: "Il y a eu peu de nains."
+2026-10-04T18:21:58.366Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:22:13.509Z INFO  [stt] Transcript: **Trailer Park Moses**: "I do see it's having issues listening to both of us."
+2026-10-04T18:22:16.191Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:22:30.516Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah it is."
+2026-10-04T18:22:32.486Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:22:35.774Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: system+gm)
+2026-10-04T18:22:39.436Z INFO  [stt] Transcript: **Hornn**: "Yeah, well, it is hearing both of us, but it's just taking a long time to process the inputs, which is a little... But it's working, kind of. I could see some changes that need to be made, specifically if there was a way for it to stop listening to us."
+2026-10-04T18:22:44.262Z INFO  [stt] Transcript: **Trailer Park Moses**: "That's all I gotta say."
+2026-10-04T18:22:48.331Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T18:23:16.130Z INFO  [stt] Transcript: **Trailer Park Moses**: "Con twelve."
+2026-10-04T18:23:18.911Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:23:19.949Z INFO  [stt] Transcript: **Trailer Park Moses**: "Intelligence nine."
+2026-10-04T18:23:22.823Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:23:23.556Z INFO  [stt] Transcript: **Trailer Park Moses**: "Wisdom."
+2026-10-04T18:23:26.768Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:23:45.681Z INFO  [stt] Transcript: **Trailer Park Moses**: "Wisdom 9"
+2026-10-04T18:23:46.099Z INFO  [stt] Transcript: **Hornn**: "I feel better now that the AI thinks you have a shitty mic too."
+2026-10-04T18:23:48.751Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:23:56.928Z INFO  [stt] Transcript: **Trailer Park Moses**: "Well, that's the thing, I'm using my thing that you guys said was so much better."
+2026-10-04T18:23:59.704Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:24:00.252Z INFO  [stt] Transcript: **Trailer Park Moses**: "すごい。"
+2026-10-04T18:24:00.451Z INFO  [stt] Transcript: **Hornn**: "That's funny."
+2026-10-04T18:24:03.589Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:24:05.367Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:24:21.550Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:24:32.507Z INFO  [stt] Transcript: **Hornn**: "The Y channel?"
+2026-10-04T18:24:33.032Z INFO  [stt] Transcript: **Trailer Park Moses**: "Or have you looked at the ears channel?"
+2026-10-04T18:24:34.801Z INFO  [stt] Transcript: **Hornn**: "Oh yeah."
+2026-10-04T18:24:37.112Z INFO  [stt] Transcript: **Trailer Park Moses**: "If you work inside"
+2026-10-04T18:24:42.036Z INFO  [stt] Transcript: **Trailer Park Moses**: "Putting some of our stuff in different languages."
+2026-10-04T18:24:45.296Z INFO  [stt] Transcript: **Hornn**: "I see that."
+2026-10-04T18:24:47.290Z INFO  [stt] Transcript: **Trailer Park Moses**: "That might be what the issue is."
+2026-10-04T18:24:51.758Z INFO  [stt] Transcript: **Hornn**: "Didn't know he could speak fucking Thai, did you?"
+2026-10-04T18:24:53.675Z INFO  [stt] Transcript: **Trailer Park Moses**: "Dobra."
+2026-10-04T18:24:54.818Z INFO  [wake] GM wake sent: HTTP 200 (9 lines)
+2026-10-04T18:25:30.583Z INFO  [stt] Transcript: **Hornn**: "Dexterity and Wisdom on the leftover 13, Strength and Dex on the twin 12s."
+2026-10-04T18:25:33.398Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:25:53.862Z INFO  [stt] Transcript: **Hornn**: "Let me say that again because I think I didn't get it. Wisdom on the 13, Strength and Dex on the twin 12s."
+2026-10-04T18:25:56.524Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:26:10.183Z INFO  [stt] Transcript: **Trailer Park Moses**: "You could speak fucking Thai, did you? My response apparently was dobra."
+2026-10-04T18:26:12.850Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:26:20.500Z INFO  [stt] Transcript: **Trailer Park Moses**: "哈哈"
+2026-10-04T18:26:23.156Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:26:32.232Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:26:32.900Z INFO  [stt] Transcript: **Hornn**: "I have that channel notifications turned on so it pops up in the bottom right corner so that I can see what it's saying we are saying."
+2026-10-04T18:26:35.080Z INFO  [stt] Transcript: **Hornn**: "Yeah."
+2026-10-04T18:26:35.676Z INFO  [stt] Transcript: **Trailer Park Moses**: "Oh, gotcha."
+2026-10-04T18:26:53.351Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T18:27:12.039Z INFO  [stt] Transcript: **Hornn**: "Yeah, priority is intelligence, then charisma, then constitution."
+2026-10-04T18:27:14.698Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:27:17.016Z INFO  [stt] Transcript: **Hornn**: "So, Intel 17, Charisma 15, Con 15."
+2026-10-04T18:27:19.709Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:27:59.496Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:28:35.757Z INFO  [stt] Transcript: **Hornn**: "John can go first."
+2026-10-04T18:28:38.439Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:28:52.592Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, let's do the questionnaire."
+2026-10-04T18:28:55.314Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:29:27.609Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:29:34.495Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:30:20.054Z INFO  [stt] Transcript: **Trailer Park Moses**: "Sledgehammer."
+2026-10-04T18:30:22.729Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:31:03.281Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:31:30.741Z INFO  [stt] Transcript: **Trailer Park Moses**: "Chewing tobacco."
+2026-10-04T18:31:33.415Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:32:05.735Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:32:43.062Z INFO  [stt] Transcript: **Trailer Park Moses**: "Wasp"
+2026-10-04T18:32:45.787Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:32:48.315Z INFO  [stt] Transcript: **Trailer Park Moses**: "Probably shouldn't have said that, but there we go."
+2026-10-04T18:32:50.973Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:32:51.289Z INFO  [stt] Transcript: **Hornn**: "of."
+2026-10-04T18:32:54.994Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:33:01.635Z INFO  [stt] Transcript: **Trailer Park Moses**: "Wasp."
+2026-10-04T18:33:04.290Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:33:05.497Z INFO  [stt] Transcript: **Trailer Park Moses**: "There we go."
+2026-10-04T18:33:08.118Z INFO  [stt] Transcript: **Trailer Park Moses**: "Juste direct."
+2026-10-04T18:33:10.799Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:33:14.318Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, now I'm speaking some other language."
+2026-10-04T18:33:16.524Z INFO  [stt] Transcript: **Hornn**: "Hey"
+2026-10-04T18:33:19.192Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:33:23.326Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:33:27.224Z INFO  [stt] Transcript: **Trailer Park Moses**: "Future record: I only speak English."
+2026-10-04T18:33:28.135Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: system+gm)
+2026-10-04T18:33:38.464Z INFO  [stt] Transcript: **Hornn**: "哈哈"
+2026-10-04T18:33:40.061Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay."
+2026-10-04T18:33:44.895Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T18:34:04.351Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm the head of the trailer park association and drink Natty Light."
+2026-10-04T18:34:07.023Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:34:14.903Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hello"
+2026-10-04T18:34:17.640Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:34:25.764Z INFO  [stt] Transcript: **Trailer Park Moses**: "This is gonna be awesome."
+2026-10-04T18:34:28.421Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:34:59.248Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:35:21.762Z INFO  [stt] Transcript: **Trailer Park Moses**: "Entschuldigung."
+2026-10-04T18:35:25.193Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:35:38.208Z INFO  [stt] Transcript: **Trailer Park Moses**: "啊"
+2026-10-04T18:35:40.912Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:35:59.282Z INFO  [stt] Transcript: **Trailer Park Moses**: "Rockin' the Beer Gut song."
+2026-10-04T18:36:01.956Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:36:11.330Z INFO  [stt] Transcript: **Trailer Park Moses**: "See how that goes."
+2026-10-04T18:36:14.015Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:36:57.657Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:37:37.811Z INFO  [stt] Transcript: **Trailer Park Moses**: "You hit them as many times as possible till they go down, and then maybe continue hitting if they move."
+2026-10-04T18:37:40.462Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:38:24.697Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:38:29.140Z INFO  [stt] Transcript: **Hornn**: "I'm introducing the GM quirk now."
+2026-10-04T18:38:45.784Z INFO  [stt] Transcript: **Hornn**: "哈哈"
+2026-10-04T18:38:46.799Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:39:12.329Z INFO  [stt] Transcript: **Trailer Park Moses**: "That"
+2026-10-04T18:39:12.525Z INFO  [stt] Transcript: **Trailer Park Moses**: "Dodge is better than Ford."
+2026-10-04T18:39:15.194Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:39:20.062Z INFO  [stt] Transcript: **Hornn**: "I don't think it picked up what you said."
+2026-10-04T18:39:22.746Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:39:23.744Z INFO  [stt] Transcript: **Trailer Park Moses**: "I even yelled at."
+2026-10-04T18:39:26.719Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:39:28.005Z INFO  [stt] Transcript: **Trailer Park Moses**: "Dodge is better than Ford."
+2026-10-04T18:39:30.704Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:40:10.391Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: system+gm)
+2026-10-04T18:40:13.260Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:41:16.015Z INFO  [stt] Transcript: **Trailer Park Moses**: "Cash"
+2026-10-04T18:41:18.673Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:42:31.907Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:43:17.105Z INFO  [stt] Transcript: **Trailer Park Moses**: "A sledgehammer with a spike on it."
+2026-10-04T18:43:19.817Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:43:23.914Z INFO  [stt] Transcript: **Hornn**: "I already have a sledgehammer."
+2026-10-04T18:43:26.582Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:43:28.882Z INFO  [stt] Transcript: **Trailer Park Moses**: "I don't think so because Eric chose cash instead."
+2026-10-04T18:43:30.118Z INFO  [stt] Transcript: **Hornn**: "Oh, gotcha."
+2026-10-04T18:43:32.777Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:43:34.954Z INFO  [stt] Transcript: **Trailer Park Moses**: "Some food blocks"
+2026-10-04T18:43:37.644Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:43:41.650Z INFO  [stt] Transcript: **Trailer Park Moses**: "armor, some light armor."
+2026-10-04T18:43:44.312Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:43:46.130Z INFO  [stt] Transcript: **Trailer Park Moses**: "rope"
+2026-10-04T18:43:48.838Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:43:52.422Z INFO  [stt] Transcript: **Trailer Park Moses**: "pencil and paper"
+2026-10-04T18:43:55.194Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:44:14.505Z INFO  [stt] Transcript: **Trailer Park Moses**: "Reinforced impact-absorbing gloves."
+2026-10-04T18:44:17.170Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:44:18.624Z INFO  [stt] Transcript: **Trailer Park Moses**: "That should be it."
+2026-10-04T18:44:21.270Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:44:23.772Z INFO  [stt] Transcript: **Trailer Park Moses**: "That way I could punch stuff."
+2026-10-04T18:44:26.481Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:45:19.321Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system+gm)
+2026-10-04T18:45:22.768Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:45:22.843Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:45:24.761Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (12 chunk(s), voice: system+gm)
+2026-10-04T18:45:26.875Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T18:46:25.380Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system)
+2026-10-04T18:46:46.779Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm not done."
+2026-10-04T18:46:52.614Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system)
+2026-10-04T18:47:04.492Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:47:45.752Z INFO  [stt] Transcript: **Trailer Park Moses**: "It's just repeating itself?"
+2026-10-04T18:47:46.538Z INFO  [stt] Transcript: **Hornn**: "Yeah, I'm trying to figure out how to stop it."
+2026-10-04T18:47:57.358Z INFO  [stt] Transcript: **Hornn**: "Ja."
+2026-10-04T18:47:57.529Z INFO  SIGTERM received, shutting down
+2026-10-04T18:47:57.551Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T18:47:57.551Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T18:48:00.139Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T18:48:00.140Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T184800-cadb)
+2026-10-04T18:48:00.140Z INFO  Voice session cap: 50 min per /join session
+2026-10-04T18:48:00.141Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-04T18:48:00.141Z INFO  GM wake webhook: ON (debounce 2500ms, max wait 8000ms, min interval 4000ms)
+2026-10-04T18:48:00.953Z INFO  Logged in as DCC Ears#8647
+2026-10-04T18:48:13.210Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T18:48:13.417Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T18:48:13.420Z INFO  [voice] Joined voice channel General
+2026-10-04T18:48:13.420Z INFO  [stt] STT listening for speakers
+2026-10-04T18:48:18.166Z INFO  [stt] Transcript: **Trailer Park Moses**: "My bad."
+2026-10-04T18:48:18.166Z INFO  [spotlight] Spotlight OFF (missing): open floor, every line wakes the GM
+2026-10-04T18:48:20.715Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:48:23.801Z INFO  [stt] Transcript: **Hornn**: "All right, John wants to continue his merchant buying."
+2026-10-04T18:48:26.351Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:48:58.576Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, so I want to buy"
+2026-10-04T18:49:01.127Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:49:13.242Z INFO  [stt] Transcript: **Trailer Park Moses**: "And then I also want to buy reinforced leg armor."
+2026-10-04T18:49:15.804Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:49:18.513Z INFO  [stt] Transcript: **Trailer Park Moses**: "Also, I want to purchase a crossbow."
+2026-10-04T18:49:21.064Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:49:29.750Z INFO  [stt] Transcript: **Trailer Park Moses**: "All that stuff I just purchased was low-end cash."
+2026-10-04T18:49:32.294Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:49:39.124Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ow, I just fucking bumped my leg."
+2026-10-04T18:49:41.687Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:49:51.972Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:50:24.474Z INFO  [stt] Transcript: **Trailer Park Moses**: "I also want to buy a"
+2026-10-04T18:50:27.207Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:50:28.075Z INFO  [stt] Transcript: **Trailer Park Moses**: "Chain"
+2026-10-04T18:50:31.157Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:50:32.812Z INFO  [stt] Transcript: **Trailer Park Moses**: "And then also a grappling hook."
+2026-10-04T18:50:35.543Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:50:40.474Z INFO  [stt] Transcript: **Trailer Park Moses**: "More food rations, enough for thirty days."
+2026-10-04T18:50:43.171Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:50:48.944Z INFO  [stt] Transcript: **Trailer Park Moses**: "a couple of torches"
+2026-10-04T18:50:51.686Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:50:53.850Z INFO  [stt] Transcript: **Trailer Park Moses**: "And that will be it."
+2026-10-04T18:50:56.565Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:51:05.119Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm not really done."
+2026-10-04T18:51:07.783Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:51:40.102Z INFO  [stt] Transcript: **Hornn**: "I got a skip command now."
+2026-10-04T18:51:41.354Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yau yis her."
+2026-10-04T18:51:44.055Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:51:46.831Z INFO  [stt] Transcript: **Hornn**: "I think so. We're gonna test it."
+2026-10-04T18:51:49.533Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:51:50.795Z INFO  [stt] Transcript: **Trailer Park Moses**: "That was crazy, it was like it actually went primal."
+2026-10-04T18:51:53.548Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:51:54.647Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:51:58.430Z INFO  [stt] Transcript: **Hornn**: "So, let's see."
+2026-10-04T18:52:16.207Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:52:26.109Z INFO  [stt] Transcript: **Trailer Park Moses**: "I am done."
+2026-10-04T18:52:28.802Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:53:07.024Z INFO  [stt] Transcript: **Hornn**: "Yes, 3D?"
+2026-10-04T18:53:09.721Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:53:18.963Z INFO  [stt] Transcript: **Hornn**: "Yeah, all objects within our space are three-dimensional objects. If you draw on a piece of paper, that's 2D."
+2026-10-04T18:53:21.666Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:53:43.891Z INFO  [stt] Transcript: **Hornn**: "Yeah, exactly. It only goes sideways and up, right? You can draw up, you can draw sideways, but you can't draw into this space. But a cup is both drawn sideways and like that and drawn up into this space."
+2026-10-04T18:53:46.613Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:53:49.369Z INFO  [stt] Transcript: **Hornn**: "Yeah, so 3D, yes."
+2026-10-04T18:53:52.091Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:53:55.959Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (7 chunk(s), voice: system+gm)
+2026-10-04T18:54:17.914Z INFO  [stt] Transcript: **Hornn**: "I don't think"
+2026-10-04T18:54:17.915Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word)
+2026-10-04T18:54:23.111Z INFO  [stt] Transcript: **Hornn**: "I didn't have time to save your inventory before I kicked it."
+2026-10-04T18:54:35.631Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:54:38.258Z INFO  [stt] Transcript: **Hornn**: "Because I kicked it in the middle of generating your inventory, right?"
+2026-10-04T18:54:42.561Z INFO  [stt] Transcript: **Trailer Park Moses**: "fun."
+2026-10-04T18:54:49.392Z INFO  [stt] Transcript: **Hornn**: "Because you just did your add-ons there, but it didn't save the shit from above because I kicked it."
+2026-10-04T18:54:51.370Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:55:00.415Z INFO  [stt] Transcript: **Hornn**: "Hold on, let me stop this real quick."
+2026-10-04T18:55:03.120Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:55:06.478Z INFO  [stt] Transcript: **Hornn**: "Okay, completely"
+2026-10-04T18:55:09.212Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:55:14.851Z INFO  [stt] Transcript: **Hornn**: "Start over John's vendor buyout."
+2026-10-04T18:55:17.550Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:55:34.522Z INFO  [stt] Transcript: **Hornn**: "If you have any items other than his gold saved, delete them and then prompt him with a fresh merchant."
+2026-10-04T18:55:37.282Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:55:54.043Z INFO  [stt] Transcript: **Hornn**: "vendor wall whatever the fuck buy-in so he can buy his equipment."
+2026-10-04T18:55:56.594Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T18:56:03.193Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T18:56:04.858Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: system)
+2026-10-04T18:56:05.215Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:56:07.422Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hold on, I'm going through the ears right now."
+2026-10-04T18:56:27.803Z INFO  [stt] Transcript: **Hornn**: "Hi."
+2026-10-04T18:56:43.092Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:57:03.513Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm looking."
+2026-10-04T18:57:37.621Z INFO  [stt] Transcript: **Trailer Park Moses**: "I want to buy a sledgehammer with a spike on it, 30 days of food blocks, medium armor instead of light, rope, pencil and paper, reinforced absorbing gloves, and some chain."
+2026-10-04T18:57:37.621Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 2 alias(es)
+2026-10-04T18:57:39.811Z INFO  [stt] Transcript: **Trailer Park Moses**: "crossbow"
+2026-10-04T18:57:42.493Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:57:44.343Z INFO  [stt] Transcript: **Trailer Park Moses**: "And a grappling hook."
+2026-10-04T18:57:47.091Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:57:47.371Z INFO  [stt] Transcript: **Trailer Park Moses**: "and a couple torches."
+2026-10-04T18:57:49.017Z INFO  [stt] Transcript: **Trailer Park Moses**: "And that's it."
+2026-10-04T18:57:51.778Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T18:58:42.535Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T18:59:25.202Z INFO  [stt] Transcript: **Trailer Park Moses**: "Scale mail."
+2026-10-04T18:59:27.938Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T18:59:57.779Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:00:32.319Z INFO  [stt] Transcript: **Trailer Park Moses**: "Steel."
+2026-10-04T19:00:35.044Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:00:41.209Z INFO  [stt] Transcript: **Hornn**: "That is steel."
+2026-10-04T19:00:43.666Z INFO  [stt] Transcript: **Trailer Park Moses**: "Seal."
+2026-10-04T19:00:46.361Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:01:31.050Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:02:27.398Z INFO  [stt] Transcript: **Hornn**: "I am going to do package on both."
+2026-10-04T19:02:27.399Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word)
+2026-10-04T19:02:30.076Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:03:51.603Z INFO  [stt] Transcript: **Hornn**: "I see it pinging off to the lore and to the core rulebook AIs right now."
+2026-10-04T19:03:52.909Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, that's kind of what I was thinking."
+2026-10-04T19:03:54.341Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:03:56.455Z INFO  [stt] Transcript: **Hornn**: "But that's cool that it's doing it on the fly like that."
+2026-10-04T19:03:57.339Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ja."
+2026-10-04T19:03:59.154Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:04:08.454Z INFO  [stt] Transcript: **Trailer Park Moses**: "It's like we're playing real D&D, always waiting on the DM."
+2026-10-04T19:04:12.313Z INFO  [stt] Transcript: **Hornn**: "Yeah, hold on."
+2026-10-04T19:04:12.613Z INFO  [stt] Transcript: **Trailer Park Moses**: "哈哈"
+2026-10-04T19:04:15.050Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:04:22.166Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:04:54.246Z INFO  [stt] Transcript: **Hornn**: "My dog Pebbles."
+2026-10-04T19:04:56.478Z INFO  [stt] Transcript: **Trailer Park Moses**: "au"
+2026-10-04T19:04:56.948Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:04:59.654Z INFO  [stt] Transcript: **Trailer Park Moses**: "I didn't think about that."
+2026-10-04T19:05:36.663Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:06:00.281Z INFO  [stt] Transcript: **Hornn**: "Bottles of sulfuric acid."
+2026-10-04T19:06:02.998Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:06:03.660Z INFO  [stt] Transcript: **Trailer Park Moses**: "Nice."
+2026-10-04T19:06:44.701Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:07:07.409Z INFO  [stt] Transcript: **Hornn**: "Social events and bills."
+2026-10-04T19:07:10.146Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:07:19.441Z INFO  [stt] Transcript: **Trailer Park Moses**: "That's actually a good answer."
+2026-10-04T19:07:23.116Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hallo!"
+2026-10-04T19:07:43.004Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:08:01.064Z INFO  [stt] Transcript: **Hornn**: "For not having any friends."
+2026-10-04T19:08:03.738Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:08:41.629Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:09:09.241Z INFO  [stt] Transcript: **Hornn**: "Smell of rain coming. I think there's a word for that, but that smell."
+2026-10-04T19:09:11.958Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:09:14.858Z INFO  [stt] Transcript: **Trailer Park Moses**: "You should have been weird about it."
+2026-10-04T19:09:18.348Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hello."
+2026-10-04T19:09:21.576Z INFO  [stt] Transcript: **Hornn**: "I also like the smell of vagina."
+2026-10-04T19:09:24.272Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:09:27.298Z INFO  [stt] Transcript: **Trailer Park Moses**: "Tinocha"
+2026-10-04T19:09:27.989Z INFO  [stt] Transcript: **Hornn**: "Clean vagina."
+2026-10-04T19:09:30.710Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:09:39.860Z INFO  [stt] Transcript: **Trailer Park Moses**: "Why is it always saying I'm speaking in a different language?"
+2026-10-04T19:09:47.117Z INFO  [stt] Transcript: **Hornn**: "Caught that loud and clear."
+2026-10-04T19:09:48.311Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, right?"
+2026-10-04T19:09:49.770Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:09:55.072Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:10:25.629Z INFO  [stt] Transcript: **Hornn**: "The plan is to win and not be the one that's either on the ground or dead."
+2026-10-04T19:10:28.299Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:11:21.992Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:11:36.059Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ok"
+2026-10-04T19:11:57.315Z INFO  [stt] Transcript: **Hornn**: "Whatever hill my kids are on."
+2026-10-04T19:12:00.027Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:12:39.835Z INFO  [stt] Transcript: **Hornn**: "Your final boss battle is going to be against a Dodge pickup truck."
+2026-10-04T19:12:42.425Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:12:44.958Z INFO  [stt] Transcript: **Trailer Park Moses**: "Right? Yeah, this is kind of what I was thinking."
+2026-10-04T19:12:49.180Z INFO  [stt] Transcript: **Hornn**: "Oh yeah."
+2026-10-04T19:12:49.851Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T19:12:50.993Z INFO  [stt] Transcript: **Trailer Park Moses**: "Gonna be kinda hard to hit that with a hammer."
+2026-10-04T19:13:05.783Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:13:10.768Z INFO  [stt] Transcript: **Hornn**: "Porn for me."
+2026-10-04T19:13:13.452Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:13:14.893Z INFO  [stt] Transcript: **Trailer Park Moses**: "Embedding"
+2026-10-04T19:13:17.983Z INFO  [stt] Transcript: **Hornn**: "Not porn, horn."
+2026-10-04T19:13:20.109Z INFO  [stt] Transcript: **Trailer Park Moses**: "Kita."
+2026-10-04T19:13:20.617Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:13:28.423Z INFO  [stt] Transcript: **Trailer Park Moses**: "I want to invent something for me."
+2026-10-04T19:13:44.493Z INFO  [stt] Transcript: **Trailer Park Moses**: "No, I want you to invent something for me."
+2026-10-04T19:14:33.740Z INFO  [stt] Transcript: **Hornn**: "Báma."
+2026-10-04T19:14:36.372Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:14:45.871Z INFO  [stt] Transcript: **Trailer Park Moses**: "isn't bad."
+2026-10-04T19:15:04.980Z INFO  [stt] Transcript: **Hornn**: "Are you waiting on input from one of us?"
+2026-10-04T19:15:07.636Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:15:18.291Z INFO  [stt] Transcript: **Hornn**: "System usage."
+2026-10-04T19:15:20.942Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:15:25.836Z INFO  [stt] Transcript: **Hornn**: "Egiltes answers, so I'm not guessing."
+2026-10-04T19:15:28.717Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:15:41.607Z INFO  [stt] Transcript: **Hornn**: "My response is I want my tag to be the name Horn."
+2026-10-04T19:15:44.356Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:15:56.686Z INFO  [stt] Transcript: **Trailer Park Moses**: "And I want you to invent a tag for me."
+2026-10-04T19:16:27.513Z INFO  [stt] Transcript: **Hornn**: "The lag is on the wakeup link. GM webhook has been rejecting wakeups. Players' lines aren't reaching GM. Happened while routine was paused, so check that the routine is enabled. URL and key haven't changed, if they are the new ones. Speech-to-text keeps mangling it, so typing it in chat."
+2026-10-04T19:16:30.196Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:16:30.233Z INFO  SIGTERM received, shutting down
+2026-10-04T19:16:30.246Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T19:16:30.247Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T19:16:33.348Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T19:16:33.349Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T191633-8908)
+2026-10-04T19:16:33.349Z INFO  Voice session cap: 50 min per /join session
+2026-10-04T19:16:33.350Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-04T19:16:33.350Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-04T19:16:33.350Z INFO  GM wake webhook: ON (debounce 2500ms, max wait 8000ms, min interval 4000ms)
+2026-10-04T19:16:33.809Z INFO  Logged in as DCC Ears#8647
+2026-10-04T19:16:54.874Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T19:16:55.272Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T19:16:55.274Z INFO  [voice] Joined voice channel General
+2026-10-04T19:16:55.275Z INFO  [stt] STT listening for speakers
+2026-10-04T19:17:04.831Z INFO  [stt] Transcript: **Hornn**: "Okay, let's pick up where we left off."
+2026-10-04T19:17:04.832Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word)
+2026-10-04T19:17:07.496Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:17:09.766Z INFO  SIGTERM received, shutting down
+2026-10-04T19:17:09.767Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T19:17:09.767Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T19:17:12.707Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T19:17:12.708Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T191712-3da2)
+2026-10-04T19:17:12.708Z INFO  Voice session cap: 50 min per /join session
+2026-10-04T19:17:12.708Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-04T19:17:12.709Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-04T19:17:12.709Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-04T19:17:13.233Z INFO  Logged in as DCC Ears#8647
+2026-10-04T19:18:24.773Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T19:18:24.972Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T19:18:24.973Z INFO  [voice] Joined voice channel General
+2026-10-04T19:18:24.973Z INFO  [stt] STT listening for speakers
+2026-10-04T19:18:29.649Z INFO  [stt] Transcript: **Trailer Park Moses**: "on."
+2026-10-04T19:18:29.650Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word)
+2026-10-04T19:18:33.799Z INFO  [stt] Transcript: **Hornn**: "Yeah, okay, let's start where we left off."
+2026-10-04T19:18:38.018Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:18:38.049Z INFO  [stt] Transcript: **Hornn**: "It's not on the AI, it's on Discord."
+2026-10-04T19:18:46.859Z INFO  [stt] Transcript: **Hornn**: "And we could still technically type our responses into the ears chat."
+2026-10-04T19:18:50.654Z INFO  [stt] Transcript: **Hornn**: "I don't know if it's gonna talk or not."
+2026-10-04T19:18:57.943Z WARN  [wake] GM wake failed: HTTP 400 (3 line(s) dropped)
+2026-10-04T19:19:32.017Z INFO  [stt] Transcript: **Hornn**: "Can you where we are?"
+2026-10-04T19:19:36.162Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:19:46.077Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T19:19:52.617Z INFO  [stt] Transcript: **Trailer Park Moses**: "There we go."
+2026-10-04T19:20:14.292Z INFO  [stt] Transcript: **Hornn**: "Could I buy anything at the Wal-Moses?"
+2026-10-04T19:20:18.424Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:20:19.804Z INFO  [stt] Transcript: **Trailer Park Moses**: "If you want."
+2026-10-04T19:20:30.261Z INFO  [stt] Transcript: **Hornn**: "Yeah, let me at the vending wall."
+2026-10-04T19:20:38.467Z WARN  [wake] GM wake failed: HTTP 400 (1 line(s) dropped)
+2026-10-04T19:21:11.411Z INFO  [stt] Transcript: **Hornn**: "It does have pretty good little jibes and snarkiness to it."
+2026-10-04T19:21:14.272Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, I think it's pretty cool."
+2026-10-04T19:21:15.686Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:21:39.496Z INFO  [stt] Transcript: **Hornn**: "And this has helped."
+2026-10-04T19:21:43.694Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:21:47.807Z INFO  [stt] Transcript: **Hornn**: "What's up, Scotty?"
+2026-10-04T19:22:03.758Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:22:10.423Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:22:10.529Z INFO  [stt] Transcript: **Hornn**: "Four bolts on top is usually a Baker."
+2026-10-04T19:22:13.470Z INFO  [stt] Transcript: **Hornn**: "Es ist einfach."
+2026-10-04T19:22:19.533Z INFO  [stt] Transcript: **Hornn**: "Hello, everybody."
+2026-10-04T19:22:23.728Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T19:22:37.077Z INFO  [stt] Transcript: **Hornn**: "Yeah, so we have five."
+2026-10-04T19:22:43.713Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:22:52.388Z INFO  [stt] Transcript: **Hornn**: "Okay, so he needs to bring those two back."
+2026-10-04T19:23:03.746Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:23:04.650Z INFO  [stt] Transcript: **Hornn**: "Yeah, it's no problem."
+2026-10-04T19:23:23.688Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:23:33.370Z INFO  [stt] Transcript: **Hornn**: "Yeah, over."
+2026-10-04T19:23:40.200Z INFO  [stt] Transcript: **Hornn**: "All right."
+2026-10-04T19:23:43.249Z INFO  [stt] Transcript: **Hornn**: "Okay, so"
+2026-10-04T19:23:45.568Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T19:24:04.521Z INFO  [stt] Transcript: **Hornn**: "Weapons, armor, food, gear, junk. I don't even know what I'm supposed to be buying. Is there like some suggestions? Or maybe you could spend all 27 credits for me, AI. I don't care if you give me joke shit or whatever. I'm at your mercy anyways. Probably gonna die in here, right?"
+2026-10-04T19:24:07.385Z INFO  [stt] Transcript: **Trailer Park Moses**: "You gonna die."
+2026-10-04T19:24:08.742Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:25:29.966Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T19:26:08.644Z INFO  [stt] Transcript: **Trailer Park Moses**: "Galiir."
+2026-10-04T19:26:08.644Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 2 alias(es)
+2026-10-04T19:26:12.835Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:26:23.850Z INFO  [stt] Transcript: **Trailer Park Moses**: "Go Meaner."
+2026-10-04T19:26:24.541Z INFO  [stt] Transcript: **Hornn**: "It read that as Galir."
+2026-10-04T19:26:32.857Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:27:11.838Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:27:27.039Z INFO  [stt] Transcript: **Trailer Park Moses**: "planeta."
+2026-10-04T19:27:31.236Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:27:36.983Z INFO  [stt] Transcript: **Trailer Park Moses**: "Polisa?"
+2026-10-04T19:27:40.145Z INFO  [stt] Transcript: **Trailer Park Moses**: "Right."
+2026-10-04T19:27:42.374Z INFO  [stt] Transcript: **Hornn**: "He said your name is Go Meaner."
+2026-10-04T19:27:46.598Z INFO  [stt] Transcript: **Hornn**: "Hi."
+2026-10-04T19:27:51.237Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:27:53.781Z INFO  [stt] Transcript: **Hornn**: "I think we could type it in here."
+2026-10-04T19:28:00.627Z INFO  [stt] Transcript: **Trailer Park Moses**: "AI, I want you to go meaner on the name."
+2026-10-04T19:28:02.292Z INFO  [stt] Transcript: **Hornn**: "Make it sound mean."
+2026-10-04T19:28:07.184Z INFO  [stt] Transcript: **Hornn**: "Sve."
+2026-10-04T19:28:11.263Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:28:42.128Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:29:08.159Z INFO  [stt] Transcript: **Trailer Park Moses**: "Roll a 1d3 to pick."
+2026-10-04T19:29:12.412Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:29:20.752Z INFO  [stt] Transcript: **Trailer Park Moses**: "I guess I said I wanted it to pick."
+2026-10-04T19:29:31.116Z INFO  [stt] Transcript: **Trailer Park Moses**: "So let's see how it goes."
+2026-10-04T19:29:32.982Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:30:07.347Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:30:21.152Z INFO  [stt] Transcript: **Hornn**: "哈哈哈"
+2026-10-04T19:30:28.226Z INFO  [stt] Transcript: **Hornn**: "That's fucked up."
+2026-10-04T19:30:36.856Z INFO  [stt] Transcript: **Trailer Park Moses**: "A default, what?"
+2026-10-04T19:30:41.076Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:30:50.342Z INFO  [stt] Transcript: **Hornn**: "I think he had deadly strike or some shit."
+2026-10-04T19:30:53.530Z INFO  [stt] Transcript: **Trailer Park Moses**: "así es."
+2026-10-04T19:30:57.129Z INFO  [stt] Transcript: **Trailer Park Moses**: "The you better listen."
+2026-10-04T19:31:01.295Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:31:35.294Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:31:55.397Z INFO  [stt] Transcript: **Trailer Park Moses**: "You better listen."
+2026-10-04T19:31:59.630Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:32:07.347Z INFO  [stt] Transcript: **Hornn**: "Maybe clarify that "You Better Listen" is the name of your attack."
+2026-10-04T19:32:11.607Z INFO  [stt] Transcript: **Hornn**: "It might think you're just telling it."
+2026-10-04T19:32:16.485Z INFO  [stt] Transcript: **Trailer Park Moses**: "The name of the track is "You Better Listen"."
+2026-10-04T19:32:20.647Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:32:28.889Z INFO  [stt] Transcript: **Hornn**: "The name of the attack."
+2026-10-04T19:32:41.595Z INFO  [stt] Transcript: **Hornn**: "I don't know if I'm, because I have it defaulted to where when it's talking to you, it's ignoring me basically."
+2026-10-04T19:32:54.210Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:33:26.524Z INFO  [stt] Transcript: **Hornn**: "네."
+2026-10-04T19:33:34.103Z INFO  [stt] Transcript: **Trailer Park Moses**: "What's that?"
+2026-10-04T19:33:38.317Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:33:40.003Z INFO  [stt] Transcript: **Trailer Park Moses**: "How's you laughing?"
+2026-10-04T19:33:40.882Z INFO  [stt] Transcript: **Hornn**: "Yeah, that's my laugh."
+2026-10-04T19:33:45.290Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yes."
+2026-10-04T19:33:57.709Z INFO  [stt] Transcript: **Trailer Park Moses**: "When I say that line, go to the nearest thing, whatever we're fighting, and just start hammering away till it's nothing but goo."
+2026-10-04T19:33:58.306Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T19:34:06.430Z INFO  [stt] Transcript: **Trailer Park Moses**: "Here we go."
+2026-10-04T19:34:18.316Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:34:28.723Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:34:57.379Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yes, keep it on."
+2026-10-04T19:34:59.925Z INFO  [stt] Transcript: **Trailer Park Moses**: "For opportunity of attack."
+2026-10-04T19:35:04.103Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:36:08.308Z INFO  [stt] Transcript: **Trailer Park Moses**: "That's it."
+2026-10-04T19:36:08.308Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 1 alias(es)
+2026-10-04T19:36:10.323Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T19:36:59.707Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hello"
+2026-10-04T19:37:10.532Z INFO  [stt] Transcript: **Hornn**: "I make it to the nearest available safe room that is unhindered by mobs. If not, then I follow my closest party member with the highest strength."
+2026-10-04T19:37:14.737Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:37:49.073Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:38:16.263Z INFO  [stt] Transcript: **Hornn**: "Yeah, my"
+2026-10-04T19:38:20.455Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:38:38.454Z INFO  [stt] Transcript: **Hornn**: "My main attack, I guess, is fuck 'em, and I fire a variable-tuned magic missile. I can target enemies and hit them for damage."
+2026-10-04T19:38:42.696Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:39:06.631Z INFO  [stt] Transcript: **Hornn**: "Opportunity attacks or like, that's when I would fire the magic missile, right, Mr. White?"
+2026-10-04T19:39:09.280Z INFO  [stt] Transcript: **Trailer Park Moses**: "I would say yeah."
+2026-10-04T19:39:09.767Z INFO  [stt] Transcript: **Hornn**: "Oui."
+2026-10-04T19:39:13.987Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:40:05.094Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:40:30.573Z INFO  [stt] Transcript: **Trailer Park Moses**: "You ready?"
+2026-10-04T19:40:30.573Z INFO  [spotlight] Spotlight OFF (cleared): open floor, every line wakes the GM
+2026-10-04T19:40:31.493Z INFO  [stt] Transcript: **Hornn**: "Let's fucking do this."
+2026-10-04T19:40:34.384Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hö."
+2026-10-04T19:40:38.562Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T19:41:08.696Z INFO  [stt] Transcript: **Hornn**: "Roll that beautiful bean footage."
+2026-10-04T19:41:12.950Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:41:41.235Z INFO  [stt] Transcript: **Trailer Park Moses**: "It's probably building the world now."
+2026-10-04T19:41:45.444Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:41:53.728Z INFO  [stt] Transcript: **Trailer Park Moses**: "Livestream's gonna try to invite me to a party."
+2026-10-04T19:41:55.665Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T19:41:57.246Z INFO  [stt] Transcript: **Trailer Park Moses**: "哈哈哈"
+2026-10-04T19:42:20.459Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:42:27.490Z INFO  [stt] Transcript: **Hornn**: "What's your vote?"
+2026-10-04T19:42:31.165Z INFO  [stt] Transcript: **Hornn**: "Let's see what it is."
+2026-10-04T19:42:40.482Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:42:43.964Z INFO  [stt] Transcript: **Hornn**: "on"
+2026-10-04T19:43:00.446Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:43:11.080Z INFO  [stt] Transcript: **Trailer Park Moses**: "owners"
+2026-10-04T19:43:14.890Z INFO  [stt] Transcript: **Trailer Park Moses**: "It's gotta be both of us."
+2026-10-04T19:43:20.442Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:43:21.395Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:43:40.874Z INFO  [stt] Transcript: **Trailer Park Moses**: "Oil"
+2026-10-04T19:43:45.047Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:43:46.146Z INFO  [stt] Transcript: **Hornn**: "says oil"
+2026-10-04T19:43:52.997Z INFO  [stt] Transcript: **Trailer Park Moses**: "On, like turn on."
+2026-10-04T19:44:02.242Z INFO  [stt] Transcript: **Hornn**: "Got it."
+2026-10-04T19:44:05.110Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T19:44:38.991Z INFO  [stt] Transcript: **Hornn**: "think about"
+2026-10-04T19:44:40.686Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm+system)
+2026-10-04T19:44:58.184Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:45:18.559Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yes."
+2026-10-04T19:45:22.718Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:45:27.255Z INFO  [stt] Transcript: **Hornn**: "I step out and look around, use my perception."
+2026-10-04T19:45:41.070Z INFO  [stt] Transcript: **Trailer Park Moses**: "As he steps out, I'm going to also look around."
+2026-10-04T19:45:42.770Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:46:15.504Z INFO  [stt] Transcript: **Hornn**: "So yeah, you are the tank. I will let you take first turns for sure."
+2026-10-04T19:46:16.565Z INFO  [stt] Transcript: **Hornn**: "Go"
+2026-10-04T19:46:17.815Z INFO  [stt] Transcript: **Trailer Park Moses**: "No, that's fine. That's what I am, I'm the tank."
+2026-10-04T19:46:19.823Z INFO  [stt] Transcript: **Hornn**: "Ja."
+2026-10-04T19:46:24.027Z INFO  [wake] GM wake sent: HTTP 200 (4 lines)
+2026-10-04T19:46:24.982Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ah, so"
+2026-10-04T19:46:38.953Z INFO  [stt] Transcript: **Trailer Park Moses**: "I guess is building the scene."
+2026-10-04T19:46:44.042Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:46:53.901Z INFO  [stt] Transcript: **Hornn**: "Oh, baby."
+2026-10-04T19:46:57.775Z INFO  [stt] Transcript: **Trailer Park Moses**: "Roll that bean footage."
+2026-10-04T19:47:04.027Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:47:18.538Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:47:27.885Z INFO  [stt] Transcript: **Trailer Park Moses**: "Asko."
+2026-10-04T19:47:41.290Z INFO  [stt] Transcript: **Trailer Park Moses**: "谢谢。"
+2026-10-04T19:47:47.107Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:47:56.040Z INFO  [stt] Transcript: **Trailer Park Moses**: "Poke a boof."
+2026-10-04T19:48:06.794Z INFO  [stt] Transcript: **Hornn**: "While he pokes a booth, I grab the orientation pit banner and stuff it into my inventory."
+2026-10-04T19:48:08.248Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:48:53.022Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:49:31.437Z INFO  [stt] Transcript: **Trailer Park Moses**: "I am going to investigate the dead crawler and possibly loot if I can."
+2026-10-04T19:49:35.662Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:49:41.854Z INFO  [stt] Transcript: **Hornn**: "I walk over to the hallway screen and examine it."
+2026-10-04T19:49:55.628Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:50:00.234Z INFO  [stt] Transcript: **Trailer Park Moses**: "嗯嗯"
+2026-10-04T19:50:01.560Z INFO  [stt] Transcript: **Hornn**: "This is fucking working, dude."
+2026-10-04T19:50:08.869Z INFO  [stt] Transcript: **Trailer Park Moses**: "It's like a real DM because it's taking forever."
+2026-10-04T19:50:15.286Z INFO  [stt] Transcript: **Trailer Park Moses**: "denn."
+2026-10-04T19:50:15.598Z INFO  [wake] GM wake sent: HTTP 200 (4 lines)
+2026-10-04T19:50:22.652Z INFO  [stt] Transcript: **Hornn**: "That's the only thing I'm not liking is the slowness of it."
+2026-10-04T19:50:24.028Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ja."
+2026-10-04T19:50:24.602Z INFO  [stt] Transcript: **Hornn**: "Huh."
+2026-10-04T19:50:34.300Z INFO  [stt] Transcript: **Hornn**: "Fuck, man."
+2026-10-04T19:50:35.637Z INFO  [wake] GM wake sent: HTTP 200 (4 lines)
+2026-10-04T19:50:37.842Z INFO  [stt] Transcript: **Hornn**: "What's up?"
+2026-10-04T19:50:52.057Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T19:51:10.609Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:51:44.376Z INFO  [stt] Transcript: **Trailer Park Moses**: "I want to pick up the dead crawler and put it in my inventory."
+2026-10-04T19:51:44.376Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 1 alias(es)
+2026-10-04T19:52:11.182Z INFO  [stt] Transcript: **Hornn**: "Do I have anything in my inventory that can disassemble or smash this screen?"
+2026-10-04T19:52:15.338Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:52:41.450Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:53:07.442Z INFO  [stt] Transcript: **Hornn**: "Hai"
+2026-10-04T19:53:08.157Z INFO  [stt] Transcript: **Trailer Park Moses**: "Do I notice what you're doing?"
+2026-10-04T19:53:09.756Z INFO  [stt] Transcript: **Hornn**: "Dewet?"
+2026-10-04T19:53:12.225Z INFO  [stt] Transcript: **Trailer Park Moses**: "So do I notice what you're doing?"
+2026-10-04T19:53:13.946Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:53:16.080Z INFO  [stt] Transcript: **Hornn**: "I'm letting the AI generate options for me."
+2026-10-04T19:53:23.827Z INFO  [stt] Transcript: **Trailer Park Moses**: "No, like my character."
+2026-10-04T19:53:27.049Z INFO  [stt] Transcript: **Hornn**: "Yeah, you're here with me, right?"
+2026-10-04T19:53:33.954Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T19:53:34.753Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, okay. So I'm just gonna walk over and punch it."
+2026-10-04T19:53:36.353Z INFO  [stt] Transcript: **Trailer Park Moses**: "Začalkem."
+2026-10-04T19:53:50.808Z INFO  [stt] Transcript: **Hornn**: "Okay, and I go cut into the guts of the crawler. Maybe he, like, in the world-ending apocalypse, he swallowed a diamond. I don't fucking know. Maybe I can find something useful."
+2026-10-04T19:53:50.950Z INFO  [stt] Transcript: **Trailer Park Moses**: "Hmhm."
+2026-10-04T19:53:55.008Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:54:32.522Z INFO  [stt] Transcript: **Trailer Park Moses**: "Ja."
+2026-10-04T19:54:36.542Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:54:37.364Z INFO  [stt] Transcript: **Hornn**: "I'm going to need a Mordecai character."
+2026-10-04T19:54:40.520Z INFO  [stt] Transcript: **Trailer Park Moses**: "For what the"
+2026-10-04T19:54:54.261Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:54:56.601Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:55:23.003Z INFO  [stt] Transcript: **Hornn**: "It's Moses's turn. I follow him."
+2026-10-04T19:55:27.158Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:55:38.841Z INFO  [stt] Transcript: **Hornn**: "What's your name, bone wife beater?"
+2026-10-04T19:55:47.220Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:55:58.418Z INFO  [stt] Transcript: **Trailer Park Moses**: "Yeah, so we're going to be walking that jazz."
+2026-10-04T19:56:00.576Z INFO  [stt] Transcript: **Trailer Park Moses**: "How far did we end up walking?"
+2026-10-04T19:56:16.001Z INFO  [stt] Transcript: **Trailer Park Moses**: "And I want to do a perception check for the next like 50 feet."
+2026-10-04T19:56:23.205Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:56:56.100Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'll leave it out."
+2026-10-04T19:56:57.622Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T19:57:12.281Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T19:57:36.382Z INFO  [stt] Transcript: **Trailer Park Moses**: "Olga left to the proctor's window."
+2026-10-04T19:57:36.382Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 3 alias(es)
+2026-10-04T19:57:40.595Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:58:38.260Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T19:59:21.268Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm definitely sticking around."
+2026-10-04T19:59:25.486Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T19:59:31.473Z INFO  [stt] Transcript: **Trailer Park Moses**: "Cad bain?"
+2026-10-04T19:59:33.908Z INFO  [stt] Transcript: **Hornn**: "I am also gonna stick around for the lesson."
+2026-10-04T19:59:45.476Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:00:34.082Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm+system)
+2026-10-04T20:01:25.095Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm gonna missle it."
+2026-10-04T20:01:29.293Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:01:37.267Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm going to muscle it."
+2026-10-04T20:01:49.298Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:02:32.324Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T20:03:01.755Z INFO  [stt] Transcript: **Hornn**: "Sorry, say it again."
+2026-10-04T20:03:06.116Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm gonna get mad and bully it so"
+2026-10-04T20:03:10.354Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:03:12.062Z INFO  [stt] Transcript: **Hornn**: "Can I step in to help?"
+2026-10-04T20:03:14.308Z INFO  [stt] Transcript: **Trailer Park Moses**: "I can."
+2026-10-04T20:03:18.407Z INFO  [stt] Transcript: **Hornn**: "Yeah, let me give assistance."
+2026-10-04T20:03:22.093Z INFO  [stt] Transcript: **Trailer Park Moses**: "Roll up those wizard arms."
+2026-10-04T20:03:26.828Z INFO  [stt] Transcript: **Hornn**: "Yeah, roll up my wizard sleeves."
+2026-10-04T20:03:26.997Z INFO  [stt] Transcript: **Trailer Park Moses**: "哈哈哈"
+2026-10-04T20:03:30.387Z INFO  [wake] GM wake sent: HTTP 200 (3 lines)
+2026-10-04T20:04:31.687Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T20:05:38.588Z INFO  [stt] Transcript: **Hornn**: "I open a trade with Moses and retrieve one credit from Moses and we drop the credit into the booth for a hint."
+2026-10-04T20:05:51.962Z INFO  [stt] Transcript: **Hornn**: "Say it again."
+2026-10-04T20:05:54.109Z INFO  [stt] Transcript: **Trailer Park Moses**: "I allow trade."
+2026-10-04T20:05:58.316Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:06:06.382Z INFO  [stt] Transcript: **Trailer Park Moses**: "I take out the credit and put it on my hand thumb and flick it towards Horan."
+2026-10-04T20:06:15.655Z INFO  [stt] Transcript: **Trailer Park Moses**: "Jana"
+2026-10-04T20:06:18.595Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:07:06.566Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:07:53.304Z INFO  [stt] Transcript: **Hornn**: "はい。"
+2026-10-04T20:07:53.763Z INFO  [stt] Transcript: **Trailer Park Moses**: "We'll go poke the hole."
+2026-10-04T20:07:56.419Z INFO  [stt] Transcript: **Trailer Park Moses**: "And before"
+2026-10-04T20:07:56.638Z INFO  [stt] Transcript: **Hornn**: "Yeah, so"
+2026-10-04T20:08:00.613Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:08:31.789Z INFO  [stt] Transcript: **Hornn**: "So, do I have a light spell? If I do, I'm gonna cast... Oh, Mr. White has torches. Anyways, I look for anything in my inventory that will cast light or provide light, and we decide that we're gonna poke the hall. Yeah, so I get behind Mr. White, and I'm gonna let him go into the hallway first."
+2026-10-04T20:08:35.346Z INFO  [stt] Transcript: **Hornn**: "So."
+2026-10-04T20:09:31.442Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:10:11.345Z INFO  [stt] Transcript: **Trailer Park Moses**: "So I'm gonna light a torch and throw it at the rats real quick."
+2026-10-04T20:10:15.540Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:10:15.580Z INFO  [stt] Transcript: **Trailer Park Moses**: "Equip my hammer, or my sledgehammer."
+2026-10-04T20:10:20.948Z INFO  [stt] Transcript: **Trailer Park Moses**: "And"
+2026-10-04T20:10:35.558Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:10:37.497Z INFO  [stt] Transcript: **Hornn**: "I scared reaction instant cast a magic missile spell at one of the rats."
+2026-10-04T20:12:51.612Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T20:13:32.960Z INFO  [stt] Transcript: **Trailer Park Moses**: "So is it your turn or mine?"
+2026-10-04T20:13:32.960Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 1 alias(es)
+2026-10-04T20:13:37.613Z INFO  [stt] Transcript: **Hornn**: "Exactly right, dump fuck 'em into one of these grease tubes."
+2026-10-04T20:13:40.472Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm gonna"
+2026-10-04T20:13:41.920Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:15:23.494Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (6 chunk(s), voice: gm+system)
+2026-10-04T20:16:08.301Z INFO  [stt] Transcript: **Trailer Park Moses**: "All right, I'm gonna grab the closest rat by the tail,"
+2026-10-04T20:16:08.302Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 2 alias(es)
+2026-10-04T20:16:11.989Z INFO  [stt] Transcript: **Trailer Park Moses**: "and slam it against the other rat."
+2026-10-04T20:16:16.740Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:17:56.541Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:18:29.346Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'll save it. So end of turn."
+2026-10-04T20:18:33.708Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:19:37.923Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:19:38.201Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T20:20:04.300Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T20:20:59.970Z INFO  [stt] Transcript: **Hornn**: "I perceive that the rats are covered in grease and oil, so I pick up the burning torch."
+2026-10-04T20:20:59.970Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 2 alias(es)
+2026-10-04T20:21:04.202Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:21:05.594Z INFO  [stt] Transcript: **Hornn**: "and touch it to one of the rats, in an attempt to set him aflame."
+2026-10-04T20:21:24.182Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:22:33.913Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:23:14.699Z INFO  [stt] Transcript: **Hornn**: "Bonus action move, shoot, fuck 'em, I split it on the two targets."
+2026-10-04T20:23:18.926Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:23:52.867Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:24:21.228Z INFO  [stt] Transcript: **Hornn**: "Yes, I scramble away from the rats and get behind Bone and end turn."
+2026-10-04T20:24:25.475Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:25:38.051Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T20:26:22.298Z INFO  [stt] Transcript: **Trailer Park Moses**: "I am gonna rage out by yelling NO!"
+2026-10-04T20:26:22.299Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word)
+2026-10-04T20:26:26.397Z INFO  [stt] Transcript: **Trailer Park Moses**: "You better fucking listen"
+2026-10-04T20:26:26.470Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:26:33.571Z INFO  [stt] Transcript: **Trailer Park Moses**: "Or the rat that bit."
+2026-10-04T20:26:35.571Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:26:46.564Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:27:01.067Z INFO  [stt] Transcript: **Trailer Park Moses**: "Did it really just come in there just to say that?"
+2026-10-04T20:27:06.527Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:27:11.345Z INFO  [stt] Transcript: **Hornn**: "I don't think it knows that you cast your attack called you better listen."
+2026-10-04T20:27:12.435Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, so"
+2026-10-04T20:27:26.471Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:27:33.527Z INFO  [stt] Transcript: **Trailer Park Moses**: "Rewind, I am going to yell no, and then I'm going to use a bonus action to rage."
+2026-10-04T20:27:46.460Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:28:04.311Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (7 chunk(s), voice: gm+system)
+2026-10-04T20:28:58.715Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, so I'll run over to that rat and punt it against the wall."
+2026-10-04T20:29:02.924Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:29:06.785Z INFO  [stt] Transcript: **Trailer Park Moses**: "and a turn"
+2026-10-04T20:29:19.951Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:29:25.895Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:30:17.915Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (7 chunk(s), voice: gm+system)
+2026-10-04T20:31:08.415Z INFO  [stt] Transcript: **Trailer Park Moses**: "Stabilize"
+2026-10-04T20:31:08.415Z INFO  [spotlight] Spotlight OFF (cleared): open floor, every line wakes the GM
+2026-10-04T20:31:12.582Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:31:16.772Z INFO  [stt] Transcript: **Trailer Park Moses**: "I don't think we have anything to heal."
+2026-10-04T20:31:25.069Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:31:32.613Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:32:04.593Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T20:32:48.101Z INFO  [stt] Transcript: **Trailer Park Moses**: "Definitely loot."
+2026-10-04T20:32:52.306Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:33:06.168Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:33:52.486Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:33:52.758Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system)
+2026-10-04T20:33:53.105Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system)
+2026-10-04T20:35:01.604Z INFO  [stt] Transcript: **Trailer Park Moses**: "Put him on my shoulder, walk to the proctor and ask if he knows where the nearest safe room is."
+2026-10-04T20:35:05.851Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:35:15.541Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:36:03.192Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T20:36:03.434Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system)
+2026-10-04T20:37:16.122Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm going to set Horned Owl over and then investigate the proctor and look to see if he is attached to the floor, bolted down or what."
+2026-10-04T20:37:16.123Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word), 1 alias(es)
+2026-10-04T20:37:20.314Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:37:20.788Z INFO  [stt] Transcript: **Trailer Park Moses**: "End of"
+2026-10-04T20:37:22.732Z INFO  [stt] Transcript: **Trailer Park Moses**: "fact."
+2026-10-04T20:37:30.430Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:37:40.322Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:38:06.941Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:38:07.212Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: system)
+2026-10-04T20:38:51.269Z INFO  [stt] Transcript: **Hornn**: "Hi."
+2026-10-04T20:38:54.219Z INFO  [stt] Transcript: **Hornn**: "Hi."
+2026-10-04T20:39:02.032Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, so now I'm going to take the rope out to his coffin, and I'm going to say, "Take us to Zone 6.""
+2026-10-04T20:39:05.592Z INFO  [stt] Transcript: **Trailer Park Moses**: "end up"
+2026-10-04T20:39:09.771Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:39:12.664Z INFO  [stt] Transcript: **Hornn**: "Take the rope out to his coffin."
+2026-10-04T20:39:22.099Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:39:25.001Z INFO  [stt] Transcript: **Trailer Park Moses**: "Take the rope out of my inventory, tie Horn and myself up to the coffin."
+2026-10-04T20:39:30.347Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:39:36.938Z INFO  [stt] Transcript: **Trailer Park Moses**: "six"
+2026-10-04T20:39:50.263Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:40:19.178Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: gm)
+2026-10-04T20:41:17.879Z INFO  [stt] Transcript: **Hornn**: "An deifrn."
+2026-10-04T20:41:27.955Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, I'm gonna ask the proctor how many credits will it take for him to take us."
+2026-10-04T20:41:32.116Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:41:42.586Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:42:05.750Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (7 chunk(s), voice: gm)
+2026-10-04T20:42:58.144Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'll leave Warren on the car, then walk over, loot the limp body, and then smash the vending machine with my hammer, then mute."
+2026-10-04T20:43:02.316Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:43:10.903Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:43:43.273Z INFO  [stt] Transcript: **Hornn**: "There it goes."
+2026-10-04T20:44:00.012Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'll leave Horn on the coffin, then walk by, smash the vending machine with my hammer."
+2026-10-04T20:44:03.168Z INFO  [stt] Transcript: **Trailer Park Moses**: "Mute."
+2026-10-04T20:44:07.341Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T20:44:41.286Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:44:45.303Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (10 chunk(s), voice: system)
+2026-10-04T20:44:45.666Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:44:45.676Z WARN  Speech backlog over limit (12 chunks / 90s): dropped the 1 oldest pending message(s) (10 chunk(s)); kept the newest
+2026-10-04T20:44:51.191Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:46:46.459Z INFO  [stt] Transcript: **Trailer Park Moses**: "I'm going to rage, and then I'm going to peel both ticks off and smash them together."
+2026-10-04T20:46:50.616Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:46:58.926Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T20:49:10.756Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm)
+2026-10-04T20:49:14.645Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (11 chunk(s), voice: system)
+2026-10-04T20:50:51.997Z INFO  [stt] Transcript: **Trailer Park Moses**: "So many right now."
+2026-10-04T20:50:51.997Z INFO  [spotlight] Spotlight OFF (cleared): open floor, every line wakes the GM
+2026-10-04T20:50:56.215Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:50:58.860Z INFO  [stt] Transcript: **Trailer Park Moses**: "Okay, so I'm gonna go ahead and open loot boxes."
+2026-10-04T20:51:06.736Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:51:16.168Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:51:48.987Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (6 chunk(s), voice: system)
+2026-10-04T20:51:49.426Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:52:21.576Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system)
+2026-10-04T20:53:09.686Z INFO  [stt] Transcript: **Hornn**: "What about my bronze growth box?"
+2026-10-04T20:53:09.686Z INFO  [spotlight] Spotlight ON: wake limited to the spotlight player (+ "AI" wake word)
+2026-10-04T20:53:13.857Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:53:30.867Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:53:55.271Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (3 chunk(s), voice: gm)
+2026-10-04T20:54:41.952Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T20:54:41.953Z INFO  Left voice channel
+2026-10-04T20:55:07.273Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T20:55:07.472Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T20:55:07.472Z INFO  [voice] Joined voice channel General
+2026-10-04T20:55:07.472Z INFO  [stt] STT listening for speakers
+2026-10-04T20:55:23.913Z INFO  [stt] Transcript: **Hornn**: "Okay, I have a question. If I came into the dungeon with my dog Pebbles, where is Pebbles now?"
+2026-10-04T20:55:28.061Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T20:55:41.127Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T20:56:02.807Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (5 chunk(s), voice: system)
+2026-10-04T21:00:01.677Z INFO  [stt] Transcript: **Hornn**: "Okay, we're gonna take a long rest now and also call that the end of this session."
+2026-10-04T21:00:05.345Z INFO  [stt] Transcript: **Hornn**: "And end it there."
+2026-10-04T21:00:09.506Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-04T21:00:18.167Z INFO  [stt] Transcript: **Hornn**: "Clip everything, save everything, file everything, do everything you need to do."
+2026-10-04T21:00:19.895Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T21:00:29.553Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T21:00:37.510Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system)
+2026-10-04T21:01:06.744Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T21:01:06.744Z INFO  Left voice channel
+2026-10-04T21:45:32.240Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T21:45:32.467Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T21:45:32.481Z INFO  [voice] Joined voice channel General
+2026-10-04T21:45:32.482Z INFO  [stt] STT listening for speakers
+2026-10-04T21:46:19.131Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: system+gm)
+2026-10-04T21:47:12.842Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (4 chunk(s), voice: gm+system)
+2026-10-04T22:01:04.193Z INFO  [stt] Transcript: **Hornn**: "Kita"
+2026-10-04T22:01:04.194Z INFO  [spotlight] Spotlight OFF (cleared): open floor, every line wakes the GM
+2026-10-04T22:01:08.416Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T22:11:53.016Z INFO  [stt] Transcript: **Hornn**: "Hello,"
+2026-10-04T22:11:57.373Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T22:12:11.036Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (1 chunk(s), voice: gm)
+2026-10-04T22:12:23.326Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-04T22:12:42.766Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T22:12:42.766Z INFO  Left voice channel
+2026-10-04T22:32:00.172Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-04T22:32:04.752Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-04T22:32:04.764Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-04T22:32:04.764Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261004T223204-4a19)
+2026-10-04T22:32:04.764Z INFO  Voice session cap: 50 min per /join session
+2026-10-04T22:32:04.765Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-04T22:32:04.765Z INFO  GM wake budget: 2/60 wakes in the last hour
+2026-10-04T22:32:04.766Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-04T22:32:04.766Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-04T22:32:05.267Z INFO  Logged in as DCC Ears#8647
+2026-10-04T22:32:41.852Z INFO  [voice] Voice: signalling -> connecting
+2026-10-04T22:32:42.047Z INFO  [voice] Voice: connecting -> ready
+2026-10-04T22:32:42.048Z INFO  [voice] Joined voice channel General
+2026-10-04T22:32:42.048Z INFO  [stt] STT listening for speakers
+2026-10-04T23:08:37.514Z INFO  [stt] Transcript: **Hornn**: "咳嗽"
+2026-10-04T23:08:37.518Z INFO  [spotlight] Spotlight OFF (stale): open floor, every line wakes the GM
+2026-10-04T23:08:41.695Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-04T23:08:58.439Z INFO  [voice] Voice: ready -> destroyed
+2026-10-04T23:08:58.439Z INFO  Left voice channel
+2026-10-05T00:38:25.981Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T00:38:30.743Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T00:38:30.747Z INFO  item-reskins: item-reskins.json matches the version file (a1177ab2f900)
+2026-10-05T00:38:30.769Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T00:38:30.770Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T003830-abca)
+2026-10-05T00:38:30.770Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T00:38:30.771Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T00:38:30.773Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T00:38:30.773Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T00:38:30.773Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T00:38:31.226Z INFO  Logged in as DCC Ears#8647
+2026-10-05T00:38:31.465Z INFO  [fish] Fish balance: $9.29 (startup)
+2026-10-05T00:39:01.822Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T00:39:02.023Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T00:39:02.030Z INFO  [voice] Joined voice channel General
+2026-10-05T00:39:02.030Z INFO  [stt] STT listening for speakers
+2026-10-05T00:42:46.961Z INFO  [stt] Transcript: **Hornn**: "Können Sie?"
+2026-10-05T00:42:46.962Z INFO  [spotlight] Spotlight OFF (stale): open floor, every line wakes the GM
+2026-10-05T00:42:51.210Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-05T00:50:12.974Z INFO  [stt] Transcript: **Hornn**: "It's important."
+2026-10-05T00:50:17.209Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-05T00:50:53.337Z INFO  [stt] Transcript: **Hornn**: "Amen."
+2026-10-05T00:50:56.229Z INFO  [stt] Transcript: **Hornn**: "こんにちは。"
+2026-10-05T00:51:00.440Z INFO  [wake] GM wake sent: HTTP 200 (2 lines)
+2026-10-05T00:51:04.105Z INFO  [stt] Transcript: **Hornn**: "Hey"
+2026-10-05T00:51:20.437Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-05T00:51:57.563Z INFO  [tts] Speaking GM message from DCC AI GM#5893 (2 chunk(s), voice: gm)
+2026-10-05T00:57:59.812Z INFO  [stt] Transcript: **Hornn**: "I don't know if she's here."
+2026-10-05T00:58:04.007Z INFO  [wake] GM wake sent: HTTP 200 (1 line)
+2026-10-05T01:05:39.371Z INFO  [voice] Voice: ready -> connecting
+2026-10-05T01:05:39.513Z INFO  [voice] Voice: connecting -> signalling
+2026-10-05T01:05:39.695Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T01:05:39.890Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T01:08:57.676Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T01:08:57.677Z INFO  Left voice channel
+2026-10-05T01:08:58.690Z INFO  [fish] Fish balance: $9.28 (session closed)
+2026-10-05T01:09:53.874Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T01:25:54.800Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T01:25:59.232Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T01:25:59.235Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T01:25:59.250Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T01:25:59.251Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T012559-031a)
+2026-10-05T01:25:59.251Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T01:25:59.252Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T01:25:59.254Z INFO  GM wake budget: 5/60 wakes in the last hour
+2026-10-05T01:25:59.254Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T01:25:59.254Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T01:25:59.764Z INFO  Logged in as DCC Ears#8647
+2026-10-05T01:26:00.062Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T01:28:19.823Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T01:28:20.016Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T01:28:20.017Z INFO  [voice] Joined voice channel General
+2026-10-05T01:28:20.017Z INFO  [stt] STT listening for speakers
+2026-10-05T01:37:59.037Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T01:37:59.038Z INFO  Left voice channel
+2026-10-05T01:37:59.368Z INFO  [fish] Fish balance: $9.28 (session closed)
+2026-10-05T01:38:28.367Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T01:38:28.819Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T01:38:28.821Z INFO  [voice] Joined voice channel General
+2026-10-05T01:38:28.821Z INFO  [stt] STT listening for speakers
+2026-10-05T01:56:00.022Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T02:01:07.922Z INFO  SIGTERM received, shutting down
+2026-10-05T02:01:08.051Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T02:01:08.051Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T02:01:12.343Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T02:01:12.346Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T02:01:12.348Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T02:01:12.379Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T02:01:12.380Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T020112-6bea)
+2026-10-05T02:01:12.380Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T02:01:12.381Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T02:01:12.382Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T02:01:12.382Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T02:01:12.382Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T02:01:12.847Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T02:01:13.178Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T02:02:07.540Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T02:02:08.007Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T02:02:08.008Z INFO  [voice] Joined voice channel General
+2026-10-05T02:02:08.008Z INFO  [stt] STT listening for speakers
+2026-10-05T02:30:46.495Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T02:30:46.502Z INFO  Left voice channel
+2026-10-05T02:30:46.860Z INFO  [fish] Fish balance: $9.28 (session closed)
+2026-10-05T02:31:13.167Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T02:37:48.651Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T02:37:56.259Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T02:37:56.261Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T02:37:56.261Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T02:37:56.261Z INFO  background-reskins: background-reskins.json matches the version file (5731a0536814)
+2026-10-05T02:37:56.262Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (7a7562cbbdd5)
+2026-10-05T02:37:56.262Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (7f52e05baf18)
+2026-10-05T02:37:56.281Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T02:37:56.281Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T023756-112b)
+2026-10-05T02:37:56.281Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T02:37:56.282Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T02:37:56.283Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T02:37:56.283Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T02:37:56.283Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T02:37:56.671Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T02:37:57.123Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T02:39:56.336Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T02:39:56.800Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T02:39:56.801Z INFO  [voice] Joined voice channel General
+2026-10-05T02:39:56.801Z INFO  [stt] STT listening for speakers
+2026-10-05T03:07:56.956Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T03:25:06.560Z INFO  SIGTERM received, shutting down
+2026-10-05T03:25:06.732Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T03:25:06.733Z INFO  Left voice channel
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T03:25:10.841Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T03:25:10.843Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T03:25:10.843Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T03:25:10.844Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T03:25:10.845Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T03:25:10.845Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T03:25:10.858Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T03:25:10.858Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T032510-4917)
+2026-10-05T03:25:10.859Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T03:25:10.859Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T03:25:10.870Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T03:25:10.870Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T03:25:10.870Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T03:25:11.319Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T03:25:11.551Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T03:42:36.746Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T03:42:41.279Z INFO  Campaign session: alpha (data /workspace/dcc-campaign/sessions)
+2026-10-05T03:42:41.281Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T03:42:41.281Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T03:42:41.281Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T03:42:41.282Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T03:42:41.282Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T03:42:41.296Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=fc21ac4846094f2ab0f574bc2697be25
+2026-10-05T03:42:41.296Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T034241-e259)
+2026-10-05T03:42:41.297Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T03:42:41.297Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions/voice-control.json
+2026-10-05T03:42:41.298Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T03:42:41.299Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions/spotlight.json, stale after 20 min; fails open)
+2026-10-05T03:42:41.299Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T03:42:41.709Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T03:42:42.098Z INFO  [fish] Fish balance: $9.28 (startup)
+2026-10-05T03:54:10.523Z INFO  [voice] Voice: signalling -> connecting
+2026-10-05T03:54:10.998Z INFO  [voice] Voice: connecting -> ready
+2026-10-05T03:54:11.006Z INFO  [voice] Joined voice channel General
+2026-10-05T03:54:11.006Z INFO  [stt] STT listening for speakers

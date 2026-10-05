@@ -1,0 +1,27 @@
+Web snippets used for drafts/f01-legendary-oneoffs-research.md (retrieved 2026-10-04 America/Chicago). Working copy; short excerpts only.
+These are NOT the novels' text and are not ledger-quotable (no WEB: kind in tools/ledger_check.py). Reddit was not read (blocked).
+
+[WEB:dccwiki-book1-achievements] https://dungeon-crawler-carl.wiki/book-1/achievements/ (search snippet only; direct fetch hit a Cloudflare check)
+- Heading in the snippet reads "Trailblazing Crazy Cat Lady (Donut)" with "Reward: Legendary Pet Box". The fandom wiki and the book recap say CARL received it. Treated as a labeling difference (ledger X-055).
+
+[WEB:afterword-b1-ch5] https://afterword.to/books/dungeon-crawler-carl-dinniman-pwp3y2/chapters/4 (search snippet)
+- Chapter 5 summary: Carl opens ten boxes in the guildhall; the Legendary Pet Box is last and holds the Enhanced Pet Biscuit; Donut snatches it and melts into a gelatinous mass; Mordecai calls it a non-negative effect, 5-10 minutes.
+
+[WEB:manatoast-b1-recap] https://manatoastmedia.com/dungeon-crawler-carl-book-1-recap/ (search snippet)
+- Chapter 5: Carl gets a Level 4 Pugilism skill, opens his boxes, "receives an 'Enhanced Pet Biscuit,' which Donut snatches". Donut melts into "a wet mess of flesh".
+
+[WEB:fandom-floor1-achievements] https://dungeon-crawler-carl.fandom.com/wiki/Floor_1_Achievements (search snippet, matches local raw/pages/Floor 1 Achievements.txt)
+- Lists three Legendary rewards: Legendary Pet Box (Trailblazing Crazy Cat Lady), Legendary Quadruped Box (first cat), Legendary That's the Spirit! Box (fighting a family member). No Celestial. Highest other F1 tier is Platinum (first Borough Boss; This Little Piggy).
+- "being the first to drive a van into the dungeon." has reward N/A [4|5] (no box named).
+
+[WEB:fandom-ring-page] https://dungeon-crawler-carl.fandom.com/wiki/Enchanted_Night_Wyrm%27s_Ring_of_Divine_Suffering (search snippet)
+- SOURCE field: Legendary "Thats the Spirit" Box; Frank Q. Wiki lists the Platinum version under Smushed for Daddy (a different box).
+
+[WEB:fandom-frank-q] https://dungeon-crawler-carl.fandom.com/wiki/Frank_Q (search snippet)
+- Frank killed Maggie's brother (a deputy) in the parking lot as they entered; wiki says the kill earned "the That's the Spirit Box". Later text says "Legendary That's the Spirit Box".
+
+[WEB:fandom-donut] https://dungeon-crawler-carl.fandom.com/wiki/Donut (search snippet)
+- "Donut receives a Legendary Quadruped Box for being the first cat to enter the Dungeon"; "Carl receives a Legendary Pet Box containing an Enhanced Pet Biscuit". Book 1 stat table: biscuit took Donut to STR 11, INT 11, CON 2, DEX 8, CHA 25.
+
+[WEB:bookreadfree-b1-p5] https://bookreadfree.com/99426/2468076 (search snippet of a third-party copy of the novel text; NOT copied here)
+- Confirms the order of Carl's ten boxes (7th Silver Goblin Box; 9th Gold Shoe Box; 10th = Legendary Pet Box, three times the size of the Bronze Pet Box). Do not reuse text.

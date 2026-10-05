@@ -1,0 +1,89 @@
+This article is about the artifact. For the book, see The Gate of the Feral Gods (Book).
+
+{{SpoilH|4}}
+{{Item
+|title=Gate of the Feral Gods
+|image=Gateoftheferal.jpg
+|imagecaption=The artifact is made up of three distinct pieces: a winding box and two pocket watches.
+|type=Artifact
+|keywords=Portal, The Nothing, Feral Gods
+|effects=
+* Opens long-distance teleportation portals
+* Releases a maddened feral god from the Nothing when the portal closes[4|15][4|21][4|23]
+|source=
+* Looted in three pieces (two watches and a winding box) from Henrik the Changeling, Commandant Kane, and the Mad Dune Mage on the Fifth Floor, within the Necropolis of Anser[4|15][4|16][4|21][4|26]
+|buy=
+|sell=
+}}
+{{Quote|It rips a hole into the depths of the Nothing.|Juice Box[4|15]}}
+The Gate of the Feral Gods is a legendary- or celestial-tier artifact, a teleportation device so powerful it would normally not surface before the eighth or ninth floor.[4|9] It bridges two distant locations by tearing a hole through the prison dimension known as the Nothing, and when the resulting portal closes, an ancient, maddened deity, a feral god, comes through into the world on the opening side.[4|15]
+==AI Description==
+The artifact's three components are described separately by the system. The winding box alone receives the following description:
+Mysterious Winding Box.
+This strange box hums with arcane power. There is space for two watches. What happens if you place the watches within and activate the box? You should try to find out![4|21]
+The system also provides the following description when the quest to assemble the full artifact is triggered:
+New Quest. The Gate of the Feral Gods.
+Henrik the Changeling. Commandant Kane. The Mad Dune Mage. They all have pieces of the artifact. Take it from them. Collect all three. Put them together.
+What happens next is pretty damn neat.
+Reward: Oh boy-oh-boy.
+Oh boy-oh-boy.[4|15]
+==Description==
+The Gate of the Feral Gods opens a massive, swirling portal roughly twenty feet tall that connects two distant points.[4|27] That connection comes at a devastating cost: to link two places, the Gate rips a hole into the depths of the Nothing, the dimension into which the pantheon banished the old gods and demons, and when the portal finally closes it releases one of those banished beings, a feral god driven mad by its imprisonment, into the world on the opening side.[4|15]
+
+{{Spoiler|book=5|spoiler=The Gate is so anomalous that, according to Orren, the system AI built it in a way that circumvented the dungeon's own rules, crashing the entire system the moment the item was generated.[5|1]}}
+
+==Appearance==
+The artifact is made up of three distinct pieces: a winding box and two pocket watches.[4|15]
+
+The Winding Box: A thick, dark wooden case with a glass window, it feels older and heavier than it looks, resembling a humidor or a large music box. Inside are two small knobs and two round cutouts shaped to hold the watches.[4|21]
+
+The Watches: A pair of magically linked pocket watches. Each has a "third hand" used to dial in specific times that stand for physical coordinates.[4|23][4|27]
+
+==Operation==
+To operate the Gate, the user dials a "time" representing a destination on one of the watches; because the two watches are magically linked, the setting mirrors automatically on the other.[4|23] Both watches then go into the winding box and the winding process begins. The second watch ticks until it syncs to the time of the current location, at which point the box is armed; it must not be moved more than about five feet while counting down, or the process resets.[4|23][4|34] Removing the watches opens the portal.[4|23]
+
+The portal is one-way and lasts roughly twenty minutes, or until the winding box and both watches are carried through, whichever comes first. It then lingers at the spot where it was opened as a two-way passage into the Nothing, staying open until something comes through from that dimension, most often a feral god.[4|23] Crawlers cannot use the Gate to hop between floors, so opening a gate to a distant floor accomplishes nothing except unleashing whatever emerges when it closes.[4|23]
+
+How the Gate behaves depends on how its pieces are distributed across the portal:
+
+* Standard Teleportation: If the watches bridge a path, a feral god is summoned on the opening side when the portal closes.[4|15]
+* Double God Summoning: If the first watch is carried through the portal inside the box while the second remains on the opening side, a feral god appears on both sides.[4|34]
+* Safe Passage: Leaving one watch on the opening side, taking the other through, and leaving the winding box inside the portal makes the passage safe and keeps monsters from escaping, though it ruins the artifact.[4|23][4|34]
+* Direct Void Portal: The winding box alone is a conduit to the Nothing. Opening its lid, winding it, and channeling a stream of charged energy into it opens a passage straight into the void, enough to banish an entire location, up to the whole necropolis, into the Nothing.[4|16][4|21][4|23]
+* Reverse Compass: The linked watches can act as a "reverse compass," fixing one's exact position relative to other places by reading the displayed time once altitude is factored in.[4|23][4|27]
+
+==Story==
+===Book 4===
+On the Fifth Floor (the Bubbles), the Gate lay buried in the Necropolis of Anser, drawing treasure hunters to the tomb-island: the bugbear submarine captain Shamus Chaindrive, who spent nearly twenty years hunting the tomb; a colony of dirigible gnomes; and the glass mage Mad Dune Mage.[4|9][4|21] By the time Carl became involved, its three pieces were split among three holders, and the system handed him a quest to gather them all: Henrik the Changeling held one watch, gnomish Commandant Kane held the second, and Ghazi held the winding box.[4|15][4|16][4|21][4|26] Meanwhile Katia studied the linked watches, working out the time-and-location combinations that let her begin mapping the ninth floor before the crew ever set foot on it.[4|23][4|27]
+
+Trapped at the bottom of the water quadrant inside the city boss Lusca, Carl assembled the completed Gate and teleported himself, Katia, and Tran to the surface, splashing down outside the pazuzu town of Pandinus; the still-open portal dragged a wall of ocean water through with them, nearly flattening the town.[4|27] True to the artifact's nature, the escape loosed a feral god into the world and, as the system had warned, drew a violent reaction from the true pantheon, with enraged deities rampaging across the floor's popped bubbles.[4|27][4|28]
+
+Merely holding the Gate made Carl a target. Seven of the nine faction-wars factions sued in the Syndicate court to strip the pieces from him, but the case was thrown out for lack of standing, earning Carl seven Fight the Power achievements; a further last-minute challenge by the Skull Empire failed as well.[4|26][4|28][4|34] Carl's plan had been to open a gate onto the ninth-floor Skull Empire army and drop a feral god into its midst, the very outcome the factions had sued to prevent.[4|34] At the last moment he changed course. Rather than sacrifice the artifact, he kept it and instead used the Gate to flood the ninth-floor faction market at Larracos with ocean water, timed explosives, and a frenzy of sharks, gutting the factions' ability to resupply, while Juice Box slipped through the portal to hide among the survivors and spread word of what the NPCs truly were.[4|34]
+
+===Book 5===
+{{Spoiler|book=5|spoiler=At the start of the sixth floor (the Hunting Grounds), the Borant Corporation and the Syndicate liaisons recognized the threat the Gate posed and pulled it from Katia's inventory. Because the rule-breaking artifact could not simply be confiscated, Orren the Liaison pressed Carl to surrender it for good, giving him three choices: hand it over, be accelerated, or endure a floor-wide portal lockdown that would kill thousands. He feared that Carl would otherwise open a hundred portals and turn the floor into a wasteland within an hour.[5|1]
+With his attorney's help, Carl agreed to give the Gate up temporarily in exchange for a receipt promising its return on the ninth floor, plus collateral: four free cretin mercenaries. Two of them, Bomo and the Sledge, received the teleportation spells Teleport to Stairwell and Zerzura to partly replace the abilities Carl was losing.[5|3][6|Recap]}}
+
+===Book 6===
+{{Spoiler|book=6|spoiler=At the end of the eighth floor, Carl tried to reclaim the Gate early, but Orren refused, unwilling to let him use it to shortcut the floor's finale.[6|51]}}
+
+===Book 7===
+{{Spoiler|book=7|spoiler=Carl regained the Gate at the very start of the ninth floor (Faction Wars), delivered by Liaison action to a dungeon mailbox.[7|1]
+Amid the volcanic chaos of the battles, Elle had the Gate primed and open when the War Mage Akuma ambushed her, knocked her unconscious, and took it.[7|61][8|37] The War Mages cared nothing for the artifact itself and traded it at the Midnight Market to Paca, a merchant serving as an agent of Krakaren Prime, in exchange for five hell-kissed Potions of Conscription powerful enough to enslave gods.[7|69][7|71][7|76][7|78] Paca swallowed the Gate to hide it in her stomach.[7|76][7|78] Once Carl learned its location from the goddess Eris, he passed word to Justice Light, who sent his sluggalos to retrieve it.[7|76][7|78][7|81]
+In the end, the broken, blood-soaked winding box formed a permanent portal into the Nothing, the same one Juice Box had used to flee the ninth floor. Justice Light stayed behind to spring a Legendary Trap, feeding a bijou fairy trap and a demon trap into that portal. This shattered the Nothing, draining it into the Halls of the Ascendency, Sheol, and Scolopendra's Lair, and awakening Scolopendra, the dungeon's final boss.[7|87]}}
+
+==Trivia==
+* Because artifacts normally do not appear until the eighth or ninth floor, the Gate's presence on the fifth triggered repeated system timeouts as the AI paused to reconcile the rule conflict its early appearance created.[4|9][4|26]
+* Lingering near an open portal to the Nothing is perilous in itself: those with weak constitutions can have their minds painted with feral madness simply by staying too close to the gateway.[4|23]
+* Ghazi worked out how to open a void portal with the winding box alone, using it in a doomed personal scheme to reach Yarilo, the banished god of lust.[4|21][4|23]
+* To keep the real artifact safe during a confrontation with the rock-creature crawler Chris, Katia fabricated a facsimile winding box while Carl carried facsimile watches, swapping the fakes for the genuine pieces beforehand.[4|34]
+* According to a note left by his associate Tish, the Gate was considered essential to defeating Scolopendra, so its loss to Ghazi's folly was seen as dooming that effort.[4|21]
+
+==Speculation==
+* Origin of the Necropolis: The boss Denise is described as a granddaughter of Emperor Anser, who "used a magical gate" to bring his people into this world through the Nothing. Since the Necropolis of Anser bears his name and holds the Gate, that founding gate may well have been this very artifact.[4|16]
+{{Spoiler|book=7|spoiler=Fate of the Gate: With the winding box broken and fused into a permanent tear in the Nothing, and the Nothing itself shattered, the Gate of the Feral Gods appears destroyed for good, though the fate of its two watches is never stated.[7|87]Krakaren Prime's designs: Krakaren Prime, banished to the Nothing, both supplied the War Mages' hell-kissed potions and engineered the trade that briefly placed the Gate in Paca's keeping. Though the artifact was recovered and destroyed, her hunger for it, together with the shattering of the Nothing, hints that she may be maneuvering to exploit the ruptured prison dimension in a bid to escape or invade, threatening the pantheon of the Celestial Ascendency.[7|71][7|87]}}
+
+==References==
+
+{{Navbox Items}}
+

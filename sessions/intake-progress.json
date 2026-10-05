@@ -1,0 +1,665 @@
+{
+  "updated": "2026-10-04T15:28-05:00",
+  "session_status": "zone_2_aftermath",
+  "party_locked": 2,
+  "players": {
+    "Hornn": {
+      "look": "Cad Bane with long hair / mullet; cowboy-hippie-wizard-rocket-scientist vibe",
+      "provisional_class": "Wizard",
+      "background": "Merchant (Operations Manager / full-time dad)",
+      "species": "Human",
+      "score_method": "roll 4d6dl1",
+      "ability_scores": {
+        "method": "roll_4d6dl_three_arrays_keep_one_gt69",
+        "sets": [
+          {
+            "scores": [
+              17,
+              15,
+              15,
+              13,
+              12,
+              12
+            ],
+            "total": 84
+          },
+          {
+            "scores": [
+              15,
+              15,
+              11,
+              10,
+              7,
+              6
+            ],
+            "total": 64
+          },
+          {
+            "scores": [
+              16,
+              15,
+              14,
+              9,
+              9,
+              8
+            ],
+            "total": 71
+          }
+        ],
+        "kept_set": 1,
+        "assignment": {
+          "STR": 12,
+          "DEX": 12,
+          "CON": 15,
+          "INT": 17,
+          "WIS": 13,
+          "CHA": 15
+        },
+        "priority": [
+          "INT",
+          "CHA",
+          "CON"
+        ],
+        "note": "Set 1 fully locked ~13:27 CT: INT17 CHA15 CON15 + leftovers STR12 DEX12 WIS13.",
+        "assignment_partial": null
+      },
+      "score_priority": [
+        "INT",
+        "CHA",
+        "CON"
+      ],
+      "score_arrays": {
+        "set1": {
+          "scores": [
+            17,
+            15,
+            15,
+            13,
+            12,
+            12
+          ],
+          "total": 84
+        },
+        "set2": {
+          "scores": [
+            15,
+            15,
+            11,
+            10,
+            7,
+            6
+          ],
+          "total": 64
+        },
+        "set3": {
+          "scores": [
+            16,
+            15,
+            14,
+            9,
+            9,
+            8
+          ],
+          "total": 71
+        },
+        "kept": "set1"
+      },
+      "score_pick_pending": null,
+      "assignment_intent": {
+        "kept_set": 1,
+        "scores": [
+          17,
+          15,
+          15,
+          13,
+          12,
+          12
+        ],
+        "assignment": {
+          "STR": 12,
+          "DEX": 12,
+          "CON": 15,
+          "INT": 17,
+          "WIS": 13,
+          "CHA": 15
+        },
+        "priority": [
+          "INT",
+          "CHA",
+          "CON"
+        ],
+        "note": "Voice: priority INT then CHA then CON \u2192 INT17 CHA15 CON15; leftovers STR12 DEX12 WIS13."
+      },
+      "scores_complete": true,
+      "kit": {
+        "status": "complete",
+        "class_choice": "package",
+        "background_choice": "package",
+        "credits_total": 27,
+        "credits_spent": 27,
+        "credits_remaining": 0,
+        "purchases": [
+          {
+            "name": "Box Cutters (Daggers)",
+            "credits": 0,
+            "qty": 2,
+            "note": "Wizard package; junk reskin of 2 Daggers"
+          },
+          {
+            "name": "Duct-Taped Mop Handle (Arcane Focus / Quarterstaff)",
+            "credits": 0,
+            "qty": 1,
+            "note": "Wizard package"
+          },
+          {
+            "name": "Sad Hotel Robe (Robe)",
+            "credits": 0,
+            "qty": 1,
+            "note": "Wizard package"
+          },
+          {
+            "name": "Cracked Phone App (Spellbook)",
+            "credits": 0,
+            "qty": 1,
+            "note": "Wizard package; canon reskin"
+          },
+          {
+            "name": "Lost-and-Found Backpack (Scholar's Pack)",
+            "credits": 0,
+            "qty": 1,
+            "note": "Wizard package"
+          },
+          {
+            "name": "Gas-Station GPS Kit (Navigator's Tools)",
+            "credits": 0,
+            "qty": 1,
+            "note": "Merchant package"
+          },
+          {
+            "name": "Ziplock Pouches",
+            "credits": 0,
+            "qty": 2,
+            "note": "Merchant package; 2 Pouches"
+          },
+          {
+            "name": "Traveler's Clothes",
+            "credits": 0,
+            "qty": 1,
+            "note": "Merchant package"
+          },
+          {
+            "name": "Discount Gas-Station Jerky Cubes (Rations)",
+            "credits": 6,
+            "qty": 12,
+            "note": "12 days @ 5 sp; AI buyout"
+          },
+          {
+            "name": "Stolen Trailer Clothesline (Rope 50 ft hempen)",
+            "credits": 1,
+            "qty": 1,
+            "note": "AI buyout"
+          },
+          {
+            "name": "Expired Office First-Aid Kit (Healer's Kit)",
+            "credits": 5,
+            "qty": 1,
+            "note": "AI buyout"
+          },
+          {
+            "name": "Paint-Can Pry Bar (Crowbar)",
+            "credits": 2,
+            "qty": 1,
+            "note": "AI buyout"
+          },
+          {
+            "name": "Bucket of Loose BB Pellets (Ball Bearings)",
+            "credits": 1,
+            "qty": 1,
+            "note": "AI buyout; bag of 1000"
+          },
+          {
+            "name": "Gas-Station Bathroom Mirror Tile (Steel Mirror)",
+            "credits": 5,
+            "qty": 1,
+            "note": "AI buyout"
+          },
+          {
+            "name": "Bike-Lock Chain Missing the Lock (Chain 10 ft)",
+            "credits": 5,
+            "qty": 1,
+            "note": "AI buyout"
+          },
+          {
+            "name": "Coat-Hanger Grapple (Grappling Hook)",
+            "credits": 2,
+            "qty": 1,
+            "note": "AI buyout"
+          }
+        ],
+        "pending_cart": null,
+        "note": "Package both ~2:02 CT. Wizard A (2 daggers, arcane focus quarterstaff, robe, spellbook, scholar's pack, 5 GP) + Merchant A (navigator's tools, 2 pouches, traveler's clothes, 22 GP) = 27 credits left. | ~2026-10-04T14:22-05:00: opened remaining-credit vending for Hornn (27). | ~2026-10-04T14:25-05:00: AI spend-all buyout sealed 27/27 (Hornn asked AI to spend).",
+        "updated": "2026-10-04T14:25-05:00",
+        "kit_complete": true,
+        "class_package_gp": 5,
+        "background_package_gp": 22
+      },
+      "questionnaire": {
+        "status": "complete",
+        "current": null,
+        "answers": {
+          "Q1": "My dog Pebbles",
+          "Q2": "Bottles of sulfuric acid",
+          "Q3": "Social events and bills",
+          "Q4": "For not having any friends",
+          "Q5": "Smell of rain coming (petrichor)",
+          "Q6": "Win and not be the one on the ground or dead"
+        },
+        "started": "2026-10-04T14:02-05:00",
+        "updated": "2026-10-04T14:12-05:00",
+        "note": "Core six + bonus1 complete ~2:12 PM CT. Bonus1: Whatever hill my kids are on.",
+        "bonus": {
+          "asked": [
+            "What's a hill you would die on? Literally, in this case."
+          ],
+          "answers": {
+            "bonus1": "Whatever hill my kids are on."
+          },
+          "pending": 0
+        }
+      },
+      "kit_turn": "done",
+      "crawler_name": "Horn",
+      "handle_note": "Hornn said ~2:16 PM CT: 'I want my tag to be the name Horn.' Locked as crawler name 'Horn' (player stays Hornn). | ~2026-10-04T14:37-05:00: Standing Orders locked \u2014 nearest clear safe room, else follow closest highest-STR party member. | ~2026-10-04T14:38-05:00: Standing Reactions locked \u2014 Fuck 'Em / variable-tuned Magic Missile; signature attack Fuck 'Em. | ~2026-10-04T14:39-05:00: clarified OA trigger \u2014 Magic Missile fires as Opportunity Attack.",
+      "standing_orders": "Make it to the nearest available safe room unhindered by mobs; if none, follow the closest party member with the highest Strength.",
+      "signature_attack": "Fuck 'Em",
+      "standing_reactions": "Opportunity Attacks: fire Fuck 'Em (variable-tuned Magic Missile)"
+    },
+    "Trailer Park Moses": {
+      "aka": "John",
+      "look": "Built like Bane / Bane in a wifebeater; brawler tank explosive expert vibe",
+      "provisional_class": "Barbarian",
+      "background": "Artisan (smelter)",
+      "species": "Goliath",
+      "score_method": "roll 4d6dl1",
+      "score_arrays": {
+        "set1": {
+          "scores": [
+            15,
+            13,
+            11,
+            11,
+            9,
+            7
+          ],
+          "total": 66
+        },
+        "set2": {
+          "scores": [
+            11,
+            11,
+            10,
+            8,
+            8,
+            3
+          ],
+          "total": 51
+        },
+        "set3": {
+          "scores": [
+            15,
+            13,
+            12,
+            12,
+            9,
+            9
+          ],
+          "total": 70
+        }
+      },
+      "score_pick_pending": null,
+      "ability_scores": {
+        "method": "roll_4d6dl_three_arrays_keep_one_gt69",
+        "sets": [
+          {
+            "scores": [
+              15,
+              13,
+              11,
+              11,
+              9,
+              7
+            ],
+            "total": 66
+          },
+          {
+            "scores": [
+              11,
+              11,
+              10,
+              8,
+              8,
+              3
+            ],
+            "total": 51
+          },
+          {
+            "scores": [
+              15,
+              13,
+              12,
+              12,
+              9,
+              9
+            ],
+            "total": 70
+          }
+        ],
+        "kept_set": 3,
+        "assignment": {
+          "STR": 15,
+          "DEX": 13,
+          "CON": 12,
+          "INT": 9,
+          "WIS": 9,
+          "CHA": 12
+        },
+        "assignment_partial": null
+      },
+      "assignment_intent": {
+        "kept_set": 3,
+        "scores": [
+          15,
+          13,
+          12,
+          12,
+          9,
+          9
+        ],
+        "partial": {
+          "STR": 15,
+          "DEX": 13,
+          "CHA": 12
+        },
+        "priority": "highest into STR and DEX (15/13); next into CHA (12); remaining 12/9/9 for CON/INT/WIS unnamed",
+        "assignment": {
+          "STR": 15,
+          "DEX": 13,
+          "CON": 12,
+          "INT": 9,
+          "WIS": 9,
+          "CHA": 12
+        },
+        "note": "Complete: CON12 INT9 WIS9 (leftover after STR15 DEX13 CHA12). Voice: Con twelve / Intelligence nine / Wisdom (score implied)."
+      },
+      "scores_complete": true,
+      "kit": {
+        "status": "complete",
+        "class_choice": "gold",
+        "class_gold_gp": 75,
+        "background_choice": "gold",
+        "background_gold_gp": 50,
+        "credits_total": 125,
+        "credits_spent": 113,
+        "credits_remaining": 12,
+        "purchases": [
+          {
+            "name": "Spiked Sledgehammer (Maul)",
+            "credits": 10,
+            "qty": 1
+          },
+          {
+            "name": "Food Blocks (Rations)",
+            "credits": 15,
+            "qty": 30,
+            "note": "30 days @ 5 sp"
+          },
+          {
+            "name": "Rope (50 ft hempen)",
+            "credits": 1,
+            "qty": 1
+          },
+          {
+            "name": "Pencil & Paper (writing kit)",
+            "credits": 1,
+            "qty": 1
+          },
+          {
+            "name": "Reinforced Absorbing Gloves (Club)",
+            "credits": 2,
+            "qty": 1
+          },
+          {
+            "name": "Chain (10 ft)",
+            "credits": 5,
+            "qty": 1
+          },
+          {
+            "name": "Light Crossbow + 20 Bolts",
+            "credits": 26,
+            "qty": 1,
+            "note": "crossbow 25 + bolts 1"
+          },
+          {
+            "name": "Grappling Hook",
+            "credits": 2,
+            "qty": 1
+          },
+          {
+            "name": "Torches",
+            "credits": 0,
+            "qty": 2,
+            "note": "1 cp each; rounds to 0 credits"
+          },
+          {
+            "name": "Scale Mail (steel)",
+            "credits": 50,
+            "qty": 1,
+            "ac": "14 + Dex (max 2)",
+            "note": "Disadvantage on Stealth; medium armor; steel"
+          }
+        ],
+        "pending_cart": null,
+        "note": "Cash both. Restart ~1:55 CT. Sealed ~2:00 CT at 112 spent / 13 left (steel Scale Mail). | ~15:06 CT: 1 credit to Proctor Bell hint (fed by Horn via trade).",
+        "updated": "2026-10-04T15:06-05:00",
+        "kit_complete": true,
+        "pending_food": null
+      },
+      "questionnaire": {
+        "status": "complete",
+        "current": null,
+        "answers": {
+          "Q1": "Sledgehammer",
+          "Q2": "Chewing tobacco",
+          "Q3": "Wasps",
+          "Q4": "Head of the trailer park association; drinks Natty Light",
+          "Q5": "Rockin' the Beer Gut song",
+          "Q6": "Hit them as many times as possible till they go down, and maybe continue hitting if they move"
+        },
+        "started": "2026-10-04T13:28-05:00",
+        "updated": "2026-10-04T13:39-05:00",
+        "note": "Core six + bonus1 complete ~1:39 PM CT. Bonus1: Dodge is better than Ford.",
+        "bonus": {
+          "asked": [
+            "What's a hill you would die on? Literally, in this case."
+          ],
+          "answers": {
+            "bonus1": "Dodge is better than Ford."
+          },
+          "pending": 0
+        }
+      },
+      "kit_turn": "done",
+      "crawler_name": "Bone Wifebeater",
+      "handle_note": "Was Go Meaner ~2:26 CT; unlocked ~2:28 CT for meaner pick. ~2:29 CT Moses asked AI to 1d3 among offered options (Bone Wifebeater / Gut Sledge / Trailer Executer); roll 1 \u2192 locked Bone Wifebeater. Player stays Trailer Park Moses. | ~2026-10-04T14:32-05:00: named signature attack 'You Better Listen' (said track; Hornn clarified attack). | ~2026-10-04T14:34-05:00: attack renamed to 'You Better Fucking Listen'; Standing Orders locked (trigger that line \u2192 nearest enemy, hammer to goo). | ~2026-10-04T14:35-05:00: Standing Reactions locked \u2014 Opportunity Attacks on.",
+      "signature_attack": "You Better Fucking Listen",
+      "standing_orders": "When I say 'You Better Fucking Listen', go to the nearest thing we're fighting and hammer it until it's goo.",
+      "standing_reactions": "Opportunity Attacks: on"
+    }
+  },
+  "next": "Open table: haul Horn / explore / open Bronze boxes. Vent loot 4 cr to Bone. Buddy System + Down But Not Out awarded.",
+  "table_votes": {
+    "f1_reprieve": {
+      "Hornn": "ON",
+      "Trailer Park Moses": "ON",
+      "updated": "2026-10-04T14:44-05:00"
+    }
+  },
+  "combat": {
+    "zone": "2-vent-row",
+    "round": 3,
+    "enemies": [
+      {
+        "id": "VR1",
+        "name": "Vent Rat",
+        "hp": 0,
+        "max_hp": 7,
+        "note": "torch face + Fuck Em (8 force); dead",
+        "dead": true
+      },
+      {
+        "id": "VR2",
+        "name": "Vent Rat",
+        "hp": 0,
+        "max_hp": 7,
+        "dead": true,
+        "note": "You Better Fucking Listen maul 7; dead"
+      },
+      {
+        "id": "VR3",
+        "name": "Vent Rat",
+        "hp": 0,
+        "max_hp": 7,
+        "note": "Ignited; 2/7 after start-of-turn 1 fire",
+        "conditions": [
+          "Ignited"
+        ],
+        "dead": true
+      }
+    ],
+    "init_order": [
+      {
+        "name": "Vent Rats",
+        "init": 20
+      },
+      {
+        "name": "Horn",
+        "init": 6
+      },
+      {
+        "name": "Bone Wifebeater",
+        "init": 2
+      }
+    ],
+    "light": "torch dropped at Horn feet bright20/dim20 (prone)",
+    "rats_hate_light": "Disadv on attacks in bright light; cancels Pack Tactics Adv -> straight",
+    "whose_turn": null,
+    "pending": "cleared; open table",
+    "horn_turn": {
+      "action": "Fuck Em (Magic Missile L1)",
+      "target": "VR1",
+      "darts": [
+        2,
+        4,
+        2
+      ],
+      "total": 8,
+      "slot": "1st used 1/2"
+    },
+    "bone_turn": {
+      "action": "Grab VR2 by tail and slam into VR3",
+      "result": "fail",
+      "athletics": 11,
+      "rat_acrobatics": 21,
+      "note": "Action spent; no damage; bonus action still open",
+      "bonus": "saved / unused; turn ended"
+    },
+    "rats_r2": {
+      "VR2": {
+        "target": "Bone Wifebeater",
+        "attack": 6,
+        "result": "miss",
+        "ac": 15
+      },
+      "VR3": {
+        "target": "Horn",
+        "attack": 20,
+        "result": "hit",
+        "damage": 5,
+        "horn_hp_after": "3/8"
+      }
+    },
+    "horn_turn_r2": {
+      "action": "Pick up floor torch (free) + melee torch poke VR3",
+      "attack": 19,
+      "ac": 12,
+      "result": "hit",
+      "torch_dmg": 2,
+      "grease_flash": 2,
+      "total_fire": 4,
+      "vr3_hp_after": "3/7",
+      "condition": "VR3 Ignited (1d4 fire at start of turn until put out)",
+      "bonus_attempt": "Fuck Em split VR2+VR3 \u2014 DENIED (MM is Action; Action already spent on torch poke)",
+      "move": "Scramble behind Bone (no Disengage)",
+      "oa": {
+        "VR3": {
+          "attack": 6,
+          "result": "miss",
+          "ac": 11
+        },
+        "VR2": {
+          "attack": 20,
+          "result": "hit",
+          "damage": 4,
+          "horn_hp_after": "0/8 Unconscious Dying"
+        },
+        "note": "First OA popup tutorial; Horn dropped"
+      },
+      "end": "turn ended; down behind Bone"
+    },
+    "bone_turn_r2": {
+      "bonus": "Rage (yell NO)",
+      "action": "You Better Fucking Listen (Maul) vs VR2",
+      "attack": 12,
+      "ac": 12,
+      "result": "hit",
+      "damage": 7,
+      "vr2_hp_after": "0/7 dead",
+      "achievement": "You Better Fucking Listen + Bronze"
+    },
+    "rats_r3": {
+      "VR3": {
+        "ignited_dmg": 1,
+        "hp_after": "2/7",
+        "target": "Bone Wifebeater",
+        "attack": 13,
+        "result": "miss",
+        "ac": 15
+      }
+    },
+    "horn_turn_r3": {
+      "death_save": 7,
+      "result": "fail",
+      "fails": 1,
+      "successes": 0
+    },
+    "status": "cleared",
+    "bone_turn_r3": {
+      "action": "unarmed punt VR3",
+      "result": "hit kill",
+      "achievement": "Penalty Kick + Bronze",
+      "note": "combat over"
+    },
+    "stabilize": {
+      "who": "Bone Wifebeater",
+      "target": "Horn",
+      "tool": "Expired Office First-Aid Kit",
+      "uses_left": "9/10",
+      "result": "stabilized Unconscious 0 HP"
+    },
+    "loot_vents": {
+      "roller": "Bone Wifebeater",
+      "1d6": 2,
+      "credits": 4
+    }
+  }
+}

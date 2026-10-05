@@ -1,0 +1,91 @@
+{{SpoilH | 3}}
+{{Item
+ | title         = Cleaner Bot
+ | image         = Cleaner Bot by 1Estel1.png
+|imagecaption= Art by u/1Estel1, Reddit
+ | type          = Personal Space Upgrade
+ | keywords      = 
+ | effects       = Cleans Personal Space
+ | source        = Bopca
+ | buy           = 25,000 g
+}}
+
+{{Quote|You know, you take a lot of abuse. I'm sorry for that. If this works out with your friend in there, we'll be needing you to do the same thing. You're a goddamned hero, and if I don't get a chance to say it before we need you, I just want you to know that I appreciate it.|Carl, to the cleaner bot}}
+
+Cleaner Bots are a Personal Space upgrade that crawlers can purchase for 25,000 gold beginning on the Fourth Floor. Beyond simple housekeeping, the units are capable of far more than they first appear, and by Book 8 a single cleaner bot becomes the linchpin of a plan to smuggle crawlers out of the dungeon entirely.
+
+== Description ==
+
+Cleaner Bots are frisbee-shaped flying Roombas that hum as they buzz around, cleaning up whatever mess the Royal Court and its guests make of their Personal Space.[3|30] The unit installed in the Royal Court's personal space develops a distinct personality over the course of the crawl, expressing itself through an escalating vocabulary of beeps, trills, and shrieks ranging from mournful to furious, and it clearly keeps a running tally of grievances against the crawlers and pets who trash its domain.[4|5][4|13][6|11]
+{{Spoiler
+| book = 7
+| spoiler = 
+By Book 7, the strain is starting to show. Carl notes the bot "has been acting really stressed lately" after months of cleaning up after the Royal Court's guild hall full of NPCs and children, and he starts making a point of giving it breaks.[7|15] By Book 8, the toll goes beyond simple wear and tear: the Cleaner Bot upgrade quietly disappears from the personal space shop across the entire dungeon, officially due to "overwhelming demand." In truth, the crawler Herot has placed a standing purchase order to buy up every single cleaner bot that becomes available on the market, for reasons that only become clear once Carl's party works out what the units can actually be used for.[8|55]
+}}
+== Appearance ==
+
+The cleaner bot is a frisbee-shaped robot that can fly, similar to Mexx brand robots, though unlike a Mexx unit it cannot talk.[3|30] It generally stations itself in the top corner of whatever room it's cleaning.[7|3]
+{{Spoiler
+| book = 7
+| spoiler = 
+ A second unit acquired in Book 7, looted from a defeated Viceroy's surgical theater, is the same model but painted solid white, and is slightly smaller than the Royal Court's original bot.[7|68][8|11]
+}}
+== Operation ==
+
+Day to day, a cleaner bot vacuums up spills and debris, scrubs stains, dries wet surfaces, and douses small fires with a white foam retardant.[4|13] It also acts as a safety net for fragile items: when a living, injury-prone spellbook goes into a panicked fit on the kitchen counter, the bot swoops in unprompted, scoops the book up, and delivers it straight into Carl's hands rather than let it hurt itself.[7|40][8|7]
+{{Spoiler
+| book = 9
+| spoiler = 
+Its capabilities go well beyond tidying. In Book 8, the Royal Court's bot is seen firing what Carl describes as "a disintegration ray," zapping broken furniture into puffs of smoke and vaporizing it outright rather than merely sweeping it up, a trick Carl had never seen it use before.[8|10] When Carl's fan box inheritance from a deceased crawler buries the safe room under a mountain of junk, the bot is trusted to sort through the pile on its own judgment, vaporizing most of the garbage while setting aside a smaller stack of items that might actually be useful.[8|10][8|25]
+
+A cleaner bot can itself be looted, stored in a crawler's own inventory, and later reset and reassigned to a new owner. Carl discovers this by accident when he grabs the white bot cleaning Viceroy Architect Houston's surgical theater mid-battle and feels the familiar haptic buzz indicating it can be pocketed.[7|68] Once he gives it to Mordecai, a press of a hidden control resets the unit, wiping whatever settings its previous owner had assigned it.[8|11]
+
+The discovery that makes the units so valuable, however, is what Mordecai calls their "weight-based utility inventory system." Certain items, most notably a crawler stuck inside an XL pet carrier, normally cannot be placed into a crawler's personal inventory, but a cleaner bot can hold them anyway.[8|61] Combined with the fact that cleaner bots are themselves ordinary marketplace items that can be sold, and that Herot will automatically buy any cleaner bot that goes up for sale, this becomes the basis of an escape plan: a crawler is knocked into an XL pet carrier, the carrier is swallowed by a cleaner bot before it breaks, and the loaded bot is then sold on the marketplace. Herot's standing order snaps it up and empties it inside the Pineapple Cabaret, a holding area outside the dungeon's normal playing field, effectively "losing" the crawler from the game rather than killing them.[8|61] Louis compares the whole scheme to "trading a Pokémon between devices."[8|61] There are real limits to the trick: a sold cleaner bot cannot be listed for sale again by its new owner for thirty days, and each unit can only carry so many people at once, especially if it's still holding onto other loot.[8|61]
+}}
+== Story ==
+
+=== Book 3 ===
+
+On the Fourth Floor, Katia Grim purchases a Cleaner Bot for the Royal Palace of Princess Donut after the System AI forcibly ejects gallons of blood from her inventory, leaving the whole common room coated in gore.[3|30]
+
+=== Books 4 to 6 ===
+{{Spoiler
+| book = 4,5,6
+| spoiler = 
+Over the following floors, the cleaner bot becomes a recurring fixture of life in the Royal Court's personal space and, later, their guild hall, forever chasing after messes made by Mongo, the human guests, the many NPC and pet children the Royal Court takes in, and Carl's own crafting-room mishaps. It survives Mongo biting its head clean off during one incident, though the body catches fire and has to be put out.[4|13] It refuses to clean the crafting tables, the one part of the base too sticky and scorched even for it to touch.[5|32]
+}}
+
+=== Book 7 ===
+{{Spoiler
+| book = 7
+| spoiler = 
+Carl begins to worry about the bot's wellbeing, noting it seems increasingly stressed from the nonstop workload of the guild hall, and starts trying to spare it extra abuse where he can.[7|15]
+
+During the assault on Architect Houston's stronghold, Carl and Dong break into Houston's surgical theater and find a second cleaner bot, the same model as their own but painted solid white, calmly cleaning blood off the floor amid the horrors of the room. In the chaos of the fight that follows, Carl grabs the bot to get it out of the way and is surprised to find he can stuff it directly into his inventory.[7|68]
+}}
+=== Book 8 ===
+{{Spoiler
+| book = 8
+| spoiler = 
+Back at the guild hall, Carl hands the looted white bot to Mordecai, who identifies it as an old model and resets it for their own use, noting it still has Houston's blood on its casing.[8|11] The party's original bot reacts to the newcomer with a "confused beep."[8|11]
+
+Around this time, crawlers dungeon-wide start reporting that the Cleaner Bot personal space upgrade is sold out everywhere. Rosetta and Mordecai eventually trace the shortage to a standing purchase order held by Herot, who is silently buying up every cleaner bot that becomes available.[8|55] Working from that discovery, the party devises what they call "the cleaner bot plan": using a cleaner bot's ability to store an XL pet carrier holding a crawler, then selling the loaded bot so Herot's standing order automatically ships it (and its stowaway) into the Pineapple Cabaret, a safe holding area outside the dungeon's active playing field.[8|55][8|61]
+
+The party formally names their two cleaner bots for the first time around this point: the original unit becomes "Ezra Fitz," and the looted white unit becomes "Suckira."[8|61] The plan's first live test is Li Na, who is dying from an incurable poison debuff and volunteers to be the first one sent through. She is knocked into a pet carrier, the carrier is swallowed by Suckira, and Suckira is sold on the market. Herot's standing order buys it within moments, and Li Na is confirmed to have made it safely into the Pineapple Cabaret.[8|61]
+
+With the method proven, the party scales the plan up dramatically. They track down several more cleaner bots from other crawlers willing to help, including one belonging to a reluctant Prepotente.[8|67] In the end, 227 crawlers are funneled out of the dungeon through multiple cleaner bots sold to Herot in quick succession. The Royal Court's own bot manages to fit forty people, while a bot belonging to the crawler Bobby Montague fits 105 on its own. Every cleaner bot involved is bought up by Herot's order almost the instant it's listed.[8|73] Among those evacuated this way is Daniel Bautista, whose fate afterward remains unknown even to his own attorneys back on Earth, since nothing from inside the Pineapple Cabaret is visible to the outside once someone is sent through.[8|Interlude]
+
+An alternative extraction method involving the dungeon's broken "Nothing" mechanic is considered around the same time, and by Carl and Rosetta's account, it would have been safer and moved more people at once, but the party ultimately goes with the cleaner bot plan instead.[8|79]
+}}
+== Trivia ==
+{{Spoiler
+| book = 8
+| spoiler = 
+* The Royal Court's two cleaner bots are named "Ezra Fitz" (the original unit) and "Suckira" (the white unit looted from Architect Houston). after the robot vacuum Louis's mother owned in Florida, but lost the naming rights on a coin flip she suspects Samantha rigged. Donut had lobbied to name one of them "[https://gilmoregirls.fandom.com/wiki/Anna_Nardini Anna Nardini]" from Gilmore Girls.  [8|61]
+* Louis compares the cleaner-bot smuggling method to "trading a Pokémon between devices."[8|61]
+}}
+== References ==
+
+{{Navbox Items}}
+{{Navbox Char}}
+

@@ -1,0 +1,34 @@
+{{SpoilH|5}}
+{{Quote|They were trying to get you to pick up the artifact while it was under administrative hold. It would've deleted the item.|Quasar}}
+{{Status Effects
+|name = Administrative Hold
+|type = Debuff / administrative status
+|effect = Locks an item or crawler in place pending review or dispute resolution
+|first appearance = Book 5, Chapter 3
+}}
+
+Administrative Hold is an administrative status that can be placed on either an item or a crawler, freezing it in place or suspending the holder pending some kind of review or dispute. It is treated by the System AI as one of several debuffs that can be attempted against a crawler and blocked.
+
+== Description ==
+
+Administrative Hold has two known applications in the text. Placed on an item, it locks the item so that touching it while the hold is active will delete it outright.[5|3] Placed on a crawler, it appears alongside effects like Peace-Bonded, Frozen, and Slowed as one of a list of administrative actions and debuffs that can be attempted against a target, and, separately, it is used during Faction Wars to suspend players pending the outcome of a cheating investigation.[5|Epilogue][7|68]
+
+== Story ==
+
+=== Book 5 ===
+{{Spoiler
+| book = 5
+| spoiler =
+After Carl narrowly avoids handing over the gate pieces to Orren and the Valtay liaisons, his newly acquired lawyer, Quasar, reveals the aliens had been trying to trick him into touching the artifact while it was under administrative hold, which would have deleted it.[5|3]
+
+Later, moments after Carl, Donut, and Prepotente arrive in the Pole Position Chamber on the Seventh Floor, a rapid volley of debuffs and administrative actions is thrown at them, ending with a teleport attempt and an Administrative Hold; like the rest, it is immediately negated by AI resolution.
+}}
+
+=== Book 7 ===
+{{Spoiler
+| book = 7
+| spoiler =
+During the endgame of Faction Wars, a quorum of warlords investigates accusations of cheating leveled against several players. Once the quorum determines no cheating occurred, a system-wide Warlord Message announces that any players who had been placed under an administrative hold during the investigation have been released.[7|68]
+}}
+== References ==
+

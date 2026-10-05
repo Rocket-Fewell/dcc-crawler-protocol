@@ -1,0 +1,15 @@
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Debuff
+  | causes = Spells, Weapons
+  | effect = Target is unable to move
+  | duration = 
+}}Petrified is a timed status condition that can be caused by spells or magical weapons.
+
+When a creature is petrified, they are unable to move any part of their body except for their eyes.  A petrified Crawler can still access the Chat feature of their interface.
+
+==References==
+

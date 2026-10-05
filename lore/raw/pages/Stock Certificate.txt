@@ -1,0 +1,25 @@
+{{SpoilH | 4}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is an item
+
+== AI Description ==
+
+Stock Certificate.
+The bearer of this instrument now holds one share of common stock in the Sigmund Textiles Foundry, a publicly-traded company based in the Gun-ya system within the Skull Empire and traded via the I.R.F.
+Last recorded value per share: 10.422 credits. [4|28]
+
+==References==
+
+{{Navbox Items}}

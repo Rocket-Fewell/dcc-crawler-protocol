@@ -1,0 +1,16 @@
+{{Item
+|type=Consumable
+|effects=+10 EXP
+|source=Safe Rooms
+|image=Experience Cookie.jpg
+|imagecaption=Official art by Erik Wilson [1|19]
+}}{{Quote | quote = Limited services at this location. Take an experience cookie. One per Crawler per day. You deserve it.}}
+Experience Cookies look like chocolate chip cookie and taste stale but grant +10 experience (shared among party members) when consumed.  A member of your party would get 0.2 of that experience. The experience notification appears above the crawler's head with an audible ping.[1|19]
+
+These cookies may be found in limited-service Safe Rooms on the First Floor, where  crawlers are limited to one per day. A crawler who attempts to take more will phase through the plate.  
+
+Experience cookies provide 20% of the experience of killing a single level 2  goblin, so get out there and kill, kill, kill.[1|19]
+
+==References==
+
+{{Navbox Items}}

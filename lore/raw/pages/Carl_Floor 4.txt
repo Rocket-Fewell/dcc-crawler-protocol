@@ -1,0 +1,392 @@
+{{SpoilH|3}}
+{{Quote|A strength over 40 is good for the fourth floor. It's not anything to write home about, but you've already made up the ground you lost when you picked the Primal race.|Mordecai[3|2]}}
+This page documents Carl's gear, levels, stats, and skills as he progresses through the Fourth Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable"
+!TIME
+!NOTES
+!LVL
+!STR
+!INT
+!CON
+!DEX
+!CHA
+|-
+|10 d
+|Start of floor; 24 unallocated stat points[2|Epilogue][3|1]
+|27
+|30/33f
+|10
+|24
+|16
+|25
+|-
+|
+|Donut's Mascot: temporary 5% DEX and CON bonus when Mongo damages an enemy[3|1]
+|27
+|30/33f
+|10
+|24
+|16
+|25
+|-
+|
+|w/ Enchanted Necklace of the Haute Bourgeoisie +5 DEXi[3|2]
+|27
+|30/33f
+|10
+|24
+|21i
+|25
+|-
+|
+|Allocates 10 STR, 9 CON, 5 INT (stated totals)[3|2]
+|27
+|41/44f
+|15
+|34
+|23
+|25
+|-
+|
+|Good Rest bonus and shower (+10% each to all stats)*[3|2]
+|27
+|41/49*/52f*
+|15/18*
+|34/40*
+|23/27*
+|25/30*
+|-
+|8 d 18h
+|Receives the Dungeon Anarchist's Cookbook[3|7]
+|27
+|41/44f
+|15
+|34
+|23
+|25
+|-
+|
+|Juiced by Imani (+10% STR, stacked with rest and shower)*[3|9]
+|27
+|41/53*/56f*
+|15
+|34
+|23
+|25
+|-
+|
+|Toe ring upgraded (+10 STR, up from +3)c[3|9]
+|27
+|48c/51cf
+|15
+|34
+|23
+|25
+|-
+|
+|Level up[3|11]
+|29
+|48/51f
+|15
+|34
+|23
+|25
+|-
+|6 d 23h
+|Levels up[3|14]
+|32
+|48/51f
+|15
+|34
+|23
+|25
+|-
+|
+|Trollskin Shirt upgraded (+3 DEX)b[3|15]
+|32
+|48/51f
+|15
+|34
+|26b
+|25
+|-
+|
+|Allocates 6 STR, 3 CON[3|15]
+|32
+|54/57f
+|15
+|37
+|26
+|25
+|-
+|
+|w/ Night Wyrm's Ring (+5% to all stats)j[3|19]
+|32
+|54/56j/59fj
+|15
+|37/38j
+|26/27j
+|25/26j
+|-
+|3 d 3h
+|Level stated on leaderboard[3|25]
+|34
+|54/56j/59fj
+|15
+|37/38j
+|26/27j
+|25/26j
+|-
+|~2 d 20h
+|Level up[3|27]
+|35
+|54/56j/59fj
+|15
+|37/38j
+|26/27j
+|25/26j
+|-
+|
+|Removes the Night Wyrm's ringj[3|30]
+|35
+|54/57f
+|15
+|37
+|26
+|25
+|-
+| colspan="8" |From this floor on, the text gives stats as totals including gear, as does this table; "/" values show a further bonus. Superscript letters match the gear key in the Ending Gear table: b Trollskin Shirt, c Toe Ring of the Splatter Skunk, f War Gauntlet (STR bonus in fist mode only), i Necklace of the Haute Bourgeoisie, j Night Wyrm's Ring. * Temporary. Percentage rows are calculated and rounded down. The Ch 2 stated totals exceed the listed changes by 1 STR, 1 CON, and 2 DEX. Levels 28 and 33 are not stated.
+|}
+
+==Gear==
+===Starting Gear===
+{| class="dccTable mw-collapsible mw-collapsed"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb[1|6]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]Xistera (right wrist and forearm)[2|17]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]Two rings of +2 STRh[2|6]
+|-
+|Legs
+|Enchanted BigBoi Boxersg (upgraded once)[1|35][2|13]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe)[1|6]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]
+|}
+
+===Gear Gained===
+For becoming magistrate of a Skyfowl settlement, Carl receives a Platinum Tyrant's Box containing 10,000 gold and the Enchanted Necklace of the Haute Bourgeoisie, which grants +5 DEX and the Talon Strike Skill. A Bronze Boss Box contains the tome for the Bang Bro Spell.[3|2] The party conjoins their personal spaces into the Royal Palace of Princess Donut, adding a bed that grants the Good Rest bonus and a shower that boosts stats and lowers detectability.[3|2][3|3]
+
+A Platinum fan box's Prize Carousel, hosted by Chaco the Bard, gives Carl the 24th edition of The Dungeon Anarchist's Cookbook.[3|7][3|8] A Scroll of Upgrade won at the Desperado Club raises his toe ring to +10 STR and +5 Powerful Strike.[3|9] A Bronze Benefactor Box from his sponsor, the Valtay Corporation, contains a Neural Enhancer that lets him identify and analyze subspace portals.[3|13] A second Scroll of Upgrade adds +3 DEX to his Trollskin Shirt.[3|15]
+
+Frank Q gives Carl the Enchanted Night Wyrm's Ring of Divine Suffering, which grants +5% to all stats and the Marked for Death Skill.[3|19] Katia gives him her Enchanted Auto Buckler of the Peach Pit, a left-wrist bracer that forms a small shield on command.[3|29] He removes the ring after Mordecai warns that it makes its wearer a target.[3|30]
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]Necklace of the Haute Bourgeoisiei[3|2]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb (upgraded once)[1|6][3|15]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]Xistera (right wrist and forearm)[2|17]Enchanted Auto Buckler of the Peach Pit (left wrist; from Katia)[3|29]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]Two rings of +2 STRh[2|6]
+|-
+|Legs
+|Enchanted BigBoi Boxersg (upgraded once)[1|35][2|13]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe; upgraded once)[1|6][3|9]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Personal Space
+|Royal Palace of Princess Donut (shared)[3|3]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]The Dungeon Anarchist's Cookbook (24th edition)[3|8]Night Wyrm's Ring of Divine Sufferingj (unequipped)[3|30]
+|}
+
+==Skills==
+{| class="sortable dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Marked for Death
+|Acquired[3|19]
+|Lost[3|30]
+|From the Night Wyrm's Ringj. Grants a permanent stat point when a marked crawler dies; the user cannot heal while a mark is active.[3|19]
+|-
+|Powerful Strike Skill
+|?
+|7/13cf[3|9]
+|Includes toe ring +5c and gauntlet +1f.[3|9]
+|-
+|Talon Strike Skill
+|5i[3|2]
+|
+|From the necklacei. Turns a bare-foot kick into a slashing attack with a 2% chance to cast the instakill spell Eviscerate; five-minute cooldown. Permanently active at level 15.[3|2]
+|}
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Bang Bro
+|Acquired[3|2]
+|
+|Costs 5 mana. Adds fire and electrical damage to an equipped item for 5 minutes plus 1 minute per spell level; 5-minute cooldown. May inflict Burn and Shock.[3|2]
+|-
+|Fear
+|Acquired[2|2]
+|
+|
+|-
+|Heal
+|1[1|4]
+|
+|
+|-
+|Protective Shell
+|15[1|35]
+|15
+|From Enchanted BigBoi Boxersg; 30-hour cooldown.[1|35]
+|-
+|Wisp Armor
+|Acquired[2|11]
+|
+|
+|}
+
+==Passive Effects==
+*Attacks Gain
+**2% chance to stun target when struck with Gauntlet.[1|25]
+**10% chance to stun on a solid blow (Breadbasket, from Iron Punch).[2|14]
+**1.5% chance to disarm an attacker that strikes the buckler; the weapon may drop, break, or land in his inventory (Shatter, from the Peach Pit buckler).[3|29]
+**+15% barefoot attack damage while active (from Pedicure Kit).[1|30]
+**+100% damage to attacks originating below the waist (from Freeballing).[2|13]
+**-25% damage when using bladed weapons (from Compensated Anarchist).[2|2]
+*Spellcasting
+**+25% mana cost for damage-dealing spells (from Compensated Anarchist).[2|2]
+*Training
+**+5% training speed for trapmaking and bomb-making skills (from Compensated Anarchist).[2|2]
+**+20% training speed for skills originating below the waist (from Freeballing).[2|13]
+**+10% experience and skill training under Good Rest (from the Royal Palace bed).[3|2]
+*All Equipped Armor gains:
+**Anti-Piercing Resistance (from Nightgaunt Cloak).[1|6]
+**10% Damage Reflect (from Spiked Kneepads).[1|12]
+*Negated Effects/Attacks:
+**Melee-based damage debuffs such as Stun, Knockback, Disarm, and Out-of-Breath (from Trollskin Shirt).[1|6]
+**Momentum-based attacks (from Kneepads).[1|12]
+**Feet cannot be broken while active (from Pedicure Kit).[1|30]
+*Resistant to:
+**Ice-based attacks (from Nightgaunt Cloak).[1|6]
+**Poison attacks (from Nightgaunt Cloak).[1|6]
+*Weak to:
+**Natural goblin enemies, such as fairy-class creatures, deal 20% more damage (from Goblin Pass Tattoo).[1|6]
+*Memberships & Allies
+**Access to the Desperado Club; prevents obtaining a Vanquisher Pass (from Desperado Pass Tattoo).[1|19]
+**Access to the Naughty Boys Employment Agency (from Compensated Anarchist).[2|2]
+**No automatic hostility from Goblins and free passage through goblin territory (from Goblin Pass).[1|6]
+**Sponsored by the Valtay Corporation.[3|11]
+*Restrictions
+**Only one layer of armor or clothing may cover the crotch (from Freeballing).[2|13]
+**Cannot heal while a Marked for Death mark is active (Night Wyrm's Ring, while worn).[3|19]
+*Other
+**Traps activated by footsteps prompt an alarm and delay 5 seconds before triggering while active (from Pedicure Kit).[1|30]
+**Lowered detectability (from the Royal Palace shower).[3|2]
+**Can identify and analyze subspace portals (from the Valtay Neural Enhancer).[3|13]
+
+==Ratings==
+{| class="dccProgTable"
+!TIME
+!LEADERBOARD
+!VIEWS
+!FOLLOWERS
+!FAVORITES
+!SPONSOR
+|-
+|10 d[3|1]
+|6
+|43.1 Quadrillion
+|677 Trillion
+|158.1 Trillion
+|n/a
+|-
+|8 d 18h[3|7]
+|6
+|50.2 Quadrillion
+|890 Trillion
+|199.7 Trillion
+|n/a
+|-
+|6 d 23h[3|14]
+|6
+|123.8 Quadrillion
+|1.5 Quadrillion
+|372.4 Trillion
+|Valtay Corporation[3|11]
+|-
+|3 d 3h[3|25]
+|3
+|974.1 Quadrillion
+|5.2 Quadrillion
+|1.9 Quadrillion
+|Valtay Corporation
+|}
+
+Carl's bounty is 100,000 gold for most of the floor.[3|1][3|7][3|14]
+
+==References==
+
+{{DEFAULTSORT:Carl/Floor_04}}
+

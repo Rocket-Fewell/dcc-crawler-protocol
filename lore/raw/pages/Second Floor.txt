@@ -1,0 +1,252 @@
+{{Dungeon Floor
+|title1=
+|image1=Second Floor.webp
+|caption-image1=Art by @MeaLusus, Instagram
+|preceded_by=First Floor
+|followed_by=Third Floor
+|theme=Tutorial
+|start_date=* Opens: Sat Jan 07, approx. 8:30 PM PST
+* Countdown Starts: Sun Jan 08, approx. 2:30 AM PST
+|end_date=Sat Jan 14, approx. 2:30 AM PST
+|duration=6 Days
+|exits=37,500
+|crawlers=1,292,526 (at start)
+|crawler_levels=1–13
+|mob_levels=2–8 (standard); 93 (Rage Elemental penalty)
+|locations=* Tutorial Guild Halls
+* Safe Rooms
+|quests=
+|npcs=ADMINS
+* Zev
+* Mukta
+LOCATION MANAGERS
+* Damien[1|36]
+GAME GUIDES
+* Mordecai
+* Mistress Tiatha[1|22]
+BOPCA PROTECTORS
+* Qwist[1|39]
+NAMED MOBS
+* Caroline (a Laminak)[1|33]
+* Max (a Laminak)[1|33]
+|mobs=* Brindle Grubs (Janitor Mob)
+* Brindled Vespas
+* Clurichaun
+* Danger Dingoes
+* Kobold Riders
+* Laminak (Fairies)
+* Mind Horrors
+* Rage Elemental
+* Rot Stickers
+* Satan's Lil' Hedgehogs
+* Shambling Acid Impalers
+|bosses=* Krakaren Clone (Second Floor)s (x3+)
+* Blimp Boss (Meadow Lark)[1|37]
+* Ralph
+}}
+{{Quote|Welcome to the second floor, bitches.|Wait, Bosses Can Leave Their Rooms? Achievement[1|33]}}
+
+The Second Floor is the final Tutorial level of the Dungeon and, like the First Floor above it, consists of a sprawling, grid-like maze of cinderblock passages divided into unconnected regional sections — meaning a crawler originating in, say, China cannot reach a crawler from the USA while still on this floor.[1|4][1|30] It is best remembered for its unusually short, six-day timer, slashed to the legal minimum by the Borant Corporation.[1|31]
+
+==Introductory Announcement==
+The fourth episode of Dungeon Crawler World: Earth premiers just as the First Floor collapses and the countdown timer begins ticking on the Second Floor. Cascadia's announcement follows the episode, meaning it takes place approximately seven hours after the Second Floor opened to crawlers. The announcement mostly details Borant Corporation's desperate cash-grab for Sponsors, but includes an important warning against urinating in the halls.[1|31]
+Hello crawlers.
+Welcome to the second floor. Congratulations to all of you. We have just under 1.3 million crawlers still in the game. That number is slightly lower than our projections, so we are speeding up the second floor timer to the minimum legally allowed by the rules. You have six days to find a staircase down. Once again, we urge you all to wait until the last possible moment to descend.
+As soon as this announcement ends, you will find that follows and favorites will be turned on for our viewers. The numbers will populate slowly on your interface, so don't be too disappointed if you don't see anything just yet.
+We have improved how patronage works this season. This is a major change, so please pay attention.
+All crawlers are now limited to three patrons, and all three spots will be up for auction for one day immediately upon the induction of the fourth floor, then fifth, then sixth floors respectively. Your benefactors may so choose to transfer their patronage to other parties at their own discretion starting on the seventh floor.
+All patronage spots will become available at a bid of one credit, meaning this season virtually all living crawlers will have patrons.
+But, be warned. Any bids the patron pays above the standard patronage fee will be reflected in loot box discounts for that patron. Any funds below the fee will be reflected in additional costs to that patron for loot boxes. In other words, the more your patron pays for you, the more and higher-quality Benefactor Boxes you may receive. The higher your social numbers, the better your chances at receiving the best loot. Your tutorial guide should have more details and will help you if you have any additional questions.
+Finally, we must say we are disappointed in the disrespect we are being shown regarding the bathrooms. As of this moment, if any human-born crawler intentionally urinates or defecates anywhere outside a designated bathroom area, they will be immediately and swiftly penalized in the form of a Rage Elemental plucked from the thirteenth floor. This elemental will kill them and everyone in their party before they can get their pants back up.
+That's it for tonight. Have fun out there, and remember to kill, kill, kill![1|31]
+
+==Description==
+The Second Floor closely mirrors the maze-like layout of the First Floor, a giant grid of wide thoroughfares and twisting tunnels, though the main arteries here are narrower.[1|30][1|32] The ground is cracked, uneven white concrete strewn with sharp little rocks and splinters of pavement, and the walls — built from magical cinderblock that cracks on impact but never fully breaks — are coated in places with an orange-tinted green lichen.[1|30][1|32]
+
+Because far fewer Crawlers survived the First Floor than the Borant Corporation had projected — roughly 1.3 million of the previous two million — the collapse timer was cut to the Syndicate legal minimum of six days, rather than the ten that guides like Mordecai had anticipated.[1|31][1|36]
+
+==Layout==
+
+Like the First Floor, the Second Floor is a network of wide thoroughfares and curving tunnels organized in a giant grid.[1|30][1|32]
+
+===Restrooms===
+Bathroom doors — salvaged from buildings around the world and still bearing their original men/women symbols or handwritten signs — appear roughly every 0.25 mile (0.4 km). The mismatched doors are actually portals that always open onto the same single stall assigned to each crawler, with one complimentary roll of toilet paper per floor.[1|8][1|14] Now that Syndicate citizens can access the cameras, the stalls are the only place a crawler is shielded from watching eyes.[1|4]
+
+===Safe Rooms===
+Safe Rooms appear every few miles and are visible from afar on the minimap. Some are full-service dining areas staffed by a Bopca Protector, while others are unstaffed and offer no food at all.[1|9][1|30][1|39] Every safe room provides either limited-capacity public sleeping space (usually dusty cots) or private rooms, free to use or rent on this floor.[1|9][1|30] As on the first floor, the rooms appear lifted whole from Earth's surface, taking forms such as a French storm shelter or a converted industrial kitchen.[1|30][1|47]
+
+Beginning on this floor, safe rooms also include a mailbox. A crawler who is not subscribed to the Dungeon Book of the Floor Club (or a similar organization) and tries to open it receives the error Why would someone send you mail?[1|30]
+
+As of the four-day, 17-hour mark, any crawler still inside a safe room one hour before level collapse is teleported just outside it — a measure prompted by the many crawlers who chose to remain, party, and die in First Floor safe rooms. A second countdown, Time to Safe Room Closure, now appears inside.[1|39]
+
+:Read More: Safe Rooms
+
+===Stairwells===
+Unlike on the First Floor, all 37,500 stairwells were in place the moment the Second Floor opened.[1|14][1|30] Stairwells sit inside every Borough Boss and City Boss chamber, while the rest are "randomly distributed" across the level.[1|22] A crawler who descends with more than six hours left on the timer is held in stasis until collapse; descending with six hours or less grants a head start on the Third Floor and its race/class selection.[1|14][1|22]
+
+===Tutorial Guild Halls===
+Tutorial Guild Halls liberally populate the dungeon's first three floors. Crawlers must complete the Tutorial to unlock the full Heads-Up Display (HUD) and Crawler Menus, including Inventory and Loot Boxes.[1|4] Once trained, a crawler is registered to that guildmaster as their Game Guide and is automatically portaled back to that guide's room whenever they enter another hall.[1|8]
+
+:Read More: Crawler Mechanics • Heads-Up Display (HUD) • Tutorial
+
+==Mechanics==
+The floor's opening announcement, delivered by Cascadia alongside an episode of Dungeon Crawler World: Earth, introduced several floor-wide changes.[1|31]
+
+===Ratings & Patronage===
+The Second Floor is where the intergalactic audience economy switches on in earnest. Once the opening announcement ends, viewer follows and favorites activate and crawlers' rating numbers begin to populate — though viewers still cannot see Game Guides, who are visible only to those with press credentials.[1|31][1|36] The announcement also unveiled a revised patronage system: every crawler is now capped at three patrons, with all three spots auctioned beginning on the fourth, fifth, and sixth floors. Bids open at a single credit, so virtually every living crawler ends up with a patron, and the more a patron overpays, the better the loot-box discounts and Benefactor Boxes their crawler receives.[1|31] Crawlers who draw enough rating attention or interview requests may be enrolled in Borant Corporation's "Crawler Assisted Outreach Program" and assigned a PR agent.[1|36]
+
+===Bathroom Penalty===
+Citing repeated "disrespect" toward the dungeon's restrooms, the opening announcement introduced a brutal new rule: any human-born crawler who intentionally relieves themselves outside a designated bathroom is penalized with a Level 93 Rage Elemental plucked from the thirteenth floor, a monster meant to kill the offender and their entire party.[1|31] The penalty applies only to humans; non-human pets such as Mongo can relieve themselves without consequence.[1|47] The rule was lifted upon the floor's collapse.[1|39]
+
+==Mobs & Bosses==
+
+Where the First Floor threw odd, self-contained mobs and stories at crawlers seemingly at random, several Second Floor mobs and bosses belong to deliberate, overarching set-ups. The most prominent is the Rev-Up storyline — a parody of multi-level-marketing moonshine sales run by the floor's Krakaren clones — which recurs in multiple locations across the level.[1|35][1|39] With no formal quests yet (those begin deeper in the dungeon), these stories play out shallowly or unfold on their own.
+
+{{Spoiler|book=3|spoiler=The Rev-Up storyline lays the groundwork for the Fourth Floor's overarching theme, which recasts the Krakaren as the Apothecary and reframes the moonshine operation as part of a broader metaphor about narcotics and influence spreading across the Syndicate.[3|30]}}
+
+===Mobs===
+Brindle Grubs are the floor's "janitor mob," part of the dungeon's waste-disposal system; they level up by consuming corpses.[1|30][1|37] Whenever a corpse is created with no grubs nearby, the system spawns anywhere from one to fifteen of them to consume it, up to a hard cap of 5,000 per quadrant. Destroying a corpse stops the grubs from leveling but does not stop new ones from being generated — a mechanic Carl and his allies discovered the hard way when a single boss battle buried them under thousands of the otherwise-harmless grubs.[1|37] Sufficiently leveled grubs cocoon into pupae before emerging as Brindled Vespas.[1|39]
+
+Other mobs include Mind Horrors, Danger Dingoes and their Kobold Riders, Clurichaun and Laminak Rev-Up consultants, and the Shambling Acid Impalers Mordecai warned would be everywhere.[1|4][1|30][1|32] The Level 93 Rage Elemental is summoned only as a bathroom-violation penalty.[1|31] The Satan's Lil' Hedgehogs mob originally seeded here was relocated to a deeper floor partway through, its armor-piercing quills deemed too strong.[1|39]
+
+===Bosses===
+On the Second Floor, bosses gain the ability to leave their chambers. The first time a crawler experiences this, they earn the Wait, Bosses Can Leave Their Rooms? Achievement.[1|33]
+
+==Loot==
+The dungeon's early floors are designed to flood crawlers with low-tier loot so that, by the time they reach the Third Floor and pick a Class and Race, they have a sense of what build suits them.[1|12] On the Second Floor, common Loot Boxes hold torches and bandages, while mobs drop skins, organs, and other crafting materials. Beginning on this floor, mobs also start dropping small numbers of gold coins.[1|4][1|32]
+
+:See Also: Looting Mechanics • Loot Boxes
+
+==Story==
+Carl and Donut arrive on the Second Floor shortly ahead of the Meadow Lark party — the elderly survivors and caretakers (Brandon, Chris, Imani, and Yolanda) they had helped on the First Floor.[1|30][1|31] As Carl and Donut grind through nearby quadrants and battle a Krakaren clone, their kills trigger a massive janitor-grub infestation that swarms the neighborhood and traps the group.[1|35][1|37]
+
+To clear a path to the stairs, Carl engineers the death of one of the supposedly unkillable Level 93 Rage Elementals. Using a wheeled bomb-launcher he dubs the "Mother of All Bombs," an oil slick, and Donut's Puddle Jumper spell, he lures the elemental into the stairwell hole, where the dungeon's own descent rules dissolve it — a kill that frustratingly awards no experience.[1|40] With the threat gone, the surviving Meadow Lark residents descend safely to the Third Floor.[1|41]
+
+Carl and Donut's media career accelerates here, too. After the admin Mukta overrides Zev's scheduling, the pair are forced onto Death Watch Extreme Dungeon Mayhem, a sadistic round-table program hosted by an orc called the Maestro.[1|41][1|42] Rather than play the host's cruel game, Carl hijacks the segment and goads the Maestro into rescuing four trapped crawlers — Li Jun, his sister Li Na, Zhang, and their manager — humiliating him on his own show.[1|42] The fallout — amplified by a viral, fabricated "snick" video — sends their view counts soaring.[1|44][1|47]
+
+Much of the rest of the floor is spent taming Mongo, a raptor-like dungeon pet, gradually breaking his automatic hostility until he bonds to Donut as her "Royal Steed."[1|47] In the floor's final hours, the long-missing Agatha reappears alive at the stairwell, and Carl realizes that the contents of her shopping cart — which he had absorbed into his inventory during an earlier boss fight — include illegal Valtay Corporation technology, seeding one of the series' lingering mysteries.[1|47]
+
+==Achievements==
+{| class="mw-collapsible fandom-table" style="width:100%"
+|+Achievements awarded on the Second Floor
+!Achievement
+!For
+!Reward
+|-
+|You Found Stairs Achievement
+|Finding a stairwell down
+|None
+|-
+|Wait, Bosses Can Leave Their Rooms Achievement
+|Encountering a boss that left its chamber before crawlers entered
+|None
+|-
+|Dungeonpreneur Achievement
+|Inventing a stackable weapon, device, or potion
+|One gold coin per kill made with the device by other crawlers, for the inventor's natural life (adjusted for exchange rates)
+|-
+|What Goes Up... Achievement
+|Being struck with and surviving Reverse Gravity
+|None
+|-
+|Like a Moth to the Flame Achievement
+|Damaging a mob more than 75 levels higher than yourself
+|Platinum Lucky Bastard Box
+|-
+|Grease Monkey Achievement
+|Building and deploying a wheeled device
+|Silver Mechanic's Box
+|-
+|You Call That a Trap Achievement
+|Injuring a mob with something purposely left lying around
+|Gold Sapper's Box
+|-
+|I'll Take the Ceramic Dalmatian Pat Achievement
+|Discovering a reward room
+|The reward room itself
+|-
+|Menagerie Achievement
+|Discovering a pet reward room
+|A key to open one cage
+|-
+|PETA Enthusiast Achievement
+|Removing the hostility of an aggravated, non-sapient enemy
+|None
+|-
+|}
+
+==Floor Timeline & Patch Notes==
+Approximate times are given in Pacific Standard Time (PST), or UTC-8. See here for the starting-time calculation.
+{| class="dccTable mw-collapsible"
+!COUNTDOWN
+!EVENTS
+|-
+|6 d 06 h Sat 01/07 8:30PM
+|Crawlers can begin exploring the Second Floor.
+|-
+|6 d 02 h Sun 01/08 12:30AM
+|Carl and Donut arrive on the Second Floor.[1|30]
+|-
+|6 d 00 h Sun 01/08 2:30AM
+|Remaining Crawlers: 1,292,526.[1|31] Second Floor countdown timer starts.[1|31]
+Dungeon Crawler World: Earth (episode 4) showcases the last 30 hours on the First Floor.
+|-
+|5 d 23 h Sun 01/08 3:30AM
+|Cascadia's introductory announcement. Ratings are active; crawlers can now receive Views, Favorites, and Follows.[1|31]
+|-
+|4 d 20 h Mon 01/09 6:50AM
+|Remaining Crawlers: 1,033,992.[1|39]
+|-
+|4 d 18 h Mon 01/09 8:30AM
+|Dungeon Crawler World: Earth (episode 5) features Carl, Donut, and the Meadow Lark party camped in a safe room while a Rage Elemental lurks outside. Carl's Jug O'Boom is added to the Dungeon Codex.[1|39]
+|-
+|4 d 17 h Mon 01/09 9:30AM
+|Cascadia's follow-up announcement includes two patch notes:
+* The Satan's Lil' Hedgehogs mob is relocated to a deeper floor.
+* Safe rooms will close one hour before the floor collapses.[1|39]
+|-
+|3 d 12 h Tue 01/10 2:30PM
+|Dungeon Crawler World: Earth (episode 6).[1|44]
+|-
+|3 d 11 h Tue 01/10 3:30PM
+|Remaining Crawlers: 990,303.[1|44]
+Cascadia's daily announcement:
+* Game Guides can now begin explaining Third Floor race/class selection.
+* Non-sapient mobs that enter a stairwell will no longer disintegrate.
+* The Brindled Vespa population is reduced by 50%, and their acid-spit damage is lowered slightly.
+* Brindle Grubs continue to generate on every corpse, but now have only a 50% chance of advancing to the pupa stage.[1|44]
+|-
+|2 d 06 h Wed 01/11 8:30PM
+|Dungeon Crawler World: Earth (episode 7). Not described.
+|-
+|1 d 00 h Fri 01/13 2:30AM
+|Dungeon Crawler World: Earth (episode 8). Not described.
+|-
+|0 d 06 h Fri 01/13 8:30PM
+|Crawlers can begin descending to the Third Floor without losing time.
+|-
+|0 d 00 h Sat 01/14 2:30AM
+|Level collapse.
+|}
+
+==Behind the Scenes==
+At the Bloom's insistence — and despite resistance within the company — the Borant Corporation is actively accelerating the crawl by shortening timers, introducing "bugs," and overpowering certain mobs. By the time the Second Floor opens, the Crawl Council has put Borant on notice; too many violations could cost the company all the proceeds it stands to gain at the end of the season.[1|36]
+
+The Second Floor's first morning update — distributed to Dungeon Admins and select NPCs such as Game Guides — reports twelve Site Prep workers swallowed whole and a human employee "splattered" for relieving himself in the Dungeon, a grim illustration of how little protection Borant Corporation affords its lower-tier staff.[1|36]
+
+Only three Location Managers are assigned to the level, including Damien — a number that may or may not correspond to the floor's Krakaren clones.[1|36]
+
+==Trivia==
+* Following the dungeon's rule of halving entrances at each level, exactly 37,500 stairwells led down to the Third Floor.[1|1]
+* Roughly 1,292,526 crawlers reached the Second Floor; more than 700,000 people — about a third of the survivors — died the instant the First Floor collapsed.[1|31]
+* The floor introduced Mind Horrors, floating brain-like creatures trailing tentacles that attack with debilitating psionic headaches.[1|30]
+* One unstaffed safe room held a Mana Toast machine — a toaster dispensing a single piece of mana-restoring toast per crawler, paired with an especially hostile description.[1|47]
+* A mailbox in the storm-shelter safe room enrolled Donut in the "Dungeon Book of the Floor Club," which mails her one spellbook per floor.[1|30]
+
+==Speculation==
+* Borant's willingness to abruptly cut the floor's timer to six days suggests Syndicate regulations are far more flexible than presented, and that the showrunners will prioritize pacing and viewer entertainment over crawler fairness or consistent mechanics.
+
+==References==
+
+{{DEFAULTSORT:Dungeon Floor 02}}
+

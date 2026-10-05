@@ -1,0 +1,53 @@
+{{SpoilH|5}}
+{{Item
+| title        = Spider Stalker
+| image        =Spider.jpg 
+| imagecaption = 
+| type         = Automaton / Crafted Weapon
+| keywords     = Robot, Rot Sticker, Trap, Explosive, Automaton
+| effects      = Acts as a mobile delivery system for traps, explosives, and potions. Can be programmed to seek specific targets or follow voice commands.
+| source       = Crafted by Carl (Requires a Main Driveshaft and automaton components)
+| buy          = 
+| sell         = 
+}}
+
+Spider Stalkers (also frequently referred to as spider automatons or seeker spiders) are small, crafted robotic devices that function as mechanical versions of the explosive "rot sticker" mobs.[5|60] Carl uses them as mobile delivery systems for bombs, traps, and potions.
+
+==AI Description==
+The exact system AI description for the Spider Stalker has not yet been provided.
+
+==Description==
+Spider Stalkers are crafted automatons that Carl builds using rare and expensive main driveshafts,[5|60] likely combined with components from Doctor Ratchet's Automaton Build-It Kit.[6|3] They possess a flat, top surface that is specifically designed to anchor trap modules, explosives, or potions.[6|57]
+
+They are highly programmable. Carl can set specific targets for them using his interface, such as "Hunter Not Already Targeted," and establish detonation delays (e.g., "Explode five seconds after target acquired").[5|60] Once Carl upgrades his engineering table, the spiders gain the ability to listen to and follow spoken voice commands, such as "stay here and stay hidden" or "follow me."[6|58]
+
+Crawlers with the Trap Master skill or a sufficient level in the Automaton Pilot skill (such as Princess Donut at level five) can affix secondary traps, like teleport beacons, directly onto the backs of the spiders.[6|57]
+
+==Appearance==
+When inactive, Spider Stalkers look like metallic balls roughly the size of a tennis ball.[5|60] When deployed, mechanical legs pop out of the spheres, allowing them to skitter around like spiders.[5|60] They range in description from being fist-sized[6|57] to rat-sized.[5|60] Some are painted with distinct colors, such as red, to differentiate their payloads or functions.[6|57]
+
+==Story==
+Carl builds a stockpile of these automatons and utilizes them in various tactical situations across the sixth and eighth floors:
+
+===Book 5===
+The Hunting Grounds (Floor 6): Carl unleashes twenty of the spider automatons to fight a group of hunters. He pours the metallic balls onto the ground and has Donut tap them to activate them.[5|60] Two of the spiders are used to chase Samantha's severed sex-doll head toward a massive anti-air gun, resulting in a catastrophic explosion that destroys the weapon.[5|61]
+
+===Book 6===
+{{Spoiler
+| book = 6
+| spoiler =The Desperado Club (Floor 8): While trapped in the Desperado Club by the massive demon Minge, Carl deploys three specialized spiders — one utility and two anti-undead variants.[6|33] He places a demon snare on the first robot, which attaches the spider directly to the demon's bulk before detonating and splashing Minge with holy water.[6|33] The other two detonate holy-water-infused smoke curtains to blind the demon and cover Carl's escape.[6|33]
+
+Havana (Floor 8): Carl uses the spiders as mobile anchors for teleport traps. He forces one small spider into the latex neck stump of Samantha's head, which makes a "scared, disapproving noise" as it is shoved inside.[6|57] He deploys three more spiders in the streets of Havana. One is crushed under Carl's weight when he teleports directly onto it, while another (painted red) hides against a wall and accidentally gets a memory ghost's pants stuck to it.[6|58]}}
+
+==Trivia==
+*Despite being robots, they seem to possess a rudimentary, quirky personality. They make "scared, disapproving" noises when shoved into tight spaces,[6|57] buzz and click to acknowledge commands,[6|58] and emit sparks when destroyed.[6|58]
+*They are incredibly fast; they can keep pace with Samantha's severed head rolling at high speeds.[5|61]
+*Donut acts as the activator for the spiders in combat, tapping them with her paw to send them after targets.[5|60]
+
+==Speculation==
+*Because Carl refers to them as "robot rot stickers,"[5|60] it is highly likely that their movement and pathfinding AI is reverse-engineered from the explosive, ravioli-shaped rot sticker mobs found on the first and second floors.[1|19][7|21] This explains their tendency to aggressively rush targets and detonate on impact.[5|61]
+
+==References==
+
+{{Navbox Items}}
+

@@ -1,0 +1,28 @@
+#redirect List of Classes
+<!--
+{{Class
+| title1 = {{PAGENAME}}
+| type = Barbarian
+| prerequisites = 
+Cat (presumed)
+| image1 =
+| type =
+| subclass_of =
+| stats =
+| skills =
+| effects =
+| benefits =
+| Prerequisites =
+| crawlers =
+}}{{Quote | quote = ““ Feral Cat Berserker was basically a barbarian that’d end up getting her killed immediately thanks to her low health” Carl [2|1]}}
+<!--
+Feral Cat Berserker is a unique barbarian class offered to Donut on the Third Floor.[2|1]
+
+<!--
+==AI Description==
+
+==Story==
+Donut is offered this class on the Third Floor. She chooses Former Child Actor Class instead. [2|1]
+
+==References==
+

@@ -1,0 +1,5 @@
+{{Glossary Entry
+| Title = Tomes
+| Definition = Tomes of [Spell] allow crawlers to permanently learn a given spell.  Crawlers can only read a tome if they have enough mana points to cast the spell.
+:See Also: Magic & Spells
+|Image=}

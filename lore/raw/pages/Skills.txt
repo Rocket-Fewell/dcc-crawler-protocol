@@ -1,0 +1,98 @@
+{{Quote|Getting skills up to ten or eleven is relatively easy as long as you use them regularly... But each level after that is a slog unless you really dedicate yourself to training.|Mordecai[2|2]}}
+
+Skills are the specific talents, proficiencies, and nonmagical attacks that crawlers and NPCs possess and can train to increase their power and effectiveness inside the Dungeon. They are distinct from Player Stats, which are broader ability scores, and from Benefits, which cannot be leveled up.[2|2][2|1][1|4]
+
+== AI Description ==
+Smush: Skill Level 3Killing with your feet. Your bare, beautiful feet.Taking your bare foot, placing it on top of a living, conscious life, and then pressing lovingly down until that life ceases to be. Is there a more noble way to kill?The amount of pressure you can bring to bear upon an enemy with your unshod foot is increased by 10% with each level of this skill.[1|8]
+
+== New Crawlers ==
+New crawlers enter the Dungeon with a laundry list of skills, most of them only level 1–3. A crawler may have 6–8 levels in a handful of skills tied to their profession or a long-time hobby — Carl, for example, starts with 6 levels in "Basic Electrical Repair Skill" and 8 levels in Frogger (which he played obsessively as a kid), but only 3 levels in "Breathing."[1|4]
+
+{| class="dccTable mw-collapsible mw-collapsed" style="width:100%"
+!Example of Starting Skills
+!Base Level (Carl)
+|-
+|Basic Electrical Repair Skill
+|6[1|4]
+|-
+|Breathing
+|3[1|4]
+|-
+|Dumpster Diving
+|?[1|12]
+|-
+|Frogger – 1981 Video Game Cabinet Version (result hidden due to filters)
+|8[1|6]
+|-
+|Lacing Boots
+|3[1|6]
+|-
+|Operating a Sony Brand RMVLZ620 Universal Remote Control
+|1[1|6]
+|-
+|Swimming
+|4[1|4]
+|-
+|Walking
+|4[1|4]
+|-
+|Unarmed Combat Skill
+|3[1|4]
+|}
+
+== Skills Menu ==
+After completing the Tutorial, crawlers can open the Skills Menu through the "Crawler Menus" option in their Heads-Up Display (HUD).[1|4] The menu lets a crawler review their current level in every skill they possess, though — absent some unknown or possibly nonexistent enhancement — it does not show progress toward the next level.
+
+The basic Skills Menu is a seemingly endless run of pages listing what feels like infinite skills. Any skill a crawler doesn't have at least one level in shows up "blurred out," its description unreadable.[1|4][1|6] A search box and a set of check-box filters (by criteria such as skill level) let crawlers cut the list down to only the proficiencies they care about.[1|6][1|4]
+
+== Skill Mechanics ==
+Skills can be acquired from equipped gear, potions, race and class selection, specialized guildhalls, or simply through actions taken in the Dungeon. They are gained and trained independently of Player Stats.[1|4][2|2]
+
+{{Spoiler|book=5|spoiler=A crawler's stats can influence how strongly a skill performs without affecting its level or accumulated experience — the Love Vampire Skill, for example, works better the higher a crawler's Charisma, even though Charisma has no bearing on the skill's level or progress.[5|76]}}
+
+=== Skill Levels ===
+In general, skills cap at level 15. A crawler's race or class may unlock the ability to train specific skills — or, in the unique case of the Primal race, all skills — up to level 20. Only a handful of crawlers each season ever push one or two skills to level 16 or beyond.[2|2]
+
+The power gap between levels widens as a skill climbs. A level-15 skill is already devastating, but a level-16 version can be roughly four times stronger — Mordecai notes that a level-16 Fireball is four times as potent as a level-15 one, and a level-20 version could turn a mountain into an active volcano.[2|2] A few limited, exclusive races unlock higher-tier versions of certain skills: the Sasquatch race unlocks higher-tier Smush, the Hobgoblin race unlocks higher-tier explosives and trapmaking skills, and the exclusive Primal race unlocks every higher-tier skill, granting god-like potential to any crawler who can survive long enough to grind the experience.[2|2]
+
+=== Training Skills ===
+For the most part, skills are trained by using them. A first-floor skill can reach level 10 or 11 by the end of the Third Floor with regular use, while a tougher skill like Powerful Strike might sit stubbornly at level nine for a week or more.[2|2] Past 10 or 11, leveling becomes a genuine slog that only gets slower with each new level.[2|2]
+
+Various benefits, gear, classes, and races boost "skill progression" for certain categories of skills by a set percentage — most likely by multiplying the experience earned toward those skills. Crawlers also gain a training bonus inside Training Rooms and guildhalls, and certain potions can raise a skill permanently — the "Cheat Code" potion, or a Legendary Skill Potion, which raises a single eligible skill straight to level 15 (or all the way to 20 if the crawler can train that skill that high).[2|2][1|30][1|43][1|4] There are no achievements for leveling a skill up for the first time; instead, each level-up simply produces the notification:
+You've gained a skill level![Skill Name] Level #
+
+{{Spoiler|book=3|spoiler=Once crawlers can buy a personal space, they gain access to a private training room — Carl grinds skills like Bare Knuckle and Powerful Strike an hour at a time, while Donut uses the same kind of room to level her Dodge Skill.[3|10]}}
+
+{{Spoiler|book=4|spoiler=The rarest skill-boosting potion of all is Pawna's Tears, named for the goddess of peace and won from a Legendary deity's box. Where the Cheat Code potion gives +3 to a random skill and must be drunk on the spot, and a Legendary Skill Potion only works on a limited set of eligible skills, Pawna's Tears adds +5 to any spell or skill the drinker chooses and can be saved indefinitely — enough to train a skill to 15 and then push it the rest of the way to 20.[4|2]}}
+
+=== Skill Buffs ===
+Enchanted gear and daily buffs can raise a crawler's level in a given skill by a set number of points (expressed as "+#"), stacking on top of the base level the crawler has trained.[1|6]
+
+{{Spoiler|book=5|spoiler=This stacking works as expected only until the crawler's combined total (base skill + gear + buffs) approaches 15. Starting around a combined level of 14, additional gear and buffs scale down: instead of adding a full point, they effectively add an experience value, and since each new level demands far more experience than the last, the practical worth of a "+#" buff shrinks the higher the skill climbs.[5|32]
+For example, a crawler with 12 base levels in a skill reaches level 14 from a +3 buff and level 16 (if unlocked) from a +6 buff; to land at an overall level of 20 with that same +6 buff, they would need to train the base level all the way up to 17 or 18.[6|40][5|32]}}
+
+== Story ==
+Skills shape a crawler's entire build and survival strategy, and crawlers have to manage and level them carefully to keep pace with the escalating difficulty of the deeper floors.[2|2] Carl tends to focus on aggressively leveling his Explosives Handling, Trap Engineer, and unarmed-combat skills (like Iron Punch and Smush) to stay effective as both a tank and a saboteur.[2|2][2|14][1|37][3|10]
+
+{{Spoiler|book=3|spoiler=Dangerous, overpowered skills like Marked for Death — imparted by the Ring of Divine Suffering — demand careful, strategic handling to reap their massive stat boosts without fatal consequences, since a crawler with an active mark cannot heal until their chosen target is dead.[3|19]}}
+
+{{Spoiler|book=4|spoiler=Donut leans on high-level skills such as Dodge, which grants a permanent Deflection buff once it hits level 10, halving the accuracy of arrows and other missiles aimed at her.[4|23]}}
+
+{{Spoiler|book=5|spoiler=During CrawlCon, Carl briefly gains access to a tier-four "Ultimate Training Room" far more capable than the personal-space rooms crawlers normally use: it let him train up to six different skills for as long as six hours a day, practice with crafting tables remotely, and spar against an intelligent AI trainer. Rooms like that aren't normally available until the twelfth floor.[5|32]}}
+
+== Trivia ==
+A skill generally won't level up just from idly repeating an action in a safe room. Casting a spell at random out in the field can eventually raise it, but the system is smart enough to tell mere practice from real combat usage — and combat is far more effective.[2|5][2|12]
+
+Crawlers who pick a domestic class are sometimes handed "Earth Hobby" skill potions to satisfy a legal Syndicate requirement. These impart a random, frequently useless Earth-based skill — Donut ends up with the baffling "Scutelliphily," while Carl receives "Cesta Punta."[2|5]
+
+Because the Dungeon records every skill a crawler has ever picked up, even utterly mundane abilities stay on the books — Carl's level-8 Frogger skill, for instance, is hidden from his default view only by the menu's dungeon-relevance filter.[1|6]
+
+{{Spoiler|book=3|spoiler=There is a hidden, "under-the-hood" metric called skill experience. It takes a great deal of it to unlock a skill to level 1 (to "break the cherry"), but once unlocked, a crawler keeps the skill's base experience even after changing classes and temporarily losing the class-associated levels and buffs.[3|1]}}
+
+== Speculation ==
+{{Spoiler|book=4|spoiler=The "Earth Hobby" skills, which instantly impart complex technical and mechanical know-how — like Katia suddenly understanding exactly how to build combustion engines and suspension systems — suggest the Dungeon may use the crawlers' neural wetware to download knowledge straight into their brains, much like the movie The Matrix, blurring the line between programmed game mechanics and real-world intelligence.[4|4]}}
+
+{{Spoiler|book=5|spoiler=Because equipment buffs hit mathematical diminishing returns past level 15, the system AI may be deliberately throttling high-level skills to keep crawlers from leaning on a single overpowered item or attack — forcing them to physically grind and diversify their builds to survive the deeper floors.[5|32]}}
+
+== References ==
+

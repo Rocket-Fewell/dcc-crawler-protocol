@@ -1,0 +1,6 @@
+{{Glossary Entry
+| Title = Action Item
+| Definition = An action item is a request by a Warlord to adjust the rules or otherwise affect the game state on the Ninth Floor during Faction Wars.
+
+There are both regular action items which are voted upon by the the various participating Warlords prior to start of Faction Wars, and there are emergency action items which require no vote but are instead approved or rejected by the System AI. Unlike regular action items emergency action items may be proposed prior-to or during Faction Wars. Each faction may propose an unlimited number of regular action items but may only propose three emergency action items.
+}}

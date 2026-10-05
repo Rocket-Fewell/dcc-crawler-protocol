@@ -1,0 +1,21 @@
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=Food, Consumable
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a food item that are received as a loot drop after killing Bad Llamas.  The system AI automatically adds these to the Food Items tab when Carl adds them to his inventory.
+
+==Story==
+===Book 1===
+Carl and Donut receive {{PAGENAME}} after killing some Bad Llamas on the first floor. [1|8] 
+== References ==
+
+{{Navbox Items}}

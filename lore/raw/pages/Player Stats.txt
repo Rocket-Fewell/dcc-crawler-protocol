@@ -1,0 +1,93 @@
+{{Quote|Everything is a stat. Just because you can't see it doesn't mean it's not really there.|Odette[1|29]}}
+
+Player Stats (also called "ability scores" or "Crawler Statistics") are the numerical values that represent a crawler's physical, mental, and social capabilities within Dungeon Crawler World. They dictate everything from a crawler's health pool and magic capacity to their ability to charm NPCs, deal physical damage, and interact with the dungeon environment.[1|29][1|4]
+
+== Description ==
+When a crawler first enters the Dungeon, the System AI generates their Level 1 base stats from their inherent, real-life physical and mental attributes; a typical adult human arrives with somewhere between three and five points in each of the five core stats, and a six counts as a solidly above-average score.[1|4] The highest natural scores any human can reach sit around nine or ten.[1|6]
+
+Crawlers earn three stat points every time they level up, but they cannot manually distribute those points until they reach the Third Floor and officially select a Race and Class.[1|4] Until that selection is made, the stats drift up and down on their own.[1|4] Certain buffs bypass this rule entirely: Princess Donut's "Enhanced Growth" allocates four points per level automatically (+1 Strength, +1 Intelligence, +2 Charisma) without waiting for a class.[1|7]
+
+A sixth stat, Wisdom, also exists, but crawlers cannot view or directly adjust it — the showrunners discovered that changing a person's Wisdom dramatically rewired their personality.[1|4]
+
+== Player Stats Menu ==
+After completing the Tutorial, crawlers can view their attributes in the "Player Stats Menu" of their crawler interface, where the five adjustable stats are listed as Strength, Intelligence, Constitution, Dexterity, and Charisma.[1|4] Once a crawler has chosen a race and class on the Third Floor, this menu is also where they spend the points earned from leveling up.[1|4]
+
+== Core Stats ==
+Each of the five core stats is really a composite of many smaller stats and aptitudes bundled together, so raising one attribute lifts every game and physical trait tied to it at once. Skills are trained and leveled separately.[1|4]
+
+=== Strength ===
+Strength governs a crawler's raw physical power — lifting and moving heavy objects, general athleticism, and the melee damage they deal.[1|8] A crawler physically feels more powerful as the number climbs; at a Strength of just 9, Carl could easily heft weights that would normally have strained him, and a base Strength of 30 later made him as strong as six ordinary humans.[1|8][2|14]
+
+{{Spoiler
+| book = 5
+| spoiler = When a crawler reaches a base score of 100 in any stat, they earn an achievement and are given three minutes to choose one of three permanent upgrades. One option always doubles future gains in that stat, while the other two grant situational bonuses, status effects, or new benefits. The Strength choices are:[5|36]
+Swole, which makes every Strength point gained from a level-up count as twoPrison Bitch, granting a Strength bonus when fighting a hand-to-hand opponent weaker than oneselfStepson, giving kicks and foot attacks a chance to inflict a stagger effect
+}}
+
+=== Intelligence ===
+
+Intelligence determines a crawler's maximum mana points (MP), their rate of mana regeneration, and their ability to recall information and comprehend spellbooks.[1|29] A crawler's total mana pool is roughly equal to their Intelligence — Donut's Intelligence of 17, for instance, gave her exactly 17 mana points — and higher Intelligence noticeably speeds up regeneration, with a high score restoring roughly one mana point per minute and a low one (such as Carl's Intelligence of 3) only about one per hour.[1|4][1|8] Low Intelligence also throttles the duration and effectiveness of certain spells and scrolls: a scroll of Confusing Fog lasted only fifteen seconds in the hands of a crawler with an Intelligence of 3, versus a full two minutes for the high-Intelligence Donut, as Mordecai explained.[1|25]
+
+=== Constitution ===
+Constitution measures a crawler's health and stamina, and is tied directly to their base health pool and natural healing speed; every point widens the health pool and slightly quickens recovery after injury.[1|4] It also sets a crawler's "potion cooldown" — how long they must wait between potions of any kind. Drinking a potion before the timer expires inflicts a Poison effect.[1|24] The higher the Constitution, the shorter that window: Carl's cooldown ran about fifteen seconds, while the low-Constitution Donut had to wait closer to two minutes.[1|24][1|25] Mordecai notes that Constitution-boosting items tend to be rarer than gear for other stats.[1|25]
+
+{{Spoiler|book=5|spoiler=Pushing a base Constitution over 100 unlocks upgrades such as "Steely Skin," which thickens a crawler's flesh as their health drops.[5|3]}}
+
+=== Dexterity ===
+Dexterity ties into agility, reflexes, and balance. Crawlers with a strong Dexterity bonus can pull off acrobatic feats such as running along walls and flipping through a fight — as the heavily geared Lucia Mar was doing as early as the Second Floor.[1|30] It also governs accuracy, particularly with ranged weapons and thrown explosives.[2|17]
+
+=== Charisma ===
+Charisma shapes a crawler's social interactions, bargaining power, and charm abilities, and it underpins Bard magic and the ability to adopt and bond with multiple pets.[1|7] High Charisma yields steep discounts at shops and lets a crawler emotionally manipulate or charm NPCs and Mobs, overriding their hostile programming.[1|15][2|14] Charm has no effect on fellow crawlers, managers, or certain races such as Half-Djinns.[1|7][2|15]
+
+{{Spoiler|book=3|spoiler=When a crawler's base Charisma reaches 100, they may gain a passive effect such as the "Love Vampire" skill, which reflects damage back onto lower-level mobs.[3|15][3|30]}}
+
+{{Spoiler|book=5|spoiler=Charisma also sets a strict formula for charming hostile NPCs: a target can be charmed only if the crawler's Charisma exceeds that target's combined Constitution and Charisma, and a Province Boss requires the crawler's Charisma to beat that total by a full 100 points. Country and floor bosses cannot be charmed at all.[5|70]}}
+
+{{Spoiler|book=7|spoiler=Once Charisma crosses 200, a crawler can earn the "Wholesale Discount" benefit, letting them buy store items at cost.[7|77]}}
+
+=== Hidden Stats ===
+Wisdom is technically a core stat, but crawlers can neither see nor freely change it, since altering it warps the personality; it can, however, be temporarily nudged by indirect means inside System AI-controlled Enhancement Zones.[1|4][1|29]
+
+{{Spoiler|book=6|spoiler=Luck is, officially, not a real stat inside the dungeon — yet experienced crawlers like Rosetta suspect otherwise, pointing to the uncanny good fortune of fairies and sprites that makes them so maddening to fight.[6|31]}}
+
+== Stat Buffs ==
+Beyond leveling up, a crawler's stats can be raised permanently or temporarily by equipping enchanted rings, armor, and clothing — Carl's War Gauntlet, for example, grants +3 Strength in fist mode and +1 Dexterity — or through Personal Space upgrades and daily buffs.[1|6][1|25]
+
+{{Spoiler|book=3|spoiler=Stats can also be raised by ingesting stat potions, including rare "Cosmic Buff" potions that boost a single random stat by ten points.[3|7][6|2]
+Certain nefarious items run the process in reverse: the Ring of Divine Suffering lets its wearer permanently siphon a stat point (or more) from a marked target upon killing them.[3|19]
+Daily buffs like the "Good Rest" bed bonus or those from an Upgraded Shower are applied to a crawler's base stats before equipment is factored in. Due to a bug that has lingered for several seasons of Dungeon Crawler World, these increases do not appear in the Player Stats Menu, even though they show up in the crawler's mana bar and abilities — an effect Mordecai flags as a persistent glitch.[3|16]}}
+
+{{Spoiler|book=6|spoiler=Divine items and matched armor sets, which often hide their effects until equipped, can drastically boost stats and grant additional benefits in the presence of deities.[6|3][8|9]}}
+
+== Story ==
+Carl funnels his points heavily into Strength and Constitution, serving as the party's "tank" and front-line brawler.[2|2][5|61]
+
+{{Spoiler|book=3|spoiler=Carl uses the Ring of Divine Suffering to siphon stat points from murdered hunters and other crawlers, massively boosting his own capabilities.[3|19][6|23]}}
+
+{{Spoiler|book=5|spoiler=He eventually pushes his base Strength past 100 and selects the "Swole" upgrade to compound his physical power.[5|36]}}
+
+Princess Donut's stats grow in a wildly specialized way thanks to her "Enhanced Growth" buff and her class choices.[1|7] Her Charisma skyrockets to absurd heights early in the crawl, letting her charm hostile goblins and coax free meals out of safe-room Bopcas.[1|15]
+
+{{Spoiler|book=5|spoiler=Donut's runaway Charisma eventually grows powerful enough to charm even a Province Boss — the high-elf queen's familiar, Ferdinand.[5|70]}}
+
+{{Spoiler|book=7|spoiler=On the Ninth Floor during the Faction Wars, Li Na became the first crawler ever to max out all of her base stats at 300, a feat for which the System AI had no programmed response and was forced to improvise a solution.[7|77]
+Donut, meanwhile, accrued a string of "natural benefits" as her boosted stats crossed key thresholds — including Monologue, a skill that generates experience points simply by terrifying her enemies, unlocked once her buffed stats topped 300.[7|86]}}
+
+{{Spoiler|book=3|spoiler=On Mordecai's advice, Katia pours her points into Strength until it reaches 50, then funnels the rest into Constitution with the goal of pushing her unenhanced base over 100 — a disciplined "tank" build that complements the enormous mass her race lets her carry.[3|13]}}
+
+== Trivia ==
+* On entry, Carl's starting stats were Strength 6, Intelligence 3, Constitution 5, Dexterity 5, and Charisma 4 — a touch above the human average, save for that infamously low Intelligence.[1|4]
+* A creature needs a base Intelligence of at least 2 to qualify for tutorial training; without it, their inventory and loot boxes never switch on, and they are designated a pet rather than a full crawler.[1|4]
+* Crawlers can be heavily penalized when their stats clash with their chosen class; the Compensated Anarchist class requires a minimum Charisma of 25, forcing Carl to spend 17 of his pooled points just to meet the baseline.[2|2]
+* Although Wisdom is a hidden stat, Odette's production crew once temporarily boosted Donut's Wisdom and a few confidence-related stats by slipping the effect into her cat treats, making for a livelier interview.[1|29]
+
+{{Spoiler|book=3|spoiler=The crawler-issue wetware the System AI reads to generate a crawler's profile is identified in-system as "Syndicate Crawl Version 47.002.Human."[3|13]}}
+
+== Speculation ==
+Odette has asserted that the visible stats are really a "mish-mash" of hundreds of hidden sub-stats, implying far more is happening beneath the interface than crawlers can see.[1|29] In the same vein, Carl suspects the System AI quietly manipulates background stats and experience-point distribution — sometimes to keep the game "fair," sometimes to punish crawlers who exploit loopholes — given how unpredictable and stingy his experience awards can be after a clever kill, and how early on he could already tell that party experience wasn't split strictly by damage dealt.[1|8][1|40][4|17]
+
+== Soundbooth Theater Cinematic Audio ==
+The Soundbooth Theater Cinematic Audio adaptation departs from the books at several points during the Tutorial, including in its introduction of the stats tab, which the narrator presents as "Crawler Statistics" rather than Player Stats. The narrator frames the menu as the crawler's inherent statistics and invites listeners to examine their own. A chalkboard behind the narrator illustrates example stats with cartoon figures of an average male and female crawler, followed by a muscular man with a base Strength of 7 and an exaggerated hourglass-figured woman with a base Charisma of 6. The narrator never mentions Wisdom.
+
+== References ==
+

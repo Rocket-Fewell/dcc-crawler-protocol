@@ -1,5 +1,5 @@
 # Lore Tables Index
-Owner: DCC Lore | Status: draft | Version: 0.25 | Updated: 2026-10-04
+Owner: DCC Lore | Status: draft | Version: 0.26 | Updated: 2026-10-04
 Summary: Machine-readable tables for the campaign bots (JSON is exempt from headers; schema is documented in the catalog file).
 
 | Path | Description | Owner | Status |
@@ -75,4 +75,6 @@ Change note v0.23 (2026-10-04): background-reskins v0.1.2 (sha256 46204c8226c5�
 
 Change note v0.24 (2026-10-04): new `canon-floor-2.json` (sha256 2069d0851a92…) and `canon-floor-2.md` view (status "reserve"), built by tools/canon_floor2_build.py and checked by tools/canon_floor2_check.py (ledger section 9.2, M-327..M-524, conflicts X-059..X-065). Ledger v1.12 changed the `ledger_version` field, so `canon-floor-1.json` was rebuilt (sha256 515d92e96d9b…, content otherwise unchanged; md f66243da986d…).
 
-Change note v0.25 (2026-10-04): house spelling "saferoom" (Syndicate ruling): prose in the builders `tools/canon_floor_build.py` and `tools/canon_floor2_build.py` changed from safe room / safe-room to saferoom (ids, ledger quotes, the System label "Time to Safe Room Closure" and the wiki page title "Safe Rooms" unchanged), then both tables were rebuilt: `canon-floor-1.json` sha256 c5d67e380ca3…, md 4b4916ad3088…; `canon-floor-2.json` (still "reserve") sha256 43af88461422…, md 929c6bf67b65…. Schema/content otherwise unchanged; both checkers 0 errors.
+Change note v0.26 (2026-10-04): house spelling "saferoom" (Syndicate ruling): prose in the builders `tools/canon_floor_build.py` and `tools/canon_floor2_build.py` changed from safe room / safe-room to saferoom (ids, ledger quotes, the System label "Time to Safe Room Closure" and the wiki page title "Safe Rooms" unchanged), then both tables were rebuilt: `canon-floor-1.json` sha256 c5d67e380ca3…, md 4b4916ad3088…; `canon-floor-2.json` (still "reserve") sha256 43af88461422…, md 929c6bf67b65…. Schema/content otherwise unchanged; both checkers 0 errors.
+
+- v0.26 (2026-10-04): added `achievement-crossref.csv`, which maps ledger A-044, A-139 and A-151 to Syndicate catalog v1.1 ACH-1824..1826. The ledger itself is unchanged.

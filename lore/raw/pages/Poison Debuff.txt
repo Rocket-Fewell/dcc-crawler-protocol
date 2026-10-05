@@ -1,0 +1,25 @@
+
+{{Status_Effects
+|image1 = Poisoned Icon.png
+|title1=Poisoned
+|type=Debuff
+|effect=- Health
+}}{{Quote | quote = You have been poisoned! System AI}}
+
+Poisoned is a common health-sapping debuff that can be inflicted by attacks, items, or by consuming potions too quickly.  The effect can stack.[1|5][1|8]  When a crawler is poisoned, it feels like being "kicked in the stomach by a damn horse."[2|10]   
+
+Poison cannot be cured by a Heal Spell or Healing Potion; instead, it must be treated with Poison Antidotes.[1|8] The status effect is on a timer and may run out on its own, so a crawler can survive by taking health potions if their potion cool-down is short enough.[1|22]
+
+==Poison Resistance==
+Certain items, classes, and races include a resistance to poison. The crawler can still be poisoned, and will receive the notification:
+You have been poisoned!  Poison effect nullified. OR, on later floors: Poison negated!
+
+==Story==
+===Book 1===
+Carl and Donut come across some rats on the First Floor that attempt to poison Carl but his Enchanted Nightgaunt Cloak of Stoutness negates the effect after a second. [1|8]
+
+===Book 2===
+To kill the Pestiferous Vine Grimaldi, Carl intentionally removes his Enchanted Nightgaunt Cloak of Stoutness to poison himself. He does this by drinking too many potions too quickly, quickly giving himself the debuff. [2|10]
+
+==References==
+

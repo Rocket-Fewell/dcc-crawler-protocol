@@ -1,0 +1,228 @@
+This page documents Princess Donut's levels, stats, skills, and gear on the First Floor (5 Days).
+
+{{Navbox Stats}}
+
+==Gear==
+===Starting Gear===
+Donut enters the Dungeon wearing a collar and nothing else.  
+
+===Gained Gear===
+Within one hour, she grows slightly larger as a result of her transformation from the Enhanced Pet Biscuit and equips the Enchanted Crown of the Sepsis Whore.[1|7]  Just under seven hours later, she receives and equips the Talisman of the Slate Butterfly.[1|9]
+
+With two days and 18 hours to level collapse, she receives a Desperado Pass Tattoo just above her right shoulder blade; it glows through her fur, but looks like nothing so much as a gold-colored splotch. At the same time, she gains and equips the Enchanted Fae Scale Quadruped Crupper of the Fleet.[1|19] 
+
+With less than 40 hours remaining in the Dungeon, she gains a Bracelet of +2 DEX, which she equips on her front leg.[1|25]
+
+===Ending Gear===
+{| class="dccTable"
+!SLOT
+!GEAR
+!NOTES
+|-
+|Head
+|Enchanted Crown of the Sepsis Whore
+|
+|-
+|Neck
+|Talisman of the Slate Butterfly
+|on collar
+|-
+|Waist
+|Enchanted Fae Scale Quadruped Crupper of the Fleet
+|
+|-
+|Legs
+|Bracelet of +2 DEX (front leg)
+|
+|-
+|Tattoos
+|Desperado Pass Tattoo (back)
+|
+|}
+
+==Levels & Stats==
+{| class="dccProgTable"
+!TIME
+!NOTES
+!LEVEL
+!STR
+!INT
+!CON 
+!DEX
+!CHA
+|-
+|4 d 23h
+|Starting Stats (Cat)
+|1
+|1
+|1
+|1
+|8
+|5
+|-
+|4 d 23h
+|After Enhanced Pet Biscuit
+|1
+|11
+|11
+|2
+|8
+|25
+|-
+|4 d 23h
+|Enchanted Crown of the Sepsis Whore +5 INTa
+|1
+|11
+|11/16a
+|2
+|8
+|25
+|-
+|4 d 20h
+|Level Up w/ Enhanced Growth Buff
+|2
+|12
+|12/17a
+|2
+|8
+|27
+|-
+|4 d 17h
+|Talisman of the Slate Butterfly +1 INTb
+|2
+|12
+|12/18ab
+|2
+|8
+|27
+|-
+|4 d 01h
+|Level 5 w/ Enhanced Growth buff
+|5
+|15
+|15/21ab
+|2
+|8
+|33
+|-
+|3 d 02h
+|Level 7 w/ Enhanced Growth buff
+|7
+|17
+|17/23ab
+|2
+|8
+|37
+|-
+|2 d 23h
+|Level 8 (+1STR +1INT +2CHR) 
+|8
+|18
+|18/24ab
+|2
+|8
+|39
+|-
+|2 d 18h
+|Fae Scale Crupper +2DEXc
+|8
+|18
+|18/24ab
+|2
+|8/10c
+|39
+|-
+|ab
+|2
+|8/10c
+|41
+|-
+|d
+|9
+|19
+|19/25ab
+|2
+|8/12cd
+|41
+|-
+|0 d 05h
+|Level 10 (+1STR +1INT +2CHR) 
+|10
+|20
+|20/26ab
+|2
+|8/12cd
+|43
+|}
+
+:See Also: Player Stats
+
+==Skills==
+{| class="dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Back Claw
+|4[1|10]
+|
+|
+|-
+|Dodge Skill
+|
+|4[1|25]
+|
+|-
+|Light on Your Feet Skill
+|3[1|9]
+|3 / 7b
+|Talisman of the Slate Butterfly +4[1|9]b
+|-
+|Good First Impression Skill
+|5
+|5 
+|From Enchanted Crown of the Sepsis Whore
+|-
+|Slice Attack
+|4[1|10]
+|
+|
+|}
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Magic Missile
+|1
+|5[1|23]
+|
+|-
+|Puddle Jumper Spell
+|1[1|25]
+|
+|Gained after fighting the Juicer[1|25]
+|-
+|Torch Spell
+|1
+|n/a
+|Gained after fight against Hoarder[1|12]
+|-
+|}
+
+==Passive Effects==
+* All Attacks Gain:
+** +15% chance to inflict Sepsis Debuff (from Crown).
+* Memberships
+** Desperado Club access (from Desperado Pass Tattoo).
+* Other
+** Winged Fairies are white-tagged (from Talisman).
+** With her talisman and crupper, she sounds like a bell when she hops or moves.[1|30]
+
+==References==
+
+{{DEFAULTSORT:Donut/Floor_01}}

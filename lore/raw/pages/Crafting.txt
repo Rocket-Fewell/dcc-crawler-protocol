@@ -1,0 +1,119 @@
+{{Quote|It's one thing to take a grenade and toss it. But it takes a set of brass balls the size of basilisk eggs to actually build a bomb.|IED skill description[1|19]}}
+
+Crafting is a dungeon mechanic in the World Dungeon that allows Crawlers to combine materials, tools, and equipment into new items. Crafting can be done by hand in the field or at specialized workbenches, and original inventions can earn their creator an entry in the Dungeon Codex.
+
+== Mechanics ==
+=== Materials ===
+Some loot is automatically sorted into a Crafting Items menu when it enters a crawler's inventory.[1|8] Other drops are tagged as alchemy materials, including hemolymph vials[1|10] and whole mob corpses,[1|33] and some are labeled "Trap Supplies."[2|13] Ordinary food can also serve as an ingredient.[2|12] Materials are sold at alchemical markets in medium and large towns[2|9] and by specialty merchants such as Pustule.[2|16]
+
+=== Workbenches ===
+Workbenches, also called tables, are accessories for a Personal Space,[1|10] which Safe Rooms do not sell until the Fourth Floor.[1|9][1|30] Tables can instead be looted from mob workshops[1|17][1|33] or awarded from loot boxes.[1|41] Tables level up automatically each time a floor collapses,[3|2] so tables acquired early grow stronger than those acquired later.[1|10] Some tools function only at a workbench, such as the shaping tool Goo-Inator 3000[1|30] and the hardening tool Gorgon Marital Aid.[1|41]
+
+Early tables documented in the series include:
+* Engineer's Table: one of the tables looted from a goblin workshop on the First Floor.[1|17][1|19]
+* Sapper's Table: explosives and traps created at the table do not lose stability and cannot be prematurely set off.[1|41] Standing at the table unlocks the Demolitions Workshop menu.[1|19]
+* Alchemy Table: looted from a Rev-Up filling room on the Second Floor.[1|33]
+
+{{Spoiler|book=3|spoiler=Tables are placed in a personal space's Crafting Studio; a level-one studio holds up to five basic tables,[3|3] and an Enhanced Crafting Studio is available as an upgrade.[3|2] Individual tables can also be upgraded, which can change their size and features.[3|7]Tables can be bought from a catalog at a safe room counter, where most cost around 25,000 gold and options range from the general-purpose Tinker's Table to highly specific stations.[3|13] Tables introduced on the Fourth Floor include the Armorer's Table, which is required to make wearable gear[3|4] and designates an item shaped at another table as a specific type of gear so it can be equipped.[3|13] Others include the Makeup Table,[3|10] the Repair Bench,[3|26] the Metalworking Table, and the Bolt-Thrower's Workshop.[3|30]}}
+
+{{Spoiler|book=4|spoiler=A Sapper's Table's stability protection ends once an item leaves the table.[4|18]}}
+
+{{Spoiler|book=5|spoiler=Later additions include the Advanced Trap Maker's Workshop[5|1] and the Automaton Table.[5|33] The Advanced Bomber's Studio is a crafting room with a simulator for testing explosives against virtual targets, though simulated results are not guaranteed to match real detonations.[5|4]}}
+
+{{Spoiler|book=7|spoiler=A table's owner can grant other crawlers access to it.[7|5]}}
+
+=== Recipes ===
+Successfully following a recipe adds it to the crawler's crafting menu.[2|12] Simple alchemical recipes can be made without a table, while more complex recipes require one; attempts can fail.[2|17] The system names and describes each crafted item itself, often mockingly.[1|32]
+
+{{Spoiler|book=3|spoiler=These descriptions are not always accurate.[3|7]}}
+
+=== Skills, Races, and Classes ===
+Numerous skills affect crafting. IED increases the yield of improvised explosives and reduces the chance of premature detonation.[1|19] At level five, Explosives Handling reveals additional information about bomb-type devices,[1|19] including their stability.[1|20] Other crafting skills include Incendiary Device Handling,[1|32] Bomb Surgeon, Trap Engineer, and Backfire.[2|2]
+
+Constructing a new device can raise several related skills at once. Building Carl's Jug O' Boom immediately raised Carl's Incendiary Device Handling to level five,[1|32] and his IED, Explosives Handling, and other explosives skills to level seven.[1|35]
+
+Race and class selection on the Third Floor can favor crafting. The Hobgoblin race boosts trap and explosive skills and grants free access to Hobgoblin Sapper Workshops, the Bomb Squad Tech class prevents explosives from degrading when handled, and the Compensated Anarchist class accelerates trapmaking and bomb-making skills.[2|2]
+
+{{Spoiler|book=5|spoiler=On the Sixth Floor, Compensated Anarchist subclasses grant advanced trap-making or bomb-making workshops.[5|1]}}
+
+=== Achievements and Royalties ===
+Crawlers who invent a stackable weapon, device, or potion earn the Dungeonpreneur achievement, which enters the invention into the Dungeon Codex and pays one gold coin for every kill other crawlers make with it, continuing in later seasons if the inventor survives.[1|35] Royalties are tallied once daily in an Accounts tab and can be cashed out for a fee of two gold plus 25%; funds not deposited are forfeited upon death.[1|44]
+
+Other achievements reward specific kinds of crafting. Deploying a built structure in battle earns Battlefield Construction,[1|30] building and deploying a wheeled device earns Grease Monkey,[1|41] and injuring a mob with a deliberately placed object earns You Call That a Trap?[1|41]
+
+{{Spoiler|book=3|spoiler=Crafting at a workbench for the first time earns the Martha Stewart achievement.[3|4]}}
+
+== Types of Crafting ==
+=== Field Crafting and Construction ===
+Some items can be crafted without a table. Carl's Jug O' Boom, a jug of Rev-Up Toilet-Grade Moonshine with added goblin oil and a torch as a wick, was assembled in the field, recognized by the system as a new named item, and is far more stable than Goblin Dynamite.[1|32] Simple potions can likewise be mixed by hand.[2|12]
+
+Crawlers can also build structures and vehicles from looted parts using ordinary tools.[1|26] Improvised structures can attract janitor mobs, which treat them as refuse.[2|12]
+
+=== Alchemy ===
+Alchemy produces potions and potion-based items. Some recipes are found in the dungeon itself; the recipe for the Rev-Up Immunity Smoothie was found in a Rev-Up filling room,[1|33] and the smoothie grants temporary immunity to the Taint and the Vigorous Measles.[1|34] Other examples include a potion that negates naiad sleep effects and curses[2|9] and the sobering Hair of the Dog potion.[2|17]
+
+{{Spoiler|book=3|spoiler=Stat buff potions can also be brewed, though a crawler may drink only two of each stat's buff potion during their time in the dungeon.[3|7]}}
+
+{{Spoiler|book=7|spoiler=Examining a Celestial-quality skill potion at his table was enough for Mordecai to learn its recipe, though brewing it would require further table upgrades and specialized ingredients.[7|4]}}
+
+=== Trapmaking ===
+The system treats trapmaking as a discipline separate from bomb-making.[1|41] Ready-made Trap Modules can be deployed as they are[1|44] or used as components in a larger trap,[3|1] and they can be reconfigured at a Sapper's Table.[1|44] At the table, a Proximity Trigger can be attached to a non-static trap to set activation conditions such as countdowns or mob-type triggers.[1|41]
+
+{{Spoiler|book=3|spoiler=A crawler's Trap Engineer level determines which trap modifications require a Sapper's Table.[3|1]}}
+
+{{Spoiler|book=6|spoiler=Trigger conditions can be highly specific, such as activating only for crawlers who are not members of a particular guild.[6|4]}}
+
+=== Infusion ===
+{{Spoiler|book=3|spoiler=A level-three Sapper's Table can infuse bombs with other substances, such as potions.[3|8] A hobgoblin smoke curtain soaked in a healing potion and dried, for example, becomes effective against low-level undead.[3|8]}}
+
+{{Spoiler|book=4|spoiler=Infused items are unstable, a problem that lessens as the crafter's Infusion skill rises, and failed infusions leave the item with the Dud status.[4|18]}}
+
+=== Automatons ===
+{{Spoiler|book=5|spoiler=Automatons are built at an Automaton Table from recipes and parts.[5|33]}}
+
+{{Spoiler|book=6|spoiler=Parts can be obtained individually or in kits.[6|3] Finished automatons are stored in a dedicated inventory menu and have modular components that can be swapped. Through the automaton's menu, a crawler can assign a target location, instructions, and delays, and the system notifies the owner if an automaton is destroyed before completing its task.[6|33]}}
+
+=== Scrolls and Tattoos ===
+{{Spoiler|book=4|spoiler=Writing scrolls requires specialized skills. A Writing Table makes scroll writing more efficient, and a Printing Press can produce scrolls or even tomes.[4|13]}}
+
+{{Spoiler|book=7|spoiler=A skill or spell can also be transferred through a tattoo drawn with ink made from a potion and a donor's blood. The tattoo is permanent, and its required size scales with the level of the transferred ability.[7|40] Words of Power written in ink over a tattoo can temporarily raise a spell's level, with the effect fading as the ink fades.[7|75]}}
+
+== Limitations ==
+Raw materials can be worth more than the finished item: Carl's inventory valued unaltered moonshine above his Jug O' Boom,[1|32] and Pustule told him he would earn more selling the moonshine plain.[2|16] Incendiary weapons can also destroy the loot of the mobs they kill.[1|32] Explosives are inert inside safe rooms.[1|40]
+
+{{Spoiler|book=3|spoiler=Crafting at a workbench carries physical risk even inside a safe room,[3|4] and large builds may exceed the size a table can handle.[3|31] Carrying unstable explosives in an equipped backpack slows their destabilization, though it does not stop it.[3|13]}}
+
+{{Spoiler|book=4|spoiler=Although explosives are inert in safe rooms, smoke bombs can still be set off.[4|18]}}
+
+{{Spoiler|book=5|spoiler=The system's classification of an item also matters; a modified device that no longer counts as an explosive loses the throwing enhancements that apply to explosives.[5|50]}}
+
+== Story ==
+=== Book 1 ===
+On the First Floor, Carl looted a goblin workshop's tools, supplies, and tables,[1|17] including an Engineer's Table.[1|19] With members of Meadow Lark, he built a modular fortress from workshop tables and gym equipment and used it to defeat the Ball of Swine,[1|26] earning the Battlefield Construction achievement.[1|30] On the Second Floor, he invented Carl's Jug O' Boom,[1|32] which earned the Dungeonpreneur achievement.[1|35] He then built a trailer-mounted bomb launcher and used it to lure the Rage Elemental into a stairwell.[1|40] The launcher earned him the Grease Monkey achievement, while the traps he left along the route earned You Call That a Trap?, whose Gold Sapper's Box contained a Sapper's Table.[1|41]
+
+=== Book 2 ===
+On the Third Floor, Carl brewed his first potions under Mordecai's instruction: a modified healing potion[2|12] and Hair of the Dog.[2|17] At the end of the floor, an overloaded soul crystal inside a Sheol Glass Reaper Case became a custom explosive, which the system named Carl's Doomsday Scenario and flagged as impossible to stabilize.[2|25]
+
+=== Book 3 ===
+{{Spoiler|book=3|spoiler=On the Fourth Floor, Carl, Donut, and Katia combined their personal spaces and bought an Enhanced Crafting Studio,[3|2] which Carl applied to their shared crafting room[3|3] and began furnishing with his tables.[3|4] He also obtained The Dungeon Anarchist's Cookbook[3|7] and presented its recipes as his own when designing his first landmines.[3|10] After using coupons to add an Armorer's Table and raise his Sapper's Table to level three, he built an equippable backpack that let Katia add over a ton of metal to her mass.[3|13]}}
+
+=== Book 4 ===
+{{Spoiler|book=4|spoiler=On the Fifth Floor, Carl and Katia built the Royal Chariot, a portable tracked vehicle.[4|4] Using components Mordecai reverse-engineered from dromedarian rockets,[4|4] Carl built modified missiles at his Sapper's Table[4|8] and fitted some with Surefire seekers.[4|10] He also developed infused smoke curtains, including the Hobgoblin Disco Ball.[4|18]}}
+
+=== Book 5 ===
+{{Spoiler|book=5|spoiler=On the Sixth Floor, Carl chose the Agent Provocateur subclass,[5|1] purchased an Advanced Bomber's Studio,[5|3] and acquired an Automaton Table along with a guide to building automatons.[5|33]}}
+
+=== Book 6 ===
+{{Spoiler|book=6|spoiler=On the Eighth Floor, Carl used the two table upgrade coupons from his Scourge box[6|3] on Mordecai's alchemy table so that Liquid Therapy could be brewed for their guild.[6|25] He also built spider automatons armed with explosives or anti-undead payloads[6|10] and a suit of breakaway armor for Bomo fitted with missile launchers.[6|14]}}
+
+=== Book 7 ===
+{{Spoiler|book=7|spoiler=On the Ninth Floor, Katia began building a mobility device for Tran[7|5] by adapting an automaton recipe into a crab-legged exoskeleton, with a similar build planned for Jamal.[7|21] She also gave Carl a skill-transfer tattoo using Li Na's blood.[7|40] Carl refined a large bomb design into a thermos-sized thermobaric device the system named The Waffle Maker.[7|54]}}
+
+=== Book 8 ===
+{{Spoiler|book=8|spoiler=On the Tenth Floor, Carl's team equipped their race truck with potion-based weapons, including slime-coating missiles[8|30] and ghoul-manned cages that hurled hardening foam potion balls.[8|31] Carl also used poleaxes, directional breaching charges of his own design that blast in a vertical cone to punch through floors and ceilings with minimal lateral damage.[8|83]}}
+
+== Dungeon Lore ==
+{{Spoiler|book=3|spoiler=The Dungeon Anarchist's Cookbook is a unique item disguised as a joke recipe book.[3|7] It preserves crafting knowledge between crawls, passing to a new recipient after its owner dies or retires, and anything the owner writes on its extra scratchpad page is added to the next edition. The book instructs its owner to present its recipes as their own discoveries. Its contents are hidden from the showrunners and viewers and will erase if the owner reveals the book.[3|8]}}
+
+== References ==
+

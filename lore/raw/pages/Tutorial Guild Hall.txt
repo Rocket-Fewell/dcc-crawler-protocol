@@ -1,0 +1,52 @@
+{{Location
+|title=
+|image=Obvious Trap by OutFold.jpg
+|imagecaption=Art by u/OutFold, Reddit
+|map=
+|mapcaption=
+|type=Safe Room {{!}} Dungeon Mechanic
+|system=
+|planet=Earth
+|location=Dungeon: First Floor, Second Floor, Third Floor
+|species=Varies
+|organization=
+|characters=*Mordecai
+*Mistress Tiatha
+|first=Book 1, Chapter 1
+}}
+
+{{Quote|It is highly recommended you immediately find and utilize a tutorial guild.|Syndicate World Dungeon Announcement[1|1]}}
+
+Tutorial Guild Halls are safe rooms found only on the first, second, and third floors of the Dungeon. A new crawler must find one in order to begin the Tutorial.[1|1]
+
+==AI Description==
+Tutorial Guild Hall This is a Safe Zone. Warning: level timers are still active.[1|3]
+
+==Description==
+Halls are marked by simple, hard-to-see signs that blend into the Dungeon walls.[1|2] On the first two floors they sit scattered along the corridors.[1|12] On the third they exist only inside the villages and never in the Over City Ruins, and every medium-sized settlement is guaranteed to have one.[2|3] A hall appears on the minimap as a highlighted room with the guildmaster inside registering as a white NPC dot, and, because it is a safe area, it remains visible under the fog of war covering unvisited ground.[1|4][1|5]
+
+Each hall doubles as the personal room of its guildmaster: a recreation of the guildmaster's own home, rebuilt from their possessions when they accepted the post and extended with seating for new crawlers.[1|3] The room is not fixed in place. It relocates each time the guildmaster moves, and, if they are a Changeling, the guildmaster's body is reassigned to a mob species native to the current floor.[1|3] Mordecai's first-floor room held a bed, a fireplace, shelves of keepsakes, a rug, an empty desk, and six classroom chairs;[1|3] on the third floor a pair of beds were added for crawlers undergoing race transformation, while the chairs remained.[2|1] After the third floor a guildmaster usually transfers to a specialty guild on a deeper floor, where the room is larger and carries the guildmaster's own potions and a wider range of spells.[1|3][2|1]
+
+==Access and Rules==
+A guildmaster is forbidden from opening the door while mobs stand directly outside, which can strand a pursued crawler in the corridor until the area is cleared.[1|2] The entry door is extraordinarily durable: Mordecai likens it to absorbing a kinetic strike from a star destroyer, and it held when a Goblin Murder Dozer suffered a boiler breach in the hallway outside.[1|3] As with all safe rooms, mobs may wander in but are teleported away the moment they attack.[1|20] Floor collapse timers continue to run inside.[1|3] Loot boxes may only be opened in a safe area; every guildhall counts as one, though not every safe area is a guildhall.[1|5]
+
+Viewer access inside a hall is asymmetric. Viewers can watch and hear the crawler, but cannot see or hear the guildmaster unless they hold press credentials, and all cameras shut off whenever a Kua-Tin is present.[1|35]
+
+==Tutorial and Game Guides==
+Reading a guild sign for the first time earns a crawler the You've Discovered and Read an Official Dungeon Sign Achievement, which highlights all official dungeon signage and adds nearby guilds to the minimap.[1|2] Entering a hall unlocks the You've Entered a Guildhall! Achievement.[1|5] Completing the Tutorial inside unlocks the crawler menu (health display, minimap, stat page, Ratings page, skills list, magic menu, and party menu), and the guildmaster activates the crawler's inventory separately, at the end of the tutorial.[1|4][1|5]
+
+Once a crawler completes the tutorial, their guildmaster becomes their Game Guide, and every hall door that crawler finds thereafter is a portal leading to the guide's room.[1|8] Each door opens into a private instance, so several crawlers may pass through the same doorway and arrive in separate rooms with their own guides.[2|3] While a crawler is inside, the guildmaster can see everything on that crawler's private HUD.[1|4] A Game Guide is normally lost when the crawler reaches the Fourth Floor.[1|8]
+
+==Story==
+Minutes after entering the Dungeon, Carl was lured into a goblin ambush by a neon sign reading "Da Tutorial Guild," earning the Fall into an Obvious Trap Achievement.[1|2] At a genuine hall shortly afterward, Mordecai refused to unchain the door with a Goblin Murder Dozer and its crew in the corridor, shouting instructions through the gap instead, and relented only after Donut squeezed inside on her own.[1|2] Carl stepped back out to finish the surviving goblins and raced in again ahead of the dozer's boiler breach; the blast threw him onto the floor of the hall, but the door held.[1|3] Mordecai walked the pair through the Tutorial, activated Carl's inventory, and registered as their Game Guide.[1|4][1|5][1|8]
+
+The pair visited a hall on each of the next two floors, finding Mordecai transformed into a Bugaboo on the Second Floor[1|35] and into an incubus on the Third Floor.[2|1] Because Donut's Former Child Actor class carried the Manager benefit, he shifted from a temporary guide into their permanent manager and now teleports to any safe room the party occupies rather than waiting in a hall.[2|1][2|3]
+
+==Trivia==
+*Every Tutorial Guild Hall in the First Floor neighborhood Carl mapped held Mordecai. When he looted a Neighborhood Map, each white dot in the square resolved to a hall with the same guildmaster inside.[1|12]
+
+==Speculation==
+*The halls may be pocket spaces rather than rooms embedded in each floor: one door reaches a different instance for each crawler,[2|3] a trained crawler entering any hall is routed to their own Game Guide's room,[1|8] and the room relocates intact when the third floor collapses.[1|3]
+
+==References==
+

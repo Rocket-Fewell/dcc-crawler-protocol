@@ -1,0 +1,28 @@
+{{Item
+|type=Potion
+|keywords=Consumable, Single-Use
+|effects=Heals creature|source=Crafting}}
+{{Quote | quote = I forced open the sharp mouth of the dinosaur and poured the now-brown potion into the pet’s mouth. The needles dropped to the ground. Mongo groaned and shook his head. He sat up, nudged Donut with his head, and then he shrieked, loud enough that my ears hurt. Then he started bouncing up and down, waving his arms and circling around me, hitting me with his head in joy, as if he’d just realized I’d returned.}}
+
+Heal Critter Potions are single-use, brown-colored potions that can be used to heal injured  pets, dungeon familiars, and presumably animal-class mobs that are not affected by a standard Healing Potion.  Unlike some potions that can be simply thrown at NPCs, Heal Critter Potions must be consumed by the target.[2|12]
+
+==Recipe==
+To craft a Heal Critter Potion in the field:
+#Add an entire cinnamon stick to a Healing Potion.
+#Wait 5 seconds
+#Add a few branches of Thistle Rot.
+#Re-cork the bottle and shake until it turns brown.
+
+===Potion Upgrade===
+{{Spoiler
+| book = 7
+| spoiler = Heal Pet potion can be upgraded to Revitalize Pet as a benefit of being in the presence of Ysalte. The potion gets super sparkly. [7|1]
+}}
+==Story==
+===Book 2===
+Carl first crafts this potion on Mordecai's advice when trying to heal Mongo after his fight with the Street Urchins. [2|12]
+
+==References==
+
+{{Navbox Items}}
+

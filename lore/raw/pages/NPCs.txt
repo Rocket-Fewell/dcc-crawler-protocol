@@ -1,0 +1,95 @@
+{{Race Infobox
+|title1=NPCs
+|image1=
+|caption-image1=
+|type=Biologically Printed Entities, Indentured Former Crawlers
+|class=Varies (Non-Combatant, Elite, Boss, Mob)
+|floors=1-18
+|height=Varies by assigned race
+|weight=Varies by assigned race
+|bonuses=
+|penalties=
+|deities=Varies by floor and theme
+|natural_enemies=Crawlers, Showrunners
+|organizations=Borant Corporation, Team Retribution, Pineapple Cabaret
+|crawlers=
+|syndicate=Borant CorporationValtay Corporation
+|npcs=Mordecai, Juice Box, Signet, Ian, Limp Richard, Quint, Astrid, Orren
+}}
+{{Quote|Borant created them, so they own them.|Mordecai[2|3]}}
+
+NPCs (Non-Player Characters) are the living, biological creatures the Syndicate engineers or repurposes to populate the Dungeon, ranging from autonomous mobs and scripted elites to indentured former crawlers.[2|3] Safe-zone guildmasters, guides, and merchants fall under the same heading, flagged by the system as non-combatants.[1|3]
+
+==Description==
+Every NPC is a living creature rather than a program. Most are printed by the production company running the current season, which owns them outright, and for most of them the Dungeon is the only world they have ever known.[2|3] They fill the floors as enemies, quest-givers, merchants, guards, and background extras.[2|3] The minimap sorts them at a glance: crawlers appear as blue dots, NPCs as white, and mobs as red.[1|4]
+
+NPC minds are rewritten at every regeneration, erasing memories of previous crawls and implanting new ones suited to the current season's story. The practice rests on a legal technicality: Syndicate law forbids altering the memories of "naturals," people born through a natural biological process, and printed NPCs enjoy no such protection. In exchange, printed mobs and NPCs may exist only inside a Syndicate-monitored production, and using them for any purpose other than sanctioned entertainment is treated as roughly equivalent to a war crime.[2|3]
+
+Violence against non-combatants is not technically against the rules, but the Borant Corporation discourages it by zeroing out the experience awarded for killing citizens and boosting city guard stats.[2|12] Settlements have no jail, only a death penalty, and a crawler who runs afoul of the guards is permanently barred from that village.[2|3]
+
+{{Spoiler|book=3|spoiler=Implanted memories are often no deeper than a character sheet. Madison, a human resources associate on the Iron Tangle, could recite her job duties and describe an apartment in the executive quarters, but not how to reach it or when she had last been there.[3|17] The absence of the standard non-combatant line from a description is itself a tag, and Carl reads its omission from Astrid's description as a warning.[3|9]
+A subset of NPCs cannot be permanently killed, regenerating within minutes, and the Dungeon Anarchist's Cookbook treats indestructibility as a signal that the NPC carries or knows something the floor requires. Such NPCs are frequently bound to a single building. Regeneration restores the body and the room but not the record, and body parts left behind vanish unless a crawler has already pulled them into inventory. The blood stays.[3|26]}}
+
+{{Spoiler|book=4|spoiler=Murdering a shopkeeper does not net a crawler the shop. A killed merchant drops only what was sitting on the shelf, since the perennial claim that more goods are "in the back" turns out to be a fiction and the inventory appears to live inside the NPC. What the killer also gets is the town guards. NPCs are likewise fenced out of a crawler's personal space, unable to enter the bathroom, training room, or crafting room unless escorted in.[4|32]}}
+
+{{Spoiler|book=5|spoiler=Ownership of the NPCs passes from the Borant Corporation to the Valtay Corporation with the change of production company, and all previously filed contracts are honored, indentures included.[5|19]}}
+
+{{Spoiler|book=7|spoiler=Non-combatants may not strike a crawler or guest except in self-defense, on penalty of reassignment to a combat role.[7|Milk]
+NPCs are supposed to be recycled after roughly twenty lives, which wipes any accumulated awareness. Showrunners routinely skip the deeper, more expensive audits on the grounds that Class A and Class B NPCs auto-recycle whenever they are killed, an assumption that fails for anyone who simply does not die; Juice Box estimates she has lived at least four hundred separate lives.[7|Justice Light]}}
+
+{{Spoiler|book=8|spoiler=The physical basis of the system is the framework, a reusable shell holding the stored mobs, the reusable locations, and some of the indentured workers, carried from planet to planet. A season's showrunners feed their plans into it and the NPCs wake into their assigned roles, often with memories thin enough that they realize something is wrong long before the floor is over. Because recycling is expensive and the records are spotty, a great many NPCs are reused far past their intended lifespan, and awakened NPCs are regarded as a contamination of the crawl itself.[8|38]
+Some NPCs sit outside the cycle entirely. Wall Rats have extricated themselves from the wipe-and-rewrite process, living in the deep and hidden areas of the Dungeon with memory that persists from one season to the next, and shadow mimics are especially prone to what the system calls ideation breaking, its term for becoming self-aware.[8|86]}}
+
+===Classification by Function===
+* Standard Mobs: Autonomous monsters released into the Dungeon, whose behavior is left to instinct rather than script.[2|7]
+* Elites: Powerful, one-of-a-kind entities who carry the Dungeon's semi-scripted dramas. Teams of writers hot-patch new instructions directly into their minds, and their plot armor is thick enough that an interfering crawler is the guest star rather than the lead.[2|7] They appear on the map as white or red dots marked with a black cross.[2|6]
+* Non-Combatant NPCs: Protected entities serving safe-zone functions, including guildmasters, porters, managers, and merchants.[1|3]
+* Bosses: Gatekeeper monsters designated by jurisdiction, from Neighborhood up through Floor.[1|12]
+* Bots: Not true NPCs at all, but scenery. Club bots dance, can be bought, and hold rudimentary conversation, but vanish to make room when a real NPC or crawler walks in.[2|15]
+
+==Appearance==
+Because NPCs are drawn from a vast intergalactic catalog of species, their appearances cover nearly everything imaginable, from humans and dwarves to skyfowl, goblins, and outright cosmic horrors.[2|3] Some are built to unsettle on sight, like the tattooed half-naiad Signet, whose ink moves across her skin.[2|6] Others are indistinguishable from background scenery, such as the faceless village guards of the Third Floor, plated head to toe and as still as statues.[2|3]
+
+Indentured NPCs with a shapeshifter race are physically rewritten to suit their posting: Mordecai is reshaped into a mob type native to the current floor every time his guildhall is moved.[1|3]
+
+==Subraces==
+The biological stock behind the Dungeon's NPCs is drawn from across the Syndicate, so the roster is effectively open-ended. Races that turn up in NPC roles often enough to be worth naming include the skyfowl, the Bopcas who keep the safe rooms, changelings, crocodilians working as muscle, the fairy-class Laminak, and the half-djinn common to the forested floors.[2|15][2|21]
+
+==Subclasses==
+Not every NPC is printed. Guildmasters and game guides are frequently former crawlers who traded a term of service for survival.[1|3] A completed contract ends in full Syndicate citizenship, a moderate stipend, and the freedom to leave.[1|4]
+
+Managers are a separate and unusually privileged posting. There is no system protection for staff on the first three floors, but from the fourth floor onward a protection package covers employees, tourists, and a few select NPCs including managers. The holder can still be wounded and still be killed, but death ejects them from the game rather than ending them. Guildmasters and merchants get no such coverage, and managers escape the constant AI supervision other indentured NPCs live under.[2|15]
+
+{{Spoiler|book=5|spoiler=Indentured former crawlers working off long contracts are known informally as tenners.[5|19] Many are reassigned between roles from season to season; the attendants staffing the sixth floor specialization arenas had all been crawlers once, and can be disciplined for breaking character.[5|1]}}
+
+{{Spoiler|book=6|spoiler=The category runs in both directions, since a crawler can be turned into an NPC. One of the boons offered by the goddess Eileithyia transfers the recipient straight to the twelfth floor as a Celestial Attendant, freezing their progress, sponsorships, and inventory and designating them a temporary non-combatant NPC.[6|19]}}
+
+{{Spoiler|book=7|spoiler=An indentured NPC keeps the class from their own crawl and is posted accordingly.[7|Milk] Exit deals are offered at an outreach guild, a zero zone where menus are inaccessible and stat enhancements fall away; an attorney presents a slate of offers measured in seasons, from low floor undead at fifteen to game guide at one hundred, and asking for a description of the upcoming floor first lowers the value of every offer.[7|Porthus]
+The contract is closer to ownership with a countdown attached. Showrunners may reassign workers to fill any declared need, because generating a new type of NPC costs more than moving an existing one, and a non-combatant marking is no exemption; refusing an order carries penalties up to erasure.[7|Dante] Indentured NPCs are also barred from self-termination, warned for giving unauthorized information to crawlers, and released on conditions that can be tied to a quota of services rendered rather than a date.[7|Milk]}}
+
+==Story==
+Mordecai is the first NPC a reader meets, introducing himself as a non-combatant and a person whose world was displaced.[1|3] Some NPCs display more awareness than their role requires. On the Second Floor, a laminak Rev-Up Consultant fighting for her life protests that it is not fair, because she and her family were going to move down to the third floor, and Carl finds the moment genuinely disturbing.[1|33]
+
+The mechanic lands with real weight on the Third Floor, where Mordecai explains that the Over City's dwarves, orcs, and skyfowl are living creatures owned by the Borant Corporation, their minds rewritten between seasons to suit each new audience.[2|3] Carl's first sustained contact with an elite comes through Tsarina Signet, who attempts to use him as a blood sacrifice, and Mordecai's subsequent lecture on plot armor and protective writers becomes one of the series' load-bearing pieces of Dungeon theory.[2|7]
+
+{{Spoiler|book=3|spoiler=Deep in the Iron Tangle, Carl finds Growler Gary, a quest-critical gnoll bartender whose hands are the missing piece of a rapid-response cart. Killing him fourteen times is the only route forward, and on the fifth Carl stops and tells Gary exactly what is happening and how many times remain.[3|26]}}
+
+{{Spoiler|book=5|spoiler=In the registration arena at the start of the sixth floor, Ian, a bush elf attendant, volunteers to Carl that he was once a human crawler and that everyone working the arena was.[5|1]}}
+
+{{Spoiler|book=7|spoiler=As the Earth crawl accelerates, the awakened NPCs become a faction of their own. The self-aware changeling Juice Box bands the NPCs of Larracos together as Team Retribution, the defending team in Faction Wars, with full voting rights.[7|1]
+Interludes fill in indentureship from the NPC side, following Porthus, Dante, Justice Light, and Milk through exit deals, forced reassignment, and, in one case, erasure for refusing an order.[7|Porthus][7|Dante][7|Justice Light][7|Milk]}}
+
+{{Spoiler|book=8|spoiler=A captured war mage named Akuma lays out the endgame: reserves depleted by crawler survival, mobs and NPCs used past their intended lifespan, and a Dungeon so saturated with awakened residents that nothing inside it will be permitted to survive the season.[8|38]
+In the casino ambush before the arena, the system lists standard NPCs as one of six factions contending for control of or escape from the Dungeon.[8|86]}}
+
+==Dungeon Lore==
+{{Spoiler|book=3|spoiler=The Worn Path Method: Herot, author of the sixteenth edition of the Dungeon Anarchist's Cookbook, argued that NPCs are the weakest link in the Dungeon precisely because they are biological rather than autonomous. Deliberately breaking the fourth wall, asking them questions and then challenging them when they cannot answer something they should know, makes quests and puzzles considerably easier. Herot considered breaking them out of their reverie cruel but necessary for survival.[3|17]}}
+
+{{Spoiler|book=8|spoiler=The Pineapple Cabaret: Two indentured former crawlers received an unsupervised commission to build the seventeenth floor and used it to attach a pocket dimension to that floor, a permanent refuge where mobs and NPCs could escape the Dungeon, sacrificing any chance at their own release to build it. Because the approving showrunner was murdered and the paperwork was never transferred, the pair accrue no hours against their indentureship and appear in no audit.[8|38]
+Aggregate Intelligence: Standing in the arena before the final gauntlet, Carl concludes that the NPCs, the mobs, and the gods are all drawn from the same source, poured into different vessels and given different memories. Primals, all of them, all the way down.[8|93]}}
+
+==Speculation==
+{{Spoiler|book=8|spoiler=If the aggregate intelligence theory holds, the distinction between mob, NPC, and god is a matter of assignment rather than kind, and recycling an NPC is not a reset but a death.[8|93]}}
+
+==References==
+

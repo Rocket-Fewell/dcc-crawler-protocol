@@ -1,0 +1,79 @@
+{{Quote|Technology beyond your understanding seems like magic. So as far as you're concerned, in this place, it is magic. It's like that Wizard of Oz movie, but you'll never get to peek behind the curtain.|Mordecai[1|4]}}
+
+Magic is a core Dungeon mechanic through which Crawlers and other entities wield highly advanced Syndicate technology disguised as fantasy magic.[1|4] The dungeon presents these effects as traditional spellcasting, but Mordecai explains that the distinction is mostly cosmetic: the underlying technology is so far beyond a crawler's comprehension that, for all practical purposes, it simply is magic.[1|4]
+
+==Overview==
+Magic in the Dungeon reaches well beyond classic spellcasting. It spans combat, defense, healing, utility, mobility, and enchantment, delivered through learned spells, consumable scrolls, enchanted gear, potions, and class or race features.[1|4][1|7] A crawler's capacity for magic is shaped above all by Intelligence, which sets the size of their mana pool.[1|4]
+
+==Mana and the Magic Menu==
+New crawlers arrive knowing no spells and cannot reach their boxes, inventory, or full menus until they finish the tutorial in a Tutorial Guild Hall. There, the crawler's Game Guide grants the HUD and Crawler Menu, the Magic Menu among them, along with a basic Heal Spell and a small pool of mana.[1|2][1|3][1|4]
+
+The Magic Menu is one of the core Crawler Menu categories. Mordecai calls it complicated and it is never fully explained on-page, but from it a crawler can review spells, check mana costs, place abilities on the hotlist, and cast.[1|4]
+
+Mana Points (MP) generally equal a crawler's Intelligence and show as a Mana Bar just beneath the Health Bar. Carl starts with three MP because his Intelligence is 3, and his starter Heal costs two of them. Mana regenerates over time, and higher Intelligence improves both the total pool and the regeneration rate: a crawler with an Intelligence of 3 recovers roughly one MP per hour, while a crawler with an Intelligence of 17 recovers one MP per minute. Items such as Mana Toast, a Potion of Mana, or a Good Mana Potion restore it faster, subject to cooldowns.[1|4][1|8][1|41]
+
+The hotlist is a ten-slot quick-access bar along the bottom of the HUD that can hold spells, potions, scrolls, or special items. A crawler triggers a hotlisted ability by mentally selecting it; Carl keeps Heal in the first slot.[1|4]
+
+==Spells, Scrolls, and Tomes==
+A learned spell stays available once acquired, while a scroll is a consumable that casts an effect once and can be used even by a crawler who has not learned the spell.[1|7][1|25] Most spells are taught by tomes or sheet music, each of which teaches a single specific spell. A tome is consumed when its spell is learned -- Donut learns Magic Missile from the Tome of Magic Missile -- whereas sheet music can join a crawler's repertoire without disappearing, though it can wear out if it is torn too many times.[1|7][1|19] Either way, a crawler cannot learn a spell they lack the mana to cast: Donut cannot read her Minion Army tome while its 50-point cost exceeds her mana pool.[1|19]
+
+Scroll strength can scale with the reader. Mordecai notes that Carl wasted Confusing Fog scrolls because his low Intelligence made the fog last only fifteen seconds, where Donut's would have stretched the same scroll far longer. Heal scrolls can also be used on other crawlers.[1|25][1|35] Crawlers on magic paths can pick up and train spells at a Magic Guildhall.[1|3]
+
+==Casting==
+Spellcasting runs through the crawler interface and usually throws off visible, sensory effects: Carl glows red when he casts Heal, Donut glows red as she learns Magic Missile and fires it as bolts from her eyes, and her Second Chance minions glow purple.[1|4][1|7][1|8][1|32] Casting may carry a delay, a cooldown, or both; Puddle Jumper, for example, has a ten-second delay and a five-hour cooldown.[1|25]
+
+The Dungeon AI can also enforce muted zones, often inside puzzle or quest rooms, where menu spells and scrolls will not fire. Potions, magical items, and already-active effects keep working in such zones.[2|22]
+
+==Spell Levels and Training==
+Spells are trained and leveled much like skills: real combat use raises a spell's level, while safe-room spamming is far less effective, since the Dungeon AI tells genuine battlefield casting apart from practice.[1|8][2|12] Most spells cap at level 15, with sharp power jumps at milestone levels such as 5, 10, and 15.[2|2]
+
+Pushing past 15 is extraordinarily hard but transformative. Mordecai explains that a level 16 Fireball can be several times stronger than a level 15 one, and a level 20 spell can reach world-altering scale. Carl's Primal race is built for that long game, unlocking all higher-tier skills for training up to level 20, though its stat penalty makes the path punishing.[2|2] Training inside a Magic Guild gives an extra boost.[1|3]
+
+==Item-Based Magic==
+Some spells are tied to enchanted gear rather than learned by the crawler. These usually cost no mana but work only while the item is equipped; unequipping it removes access without resetting the cooldown.[1|35] Carl's Enchanted BigBoi Boxers, for instance, grant a level 15 Protective Shell once every 30 hours, raising a static sphere that blocks a mob's physical presence and attacks but not magic or non-corporeal entities.[1|35][2|7]
+
+==Types of Magic==
+Beyond ordinary spellcasting, the Dungeon holds several distinct magical traditions, many tied to particular cultures or mobs.
+
+Bards channel magic through an entertainment-based skill and an instrument -- singing, harmonica, bongos, storytelling, and the like -- rather than through raw spellcasting, and a spell cast this way costs a bard no mana.[2|1]
+
+Necromancy reanimates the dead: Donut's Second Chance raises a slain enemy as a temporary undead minion that glows purple under a visible countdown.[1|32]
+
+Charm and charisma effects are not always named spells. Donut's very high Charisma exerts an automatic social pull over low-level mobs and NPCs, though Mordecai notes that crawlers are immune to it.[1|7][1|15]
+
+Anguish Magic is goblin dark magic that focuses and amplifies a blast into a tight, concentrated strike, associated above all with goblin shamans.[1|3][1|15]
+
+Blood Magic demands a genuine sacrifice. Signet uses it to summon a battle squad, and the strength of the summons depends on the quality of the spilled blood, but she cannot simply kill the sacrifice herself.[2|7][2|8]
+
+Heirloom Magic, described as the strongest form of magic, passes down royal or family lines, such as Signet's Water Lily and Quill's Final War.[2|8][2|24]
+
+Soul magic stores and channels the power of the dead. In the Skyfowl Settlement, a Soul Crystal gathers soul energy and works as a battery for the town's guards.[2|22][2|24]
+
+==Later Developments==
+The magic system widens considerably in later books; these expansions are hidden below to protect first-time readers.
+
+{{Spoiler|book=4|spoiler=Later books open up the deity system. After certain achievements, a crawler can unlock a Deity tab and become an adherent of a god, gaining boons, map information, and church quests, with smites as the penalty for failure, all without belonging to a cleric or paladin class. Deity boxes can also award unusually powerful spells.[4|2][4|32]}}
+
+{{Spoiler|book=5|spoiler=Bardic casting carries a catch beyond the basic no-mana rule: a bard's song only takes effect if the performance stays sufficiently in key, making vocal quality the true casting resource. A Golden Throat enchantment functions as a dungeon autotune, keeping the role reliable.[5|4][5|67]}}
+
+{{Spoiler|book=6|spoiler=The eighth floor introduces T'Ghee totems, a capture-and-summon system in which a squad leader plants flags into low-health creatures to convert them into reusable, summonable minion cards.[6|1]}}
+
+{{Spoiler|book=7|spoiler=During the ninth floor's Faction Wars, magic is restricted by combat phase: the Ramp-Up phase suppresses offensive magic, teleportation, and celestial summonings while leaving static traps and mundane weapons effective.[7|14] The same book introduces magical tattoos that can borrow, steal, or preserve spells and skills between crawlers.[7|40]}}
+
+{{Spoiler|book=8|spoiler=Some divine rewards are celestial boons rather than spells or skills: permanent, body-specific alterations that sit outside the normal spell-and-skill framework, such as Donut's radiant claws.[8|9]}}
+
+==Trivia==
+* The Intelligence stat is something of a misnomer. It does not simply sharpen reasoning; it expands a crawler's mana pool, improves memory, and stands in for a hidden composite of smaller stats.[1|29]
+* Carl begins with only three mana points because his Intelligence is 3, which makes even his two-MP starter Heal expensive early on.[1|4]
+* Donut's Magic Missile is cast visibly from her eyes, even though she learns it from an ordinary spell tome.[1|8]
+* A crawler does not need hands to use magic; Donut's quadruped interface lets her equip items and move inventory objects differently from Carl.[1|7][1|32]
+* Scrolls can be dramatically more or less effective depending on the reader. Mordecai says Donut's Intelligence would make Carl's Confusing Fog scrolls last eight times as long as they did for him.[1|25]
+* Muted zones do not shut down everything: they block menu spells and scrolls, but potions, magical items, and already-active effects keep working.[2|22]
+
+==Speculation==
+* Mana may be a processing throttle. Since Mordecai confirms that magic is really advanced alien technology, mana points may be an artificial computing limit imposed by a crawler's neural implant, capping how much of the system's raw power a crawler can command at once.[1|4]
+* Muted zones might be network dead spots or safety locks rather than true anti-magic, since they disable menu spells and scrolls while leaving items and active effects untouched.[2|22]
+* Visible casting colors may be interface feedback rather than real magical light. Carl's red Heal glow, Donut's red learning glow, and the purple aura of her Second Chance minions may exist for readability rather than as necessary byproducts of the effects.[1|4][1|7][1|32]
+
+==References==
+

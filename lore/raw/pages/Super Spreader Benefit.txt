@@ -1,0 +1,24 @@
+{{SpoilH | 4}}
+{{Spells
+|title1= {{PAGENAME}}
+|effect=Share an active Debuff
+| image1=
+|caption-image1=
+|cost=
+|casting=
+|cooldown=
+|target=Target of choice
+|duration=Indefinite
+|associated equipment= Enchanted Toe Ring of the Leprous Bandit
+|users= Carl
+}}
+
+Super Spreader is a Benefit that allows you to share an active Debuff with one target of your choice.
+
+==AI Description==
+
+Super Spreader
+You have been given the power of every plague rat and kindergartner since the dawn of time. You may pass any active debuffs onto a target of your choice once per hour. This does not remove the debuff from yourself.
+
+==References==
+

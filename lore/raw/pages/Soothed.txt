@@ -1,0 +1,16 @@
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Buff
+  | causes =
+  | effect = * Debuffs are 10% less effective
+  | duration = 
+}}Soothed is a healing buff that can be imparted by spells or passive abilities.[5|6]
+
+==AI Notification==
+You have been Soothed! Everything hurts a little less. Debuffs are 10% less effective.
+
+==References==
+

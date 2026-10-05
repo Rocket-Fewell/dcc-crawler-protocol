@@ -1,0 +1,194 @@
+{{SpoilH|7}}
+{{Event
+|title=Faction Wars
+|image=Faction Wars by ContentOffice.jpg
+|imagecaption=Art by u/Content_Office_2479, Reddit
+|performers=* Bone Clan (of the Skull Empire)
+* Operatic Collective
+* Princess Posse
+* Blood Sultanate
+* Prism Kingdom
+* The Dream
+* Lemig Sortion
+* The Madness
+* The Reavers
+* Team Retribution (defending)[7|1][7|20]
+|date=Once per Dungeon season[1|43]
+|location=Larracos and the surrounding plains, Ninth Floor[4|24][7|14]
+}}
+{{Quote|Weapons Free. Weapons Free. Faction Wars have officially begun.|System Message[7|19]}}
+
+Faction Wars is the ninth-floor spectacle of Dungeon Crawler World: a long-running Syndicate tradition in which nine sponsored armies fight for control of the capital city of Larracos and a large cash prize.[1|43][3|9][4|24] Crawlers are traditionally bystanders, expected to do nothing but survive.[1|44][3|30]
+
+This article covers the rules, terminology, and history of the game. For the level it is played on, see Ninth Floor.
+
+== Overview ==
+Faction Wars runs on the Ninth Floor of every Dungeon season. Syndicate corporations and governments sponsor the nine attacking teams, which battle one another for Larracos, the capital of the disputed lands.[1|43][3|9] A single faction spot costs roughly 150 million credits.[5|15] Eligibility is restricted: a buyer must already be a significant participant in or sponsor of the season, and an organization that already qualifies pays only a portion of the full fee.[5|75] Each faction begins with roughly 15,000 troops plus whatever mercenaries it can acquire, and by the time a season ends no building in Larracos is left standing and no NPC is left alive.[4|24][4|34]
+
+The alien soldiers are informally known as tourists; most are wealthy enough to treat the season as a holiday and fight for bragging rights, while their sponsors play for the cash prize and the prestige, and a great many bets ride on the outcome.[2|15][4|24] Crawlers are not players in the war at all. Mordecai advises riding the floor out like a tornado and keeping one's head down; those who neither flee nor enlist are conscripted into whichever army finds them, and full crawler extinction, rare on earlier floors, is common here.[1|44][3|30][7|1]
+
+== Rules ==
+The goal of Faction Wars is to capture the castle at the center of Larracos.[7|1] Play proceeds through four named phases, with a long preparation period before crawlers ever reach the level.[7|14]
+
+=== Preparations ===
+Each of the nine factions arrives at its designated area when the Third Floor opens and begins building its army, defenses, and fortifications. Starting positions are assigned at random with one exception: the previous season's winner chooses where it starts, and most choose King's Point, the map's only pre-built, naturally defensible castle. Factions cannot fight one another until crawlers arrive, so serious commanders spend the interval drilling officers and stockpiling buff potions, while others party in Larracos or gamble away credits in the Desperado Club.[3|9][4|24]
+
+Faction leadership has no access to the crawlers' marketplace interface, so commanders must travel into Larracos in person to buy gear from NPC proprietors and hire troops at the mercenary market deep in the city.[4|3][4|24] That window closes the moment crawlers arrive: everyone is expelled from the city and the fighting begins.[4|3]
+
+=== Ceasefire ===
+The Ceasefire is the first phase and begins the moment the floor opens. It is scheduled to last 60 hours, but may be cut short if a team is eliminated or voluntarily withdrawn, as it was by more than 23 hours when Commander Stockade died.[7|1][7|19] Teams recruit soldiers, prepare defenses, and negotiate alliances; crawlers may freely enlist in any army that will have them or attempt to flee into the woods beyond the Plains of Larracos, though each faction is adept at hunting down strays. When the Ceasefire ends, only the defending team, unaffiliated NPCs, and the defenders' allies may remain inside the city. Every other team is ejected and the battles begin.[7|1]
+
+=== The Ramp-Up ===
+The Ramp-Up triggers when the Ceasefire ends and lasts 180 hours. Several restrictions apply during this phase:[7|14][7|20]
+* No celestial summonings.
+* No offensive magic, meaning magic designed to cause direct harm.
+* No teleport-based magic or skills. Magical weapons still function, but spells attached to them do not.
+* Enemy territory may be entered only through designated, kilometer-wide corridors, with free passage once inside. Crawlers holding the "Scout" endorsement are exempt.
+* Traps must remain static and cannot be repurposed as weapons or artillery ammunition. Non-magical artillery is permitted.
+
+=== Open Hostilities and the Peeling ===
+Open Hostilities triggers the moment the Ramp-Up expires, lifting its restrictions and restoring normal Dungeon rules. The Peeling of Larracos is the final phase, triggered the moment only four teams remain.[7|14] Until that point, the city itself is sealed and inaccessible.[7|1]
+
+=== Victory and Elimination ===
+Once the Peeling begins, the defending team wins by holding the central throne room for a full week; if it loses the room and later regains it, the week restarts. Any attacking team wins by holding the throne room for six hours, with a half-hour grace period when the room changes hands. Only individual teams, never alliances, may take the room, and whichever team holds it gains access to the city defense system. An attacking team is eliminated if its warlord or warlords are killed, or if the throne room of its primary base is taken and held against it for six hours; soldiers of an eliminated team are traditionally given the choice to join the victors or be slaughtered. Alliances themselves are formed by declaring a formal truce, and allies may cooperate militarily, but an alliance can never claim the throne room.[7|1] A defeated team's assets pass to the victor, or, if the defeat was voluntary, to the nearest allied castle or warlord. Inherited territory that does not adjoin a team's own land cannot be dismantled and remains vulnerable to capture.[7|19][7|27]
+
+=== Stairwells ===
+Stairwell chambers are seeded throughout the floor, 293 of them in the Dungeon Crawler World: Earth season, but they do not open until either Faction Wars is won or there are 30 hours left before level collapse, whichever comes first.[7|1]
+
+== Armies ==
+Recruits who wish to join a faction must be sworn in by an officer, and individuals must be physically touched to be made an officer. Volunteers are often supplied with equipment and loot and treated as valuable members of the team; well-regarded ones are sometimes remembered and offered employment once their time in the Dungeon is complete. Any crawler who is not recruited is vulnerable to conscription and can be forced to fight against their will, and conscripts who refuse suffer a debuff that prevents them from being healed.[7|1][7|68]
+
+Most troops are NPCs, though wealthier factions may pay to fill part of the ranks with their own people. Each such person displaces one NPC, so there is little advantage in bringing many unless they are already well trained: a rich faction might bring two hundred, a poor one twenty.[4|24] Showrunners also seed war mages in as mercenaries, and because they prize them for this event in particular the pool is rarely recycled between seasons, so the war mages who reach the Ninth Floor are older and more dangerous than their placement suggests.[7|61]
+
+=== War Chests ===
+Each faction may bring a single war chest containing a set volume of supplies, typically legendary potions that boost stats or skills, magical rings, and other compact but powerful items. Most of the contents are consumed within roughly fifteen minutes of the floor opening,[2|2] and one chest is nowhere near enough to outfit an army, so everything else must be purchased or looted.[4|24]
+
+=== Captured Troops ===
+Soldiers taken from a defeated or surrendering faction may be converted rather than killed. For roughly a week afterward their banner blinks red, and during that period their new team holds the same control over them as over a conscript: they cannot attack officers directly, they can be compelled to follow orders, and their flight triggers a notification. They may also be executed at will during this window, which is what has traditionally happened to captured NPCs and crawlers alike.[7|27]
+
+== Terms ==
+=== Adjutant ===
+An adjutant is a neutral third-party observer and referee assigned to each Faction Wars team, sitting somewhere between a manager and a liaison. Adjutants hold the expanded ruleset, keep open communications with one another, and have a limited ability to call out rule-breaking, though their participation is traditionally symbolic and the role usually goes to someone loud and famous who can provide color commentary and a daily on-air recap.[6|21][6|35] The system classes them as non-combatant observers.[7|10]
+
+An adjutant accompanies their warlord onto the field, may teleport even during the Ramp-Up, and can turn invisible, but may not participate in combat and will call fouls against their own team.[7|14] Adjutants remain protected regardless of the vote on sponsor protections,[6|35] and those of eliminated teams are relocated to the Scolopendra Club on the eighteenth floor.[7|27]
+
+=== Adjudication and Penalties ===
+A foul that carries sanctions must be examined by a minor quorum of three adjutants, who register agreement with an audible system chime; a single adjutant may formally refute a claim.[7|18] Larger questions, such as whether the War Mage Rebellion had standing as a team, go to a full quorum.[7|62] A team may receive up to three penalties. The first levied in the Dungeon Crawler World: Earth season, against the Lemig Sortion, was a 25% reduction in standing force plus the removal of two technology slots, disbanding the mechanized armor occupying them.[7|19]
+
+=== Protections ===
+In a typical season, alien tourists cannot be killed on the Ninth Floor. System protection covers employees, tourists, and certain NPCs from the fourth floor onward; those killed under it are not truly dead but merely ejected from the game.[2|15] On the ninth floor specifically, the system holds a portion of a tourist's health in reserve and teleports them away before death, though they still feel real pain, so the fighting amounts to little more than a weekend excursion for many of them. A tourist killed before crawlers arrive respawns; one killed afterward is permanently removed. NPC troops never respawn at all.[4|24]
+
+Faction sponsors carry the same protection, and during Dungeon Crawler World: Earth it was stripped from them. When the question was first put to the nine teams, only the Skull Empire and the newly formed Princess Posse voted in favor.[5|75] The measure eventually reached the audience as part of a batch of pending votes and carried by 98%, putting the life of every sponsor on the floor at risk.[6|72]
+
+=== Action Item ===
+Any team may propose an action item during the pre-production planning meetings. Proposals enter a queue and are put to a vote, though the system may reject one outright before any vote occurs, as it did with Donut's proposal to rename Crown Prince Stalwart on the grounds that titles may not be changed. Regular action items can no longer be proposed once the season begins.[6|21][6|22][6|72]
+
+Each team additionally holds three emergency action items. These are not put to a vote; the system decides them directly, and they may be spent at any point during the season.[6|35][6|72] Recorded uses include Empress D'Nadia's three rejected proposals,[6|35] Carl's successful proposal to hand every pending action-item vote to the audience,[6|72] and Sir Ferdinand's live-feed blackout.[7|19][7|43] The most consequential on record was Agatha's: on gaining standing for the War Mage Rebellion she spent all three at once, buying full resources and warlord-system access together with the right to claim thrones, full access to the Conscription spell and its benefits, and a reversion to the rules of the original Faction Wars, under which a defeated team's warlords and soldiers all die automatically during the Peeling.[7|68]
+
+=== Warlord ===
+A warlord is the person, or persons, in charge of a faction. Once every warlord for a team has been eliminated, that team has lost Faction Wars.[7|1] The role is enforced through a system-side warlord menu, which governs a team's interfaces; because the NPC Juice Box could not be granted access to that menu, Sir Ferdinand was seated alongside her as co-warlord so that Team Retribution could manage its own team.[7|9][7|69]
+
+=== Warlord Council ===
+The Warlord Council is the forum in which faction leadership meets. Preproduction meetings run in the months before the floor opens, hosted from a boardroom inside Larracos, or remotely when the city is unusable.[6|21] A televised council convenes during the season itself, where the warlords answer questions on air.[7|43]
+
+== History ==
+* By Prince Maestro's account, his family's Skull Clan has won six of the last ten Faction Wars and placed in the top three every time.[1|43]
+* The Blood Sultanate always participates, and is almost always the first of the nine eliminated.[1|43]
+* The victorious army is almost always led by a champion carrying an artifact on the order of the Enchanted Night Wyrm's Ring of Divine Suffering, an item designed for tourists rather than crawlers, which the factions collect by convincing hunters to go looking for one on the Sixth Floor.[3|30]
+* The Skull Empire and the Reavers have a habit of allying to clear the other teams off the board before turning on each other for the trophy, though an early betrayal the previous season made a repeat unlikely.[6|21]
+* The Viceroys were once frequent winners, though they had not taken a season in some time.[6|21]
+* In an earlier season the Reavers used invisibility and Fall potions to leap straight down the center of the Larracos funnel while the orcs marched the ramps, reaching the castle first. They lost anyway.[7|8]
+
+== Story ==
+
+Dungeon Crawler World: Earth went off script before the floor even opened. At the end of the Fifth Floor, Carl and Katia opened the Gate of the Feral Gods directly into the faction market inside Larracos and drained an ocean through it, destroying the markets every faction had been counting on to outfit its armies; because worker NPCs cannot be added to a finished level, the merchants and mercenary brokers could not be replaced.[4|34] The Dreadnought Clan quit the season in the aftermath,[5|58] and the Burrowers abandoned their stake at the last minute. That slot went to the Princess Posse of Carl and Donut, who inherited no mercenaries at all and had funded the purchase through their fan club.[5|75][6|OMG. What a floor!]
+
+The season also seated an unprecedented tenth team. At an eighth-floor Warlord Council meeting, the NPC Juice Box, who had spent the preceding meetings assassinating warlords and their representatives to force the question, demanded that her people be recognized as a team of their own with the same protections as everyone else; Carl formalized it as an action item.[6|22] The proposal passed by a 52% audience vote, which designated the faction the "Home Team," established Larracos as its base, and named Juice Box and Sir Ferdinand co-warlords. The NPCs themselves later chose the name Team Retribution.[6|72][7|1] The same batch of audience votes loosened long-range artillery physics, raised the playing field's ceiling, accelerated pet leveling, and expanded the field to accommodate the unprecedented number of surviving crawlers, while rejecting a Madness proposal to cut celestial summonings from fifteen per team to five.[6|72]
+
+{| class="fandom-table sortable"
+|+ Faction roster (Dungeon Crawler World: Earth)
+! Spot
+! Faction
+! Warlord(s)
+! Syndicate / Race
+! Adjutant
+|-
+| 1
+| Bone Clan (of the Skull Empire)
+| Crown Prince Stalwart
+| Orcs
+| Deng Bao[7|69]
+|-
+| 2
+| Operatic Collective
+| Hortense Leadership Unit
+| Slimes
+|
+|-
+| 3
+| Princess Posse
+| Carl and Donut
+| Various
+| Baroness Victory[6|36]
+|-
+| 4
+| Blood Sultanate
+| Princess Vinata (the "Sepsis Whore")
+| Nagas
+| Admiral Corinne Whimpleshin[7|53]
+|-
+| 5
+| Prism Kingdom
+| Empress D'Nadia
+| Saccathians
+| Nihit Kumar[7|27]
+|-
+| 6
+| The Dream
+| Epitome Tagg
+| Elves
+| Fopsy[7|69]
+|-
+| 7
+| Lemig Sortion
+| Commander Stockade
+| Various
+| Panford[7|18]
+|-
+| 8
+| The Madness
+| Architect Houston
+| Viceroys
+| Opiee[7|18]
+|-
+| 9
+| The Reavers
+| Warlord Fang
+| Cyborgs
+|Tart
+|-
+| 10
+| Team Retribution (defending, officially the "Home Team")
+| Juice Box and Sir Ferdinand
+| NPCs
+| Drick[7|10]
+|-
+| None
+| War Mage Rebellion (mid-season entrant)
+| Akuma and Agatha
+| War Mages
+| Deng Bao[7|69]
+|}
+
+As the previous season's winner, the Bone Clan held King's Point.[7|14] Within hours of the floor opening it announced a truce with the Operatic Collective that six more teams joined; the eight named themselves the Bloc, declared war on both Team Retribution and the Princess Posse, and named Crown Prince Stalwart their leader.[7|1][7|Volteeg] The Posse and Team Retribution answered with a truce of their own, which Donut named "The Good Guys."[7|1]
+
+The Lemig Sortion fell first, when Commander Stockade was driven insane and killed himself; the voluntary defeat cut the Ceasefire short and handed the team's assets to the Madness.[7|19] The Prism Kingdom followed, and then the Operatic Collective, destroyed by one of its own when Volteeg filled his tank with charged energy balls and detonated it in the center of the Bloc force.[7|27][7|Volteeg] Mid-season the war mages conscripted under Stalwart broke their bonds, killed him, and declared themselves the War Mage Rebellion, a non-team entity the system had no category for.[7|61][7|62] Once the Peeling began the system granted them standing; they seized Team Retribution's throne room and the city defense system with it, took the Scavenger's Daughter they had come for, and abandoned the position, forfeiting the season.[7|68][7|69] Carl killed Architect Houston of the Madness, dropping the field to four and opening the sealed city.[7|68] The season ended with the Princess Posse victorious.[7|Epilogue]
+
+The fighting itself, the divine interference, and the unprecedented survivor count are covered in detail on the Ninth Floor page.
+
+== Trivia ==
+* The Bone Clan, the Skull Clan, and the Bone Empire are all used for Stalwart's army; the system prefers the first.[7|62][7|Volteeg]
+* The Lemig Sortion appears in system messages as the "Democratic Sortion," most likely a formal title for the same team.[6|21][7|19][7|20]
+
+== References ==
+

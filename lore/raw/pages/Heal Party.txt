@@ -1,0 +1,45 @@
+{{SpoilH|4}}
+{{Spells
+| title1        = Heal Party
+| image1        = 
+| caption-image1 = 
+| cost          = Unknown
+| casting       = Unknown
+| cooldown      = Unknown
+| target        = Party Members
+| duration      = Instantaneous
+| effect        = Heals multiple members of the caster's party.
+}}
+
+Heal Party is a magical spell that restores the health of a crawler's party members.[6|15] It is a highly valued support ability within Dungeon Crawler World that can be acquired through loot tomes or divine rewards.[6|15][4|32]
+
+==Description==
+The Heal Party spell functions as a group-healing mechanic for crawlers, allowing them to tend to their allies' health simultaneously rather than relying on individual potions or single-target heal scrolls.[6|15][4|32]
+
+{{Spoiler | book = 5 | spoiler =There are also specialized class-based variants of this spell. For example, the Bard class features a song-based spell called Encore that acts as a Heal Party spell with the added benefit of removing multiple debuffs from the party.[5|4]}}
+{{Spoiler | book = 8 | spoiler =Additionally, pets can acquire similar targeted abilities; the "Wrap of Sekhmet's Compassion" enchanted headband grants a pet the "Heal Party Member" skill to protect and heal its owner in dire situations.[8|8]}}
+
+==Level Up==
+{{Spoiler | book = 6 | spoiler =Specific mathematical details regarding the leveling progression of the base Heal Party spell are not fully documented. However, it is known that the spell can be acquired at an advanced tier, such as level 10, indicating that leveling up the spell substantially increases its healing efficacy or its area of effect for the party.[6|15]}}
+
+==Story==
+===Book 4===
+During the events of the Fifth Floor (the "bubble" floor), Tserendolgor mentions in the chat that a member of her group received a tome of Heal Party from a loot box, which she celebrates as being "good stuff" alongside other powerful drops.[4|32]
+
+===Book 5===
+{{Spoiler | book = 5 | spoiler =Princess Donut gains the Encore spell through her Bard class, which Mordecai enthusiastically identifies as a Heal Party spell capable of clearing debuffs.[5|4]}}
+
+===Book 6===
+{{Spoiler | book = 6 | spoiler =During the encounter with the Orishas, fixing the shrine of Oshun offers a massive reward where all participating crawlers receive a level 10 Heal Party spell, along with a 50% Charisma boost and protection from the next five fatal blows.[6|15]}}
+
+===Book 8===
+{{Spoiler | book = 8 | spoiler =Carl loots an item called the Wrap of Sekhmet's Compassion, which grants a pet the "Heal Party Member" skill and invulnerability for 60 seconds if its owner's health drops below 10%.[8|8]}}
+
+==Trivia==
+{{Spoiler | book = 6 | spoiler =*Repairing Oshun's shrine to obtain the level 10 Heal Party spell causes Oshun to ascend to the Halls of Ascendency.[6|15]}}
+
+==Speculation==
+*Because a level 10 version of the spell is offered as a major reward from a goddess's shrine, it can be speculated that leveling the Heal Party spell manually is a difficult and resource-intensive process. Furthermore, since party-wide healing is rare compared to single-target Heal scrolls and potions, having a crawler with this spell is likely a massive tactical advantage for larger squads facing area-of-effect damage.
+
+==References==
+

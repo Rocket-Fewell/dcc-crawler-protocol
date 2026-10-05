@@ -1,0 +1,26 @@
+{{SpoilH | 8}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=
+|keywords=
+|effects=
+|source=Assassin of Sekhmet Class
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is an item Donut receives as part of her Assassin of Sekhmet Class. She gives it to Rend.
+
+== AI Description ==
+
+Enchanted headband. The Wrap of Sekhmet’s Compassion.
+This item may only be equipped by a pet.
+Eternal Protector of Health. Pet will become temporarily invulnerable and will gain the Heal Party Member skill if it is within three meters of its owner and its owner’s health is below 10%. Invulnerability will last 60 seconds and can only trigger once per day.
+Bringer of Resurrection. Fatal bites from this pet have a 75% chance to cast a level 10 Raise Bootlicker on the corpse.[8|8]
+
+==References==
+
+{{Navbox Items}}

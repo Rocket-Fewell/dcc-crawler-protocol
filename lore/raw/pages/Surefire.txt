@@ -1,0 +1,28 @@
+{{SpoilH | 4}}
+{{DISPLAYTITLE:}}
+{{Item
+|title=
+|image=
+|imagecaption=
+|type= Crafting Item
+|keywords=
+|effects=Adds seeking element to projectiles
+|source= Sniper's Box
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is an item
+
+== AI Description ==
+
+Surefire. Crafting item.
+A Surefire adds the “Guided” status to any projectile, powered or not. It may be utilized on a vast array of crafting tables. If added to an arrow or bolt, you must choose a target prior to unleashing the weapon, and the projectile will seek that target.
+If added to a trap, additional options become available. Such as “Target any healers within range” or “Target anyone who thinks it’s okay to put mayonnaise on hotdogs.”
+If added to a powered weapon, such as an explosive-based rocket, targets may be assigned during the crafting process or upon firing, but not both. 
+Note: this upgrade alone does not add range to the projectile.[4|2]
+
+==References==
+
+{{Navbox Items}}
+

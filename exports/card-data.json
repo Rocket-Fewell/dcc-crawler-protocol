@@ -1,0 +1,189 @@
+{
+  "_comment": "Player-facing card data for the channel publisher (tools/publisher.py). Items are matched by exact state.json item name (case-insensitive); an inventory item's own 'mechanics' field (state.py inventory add --mechanics) overrides this. Derived from exports/sheet-*.md. Never put GM-only content here.",
+  "categories": [
+    [
+      "weapons",
+      "Weapons & focus"
+    ],
+    [
+      "armor",
+      "Armor & clothing"
+    ],
+    [
+      "magic",
+      "Magic & special"
+    ],
+    [
+      "gear",
+      "Gear"
+    ]
+  ],
+  "items": {
+    "box cutters (daggers)": {
+      "category": "weapons",
+      "mechanics": "1d4 piercing, Finesse, Light, Thrown (range 20/60)."
+    },
+    "duct-taped mop handle (arcane focus / quarterstaff)": {
+      "category": "weapons",
+      "mechanics": "Quarterstaff: 1d6 bludgeoning, 1d8 two-handed (Versatile). Spellcasting focus."
+    },
+    "cracked phone app (spellbook)": {
+      "category": "weapons",
+      "mechanics": "Spellbook: holds your wizard spells; ritual-cast from it."
+    },
+    "sad hotel robe (robe)": {
+      "category": "armor",
+      "mechanics": "Robe: no AC."
+    },
+    "traveler's clothes": {
+      "category": "armor",
+      "mechanics": "No mechanics."
+    },
+    "pebbles snow globe (driftglobe: light, floats, dog inside bobs its head)": {
+      "category": "magic",
+      "mechanics": "Driftglobe (Uncommon wondrous; hand-picked into a Bronze box): within 60 ft, a command word makes it shed the Light cantrip (20 ft bright + 20 ft dim, 1 hour) or Daylight (60 ft bright + 60 ft dim; once per dawn). Another command (Action) floats it up to 5 ft to hover and follow you."
+    },
+    "lost-and-found backpack (scholar's pack)": {
+      "category": "gear",
+      "mechanics": "Scholar's Pack: backpack, book, ink and pen, lamp, 10 oil flasks, parchment, tinderbox."
+    },
+    "gas-station gps kit (navigator's tools)": {
+      "category": "gear",
+      "mechanics": "Tool proficiency kit for plotting a course and navigating."
+    },
+    "ziplock pouches": {
+      "category": "gear",
+      "mechanics": "Each holds about 6 lb of small items."
+    },
+    "discount gas-station jerky cubes (rations)": {
+      "category": "gear",
+      "mechanics": "Rations: 1 day of food each, 2 lb each."
+    },
+    "stolen trailer clothesline (rope 50 ft hempen)": {
+      "category": "gear",
+      "mechanics": "Rope, 50 ft: DC 20 Strength (Athletics) check to burst."
+    },
+    "expired office first-aid kit (healer's kit)": {
+      "category": "gear",
+      "mechanics": "Healer's Kit: Utilize action to stabilize a creature at 0 HP without a check."
+    },
+    "paint-can pry bar (crowbar)": {
+      "category": "gear",
+      "mechanics": "Crowbar: advantage on Strength checks where leverage helps."
+    },
+    "bucket of loose bb pellets (ball bearings)": {
+      "category": "gear",
+      "mechanics": "Ball Bearings (1000): spill over a 10 ft square; creatures entering make a DC 10 Dex save or fall prone."
+    },
+    "gas-station bathroom mirror tile (steel mirror)": {
+      "category": "gear",
+      "mechanics": "Steel Mirror: look around corners; signal flash."
+    },
+    "bike-lock chain missing the lock (chain 10 ft)": {
+      "category": "gear",
+      "mechanics": "Chain, 10 ft: 10 HP, DC 20 Strength to burst."
+    },
+    "coat-hanger grapple (grappling hook)": {
+      "category": "gear",
+      "mechanics": "Grappling Hook: attach to rope, throw to anchor on a ledge."
+    },
+    "orientation pit banner (stolen hallway canvas)": {
+      "category": "gear",
+      "mechanics": "Stolen canvas; no mechanics."
+    },
+    "dog leash clipped to nothing (pebbles's)": {
+      "category": "gear",
+      "mechanics": "Pebbles's. No mechanics."
+    },
+    "spiked sledgehammer (maul)": {
+      "category": "weapons",
+      "mechanics": "Maul: 2d6 bludgeoning, Heavy, Two-Handed, Topple mastery."
+    },
+    "reinforced absorbing gloves (club)": {
+      "category": "weapons",
+      "mechanics": "Club-class: 1d4 bludgeoning, Light, Slow mastery."
+    },
+    "mop-handle staff (quarterstaff)": {
+      "category": "weapons",
+      "mechanics": "Quarterstaff: 1d6 bludgeoning, 1d8 two-handed."
+    },
+    "light crossbow + 20 bolts": {
+      "category": "weapons",
+      "mechanics": "1d8 piercing, range 80/320, Loading, Two-Handed, Slow mastery."
+    },
+    "torches": {
+      "category": "weapons",
+      "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour; 1 fire damage if used as a weapon."
+    },
+    "scale mail (steel)": {
+      "category": "armor",
+      "mechanics": "Medium armor: AC 14 + Dex (max +2), Stealth disadvantage."
+    },
+    "sports drink, red flavor (potion of healing)": {
+      "category": "magic",
+      "mechanics": "Potion of Healing: drink as a Bonus Action, heal 2d4 + 2."
+    },
+    "sports drink, blue flavor (potion of healing)": {
+      "category": "magic",
+      "mechanics": "Potion of Healing: drink as a Bonus Action, heal 2d4 + 2."
+    },
+    "laminated complaint card (one-use: system answers 1 yes/no about current floor truthfully)": {
+      "category": "magic",
+      "mechanics": "One use. The System truthfully answers one yes/no question about the current floor."
+    },
+    "eternally stained wifebeater (cloak of many fashions reskin)": {
+      "category": "magic",
+      "mechanics": "Cloak of Many Fashions (Common): Bonus Action to change the garment's style, color and apparent quality."
+    },
+    "collapsible tent-pole (pole of collapsing)": {
+      "category": "magic",
+      "mechanics": "Pole of Collapsing (Common): 10 ft pole; Action command collapses it to 1 ft or extends it back."
+    },
+    "gas-station bathroom key on a hubcap (mystery key)": {
+      "category": "magic",
+      "mechanics": "Opens one specific lock; may vanish after use."
+    },
+    "kevin the sentient rubber duck (joke; terrible advice only)": {
+      "category": "magic",
+      "mechanics": "Gives terrible advice only. No mechanics."
+    },
+    "bone's own chewing tobacco (fan pull)": {
+      "category": "magic",
+      "mechanics": "Natty Light hologram; the System is listening. No mechanics yet."
+    },
+    "tanya ruiz lore scrap": {
+      "category": "magic",
+      "mechanics": "Lore note; no mechanics."
+    },
+    "food blocks (rations)": {
+      "category": "gear",
+      "mechanics": "Rations: 1 day each, 2 lb each."
+    },
+    "rope (50 ft hempen)": {
+      "category": "gear",
+      "mechanics": "Rope, 50 ft: DC 20 Strength (Athletics) check to burst."
+    },
+    "chain (10 ft)": {
+      "category": "gear",
+      "mechanics": "Chain, 10 ft: 10 HP, DC 20 to burst."
+    },
+    "grappling hook": {
+      "category": "gear",
+      "mechanics": "Attach to rope."
+    },
+    "pencil & paper (writing kit)": {
+      "category": "gear",
+      "mechanics": "No mechanics."
+    }
+  },
+  "crawlers": {
+    "Horn": {
+      "standing_orders": "Nearest clear safe room, else follow the closest highest-STR party member.",
+      "standing_reaction": "Opportunity Attacks fire Fuck 'Em (Magic Missile)."
+    },
+    "Bone Wifebeater": {
+      "signature": "You Better Fucking Listen (hammer to goo).",
+      "standing_reaction": "Opportunity Attacks on."
+    }
+  }
+}

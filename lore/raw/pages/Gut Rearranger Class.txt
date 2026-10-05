@@ -1,0 +1,26 @@
+#redirect List of Classes
+<!--
+{{Class
+| title1 = {{PAGENAME}}
+| type = Healer / Rogue
+| prerequisites =
+*Connection to surgery pre-Collapse (Assumed)
+| crawlers =
+ Vadim
+| image1 =
+| subclass_of =
+| stats =
+| skills =
+| effects =
+| benefits =
+}}<!--{{Quote | quote = }}
+
+{{PAGENAME}} is a healer / rogue combo Class offered on the Third Floor. 
+
+<!--==Description==
+
+==Story==
+Vadim chooses this as his class during Third Floor Class selection.
+
+==References==
+

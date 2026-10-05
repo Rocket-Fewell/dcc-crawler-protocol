@@ -1,0 +1,19 @@
+{{SpoilH | 4}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type= Potion
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a potion that prevents you from dying from falling damage but leaves you at 5% health.
+
+==References==
+
+{{Navbox Items}}

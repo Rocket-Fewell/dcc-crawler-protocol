@@ -1,0 +1,83 @@
+{{Quote|Any biological creature above a certain weight who enters the dungeon is assigned a crawler ID. But one needs at least an intelligence of two to qualify for training...Otherwise, they're designated as pets.|Mordecai[1|4]}}
+
+Pets and dungeon familiars are two related but distinct categories of creature that fight alongside crawlers in the World Dungeon. Both gain experience and level up, carry their own abilities and weaknesses, and can be radically altered by specialized magical items and treats.
+
+==AI Description==
+This is a pet-class mob. This pet has not yet bonded with a crawler.[1|46]
+
+==Description==
+
+===Classification===
+Any biological creature above a certain weight that enters the World Dungeon is assigned a crawler ID, but a creature needs an intelligence of at least two to qualify for the tutorial. Without that training its inventory never activates, so the System AI designates it a pet rather than a crawler; wild animals that wander in on their own rarely survive past the first floor.[1|4] Mordecai frames the practical difference as where the creature came from and whether it holds an ID of its own.[1|47]
+
+Pets do not carry the kill markers crawlers do: neither of Lucia Mar's rottweilers showed boss-kill stars or player killer skulls beside their names.[1|39] The distinction outlasts the crawl, since a creature that enters as a pet is recorded differently in Syndicate paperwork than one that enters as a crawler.[7|Volteeg]
+
+===Dungeon Familiars===
+Dungeon familiars enter from the surface alongside their owners and receive crawler IDs, but fall below the intelligence threshold and are designated pets rather than crawlers.[1|4] Mordecai treats them as a category distinct from crawler pets.[1|47] Princess Donut began this way, holding a crawler ID and a level but no class,[1|2] and was listed as a pet before her transformation. Lucia Mar's rottweilers Cici and Gustavo 3 were pets as well.[1|39]
+
+Because they hold crawler IDs, familiars do not count against a crawler's pet limit, and no upper limit on their number is stated; one crawler entered with fifteen goats and kept them all.[1|47]
+
+===Crawler Pets===
+Pet-class mobs are sourced from inside the Dungeon. Most come caged in a reward room, where the crawler is generally handed a single key and a single choice,[1|46] or are purchased from a merchant, which Mordecai treats as equivalent.[1|47] A pet may also arrive as a promotional gift.[5|63] Reward-room and merchant pets are always level 1 when acquired, no matter what level their species reaches in the wild, and they remain level 1 until bonded, after which they gain levels and physical size rapidly from combat.[1|47]
+
+A crawler is generally limited to one pet, though certain class and race choices permit multiples, and a sufficiently high charisma may allow multiples of a single species.[1|47] Taming a gang of invisible night weasels is said to require an ultra-high charisma.[5|2] Pet boxes award supplies rather than animals, typically pet biscuits and scrolls of Heal Critter.[1|5]
+
+===Bonding and the Pet Menu===
+Bonding proceeds in stages, tracked by the minimap dot: red while the creature is hostile, white once its automatic aggression has been removed, and orange once the bond is complete.[1|47] Orange remains the marker for any pet on the map regardless of owner.[5|2] A pet cannot bond while its aggro is active, and for a pack hunter that means hunting alongside it until it stops treating its handler as prey.[1|47] Repeated feeding does the rest,[6|59] and some species bond after a single meal.[7|5]
+
+Bonding unlocks the Pet Menu in the crawler's interface, which sets the pet's name and title[1|47] and lists new abilities gained on level-up.[3|7] A pet's weaknesses can only be examined once it is bonded or while it is held in a carrier, and a guild with a pet stable installed adds further options to the Bonded Pets tab.[7|5]
+
+Bonding is not optional for a crawler who means to keep the animal: an unbonded pet must be left behind when a floor collapses, and it refuses to stay inside a safe room, teleporting away unless caged or otherwise contained. Pets respond to ordinary animal training, standard dog commands work reasonably well, and food motivation speeds the process considerably.[1|47] Pet training appears to run faster than other kinds.[7|5]
+
+===Growth and Gear===
+Every species has a level at which it stops getting larger, though it continues to gain levels past that point.[1|47] A mongoliensis reaches full size at level 15,[1|46] a hellspawn familiar at 50,[5|6] and a tummy acher at a level that shifts upward as it accumulates regenerations.[7|5] A tummy acher regenerates on death so long as its body survives, gaining twenty-five percent to its stats and a new random weakness each time, and on every fifth death it reverts to level 1 and must be re-bonded and renamed.[6|59][7|5]
+
+Pets can be equipped with gear, armor, and magical items, and some appear able to learn spells or gain new abilities outright.[1|14] Most gear cannot be transferred between a crawler and a pet, though some items can. Enchanted fang caps come in pairs and are installed by hand into the animal's mouth, raising bite damage and adding chances to inflict poison and paralysis; a mongoliensis can wear up to six pairs, and because they are a Fleeting item, removing them destroys them.[2|13] Saddles convert a suitable pet into a mount while granting bonuses to rider and ridden alike.[3|7]
+
+Some class selections arrive with a full set of pet accessories, one for every pet in the party.[8|1] These can only be equipped by a pet, cannot be drained of their magic the way ordinary enchanted gear can, and pair a conditional defense that turns the pet briefly invulnerable when its owner drops below ten percent health with an offensive rider on the pet's bite.[8|8]
+
+===Care and Carriers===
+Pets have their own healing track. Heal Pet potions and the Heal Critter spell both restore them, and the spell largely supersedes the potions once it is leveled, while a rarer Revitalize Pet potion can regrow a limb outright over about an hour, though scarring may remain. Pets are not limited to pet-specific remedies, and general healing potions work on them as well.[7|2] Charm and compulsion magic does not appear to work on them: Donut's Love Vampire skill, which reliably turns mobs, has no effect on a pet.[7|21]
+
+Magical pet carriers store a pet away between fights; the animal rests and recovers strength inside and can be recalled with a button press, which matters more than it first appears, since a pet that stands guard all night instead of sleeping suffers a measurable penalty to its stats. Carriers are also effectively mandatory at the Desperado Club, which bars pets from the floor entirely and offers only a familiar playroom whose safety is not guaranteed.[2|14]
+
+The spell Meat Hooks can override ownership outright, drawing every carnivorous pet-class mob in range, bonded or not, away from its owner and toward the caster.[2|17][4|30]
+
+===Mounts===
+Mounts are creatures a crawler can acquire to ride. Some pets serve as both, but plain mounts tend to have low health points and little to no personality, and they do not level or grow stronger; merchants usually include a pet carrier, and a crawler may own as many mounts as they can afford, though they are expensive and must be fed.[2|14]
+
+===Pet Biscuits===
+Ordinary pet biscuits feed a pet-based class for a full day, and pets find them irresistible enough to smell out and devour any that are pulled out, so they are best produced one at a time.[1|5]
+
+Enhanced pet biscuits are a gamble, carrying over a hundred possible effects, roughly half of them good and the remainder neutral or decidedly bad. Fed inside a safe zone, a bad outcome teleports the transformed pet to a random point within a square mile rather than leaving it free to turn on its owner; fed out on crawl, there is no such protection.[1|5] Bad outcomes are documented.[2|14] Results fall along a branching tree: the Pet subtree keeps the creature a pet while upgrading what it can become, including the hellspawn familiar result, and the Party Companion subtree elevates it toward crawler status.[8|16]
+
+{{Spoiler|book=8|spoiler=Enriched pet biscuits are refined versions that leave nothing to chance and deliver a single known result. "Nothing Special" converts a creature into a dungeon pet capable of gaining levels, skills, and upgrades, reverting it to juvenile form; "Nothing Special Party Companion" leaves the body untouched, so the recipient never gains the ability to speak aloud, though it can still use the chat interface; "The Paramour" adds a permanent, incurable charm making the recipient fall hopelessly in love with whoever fed it.[8|16]
+A Party Companion transformation grants a dungeon-born pet a crawler number and full crawler status, requires a class selection in a safe room, and resets the recipient's level to 1. The elevated creature is automatically partied with whoever fed it, inherits that crawler's game guide, and is directed to the nearest safe room to choose a class and change its race.[8|16][8|94]}}
+
+==Story==
+Princess Donut entered the Dungeon as Carl's cat, holding a crawler ID and a level but no class.[1|2] She ate the enhanced pet biscuit from Carl's Legendary Pet Box straight out of his hand while he was still weighing whether to sell it,[1|5] reformed with the Enhanced Growth benefit, and was reclassified from pet to regular crawler on the spot.[1|7]
+
+On the Second Floor she claimed a mongoliensis from a pet reward room and named him Mongo.[1|46] Removing his hostility took most of the floor and required her to hunt grubs alongside him; he bonded only in the final hours and took the title Royal Steed.[1|47]
+
+{{Spoiler|book=5|spoiler=On the Sixth Floor, the Royal Court fell in with Miriam Dom, who had entered the Dungeon with a herd of boer goats and fed enhanced pet biscuits to several of them: Prepotente became a crawler in his own right, and Bianca Del Ciao became a hellspawn familiar. She keeps ten unaltered boers in pet carriers and only lets them out in safe rooms, a precaution she attributes to an earlier incident with one of the goats.[5|6] Ren was traveling the same floor with a level-20 tummy acher named Garret, received as a gift for attending CrawlCon.[5|63]}}
+
+{{Spoiler|book=6|spoiler=At the close of the Eighth Floor, Ren killed Garret, placed his regenerating body in a carrier, and handed him to Carl along with the list of weaknesses he had accumulated across his previous deaths.[6|59]}}
+
+{{Spoiler|book=7|spoiler=Garret surfaced on the Ninth Floor as a level-1 tummy acher with no name, no memory of Ren, and five accumulated weaknesses. He bonded to Carl after a single bowl of chowder, far faster than Mongo ever had, and the system then demanded a new name: Rend.[7|5]
+Mongo entered the same floor maimed, a wing gone and his feathers burned away. A Heal Severe Injury potion treated the burns, and a Heal Pet potion that had upgraded into a Revitalize Pet potion regrew the wing in about an hour.[7|2]
+The Reavers produced the ugliest documented use of pets in the crawl, raising infant rot stickers until the animals trusted their keepers, then caging them, injecting them with size-altering steroids, infecting them with contagious debuffs, and launching roughly a thousand of them at a single defensive line as living missiles.[7|21]}}
+
+{{Spoiler|book=8|spoiler=Rend died a sixth time on the Tenth Floor and, because it was not a fifth death, came back with his memories and identity intact, another twenty-five percent to his stats, and a new weakness: potatoes.[8|26]
+Carl fed a Nothing Special Party Companion biscuit to a Yorkshire pig, elevating her to Penelope 3, a sapient party member who could not speak aloud but took to the chat interface immediately.[8|94] On the Eleventh Floor he weaponized the mechanic outright, firing a banger sphere loaded with an enriched biscuit into the mouth of the dungeon boss Scolopendra and reducing her to a puddle.[8|97] The plan was to keep the reverted boss in a carrier as a fail-safe, but Donut grabbed the wrong biscuit in the scramble, and Scolopendra came back as a level-1 crawler instead.[8|98]}}
+
+==Trivia==
+*Adopting a pet that was previously bonded to someone else carries its own achievement, Used Pet, and a Gold Pet Box.[7|2]
+*The magical pet carrier is about the size of a Rubik's Cube and marked with a symbol that resembles a fire hydrant.[2|14]
+
+==Speculation==
+*Pets carry no kill markers, but the text does not say where the credit goes. It may pass to the owner, or a pet's kills may simply go unrecorded.[1|39]
+
+{{Spoiler|book=8|spoiler=The hellspawn familiar description states that the condition arises when a pet encased in a soul protection spell dies anyway, yet Bianca Del Ciao received the benefit directly from an enhanced pet biscuit. Either the biscuit simulates the death and rebirth, or the two are separate routes to the same result.[5|6][8|16]Since a Paramour recipient is granted full crawler status, and animals holding crawler IDs do not count against a crawler's pet limit, the transformation would presumably free the owner's pet slot. The text does not address this.[1|47][8|16]}}
+
+==References==
+

@@ -1,0 +1,15 @@
+{{SpoilH | 5}}{{Item|title=Charm Animal|type=Potion|effects="Tames" one mob|source=Recipe}}{{Quote | quote = “Holy cow. I’ve been chasing this one for fifty cycles!” Mordecai's eyes scanned the page. “Of course! You don’t chill it. You put it in the centrifuge and then flash-freeze it! Of course. Gah, I almost had it. So simple, too.”}}
+The Charm Animal Potion tames a Dungeon animal for the duration of the Floor.  The potion must be brewed for that specific type of creature using blood.
+
+==Description==
+Charm Animal is a craftable recipe that must be brewed for a specific type of animal using blood.  Its System AI-assigned name changes based on the type of animal the spell targets (e.g. a potion brewed with Mongoliensis blood becomes a potion of Charm Mongoliensis).  
+Each batch of the potion requires one liter of blood and Thorn Sap Tips.  Once combined, the potion should be placed in a centrifuge and flash-frozen.
+
+Once ingested, the nearest eligible monster is tamed for the duration of the floor; its dot turns white, and it can behave like a minion.
+
+==Story==
+Carl receives the recipe for this potion in a Silver Benefactor Box from the Apothecary on the Sixth Floor. Donut uses the potion to tame Kiwi.
+
+==References==
+
+{{Navbox Items}}

@@ -1,0 +1,100 @@
+{{SpoilH|3}}
+
+{{Item
+|title=
+|image=
+Nightmare express.png|Fanart A
+Nightmare express 2.png|Fanart B
+
+|imagecaption=
+|type=Train - Named Line
+|keywords=
+|effects=
+*Only known Iron Tangle line stopping at Abyss Station (Station 436)
+*Can pass through the Station Repair portal to Station and Repair Hub E
+*Boiler becomes a Shattering Train Bomb if overpressurized
+|source=
+*Fourth Floor
+*Commandeered by Carl
+|buy=
+|sell=
+}}
+
+{{Quote|I was alive. Not only was I alive, but I'd stolen a train. I had stolen a goddamned train.|Carl[3|14]}}
+
+The Nightmare Express is a named steam train[3|14] that runs a figure-eight loop on the Iron Tangle of the Fourth Floor.[3|4] Carl hijacked it and used it for the rest of the floor[3|14] before sending it into the Abyss as a bomb.[3|34]
+
+==AI Description==
+The train has no item description. As its boiler neared critical pressure, its controls displayed this tooltip:
+Shattering Train BombType: A steam boiler made with a shocking disregard for safety. It's almost like they want this thing to explode.Effect: It's a train-sized grenade that is going to detonate from extreme pressure. What do you think the effect will be?Status: Deteriorating. 75/1000If you don't figure this shit out in about two minutes, it's going to be pretty damn spectacular.[3|14]
+
+==Description==
+The Nightmare Express differs from the Iron Tangle's colored subway lines[3|4] and, like the other named lines, runs in a loop rather than climbing upward.[3|14] Its boiler burns Sheol Bricks and is stoked by Fire Brandy, a level 75 Lesser Demon sealed inside it.[3|14] Its original crew also included an engineer, CrackJack,[3|17] and a war mage.[3|14]
+
+Crawlers can board only at the caboose; the passenger car behind the engine is exit-only. The apparent route forward is a narrow rooftop gangway above the open-topped monster cars, with about four feet of clearance beneath the tunnel ceiling, at over 100 miles per hour.[3|14]
+
+==Route==
+The loop takes an hour and a half[3|14] and has five stops, four of them transit stations.[3|4] In order:
+*Station 83 (yellow and red lines)[3|4]
+*Station 283 (mauve and purple lines)[3|4]
+*Abyss Station[3|15] (Station 436), at the top of the figure eight[3|4]
+*A second Station 283 (green and yellow lines)[3|4]
+*A second Station 83 (tangerine and plum lines)[3|4]
+
+The Nightmare Express was the only line known to the Royal Court to stop at Station 436.[3|11] Its tracks are wider than the subway lines' and lack an electrified third rail,[3|4] its platforms are about twice as long,[3|4][3|12] and its tunnel is larger.[3|12]
+
+Just before Abyss Station, the line passes through a switching cavern with three switches:[3|15] "Auxiliary Tracks. Warning," which connects to other lines;[3|15][3|16] "Station Repair," which leads through a two-way portal[3|16] to Station and Repair Hub E;[3|17] and "Recycle," which leads to the Abyss.[3|16]
+
+==Appearance==
+The Nightmare Express is a jet-black steam locomotive with the number 666 in red on the front of its boiler. A low, wedge-shaped cowcatcher sits on the nose beneath a small ledge and headlamp. A ladder leads to a gangplank and handrail along the port side of the boiler; the starboard side, which faces the platforms, has no gangplank. Automatic valves along the wheels vent scalding steam at random intervals.[3|14]
+
+The cramped cab holds pipes, spigots, levers, and a row of five pressure gauges above the controls, with a wood-stove-style firebox door at the bottom and a box of Sheol Bricks near the rear exit. The cab window at the end of the port-side gangplank is only about three feet tall.[3|14]
+
+As originally configured, the engine pulled a passenger car, 38 open-topped cars, and a caboose with a rear balcony and roof ladder. Most of the open-topped cars were slatted livestock cars capped with chain-link cages reaching the tunnel ceiling. Fourteen held large monsters, including one solid car of sloshing seawater; the rest appeared empty.[3|14]
+
+==Operation==
+Fire Brandy taught Carl to drive the train.[3|14] Its controls include:
+*Throttle: a large red lever.[3|14]
+*Brakes: separate levers for the engine and the cars.[3|14]
+*Pressure: valves opened and closed in sequence keep the five gauges out of the red;[3|14] a red spigot vents steam out the side of the engine.[3|17]
+*Whistle: a chain hanging from the ceiling.[3|14]
+*Switch lance: a handle that swings a pole out from the side of the boiler[3|14] to strike the red, target-shaped switch plates beside the track.[3|15] Carl judged it safe to use only at very low speed.[3|14]
+*Standby: the boiler can idle while the train is parked.[3|15]
+*Emergency fuel: without a fireman, the cab's box of Sheol Bricks can keep the boiler running only long enough to reach a station and vent.[3|14]
+
+To reverse direction, the driver runs past a sideways T-shaped section of track, then backs into it while throwing the switches by hand.[3|19]
+
+The Steam Engineer's Key grants access to employee-only areas and actions on all 400 of the Iron Tangle's steam trains.[3|14] It is also one of the keys that open the one-way portals above the Abyss, which lead into the trainyard.[3|15]
+
+==Story==
+===Hijacking===
+The Nightmare Express served Station 83,[3|1][3|4] the Royal Court's first base on the Fourth Floor.[3|2] Donut suggested riding it early on, but Carl balked at the name,[3|3] and the Court put off boarding until they knew more.[3|4] Katia later planned a route to catch it, since it was the only known line to Station 436.[3|12]
+
+At Station 283, Carl judged the rooftop route too dangerous and let the train leave without them. He instead cast his Protective Shell in the path of the next train while Donut's Puddle Jumper teleported them toward the platform. The shell killed every hostile monster aboard, including three neighborhood bosses, along with the engineer and the war mage. Donut reached the platform, but the driverless train struck Carl with its cowcatcher; he survived with healing spells and potions.[3|14]
+
+Carl broke into the cab through its window and found the boiler near critical pressure; when he eased the throttle, the controls warned that it would detonate as a Shattering Train Bomb in about two minutes. Fire Brandy talked him through venting the pressure and taught him to drive, earning him the Kept A Rollin' achievement. He looted about fifty Sheol Bricks and a Steam Engineer's Key from the cab. The shell had torn the walls off the monster cars and the top off the caboose, leaving only the engine and passenger car intact.[3|14]
+
+===Abyss and Hub E===
+Carl drove the train to Abyss Station to scout the Abyss, then returned to Station 283 for his party.[3|15] The Court drove it back to the switching cavern[3|16] and through the Station Repair portal to Station and Repair Hub E, a trainyard overrun with Festering Ghouls.[3|17] There, the grease gremlin Widget had Carl vent steam to drive off climbing ghouls and unhooked the ruined cars; Donut then worked the yard's turntable controls, and Carl drove the bare engine out onto the employee line.[3|17] He later parked it at Station 41[3|19] and used it to ferry Brynhild's Daughters, who rode on the outside of the engine,[3|21] to Station 60.[3|31]
+
+===Final Run===
+The train idled at Station 60 while the crawlers held off the ghoul waves, and Brandy supplied several hundred more Sheol Bricks.[3|31] It later came down the employee track to the trainyard[3|33] with Elle aboard[3|32] and the dwarf Tizquick helping drive it.[3|34]
+
+Carl then sent the train into the Abyss as a bomb, hoping enough simultaneous deaths would pop the remaining soul crystals and stop the ghouls from generating. Brandy and Tizquick stayed aboard, with Tizquick promising to detonate it just before it hit the bottom of the pit. After Carl placed explosive satchels at the back, the train sped through the portal of his commandeered portal cart; the blast killed many monsters in the Abyss and destroyed a ghoul generator.[3|34]
+
+==Trivia==
+*The number 666 on the boiler is the biblical Number of the Beast.[3|14]
+*The Kept A Rollin' achievement, earned for driving the train, references the song "Train Kept A-Rollin'."[3|14]
+*According to Mordecai, the Nightmare's loop, together with those of other named lines, traces the Syndicate logo when viewed from above.[3|30]
+
+==Gallery==
+
+Nightmare express.png|Art by u/Mashermello, Reddit
+Nightmare express 2.png|Art by u/Mashermello, Reddit
+Nightmare Express by ATATMom.webp|Created by u/ATATMom, Reddit, based on Rolife kit
+Nightmarexpres44.jpg|Art by Danielle Sylvan
+
+==References==
+
+{{Navbox Items}}
+

@@ -1,0 +1,439 @@
+{
+ "analytic": {
+  "scopes": {
+   "any_only": {
+    "zones": [
+     "any"
+    ],
+    "box_type": null,
+    "cards": 50,
+    "bronze_pull_type_means": {
+     "consumable": 32.55,
+     "gear": 8.48,
+     "credits": 52.5,
+     "tailored": 25.26,
+     "weird": 9.5
+    },
+    "silver_pull_type_means": {
+     "consumable": 173.91,
+     "gear": 283.72,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 30.081,
+    "bronze_box_1_5_pulls": 45.122,
+    "silver_pull": 241.178,
+    "silver_box_2_pulls": 482.355,
+    "welcome_box": 55.344
+   },
+   "any+z03": {
+    "zones": [
+     "any",
+     "z03"
+    ],
+    "box_type": null,
+    "cards": 58,
+    "bronze_pull_type_means": {
+     "consumable": 27.61,
+     "gear": 7.22,
+     "credits": 52.5,
+     "tailored": 25.26,
+     "weird": 8.26
+    },
+    "silver_pull_type_means": {
+     "consumable": 173.91,
+     "gear": 283.72,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 28.158,
+    "bronze_box_1_5_pulls": 42.237,
+    "silver_pull": 241.178,
+    "silver_box_2_pulls": 482.355,
+    "welcome_box": 53.42
+   },
+   "any+z06": {
+    "zones": [
+     "any",
+     "z06"
+    ],
+    "box_type": null,
+    "cards": 57,
+    "bronze_pull_type_means": {
+     "consumable": 33.02,
+     "gear": 8.48,
+     "credits": 52.5,
+     "tailored": 25.26,
+     "weird": 10.92
+    },
+    "silver_pull_type_means": {
+     "consumable": 173.91,
+     "gear": 283.72,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 30.364,
+    "bronze_box_1_5_pulls": 45.546,
+    "silver_pull": 241.178,
+    "silver_box_2_pulls": 482.355,
+    "welcome_box": 55.626
+   },
+   "any+z09": {
+    "zones": [
+     "any",
+     "z09"
+    ],
+    "box_type": null,
+    "cards": 63,
+    "bronze_pull_type_means": {
+     "consumable": 32.3,
+     "gear": 9.53,
+     "credits": 52.5,
+     "tailored": 25.19,
+     "weird": 7.92
+    },
+    "silver_pull_type_means": {
+     "consumable": 171.57,
+     "gear": 283.72,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 30.08,
+    "bronze_box_1_5_pulls": 45.12,
+    "silver_pull": 240.46,
+    "silver_box_2_pulls": 480.92,
+    "welcome_box": 55.266
+   },
+   "pooled_floor": {
+    "zones": [
+     "any",
+     "z03",
+     "z06",
+     "z09",
+     "z10"
+    ],
+    "box_type": null,
+    "cards": 78,
+    "bronze_pull_type_means": {
+     "consumable": 28.79,
+     "gear": 8.38,
+     "credits": 52.5,
+     "tailored": 25.19,
+     "weird": 9.14
+    },
+    "silver_pull_type_means": {
+     "consumable": 171.57,
+     "gear": 283.72,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 28.862,
+    "bronze_box_1_5_pulls": 43.293,
+    "silver_pull": 240.46,
+    "silver_box_2_pulls": 480.92,
+    "welcome_box": 54.047
+   },
+   "z10_boss": {
+    "zones": [
+     "any",
+     "z10"
+    ],
+    "box_type": "Boss",
+    "cards": 54,
+    "bronze_pull_type_means": {
+     "consumable": 32.55,
+     "gear": 8.48,
+     "credits": 52.5,
+     "tailored": 25.26,
+     "weird": 9.5
+    },
+    "silver_pull_type_means": {
+     "consumable": 167.74,
+     "gear": 289.55,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 30.073,
+    "bronze_box_1_5_pulls": 45.11,
+    "silver_pull": 240.776,
+    "silver_box_2_pulls": 481.552,
+    "welcome_box": 55.336
+   },
+   "pooled_incl_boss_only": {
+    "zones": [
+     "any",
+     "z03",
+     "z06",
+     "z09",
+     "z10"
+    ],
+    "box_type": "Boss",
+    "cards": 82,
+    "bronze_pull_type_means": {
+     "consumable": 28.79,
+     "gear": 8.38,
+     "credits": 52.5,
+     "tailored": 25.19,
+     "weird": 9.14
+    },
+    "silver_pull_type_means": {
+     "consumable": 166.42,
+     "gear": 289.55,
+     "credits": 175.0,
+     "tailored": 400.0,
+     "weird": 150.0
+    },
+    "empty_bronze_types": [],
+    "empty_silver_types": [],
+    "bronze_pull": 28.86,
+    "bronze_box_1_5_pulls": 43.29,
+    "silver_pull": 240.371,
+    "silver_box_2_pulls": 480.742,
+    "welcome_box": 54.045
+   }
+  }
+ },
+ "sim_repl_check": {
+  "f1_all": {
+   "mean": 667.7,
+   "p50": 656,
+   "p90": 889,
+   "p95": 958,
+   "p99": 1093,
+   "max": 1660,
+   "pct_over_1500": 0.01
+  },
+  "f2_all": {
+   "mean": 719.4,
+   "p50": 708,
+   "p90": 941,
+   "p95": 1012,
+   "p99": 1154,
+   "max": 1760,
+   "pct_over_1500": 0.02
+  },
+  "f1_box": {
+   "mean": 578.2,
+   "p50": 562,
+   "p90": 801,
+   "p95": 866,
+   "p99": 1001,
+   "max": 1565,
+   "pct_over_1500": 0.01
+  },
+  "f2_box": {
+   "mean": 568.9,
+   "p50": 555,
+   "p90": 793,
+   "p95": 856,
+   "p99": 1002,
+   "max": 1610,
+   "pct_over_1500": 0.01
+  },
+  "n": 40000,
+  "seed": 70,
+  "no_repeat_nonconsumable": false,
+  "gov_threshold": null,
+  "stress": false,
+  "gov_triggered_pct": 0.0,
+  "widened_pulls": 0
+ },
+ "sim_base": {
+  "f1_all": {
+   "mean": 669.3,
+   "p50": 659,
+   "p90": 887,
+   "p95": 955,
+   "p99": 1089,
+   "max": 1604,
+   "pct_over_1500": 0.01
+  },
+  "f2_all": {
+   "mean": 720.0,
+   "p50": 709,
+   "p90": 941,
+   "p95": 1011,
+   "p99": 1156,
+   "max": 1691,
+   "pct_over_1500": 0.01
+  },
+  "f1_box": {
+   "mean": 579.8,
+   "p50": 570,
+   "p90": 800,
+   "p95": 861,
+   "p99": 1000,
+   "max": 1503,
+   "pct_over_1500": 0.0
+  },
+  "f2_box": {
+   "mean": 569.5,
+   "p50": 556,
+   "p90": 794,
+   "p95": 856,
+   "p99": 1003,
+   "max": 1555,
+   "pct_over_1500": 0.0
+  },
+  "n": 100000,
+  "seed": 70,
+  "no_repeat_nonconsumable": true,
+  "gov_threshold": null,
+  "stress": false,
+  "gov_triggered_pct": 0.0,
+  "widened_pulls": 144
+ },
+ "sim_base_governor_900": {
+  "f1_all": {
+   "mean": 669.3,
+   "p50": 659,
+   "p90": 887,
+   "p95": 955,
+   "p99": 1089,
+   "max": 1604,
+   "pct_over_1500": 0.01
+  },
+  "f2_all": {
+   "mean": 720.0,
+   "p50": 709,
+   "p90": 941,
+   "p95": 1011,
+   "p99": 1156,
+   "max": 1691,
+   "pct_over_1500": 0.0
+  },
+  "f1_box": {
+   "mean": 579.8,
+   "p50": 570,
+   "p90": 800,
+   "p95": 861,
+   "p99": 1000,
+   "max": 1503,
+   "pct_over_1500": 0.0
+  },
+  "f2_box": {
+   "mean": 569.5,
+   "p50": 556,
+   "p90": 794,
+   "p95": 856,
+   "p99": 1003,
+   "max": 1555,
+   "pct_over_1500": 0.0
+  },
+  "n": 100000,
+  "seed": 70,
+  "no_repeat_nonconsumable": true,
+  "gov_threshold": 900,
+  "stress": false,
+  "gov_triggered_pct": 0.02,
+  "widened_pulls": 162
+ },
+ "sim_ceiling": {
+  "f1_all": {
+   "mean": 836.9,
+   "p50": 824,
+   "p90": 1070,
+   "p95": 1146,
+   "p99": 1303,
+   "max": 1892,
+   "pct_over_1500": 0.11
+  },
+  "f2_all": {
+   "mean": 856.9,
+   "p50": 844,
+   "p90": 1089,
+   "p95": 1169,
+   "p99": 1335,
+   "max": 1940,
+   "pct_over_1500": 0.15
+  },
+  "f1_box": {
+   "mean": 672.4,
+   "p50": 658,
+   "p90": 905,
+   "p95": 980,
+   "p99": 1135,
+   "max": 1676,
+   "pct_over_1500": 0.01
+  },
+  "f2_box": {
+   "mean": 656.4,
+   "p50": 643,
+   "p90": 886,
+   "p95": 966,
+   "p99": 1130,
+   "max": 1710,
+   "pct_over_1500": 0.01
+  },
+  "n": 100000,
+  "seed": 70,
+  "no_repeat_nonconsumable": true,
+  "gov_threshold": null,
+  "stress": true,
+  "gov_triggered_pct": 0.0,
+  "widened_pulls": 1313
+ },
+ "sim_ceiling_governor_900": {
+  "f1_all": {
+   "mean": 836.9,
+   "p50": 824,
+   "p90": 1070,
+   "p95": 1146,
+   "p99": 1303,
+   "max": 1892,
+   "pct_over_1500": 0.11
+  },
+  "f2_all": {
+   "mean": 856.7,
+   "p50": 844,
+   "p90": 1089,
+   "p95": 1169,
+   "p99": 1327,
+   "max": 1699,
+   "pct_over_1500": 0.09
+  },
+  "f1_box": {
+   "mean": 672.4,
+   "p50": 658,
+   "p90": 905,
+   "p95": 980,
+   "p99": 1134,
+   "max": 1676,
+   "pct_over_1500": 0.01
+  },
+  "f2_box": {
+   "mean": 656.2,
+   "p50": 643,
+   "p90": 886,
+   "p95": 966,
+   "p99": 1125,
+   "max": 1486,
+   "pct_over_1500": 0.0
+  },
+  "n": 100000,
+  "seed": 70,
+  "no_repeat_nonconsumable": true,
+  "gov_threshold": 900,
+  "stress": true,
+  "gov_triggered_pct": 0.19,
+  "widened_pulls": 1460
+ }
+}

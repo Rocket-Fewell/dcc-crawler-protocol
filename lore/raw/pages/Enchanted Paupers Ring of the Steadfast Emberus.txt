@@ -1,0 +1,40 @@
+{{SpoilH|6}}
+{{Quote
+| quote = Uh... What the hell does that asterisk part mean?
+—Carl
+}}
+{{Item
+ | title         = Enchanted Pauper's Ring of the Steadfast Emberus
+ | image         = 
+ | type          = Equipped Item / Ring
+ | effects       = * cancels health-sapping debuff effects
+* cancel disease debuff effects
+* may numb other debuffs
+* does NOT remove debuffs
+ | source        = Blessed Sun Enchantments Shop at Club Vanquisher
+ | buy           = 1,000,000 gold
+}}The Enchanted Pauper's Ring of the Steadfast Emberus is a magical item that, when equipped by a worshipper of Emberus, cancels the effects of most health-sapping and disease-based debuffs without removing the actual debuff. 
+
+It can be purchased for 1,000,000 Gold from a jeweler at Club Vanquisher, and is molded from a ring that the crawler already possesses.  When finished, the Enchanted Pauper's Ring looks identical to and is still labeled as the original ring.  The power of the base ring determines how many debuffs of any kind the crawler can accumulate before the ring gets overwhelmed and "might not work as intended."[6|56]
+
+==AI Description==
+Ah, Emberus. Wholly sane, reasonable Emberus. I'm sure any jewelry that bears his name will be a perfectly fine, normal piece of magical gear.
+When working properly, this ring will remove most health-seeping and disease-based debuff effects. Has a variable numbing effect on various other debuff types. This will not remove the debuff itself. Too many active debuffs of any kind may temporarily mute or overheat this ring.
+Warning: This ring may only be worn by a worshipper of Emberus. This will turn into a cursed item if worn by a non-worshipper.
+Warning: This ring's true nature may only be seen by a worshipper of Emberus. It is disguised as an enchanted Strength ring.
+Warning: This ring has a debt attached to it. You may not sell this ring while this debt is attached. If you lose this ring, the loan payment will be accelerated. If you are expelled from the church while you are wearing this ring, the curse effect will activate.
+Warning: This ring carries a curse effect. Non-worshippers who attempt to wear this ring will find themselves infected with every debuff suffered by anyone within 50 meters of this ring. That's... that's a bad one.
+
+==Story==
+Carl purchased the Enchanted Pauper's Ring while visiting Pater Coal in Club Vanquisher on the Eighth Floor.  He made a down payment of 10,000 gold and took on an "interest-free* loan" from the Temple of Emberus for the remaining 990,000 gold, earning the Columbia House! Achievement.[6|56]
+
+Carl's ring is labeled as "a strength ring" by the System AI and is worn on one of his fingers.[1|9][6|56]
+
+==Trivia==
+* What does it look like? There is a bit of confusion around the ring Carl used as a base: the AI says it's an Enchanted Strength Ring, Carl says it's based on the first ring he received, and Carl wears it on his finger.[6|56] The first finger ring that Carl received was a Silver Ring of +1 Constitution seven hours after entering the Dungeon.[1|9] The first ring of any kind he received was the Enchanted Toe Ring of the Splatter Skunk which does have a +3 strength effect.[1|6]
+
+==References==
+
+{{Navbox Items}}
+
+{{DEFAULTSORT:Paupers_Ring_of_the_Steadfast_Emberus}}

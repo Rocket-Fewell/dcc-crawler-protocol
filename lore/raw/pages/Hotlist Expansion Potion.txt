@@ -1,0 +1,28 @@
+{{SpoilH | 8}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type= Potion
+|keywords= Hotlist
+|effects=
+|source=Payload Box
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a potion that expands a Crawler's hotlist in their Heads-Up Display (HUD).
+
+== AI Description ==
+
+Skill Potion. Hotlist Expansion.
+Drinking this potion will expand your 10-space hotlist into 20 spaces. [8|10]
+
+==Story==
+===Book 8=== 
+Carl receives this potion in his Gold Payload Box at the beginning of the Tenth Floor for the Bomb's Away Achievement. [8|10]
+
+==References==
+
+{{Navbox Items}}

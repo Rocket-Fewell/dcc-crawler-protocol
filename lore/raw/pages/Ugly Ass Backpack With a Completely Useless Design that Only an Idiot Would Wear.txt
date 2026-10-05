@@ -1,0 +1,39 @@
+
+{{SpoilH | 3}}
+{{Item
+|title=Ugly Ass Backpack With a Completely Useless Design that Only an Idiot Would Wear
+|image= Ugly Ass Backpack V2.jpg
+|type= Backpack
+|keywords= Equipped
+|effects= Variable additional mass
+|source= Carl Armorer's Workshop
+|buy=
+|sell=
+}}{{Quote | I reached up and banged on her arm. It clanged like metal. Good. “Make sure you keep your flesh core deep on the inside.” “I’ll have to work on it,” she said, flexing her arm. “I can’t replace my eyes and mouth with metal parts. I’ll have to build a cage around my head.”}} 
+
+Carl crafts the {{PAGENAME}} for Katia Grim at his Armorer's Workshop during the Fourth Floor. The idea is to take advantage of her Doppelgänger race's ability to assimilate and shape equipped gear by making an equippable item that can store variable amounts of mass.[3|13]
+
+==Appearance==
+The Ugly-Ass Backpack looks like a large metal open-topped basket or oversized laundry hamper; the open top has a slight lip. It has reinforced Danger Dingo-hide shoulder straps and a set of tie-able waist straps, but the straps are insufficient to carry the weight of the backpack; instead, they're simply so the System AI will classify it as a backpack.[3|13]
+
+==Operation==
+The backpack takes advantage of an exploit that Carl discovered after looting the Juicer's room on the First Floor: when a container is added directly to a crawler's inventory, the crawler can pull the container out of inventory with all, none, or specific contents.  (Meaning: If a box holding ABC is added to inventory, the box can be removed from inventory at any point with ABC, BC, A, or nothing at all.)  As long as 3/5 of its mass is inside the basket and the basket has a lip, it functions as a container.  This allows Katia to rapidly incorporate the backpack's mass and metal into her form; however, it will not work for enchanted items or weapons.[3|13]
+
+===Equipping===
+To equip the backpack or modify its contents, it must be stationed on a special stand (another Carl invention).  Katia must back into the pack and fasten the straps around herself without lifting it from the stand, or else it will be automatically absorbed into her mass. 
+
+===Stat Effects===
+With 1,250 kilos of additional metal mass, Katia speaks in a lower voice, gains a strength bonus, and takes a dexterity debuff.  Her body resets into a blob if she suddenly unequips more than 50% of her mass at once.[3|13] 
+
+==Story==
+Carl makes the backpack based on one of Rosetta Thagra's entries in the Dungeon Anarchist's Cookbook, but says he saw "backpack" in the Armorer's Workshop menu.[3|13]  
+
+The first time Katia equips the pack, Carl adds approximately 1,250 kilos of scrap metal poles and bearings to the open basket, and immediately begins thinking about how to add even more and how to modify the stand to make it easier to equip. Carl has Katia slowly form a shelf on her back to slowly push the stand out of the way until she is holding enough to equip the backpack. It's too much weight for her level 49 strength, but she is able to successfully pull it into her inventory. After a few hours of practice, Katia is able to equip the backpack within 30 seconds.[3|13]
+
+Katia continues to train with the backpack, and uses Carl's Engineer's Table to modify it, adds more metal, and adds rubber, which absorbs impacts when layered between the metal and her flesh.[3|21]  She later gets into the habit of maintaining a smaller backpack with less metal to make herself appear taller.[3|epilogue]
+
+==References==
+
+ 
+
+{{Navbox Items}}

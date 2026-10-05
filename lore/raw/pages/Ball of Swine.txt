@@ -1,0 +1,96 @@
+{{Race Infobox
+|title1=Ball of Swine
+|image1=Ball of Swine Official KS.jpg
+|caption-image1=Official art from the Kickstarter edition by Luciano Fleitas
+|type=Boss, Mob
+|class=
+|floors=First Floor
+|height=Ball: nearly 15 feet (4.5 m) in diameter  Individual Tuskling: about 4 feet 6 inches
+|weight=
+|bonuses=
+*Fused sphere of at least thirty individuals
+*Loses almost no speed on impact or on right-angle turns
+*Fills its tunnel from floor to ceiling
+*Cannot be attacked from outside the sealed arena
+|penalties=
+*Locked to the arena's grooved tracks and shifting wall paths
+*Will not enter the entry courtyard before the fight begins
+*Breaks apart once it takes enough damage
+*Individual knights and courtesans are low-level and unarmed
+|deities=
+|natural_enemies=
+|organizations=Orcish Supremacy
+|crawlers=
+|syndicate=
+|npcs=
+}}
+
+{{Quote|I'm feeling really ignored right now. Why is it always human this, human that? Why can't it be 'blood squeezed out of their human and feline bodies'?|Donut[1|26]}}
+
+Ball of Swine, also known as the Porkchop Express, is a level 15 Borough Boss fought on the First Floor of the World Dungeon. It is not one creature but a rolling battle formation of dozens of Tuskling aristocrats fused into a single sphere of flesh, and it kills by steamrolling crawlers along concentric tracks governed by shifting dungeon walls.[1|26]
+
+==AI Description==
+TheBallofSwine!Level 15 Borough Boss!
+Also known as the Porkchop Express, the Ball of Swine is one of the rarest, most deadly battle formations of the Tuskling. Encompassing at least 30 Tuskling knights and their lady loves, a Ball formation requires a specific set of circumstances to create. Combine a gathering of Tuskling aristocracy, add an alcohol-fueled, sexually-charged orgy of war lust, and sometimes, just sometimes, the wild, ancient battle magic that permeates their war-torn world casts the spell, forming the ball. The Tusklings, the ruling class of the Orcish Supremacy, shape into an inseparable sphere that rolls onto the countryside. The ball of pork won't stop its night of terror until it has crushed the poor, the weak, and the lesser citizens under its unstoppable weight.
+Plucked directly from a Tuskling High Caucus moments after it formed, this particular ball has been transferred here to this dungeon for your entertainment, ladies and gentlemen. The magic of the ball won't allow them to stop until every last drop of Crawler blood is squeezed right out of their human bodies![1|26]
+
+==Description==
+The Ball of Swine is a rolling battle formation of the Tuskling, the aristocratic ruling class of the Orcish Supremacy, fused into a single inseparable sphere by the ancient battle magic of their homeworld. This particular ball was pulled from a Tuskling High Caucus moments after it formed and installed in the Dungeon as a Borough Boss, where the same magic keeps it rolling until every crawler in the arena is dead.[1|26]
+
+The encounter turns on positioning rather than a damage race. The sphere runs endlessly along concentric grooves cut into the stone floor while the arena's internal walls rise and fall to open new paths and steer it toward the crawlers, and it fills its tunnel completely, leaving virtually no room to dodge. Despite the level 15 rating on the formation, the creatures inside it are weak: knights at level 4 and courtesans at level 5, none of them armed or trained for a real fight. Once the sphere pops, the encounter drops into a standard skirmish against more than thirty dazed targets,[1|26] led by a single level 8 Dominatrix.[1|27]
+
+===Boss Chamber===
+The lair is a round maze of concentric rounded tunnels coiling inward toward the center of the ring,[1|21] each of them roughly 15 feet (4.5 m) tall.[1|26] Rounded portcullises open off each corridor, but the openings are magically sealed, so nothing can be thrown or shot through.[1|22] Crawlers can still watch the ball hurtle past through them, which is how the party scouted its behavior before committing to the fight.[1|26] The only entrance is a single vast gate opening onto a courtyard; the ball will not enter that courtyard, so a party can stage there, but once the gate closes it seals completely, severing sight, sound, and party chat with anyone outside.[1|22] The shelter is temporary, since the courtyard walls sink into the floor when the battle starts and the space becomes part of the ball's track.[1|26]
+
+A stairwell down to the Second Floor sits at the center of the arena behind a red forcefield,[1|26] which drops once the boss is dead.[1|27]
+
+==Appearance==
+Seen in passing, the Ball of Swine is a colossal sphere of pink, fleshy mass that fills the corridor wall to wall, grunting as it goes and trailing a stench of sewage.[1|21] Up close it measures nearly fifteen feet across, wide enough to fill a corridor the width of a single freeway lane, and its rippling skin is covered in eyes, coarse hairs, and random tusks. Tattered flaps of black and white cloth and swaths of glittering red-sequined fabric, the remains of the nobles' formal wear, are embedded across it. Rotten meat cuts through the sewage reek, and the sphere squeals constantly as it rolls, individual faces rotating along its outer edge like ornamental car rims.[1|26]
+
+The Tusklings revealed when the ball pops stand about four and a half feet tall, half again as bulky as a human through the body, with comically short legs and large warthog heads set so close to their shoulders that they look neckless. Each has four tusks, two long and curved and a second pair crossed in front of the face.[1|26] Their feet are hoofed and bare.[1|27]
+
+*Tuskling Knight (male): Level 4. Boar-faced and meaty through the chest, wearing black formal wear resembling a tuxedo.[1|26]
+*Tuskling Courtesan (female): Level 5. Clad in a glittering red gown. The one Carl fought wore enough leather strapping over the gown to resemble a harness,[1|26] catalogued as a Pig Harness when looted.[1|27]
+*Tuskling Dominatrix (female): Level 8. The highest-level member of this formation, the last to fall, and the carrier of the boss drop.[1|27]
+
+==Combat Mechanics==
+The Ball of Swine has exactly one attack: it rolls over its target. The roll carries no fire, lightning, or acid effect.[1|26]
+
+*Unstoppable roll: The sphere barrels along the circular tracks and accelerates over the course of the fight, taking hard ninety-degree turns off the walls with almost no loss of speed, which rules out simply blocking it with a solid wall.[1|26]
+*Masked approach: The arena's heavy dance music covers the vibration of the oncoming ball, so crawlers cannot feel it coming until it is nearly on top of them.[1|26]
+*Shifting wall guidance: Concentric grooves mark the ball's tracks, and straight lines crossing them at right angles mark where the walls will rise and fall to redirect it. Reading the floor is the only reliable way to find safe ground.[1|26]
+*Weakness: Because the ball fills the corridor completely, it can be wedged. An angled ramp of sufficient strength catches it between the structure and the ceiling and pins it, at which point it can be stabbed through gaps from below.[1|26]
+*Fragmentation: At enough damage the sphere bursts, throwing the individual Tusklings outward dazed, unarmed, and with no memory of their time inside the formation.[1|26]
+
+{{Spoiler|book=7|spoiler=The mobs inside a rolling battle formation are immune to all damage for as long as the ball holds together, which is why the ball itself has to be broken before its contents can be fought.[7|15]}}
+
+==Story==
+Two days into the first floor, Carl and Donut followed graffiti warning crawlers away from the spiral and waited at a half-raised portcullis, where they watched the ball rush past too fast to pull up an info box.[1|21] A quarter turn around the ring they found thirty-eight people camped at the drawbridge, most of them elderly residents of the Meadow Lark eldercare facility, with four night-shift staff still standing: Brandon Andrews, Chris Andrews, Yolanda Martinez, and Imani.[1|22] Mordecai called facing a borough boss with six crawlers madness, but confirmed that every boss has a vulnerability and that there are always clues.[1|25]
+
+Carl, Brandon, and Chris spent about five hours building spike strips and the Speedbump, a modular four-foot-high fortress with roughly twenty intact Enchanted Shuriken of Bloodlust driven into its wooden front ramp. With six hours and thirty minutes left on the clock, seven crawlers entered the arena. A spike strip took the first point off the ball's health, and the party then raised the Speedbump on a slab that served as a track switch, wedging the sphere between the fortress and the ceiling exactly as planned. Imani forced her longsword up through the lattice while Carl jabbed with half a chin-up bar clamped around a cluster of shuriken, and the ball burst. Tuxedoed knights and gowned courtesans rained into the wreckage and were cut down unarmed.[1|26] The Dominatrix fell last, crushed under Brandon's hammer, and dropped a Borough Field Guide that labels the mob types of surrounding quadrants on the map.[1|27] Carl came away with the Borough Boss achievement and a Silver Boss Box.[1|30] Every survivor of the fight gained a silver star beside their name.[1|31]
+
+{{Spoiler|book=7|spoiler=A larger version of the formation reappeared during Faction Wars on the ninth floor, filled with buffed-up Skank Skunks instead of Tusklings. Listed as a level 70 Rolling Battle Formation Ball, it was not classified as a boss at all despite being roughly a third bigger than the original, and it took two impact hob-lobbers to crack it open.[7|15]}}
+
+==Dungeon Lore==
+The Tuskling conquered the Orcish Supremacy hundreds of years ago and have coasted since. The system is blunt about the decline: the honorific "Knight" now describes a bureaucrat who writes laws to oppress the poor, and knights and courtesans are only worthy adversaries once they come together into a formation. The formation itself is less a military doctrine than an accident of ritual, arising at gatherings of Tuskling aristocracy out of alcohol-soaked, sexually charged war lust when the ancient magic of their homeworld fuses the participants into a single destructive mass.[1|26]
+
+Mordecai named the tusklings and their battle formation as examples of the rarest category of dungeon content: real creatures taken from their own world and dropped into the fight as-is, rather than mobs generated by the system AI or built by writers stitching Earth stereotypes onto alien creatures.[1|35]
+
+==Trivia==
+*The formation's alternate name, the Porkchop Express, is a pop-culture reference to Kurt Russell's character Jack Burton and his truck in the 1986 film Big Trouble in Little China.[1|26]
+*The boss arena is staged as a rave, with an EDM soundtrack, blacklight, neon, and lasers timed to the beat. Once the internal walls retract after the fight, the purple-lit dome resembles a giant 1980s roller-skating rink.[1|26]
+*The stairwell at the center of the arena turned out to be a long ramp rather than stairs.[1|27]
+*The Soundbooth Theatre Immersion Tunnel adaptation devotes its fourth first-season episode to the fight, titled "The Porkchop Express."
+
+==Speculation==
+*Because the individual Tusklings lose all memory of their time in the ball and are disoriented when it pops, the ancient battle magic likely suppresses individual agency for the duration of the formation.[1|26]
+*The formal wear, the Dominatrix rank, and the orgy-fueled conditions required to form a ball suggest the Tusklings treat the formation as a celebratory ritual of dominance rather than a military tactic.[1|26]
+
+==Gallery==
+
+Ball of Swine Official KS.jpg|Official art from the Kickstarter edition by Luciano Fleitas
+DCC-AIT-S01E04-Cover-1.jpg|Official art from the cover of Soundbooth Theatre Immersion Tunnel, Season 1, Episode 4: The Porkchop Express
+Ball of swine Art by @frayedfables, Instagram.webp|Art by @frayedfables, Instagram
+
+==References==
+

@@ -1,0 +1,2715 @@
+{
+  "schema": "encounter-budget/0.1",
+  "version": "0.1.3",
+  "changelog": [
+    "0.1.3 (2026-10-04): Q2 resolved as placeholders: clock.days F4 = 10, F5 = 15, F6 = 17 (was 25/30/35), tagged inspired (Lore canon timers M-603..M-608; Caleb can adjust; GM-adaptable); F7-F18 held at 17 in the growth curve (was +5 per floor to 60). Recomputed: F4-F6 encounter totals, mixes, cash, daily XP budgets and the Floors 3-18 growth table. No field path renamed or removed.",
+    "0.1.2 (2026-10-04, Encounter Bot request): (1) added budget fields for the house-built Day 2-4 encounters enc-d02-02, enc-d03-02, enc-d03-03 and enc-d04-03 as new keys floors.1.fixed_encounters.d02_02 / d03_02 / d03_03 / d04_03 (counts, XP, fit, cash; sized from the F1 level-1 tier budgets for 2, 3 and 4 Crawlers), plus floors.1._day_encounter_index and _day_encounter_economy; (2) refreshed day01_slot_map: stale slots 3 and 4 (the old collapse_miss toll) removed, slot_no of the others unchanged, map re-pinned to the 22:08 PM regenerated spec, and a new day02_to_04_slot_map added; (3) added proposed_floor_growth_curve (Floors 3-18 flag-line proposal, PLACEHOLDER); (4) the Detour Tax / death-on-miss wording in the md fixed. No existing field path was renamed or removed.",
+    "0.1.1 (2026-10-04, after the Accountant audit PASS WITH FIXES): (1) audit line restated per Crawler per FLOOR (rules/40 3.2, rules/45, tools/loot.py); combined F1+F2 framing, 84.9% and the 226 headroom claim removed; (2) all box means re-derived from the live decks by pull_type (Silver box 481.6, was 429.5; Bronze, Welcome and pull-type means recomputed) and expected totals recomputed: F1 @@A1, F2 @@A2 all-in, box-only @@B1 and @@B2; (3) governor demoted to an optional safety valve (A12) and the unreproduced 13.2% to 3.1% claim withdrawn, replaced by simulations run from the live decks (tools-notes/encounter_budget_econ.py); (4) flagged that loot totals cannot run the valve (tool change needed); (5) Caleb rulings applied: a missed floor collapse is death on every floor (no toll), Detour Tax covers only a missed Stairwell key, Floor 3 = 20 days; F4-F6 placeholder days now 25/30/35; open questions Q1 and Q1b closed.",
+    "0.1.0 (2026-10-04): first filing."
+  ],
+  "meta": {
+    "title": "Encounter budget, credits and loot (5e 2024)",
+    "owner": "Syndicate",
+    "status": "draft",
+    "updated": "2026-10-04",
+    "file": "rules/70-encounter-budget-5e.json",
+    "companion": "rules/70-encounter-budget-5e.md",
+    "consumer": "Encounter Bot (tools/encounter_bot, local script, no model calls) cites this file for difficulty, credits and loot; it is the only source of those numbers",
+    "decided_by": "Caleb: 'Go ahead and write the budget file.' (2026-10-04); clock numbers from decision 026",
+    "players_are": "Crawlers"
+  },
+  "authority_note": "Budgets are guidelines, not enforced. The GM has authority to adapt as play goes (Caleb, 2026-10-04). Anything under 'authoritative' follows a filed source; anything under 'assumed' or tagged ASSUMED is a proposal for Caleb/GM to adjust.",
+  "schema_description": {
+    "top_level": {
+      "schema": "schema id",
+      "version": "semver of this file",
+      "meta": "owner/status/consumer",
+      "authority_note": "guideline-only rule",
+      "schema_description": "this block",
+      "authoritative": "numbers copied or derived from filed sources (SRD tables, core, decision 026)",
+      "assumed": "parameters this file proposes (ids A1..A14; A13 retired in v0.1.1)",
+      "party_sizes": "2, 3, 4 supported; other sizes: multiply per-character budgets by P",
+      "floors": "Floors 1-6 in full, keyed by floor number as a string",
+      "floors_7_18": "formula and placeholders",
+      "economy_audit": "per-Crawler PER-FLOOR arithmetic for Floors 1 and 2 against the 1,500 line (box-only and all-in), live-deck pull means, simulations, optional valve",
+      "adjacency": "safe-room placement fields: per floor in floors.N.adjacency, rationale in assumed.adjacency",
+      "adjustments": "pets, companions, class features",
+      "day01_slot_map": "the 34 empty slots in floors/f01/day-01.spec.json and the field that fills each",
+      "open_questions": "short list for Caleb"
+    },
+    "naming_scheme": {
+      "ids": "lowercase keys; party size keys are the strings '2','3','4'; tiers are trivial|standard|hard|boss; levels are 'L<n>'; CRs are strings ('1/8','1/4','1/2','1','2')",
+      "units": "XP for budgets, credits for money (1 credit = 1 GP), hours/days for time",
+      "tags": "ASSUMED = proposal; 'authoritative' = follows a source; 'derived' = computed from both",
+      "citing": "cite as rules/70-encounter-budget-5e.json#<dotted.path>, e.g. floors.1.fixed_encounters.z07.counts_by_party_size.4.goblin-warrior",
+      "slot_map": "slot_no follows the order of the 'slots' array in floors/f01/day-01.json (34 entries); spec_path is the JSON path inside day-01.spec.json; fills_from is the dotted path here; value or value_by_party_size is the ready-to-paste fill"
+    }
+  },
+  "tiers": {
+    "names": ["trivial", "standard", "hard", "boss"],
+    "meaning": {
+      "trivial": "burns a little resource; wandering or filler",
+      "standard": "the everyday fight",
+      "hard": "an elite; avoidable or telegraphed above Moderate",
+      "boss": "the floor boss with support; at the top of the High band"
+    },
+    "band_maps": {
+      "F1": {"trivial": "half of Low", "standard": "Low", "hard": "Moderate", "boss": "High"},
+      "F2_plus": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"}
+    },
+    "lead_share": {"trivial": 1.0, "standard": 1.0, "hard": 1.0, "boss": 0.9},
+    "status": "band maps ASSUMED for F2+; F1 matches overview 9.2"
+  },
+  "authoritative": {
+    "status": "authoritative: copied or derived directly from a filed source; change only by changing the source",
+    "xp_budget_per_character": {
+      "source": "SRD 5.2.1 'XP Budget per Character' (same table the overview 9.1 uses for levels 1-2). No group multiplier in 2024.",
+      "by_level": {
+        "1": {"low": 50, "moderate": 75, "high": 100},
+        "2": {"low": 100, "moderate": 150, "high": 200},
+        "3": {"low": 150, "moderate": 225, "high": 400},
+        "4": {"low": 250, "moderate": 375, "high": 500},
+        "5": {"low": 500, "moderate": 750, "high": 1100},
+        "6": {"low": 600, "moderate": 1000, "high": 1400},
+        "7": {"low": 750, "moderate": 1300, "high": 1700},
+        "8": {"low": 1000, "moderate": 1700, "high": 2100},
+        "9": {"low": 1300, "moderate": 2000, "high": 2600},
+        "10": {"low": 1600, "moderate": 2300, "high": 3100},
+        "11": {"low": 1900, "moderate": 2900, "high": 4100},
+        "12": {"low": 2200, "moderate": 3700, "high": 4700},
+        "13": {"low": 2600, "moderate": 4200, "high": 5400},
+        "14": {"low": 2900, "moderate": 4900, "high": 6200},
+        "15": {"low": 3300, "moderate": 5400, "high": 7800},
+        "16": {"low": 3800, "moderate": 6100, "high": 9800},
+        "17": {"low": 4500, "moderate": 7200, "high": 11700},
+        "18": {"low": 5000, "moderate": 8700, "high": 14200},
+        "19": {"low": 5500, "moderate": 10700, "high": 17200},
+        "20": {"low": 6400, "moderate": 13200, "high": 22000}
+      }
+    },
+    "xp_by_cr": {
+      "source": "SRD 5.2.1 'Experience Points by Challenge Rating'",
+      "table": {
+        "0": 0,
+        "1/8": 25,
+        "1/4": 50,
+        "1/2": 100,
+        "1": 200,
+        "2": 450,
+        "3": 700,
+        "4": 1100,
+        "5": 1800,
+        "6": 2300,
+        "7": 2900,
+        "8": 3900,
+        "9": 5000,
+        "10": 5900,
+        "11": 7200,
+        "12": 8400,
+        "13": 10000,
+        "14": 11500,
+        "15": 13000,
+        "16": 15000,
+        "17": 18000,
+        "18": 20000,
+        "19": 22000,
+        "20": 25000,
+        "21": 33000,
+        "22": 41000,
+        "23": 50000,
+        "24": 62000,
+        "25": 75000,
+        "26": 90000,
+        "27": 105000
+      },
+      "note": "CR 11, 12, 13 are missing from the SRD text extraction used here (7,200 / 8,400 / 10,000 are the standard values); verify before relying on them. CR 0 is 0 or 10 XP; this file uses 0."
+    },
+    "level_track": {
+      "source": "core 2.2 standard track: arrive on Floor N at level N, leave at N+1; Floor 1 gains level 2 at the Green Room (core 2.3, overview rule 3)",
+      "slow_burn": "table option; look up the floor whose level matches (core 8.3 note)"
+    },
+    "core_cr_targets_party_of_4": {
+      "source": "core 8.3",
+      "columns": ["mob_lo", "mob_hi", "elite_lo", "elite_hi", "boss_lo", "boss_hi"],
+      "by_floor": {
+        "1": ["0", "1/4", "1/2", "1", "2", "2"],
+        "2": ["1/8", "1/2", "1", "2", "3", "4"],
+        "3": ["1/4", "1", "2", "3", "4", "5"],
+        "4": ["1/2", "1", "2", "3", "5", "6"],
+        "5": ["1", "2", "3", "4", "7", "8"],
+        "6": ["1", "2", "4", "6", "8", "9"],
+        "7": ["2", "3", "5", "6", "9", "10"],
+        "8": ["2", "3", "6", "7", "10", "11"],
+        "9": ["3", "4", "7", "8", "11", "12"],
+        "10": ["3", "5", "8", "9", "12", "13"],
+        "11": ["4", "5", "9", "10", "13", "14"],
+        "12": ["4", "6", "10", "11", "14", "16"],
+        "13": ["5", "6", "11", "12", "15", "16"],
+        "14": ["5", "7", "12", "13", "16", "17"],
+        "15": ["6", "8", "13", "14", "17", "19"],
+        "16": ["6", "8", "14", "15", "18", "20"],
+        "17": ["7", "9", "15", "16", "19", "21"],
+        "18": ["8", "10", "16", "18", "21", "24"]
+      }
+    },
+    "clock": {
+      "source": "decision 026 (Caleb) + Syndicate confirmation",
+      "days": {"1": 5, "2": 10, "3": 20},
+      "days_f4_plus": "F4 = 10, F5 = 15, F6 = 17 placeholders (v0.1.3, see days_f4_f5_f6); F7+ held at 17 in the growth curve; kept as a string so the v0.1.0-v0.1.2 field path still resolves (was: longer, placeholders 25/30/35)",
+      "days_f4_f5_f6": {
+        "4": 10,
+        "5": 15,
+        "6": 17,
+        "status": "PLACEHOLDER defaults tagged inspired (Lore canon timers M-603..M-608; Caleb can adjust; GM-adaptable), set in v0.1.3; replaces the v0.1.2 placeholders 25/30/35. F4 = 10 is shorter than F3 = 20, which departs from decision 026's 'later floors longer'."
+      },
+      "days_f7_plus": "PLACEHOLDER 17, held at the Floor 6 value (no source for F7+ yet; the file does not extend any growth)",
+      "short_rest_slots_per_day_cap": 4,
+      "long_rest_per_day": 1,
+      "stairwell_opens_after_hours": 32,
+      "stairwell_opens_note": "about 32 hours after the floor opens, early Day 2 (canon M-276, verified by Lore); Z10 arena holds a stairwell (M-275); the key and Zone S door are house ideas tagged inspired",
+      "final_collapse": {
+        "hour_of_floor": 120,
+        "rule": "fixed: 24 in-game hours into the last day; a Long Rest never ends or skips the floor; the System cuts short a rest that would run past it",
+        "status": "Syndicate default in decision 026 (~9:45 PM CT); Caleb may veto"
+      },
+      "missed_collapse": {
+        "rule": "A player who has not reached a stairwell by the floor collapse is dead, game over, on EVERY floor. No Reprieve, no toll, no Exhaustion exception.",
+        "source": "decision 026, Caleb ruling ~10:02 PM CT (supersedes the Floor 1 'hauled down' default)",
+        "credit_toll": null,
+        "loot_and_credits": "the dead Crawler's credits and items are destroyed with the floor; survivors may loot only while the floor stands (decision 028)",
+        "gm_warning": "clearly at Floor 1 start and on Days 4 and 5",
+        "stasis_counts_as_reaching_a_stairwell": true,
+        "death_rules": "core 6 (death is pretty much game over; loot stays lootable)"
+      },
+      "break_room_saferoom_through_day": 3,
+      "early_descent": {
+        "threshold_hours_left": 6,
+        "rule": "a Crawler who descends with more than 6 hours left is held in stasis until the floor collapses (M-277): banks the achievement, ends that Crawler's floor; in the last 6 hours descent is free; each Crawler chooses; the GM may log an override"
+      },
+      "collapse_order_floor_1": [
+        {"day": 1, "event": "nothing closes"},
+        {"day": 2, "event": "outer zones close"},
+        {"day": 3, "event": "mid zones close"},
+        {"day": 4, "event": "Break Room (Z6) and vendors lose service"},
+        {"day": 5, "event": "only the Stairwell corridor stays"}
+      ],
+      "zone_groups_floor_1": {
+        "outer_close_day_2": ["Z0", "Z1", "Z2", "Z3", "Z3b", "Z4"],
+        "mid_close_day_3": ["Z5", "Z7", "Z8"],
+        "corridor_stays_to_end": ["Z10", "Z11", "ZS"],
+        "z6_break_room": "loses service Day 4",
+        "z9_green_room": "saferoom stays open to the end",
+        "route_rule": "closed means hooks and services vanish; the route (Z6, Z8, Z9, Z10, Z11) is never cut",
+        "key_deadlines": {"bruiser_key_gone_day": 3, "terminal_key_gone_day": 4}
+      }
+    },
+    "box_credit_dice": {
+      "source": "core 4.2 (no floor multiplier on box credit pulls, decision 019)",
+      "Bronze": "3d6 x 5",
+      "Silver": "2d6 x 25",
+      "Gold": "2d6 x 250",
+      "Platinum": "2d6 x 2500",
+      "Legendary": "2d6 x 10000",
+      "pulls": {"Bronze": "1-2", "Silver": 2, "Gold": "2-3", "Platinum": 3}
+    },
+    "box_pacing_per_crawler_per_floor": {
+      "source": "core 4.5",
+      "by_band": {
+        "1-2": {"Bronze": "2-4", "Silver": "0-1"},
+        "3-5": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "6-9": {"Bronze": "1-2", "Silver": "1-2", "Gold": "1", "Platinum": "0-1 (F9)"}
+      }
+    },
+    "floor_rarity_ceiling": {
+      "source": "core 3.6",
+      "F1-2": {"default": "Common", "peak": "Uncommon"},
+      "F3-5": {"default": "Uncommon", "peak": "Rare"},
+      "F6-9": {"default": "Rare", "peak": "Very Rare"}
+    },
+    "credit_multiplier": {
+      "source": "core 3.9; decision 019",
+      "x1": "F1-4",
+      "x5": "F5-9",
+      "x20": "F10-14",
+      "x50": "F15-18",
+      "applies_to": ["achievement rewards", "System fees (repairs, Story Box buyback, crafting)"],
+      "does_not_apply_to": ["box credit pulls", "revive fees", "Upgrade Coupon cap"]
+    },
+    "story_box_constraints": {
+      "source": "decisions 015/018; rules/45; core 4.1/4.5/4.7",
+      "floors": [1, 2],
+      "cap_per_table_per_floor": 1,
+      "awarded_by": "GM hand-pick only, one named one-time deed, never random",
+      "opens_only_in": "a saferoom",
+      "box_odds_in_this_file": 0,
+      "sale_value_by_rung": {"0": 100, "1": 250, "2": 500},
+      "sale_value_note": "Floor-1 scale; times the sale floor's multiplier; story_value is provenance only and excluded from the 1,500 flag, a sale is not"
+    },
+    "floor_1_reprieve": {
+      "source": "core 6.2; STATE-OF-BUILD 6",
+      "floor_1_only": true,
+      "note": "No budget field changes it. This file prices a missed key and resting without a saferoom as costs, never wipes. A missed floor collapse is death on every floor and the Reprieve does not cover it (decision 026, Caleb ruling ~10:02 PM CT); nothing here prices it."
+    },
+    "saferoom_rules": {
+      "source": "core 5.6; overview rule 5/7",
+      "long_rest": "saferooms only",
+      "short_rest": "anywhere reasonably quiet; guaranteed in a saferoom",
+      "floor_1_saferooms": ["Z6 Break Room", "Z9 Green Room"],
+      "honest_on_floor_1": true,
+      "saferooms_can_lie_from": 2
+    },
+    "floor_1_encounter_composition": "see floors.1.fixed_encounters (mirrors overview 9.2/9.3)"
+  },
+  "assumed": {
+    "status": "ASSUMED: proposals the GM may adapt; Caleb can overrule any of them",
+    "list": [
+      {
+        "id": "A1",
+        "what": "Tier-to-band map: F1 trivial=half of Low, standard=Low, hard=Moderate, boss=High (matches overview 9.2). F2+ trivial=Low, standard=Moderate, hard=High (elite), boss=High (core 8.3: mostly Moderate, some Low, 1-3 High per floor).",
+        "adapt": "Caleb/GM"
+      },
+      {
+        "id": "A2",
+        "what": "Boss lead creature fits within 90% of the High total so support has room; other tiers 100%.",
+        "adapt": "Caleb/GM"
+      },
+      {
+        "id": "A3",
+        "what": "Encounter density: F1 fixed list (6 planned, max 8); F2-F6 1.5 encounters per clock day, no quota; mix = boss 1, hard 15%, trivial 25%, standard rest.",
+        "adapt": "Caleb/GM"
+      },
+      {
+        "id": "A4",
+        "what": "Days: F4=10, F5=15, F6=17 are placeholder defaults tagged inspired (Lore's canon timers M-603..M-608; Caleb can adjust; GM-adaptable), set in v0.1.3. F7+ is held at 17 for the growth curve only (placeholder, no source). F1=5, F2=10, F3=20 are authoritative. Note F4 (10) is shorter than F3 (20).",
+        "adapt": "Caleb"
+      },
+      {
+        "id": "A5",
+        "what": "Encounter cash per Crawler by tier (F1 scale): trivial 0-2, standard 1d4x2, hard 1d6x2, boss 1d6x5; pool = per-Crawler x party size, split evenly. F1 values are sized so a 4-Crawler party's spot amounts in the overview (about 158 credits across the floor) fit inside the tiers.",
+        "adapt": "Accountant/GM"
+      },
+      {
+        "id": "A6",
+        "what": "R1 toast credits 10-40 (avg 25); expected credit-paying R1 toasts per Crawler: F1 2, F2 3, F3+ 3.",
+        "adapt": "Accountant/GM"
+      },
+      {
+        "id": "A7",
+        "what": "Per-encounter box odds are the fight share of core 4.5 targets; non-fight deed Bronze expected 0.5 (F1) and 0.9 (F2) per Crawler. F1 total Bronze (incl. Welcome) is 1.9 expected, inside the overview's 1-3; F2 about 2.0, the low end of core 2-4.",
+        "adapt": "Caleb/GM"
+      },
+      {
+        "id": "A8",
+        "what": "F2 Boss Box is Silver (core 4.7 cap) and F2 box values equal F1's: the F1 live decks are reused for F2 (no F2 decks exist yet). Welcome Box uses decks z06 + any, fight/deed Bronze boxes use all F1 decks pooled, the Boss Box uses z10 (Boss) + any.",
+        "adapt": "Lore"
+      },
+      {
+        "id": "A9",
+        "what": "Encounter cash on F5+ takes the credit multiplier (x5); box pulls do not (decision 019).",
+        "adapt": "Caleb/Accountant"
+      },
+      {
+        "id": "A10",
+        "what": "Rest-without-saferoom fee 20 per Crawler (cap 60 per floor); key bribe 50 per Crawler; Detour Tax 75 per Crawler (a missed Stairwell key ONLY; a missed collapse is death with no toll, decision 026); Zone S forcing fee 25 per Crawler; detour 2 hours, 0 rest slots; collapse steps cost hooks and services, 0 credits.",
+        "adapt": "Caleb/GM"
+      },
+      {"id": "A11", "what": "Safe-room adjacency and rest-segment limits (see adjacency).", "adapt": "GM"},
+      {
+        "id": "A12",
+        "what": "Optional safety valve (not required under the per-floor line): before a Floor 2 Boss Box, if the Crawler's running total on that floor is 900 or more, the GM may hand-pick that box from cards worth 175 or less. Needs a tool change to measure all-in (cash + R1) totals.",
+        "adapt": "Accountant"
+      },
+      {
+        "id": "A14",
+        "what": "Reward ladder for the six proposed achievements (floors.1.achievement_rewards).",
+        "adapt": "Caleb/GM"
+      }
+    ],
+    "adjacency": {
+      "status": "ASSUMED (GM may adapt)",
+      "fields": {
+        "boss_max_zones_from_saferoom": "F1-2: 1 (one door; F1 Z10 sits one door from the Z9 Green Room per overview 6.7); F3+: 2",
+        "hard_max_zones_from_saferoom": "F1: 1 (Z8 sits between Z6 and Z9); F2+: 2",
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "wandering_encounters": "F1: max 2 on the floor (overview 5.11, authoritative); F2+: max 1 per day",
+        "saferooms_min_per_floor": 2,
+        "rule_of_thumb": "A Crawler should never be more than two fights from an honest saferoom on F1-2."
+      }
+    },
+    "cash_per_crawler_f1_scale": {
+      "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
+      "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+      "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+      "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+    },
+    "r1_toast_credits": {"min": 10, "max": 40, "avg": 25.0},
+    "r1_expected_count": {"1": 2, "2": 3, "3_plus": 3},
+    "deed_bronze_expected_per_crawler": {"1": 0.5, "2": 0.9}
+  },
+  "party_sizes": {
+    "supported": [2, 3, 4],
+    "note": "Encounter counts per floor do not change with party size; enemy counts and XP budgets do. Credits per Crawler stay flat; the encounter cash pool is per-Crawler x P (it scales and then splits evenly); boxes are per Crawler."
+  },
+  "floors": {
+    "1": {
+      "name": "The Orientation Pit",
+      "clock": {
+        "days": 5,
+        "days_field": "clock.days",
+        "days_status": "authoritative (decision 026)",
+        "short_rest_slots_per_day_cap": 4,
+        "short_rest_slots_total_cap": 20,
+        "long_rests_per_day": 1,
+        "long_rests_total": 5,
+        "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
+      },
+      "level": {
+        "arrive": 1,
+        "leave": 2,
+        "track": "standard (core 2.2)",
+        "status": "authoritative",
+        "budget_level": {"before_green_room_z9": 1, "boss_z10": 2},
+        "note": "Floor 1 only: encounters before the Green Room (Z9) budget at level 1; the boss budgets at level 2 (overview rule 3). Floor N>=2: whole floor budgets at level N (descent level applies at the first saferoom of the next floor, core 2.3)."
+      },
+      "tier_band_map": {
+        "map": {"trivial": "half of Low", "standard": "Low", "hard": "Moderate", "boss": "High"},
+        "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
+      },
+      "xp_per_character": {"L1": {"low": 50, "moderate": 75, "high": 100}, "L2": {"low": 100, "moderate": 150, "high": 200}},
+      "tiers": {
+        "L1": {
+          "xp_budget_total": {
+            "2": {"trivial": 50, "standard": 100, "hard": 150, "boss": 200},
+            "3": {"trivial": 75, "standard": 150, "hard": 225, "boss": 300},
+            "4": {"trivial": 100, "standard": 200, "hard": 300, "boss": 400}
+          },
+          "cr_caps": {
+            "2": {"trivial": "1/4", "standard": "1/4", "hard": "1/2", "boss": "1/2"},
+            "3": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "1"},
+            "4": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "1"}
+          }
+        },
+        "L2": {
+          "xp_budget_total": {
+            "2": {"trivial": 100, "standard": 200, "hard": 300, "boss": 400},
+            "3": {"trivial": 150, "standard": 300, "hard": 450, "boss": 600},
+            "4": {"trivial": 200, "standard": 400, "hard": 600, "boss": 800}
+          },
+          "cr_caps": {
+            "2": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "1"},
+            "3": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "2"},
+            "4": {"trivial": "1/4", "standard": "1/4", "hard": "1", "boss": "2"}
+          }
+        }
+      },
+      "encounters": {
+        "formula": "F1 is fixed by the module (overview 9.2): Z2, Z5, Z7 standard; Z8 hard; Z10 boss; plus wandering Ceiling Ticks (trivial), max 2 on the floor",
+        "total_planned": 6,
+        "wandering_max": 2,
+        "total_max": 8,
+        "total_max_source": "core 10.3: 4-8 encounters on F1",
+        "per_day_typical": 1.2,
+        "per_day_max": 4,
+        "mix_planned": {"trivial": 1, "standard": 3, "hard": 1, "boss": 1},
+        "quota": false,
+        "note": "Encounters are a ceiling envelope, not a quota. Unused days are fine."
+      },
+      "xp": {
+        "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
+        "by_party_size": {
+          "2": {
+            "floor_xp_ceiling_total": 900,
+            "daily_xp_budget_typical": 180.0,
+            "daily_xp_budget_per_crawler": 90.0,
+            "daily_xp_cap_normal_day": 400,
+            "daily_xp_cap_boss_day": 600
+          },
+          "3": {
+            "floor_xp_ceiling_total": 1350,
+            "daily_xp_budget_typical": 270.0,
+            "daily_xp_budget_per_crawler": 90.0,
+            "daily_xp_cap_normal_day": 600,
+            "daily_xp_cap_boss_day": 900
+          },
+          "4": {
+            "floor_xp_ceiling_total": 1800,
+            "daily_xp_budget_typical": 360.0,
+            "daily_xp_budget_per_crawler": 90.0,
+            "daily_xp_cap_normal_day": 800,
+            "daily_xp_cap_boss_day": 1200
+          }
+        },
+        "status": "derived from SRD budgets + ASSUMED mix/density"
+      },
+      "credits": {
+        "cash_per_crawler_per_encounter_f1_scale": {
+          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2, "avg_f01_override": 0.0},
+          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+        },
+        "cash_scale": 1,
+        "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter cash; decision 019 names only achievement rewards and fees",
+        "cash_expected_per_crawler": 39.5,
+        "r1_toast_credits_per_crawler": {
+          "count_expected": 2,
+          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "expected": 50.0,
+          "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
+        },
+        "pool_rule": "per-Crawler figures are flat; encounter cash pool = per-Crawler dice x P (scales with party), split evenly among living Crawlers. Spot amounts printed for 4 Crawlers in a floor doc scale by P/4. Boxes are per Crawler and never split.",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "boxes": {
+        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.06}, "hard": {"Bronze": 0.23}, "boss": {"Silver": 1.0}},
+        "expected_fight_boxes_per_crawler": {"Bronze": 0.41, "boss_box": "Silver"},
+        "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
+        "core_pacing_per_crawler_per_floor": {"Bronze": "2-4", "Silver": "0-1"},
+        "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
+        "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
+        "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
+        "status": "odds ASSUMED; ceilings and pacing authoritative"
+      },
+      "adjacency": {
+        "boss_max_zones_from_saferoom": 1,
+        "hard_max_zones_from_saferoom": 1,
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "saferooms_min_per_floor": 2,
+        "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "fixed_encounters": {
+        "z02": {
+          "name": "Vent Rats",
+          "tier": "standard",
+          "budget_level": 1,
+          "creatures": [{"srd_id": "giant-rat", "cr": "1/8"}],
+          "counts_by_party_size": {"2": {"giant-rat": 3}, "3": {"giant-rat": 4}, "4": {"giant-rat": 6}},
+          "xp_by_party_size": {"2": 75, "3": 100, "4": 150},
+          "fit": {
+            "2": {"xp_used": 75, "tier_budget": 100, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 100, "tier_budget": 150, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 150, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2"
+        },
+        "z05": {
+          "name": "Mannequin Staff",
+          "tier": "standard",
+          "budget_level": 1,
+          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
+          "counts_by_party_size": {"2": {"skeleton": 2}, "3": {"skeleton": 3}, "4": {"skeleton": 4}},
+          "xp_by_party_size": {"2": 100, "3": 150, "4": 200},
+          "fit": {
+            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 150, "tier_budget": 150, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2"
+        },
+        "z07": {
+          "name": "Exit Greeters (Big Green EXIT)",
+          "tier": "standard",
+          "budget_level": 1,
+          "creatures": [{"srd_id": "goblin-warrior", "cr": "1/4"}, {"srd_id": "goblin-minion", "cr": "1/8"}],
+          "counts_by_party_size": {
+            "2": {"goblin-warrior": 1, "goblin-minion": 2},
+            "3": {"goblin-warrior": 1, "goblin-minion": 3},
+            "4": {"goblin-warrior": 2, "goblin-minion": 4}
+          },
+          "xp_by_party_size": {"2": 100, "3": 125, "4": 200},
+          "fit": {
+            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 125, "tier_budget": 150, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2"
+        },
+        "z08": {
+          "name": "The Elite (Mascot Locker Room)",
+          "tier": "hard",
+          "budget_level": 1,
+          "creatures": [{"srd_id": "animated-armor", "cr": "1"}, {"srd_id": "animated-flying-sword", "cr": "1/4"}],
+          "counts_by_party_size": {
+            "2": {"animated-armor": 1, "animated-flying-sword": 0},
+            "3": {"animated-armor": 1, "animated-flying-sword": 1},
+            "4": {"animated-armor": 1, "animated-flying-sword": 2}
+          },
+          "xp_by_party_size": {"2": 200, "3": 250, "4": 300},
+          "fit": {
+            "2": {"xp_used": 200, "tier_budget": 150, "over_by": 50, "within_tier": false},
+            "3": {"xp_used": 250, "tier_budget": 225, "over_by": 25, "within_tier": false},
+            "4": {"xp_used": 300, "tier_budget": 300, "over_by": 0, "within_tier": true}
+          },
+          "cash_per_crawler": 7.0,
+          "cash_dice_per_crawler": "1d6 x 2"
+        },
+        "wandering": {
+          "name": "Ceiling Ticks (Lights-Out)",
+          "tier": "trivial",
+          "budget_level": 1,
+          "creatures": [{"srd_id": "stirge", "cr": "1/8"}],
+          "counts_by_party_size": {"2": {"stirge": 2}, "3": {"stirge": 3}, "4": {"stirge": 4}},
+          "xp_by_party_size": {"2": 50, "3": 75, "4": 100},
+          "fit": {
+            "2": {"xp_used": 50, "tier_budget": 50, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 75, "tier_budget": 75, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true}
+          },
+          "cash_per_crawler": 0.0,
+          "cash_dice_per_crawler": "none (overview: wandering Ticks carry no loot)",
+          "max_on_floor": 2
+        },
+        "z10": {
+          "name": "Dean Thudd (boss)",
+          "tier": "boss",
+          "budget_level": 2,
+          "creatures": [{"srd_id": "ogre", "cr": "2"}, {"srd_id": "bugbear-warrior", "cr": "1"}, {"srd_id": "skeleton", "cr": "1/4"}],
+          "counts_by_party_size": {
+            "2": {"ogre": 0, "bugbear-warrior": 1, "skeleton": 4},
+            "3": {"ogre": 1, "bugbear-warrior": 0, "skeleton": 2},
+            "4": {"ogre": 1, "bugbear-warrior": 0, "skeleton": 4}
+          },
+          "xp_by_party_size": {"2": 400, "3": 550, "4": 650},
+          "fit": {
+            "2": {"xp_used": 400, "tier_budget": 400, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 550, "tier_budget": 600, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 650, "tier_budget": 800, "over_by": 0, "within_tier": true}
+          },
+          "cash_per_crawler": 17.5,
+          "cash_dice_per_crawler": "1d6 x 5",
+          "note": "Boss: 2 Crawlers use overview Variant B (Bugbear Warrior + 4 Skeletons); 3 use Ogre + 1 + 1 Skeletons; 4 use Ogre + 2 + 2 Skeletons (the +2 arrive in Phase 2). Skeleton counts are totals across both phases."
+        },
+        "d02_02": {
+          "name": "Zone S: The Service Door (Ushers if the door is forced or the party is loud)",
+          "tier": "trivial",
+          "budget_level": 1,
+          "spec_encounter_id": "enc-d02-02",
+          "spec_file": "floors/f01/day-02.spec.json",
+          "optional_conditional": true,
+          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
+          "counts_by_party_size": {"2": {"skeleton": 1}, "3": {"skeleton": 1}, "4": {"skeleton": 2}},
+          "xp_by_party_size": {"2": 50, "3": 50, "4": 100},
+          "fit": {
+            "2": {"xp_used": 50, "tier_budget": 50, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 50, "tier_budget": 75, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true}
+          },
+          "tier_budget_if_level_2": {"2": 100, "3": 150, "4": 200},
+          "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
+          "cash_per_crawler": 0.0,
+          "cash_dice_per_crawler": "none (F1 trivial tier carries no loot)",
+          "boxes": "none: these conditional extras carry no box odds; the Boss Box and the planned fight/deed boxes in floors.1.boxes are unchanged",
+          "reasoning": "Avoidable (a quiet entry has no enemies) and followed a minute later by Dean Thudd, who is budgeted separately in z10, so the Ushers stay a trivial tier: half of Low."
+        },
+        "d03_02": {
+          "name": "The Collapsing Hall: Displaced Vermin",
+          "tier": "standard",
+          "budget_level": 1,
+          "spec_encounter_id": "enc-d03-02",
+          "spec_file": "floors/f01/day-03.spec.json",
+          "optional_conditional": true,
+          "creatures": [{"srd_id": "giant-rat", "cr": "1/8"}, {"srd_id": "stirge", "cr": "1/8"}],
+          "counts_by_party_size": {"2": {"giant-rat": 2, "stirge": 2}, "3": {"giant-rat": 3, "stirge": 3}, "4": {"giant-rat": 4, "stirge": 4}},
+          "xp_by_party_size": {"2": 100, "3": 150, "4": 200},
+          "fit": {
+            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 150, "tier_budget": 150, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          },
+          "tier_budget_if_level_2": {"2": 200, "3": 300, "4": 400},
+          "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2",
+          "boxes": "none: these conditional extras carry no box odds; the Boss Box and the planned fight/deed boxes in floors.1.boxes are unchanged",
+          "reasoning": "Everyday Low-band fight at level 1: one Vent Rat and one Ceiling Tick per Crawler (25 XP each) fills the Low band exactly. If the GM uses the Ticks, they count toward the floor's wandering cap of two (overview 5.11)."
+        },
+        "d03_03": {
+          "name": "Stage Wings Recon (Ushers only if the party is spotted)",
+          "tier": "trivial",
+          "budget_level": 1,
+          "spec_encounter_id": "enc-d03-03",
+          "spec_file": "floors/f01/day-03.spec.json",
+          "optional_conditional": true,
+          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
+          "counts_by_party_size": {"2": {"skeleton": 1}, "3": {"skeleton": 1}, "4": {"skeleton": 2}},
+          "xp_by_party_size": {"2": 50, "3": 50, "4": 100},
+          "fit": {
+            "2": {"xp_used": 50, "tier_budget": 50, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 50, "tier_budget": 75, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true}
+          },
+          "tier_budget_if_level_2": {"2": 100, "3": 150, "4": 200},
+          "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
+          "cash_per_crawler": 0.0,
+          "cash_dice_per_crawler": "none (F1 trivial tier carries no loot)",
+          "boxes": "none: these conditional extras carry no box odds; the Boss Box and the planned fight/deed boxes in floors.1.boxes are unchanged",
+          "reasoning": "Spotted-only watch near the stage; same size as the Day 2 door Ushers. Trivial tier."
+        },
+        "d04_03": {
+          "name": "Ushers at the Stage Door (flashlight sweep)",
+          "tier": "standard",
+          "budget_level": 1,
+          "spec_encounter_id": "enc-d04-03",
+          "spec_file": "floors/f01/day-04.spec.json",
+          "optional_conditional": true,
+          "creatures": [{"srd_id": "skeleton", "cr": "1/4"}],
+          "counts_by_party_size": {"2": {"skeleton": 2}, "3": {"skeleton": 3}, "4": {"skeleton": 4}},
+          "xp_by_party_size": {"2": 100, "3": 150, "4": 200},
+          "fit": {
+            "2": {"xp_used": 100, "tier_budget": 100, "over_by": 0, "within_tier": true},
+            "3": {"xp_used": 150, "tier_budget": 150, "over_by": 0, "within_tier": true},
+            "4": {"xp_used": 200, "tier_budget": 200, "over_by": 0, "within_tier": true}
+          },
+          "tier_budget_if_level_2": {"2": 200, "3": 300, "4": 400},
+          "level_note": "Budgeted at level 1 (the Green Room milestone, Z9, gives level 2). If the table already has level 2 the counts are well inside the level-2 budget shown; the GM may add Skeletons or Rats up to it.",
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2",
+          "boxes": "none: these conditional extras carry no box odds; the Boss Box and the planned fight/deed boxes in floors.1.boxes are unchanged",
+          "reasoning": "An active patrol on the way to the boss: standard tier, one Usher per Crawler, same counts as the Z5 Mannequin Staff (4 Crawlers: 4 Skeletons, 200 XP)."
+        },
+        "_day_encounter_index": {"enc-d02-02": "d02_02", "enc-d03-02": "d03_02", "enc-d03-03": "d03_03", "enc-d04-03": "d04_03"},
+        "_day_encounter_economy": {
+          "status": "v0.1.2, ASSUMED",
+          "note": "Conditional extras on Days 2-4 sit on top of the six planned Floor 1 encounters (core 10.3 says 4-8 on F1, so if every one fires the floor has 10; the GM may drop any). Only d03_02 pays cash (standard tier, 1d4 x 2 per Crawler, expected 5); the trivial ones pay nothing and none carries a box.",
+          "max_added_expected_cash_per_crawler": 5.0,
+          "economy_audit_changed": false,
+          "xp_added_per_day_if_all_fire_4_crawlers": {"day_2": 100, "day_3": 300, "day_4": 200},
+          "compare": "floors.1.xp.by_party_size.4.daily_xp_budget_typical (360) and daily_xp_cap_normal_day (800)"
+        },
+        "_status": "counts mirror floors/f01/00-overview.md 9.2/9.3 verbatim (authoritative for Floor 1 until Caleb says otherwise); fit flags show where the overview runs above the tier budget"
+      },
+      "boss_variant_b_level1": {
+        "budget_level": 1,
+        "xp_budget_total": {"2": 200, "3": 300, "4": 400},
+        "note": "Boss at level 1 (table declines the Green Room milestone): Bugbear Warrior (CR 1) + Skeletons; 4 Crawlers = 400 XP = High (overview 6.6)."
+      },
+      "prices": {
+        "currency": "credits (1 credit = 1 GP, core 5.10); F1 prices at Floor-1 scale; System fees multiply by the floor credit multiplier (decision 019)",
+        "potion_of_healing_vendor": {
+          "price": 50,
+          "stock_floor_wide": 2,
+          "sells_back_at": 0.5,
+          "status": "authoritative (overview 5.6/8.3: 50 credits, 2 in stock for the whole floor, shared Z6/Z9)"
+        },
+        "rest_without_saferoom": {
+          "applies_to": "Floor 1: any Long Rest attempt outside an open saferoom (Z6 is a saferoom through Day 3; the Z9 Green Room stays open to the end, so a saferoom is always reachable)",
+          "long_rest_granted": false,
+          "long_rest_rule": "Long Rest only in saferooms (core 5.6; overview rule 7); a field attempt is interrupted by Ceiling Ticks after 1d4 hours",
+          "unlicensed_rest_fee_per_crawler": 20,
+          "fee_cap_per_crawler_per_floor": 60,
+          "party_fee_by_size": {"2": 40, "3": 60, "4": 80},
+          "interruption_encounter": {"tier": "trivial", "creature": "Ceiling Ticks", "counts_against_wandering_max": true},
+          "never_a_wipe": true,
+          "status": "ASSUMED",
+          "reasoning": "20 credits = 40% of one Potion of Healing (50) and below the R1 toast band (10-40); 3 billings cap at 60 = 4% of a floor's 1,500 line. A saferoom is free, so the fee only has to sting, not threaten."
+        },
+        "stairwell_key_terminal_bribe": {
+          "where": "Floor 1 Break Room (Z6) Snakk-Matic terminal; gone on Day 4 when the Break Room and vendors lose service (decision 026)",
+          "price_per_crawler": 50,
+          "party_price_by_size": {"2": 100, "3": 150, "4": 200},
+          "payable_by_pooling": true,
+          "haggle": "allowed at the terminal's normal DC 13 / 15% off (core 5.10; overview 5.6), GM may refuse",
+          "status": "ASSUMED",
+          "reasoning": "50 per Crawler = one Potion of Healing each (3.3% of a floor's 1,500 line). It buys the key without the Bruiser fight; using the key to skip the Z10 fight also forfeits the Silver Boss Box (about 482 credits of expected value), so the bribe is cheap in credits and expensive in opportunity."
+        },
+        "detour_tax": {
+          "what": "The System's Detour Tax toll. It covers ONLY a missed Stairwell key: a Crawler who reaches the Zone S door without the key may pay it as one of the three costs the day spec lists (detour back to Z8 or Z6, this toll, or the loud keyless forcing). It is NOT a collapse toll: a missed floor collapse is death on every floor, with no toll (decision 026, Caleb ruling ~10:02 PM CT). The collapse steps themselves cost hooks and services only.",
+          "applies_to": "missed Stairwell key only",
+          "does_not_apply_to": "a missed floor collapse (death, no toll)",
+          "toll_per_crawler": 75,
+          "party_toll_by_size": {"2": 150, "3": 225, "4": 300},
+          "payable_by_pooling": true,
+          "shortfall": "a Crawler who cannot pay pays what they have and the GM logs the balance (no debt mechanic)",
+          "scales_with_floor_multiplier": true,
+          "status": "ASSUMED",
+          "reasoning": "75 = 1.5 x the bribe (waiting costs more than buying early) and 5% of a floor's 1,500 line. The real cost of a missed key is time, danger or the forfeited Boss Box (about 482 expected credits), not the toll."
+        },
+        "zone_s_door_forcing": {
+          "mechanics_source": "overview 5.10: Thieves' Tools DC 15 or Strength (Athletics) DC 15, 10 minutes, loud; Dean Thudd and his Ushers come looking 1 minute later",
+          "forcing_fee_per_crawler": 25,
+          "party_fee_by_size": {"2": 50, "3": 75, "4": 100},
+          "status": "ASSUMED",
+          "reasoning": "25 per Crawler is the cheapest in credits because forcing already pays in danger (the boss arrives at the Crawlers' worst moment). Ordering: forcing 25 < bribe 50 < Detour Tax 75."
+        },
+        "detour": {
+          "hours": 2,
+          "short_rest_slots_used": 0,
+          "extra_ceiling_tick_rolls": 4,
+          "note": "Walking back to Z8 or Z6 while they still serve: 2 in-game hours, no rest slot consumed, 4 extra d6 Ceiling Tick rolls (one per 30 minutes, overview rule 6).",
+          "status": "ASSUMED"
+        },
+        "collapse_step_costs": {
+          "credit_cost_per_step": 0,
+          "model": "Each collapse step costs the party the hooks and services in the closed zones (loot, achievements, vendors), not credits; the Detour Tax (missed key only) is the only credit toll on the clock (day spec collapse_order_status). Missing the final collapse is death, not a price. The way to Z9, Z10, Z11 is never cut.",
+          "status": "matches the day-spec wording; amounts ASSUMED"
+        }
+      },
+      "achievement_rewards": {
+        "status": "ASSUMED; the six proposed achievements are a seed list at GM discretion, rewards tailored by the GM, snark-only allowed (decision 026, day-spec achievement_caps)",
+        "ladder": {
+          "R0": "snark-only, Title, 0 credits",
+          "R1": "Title plus 10-40 credits (avg 25) times the floor multiplier",
+          "R2": "Heroic Inspiration (at most 1 per session from achievements, core 3.7)",
+          "R3": "Common consumable (F1-2 ceiling)",
+          "R5": "Bronze box on F1-2 (named for the deed); Silver only as the Boss Box"
+        },
+        "soft_cap_achievement_boxes_per_crawler_per_floor": "2-3 (Caleb's ruling as quoted in the day spec); this file expects about 0.5 (F1) and 0.9 (F2) deed Bronze boxes",
+        "never": [
+          "Gold or higher on F1-2",
+          "a second Silver box from an achievement",
+          "Story Box (separate GM hand-pick, rules/45)",
+          "XP (core 3.4)"
+        ],
+        "proposed": {
+          "slow_learner": {"trigger": "Clear every Day 1 to 3 encounter before descending", "reward": "R1: Title + 25 credits"},
+          "read_the_fine_print": {"trigger": "Use the Break Room terminal bribe route", "reward": "R0: snark-only Title"},
+          "last_one_out": {
+            "trigger": "Hold a closing zone until the party is clear, then reach the Green Room",
+            "reward": "R2: Heroic Inspiration"
+          },
+          "detour_tax": {"trigger": "Pay the missed-key toll and still descend", "reward": "R0: snark-only Title"},
+          "early_withdrawal": {"trigger": "Choose early-descent stasis", "reward": "R0: snark-only Title"},
+          "hold_please": {
+            "trigger": "Talk Dean Thudd down without a fight",
+            "reward": "R5: Bronze box named for the deed (the Silver Boss Box still drops, overview 6.7)"
+          }
+        }
+      },
+      "economy_note": "Floor 1 expected economy per Crawler: see economy_audit.floor_1"
+    },
+    "2": {
+      "name": "(floor name per floor doc; core 2.1 working names only)",
+      "clock": {
+        "days": 10,
+        "days_field": "clock.days",
+        "days_status": "authoritative (decision 026)",
+        "short_rest_slots_per_day_cap": 4,
+        "short_rest_slots_total_cap": 40,
+        "long_rests_per_day": 1,
+        "long_rests_total": 10,
+        "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
+      },
+      "level": {
+        "arrive": 2,
+        "leave": 3,
+        "track": "standard (core 2.2)",
+        "status": "authoritative",
+        "budget_level": 2,
+        "note": "Whole floor budgets at level 2."
+      },
+      "tier_band_map": {
+        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
+      },
+      "xp_per_character": {"L2": {"low": 100, "moderate": 150, "high": 200}},
+      "tiers": {
+        "L2": {
+          "xp_budget_total": {
+            "2": {"trivial": 200, "standard": 300, "hard": 400, "boss": 400},
+            "3": {"trivial": 300, "standard": 450, "hard": 600, "boss": 600},
+            "4": {"trivial": 400, "standard": 600, "hard": 800, "boss": 800}
+          },
+          "cr_caps": {
+            "2": {"trivial": "1/2", "standard": "1/2", "hard": "1", "boss": "1"},
+            "3": {"trivial": "1/2", "standard": "1/2", "hard": "2", "boss": "2"},
+            "4": {"trivial": "1/2", "standard": "1/2", "hard": "2", "boss": "3"}
+          }
+        }
+      },
+      "encounters": {
+        "formula": "total = round(clock.days x per_day_typical); mix = boss 1, hard round(0.15 x (total-1)) (min 1), trivial round(0.25 x (total-1)), standard = rest",
+        "per_day_typical": 1.5,
+        "per_day_max": 4,
+        "total_planned": 15,
+        "mix_planned": {"trivial": 4, "standard": 8, "hard": 2, "boss": 1},
+        "quota": false,
+        "wandering_max_per_day": 1,
+        "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
+      },
+      "xp": {
+        "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
+        "by_party_size": {
+          "2": {
+            "floor_xp_ceiling_total": 4400,
+            "daily_xp_budget_typical": 440.0,
+            "daily_xp_budget_per_crawler": 220.0,
+            "daily_xp_cap_normal_day": 1200,
+            "daily_xp_cap_boss_day": 700
+          },
+          "3": {
+            "floor_xp_ceiling_total": 6600,
+            "daily_xp_budget_typical": 660.0,
+            "daily_xp_budget_per_crawler": 220.0,
+            "daily_xp_cap_normal_day": 1800,
+            "daily_xp_cap_boss_day": 1050
+          },
+          "4": {
+            "floor_xp_ceiling_total": 8800,
+            "daily_xp_budget_typical": 880.0,
+            "daily_xp_budget_per_crawler": 220.0,
+            "daily_xp_cap_normal_day": 2400,
+            "daily_xp_cap_boss_day": 1400
+          }
+        },
+        "status": "derived from SRD budgets + ASSUMED mix/density"
+      },
+      "credits": {
+        "cash_per_crawler_per_encounter_f1_scale": {
+          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
+          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+        },
+        "cash_scale": 1,
+        "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter cash; decision 019 names only achievement rewards and fees",
+        "cash_expected_per_crawler": 75.5,
+        "r1_toast_credits_per_crawler": {
+          "count_expected": 3,
+          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "expected": 75.0,
+          "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
+        },
+        "pool_rule": "per-Crawler figures are flat; encounter cash pool = per-Crawler dice x P (scales with party), split evenly among living Crawlers. Spot amounts printed for 4 Crawlers in a floor doc scale by P/4. Boxes are per Crawler and never split.",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "boxes": {
+        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.07}, "hard": {"Bronze": 0.28}, "boss": {"Silver": 1.0}},
+        "expected_fight_boxes_per_crawler": {"Bronze": 1.12, "boss_box": "Silver"},
+        "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
+        "core_pacing_per_crawler_per_floor": {"Bronze": "2-4", "Silver": "0-1"},
+        "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
+        "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
+        "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
+        "status": "odds ASSUMED; ceilings and pacing authoritative"
+      },
+      "adjacency": {
+        "boss_max_zones_from_saferoom": 1,
+        "hard_max_zones_from_saferoom": 2,
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "saferooms_min_per_floor": 2,
+        "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
+        "status": "ASSUMED (GM may adapt)"
+      }
+    },
+    "3": {
+      "name": "(floor name per floor doc; core 2.1 working names only)",
+      "clock": {
+        "days": 20,
+        "days_field": "clock.days",
+        "days_status": "authoritative: Caleb ruled Floor 3 = 20 days (decision 026, ~10:00 PM CT)",
+        "short_rest_slots_per_day_cap": 4,
+        "short_rest_slots_total_cap": 80,
+        "long_rests_per_day": 1,
+        "long_rests_total": 20,
+        "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
+      },
+      "level": {
+        "arrive": 3,
+        "leave": 4,
+        "track": "standard (core 2.2)",
+        "status": "authoritative",
+        "budget_level": 3,
+        "note": "Whole floor budgets at level 3."
+      },
+      "tier_band_map": {
+        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
+      },
+      "xp_per_character": {"L3": {"low": 150, "moderate": 225, "high": 400}},
+      "tiers": {
+        "L3": {
+          "xp_budget_total": {
+            "2": {"trivial": 300, "standard": 450, "hard": 800, "boss": 800},
+            "3": {"trivial": 450, "standard": 675, "hard": 1200, "boss": 1200},
+            "4": {"trivial": 600, "standard": 900, "hard": 1600, "boss": 1600}
+          },
+          "cr_caps": {
+            "2": {"trivial": "1", "standard": "1", "hard": "3", "boss": "3"},
+            "3": {"trivial": "1", "standard": "1", "hard": "3", "boss": "3"},
+            "4": {"trivial": "1", "standard": "1", "hard": "3", "boss": "4"}
+          }
+        }
+      },
+      "encounters": {
+        "formula": "total = round(clock.days x per_day_typical); mix = boss 1, hard round(0.15 x (total-1)) (min 1), trivial round(0.25 x (total-1)), standard = rest",
+        "per_day_typical": 1.5,
+        "per_day_max": 4,
+        "total_planned": 30,
+        "mix_planned": {"trivial": 7, "standard": 18, "hard": 4, "boss": 1},
+        "quota": false,
+        "wandering_max_per_day": 1,
+        "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
+      },
+      "xp": {
+        "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
+        "by_party_size": {
+          "2": {
+            "floor_xp_ceiling_total": 14200,
+            "daily_xp_budget_typical": 710.0,
+            "daily_xp_budget_per_crawler": 355.0,
+            "daily_xp_cap_normal_day": 2000,
+            "daily_xp_cap_boss_day": 1250
+          },
+          "3": {
+            "floor_xp_ceiling_total": 21300,
+            "daily_xp_budget_typical": 1065.0,
+            "daily_xp_budget_per_crawler": 355.0,
+            "daily_xp_cap_normal_day": 3000,
+            "daily_xp_cap_boss_day": 1875
+          },
+          "4": {
+            "floor_xp_ceiling_total": 28400,
+            "daily_xp_budget_typical": 1420.0,
+            "daily_xp_budget_per_crawler": 355.0,
+            "daily_xp_cap_normal_day": 4000,
+            "daily_xp_cap_boss_day": 2500
+          }
+        },
+        "status": "derived from SRD budgets + ASSUMED mix/density"
+      },
+      "credits": {
+        "cash_per_crawler_per_encounter_f1_scale": {
+          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
+          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+        },
+        "cash_scale": 1,
+        "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter cash; decision 019 names only achievement rewards and fees",
+        "cash_expected_per_crawler": 142.5,
+        "r1_toast_credits_per_crawler": {
+          "count_expected": 3,
+          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "expected": 75.0,
+          "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
+        },
+        "pool_rule": "per-Crawler figures are flat; encounter cash pool = per-Crawler dice x P (scales with party), split evenly among living Crawlers. Spot amounts printed for 4 Crawlers in a floor doc scale by P/4. Boxes are per Crawler and never split.",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "boxes": {
+        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.04}, "hard": {"Bronze": 0.15, "Silver": 0.12}, "boss": {"Gold": 1.0}},
+        "expected_fight_boxes_per_crawler": {"Bronze": 1.32, "Silver": 0.48, "boss_box": "Gold"},
+        "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
+        "core_pacing_per_crawler_per_floor": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
+        "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
+        "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
+        "status": "odds ASSUMED; ceilings and pacing authoritative"
+      },
+      "adjacency": {
+        "boss_max_zones_from_saferoom": 2,
+        "hard_max_zones_from_saferoom": 2,
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "saferooms_min_per_floor": 2,
+        "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
+        "status": "ASSUMED (GM may adapt)"
+      }
+    },
+    "4": {
+      "name": "(floor name per floor doc; core 2.1 working names only)",
+      "clock": {
+        "days": 10,
+        "days_field": "clock.days",
+        "days_status": "PLACEHOLDER default, tagged inspired (Lore's canon timers M-603..M-608; Caleb can adjust; GM-adaptable). Set in v0.1.3. Note: F4 = 10 is shorter than F3 = 20, so decision 026's 'later floors grow longer' no longer holds on its face",
+        "short_rest_slots_per_day_cap": 4,
+        "short_rest_slots_total_cap": 40,
+        "long_rests_per_day": 1,
+        "long_rests_total": 10,
+        "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
+      },
+      "level": {
+        "arrive": 4,
+        "leave": 5,
+        "track": "standard (core 2.2)",
+        "status": "authoritative",
+        "budget_level": 4,
+        "note": "Whole floor budgets at level 4."
+      },
+      "tier_band_map": {
+        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
+      },
+      "xp_per_character": {"L4": {"low": 250, "moderate": 375, "high": 500}},
+      "tiers": {
+        "L4": {
+          "xp_budget_total": {
+            "2": {"trivial": 500, "standard": 750, "hard": 1000, "boss": 1000},
+            "3": {"trivial": 750, "standard": 1125, "hard": 1500, "boss": 1500},
+            "4": {"trivial": 1000, "standard": 1500, "hard": 2000, "boss": 2000}
+          },
+          "cr_caps": {
+            "2": {"trivial": "1", "standard": "1", "hard": "3", "boss": "3"},
+            "3": {"trivial": "1", "standard": "1", "hard": "3", "boss": "4"},
+            "4": {"trivial": "1", "standard": "1", "hard": "3", "boss": "5"}
+          }
+        }
+      },
+      "encounters": {
+        "formula": "total = round(clock.days x per_day_typical); mix = boss 1, hard round(0.15 x (total-1)) (min 1), trivial round(0.25 x (total-1)), standard = rest",
+        "per_day_typical": 1.5,
+        "per_day_max": 4,
+        "total_planned": 15,
+        "mix_planned": {"trivial": 4, "standard": 8, "hard": 2, "boss": 1},
+        "quota": false,
+        "wandering_max_per_day": 1,
+        "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
+      },
+      "xp": {
+        "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
+        "by_party_size": {
+          "2": {
+            "floor_xp_ceiling_total": 11000,
+            "daily_xp_budget_typical": 1100.0,
+            "daily_xp_budget_per_crawler": 550.0,
+            "daily_xp_cap_normal_day": 3000,
+            "daily_xp_cap_boss_day": 1750
+          },
+          "3": {
+            "floor_xp_ceiling_total": 16500,
+            "daily_xp_budget_typical": 1650.0,
+            "daily_xp_budget_per_crawler": 550.0,
+            "daily_xp_cap_normal_day": 4500,
+            "daily_xp_cap_boss_day": 2625
+          },
+          "4": {
+            "floor_xp_ceiling_total": 22000,
+            "daily_xp_budget_typical": 2200.0,
+            "daily_xp_budget_per_crawler": 550.0,
+            "daily_xp_cap_normal_day": 6000,
+            "daily_xp_cap_boss_day": 3500
+          }
+        },
+        "status": "derived from SRD budgets + ASSUMED mix/density"
+      },
+      "credits": {
+        "cash_per_crawler_per_encounter_f1_scale": {
+          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
+          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+        },
+        "cash_scale": 1,
+        "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter cash; decision 019 names only achievement rewards and fees",
+        "cash_expected_per_crawler": 75.5,
+        "r1_toast_credits_per_crawler": {
+          "count_expected": 3,
+          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "expected": 75.0,
+          "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
+        },
+        "pool_rule": "per-Crawler figures are flat; encounter cash pool = per-Crawler dice x P (scales with party), split evenly among living Crawlers. Spot amounts printed for 4 Crawlers in a floor doc scale by P/4. Boxes are per Crawler and never split.",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "boxes": {
+        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.08}, "hard": {"Bronze": 0.33, "Silver": 0.25}, "boss": {"Gold": 1.0}},
+        "expected_fight_boxes_per_crawler": {"Bronze": 1.3, "Silver": 0.5, "boss_box": "Gold"},
+        "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
+        "core_pacing_per_crawler_per_floor": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
+        "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
+        "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
+        "status": "odds ASSUMED; ceilings and pacing authoritative"
+      },
+      "adjacency": {
+        "boss_max_zones_from_saferoom": 2,
+        "hard_max_zones_from_saferoom": 2,
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "saferooms_min_per_floor": 2,
+        "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
+        "status": "ASSUMED (GM may adapt)"
+      }
+    },
+    "5": {
+      "name": "(floor name per floor doc; core 2.1 working names only)",
+      "clock": {
+        "days": 15,
+        "days_field": "clock.days",
+        "days_status": "PLACEHOLDER default, tagged inspired (Lore's canon timers M-603..M-608; Caleb can adjust; GM-adaptable). Set in v0.1.3. Note: F4 = 10 is shorter than F3 = 20, so decision 026's 'later floors grow longer' no longer holds on its face",
+        "short_rest_slots_per_day_cap": 4,
+        "short_rest_slots_total_cap": 60,
+        "long_rests_per_day": 1,
+        "long_rests_total": 15,
+        "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
+      },
+      "level": {
+        "arrive": 5,
+        "leave": 6,
+        "track": "standard (core 2.2)",
+        "status": "authoritative",
+        "budget_level": 5,
+        "note": "Whole floor budgets at level 5."
+      },
+      "tier_band_map": {
+        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
+      },
+      "xp_per_character": {"L5": {"low": 500, "moderate": 750, "high": 1100}},
+      "tiers": {
+        "L5": {
+          "xp_budget_total": {
+            "2": {"trivial": 1000, "standard": 1500, "hard": 2200, "boss": 2200},
+            "3": {"trivial": 1500, "standard": 2250, "hard": 3300, "boss": 3300},
+            "4": {"trivial": 2000, "standard": 3000, "hard": 4400, "boss": 4400}
+          },
+          "cr_caps": {
+            "2": {"trivial": "2", "standard": "2", "hard": "4", "boss": "5"},
+            "3": {"trivial": "2", "standard": "2", "hard": "4", "boss": "7"},
+            "4": {"trivial": "2", "standard": "2", "hard": "4", "boss": "8"}
+          }
+        }
+      },
+      "encounters": {
+        "formula": "total = round(clock.days x per_day_typical); mix = boss 1, hard round(0.15 x (total-1)) (min 1), trivial round(0.25 x (total-1)), standard = rest",
+        "per_day_typical": 1.5,
+        "per_day_max": 4,
+        "total_planned": 23,
+        "mix_planned": {"trivial": 6, "standard": 13, "hard": 3, "boss": 1},
+        "quota": false,
+        "wandering_max_per_day": 1,
+        "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
+      },
+      "xp": {
+        "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
+        "by_party_size": {
+          "2": {
+            "floor_xp_ceiling_total": 34300,
+            "daily_xp_budget_typical": 2286.7,
+            "daily_xp_budget_per_crawler": 1143.3,
+            "daily_xp_cap_normal_day": 6200,
+            "daily_xp_cap_boss_day": 3700
+          },
+          "3": {
+            "floor_xp_ceiling_total": 51450,
+            "daily_xp_budget_typical": 3430.0,
+            "daily_xp_budget_per_crawler": 1143.3,
+            "daily_xp_cap_normal_day": 9300,
+            "daily_xp_cap_boss_day": 5550
+          },
+          "4": {
+            "floor_xp_ceiling_total": 68600,
+            "daily_xp_budget_typical": 4573.3,
+            "daily_xp_budget_per_crawler": 1143.3,
+            "daily_xp_cap_normal_day": 12400,
+            "daily_xp_cap_boss_day": 7400
+          }
+        },
+        "status": "derived from SRD budgets + ASSUMED mix/density"
+      },
+      "credits": {
+        "cash_per_crawler_per_encounter_f1_scale": {
+          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
+          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+        },
+        "cash_scale": 5,
+        "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter cash; decision 019 names only achievement rewards and fees",
+        "cash_expected_per_crawler": 547.5,
+        "r1_toast_credits_per_crawler": {
+          "count_expected": 3,
+          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "expected": 375.0,
+          "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
+        },
+        "pool_rule": "per-Crawler figures are flat; encounter cash pool = per-Crawler dice x P (scales with party), split evenly among living Crawlers. Spot amounts printed for 4 Crawlers in a floor doc scale by P/4. Boxes are per Crawler and never split.",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "boxes": {
+        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.05}, "hard": {"Bronze": 0.21, "Silver": 0.17}, "boss": {"Gold": 1.0}},
+        "expected_fight_boxes_per_crawler": {"Bronze": 1.28, "Silver": 0.51, "boss_box": "Gold"},
+        "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
+        "core_pacing_per_crawler_per_floor": {"Bronze": "2-3", "Silver": "1-2", "Gold": "0-1"},
+        "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
+        "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
+        "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
+        "status": "odds ASSUMED; ceilings and pacing authoritative"
+      },
+      "adjacency": {
+        "boss_max_zones_from_saferoom": 2,
+        "hard_max_zones_from_saferoom": 2,
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "saferooms_min_per_floor": 2,
+        "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
+        "status": "ASSUMED (GM may adapt)"
+      }
+    },
+    "6": {
+      "name": "(floor name per floor doc; core 2.1 working names only)",
+      "clock": {
+        "days": 17,
+        "days_field": "clock.days",
+        "days_status": "PLACEHOLDER default, tagged inspired (Lore's canon timers M-603..M-608; Caleb can adjust; GM-adaptable). Set in v0.1.3. Note: F4 = 10 is shorter than F3 = 20, so decision 026's 'later floors grow longer' no longer holds on its face",
+        "short_rest_slots_per_day_cap": 4,
+        "short_rest_slots_total_cap": 68,
+        "long_rests_per_day": 1,
+        "long_rests_total": 17,
+        "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
+      },
+      "level": {
+        "arrive": 6,
+        "leave": 7,
+        "track": "standard (core 2.2)",
+        "status": "authoritative",
+        "budget_level": 6,
+        "note": "Whole floor budgets at level 6."
+      },
+      "tier_band_map": {
+        "map": {"trivial": "Low", "standard": "Moderate", "hard": "High", "boss": "High"},
+        "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
+      },
+      "xp_per_character": {"L6": {"low": 600, "moderate": 1000, "high": 1400}},
+      "tiers": {
+        "L6": {
+          "xp_budget_total": {
+            "2": {"trivial": 1200, "standard": 2000, "hard": 2800, "boss": 2800},
+            "3": {"trivial": 1800, "standard": 3000, "hard": 4200, "boss": 4200},
+            "4": {"trivial": 2400, "standard": 4000, "hard": 5600, "boss": 5600}
+          },
+          "cr_caps": {
+            "2": {"trivial": "2", "standard": "2", "hard": "6", "boss": "6"},
+            "3": {"trivial": "2", "standard": "2", "hard": "6", "boss": "7"},
+            "4": {"trivial": "2", "standard": "2", "hard": "6", "boss": "9"}
+          }
+        }
+      },
+      "encounters": {
+        "formula": "total = round(clock.days x per_day_typical); mix = boss 1, hard round(0.15 x (total-1)) (min 1), trivial round(0.25 x (total-1)), standard = rest",
+        "per_day_typical": 1.5,
+        "per_day_max": 4,
+        "total_planned": 26,
+        "mix_planned": {"trivial": 6, "standard": 15, "hard": 4, "boss": 1},
+        "quota": false,
+        "wandering_max_per_day": 1,
+        "status": "ASSUMED (density, mix); per_day_max and the 'no quota' rule too"
+      },
+      "xp": {
+        "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
+        "by_party_size": {
+          "2": {
+            "floor_xp_ceiling_total": 51200,
+            "daily_xp_budget_typical": 3011.8,
+            "daily_xp_budget_per_crawler": 1505.9,
+            "daily_xp_cap_normal_day": 8000,
+            "daily_xp_cap_boss_day": 4800
+          },
+          "3": {
+            "floor_xp_ceiling_total": 76800,
+            "daily_xp_budget_typical": 4517.6,
+            "daily_xp_budget_per_crawler": 1505.9,
+            "daily_xp_cap_normal_day": 12000,
+            "daily_xp_cap_boss_day": 7200
+          },
+          "4": {
+            "floor_xp_ceiling_total": 102400,
+            "daily_xp_budget_typical": 6023.5,
+            "daily_xp_budget_per_crawler": 1505.9,
+            "daily_xp_cap_normal_day": 16000,
+            "daily_xp_cap_boss_day": 9600
+          }
+        },
+        "status": "derived from SRD budgets + ASSUMED mix/density"
+      },
+      "credits": {
+        "cash_per_crawler_per_encounter_f1_scale": {
+          "trivial": {"dice": "1d3-1", "min": 0, "avg": 1.0, "max": 2},
+          "standard": {"dice": "1d4 x 2", "min": 2, "avg": 5.0, "max": 8},
+          "hard": {"dice": "1d6 x 2", "min": 2, "avg": 7.0, "max": 12},
+          "boss": {"dice": "1d6 x 5", "min": 5, "avg": 17.5, "max": 30}
+        },
+        "cash_scale": 5,
+        "cash_scale_status": "ASSUMED = credit multiplier of the floor (core 3.9) applied to encounter cash; decision 019 names only achievement rewards and fees",
+        "cash_expected_per_crawler": 632.5,
+        "r1_toast_credits_per_crawler": {
+          "count_expected": 3,
+          "each_f1_scale": {"min": 10, "max": 40, "avg": 25.0},
+          "expected": 375.0,
+          "status": "ASSUMED; multiplier applies (achievement rewards, decision 019)"
+        },
+        "pool_rule": "per-Crawler figures are flat; encounter cash pool = per-Crawler dice x P (scales with party), split evenly among living Crawlers. Spot amounts printed for 4 Crawlers in a floor doc scale by P/4. Boxes are per Crawler and never split.",
+        "status": "ASSUMED (GM may adapt)"
+      },
+      "boxes": {
+        "odds_per_encounter_by_tier": {"trivial": {}, "standard": {"Bronze": 0.03}, "hard": {"Bronze": 0.13, "Silver": 0.19}, "boss": {"Gold": 1.0}},
+        "expected_fight_boxes_per_crawler": {"Bronze": 0.97, "Silver": 0.76, "boss_box": "Gold"},
+        "ceiling": "core 3.6/4.5: F1-2 Bronze+Silver only (boss box Silver); F3-5 up to Gold; F6 Gold (Platinum from F9)",
+        "core_pacing_per_crawler_per_floor": {"Bronze": "1-2", "Silver": "1-2", "Gold": "1", "Platinum": "0-1 (F9)"},
+        "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
+        "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
+        "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
+        "status": "odds ASSUMED; ceilings and pacing authoritative"
+      },
+      "adjacency": {
+        "boss_max_zones_from_saferoom": 2,
+        "hard_max_zones_from_saferoom": 2,
+        "max_encounters_between_rests": 3,
+        "max_hard_or_boss_between_rests": 1,
+        "saferooms_min_per_floor": 2,
+        "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
+        "status": "ASSUMED (GM may adapt)"
+      }
+    }
+  },
+  "floors_7_18": {
+    "status": "formula and placeholders only",
+    "steps": [
+      "level = floor number (standard track); band map = BAND_STD (A1)",
+      "tier budget(P) = SRD per-character XP at the budget level for the band x party size P",
+      "CR cap(tier) = min(core 8.3 upper bound for the tier, highest CR whose XP <= lead_share x tier budget); lead_share = 0.9 for boss, 1.0 otherwise",
+      "encounters total = round(days x per_day_typical); mix rule as floors.2.encounters.formula",
+      "daily XP budget = sum(tier counts x tier budget) / days; caps: normal day 1 hard + 2 standard + 1 trivial; boss day boss + 1 standard",
+      "encounter cash per Crawler = tier dice x cash_scale; cash_scale = credit multiplier (A9) so rewards keep pace with fees",
+      "box odds = fight share of the core 4.5 target / eligible encounters (hard weighs 4x standard for Bronze); boss box: F1-2 Silver, F3-8 Gold, F9+ Platinum (core 4.7, ceilings 3.6)",
+      "rest slots: 4 short-rest slots (cap) and 1 Long Rest per day; days = clock.days"
+    ],
+    "floors": {
+      "7": {
+        "level_arrive": 7,
+        "level_leave": 8,
+        "budget_level": 7,
+        "xp_per_character_at_budget_level": {"low": 750, "moderate": 1300, "high": 1700},
+        "core_8_3_cr": {"mob": ["2", "3"], "elite": ["5", "6"], "boss": ["9", "10"]},
+        "credit_multiplier": 5,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "8": {
+        "level_arrive": 8,
+        "level_leave": 9,
+        "budget_level": 8,
+        "xp_per_character_at_budget_level": {"low": 1000, "moderate": 1700, "high": 2100},
+        "core_8_3_cr": {"mob": ["2", "3"], "elite": ["6", "7"], "boss": ["10", "11"]},
+        "credit_multiplier": 5,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "9": {
+        "level_arrive": 9,
+        "level_leave": 10,
+        "budget_level": 9,
+        "xp_per_character_at_budget_level": {"low": 1300, "moderate": 2000, "high": 2600},
+        "core_8_3_cr": {"mob": ["3", "4"], "elite": ["7", "8"], "boss": ["11", "12"]},
+        "credit_multiplier": 5,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "10": {
+        "level_arrive": 10,
+        "level_leave": 11,
+        "budget_level": 10,
+        "xp_per_character_at_budget_level": {"low": 1600, "moderate": 2300, "high": 3100},
+        "core_8_3_cr": {"mob": ["3", "5"], "elite": ["8", "9"], "boss": ["12", "13"]},
+        "credit_multiplier": 20,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "11": {
+        "level_arrive": 11,
+        "level_leave": 12,
+        "budget_level": 11,
+        "xp_per_character_at_budget_level": {"low": 1900, "moderate": 2900, "high": 4100},
+        "core_8_3_cr": {"mob": ["4", "5"], "elite": ["9", "10"], "boss": ["13", "14"]},
+        "credit_multiplier": 20,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "12": {
+        "level_arrive": 12,
+        "level_leave": 13,
+        "budget_level": 12,
+        "xp_per_character_at_budget_level": {"low": 2200, "moderate": 3700, "high": 4700},
+        "core_8_3_cr": {"mob": ["4", "6"], "elite": ["10", "11"], "boss": ["14", "16"]},
+        "credit_multiplier": 20,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "13": {
+        "level_arrive": 13,
+        "level_leave": 14,
+        "budget_level": 13,
+        "xp_per_character_at_budget_level": {"low": 2600, "moderate": 4200, "high": 5400},
+        "core_8_3_cr": {"mob": ["5", "6"], "elite": ["11", "12"], "boss": ["15", "16"]},
+        "credit_multiplier": 20,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "14": {
+        "level_arrive": 14,
+        "level_leave": 15,
+        "budget_level": 14,
+        "xp_per_character_at_budget_level": {"low": 2900, "moderate": 4900, "high": 6200},
+        "core_8_3_cr": {"mob": ["5", "7"], "elite": ["12", "13"], "boss": ["16", "17"]},
+        "credit_multiplier": 20,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "15": {
+        "level_arrive": 15,
+        "level_leave": 16,
+        "budget_level": 15,
+        "xp_per_character_at_budget_level": {"low": 3300, "moderate": 5400, "high": 7800},
+        "core_8_3_cr": {"mob": ["6", "8"], "elite": ["13", "14"], "boss": ["17", "19"]},
+        "credit_multiplier": 50,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "16": {
+        "level_arrive": 16,
+        "level_leave": 17,
+        "budget_level": 16,
+        "xp_per_character_at_budget_level": {"low": 3800, "moderate": 6100, "high": 9800},
+        "core_8_3_cr": {"mob": ["6", "8"], "elite": ["14", "15"], "boss": ["18", "20"]},
+        "credit_multiplier": 50,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "17": {
+        "level_arrive": 17,
+        "level_leave": 18,
+        "budget_level": 17,
+        "xp_per_character_at_budget_level": {"low": 4500, "moderate": 7200, "high": 11700},
+        "core_8_3_cr": {"mob": ["7", "9"], "elite": ["15", "16"], "boss": ["19", "21"]},
+        "credit_multiplier": 50,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      },
+      "18": {
+        "level_arrive": 18,
+        "level_leave": "19-20 (finale)",
+        "budget_level": 18,
+        "xp_per_character_at_budget_level": {"low": 5000, "moderate": 8700, "high": 14200},
+        "core_8_3_cr": {"mob": ["8", "10"], "elite": ["16", "18"], "boss": ["21", "24"]},
+        "credit_multiplier": 50,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail"
+      }
+    }
+  },
+  "economy_audit": {
+    "line": {
+      "value": 1500,
+      "basis": "per Crawler per FLOOR (not Floors 1+2 combined)",
+      "verified_in": [
+        "rules/40-loot-deck-spec-5e.md 3.2 (Audit hint: per crawler per floor on F1-2, total credit_value granted by boxes 300-1,000, anything above about 1,500 is inflation to flag)",
+        "rules/45-story-boxes-5e.md 6.3 item 4 and change row C2 ('1,500-per-floor inflation flag', sale proceeds count, flag not block)",
+        "tools/loot.py INFLATION_FLAG = 1500, tested per crawler per floor"
+      ],
+      "what_loot_py_counts": "box economy_value only (credit_value of drawn cards, credit pulls as rolled) plus Story Box sale proceeds; it does NOT see encounter cash or R1 toast credits. 'box_only' below is the figure comparable to `state.py loot totals`; 'all_in' (cash + R1 + boxes) is the stricter reading and is shown too.",
+      "status": "authoritative as the Accountant's flag; v0.1.0 wrongly read it as F1+F2 combined"
+    },
+    "floor_1": {
+      "rows": [
+        {
+          "item": "encounter cash",
+          "expected_credits": 39.5,
+          "arithmetic": "F1: Z2 5 + Z5 5 + Z7 5 + Z8 7 + Ticks 0 + boss 17.5 = 39.5",
+          "counts_in_loot_totals": false
+        },
+        {
+          "item": "R1 toast credits",
+          "expected_credits": 50.0,
+          "arithmetic": "2 toasts x 25 average",
+          "counts_in_loot_totals": false
+        },
+        {
+          "item": "Welcome Box (Bronze: pull 1 tailored + pull 2 d100)",
+          "expected_credits": 55.6,
+          "arithmetic": "25.26 tailored + 30.36 Bronze pull = 55.63 (decks z06 + any)",
+          "counts_in_loot_totals": true
+        },
+        {
+          "item": "Deed/fight Bronze boxes",
+          "expected_credits": 39.4,
+          "arithmetic": "0.91 boxes (fights 0.41 + deeds 0.50) x 43.29 per Bronze box (28.862 per pull x 1.5 pulls, all F1 decks pooled) = 39.4",
+          "counts_in_loot_totals": true
+        },
+        {
+          "item": "Silver Boss Box",
+          "expected_credits": 481.6,
+          "arithmetic": "2 pulls x 240.78 per Silver pull (decks z10 Boss + any) = 481.6",
+          "counts_in_loot_totals": true
+        }
+      ],
+      "expected_total_per_crawler": 666.1,
+      "expected_box_only_per_crawler": 576.6,
+      "line": 1500,
+      "share_of_line_all_in": 0.444,
+      "share_of_line_box_only": 0.384,
+      "expected_bronze_boxes": 1.91,
+      "expected_silver_boxes": 1
+    },
+    "floor_2": {
+      "rows": [
+        {
+          "item": "encounter cash",
+          "expected_credits": 75.5,
+          "arithmetic": "4 trivial x 1 + 8 standard x 5 + 2 hard x 7 + boss 17.5 = 75.5",
+          "counts_in_loot_totals": false
+        },
+        {
+          "item": "R1 toast credits",
+          "expected_credits": 75.0,
+          "arithmetic": "3 toasts x 25 average",
+          "counts_in_loot_totals": false
+        },
+        {
+          "item": "Deed/fight Bronze boxes",
+          "expected_credits": 87.5,
+          "arithmetic": "2.02 boxes (fights 1.12 + deeds 0.90) x 43.29 per Bronze box (28.862 per pull x 1.5 pulls, all F1 decks pooled) = 87.5",
+          "counts_in_loot_totals": true
+        },
+        {
+          "item": "Silver Boss Box",
+          "expected_credits": 481.6,
+          "arithmetic": "2 pulls x 240.78 per Silver pull (decks z10 Boss + any) = 481.6",
+          "counts_in_loot_totals": true
+        }
+      ],
+      "expected_total_per_crawler": 719.5,
+      "expected_box_only_per_crawler": 569.0,
+      "line": 1500,
+      "share_of_line_all_in": 0.48,
+      "share_of_line_box_only": 0.379,
+      "expected_bronze_boxes": 2.02,
+      "expected_silver_boxes": 1
+    },
+    "per_floor_summary": {
+      "1": {"all_in": 666.1, "box_only": 576.6},
+      "2": {"all_in": 719.5, "box_only": 569.0},
+      "reading": "each floor is audited separately against 1,500; no combined total is audited and none is claimed"
+    },
+    "by_party_size": {
+      "2": {
+        "per_crawler_f1_all_in": 666.1,
+        "per_crawler_f2_all_in": 719.5,
+        "per_crawler_f1_box_only": 576.6,
+        "per_crawler_f2_box_only": 569.0,
+        "cash_pool_f1": 79.0,
+        "cash_pool_f2": 151.0,
+        "table_total_f1_all_in": 1332.2,
+        "table_total_f2_all_in": 1439.0
+      },
+      "3": {
+        "per_crawler_f1_all_in": 666.1,
+        "per_crawler_f2_all_in": 719.5,
+        "per_crawler_f1_box_only": 576.6,
+        "per_crawler_f2_box_only": 569.0,
+        "cash_pool_f1": 118.5,
+        "cash_pool_f2": 226.5,
+        "table_total_f1_all_in": 1998.3,
+        "table_total_f2_all_in": 2158.5
+      },
+      "4": {
+        "per_crawler_f1_all_in": 666.1,
+        "per_crawler_f2_all_in": 719.5,
+        "per_crawler_f1_box_only": 576.6,
+        "per_crawler_f2_box_only": 569.0,
+        "cash_pool_f1": 158.0,
+        "cash_pool_f2": 302.0,
+        "table_total_f1_all_in": 2664.4,
+        "table_total_f2_all_in": 2878.0
+      }
+    },
+    "per_crawler_flat_across_party_size": true,
+    "pull_expectations": {
+      "source": "tables/loot-decks/f01-*.json (live decks, Story Box deck excluded) filtered like tools/loot.py eligible(): draw_weight > 0, not a needs-verify stub, not Legendary/Celestial, box_types 'any' or the box's type. Pull type by core 4.2 d100 (30/25/15/18/10, 99-00 upgrade). Credit cards use their grant roll (Bronze 3d6 x 5 = 52.5, Silver 2d6 x 25 = 175). F2 reuses the F1 decks (no F2 decks yet; A8). Consumable 'two at one tier lower' is ignored. Analytic means are with replacement.",
+      "script": "tools-notes/encounter_budget_econ.py",
+      "script_sha256": "8941262f3513edb80512f8ff008ab555badd00b810ffd0672e26318042d0c2fa",
+      "pull_type_table": [
+        {"d100": "01-30", "type": "consumable", "p": 0.3},
+        {"d100": "31-55", "type": "gear", "p": 0.25},
+        {"d100": "56-70", "type": "credits", "p": 0.15},
+        {"d100": "71-88", "type": "tailored", "p": 0.18},
+        {"d100": "89-98", "type": "weird", "p": 0.1},
+        {
+          "d100": "99-00",
+          "type": "upgrade (re-roll one tier up; Silver is the F1-2 ceiling so it re-rolls Silver)",
+          "p": 0.02
+        }
+      ],
+      "formulas": {
+        "bronze_pull": "0.30 x consumable + 0.25 x gear + 0.15 x credits + 0.18 x tailored + 0.10 x weird + 0.02 x silver_pull",
+        "silver_pull": "(0.30 x consumable + 0.25 x gear + 0.15 x credits + 0.18 x tailored + 0.10 x weird) / 0.98",
+        "bronze_box": "1.5 pulls (core 4.1: 1-2)",
+        "silver_box": "2 pulls (core 4.1)",
+        "welcome_box": "pull 1 tailored (cards of pull_type tailored) + pull 2 d100 (overview 8.1)"
+      },
+      "pull_type_means_bronze_pooled": {"consumable": 28.79, "gear": 8.38, "credits": 52.5, "tailored": 25.19, "weird": 9.14},
+      "pull_type_means_silver_boss": {"consumable": 167.74, "gear": 289.55, "credits": 175.0, "tailored": 400.0, "weird": 150.0},
+      "used_in_budget": {
+        "bronze_pull_mean": 28.862,
+        "bronze_box_mean_1_5_pulls": 43.293,
+        "welcome_box_mean": 55.626,
+        "silver_pull_mean": 240.776,
+        "silver_box_mean_2_pulls": 481.552,
+        "which": {
+          "bronze_fight_deed": "pooled_floor (all F1 decks, cards open to any box)",
+          "welcome": "any+z06 (Break Room)",
+          "silver_boss": "z10_boss (Z10 deck Boss cards + any)"
+        }
+      },
+      "scopes": {
+        "any_only": {
+          "zones": ["any"],
+          "box_type": null,
+          "cards": 50,
+          "bronze_pull": 30.081,
+          "bronze_box_1_5_pulls": 45.122,
+          "silver_pull": 241.178,
+          "silver_box_2_pulls": 482.355,
+          "welcome_box": 55.344,
+          "bronze_pull_type_means": {"consumable": 32.55, "gear": 8.48, "credits": 52.5, "tailored": 25.26, "weird": 9.5},
+          "silver_pull_type_means": {"consumable": 173.91, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        },
+        "any+z03": {
+          "zones": ["any", "z03"],
+          "box_type": null,
+          "cards": 58,
+          "bronze_pull": 28.158,
+          "bronze_box_1_5_pulls": 42.237,
+          "silver_pull": 241.178,
+          "silver_box_2_pulls": 482.355,
+          "welcome_box": 53.42,
+          "bronze_pull_type_means": {"consumable": 27.61, "gear": 7.22, "credits": 52.5, "tailored": 25.26, "weird": 8.26},
+          "silver_pull_type_means": {"consumable": 173.91, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        },
+        "any+z06": {
+          "zones": ["any", "z06"],
+          "box_type": null,
+          "cards": 57,
+          "bronze_pull": 30.364,
+          "bronze_box_1_5_pulls": 45.546,
+          "silver_pull": 241.178,
+          "silver_box_2_pulls": 482.355,
+          "welcome_box": 55.626,
+          "bronze_pull_type_means": {"consumable": 33.02, "gear": 8.48, "credits": 52.5, "tailored": 25.26, "weird": 10.92},
+          "silver_pull_type_means": {"consumable": 173.91, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        },
+        "any+z09": {
+          "zones": ["any", "z09"],
+          "box_type": null,
+          "cards": 63,
+          "bronze_pull": 30.08,
+          "bronze_box_1_5_pulls": 45.12,
+          "silver_pull": 240.46,
+          "silver_box_2_pulls": 480.92,
+          "welcome_box": 55.266,
+          "bronze_pull_type_means": {"consumable": 32.3, "gear": 9.53, "credits": 52.5, "tailored": 25.19, "weird": 7.92},
+          "silver_pull_type_means": {"consumable": 171.57, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        },
+        "pooled_floor": {
+          "zones": ["any", "z03", "z06", "z09", "z10"],
+          "box_type": null,
+          "cards": 78,
+          "bronze_pull": 28.862,
+          "bronze_box_1_5_pulls": 43.293,
+          "silver_pull": 240.46,
+          "silver_box_2_pulls": 480.92,
+          "welcome_box": 54.047,
+          "bronze_pull_type_means": {"consumable": 28.79, "gear": 8.38, "credits": 52.5, "tailored": 25.19, "weird": 9.14},
+          "silver_pull_type_means": {"consumable": 171.57, "gear": 283.72, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        },
+        "z10_boss": {
+          "zones": ["any", "z10"],
+          "box_type": "Boss",
+          "cards": 54,
+          "bronze_pull": 30.073,
+          "bronze_box_1_5_pulls": 45.11,
+          "silver_pull": 240.776,
+          "silver_box_2_pulls": 481.552,
+          "welcome_box": 55.336,
+          "bronze_pull_type_means": {"consumable": 32.55, "gear": 8.48, "credits": 52.5, "tailored": 25.26, "weird": 9.5},
+          "silver_pull_type_means": {"consumable": 167.74, "gear": 289.55, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        },
+        "pooled_incl_boss_only": {
+          "zones": ["any", "z03", "z06", "z09", "z10"],
+          "box_type": "Boss",
+          "cards": 82,
+          "bronze_pull": 28.86,
+          "bronze_box_1_5_pulls": 43.29,
+          "silver_pull": 240.371,
+          "silver_box_2_pulls": 480.742,
+          "welcome_box": 54.045,
+          "bronze_pull_type_means": {"consumable": 28.79, "gear": 8.38, "credits": 52.5, "tailored": 25.19, "weird": 9.14},
+          "silver_pull_type_means": {"consumable": 166.42, "gear": 289.55, "credits": 175.0, "tailored": 400.0, "weird": 150.0}
+        }
+      },
+      "v0_1_0_error": "v0.1.0 selected cards by `kind` instead of `pull_type`, which gave Silver 429.5 and wrong pull-type means. The live-deck Silver box is about 481."
+    },
+    "not_counted": [
+      "Story Box story_value (rules/45 6.3 excludes it from the flag)",
+      "vendor spending (potions, bribes, tolls, fees) - these are sinks, not income",
+      "resale of box items at half credit_value (already counted at credit_value; do not count twice)",
+      "placed mundane goods and placed Potions of Healing (not boxes, not credits)"
+    ],
+    "counted_but_unplanned": [
+      "Story Box item sale proceeds (fixed sale_value 100/250/500 by rung, rules/45 4.6): count toward the flag on the floor of the sale. The Accountant flags but never blocks."
+    ],
+    "simulation": {
+      "script": "tools-notes/encounter_budget_econ.py",
+      "script_sha256": "8941262f3513edb80512f8ff008ab555badd00b810ffd0672e26318042d0c2fa",
+      "reproduce": "python3 tools-notes/encounter_budget_econ.py out.json   (defaults: 100000 Crawlers, seed 70, Python random; a few minutes)",
+      "method": "One Crawler per trial, Floor 1 then Floor 2, drawing real cards from the live decks (pull type by d100, weighted card draw, credit cards rolled). Non-consumable cards already drawn by that Crawler on that floor are removed (loot.py rule); a pull whose pool is then empty widens to any pull type at that tier (counted in widened_pulls). Cash dice, R1 toasts (uniform 10-40), fight-box odds and deed boxes as in this file; Bronze box 1 or 2 pulls (50/50); Welcome Box pull 1 tailored. Welcome decks z06 + any, fight/deed boxes pooled F1 decks, Boss Box z10 Boss + any. F2 reuses the F1 decks.",
+      "scenarios": {
+        "base": {
+          "what": "the plan in this file",
+          "result": {
+            "f1_all": {"mean": 669.3, "p50": 659, "p90": 887, "p95": 955, "p99": 1089, "max": 1604, "pct_over_1500": 0.01},
+            "f2_all": {"mean": 720.0, "p50": 709, "p90": 941, "p95": 1011, "p99": 1156, "max": 1691, "pct_over_1500": 0.01},
+            "f1_box": {"mean": 579.8, "p50": 570, "p90": 800, "p95": 861, "p99": 1000, "max": 1503, "pct_over_1500": 0.0},
+            "f2_box": {"mean": 569.5, "p50": 556, "p90": 794, "p95": 856, "p99": 1003, "max": 1555, "pct_over_1500": 0.0}
+          },
+          "n": 100000,
+          "seed": 70,
+          "widened_pulls": 144
+        },
+        "pacing_ceiling": {
+          "what": "core 4.5 ceiling: 4 Bronze per Crawler per floor (F1 count includes the Welcome Box) plus the Silver Boss Box, and 5 credit-paying R1 toasts per floor",
+          "result": {
+            "f1_all": {"mean": 836.9, "p50": 824, "p90": 1070, "p95": 1146, "p99": 1303, "max": 1892, "pct_over_1500": 0.11},
+            "f2_all": {"mean": 856.9, "p50": 844, "p90": 1089, "p95": 1169, "p99": 1335, "max": 1940, "pct_over_1500": 0.15},
+            "f1_box": {"mean": 672.4, "p50": 658, "p90": 905, "p95": 980, "p99": 1135, "max": 1676, "pct_over_1500": 0.01},
+            "f2_box": {"mean": 656.4, "p50": 643, "p90": 886, "p95": 966, "p99": 1130, "max": 1710, "pct_over_1500": 0.01}
+          },
+          "n": 100000,
+          "seed": 70,
+          "widened_pulls": 1313,
+          "note": "widened_pulls is high because 4 Bronze boxes without repeats exhaust small pull-type pools; treat the ceiling numbers as an approximation"
+        },
+        "base_with_valve_900": {
+          "what": "base plan with the optional safety valve at 900",
+          "result": {
+            "f1_all": {"mean": 669.3, "p50": 659, "p90": 887, "p95": 955, "p99": 1089, "max": 1604, "pct_over_1500": 0.01},
+            "f2_all": {"mean": 720.0, "p50": 709, "p90": 941, "p95": 1011, "p99": 1156, "max": 1691, "pct_over_1500": 0.0},
+            "f1_box": {"mean": 579.8, "p50": 570, "p90": 800, "p95": 861, "p99": 1000, "max": 1503, "pct_over_1500": 0.0},
+            "f2_box": {"mean": 569.5, "p50": 556, "p90": 794, "p95": 856, "p99": 1003, "max": 1555, "pct_over_1500": 0.0}
+          },
+          "valve_triggered_pct_of_f2_floors": 0.02
+        },
+        "pacing_ceiling_with_valve_900": {
+          "what": "pacing ceiling with the optional safety valve at 900",
+          "result": {
+            "f1_all": {"mean": 836.9, "p50": 824, "p90": 1070, "p95": 1146, "p99": 1303, "max": 1892, "pct_over_1500": 0.11},
+            "f2_all": {"mean": 856.7, "p50": 844, "p90": 1089, "p95": 1169, "p99": 1327, "max": 1699, "pct_over_1500": 0.09},
+            "f1_box": {"mean": 672.4, "p50": 658, "p90": 905, "p95": 980, "p99": 1134, "max": 1676, "pct_over_1500": 0.01},
+            "f2_box": {"mean": 656.2, "p50": 643, "p90": 886, "p95": 966, "p99": 1125, "max": 1486, "pct_over_1500": 0.0}
+          },
+          "valve_triggered_pct_of_f2_floors": 0.19
+        },
+        "with_replacement_check": {
+          "what": "base plan, 40000 Crawlers, cards drawn with replacement; should match the analytic means (F1 666.1, F2 719.5)",
+          "result": {
+            "f1_all": {"mean": 667.7, "p50": 656, "p90": 889, "p95": 958, "p99": 1093, "max": 1660, "pct_over_1500": 0.01},
+            "f2_all": {"mean": 719.4, "p50": 708, "p90": 941, "p95": 1012, "p99": 1154, "max": 1760, "pct_over_1500": 0.02},
+            "f1_box": {"mean": 578.2, "p50": 562, "p90": 801, "p95": 866, "p99": 1001, "max": 1565, "pct_over_1500": 0.01},
+            "f2_box": {"mean": 568.9, "p50": 555, "p90": 793, "p95": 856, "p99": 1002, "max": 1610, "pct_over_1500": 0.01}
+          },
+          "n": 40000
+        }
+      },
+      "v0_1_0_claim_withdrawn": "v0.1.0 reported 13.2% -> 3.1% over 1,500 for a combined F1+F2 line from a script that is not filed. That claim is withdrawn; nothing in v0.1.1 relies on it."
+    },
+    "governor": {
+      "status": "OPTIONAL safety valve (demoted in v0.1.1). Not needed to stay under the per-floor line.",
+      "why_demoted": "With the line read per floor, the plan's F1 and F2 expected totals are 666.1 and 719.5 (all-in), far under 1,500. Simulated from the live decks, 0.01% of F1 and 0.01% of F2 Crawler-floors exceed 1,500 all-in in the base plan (box-only 0.00% and 0.00%); at the core 4.5 pacing ceiling 0.11% and 0.15% (box-only 0.01% and 0.01%).",
+      "rule": "Optional: before opening a Floor 2 Boss Box, if that Crawler's running total on THIS floor (cash credits + R1 credits + boxes opened so far, plus Story Box sale proceeds) is 900 or more, the GM may hand-pick that box's pulls from cards worth 175 or less. Use it only if a floor is clearly running hot. Tighten boxes before nerfing items (core 3.7; rules/40 3.2).",
+      "effect_simulated": {
+        "base_f2_all_in_over_1500": "0.01% -> 0.00% (valve fires for 0.02% of Crawlers)",
+        "pacing_ceiling_f2_all_in_over_1500": "0.15% -> 0.09% (valve fires for 0.19%)"
+      },
+      "tool_change_needed": "`state.py loot totals` / tools/loot.py totals() counts box economy_value only (plus Story Box sale proceeds). It cannot see encounter cash or R1 credits, so it cannot evaluate this valve's all-in running total. Running the valve on all-in numbers needs a tool change (a per-crawler per-floor credits view that includes ledger credit lines) or a hand tally. Not made here; flagged for the Architect.",
+      "hard_flag": 1500
+    }
+  },
+  "proposed_floor_growth_curve": {
+    "status": "PLACEHOLDER, GM/Caleb adaptable. Proposed 2026-10-04 at the parent agent's request so the Accountant can build a per-floor audit table. Floors 1-2 flag lines are authoritative; everything from Floor 3 is a proposal.",
+    "unit": "credits per Crawler per floor; 'counted' = what the Accountant's flag counts (box credit_value + encounter cash + R1 toast credits; Story Box story_value excluded, sale proceeds included)",
+    "anchors": {
+      "authoritative": [
+        "flag line 1,500 per Crawler per floor on F1-2 (rules/40 3.2, rules/45, tools/loot.py)",
+        "credit multiplier x1 F1-4, x5 F5-9, x20 F10-14, x50 F15-18 (core 3.9, decision 019); applies to achievement rewards and System fees (crafting prices), not box credit pulls",
+        "days F1/F2/F3 = 5/10/20 (decision 026; F4-F6 = 10/15/17 are placeholders, see assumed)",
+        "box counts per floor (core 4.5) and rarity ceilings (core 3.6)",
+        "crafting prices at Floor-1 scale: basic table 5,000, Crafting Studio 12,000 (F4+), Enhanced Crafting Studio 30,000 (F6+), times the purchase floor's multiplier (rules/20 section 0, 2.5)",
+        "box tier item-value ranges (rules/40 3.2): Bronze 0-100, Silver 100-500, Gold 500-5,000, Platinum 5,000-50,000, Legendary 20,000-250,000; credit pulls 2d6 x 250 / 2,500 / 10,000 (core 4.2)"
+      ],
+      "assumed": [
+        "days for F4-F6 = 10 / 15 / 17 (placeholder defaults tagged inspired, Lore canon timers M-603..M-608); F7-F18 held at 17 (placeholder, no source)",
+        "encounters = round(1.5 x days), mix rule of floors.2.encounters.formula, cash dice as assumed.cash_per_crawler_f1_scale times the credit multiplier (A9)",
+        "3 credit-paying R1 toasts per floor x 25 average x multiplier (A6)",
+        "box counts = the midpoint of core 4.5's range (Legendary 0.5 on F13-14, 0.25 on F15-18 so the campaign total stays at 2)",
+        "Bronze and Silver box values from the live F1 decks; Gold, Platinum and Legendary: pull = 0.15 x credit-pull mean + 0.85 x geometric midpoint of the rules/40 item range (the same method puts a Silver item pull within about 12% of the live decks: 223 vs 251), Gold box 2.5 pulls, Platinum 3, Legendary 3. NO F3+ decks exist yet, so these are placeholders",
+        "flag line (F3+) = the same cushion the F1-2 line carries over expected income: 2.165 x expected, rounded to the nearest 500 (1,500 / mean of F1 and F2 expected 692.8)"
+      ]
+    },
+    "growth_rate": {
+      "summary": "Expected counted income per Crawler per floor jumps at F3 (first Gold box, first 20-day floor) and then rises mostly by box-tier steps (Gold, Platinum, Legendary) and by the credit multiplier acting on cash and R1 credits. Geometric mean growth per floor between the endpoints of each band is given below.",
+      "per_band_geometric_mean": {"F3->F4": 0.978, "F5->F9": 1.679, "F10->F14": 1.417, "F15->F18": 1.0, "F3->F18": 1.276},
+      "step_floors": {
+        "F3": "first Gold box, Floor 3 = 20 days",
+        "F5": "credit multiplier x5 (cash, R1, fees)",
+        "F9": "first Platinum box (0-1)",
+        "F10": "credit multiplier x20",
+        "F13": "Legendary boxes begin (campaign total <= 2)",
+        "F15": "credit multiplier x50"
+      }
+    },
+    "table": [
+      {
+        "floor": 1,
+        "days": 5,
+        "credit_multiplier": 1,
+        "expected_counted": 666.1,
+        "flag_line": 1500,
+        "basis": "authoritative flag; expected from this file"
+      },
+      {
+        "floor": 2,
+        "days": 10,
+        "credit_multiplier": 1,
+        "expected_counted": 719.5,
+        "flag_line": 1500,
+        "basis": "authoritative flag; expected from this file"
+      },
+      {
+        "floor": 3,
+        "days": 20,
+        "credit_multiplier": 1,
+        "encounters": 30,
+        "cash_plus_r1": 218,
+        "boxes_counted": 2839,
+        "expected_counted": 3056,
+        "pacing_ceiling_counted": 5327,
+        "flag_line": 6500,
+        "growth_vs_previous": 4.25,
+        "liquid_if_items_sold_at_half": 1855,
+        "price_basic_table": 5000,
+        "price_crafting_studio": 12000,
+        "price_enhanced_studio": null,
+        "floors_of_liquid_income_basic_table": 2.7,
+        "floors_of_liquid_income_studio": 6.5,
+        "floors_of_liquid_income_enhanced": null,
+        "cumulative_expected_from_f1": 4442
+      },
+      {
+        "floor": 4,
+        "days": 10,
+        "credit_multiplier": 1,
+        "encounters": 15,
+        "cash_plus_r1": 150,
+        "boxes_counted": 2839,
+        "expected_counted": 2989,
+        "pacing_ceiling_counted": 5260,
+        "flag_line": 6500,
+        "growth_vs_previous": 0.98,
+        "liquid_if_items_sold_at_half": 1788,
+        "price_basic_table": 5000,
+        "price_crafting_studio": 12000,
+        "price_enhanced_studio": null,
+        "floors_of_liquid_income_basic_table": 2.8,
+        "floors_of_liquid_income_studio": 6.7,
+        "floors_of_liquid_income_enhanced": null,
+        "cumulative_expected_from_f1": 7431
+      },
+      {
+        "floor": 5,
+        "days": 15,
+        "credit_multiplier": 5,
+        "encounters": 23,
+        "cash_plus_r1": 922,
+        "boxes_counted": 2839,
+        "expected_counted": 3761,
+        "pacing_ceiling_counted": 6032,
+        "flag_line": 8000,
+        "growth_vs_previous": 1.26,
+        "liquid_if_items_sold_at_half": 2560,
+        "price_basic_table": 25000,
+        "price_crafting_studio": 60000,
+        "price_enhanced_studio": null,
+        "floors_of_liquid_income_basic_table": 9.8,
+        "floors_of_liquid_income_studio": 23.4,
+        "floors_of_liquid_income_enhanced": null,
+        "cumulative_expected_from_f1": 11192
+      },
+      {
+        "floor": 6,
+        "days": 17,
+        "credit_multiplier": 5,
+        "encounters": 26,
+        "cash_plus_r1": 1008,
+        "boxes_counted": 4803,
+        "expected_counted": 5811,
+        "pacing_ceiling_counted": 6073,
+        "flag_line": 12500,
+        "growth_vs_previous": 1.54,
+        "liquid_if_items_sold_at_half": 3786,
+        "price_basic_table": 25000,
+        "price_crafting_studio": 60000,
+        "price_enhanced_studio": 150000,
+        "floors_of_liquid_income_basic_table": 6.6,
+        "floors_of_liquid_income_studio": 15.8,
+        "floors_of_liquid_income_enhanced": 39.6,
+        "cumulative_expected_from_f1": 17003
+      },
+      {
+        "floor": 7,
+        "days": 17,
+        "credit_multiplier": 5,
+        "encounters": 26,
+        "cash_plus_r1": 1008,
+        "boxes_counted": 4803,
+        "expected_counted": 5811,
+        "pacing_ceiling_counted": 6073,
+        "flag_line": 12500,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 3786,
+        "price_basic_table": 25000,
+        "price_crafting_studio": 60000,
+        "price_enhanced_studio": 150000,
+        "floors_of_liquid_income_basic_table": 6.6,
+        "floors_of_liquid_income_studio": 15.8,
+        "floors_of_liquid_income_enhanced": 39.6,
+        "cumulative_expected_from_f1": 22814
+      },
+      {
+        "floor": 8,
+        "days": 17,
+        "credit_multiplier": 5,
+        "encounters": 26,
+        "cash_plus_r1": 1008,
+        "boxes_counted": 4803,
+        "expected_counted": 5811,
+        "pacing_ceiling_counted": 6073,
+        "flag_line": 12500,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 3786,
+        "price_basic_table": 25000,
+        "price_crafting_studio": 60000,
+        "price_enhanced_studio": 150000,
+        "floors_of_liquid_income_basic_table": 6.6,
+        "floors_of_liquid_income_studio": 15.8,
+        "floors_of_liquid_income_enhanced": 39.6,
+        "cumulative_expected_from_f1": 28625
+      },
+      {
+        "floor": 9,
+        "days": 17,
+        "credit_multiplier": 5,
+        "encounters": 26,
+        "cash_plus_r1": 1008,
+        "boxes_counted": 28900,
+        "expected_counted": 29908,
+        "pacing_ceiling_counted": 54267,
+        "flag_line": 65000,
+        "growth_vs_previous": 5.15,
+        "liquid_if_items_sold_at_half": 17803,
+        "price_basic_table": 25000,
+        "price_crafting_studio": 60000,
+        "price_enhanced_studio": 150000,
+        "floors_of_liquid_income_basic_table": 1.4,
+        "floors_of_liquid_income_studio": 3.4,
+        "floors_of_liquid_income_enhanced": 8.4,
+        "cumulative_expected_from_f1": 58533
+      },
+      {
+        "floor": 10,
+        "days": 17,
+        "credit_multiplier": 20,
+        "encounters": 26,
+        "cash_plus_r1": 4030,
+        "boxes_counted": 30887,
+        "expected_counted": 34917,
+        "pacing_ceiling_counted": 61263,
+        "flag_line": 75500,
+        "growth_vs_previous": 1.17,
+        "liquid_if_items_sold_at_half": 21980,
+        "price_basic_table": 100000,
+        "price_crafting_studio": 240000,
+        "price_enhanced_studio": 600000,
+        "floors_of_liquid_income_basic_table": 4.5,
+        "floors_of_liquid_income_studio": 10.9,
+        "floors_of_liquid_income_enhanced": 27.3,
+        "cumulative_expected_from_f1": 93450
+      },
+      {
+        "floor": 11,
+        "days": 17,
+        "credit_multiplier": 20,
+        "encounters": 26,
+        "cash_plus_r1": 4030,
+        "boxes_counted": 30887,
+        "expected_counted": 34917,
+        "pacing_ceiling_counted": 61263,
+        "flag_line": 75500,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 21980,
+        "price_basic_table": 100000,
+        "price_crafting_studio": 240000,
+        "price_enhanced_studio": 600000,
+        "floors_of_liquid_income_basic_table": 4.5,
+        "floors_of_liquid_income_studio": 10.9,
+        "floors_of_liquid_income_enhanced": 27.3,
+        "cumulative_expected_from_f1": 128367
+      },
+      {
+        "floor": 12,
+        "days": 17,
+        "credit_multiplier": 20,
+        "encounters": 26,
+        "cash_plus_r1": 4030,
+        "boxes_counted": 30887,
+        "expected_counted": 34917,
+        "pacing_ceiling_counted": 61263,
+        "flag_line": 75500,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 21980,
+        "price_basic_table": 100000,
+        "price_crafting_studio": 240000,
+        "price_enhanced_studio": 600000,
+        "floors_of_liquid_income_basic_table": 4.5,
+        "floors_of_liquid_income_studio": 10.9,
+        "floors_of_liquid_income_enhanced": 27.3,
+        "cumulative_expected_from_f1": 163283
+      },
+      {
+        "floor": 13,
+        "days": 17,
+        "credit_multiplier": 20,
+        "encounters": 26,
+        "cash_plus_r1": 4030,
+        "boxes_counted": 136793,
+        "expected_counted": 140823,
+        "pacing_ceiling_counted": 273075,
+        "flag_line": 305000,
+        "growth_vs_previous": 4.03,
+        "liquid_if_items_sold_at_half": 82808,
+        "price_basic_table": 100000,
+        "price_crafting_studio": 240000,
+        "price_enhanced_studio": 600000,
+        "floors_of_liquid_income_basic_table": 1.2,
+        "floors_of_liquid_income_studio": 2.9,
+        "floors_of_liquid_income_enhanced": 7.2,
+        "cumulative_expected_from_f1": 304107
+      },
+      {
+        "floor": 14,
+        "days": 17,
+        "credit_multiplier": 20,
+        "encounters": 26,
+        "cash_plus_r1": 4030,
+        "boxes_counted": 136793,
+        "expected_counted": 140823,
+        "pacing_ceiling_counted": 273075,
+        "flag_line": 305000,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 82808,
+        "price_basic_table": 100000,
+        "price_crafting_studio": 240000,
+        "price_enhanced_studio": 600000,
+        "floors_of_liquid_income_basic_table": 1.2,
+        "floors_of_liquid_income_studio": 2.9,
+        "floors_of_liquid_income_enhanced": 7.2,
+        "cumulative_expected_from_f1": 444930
+      },
+      {
+        "floor": 15,
+        "days": 17,
+        "credit_multiplier": 50,
+        "encounters": 26,
+        "cash_plus_r1": 10075,
+        "boxes_counted": 107675,
+        "expected_counted": 117750,
+        "pacing_ceiling_counted": 119779,
+        "flag_line": 255000,
+        "growth_vs_previous": 0.84,
+        "liquid_if_items_sold_at_half": 72309,
+        "price_basic_table": 250000,
+        "price_crafting_studio": 600000,
+        "price_enhanced_studio": 1500000,
+        "floors_of_liquid_income_basic_table": 3.5,
+        "floors_of_liquid_income_studio": 8.3,
+        "floors_of_liquid_income_enhanced": 20.7,
+        "cumulative_expected_from_f1": 562679
+      },
+      {
+        "floor": 16,
+        "days": 17,
+        "credit_multiplier": 50,
+        "encounters": 26,
+        "cash_plus_r1": 10075,
+        "boxes_counted": 107675,
+        "expected_counted": 117750,
+        "pacing_ceiling_counted": 119779,
+        "flag_line": 255000,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 72309,
+        "price_basic_table": 250000,
+        "price_crafting_studio": 600000,
+        "price_enhanced_studio": 1500000,
+        "floors_of_liquid_income_basic_table": 3.5,
+        "floors_of_liquid_income_studio": 8.3,
+        "floors_of_liquid_income_enhanced": 20.7,
+        "cumulative_expected_from_f1": 680429
+      },
+      {
+        "floor": 17,
+        "days": 17,
+        "credit_multiplier": 50,
+        "encounters": 26,
+        "cash_plus_r1": 10075,
+        "boxes_counted": 107675,
+        "expected_counted": 117750,
+        "pacing_ceiling_counted": 119779,
+        "flag_line": 255000,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 72309,
+        "price_basic_table": 250000,
+        "price_crafting_studio": 600000,
+        "price_enhanced_studio": 1500000,
+        "floors_of_liquid_income_basic_table": 3.5,
+        "floors_of_liquid_income_studio": 8.3,
+        "floors_of_liquid_income_enhanced": 20.7,
+        "cumulative_expected_from_f1": 798178
+      },
+      {
+        "floor": 18,
+        "days": 17,
+        "credit_multiplier": 50,
+        "encounters": 26,
+        "cash_plus_r1": 10075,
+        "boxes_counted": 107675,
+        "expected_counted": 117750,
+        "pacing_ceiling_counted": 119779,
+        "flag_line": 255000,
+        "growth_vs_previous": 1.0,
+        "liquid_if_items_sold_at_half": 72309,
+        "price_basic_table": 250000,
+        "price_crafting_studio": 600000,
+        "price_enhanced_studio": 1500000,
+        "floors_of_liquid_income_basic_table": 3.5,
+        "floors_of_liquid_income_studio": 8.3,
+        "floors_of_liquid_income_enhanced": 20.7,
+        "cumulative_expected_from_f1": 915928
+      }
+    ],
+    "reading_the_table": [
+      "expected_counted is the budget; flag_line is where the Accountant flags (never blocks). pacing_ceiling_counted is the same model at the top of core 4.5's ranges and should sit under flag_line.",
+      "floors_of_liquid_income_* = price / the Crawler's liquid income that floor if every box item is sold at half credit_value (core 5.10) and nothing else is spent; it is a speed limit on crafting purchases, not a promise.",
+      "Because box credit pulls and item values do not take the multiplier but crafting prices do, the affordability ratios jump at F5, F10 and F15 (price x5, x20, x50 while income steps up by box tier only). That is a design flag for Caleb/Lore, not something this file fixes: a Crawler who buys a table on F4 pays x1.",
+      "Story Box sale proceeds (100 / 250 / 500 by rung, times the sale floor's multiplier) count toward the flag on the floor of the sale."
+    ],
+    "cumulative_check": "By arrival on Floor 4 a Crawler who banks everything has about 4442 expected credits from Floors 1-3 (F1 666 + F2 720 + F3 3056), so a 5,000 basic table at x1 is reachable early on Floor 4 if they buy nothing else. The rules/20 benchmark of 'one coupon plus 15,000 credits' on Floor 4 is not reachable from this income (Q6).",
+    "check_against_floors_block": "F3-F6 encounter cash in floors.N.credits matches this table's cash (same model); the table adds R1 and boxes."
+  },
+  "adjustments": {
+    "pets": "GM-run, do not count toward party size, take no XP, loot or credits (rules/60). No budget rebuild; if a fight is close the GM may add one CR 1/4 creature (50 XP) to the enemy side or leave it. A pet-Crawler counts as a full Crawler.",
+    "assigned_companion": "2-Crawler tables (core 2.4): DM-run, CR <= half party level, takes no loot, does not count toward P; the F1 numbers already lean on the higher end for two Crawlers.",
+    "class_features": "No separate adjustment for Second Wind or similar; the 2024 budgets already assume class resources.",
+    "pvp": "No PvP anywhere. Nothing here pays XP, credits or boxes for attacking another Crawler."
+  },
+  "srd_pick_guidance": {
+    "how": "Pick any SRD 5.2.1 creature whose CR is at or under the tier's cr_cap, reskin it (core 8.1), and fill the rest of the tier budget with copies or lower-CR support using the XP by CR table. Do not copy stat blocks into floor files.",
+    "fragile_rule": "SRD: more than two creatures per Crawler -> include fragile ones that fall quickly (most important at levels 1-2).",
+    "powerful_creature_rule": "SRD: a creature with CR above party level can drop a Crawler in one hit; telegraph it.",
+    "xp_award": "Achievements never grant XP (core 3.4). Levels come from milestones (core 2.3); the XP figures here only size fights."
+  },
+  "open_questions": [
+    "Q2 (RESOLVED in v0.1.3 as placeholders): Floor 4 = 10, Floor 5 = 15, Floor 6 = 17 days, tagged inspired (Lore canon timers M-603..M-608); Caleb can adjust, GM-adaptable. Still open: F7+ has no day counts (held at 17 in the growth curve only), and F4 = 10 is shorter than F3 = 20.",
+    "Q3 (Caleb): Keep the overview's Z8 counts for 2-3 Crawlers (over the hard-tier budget by 50 and 25 XP) or tighten them?",
+    "Q4 (Accountant): Confirm or adjust the proposed F3-F18 flag lines in proposed_floor_growth_curve (PLACEHOLDER). At Floor-1 scale, income is about 670-720 credits per Crawler per floor all-in against crafting prices of 5,000 / 12,000 / 30,000. (Q1, the line basis, is resolved: per Crawler per floor. Q1b is withdrawn: a missed collapse is death, no toll.)",
+    "Q5 (Architect/Accountant): The optional safety valve (A12) cannot be run from `state.py loot totals` because that counts box value only. Decide whether a tool change is wanted or the GM tallies by hand.",
+    "Q6 (Caleb/Lore): The growth-curve proposal (proposed_floor_growth_curve) shows crafting prices (x5 at F5, x20 at F10, x50 at F15) pulling ahead of income that steps up only by box tier. Keep as is, or give crafting prices their own slower multiplier? Also the rules/20 benchmark of one coupon plus 15,000 credits on Floor 4 is far above the modeled income."
+  ],
+  "day01_slot_map": {
+    "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
+    "spec_sha256_when_mapped": "9107d15f094152d9e5e05becfb02de97ed7bc0aab6fc503222013d132c130d14",
+    "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
+    "count": 32,
+    "all_filled": true,
+    "removed_slots": [
+      {
+        "slot_no": 3,
+        "spec_path": "/clock/collapse_miss/effects[2]",
+        "label": "DETOUR TAX",
+        "reason": "stale: the old missed-collapse toll; a missed collapse is death with no toll (decision 026, Caleb ~10:02 PM CT; decision 028) and the regenerated spec no longer has this path"
+      },
+      {
+        "slot_no": 4,
+        "spec_path": "/clock/collapse_miss/toll_slot",
+        "label": "DETOUR TAX",
+        "reason": "stale: same as slot 3"
+      }
+    ],
+    "slot_no_policy": "slot_no values of the remaining slots are unchanged (3 and 4 are simply absent) so existing references still resolve",
+    "label_guide": {
+      "BUDGET": "floors.1.fixed_encounters.<zone>.fit (tier, XP budget, XP used) or floors.N.tiers.L<level>.xp_budget_total.<P>.<tier>",
+      "CR": "creature CR in floors.1.fixed_encounters.<zone>.creatures; tier ceiling in floors.N.tiers.L<level>.cr_caps.<P>.<tier>; non-combat = none",
+      "COUNT": "floors.1.fixed_encounters.<zone>.counts_by_party_size.<P>.<srd_id>",
+      "CREDITS (key price)": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size",
+      "CREDITS (vendor price)": "floors.1.prices.potion_of_healing_vendor.price",
+      "DETOUR TAX": "floors.1.prices.detour_tax.party_toll_by_size (or toll_per_crawler)",
+      "REST-WITHOUT-SAFEROOM COST": "floors.1.prices.rest_without_saferoom",
+      "LOOT AMOUNT": "cash: floors.N.credits; boxes: floors.N.boxes and economy_audit; boss cache: floors.1.fixed_encounters.z10.cash_per_crawler (overview 2d6 x 10 is written for 4 Crawlers, scale by P/4)",
+      "REWARD": "floors.1.achievement_rewards.proposed.<name>"
+    },
+    "days_2_to_5": "Day 2 to 5: the four house-built encounters the Encounter Bot listed are mapped in day02_to_04_slot_map (v0.1.2). Other Day 2 to 5 slots use the same labels and the label_guide.",
+    "slots": [
+      {
+        "slot_no": 1,
+        "spec_path": "/clock/collapse_cost_slot",
+        "label": "DETOUR TAX",
+        "fills_from": "floors.1.prices.detour_tax",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "Detour Tax (missed Stairwell key only): 75 credits per Crawler (150 for the party), payable by pooling; a Crawler who is short pays what they have and the GM logs the balance. A missed floor collapse has no toll: it is death (decision 026, Caleb)",
+          "3": "Detour Tax (missed Stairwell key only): 75 credits per Crawler (225 for the party), payable by pooling; a Crawler who is short pays what they have and the GM logs the balance. A missed floor collapse has no toll: it is death (decision 026, Caleb)",
+          "4": "Detour Tax (missed Stairwell key only): 75 credits per Crawler (300 for the party), payable by pooling; a Crawler who is short pays what they have and the GM logs the balance. A missed floor collapse has no toll: it is death (decision 026, Caleb)"
+        }
+      },
+      {
+        "slot_no": 2,
+        "spec_path": "/clock/rest_without_saferoom_slot",
+        "label": "REST-WITHOUT-SAFEROOM COST",
+        "fills_from": "floors.1.prices.rest_without_saferoom",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "Rest without a saferoom: 20 credits per Crawler (40 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe",
+          "3": "Rest without a saferoom: 20 credits per Crawler (60 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe",
+          "4": "Rest without a saferoom: 20 credits per Crawler (80 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe"
+        }
+      },
+      {
+        "slot_no": 5,
+        "spec_path": "/day/rest_options[2]/note",
+        "label": "REST-WITHOUT-SAFEROOM COST",
+        "fills_from": "floors.1.prices.rest_without_saferoom",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "Rest without a saferoom: 20 credits per Crawler (40 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe",
+          "3": "Rest without a saferoom: 20 credits per Crawler (60 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe",
+          "4": "Rest without a saferoom: 20 credits per Crawler (80 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe"
+        }
+      },
+      {
+        "slot_no": 6,
+        "spec_path": "/day/proposed_achievements[0]/reward_slot",
+        "label": "REWARD (Slow Learner)",
+        "fills_from": "floors.1.achievement_rewards.proposed.slow_learner",
+        "mode": "text",
+        "value": "R1: Title plus 25 credits (band 10-40), or snark-only if the GM prefers. No box. Counts toward the R1 credit expectation in economy_audit."
+      },
+      {
+        "slot_no": 7,
+        "spec_path": "/stairwell_key/ways[1]/price_slot",
+        "label": "CREDITS (key price)",
+        "fills_from": "floors.1.prices.stairwell_key_terminal_bribe",
+        "mode": "number",
+        "value_by_party_size": {"2": 100, "3": 150, "4": 200}
+      },
+      {
+        "slot_no": 8,
+        "spec_path": "/stairwell_key/missing_key_cost/toll_slot",
+        "label": "DETOUR TAX",
+        "fills_from": "floors.1.prices.detour_tax",
+        "mode": "number",
+        "value_by_party_size": {"2": 150, "3": 225, "4": 300}
+      },
+      {
+        "slot_no": 9,
+        "spec_path": "/encounters[0]/cr_slot",
+        "label": "CR",
+        "fills_from": "floors.1.fixed_encounters",
+        "mode": "text",
+        "value": "none (non-combat)"
+      },
+      {
+        "slot_no": 10,
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d01-01)",
+        "fills_from": "floors.1.xp.by_party_size",
+        "mode": "text",
+        "value": "Non-combat: 0 XP, no combat budget. Credit and box budget: see slots 11 and 12."
+      },
+      {
+        "slot_no": 11,
+        "spec_path": "/encounters[0]/loot_hooks[0]/amount",
+        "label": "LOOT AMOUNT (Welcome Box)",
+        "fills_from": "economy_audit.pull_expectations",
+        "mode": "text",
+        "value": "Bronze Welcome Box per Crawler: 1-2 pulls (pull 1 tailored, pull 2 d100); credit pull 3d6 x 5; expected box value about 56 credits (credit_value, live decks z06 + any)."
+      },
+      {
+        "slot_no": 12,
+        "spec_path": "/encounters[0]/loot_hooks[4]/amount",
+        "label": "CREDITS (vendor price)",
+        "fills_from": "floors.1.prices.potion_of_healing_vendor",
+        "mode": "number",
+        "value": 50
+      },
+      {
+        "slot_no": 13,
+        "spec_path": "/encounters[0]/proposed_achievements[0]/reward_slot",
+        "label": "REWARD (Read the Fine Print)",
+        "fills_from": "floors.1.achievement_rewards.proposed.read_the_fine_print",
+        "mode": "text",
+        "value": "R0: snark-only Title, 0 credits (the bribe was the cost)."
+      },
+      {
+        "slot_no": 14,
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (greeter-warrior)",
+        "fills_from": "floors.1.fixed_encounters.z07.counts_by_party_size",
+        "mode": "number",
+        "value_by_party_size": {"2": 1, "3": 1, "4": 2}
+      },
+      {
+        "slot_no": 15,
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (greeter-warrior)",
+        "fills_from": "floors.1.fixed_encounters.z07.creatures",
+        "mode": "text",
+        "value": "1/4"
+      },
+      {
+        "slot_no": 16,
+        "spec_path": "/encounters[1]/enemies[1]/count_slot",
+        "label": "COUNT (greeter-minion)",
+        "fills_from": "floors.1.fixed_encounters.z07.counts_by_party_size",
+        "mode": "number",
+        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+      },
+      {
+        "slot_no": 17,
+        "spec_path": "/encounters[1]/enemies[1]/cr_slot",
+        "label": "CR (greeter-minion)",
+        "fills_from": "floors.1.fixed_encounters.z07.creatures",
+        "mode": "text",
+        "value": "1/8"
+      },
+      {
+        "slot_no": 18,
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d01-02)",
+        "fills_from": "floors.1.fixed_encounters.z07.fit",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "standard tier, Low band: budget 100 XP for 2 Crawlers (level 1); used 100 XP",
+          "3": "standard tier, Low band: budget 150 XP for 3 Crawlers (level 1); used 125 XP",
+          "4": "standard tier, Low band: budget 200 XP for 4 Crawlers (level 1); used 200 XP"
+        }
+      },
+      {
+        "slot_no": 19,
+        "spec_path": "/encounters[1]/loot_hooks[0]/amount",
+        "label": "LOOT AMOUNT (Back Office cache)",
+        "fills_from": "floors.1.fixed_encounters.z07.cash_dice_per_crawler",
+        "mode": "text",
+        "value": "Back Office cache: 0 credits and no box (recipe card, 2 goblin oil, worn Tinker's Tools per overview 5.7). Greeter pocket change falls under the standard tier: 1d4 x 2 credits per Crawler (pool = x party size)."
+      },
+      {
+        "slot_no": 20,
+        "spec_path": "/encounters[2]/enemies[0]/count_slot",
+        "label": "COUNT (elite-armor)",
+        "fills_from": "floors.1.fixed_encounters.z08.counts_by_party_size",
+        "mode": "number",
+        "value_by_party_size": {"2": 1, "3": 1, "4": 1}
+      },
+      {
+        "slot_no": 21,
+        "spec_path": "/encounters[2]/enemies[0]/cr_slot",
+        "label": "CR (elite-armor)",
+        "fills_from": "floors.1.fixed_encounters.z08.creatures",
+        "mode": "text",
+        "value": "1"
+      },
+      {
+        "slot_no": 22,
+        "spec_path": "/encounters[2]/enemies[1]/count_slot",
+        "label": "COUNT (lanyard-blade)",
+        "fills_from": "floors.1.fixed_encounters.z08.counts_by_party_size",
+        "mode": "number",
+        "value_by_party_size": {"2": 0, "3": 1, "4": 2}
+      },
+      {
+        "slot_no": 23,
+        "spec_path": "/encounters[2]/enemies[1]/cr_slot",
+        "label": "CR (lanyard-blade)",
+        "fills_from": "floors.1.fixed_encounters.z08.creatures",
+        "mode": "text",
+        "value": "1/4"
+      },
+      {
+        "slot_no": 24,
+        "spec_path": "/encounters[2]/budget_slot",
+        "label": "BUDGET (enc-d01-03)",
+        "fills_from": "floors.1.fixed_encounters.z08.fit",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "hard tier, Moderate band: budget 150 XP for 2 Crawlers (level 1); used 200 XP (over by 50, overview 9.3 count kept)",
+          "3": "hard tier, Moderate band: budget 225 XP for 3 Crawlers (level 1); used 250 XP (over by 25, overview 9.3 count kept)",
+          "4": "hard tier, Moderate band: budget 300 XP for 4 Crawlers (level 1); used 300 XP"
+        }
+      },
+      {
+        "slot_no": 25,
+        "spec_path": "/encounters[2]/loot_hooks[0]/amount",
+        "label": "LOOT AMOUNT (service key)",
+        "fills_from": "floors.1.prices.zone_s_door_forcing",
+        "mode": "text",
+        "value": "n/a: quest item, 0 credits. If the party misses it, see detour_tax, the terminal bribe and zone_s_door_forcing."
+      },
+      {
+        "slot_no": 26,
+        "spec_path": "/encounters[2]/loot_hooks[1]/amount",
+        "label": "LOOT AMOUNT (placed Potion)",
+        "fills_from": "floors.1.prices.potion_of_healing_vendor",
+        "mode": "text",
+        "value": "n/a: placed consumable (third placed Potion of Healing, overview 8.3); vendor value 50 credits, not counted as income."
+      },
+      {
+        "slot_no": 27,
+        "spec_path": "/encounters[3]/enemies[0]/count_slot",
+        "label": "COUNT (ticks)",
+        "fills_from": "floors.1.fixed_encounters.wandering.counts_by_party_size",
+        "mode": "number",
+        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+      },
+      {
+        "slot_no": 28,
+        "spec_path": "/encounters[3]/enemies[0]/cr_slot",
+        "label": "CR (ticks)",
+        "fills_from": "floors.1.fixed_encounters.wandering.creatures",
+        "mode": "text",
+        "value": "1/8"
+      },
+      {
+        "slot_no": 29,
+        "spec_path": "/encounters[3]/budget_slot",
+        "label": "BUDGET (enc-d01-04)",
+        "fills_from": "floors.1.fixed_encounters.wandering.fit",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "trivial tier, half of Low band: budget 50 XP for 2 Crawlers (level 1); used 50 XP",
+          "3": "trivial tier, half of Low band: budget 75 XP for 3 Crawlers (level 1); used 75 XP",
+          "4": "trivial tier, half of Low band: budget 100 XP for 4 Crawlers (level 1); used 100 XP"
+        }
+      },
+      {
+        "slot_no": 30,
+        "spec_path": "/encounters[3]/loot_note",
+        "label": "LOOT AMOUNT (Ticks)",
+        "fills_from": "floors.1.fixed_encounters.wandering.cash_dice_per_crawler",
+        "mode": "text",
+        "value": "0 credits, no box (trivial tier, F1 override: wandering Ticks carry no loot)."
+      },
+      {
+        "slot_no": 31,
+        "spec_path": "/encounters[3]/if_they_do_something_dumb",
+        "label": "REST-WITHOUT-SAFEROOM COST",
+        "fills_from": "floors.1.prices.rest_without_saferoom",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "Rest without a saferoom: 20 credits per Crawler (40 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe",
+          "3": "Rest without a saferoom: 20 credits per Crawler (60 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe",
+          "4": "Rest without a saferoom: 20 credits per Crawler (80 for the party), cap 60 per Crawler per floor; no Long Rest is granted; Ceiling Ticks interrupt after 1d4 hours; never a wipe"
+        }
+      },
+      {
+        "slot_no": 32,
+        "spec_path": "/encounters[4]/cr_slot",
+        "label": "CR",
+        "fills_from": "floors.1.fixed_encounters",
+        "mode": "text",
+        "value": "none (non-combat)"
+      },
+      {
+        "slot_no": 33,
+        "spec_path": "/encounters[4]/budget_slot",
+        "label": "BUDGET (enc-d01-05)",
+        "fills_from": "floors.1.xp.by_party_size",
+        "mode": "text",
+        "value": "Non-combat: 0 XP, no combat budget. Day close in the Z9 saferoom: all earned boxes open at once (slot 34)."
+      },
+      {
+        "slot_no": 34,
+        "spec_path": "/encounters[4]/loot_hooks[3]/amount",
+        "label": "LOOT AMOUNT (box openings)",
+        "fills_from": "economy_audit.floor_1",
+        "mode": "text",
+        "value_by_party_size": {
+          "2": "Opens every earned box per Crawler, lowest tier first. Expected on F1: Welcome Bronze (if not yet opened) plus about 0.9 deed/fight Bronze (soft cap 2-3 achievement boxes per Crawler per floor), Silver Boss Box after Z10 (only if the boss is fought or talked down). Expected value per Crawler for Floor 1 (cash, R1 toasts, boxes): about 666 credits all-in, about 577 from boxes alone, against the Accountant's 1,500 per Crawler per floor; credits per Crawler do not change with party size, table total = x 2.",
+          "3": "Opens every earned box per Crawler, lowest tier first. Expected on F1: Welcome Bronze (if not yet opened) plus about 0.9 deed/fight Bronze (soft cap 2-3 achievement boxes per Crawler per floor), Silver Boss Box after Z10 (only if the boss is fought or talked down). Expected value per Crawler for Floor 1 (cash, R1 toasts, boxes): about 666 credits all-in, about 577 from boxes alone, against the Accountant's 1,500 per Crawler per floor; credits per Crawler do not change with party size, table total = x 3.",
+          "4": "Opens every earned box per Crawler, lowest tier first. Expected on F1: Welcome Bronze (if not yet opened) plus about 0.9 deed/fight Bronze (soft cap 2-3 achievement boxes per Crawler per floor), Silver Boss Box after Z10 (only if the boss is fought or talked down). Expected value per Crawler for Floor 1 (cash, R1 toasts, boxes): about 666 credits all-in, about 577 from boxes alone, against the Accountant's 1,500 per Crawler per floor; credits per Crawler do not change with party size, table total = x 4."
+        }
+      }
+    ]
+  },
+  "day02_to_04_slot_map": {
+    "status": "v0.1.2 addition (Encounter Bot request). The CR slots of these encounters already resolve (floors.1.fixed_encounters.z10.creatures key skeleton, z02.creatures key giant-rat, wandering.creatures key stirge) and are unchanged.",
+    "spec_sha256_when_mapped": {
+      "day-02": "7636a21f57e27a5b731f3f4046b29d755da168265f26390559644f43324db3ff",
+      "day-03": "fca56c57e4ed94f5241c6db6ec3b3532a13c04c2b001fa5a1cea9d3ce88d4016",
+      "day-04": "2ff5341abf537bac76377ac5e7b43d62f133591d6d016ccce7b025b483059741"
+    },
+    "count": 9,
+    "slots": [
+      {
+        "spec_file": "floors/f01/day-02.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (noise-ushers)",
+        "fills_from": "floors.1.fixed_encounters.d02_02.counts_by_party_size",
+        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d02_02.counts_by_party_size", "key": "skeleton"},
+        "value_by_party_size": {"2": 1, "3": 1, "4": 2}
+      },
+      {
+        "spec_file": "floors/f01/day-02.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d02-02)",
+        "fills_from": "floors.1.fixed_encounters.d02_02.fit",
+        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d02_02.fit"},
+        "value_by_party_size": {
+          "2": "trivial tier, Low-band rule at level 1: budget 50 XP for 2 Crawlers; used 50 XP",
+          "3": "trivial tier, Low-band rule at level 1: budget 75 XP for 3 Crawlers; used 50 XP",
+          "4": "trivial tier, Low-band rule at level 1: budget 100 XP for 4 Crawlers; used 100 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f01/day-03.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (displaced-rats)",
+        "fills_from": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size", "key": "giant-rat"},
+        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+      },
+      {
+        "spec_file": "floors/f01/day-03.spec.json",
+        "spec_path": "/encounters[1]/enemies[1]/count_slot",
+        "label": "COUNT (displaced-ticks)",
+        "fills_from": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size", "key": "stirge"},
+        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+      },
+      {
+        "spec_file": "floors/f01/day-03.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d03-02)",
+        "fills_from": "floors.1.fixed_encounters.d03_02.fit",
+        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d03_02.fit"},
+        "value_by_party_size": {
+          "2": "standard tier, Low-band rule at level 1: budget 100 XP for 2 Crawlers; used 100 XP",
+          "3": "standard tier, Low-band rule at level 1: budget 150 XP for 3 Crawlers; used 150 XP",
+          "4": "standard tier, Low-band rule at level 1: budget 200 XP for 4 Crawlers; used 200 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f01/day-03.spec.json",
+        "spec_path": "/encounters[2]/enemies[0]/count_slot",
+        "label": "COUNT (watch-ushers)",
+        "fills_from": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
+        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size", "key": "skeleton"},
+        "value_by_party_size": {"2": 1, "3": 1, "4": 2}
+      },
+      {
+        "spec_file": "floors/f01/day-03.spec.json",
+        "spec_path": "/encounters[2]/budget_slot",
+        "label": "BUDGET (enc-d03-03)",
+        "fills_from": "floors.1.fixed_encounters.d03_03.fit",
+        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d03_03.fit"},
+        "value_by_party_size": {
+          "2": "trivial tier, Low-band rule at level 1: budget 50 XP for 2 Crawlers; used 50 XP",
+          "3": "trivial tier, Low-band rule at level 1: budget 75 XP for 3 Crawlers; used 50 XP",
+          "4": "trivial tier, Low-band rule at level 1: budget 100 XP for 4 Crawlers; used 100 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f01/day-04.spec.json",
+        "spec_path": "/encounters[2]/enemies[0]/count_slot",
+        "label": "COUNT (ushers)",
+        "fills_from": "floors.1.fixed_encounters.d04_03.counts_by_party_size",
+        "cite": {"kind": "count", "path": "floors.1.fixed_encounters.d04_03.counts_by_party_size", "key": "skeleton"},
+        "value_by_party_size": {"2": 2, "3": 3, "4": 4}
+      },
+      {
+        "spec_file": "floors/f01/day-04.spec.json",
+        "spec_path": "/encounters[2]/budget_slot",
+        "label": "BUDGET (enc-d04-03)",
+        "fills_from": "floors.1.fixed_encounters.d04_03.fit",
+        "cite": {"kind": "fit", "path": "floors.1.fixed_encounters.d04_03.fit"},
+        "value_by_party_size": {
+          "2": "standard tier, Low-band rule at level 1: budget 100 XP for 2 Crawlers; used 100 XP",
+          "3": "standard tier, Low-band rule at level 1: budget 150 XP for 3 Crawlers; used 150 XP",
+          "4": "standard tier, Low-band rule at level 1: budget 200 XP for 4 Crawlers; used 200 XP"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,739 @@
+The Dungeon Leaderboard populates after the first episode of Dungeon Crawler World: Earth airs on the Fourth Floor, and updates after every new episode.  It shows the Dungeon's current Top Ten Crawlers, as determined by crawler Ratings, and the bounty on each of those crawlers' heads.
+
+==Leaderboard Mechanics==
+Every time a Top Ten Crawler is killed, a system message announces to everyone inside the Dungeon: 
+System Message. A champion has fallen. A bounty has been claimed.[3|24]
+The crawler to kill the "Champion" receives a Gold Player-Killer Skull above their heads, an achievement, and a Legendary Bounty Box containing the slain crawler's bounty.[3|23][3|25]  The first crawler to kill a champion in any given Dungeon receives an achievement for being the first to collect a bounty, but does not receive an award.[3|25]
+
+Every time a crawler in the Leaderboard's Top 10 descends a  stairwell, they receive the Quarry Sees Another Spring Achievement and a Gold or Platinum Venison Box containing 10%+ of their own bounty.   Every time they receive the achievement, the current and all future bounties on their heads are multiplied by a factor of one.[4|1]
+
+==Fourth Floor: The Iron Tangle==
+===Leaked Leaderboard===
+Odette leaks an advanced copy of the Leaderboard to Carl and Donut after they flee the Third Floor and appear on Dungeon Crawler After Hours with Odette.  (Carl is, notably and hilariously, wearing underwear fashioned out of toilet paper.)
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty
+|-
+|1
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|29
+|1,000,000
+|-
+|2
+|Hekla
+|Amazonian
+|Shieldmaiden Class
+|28
+|500,000
+|-
+|3
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|27
+|400,000
+|-
+|4
+|Florin
+|Crocodilian
+|Shotgun Messenger Class
+|24
+|300,000
+|-
+|5
+|Miriam Dom
+|Human
+|Shepherd Class
+|27
+|200,000
+|-
+|6
+|Carl
+|Primal
+|Compensated Anarchist Class
+|27
+|100,000
+|-
+|7
+|Donut
+|Cat
+|Former Child Actor Class
+|26
+|100,000
+|-
+|8
+|Ifechi
+|Human
+|Physicker Class
+|18
+|100,000
+|-
+|9
+|Li Jun
+|Human
+|Street Monk Class
+|25
+|100,000
+|-
+|10
+|Elle McGib
+|Frost Maiden
+|Blizzardmancer Class
+|13 
+|100,000
+|}
+
+===Debut Leaderboard[3|p.52]===
+Cascadia cheerfully explains:
+You will notice that the leaderboard has finally populated. Congratulations to everybody on the list. As you can see, each member of the top 10 has a bounty after their names. That means hunting season is open! Isn’t that exciting? If you kill one, you will receive a loot box containing the reward. If you are on the leaderboard, don’t worry, you get to join in on the fun, too. If you survive the floor, you will receive 10% of your own bounty upon floor collapse. That percentage goes up each floor.
+
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty[3|p.52]
+|-
+|1
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|30 
+|1,000,000
+|-
+|2
+|Hekla
+|Amazonian
+|Shieldmaiden Class
+|28
+|500,000
+|-
+|3
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|27
+|400,000
+|-
+|4
+|Florin
+|Crocodilian
+|Shotgun Messenger Class
+|24
+|300,000
+|-
+|5
+|Miriam Dom
+|Human
+|Shepherd Class
+|27
+|200,000
+|-
+|6
+|Carl
+|Primal
+|Compensated Anarchist Class
+|27
+|100,000
+|-
+|7
+|Donut
+|Cat
+|Former Child Actor Class
+|26
+|100,000
+|-
+| 8
+|Ifechi
+|Human
+|Physicker Class
+|18
+|100,000
+|-
+|9
+|Li Jun
+|Human
+|Street Monk Class
+|25
+|100,000
+|-
+|10
+|Elle McGib
+|Frost Maiden
+|Blizzardmancer Class
+|17
+|100,000
+|}
+
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty[3|p.196]
+|-
+|1
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|?
+|1,000,000
+|-
+|2
+|Hekla
+|Amazonian
+|Shieldmaiden Class
+|?
+|500,000
+|-
+|3
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|?
+|400,000
+|-
+|4
+|Florin
+|Crocodilian
+|Shotgun Messenger Class
+|?
+|300,000
+|-
+|5
+|Miriam Dom
+|Human
+|Shepherd Class
+|?
+|200,000
+|-
+|6
+|Carl
+|Primal
+|Compensated Anarchist Class
+|?
+|100,000
+|-
+|7
+|Donut
+|Cat
+|Former Child Actor Class
+|?
+|100,000
+|-
+|8
+|Elle McGib
+|Frost Maiden
+|Blizzardmancer Class
+|?
+|100,000
+|-
+| 9
+|Ifechi
+|Human
+|Physicker Class
+|?
+|100,000
+|-
+|10
+|Quan Ch
+|Half Elf
+|Imperial Security Trooper Class
+|?
+|100,000
+|}
+
+===Approx. 2 Days, 17 Hours to Level Collapse[3|p. 369]===
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Ranking
+!Crawler
+!Race
+!Class
+!Level
+!Bounty[3|p. 369]
+|-
+|1
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|35
+|1,000,000
+|-
+|2
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|34
+|500,000
+|-
+|3
+|Carl
+|Primal
+|Compensated Anarchist Class
+|34
+|400,000
+|-
+|4
+|Donut
+|Cat
+|Former Child Actor Class
+|32
+|300,000
+|-
+|5
+|Quan Ch
+|Half Elf
+|Imperial Security Trooper Class
+|38
+|200,000
+|-
+|6
+|Florin
+|Crocodilian
+|Shotgun Messenger Class
+|32
+|100,000
+|-
+|7
+|Miriam Dom
+|Human
+|Shepherd Class
+|30
+|100,000
+|-
+|8
+|Katia Grim
+|Doppelgänger
+|Monster Truck Driver Class
+|37
+|100,000
+|-
+|9
+|Dmitri Popov & Maxim Popov
+|Nodling
+|Illusionist Class & Bogatyr Class
+|30
+|100,000
+|-
+|10
+|Ifechi
+|Human
+|Physicker Class
+|29
+|100,000
+|}
+
+==Fifth Floor: The Bubbles==
+===Approx. 14 Days to Level Collapse===
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty
+|-
+|1
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|38
+|1,000,000 (x2)
+|-
+|2
+|Carl
+|Primal
+|Compensated Anarchist Class
+|41
+|500,000 (x2)
+|-
+|3
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|35
+|400,000 (x2)
+|-
+|4
+|Donut
+|Cat
+|Former Child Actor Class
+|33
+|300,000 (x2)
+|-
+|5
+|Quan Ch
+|Half Elf
+|Imperial Security Trooper Class
+|43
+|200,000 (x2)
+|-
+|6
+|Dmitri Popov & Maxim Popov
+|Nodling
+|Illusionist Class & Bogatyr Class
+|33
+|100,000 (x2)
+|-
+|7
+|Miriam Dom
+|Human
+|Shepherd Class
+|31
+|100,000 (x2)
+|-
+|8
+|Elle McGib
+|Frost Maiden
+|Blizzardmancer Class
+|33
+|100,000
+|-
+|9
+|Bogdon Ro
+|Human
+|Legatus Class
+|31
+|100,000
+|-
+|10
+|Florin
+|Crocodilian
+|Shotgun Messenger Class
+|33
+|100,000 (x2)
+|}
+
+===Approx. 10 Days 6 Hours to Level Collapse[4|p.290]===
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty[4|p.290]
+|-
+|1
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|41 
+|1,000,000 (x2)
+|-
+|2
+|Carl
+|Primal
+|Compensated Anarchist Class
+|44
+|500,000 (x2)
+|-
+|3
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|38
+|400,000 (x2)
+|-
+|4
+|Donut
+|Cat
+|Former Child Actor Class
+|36
+|300,000 (x2)
+|-
+|5
+|Dmitri Popov & Maxim Popov
+|Nodling
+|Illusionist Class & Bogatyr Class
+|37 
+|200,000 (x2)
+|-
+|6
+|Miriam Dom
+|Human
+|Shepherd Class
+|34
+|100,000 x2
+|-
+|7
+|Quan Ch
+|Half Elf
+|Imperial Security Trooper Class
+|45 
+|100,000 x2
+|-
+|8
+|Elle McGib
+|Frost Maiden
+|Blizzardmancer Class
+|35
+|100,000
+|-
+|9
+|Bogdon Ro
+|Human
+|Legatus Class
+|35
+|100,000
+|-
+|10
+|Chirag Ali
+|Human
+|Sacred Paladin Class
+|35 
+|100,000
+|}
+
+===Approx. 1 Hour to Level Collapse===
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty
+|-
+|1
+|Carl
+|Primal
+|Compensated Anarchist Class
+|47
+|1,000,000 (x2)
+|-
+|2
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|48
+|500,000 (x2)
+|-
+|3
+|Prepotente
+|Caprid
+|Forsaken Aerialist Class
+|55
+|400,000 (x2)
+|-
+|4
+|Donut
+|Cat
+|Former Child Actor Class
+|39
+|300,000 (x2)
+|-
+|5
+|Dmitri Popov & Maxim Popov
+|Nodling
+|Illusionist Class & Bogatyr Class
+|43
+|200,000 (x2)
+|-
+|6
+|Miriam Dom
+|Human
+|Shepherd Class
+|52
+|100,000 (x2)
+|-
+|7
+|Elle McGib
+|Frost Maiden
+|Blizzardmancer Class
+|47
+|100,000
+|-
+|8
+|Bogdon Ro
+|Human
+|Legatus Class
+|35
+|100,000
+|-
+|9
+|Eva Sigrid
+|Half Nagini, Half-Orc
+|Nimblefoot Enforcer Class
+|40
+|100,000
+|-
+|10
+|Quan Ch
+|Half Elf
+|Imperial Security Trooper Class
+|48
+|100,000 (x2)
+|}
+
+==Sixth Floor: The Hunting Grounds==
+===Approx. 15 Days, 23 Hours to Level Collapse===
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty
+|-
+|1
+|Carl
+|Primal
+|Agent Provocateur Class
+|54
+|1,000,000 (x3)
+|-
+|2
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|48
+|500,000 (x3)
+|-
+|3
+|Prepotente
+|Caprid
+|Profane Vitiate Class
+|55
+|400,000 (x3)
+|-
+|4
+|Donut
+|Cat
+|Former Child Actor Class
+|41
+|300,000 (x3)
+|-
+|5
+|Dmitri Popov & Maxim Popov
+|Nodling
+|Visionary Class and  Bogatyr Class
+|44
+|200,000 (x3)
+|-
+|6
+|Miriam Dom
+|Vampire
+|Shepherd Class
+|52
+|100,000 (x3)
+|-
+|7
+|Elle McGib
+|Frost Maiden
+|Tundra Princess Class
+|47
+|100,000 (x2)
+|-
+|8
+|Bogdon Ro
+|Human
+|Legatus Class
+|44
+|100,000 x2
+|-
+|9
+|Eva Sigrid
+|Half Nagini, Half-Orc
+|Nimblefoot Enforcer Class
+|40
+|100,000 (x2)
+|-
+|10
+|Quan Ch
+|Half Elf
+|Sergeant-at-Arms Class
+|48
+|100,000 (x3)
+|}
+
+==Eighth Floor==
+System Message. Carl has stopped transcribing the leaderboard in his notes.  The multiplier is most likely (x 5) as of the Eighth Floor.
+
+{| class="dccProgTable mw-collapsible mw-collapsed"
+!Rank
+!Crawler
+!Race
+!Class
+!Level
+!Bounty[6|8]
+|-
+|1
+|Prepotente
+|Caprid
+|Profane Vitiate Class
+|
+|1,000,000 x4
+|-
+|2
+|Donut
+|Cat
+|Former Child Actor Class
+|
+|500,000 x4
+|-
+|3
+|Carl
+|Primal
+|Agent Provocateur Class
+|
+|400,000 x4
+|-
+|4
+|Lucia Mar
+|Lajabless
+|Black Inquisitor General Class
+|
+|300,000 x4
+|-
+|5
+|Elle McGibbons
+|Frost Maiden
+|Tundra Princess Class
+|
+|200,000 x3
+|-
+|6
+|Katia Grim
+|Doppelgänger
+|Monster Truck Driver Class
+|
+|100,000
+|-
+|7
+|Florin
+|Crocodilian
+|Shotgun Messenger Class
+|
+|100,000
+|-
+|8
+|Osvaldo
+|Curupira
+|Ranger Class
+|
+|100,000
+|-
+|9
+|Li Na
+|Changbi Demon
+|Slave Driver Class
+|
+|100,000
+|-
+|10
+|Burcu
+|Porsuk
+|Swashbuckler Class
+|
+|100,000
+|}
+
+==References==
+

@@ -1,0 +1,59 @@
+{{Quote|Yeah, you gotta complete the tutorial.|Mordecai[1|2]}}
+
+The Tutorial is a Dungeon mechanic that grants new crawlers access to the full Heads-Up Display (HUD) and Crawler Menus.[1|4] It is administered by the Guildmaster of a Tutorial Guild Hall on the First, Second, and Third Floors,[1|1] and concludes with race and class selection on the Third Floor.[2|1]
+
+Error. You may not access this until you have completed the tutorial.[1|3]
+
+==Description==
+Immediately after the Transformation, an AI announcement directs prospective crawlers to find a tutorial guild as soon as possible.[1|1] The recommendation is not enforced, and a crawler may descend without ever completing a tutorial.[1|27] Mordecai refers to the first two floors as the "training levels."[2|1]
+
+Until the tutorial is complete, the Crawler Menu remains locked. Info boxes and achievement notifications still appear,[1|2] but unread notifications collapse into a blinking folder that returns an error when opened.[1|3] Only creatures with an Intelligence of at least 2 qualify for training; those that do not are designated pets and never have their Inventory activated.[1|4] When Donut was reclassified from pet to crawler partway through a session, Mordecai said her tutorial would have to be restarted.[1|7]
+
+Once training is complete, the Guildmaster becomes the crawler's registered Game Guide. Entering any other tutorial guild afterward transports the crawler to their guide's room, and access to the guide ends on the Fourth Floor.[1|8]
+
+{{Spoiler|book=8|spoiler=According to Mordecai, an animal elevated to sapience late in the crawl, such as by an enriched pet biscuit, is likely directed to a safe room and assigned a temporary game guide to choose a class and change its race. Until then its class is listed as unassigned, though chat is available immediately. Mordecai expected to be assigned to Penelope 3, as Carl's registered guide.[8|94]}}
+
+==Format==
+===Books===
+The session begins when the Guildmaster's right hand glows and the crawler receives the notification "You have been granted access to the Crawler Menu," after which the expanded HUD appears.[1|4] The Guildmaster then covers notifications and the minimap (green for the crawler, blue for other crawlers, white for NPCs, red for mobs, and an X for corpses),[1|4] including its fog of war;[1|5] the Player Stats and Ratings tabs; patrons; the Health, Skill, Magic, and Party menus; the Hotlist; and, where applicable, the Pet Menu.[1|4] The session ends with the activation of the crawler's Inventory and the opening of their Loot Boxes, of which most crawlers have two or three.[1|5]
+
+Other topics include stat points, which accrue at three per level but cannot be distributed until race and class selection; the hidden, fixed Wisdom stat; Ratings, which remain at zero until the crawler leaves the First Floor, as it is closed to live viewers; and automatic partying of crawlers who entered the Dungeon together. Crawlers are also taught a basic Heal Spell.[1|4] A Guildmaster may warn that naming the production company or the Syndicate causes the System AI to flag the interaction for review, and that disparaging either may result in the crawler's experience being "accelerated."[1|4]
+
+Guides vary between crawlers. Brandon and Imani's group trained under Mistress Tiatha,[1|22][1|27][2|3] Frank Q, Maggie My, and Yvette under a Mind Horror,[1|43] and Katia under Bannon.[2|21] The quality of instruction varies accordingly: the Mind Horror told its crawlers that killing other crawlers was the only way to survive,[1|43] and Bannon steered Katia into a race and class she struggled to use.[2|21]
+
+===Soundbooth Theater Audio Immersion Tunnel===
+In Soundbooth Theater's cinematic audio adaptation, the Guildmaster plays a cassette labeled "Video 1" on a tube television and Betamax player rather than leading the session in person. In the video, a Syndicate Human narrator in a purple suit welcomes the crawler on behalf of the Borant Corporation from a classroom whose chalkboard updates itself as he speaks. The content largely matches the books, though Player Stats are called "Crawler Statistics" and the Health segment emphasizes that death in the Dungeon is final. Mordecai fast-forwards through the introduction during Carl's session.
+
+:See Also: Player Stats#Soundbooth Theater Cinematic Audio
+
+==Race & Class Selection==
+From the midpoint of the Second Floor, guides may brief crawlers on how selection works.[1|44] Selection itself takes place on arrival at the Third Floor, where crawlers report to their Game Guide's guildhall,[2|1][2|7] and is conducted off camera.[2|1]
+
+The guide displays an alphabetical list of every available race, with the System AI supplying three recommendations. The class list is generated afterward and narrowed by the crawler's race, stats, memberships, and equipped items.[2|1] Some classes impose stat minimums that must be paid from banked points.[2|2] List sizes vary widely: Donut was offered 320 races and 34 classes, the shortest class list Mordecai had seen,[2|1] while Carl was offered 398 races and over 650 classes.[2|2]
+
+Formally choosing one's existing race is a valid selection and grants racial benefits the crawler did not previously have. Changes take effect only at the end of the process, and Mordecai keeps beds in his guildhall for the transformation.[2|1] Guides may also advise on options; Mordecai explained an undocumented Dungeon Locator benefit attached to one of Carl's choices[2|2] and weighed options against viewership as well as combat viability.[2|1][2|2]
+
+:See Also: Class for class selection and specialization on later floors.
+
+==Impact on Crawlers==
+A crawler who skips the tutorial never has their Inventory activated,[1|5] leaving the Awards and Boxes tab and any earned Loot Boxes inaccessible,[1|2] and lacks the health and mana bars the session adds to the HUD.[1|4] Agatha reached level four without a session and carried her possessions in a shopping cart.[1|27]
+
+A crawler's entry point on the Third Floor is determined by the location of their registered Game Guide rather than where they exited the floor above, scattering crawlers across the Over City[2|3] and separating groups whose members trained under different guides.[2|7]
+
+==Story==
+Mordecai began Carl's session by describing his own history as a crawler[1|3] and explaining the Borant Corporation, the Syndicate, and the show before starting the walkthrough, which was interrupted by a Borant announcement sealing the Dungeon.[1|4] The session concluded with the activation of Carl's inventory and the opening of his ten Loot Boxes.[1|5]
+
+The Enhanced Pet Biscuit from Carl's Legendary Pet Box[1|5] transformed Donut from a pet into a crawler partway through. She declined to restart the tutorial, named the party the Royal Court of Princess Donut, and left the guildhall.[1|7] Mordecai nonetheless registered himself as guide to both.[1|8]
+
+On the Third Floor, Donut chose to remain a cat without reviewing her other options, then selected the Former Child Actor class for its Manager benefit, which made Mordecai the party's permanent manager; the choice had been planned in advance on Odette's advice.[2|1] Carl reviewed every available race over two hours before choosing Primal and Compensated Anarchist.[2|2]
+
+{{Spoiler|book=3|spoiler=Because of the Manager benefit, the Royal Court retained Mordecai past the Fourth Floor, and he continued advising Donut on class selection over chat.[3|1]}}
+
+==Dungeon Lore==
+Guides are required to say the organizers' name several times during training, so the organizers largely ignore what Guildmasters say.[1|4] Mordecai admits he tells crawlers more than he is supposed to.[1|3] Each Dungeon is built for the world it inhabits, and the organizers ensure locals understand the game, which is why the menus use Earth idiom and achievements reference Earth pop culture.[1|3] Guildmasters spend years preparing for each new world before a season begins.[1|4]
+
+==Speculation==
+*The Tutorial's availability through the Third Floor[1|1] may be tied to race and class selection, since Mordecai explains that transfiguration is expensive and reserved for crawlers who reach that floor.[1|4]
+
+==References==
+

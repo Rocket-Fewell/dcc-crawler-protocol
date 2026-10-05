@@ -1,0 +1,29 @@
+{
+  "name": "discord-voice-bridge",
+  "version": "1.0.0",
+  "description": "Discord voice <-> text bridge for an AI-GM tabletop RPG: Whisper STT of players in voice, TTS of GM text-channel output.",
+  "type": "module",
+  "private": true,
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "register": "node src/register-commands.js",
+    "check": "node scripts/check-syntax.js",
+    "test": "node --test test/*.test.js",
+    "doctor": "node scripts/doctor.js",
+    "usage": "node scripts/tts-usage-summary.js",
+    "wake-test": "node scripts/wake-test.js"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.19.2",
+    "@snazzah/davey": "^0.1.12",
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.5",
+    "opusscript": "^0.0.8",
+    "prism-media": "^1.3.5",
+    "sodium-native": "^5.1.0"
+  }
+}

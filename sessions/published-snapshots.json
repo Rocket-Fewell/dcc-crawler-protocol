@@ -1,0 +1,424 @@
+{
+  "version": 1,
+  "crawlers": {
+    "Horn": {
+      "published_at": "2026-10-04T16:14:31-05:00",
+      "view": {
+        "name": "Horn",
+        "player": "Hornn",
+        "class": "Wizard",
+        "species": "Human",
+        "level": 1,
+        "xp": 0,
+        "hp": {
+          "current": 8,
+          "max": 8,
+          "temp": 0
+        },
+        "ac": 11,
+        "hit_dice": {
+          "current": 1,
+          "max": 1
+        },
+        "abilities": {
+          "str": 12,
+          "dex": 12,
+          "con": 15,
+          "int": 17,
+          "wis": 13,
+          "cha": 15
+        },
+        "credits": 75,
+        "conditions": [],
+        "boxes": {},
+        "death_saves": {
+          "successes": 0,
+          "fails": 0
+        },
+        "inventory": [
+          {
+            "name": "Box Cutters (Daggers)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d4 piercing, Finesse, Light, Thrown (range 20/60)."
+          },
+          {
+            "name": "Duct-Taped Mop Handle (Arcane Focus / Quarterstaff)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Quarterstaff: 1d6 bludgeoning, 1d8 two-handed (Versatile). Spellcasting focus."
+          },
+          {
+            "name": "Sad Hotel Robe (Robe)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "Robe: no AC."
+          },
+          {
+            "name": "Cracked Phone App (Spellbook)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Spellbook: holds your wizard spells; ritual-cast from it."
+          },
+          {
+            "name": "Lost-and-Found Backpack (Scholar's Pack)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Scholar's Pack: backpack, book, ink and pen, lamp, 10 oil flasks, parchment, tinderbox."
+          },
+          {
+            "name": "Gas-Station GPS Kit (Navigator's Tools)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Tool proficiency kit for plotting a course and navigating."
+          },
+          {
+            "name": "Ziplock Pouches",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Each holds about 6 lb of small items."
+          },
+          {
+            "name": "Traveler's Clothes",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "No mechanics."
+          },
+          {
+            "name": "Discount Gas-Station Jerky Cubes (Rations)",
+            "qty": 12,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Rations: 1 day of food each, 2 lb each."
+          },
+          {
+            "name": "Stolen Trailer Clothesline (Rope 50 ft hempen)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Rope, 50 ft: 2 HP, DC 17 Strength to burst."
+          },
+          {
+            "name": "Expired Office First-Aid Kit (Healer's Kit)",
+            "qty": 1,
+            "uses": 9,
+            "uses_max": 10,
+            "category": "gear",
+            "mechanics": "Healer's Kit: Utilize action to stabilize a creature at 0 HP without a check."
+          },
+          {
+            "name": "Paint-Can Pry Bar (Crowbar)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Crowbar: advantage on Strength checks where leverage helps."
+          },
+          {
+            "name": "Bucket of Loose BB Pellets (Ball Bearings)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Ball Bearings (1000): spill over a 10 ft square; creatures entering make a DC 10 Dex save or fall prone."
+          },
+          {
+            "name": "Gas-Station Bathroom Mirror Tile (Steel Mirror)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Steel Mirror: look around corners; signal flash."
+          },
+          {
+            "name": "Bike-Lock Chain Missing the Lock (Chain 10 ft)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Chain, 10 ft: 10 HP, DC 20 Strength to burst."
+          },
+          {
+            "name": "Coat-Hanger Grapple (Grappling Hook)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Grappling Hook: attach to rope, throw to anchor on a ledge."
+          },
+          {
+            "name": "ORIENTATION PIT Banner (stolen hallway canvas)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Stolen canvas; no mechanics."
+          },
+          {
+            "name": "Pebbles Snow Globe (Driftglobe: light, floats, dog inside bobs its head)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Driftglobe (Common wondrous): within 60 ft, a command word makes it shed the Light cantrip (20 ft bright + 20 ft dim, 1 hour) or Daylight (60 ft bright + 60 ft dim; once per dawn). Another command (Action) floats it up to 5 ft to hover and follow you."
+          },
+          {
+            "name": "Dog leash clipped to nothing (Pebbles's)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Pebbles's. No mechanics."
+          }
+        ],
+        "achievements": [
+          "Don't Skip Intro",
+          "Grease Tube Disposal",
+          "Down But Not Out",
+          "Participation Corpse"
+        ],
+        "standing_orders": "Nearest clear safe room, else follow the closest highest-STR party member.",
+        "standing_reaction": "Opportunity Attacks fire Fuck 'Em (Magic Missile).",
+        "signature": ""
+      },
+      "message_ids": [
+        "1556414236807274568",
+        "1556414237771829299"
+      ]
+    },
+    "Bone Wifebeater": {
+      "published_at": "2026-10-04T16:14:31-05:00",
+      "view": {
+        "name": "Bone Wifebeater",
+        "player": "Trailer Park Moses",
+        "class": "Barbarian",
+        "species": "Goliath",
+        "level": 1,
+        "xp": 0,
+        "hp": {
+          "current": 13,
+          "max": 13,
+          "temp": 0
+        },
+        "ac": 15,
+        "hit_dice": {
+          "current": 1,
+          "max": 1
+        },
+        "abilities": {
+          "str": 15,
+          "dex": 13,
+          "con": 12,
+          "int": 9,
+          "wis": 9,
+          "cha": 12
+        },
+        "credits": 127,
+        "conditions": [],
+        "boxes": {},
+        "death_saves": null,
+        "inventory": [
+          {
+            "name": "Spiked Sledgehammer (Maul)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Maul: 2d6 bludgeoning, Heavy, Two-Handed, Topple mastery."
+          },
+          {
+            "name": "Food Blocks (Rations)",
+            "qty": 30,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Rations: 1 day each, 2 lb each."
+          },
+          {
+            "name": "Scale Mail (steel)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "Medium armor: AC 14 + Dex (max +2), Stealth disadvantage."
+          },
+          {
+            "name": "Rope (50 ft hempen)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Rope, 50 ft: 2 HP, DC 17 to burst."
+          },
+          {
+            "name": "Pencil & Paper (writing kit)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "No mechanics."
+          },
+          {
+            "name": "Reinforced Absorbing Gloves (Club)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Club-class: 1d4 bludgeoning, Light, Slow mastery."
+          },
+          {
+            "name": "Chain (10 ft)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Chain, 10 ft: 10 HP, DC 20 to burst."
+          },
+          {
+            "name": "Light Crossbow + 20 Bolts",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d8 piercing, range 80/320, Loading, Two-Handed, Slow mastery."
+          },
+          {
+            "name": "Grappling Hook",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Attach to rope."
+          },
+          {
+            "name": "Torches",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour; 1 fire damage if used as a weapon."
+          },
+          {
+            "name": "Mop-Handle Staff (Quarterstaff)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Quarterstaff: 1d6 bludgeoning, 1d8 two-handed."
+          },
+          {
+            "name": "Sports Drink, Red Flavor (Potion of Healing)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Potion of Healing: drink as a Bonus Action, heal 2d4 + 2."
+          },
+          {
+            "name": "Tanya Ruiz Lore Scrap",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Lore note; no mechanics."
+          },
+          {
+            "name": "Bone's Own Chewing Tobacco (Fan Pull)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Natty Light hologram; the System is listening. No mechanics yet."
+          },
+          {
+            "name": "Laminated Complaint Card (one-use: System answers 1 yes/no about current floor truthfully)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "One use. The System truthfully answers one yes/no question about the current floor."
+          },
+          {
+            "name": "Eternally Stained Wifebeater (Cloak of Many Fashions reskin)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Cloak of Many Fashions (Common): Bonus Action to change the garment's style, color and apparent quality."
+          },
+          {
+            "name": "Collapsible Tent-Pole (Pole of Collapsing)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Pole of Collapsing (Common): 10 ft pole; Action command collapses it to 1 ft or extends it back."
+          },
+          {
+            "name": "Kevin the Sentient Rubber Duck (joke; terrible advice only)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Gives terrible advice only. No mechanics."
+          },
+          {
+            "name": "Gas-Station Bathroom Key on a Hubcap (Mystery Key)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Opens one specific lock; may vanish after use."
+          },
+          {
+            "name": "Sports Drink, Blue Flavor (Potion of Healing)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "magic",
+            "mechanics": "Potion of Healing: drink as a Bonus Action, heal 2d4 + 2."
+          }
+        ],
+        "achievements": [
+          "Don't Skip Intro",
+          "You Better Fucking Listen",
+          "Penalty Kick",
+          "Buddy System",
+          "Personal Luggage",
+          "Warranty Void If Removed",
+          "Tow Package",
+          "Corpse Lesson",
+          "Find a Lore Scrap",
+          "Vending Gore",
+          "Tick Sandwich",
+          "Mostly Dead Intern"
+        ],
+        "standing_orders": "",
+        "standing_reaction": "Opportunity Attacks on.",
+        "signature": "You Better Fucking Listen (hammer to goo)."
+      },
+      "message_ids": [
+        "1556414238564687915",
+        "1556414239315591231"
+      ]
+    }
+  }
+}

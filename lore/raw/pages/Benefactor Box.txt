@@ -1,0 +1,104 @@
+{{Item
+|title=
+|image=
+|imagecaption=
+|type=Loot Box, Consumable
+|keywords=
+|effects=
+*Delivers outworld items that never appear in dungeon loot
+*Outclasses the equivalent tier of adventurer box
+*Contents are usually bound to the named recipient
+|source=
+*Purchased and sent by one of a crawler's sponsors
+*Priority delivery available for an emergency fee
+|buy=N/A
+|sell=N/A
+}}
+{{Quote|Patrons are the only ones who can send what are called Benefactor Boxes.|Mordecai[1|4]}}
+Benefactor Boxes, also called sponsor boxes, are a class of loot box purchased for a crawler by their sponsors.[1|4] They use the same six quality tiers as every other box, but rank for rank they outclass ordinary loot: a bronze benefactor box beats a gold adventurer box.[1|4]
+
+==Description==
+Only a sponsor can send one, and the sponsor chooses the item personally.[1|4] Because the contents come from outworld commerce rather than the dungeon's own loot tables, a box can deliver gear that is otherwise impossible to find inside, such as a pulse rifle or automated power armor.[1|4] The item's strength and value set the tier and therefore the price, so most sponsors can only afford silver or gold; the tiers run Bronze, Silver, Gold, Platinum, Legendary, and Celestial.[1|4] The more a sponsor pays for the slot and the higher a crawler's social numbers climb, the more and better boxes that crawler can expect.[1|31]
+
+==Operation==
+{{Spoiler|book=3|spoiler=Delivery is not always immediate. When the Borant Corporation fell behind on fulfillment, sponsors could pay an emergency fee to have a box arrive at once.[3|13]}}
+
+{{Spoiler|book=4|spoiler=The tier an item requires is calculated from its origin, value, rarity, and a hundred other factors; the sender picks the gift, not the grade.[4|8] Because exceptional items cost a fortune, sponsors commonly send a modest item on one floor and upgrades for that same item later, the upgrade arriving in an apparently empty box. Four or five cheap boxes cost a fraction of a single legendary, which lets a patient benefactor build a crawler up to legendary or celestial gear across several floors.[4|9] Sending more than one box in a single floor is possible, but the cost is astronomical.[4|9] A sponsor may also send a product sample, which looks like an ordinary box but is written into the sponsorship contract as a freebie, sent so the crawler will handle and discuss the product on air.[4|7]}}
+
+{{Spoiler|book=5|spoiler=Delivered items are commonly bound to the named recipient, a measure meant to stop other crawlers from murdering them for the gear; a rare scroll called Cracker Jack can lift the restriction.[5|60] A sponsor may attach a written note, but notes are billed by the character and anything insufficiently vague gets rewritten by the system AI instead, so benefactors are forced to speak in code.[5|55]}}
+
+{{Spoiler|book=6|spoiler=A liaison can seize a box in transit, though the system AI is capable of overriding the seizure and delivering it anyway.[6|48]}}
+
+==Deliveries==
+Every benefactor box shown on the page, in the order received. The table contains spoilers through Book 8.
+
+{|class="article-table sortable mw-collapsible mw-collapsed"
+|+ Benefactor boxes received by crawlers, Books 3 to 8
+! Book !! Recipient !! Tier !! Sponsor !! Contents
+|-
+|3||Carl||Bronze||Valtay Corporation||Neural Enhancer #544, Variant 32.c, a permanent brain upgrade for identifying and analyzing subspace portals[3|13]
+|-
+|3||Donut||Unstated||Princess D'nadia||The Prism Industries Capacitating and Focusing Goggles, a unique item signed personally by the sender[3|15]
+|-
+|3||Katia||Silver||Princess Formidable||The Bolt of Ophiotaurus[3|29]
+|-
+|4||Carl||Bronze||Valtay Corporation||Neural Enhancer #275, Variant 35.j[4|8]
+|-
+|4||Carl||Silver||Open Intellect Pacifist Action Network||A Toraline root vegetable[4|8]
+|-
+|4||Donut||Bronze||Princess D'nadia||No item at all, only an upgrade to her existing goggles[4|9]
+|-
+|4||Donut||Product sample||Veriluxx||An interactive toy of Donut[4|13]
+|-
+|4||Katia||Silver (emergency)||Princess Formidable||Ten bolts of Petrify Rock Class[4|14]
+|-
+|4||Carl||Platinum (emergency)||Open Intellect Pacifist Action Network||The enchanted xistera extension slot, custom made to fit Samantha's head[4|34]
+|-
+|5||Carl||Gold||The Plenty||An upgrade patch bearing the mark of the Midnight Epicure[5|43]
+|-
+|5||Donut||Gold||The Apothecary||The silver bracelet of the Ab-solar[5|43]
+|-
+|5||Carl||Silver||The Apothecary||A Charm Animal potion recipe and a drawing of Mongo[5|43]
+|-
+|5||Prepotente||Legendary (emergency)||Unstated||A magical spray applicator and a matching herbicide recipe[5|49]
+|-
+|5||Carl||Gold||Open Intellect Pacifist Action Network||A Pawna's Cries potion, sent with a coded note[5|55]
+|-
+|5||Prepotente||Unstated||Unstated||An I Take it All Back potion, tagged with instructions to hand it to Donut[5|57]
+|-
+|5||Katia||Unstated||The Apothecary||A knit beanie granting the I Need My Personal Space spell[5|60]
+|-
+|5||Five crawlers, routed to Donut||Unstated||The Apothecary||The Hammer of Fast Forward, the Stick of Cascadia's Screams, a charisma-doubling tiara, a sheet of music, and a wand recharge scroll, each sent to a different crawler with a note directing that it be passed along[5|60]
+|-
+|6||Katia||Emergency||Princess Formidable||A scroll of worship letting her take up the goddess Eileithyia[6|19]
+|-
+|6||Carl||Gold (emergency)||Open Intellect Pacifist Action Network||A paper flyer for a homeless shelter in Homestead, Florida[6|48]
+|-
+|7||Donut||Celestial||Long Haul Biological Waste Management Solutions||A box-shaped spaceship that folded itself into a massive mechanical hand, holding the Tiara of a Thousand Lights and its charge pillow[7|3]
+|-
+|7||Donut||Platinum||The Apothecary||A second charging pillow, which drains any magical item, though the stored buff will only transfer to a like item[7|3]
+|-
+|7||Donut||Gold||The Apothecary||A quadruped weapon mount[7|86]
+|-
+|8||Prepotente||Unstated||The Plenty||The ability to worship the Midnight Epicure[8|70]
+|}
+
+==Story==
+{{Spoiler|book=3|spoiler=Benefactor boxes became routine on the Fourth Floor, when the Borant Corporation announced that every surviving crawler in the dungeon had been assigned a sponsor for the first time in the show's history.[3|13]}}
+
+{{Spoiler|book=5|spoiler=Late in the Sixth Floor, the Apothecary and the Plenty sent a coordinated run of boxes to half a dozen different crawlers, every one of them holding an item and a note directing that it be handed to Donut, a pattern Mordecai had never seen before.[5|60] Borant appealed to block one of them, the Hammer of Fast Forward routed through Imani, and was denied immediately.[5|60]}}
+
+{{Spoiler|book=6|spoiler=Carl's last delivery from the Pacifist Network arrived already seized by liaison action, only for the system AI to override the seizure.[6|48] Orren later told him the whole delivery had been a trap, engineered to force the showrunners into a choice that would end the crawl either way.[6|51]}}
+
+==Trivia==
+{{Spoiler|book=3|spoiler=A benefactor box and a fan box are separate awards, and a crawler can have both waiting at once.[3|29]}}
+
+{{Spoiler|book=4|spoiler=Mordecai called Carl's emergency platinum box the most expensive box in the game's history, worth more than the gross domestic product of some star systems.[4|34]}}
+
+==Speculation==
+{{Spoiler|book=5|spoiler=The Apothecary already sponsored Donut directly, so routing her gifts through other crawlers was probably a way around the astronomical cost of a second box to the same crawler in a single floor, rather than a restriction on who may receive one.[5|60]}}
+
+==References==
+
+{{Navbox Items}}
+

@@ -1,0 +1,20 @@
+Web snippets used for ledger section 9.3 (premise verification, Pass 20; retrieved 2026-10-04 America/Chicago). Working copy; short paraphrased notes only.
+These are NOT the novels' text and are not ledger-quotable (no WEB: kind in tools/ledger_check.py). Fandom direct fetch was not attempted; search snippets were used and matched the local mirror.
+
+[WEB:nerdist-overview] https://nerdist.com/article/everything-you-need-to-know-dungeon-crawler-carl-litrpg-book-series/ (search snippet)
+- Says ten million Crawlers enter Earth's season with three million dying in the first hour, and calls the goal descending to the end of the eighteenth floor. The local wiki says just under 13 million entered and the count fell below 10 million (loss of ~3 million) before the first floor sealed; the two disagree on the starting figure.
+
+[WEB:wikipedia-dcc] https://en.wikipedia.org/wiki/Dungeon_Crawler_Carl (search snippet)
+- Describes Carl and Donut as part of "a few million" beings escaping the elimination of the human species and the mining of Earth's resources; calls the World Dungeon an eighteen-level crawl built from Earth's resources; says survivors of the ninth floor and beyond can take deals (indentureships). Loose on counts; no inverted-shape wording.
+
+[WEB:simulacra-world-dungeon] https://simulacra.ink/worlds/dungeon-crawler-carl-book-one/locations/world_dungeon (search snippet; fan-made reference)
+- Describes the dungeon as shaped like an inverted triangle with each floor smaller than the last and a single stairwell exit on the last floor; mentions nearly thirteen million humans entering and says stairwells may hold crawlers in stasis. Third-party; agrees with the wiki wording ("triangle").
+
+[WEB:search-synthesis-inverted] web search result synthesis (not a source page)
+- The search engine's own summary wrote "inverted triangle/pyramid"; every page it cited said triangle only. No cited page used "pyramid" for the Dungeon.
+
+[WEB:manatoast-b1-recap-npc] https://manatoastmedia.com/dungeon-crawler-carl-book-1-recap/ (search snippet)
+- Recap says Rory explains that the Floor 1 goblins know the floor collapses but go to sleep and wake up on the next floor down, hoping crawlers eventually stop coming. Also repeats the early-descent stasis rule. Matches the local wiki Rory/Lorelai pages (which carry no chapter cite).
+
+[WEB:crawlerscookbook-floor1] https://crawlerscookbook.com/floors/floor-1/ (search snippet)
+- Says that when a floor timer reaches zero the floor collapses and anyone still on it dies. Agrees with the wiki ("killed and collected when the level collapses").

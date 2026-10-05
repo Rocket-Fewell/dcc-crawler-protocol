@@ -1,0 +1,5 @@
+{"ts":"2026-10-04T23:04:15.491Z","event":"registered","crawler":"TestPally","uid":"376517850724040714","tag":"CRAWLER #5260-P","session":"alpha","card_posted":true,"via":"create-flow"}
+{"ts":"2026-10-05T01:37:40.453Z","event":"build_cancelled","uid":"376517850724040714","screen":"S8","status":"draft","had_rolls":false}
+{"ts":"2026-10-05T01:45:00.116Z","event":"build_cancelled","uid":"376517850724040714","screen":"S7","status":"draft","had_rolls":false}
+{"ts":"2026-10-05T02:07:16.878Z","event":"build_cancelled","uid":"376517850724040714","screen":"S8","status":"draft","had_rolls":true}
+{"ts":"2026-10-05T02:52:09.936Z","event":"build_cancelled","uid":"376517850724040714","screen":"S14","status":"draft","had_rolls":true}

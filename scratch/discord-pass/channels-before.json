@@ -1,0 +1,157 @@
+[
+ {
+  "id": "1556163675000279040",
+  "type": 4,
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "Text Channels",
+  "parent_id": null,
+  "position": 0,
+  "permission_overwrites": []
+ },
+ {
+  "id": "1556163675000279041",
+  "type": 4,
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "Voice Channels",
+  "parent_id": null,
+  "position": 0,
+  "permission_overwrites": []
+ },
+ {
+  "id": "1556163675000279042",
+  "type": 0,
+  "last_message_id": "1556410337803243521",
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "general",
+  "parent_id": "1556163675000279040",
+  "rate_limit_per_user": 0,
+  "topic": null,
+  "position": 0,
+  "permission_overwrites": [],
+  "nsfw": false,
+  "icon_emoji": {
+   "id": null,
+   "name": "\ud83d\udc4b"
+  },
+  "theme_color": null
+ },
+ {
+  "id": "1556163675000279043",
+  "type": 2,
+  "last_message_id": null,
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "General",
+  "parent_id": "1556163675000279041",
+  "rate_limit_per_user": 0,
+  "bitrate": 64000,
+  "user_limit": 0,
+  "rtc_region": null,
+  "position": 0,
+  "permission_overwrites": [],
+  "nsfw": false,
+  "icon_emoji": {
+   "id": null,
+   "name": "\ud83c\udf99"
+  },
+  "theme_color": null,
+  "application_id": null,
+  "voice_background_display": null,
+  "voice_hangout": null
+ },
+ {
+  "id": "1556163778788462602",
+  "type": 0,
+  "last_message_id": "1556428673551437847",
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "dcc_ears",
+  "parent_id": "1556163675000279040",
+  "rate_limit_per_user": 0,
+  "topic": null,
+  "position": 1,
+  "permission_overwrites": [],
+  "nsfw": false
+ },
+ {
+  "id": "1556163836879568946",
+  "type": 0,
+  "last_message_id": "1556428800898760858",
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "dcc_mouth",
+  "parent_id": "1556163675000279040",
+  "rate_limit_per_user": 0,
+  "topic": null,
+  "position": 2,
+  "permission_overwrites": [],
+  "nsfw": false
+ },
+ {
+  "id": "1556414212106883103",
+  "type": 4,
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "Crawler Sheets",
+  "parent_id": null,
+  "position": 1,
+  "permission_overwrites": []
+ },
+ {
+  "id": "1556414213113774290",
+  "type": 0,
+  "last_message_id": "1556414237771829299",
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "hornn-sheet",
+  "parent_id": "1556414212106883103",
+  "rate_limit_per_user": 0,
+  "topic": "Horn's character sheet - posted by the GM bot after every change. Read-only.",
+  "position": 3,
+  "permission_overwrites": [
+   {
+    "id": "1556163673469222942",
+    "type": 0,
+    "allow": "66560",
+    "deny": "2112"
+   },
+   {
+    "id": "1556179135783505930",
+    "type": 1,
+    "allow": "84992",
+    "deny": "0"
+   }
+  ],
+  "nsfw": false
+ },
+ {
+  "id": "1556414214028140624",
+  "type": 0,
+  "last_message_id": "1556414239315591231",
+  "flags": 0,
+  "guild_id": "1556163673469222942",
+  "name": "moses-sheet",
+  "parent_id": "1556414212106883103",
+  "rate_limit_per_user": 0,
+  "topic": "Bone Wifebeater's character sheet - posted by the GM bot after every change. Read-only.",
+  "position": 4,
+  "permission_overwrites": [
+   {
+    "id": "1556163673469222942",
+    "type": 0,
+    "allow": "66560",
+    "deny": "2112"
+   },
+   {
+    "id": "1556179135783505930",
+    "type": 1,
+    "allow": "84992",
+    "deny": "0"
+   }
+  ],
+  "nsfw": false
+ }
+]

@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "changelog": [
+    "0.1.10 (2026-10-04): provenance re-sync after Floor 1 achievement-ref swap to ACH-1824..1826; no values changed. spec_sha256_sans_pin_when_mapped re-synced in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map from tools/encounter_bot/spec_hash_sans_pin.py (method now also skips achievements_catalog.version and .expected_sha256); every slot path in the maps re-checked against the current specs.",
     "0.1.9 (2026-10-04): provenance-only: slot maps now match on sans-pin spec hash so budget bumps no longer break provenance; no values changed. spec_sha256_when_mapped in day01_slot_map and day02_to_04_slot_map is replaced by spec_sha256_sans_pin_when_mapped (helper tools/encounter_bot/spec_hash_sans_pin.py; method in day01_slot_map.spec_hash_method); new day05_slot_map holds only the Day 5 sans-pin hash (no slots mapped).",
     "0.1.8 (2026-10-04, Accountant's four cleanups of v0.1.7; no value changed): (1) rules/20 version cites in the Q6 text replaced by 'current section 9.1a' so they stop going stale; (2) rules/20 coupon paragraph reworded in rules/20 v0.3.6 (no value change here); (3) CORRECTION to the v0.1.7 line below: its 'every other value unchanged' did not cover the provenance hashes; day01_slot_map.spec_sha256_when_mapped and day02_to_04_slot_map.spec_sha256_when_mapped were re-synced to the current floors/f01/day-0N.spec.json (the Encounter Bot rewrote the specs at 22:36); PROVENANCE ONLY: every slot path in both maps was re-checked against the current specs and still resolves, no slot or value changed, and floors/ was not touched; (4) ratio_check averages now use unrounded ratios: 3.01 / 6.03 / 9.89 floors of liquid income (v0.1.7 printed 3.02 / 6.04 / 9.89 from the 1-decimal ratios). Every price, flag line and other value is unchanged.",
     "0.1.7 (2026-10-04): Accountant voted YES on Q-004 (6 of 7; Encounter Bot pending) with three accepted price fixes: F8 held at F7 (15,000 / 30,000 / 50,000), F13 raised to 180,000 / 360,000 / 600,000, F18 held at F17 (285,000 / 570,000 / 945,000); the schedule still never falls floor to floor. Ratio check added (q6_crafting_price_proposal.ratio_check; targets are measured against liquid_if_items_sold_at_half, which halves box items but not credit-pull cards; against expected_counted the ratios are about 0.6x as large). Stale text fixed: reading_the_table and cumulative_check now describe the smoothed schedule (a 5,000 basic table is reachable late on Floor 4; F3 basic 5,500, F4 basic 6,500). flag_line_by_floor and every other value unchanged; no field path removed or renamed.",
@@ -2939,8 +2940,8 @@
   ],
   "day01_slot_map": {
     "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
-    "spec_sha256_sans_pin_when_mapped": "3f5d404dd468f70017acfd69db530291631627194572434bb8a8c7416b7da9ec",
-    "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256 and canon_table.expected_sha256 deleted (the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pin on this file, so a budget bump no longer breaks this provenance.",
+    "spec_sha256_sans_pin_when_mapped": "75f63abff9ab999546dd84d19cd0109b1c740eba4fba76eb16b2f674b454d3e0",
+    "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version and achievements_catalog.expected_sha256 deleted if present (method updated by the Encounter Bot to also skip the achievements catalog version and sha; the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pins on this file and on the canon table and achievements catalog, so a budget or catalog bump no longer breaks this provenance; real slot content changes still do.",
     "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
     "count": 32,
     "all_filled": true,
@@ -3265,9 +3266,9 @@
   "day02_to_04_slot_map": {
     "status": "v0.1.2 addition (Encounter Bot request). The CR slots of these encounters already resolve (floors.1.fixed_encounters.z10.creatures key skeleton, z02.creatures key giant-rat, wandering.creatures key stirge) and are unchanged.",
     "spec_sha256_sans_pin_when_mapped": {
-      "day-02": "d453fdf396a50df5772bd2484f34f9bef3c5fbe456f72e3b3d2cced8c0312e1e",
-      "day-03": "d42c05a5d5a9868cf84b4bf4d3837f14a6be0e134ad3c5d8e128f57a93a08224",
-      "day-04": "2b6216f51a9324652294b0ff0045de4a59f032d3d33d69e462fcf1cfb03215ec"
+      "day-02": "d13a71b8397547f8776bbffee9cc21bb4a0704e8cdfa4045d36fc58a9dd9c9ca",
+      "day-03": "ccccfed5db877cc72b95c91e2de4b4c68a2a814e678b186b5d51e658abb81c21",
+      "day-04": "fa6fc548b0fe239f3c97489c93d4cb5083805020755ec66cad0f62037123ab95"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 9,
@@ -3364,7 +3365,7 @@
   },
   "day05_slot_map": {
     "status": "PROVENANCE ONLY (v0.1.9): no slots are mapped for Day 5; its spec cites this file by field path (b70 cites) and needs no fills. Recorded so all five Day specs carry a provenance hash.",
-    "spec_sha256_sans_pin_when_mapped": "513460409b9c9e6fc59d8990232cedf4f2b5066d930f36d0c57053a11cf2f412",
+    "spec_sha256_sans_pin_when_mapped": "3b2a03d40eaad91895be29185cfb16f7cfd456f37f07d795c12dd08ba8a32678",
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 0,
     "slots": []

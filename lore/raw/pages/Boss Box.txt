@@ -1,0 +1,217 @@
+{{Item
+|title=Boss Box
+|image=
+|imagecaption=
+|type=Loot Box
+|keywords=
+|effects=Awards crawlers with high-value loot, magic items, and consumables upon opening.
+|source=Defeating a Boss
+|buy=N/A
+|sell=N/A
+}}
+{{Quote|All bosses drop persistent loot, and their corpses stay there for any crawler to pick it up... But the ones who actually kill the boss also receive an achievement and a Boss Box. Bronze for Neighborhood, Silver for Borough, and so forth.|Mordecai[1|12]}}
+A Boss Box is a Loot Box awarded to Crawlers who kill a Boss monster. The box's tier, and the quality of the loot inside, scales with the difficulty of the boss defeated.[1|12]
+
+==Description==
+A Boss Box is a specialized loot container that the Dungeon AI awards to the specific Crawler (or crawlers) responsible for killing a Boss.[1|12] The box's tier corresponds to the boss's rank, ranging from Bronze for the weakest bosses up through Celestial for the strongest.
+
+{|class="fandom-table"
+|+Box Tiers
+!Color
+!Awarded for Defeating
+|-
+|Bronze Box
+|Neighborhood Bosses[1|12]
+|-
+|Silver Box
+|Borough Bosses[1|12]
+|-
+|Gold Box
+|City Bosses[4|26][4|28]
+|-
+|Platinum Box
+|Province Bosses
+|-
+|Legendary Box
+|Country Bosses[6|3]
+|-
+|Celestial Box
+|Floor Bosses
+|}
+
+The quality of the loot inside also scales with dungeon depth: the Bronze and Silver boxes that held excellent rewards on the first two floors grow far less impressive by the fifth, where the best loot comes from City-boss boxes and above.[4|23] The boxes typically contain highly valuable items, including spell books, enchanted armor and weapons, stat-boosting rings, unique crafting materials, and substantial amounts of gold.[1|12][1|19][1|25][1|30][6|2]
+
+==Appearance==
+The physical appearance of a Boss Box scales with its tier. As with all loot boxes, lower tiers are smaller and plainer, while higher tiers grow larger and more elaborate, shifting in material and color from bronze to silver to glowing gold and beyond. A box's design can also carry thematic detailing tied to its source.[1|5]
+
+{{Spoiler|book=4|spoiler=Carl describes a Gold Boss Box that swirled and spun, with clockwork gears ratcheting loudly as it peeled open like a banana.[4|28]}}
+
+{{Spoiler|book=6|spoiler=A Legendary Boss Box earned from killing Imogen featured little metal bands that slipped and moved, opening with "a ridiculous amount of fanfare".[6|3]}}
+
+==Operation==
+Like all standard loot boxes, Boss Boxes are securely stored in a crawler's dimensional inventory upon receipt.[1|5] They cannot be opened in the field; crawlers must be inside a designated safe zone, such as a guildhall or a safe room, to access their contents.[1|2][1|5] When a crawler decides to open their boxes, they cannot pick and choose a specific Boss Box to open. The inventory system forces an "all or nothing" opening sequence, presenting every unopened box the crawler possesses one by one, organized by tier.[1|5]
+
+Unopened boxes cannot be sold or transferred, so there is no tactical advantage to hoarding them.[1|5] As with all loot boxes, a Boss Box will never contain outright cursed loot, though it can hold unstable or damaged items, so crawlers are advised to read every item's description before equipping or using it.[1|5]
+
+==Story==
+Because each awarded box is unique, this section is organized by the book in which the box is opened. Books often concludes soon after the final boss battle does, so the box for a floor's last boss is often not revealed until the following book.
+
+===Book 1===
+{|class="fandom-table"
+|+Bronze Boss Box for killing the Hoarder
+!Crawler
+!Loot
+|-
+|Donut
+|Tome of Torch[1|12]
+|-
+|Carl
+|Tome of Wisp Armor[1|12]
+|}
+
+{|class="fandom-table"
+|+Bronze Boss Box for killing the Goblin Chieftain[1|17]
+!Crawler
+!Loot
+|-
+|Donut
+|Enchanted Fae Scale Quadruped Crupper of the Fleet[1|19]
+|-
+|Carl
+|Silver Ring of Constitution +2[1|19]
+|}
+
+{|class="fandom-table"
+|+Bronze Boss Box for killing the Juicer
+!Crawler
+!Loot
+|-
+|Donut
+|Tome of Puddle Jumper[1|25]
+|-
+|Carl
+|Enchanted Shuriken of Bloodlust[1|25]
+|}
+
+{|class="fandom-table"
+|+Silver Boss Box for killing the Ball of Swine
+!Crawler
+!Loot
+|-
+|Donut
+|Membership in the Dungeon Book of the Floor Club[1|30]
+|-
+|Carl
+|100 Gold and a Cheat Code Potion[1|30]
+|-
+|Brandon Andrews
+|A magic boomerang[1|31]
+|-
+|Chris Andrews
+|Membership in the Dungeon Book of the Floor Club[1|31]
+|-
+|Yolanda Martinez
+|A magic quiver[1|31]
+|}
+
+{|class="fandom-table"
+|+Bronze Boss Box for killing the Krakaren Clone (Second Floor)
+!Crawler
+!Loot
+|-
+|Donut
+|Enchanted Fur Brush of the Ecclesiastic[1|35]
+|-
+|Carl
+|Enchanted BigBoi Boxers[1|35]
+|}
+
+{|class="fandom-table"
+|+Bronze Boss Box for killing Ralph[1|45]
+!Crawler
+!Loot
+|-
+|Donut
+|Spell book of Heal Critter[1|47]
+|-
+|Carl
+|Potion of Determine Value Skill and 1,000 Gold[1|47]
+|}
+
+===Book 2===
+{|class="fandom-table"
+|+Bronze Boss Box for killing Heather the Bear
+!Crawler
+!Loot
+|-
+|Carl
+|Hobgoblin Dynamite and Hobgoblin Pus[2|13]
+|}
+
+===Book 3===
+{|class="fandom-table mw-collapsible mw-collapsed"
+|+Bronze Boss Box for killing Miss Quill on the Third Floor
+!Crawler
+!Loot
+|-
+|Carl
+|Tome of Bang Bro[3|2]
+|}
+
+{|class="fandom-table mw-collapsible mw-collapsed"
+|+Boss Box for killing Gore-Gore
+!Crawler
+!Loot
+|-
+|Donut
+|Heal Scrolls and a poison dart trap kit[3|12]
+|}
+
+{|class="fandom-table mw-collapsible mw-collapsed"
+|+Three Bronze Boss Boxes for Neighborhood Bosses on the Nightmare Express[3|14]
+!Crawler
+!Loot
+|-
+|Carl
+|Scroll of Upgrade[3|15]
+|}
+
+===Book 4===
+{|class="fandom-table mw-collapsible mw-collapsed"
+|+Gold Boss Box for killing Lusca on the Fifth Floor[4|26]
+!Crawler
+!Loot
+|-
+|Carl
+|Drakea's Enchanted Kerchief of Disorder[4|28]
+|}
+
+===Book 6===
+{|class="fandom-table mw-collapsible mw-collapsed"
+|+Legendary Boss Box for killing Imogen on the Sixth Floor
+!Crawler
+!Loot
+|-
+|Donut
+|Flawless Jeweler's Gem[6|2]
+|-
+|Carl
+|A glowing leather wristband[6|3]
+|}
+
+==Trivia==
+Boss Boxes are strictly awarded only to the crawlers who achieve the kill.[1|12] They are completely separate from the "persistent loot" that a boss's corpse drops on the ground, such as a Neighborhood Map or Field Guide, which any crawler can pick up regardless of who made the kill.[1|12][1|27]
+
+Defeating a boss also places a tier-colored star beside the crawler's name in all subsequent notifications, matching the tier of the Boss Box awarded: a bronze star for a Neighborhood boss, a silver star for a Borough boss, and so on.[1|12][1|31]
+
+{{Spoiler|book=4|spoiler=A boss must be permanently killed for a Boss Box to drop. After Carl and Donut melted down the necropolis's sand slime and cleared the quadrant, they received no Boss Box, because the ooze was not truly dead; it survived as a single grain of sand, unable to properly regenerate.[4|23]}}
+
+{{Spoiler|book=8|spoiler=Regenerating bosses make this especially hard to guarantee. A slag elemental reforms whenever its corpse falls into the molten metal below, so the dungeon warns that no Boss Box drops unless such a boss is "dead-dead."[8|65]}}
+
+==Speculation==
+{{Spoiler|book=4|spoiler=The contents of a Boss Box may be less random than the system implies. Mordecai explains that while the showrunners control the storylines, the dungeon's System AI picks the specific loot and can adjust it to fine-tune difficulty and keep the game "fair," which suggests the items generated inside Boss Boxes may be deliberately tailored to a crawler's build or to the challenges ahead.[4|9]}}
+
+==References==
+
+{{Navbox Items}}
+

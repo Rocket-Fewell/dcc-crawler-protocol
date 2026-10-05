@@ -1,0 +1,20 @@
+{{delete}}
+{{SpoilH | 6}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title=
+|image=
+|imagecaption=
+|type= T'Ghee Card
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a utility T'Ghee card that increases a totems chance of landing an attack. If stacked they count as a single buff.
+
+==References==
+
+{{Navbox Items}}

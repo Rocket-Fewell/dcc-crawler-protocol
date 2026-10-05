@@ -1,0 +1,19 @@
+{{Item
+|type=Potion
+|keywords=Consumable
+|effects=+1 Level (Specific Skill)
+|source=Loot Boxes}}
+
+A Skill Potion is a special potion that, when consumed, adds a single level to a skill specified in the item's description.  Typically received in Loot Boxes, Skill Potions may be the only way to unlock certain Crawler Menu options such as sorting inventory by value.[1|19]
+
+== AI Description ==
+
+Skill Potion.
+Drinking this adds a single level to the Determine Value skill. Hopefully now you’ll realize all those Magic: The Gathering cards are nothing more than just meaningless pieces of paper, and you should have spent your money on something with actual value, like a treadmill. Or shampoo. [1|19]
+
+==Story==
+Carl receives two Skill Potions of Determine Value Skill in Looter Boxes on the First Floor, and a third in a Boss Box at the end of the Second Floor.[1|19][1|25][1|47]
+
+==References==
+
+{{Navbox Items}}

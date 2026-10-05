@@ -1,0 +1,19 @@
+{{SpoilH | 5}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type= Potion
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a potion that gives detail about mobs including their stats and skills.
+
+==References==
+
+{{Navbox Items}}

@@ -1,0 +1,75 @@
+{{Group
+|name=Party
+|image1=
+|caption-image1=
+|aliases=Squad, Team
+|part_of=Dungeon Crawler World Mechanics
+|type=Party
+|industry=
+|base_location=
+|first=Book 1, Chapter 4
+|status=
+|head=Party Leader
+|members=Crawlers, Pets, Minions, Mercenaries
+|former_members=
+|sponsored_crawlers=
+}}
+{{Quote|Anyone who entered the dungeon at the same time as anyone else was automatically grouped together, and as a result, I had a party of two. Me and Donut.|Carl[1|4]}}
+
+A Party is a core organizational game mechanic in Dungeon Crawler World that groups crawlers into small teams so they can share experience, communicate privately, and pool their resources.[1|4][5|8]
+:See also: Guilds • Personal Space • Crawler mechanics • :Category:Parties
+
+==Party Mechanics==
+Parties are formed in two primary ways. First, any crawlers who enter the World Dungeon at the same time are automatically grouped together by the system into a single party.[1|4] Second, crawlers can manually send party requests to other individuals through their interface to invite them to join, which the recipient must then accept.[2|21][8|98]
+
+The party member with the highest combined base stat total is designated the Party Leader. The leader has administrative control over the party menu, including the ability to choose the party's official name and to assign whimsical or descriptive titles to its members.[1|7]
+
+{{Spoiler|book=5|spoiler=The leader also has the authority to make critical choices on behalf of the group, such as selecting starting locations for new floors.[5|Epilogue]
+This leadership status is dynamic; if another member's base stats surpass the current leader's, the system instantly and automatically transfers the Party Leader designation to the strongest crawler.[5|61][7|27]}}
+
+Crawlers are free to leave a party at any time.[1|7]
+
+{{Spoiler|book=8|spoiler=Leaving a party segregates the departing crawler's personal space from the communal area, strips their party titles, and prompts them with an invitation to rejoin a guild or safehome.[8|90]}}
+
+==Party Menu==
+The Party Menu is part of the crawler's HUD and is unlocked during the Tutorial.[1|4] Through it, members can manage their party and membership, use a private party chat, and view one another's stats, health, skills, and equipped gear, though not each other's inventories.[1|4][1|7] The party menu also shows when a member dies.[1|22]
+
+{{Spoiler|book=3|spoiler=Crawlers can also manage their shared Personal Space through the party system; if members buy individual spaces, they can combine them into a larger communal space that shares environmental upgrades.[3|3]}}
+
+===Party Chat===
+When a crawler first uses the party chat, a virtual keyboard materializes in front of them, but most soon learn they can simply focus on the chat window and think the words they wish to send.[1|15][1|20] If two party members are separated and one is locked into a boss battle, they cannot use the party chat to communicate until the battle is over.[1|22] Although the feature is used throughout the tutorial and first book, it is explicitly named "party chat" only once.[1|22]
+
+{{Spoiler|book=3|spoiler=The party chat is not a standalone system but the party's automatically generated group channel within the crawler's broader Messaging Menu, the interface that also handles direct messages to any crawler a player has added to their contacts. It was simply the first form of dungeon messaging shown in the series.[3|8]}}
+
+==Experience Sharing==
+Crawlers in the same party share experience, which is necessary to level up.[1|4] Distribution is partially based on the percentage of participation in a fight, including support activities like tanking and healing, but simply being in the party and present for the battle garners a nominal amount of experience.[1|8] The precise formula has never been defined in the books. A crawler cannot earn any experience at all until they first unlock the ability by earning the You've Killed a Mob! Achievement.[1|5]
+
+On the First Floor, Donut received 9.8 experience from a 10-experience Experience Cookie, with the remaining 0.2 passing to Carl as her only party member; Frank Q likewise received just 9.8 from an identical cookie, which is how Carl deduced that Frank was partied with another living crawler. This implies a crawler keeps roughly 98% of earned experience while the remaining 2% is shared with the rest of their party.[1|19][1|20] Because the earner keeps the overwhelming majority of their own experience, even very large parties can function; the Book 1 group Le Mouvement numbered roughly 150 crawlers.[1|26][1|31]
+
+==Player Killing==
+{{Spoiler|book=3|spoiler=The first member of a party to kill another crawler inside the Dungeon receives a Savage Box containing a PVP Coupon named for each member of their party. A second member of the same party who kills a crawler does not receive the same reward.[3|18]}}
+
+==Story==
+The primary party followed throughout the crawl is the Royal Court of Princess Donut, which was formed automatically when Carl and Donut entered the Dungeon together.[1|4] Donut, having vastly superior base stats due to a pet biscuit, was designated the Party Leader, immediately naming the group and giving Carl the title of "Royal Bodyguard".[1|7]
+
+As the crawl progresses, the AI and showrunners frequently manipulate party mechanics to force drama and break up large alliances.
+
+{{Spoiler|book=3|spoiler=Large parties such as Brynhild's Daughters offered safety in numbers but suffered severely diminished experience returns, since the finite experience pool of the earlier floors was spread too thin among too many members.[3|21]}}
+
+{{Spoiler|book=5|spoiler=On the Eighth Floor, parties were forced to splinter into unchangeable "squads" of five or fewer members to tackle specific floor challenges, though they technically remained in the same overall party.[5|Epilogue]}}
+
+{{Spoiler|book=8|spoiler=Crawlers also occasionally leave their parties for strategic reasons. Ahead of an exceptionally dangerous plan on the Eleventh Floor, Carl temporarily left the Royal Court of Princess Donut so that Donut would not be killed or penalized if he died during the attempt.[8|69][8|90]}}
+
+==Dungeon Lore==
+{{Spoiler|book=5|spoiler=Beginning on the Sixth Floor, Borant Corporation capped party sizes at 30 crawlers, automatically breaking up any larger group, and introduced the much larger Guild system that the party mechanic serves as the building block for.[5|8] To prevent mega-parties while still allowing crawlers to collaborate, the Guild system allows up to five separate parties or individuals to join together under a single charter.[5|8] This grants the allied parties a massive shared common area connecting their personal spaces without forcing them into a single party interface.[5|8] Unlike parties, guild members do not share experience by default, ensuring crawlers don't dilute their leveling potential, though they can opt to share experience for a fee.[5|8]}}
+
+==Trivia==
+{{Spoiler|book=5|spoiler=Minions can either be assigned to the party as a whole or to an individual crawler, which affects what actions, such as creating clockwork copies, can be taken with them.[5|9]}}
+
+{{Spoiler|book=8|spoiler=Standard animals and pets can be officially integrated into a party as full crawler members if they are fed an Enriched Pet Biscuit, which grants them sapience, a crawler number, and access to the party interface.[8|16][8|94]}}
+
+==Speculation==
+{{Spoiler|book=3|spoiler=The "Large Party" Trap: Because the dungeon's system heavily rewards small groups with more concentrated experience and punishes large groups with diminishing returns[3|21], the AI and showrunners likely allow large "mega-parties" to form early on purpose. They know these crawlers will gain a false sense of security while becoming severely under-leveled, ensuring they are easily slaughtered for high viewer ratings when they reach the more difficult, deeper floors.}}
+
+==References==
+

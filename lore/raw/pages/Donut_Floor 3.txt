@@ -1,0 +1,83 @@
+This page documents Princess Donut's levels, stats, gear, skills, and spells as she progresses through the Third Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable" 
+!TIME
+!NOTES
+!LVL
+!STR 
+!INT
+!CON
+!DEX
+!CHA
+|-
+|}
+
+==Gear==
+===Starting Gear===
+{| class="dccTable mw-collapsible mw-collapsed" 
+!SLOT
+!GEAR
+|-
+|Head
+|Enchanted Crown of the Sepsis Whore
+|-
+|Neck 
+|Talisman of the Slate Butterfly (on collar)
+|-
+|Waist
+|Enchanted Fae Scale Quadruped Crupper of the Fleet
+|-
+|Legs
+|Bracelet of +2 DEX (front leg)
+|-
+|Tattoo
+|Desperado Pass Tattoo (back)
+|}
+
+===Gear Gained===
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|}
+
+==Skills==
+{| class="dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|}
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|}
+
+==Passive Effects==
+
+==Ratings==
+{| class="dccProgTable"
+!TIME
+!LEADERBOARD
+!VIEWS
+!FOLLOWERS
+!FAVORITES
+!PATRONS
+|-
+|}
+
+==References==
+
+{{DEFAULTSORT:Donut/Floor_03}}
+

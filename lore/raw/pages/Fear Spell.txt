@@ -1,0 +1,44 @@
+{{Spells
+|title1= {{PAGENAME}}
+|effect=
+| image1=Carl Art by klevinns.art.webp
+|caption-image1=Art by @klevinns.art, Instagram
+|cost= 3 mana
+|users=
+Carl
+|casting=
+|cooldown=
+|target=
+|duration=
+|associated equipment=
+}}
+
+{{PAGENAME}}  is a  spell that imbues fear into an enemy, causing them to either run away or lose stat points.
+
+==AI Description==
+
+Cost: 3 Mana
+
+If successfully cast, the effected mob either runs away, or stands its ground, but its Dexterity is lowered by an increasing amount per spell level. At level 5 it works on groups of enemies and a level 10 it has a 2% chance to paralyse an opponent and can be cast on a wide area.
+
+==Description==
+If Fear is attempted to be cast on mobs that are scary themselves (such as Terror the Clown), the crawler will receive the following message: 
+Warning: scary-ass mobs are immune to Fear effects. [2|4]
+
+Entities under the Magical Fervor buff will be immune to Fear. [2|20]
+
+An Alarm Module can be imbued with Fear, but for crawlers with a low Trap Engineer Skill, this can only be done at a Sapper's Table. [3|1]
+
+==Story==
+===Book 2===
+Carl chooses the Compensated Anarchist Class which gives access to the Fear Spell.[2|2] He first attempts to use it on Terror the Clown while fighting the Former Circus Lemurs, but receives the following message: 
+Warning: scary-ass mobs are immune to Fear effects. [2|4]
+Carl later practices his Fear spell on mobs while grinding at the midpoint of the floor. The downside of the spell is that it makes mobs run away, denying the team experience points. To combat this, he develops the Special Play "Panic", that uses both Fear and Donut's Magic Missile spell. He raises his spell skill to 3. [2|12] 
+
+Carl attempts to use the spell on the Brain Boilers outside the Medium Skyfowl Settlement, but due to their psionic affinity the spell is greatly weakened. [2|14]
+
+===Book 3===
+*Carl trains his Fear Spell while hunting Cornets on the Iron Tangle. [3|6]
+*Carl casts his Fear Spell as part of the Play Doozy against Gore-Gore. [3|11]
+==References==
+

@@ -1,0 +1,27 @@
+Web snippets used for tables/canon-floor-2.json and ledger section 9.2 (retrieved 2026-10-04 America/Chicago). Working copy; short paraphrased notes only.
+These are NOT the novels' text and are not ledger-quotable (no WEB: kind in tools/ledger_check.py). Reddit was not read directly (a search snippet is noted below). Fandom direct fetch returned 403; search snippets were used instead.
+
+[WEB:afterword-b1-ch45] https://afterword.to/books/dungeon-crawler-carl-dinniman-pwp3y2/chapters/44 (search snippet; chapter summary site)
+- Kobold boss chamber is a converted municipal dog pound; most cages hold injured Danger Dingoes; a pet biscuit turns a dingo's map dot from red to white; the summary counts fourteen caged dingoes and about forty kobolds escorting Ralph in a small metal-reinforced cage; a wall button opens every cage; the one-eyed dingo swallows Ralph, then its head bursts; a stun proc and a bare-foot stomp finish him.
+- Local wiki (raw/pages/Ralph.txt) already agrees on the pound, the red-to-white dot, about forty kobolds, the dingo that eats Ralph, and the burst head. The fourteen-cage count is only here.
+
+[WEB:afterword-b1-ch46] https://afterword.to/books/dungeon-crawler-carl-dinniman-pwp3y2/chapters/45 (search snippet)
+- After Ralph dies the chamber is a pet reward room: a fighting pit with bones against the wall, chairs, and a line of ten cages of assorted monsters; two achievements fire; only one creature can be claimed; Mongo is in the last cage. The freed dingoes scatter into the hallways (summary says thirteen; ch45 summary says fourteen caged -> count is inconsistent between summaries).
+
+[WEB:afterword-b1-ch37] https://afterword.to/books/dungeon-crawler-carl-dinniman-pwp3y2/chapters/36 (search snippet)
+- The grub flood follows a boss battle where 835 monsters died; grubs spawn 1-15 per corpse when janitor mobs are unavailable, capped at 5,000 per quadrant; destroying corpses stops leveling, not spawning; Brandon's team moves 39 residents on a chain-linked train of wheeled chairs built by Imani and Chris; Brandon's team had cleared "Mind Horrors (floating brain bosses)" for training. Zev (by direct mental contact) says the elderly storyline polarizes viewers. (Wording of "Mind Horror bosses" vs the wiki's "Giant Blimp" neighborhood boss is unresolved: backlog.)
+
+[WEB:afterword-b1-ch39] https://afterword.to/books/dungeon-crawler-carl-dinniman-pwp3y2/chapters/38 (search snippet)
+- After the recap episode the dungeon announces safe rooms close one hour before floor collapse and teleport occupants outside. Carl had planned to wait 28 hours for a cooldown; the rule forces an immediate change. A wave of grubs pulls the Rage Elemental off the door; the summary says it kills 666 grubs before returning to the door (the wiki says it shreds thousands of grubs in under a minute; counts differ).
+
+[WEB:manatoastmedia-b1-recap] https://manatoastmedia.com/dungeon-crawler-carl-book-1-recap/ (search snippet)
+- Ch30: on arrival the stairwell to Floor 3 is already visible on the minimap (northeast corner); walls are cinderblock with white lichen (the wiki says orange-tinted green lichen: colour differs). Ch31 announcement summary says patron spots "go to auction at the start of each floor" (the wiki transcription says auctions begin with the fourth floor).
+
+[WEB:fandom-meadow-lark] https://dungeon-crawler-carl.fandom.com/wiki/Meadow_Lark (search snippet; matches local raw/pages)
+- Meadow Lark staff build a ten-car "giant centipede" of wheelchairs with a single Yog's Special Chain scroll to move 39 patients; Jack, Randall and Yolanda die; 36 patients, Brandon, Chris and Imani reach the Third Floor.
+
+[WEB:dccwiki-book1-bestiary] https://dungeon-crawler-carl.wiki/book-1/bestiary/ (search snippet; same text as local sources/fanwiki/book1-bestiary.txt)
+- Floor 2 bosses table lists Krakaren as a Borough Boss and Rage Elemental as a Wandering Boss; the local fandom mirror calls the Krakaren Clone a Neighborhood Boss.
+
+[WEB:reddit-hedgehogs] https://www.reddit.com/r/DungeonCrawlerCarl/comments/1u7lhgb/reoccuring_hedgehogs/ (search snippet only)
+- A reader notes the "Satan's Lil' Hedgehogs" mob removed in the Book 1 ch39 patch notes and Satan the Hedgehog as a Book 8 boss (not fought). Later-book link only; not used for Floor 2 canon.

@@ -1,0 +1,19 @@
+{{SpoilH | 4}}
+{{Spells
+|title1= {{PAGENAME}}
+|target=Self
+|effect=Walk on walls/ceilings
+|duration=Dexterity x 2 seconds
+|associated equipment=Enchanted Toe Ring of the Leprous Bandit
+|users= Carl
+}}{{Quote | quote = “Hey, I’m like spiderman. At least my feet are."}}
+
+Sticky Feet is a Benefit that allows the Crawler to walk barefoot on any non-horizontal surface for (DEX x 2) seconds, once every six hours.[4|2]
+
+==AI Description==
+
+Sticky Feet.
+Once every six hours, for (Dexterity x 2) seconds, you may walk upon a non-horizontal surface, such as a wall or ceiling. Gravity will not change, so leave your beer on the ground and make sure you tuck in your shirt first. Your bare feet must be in contact with the surface. No socks, no shoes. 
+
+==References==
+

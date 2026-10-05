@@ -1,0 +1,34 @@
+{{SpoilH | 3}}
+{{Item
+ | title         = Potion of Invisibility
+ | image         = 
+ | type          = Potion
+ | effects       = Turns the drinker invisible for 2 * intelligence seconds
+ | source        = Reward Room prize case / Adventurer Box / Silver Lucky Bastard Box
+}}
+
+{{Quote | quote = Guess what this does. System AI [3|5]}}
+
+Carl receives his first Potion of Invisibility in a Reward Room prize case on the Fourth Floor.[3|5]
+
+==Description==
+Turns the drinker invisible for 2 x intelligence seconds.
+
+==Story==
+===Book 3===
+*Carl receives a Potion of Invisibility from a bag he claims from the porter Pierre while on the Yellow line on the Iron Tangle. His bag is a black bag filled with women's lingerie, but tucked into the side of the bag is the potion. [3|5]
+
+===Book 4===
+{{Spoiler | book = 4 | spoiler =
+These potions become more common as Carl and Donut descend through the dungeon. They get one from an Adventurer Box on the Fifth Floor.[4|28] 
+}}
+
+===Book 5===
+{{Spoiler | book = 4 | spoiler =
+By the Sixth Floor they have enough to start using a pre-planned move they call "Predator", which requires both of them to be invisible.[5|5]
+}}
+
+==References==
+
+{{Navbox Items}}
+

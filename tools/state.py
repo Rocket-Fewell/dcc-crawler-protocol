@@ -1517,6 +1517,10 @@ def cmd_loot(a):
         rows = rows[-a.n:]
         return {"ok": True, "loot": rows}, "\n".join(loot.log_line(r) for r in rows) or "(no loot draws)"
     if a.action == "totals":
+        if not getattr(a, "include_credits", False):
+            given = [f for f, v in (("--credit-sources", a.credit_sources), ("--assume-floor", a.assume_floor)) if v is not None]
+            if given:
+                raise StateError(f"{' and '.join(given)} only apply to the ALL-IN view; add --include-credits (e.g. `loot totals --include-credits {given[0]} ...`)")
         t = loot.totals(ledgers.read("loot"), a.crawler, a.totals_floor)
         sales = [e for e in ledgers.read("story-box") if (e.get("event") == "sold" or (e.get("event") == "transferred" and e.get("price")))
                  and (not a.crawler or (e.get("crawler") or "").lower() == a.crawler.lower()) and (a.totals_floor is None or e.get("floor") == a.totals_floor)]
@@ -1972,7 +1976,7 @@ def cmd_transfer(a):
     prov = _story_provenance(it)
     floor = state["campaign"]["current_floor"]
     if a.dry_run:
-        return {"ok": True, "dry_run": True}, f"DRY RUN: {src['name']} -> {dst['name']}: {a.qty}x {it['name']}" + (f" for {price} credits" if price else " (no payment)") + (f"\nFLAG: Story Box item sold between crawlers; story value {prov['story_value']:g} is provenance only" if prov and price else "")
+        return {"ok": True, "dry_run": True}, f"DRY RUN: {src['name']} -> {dst['name']}: {a.qty}x {it['name']}" + (f" for {price} credits" if price else " (no payment)") + (f"\nFLAG: Story Box item transferred between Crawlers for {price} credits (a transfer, not a sale: NOT counted as income); story value {prov['story_value']:g} is provenance only" if prov and price else "")
     ex = {"*": prov} if prov and price else {"*": {"transfer_item": it["name"]}}
     _RUN.update(reason=f"{'Sold' if price else 'Transferred'} {a.qty}x {it['name']} {src['name']} -> {dst['name']}: {a.reason.strip()}", source="transfer", ledger_extra=ex if price else None)
 
@@ -1994,7 +1998,7 @@ def cmd_transfer(a):
                                      "story_value": prov["story_value"], "box_id": prov["story_box_id"], "reason": a.reason.strip()})
     text = f"{src['name']} -> {dst['name']}: {a.qty}x {it['name']}" + (f" for {price} credits" if price else " (no payment)")
     if prov and price:
-        text += f"\nFLAG: Story Box item sold between crawlers. Story value {prov['story_value']:g} is provenance only and was NOT credited."
+        text += f"\nFLAG: Story Box item transferred between Crawlers for {price} credits (a transfer, not a sale: NOT counted as income). Story value {prov['story_value']:g} is provenance only and was NOT credited."
     return {"ok": True, "price": price, "story_box_item": bool(prov)}, text
 
 
@@ -2008,9 +2012,9 @@ MAX_FLOOR = 18
 
 
 def _ascii_uint(raw):
-    """Whole number written with ASCII digits 0-9 only (no signs, decimals, spaces inside, or look-alike Unicode digits). Returns int or None."""
-    t = str(raw)                      # no strip: " 5", "5 " and "5\n" are refused, as are look-alike Unicode digits, signs and decimals
-    return int(t) if re.fullmatch(r"[0-9]+", t) else None
+    """Whole number written with ASCII digits 0-9 only (no signs, decimals, spaces, leading zeros or look-alike Unicode digits). Returns int or None."""
+    t = str(raw)                      # no strip: " 5", "5 " and "5\n" are refused, as are look-alike Unicode digits, signs, decimals and leading zeros ("05", "00"; a lone "0" is fine)
+    return int(t) if re.fullmatch(r"0|[1-9][0-9]*", t) else None
 
 
 def _floor_arg(raw, default):
@@ -2019,7 +2023,7 @@ def _floor_arg(raw, default):
         return default
     n = _ascii_uint(raw)
     if n is None or not 1 <= n <= MAX_FLOOR:
-        raise StateError(f"--floor must be a whole number from 1 to {MAX_FLOOR} (got {str(raw).strip()!r})")
+        raise StateError(f"--floor must be a whole number from 1 to {MAX_FLOOR} (got {str(raw)!r})")
     return n
 
 
@@ -2117,7 +2121,7 @@ def cmd_loot_body(a):
         elif _ascii_uint(a.coins) is not None:
             coins = _ascii_uint(a.coins)
         else:
-            raise StateError(f"--coins must be a whole number of credits written with the digits 0-9 only (no spaces, signs, decimals or other characters), or 'all' (got {a.coins!r})")
+            raise StateError(f"--coins must be a whole number of credits written with the digits 0-9 only (no spaces, signs, decimals, leading zeros or other characters), or 'all' (got {a.coins!r})")
         if coins < 0 or coins > dead["credits"]:
             raise StateError(f"{dead['name']} has {dead['credits']} credits; cannot loot {coins}")
     wanted = []
@@ -2129,7 +2133,7 @@ def cmd_loot_body(a):
         if "=" in spec:
             n = _ascii_uint(q)
             if n is None:
-                raise StateError(f"--item {spec!r}: the quantity must be a whole number of 1 or more written with digits 0-9 (not negative, not a decimal, not text)")
+                raise StateError(f"--item {spec!r}: the quantity must be a whole number of 1 or more written with digits 0-9 (not negative, not a decimal, no leading zeros or spaces, not text)")
             if n < 1:
                 raise StateError(f"--item {spec!r}: a quantity of 0 takes nothing; use 1 or more, or leave the item out")
         else:
@@ -2682,9 +2686,31 @@ def cmd_use_revive(a):
     return {"ok": True, "message": text}, text
 
 
-def _check_item_record(tag, rows, rec, label, seq, required_from):
+# Fixed cutoff for the item fingerprint (item_count + items_digest) on floor_lost and body_loot rows. It lives in code, NOT in the ledger, so stripping fingerprints from
+# rows cannot move it (Accountant, job 7 follow-up). Chosen from the live sessions/credit-ledger.jsonl as read on 2026-10-04 22:50 CT: it holds entries #1-#10 (last ts
+# 2026-10-04T15:58:00-05:00) and NO floor_lost or body_loot row at all (nor does the deleted-archive), so the first fingerprinted row of either kind can only be #11 or later.
+# A row is exempt (old, written before fingerprints) only if it is BOTH numbered below FINGERPRINT_CUTOFF_SEQ AND stamped at or before FINGERPRINT_CUTOFF_TS; every other
+# floor_lost / body_loot row must carry item_count and items_digest. In the live ledger no row is exempt.
+FINGERPRINT_CUTOFF_SEQ = 11
+FINGERPRINT_CUTOFF_TS = "2026-10-04T15:58:00-05:00"
+
+
+def _fingerprint_required(e):
+    """True unless the row predates the fixed cutoff on BOTH its seq and its timestamp (a row with no usable seq or ts is never exempt)."""
+    seq = e.get("seq")
+    if not _is_int(seq) or seq >= FINGERPRINT_CUTOFF_SEQ:
+        return True
+    try:
+        ts = dt.datetime.fromisoformat(str(e.get("ts")))
+        cut = dt.datetime.fromisoformat(FINGERPRINT_CUTOFF_TS)
+        return ts.tzinfo is None or ts > cut
+    except (TypeError, ValueError):
+        return True
+
+
+def _check_item_record(tag, rows, rec, label, required):
     """Shared item check for floor_lost.destroyed and body_loot rows: well-formed rows, no duplicates, item_count == summed quantities, and the fingerprint (items_digest) matches.
-    A row without a fingerprint passes only if it predates the first fingerprinted row of its kind (required_from)."""
+    A row without item_count / items_digest passes only if it is exempt under the fixed cutoff (required=False)."""
     out = []
     if not all(isinstance(i, dict) and isinstance(i.get("name"), str) and i["name"].strip() and _is_int(i.get("qty")) and i["qty"] >= 1 for i in rows):
         return [f"{tag} has a malformed {label} item row (needs a name and a quantity of 1 or more)"]
@@ -2693,16 +2719,16 @@ def _check_item_record(tag, rows, rec, label, seq, required_from):
         out.append(f"{tag} lists the same {label} item twice")
     total = sum(i["qty"] for i in rows)
     if not _is_int(rec.get("item_count")):
-        if label == "destroyed" or rec.get("items_digest") is not None or (required_from is not None and _is_int(seq) and seq >= required_from):
-            out.append(f"{tag} does not record item_count")
+        if required or label == "destroyed" or rec.get("items_digest") is not None:
+            out.append(f"{tag} does not record item_count" + (f" (required for entries from #{FINGERPRINT_CUTOFF_SEQ} or stamped after {FINGERPRINT_CUTOFF_TS})" if required else ""))
     elif rec["item_count"] != total:
         out.append(f"{tag} says item_count {rec['item_count']} but the {label} items add up to {total} (items list or count was edited)")
     dg = rec.get("items_digest")
     if dg is not None:
         if dg != _items_digest(rows):
             out.append(f"{tag}: the {label} items list does not match its recorded fingerprint (edited after it was written)")
-    elif required_from is not None and _is_int(seq) and seq > required_from:
-        out.append(f"{tag} has no items fingerprint (required for entries after #{required_from})")
+    elif required:
+        out.append(f"{tag} has no items fingerprint (required for entries from #{FINGERPRINT_CUTOFF_SEQ} or stamped after {FINGERPRINT_CUTOFF_TS})")
     return out
 
 
@@ -2710,13 +2736,19 @@ def _verify_floor_events(entries, balances):
     """floor_lost: balance 0 and destroyed.coins == -delta (the exact coins), items listed. body_loot: each transfer_id has one from and one to row whose deltas cancel
     (coins counted once, never twice or lost) and whose item lists agree. A missing side is tolerated only when that Crawler is no longer in state.json (deleted, archived)."""
     out = []
-    # Backward compatible: rows written before the item fingerprint existed stay verifiable without one. Once a digested row of a kind appears at seq S, every later row
-    # of that kind must carry one too (so stripping the fingerprint from a new row is itself caught).
-    req = {}
-    for kind in ("floor_lost", "body_loot"):
-        seqs = [e["seq"] for e in entries if e.get("event") == kind and _is_int(e.get("seq"))
-                and isinstance(((e.get("destroyed") or {}) if kind == "floor_lost" else e).get("items_digest"), str)]
-        req[kind] = min(seqs) if seqs else None
+    # Rows written before the item fingerprint existed stay verifiable without one only if they predate the FIXED cutoff above (seq AND ts); the cutoff is not derived
+    # from the ledger, so stripping fingerprints cannot move it. An exempt-looking row must also sit where an old row would: unique seq, before every later-numbered row.
+    seq_count = {}
+    for e in entries:
+        if _is_int(e.get("seq")):
+            seq_count[e["seq"]] = seq_count.get(e["seq"], 0) + 1
+    max_seen = 0
+    for e in entries:
+        sq = e.get("seq") if _is_int(e.get("seq")) else None
+        if e.get("event") in ("floor_lost", "body_loot") and not _fingerprint_required(e) and (seq_count.get(sq, 0) > 1 or (sq is not None and sq < max_seen)):
+            out.append(f"{e['crawler']}: {e['event']} entry #{sq} claims to predate the item-fingerprint cutoff (#{FINGERPRINT_CUTOFF_SEQ}) but its seq is reused or out of order")
+        if sq is not None:
+            max_seen = max(max_seen, sq)
     for e in entries:
         if e.get("event") != "floor_lost":
             continue
@@ -2728,7 +2760,7 @@ def _verify_floor_events(entries, balances):
         elif d["coins"] != -e["delta"]:
             out.append(f"{e['crawler']}: floor_lost entry #{e.get('seq')} says {d['coins']} coins destroyed but the delta is {e['delta']:+d}")
         if isinstance(d, dict) and isinstance(d.get("items"), list):
-            out += _check_item_record(f"{e['crawler']}: floor_lost entry #{e.get('seq')}", d["items"], d, "destroyed", e.get("seq"), req["floor_lost"])
+            out += _check_item_record(f"{e['crawler']}: floor_lost entry #{e.get('seq')}", d["items"], d, "destroyed", _fingerprint_required(e))
     groups = {}
     for e in entries:
         if e.get("event") == "body_loot":
@@ -2752,7 +2784,7 @@ def _verify_floor_events(entries, balances):
             out.append(f"body_loot {tid}: the item lists of the two rows differ")
         for r in (f, t):
             if isinstance(r.get("items"), list):
-                out += _check_item_record(f"body_loot {tid} ({r.get('role')} row, {r['crawler']}, entry #{r.get('seq')})", r["items"], r, "looted", r.get("seq"), req["body_loot"])
+                out += _check_item_record(f"body_loot {tid} ({r.get('role')} row, {r['crawler']}, entry #{r.get('seq')})", r["items"], r, "looted", _fingerprint_required(r))
             else:
                 out.append(f"body_loot {tid}: the {r.get('role')} row for {r['crawler']} does not list the looted items")
         if f.get("items_digest") != t.get("items_digest") or f.get("item_count") != t.get("item_count"):
@@ -3056,8 +3088,8 @@ def build_parser():
     sp.add_argument("--no-publish", dest="no_publish", action="store_true", help="story-box: do not refresh the player's channel card")
     sp.add_argument("--floor", dest="totals_floor", type=int, help="totals: only this floor")
     sp.add_argument("--include-credits", dest="include_credits", action="store_true", help="totals: ALSO show the all-in view (boxes + Story Box sale proceeds + credits earned from encounters/R1 toasts) and the optional Floor 2 valve check (budget A12). Off by default; the normal totals are unchanged")
-    sp.add_argument("--credit-sources", dest="credit_sources", help="totals --include-credits: comma list of credit-ledger sources that count as earned credits (default encounter,achievement,toast,r1; box is never counted twice)")
-    sp.add_argument("--assume-floor", dest="assume_floor", help="totals --include-credits: floor (1-18) for earned credits whose ledger entry has no floor recorded (default: shown as 'floor not recorded')")
+    sp.add_argument("--credit-sources", dest="credit_sources", help="totals --include-credits: comma list of credit-ledger sources that count as earned credits (default encounter,achievement,toast,r1; box is never counted twice); needs --include-credits")
+    sp.add_argument("--assume-floor", dest="assume_floor", help="totals --include-credits: floor (1-18) for earned credits whose ledger entry has no floor recorded (default: shown as '(no floor set)'); needs --include-credits")
     sp.add_argument("-n", type=int, default=10)
 
     sp = add("sell", cmd_sell, "sell CRAWLER ITEM --reason TEXT [--qty N] [--price N] [--floor N]: credits via the ledger; Story Box items sell to the System at sale_value x floor multiplier")

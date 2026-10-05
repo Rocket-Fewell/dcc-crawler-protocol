@@ -1,0 +1,97 @@
+{{Item
+|title=Stairwells
+|image=Stairwells by Outfold.jpg
+|imagecaption=Art by u/OutFold, Reddit
+|type=Dungeon Mechanic
+|keywords=
+|effects=Allows passage between floors
+|source=World Dungeon / System AI
+|buy=
+|sell=
+}}
+
+{{Quote|The only way for a crawler to move from one floor to the next is via a stairwell. That's it. It is an unbreakable rule. There is no skipping floors.|Crawler Rosetta, 9th Edition of the Dungeon Anarchist's Cookbook[6|61]}}
+
+Stairwells are a feature of the Dungeon that allows for passage between floors.[1|1] Different floors of the dungeon may have different rules governing how their stairwells are accessed.
+
+==Appearance==
+Stairwells are generally well-lit, with warmth and light radiating up out of the opening.[1|2] On the First Floor, the entrance descended to a massive, double-wide door engraved with a stylized, oversized Kua-Tin.[1|2]
+
+{{Spoiler|book=3|spoiler=During Mordecai's crawl, the doors to the stairwells displayed the Syndicate logo rather than a Kua-Tin, suggesting the door art varies by season or operator.[3|30]
+On the Fourth Floor (the Iron Tangle), stairwells were clustered in hidden underground rooms, five to a chamber, ringed in a circle with light shining straight up over each one like a blazing spotlight.[3|18]}}
+
+{{Spoiler|book=5|spoiler=On the Seventh Floor (the Great Race), the stairwells had no stairs or doors at all. They were round, glowing portals suspended in the air that a crawler could enter from any direction, stacked vertically in a corkscrew column and physically pulling crawlers toward them.[5|Epilogue]}}
+
+===Gallery===
+
+Stairwells by Outfold.jpg|Art by u/OutFold, Reddit
+Stairwells by Erik Wilson.png|Official art by Erik Wilson[1|1]
+Stairwell by Mashermello.png|Art by u/Mashermello, Reddit
+
+==Mechanics==
+A crawler must locate and enter a stairwell before the floor's timer expires, or they will die in the level collapse along with everything else left behind.[1|1] The number of stairwells halves with each descent: there were 150,000 entrances from Earth down to the First Floor, 75,000 down to the Second Floor, and so on, the count halving (rounding up) all the way down to a mere two entrances and a single exit on the eighteenth floor.[1|1] Once a crawler descends, it is an unbreakable rule that they cannot return to the floor above.[1|14][6|61]
+
+If a crawler goes down a stairwell with low health, their health automatically refills.[1|4] Stairwells appear on the map as a white square, labeled with their destination, such as Stairwell to Floor Two.[1|21] Descending prematurely holds a crawler in stasis until the floor above collapses; descending within the recommended window, no earlier than six hours before collapse, avoids stasis and grants a head start over those who came before.[1|14]
+
+Mobs that wander onto a stairwell are not teleported away but destroyed outright by the dungeon's ruleset, which keeps a floor's monster ecology contained to that floor. On the First Floor, Rory warned Carl and Donut that climbing down the stairs is fatal for them, the body dissolving partway down.[1|15] Carl exploited this on the Second Floor to destroy a Rage Elemental, luring it into the stairwell hole.[1|40] After the defeat aired on the recap episode, the rule was changed so that non-sapient mobs reaching a stairwell would no longer be disintegrated.[1|44]
+
+{{Spoiler|book=4|spoiler=If a stairwell is embedded in a relatively moveable object, such as a small house, that structure can be repositioned with the stairwell still attached. The stairwell cannot, however, be taken out of its quadrant; on the Fifth Floor, Katia's group had to hack apart a flown house to dislodge its stairwell before they could move the house out of the area.[4|20]}}
+
+{{Spoiler|book=6|spoiler=A stairwell can never be moved into a saferoom or from one floor to another, nor can a stairwell ever be destroyed; one was observed surviving a direct hit from an Utter Annihilation wand, and an exit portal cannot be placed into a crawler's inventory.[6|61]}}
+
+On the earliest floors, stairwells appear in random, unguarded locations, but from the Fourth Floor onward they stop populating randomly and become guarded, so that reaching one may require completing quests or defeating bosses.[1|4] The specific conditions vary by floor:
+
+The following table contains spoilers through Book 7.
+{| class="mw-collapsible mw-collapsed fandom-table"
+|+Limitations on Stairwell Entry
+!Floor
+!Limitations
+|-
+|1
+|Stairwells down to the Second Floor do not populate or open until after the first episode of Dungeon Crawler World: Earth, roughly 30 hours in.[1|4]
+|-
+|2
+|No special descent restriction noted; however, Safe Rooms close one hour before the floor collapses.[1|39]
+|-
+|3
+|
+|-
+|4
+|Crawlers may not descend early; the stairwells open only six hours before collapse.[3|3]
+|-
+|5
+|A stairwell sits in each quadrant castle's throne room and opens when that castle is taken, but the stairwell does not become passable until all four of a bubble's castles (Land, Sea, Air, and Subterranean) have fallen.[4|1]
+|-
+|6
+|
+|-
+|7
+|The stairwells are round, in-air portals reached only by completing the Great Race maze.[5|Epilogue]
+|-
+|8
+|Stairwell chambers are sealed and can only be opened with a designated key.[6|52]
+|-
+|9
+|293 stairwell chambers are seeded across the field; they do not open until Faction Wars is won or 30 hours remain before collapse, whichever comes first.[7|1]
+|}
+
+==Story==
+{{Spoiler|book=6|spoiler=On the Eighth Floor, crawlers were pitted against one another to collect a limited number of keys needed to unlock the stairwell chambers, with stolen and lost keys driving much of the floor's crawler-on-crawler violence.[6|52][6|53]
+Realizing the stairwells were indestructible while their chambers were sealed by walls no ordinary force could breach, Carl devised a way out for the many crawlers left without keys. By freeing and empowering the demon prince Amayon, whose portal to Sheol was charged strongly enough to engulf the entire planet, the region was sucked skyward; as each sealed stairwell chamber was drawn into the hell portal, its walls teleported away and exposed the bare stairwell, letting any crawler positioned directly beneath the chamber strike the stairwell as they were swept up to the next floor.[6|62][6|72]}}
+
+{{Spoiler|book=7|spoiler=By the Ninth Floor, only 293 stairwell chambers remained, and they would not open until Faction Wars was won or 30 hours remained before collapse.[7|1]}}
+
+==Trivia==
+* Crawlers receive the You Found Stairs! achievement the first time they locate a stairwell down to the next floor.[1|30]
+* Because mobs cannot use the stairwells to travel, a floor's monster ecology generally stays contained to that floor.[1|40]
+
+{{Spoiler|book=5|spoiler=Teleporting to a stairwell station early in a floor can earn the "I Wanna Go Home!" achievement, whose only reward is mocking "fatherly advice."[5|6]}}
+
+==Speculation==
+{{Spoiler|book=6|spoiler=Because stairwells are completely indestructible and cannot be moved into an inventory or saferoom, it is plausible that they serve as foundational anchor points around which the dungeon's world-building engines construct the surrounding terrain of each floor.[6|61]
+The deliberate halving of stairwells per floor[1|1] may be a design choice meant to inflate crawler-on-crawler conflict and consolidate viewership into fewer, bloodier broadcasts as the season approaches the Ascendency.}}
+
+==References==
+
+{{Navbox Items}}
+

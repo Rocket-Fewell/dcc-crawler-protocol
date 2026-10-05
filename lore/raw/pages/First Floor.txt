@@ -1,0 +1,296 @@
+{{Dungeon Floor
+| title1 = The First Floor
+|image1=First Floor.webp
+|caption-image1=Art by @MeaLusus, Instagram
+| preceded_by = Dungeon Entrance
+| followed_by = Second Floor
+| theme = Tutorial / Generic Fantasy
+| duration = 5 Days
+| start_date = Tues Jan 03, approx. 2:30 AM PST.
+| end_date = Sun Jan 08, approx. 2:30 AM PST
+| exits = 75,000
+| crawlers = You have been designated Crawler Number ___.  You have been assigned the Crawler Name “___.”
+You are assigned the race of Human. You are currently level 1. You may choose a new race and class as soon as you descend to the third floor. Your  stat points have been assigned based on your current physical and mental profile. See the stat menu for more details.[1|2]
+
+{{Spoiler | book = 4 | spoiler = Biologically female crawlers receive an additional notification stating that their menstrual cycles have stopped and they will not be able to conceive until after the crawl.[4|25]}}
+
+{{Spoiler | book = 5 | spoiler = When pregnant women and children "under the age of maturity" attempt to enter the First Floor, they are instead teleported to the Kinder Facility on the Earth's surface.[5|37]  The System AI does not seem to explain this to anyone accompanying the pregnant woman or child; to these crawlers, it appears as though their loved ones have simply vanished.[4|25]}}
+
+:See Also:  New Crawler Mechanics •  List of First Floor Achievements & Rewards
+
+==Introductory Announcement==
+Cascadia makes the introductory announcement after the stairwells from the surface close, one hour after the Dungeon opens (approximately 3:30 AM PST).  Her general tone is similar to a manager opening a store for business:[1|1][1|4]
+
+"Hello, Crawlers! The dungeon is now sealed. We have a diverse group joining us this season, and we are very happy to have you here. We had just under 13 million human crawlers make it through the gates and into the dungeon. We are already down to under 10 million. 
+A quick note, the entrances to the second floor will not open up until the introductory episode of Dungeon Crawler World tunnels, which will be in approximately 30 of your hours. Once that happens, the entrances to the  second level will populate. There will be no lag time for the appearance of additional levels.
+On behalf of the Borant Corporation I wanted to thank you for volunteering, and I wish you all good luck and a happy crawl."[1|4]
+
+==Layout==
+
+The First Floor is a network of halls and tunnels organized in a giant square grid.  Each equally-sized square is bordered by wide passageways and intersected by twisty, maze-like halls, tunnels, and dead ends laid out like a condensed version of the city above.  Each square contains four neighborhoods, and each neighborhood has its own area-specific mob and neighborhood boss.[1|8][1|15]  The floor is enormous, by some accounts spanning an area nearly as large as the surface of the Earth itself.[1|4]
+
+The first main artery that Carl finds is dimly illuminated by torches and approximately 30' Wide x 30' High (9.14m x 9.14m), stretching as far as he can see.  Alleyways of various widths and heights branch from its walls; some alleys are hewn from smooth stone, others have "green, lichen-like growths" glowing on dark red brick walls or are lit by bright torches, and others are shrouded in absolute darkness.[1|2][1|3][1|8] The various halls are humid and stuffy.[1|10]
+
+===Restrooms===
+Restrooms (with one complimentary roll of toilet paper) appear roughly every 0.25 mile (0.4 km).  The doorways came from commercial buildings around the world and still bear men/women symbols or handwritten signs; however, the mismatched doors are portals that always open to the same bathroom stall assigned to the crawler.   Carl's restroom is cramped and contains only a silver toilet and a roll of toilet paper;  Princess Donut's contains a litterbox.[1|8]
+
+For the first thirty hours, if one crawler opens a restroom door but a second crawler enters the room, the second crawler explodes in a mess of gore.[1|14] For the first sixty hours, there is an equally dangerous but unexplained "toilet suction" issue.[1|20]
+
+===Safe Rooms===
+Safe Rooms appear every few miles.  On the first floor, these take the form of fast food restaurants and rest areas teleported from Earth's surface: a Peruvian Taco Bell, a Waffle House from Alabama, a fast-food restaurant with a ball pit, a DMV waiting room, etc.[1|9]
+
+Some safe rooms are full-service dining areas staffed by Bopca Protector non-combatant NPCs, but smaller unstaffed safe rooms may instead offer once-per-day servings of Experience Cookies or +1 DEX candies.[1|9][1|22]  Safe Room bathrooms may include showers and amenities, or only toilet stalls.  Some Safe Rooms have rooms to rent (for free), while others have a few cots to sleep on and maybe a curtain for privacy.  
+
+All safe rooms have three television screens: one screen shows countdown timers to level collapse and the next episode of Dungeon Crawler World: Earth above the number of remaining crawlers, which clicks each time it goes down; one screen that shows the recap episode when it airs, but otherwise shows the message Leaderboard will populate upon collapse of the third level; and one screen showing information specific to the safe room.[1|9]
+
+:See Also: Safe Rooms
+
+===Stairwells===
+Roughly (32) hours after the Dungeon opens, 75,000 stairwells are "randomly" distributed across the First Floor.[1|14] A stairwell is installed inside all Borough Boss and City Boss Chambers, but many stairwells are not guarded.[1|22]
+
+If a crawler descends the stairs with more than six hours to level collapse, they will be held in stasis until the collapse.  If a crawler descends with six hours or less remaining on the countdown timer, they will have a head start on the Second Floor.[1|22]
+
+===Tutorial Guild Halls===
+Tutorial Guild Halls liberally populate the first and second floors.  Crawlers must complete the Tutorial to receive access to the full Heads-Up Display (HUD) and  Crawler Menus, including Inventory and Loot Boxes.  After completing the Tutorial, the guildmaster is designated as that crawler's Game Guide, and the crawler will automatically portal to that Game Guide's room every time they enter a Tutorial Guild Hall.
+
+:Read More:  Crawler Mechanics • Heads-Up Display (HUD) • Tutorial
+==Important Events==
+
+* Upon Entry to the Floor: Crawlers enter the dungeon.
+* Tutorial Guild: Crawlers are recommended (but not required) to locate a tutorial guild to gain access to HUD features.
+* Stairwell: No limitations on time to enter Stairwells.
+
+==Mobs & Bosses==
+
+===Mobs===
+On the First Floor, mobs range in level from 1 to 5, and stop spawning in a neighborhood after the local boss is killed.[1|15]  The first time a crawler kills a mob, they receive the You've Killed a Mob! Achievement and unlock the ability to earn  experience points.[1|5]  A level 2 mob yields ~50 experience points.[1|19]
+
+Each neighborhood has a local mob, but Level 2 Rats seem to infest every neighborhood regardless of the mobs.[1|15][1|20]  These rats also function as the floor's "janitor mobs," consuming the corpses of fallen crawlers.[1|8][1|30]  Although the first floor mobs are low level, some intelligent mobs (like the Goblins) are aware that the Dungeon is a construct.  
+
+Mobs drop skins, organs, and other items that can be used in crafting later.  They will not start dropping gold until the Second Floor.[1|4]
+
+===Bosses===
+ Bosses cannot exit Boss Chambers on this floor.  There are four neighborhood bosses in each square; these range in level from 7 to 9, and are mostly caricatures of an Earth or Syndicate stereotype mashed together with the local mob.[1|15]  Generally, each boss only has one main attack.[1|26]
+
+Borough Bosses are fewer between, and their lairs may be identified by abnormal curves in the otherwise straight east- and west- arteries.[1|21]  All Borough Bosses and City Bosses on the level have a  stairwell in their arena.[1|22]  While several Borough Bosses are defeated, no City Bosses are killed on the First Floor.  The first group to defeat a Borough Boss receives Platinum Weapon Boxes in addition to Silver Boss Boxes.[1|14]
+
+==Loot==
+The first two floors are designed to load crawlers up with a variety of loot so that they can experiment with possible builds. By the time a crawler arrives on the Third Floor, they should have a good idea of what class and race will work for them.[1|12]  On the first floor, low-tier Loot Boxes commonly contain  torches and bandages, but no gold. 
+
+:See Also:  Looting Mechanics • Loot Boxes
+
+==Story==
+Carl and Donut narrowly escape the freezing surface of Earth by descending an ornate, wrought-iron staircase into the glowing warmth of the First Floor.[1|1][1|2]  Shortly after arriving, they are chased by a Goblin Murder Dozer and stumble into a Tutorial Guild, where they are briefed on the Dungeon's reality by a game guide named Mordecai, a Rat Hooligan.[1|2][1|3]
+
+Setting out to survive, Carl and Donut steadily level up by grinding through various mob territories, including those populated by Bad Llamas, explosive Rot Stickers, and Troglodytes.[1|8][1|19][1|24]  They defeat two neighborhood bosses: a garbage-collecting monster known as the Hoarder[1|12] and a troglodyte boss known as the Juicer.[1|15]
+
+Near the end of the floor's timer, the pair encounter another group of human survivors from a retirement home called Meadow Lark, led by a crawler named Brandon.[1|22]  Working together, they set a trap using Carl's explosives and the Dungeon's architecture to defeat a massive, rolling Borough Boss called the Ball of Swine.[1|26]  Following the battle, the group safely descends one of the 75,000 stairwells to the Second Floor before the level collapses.[1|27]
+
+== Achievements ==
+{| class="mw-collapsible fandom-table" style="width:100%"
+|+Achievements for the First Floor
+!Achievement
+!For
+!Reward
+|-
+|Crazy Cat Lady Achievement
+|Entering the World Dungeon accompanied by a cat 
+|Bronze Pet Box
+|-
+|Trailblazing Crazy Cat Lady Achievement
+|Being the first crawler to enter the World Dungeon accompanied by a cat
+|Legendary Pet Box
+|-
+|Early Adopter Achievement
+|Being one of the first 5,000 crawlers to enter a new World Dungeon
+|Silver Adventurer Box
+|-
+|Empty Pockets Achievement
+|Entering the dungeon with no supplies 
+|Bronze Adventurer Box
+|-
+|Why Aren't You Wearing Pants Achievement
+|Entering the dungeon wearing no pants 
+|Gold Apparel Box
+|-
+|Unarmed Combat Achievement
+|Entering the dungeon without any weapons
+|Bronze Weapon Box
+|-
+|Loner Achievement
+|Entering the dungeon without any human companions
+|None
+|-
+|Fall Into An Obvious Trap Achievement
+|Walking into a trap 
+|None
+|-
+|You've Discovered and Read an Official Dungeon Sign Achievement
+|Reading dungeon signage
+|All signage will be highlighted; nearby guilds appear on minimap
+|-
+|You've Inflicted Damage on a Mob Achievement
+|Inflicting damage on a mob
+|None
+|-
+|You've Killed a Mob Achievement
+|Killing a mob
+|Crawler can now earn experience 
+|-
+|You’ve Killed an Armed Mob With Your Bare Fucking Hands Achievement
+|Killing a mob without weapons
+|Bronze Weapon Box
+|-
+|You’ve Killed a Mob a Higher Level Than Yourself Achievement
+|Killing a mob at a higher level 
+|Bronze Adventurer Box
+|-
+|You’ve Entered a Guildhall Achievement
+|Entering a guildhall
+|None
+|-
+|Podophilia Achievement
+|Using bare feet to crush and kill an opponent
+|Gold Shoe Box
+|-
+|Boom Achievement
+|Causing an explosion that shook the dungeon
+|Silver Goblin Box
+|-
+|Level-Up, Baby Achievement
+|Receiving enough experience to gain a level
+|None
+|-
+|Loot Achievement
+|Wearing something found in the dungeon
+|None
+|-
+|Oooh, Magic Achievement
+|Wearing magical gear for the first time
+|Bronze Adventurer Box
+|-
+|Boss Babe Achievement
+|Struck and caused damage to a boss 
+|None 
+|-
+|You Monster Achievement
+|Killing an infant 
+|Bronze Asshole's Box
+|-
+|War Criminal Achievement
+|Killing more than 20 non-combatants in a single attack 
+|Gold Asshole's Box
+|-
+|Bitchmeat Achievement
+|Being attacked by a fellow crawler in a safe room and requiring the system's help
+|None 
+|-
+|Two Chicks at the Same Time Achievement
+|Killing two mobs at once using only their own bodies 
+|Gold Brawler Box
+|}
+
+== Floor Timeline & Patch Notes ==
+
+{| class="dccTable mw-collapsible"
+!COUNTDOWN
+!EVENTS
+|-
+|5 d 00 h 00 m Tue 01/03 2:30AM
+|Stairwells open on Earth's surface.[1|1]
+|-
+|4 d 23 h 48 m Tue 01/03 2:42AM
+|Donut and Carl are the 4,119th and 4,122nd crawlers to enter the Dungeon.[1|2]
+|-
+|4 d 23 h 21 m 
+|Carl begins tutorial with Mordecai.[1|3]
+|-
+|4 d 23 h Tue 01/03 3:30AM
+|Cascadia's introductory announcement.  The stairwells are now closed. 13,000,000 crawlers entered the dungeon.Remaining Crawlers: Tue 01/03 6:30AM
+|Carl and Donut leave Tutorial Guild Hall.[1|8]
+|-
+|4 d 17 h Tue 01/03 9:30AM
+|Remaining Crawlers: 4,322,395.[1|9]
+|-
+|4 d 03 h Tue 01/03 11:30PM
+|Remaining Crawlers: 4,148,111.[1|10]
+|-
+|~4d 00 h Wed 01/04 2:30AM
+|Royal Court of Princess Donut vs. the Hoarder[1|10][1|11]
+|-
+|3 d 18 h Wed 01/04 8:30AM
+|Remaining Crawlers: 4,006,002.Dungeon Crawler World: Earth premiers. Highlights include:
+* Previously unseen mobs, including: spine-covered wolves, shapeless fire blobs, floating stingrays that shoot Magic Missiles from their eye stalks, and groups of floating eyeballs.
+*10 people armed with shotguns and bows defeat the first Borough Boss of the Dungeon, "a nightmare pile of mouths and eyeballs and flesh." [1|14]  
+*Extended episode notes  here.
+|-
+|3 d 17 h Wed 01/04 9:30AM
+|Cascadia's first update and patch notes.[1|14]  
+* Stairwells to level 2 are now populating.
+** Anyone who descends before six hours to level collapse will be held in stasis until collapse; anyone who descends with six hours or less to level collapse will have a head start on the next floor. 
+*Bosses Killed: 15 Borough Bosses, 1,500+ Neighborhood Bosses.
+*Bug Fixes:
+**Fire Fingers Spell is now safe to cast.
+**If you open a hallway bathroom door and someone else enters, they should no longer explode.
+**Toilet paper now limited to one roll per floor.
+**Mobs cannot be added to inventory in order to kill them.
+**Items no longer preserve momentum when added to inventory.[1|14]
+|-
+|2 d 18 h Th 01/05 8:30AM
+|Remaining Crawlers: 3,594,517[1|18]
+|-
+|2 d 12 h Th 01/05 2:30PM
+|Dungeon Crawler World: Earth  episode 2.[1|20]
+Royal Court vs. Frank Q and Maggie My.[1|20]
+|-
+|2 d 11 h Th 01/05 3:30PM
+|Cascadia's second update and patch notes. 
+*The bathroom toilet suction issues and exploding issues have been resolved. Stop relieving yourselves in the hallways.
+*Support for all languages has been added.
+*Cross-support for all languages has been added; crawlers can now communicate with each other.
+*The Feral Rabies Debuff is now curable and no longer airborne.  "Sorry about that, New Zealand." 
+*Blender Fiend mobs have been moved to a lower floor after killing 15,000 crawlers in one day.
+*The Street Preacher neighborhood boss has been upgraded to a Borough Boss.
+*Strength levels have been tweaked for many mobs.[1|20]
+|-
+|1 d 16 h Fri 01/06 10:30AM
+|Royal Court meets Meadow Lark.[1|22]
+|-
+|1 d 06 h Fri 01/06 8:30PM
+|Remaining Crawlers: 2,552,085[1|26]Dungeon Crawler World: Earth  episode 3.
+|-
+|1 d 05 h Fri 01/06 9:30AM
+|Cascadia's third update and patch notes, mostly a long list of changes to spells and mob power levels, plus a stern warning not to use the hallways as bathrooms.[1|26]
+|-
+|0d 06 h 30 mSat 01/07 8:00PM
+|Royal Court, Meadow Lark, and Agatha vs. the Ball of Swine[1|26]
+|-
+|0 d 06 hSat 01/07 8:30PM
+|Crawlers can now descend the stairs to get a head start on the Second Floor.
+|-
+|0 d 00 hSun 01/08 2:30AM
+|Remaining Crawlers: 1,292,526 Crawlers killed on Level 1 when the floor collapsed: >700,000.[1|31]
+
+Dungeon Crawler World: Earth  episode 4.  Highlights include: 
+*New first floor mobs, including a three-headed baboon and an eggplant with teeth.
+*Quick clips of various crawler groups fighting monsters or racing for the stairs.[1|31]
+|}
+
+==Trivia==
+* The very first achievement Carl earns is the Crazy Cat Lady Achievement, awarded simply for entering the World Dungeon accompanied by a cat.[1|2]
+
+==Speculation==
+
+* Opening Time: The Transformation takes place at approx. 2:23 AM PST.  Based on Carl's actions, ~ 1 minute passes before the surface AI announcement, which is 4m 53s long.[1|1]  The stairwells populate 18s later. So, best estimate is that the Dungeon opens around 2:29AM - 2:30AM PST (9:29 - 9:30 AM UTC).[1|1]
+* The Bathroom Exploit: Some readers speculate that the unusual abundance of random Earth bathrooms exists specifically to give crawlers moments of unrecorded privacy, since the cameras are forbidden from filming inside functioning toilets.[1|4][1|8]
+*  Speculation on Year
+
+== Easter Eggs ==
+
+*
+
+* TBD
+
+==References==
+
+{{DEFAULTSORT: Dungeon Floor 01}}

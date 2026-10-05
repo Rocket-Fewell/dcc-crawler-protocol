@@ -1,0 +1,247 @@
+{{SpoilH|3}}
+{{DISPLAYTITLE:The Iron Tangle (Fourth Floor)}}
+{{Dungeon Floor
+|image1=Welcome to the fourth floor by OutFold.jpg
+|caption-image1=Art by u/OutFold, Reddit
+|floor_number=4
+|theme=Trains
+|duration=10 Days
+|exits=9,375
+|crawlers=389,441
+|start_date=January 21
+|preceded_by=Third Floor
+|followed_by=Fifth Floor
+|npcs=
+*Limp Richard - General store proprietor at station #83
+*Wendita - Saferoom attendant at station #83
+*Vernon - Yellow Line Train Conductor
+*Pierre - Yellow Line Porter
+*Fire Brandy - Firewoman of the Nightmare Express
+*Widget - Grease Gremlin, Trainyard
+*Madison - Human Resources, Trainyard
+*Tizquick - Mango Line Train Conductor
+*Growler Gary - Bartender, The Downward Dog
+|mobs=
+*Drek
+*Jikininki
+*Psycho Sticker
+*Cave Mudge Bonker
+*Shock Chomper
+*Pollyslog
+*Literal Fire Ants
+*Cornets
+*Zlurpies
+*Kravyad
+*Wall monitor lizards
+*Gross Atomizers
+*Razor Fox
+*Krakaren Crotch Dumplings
+*Skinned Mollies
+*Snakeheads
+*Festering Ghouls
+*Krakaren Babies
+|bosses=
+*Gore-Gore
+*Krakaren Clone (Fourth Floor)
+*Pooka
+*Station Mimic
+*Festering Ghoul Amalgam
+|locations=
+*Trainyard
+*Abyss Station
+|quests=
+*Levi is on the Menu Quest
+}}
+See also: Untangling the Iron Tangle
+{{Quote|They weren't kidding when they named this thing 'the Iron Tangle.' My head hurts already. I hate math.|Carl[3|4]}}
+
+The Iron Tangle is the fourth floor of the World Dungeon, an enormously complex, interwoven subterranean subway and railway network designed to act as a massive puzzle for the crawlers.[3|Preface][3|1]
+
+==Introductory Announcement==
+
+Hello Crawlers. Welcome to the fourth floor!
+
+We are so very excited to introduce you to what is being hailed a genius feat of engineering. We call it the Iron Tangle. The trick is to find the stairwells. There are a lot of them out there, but where? Let's see how many of you figure it out.
+
+This is important. This is not a permanent change, but it is a new rule for this level only. You may not go down early this level. The stairwells will open six hours prior to collapse, and that's it. Again, you may not go down early this floor. Now have fun out there. These train things are so nifty. We never had anything like it on our world.
+
+Patron bidding is active, and we are very happy with the results so far. You will get a notification when your bidding has concluded. We'll have more info on that later.
+
+You will notice that the leaderboard has finally populated. Congratulations to everybody on the list. As you can see, each member of the top 10 has a bounty after their names. That means hunting season is open! Isn't that exciting? If you kill one, you will receive a loot box containing the reward. If you are on the leaderboard, don't worry, you get to join in on the fun, too. If you survive the floor, you will receive 10% of your own bounty upon floor collapse. That percentage goes up each floor.
+
+Finally, we'd like to address the especially high mortality rate of the third floor. This occurred due to a high instance of group quests gone bad. While the number of crawlers are still in the acceptable range, we are all concerned about early extinction. That does not mean we will be letting up. So quit sucking. It's as simple as that.
+
+Now get out there, ride the rails, and kill, kill, kill![3|3]
+
+==Description==
+
+The Iron Tangle is a subterranean network of hundreds of kilometers of twisting, turning train tubes, platforms, and transit stations.[3|1] It consists entirely of thousands of interconnected tunnels, each carrying a color designation or a unique name, and each running one or more trains in a continuous loop. The floor is built from multiple colored train lines — such as the Red Line, Yellow Line, and Ochre Line — alongside special named trains like the Nightmare Express.[3|1][3|2]
+
+Train stations run up and down every line. At some stops mobs board or leave the train, and certain stations contain safe rooms; transfer stations let crawlers switch between lines to hunt for the floor's hidden exits.[3|2][3|4] When a train reaches the end of its line, it is portaled either to a trainyard, where it is readied for another loop, or to the Abyss — a giant pit where wreckage is discarded.[3|11]
+
+The track layout is a chaotic, three-dimensional maze. Mapped out and viewed together, the named train lines deliberately trace the shape of the Syndicate's logo (and the underlying wormhole network) many times over, while the entire system doubles as a functional map of the galaxy.[3|30] The trains are operated by mind-wiped NPCs — ManTauRs, Dwarves, and Grapples — who believe the subway is their entire world and go about their repetitive jobs with no idea they are inside a dungeon.[3|5][3|6]
+
+==Layout==
+
+The Iron Tangle is a web of interwoven trains, which come in two types: colored lines and named trains.
+
+Stations arrive somewhere between 2 and 20 minutes apart. The entire trip between stations 11 and 435 takes three days on a colored line, but the named trains can cover it in around an hour and a half.[3|5]
+
+===Navigating the Tangle===
+*Trainyard at 10.
+*Stairwells at 12, 24, 36, 48, and 72 on any colored line.[3|2]
+*Saferooms at prime-numbered transfer stations (11, 13, 17, etc.).[3|9]
+*Exit-only Caverns every five stations (15, 20, etc.), where monsters get Rev-Up Vitamin Shots.
+*Desperado Club at transfer stations ending in 1.[3|6]
+*Club Vanquisher at transfer stations ending in 9.[3|6]
+*End of the Line at 435 (employees depart and portal to the trainyard).[3|5]
+*Abyss Station at 436 (the giant pit where leftover trains are dumped).[3|11]
+
+"stations 11 through 72 were each about a city block or two apart from one another. We could walk that distance unhindered in a few hours. That was good to know. By comparison, stations 300 and 301 looked to be about 40 or 50 miles apart."[3|12]
+
+===Colored Lines===
+Colored lines are normal subway cars.
+*First car is the Engineer.
+*Fifth car is the Employee Break Room, where the train conductor sits.[3|5]
+*Tenth car is the Porters.
+*Fifteenth car holds Jikininki janitor ghouls.[3|5]
+
+All employees get off the train at station 435. Crawlers are advised to get off at station 433, which is said to be a big transit hub[3|5] — but it's actually a Station Mimic. Employees remember pulling into station 435, then blink and find themselves back at station 10, the Trainyard, boarding the train again. The train is not in a time loop, but it does reset everything to where it was every time it starts a new run.[3|5]
+
+Porters and Conductors board at 10. Jikininki board at 12. Engineers are already aboard by 10. Monsters get off every five stops; if they miss their stop, they panic, because they can't stay on the train or they die. Monsters will break into cars 10 and 15, but not car 5.[3|5] The showrunners use Control Sigils to gate monster movement — considered sloppy programming. The mobs are kept on drugs: they get their fix, are moved back five stops, and then have to climb back onto the train to get more.[3|6]
+
+Engineers only come out for a derailment. Engineer keys are tied to their line, so an engineer's key of one color won't open a train car on another line.[3|11]
+
+Known colored lines: Red, Orange, Yellow, Indigo, Emerald, Azure, Purple, Brown, Mauve, Green, Tangerine, Plum, Winter Sky, Ochre, [https://en.wikipedia.org/wiki/Fulvous Fulvous], Camel, Cobalt, Puce, Vermillion, Mango, Amaranth, Pink, [https://en.wikipedia.org/wiki/Sinopia Sinopia], [https://encycolorpedia.com/e3f988 Mindaro], [https://en.wikipedia.org/wiki/Grullo Grullo], and [https://encycolorpedia.com/39a78e Zomp].
+
+===Named Trains===
+*Nightmare Express — An old-school, jet-black steam locomotive with a cowcatcher that runs a very large figure eight every ninety minutes. The figure eight loops from Station 83 to Purple/Mauve Station 283 to Abyss Station 436 to Station 283 to Station 83 and then back to the other Station 83. You must enter through the very last car and fight your way through thirty-eight cars to the front. The train is steam-powered by the fire produced by the Lesser Demon MILF, Fire Brandy.[3|14]
+*Dismemberment Limited — A white monorail with only two cars, running on a wide track with two metal beams. The platform is smaller than normal, and it arrives every 48 minutes. The engineer's car, unlike the colored lines, is open with no seats and resembles a freight car. The engineer — Levi the 7th, a Troll Flesher and Hobgoblin Skellie symbiote — is the key to the Levi is on the Menu Quest. In the back car, a war mage named Dismember waits for crawlers with his army of minion fleshers.[3|12] One stop on this loop is Mauve Station 281.[3|13]
+*Eviscerator — One stop is Cobalt Station 271.
+*Misery — One stop is a station 317.[3|3]
+*Name Unknown — A diesel-style train with an orc war mage who controls drill crabs (crab-like monsters with drills instead of pincers).
+*Name Unknown — A modern steam locomotive with a small cowcatcher and 10 passenger cars. Its caboose has two speared human heads on its balcony.[3|15]
+
+==Locations==
+*Transfer Stations: Safe rooms are generated at every transfer station,[3|2] which are numbered with prime numbers[3|9] and host vendors such as Limp Richard the Mole Man.[3|2]
+*The Abyss (Station 436): A massive, flaming pit at the center of the railway network where the colored lines deposit their cars.[3|15] Thousands of train cars are dumped here, dropping from subspace portals high overhead to form a mountain of flaming wreckage that is scoured by Jikininki janitor ghouls.[3|15]
+*Trainyards: Dozens of open-air maintenance yards dot the outer edges of the map, where engines are parked, serviced, and turned around.[3|17] Trainyard E later becomes the home of a massive Station Mimic City Boss.[3|18]
+*Employee Lines and Substation E: Off-the-books tracks and stations used exclusively by the NPC employees, usually free of mobs.[3|17]
+
+==Mechanics==
+*Restricted Descent: Crawlers are barred from leaving the floor early; the 9,375 stairwells to the fifth floor only power up and open exactly six hours before the level collapses.[3|3][3|31]
+*Stairwell Placements: Exits are hidden only at stations numbered 12, 24, 36, 48, and 72 on any colored line.[3|2]
+*Monster Spawning and Pathing: The mobs run on an automated, drug-fueled schedule. Every five stops (stations ending in 5 or 0) the monsters disembark and enter tunnels to collect drug vials from fuzzy, goblin-like Neighborhood Bosses called Pookas. The addicted mobs then take a one-way portal back to their starting stations to repeat the loop.[3|12]
+*Personal Spaces: The fourth floor introduces the ability to buy and upgrade Personal Spaces inside the safe rooms — an inter-dimensional base of operations that party members can link together to pool resources.[3|2][3|3]
+*Ghoul Amalgams: If the mob-generation system is disrupted, excess ghouls gather at the stairwell stations. Once enough collect, worm-like appendages drag them into a single, massive Festering Ghoul Amalgam Province Boss that fills the entire room.[3|22]
+
+==Events & Quests==
+*Upon Entry to the Floor: When crawlers enter the fourth floor, they are randomly placed on a train with their party.
+*Levi is on the Menu Quest
+*Vermillion Line Rescue
+*End of the Line Rescue
+*Stairwell Fight on the Fourth Floor
+*Stairwell: Crawlers may only go down six hours prior to level collapse.[3|3] The stairwells are located at stations 12, 24, 36, 48, and 72.
+
+==Story==
+Carl, Donut, and Katia arrive on the fourth floor inside a moving subway car.[3|1] They spend their early days grinding through the trains — discovering safe rooms, establishing their personal space, and trying to map the dizzyingly complex rail lines.[3|1][3|3] Along the way they encounter several mind-wiped NPC employees, such as Vernon the Conductor and Gore-Gore the Engineer, exploiting the workers' rigid devotion to their "jobs" to pry loose information.[3|11]
+
+Carl manages to hijack a steam engine (the 666 train), running it to the end of the line and discovering the Abyss.[3|14][3|15] By mapping the lines and piecing together the connections, Mordecai realizes the floor's layout is a scaled-down map of the galaxy and the Syndicate's wormhole paths.[3|30]
+
+Late in the floor's timeline, hundreds of crawlers find themselves stranded at the Abyss with no way back.[3|25] Carl steals a Hobgoblin Interdiction Rapid-Response Railway Repair Cart — a vehicle fitted with a mobile portal scoop on its front[3|26] — and uses it to teleport the stranded crawlers from the Abyss to the safety of the trainyards.[3|26][3|27] In the process he accidentally strikes a railroad crossing barrier that turns out to be the tongue of a massive Station Mimic, teleporting the City Boss straight into Trainyard E.[3|28]
+
+On the floor's final day, the system AI initiates a catastrophic self-destruct sequence for the entire Iron Tangle, forcing everyone to flee through emergency tunnels toward the stairwells.[3|31]
+
+==Achievements==
+{|class="mw-collapsible fandom-table" style="width:100%"
+|+Achievements for the Fourth Floor
+!Achievement
+!For
+!Reward
+|-
+|I'm on a train Achievement
+|Being on a train
+|Train Conductor's Souvenir Hat
+|-
+|They like me! They really like me! Achievement
+|First five crawlers to achieve 500 trillion followers
+|Platinum Fan Box
+|-
+|Cuck Aquaman Achievement
+|Got the courts and lawyers involved
+|Platinum It's Not My Fault You Fish-Headed Assholes Don't Properly Program Your Quests Box
+|-
+|Welcome to the Neighborhood! Achievement
+|Bought a Personal Space
+|You own a home now
+|-
+|Well-Rested! Achievement
+|Used a well rest bed
+|Receive Good Rest Buff bonus when using the bed
+|-
+|Martha Stewart Achievement
+|Used a Crafting table for the first time
+|Bronze Crafter's Box
+|-
+|Locomotive Breath Achievement
+|Derailed a train
+|Gold Engineering Box
+|-
+|Kept A Rollin' Achievement
+|Driving a Train
+|You get to drive a train
+|-
+|Three Cheers for Slaughter Achievement
+|Killed three boss monsters with same attack
+|Platinum Big Daddy Box
+|-
+|Mentally Unstable Clothing Hoarder Achievement
+|Have over 500 of same piece of clothing
+|We don't reward weird behavior
+|-
+|}
+
+System Message: the following achievements were for actions taken on the Fourth Floor, but are opened in the Gate of the Feral Gods book.
+
+{|class="mw-collapsible mw-collapsed fandom-table" style="width:100%"
+|+Achievements
+!Achievement
+!For
+!Reward
+|-
+|Let There Be Chaos Achievement
+|Summoning a God
+|
+|-
+|Divine Epiphany Achievement
+|Seen a deity
+|Option to worship Grull
+|-
+|Indomitable Achievement
+|Been physically attacked by a god
+|Legendary Deity's Box
+|-
+|Smushed for Daddy Achievement
+|Been stepped on by Grull
+|Platinum Spicy Box
+|-
+|Hail Mary Achievement
+|Initiated attack that caused 100 casualties 100 km away
+|Gold Sniper's Box
+|-
+|Extinction Event Achievement
+|Killed all the Wall Monitor's on the Fourth Floor
+|Platinum Asshole's Box
+|-
+|}
+
+==Trivia==
+*The entire Iron Tangle is designed as a thinly veiled, racist political cartoon by the Borant Corporation, meant to mock the Krakaren and the Plenty by depicting them as drug dealers addicting the galaxy to their proprietary tunneling-communication technology.[3|30]
+*The "Escape Velocity" train is the only line that physically loops back from the Abyss to the start of the lines; it is named after the ship that originally discovered the wormhole network.[3|18][3|30]
+
+==Speculation==
+*The "Noodle" Track Layout: Katia speculates that the Iron Tangle's tracks don't merely intersect on a flat plane. She theorizes the lines are shaped like three-dimensional "noodles," with track running along the top, bottom, and sides of the tubes — turning the whole floor into a chaotic mess where gravity shifts toward the nearest interior wall.[3|30][3|32]
+
+==References==
+
+{{DEFAULTSORT:Dungeon Floor 04}}

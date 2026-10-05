@@ -1,0 +1,107 @@
+{{Location
+|title=Safe Rooms
+|image=Safe room Art by @frayedfables, Instagram.webp
+|imagecaption=Art by @frayedfables, Instagram
+|map=
+|mapcaption=
+|type=Dungeon Mechanic
+|system=
+|planet=Earth
+|location=All Dungeon Floors
+|species=Bopca Protectors
+|organization=Borant Corporation / Syndicate
+|characters=Tally, Nodd, Wendita, Qwist, Mordecai
+|first=Book 1, Chapter 5
+}}
+
+{{Quote|The safe rooms will always appear on your map, even if they're within the fog of war. The safe rooms will have restrooms, sleeping cubicles, and some will even have food and fountains with healing potions.|Mordecai[1|5]}}
+
+Safe Rooms can be found throughout the Dungeon and always appear in green on a crawler's minimap, even in areas otherwise shrouded by the "fog of war."[1|5][1|8] Safe Rooms typically include restrooms, sleeping areas and/or Personal Space access, and three television screens, and are often staffed by a Bopca Protector or other non-combatant NPCs.[1|5][1|9] All guildhalls are safe areas, but not all safe areas are guildhalls.[1|5]
+
+Anytime a crawler enters a Safe Room, they receive the notification: Entering Safe Room.[1|9]
+
+==Special Mechanics==
+Crawlers must be inside a Safe Room to open Loot Boxes,[1|5] or, after Third Floor race and class selection, to distribute any stat points earned by leveling up.
+
+===Theft & Violence===
+Crawlers may not steal or commit violence inside safe rooms. It is "a strict, ironclad rule" with a three strikes policy:
+# First Strike: Crawler is frozen in place for 100 seconds and forced to listen to an automated recording about "playing nice" while the word Naughty blazes over their head.[1|20]
+# Second Strike: Crawler is frozen in place for one hour.[1|20]
+# Third Strike: Crawler is stripped of all gear and teleported into a mob nest.[1|20]
+
+===Mobs & Bosses===
+Safe Room doors may not open if there are mobs outside.[1|10] If the door is already open, mobs may enter safe rooms and interact with the objects and occupants (or simply trash the room) inside.[1|20] A mob will be teleported to a random place within one square mile (2.59 km2) of the safe room if it attempts to attack anyone inside.[1|5]
+
+{{Spoiler|book=6|spoiler=Even a boss can step into a safe room when the door is held open, and like any mob it is ejected the moment it attempts an attack. A crawler who allows a red-tagged boss inside earns the Interloper achievement.[6|10][6|11]}}
+
+{{Spoiler|book=4|spoiler=Safe rooms are generally protected from widespread environmental destruction, such as aerial bombardment. However, non-combatant NPCs sheltering inside are only spared if a crawler is present in the room with them; an empty safe room offers them no such protection.[4|4]}}
+
+===Safe Room Closure===
+Starting on the Second Floor, all safe rooms close one hour before level collapse, teleporting any crawlers still inside to just outside the room.[1|39]
+
+{{Spoiler|book=5|spoiler=On later floors, the dungeon may impose a "Blood Bar" on safe room access to discourage camping. Once a crawler enters a safe area, the bar begins to count down; a full bar grants roughly ten hours inside, and it can only be refilled by leaving and killing mobs. A crawler whose bar empties while inside is teleported out, and a crawler with an empty bar cannot enter a safe area at all.[5|52][8|7]}}
+
+===Experience===
+Crawlers can only cast non-violent spells in safe rooms (such as Clockwork Triplicate), but will not gain experience from casting.[2|5]
+
+===Explosives===
+Explosives and bombs are rendered inert while inside a safe room, displaying an "Inert While in Safe Room" status (with their true status noted in parentheses). This prevents accidental detonation and lets crawlers safely assemble and test ordnance indoors.[1|40]
+
+==Layout==
+On the upper tutorial floors, Safe Rooms can be found every few miles and take the form of restaurants and rest areas teleported from Earth's surface: a Peruvian Taco Bell, an Alabama Waffle House, a Polish fast food restaurant complete with kid's play area, a dingy DMV waiting area, etc. The windows show nothing but solid walls beyond.[1|9][1|19]
+
+===Safe Room Screens===
+Safe Rooms generally have three monitors displaying information in Syndicate Standard. On the first three floors, the monitors typically stand where a menu would otherwise be.[1|9]
+
+====Screen 1====
+The first screen shows countdown timers to level collapse and the next episode of Dungeon Crawler World: Earth above the number of remaining crawlers, which makes a barely audible "clink" sound as it updates in real time.[1|9][1|19] The screen is formatted as:
+Countdown until Level Collapse: - days, - hours
+Countdown until the [premiere or next episode] of Dungeon Crawler World: Earth.  - hours, - minutes.
+Remaining Crawlers: 4,322,395[1|9]
+
+====Screen 2====
+The second (center) screen shows Dungeon Crawler World: Earth when it tunnels, and otherwise displays the most recent leaderboard during the roughly 29 hours between episodes.[1|14] On the first three floors, the screen shows the following message in place of the leaderboard: Leaderboard will populate upon collapse of the third level.[1|9]
+
+Following the first recap episode after the Third Floor collapses (approximately 24 hours after the Fourth Floor countdown begins), the "Current Leaderboard" displays the top ten highest-rated crawlers; a tentative draft is first revealed at the close of the Third Floor.[2|Epilogue][3|2] The leaderboard only updates after the recap episodes, never in real time, even though crawler ratings are always changing. Each line shows the crawler's Crawler Name, race, class, current level, and bounty, formatted as:
+6. Carl – Primal – Compensated Anarchist – Level 27 – 100,000[2|Epilogue]
+
+====Screen 3====
+The third screen shows information specific to the given Safe Room. A typical example of this screen on an upper floor is:
+Welcome to the Safe Room. You are on the First Level. Rental Rooms currently available: 20 Rental Room price: 0 gold.Personal spaces will become available for purchase on the Fourth Level. Food is available at this location.[1|9]
+
+===Sleeping Areas & Rental Rooms===
+Safe Rooms typically include sleeping areas. These may be rooms available for rent (free on the first two floors), or may be some cots with curtains around them.[1|9][1|19] The rental rooms are small and cooler than the humid Dungeon, with comfortable beds fitted with clean white cotton sheets.[1|10]
+
+When a crawler sleeps in a safe room, their dot does not appear on the minimap and they appear intangible and translucent to anyone who is not in their party.[1|20]
+
+{{Spoiler|book=3|spoiler=Bopca Protectors are highly susceptible to the Charisma stat. A sufficiently charismatic crawler can haggle them down on the price of rental rooms, goods, and Personal Spaces, or coax out extra rations and premium accommodations.[3|2]}}
+
+===Restrooms===
+Restrooms are everywhere in the Dungeon, and Safe Rooms are no exception. Safe Rooms have larger, full service restrooms with shower stalls, soap and shampoo dispensers, and shaving cream and disposable razors (towels may not be provided).[1|10] Unlike the hallway bathrooms, multiple crawlers can occupy the same bathroom at the same time in a safe room.[1|20]
+
+The toilet areas only are not visible to the production company or Syndicate audiences.
+
+===Amenities===
+Beyond the standard facilities, individual safe rooms often have a unique quirk or limited service. Examples include a daily experience cookie ("one per Crawler per day"), free "Mana Toast" that refills mana, self-serve soda fountains, and a mailbox that delivers spell books (such as those owed to members of the Dungeon Book of the Floor Club).[1|19][1|30][1|41]
+
+==Associated Achievements==
+{| class="dccTable mw-collapsible"
+!Achievement
+!Summary
+!Reward
+|-
+|N/A
+|finding your first safe room
+|Silver Adventurer Box[1|9]
+|-
+|Bitchmeat!
+|Another crawler attacked you in a safe room
+|none[1|21]
+|-
+|Interloper
+|Letting a boss into a safe room
+|Bronze Stranger Danger Box[6|11]
+|}
+
+==References==
+

@@ -1,0 +1,414 @@
+{{Quote|I'm not human. I'm a Primal.|Carl[2|2]}}
+This page documents Carl's gear, levels, stats, and skills as he progresses through the Third Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable"
+!TIME
+!NOTES
+!LVL
+!STR
+!INT
+!CON
+!DEX
+!CHA
+|-
+|
+|Start of floor[1|47]
+|13
+|6/9c/12cf
+|3
+|5/14adeg
+|5/6f
+|4
+|-
+|
+|Race selection: Primal (-1 to all base stats)[2|2]
+|13
+|5/8c/11cf
+|2
+|4/13adeg
+|4/5f
+|3
+|-
+|
+|Class selection: Compensated Anarchist (+1 INT, +5 CHA)[2|2]
+|13
+|5/8c/11cf
+|3
+|4/13adeg
+|4/5f
+|8
+|-
+|
+|Allocates 36 points; class minimums set CHA to 25[2|2]
+|13
+|10/13c/16cf
+|5
+|10/19adeg
+|10/11f
+|25
+|-
+|
+|w/ two rings of +2 STRh[2|6]
+|13
+|10/17ch/20cfh
+|5
+|10/19adeg
+|10/11f
+|25
+|-
+|
+|Level up[2|7]
+|14
+|10/17ch/20cfh
+|5
+|10/19adeg
+|10/11f
+|25
+|-
+|
+|Allocates 3 points to STR[2|8]
+|14
+|13/20ch/23cfh
+|5
+|10/19adeg
+|10/11f
+|25
+|-
+|
+|Level up[2|9]
+|15
+|13/20ch/23cfh
+|5
+|10/19adeg
+|10/11f
+|25
+|-
+|
+|Nightgaunt Cloak removed (-4 CON)*[2|10]
+|15
+|13/20ch/23cfh
+|5
+|10/15deg*
+|10/11f
+|25
+|-
+|
+|Levels up[2|11]
+|18
+|13/20ch/23cfh
+|5
+|10/19adeg
+|10/11f
+|25
+|-
+|5 d 10h
+|Enchanted BigBoi Boxers upgraded (+5 DEX, +5 INT, +3 CON)g[2|13]
+|18
+|13/20ch/23cfh
+|5/10g
+|10/22adeg
+|10/15g/16fg
+|25
+|-
+|
+|Allocates 10 points to STR and 2 to CON[2|14]
+|18
+|23/30ch/33cfh
+|5/10g
+|12/24adeg
+|10/15g/16fg
+|25
+|-
+|
+|Level up (stated later)[2|Epilogue]
+|19
+|23/30ch/33cfh
+|5/10g
+|12/24adeg
+|10/15g/16fg
+|25
+|-
+|
+|Levels up[2|22]
+|21
+|23/30ch/33cfh
+|5/10g
+|12/24adeg
+|10/15g/16fg
+|25
+|-
+|
+|Levels up from the final explosion; 24 points unallocated[2|Epilogue]
+|27
+|23/30ch/33cfh
+|5/10g
+|12/24adeg
+|10/15g/16fg
+|25
+|-
+| colspan="8" |Base stat / stat with gear. Superscript letters match the gear key in the Ending Gear table: a Nightgaunt Cloak, c Toe Ring of the Splatter Skunk, d Silver Ring of +1 CON, e Silver Ring of +2 CON, f War Gauntlet (STR bonus in fist mode only), g BigBoi Boxers, h two rings of +2 STR. * Temporary. Race and class rows are calculated from the stated modifiers.
+|}
+
+==Gear==
+===Starting Gear===
+{| class="dccTable mw-collapsible mw-collapsed"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb[1|6]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]
+|-
+|Legs
+|Enchanted BigBoi Boxersg[1|35]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe)[1|6]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Weapon
+|Slingshot[1|32]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]
+|}
+
+===Gear Gained===
+Choosing an Earth class earns Carl a Silver Earth Box,[2|2] which contains an Earth Hobby Potion that grants the Cesta Punta Skill.[2|5] He loots two rings of +2 STR from the body of a crawler named Nica.[2|6]
+
+A Scroll of Upgrade from a Platinum Quest Box upgrades his Enchanted BigBoi Boxers, adding +5 DEX, +5 INT, +3 CON, and the Freeballing Benefit.[2|13]
+
+His gold fan box contains a xistera, the scoop used in Cesta Punta (jai alai). Strapped to his right wrist and forearm, it launches items pulled from his inventory and retracts into a bracer that fits under his gauntlet. He cannot punch while it is extended. The xistera replaces his slingshot.[2|17]
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb[1|6]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]Xistera (right wrist and forearm)[2|17]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]Two rings of +2 STRh[2|6]
+|-
+|Legs
+|Enchanted BigBoi Boxersg (upgraded once)[1|35][2|13]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe)[1|6]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]
+|}
+
+==Skills==
+{| class="sortable dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Alchemy
+|
+|3[2|17]
+|Gained from brewing a Hair of the Dog potion.[2|17]
+|-
+|Backfire
+|Acquired
+|5[2|2]
+|Compensated Anarchist +5
+|-
+|Bomb Surgeon
+|Acquired
+|1[2|2]
+|Compensated Anarchist +1
+|-
+|Cesta Punta
+|Acquired
+|3[2|5]
+|From an Earth Hobby Potion.[2|5]
+|-
+|Escape Plan
+|Acquired
+|5[2|2]
+|Compensated Anarchist +5
+|-
+|Find Trap
+|Acquired
+|5[2|2]
+|Compensated Anarchist +5
+|-
+|Hide in Shadows
+|Acquired
+|2[2|2]
+|Compensated Anarchist +2
+|-
+|Iron Punch
+|5/7f[1|25]
+|10f[2|14]
+|Level 10 (with gauntlet) adds the Breadbasket effect.[2|14]
+|-
+|Trap Engineer
+|Acquired
+|1[2|2]
+|Compensated Anarchist +1
+|-
+|Unarmed Combat
+|6[1|25]
+|7
+|Compensated Anarchist +1[2|2]
+|}
+
+As a Primal, Carl can train higher-tier skills to level 20.[2|2]
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Fear
+|Acquired
+|
+|From Compensated Anarchist; costs 3 mana.[2|2]
+|-
+|Heal
+|1[1|4]
+|
+|
+|-
+|Protective Shell
+|15[1|35]
+|15
+|From Enchanted BigBoi Boxersg; 30-hour cooldown.[1|35]
+|-
+|Wisp Armor
+|Acquired
+|
+|Learned from the tome during the circus quest; costs 5 mana and grants temporary immunity to mind control.[2|11]
+|}
+
+==Passive Effects==
+*Attacks Gain
+**2% chance to stun target when struck with Gauntlet.[1|25]
+**10% chance to stun on a solid blow (Breadbasket, from Iron Punch).[2|14]
+**+15% barefoot attack damage while active (from Pedicure Kit).[1|30]
+**+100% damage to attacks originating below the waist (from Freeballing).[2|13]
+**-25% damage when using bladed weapons (from Compensated Anarchist).[2|2]
+*Spellcasting
+**+25% mana cost for damage-dealing spells (from Compensated Anarchist).[2|2]
+*Training
+**+5% training speed for trapmaking and bomb-making skills (from Compensated Anarchist).[2|2]
+**+20% training speed for skills originating below the waist (from Freeballing).[2|13]
+*All Equipped Armor gains:
+**Anti-Piercing Resistance (from Nightgaunt Cloak).[1|6]
+**10% Damage Reflect (from Spiked Kneepads).[1|12]
+*Negated Effects/Attacks:
+**Melee-based damage debuffs such as Stun, Knockback, Disarm, and Out-of-Breath (from Trollskin Shirt).[1|6]
+**Momentum-based attacks (from Kneepads).[1|12]
+**Feet cannot be broken while active (from Pedicure Kit).[1|30]
+*Resistant to:
+**Ice-based attacks (from Nightgaunt Cloak).[1|6]
+**Poison attacks (from Nightgaunt Cloak).[1|6][2|10]
+*Weak to:
+**Natural goblin enemies, such as fairy-class creatures, deal 20% more damage (from Goblin Pass Tattoo).[1|6]
+*Memberships & Allies
+**Access to the Desperado Club; prevents obtaining a Vanquisher Pass (from Desperado Pass Tattoo).[1|19]
+**Access to the Naughty Boys Employment Agency (from Compensated Anarchist).[2|2]
+**No automatic hostility from Goblins and free passage through goblin territory (from Goblin Pass).[1|6]
+*Restrictions
+**Only one layer of armor or clothing may cover the crotch (from Freeballing).[2|13]
+*Other
+**Traps activated by footsteps prompt an alarm and delay 5 seconds before triggering while active (from Pedicure Kit).[1|30]
+
+==Ratings==
+Patronage begins on the Fourth Floor.[1|31]
+{| class="dccProgTable"
+!TIME
+!LEADERBOARD
+!VIEWS
+!FOLLOWERS
+!FAVORITES
+!PATRONS
+|-
+|[2|4]
+|n/a
+|371.5 Trillion
+|7.8 Trillion
+|1.1 Trillion
+|n/a
+|-
+|6 d 23h[2|8]
+|n/a
+|998.3 Trillion
+|16.5 Trillion
+|3 Trillion
+|n/a
+|-
+|5 d 10h[2|13]
+|n/a
+|1.4 Quadrillion
+|30 Trillion
+|6.2 Trillion
+|n/a
+|-
+|3 d 16h[2|18]
+|n/a
+|1.9 Quadrillion
+|72 Trillion
+|13.1 Trillion
+|n/a
+|-
+|End of floor[2|Epilogue]
+|6 (draft)
+|
+|
+|
+|n/a
+|}
+
+==References==
+
+{{DEFAULTSORT:Carl/Floor_03}}
+

@@ -1,0 +1,69 @@
+{{Item
+|title=
+|image=
+|imagecaption=
+|type=Dungeon Mechanic / Reward System
+|keywords=Loot Box, Reward, Bronze, Silver, Gold, Platinum, Legendary, Celestial, Benefactor
+|effects=Grants items, gear, potions, scrolls, and spells to crawlers
+|source=
+* Achievements
+* Boss kills
+* Quests
+* Patrons and viewers
+|buy=N/A
+|sell=N/A
+}}
+{{Quote|There are dozens of types of boxes, and each type of box has six quality tiers. Bronze, then Silver, then Gold, then Platinum, then Legendary, then Celestial.|Mordecai[1|4]}}
+
+Loot Boxes are the primary reward mechanism in Dungeon Crawler World, distributed by the System AI to crawlers for completing achievements, defeating bosses, finishing quests, or as gifts from viewers and sponsors.[1|4][1|12]
+
+== Description ==
+Loot boxes are handed out as rewards for unlocking achievements, killing bosses (Boss Boxes), completing quests (Quest Boxes), or as gifts from viewers and patrons (Fan Boxes and Benefactor Boxes).[1|4][1|12] Every type of box comes in six standard quality tiers, each one dramatically rarer and more valuable than the last:[1|4]
+# Bronze
+# Silver
+# Gold
+# Platinum
+# Legendary
+# Celestial
+Lower tiers tend to hold common or unenchanted items, while higher tiers contain progressively more powerful and rare loot.[1|4] Because the host company owes the Syndicate a tax on the tier of every non-sponsored box it awards, the upper tiers are genuinely expensive to hand out — part of why Celestial boxes are so vanishingly rare.[2|Epilogue]
+
+Bronze boxes tend to contain junk, while most patrons can only afford to send Silver or Gold boxes; the wealthiest sponsors might manage a Platinum.[1|4] Boss Boxes scale with the rank of the boss killed, starting at Bronze for a Neighborhood Boss and climbing through Silver for a Borough Boss and up.[1|12] The early floors are deliberately designed to drown crawlers in low-tier loot and beginner skills, but boxes and achievements become much harder to come by once a crawler reaches the Fourth Floor.[1|12]
+
+The loot itself is "semi-random": a box's contents may be genuinely randomized, or the System AI may have hand-picked them to help or hurt a crawler for the sake of ratings.[1|29] Drops are keyed to a crawler's race rather than their class, so a barbarian can easily wind up holding a necromancer's staff.[1|7] With the exception of Benefactor Boxes, all loot fits the Dungeon's theme — no one crawling Borant's fantasy-flavored dungeon will pull a pulse rifle or automated power armor out of a standard box.[1|4]
+
+Only patrons can send Benefactor Boxes, which hold some of the rarest items in the game — sometimes including precisely the kind of off-world technology a standard box would never produce, such as a pulse rifle or power armor, or gear pulled straight from the sponsor's own homeworld. As a result, even a Bronze Benefactor Box outclasses a plain Gold Adventurer Box.[1|4]
+
+== Appearance ==
+Loot boxes vary wildly in appearance depending on their type, tier, and theme.[1|5] A Bronze Pet Box resembles a small military footlocker with an animal stenciled on the lid, while a Silver Goblin Box looks cobbled together from scrap metal and is stamped with a goblin skull.[1|5] Higher-tier boxes are far more elaborate; the Legendary Pet Box Carl opened during the tutorial featured intricately carved silver-and-gold patterns and spinning clockwork gears that ratcheted as it opened.[1|5]
+
+{{Spoiler|book=6|spoiler=Boxes can also be wildly themed. The Gold Gobble Box is shaped like a turkey,[6|49] and the Celestial Predator Box takes the form of a barrel-sized, glowing demon skull that spins, shoots out beams of light, and bursts into a cloud of fireflies as it opens.[6|3]}}
+
+{{Spoiler|book=7|spoiler=The Platinum Tserendolgor box is shaped like a jeweled, life-sized German Shepherd wearing an army helmet.[7|3]}}
+
+== Operation ==
+After finishing the tutorial in a Tutorial Guild Hall, crawlers can reach their unopened loot boxes through the "Awards and Boxes" tab of their inventory, where the boxes stay locked until the crawler reaches a designated Safe Room or Guildhall.[1|2][1|5] When a crawler chooses to open their boxes, they cannot pick and choose; it is an all-or-nothing process in which every accumulated box opens in sequence.[1|5][5|36] The boxes pop out of the inventory and line up in the air by tier, from Bronze to Celestial, then open one at a time with varying levels of fanfare — the lid bursts open, the box vanishes in a puff of smoke, and the contents drop to the ground before transferring automatically back into the crawler's inventory.[1|5][6|3]
+
+Because loot is unpredictable, crawlers are warned to read every item description carefully before equipping anything: while a box will never drop outright cursed loot, it can absolutely drop unstable, damaged, or highly dangerous items.[1|5] As Mordecai bluntly puts it, a crawler should always read the descriptions before activating or wearing anything — "Always, always. No exceptions."[1|5] Unopened boxes cannot be sold or transferred to other crawlers, so there is no tactical reason to hoard them.[1|5]
+
+== Story ==
+Loot boxes are a constant presence for Carl and Princess Donut, serving as their main source of gear, potions, and spells.[1|12] The System AI often saddles them with oddly specific or insulting boxes for unusual, destructive, or taboo feats — such as the Bronze and Gold "Asshole's" boxes Carl earned for killing non-combatants on the First Floor.[1|19]
+
+The extreme rarity of Celestial boxes sparked major drama at the end of the Third Floor. After a quest's reward was double-upgraded all the way to Celestial for 83 crawlers, Borant spent its single per-season veto to negate the prizes — but not before the crawler Quan Ch opened his upgraded Celestial Quest Box, leaving Borant on the hook for it and triggering a costly Syndicate court fight. Borant promptly patched out the upgrade achievements responsible.[2|Epilogue]
+
+{{Spoiler|book=3|spoiler=Benefactor boxes grow into a major plot thread once every crawler in the dungeon is assigned a sponsor. The Valtay Corporation used a Bronze Benefactor Box to send Carl a Neural Enhancer pill that granted him the ability to identify and analyze subspace portals,[3|13] and sponsors could pay an "emergency delivery fee" for priority box fulfillment.[3|13]}}
+
+{{Spoiler|book=4|spoiler=The Open Intellect Pacifist Action Network later spent an exorbitant sum on an Emergency Platinum Benefactor Box to deliver Carl a custom head-tosser attachment for his xistera at a critical moment.[4|34]}}
+
+== Trivia ==
+* Across the entire history of Dungeon Crawler World, only 2,145 Celestial Boxes of any tier have ever been awarded, and no single crawler has ever received more than four.[2|Epilogue]
+* Prior to this crawl, the most Celestial boxes ever given out in a single season was 18 — an exorbitant figure that bankrupted the Naga showrunners and kept them from running another season for centuries.[2|Epilogue]
+* Fan Boxes require viewers to spend actual credits to vote for higher-tier contents, which keeps internet trolls from casually gaming the system and stuffing crawlers' prizes with useless junk.[2|17]
+{{Spoiler|book=7|spoiler=The System AI sometimes generates absurdly long, taunting box names to needle crawlers, such as the "Platinum Have You Goddamned Figured Out How To Use This In Conjunction With the Fucking Voodoo Book Yet? Jesus Christ I Can Only Help You So Much box."[7|57]}}
+
+== Speculation ==
+{{Spoiler|book=4|spoiler=Because the System AI directly controls the contents of most standard boxes to balance the game and offset shrinking floor timers,[2|21] some readers speculate it deliberately doles out strange, hyper-specific box rewards to steer crawlers into precise scenarios for its own amusement — possibly an early symptom of the "Primal Degeneration" that eventually drives every large-scale Syndicate AI insane.[4|28]}}
+
+== References ==
+
+{{Navbox Items}}
+

@@ -1,0 +1,37 @@
+
+{{SpoilH | 6}}
+{{Spells
+|title1= {{PAGENAME}}
+|effect=
+* Instantly removes target from the blessing of their deity and all associated buffs and effects. 
+* Higher levels increase the possibility of forcing a smite upon the target
+| image1=
+|caption-image1=
+|cost=
+|casting=
+|cooldown=
+|target=
+|duration=(30 + [Caster’s Intelligence+Constitution] – [Target’s Intelligence/2]) Seconds
+|associated equipment= Enchanted Nipple Ring of the Defiler
+|users=
+}}
+{{PAGENAME}}  is a spell Carl gets from the Enchanted Nipple Ring of the Defiler.
+== AI Description ==
+
+Black Nimbus.
+Type: Involuntary Abjuration
+
+Cost: Item Based
+
+Duration: Instantaneous casting. Affected target will suffer the effects of this spell for (30 + [Caster’s Intelligence+Constitution] – [Target’s Intelligence/2]) Seconds.
+
+Cooldown: Once Every Hour
+
+Target: Single target.
+
+Effect: Has the same effect as wearing a shirt for the band Cattle Decapitation to church. Instantly removes target from the blessing of their deity and all associated buffs and effects. Will make it so target is unable to physically enter church or temple while the spell is in effect. Higher levels of this spell increase the possibility of forcing a smite upon the target.
+
+Warning! You probably don’t want to cast this on members of the same religion more than two or three times in a row.
+
+==References==
+

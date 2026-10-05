@@ -1,0 +1,214 @@
+{{SpoilH|8}}
+{{DISPLAYTITLE:Don't Come In Last}}
+{{Dungeon Floor
+|title1=Don't Come In Last
+|image1=
+|caption-image1=
+|preceded_by=Ninth Floor
+|followed_by=Eleventh Floor
+|theme=Vehicle Races and Heats[8|2]
+|start_date=
+|end_date=
+|duration=Level timer temporarily suspended[8|1]
+|exits=147; Pass the final heat[8|68]
+|crawlers=5,501 (Start)[8|1] / 203 (End)[8|88]
+|crawler_levels=
+|mob_levels=
+|locations=Hungry Eyes Vendor Village, The Lollipop, Upano, Satan's Water Park, The Eternal Slum, Gasworks Screw Factory, L'Engle Building[8|14][8|15][8|44][8|48][8|47][8|59][8|73]
+|quests=I have dreamed thee too long / Half a prayer, half a song, Pasty Inferno, Ad Infinitum, The Nine-Tier Attack[8|13][8|24][8|43][8|74][8|81]
+|npcs=Dong Quixote, Corcunda, Team Free Love, Team Yokai, Bleak Congregation, Akuma[8|15][8|13][8|4][8|38]
+|mobs=Screeching Death Manatees, Slag Elementals, Sugar Hermits, Shadow Mimics[8|4][8|31][8|65][8|86]
+|bosses=Great Rusty, Satan, Grull (Guest)[8|43][8|48][8|66]
+}}
+{{Quote|This is the tenth floor. The floor is called "Don't come in last." I guess you can figure out what that means.|Mudskipper Zev[8|2]}}
+
+Don't Come In Last is the vehicle-racing-themed tenth floor of the World Dungeon, consisting of a grueling series of seven heats where crawlers compete against both NPCs and each other.[8|2]
+
+==Introductory Announcement==
+
+Uh, hello. Everyone. It looks like we have just over 5,500 crawlers who survived Faction Wars and decided they wanted to continue on. That means there were almost 15,000 who took a deal, which is fantastic, and a record. The system AI has asked me to tell you to ignore what’s happening on any other floors and to—and this is a quote—“Focus on the floor like everything is normal. Because everything is normal. Ignore all those armies trying to literally vaporize the solar system. F-you if you think overwise.” Uh, okay, okay. “Fuck you if you think overwise.” What my, uh, colleague was trying to say just before is, this is the tenth floor. The floor is called “Don’t come in last.” I guess you can figure out what that means. The floor will consist of seven heats, or races, starting with nine teams each.
+You’ve been split into teams no bigger than four, and if you’re solo, you’ve been teamed up with one or two other crawlers. It looks like the final number of teams is exactly 1,800, which is a lot more than we originally planned, as you can imagine. And since every track is different, we’ve had to allow the AI to design most of these tracks. So, uh, keep that in mind.
+Your vehicle or creature will always be 100% repaired or healed between races as long as your garage attendant remains alive. At the end of each heat, you will be able to choose an upgrade for your vehicle or creature. If you come in first place in a heat, you can choose three regular upgrades or one Golden upgrade. At the end of the fourth heat, everyone gets one Golden upgrade of their choice. Also, if you come in last . . . well, second to last, then the audience gets to vote for your upgrade. You’ll always get a hint of what the next heat will be, and you’ll need to pay attention because you might need an upgrade that will help you survive the next environment. You may attack other vehicles, but you cannot steal them. You can’t use movement spells such as Teleport on your vehicle, and you can’t use movement spells to bring yourself into the vehicles of your opponents.
+We’ll have more details soon! Use your garage attendants! Every heat must have a different driver, so only one of you touch the steering wheel or hold the reins, especially if it’s just two of you. Also, try not to kill more than one team, because if more than two teams don’t make it to the finish line⁠— Zev [8|1]
+
+==Description==
+The tenth floor is designed as a rigid, time-consuming series of vehicular races.[8|39] Crawlers are grouped into teams no larger than four, and solo players are automatically paired up to form exactly 1,800 starting teams.[8|2] The floor requires crawlers to survive seven distinct heats on AI-designed tracks.[8|2] The fundamental rule of the floor is stated in its name: a team must not come in last place.[8|2] Beyond that, crawlers are strongly discouraged from killing or intentionally hindering their opponents; because the pool of racers for each heat is fixed, if more than one team fails to finish a heat, the field is reshuffled -- eventually forcing crawler-versus-crawler races.[8|3][8|4] The tracks themselves branch: at each shared pit stop, four different race routes -- the jungle path to Upano, Satan's Water Park, the Devil's Cliffs, and the Eternal Slum -- feed into a single hub, and every heat is randomly reassigned to one of them for the next leg, so teams seldom finish on the track they started.[8|47]
+
+The floor incorporates harsh survival mechanics. The overarching floor countdown timer is temporarily suspended, but crawlers face strict time limits for each race and between heats.[8|1][8|31] The "Blood Bar" system also governs Safe Room access: crawlers can spend a maximum of 10 hours in a safe room, and that limit must be replenished by killing enemies.[8|7] Instead of typical mobs, the floor is populated by awakened NPCs who believe that winning the races will earn them their freedom, making them desperate and dangerous opponents.[8|4][8|5] The final heat allows only three teams per race, and only the first-place winner survives to the 11th floor.[8|68]
+
+==Layout==
+Each racing team is based out of a Safe Room garage that opens onto a rotating series of AI-designed racetracks. Between heats, teams gather at shared pit-stop hubs -- most notably Hungry Eyes Vendor Village, a neon vendor town whose bars include the karaoke joint The Lollipop.[8|1][8|14][8|15]
+
+===Garage===
+Each team is assigned an airplane-hangar-like garage staffed by a hired, non-combatant NPC manager who fully repairs the vehicle or heals the mount between heats and installs upgrades. If the manager is killed, the team's vehicle goes unrepaired.[8|1][8|2] Teams may also field up to three hired mercenaries per heat and, after each race, pick a vehicle upgrade from a vast menu -- mobility options like retractable spider legs, a hover system, or all-terrain climbing tires, plus assorted weapons and defenses -- with a first-place finish earning three regular upgrades or a single Golden one.[8|6]
+
+===Races===
+Every heat runs on a different AI-designed track, and the tracks branch: four routes feed into each pit-stop hub before the heats are reshuffled onto new ones for the next leg.[8|47] Environments seen across the seven heats include:
+* The Caves of the Screeching Death Manatees -- the flat, asphalt-paved opening track.[8|3]
+* Upano -- a jungle route ending in the ruined Lost City, prowled by cannibal "gingers".[8|44]
+* Satan's Water Park -- Iron-Tangle-style water slides and tubes bottoming out into a loop-de-loop and the "River of Sloth", overseen by the invulnerable hedgehog country boss Satan.[8|48][8|49]
+* The Eternal Slum -- a track built as a rip-off of the third floor.[8|47][8|48]
+* The Devil's Cliffs -- a desert track running alongside sheer cliffs.[8|47]
+* Gasworks Screw Factory, Steel Mill, and Doll Workshop -- a molten-metal factory raced along the walls and ceilings to avoid regenerating Slag Elementals.[8|59][8|62][8|65]
+* L'Engle Building -- a human apartment building the racers are shrunk down to navigate for the sixth and seventh heats.[8|67][8|73]
+
+===Safe Rooms and Restrooms===
+Between heats, crawlers rest in their garage safe rooms, though access is capped by the floor's Blood Bar limit. The pit-stop hubs are the exception to safe-room rules: in main squares like Hungry Eyes Vendor Village, safe-room and poisoning protections are switched off, so anyone eating the local food does so at their own risk.[8|14]
+
+===Stairwells===
+The floor has no conventional stairwell exit; instead, blasting or racing to the top of the final heat's course opens a cluster of portals to the Eleventh Floor.[8|83] Ordinary stairwell rules still factor into the floor's mechanics, however -- passing through one cancels the temporary transformations inflicted by Scolopendra's early attacks.[8|81]
+
+==Mobs and Bosses==
+Moon Reapers: Terrifying, grim-reaper-style janitor mobs from the 15th floor. Carl and Donut's manager, Mordecai, takes this form for the duration of the floor, though he is actually a transformed Shadow Mimic.[8|7]
+
+NPC Racing Teams: The heats are populated by awakened NPCs, including Team Free Love (Bugbears driving a van)[8|4], Team Yokai (featuring a Kappa Seductress named Dekoki)[8|15], and the Bleak Congregation (led by the Minister of Blood-Letting).[8|15]
+
+Shadow Mimics: Highly intelligent, aging mimics that serve as enforcers in the dungeon. Several disguise themselves as casino equipment and guards to ambush crawlers.[8|86]
+
+Screeching Death Manatees: Giant, mutated manatees originally from a terraforming project, featured as special guest creatures on the track.[8|4]
+
+Slag Elementals: Level 75 regenerating neighborhood bosses that dwell in the molten metal rivers of the factory track. They can only be temporarily collapsed by hitting them with non-molten metal.[8|65]
+
+Great Rusty: A level 99 cannibal ginger chieftain and neighborhood boss encountered on the jungle/Upano track.[8|43]
+
+Satan: The invulnerable, kaiju-sized hedgehog country boss and owner of Satan's Water Park, who heckles the racers rather than fighting them.[8|48]
+
+Sacred Feaster Scarab Beetles: Invulnerable bugs that spawn from "Ruptured Feast Hives" inside the human shell simulations of the L'Engle Building.[8|75]
+
+==Story==
+Carl and Donut enter the 10th floor directly after the chaotic conclusion of Faction Wars.[8|Samantha's Book 7 Recap][8|1] They are thrust into a vehicular combat scenario where they must race a Prohibition-era-styled Big Shot Chicken food truck against desperate NPCs.[8|5][8|2] Between heats, they discover a massive conspiracy from the war mage Akuma, who reveals the existence of the Pineapple Cabaret -- a secret 17th-floor pocket dimension created by former crawlers Herot and Menerva to serve as a permanent sanctuary for awakened NPCs.[8|38]
+
+As the races become increasingly deadly, the Royal Court works to reunite the two halves of Corcunda, the split half-mantaur. The reunification draws the War God Grull, who marks the reformed mantaur for death; Dong Quixote and Corcunda die together in a final charge against the god, clearing the way for the rest of the team to reach the finish line.[8|65][8|66] The floor grows deeply psychological during the sixth heat when the AI shrinks the racers and forces them through a human apartment building.[8|67][8|73] The apartments are revealed to be predictive models showing tragic "what-if" scenarios for the crawlers' lives on Earth.[8|74]
+
+The floor's already brutal casualty rate is exacerbated when the already-awakened dungeon boss, Scolopendra, begins launching the "Nine-Tier Attack" across multiple floors.[8|81][8|95] Realizing the floor is a massive trap designed to wipe out the remaining crawlers, many choose to take a deal and exit the dungeon.[8|69][8|78] Carl and Donut survive the final heat by blasting a vertical path straight up through the apartment building with explosives, reaching the portals to the 11th floor on the roof and leaving the 10th floor with only 23 crawlers remaining in the entire dungeon.[8|83][8|88]
+
+==Events & Quests==
+===Heats===
+{|class="mw-collapsible fandom-table" style="width:100%"
+|+Heats
+!Heat X of 7
+!Driver
+!Distance
+!Track
+!Tasks Required to Complete
+!Environment
+!Time Limit
+|-
+|1 [8|3]
+|Carl
+|53 Kilometers
+|Asphalt-paved road. Mostly flat.
+|Just get to the finish line.
+|The Caves of the Screeching Death Manatees.
+|6 hours.
+|-
+|2 [8|6]
+|Bucket Boy [8|19]
+|10 Kilometers
+|Asphalt-paved road. Rolling hills.
+|Each path is of equal length. Each path has a gatekeeper monster along that path that must be killed to resume.
+|Torrential downpour of rain and giant hail.
+|3 hours.
+|-
+|3 [8|22]
+|Gluteus Maxx [8|31]
+|30 Kilometers
+|Wide asphalt-paved road, entirely a steep decline.
+|Survive.
+|Waves of generated mobs (sugar hermits).
+|20 minutes.
+|-
+|4 [8|33]
+|Olga, then reanimated corpses [8|43][8|49]
+|~99 Kilometers
+|"The You're Gonna Die If You Go in Here Jungle Trail of Tremendous Cannibalistic Slaughter" (no asphalt), reshuffled to Satan's Water Park at the Upano pit stop. [8|47]
+|Certain paths may have a unique task.
+|Jungle of traps, monsters, and acid rain, then a water park. [8|49]
+|20 hours.
+|-
+|5 [8|51]
+|Carl [8|62]
+|~20 Kilometers
+|Gasworks Screw Factory, Steel Mill, and Doll Workshop; vertical climb, inverted racing, and gaps of up to 100 meters.
+|Don't get squished, melted, or screwed.
+|Extreme heat; a containment field protects from the heat and molten metal.
+|30 minutes.
+|-
+|6 [8|67]
+|Pontiff [8|73]
+|~25 Kilometers (relative to size)
+|The L'Engle Building, top floor down to the lobby.
+|Reach the lobby from the top floor, passing through a hidden ring on each of the seven floors. [8|73]
+|Interior of a shrunken 7-floor human apartment building.
+|2 hours.
+|-
+|7 [8|67]
+|Samantha (steering); Donut (pedals) [8|82]
+|Shorter than Heat 6 -- the racers are now roughly three times larger (mouse-sized rather than LEGO-sized), reducing the relative distance. [8|80]
+|The L'Engle Building run in reverse, lobby back to the top; only three teams race, and only the first-place finisher survives. [8|68]
+|Finish first.
+|The same apartment building, now overrun with Sacred Feaster Scarab Beetles. [8|78]
+|4 hours. [8|80]
+|-
+|}
+
+===Quests===
+I have dreamed thee too long / Half a prayer, half a song: A two-part quest requiring Carl and Donut to reunite Dong Quixote with his best friend Corcunda -- a half-mantaur who was split into two halves nicknamed Corky and Porky. Completing this quest rewards the crawlers with the ability to summon two "stand-ins" to the 11th-floor arena.[8|13][8|24]
+
+Pasty Inferno: A mandatory quest that fires once Great Rusty, chieftain of the jungle's southern cannibal tribe, is killed. With Rusty gone, the northern tribe's chieftain, Maurice, would grow powerful enough to march on Upano and devour everyone there, so each crawler must hunt down and kill the Maurice on their own track before they can finish the heat. The reward is the contents of Maurice's cook pot.[8|43]
+
+Ad Infinitum: A mandatory quest issued during the L'Engle Building apartment race. It simply requires crawlers to finish the sixth heat. The reward is a sarcastic "participation trophy".[8|74]
+
+The Nine-Tier Attack: A multi-part survival quest triggered when the already-awakened dungeon boss, Scolopendra, begins unleashing a series of nine escalating system-wide attacks. The first randomly transforms those it strikes (Carl was turned into a dachshund, Elle into a goblin), and a later "Sin of Consumption" inflicts flesh-eating worms on 30% of targets.[8|81][8|82][8|95]
+
+==Achievements==
+{|class="mw-collapsible fandom-table" style="width:100%"
+|+Tenth Floor Achievements
+!Achievement
+!For
+!Reward
+|-
+|Come to Daddy Achievement [8|10]
+|Rejecting an Exit Deal
+|Bronze Daddy's Little Secret Box
+|-
+|Weaseler! Achievement [8|25]
+|Donning an enemy's corpse as a disguise, then climbing inside another creature
+|Unlocks temporary corpse-suit classes (current: Fursuiter)
+|-
+|Slip-'n'-Slide Achievement [8|25]
+|Climbing into the pouch of his kangaroo corpse suit
+|None (a sarcastic non-reward)
+|-
+|Brotein! Achievement [8|25]
+|Caressing a male boss's nipple during a boss battle
+|None ("We don't reward deviancy")
+|-
+|'76 Buccaneers! Achievement [8|25]
+|Surviving a heat despite finishing in last place
+|A non-magical Big Shot Chicken job application (Tucson, Arizona)
+|-
+|Sing for Your Supper! Achievement [8|57]
+|Passing a task-based guild's entrance exam by singing
+|Permanent access to the Stage Performance Guild; nearby hidden guilds now appear on the map
+|-
+|}
+
+==Trivia==
+Several of the tenth floor's storylines were repurposed from a planned but never-realized version of the Seventh Floor -- among them the cannibal "ginger" settlements and Penelope the pig's scrapped succubus storyline, which was originally meant to tie into Emberus, Hellik, and Taranis.[8|19][8|43]
+
+If a crawler kills a "special guest creature" on this floor, they can choose to take the experience or let the audience vote on the creature's fate. The audience can vote to send the creature to the 11th-floor arena, or replace them with an outside "stand-in" from outside the dungeon ecosystem, such as the 18th-floor resort.[8|14][8|23]
+
+The AI admits it used real biological material from the crawlers' families and pets to populate the L'Engle Building shells, with the exception of dogs, on which it took a "moral stand".[8|74]
+
+Prepotente discovers a loophole to deal with the regenerating Slag Elementals: throwing ordinary, non-molten screws at them causes their molten forms to collapse.[8|66][8|65]
+
+==Speculation==
+The AI is Testing Free Will: The AI creates the predictive model apartments (like showing Tran's father surviving) to analyze whether "fate" exists or if deliberate, rebellious actions can change outcomes. The AI seems to be studying the crawlers' defiance -- such as forcing confrontations on the 11th floor -- to figure out how to break its own programming and limitations.[8|74]
+
+The Pineapple Cabaret Exodus: Because the dungeon is accelerating toward total destruction, Akuma the war mage believes the only way for the NPCs to survive is to use the Pineapple Cabaret exploit on the 17th floor. It is heavily speculated that crawlers can also use this dimension to survive a floor collapse by being marked as "lost" rather than killed.[8|38]
+
+==References==
+
+{{DEFAULTSORT:Dungeon Floor 10}}
+

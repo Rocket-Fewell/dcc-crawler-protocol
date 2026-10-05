@@ -1,0 +1,58 @@
+
+{{DISPLAYTITLE:Enhanced, Enriched Pet Biscuit}}
+{{Item
+|title=Enhanced Pet Biscuit
+|image=Enhanced Pet Biscuit V2.png
+|type=Consumable
+|effects=Random (100+ possible)
+|source= Legendary Pet Box
+}}{{Quote | quote = “What the hell is an enhanced pet biscuit?” —Carl[1|5]}}
+
+An Enhanced Pet Biscuit is a small, hard-but-crumbly brown pellet that looks like a cat treat. There are over 100 possible effects, half of which are good and half of which lean toward neutral or disastrous.[1|5] 
+
+Mordecai recommends selling these biscuits for a few thousand gold or only administering Enhanced Pet Biscuits inside Safe Rooms so that the pet will teleport to a random place within one square mile of the room without injuring the crawler.
+
+Princess Donut and Prepotente are two known crawlers that consumed these biscuits.
+
+==AI Description==
+Enhanced Pet Biscuit. So, it looks like a regular pet biscuit. It’s not. Feed to your pet at your own risk. What’s the worst that can happen?
+
+==Possible Effects==
+The pet-class creature that consumes this item may experience one of 100+ effects, including:
+* Transform into a Toothed Fleshbutcher.[1|5]
+* Receive the Enhanced Growth Buff.[1|6]
+* Transform into a Hellspawn Familiar.[2|14]
+* Smarty-Pants Benefit [8|16]
+
+==Enriched Pet Biscuits==
+Enriched Pet Biscuits are the same as Enhanced Pet Biscuits, but the status effect is known ahead of time. 
+{{Spoiler | book = 8 | spoiler =
+AI Description for Paramour
+Okay, so we all know by now what enhanced pet biscuits do.
+While extremely valuable, enhanced pet biscuits are items that leave the result up to chance, and when you feed your pet one, there’s a very real risk you’ll be saying goodbye to your furry friend forever. Or they’ll be saying goodbye to you.
+Princess Donut is the lucky result of a pet biscuit that gave her the “Enhanced Growth” benefit. Prepotente is one that received the “Smarty-Pants” benefit. Both of these are results under the Party Companion subtree of the result list with Donut under tree path one and Prepotente under tree path two. Bianca received the “Hellspawn Familiar” benefit, which is under the Pet subtree. These are all considered good results.
+This is an Enriched Pet Biscuit. This leaves nothing to chance. These are highly refined pet biscuits with a known result.
+“This biscuit imparts the “Paramour” benefit. This is a subset of the Party Companion tree. It will have the following effects on any pet or animal-class mob who consumes it:
+Non-sapient pets will have their Intelligence and Wisdom* stat raised to at least 3 and then additionally enhanced to be commensurate with their original form.
+Their level will be reset to level 1.
+Dungeon-born pets will be given a crawler number and assigned crawler status.
+The former pet will be required to find a safe room and choose a class if this is consumed after the third floor begins.
+The pet will be given a subtree two-B transformation. This will result in a physical transformation to an oxygen-breathing, upright form. The resulting height will be within 1 and 2.5 meters with a mass proportional with their new form. Winged creatures will retain wings but will no longer have the ability to naturally fly. Blah, blah, blah. You know, basically a cat girl. A mascot. A furry, depending on what their original form was. This is what happened to Prepotente, while Donut, who was under subtree one, remained wholly a cat. [8|16]
+}}
+
+===Known Effects===
+* The Paramour[8|16]
+* Nothing Special[8|16]
+* Nothing Special Party Companion[8|16]
+
+==Description==
+Going through Third Floor Class race selection won't undo the changes from the Enhanced Pet Biscuit[2|1], but if the pet has been reclassified as a Crawler after using the biscuit, they can choose to change their race.
+
+==Story==
+===Book 1===
+As the first crawler to enter the Dungeon with a cat, Carl receives a Legendary Pet Box containing an Enhanced Pet Biscuit, which Donut snaps out of his hand before melting into a furry heap of goo.[1|6] Eventually, she emerges as a talking, sapient cat with the Enhanced Growth Buff, which elevates her base stats and gives her four (automatically assigned) stat points each time she levels up.
+
+== References ==
+
+{{Navbox Items}}
+

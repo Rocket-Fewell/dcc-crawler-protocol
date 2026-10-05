@@ -304,6 +304,8 @@ class Data:
                 c["_deck"] = d.get("deck_id")
                 self.cards[c["id"]] = c
         self.ach = {}
+        with open(check_read_allowed(os.path.join(t, "achievements.csv")), "rb") as f:
+            self.ach_sha256 = hashlib.sha256(f.read()).hexdigest()
         with open(check_read_allowed(os.path.join(t, "achievements.csv")), encoding="utf-8", newline="") as f:
             for r in csv.DictReader(f):
                 self.ach[r["ID"]] = r
@@ -460,6 +462,43 @@ def add_audience(doc, rep):
         rep.ok("audience manifest", "%d player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm" % len(blocks))
 
 
+def _get_path(doc, path):
+    o = doc
+    for k in path.strip("/").split("/"):
+        o = o[int(k)] if isinstance(o, list) else o.get(k) if isinstance(o, dict) else None
+    return o
+
+
+def check_md_audience(md, doc, rep):
+    """Rendered-page audience checks. FAIL if (a) a GM marker sits inside any player block from audience_manifest,
+    (b) one .md line/bullet carries both [GM-ONLY] and [PLAYER-FACING], or (c) an achievement / proposed-achievement
+    bullet carries an inline [GM-ONLY] note (it must be its own bullet). WARN on a doubled full stop ('..') in prose."""
+    bad_pb, mixed, inline_ach, dots = [], [], [], []
+    for b in doc.get("audience_manifest", {}).get("player_blocks", []):
+        blk = _get_path(doc, b["path"])
+        val = blk.get(b["field"]) if isinstance(blk, dict) else None
+        if isinstance(val, list):
+            val = " ".join(q.get("text", "") if isinstance(q, dict) else str(q) for q in val)
+        if isinstance(val, str) and (GM in val or "[GM-FACING]" in val):
+            bad_pb.append(b["path"])
+    for n_, raw_ln in enumerate(md.splitlines(), 1):
+        ln = re.sub(r"`[^`]*`", "", raw_ln)  # markers quoted in code spans (the Reading key legend) are not tags
+        if GM in ln and PF in ln:
+            mixed.append(n_)
+        if GM in ln and re.match(r"\s*- \*\*(Achievement|Proposed achievement)", ln):
+            inline_ach.append(n_)
+        if not ln.lstrip().startswith(("|", "`")) and re.search(r"(?<!\.)\.\.(?![./])", ln):
+            dots.append(n_)
+    if bad_pb or mixed or inline_ach:
+        rep.fail("rendered audience separation", "GM marker in player block(s) %s; mixed GM/player .md line(s) %s; inline GM note on achievement bullet line(s) %s" % (bad_pb, mixed, inline_ach))
+    else:
+        rep.ok("rendered audience separation", "%d player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet" % len(doc.get("audience_manifest", {}).get("player_blocks", [])))
+    if dots:
+        rep.warn("doubled full stop", "'..' in .md line(s) %s" % dots)
+    else:
+        rep.ok("doubled full stop", "no '..' artifacts in the rendered page")
+
+
 def build(spec, data, rep):
     clock = spec["clock"]
     days = clock.get("days")
@@ -557,6 +596,12 @@ def build(spec, data, rep):
     else:
         rep.fail("clock cites decision 026", "clock.authority must cite decision 026")
 
+    # ---- achievements catalog pin (optional; tables/achievements.csv)
+    acp = spec.get("achievements_catalog", {}).get("expected_sha256")
+    if acp and acp != data.ach_sha256:
+        rep.warn("achievements catalog hash", "spec pins %s but tables/achievements.csv is %s (Syndicate revised it; check the cited rows, then update the pin)" % (acp[:12], data.ach_sha256[:12]))
+    elif acp:
+        rep.ok("achievements catalog pinned", "tables/achievements.csv v%s, sha256 %s, %d rows" % (spec["achievements_catalog"].get("version", "?"), data.ach_sha256[:16], len(data.ach)))
     # ---- canon table
     if data.canon:
         rep.ok("Lore canon table present", "%s (ledger %s, %d zones)" % (
@@ -1136,7 +1181,7 @@ def build(spec, data, rep):
         "schema": "encounter-bot-day/0.1",
         "meta": dict(spec["meta"], day=daynum, days=days, days_left=ctx["days_left"],
                      generated_by="tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-                     canon_table_sha256=data.canon_sha256, canon_ledger_version=(data.canon or {}).get("ledger_version"),
+                     canon_table_sha256=data.canon_sha256, achievements_csv_sha256=data.ach_sha256, canon_ledger_version=(data.canon or {}).get("ledger_version"),
                      budget_file=B70, budget_file_version=(bud.data or {}).get("version"), budget_file_sha256=bud.sha256,
                      budget_file_label="every figure from the budget file is a GM-adaptable guideline (its authority_note)"),
         "clock": spec["clock"],
@@ -1164,13 +1209,42 @@ def gm(note):
     return note if note.startswith(GM) or "[GM-ONLY]" in note else "%s %s" % (GM, note)
 
 
+def join_sentence(*parts):
+    """Join prose pieces with single spaces and never leave a doubled full stop ('..'); a real ellipsis is kept."""
+    out = ""
+    for p_ in parts:
+        p_ = (p_ or "").strip()
+        if not p_:
+            continue
+        if out.endswith(".") and not out.endswith("...") and p_.startswith("."):
+            p_ = p_[1:].lstrip()
+        out = (out + " " + p_) if out else p_
+    return out
+
+
+def end_stop(s):
+    s = (s or "").rstrip()
+    return s if not s or s[-1] in ".!?)\"" else s + "."
+
+
 def ach_line(a):
+    """Achievement text WITHOUT its GM note; the note goes on its own bullet (ach_gm_bullets)."""
     s = "%s: %s" % (a.get("label", a["id"]), a["note"])
     if a.get("canon_ledger_id"):
         s += " (catalog row for canon %s)" % a["canon_ledger_id"]
-    if a.get("gm_note"):
-        s += " " + gm(a["gm_note"])
     return s
+
+
+def ach_gm_bullets(achs, what="Achievement"):
+    """One separate [GM-ONLY] bullet per achievement GM note; never inline with player text or the achievement line."""
+    out = []
+    for a in achs or []:
+        if a.get("gm_note"):
+            note = a["gm_note"].strip()
+            if note.startswith(GM):
+                note = note[len(GM):].strip()
+            out.append("- %s %s %s: %s" % (GM, what, a["id"], end_stop(note)))
+    return out
 
 
 def render_proposed(pa):
@@ -1181,8 +1255,17 @@ def render_proposed(pa):
         s += " Canon parallel: %s \"%s\" (reference only)." % (pa["canon_ref"]["ledger_id"], pa["canon_ref"]["ledger_name"])
     if pa.get("catalog_parallel"):
         cp = pa["catalog_parallel"]
-        s += " Catalog parallel: %s%s." % (cp.get("label", cp["id"]), (" " + gm(cp["gm_note"])) if cp.get("gm_note") else "")
-    return s + " Reward (guideline, GM may adapt): %s" % fill_text(pa["reward_slot"])
+        s = join_sentence(s, "Catalog parallel: %s." % cp.get("label", cp["id"]).rstrip("."))
+    return join_sentence(s, "Reward (guideline, GM may adapt): %s" % fill_text(pa["reward_slot"]))
+
+
+def render_proposed_lines(pa):
+    """The proposal bullet (may carry [PLAYER-FACING] narration) plus any GM note as its OWN [GM-ONLY] bullet."""
+    lines = ["- " + render_proposed(pa)]
+    cp = pa.get("catalog_parallel")
+    if cp and cp.get("gm_note"):
+        lines += ach_gm_bullets([dict(cp, id="%s (catalog parallel of proposed %s)" % (cp["id"], pa["name"]))], "Achievement")
+    return lines
 
 
 def render_md(doc):
@@ -1267,6 +1350,8 @@ def render_md(doc):
         w("- **Stairwell access:** %s" % r["stairwell_access"])
         if r["achievements"]:
             w("- **Achievement ids:** " + "; ".join(ach_line(a) for a in r["achievements"]))
+            for g_ in ach_gm_bullets(r["achievements"]):
+                w(g_)
         for c in r["canon_refs"]:
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
         w("")
@@ -1305,6 +1390,8 @@ def render_md(doc):
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
         for a in ed.get("achievements", []):
             w("- **Achievement** %s" % ach_line(a))
+            for g_ in ach_gm_bullets([a]):
+                w(g_)
         w("- **GM note (stasis sideline scenes):** %s" % ed["sideline_note"])
         w("")
     w("### Rest options (Day %d)\n" % m["day"])
@@ -1390,8 +1477,11 @@ def render_md(doc):
             w("- " + gm(e["spine_plant_gm_only"]))
         for a in e["achievement_hooks"]:
             w("- **Achievement** %s" % ach_line(a))
+            for g_ in ach_gm_bullets([a]):
+                w(g_)
         for pa in e.get("proposed_achievements", []):
-            w("- " + render_proposed(pa))
+            for l_ in render_proposed_lines(pa):
+                w(l_)
         w("")
         w("#### Scaling note (2, 3, 4 Crawlers)\n")
         for n in ("2", "3", "4"):
@@ -1429,13 +1519,16 @@ def render_md(doc):
     w(lc["note"] + "\n")
     for a in lc["achievements"]:
         w("- **Achievement** %s" % ach_line(a))
+        for g_ in ach_gm_bullets([a]):
+            w(g_)
     for c in lc["cards"]:
         w("- **Card** `%s` %s [%s]: %s" % (c["card_id"], c.get("display", ""), c.get("tier", "?"), c["note"]))
     if day.get("proposed_achievements") or any(x.get("proposed_achievements") for x in doc["encounters"]):
         w("")
         w("**Proposed achievements on this page** (Floor 1 seed list, GM discretion). %s" % clk["achievement_caps"])
     for pa in day.get("proposed_achievements", []):
-        w("- " + render_proposed(pa))
+        for l_ in render_proposed_lines(pa):
+            w(l_)
     w("")
     w("## Short-rest slot map (cap, not a promise)\n")
     w(bullets(day["short_rest_slots"]))
@@ -1522,6 +1615,10 @@ def main(argv=None):
     doc = build(spec, data, rep)
     sans_pin = spec_sha256_sans_pin(json.loads(raw))
     check_slot_map_provenance(spec, sans_pin, data.budget, rep)
+    doc["meta"]["spec_sha256_sans_pin"] = sans_pin
+    doc["meta"]["spec_sha256_sans_pin_method"] = SANS_PIN_METHOD
+    doc["validation"] = {"result": "?", "pass": 0, "warn": 0, "fail": 0, "spec_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(), "checks": []}
+    check_md_audience(render_md(doc), doc, rep)  # provisional render; the build note is re-rendered below
     checks = [{"status": s, "check": c, "detail": d} for s, c, d in rep.items]
     doc["validation"] = {
         "result": "PASS" if rep.passed else "FAIL", "pass": rep.count("PASS"), "warn": rep.count("WARN"), "fail": rep.count("FAIL"),

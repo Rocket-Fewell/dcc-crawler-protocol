@@ -1,0 +1,35 @@
+{{SpoilH | 6}}
+{{Spells
+|title1= {{PAGENAME}}
+| image1=
+|caption-image1=
+|effect=
+|cost= Nothing
+|casting=
+|cooldown= Once a day
+|target= Self
+|duration= Instantaneous. Fire burst lasts up to three seconds.
+|associated equipment=
+|users= Carl
+}}
+{{PAGENAME}}  is a spell given to Carl by Emberus for being in his good graces as a Devotee.
+
+==AI Description==
+
+Self-Immolation
+Cost: Nothing. Requires to be in Emberus' good graces to cast.
+
+Target: Self Only
+
+Duration: Instantaneous. Fire burst lasts up to three seconds, which is complete overkill with this stuff.
+
+Cooldown: Once a day. Resets with the obeisance countdown.
+
+Casts a non-static sphere of Sheol Fire around the caster with a 1-foot buffer from all body parts of caster. Fire expands in a distance of .15 meters level level until it reaches level 15, at which time the distance increases exponentially and may be controlled.
+
+At level 10, the fire will expand in a sphere 1.5 meters around your body. That's up, down, left, and right. So you might want to be careful where you are when you cast this.
+
+What is Sheol Fire? You know how when you were a kid, you'd take a lighter and pass your finger over the flame really fast, and it wouldn't hurt you? Don't try that with this stuff. It's fire with rabies. Wood instantly turns to ash. Rock to lava. Flesh... well. Just be careful. Or don't, if you're looking to go out with some char-scented gusto. [6|47]
+
+==References==
+

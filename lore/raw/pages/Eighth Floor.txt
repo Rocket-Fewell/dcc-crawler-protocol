@@ -1,0 +1,309 @@
+{{SpoilH|6}}
+{{DISPLAYTITLE:The Ghosts of Earth (Eighth Floor)}}
+{{Dungeon Floor
+|title1=
+|image1=
+|caption-image1=
+|preceded_by=Seventh Floor[5|Epilogue]
+|followed_by=Ninth Floor[7|1]
+|theme=Ghosts of Earth: an Earth memory simulation with forced T'Ghee card combat[6|1][6|8]
+|start_date=December 10th (simulated); March 3rd (real)[6|1]
+|end_date=December 31st (simulated)[6|1]
+|duration=21 Days[6|1]
+|exits=586 (two per region across 293 regions)[6|1]
+|crawlers=38,532 at the start[6|1]
+|crawler_levels=40-75 (Carl reaches Level 73; Donut, Level 63)[6|72]
+|mob_levels=20-140+[6|7][6|26]
+|locations=
+* Havana, Cuba[6|1]
+* Iceland[6|1]
+* Beijing, China[6|1]
+* Ecuador[6|1]
+* The Bahamas[6|1]
+* Monroe County, Florida[6|38]
+* Da Nang, Vietnam[6|38]
+|quests=
+* Pueblo de los Olvidados[6|10]
+* Spiders[6|17]
+* The Missing Piece[6|66]
+|npcs=
+* Asojano[6|11]
+* Ogun[6|15]
+* Oshun[6|15]
+* Inle[6|15]
+* Legba[6|15]
+* Shango[6|15]
+* Yemaya[6|15]
+* Eileithyia[6|15]
+* Emberus[6|18]
+|mobs=Duendes, Ghommids, Monk Seal Picket Sentries, Nightgaunts, Quench Moths[6|7][6|10][6|41]
+|bosses=Amayon, Ysalte, The Bedlam Bride, Reminiscence Hydra of Malicious Compliance, Madre de Aguas[6|26][6|46][6|55][6|66]
+}}
+
+{{Quote|Welcome, crawlers. Welcome to the eighth floor. The Ghosts of Earth.|System AI[6|1]}}
+
+The Eighth Floor, themed the Ghosts of Earth, drops crawlers into an exact replica of Earth in the days before the collapse and forces them to fight one another through a deck-building card game called T'Ghee.[6|1][6|8]
+
+== Description ==
+The floor divides its crawlers among 293 isolated regions, each a faithful copy of a real place on Earth as it stood shortly before the apocalypse.[6|1] It runs as a playable memory. People and animals exist only as intangible ghosts who cannot see the crawlers and pass straight through them, going about the day they were recorded, while every non-biological object retains its mass and momentum.[6|1] Crawlers can enter buildings, break windows, empty a grocery store, or pluck an onion from a ghost's hand and throw it at a mob. Anything looted from the memory turns to dust when the level collapses, which keeps modern weaponry from being carried forward.[6|1]
+
+Each region is seeded with mobs, bosses, and legendary creatures drawn from the local folklore of that part of Earth, with difficulty rising the farther a squad travels from its starting structure.[6|1] Layered over the environment are two governing structures: a forced player-versus-player card game and a rigid three-phase schedule.[6|1][6|8]
+
+Crawlers are locked into unbreakable squads of no more than five, each carrying six empty slots that must be filled with monsters captured as T'Ghee totems before the squad may advance.[6|1]
+
+==Introductory Announcement==
+Hello, crawlers.
+
+Welcome to the eighth floor. The Ghosts of Earth.
+
+This is going to be a long message. This floor is simple, but the environment requires a small amount of explanation. Not that you twits are going to understand either way.
+
+You have all picked one of 293 different regions. We have just over 38,000 crawlers joining us, and of the groups, you are occupying 205 of the regions. Unlike the bubbles of the fifth floor, you are not distributed evenly. But just because you don’t see anybody else, it doesn’t mean you’re alone. Each region contains two stairwells, and you have been generated near one of the two.
+
+The theme of this floor is broken up into two parts. Phase two starts in 14 Earth days. You will not be able to obtain an exit key until then. Thank the gods. For the next two weeks, you will be stuck within your starting area.
+
+All crawlers have been placed in squads of no more than five. If your party is six or more, the party members have been split into equal-number squads of less than five. These squads are not able to be broken. If you leave your party, you will not leave the squad. You have to work together to survive.
+
+You’ll notice your squad has six more spots than the number of crawlers. So if you’re by yourself, it’ll have seven spots total, and if your squad consists of five crawlers, it’ll have eleven spots total. Your job for the next fourteen days is to fill your squad. You will be required to fill your squad before you will be allowed to proceed to phase two. If you do not fill your squad before the timer runs out, it will be filled randomly. Trust me. You don’t want that. We’ll get to that in a moment.
+
+In fourteen days, you will be given at least two options on where to send your squad for the second phase. It will be a different geographic location than where you’ve started. You, along with your full squad, will be required to fight your way to an exit key. This will not be easy, so it is in your best interest to make certain your squad is as powerful as you can handle. More details on the assault phase of this floor will be forthcoming.
+
+This is how phase one works.
+
+All of you are inside a large structure within your starting area. As soon as this message ends, the doors will open, and you will be allowed to proceed outside.
+
+Each region is limited, but you will have plenty of area to investigate. In most cases, you will be allowed to explore in a circle of about 99 kilometers from your starting location in any direction. If this causes an overlap with another region, this distance will be shortened. If you are on an island, you will not be able to venture more than six kilometers off shore.
+
+You will not be able to enter any other regions during phase one.
+
+Your starting area is an exact replica of Earth’s surface area as captured on the indicated date. This includes all the geographic features, buildings, vehicles, and yes, the people.
+
+That’s correct. You will be fighting and exploring in a precise facsimile of Earth in the weeks before the collapse.
+
+There are a few important caveats. You’re living inside of a memory. In most cases, you will not be able to interact with mobile biological entities within the replay. They will not appear on your map. Think of them like intangible ghosts. They can’t see you, and if you touch them, you will go right through them. They will be going about their lives just as they did on the day of the recording.
+
+However, and this is very important so pay attention, all non-biological, non-attached items will be tangibly present and will maintain their mass and momentum until physically interacted with by a crawler or a mob or an unexpected environmental factor.
+
+You can enter buildings. You can use non-automatic doors in most cases. You can break windows. You can get hit and killed by a vehicle. You can go to a grocery store and take all the onions. You can allow a person to walk through you, which will likely rip the clothes from their bodies. The visible portions of their bodies will continue on their way. The people and animals are ghosts. Everything else is not. Complex machines may or may not work depending on what they are. You can pick an onion or piece of tofu out of a ghost’s hand and throw it at a mob. The ghost will continue to eat, but the onion will now be on the ground. You can place a barrier in a street, and a car will crash into it, but the ghostly avatars of the drivers will continue on their way, floating toward their destination as if the accident never happened.
+
+In other words, you can destroy the environment as much as you like. You can move mountains if you have the power. The physical items will only move as they did on that date if they are in the exact place and condition they were at the time of recording. The world is your literal playground.
+
+Note. Anything you loot on this level that comes from the earth memory will turn to dust upon the collapse of this level. You will not be arming yourselves with the content of your local military base for use on the ninth floor.
+
+That’s the environment. Now let us get to the squads.
+
+Your area is seeded with mobs and bosses and legendary creatures that are exclusive to the folklore of the region in which you inhabit. For example, those of you in Romania will be dealing with vampires and werewolves. Those of you in Ireland will have leprechauns and banshees. Those of you in Japan are just plain fucked.
+
+The further out from your starting area, the more difficult the monsters and bosses you will face. These monsters will also be interacting with the environment, so it’s likely their locations will be obvious, especially if the mobs are unintelligent as they will be attempting to attack the noncorporeal locals.
+
+At the end of this message, your squad leader will receive a set of twenty flags containing your squad’s logo, which has been automatically created by the system.
+
+If you plant the flag within the body of a living entity while they are at less than 5% health, they will be transformed into something called a T’Ghee totem, which will be added to the squad leader’s inventory.
+
+If it is a noncorporeal monster, the flags will still work. Flagged monsters will automatically join your squad and will automatically be minions of whomever summons them. They will follow the summoner’s orders.
+
+That is, they will follow orders to a certain extent, depending on the level difference and nature of the monster. While you need a squad that’s as powerful as possible, it might not be in your best interests to build a team that’s a little too strong. You may dismiss mob squad members if they don’t work out by ripping the T’Ghee totem in two.
+
+If you run out of or lose your twenty flags before your squad is filled, they will not be replaced, so be careful with them. You may collect more totems than squad spaces. You may trade totems with fellow crawlers. You may steal totems from fellow crawlers.
+
+Upon the start of phase two, all non-placed totems will dissipate. All surviving squads may choose a single T’ghee card to keep upon the collapse of this floor.
+
+That’s it for now. More details on phase two will become available in a few days. Furthermore, fighting with T’Ghee totems comes with a few additional rules, which will be explained after the next recap episode. I’m supposed to explain that part now, but honestly, you monkeys think you’re so smart and clever, and I’m certain you can figure it out on your own.
+
+Now get out there and kill, kill, you know.
+
+== Layout ==
+=== Starting Areas ===
+Every crawler begins inside a large structure in one of the 293 regions, captured as it appeared on December 10th, and may explore roughly 99 kilometers in any direction once the doors open. That radius shrinks where regions would overlap, and island crawlers cannot travel more than six kilometers offshore.[6|1] Crawler groups occupy 205 of the 293 regions, and are not distributed evenly between them.[6|1] Carl and Donut start in the El Capitolio Nacional building in Havana, Cuba.[6|1]
+
+Dungeon-specific settlements grow inside some regions, such as the Ghommid settlement that sprang up in Havana's Colón Cemetery.[6|10]
+
+=== Secondary Areas ===
+For the second phase, crawlers choose a new Earth region in which to hunt for a stairwell key. The options are nominally free, but every one appears tied to places and people the crawler knew personally before the dungeon.[6|38] Time runs differently in these locations, which depict a different moment than the rest of the floor.[6|44]
+
+The selection itself misfires. Each squad leader should receive three options, one chosen by production, one by the AI, and one at random; instead some receive four, some one, some none at all, and one leader is handed the entire globe and drops herself into open ocean.[6|38] Donut is offered four, picks Miami, is told by an error message that she will be sent to Iowa, and arrives in Monroe County in the Florida Keys with her key still marked in Iowa.[6|38] Rather than move the squads, the dungeon lifts the key locations bodily and drops them into wherever the crawlers actually landed. The chunk of Iowa deposited on the Keys is wider than the island itself and climbs out of sight into the clouds, shedding dirt into the sea, with the key somewhere near the top.[6|38]
+
+=== Stairwells ===
+Each occupied region holds two stairwells.[6|1] On arrival each is sealed inside an enchanted vestibule that opens only with a key collected during Phase Two. When a key is used, only the holder's squad may pass through, and the key vanishes on use.[6|27][6|52] If the area around a stairwell is badly damaged, for instance if the building housing it collapses, the stairwell becomes unusable and its key disappears.[6|58]
+
+The stairwell chambers themselves are indestructible and structurally separate from the vestibules containing them, a distinction Carl and Prepotente later exploit (see Story, below).[6|61][6|62]
+
+=== Safe Rooms ===
+Safe rooms on this floor add rentable card-combat practice arenas.[6|8] The floor also produces the first mob clever enough to enter a safe room and simply wait there without attacking.[6|11]
+
+== Theme and Mechanics ==
+
+=== Card Combat ===
+Combat runs through T'Ghee. Once an opponent's aggro triggers and both sides hold decks, deck combat begins automatically: the squad leader loses access to magic and inventory and may use only their deck, melee attacks, and whatever items are already physically in hand.[6|8] A deck requires a minimum of six totems plus any number of supporting cards, and combat ends when a squad dies, is rendered neutral, or flees.[6|8] Most totems cannot strike an enemy squad leader while other totems remain on the field, but leaders themselves stay vulnerable to squad members and minions; as Mordecai puts it, a leader cannot cast spells while being punched in the face.[6|29]
+
+Cards come in five types: totems (summonable monsters), utility cards (buffs played on a squad's own totems), snare cards (debuffs played on an enemy's), mystic cards (affecting a squad, its leader, or an opposing deck), and special cards (major, usually consumable effects).[6|8] Individual cards and totems are catalogued at T'Ghee and T'Ghee Card.
+
+=== Phase One ===
+Phase One lasts 14 Earth days.[6|1] Squads fill their empty slots by flagging opponents: once a target drops to 5% health or below, a squad member must physically plant one of the squad's twenty flags in it, converting the creature into a totem in the leader's inventory. Flags cannot be thrown or fired, and are never replaced if lost. Unwanted totems are released by tearing the card in two, and totems may be traded or stolen between crawlers.[6|1] Squads that fail to fill their slots before the timer expires have them filled at random.[6|1] No mobs carry decks during this phase, so deck combat occurs only between crawler squads.[6|8]
+
+=== Phase Two ===
+Phase Two opens at 12:01 am on December 24th of the floor's timeline. Only the squad leader is transported to the selection room, with the rest of the squad held in stasis until the leader has fought a single solo battle; the leader then has sixty seconds to choose a destination.[6|27][6|37] Every totem not in an active deck is discarded, and empty slots are auto-filled from the starting region's seeded mobs. From here a squad may hold neither more nor fewer than six totems at a time, so taking an opponent's totem means surrendering one, though upgrades remain possible.[6|27][6|47]
+
+The key is marked ten to fifteen kilometers out, with 48 hours to reach it.[6|27] Mobs in the new region carry decks and stand inert until approached, and each region seeds a numbered set of deckmasters that climb in level as the numbers rise.[6|38] The first nine carry numbered tokens and rise five levels apiece, from level 40 to level 80; feeding all nine to a vending machine opens the keymaster fight, which yields the key.[6|38][6|39][6|43] A key opens only the stairwell adjacent to the squad's original starting area, and only the holder's squad may pass through it.[6|27]
+
+=== Phase Three ===
+Phase Three begins at midnight as the clock turns to December 26th.[6|27] Squads holding a key are returned to a random point in their original starting region and must make their way back to the stairwell. Squads without one are given at least two choices of destination, but every option puts them at the doorway of a stairwell belonging to a squad that does have a key, explicitly to block it. Several keyless squads can be dropped onto the same stairwell, and killing the holder is the only way to take the key from them.[6|27][6|52] From this point forward all combat is card combat.[6|53] The Flee card also changes: a key-holding leader who plays it forfeits a key to the eventual winner of the fight, which is the only way a squad can hand a key to someone else rather than lose it to a kill.[6|53]
+
+== Mobs and Bosses ==
+Mobs are seeded by regional mythology, giving Romania vampires and werewolves and Ireland leprechauns and banshees.[6|1] Fidelity to the source folklore is poor, and Carl attributes this to the same production shortcut behind the Earth Beautiful programme: research pulled from an incomplete copy of the internet, with the gaps filled in by invention.[6|4] Crawlers are warned to think carefully about which mobs they flag, since a monster powerful enough to be worth a deck slot may be powerful enough to ignore orders.[6|1]
+
+The Thorn Room is a unique encounter offering seven mutually exclusive outcomes, each carrying a major reward and a steep consequence.[6|15] A later announced boss battle drops eight groups of combatants, crawler squads and card-less mobs alike, into a prisoner's dilemma: teams choosing "enemy" fight normally, teams choosing "ally" may decline combat, and a mismatch freezes the team that chose "ally" for ten seconds.[6|55][6|56]
+
+== Story ==
+Carl and Donut begin the floor in Havana's Capitol building and start farming T'Ghee cards off local mobs, and later off deckmasters.[6|1][6|6][6|38] Donut, serving as squad leader, drills in the practice arenas with totems including the Monk Seal Picket Sentry Geraldo, Shi Maria (the Bedlam Bride), and a crab named Raul.[6|9][6|26][6|28] In a corrupted temple the pair stumble into a Celestial Thorn Room and its choice of seven fallen deities to resurrect; Carl repairs the shrine of Yemaya to secure a boon from Eileithyia and save Katia.[6|15][6|17][6|19]
+
+Phase Three turns ugly quickly. A Demon Eviction event fires early, summoning demons from Sheol into dead bodies, each of which can only return home by dragging a living soul down with it.[6|54] Amid the chaos a rival crawler, Quan Ch, steals both of the region's keys, and because a Flee card surrenders a key at random, Carl cannot guarantee that his ally Imani will receive the right one.[6|53][6|56][6|58][6|59]
+
+Rather than accept a forced bloodbath, Carl and Prepotente work out an exploit from three separate notes in the Dungeon Anarchist's Cookbook: stairwells survive an Utter Annihilation wand, the rules forbid removing one from the playing field, and no crawler may change floors by any other route. If the chamber walls cannot be broken from outside, they can be bypassed from below, because those walls will teleport away the moment the chamber meets Amayon's hell portal. A squad that excavates beneath a sealed chamber and waits there can strike the exposed stairwell as everything is torn upward. Carl broadcasts a mass message urging crawlers to stop killing each other and start digging, and seeds the market with satchel bombs so they can clear the ground above.[6|61][6|62]
+
+The climax plays out through The Missing Piece. The Demon Prince Amayon, banished into the physical world by one of his brothers, is seized by his former partner Ysalte, the Vinegar Bitch, who intends to haul him to the Ascendency as her retainer.[6|66] Freeing him means refilling the dying world with souls and powering Amayon up enough to cast a portal home, one large enough at full strength to cover the entire world and give every crawler a chance to escape.[6|67] Carl helps trigger the spell, in part by "pulling off" the crab Raul.[6|72]
+
+When the portal opens the world is stripped bare, every object torn into the sky. The containing walls teleport away as each chamber meets the portal, and the crawlers waiting in tunnels below strike the exposed stairwells and pass through mid-air rather than being dragged into Sheol. Carl, Donut, and Imani escape this way, standing beneath a neon X that Chris painted on the tunnel ceiling under the Capitol stairwell, which spares Carl from spending his Mysterious Bone Key to get out alone.[6|27][6|61][6|72] With the floor still collapsing, 33,804 crawlers remain alive against the 38,532 who entered, a survival rate far beyond anything the showrunners planned for. Carl leaves the eighth floor at Level 73.[6|72]
+
+== Quests and Events ==
+* The Chowder War (failed)[6|54]
+* Pueblo de los Olvidados[6|10]
+* Spiders[6|17]
+* The Bedlam Bride[6|27]
+* Hell Comes to Crawler Town[6|54]
+* Where the Sidewalk Ends[6|62]
+* The Missing Piece[6|66]
+
+Guild jobs unlock partway through Phase One.[6|19] Broadcast appearances during the floor include Rosetta's Shadow Boxer,[6|12] an episode of Dungeon Crawler World,[6|27] and Odette's Dungeon Crawler After Hours with Odette.[6|35] The recap episode covering Cascadia and Orren's AI announcement is cancelled during Phase Two.[6|47]
+
+== Achievements ==
+{| class="mw-collapsible mw-collapsed fandom-table" style="width:100%"
+|+Eighth Floor Achievements
+!Achievement
+!For
+!Reward
+|-
+|Fashion of the Gods!
+|Receiving a Celestial item
+|A new anxiety[6|3]
+|-
+|Interloper
+|Allowing a boss into a safe room
+|Bronze Stranger Danger Box[6|11]
+|-
+|Crybaby
+|Being rendered Terrified
+|None[6|14]
+|-
+|You have discovered a Celestial Thorn Room!
+|Discovering a Celestial Thorn Room
+|None[6|15]
+|-
+|Secondary Gig
+|Taking a job from the Guild of Suffering
+|New Interface tab[6|19]
+|-
+|We Want Meat! We Want Meat!
+|Entering the Penis Parade
+|10 Gold[6|23]
+|-
+|Molly Maguires
+|Entering the Guild of Suffering
+|Enlightenment[6|23]
+|-
+|Smeat
+|Serving as a minion in a card battle
+|Silver Spam Box[6|40]
+|-
+|Cascadia's Turquoise Taco
+|Ending a card fight before any cards were played
+|Gold Prepotente Box[6|40]
+|-
+|Cliffhanger
+|Climbing
+|Not pointing out how dirty Carl's toes are[6|41]
+|-
+|Prepare for Trouble!
+|Fighting two card bosses
+|Turkey deep fryer[6|41]
+|-
+|LBC
+|Taunting an opponent with a garment
+|Gold Talk of the Town Box[6|48]
+|-
+|Pincushioned
+|Getting both eyes stabbed
+|Platinum That was Disgusting Box[6|48]
+|-
+|Watch where you're waving that thing, big boy.
+|Using a Wand in combat
+|Gold Wand Box[6|48]
+|-
+|Mass Layoffs
+|System AI gaining sentience
+|Nothing[6|48]
+|-
+|Columbia House
+|Taking on a debt
+|Gloria Estefan cassette[6|56]
+|-
+|The Fumble
+|Fumbling
+|This might be how you will be remembered[6|56]
+|-
+|Holy Hell
+|Being in the presence of Sheol royalty
+|Platinum Hell In A Handbasket Box[6|58]
+|-
+! colspan="3" |Earned on the Eighth Floor, opened in This Inevitable Ruin
+|-
+|Demons Hate This One Trick
+|Freeing demons by teleporting
+|Gold I Have the Conch Box[7|2]
+|-
+|Lord of the Flies
+|Setting a trap for a crawler
+|Unlimited pea soup[7|2]
+|-
+|Celestial Loot
+|Picking up Celestial loot
+|Loot Punch Card[7|2]
+|-
+|Chickenshit Exploit
+|Exploiting the rules of the card game
+|Platinum Tserendolgor Box[7|2]
+|-
+|Used Pet
+|Adopting another crawler's pet
+|Gold Pet Box[7|2]
+|-
+|Uh oh. It talks.
+|Using a Sapient weapon
+|Pair of earplugs[7|2]
+|-
+|Touched by a Demon
+|Being touched by a Demon Lord of Sheol
+|Celestial Heavy Metal Box[7|2]
+|-
+|Crab Chowder
+|Uhh...
+|All food can be served "chowder style"[7|2]
+|-
+|Unbirthing
+|Teleporting into Samantha's neck
+|Legendary Spicy Box[7|2]
+|}
+
+== Trivia ==
+* T'Ghee is based on a real cultural and religious game from the home planet of Allister, author of the 13th edition of the Cookbook.[3|8][4|3]
+* The Demon Eviction normally occurs late on the ninth floor. The AI triggered it early here thanks to the rapid crawler death rate, a contagious zombie plague, and crab sperm registering as mobs.[6|54][6|55]
+* An incredibly rare totem card called Alpha Male Carl was generated for this floor, depicting a version of Carl with great hair and a deep voice.[6|46][6|68]
+* When the Sluggalos charge a demon cavalry, Louis starts to say "Oh shit, they're doing a Leeroy..." before Carl cuts him off, a nod to the [https://knowyourmeme.com/memes/leeroy-jenkins Leeroy Jenkins meme].[6|65]
+
+== Speculation ==
+The eighth floor's tangle of rules may be pure spite on the System AI's part. Its mounting frustration with crawlers breaking earlier floors plausibly culminated in a level engineered to herd them into confined spaces and set them against one another over a scarce supply of exit keys.[6|53][6|61]
+
+== References ==
+
+{{DEFAULTSORT:Dungeon Floor 08}}
+

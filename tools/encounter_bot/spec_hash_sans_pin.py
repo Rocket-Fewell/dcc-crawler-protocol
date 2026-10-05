@@ -6,7 +6,8 @@ Usage: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.
 Method (keep in sync with METHOD below; Syndicate can recompute it independently):
   1. Parse the spec file as JSON.
   2. Delete these keys if present (the pins; nothing else is removed):
-       budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256
+       budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256,
+       achievements_catalog.version, achievements_catalog.expected_sha256
      The budget version is never written into spec prose; prose uses the token {budget_version},
      which the generator fills at build time, so re-pinning touches only the keys above.
      The spec carries no other build stamp (spec_sha256 and validation exist only in the output JSON).
@@ -18,10 +19,11 @@ import hashlib
 import json
 import sys
 
-PIN_PATHS = (("budget_file", "version"), ("budget_file", "expected_sha256"), ("canon_table", "expected_sha256"))
+PIN_PATHS = (("budget_file", "version"), ("budget_file", "expected_sha256"), ("canon_table", "expected_sha256"),
+             ("achievements_catalog", "version"), ("achievements_catalog", "expected_sha256"))
 METHOD = ("sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), "
           "where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, "
-          "canon_table.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} "
+          "canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} "
           "(filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>.")
 
 

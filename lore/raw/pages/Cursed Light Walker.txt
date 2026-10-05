@@ -1,0 +1,13 @@
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Debuff
+  | causes =
+  | effect = - Health when in darkness
+  | duration = 
+}}Cursed Light Walker is a status condition and debuff that causes a creature's health to slowly decline when in darkness.  If the creature's health reaches zero, they die and crumple to dust.
+
+==References==
+

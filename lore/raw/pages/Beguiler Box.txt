@@ -1,0 +1,22 @@
+{{Item
+|title=Beguiler Box
+|image=
+|imagecaption=
+|type=Loot Box
+|source=Achievement}}
+The Beguiler Box is a  Loot Box awarded for charming mobs and NPCs. 
+
+==Story: Book 1==
+Donut receives this after charming the goblins on the First Floor.
+{| class="fandom-table"
+|+Silver Beguiler Box
+!Crawler
+!Loot
+|-
+|Donut
+|Tome of Minion Army Spell [1|19]
+|}
+
+==References==
+
+{{Navbox Items}}

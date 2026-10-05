@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# FULL backup: mirror the whole DCC project -> staging repo, credential-check, commit, push to private GitHub backup.
+# Caleb authorized a full backup on 2026-10-04 ("i want all files on the github.... everything"): only live credentials,
+# dependency/cache folders and files over 50 MB are left out (see backup-sync.py).
+# Token is read ONLY from env GITHUB_BACKUP_TOKEN (never printed, never stored in .git/config).
+# Usage: GITHUB_BACKUP_TOKEN=... /workspace/backup-push.sh ["commit message"]   (DRY_RUN=1 stops before the commit)
+set -euo pipefail
+REPO=/workspace/dcc-repo-staging
+URL=https://github.com/Rocket-Fewell/dcc-crawler-protocol.git
+MSG="${1:-Sync campaign design files}"
+: "${GITHUB_BACKUP_TOKEN:?GITHUB_BACKUP_TOKEN not set}"
+
+# (all exclusions live in backup-sync.py)
+
+cd "$REPO"
+python3 /workspace/backup-sync.py   # rsync-like full mirror (rsync is not installed)
+cp ops/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # credential-only hook
+# --force: mirrored folders carry their own .gitignore (e.g. discord-voice-bridge ignores logs/ and *.log); the
+# mirror already decides what belongs here, so nested ignore files must not drop logs.
+git add -A --force
+# safety checks (on the staged tree): credentials only
+python3 ops/check_repo_safe.py --staged
+# Secret grep. gm-notes/secret/ is skipped by design (GM etiquette: roll/affinity data, never read; copied byte-for-byte).
+if git ls-files -z -- . ':(exclude)gm-notes/secret' | xargs -0 grep -IlE \
+   -e 'github_pat_[A-Za-z0-9_]{20,}' -e 'gh[pousr]_[A-Za-z0-9]{30,}' -e 'sk-[A-Za-z0-9_-]{20,}' -e 'sk_[0-9a-f]{40,}' \
+   -e 'discord(app)?\.com/api/(v[0-9]+/)?webhooks/[0-9]+' -e '[MNO][A-Za-z0-9_-]{23,27}\.[A-Za-z0-9_-]{6,7}\.[A-Za-z0-9_-]{27,}' ; then
+  echo "STOP: secret-looking pattern found in files listed above" >&2; exit 1
+fi
+if [ -n "${DRY_RUN:-}" ]; then
+  echo "changed paths vs last commit: $(git status --short | wc -l)"
+  echo "files in tree: $(git ls-files | wc -l)"
+  echo "tree size: $(git ls-files -z | xargs -0 du -cb --apparent-size | tail -1 | cut -f1) bytes"
+  echo "DRY_RUN: stopping before commit"; exit 0
+fi
+if git diff --cached --quiet; then echo "Nothing to commit."; else
+  git -c user.name="Borent Architect" -c user.email="borent-architect@users.noreply.github.com" commit -q --author="Borent Architect <borent-architect@users.noreply.github.com>" -m "$MSG"
+fi
+git remote get-url origin >/dev/null 2>&1 && git remote set-url origin "$URL" || git remote add origin "$URL"
+AUTH="Authorization: Basic $(printf 'x-access-token:%s' "$GITHUB_BACKUP_TOKEN" | base64 -w0)"
+git -c credential.helper= -c "http.extraHeader=$AUTH" push origin main:main
+echo "local : $(git rev-parse HEAD)"
+echo "remote: $(git -c credential.helper= -c "http.extraHeader=$AUTH" ls-remote origin refs/heads/main)"
+code=$(curl -s -H "$AUTH" -H 'Accept: application/vnd.github+json' https://api.github.com/repos/Rocket-Fewell/dcc-crawler-protocol | python3 -c 'import sys,json; print("private=",json.load(sys.stdin).get("private"))')
+echo "$code"

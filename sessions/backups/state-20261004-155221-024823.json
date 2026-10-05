@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "campaign": {
+    "name": "Dungeon Crawler Carl 5e (2024)",
+    "current_floor": 1,
+    "zone": "6-break-room",
+    "death_mode": "Costly Revives",
+    "comfort": "Ludicrous",
+    "created": "2026-10-04T01:03:10-05:00",
+    "updated": "2026-10-04T15:52:20-05:00",
+    "f1_reprieve": true,
+    "session_status": "z6_break_room_reprieve_landed",
+    "proctor_hints": {
+      "zone_1": {
+        "Horn": {
+          "paid_by": "Bone Wifebeater",
+          "fed_by": "Horn",
+          "cost": 1,
+          "hint": "The rats in the next hall hate light and love ankles.",
+          "at": "2026-10-04T15:06-05:00"
+        }
+      }
+    },
+    "tanya_looted": true,
+    "wandering_ceiling_ticks": 1,
+    "hungry_vendors_smashed": 1
+  },
+  "party": {
+    "revives_used": 0,
+    "last_revive_floor": null,
+    "revive_log": [],
+    "bypasses_used": 2,
+    "bypass_log": [
+      {
+        "crawler": "Bone Wifebeater",
+        "kind": "f1-reprieve",
+        "floor": 1,
+        "at": "2026-10-04T15:48:53-05:00"
+      },
+      {
+        "crawler": "Horn",
+        "kind": "f1-reprieve",
+        "floor": 1,
+        "at": "2026-10-04T15:48:59-05:00"
+      }
+    ],
+    "floor": "Floor 1 (2-vent-row)",
+    "notes": ""
+  },
+  "limits": {
+    "revive_party_cooldown_floors": 3,
+    "revive_campaign_cap": 3,
+    "revive_per_crawler_cap": 1,
+    "bypass_per_crawler_cap": null
+  },
+  "crawlers": [
+    {
+      "name": "Horn",
+      "player": "Hornn",
+      "class": "Wizard",
+      "species": "Human",
+      "level": 1,
+      "xp": 0,
+      "hp": {
+        "current": 1,
+        "max": 8,
+        "temp": 0
+      },
+      "hit_dice": {
+        "current": 1,
+        "max": 1
+      },
+      "ac": 11,
+      "abilities": {
+        "str": 12,
+        "dex": 12,
+        "con": 15,
+        "int": 17,
+        "wis": 13,
+        "cha": 15
+      },
+      "inventory": [
+        {
+          "name": "Box Cutters (Daggers)",
+          "qty": 2,
+          "notes": ""
+        },
+        {
+          "name": "Duct-Taped Mop Handle (Arcane Focus / Quarterstaff)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Sad Hotel Robe (Robe)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Cracked Phone App (Spellbook)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Lost-and-Found Backpack (Scholar's Pack)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Gas-Station GPS Kit (Navigator's Tools)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Ziplock Pouches",
+          "qty": 2,
+          "notes": ""
+        },
+        {
+          "name": "Traveler's Clothes",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Discount Gas-Station Jerky Cubes (Rations)",
+          "qty": 12,
+          "notes": ""
+        },
+        {
+          "name": "Stolen Trailer Clothesline (Rope 50 ft hempen)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Expired Office First-Aid Kit (Healer's Kit)",
+          "qty": 1,
+          "notes": "9/10 uses (1 spent stabilizing Horn)",
+          "uses": 9,
+          "uses_max": 10,
+          "note": "1 use spent stabilizing Bone→Horn ~15:31"
+        },
+        {
+          "name": "Paint-Can Pry Bar (Crowbar)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Bucket of Loose BB Pellets (Ball Bearings)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Gas-Station Bathroom Mirror Tile (Steel Mirror)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Bike-Lock Chain Missing the Lock (Chain 10 ft)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Coat-Hanger Grapple (Grappling Hook)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "ORIENTATION PIT Banner (stolen hallway canvas)",
+          "qty": 1,
+          "notes": ""
+        }
+      ],
+      "credits": 25,
+      "conditions": [],
+      "vows": [],
+      "boons": [],
+      "achievements": [
+        {
+          "name": "Don't Skip Intro",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:00:33-05:00"
+        },
+        {
+          "name": "Grease Tube Disposal",
+          "floor": 1,
+          "note": "First kill: Magic Missile into torch-burned Vent Rat VR1",
+          "at": "2026-10-04T15:15:16-05:00"
+        },
+        {
+          "name": "Down But Not Out",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:34:08-05:00"
+        },
+        {
+          "name": "Participation Corpse",
+          "floor": 1,
+          "note": "Floor 1 Reprieve; ticks crit while stable in Z3; ejected to Break Room Z6",
+          "at": "2026-10-04T15:48:59-05:00"
+        }
+      ],
+      "boxes": {
+        "bronze": 0,
+        "silver": 0,
+        "gold": 0,
+        "platinum": 0,
+        "legendary": 0,
+        "celestial": 0
+      },
+      "revives_used": 0,
+      "bypasses_used": 1,
+      "fan_profile": {
+        "quirks": [
+          "Cad Bane mullet cowboy-hippie-wizard",
+          "Standing Orders: nearest clear safe room else follow highest-STR ally",
+          "Signature: Fuck Em",
+          "Standing Reactions: Opportunity Attacks fire Fuck Em variable-tuned Magic Missile"
+        ],
+        "notes": "",
+        "opt_outs": []
+      },
+      "notes": "L1 spell slots used: 1/2 (Fuck Em vs VR1, Zone 2 R1)",
+      "death_saves": {
+        "successes": 0,
+        "fails": 0
+      }
+    },
+    {
+      "name": "Bone Wifebeater",
+      "player": "Trailer Park Moses",
+      "class": "Barbarian",
+      "species": "Goliath",
+      "level": 1,
+      "xp": 0,
+      "hp": {
+        "current": 1,
+        "max": 13,
+        "temp": 0
+      },
+      "hit_dice": {
+        "current": 1,
+        "max": 1
+      },
+      "ac": 15,
+      "abilities": {
+        "str": 15,
+        "dex": 13,
+        "con": 12,
+        "int": 9,
+        "wis": 9,
+        "cha": 12
+      },
+      "inventory": [
+        {
+          "name": "Spiked Sledgehammer (Maul)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Food Blocks (Rations)",
+          "qty": 30,
+          "notes": ""
+        },
+        {
+          "name": "Scale Mail (steel)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Rope (50 ft hempen)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Pencil & Paper (writing kit)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Reinforced Absorbing Gloves (Club)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Chain (10 ft)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Light Crossbow + 20 Bolts",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Grappling Hook",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Torches",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Mop-Handle Staff (Quarterstaff)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Sports Drink, Red Flavor (Potion of Healing)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Tanya Ruiz Lore Scrap",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Bone's Own Chewing Tobacco (Fan Pull)",
+          "qty": 1,
+          "notes": "Natty Light hologram; System listening tease"
+        },
+        {
+          "name": "Laminated Complaint Card (one-use: System answers 1 yes/no about current floor truthfully)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Eternally Stained Wifebeater (Cloak of Many Fashions reskin)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Collapsible Tent-Pole (Pole of Collapsing)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Kevin the Sentient Rubber Duck (joke; terrible advice only)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Gas-Station Bathroom Key on a Hubcap (Mystery Key)",
+          "qty": 1,
+          "notes": ""
+        },
+        {
+          "name": "Sports Drink, Blue Flavor (Potion of Healing)",
+          "qty": 1,
+          "notes": ""
+        }
+      ],
+      "credits": 127,
+      "conditions": [],
+      "vows": [],
+      "boons": [],
+      "achievements": [
+        {
+          "name": "Don't Skip Intro",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:00:33-05:00"
+        },
+        {
+          "name": "You Better Fucking Listen",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:28:18-05:00"
+        },
+        {
+          "name": "Penalty Kick",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:30:23-05:00"
+        },
+        {
+          "name": "Buddy System",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:34:08-05:00"
+        },
+        {
+          "name": "Personal Luggage",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:36:10-05:00"
+        },
+        {
+          "name": "Warranty Void If Removed",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-04T15:38:12-05:00"
+        },
+        {
+          "name": "Tow Package",
+          "floor": 1,
+          "note": "Tied self+Horn to Proctor Bell booth, towed Z2->Z3; Ath 23",
+          "at": "2026-10-04T15:40:30-05:00"
+        },
+        {
+          "name": "Corpse Lesson",
+          "floor": 1,
+          "note": "Looted Tanya Ruiz Z3",
+          "at": "2026-10-04T15:44:51-05:00"
+        },
+        {
+          "name": "Find a Lore Scrap",
+          "floor": 1,
+          "note": "Tanya note Z3; +25cr Title",
+          "at": "2026-10-04T15:44:51-05:00"
+        },
+        {
+          "name": "Vending Gore",
+          "floor": 1,
+          "note": "Smashed SNAKK-MATIC Nat20; +25cr Title",
+          "at": "2026-10-04T15:44:51-05:00"
+        },
+        {
+          "name": "Tick Sandwich",
+          "floor": 1,
+          "note": "Raged, peeled both attached Ceiling Ticks, smashed together",
+          "at": "2026-10-04T15:48:25-05:00"
+        },
+        {
+          "name": "Mostly Dead Intern",
+          "floor": 1,
+          "note": "Floor 1 Reprieve; ejected to Break Room Z6",
+          "at": "2026-10-04T15:48:53-05:00"
+        }
+      ],
+      "boxes": {
+        "bronze": 0,
+        "silver": 0,
+        "gold": 0,
+        "platinum": 0,
+        "legendary": 0,
+        "celestial": 0
+      },
+      "revives_used": 0,
+      "bypasses_used": 1,
+      "fan_profile": {
+        "quirks": [
+          "Bane in a wifebeater",
+          "Signature: You Better Fucking Listen",
+          "Standing Orders: say that line then hammer nearest to goo",
+          "Standing Reactions: Opportunity Attacks on"
+        ],
+        "notes": "",
+        "opt_outs": []
+      },
+      "notes": ""
+    }
+  ]
+}

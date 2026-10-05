@@ -1,0 +1,60 @@
+{{SpoilH|5}}
+{{Item
+| title = Memorial Crystal
+| image =crystal_comparison_dungeon.webp 
+| imagecaption = 
+| type = Artifact, Equipable, Jewelry/Weapon Attachment
+| keywords = Artifact, Deity, Soul Crystal
+| effects = *Stores god-tier spells, skills, and knowledge
+*Protects bearer and nearby allies from Scolopendra's attacks (Apito's crystal only)
+| source = Dropped by fallen Gods and Demigods
+| buy = 
+| sell = 
+}}{{Quote|Memorial crystals only form when a god has died. Apito lives, yet there is a crystal made by her. How is that possible? You must investigate this.|Pater Coal[6|18]}}
+
+Memorial Crystals are extremely rare and powerful artifacts created upon the death of gods or demigods.[5|67][6|69]
+
+==AI Description==
+{{Spoiler|book=8|spoiler=The system's descriptions for memorial crystals are unusually terse, and they change depending on which deity the crystal belongs to. Apito's crystal, for instance, reads:
+Memorial Crystal. Apito. This item is 0% charged.[8|70]
+Emberus's crystal simply displays:
+Memorial Crystal. Emberus.[8|98]}}
+
+==Description==
+Memorial Crystals are physically similar to soul crystals,[5|8][5|67] but where a soul crystal merely stores raw soul power, a memorial crystal is packed with information -- the god-tier spells and knowledge of the deity who died to create it.[5|67]
+
+==Appearance==
+Seen in hologram form at the Butcher's Masquerade prize counter, a memorial crystal looked roughly the size of a grape and colorless, glittering as it turned.[5|67]
+
+{{Spoiler|book=8|spoiler=Up close, the crystal is a small, surprisingly heavy, glowing gem that occasionally shifts color.[8|70] Apito's crystal is amber-hued and smaller than the soul crystal that became Carl's Doomsday Scenario; it is set in silver and hung from a simple chain with a few goat hairs stuck to it.[8|70] Emberus's crystal likewise appears as a glowing, amber-hued gem.[8|98]}}
+
+==Operation==
+To draw out the god-tier spells and knowledge sealed inside a memorial crystal, the bearer attaches it to a weapon or piece of armor, or simply wears it as jewelry, and charges it by killing enemies; once fully charged, its contents can be extracted.[5|67]
+
+{{Spoiler|book=7|spoiler=Apito's crystal has also been seen to act entirely on its own. During Faction Wars, at the very moment the banished god Yarilo emerged from the Nothing, it activated unprompted and blazed a brilliant column of light into the sky -- though the display charged nothing and faded as abruptly as it had flared.[7|64][8|70]}}
+
+{{Spoiler|book=8|spoiler=In practice, the ordinary charging method proved just as unreliable. Both Osvaldo and Prepotente found that Apito's crystal would not charge from regular mob kills.[8|70] It only began to fill -- reaching 11.1% -- after absorbing one of Scolopendra's deity-level attacks.[8|82][8|98]
+Holding a deity's crystal can also serve as a ward. Apito's crystal projected a protective barrier against Scolopendra's attacks for its bearer and anyone sharing the same building or mount, mirroring the protection the High Elves enjoyed inside their castle.[8|82][8|95]}}
+
+==Story==
+Apito's Memorial Crystal was the most prized possession of Queen Imogen of the High Elves, who wore it around her neck.[5|67] Because the Butcher's Masquerade spell obligated its host to put up their single most valuable item as a prize, the crystal ended up in Chaco's prize counter, where any crawler could claim it for one hundred severed hunter hands.[5|67] No one could afford it, so when Imogen was killed near the end of the floor, the crystal reverted to her body and was looted by the crawler Osvaldo.[5|75] Both Carl and Prepotente came away with quests tied to the artifact.[5|75]
+
+{{Spoiler|book=6|spoiler=Apito's was not the only memorial crystal in play. When the crawler Paz slew the goddess Ysalte, the system generated a second crystal and announced that it would be available to loot on a future floor.[6|69]}}
+
+{{Spoiler|book=7|spoiler=Apito's crystal, meanwhile, passed from Osvaldo to Prepotente without a fight -- a transfer that initially baffled Carl.[7|78]}}
+
+{{Spoiler|book=8|spoiler=Osvaldo had in fact handed it over willingly. Worn down by his god Tupa's endless quests and unable to make the crystal work, he gave it to Prepotente -- in part out of spite, since Prepotente's familiar, Bianca, had killed his pet hawk, Gimli.[8|41] Prepotente wore the crystal as a necklace; it shielded him and everyone sharing his vehicle when Scolopendra struck the racers with an area attack, and it protected the team's survivors during the final battle.[8|82][8|95] In the chaos of that last fight, however, a deity pulled the crystal right off his neck.[8|98]
+Immediately after the battle with Scolopendra, Carl recovered a different crystal -- Emberus's -- half-buried in the dirt, and the Royal Court now holds it.[8|98]
+The second crystal, Ysalte's, resurfaced as well. It was the one Osvaldo tracked down in the forest during Faction Wars as part of Tupa's quest.[8|41] After Britney killed Osvaldo, she took the Ysalte crystal for herself.[8|83] Samantha claimed that placing the gem in the plinth at the Basilica or the Vulgar Temple could bring the goddess back for good.[8|83]}}
+
+==Trivia==
+*Apito's Memorial Crystal is one of the dungeon's standing mysteries: a memorial crystal is only supposed to form when a god dies,[5|67] yet the goddess Apito is, as far as anyone knows, still alive.[5|75][6|18]
+*The Guild of Suffering, a cult devoted to the demigod Night Wyrm, possesses its own memorial crystal, which is bound up with the Ring of Divine Suffering.[5|8]
+
+==Speculation==
+{{Spoiler|book=8|spoiler=Divine Sabotage: Osvaldo's god Tupa rejected two different crystals as "corrupted" and "wrong" and then set him a fresh quest to find out why memorial crystals will not charge properly.[8|41] It may be that the dungeon AI or rival deities are deliberately keeping the crystals from charging so that crawlers cannot tap into god-tier magic.Resurrection Mechanics: If Samantha is right that Ysalte's crystal can bring the goddess back,[8|83] memorial crystals may function as phylacteries or backup drives -- vessels holding a deity's full essence, ready to be restored.}}
+
+==References==
+
+{{Navbox Items}}
+

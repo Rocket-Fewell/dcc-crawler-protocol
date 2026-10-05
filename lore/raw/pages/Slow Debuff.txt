@@ -1,0 +1,29 @@
+{{SpoilH|5}}
+{{Quote|You have been slowed! Slow has been negated by AI resolution.|System Message}}
+{{Status Effects
+|name = Slow
+|type = Debuff
+|effect = Presumably reduces the target's speed
+|first appearance = Book 5, Epilogue
+}}
+
+Slow is a status effect debuff that, based on its name, presumably reduces a target's speed. Its only appearance in the text is immediately negated, so its actual mechanical effect is never shown in play.
+
+== AI Notifications ==
+
+When applied:
+
+You have been slowed!
+
+When countered:
+
+Slow has been negated by AI resolution.
+
+== Story ==
+
+=== Book 5 ===
+
+Moments after Carl, Donut, and Prepotente arrive in the Pole Position Chamber on the Seventh Floor, a rapid-fire volley of debuffs is thrown at them, including Peace-Bonded, Frozen, Paralyzed, and Slow, each one followed immediately by a notification that it has been negated by AI resolution. A few additional effects follow, including a teleport attempt and an Administrative Hold, which are likewise pushed back.[5|Epilogue]
+
+== References ==
+

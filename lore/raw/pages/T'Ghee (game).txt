@@ -1,0 +1,102 @@
+{{SpoilH|6}}
+{{Event
+|title=
+|image=
+|imagecaption=
+|performers=Crawlers, deckmasters, and flagged mobs
+|date=December 10th to 31st (simulated)[6|1]
+|location=Eighth Floor
+}}
+
+{{Quote|This is not a turn-based environment, so speed and squad synergy are important.|Cascadia[6|8]}}
+
+T'Ghee is a deck-building card game built around captured monsters, imposed on every crawler for the duration of the eighth floor and used to force squad-versus-squad combat.[6|1][6|8]
+
+== Description ==
+T'Ghee is a genuine cultural and religious tradition on the home planet of the crawler Allister, author of the 13th edition of the Dungeon Anarchist's Cookbook.[3|8][4|3] In Allister's hands it had nothing to do with capturing or summoning monsters; the dungeon appropriated the name and built a blood sport around it.[6|1] Mordecai, who has watched the game run in several forms across past seasons, compares the totems to tarot cards and notes that they are reusable even after the monster they summon is killed.[6|1]
+
+Every crawler on the floor is placed in an unbreakable squad of no more than five, with six additional empty slots that must be filled with monsters before the squad may advance.[6|1] Those monsters are captured as totems: a creature reduced to 5% health or below can have one of the squad's twenty flags planted in its body, converting it into a card in the squad leader's inventory.[6|1] Flagged monsters automatically join the squad and obey whoever summons them, though obedience varies with the level gap and the creature's nature, so a monster strong enough to be worth a slot may be strong enough to ignore orders. An unwanted totem is dismissed by tearing its card in two, and totems may be freely traded or stolen between crawlers.[6|1]
+
+While a squad still has empty slots, any totem card it collects is placed automatically and cannot be removed or traded until the squad is full; tearing the card is the only way out, and even that is barred until another card arrives to take its place.[6|22][6|47] Cards may only be held by the squad leader.[6|4]
+
+Each totem carries a fixed number of slots for the buffs and debuffs that can be attached to it. Asojano and Uzi Jesus each had seven utility slots; the fused Lazarus-A-Bang-Bang has only two, a cost the card lists openly.[6|39] Shi Maria has a single snare slot, so one wasted debuff leaves her untouchable for the rest of a fight.[6|46] Per-card slot counts are recorded at T'Ghee Card.
+
+Defeating a Phase Two keymaster awards a Champion Pack, which adds two reserve slots. A squad holding one may carry eight totems in total while still fielding only six.[6|47]
+
+The full rules are published to each crawler's deck tab in the interface. Cascadia delivered them by announcement at the end of the floor's first week, and deck functionality activated the moment she finished; before that, attempting to summon a totem simply returned an error.[6|7][6|8]
+
+== Decks ==
+A deck requires six active totems. Beyond that minimum a squad leader may carry as many utility, mystic, snare, and special cards as they like, at the risk of drawing a hand containing no totems at all and leaving themselves exposed; a deck of exactly six cards is legal.[6|8] A leader activates the deck by pulling it from their inventory during combat.[6|8] Supporting cards are looted from defeated opponents, and killing a rival squad yields their entire collection.[6|8] Cards also turn up loose in the inventories of ordinary mobs that never carried a deck.[6|4]
+
+Crawler consensus settles on eighteen cards as the ideal deck size, which gives roughly an 80% chance of drawing at least one totem in the opening hand while still leaving room for a dozen supporting cards.[6|28] A deck can be ruined by the opposite error: the Reef Explorer carried thirty copies of Precision and could barely draw a totem at all.[6|39]
+
+Opposing deckmasters are not bound to the same shape. Der Schachmeister fields twenty cards with six totems and draws every eight seconds rather than every ten, and the Visitor carries eighteen totems in a thirty-card deck, six times the crawler limit.[6|29][6|41] They are not always good at using them. Opponents failing to play their own decks becomes a regular occurrence during Phase Two, and one of Li Jun's deckmasters eats his cards instead.[6|41]
+
+Cards fall into five categories:[6|8]
+
+* Totems are summonable monsters, each summoned for a fixed duration printed on the card.
+* Utility cards may only be played on one or more of the squad's own actively summoned totems. Most buffs persist across multiple summonings within a single combat.
+* Snare cards may only be played while an opponent has a totem actively summoned. Their debuffs likewise persist across summonings.
+* Mystic cards work much like ordinary spells and generally act on a squad, a squad leader, or an opposing deck.
+* Special cards cover everything else, and are usually one-time use.
+
+Buffs and debuffs alike expire when combat ends.[6|8] Every individual totem and supporting card recorded on the floor, along with the rarity tiers and the physical description of a card, is catalogued at T'Ghee Card.
+
+== Combat ==
+Combat engages when a nearby monster's aggro triggers and it begins actively hunting, and disengages when the mobs are dead, rendered neutral, or one party has fled. Overlapping fights against several mobs count as a single session, which matters because most totems cannot be reused once knocked out.[6|8] If an opponent owns enough cards to field a deck, deck-to-deck combat begins and using one's own deck stops being optional.[6|8] A fight is won by landing a single blow on the opposing deckmaster and lost the moment an enemy totem or deckmaster lands one in return.[6|29]
+
+The squad leader, acting as deckmaster, immediately loses access to their magic and their inventory system. They may still fight with melee attacks and with potions, scrolls, wands, and anything else already physically to hand.[6|8] Those abilities return once every card in the deck has been played or discarded. Should the deckmaster die mid-combat, the deck transfers to the next member in line.[6|8]
+
+Most summoned totems may not directly attack an opposing deckmaster while any enemy totems remain on the field, which makes keeping the deckmaster alive the rest of the squad's responsibility rather than a rule the system enforces.[6|8] Carl falls back on Mordecai's advice about fighting mages: they cannot cast while being punched in the face.[6|29]
+
+Ordinary squad members count as minions for the duration of a card battle, which leaves them exposed to cards that mute or debuff an opponent's minions.[6|42] Muting blocks spellcasting but not skills, so a crawler silenced by a card can still fall back on skill-based attacks.[6|42]
+
+A deckmaster cannot cast spells or open their inventory, but spells cast before combat begins persist as long as they need no ongoing mana, and skills remain available throughout. Bard songs are unusable because they must be triggered through the interface, though an amplifying headset still lets a leader shout orders across a battlefield.[6|41][6|42] An opponent who empties their deck regains everything, which is why the crawlers fighting Ysalte spend the battle keeping her hand stocked rather than clearing it.[6|8][6|67]
+
+The game is not turn-based. Speed and squad coordination decide fights.[6|8]
+
+=== Hands and Timing ===
+Four random cards are drawn the instant combat initiates, and a deckmaster may play any or all of them at once, up to summoning four totems simultaneously.[6|8] A spent card is replaced from the deck at a rate of one card every ten seconds, though gear can shorten that interval and some opponents draw faster by default; Donut's sailor hat cuts two seconds off her countdown at the cost of ten intelligence.[6|8][6|29][6|38] A deckmaster begins combat able to discard one card and regains that ability every thirty seconds. Discarded cards, whether spent voluntarily or lost in battle, go to the discard pile and stay unusable for the remainder of the fight.[6|8]
+
+Persistent cards, most often mystic ones, remain on the field once played and occupy a hand slot for as long as they stay active.[6|42]
+
+A totem that survives to the end of its timer returns to the deck rather than the discard pile and can be drawn again, announced with a Time's Up! notification. It does not heal between summonings and carries its injuries and debuffs for the rest of the fight. A totem knocked out before its timer expires is out for the remainder of combat.[6|8][6|42]
+
+Defeated totems normally crumble to dust. If the deck contains a resurrection card or a totem capable of casting Resurrect Totem, the bodies remain instead, and a resurrected totem returns as though freshly summoned with its timer reset and every buff and debuff cleared.[6|29]
+
+=== Practice Arenas ===
+From the announcement onward, every safe room includes a practice arena that crawlers may enter for a fee to run limited mock battles. A full deck is not required, and the system's opponents carry no decks of their own and cannot harm the player. Safe rooms are the only place this works; the Mercenary Arcade sold as a guildhall upgrade does not.[6|8][6|34] Consumable cards spent in practice are gone for good, and cards with cooldowns, such as the once-daily Grand Finale, do not reset at the end of a session.[6|8] Using the arena can itself earn a T'Ghee loot box.[6|11]
+
+A deckmaster picks both a difficulty and an environment, and the environment may be populated with physical, interactive NPCs who get underfoot during the fight.[6|28] Prices rise as the floor progresses, climbing from 2,000 to 2,500 gold at the start of the floor's second week.[6|27][6|28] Beating the challenge tier unlocks Secret Challenge Mode, a free but thrice-only medium-plus difficulty in which the opposing deckmaster carries a deck, giving crawlers their only practice against deck-to-deck combat.[6|27][6|29] Arena opponents include Puppet-Masters such as Rude-Dolph the Blood-Nosed Slay-Deer, who stays intangible until all eight of his puppets are killed.[6|28]
+
+== Rules by Phase ==
+The floor's three phases each change how the game is played.
+
+* Phase One. Squads build their rosters by flagging monsters. No mobs in the starting regions carry decks, so deck combat happens only between crawler squads, which the system openly encourages as practice.[6|1][6|8]
+* Phase Two. Only the squad leader is transported to the selection room; the rest of the squad is held in stasis until the leader has fought one solo battle.[6|37] The leader has sixty seconds to choose a destination.[6|27] Every totem not held in an active deck is then discarded, and empty slots are auto-filled with random seeded mobs from the squad's starting region. From this point a squad may hold neither more nor fewer than six totems at a time, and taking an opponent's totem means giving one up.[6|27][6|38] Mobs now carry decks and stand frozen in place until a crawler approaches. Each region seeds ten numbered deckmasters rising five levels apiece, from level 40 at the first to level 80 at the ninth, with bodyguards appearing from the fourth onward to keep a squad from simply killing the leader before a card is played.[6|38][6|39] The first nine carry numbered tokens; feeding all nine to a vending machine opens the keymaster fight, which awards the stairwell key and a Champion Pack.[6|38][6|43][6|47]
+* Phase Three. All combat becomes card combat.[6|53] The Flee card changes function: a key-holding deckmaster who plays it forfeits the key to the last deckmaster left standing, which is the only way a key passes to another squad short of a kill. Because the transfer is automatic rather than directed, a crawler cannot choose who receives it.[6|53][6|56]
+
+== Story ==
+Donut serves as squad leader and therefore deckmaster for the Royal Court. The roster fills over the first two weeks with Geraldo the monk seal, Skylar Spinach, Asojano, Uzi Jesus traded over by Florin, the crab Raul, and finally Shi Maria.[6|7][6|22][6|24][6|26] Practice in the mock arenas exposes the problem with it: Asojano and Uzi Jesus are powerful and barely obedient, Raul and Geraldo despise each other, and Shi Maria is strong enough to be a liability.[6|29]
+
+By the eve of Phase Two the deck runs to eighteen cards: six totems, six utility cards, three snares, two mystics, and a single Flee.[6|28] Rather than drop a totem to make room for Jola, a mythic Yule Cat traded over by Katia Grim, Donut spends both of her consumables at once, fusing Asojano and Uzi Jesus with a Combo Card, stacking every buff she has on the result, and making it permanent with Glow-Up. The Royal Court ends the first phase with two new totems instead of one, the second being Lazarus-A-Bang-Bang.[6|34]
+
+Phase Two turns the deck into a working tool. Donut fights her way up a ladder of ten deckmasters and comes out of it genuinely fluent, trading card theory across the chat until Carl concedes she understands the game better than he does.[6|39] The deck swells to twenty-two cards by the final phase, and the totems settle into an uneasy peace: Lazarus and Shi Maria compete over kills and entrance sequences, Raul and Geraldo learn to tolerate each other, and everybody ignores Skylar Spinach.[6|39][6|55] The keymaster at the top of the ladder is the Reminiscence Hydra of Malicious Compliance, a level 125 city boss whose nine heads wear the faces of people Carl and Donut knew, and whose deck is built entirely from mockeries of them.[6|46]
+
+The game's real function becomes clear in Phase Three, when all combat converts to card combat and exit keys can only change hands through a Flee card or a kill. Quan Ch demonstrates the point by using Peekaboo to read two rival hands and Force Play to make both of them flee, collecting the keys of Sister Ines and the Royal Court in a single fight.[6|53][6|56] Carl finds a loophole of his own: because a deckmaster can summon totems anywhere her own fight is still running, he uses Donut's teleport traps to pull her totems into a battle she is not physically part of, leaving Quan unable to snare them and leaving them free to attack him directly. He calls it a chickenshit move and expects it to be patched.[6|58]
+
+He and the others then bypass the game entirely, tunnelling beneath the sealed stairwell chambers rather than playing for keys at all.[6|61][6|62] The floor's last card battle is fought not for a key but to free the demon prince Amayon, whose six totems the surviving crawlers must strip away while keeping Ysalte's deck stocked, because an opponent who runs out of cards regains their spells.[6|67] Donut tears the Shi Maria card once it is over, and the Paz Lo card with it.[6|72]
+
+== Trivia ==
+* Both Carl and Donut reach for the same comparison independently. Carl guesses the floor will work like Pokémon before the rules are even announced; Donut later adds "that one with the guy with the spiky hair that didn't make any sense," which she remembers as "Yugoslavia."[6|1][6|8]
+* Ordinary squad members count as minions during a card battle, a fact the system mentions only in passing while Carl is being muted by an opposing card.[6|42]
+* Gear can modify the game's mechanics directly. Donut's looted sailor cap shortens her card draw by two seconds, at the cost of ten intelligence and the use of her Hover skill.[6|38]
+* Frank Q appears as a totem two floors after his death, the first evidence that the dungeon renders fallen crawlers as cards. Carl refuses to field him and warns the other crawlers before anyone else finds one.[6|47]
+* Squad flags carry a logo the system generates without input. The Royal Court's is a pair of heart-covered boxer shorts with a bomb patch stitched over the crotch; Elle McGibbons drew a bag of adult diapers and Imani a butterfly.[6|4]
+* Alpha Male Carl behaves entirely differently depending on who summons him, threatening Carl with "fist therapy" in an opponent's hands and offering to hug it out in Carl's own.[6|46][6|68]
+
+== Speculation ==
+Appropriating Allister's religious game as a floor mechanic fits a broader pattern of the dungeon strip-mining conquered cultures for entertainment, though the text does not confirm whether the System AI chose T'Ghee for that reason or simply because it forced crawlers to kill one another efficiently.[3|8][6|1][6|53]
+
+== References ==
+

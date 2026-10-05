@@ -1,0 +1,571 @@
+{
+  "13_1": [
+    [
+      "M-119",
+      "Hunters: who they are",
+      "Outworld tourists who enter on Floor 6 to hunt crawlers for sport/gear.",
+      "B5 ch1; B2 ch3",
+      "wealthy outworld tourists, known as Hunters, pay to enter the dungeon and hunt crawlers for sport",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch1 / B2 ch3)",
+      "within 30 hours, at least 360 hunters, all bumped up to level 50",
+      "YT:TKcMxF2dA3w"
+    ],
+    [
+      "M-120",
+      "Hunters: Faction Wars gear pipeline",
+      "Hunter goal includes selling crawler gear to Faction Wars leaders on Floor 9.",
+      "B5",
+      "hunt Crawlers for their gear to sell to the Faction leaders for Faction Wars on the Ninth Floor",
+      "W:Hunters",
+      "WIKI-ONLY",
+      "—",
+      "—"
+    ],
+    [
+      "M-121",
+      "Hunters: level bump to 50",
+      "This season hunters start at level 50 (traditional start 30, +20 bump).",
+      "B5 ch1",
+      "we have given all hunters a bump of 20 levels, so they all start out at 50",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch1)",
+      "within 30 hours, at least 360 hunters, all bumped up to level 50",
+      "YT:TKcMxF2dA3w"
+    ],
+    [
+      "M-122",
+      "Hunters: release timer",
+      "Hunters sequestered then released in under ~28 hours (grace ~30 hours).",
+      "B5 ch1",
+      "In a little less than 28 hours, they will be unleashed and will begin hunting you for your gear",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch1)",
+      "—",
+      "—"
+    ],
+    [
+      "M-123",
+      "Hunters: grace period / Zockau",
+      "~30-hour grace with hunters trapped in Zockau before hunting begins.",
+      "B5 ch1",
+      "The floor starts with a 30-hour \"grace period\" during which the hunters are trapped in Zockau",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch1)",
+      "city where all the hunters start on the Sixth Floor Hunting Grounds",
+      "W:Zockau"
+    ],
+    [
+      "M-124",
+      "Hunters: no tourist immortality",
+      "Hunters lack usual tourist protections and can be permanently killed.",
+      "B2 ch3; B3 ch30",
+      "These tourists enjoy none of the usual protections and can die for real",
+      "W:Sixth Floor",
+      "VERIFIED (cite B2 ch3)",
+      "—",
+      "—"
+    ],
+    [
+      "M-125",
+      "Hunters: territory agreements",
+      "Hunters mostly respect syndicate/alliance hunting-territory deals.",
+      "B5 ch15",
+      "the hunters largely abide by agreements dictating which syndicates and alliances control which hunting territories",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch15)",
+      "—",
+      "—"
+    ],
+    [
+      "M-126",
+      "Hunter Hand trophies",
+      "Killed hunters leave Hunter Hand trophies (see X-001 claw wording).",
+      "B5 ch8",
+      "leaving behind valuable \"Hunter Hand\" trophies",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch8)",
+      "It’s the hand of a hunter. Gross.",
+      "W:Hunting Trophy"
+    ],
+    [
+      "M-127",
+      "Hunting Trophy = prize ticket",
+      "Hands are prize tickets redeemable only at the Masquerade prize counter.",
+      "B5 ch8",
+      "This hand you have savagely removed from a third-party interloper is the ticket",
+      "W:Hunting Trophy",
+      "VERIFIED (cite B5 ch8)",
+      "severed hunter hands turned out to be prize tickets for the upcoming Butcher Masquerade",
+      "YT:TKcMxF2dA3w"
+    ],
+    [
+      "M-128",
+      "Prize Counter timing / cost floor",
+      "Prize counter opens at Butcher's Masquerade; cheapest prize costs one hand.",
+      "B5 ch8",
+      "The prize counter where it may be exchanged will be open at the Butcher’s Masquerade",
+      "W:Hunting Trophy",
+      "VERIFIED (cite B5 ch8)",
+      "The cheapest award in the prize case will cost a single hand",
+      "W:Hunting Trophy"
+    ],
+    [
+      "M-129",
+      "Trophy transfer rule",
+      "Transferring or selling a Hunting Trophy reverts it to an ordinary appendage.",
+      "B5 ch8",
+      "If you transfer or sell this item, it will revert to just being some dude’s appendage",
+      "W:Hunting Trophy",
+      "VERIFIED (cite B5 ch8)",
+      "Hunter hands and crawler scalps are trophy items that revert to ordinary appendages",
+      "W:Butcher's Masquerade Ball"
+    ],
+    [
+      "M-130",
+      "Prize Counter host (Chaco)",
+      "At the Ball, hands/scalps redeem at a counter run by Chaco the Bard.",
+      "B5 ch66",
+      "is run by Chaco the Bard",
+      "W:Butcher's Masquerade Ball",
+      "VERIFIED (cite B5 ch66)",
+      "Prize counter attendant",
+      "W:Chaco"
+    ],
+    [
+      "M-131",
+      "Butcher's Masquerade guests",
+      "Exclusive late-F6 party for top 50 crawlers (+ones) and surviving hunters.",
+      "B5 ch8",
+      "top 50 crawlers, their plus-ones, and every surviving hunter",
+      "W:Butcher's Masquerade Ball",
+      "VERIFIED (cite B5 ch8)",
+      "—",
+      "—"
+    ],
+    [
+      "M-132",
+      "Hunter-Killer Box (Hand that Claws)",
+      "Killing hunters awards stackable Hand that Claws; Hunter-Killer Boxes only on F6.",
+      "B5",
+      "Hunter-Killer Boxes are only awarded on the sixth floor",
+      "W:Hand that Claws the Master Achievement",
+      "WIKI-ONLY",
+      "Hand of the hunter killed",
+      "W:Hunter-Killer Box"
+    ],
+    [
+      "M-133",
+      "Blood bar (F6 saferooms)",
+      "Saferoom access gated by a blood bar that drains inside and refills by kills.",
+      "B5 ch52",
+      "saferoom access is restricted by a \"blood bar.\"",
+      "W:Sixth Floor",
+      "VERIFIED (cite B5 ch52)",
+      "The bar drains continuously while a crawler is inside a saferoom or personal space",
+      "W:Sixth Floor"
+    ],
+    [
+      "M-134",
+      "Fantasy Hunter Camp",
+      "Paid simulation of Hunting Grounds; best performers win Dream Faction Wars army spots.",
+      "B5 ch22",
+      "simulates the sixth floor Hunting Grounds, allowing participants to experience being a hunter without any risk",
+      "W:Fantasy Hunter Camp",
+      "VERIFIED (page cite B5 ch22)",
+      "Those who perform best win spots on The Dream's Faction Wars army",
+      "W:Fantasy Hunter Camp"
+    ],
+    [
+      "M-135",
+      "Divine Suffering rings ↔ hunters",
+      "Faction Wars factions send hunters to F6 to obtain Divine Suffering artifacts/rings.",
+      "B3 ch30",
+      "factions of Faction Wars send hunters to the Sixth Floor Hunting Grounds to obtain them",
+      "W:Enchanted Night Wyrm's Ring of Divine Suffering",
+      "VERIFIED (cite B3 ch30)",
+      "no Faction Wars army has won without a champion wearing one",
+      "W:Enchanted Night Wyrm's Ring of Divine Suffering"
+    ]
+  ],
+  "13_2": [
+    [
+      "M-136",
+      "Sponsors: max 3",
+      "Every crawler capped at three patrons/sponsors.",
+      "B1 ch31",
+      "Every crawler is limited to three patrons",
+      "W:Sponsors",
+      "VERIFIED (cite B1 ch31)",
+      "—",
+      "—"
+    ],
+    [
+      "M-137",
+      "Sponsors: auction floors 4/5/6",
+      "All three slots auctioned one day each at induction of Floors 4, 5, and 6.",
+      "B1 ch31",
+      "all three spots are auctioned for one day upon the induction of the fourth, fifth, and sixth floors",
+      "W:Sponsors",
+      "VERIFIED (cite B1 ch31)",
+      "—",
+      "—"
+    ],
+    [
+      "M-138",
+      "Sponsors: opening bid",
+      "Bidding opens at one credit per spot (so nearly every survivor gets patrons).",
+      "B1 ch31",
+      "bidding opens at one credit per spot",
+      "W:Sponsors",
+      "VERIFIED (cite B1 ch31)",
+      "—",
+      "—"
+    ],
+    [
+      "M-139",
+      "Sponsors: overbid / underbid",
+      "Bids above the fee return as loot-box discounts; underbids surcharge boxes.",
+      "B1 ch31",
+      "Bids above the standard patronage fee return to the patron as loot box discounts",
+      "W:Sponsors",
+      "VERIFIED (cite B1 ch31)",
+      "—",
+      "—"
+    ],
+    [
+      "M-140",
+      "Sponsors: F7+ stake sales",
+      "From Floor 7 onward benefactors may transfer/sell patronage at their discretion.",
+      "B1 ch31; B5 ch21",
+      "benefactors may transfer their patronage at their own discretion from the seventh floor onward",
+      "W:Sponsors",
+      "VERIFIED (cite B1 ch31)",
+      "—",
+      "—"
+    ],
+    [
+      "M-141",
+      "Sponsors: wait for Floor 4",
+      "Sponsors historically wait for Floor 4 because F3 race/class can gut popularity.",
+      "B1 ch29",
+      "Sponsors historically wait for the fourth floor",
+      "W:Sponsors",
+      "VERIFIED (cite B1 ch29)",
+      "—",
+      "—"
+    ],
+    [
+      "M-142",
+      "Sponsors: one-way messages",
+      "Crawler can message sponsor via Sponsorship tab notes; sponsor cannot reply.",
+      "B3 ch8; B3 ch13",
+      "a crawler may message a sponsor from a notes section inside the tab",
+      "W:Sponsors",
+      "VERIFIED (cite B3 ch13)",
+      "but a sponsor cannot reply",
+      "W:Sponsors"
+    ],
+    [
+      "M-143",
+      "Sponsors: COI replacement auction",
+      "Valtay COI void triggered a special 60-hour replacement auction.",
+      "B5 ch19",
+      "triggered a special 60-hour replacement auction",
+      "W:Sponsors",
+      "VERIFIED (cite B5 ch19)",
+      "—",
+      "—"
+    ],
+    [
+      "M-144",
+      "Sponsors: frozen slots",
+      "Fugitive sponsor assets can freeze the slot rather than reauction it.",
+      "B6 ch51",
+      "the slot was frozen with them",
+      "W:Sponsors",
+      "VERIFIED (cite B6 ch51)",
+      "—",
+      "—"
+    ],
+    [
+      "M-145",
+      "Benefactor Box tier power",
+      "Bronze Benefactor outclasses Gold Adventurer; only sponsors send them.",
+      "B1 ch4",
+      "a bronze benefactor box beats a gold adventurer box",
+      "W:Benefactor Box",
+      "VERIFIED (cite B1 ch4)",
+      "Only a sponsor can send one, and the sponsor chooses the item personally",
+      "W:Benefactor Box"
+    ],
+    [
+      "M-146",
+      "Benefactor Box: binding",
+      "Delivered items commonly bound to the named recipient (anti-murder for gear).",
+      "B5 ch60",
+      "Delivered items are commonly bound to the named recipient",
+      "W:Benefactor Box",
+      "VERIFIED (cite B5 ch60)",
+      "—",
+      "—"
+    ],
+    [
+      "M-147",
+      "Fan Box: 30-hour vote window",
+      "Fan Boxes wait ~30 hours while fans vote contents; electorate scales by tier.",
+      "B2 ch13",
+      "you may not open it for thirty hours while the fans vote for the contents",
+      "W:Fan Box",
+      "VERIFIED (cite B2 ch13)",
+      "Fan or Benefactor Boxes sent as gifts from viewers and sponsors",
+      "NL:achievements-and-loot-boxes-reward-system"
+    ]
+  ],
+  "13_3": [
+    [
+      "M-148",
+      "Prize Carousel: Fan Box ballot option",
+      "Viewers may vote to summon the Prize Carousel from a Fan Box.",
+      "B3 ch7",
+      "Viewers may vote to summon the Prize Carousel",
+      "W:Fan Box",
+      "VERIFIED (cite B3 ch7)",
+      "Carl's fan boxes trigger a prize carousel hosted by Chaco",
+      "YT:FHLzs9fjyU8"
+    ],
+    [
+      "M-149",
+      "Prize Carousel: nine prizes",
+      "Carousel has nine curtained sections / nine prizes.",
+      "B3 ch7",
+      "It has nine curtained-off sections containing nine prizes",
+      "W:Prize Carousel",
+      "VERIFIED (cite B3 ch7)",
+      "—",
+      "—"
+    ],
+    [
+      "M-150",
+      "Prize Carousel: ten minutes / no tooltips",
+      "Crawler has ten minutes; cannot scan items or read tooltips.",
+      "B3 ch7",
+      "The crawler has ten minutes to select a prize",
+      "W:Prize Carousel",
+      "VERIFIED (cite B3 ch7)",
+      "not able to scan the items or view tooltip descriptions",
+      "W:Prize Carousel"
+    ],
+    [
+      "M-151",
+      "Prize Carousel: rarity",
+      "Not popular with voters; only happens a few times each season.",
+      "B3 ch7",
+      "only happens a few times each season",
+      "W:Prize Carousel",
+      "VERIFIED (cite B3 ch7)",
+      "—",
+      "—"
+    ],
+    [
+      "M-152",
+      "Prize Carousel → Cookbook (Carl)",
+      "Carl's Platinum Fan Box carousel pick is the Dungeon Anarchist's Cookbook.",
+      "B3 ch7",
+      "Prize Carousel selection: Dungeon Anarchist's Cookbook",
+      "W:Fan Box",
+      "VERIFIED (cite B3 ch7 / table)",
+      "Carl's fan boxes trigger a prize carousel hosted by Chaco",
+      "YT:FHLzs9fjyU8"
+    ]
+  ],
+  "13_4": [
+    [
+      "M-153",
+      "Midnight Market: location",
+      "Secret bazaar on the bottom regular floor of the Desperado Club.",
+      "B7 ch4",
+      "secretive bazaar hidden on the bottom regular floor of the Desperado Club",
+      "W:Midnight Market",
+      "VERIFIED (cite B7 ch4)",
+      "merchant patch that grants access to the midnight market",
+      "YT:FurNY4o0uCo"
+    ],
+    [
+      "M-154",
+      "Midnight Market: warning text",
+      "Upgrade Patch / access warning: safety or sanity not guaranteed.",
+      "B7 ch4",
+      "Access to the Midnight Market. Safety or Sanity not guaranteed",
+      "W:Midnight Market",
+      "VERIFIED (cite B7 ch4)",
+      "—",
+      "—"
+    ],
+    [
+      "M-155",
+      "Midnight Market: access via patch",
+      "Affixing the Reaper Spider Minion merchant Upgrade Patch grants entry.",
+      "B7 ch4",
+      "Affixing the patch grants entry to the market",
+      "W:Midnight Market",
+      "VERIFIED (cite B7 ch4)",
+      "merchant patch that grants access to the midnight market",
+      "YT:FurNY4o0uCo"
+    ],
+    [
+      "M-156",
+      "Gray Market sibling",
+      "Desperado Club also has a separate Gray Market on its middle floor.",
+      "B7 ch4",
+      "a separate hidden market on its middle floor known as the Gray Market",
+      "W:Midnight Market",
+      "VERIFIED (cite B7 ch4)",
+      "—",
+      "—"
+    ],
+    [
+      "M-157",
+      "Midnight Market: Gate trade",
+      "War mages traded the Gate of the Feral Gods there for five hell-kissed potions.",
+      "B7 ch69",
+      "traded the Gate of the Feral Gods at the Midnight Market in exchange for five hell-kissed potions",
+      "W:Midnight Market",
+      "VERIFIED (cite B7 ch69)",
+      "—",
+      "—"
+    ]
+  ],
+  "13_5": [
+    [
+      "H-054",
+      "Chaco",
+      "Prize Carousel host and Masquerade prize-counter attendant (former crawler).",
+      "B3 ch7",
+      "best known as host of The Prize Carousel",
+      "W:Chaco",
+      "VERIFIED (cite B3 ch7)",
+      "Prize counter attendant",
+      "W:Chaco"
+    ],
+    [
+      "H-055",
+      "Vrah",
+      "Top Dark Hive mantis hunter on Floor 6; major hunter antagonist.",
+      "B5 ch5",
+      "Vrah is a Mantis Hunter and the top hunter of the Dark Hive who hunts crawlers on the Sixth Floor",
+      "W:Vrah",
+      "VERIFIED (cite B5 ch5)",
+      "—",
+      "—"
+    ],
+    [
+      "H-056",
+      "Zabit",
+      "Final Floor 6 hunter; killed via his own traps after Carl cast Tripper.",
+      "B5",
+      "He was the final Hunter on floor 6",
+      "W:Zabit",
+      "WIKI-ONLY",
+      "killed by his own traps when Carl cast Tripper",
+      "W:Zabit"
+    ],
+    [
+      "I-026",
+      "Hunting Trophy",
+      "Inventory item = hunter hand used as Masquerade prize ticket.",
+      "B5 ch8",
+      "It’s the hand of a hunter. Gross.",
+      "W:Hunting Trophy",
+      "VERIFIED (cite B5 ch8)",
+      "The cheapest award in the prize case will cost a single hand",
+      "W:Hunting Trophy"
+    ],
+    [
+      "L-021",
+      "Hunter-Killer Box",
+      "Gold box for killing hunters; contains gold + the hunter's hand.",
+      "B5",
+      "Hand of the hunter killed",
+      "W:Hunter-Killer Box",
+      "WIKI-ONLY",
+      "Hunter-Killer Boxes are only awarded on the sixth floor",
+      "W:Hand that Claws the Master Achievement"
+    ],
+    [
+      "L-022",
+      "Fan Box → Prize Carousel link",
+      "Fan Box ballot can award Prize Carousel play (Cookbook path for Carl).",
+      "B3 ch7",
+      "Viewers may vote to summon the Prize Carousel",
+      "W:Fan Box",
+      "VERIFIED (cite B3 ch7)",
+      "Prize Carousel selection: Dungeon Anarchist's Cookbook",
+      "W:Fan Box"
+    ],
+    [
+      "T-070",
+      "Scourge (most hands)",
+      "Carl awarded Scourge for collecting the most hunter hands at Masquerade start.",
+      "B6 ch2",
+      "You have collected the most hands",
+      "W:Scourge Achievement",
+      "VERIFIED (cite B6 ch2)",
+      "—",
+      "—"
+    ],
+    [
+      "T-071",
+      "Apex Predator (last hunter)",
+      "Carl kills the last Floor 6 hunter; Celestial Predator Box.",
+      "B4 ch34; B6 ch2",
+      "Not only did you kill more hunters than everyone else, but you killed the very last one",
+      "W:Apex Predator Achievement",
+      "VERIFIED (cite B4 ch34 / B6 ch2)",
+      "—",
+      "—"
+    ]
+  ],
+  "x": [
+    [
+      "X-048",
+      "Fantasy Hunter Camp operator: Vrah's family vs The Dream",
+      "The Fantasy Hunter Camp is a camp run by Vrah's family",
+      "W:Fantasy Hunter Camp",
+      "Those who perform best win spots on The Dream's Faction Wars army",
+      "W:Fantasy Hunter Camp",
+      "OPEN: same short page attributes camp to Vrah's family while army spots are The Dream's; Akland (Dream) is the named informant. May be two overlapping programs or wiki conflation.",
+      "2026-10-04"
+    ],
+    [
+      "X-049",
+      "\"Blood Hunter\" is a scripted show, not a hunter subtype",
+      "is an in-dungeon scripted drama set in Dungeon Crawler World: Earth",
+      "W:Blood Hunter",
+      "wealthy outworld tourists, known as Hunters, pay to enter the dungeon and hunt crawlers for sport",
+      "W:Sixth Floor",
+      "RESOLVED for RPG notes: Blood Hunter ≠ Floor 6 tourist hunters; it is Viscount Fog's vampire-hunter drama (Blood Sultanate studio).",
+      "2026-10-04"
+    ],
+    [
+      "X-050",
+      "\"Unwashed\" is not a hunter faction",
+      "To say it is the personification of the Nothing is one way to describe it",
+      "W:Unwashed",
+      "wealthy outworld tourists, known as Hunters, pay to enter the dungeon and hunt crawlers for sport",
+      "W:Sixth Floor",
+      "RESOLVED for RPG notes: Unwashed/Beautiful Place is a cosmic/Nothing-adjacent entity shown in Faction Wars (Juice Box form), not a hunter type.",
+      "2026-10-04"
+    ],
+    [
+      "X-051",
+      "Hunter trophy wording already tracked as X-001",
+      "It’s the hand of a hunter. Gross.",
+      "W:Hunting Trophy",
+      "leaving behind valuable \"Hunter Hand\" trophies",
+      "W:Sixth Floor",
+      "PREFERRED: hands (Hunting Trophy AI + Prize Counter + Hunter-Killer Box). X-001 chapter-summary \"claw\" remains the conflicting slip; Pass 9 confirms hand wording on item pages.",
+      "2026-10-04"
+    ]
+  ]
+}

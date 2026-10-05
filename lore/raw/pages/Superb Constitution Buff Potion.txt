@@ -1,0 +1,33 @@
+
+{{spoilH|3}}
+{{Item
+|title=
+|image=Superb Constitution Buff Potion.jpg
+|type=
+|keywords=
+|effects= Randomly buff Constitution stat between 1 and 4
+|source= Mordecai's Alchemy Table
+|buy=
+|sell=
+}}
+
+Mordecai brews {{PAGENAME}} on the Fourth Floor using the level 3 Alchemy Table. The Potion buffs a player's Constitution by a random number between 1 and 4 and the crawler can only take two total potions. 
+
+== AI Description ==
+
+Superb Constitution Buff Potion.
+
+Drinking this mixture will permanently increase your Constitution by a random number between one and four. You may only drink two of these during your time in the dungeon. Why? Because drinking more would be cheating. And if anyone is going to cheat, it’s going to be me.
+ 
+
+==Appearance==
+This version of the potion is orange and bubbly. [3|7]
+
+==Story==
+===Book 3===
+Mordecai brews this potion on his level 3 Alchemy Table. Donut drinks two of them, increasing her base constitution by 1 and 3, for a total increase of 4. [3|7]
+
+== References ==
+
+{{Navbox Items}}
+

@@ -1,0 +1,360 @@
+{{Quote|Mordecai, darling. Is there a worst-dressed award for the dungeon?|Donut[1|12]}}
+This page documents Carl's gear, levels, stats, and skills as he progresses through the First Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable"
+!TIME
+!NOTES
+!LVL
+!STR
+!INT
+!CON
+!DEX
+!CHA
+|-
+|5 d
+|Starting stats[1|4]
+|1
+|6
+|3
+|5
+|5
+|4
+|-
+|
+|Level up[1|5]
+|2
+|6
+|3
+|5
+|5
+|4
+|-
+|
+|w/ Enchanted Nightgaunt Cloak of Stoutness +4 CONa[1|6]
+|2
+|6
+|3
+|5/9a
+|5
+|4
+|-
+|
+|w/ Enchanted Toe Ring of the Splatter Skunk +3 STRc[1|6]
+|2
+|6/9c
+|3
+|5/9a
+|5
+|4
+|-
+|4 d 20h
+|Level up[1|8]
+|3
+|6/9c
+|3
+|5/9a
+|5
+|4
+|-
+|4 d 17h
+|w/ Silver Ring of +1 CONd[1|9]
+|3
+|6/9c
+|3
+|5/10ad
+|5
+|4
+|-
+|4 d 03h
+|Levels up[1|10]
+|5
+|6/9c
+|3
+|5/10ad
+|5
+|4
+|-
+|3 d 02h
+|Stated level[1|15]
+|7
+|6/9c
+|3
+|5/10ad
+|5
+|4
+|-
+|
+|Stated level[1|18]
+|8
+|6/9c
+|3
+|5/10ad
+|5
+|4
+|-
+|2 d 18h
+|w/ Silver Ring of +2 CONe[1|19]
+|8
+|6/9c
+|3
+|5/12ade
+|5
+|4
+|-
+|
+|Carl states that his strength is nine[1|23]
+|8
+|6/9c
+|3
+|5/12ade
+|5
+|4
+|-
+|
+|Level up[1|25]
+|9
+|6/9c
+|3
+|5/12ade
+|5
+|4
+|-
+|
+|w/ Enchanted War Gauntlet of the Exalted Grull +3 STR (fist mode only), +1 DEXf[1|25]
+|9
+|6/9c/12cf
+|3
+|5/12ade
+|5/6f
+|4
+|-
+|
+|Level up[1|27]
+|10
+|6/9c/12cf
+|3
+|5/12ade
+|5/6f
+|4
+|-
+| colspan="8" |Base stat / stat with gear. Superscript letters match the gear key in the Ending Gear table: a Nightgaunt Cloak, c Toe Ring of the Splatter Skunk, d Silver Ring of +1 CON, e Silver Ring of +2 CON, f War Gauntlet (STR bonus in fist mode only). Carl does not allocate any stat points on the First Floor.
+|}
+
+==Gear==
+===Starting Gear===
+Carl enters the Dungeon wearing a leather jacket, boxers, and Beatrice's pink Crocs, and carrying a Zippo lighter and half a pack of Marlboro Reds.[1|1][1|8] He loses the Crocs in the first tunnel[1|2] and remains barefoot for the rest of the floor.[1|19]
+
+===Gear Gained===
+Carl's first loot boxes give him the Goblin Pass Tattoo on his left inner forearm, common fingerless gloves, a Toad Cudgel, and a fireplace poker.[1|5] He wears the gloves but rarely uses either weapon, since his unarmed attacks deal more damage.[1|6][1|10] He then equips the Enchanted Trollskin Shirt of Pummeling under his jacket, the Enchanted Nightgaunt Cloak of Stoutness over it, and the Enchanted Toe Ring of the Splatter Skunk on his right index toe.[1|6] A Silver Ring of +1 CON follows in his first safe room.[1|9]
+
+During the Hoarder battle, he wraps a broken chain-link leash around his right fist.[1|11] The battle's rewards include the Enchanted Spiked Kneepads of the Shade Gnoll Riot Forces, which he equips, and a Tome of Wisp Armor, which he cannot yet cast.[1|12] A Slime later dissolves his right glove and the right sleeve of his jacket.[1|15]
+
+Carl obtains the Goblin Copper Chopper in a trade with the goblin shamankas Rory and Lorelai.[1|15][1|16] After the goblin war chieftain fight, he receives the Desperado Pass Tattoo on his neck and a Silver Ring of +2 CON, worn on his left ring finger.[1|19] After the Juicer fight, he receives the Enchanted Shuriken of Bloodlust (x100) and the Enchanted War Gauntlet of the Exalted Grull, a right-handed wrist bracer that becomes a spiked gauntlet when he makes a fist.[1|25]
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb[1|6]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]
+|-
+|Legs
+|Unenchanted boxers[1|1]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe)[1|6]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Vehicle
+|Goblin Copper Chopper[1|16]
+|}
+
+==Skills==
+{| class="sortable mw-collapsible fandom-table dccProgTable"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Chopper Pilot Skill
+|1
+|5[1|21]
+|Used to drive the Goblin Copper Chopper. Level 5 allows greater speed.[1|21]
+|-
+|Dangerous Explosives Handling Skill
+|1[1|11]
+|5[1|19]
+|
+|-
+|Determine Value Skill
+|1[1|19]
+|2[1|25]
+|Gained from two Skill Potions.[1|19][1|25]
+|-
+|Dumpster Diving
+|?
+|?
+|Received a skill level notification after the Hoarder battle.[1|12]
+|-
+|Explosives Handling Skill
+|1[1|11]
+|5[1|19]
+|At level 5, examining bomb-type devices gives additional information.[1|19]
+|-
+|Foot Soldier Skill
+|Acquired[1|8]
+|6[1|25]
+|Gained at player level 3; increases kick damage.[1|8] Level 5 before the Hoarder battle.[1|10] Final level inferred from a general increase to his fighting skills.[1|25]
+|-
+|Goblin Explosives Skill
+|1[1|11]
+|5[1|19]
+|
+|-
+|IED Skill
+|3[1|19]
+|
+|Gained after the barrel bomb that kills the goblin war chieftain.[1|17][1|18] Each level adds 10% damage to improvised explosives and halves the chance of premature detonation.[1|19]
+|-
+|Iron Punch Skill
+|3[1|12]
+|5/7f[1|25]
+|Includes Enchanted War Gauntlet of the Exalted Grull +2f. Each level adds 10% to the fist damage bonus of gauntlets.[1|12]
+|-
+|Jump Attack
+|?
+|?
+|Received a skill level notification after the Hoarder battle.[1|12]
+|-
+|Powerful Strike Skill
+|3c[1|6]
+|?
+|Includes:
+*Enchanted Toe Ring of the Splatter Skunk +3c
+*Enchanted War Gauntlet of the Exalted Grull +1f
+Each level multiplies damage when not wielding a weapon.[1|6]
+|-
+|Pugilism Skill
+|4[1|5]
+|6[1|25]
+|Each level increases bare-knuckle damage by 25%.[1|5] Level 5 before the Hoarder battle.[1|10] Rises to 6 with his other fighting skills.[1|25]
+|-
+|Regeneration Skill
+|7b[1|6]
+|7b
+|Enchanted Trollskin Shirt of Pummeling +7b
+|-
+|Smush Skill
+|3[1|8]
+|6[1|25]
+|Gained at player level 3; each level increases bare-foot pressure by 10%.[1|8] Level 5 before the Hoarder battle.[1|10]
+|-
+|Unarmed Combat Skill
+|3[1|4]
+|6[1|25]
+|Level 5 before the Hoarder battle.[1|10] Final level inferred from a general increase to his fighting skills.[1|25]
+|}
+
+{| class="sortable mw-collapsible mw-collapsed fandom-table dccProgTable"
+|+ Selected Pre-Dungeon Skills
+!SKILL
+!LEVEL
+!NOTES
+|-
+|Basic Electrical Repair
+|6[1|4]
+|His only listed skill above level 5.[1|4]
+|-
+|Breathing
+|3[1|4]
+|
+|-
+|Firearms
+|?
+|Proficient with several Earth firearms.[1|4]
+|-
+|Frogger -- 1981 Video Game Cabinet Version
+|8[1|6]
+|Hidden by Carl's skill filters.[1|6]
+|-
+|Lacing Boots
+|3[1|6]
+|
+|-
+|Operating a Sony Brand RMVLZ620 Universal Remote Control
+|1[1|4]
+|
+|-
+|Swimming
+|4[1|4]
+|
+|-
+|Walking
+|4[1|4]
+|
+|}
+
+:See Also: Skills
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Heal
+|1[1|4]
+|1
+|Restores about 20% of Carl's health and costs two of his three mana points.[1|4]
+|}
+
+==Passive Effects==
+*Attacks Gain
+**2% chance to stun target when struck with Gauntlet.[1|25]
+*All Equipped Armor gains:
+**Anti-Piercing Resistance (from Nightgaunt Cloak).[1|6]
+**10% Damage Reflect (from Spiked Kneepads).[1|12]
+*Negated Effects/Attacks:
+**Melee-based damage debuffs such as Stun, Knockback, Disarm, and Out-of-Breath (from Trollskin Shirt).[1|6]
+**Momentum-based attacks (from Kneepads).[1|12]
+*Resistant to:
+**Ice-based attacks (from Nightgaunt Cloak).[1|6]
+**Poison attacks (from Nightgaunt Cloak).[1|6]
+*Weak to:
+**Natural goblin enemies, such as fairy-class creatures, deal 20% more damage (from Goblin Pass Tattoo).[1|6]
+*Memberships & Allies
+**Access to the Desperado Club; prevents obtaining a Vanquisher Pass (from Desperado Pass Tattoo).[1|19]
+**No automatic hostility from Goblins and free passage through goblin territory (from Goblin Pass).[1|6]
+
+==Ratings==
+The First Floor is closed to live viewers, so Carl's Ratings remain at zero.[1|4]
+
+==References==
+
+{{DEFAULTSORT:Carl/Floor_01}}
+

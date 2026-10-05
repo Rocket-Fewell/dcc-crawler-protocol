@@ -1,0 +1,21 @@
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Buff
+  | causes = Enhanced Pet Biscuit
+  | effect = * Boosts 4 random Player Stats
+All future Level Ups gain:
+* +1 STR
+* +1 INT
+* +2 CHA
+  | duration = Crawl
+}}Enhanced Growth is a status condition and Buff that boosts four random Player Stats, and then gives crawlers four automatically assigned stat points upon leveling up (instead of the standard three).  It is one of the 100 possible outcomes of consuming an Enhanced Pet Biscuit.
+
+==AI Description ==
+Enhanced Growth. 
+After an initial boost to four random stats, all additional levels will automatically grant +1 to Strength and Intelligence. Charisma will gain +2 per level. No additional stat points will be received upon level-up. 
+
+==References==
+

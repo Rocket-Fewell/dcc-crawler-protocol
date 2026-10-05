@@ -1,0 +1,26 @@
+{{SpoilH | 5}}
+{{Spells
+|title1= {{PAGENAME}}
+|effect=
+Alerts town guards and moves them to your location
+| image1=
+|cost=
+|casting=
+|cooldown=
+|target=
+|duration=
+|associated equipment=
+|users=
+}}
+
+{{PAGENAME}}  is a  skill that alerts all the towns guards of and starts to move them to your current location. 
+== AI Description ==
+
+Snitch.
+Nobody likes a snitch. Nobody except the po-po.
+If you are within any settlement, activating this skill will immediately alert all the town’s guards who will start to move to your location at the time of activation. At level five, a single guard will be immediately teleported to you. At level 10, it’ll be five guards. At 15, all of the town’s guards will be summoned to you.
+In addition, at level 10, guards may be summoned up to one kilometer outside of the city limits of a settlement you own. At level 15, this will work with any settlement.
+Warning: As you’ve probably already deduced, simply summoning the guards to you doesn’t necessarily mean they’ll do what you want, even if you’re the town’s leader. In addition, while there’s no cooldown for this skill, this is not something you want to abuse. These guard guys can get really cranky. [5|11]
+
+==References==
+

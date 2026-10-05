@@ -1,0 +1,92 @@
+"""Data for species-class-reskins (display-name layer only; ids, stats and rules are the 5e ones, untouched).
+Row: (id, kind, parent_id, srd_name, display_name, nation, flavor[, spoken_hint])
+ kind: species | species_lineage | class | class_option
+ nation: the real-world nationality the display name plays on (species and lineages); None for classes.
+ spoken_hint (optional): short say-it-aloud help (None = default "<display_name>. <5e name>.")
+ label_name (optional, 9th item): short 5e name used in combined_label instead of srd_name (class options: avoids nested parentheses)
+Tone: affectionate, DCC voice, food/weather/folklore/sports/quirks/absurdity. No slurs, no lazy/dirty/violent stereotypes.
+Table is adults-only; Caleb (2026-10-04) wants real nationalities for every species, played for comedy.
+"""
+ROWS = [
+# ---------------- 9 SRD species in /create (chargen-5e.json species)
+("dragonborn","species",None,"Dragonborn","Welsh Flag-Dragon Descendant","Welsh","Your flag already has a dragon on it. You are the paperwork catching up. Every consonant is a threat.","Welsh Flag-Dragon Descendant. Dragonborn."),
+("dwarf","species",None,"Dwarf","Vietnamese Scooter-Caravan Tunnel Delver","Vietnamese","Your country owns the biggest cave on Earth. Hauling a fridge on a scooter was just the warm-up."),
+("elf","species",None,"Elf","Icelandic Fjord-Fae","Icelandic","Half your country politely believes in elves, so the paperwork was already filed. You trance through daylight that never ends.","Icelandic Fjord-Fae. Elf."),
+("gnome","species",None,"Gnome","Polish Garden Krasnal","Polish","Your cousins are bronze statues all over Wroclaw. Hypnosis bounces off a nation that survived every telemarketer.","Polish Garden Krasnal. Gnome."),
+("goliath","species",None,"Goliath","Samoan Rugby-Prop Titan","Samoan","Big-boned, big-hearted, and the front row of every scrum. Gentle until the ball is involved."),
+("halfling","species",None,"Halfling","Belgian Waffle-Cart Tinyfolk","Belgian","Eleven million people, countless beers, and once 541 days with no government. Statistically suspicious, deliciously.","Belgian Waffle-Cart Tinyfolk. Halfling."),
+("human","species",None,"Human","Polite Canadian Control Group","Canadian","Baseline. You apologize to the trap after it hits you, then thank it for the experience.","Polite Canadian Control Group. Human."),
+("orc","species",None,"Orc","Land-of-Fire Pomegranate Orc","Azerbaijani","Your country is literally named Land of Fire. You refuse to fall down, and you refuse to refuse tea.","Land-of-Fire Pomegranate Orc, Azerbaijani edition. Orc."),
+("tiefling","species",None,"Tiefling","Brazilian Carnival-Float Devil-Spawn","Brazilian","You run a little hot. Everyone else calls that Tuesday in February. Horns come with a feather headdress option.","Brazilian Carnival-Float Devil-Spawn. Tiefling."),
+# ---------------- 12 supplement species (rules/30-species-supplement-5e.md section 4)
+("changeling","species",None,"Changeling","Scottish Selkie-Blooded Shapeshifter","Scottish","Half the coast claims a seal grandmother and you can prove it. Three accents, none of them borrowed on purpose."),
+("felid","species",None,"Felid","Istanbul Street-Cat Tea-Shop Regular","Turkish","In your city the cats own the sidewalks and pay no rent. You inherited the attitude and a tea glass."),
+("hobgoblin","species",None,"Hobgoblin","Summer-Festival Hanabi Sapper","Japanese","Fireworks are a national art form. Yours go off on purpose, mostly, and the safety sign is in a very polite font.","Summer-Festival Hanabi Sapper. Hobgoblin."),
+("grulke","species",None,"Grulke","Finnish Sauna-Plunge Toad-Folk","Finnish","Five feet of warty, leaping calm. You say nothing for hours, then throw a boot forty meters and call it a conversation."),
+("crocodilian","species",None,"Crocodilian","Australian Billabong Croc-Mate","Australian","You stand near doors for a living. Back home everything already wants to eat you, so this is a promotion."),
+("naga","species",None,"Naga","Indian Cobra-Hood Masala Chai Brewer","Indian","The old stories make Nagas guardians of water and treasure. You guard the chai and the margin on it."),
+("lajabless","species",None,"Lajabless","Mexican Calavera, Day Shift and Night Shift","Mexican","Skull face, goat leg, two moods. Day you is a sweet abuela. Night you is the whole party and the ofrenda."),
+("caprid","species",None,"Caprid","Moroccan Argan-Tree Goat Climber","Moroccan","Your relatives climb trees for lunch. You are polite until someone is stupid, and then you ask three pointed questions."),
+("skyfowl","species",None,"Skyfowl","Albanian Land-of-Eagles Sky-Dweller","Albanian","Your country's name literally means land of eagles. You are always above, and you insult guests only after your besa expires."),
+("nodling","species",None,"Nodling","Argentine Two-Head Asado Pundit","Argentine","Two heads, one grill, and a permanent argument about the cut. Both heads see a therapist. Separately."),
+("bloodbound","species",None,"Bloodbound","Romanian Castle-Gift-Shop Vampire","Romanian","Your country sells Dracula souvenirs and you own the souvenir stand. Bite-and-heal comes with garlic sausage on the side."),
+("raptorkin","species",None,"Raptorkin","Gobi Desert Raptor-Pup, Mongolian Edition","Mongolian","Your country dug up the first raptor eggs. Now you hatched out of someone's paperwork. Quick, toothy and loyal as a herding dog."),
+# ---------------- variants named in rules/30-species-supplement-5e.md (section 4.2 heading: Felid = Cat / Cat Girl / Tigran / Were-Cat)
+("felid-cat","species_variant","felid","Cat","Sphinx-Courtyard Tabby","Egyptian","The whole cat. Your ancestors were worshipped and you have not let anyone forget it."),
+("felid-cat-girl","species_variant","felid","Cat Girl","Taipei Night-Market Cat-Cafe Barista","Taiwanese","Cat ears, bubble tea, and a loyalty card nobody remembers issuing. Donut has opinions, in writing."),
+("felid-tigran","species_variant","felid","Tigran","Sundarbans Mangrove Big-Cat","Bangladeshi","Big-cat energy through the mangrove. Boats yield the channel and so does the tide."),
+("felid-were-cat","species_variant","felid","Were-Cat","Full-Moon Village Were-Cat","Bulgarian","Furry by moonlight, rose-oil salesman by day. The village never asks which half is bluffing."),
+# ---------------- canon sub-types (CANON-LEDGER R-004 / R-049 / R-050 + wiki pages Caprid, Lajabless, Nodling; rules/30 4.7 names the Lajabless phases)
+("caprid-small","species_variant","caprid","Small Caprid","Himalayan Happiness-Index Goat-Person","Bhutanese","Four feet tall and politely carrying the national happiness index. You win staring contests with mountains."),
+("caprid-large-dark","species_variant","caprid","Large Dark Caprid","Black-Mountain Tall-Horn Goat-Person","Montenegrin","Towering, dark and satanic-looking until you open your mouth and ask about the weather. Very tall country, very large goat."),
+("lajabless-radiant","species_variant","lajabless","Radiant Phase","Calypso Carnival Radiant La Diablesse","Trinidadian","Dawn bell, sunshine, spells at half price. The goat hoof wears a very nice sandal."),
+("lajabless-skull","species_variant","lajabless","Skull Phase","Moonlit-Road Skull La Diablesse","Saint Lucian","Dusk bell, skull face, strength doubled. Folklore says never follow the lady in the long dress down the road. You are the lady."),
+("nodling-two-headed","species_variant","nodling","Two-Headed Nodling","Double-Eagle Habsburg Debate Team","Austrian","Two heads, one imperial crest, and a waltz neither head can agree to lead."),
+("nodling-three-headed","species_variant","nodling","Three-Headed Nodling","Bike-Lane Committee of Three","Dutch","Three heads, three bicycles, and a perfectly flat opinion about everything. The vote is always 2 to 1."),
+("nodling-four-headed","species_variant","nodling","Four-Headed Nodling","Marathon Pace-Setter Quartet","Kenyan","Four heads running four different splits. One of them is always ahead, and he never stops talking about it."),
+("nodling-five-headed","species_variant","nodling","Five-Headed Nodling","Coffee-Farm Five-Way Taste Panel","Colombian","Five heads, five palates, one cup of coffee. Dinner takes an hour and the argument takes longer."),
+("nodling-six-headed","species_variant","nodling","Six-Headed Nodling","Fado Six-Part Harmony Choir","Portuguese","Six heads sing six sad songs about the same missing sandwich. Nostalgia has never been this loud."),
+# ---------------- lineages and ancestries shown in /create (chargen-5e.json species.*.sub.options)
+("dragonborn-black","species_lineage","dragonborn","Black Dragonborn","Black Star Cocoa Wyrmling","Ghanaian","Black as the star on the flag, sweet as the cocoa you hoard. Breathes acid and gets a standing ovation at every wedding."),
+("dragonborn-blue","species_lineage","dragonborn","Blue Dragonborn","Sky-Blue Football-Shirt Wyrm","Uruguayan","Light blue, two World Cups, and a thermos of mate you will not share. Lightning strikes whenever the referee misses a call."),
+("dragonborn-brass","species_lineage","dragonborn","Brass Dragonborn","Village Brass-Band Festival Wyrm","Serbian","Your breath is a trumpet solo at full volume. Weddings, funerals and fire drills all hire you."),
+("dragonborn-bronze","species_lineage","dragonborn","Bronze Dragonborn","Riace Bronze Statue Wyrm","Italian","Looks like a museum piece and knows it. Gestures wildly with a very expensive wing."),
+("dragonborn-copper","species_lineage","dragonborn","Copper Dragonborn","Copper-Mine Joke Wyrm","Chilean","Mined enough copper to roof a continent and came out with jokes. All bad. All rehearsed."),
+("dragonborn-gold","species_lineage","dragonborn","Gold Dragonborn","Gold-Reef Mine Wyrm","South African","Hoards gold, braais everything, and breathes acid on anyone who touches the grill. Rugby is the second religion."),
+("dragonborn-green","species_lineage","dragonborn","Green Dragonborn","Four-Leaf Clover Wyrm","Irish","Green as the hills, loud at the pub, and poisonously polite. The weather report is always a lie."),
+("dragonborn-red","species_lineage","dragonborn","Red Dragonborn","Inca-Red Poncho Wyrm","Peruvian","Red as the flag, proud as a llama, and fire is your idea of a spicy ceviche."),
+("dragonborn-silver","species_lineage","dragonborn","Silver Dragonborn","Potosi Silver-Mine Wyrm","Bolivian","Your mountain once paid for half an empire. You breathe frost and still negotiate the price."),
+("dragonborn-white","species_lineage","dragonborn","White Dragonborn","Fjord-Snow White Wyrm","Norwegian","White as a ski slope and just as slippery. Breathes frost and eats brown cheese with a straight face."),
+("elf-drow","species_lineage","elf","Drow","Midnight-Furniture Flatpack Dark-Elf","Swedish","Lives where the sun leaves in November. Builds fine furniture in the dark and refuses to read the instructions."),
+("elf-high","species_lineage","elf","High Elf","Alpine Chocolate-Vault High-Elf","Swiss","Precise, punctual and very high up. Your timing is perfect and the fondue is not optional."),
+("elf-wood","species_lineage","elf","Wood Elf","Forest-Sauna Wood-Elf","Estonian","Half the country is forest and the other half is a digital startup. You hide in either one."),
+("gnome-forest","species_lineage","gnome","Forest Gnome","Mushroom-Hunt National Sport Gnome","Czech","Knows every edible mushroom and has argued about each one. The national sport is picking them and being right."),
+("gnome-rock","species_lineage","gnome","Rock Gnome","Magic-Cube Tinkerer Rock-Gnome","Hungarian","Invented a cube that has ruined more weekends than the dungeon. Tinkers, solves and then twists it back on purpose."),
+("goliath-cloud","species_lineage","goliath","Cloud Goliath","Himalayan Cloud-Sherpa Titan","Nepali","Carries the whole expedition and the tea. Lives so high the clouds say hello first."),
+("goliath-fire","species_lineage","goliath","Fire Goliath","Volcano-Rim Warung Titan","Indonesian","Born on a ring of fire and unimpressed by volcanoes. Cooks dinner on the crater rim."),
+("goliath-frost","species_lineage","goliath","Frost Goliath","Siberian Ice-Fisher Titan","Russian","Drills through a lake, sits for six hours, and calls it a social event. Frost? You call it Thursday."),
+("goliath-hill","species_lineage","goliath","Hill Goliath","Highland Marathon Titan","Ethiopian","Runs up the hill for fun and arrives for coffee. The coffee ceremony takes three rounds and no hurry."),
+("goliath-stone","species_lineage","goliath","Stone Goliath","Great Stone-House Titan","Zimbabwean","Your country is named for stone houses. You shrug off blows like a very old wall."),
+("goliath-storm","species_lineage","goliath","Storm Goliath","Typhoon-Season Karaoke Titan","Filipino","The storm is loud and so is your karaoke. Both end with everybody singing along."),
+("tiefling-abyssal","species_lineage","tiefling","Abyssal Tiefling","Midnight-Dinner Abyssal Night-Owl","Spanish","Eats at 10 PM and dances until the sun files a complaint. The abyss is the after-party."),
+("tiefling-chthonic","species_lineage","tiefling","Chthonic Tiefling","Underworld Olive-Grove Devil","Greek","Hades was a neighbor and the family argues about it at every dinner. Plates get smashed. Souls get plated."),
+("tiefling-infernal","species_lineage","tiefling","Infernal Tiefling","Kimchi-Fire Barbecue Devil","South Korean","You grill the fire, you pickle the fire, you eat the fire. The ghost pepper asks for mercy."),
+# ---------------- 12 classes in /create (chargen-5e.json classes)
+("barbarian","class",None,"Barbarian","Anger-Management Dropout",None,"Failed the course, kept the certificate, and now charges by the hour for the same thing."),
+("bard","class",None,"Bard","Open-Mic Menace",None,"Unlicensed entertainer with a Bluetooth speaker and four fans. Two of them are family."),
+("cleric","class",None,"Cleric","Urgent-Care Chaplain",None,"Somebody up there signed for you. Pastoral care, triage, and a surprisingly effective hand-sanitizer miracle."),
+("druid","class",None,"Druid","Community-Garden Zealot",None,"Smells like a compost bin with ambition. Has a plot, a hose, and opinions about your lawn."),
+("fighter","class",None,"Fighter","Off-Duty Bouncer",None,"Fell into it, kept falling. Checks IDs, breaks up fights, and holds a grudge about the cover charge."),
+("monk","class",None,"Monk","Barefoot Hot-Yoga Brawler",None,"Barefoot by choice. Teaches breathing, punches stress, and makes a living off Namaste and a cash-only mat."),
+("paladin","class",None,"Paladin","HOA Enforcement Crusader",None,"Took an oath. Probably to the bylaws. Clipboard, shining armor, and a fine schedule for unauthorized mailboxes."),
+("ranger","class",None,"Ranger","Seasonal Park Ranger",None,"Knows which way is north. Has been told it is a rare skill. Drives a truck with a bad radio."),
+("rogue","class",None,"Rogue","Five-Finger Discount Specialist",None,"Your record says 'opportunist.' Your references say 'talented.' The mall says 'please leave.'"),
+("sorcerer","class",None,"Sorcerer","Leaky Power-Bank",None,"Over-charged at birth and leaking sparks into everything. Do not plug into the wall."),
+("warlock","class",None,"Warlock","Unread Terms-and-Conditions Signer",None,"Clicked 'I agree' without reading. Your patron read it. Your patron has notes."),
+("wizard","class",None,"Wizard","Perpetual Grad Student",None,"Reads. Gross. Seven years into a thesis nobody asked for, powered by bad coffee and unfunded curiosity."),
+# ---------------- class options shown in /create at level 1 (chargen-5e.json classes.*.choices)
+("cleric-protector","class_option","cleric","Protector (Divine Order)","Hallway Bodyguard",None,"Armor and martial weapons. Stands between the bleeding and the elevator.",None,"Protector"),
+("cleric-thaumaturge","class_option","cleric","Thaumaturge (Divine Order)","Church Rummage-Sale Mystic",None,"Extra cantrip and sharper at religion. Reads a tarot deck with the price tags still on.",None,"Thaumaturge"),
+("druid-magician","class_option","druid","Magician (Primal Order)","Farmers-Market Hedge Magician",None,"Extra cantrip and nature smarts. Sells heirloom tomatoes that are, technically, still cursed.",None,"Magician"),
+("druid-warden","class_option","druid","Warden (Primal Order)","Trail-Crew Warden",None,"Medium armor, shield and martial weapons. Maintains the trail and slaps anyone who feeds the wildlife.",None,"Warden"),
+]

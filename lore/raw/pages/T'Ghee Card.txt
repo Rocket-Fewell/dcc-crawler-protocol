@@ -1,0 +1,571 @@
+{{SpoilH|6}}
+{{Item
+|title=
+|image=Totems by honeymanatee.jpg
+|imagecaption=Art by u/Honeymanateebun, Reddit
+|type=T'Ghee Card
+|keywords=
+|effects=
+* Stores and commands a captured mob
+* Enables card combat
+|source=
+* Flagging a creature at 5% health or below
+* Looted from defeated opponents
+|buy=
+|sell=
+}}
+
+T'Ghee cards are the playing pieces of T'Ghee, the deck-building game the dungeon imposed on every crawler for the length of the eighth floor.[6|1][6|8]
+
+==Description==
+A totem card stores a single captured monster and lets its holder summon and command it. A crawler creates one by reducing a creature to 5% health or less and planting one of their squad's twenty flags in its body; the creature is converted on the spot and the card appears in the squad leader's inventory.[6|1] Flags cannot be thrown or fired, and a squad that runs out never receives more.[6|1] The conversion works on crawlers as readily as on monsters: Sister Ines flags her own dying squadmate Paz Lo rather than let him go, and he becomes a common card like any other.[6|16] The dungeon also builds totems from crawlers already dead, as Frank Q discovers two floors after his own.[6|47]
+
+Flagged monsters automatically become minions of whoever summons them and follow that crawler's orders, within limits set by the level gap and the creature's temperament.[6|1] Cards are reusable, and a totem survives being killed in combat.[6|1] A card is destroyed, and its monster released, by tearing it in two.[6|1]
+
+Cards may only be held by a squad leader; anyone else attempting to store one receives an error.[6|4] While a squad still has empty slots, a collected totem is placed into the deck automatically and cannot be removed or traded until the squad is full, and even tearing it is barred until another card arrives to take its place.[6|22][6|47] Once the squad is complete, totems may be traded freely between crawlers, and they may also be stolen.[6|1]
+
+Alongside totems, four kinds of supporting card circulate: utility cards played on a squad's own summoned totems, snare cards played on an opponent's, mystic cards that act on squads and decks, and special cards covering everything else.[6|8] Supporting cards are looted from defeated opponents rather than flagged, and a squad that kills a rival squad claims its entire collection.[6|8] They also turn up loose in the inventories of ordinary mobs that carry no deck at all.[6|4] Cards left on the field at the end of a fight can be picked up afterward.[6|43] How decks are built and played is covered at T'Ghee.
+
+Consumable cards are spent permanently the first time they are played, even in a practice arena, and cards carrying cooldowns do not reset at the end of a practice session.[6|8] Any totem left out of an active deck at the end of Phase One is discarded, and from that point a squad may hold neither more nor fewer than six, or eight with the reserve slots of a Champion Pack.[6|27][6|47] Surviving squads may choose a single card to keep when the floor collapses.[6|1]
+
+==Appearance==
+A card is roughly the size of a postcard, rigid but with the feel of paper and easy enough to tear by hand. The reverse carries the logo of the Syndicate government as a 3D image that moves and undulates on its own; the face shows art illustrating the card's effect, such as the red stylised plus symbol in a field of stars on a Combo Card or the pair of tied legs on Hobbled.[6|4][6|11] A card belonging to someone else displays only the information printed on its face, which is a fraction of its full stats.[6|38]
+
+The flags used to create totems are a separate item: a hand-sized banner bearing the squad's system-generated logo, mounted on a glowing enchanted metal spike about a foot long that will pierce any creature, ghosts included, once its health drops below 5%.[6|4]
+
+==Rarity==
+Cards carry a coloured border indicating rarity. Common cards are green, mythic cards are black and rank second-highest, and unique cards are orange and rank above everything else.[6|16][6|17][6|22] Uncommon, rare, very rare, and legendary cards also appear.[6|7][6|11][6|22][6|29] A card described as unique is not necessarily one of a kind: at least ten versions of the Uzi Jesus card circulate among crawlers, all recognisably the same figure but with wildly different abilities.[6|22]
+
+==Known Cards==
+===Totem Cards===
+{| class="mw-collapsible sortable fandom-table" style="width:100%"
+|+Totem cards, in order of appearance
+!Name
+!Level
+!Deckmaster
+!Entrance
+!Notes
+|-
+|Yago
+|70, later 95
+|Sister Ines, later Ysalte
+|As Geraldo
+|Monk Seal Picket Sentry; constitution 125, an aquatic melee tank with Kung Fu Master, Body Slam, Earthquake, and Deflector, summoned for 60 seconds. By the time Ysalte fields him he has been buffed with Earth magic into a Monk Seal of the Earth Order, 25 levels higher, broader, crackling with obsidian energy, and wearing a black headband with a red swirl.[6|6][6|67]
+|-
+|Geraldo
+|70
+|Donut
+|Flips through the air squealing kung-fu noises as an explosion goes off
+|Obedient. Monk Seal Picket Sentry and the Royal Court's first totem; a solid tank and melee fighter. Feuds with Raul whenever both are summoned, and calls him the spider lady's jinetera.[6|7][6|29]
+|-
+|Skylar Spinach
+|66
+|Donut
+|A small explosion of confetti, with wisps of ghostly figures
+|Obedient but mute, communicating only in donkey noises; fond of Mongo and Samantha. A donkey-headed snake ghost, two-thirds of an enraged Ghommid splitter, constitution 90, summoned for 60 seconds. When killed it splits into Skylar, a bat-winged donkey head with a Dodge of 15, and Spinach, a non-corporeal headless snake that fires spikes. If it splits and then times out, the halves become two separate temporary cards for the rest of the fight, each stronger and longer-lived than the whole.[6|14][6|28][6|29]
+|-
+|Asojano
+|130
+|Donut
+|
+|Quarrelsome. Orisha and non-corporeal spirit, known as the Lord of Smallpox; a City Boss before being flagged in the Temple of Yemaya. Enormously strong and obeys once shouted at, but opens his first practice bout by trying to debuff Donut. Permanently combined into Lazarus-A-Bang-Bang, and later returns as Lord of Blight - Gold Edition with a sugar-skull staff and a skirt of woven gold.[6|11][6|15][6|29][6|34][6|58]
+|-
+|Paz Lo
+|101
+|Sister Ines, Ysalte, later Donut
+|None
+|Destroyed. Flagged by his own squadmate as he lay dying and rendered as a green common card, the only recorded instance of a living crawler being turned into a totem. Retitled The God Predator and reclassified as a Former Crawler after killing Ysalte; her equipment passed to him as an armour upgrade. Donut tore the card rather than carry it to the ninth floor.[6|16][6|72]
+|-
+|Gumberoo
+|
+|Elle McGibbons
+|
+|Massive bear-hippo, part of a squad built around North American cryptids alongside a sasquatch and a batsquatch.[6|22]
+|-
+|Roy
+|
+|Florin
+|
+|Giant caiman, flagged from a riverbank with the main gun of a 1940s tank.[6|22][6|27]
+|-
+|Uzi Jesus
+|140
+|Florin, later Donut
+|Announced with "Body of Christ!" as translucent sparkling angels float overhead and a wooden cross bearing the totem grows from cracked ground
+|Unique. Quarrelsome. Origin Ecuador; constitution 200, summoned for 75 seconds. Undead ranged healer with Blood into Lead, Resurrect Totem, Bullet Hell, and twenty further abilities. Agrees to roughly half of what he is asked and lies about the rest. Flagged by Florin, who handed the drunk, undead totem a supreme healing potion and told him his father wanted him to drink it. Permanently combined into Lazarus-A-Bang-Bang, later returning as Uzi Jesus - Gold Edition with two gold-plated Uzis.[6|22][6|29][6|34][6|58]
+|-
+|Raul the Crab
+|70
+|Donut
+|Explosion
+|Common. Obedient to the point of grovelling, and cowers before any other summoned totem. Red Maníseros land crab; his once-per-fight Bris spell needs a short meditation to prepare and then crushes a target at range.[6|24][6|29]
+|-
+|Shi Maria
+|140
+|Donut
+|A web-covered skull laughs and bursts into spiders, webs cover everything, ominous harpsichord plays, and the announcer calls "The Bedlam Bride!"
+|Unique. Quarrelsome and sadistic, but by a wide margin the Royal Court's strongest card; she assesses a battlefield and clears it in seconds, and will demand to see the rest of the hand and dictate which buffs to cast. Reaper spider minion, summoned for 120 seconds. Her fifth eye blinds and maddens anyone who meets it. Her Cockroach skill works differently as a card: if she dies, she returns to the deck rather than the discard pile.[6|26][6|28][6|29]
+|-
+|Der Kornwolf
+|100
+|Der Schachmeister
+|
+|Giant ethereal wolf, fielded by a level 25 deckmaster who focuses on debuffs and disabling.[6|29]
+|-
+|Die Kartoffelwölfin
+|100
+|Der Schachmeister
+|
+|Giant ethereal wolf, identical to Der Kornwolf but for the name.[6|29]
+|-
+|Mo'o
+|
+|The Luau
+|
+|Human-sized lizard carrying a spear and breathing fire, fielded by a pink orc in Hawaiian dress with a conga-playing piglet.[6|30]
+|-
+|Jola
+|
+|Katia Grim, later Donut
+|The sky blackens into a digital blizzard, fake Christmas lights appear on nearby structures, slowed and distorted jingle bells play, and white fireworks burst and fall as snow
+|Mythic. Quarrelsome. A house-sized, dirty-brown Persian cat with a lumpy yellow candle melted onto his skull, larger even than Shi Maria; speaks untranslated Icelandic and casts Fashion Critic, which strips an opponent's equipment, then eats the clothing. The candle reveals invisible enemies, and he grows stronger against opponents who are naked or children. Traded away by Katia Grim because he sometimes simply refuses to fight; reliable, in Donut's assessment, as long as there are no children around. Summons for 75 seconds.[6|34][6|41][6|58]
+|-
+|Robert the Doll
+|
+|Robert the Human
+|
+|Tall, faceless doll in a sailor suit. Fielded alongside Dog by a level 40 deckmaster, the first of ten in the Royal Court's Phase Two region.[6|37]
+|-
+|Dog
+|
+|Robert the Human
+|
+|Small stuffed dog with rolling bug eyes.[6|37]
+|-
+|Babababoon
+|45
+|Babababoon
+|
+|Baboon-and-human hybrid; the second of ten Phase Two deckmasters fields two more of his own kind.[6|38]
+|-
+|Skunk Ape
+|80
+|Babababoon
+|
+|Rare.[6|38] There is no physical description in the book, but is presumed to be a reference to the creature from North American Folklore. A bipedal human or ape-like creature, 5-7 feet tall, and covered in mottled reddish-brown hair.
+|-
+|Swordfish Interlopers
+|50
+|Reef Explorer
+|Leaps out of a digital wave under a rhyming announcement
+|Bipedal, human-sized creatures whose swordfish heads point straight up and barely turn; no arms, only flippers, on short penguin legs. Spit water to knock a projectile off course, then launch skyward and dive like a missile. Summoned for 90 seconds by a level 65 ghost-class deckmaster in a glowing deep-dive suit.[6|39]
+|-
+|Lazarus-A-Bang-Bang
+|140
+|Donut
+|Church organ music swells, winged digital babies fountain upward, the totem rises spinning and shrouded in smoke, and a pack of digital street dogs bursts away under a long announced title
+|Unique. Quarrelsome, but keen on fighting and more biddable than either parent. Created by playing a Combo Card on Asojano and Uzi Jesus, stacking every available buff on the result, and locking it in with a Glow-Up. A hooded, boil-covered man in a crown of thorns that blinds him, carrying a bazooka that fires something different every time, from beetles to rockets to feathers. Summons for 200 seconds; ranged healer and affliction dealer with Apocalyptic Plague and Resurrect Totem. Unlike both components he is not undead, and freezing the card mid-buff cost him five of his seven utility slots and left his constitution at 80 against their 200. Killed while further combined with Skylar Spinach, he reverts to his two component cards, which the splitter's property returns in stronger Gold Edition forms.[6|34][6|39][6|42][6|58]
+|-
+|Quench Moths
+|30
+|The Visitor
+|
+|Dog-sized moths; gain speed and constitution while touching a light source. Fielded in bulk by the seventh of ten deckmasters, a level 70 Nightgaunt who never plays a card because Carl's cloak enrages him.[6|41]
+|-
+|Demon Queen
+|110
+|The Visitor
+|
+|Legendary. Fat upright ant wearing a crown.[6|41]
+|-
+|Wakinyan Temple Guard
+|80
+|Tom
+|Red and turquoise ribbons explode and form a giant eagle overhead, announced as a Turkey Temple Guard
+|Large, well-muscled, shirtless humanoid with a turkey's head, a headdress of brown, black, and white turkey feathers, and a curved war club. Fielded by Tom, a level 75 bereft shaman and the eighth of ten deckmasters in Havana.[6|42]
+|-
+|Unk Tehi Temple Guard
+|85
+|Sharp-Elbows; Donut temporarily
+|Black and yellow confetti and an explosion, followed by a forward roll, under an announced joke about the Tin Man
+|Large humanoid with a lizard's head, an ornate turkey-feather headdress, and either a bow or a spear. Deals 20% more damage against a crawler carrying an Extinction Sigil. Sharp-Elbows, a level 80 necromancer ogre, is the ninth of ten deckmasters; Donut fielded one by stealing it with The Thief.[6|42]
+|-
+|Worm Fulcrum
+|50
+|Sharp-Elbows, later Donut
+|Varies with the imbued spell
+|Sentient Necro Staff, formed by combining a Walking Stick totem with a Necro mystic card. Acts as a totem with its own health and timer, but occupies a card slot instead of a totem slot. See Supporting Cards below.[6|42][6|43]
+|-
+|Zombie Turkey
+|10
+|Sharp-Elbows
+|
+|Raised in bulk from turkey corpses by the Worm Fulcrum. Persist as hostile mobs after combat ends and spread their condition by biting.[6|42][6|43]
+|-
+|Alpha Male Carl
+|69
+|Reminiscence Hydra of Malicious Compliance, later Donut; Carl temporarily
+|Red, white, and blue smoke explodes to a Scorpions track
+|Unique. A "better" Carl with slicked-back hair, star-patterned boxers, a white war gauntlet, and buttons reading "#1 Son" and "Brother of the Century"; he speaks in Carl's father's voice and fights with a xistera and hob-lobbers. Openly hostile when an opponent summons him, but disconcertingly warm and supportive when Carl does.[6|46][6|68]
+|-
+|King Croissant
+|60
+|Reminiscence Hydra of Malicious Compliance
+|
+|Titled the Younger, Better, and Smarter Cat, and described as the cat Beatrice and Carl really wanted. A fist-sized black kitten in a miniature headset microphone; sings a bard escape song in a baritone voice to teleport itself and an ally clear.[6|46]
+|-
+|Bam-Bam
+|70
+|Reminiscence Hydra of Malicious Compliance
+|
+|Belly Acher, the round meatball pet also kept by Tserendolgor and offered as an option when Donut chose Mongo. Card tagline: "I eat dinosaurs. Yummy-yummy." Ripped rather than kept.[6|47]
+|-
+|Leveled-Up Frank
+|90, later 100
+|Reminiscence Hydra of Malicious Compliance, later Donut; Ysalte temporarily
+|
+|Sober Edition. Night Elf Blood Assassin built from the dead crawler Frank Q, the first sign that the dungeon will render fallen crawlers as cards. Carl refuses to field him; the card adds itself to the deck anyway when a slot falls empty.[6|47][6|67]
+|-
+|Amhuluk
+|
+|Imani
+|
+|Quarrelsome. Mossy lizard; killed Imani's team.[6|52]
+|-
+|Hoan Kiem
+|25
+|Quan Ch
+|None
+|Common. Soft-shelled turtle.[6|56]
+|-
+|Rabbit
+|10
+|Quan Ch
+|An explosion with the words "Yeah. It's a Rabbit" floating over it
+|Lands with a peep.[6|58]
+|-
+|Basquiat
+|
+|Tserendolgor
+|Erupts from the ground amid torn flooring and confetti under a rhyming announcement
+|Mongolian death worm the size of a bus, with three face flaps that open like a flower around rings of teeth. Tunnels through solid ground and swallows totems whole.[6|58]
+|-
+|(unnamed)
+|120
+|Amayon
+|
+|Flaming rock creature; the only one of Amayon's six totems to survive the opening exchange, crashing through the floor and hunting crawlers several storeys below.[6|67]
+|-
+|Xing Tian
+|80
+|Li Na
+|Bursts onto the ground in a flourish of snow and red sparkles
+|Headless human with a face set in his bare chest, carrying an axe and shield.[6|67]
+|-
+|Annie
+|80
+|Katia Grim
+|Burning embers and dancing baby pacifiers drift into the sky
+|Útburður. Cat-sized raven with an infant human's skull for a head.[6|67]
+|-
+|Gallu
+|100
+|Amayon
+|
+|Inferior demon. Tall, fat, winged figure in leather and chains carrying a whip, similar to Slit.[6|67]
+|-
+|Mavet
+|100
+|Amayon
+|
+|Inferior demon, as Gallu.[6|67]
+|-
+|Naamah
+|120
+|Amayon
+|
+|Succubus Nest Queen. Humanoid female with vampire fangs and a bust rivalling Odette's; strikes with the force of a vehicle and moves as though fired from a gun.[6|67]
+|-
+|Banjo
+|120
+|Amayon; Donut temporarily
+|
+|Hell Scrub. Gorilla-sized shadow of black cloud shot through with dark tentacles; stolen out of Amayon's deck by The Thief on the opening move of the boss fight.[6|67]
+|-
+|Legendary Master
+|120
+|Li Na
+|
+|Human.[6|67]
+|-
+|Tran's Mom
+|
+|Katia Grim; Ysalte temporarily
+|
+|Elderly woman.[6|67]
+|-
+|Zhe
+|
+|Li Na; Ysalte temporarily
+|
+|Li Jun's cousin.[6|67]
+|}
+
+===Supporting Cards===
+{| class="mw-collapsible sortable fandom-table" style="width:100%"
+|+Supporting cards, in order of appearance
+!Name
+!Type
+!Rarity
+!Durability
+!Effect
+|-
+|Combo Card
+|Utility
+|Very Rare
+|Consumable
+|Temporarily combines two totems into one creature; summon length equals the shorter of the two. Both are tagged out for the rest of combat afterward, even with health remaining. The face shows a red stylised plus symbol in a field of stars.[6|4]
+|-
+|Time Extend
+|Utility
+|Common
+|Durable
+|Doubles a summoned totem's duration. Announced with a comic-book explosion.[6|7]
+|-
+|Stout
+|Utility
+|Common
+|Durable
+|Adds 25% to a totem's health for the duration of combat. Announced with a trumpet fanfare and a comic-book explosion.[6|7]
+|-
+|Flee
+|Special
+|Uncommon
+|Consumable
+|Teleports an entire squad out of combat; neither distance nor destination is specified.[6|7]
+|-
+|Grand Finale
+|
+|
+|
+|Carries a once-daily cooldown that does not reset at the end of a practice session.[6|8]
+|-
+|Hobbled
+|Snare
+|Very Rare
+|Consumable
+|Cuts a totem's summoning time by 90%, reducing a full minute to six seconds. The reduction persists through the rest of combat even if the totem times out and is resummoned. The art shows a pair of legs tied together. Later deck summaries shorten the name to Hobble.[6|11][6|28][6|42]
+|-
+|Buff
+|Utility
+|
+|
+|Name only; no effect described.[6|11]
+|-
+|Blue Stuff
+|Utility
+|
+|Durable
+|Increases a totem's mana points.[6|11]
+|-
+|Greased Lightning
+|Utility
+|
+|Durable
+|Increases a totem's speed by 25%. Announced with a lightning graphic and a crack.[6|11]
+|-
+|(unnamed)
+|Mystic
+|
+|
+|Cuts card draw time from ten seconds to five. Held by Li Na.[6|11]
+|-
+|The Thief
+|Mystic
+|Mythic
+|Durable
+|Steals a card from another player, which poofs out of their hand and into the caster's deck. Gifted to Donut by the goddess Yemaya for repairing her shrine.[6|17][6|42]
+|-
+|Hole in the Bag
+|Snare
+|
+|Durable
+|Drains a totem's mana.[6|22]
+|-
+|Force Discard
+|Mystic
+|Rare
+|Durable
+|Picks a random card from an opponent's hand and sends it to the discard pile with a poof.[6|22]
+|-
+|Damnation
+|Snare
+|Uncommon
+|Durable
+|Forces an enemy totem to be discarded when its timer runs out, regardless of remaining health.[6|27]
+|-
+|Glow-Up
+|Special
+|Mythic
+|Consumable
+|Cast on any active card or totem on either side; permanently rewrites the card to reflect its current state, so a totem buffed to double duration keeps that duration in every future battle.[6|27]
+|-
+|Heal Totem
+|Utility
+|
+|
+|Heals a totem.[6|28]
+|-
+|Summon Lock
+|Mystic
+|
+|
+|Chains an opponent's cards and blocks all summoning for thirty seconds.[6|29]
+|-
+|Peekaboo
+|Mystic
+|
+|Persistent
+|Reveals an opponent's hand for the remainder of combat. A pair of bloodshot eyes floats over the opponent and their card names appear above the deck.[6|29]
+|-
+|(unnamed)
+|Mystic
+|Legendary
+|
+|Forcibly discards every copy of a chosen card from a hand and deck. Announced with "To Hell With Ya!" as the card flies out of the opponent's hand and ignites.[6|29]
+|-
+|Precision
+|Utility
+|
+|
+|Increases a totem's chance of landing an attack. Copies stack without consuming extra slots, counting as a single buff however many are played.[6|39]
+|-
+|Lamp
+|Snare
+|
+|Consumable
+|Paralyzes a totem for ten seconds and makes it glow brightly. The Visitor carried ten of them.[6|41][6|42]
+|-
+|Idolized
+|Mystic
+|
+|Persistent
+|Turns nearby non-totem mobs hostile toward the opponent, letting them attack an enemy deckmaster directly. Sun rays burst from the card as it locks into place.[6|42]
+|-
+|Ralphie
+|Mystic
+|
+|Persistent
+|Dispels all of an opponent's active magic and mutes their totems and minions from casting spells while it remains on the field. A digital Christmas present appears and catches fire.[6|42]
+|-
+|(unnamed)
+|Snare
+|
+|
+|Unsummons an opposing totem and returns it to its owner's deck. Announced with "GET BACK IN LINE!"[6|42]
+|-
+|Worm Fulcrum
+|Special
+|
+|Persistent
+|A Necro mystic card fused with a Walking Stick totem, listed in Donut's deck as the Sentient Staff Totem. Imbued with a single spell before combat that may then be cast once; the staff itself fights as a totem with its own health bar and timer, occupying a card slot rather than a totem slot, and changes appearance depending on the spell it holds. Loaded with Clockwork Triplicate it turns brass with a spinning cog at its tip. Not consumable.[6|42][6|43][6|46][6|55]
+|-
+|Golden Combo
+|Mystic
+|Unique
+|Durable
+|Functions as the Combo Card but is not consumable and can be reused. Filed under utility when first described and under mystic in Donut's later deck summary.[6|43][6|55]
+|-
+|Cripple
+|Snare
+|
+|Consumable
+|Slows a totem and greatly reduces its strength.[6|46][6|47]
+|-
+|Steal Totem
+|Mystic
+|
+|Consumable
+|Steals an opponent's summoned totem, announced with "Snatched!" Persistent effects already on it remain with the original owner. Described as a snare in the moment it is played against the Royal Court, but listed as a mystic card in both looted and active deck summaries.[6|46][6|47][6|55]
+|-
+|Temporary Shield
+|Utility
+|
+|
+|Protects a totem from a single snare card, which matters most on totems with only one snare slot.[6|46][6|47]
+|-
+|Force Play
+|Mystic
+|
+|Consumable
+|Select a card in an opponent's hand and force them to play it.[6|56]
+|-
+|(unnamed)
+|Mystic
+|
+|Consumable
+|Swaps the two deckmasters' entire hands, announced as "three for three."[6|56]
+|-
+|Toss-Up!
+|Mystic
+|
+|Consumable
+|Swaps every active totem between the two sides, announced as "three for two."[6|58]
+|-
+|Temporary Immortality
+|
+|
+|Consumable
+|Renders a totem invulnerable for a limited time.[6|58]
+|-
+|(unnamed)
+|Mystic
+|
+|Persistent
+|Blocks an opponent from viewing the holder's hand or forcing discards from it.[6|58]
+|-
+|(unnamed)
+|Snare
+|
+|
+|Freezes a totem in place for fifteen seconds.[6|58]
+|-
+|Midnight Express
+|Special
+|
+|Consumable, Persistent
+|Hands the deckmaster role to another party member for three minutes, freeing the original leader to cast spells and use their inventory again. Occupies a hand slot for its duration. Given to Carl by Tserendolgor before her death.[6|59][6|68]
+|-
+|Raid Stash
+|Mystic
+|Unique
+|
+|Steals one inactive card from every party's inventory.[6|67]
+|-
+|Timeless
+|Utility
+|
+|Consumable
+|A totem's summoning timer never expires.[6|67]
+|-
+|Mass Heal
+|
+|
+|
+|Heals several of a deckmaster's totems at once.[6|58]
+|}
+
+==Story==
+Donut holds the Royal Court's cards as squad leader, assembling a roster that runs from an obedient monk seal to a permanently fused pair of gods.[6|7][6|34] Her first snare card, a very rare consumable called Hobbled, arrives in a gold T'Ghee box awarded for using a practice arena, and her first mystic card, The Thief, is a gift from the goddess Yemaya.[6|11][6|17] An incredibly rare card called Alpha Male Carl was generated for the floor, depicting a version of Carl with great hair and a deep voice.[6|46][6|68]
+
+When the floor ends, Donut tears both the Shi Maria card and the Paz Lo card rather than carry either to the ninth floor.[6|72]
+
+==Trivia==
+* The game the cards belong to is a real cultural and religious tradition from the home planet of the crawler Allister, appropriated by the dungeon.[3|8][4|3][6|1]
+* Mordecai compares the cards to tarot cards, and to the stuffed animals Bautista uses.[6|1]
+* Of the ten-odd Uzi Jesus cards in circulation, Florin's is the only one armed with a gun; another crawler in California holds a hippie version.[6|22]
+
+==References==
+
+{{Navbox Items}}
+

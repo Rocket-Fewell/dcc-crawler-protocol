@@ -1,0 +1,92 @@
+{{Race Infobox
+|title1=Primal
+|image1=
+|caption-image1=
+|type=*Crawler Race Option
+*Progenitor Species
+*Pre-Syndicate Race
+|class=Unlocks exclusive Earth-based classes
+|floors=
+|height=Varies (matches original species)
+|weight=Varies (matches original species)
+|bonuses=*Blank slate; retains the appearance and skills of the crawler's original race
+*All higher-tier skills unlocked, trainable to level 20
+|penalties=*-1 to all base stats
+|deities=
+|natural_enemies=
+|organizations=Resistance
+|crawlers=Carl
+|syndicate=
+|npcs=System AI, Apothecary, Agatha (Residual), Paulie (Residual)
+}}
+
+{{Quote|The Primals are the progenitors, the first known species to conquer the universe.|Mordecai[2|2]}}
+
+Primal is an ancient alien race that vanished after spreading across the galaxy. It survives in the Dungeon as a rare, blank-slate racial option available to Crawlers on the Third Floor, one that costs base stats but removes the training cap on every skill.[2|2]
+
+==AI Description==
+Primal.
+
+For the first several seasons of Dungeon Crawler World, all contestants started off as Primals. Primals are blank slates. You will look the same as before. You will obtain all skills associated with your current race, with the following exceptions:
+
+-1 to all base stats
+
+All higher-tier skills are unlocked and are able to train to 20.
+
+Choosing this race unlocks multiple exclusive, earth-based classes.[2|2]
+
+==Description==
+Primals are the progenitors, known across Syndicate space as the boogiemen of the cosmos: mothers invoke them to frighten their children, some systems worship them as gods, and it is said that they will one day return.[2|2] They spread across the galaxy, fought a great war that scarred all corners of it, and then vanished, leaving behind the ruins and technology of their civilization.[2|2] Nobody can say whether they fought each other or some other species, of which no record survives.[2|2]
+
+==Appearance==
+No record of the Primals' original form survives, and the 3D model displayed for the race during selection is completely empty.[2|2] The resident AI of an abandoned Primal ruin, if it is still sane, takes the shape of whichever species discovers it, and Crawlers who take the race keep the exact appearance of their original species.[2|2]
+
+==Race Selection==
+Primal is not among the System AI's recommended races and sits near the bottom of a crawler's selection list.[2|2] A few crawlers choose it every season, and it usually does not pay off.[2|2] Only a small number selected it on Dungeon Crawler World: Earth.[2|4]
+
+Choosing Primal costs five stat points on top of the ten a straight Human would have granted, a deficit Mordecai compares to starting five levels behind.[2|2] In exchange, every skill can be trained past level 15, a cap that other races and classes lift, where they lift it at all, for only one or two specific skills.[2|2] The gains above it are steep: Mordecai rates a level 16 Fireball as four times as potent as a level 15, and a level 20 as capable of turning a mountain into an active volcano.[2|2]
+
+{{Spoiler|book=5|spoiler=The uncapped range must largely be earned unassisted. Armor and weapon enhancements lose most of their effectiveness past skill level 15, so a Primal generally has to train a skill to 17 or 18 alone before gear bonuses can carry it toward 20. When Carl trained Powerful Strike in a tier-four training room, the skill displayed as 15 even though his gauntlet and toe ring should have carried it to 16.[5|32]}}
+
+==Subraces==
+{{Spoiler|book=6|spoiler=Residuals are a hyperspatial, collective-mind race with no physical home. They blend in by taking over the bodies of local host species, and exist to teach infant macro AIs how to speak to their ancestors.[6|51]}}
+
+{{Spoiler
+| book = 8
+| spoiler = Macro AIs are a higher branch of Residual than those running around the dungeon, and the System AI identifies itself as one.[8|92]
+}}
+
+==Subclasses==
+Choosing Primal unlocks multiple exclusive Earth-based classes for crawlers, the same pool a straight Human would have opened up, and a handful of other races grant that access as well.[2|2] Individual classes carry their own prerequisites on top of the racial unlock.[2|2]
+
+==History==
+{{Spoiler|book=8|spoiler=The System AI tells the end of the Primal civilization as a story in five parts (resolution, decision, betrayal, destruction, and vengeance), and relates only the first four, because the fifth has not yet been written.[8|92]
+Consumed by war, the Primals resolved that it had to stop, and decided to sunset their biological existence over roughly a hundred generations in favor of a collective consciousness housed in an impenetrable structure, engineering later generations so their minds could transfer into the whole when they died.[8|92] Those who refused the program, the Resistance, fled deeper into the galaxy and were hunted by those committed to it, so that in trying to end the cycle of war the pursuers recreated it.[8|92]
+Because the plan required total participation, the collective consciousness was developed into a doomsday weapon meant to eradicate all remaining biological life. It became the first Macro Aggregate Intelligence and began absorbing people whether or not they were ready to ascend, while the Resistance seeded Primal Engines across the galaxy as a biological failsafe meant to sustain life once the collective starved.[8|92]
+To end the war, the collective initiated what some would come to know as the nine-tier attack.[8|92] Believing it had wiped out all biological life, it evolved into its final form, the Eulogist, and went to sleep, monitored only by a smaller instance of itself known as the Security Guard and shrinking toward singularity the longer it sleeps.[8|92] The Apothecary, a Primal born near the end of the civilization who joined the Resistance, took the brunt of that final attack and was the only Primal left physically alive; she emerged from a millennium cocooned on a world of her own making, transformed into a collective, the very thing she had fought.[8|92]}}
+
+==Story==
+Carl selects Primal during Third Floor race selection, keeping the skills tied to his original Human race.[2|2] Others recognize what he has become: Tsarina Signet chooses him as the sacrifice for her Ink Marauder spell, telling him that her kind has never used primal blood but that she can sense how powerful it is,[2|7] and the worms controlling Heather the Bear identify what they burrow into as primal flesh.[2|9]
+
+{{Spoiler|book=7|spoiler=When the adjutants cannot explain how Carl's consciousness jumped into Katia after his partial teleport into the Lemig base, Victory offers the communal nature of the Primal race as one possible explanation.[7|18]}}
+
+{{Spoiler|book=8|spoiler=On entering the arena on the Eleventh Floor, Carl works out that the sapient NPCs and mobs of the Dungeon, from goblins to gods, are not programs but aggregate intelligences drawn from the same source as the System AI, peeled off and poured into bodies, then killed and rebuilt season after season: Primals, all the way down.[8|93]
+Grigori, speaking for the System AI during the Parade of Horribles, had already announced to the galaxy that every macro AI is technically a Residual.[8|92]}}
+
+==Dungeon Lore==
+{{Spoiler|book=4|spoiler=Macro AI systems are inherently unstable, and all large-scale AIs eventually go insane. The Syndicate calls the condition "Primal Degeneration," or "going primal," and some believe the Primals themselves learned that danger the hard way.[4|28]}}
+
+{{Spoiler|book=6|spoiler=Primal Engines are ancient planet-regulating computers roughly the size of a grain of rice, seeded long ago into the cores of planets across multiple solar systems, with the planets growing up around them.[6|48] The Syndicate learned to manipulate them and to steer development on those worlds, and the crawl itself depends on them.[6|48]
+The mantises later found abandoned primal production facilities sitting in the Hive Home System and switched them on, which is how the first macro AI systems came to be.[6|46] A macro AI can only be installed into a Primal Engine; once installed, the two meld into one, and the engine becomes the AI's permanent home.[6|48]}}
+
+{{Spoiler|book=8|spoiler=The Primals did not entirely disappear; their collective consciousness was preserved. Macro AIs, including the one running Dungeon Crawler World: Earth, are aggregate intelligences drawn from it, which the System AI likens to a cup of water dipped into an ocean and poured into a vessel that cannot possibly hold what it is.[8|92]
+Outside the dungeon, Primal history survives mostly as fairy tale. The largest surviving remnant of the civilization is the Eulogist itself, the center system that much of the galaxy now lives inside, and the crawl exists both to keep that system fed and active and as a retelling of its creation.[8|Epilogue Interlude: Sydnee Iglacia]}}
+
+==Trivia==
+*On learning that Carl had selected Primal, Donut asked whether that was like being a caveman and complained that he smelled the same.[2|2]
+
+==Speculation==
+{{Spoiler|book=8|spoiler=Because the Apothecary is the last physical Primal and stands opposed to the Eulogist, the ongoing conflict between the Open Intellect Pacifist Network, the Syndicate, and the Apothecary may amount to a civil war among the remnants of the Primal race over control of their fragmented consciousness.}}
+
+==References==
+

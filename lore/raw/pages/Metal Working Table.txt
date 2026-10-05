@@ -1,0 +1,24 @@
+{{Item
+
+|title={{PAGENAME}}
+|type=Crafting Table
+|image=Metal Working Table.png
+|effects=Forming and shaping metal
+|source= Marketplace
+
+}}
+
+The {{PAGENAME}} is a crafting workbench that allows crawlers to manipulate metal by forming and shaping metal. 
+
+==Description==
+Level 2 (5th floor) - Can view the tensile strength and load limits, and the interface had more shaping options.
+
+Level 3 - Can melt down less valuable metals to reforge them into stronger metals.
+
+==Story==
+===Book 3===
+Mordecai buys the metal working table from the marketplace on the Fourth Floor. [3|30]
+
+==References==
+
+{{Navbox Items}}

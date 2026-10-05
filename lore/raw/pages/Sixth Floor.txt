@@ -1,0 +1,236 @@
+{{SpoilH|5}}
+{{DISPLAYTITLE:The Hunting Grounds (Sixth Floor)}}
+{{Dungeon Floor
+|floor_number=6
+|theme=Hunting Ground — overgrown jungle ruins claimed as a hunting reserve for outworld tourists
+|duration=17 Days
+|start_date=February 14
+|exits=2,344
+|crawlers=85,223 (at start)
+|crawler_levels=50s to 60s
+|mob_levels=50+ (Hunters start at Level 50)
+|preceded_by=The Bubbles (Fifth Floor)
+|followed_by=The Great Race (Seventh Floor)
+|quests=*The Creeping Apocalypse
+*Vengeance of the Daughter Quest
+*The Recital Quest
+|npcs=*Tsarina Signet
+*Queen Imogen
+*Ferdinand
+*Kiwi
+*Big Tina
+*Areson the Wise
+*Herman the Fleet
+*Juice Box
+*Orren
+|mobs=*Mongoliensis
+*Funeral Bells
+*Odious Creepers
+*Shambling Berserkers
+|bosses=*Queen Imogen (Country Boss)
+*Claude Sludgington the Fourth (Borough Boss)
+|locations=*Zockau
+*High Elf Castle (The Sugar Cube)
+*Point Mongo
+*Fort Freedom
+*Liana Sector (Elf area) [2|6]
+*Desperado Club
+*Club Vanquisher
+*Large Ursine Settlement
+}}
+{{Quote|Like the third floor, this sixth floor is a Dungeon Crawler World tradition! It's the hunting grounds! This floor is almost identical in layout and size to the third floor, but the abandoned ruins have been claimed by hundreds of years of foliage. What secrets and mysteries lay hidden in the jungle? You'll have 17 days to find out! But this time, you won't be alone.|Cascadia[5|1]}}
+
+The Hunting Grounds is the Dungeon's Sixth Floor and the second "Volcano Storyline" floor — a jungle-overgrown urban ruin where wealthy outworld tourists, known as Hunters, pay to enter the dungeon and hunt crawlers for sport.[2|3]
+
+==Introductory Announcement==
+Hello, Crawlers!
+
+Welcome to the sixth floor! We are so happy to have you here!
+
+Like the third floor, this sixth floor is a Dungeon Crawler World tradition! It's the hunting grounds! This floor is almost identical in layout and size to the third floor, but the abandoned ruins have been claimed by hundreds of years of foliage. What secrets and mysteries lay hidden in the jungle? You'll have 17 days to find out! But this time, you won't be alone.
+
+We currently have 360 hunters on deck, and they're raring to go. In a little less than 28 hours, they will be unleashed and will begin hunting you for your gear. Due to recent events, we are keeping registration open until the very last moment, and we expect that number of participants to double or even triple by the time they are released! But be warned! Some of these hunters have been here for weeks now, and even though they're currently sequestered, their minions and traps are still out there and waiting for you. A few of you have already found this out the hard way!
+
+Traditionally, all hunters start out at level 30 and are able to train themselves up as you make your way through the lower floors. It's no secret that you're here sooner than usual. In the spirit of fairness and as an incentive to gain more last-minute participants, we have given all hunters a bump of 20 levels, so they all start out at 50.
+
+We'll have more information about the hunt after the next recap message, but I wanted to thank you all for your participation. I know that last floor was tough, and we did lose a few more crawlers than we anticipated. We will all have to work together to make sure your incompetence doesn't continue.
+
+There are 2,344 exits leading to the seventh floor. There is at least one unguarded exit in the city of Zockau along with more in the valley beyond. In addition, some city boss and larger mobs will have an exit nearby. The rest are hidden, but should be easy to find. Your final sponsorship slots are now open to bidding. That's all for now. Now get out there and kill, kill, kill!
+
+==Description==
+The Hunting Grounds is the second of the Dungeon's "Volcano Storyline" floors and is part of the Scolopendra levels.[2|3] It belongs to the overarching volcano storyline that connects the 3rd, 6th, 9th, 12th, 15th, and 18th floors of the dungeon.[1|44] Geographically and politically it mirrors the Over City of the Third Floor, but centuries have passed in the dungeon's lore since the cataclysm, so the abandoned ruins have been entirely swallowed by a dense, dangerous jungle.[5|1][5|5]
+
+The floor is roughly 100,000 square kilometers — about the size and shape of Iceland[5|9] — and is divided by a winding river.[5|5] It measures about 400 km going north to south and 300 km going east to west, with a river running some 500 km through it. The wilderness is heavily guarded by lethal flora and fauna, and the few remaining faux-medieval settlements are protected by high-level guards such as the Funeral Bell mushrooms.[5|2]
+
+It is the first floor where outworlders can interact with crawlers as "Hunters": external tourists pay to enter the dungeon, track down crawlers, murder them, and steal their valuable loot. These tourists enjoy none of the usual protections and can die for real at the hands of either Mobs or crawlers.[2|3][3|30] Because the floor is extremely dangerous even for the tourists, the hunters largely abide by agreements dictating which syndicates and alliances control which hunting territories.[5|15]
+
+In the current season of Dungeon Crawler World: Earth, the Borant Corporation opens the third sponsorship slot to bidding once the floor opens.[5|1]
+
+==Layout==
+
+===Settlements===
+*Zockau
+*Point Mongo
+*Alucarda
+*Ferdinand Peak
+*Nipton
+*Prepotente town number 4
+*Prepotente town number 7
+*Medium dryad settlement
+*The high-elf castle
+
+===Notable Locations===
+Zockau: The named starting city in the north, overlooking a low-level valley.[5|5][5|1] The hunters spawn here during a "grace period," and one of them typically murders the NPC leader to seize control of the city's guards before fanning out into the jungle.[5|1]
+
+High Elf Castle ("The Sugar Cube"): A massive, white, cubic fortress in the extreme southeast corner, within the thickest part of the jungle.[5|5][5|56] Ruled by the country boss Queen Imogen, it serves as the host location for the Butcher's Masquerade.[5|56]
+
+Large Ursine Settlement: A well-manicured town populated by bear-like humanoids (Ursine), heavily guarded by level-95 Funeral Bell mushrooms.[5|9][5|10]
+
+==Mechanics==
+The Hunters: Intergalactic tourists pay to enter this floor to hunt crawlers. To ensure they pose a lethal threat, the producers artificially boosts every hunter to start at Level 50.[5|1] They are not protected by the usual tourist immortality and can be permanently killed, leaving behind valuable "Hunter Hand" trophies.[5|8][4|24]
+
+The Blood Bar: To keep crawlers and hunters from simply hiding, saferoom access is restricted by a "blood bar." The bar drains continuously while a crawler is inside a saferoom or personal space, and once it hits zero the occupants are forcibly teleported outside; it can only be refilled by actively killing enemies.[5|52]
+
+Subclass Selection: Upon arriving on the sixth floor, crawlers with certain classes must permanently select a subclass specialization (for example, Carl chooses "Agent Provocateur").[5|1]
+
+The Guild System: The official guild system unlocks on this floor, allowing crawlers to form large organizations, pool resources, and share personal-space upgrades without being in the same immediate party.[4|33]
+
+==Events & Quests==
+*Upon Entry to the Floor: When crawlers enter the sixth floor, those with a secondary class to choose are taken to a large room to select a new class.[5|1]
+*Grace Period: The floor starts with a 30-hour "grace period" during which the hunters are trapped in Zockau. Once it ends, the hunters are allowed to leave the city and hunt crawlers.[5|1]
+*CrawlCon
+*The Creeping Apocalypse: After the vampirism is cured, the partially reanimated body parts trigger the Creeping Apocalypse quest.
+*Butcher's Masquerade: The top 50 crawlers and all remaining hunters attend the Butcher's Masquerade ball.
+*Stairwell: No limitations on time to enter Stairwells.
+
+===Quests===
+*Vengeance of the Daughter Quest
+*The Recital Quest
+
+==Achievements==
+{|class="mw-collapsible fandom-table" style="width:100%"
+|+Achievements for Dungeon Crawling
+!Achievement
+!For
+!Reward
+|-
+|I Wanna Go Home Achievement
+|Teleporting to a Stairwell within the first 30 hours of floor open
+|Advice
+|-
+|You Crossed a Line You Didn't Even Know Was There Achievement
+|Used an artifact of Divine Suffering
+|Gold Junkie's Box
+|-
+|Hand that Claws the Master Achievement
+|Killing a non-crawler biological
+|Gold Hunter-Killer Box
+|-
+|Mass Casualty Event Achievement
+|Caused more than 250 non-mob casualties
+|Platinum Asshole's Box
+|-
+|Insurgent Achievement
+|Killed a target using an explosive trap
+|Gold Trapmaster Box
+|-
+|Double-Billed Achievement
+|Being one of the first 5 crawlers to be on two shows at once
+|Platinum Fan Box
+|-
+|Premature Questjaculation Achievement
+|Beating a quest before it starts
+|Nothing!
+|-
+|Uprooted Achievement
+|Causing a rooted in place boss to move
+|You already got a Boss Box
+|-
+|Bisected Achievement
+|Teleported into a solid object
+|Silver Lucky Bastard Box
+|-
+|Desecrated Achievement
+|Found a desecrated achievement
+|No reward
+|-
+|Temple Defiler Achievement
+|Defiled a temple shrine
+|Gold Apostate Box
+|-
+|That's not how you use arrows, dumbass Achievement
+|Physically stabbed someone with an arrow
+|Gold Ranged Weapon Box
+|-
+|It itches when I pee Achievement
+|Infected another combatant with a venereal disease
+|Bronze Condom
+|-
+|This Little Piggy Made a Boom Boom! Achievement
+|Deployed a bomb using your foot
+|Gold Spicy Box
+|-
+|What Big Muscles You Have! Achievement
+|Base strength over 100
+|Swole Upgrade Benefit
+|-
+|B'sieging Achievement
+|Using a trebuchet
+|Silver Siege Master Box
+|-
+|Sex Pervert Achievement
+|Putting on a nipple ring
+|None
+|-
+|}
+
+System Message: the following achievements were for actions taken on the Sixth Floor, but are opened in The Eye of the Bedlam Bride (Book) book.
+
+{|class="mw-collapsible mw-collapsed fandom-table" style="width:100%"
+|+Achievements on the Sixth Floor
+!Achievement
+!For
+!Reward
+|-
+|Oh shit! A country Boss! Achievement
+|Seeing a Country Boss
+|You know how this goes [6|2]
+|-
+|Scourge Achievement
+|Killing the most Hunters
+|Legendary Hunter Champion Box [6|2]
+|-
+|Marked for Life Achievement
+|Surviving being marked for death by a god
+|Platinum Apostate Box [6|2]
+|-
+|Apex Predator Achievement
+|Killing all the Hunters
+|Celestial Predator Box [6|2]
+|-
+|Ménage à Quatro Achievement
+|Surviving Four Way Boss Battle
+|Platinum Orgy Guy Box[6|2]
+|-
+|}
+
+==Story==
+Carl and Donut arrive on the sixth floor and are immediately forced to navigate the lethal jungle while being hunted by heavily armed tourists. Carl becomes a massive target because he possesses the Ring of Divine Suffering, a highly coveted artifact that grants stat bonuses but prevents the user from healing until their marked target is dead.[3|30][5|5][3|19]
+
+The floor's difficulty spikes dramatically when the vampire crawler Miriam Dom dies in sunlight, triggering an unavoidable world quest, The Creeping Apocalypse.[5|48] The quest spawns terrifying Odious Creepers and Shambling Berserkers that combine and grow stronger in the dark, forcing the surviving crawlers to fight on multiple fronts.[5|48]
+
+As the 17-day timer winds down, the system AI — suffering from early "Primal Degeneration" — forces all surviving hunters and the top 50 crawlers to attend the Butcher's Masquerade, a formal party hosted by the High Elves.[5|56][5|8][4|28] Carl, Donut, and the other top crawlers organize a massive, coordinated trap, exploiting the castle's architecture and Donut's Hole spell to break the magical barriers protecting the hunters.[5|77] Ultimately, Carl and his allies manipulate the dungeon's mechanics to teleport the entire High Elf castle — and several key NPCs — directly down to the ninth floor, bypassing the normal descent rules and wiping out the remaining hunters.[5|74][5|76]
+
+==Trivia==
+*Ordinarily the sixth floor would last 30 days, but the producers prematurely shortened the timer to just 17 days to accelerate crawler deaths.[2|3][5|1]
+*Crawlers who kill hunters can collect their severed hands. These "Hunter Hands" act as currency that can be traded for high-tier loot at a prize counter during the Butcher's Masquerade.[5|8]
+*The "Vengeance of the Daughter" storyline — a highly produced soap-opera drama involving the Elite Tsarina Signet — reaches its climax on this floor.[2|7][2|11]
+
+==Speculation==
+*The AI's Rebellion: It is widely speculated that the system AI is intentionally using the sixth floor to slaughter the intergalactic hunters as an act of rebellion against the Borant Corporation and the Syndicate. By allowing the hunters to be massacred, the AI inflicts real-world political and financial damage on the universe's elites.[5|21][5|53]
+*The Worn Path Method: Herot, previous author of the Dungeon Anarchist's Cookbook, theorizes that NPCs who survive across multiple seasons (such as Juice Box the changeling) can retain their memories and achieve true sapience, breaking the fourth wall and becoming dangerous variables for the showrunners.[5|54][4|10]
+
+==References==
+
+{{DEFAULTSORT:Dungeon Floor 06}}
+

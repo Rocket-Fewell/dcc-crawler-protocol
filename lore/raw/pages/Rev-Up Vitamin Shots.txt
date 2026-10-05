@@ -1,0 +1,45 @@
+{{SpoilH|3}}
+{{Item
+| title        = Rev-Up Vitamin Shots
+| image        = 
+| imagecaption = 
+| type         = Pharmaceutical / Potion
+| keywords     = Opiate, Painkiller, Sedative, Addiction, Withdrawal
+| effects      = Induces a powerful, sedative high. Missing a dose causes severe withdrawal (the DTs), physical mutation, and death or zombification.
+| source       = Krakaren (Manufacturer) / Pookas (Distributors)
+| buy          = 
+| sell         = 
+}}
+
+Rev-Up Vitamin Shots (officially known by the system as the Rev-Up Amazing Cure-All Vitamin Immunity Shot) are highly addictive, race-specific opiate painkillers distributed to mobs on the Fourth Floor of the World Dungeon.[3|12][3|17]
+
+==AI Description==
+While the exact AI description for the potion item itself is only paraphrased by Imani,[3|12] the system AI provides a detailed explanation of the drug's effects within the description for the mutated Festering Ghoul mob:[3|17]
+
+Once the DTs start, there is no cure. All die. Or worse. At stage one, sufferers are overcome with violent tremors. They are barely able to think, or to move. Their mind starts to rot out from within. Only fifty percent of sufferers survive this stage. Half move onto stage two, which allows for increased mobility. The other half drop dead.[3|17]
+
+==Description==
+Despite being called "shots," these pharmaceuticals are administered orally by drinking them.[3|12] The potions act as powerful sedatives, and each mixture is specifically tailored to a single race of mob.[3|12] The high from the drug only lasts for a limited time, forcing the addicted mobs to continually seek out their next dose.[3|12]
+
+If a mob fails to get their fix in time, they begin to suffer from severe withdrawals known as the "DTs."[3|17] The withdrawal changes the mobs physically, transforming them into entirely different, horrific monsters (such as Festering Ghouls[3|17] or mutated Razor Foxes).[3|27]
+
+==Appearance==
+The drug is distributed in individual potion vials.[3|12]
+
+==Story==
+===Book 3===
+During the fourth floor (The Iron Tangle), Imani and Elle discover the drug dens distributing these shots at transfer stations ending in the numbers 5 or 0.[3|12] The mobs line up by race and approach a door with a slot, where a Pooka (a neighborhood boss) hands each monster a single vial of the drug.[3|12] The monsters then carry the vial through a one-way portal back to their home station, as the drug's effects supposedly do not activate until they pass through the portal.[3|12]
+
+Because Carl and Princess Donut have been repeatedly stopping and derailing trains across the Iron Tangle, a chain reaction is triggered.[3|12] Stranded mobs are unable to return to the drug dens in time for their next dosage, forcing widespread withdrawal and causing massive, floor-wide mutations as the addicted mobs succumb to the DTs.[3|12][3|17]
+
+==Trivia==
+*The drug is manufactured by the various Krakaren borough bosses across the Iron Tangle.[3|12]
+*Because each drug is race-specific, there is a different Krakaren boss located at each drug den stop.[3|12]
+
+==Speculation==
+*The fact that this drug shares the "Rev-Up" branding with the "Rev-Up Toilet-Grade Moonshine" from the second floor implies that Krakaren oversees a massive, multi-floor pharmaceutical and narcotics empire within the Dungeon.[1|32] The system AI likely implemented this floor-wide addiction mechanic on the Iron Tangle specifically to punish crawlers who disrupt the train schedules, turning simple mobs into significantly more dangerous, mutated threats.[3|12]
+
+==References==
+
+{{Navbox Items}}
+

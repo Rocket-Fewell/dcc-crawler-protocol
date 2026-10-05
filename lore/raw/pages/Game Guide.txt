@@ -1,0 +1,67 @@
+{{Quote|Guildmasters prepare for years for each new dungeon world. Kid, I have been preparing for this longer than you have been alive.|Mordecai[1|4]}}
+
+A Game Guide is a dungeon mechanic of the World Dungeon in which a non-combatant NPC serves as guildmaster of a Tutorial Guild Hall,[1|3] training new Crawlers and unlocking their crawler menus on the first, second, and third floors of the Dungeon.[1|4] Guide access ends on the Fourth Floor[1|8] unless the guide is bound to the crawler as a manager.[2|1]
+
+==AI Description==
+Examining a game guide displays their name, race, level, and role:
+Mordecai - Rat Hooligan. Level 50.Guildmaster of this guildhall.This is a Non-Combatant NPC.[1|3]
+
+==Mechanics==
+Guides administer the Tutorial, granting new Crawlers access to the Crawler Menu[1|4] and then to their inventory.[1|5] Inside the guild, a guide can see everything on a crawler's screen but does not train specific skills, which other guildhalls teach.[1|4] A guide who successfully trains a crawler becomes their registered guide: until the crawler reaches the Fourth Floor, entering any training guild transports them to that guide's room,[1|8] and registration determines where they arrive on the Third Floor.[2|3] Guides choose where their door opens and have access to a guide-only town.[2|13]
+
+Guides may not explain mechanics a crawler has not yet reached, such as the public loot dropped by higher-tier bosses[1|12] or the Desperado Club.[1|35] Some restrictions lift on a schedule; at the halfway point of the Second Floor, a system message announced:
+Now that we've reached the halfway point of the level, game guides are now able to instruct you upon some of the intricacies regarding the third floor and how the race and class selection process works. Be sure to visit your game guide prior to descending in order to make the transition more smooth.[1|44]
+
+Guides can consult a guide-only help menu[1|25] and an information codex[2|1] and review "fight notes" of a crawler's battles,[1|25] but cannot use crawler chat.[2|1] They are edited out of the broadcast for all viewers without press credentials[1|35] and receive no system protection, so they can be permanently killed.[2|15]
+
+Guides vary in helpfulness. Mordecai explained boss tiers, persistent boss loot, and Boss Boxes to Carl and Donut as they encountered them,[1|12] while Frank Q and Maggie My's Mind Horror guide told them and their daughter, Yvette, that the only way to survive was to kill other crawlers.[1|43] Katia Grim's guide, Bannon, was unhelpful enough that she sought tips from Mordecai.[2|21]
+
+{{Spoiler|book=4|spoiler=Game guides are not counted as dungeon administrators; a Syndicate tally of admins killed by crawlers excluded Lucia Mar's first game guide.[4|19]}}
+
+{{Spoiler|book=5|spoiler=The Popov brothers' guide, Hongrish, told Dmitri that the Nodling race would grant an extra life without mentioning that it would merge him with his brother.[5|41] When the nodling died, it split into two yearlings, which were ruled ineligible as children and removed from the dungeon; according to Zev, the guide had known this would happen.[5|77]}}
+
+{{Spoiler|book=8|spoiler=Game guides appeared to be immune to Scolopendra's tiered attacks, which struck even inside safe rooms.[8|95]A creature that becomes a sapient crawler late in the crawl is assigned a temporary game guide at a safe room based on its party; Penelope 3 was due to receive Mordecai because he had been Carl's guide.[8|94]}}
+
+===Race and Class Selection===
+The guide conducts race and class selection when their crawlers arrive on the Third Floor, seeing the options only when the crawler does and offering limited advice.[1|47] According to Odette, a guide cannot steer crawlers overtly but can help them decide for themselves.[1|29] Afterward, the guide, in formalwear, presents each crawler to the floor:
+I'd like to present Dungeon Crawler Carl, the Level 13 Compensated Anarchist Primal. Welcome, Carl, to the third floor.[2|2]
+
+{{Spoiler|book=3|spoiler=Crawlers who trained under the same guide may go through selection together, as Katia Grim and Eva did.[3|25]}}
+
+==Managers==
+Some classes grant the Manager Benefit, which permanently binds the crawler's game guide to them as a manager. A guide may not explain the benefit unless a crawler asks about it.[2|1]
+
+For the rest of the crawl, a manager instantly teleports, without warning, to any safe room their ward enters; in exchange, they give up their posting after the Third Floor, their tunnel access and television, and their information codex.[2|1] Managers may leave their rooms,[2|2] use crawler chat and speak free of the guides' disclosure limits,[2|1] and are warned when their ward's health drops to 20 percent,[2|9] but may not engage mobs in direct battle.[2|8] A manager's minimap dot is a yellow star,[2|3] and their door opens wherever their ward last entered.[2|13] From the Fourth Floor onward, managers receive system protection and are kicked from the game rather than killed. For a season or two early on, managers could fight alongside their wards and returned on the next floor if killed.[2|15]
+
+Managers earn significantly more than a guildmaster's minimal stipend, plus a bonus that grows the longer their ward survives.[2|15]
+
+{{Spoiler|book=3|spoiler=Once a crawler owns a personal space, their manager can move their own room into it, ending the unexpected teleports. Managers stop receiving the guides' daily updates and newsletter but are notified of court decisions that adversely affect their client, and they are not kept informed of later-floor systems such as personal space upgrades.[3|2] Like guides, managers are hidden from viewers without press credentials.[3|8]The Manager Benefit can also come with a race: Elle received it by choosing the Frost Maiden race, binding her guide, Mistress Tiatha.[3|8]}}
+
+==Dungeon Lore==
+Game guides are former crawlers. Crawlers who reach the tenth floor are offered several ways to exit the dungeon; Mordecai reached the eleventh floor before choosing to become a guildmaster, and his home and possessions were recreated for him.[1|3] The guildmasters' advance team arrived on Earth in the 1930s, and Mordecai entered the prep phase in 1964.[1|4]
+
+A guide's service is an indentureship tied to the company running their crawls. According to Odette, a season counts against a guide's indentureship only if one of their crawlers reaches the Fourth Floor; otherwise the guide waits for the next season sponsored by the same company, and all indentureship contracts freeze if that company is seized in bankruptcy.[1|29] Mordecai's obligation as Donut's manager would end once she reached the Fourth Floor.[2|15] According to Zev, Borant uses hands-on guides where other corporations may use holograms.[1|36]
+
+{{Spoiler|book=5|spoiler=Game guides were not always former crawlers: Uptown Hal served as a guide and occasional manager from before the role was filled by former crawlers, spending over 200 seasons in the dungeon.[5|33]When a court ruling gave the Valtay Corporation majority ownership of Borant, the Syndicate confirmed that existing indenture contracts would be honored.[5|19]}}
+
+{{Spoiler|book=6|spoiler=Guide contracts pay out based on how far a guide's crawlers progress. During Mordecai's crawl, his manager, Odette, had five seasons left on her indentureship and had already earned her tenth-floor bonus; a crawler reaching the eleventh floor would have cut nine seasons and paid a further bonus. She pushed his party toward the stairwell rather than let them take deals, orchestrating the death of his brother, Uzzi, to get them there.[6|Prologue]At the time, guides could offer to become managers, which is how Odette came to manage Mordecai's party. A few seasons into Mordecai's indentureship, NPC pools were separated by organization, greatly extending everyone's contracts.[6|37]}}
+
+{{Spoiler|book=7|spoiler=The game guide position is one of the exit deals offered to crawlers who accept indentureship: such as a 100-season commitment that the progress of the guide's crawlers can shorten, with the guide set at level 50 or half their current level, whichever is higher. It is relatively safe and carries the most potential wealth on exit but keeps the guide in the dungeon longest. Guides may bring a few pre-collapse items, but no weapons.[7|Porthus]Indentured guides can be reassigned for an entire floor whenever it is cheaper than paying for new NPCs. Dante was killed by administrative action for refusing orders while reassigned as an ice castle guard, 14 seasons short of his exit.[7|Dante]Guild postings for guides after the tutorial ends vary: Dante instructed at the Trap Master guild,[7|Dante] Tipid at the Poisoner guild,[7|Tipid] and York at the Poetry guild,[7|Epilogue] while Rosetta worked the Desperado Club, renting mercenaries and distributing the dungeon newsletter.[7|Rosetta]}}
+
+{{Spoiler|book=8|spoiler=Donut's exit offers at the start of the tenth floor included a game guide contract with a fifteen-season commitment, which her attorney, Princess Chandra, considered unheard of for a tenth-floor crawler. Donut declined every offer.[8|Interlude: Chandra]}}
+
+==Notable Game Guides==
+*Mordecai[1|8]
+*Mistress Tiatha[1|22]
+*Odette[1|29]
+*Eklund[2|9]
+*Bannon[2|21]
+{{Spoiler|book=5|spoiler=Uptown Hal[5|33]Hongrish[5|41]}}
+{{Spoiler|book=6|spoiler=Rosetta Thagra[6|12]}}
+{{Spoiler|book=7|spoiler=Porthus[7|Porthus]Dante[7|Dante]Tipid[7|Tipid]York[7|Epilogue]}}
+
+==Trivia==
+*The books use several terms for the role: "game guide,"[1|44] "tutorial guide,"[1|22] "registered guide,"[1|8] "standard guide,"[2|13] and "guildmaster."[1|4] The room is called both a "tutorial guild"[1|2] and a "training guild."[1|8]
+
+==References==
+

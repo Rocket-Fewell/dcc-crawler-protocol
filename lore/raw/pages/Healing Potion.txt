@@ -1,0 +1,22 @@
+{{DISPLAYTITLE:Standard Healing Potion}}
+{{Item
+|title=Standard Healing Potion
+|type=Potion
+|image=
+|effects=Heal 50%+ total health |source=* Tutorial
+* Adventurer Box}}The Standard Healing Potion (also called Health Potion or Potion of Healing) is a single-use potion given to crawlers when they learn how to use their Inventory during the tutorial.  It is frequently found in low-tier Loot Boxes.[1|5]
+
+== AI Description ==
+Standard Healing Potion.
+
+Increases your health by at least 50%. Doesn’t cure poison or other health-seeping conditions such as succubus-inflicted gonorrhea. So remember to wrap it up, bucko.
+
+== Description ==
+The Standard Healing Potion is red and contained in a corked glass bottle approximately 1/3 the size of a coke bottle.[1|5]  When consumed (rather than administered directly from inventory), it tastes like kiwi juice.[1|24] It heals 50% + of a crawlers' health, but it has no effect on pets.[1|5][2|12]
+
+The Standard Healing Potion is sorted under the "Potions" and "Healing" inventory submenus, and can stack up to 999 per slot.  It can be added to the Heads-Up Display (HUD) Hotlist.
+
+== References ==
+
+{{Navbox Items}}
+

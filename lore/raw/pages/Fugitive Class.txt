@@ -1,0 +1,27 @@
+#redirect List of Classes
+<!--
+{{Class
+| title1 = {{PAGENAME}}
+| image1 =00112.jpg
+| type = Rogue
+| skills =
+*Trap Finding
+*Escaping Tough Situations
+| prerequisites =
+*Connection to Prisons Pre-Collapse (Assumed)
+| crawlers =Anton
+| subclass_of =
+| stats =
+| effects =
+| benefits =
+}}<!--{{Quote | quote = }}
+
+{{PAGENAME}} is a rouge Class offered on the Third Floor. The Crawler becomes good at finding traps and escaping tough situations.
+
+<!--== Description==
+
+==Story==
+Anton chooses this as his class during Third Floor Class selection.
+
+==References==
+

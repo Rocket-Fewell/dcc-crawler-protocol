@@ -1,0 +1,70 @@
+Official Spoiler Policy
+The DCC Wiki assumes that all crawlers have read  Dungeon Crawler Carl and  Carl's Doomsday Scenario.  We do not require spoiler warnings for content related to these books, basic demographic information such as Class / race selection, or general item/spell/etc. descriptions that do not relate to the story. 
+
+We do require spoiler warnings for all new content related to  The Dungeon Anarchist's Cookbook and later books. Editors should review the  Guide to Spoiler Templates before getting started. We are in the process of flagging existing pages, but you may find unmarked spoilers as you browse.
+
+Before a book is fully published in both paperback and digital formats, no content from the book may be added to the wiki.  Beginning 24 hours after the official Kindle release (typically several days after the print release), content may be added freely.  All content must be marked with the appropriate spoiler warnings.
+
+==Guide to Spoiler Templates==
+The Wiki has two  spoiler templates designed for easy use in both Visual Editor and Source Editor.  These are:
+
+# Spoiler Heading: {{t|SpoilH}} places a book-specific warning at the top of the page.  
+# Spoiler Filter: {{t|Spoiler}} hides a block of text.  
+
+Using templates rather than copy/paste blocks of text allows us to make site-wide changes to wording, page design, and more. 
+
+==Using the Templates==
+The sections below outline when and how to use the spoiler tools.  Please reach out to an [https://dungeon-crawler-carl.fandom.com/wiki/Special:ListUsers/sysop administrator] or hit us up on Discord if you have any questions.
+
+===1. Spoiler Heading===
+If the core content of the page reveals plot-relevant information from Book 3 or later, place SpoilH at the top of the page.  This will look like:
+
+{{SpoilH | 4}}
+The Enchanted Mankini of Engorging is a magical bright pink latex Mankini which grants the "Shocking Visage" spell.  Matt Di gains this item on the Fifth Floor.
+
+====1a. Using SpoilH in Visual Editor====
+# Click on the very top of the editor window, above any text but below the toolbar. 
+# Open the "Template Search Box" by selecting "Insert" > "Template" on the toolbar or typing {{.  
+# Search for and open "SpoilH".  
+# Enter the book number that will be spoiled (in this example: 4).  
+# Click "Insert." 
+
+====1b. Using SpoilH in Source Editor====
+At the very top of the page, type (where book# is 1, 2, 3, 4, 5, or 6):
+{{SpoilH | book#}}
+
+===2. Spoiler Filter===
+Often, later books expand on or change a character/item/etc. introduced earlier in the series.  In this case, since you want first-time readers to be able to look information up without finding spoilers, you would use {{t|Spoiler}} to hide information from later books. The result looks like:
+
+Matt Di is a Crawler from Earth. During Third Floor  class selection, Matt Di chose the Human Race and Foot Fancier class.  As a result, he gained the Sticky Feet Benefit, which allowed him to scale every building in a medium Skyfowl settlement.
+
+{{Spoiler | book = 4 | spoiler = Matt Di and El Jefe team up on the Fifth Floor.  They earn the "This is All Your Fault" Achievement, and Matt Di receives the Enchanted Mankini of Engorging in a Legendary Spicy Box.}}
+
+====2a. Using Spoiler in Visual Editor====
+# Make sure your cursor is in the correct location on the page.
+# Open the "Template Search Box" by selecting "Insert" > "Template" on the toolbar or typing {{.
+# Search for and open Spoiler.
+# In Book, enter the book number that will be spoiled (e.g. 4).
+# In Spoiler, enter your text. If there are multiple paragraphs, each paragraph must start with  and end with . Use [https://en.wikipedia.org/wiki/Help:Wikitext basic wikitext] to format the text.
+# Click "Insert."
+
+====2b. Using Spoiler in Source Editor====
+If there are multiple paragraphs, each paragraph must start with  and end with .  It does not like to conceal tables. See {{t|Spoiler}} template documentation for more tips and tricks, but generally the syntax is:
+ 
+{{Spoiler
+| book =
+| spoiler =
+}}
+
+So, the above example looks like:
+{{Spoiler | book = 4 | spoiler = Matt Di and El Jefe team up on the Fifth Floor.  They earn the "This is All Your Fault" Achievement, and Matt Di receives the Enchanted Mankini of Engorging in a Legendary Spicy Box.}}
+
+===3. Using Both on One Page===
+Let's say the Enchanted Mankini of Engorging is introduced in Book 4, but significant plot-relevant information is revealed in Book 6.  In this case, we would use both types of spoiler warnings.  The end result would look like:
+
+{{SpoilH | 4}}
+
+The Enchanted Mankini of Engorging is a magical bright pink latex Mankini which grants the "Shocking Visage" spell.  Matt Di gains this item on the Fifth Floor.
+
+{{Spoiler | book = 6 | spoiler = After arriving on the Seventh Floor, Matt Di discovers that the Mankini of Engorging is cursed when...}}
+

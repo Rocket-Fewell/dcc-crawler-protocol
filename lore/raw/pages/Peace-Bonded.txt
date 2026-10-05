@@ -1,0 +1,27 @@
+{{SpoilH | 5}}
+{{Status Effects
+  | title1 =
+  | image1 =
+  | caption-image1 =
+  | names =
+  | type = Debuff
+  | causes = Administrative Action
+  | effect = Target cannot access Inventory
+  | duration =
+}}Peace-Bonded is a status effect that prevents crawlers from accessing their Inventory in specific places or situations.  It may be caused by powerful items such as Soul Crystals, or by executive orders.[5|66][5|epilogue]
+
+==AI Notifications==
+When in place: You’ve been peace-bonded! You may not access your inventory in this room.
+
+When expired: You are no longer peace-bonded. You may now access your inventory. 
+
+When countered: You have been Peace-Bonded! Peace Bonding has been negated by AI resolution. 
+
+==Story==
+===Book 5===
+When Carl enters Ballroom A of the High Elf Castle on the Sixth Floor, he receives notifications that he has been Muted Debuff and Peace-Bonded, and the room is under a protection seal.[5|66] The status is removed from the room after Samantha pulls the soul crystals.[5|73]
+
+After Carl, Donut, and Prepotente arrive on the Seventh Floor, Cascadia attempts a long list of administrative actions and debuffs including: Peace-Bonded, Frozen, Paralyzed, Slowed, a teleport, and Administrative Hold.  The System AI blocks each one.[5|epilogue]
+
+==References==
+

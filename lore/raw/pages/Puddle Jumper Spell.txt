@@ -1,0 +1,56 @@
+{{Spells
+|title1= {{PAGENAME}}
+|image1=
+|caption-image1=
+|cost=20 mp
+|cooldown=5 hours
+|target=* Self + 3 Others
+|duration=
+*10 Seconds
+*2 Seconds (Level 5)
+|effect=* Teleport to location in line of sight
+|associated equipment= Boss Box
+|users= Donut
+}}
+
+Puddle Jumper is a teleportation spell that allows the caster to teleport themselves and up to three others to a location in line of sight. Due to its high cost, time delay, and long cooldown, it is not a practical combat spell.[1|25]
+
+== Description==
+Puddle Jumper costs (20) mana to cast, and allows the caster and up to three other crawlers, NPCs, or pets to teleport to a surface within line of sight.[1|25] The maximum allowable teleport distance increases with spell level, but the exact allowable distance is hidden. If the caster tries to teleport to a location that's too far way the spell will fail to cast. 
+
+At level 1, there is a (10) second delay between casting and teleportation. The target's form flashes and begins to fade during this countdown, before disappearing with a loud, wet pop.[1|33]
+
+The spell has a (5) hour cooldown.[1|25]
+
+{{Spoiler | book = 3 | spoiler =
+Even though the spell says "line of sight" it really has a distance limitation. [3|14]
+}}
+
+==Leveling Up==
+At Level 5, the casting delay is reduced to 2 seconds. Direct line of sight to the landing surface no longer required, allowing for teleportation to higher elevations.[2|18]
+
+At Level 15, it is almost as powerful as the Teleport Spell.[1|25]
+
+==Story==
+===Book 1===
+*Donut gains a tome of Puddle Jumper in a Bronze Boss Box on the First Floor after defeating the Juicer.[1|25] 
+*She uses it to trick the Rage Elemental into sliding into the stairwell.[1|40]
+
+===Book 2===
+*Donut's Puddle Jumper spell is level 3 at the start of the Third Floor.[2|5]
+*Donut uses the spell to get out of the hole that she and Carl fall into after spying on Grimaldi's Traveling Circus.[2|6]
+*When confronting the 201st Security Group Militia and after triggering the aggro of the Village Guard Swordsman, Carl calls Mic Drop and Donut uses Puddle jumper to jump to the nearest building.[2|20]
+*She uses the spell again to get into the administrative building in the Medium Skyfowl Settlement, since the building doesn't have a first or second floor.[2|18]
+*After blowing up the administrative building, she uses it again to get into the building.[2|22]
+
+===Book 3===
+{{Spoiler
+| book = 3
+| spoiler = 
+*When Carl uses his Protective Shell Spell in front of the Nightmare Express, Donut casts her Puddle Jumper Spell to bring her and Carl back to the platform. Even though the spell says "line of sight" it really has a distance limitation and can't bring them all the way to the platform.[3|14]
+*Donut uses her Puddle Jumper Spell to return to the Nightmare Express after using the turntable controls in Trainyard E.[3|17]
+
+}}
+
+==References==
+

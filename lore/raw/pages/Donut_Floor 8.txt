@@ -1,0 +1,71 @@
+{{SpoilH | 6}}
+
+This page documents Princess Donut's levels, stats, gear, skills, and spells as she progresses through the Eighth Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable" 
+!TIME
+!NOTES
+!LVL
+!STR 
+!INT
+!CON
+!DEX
+!CHA
+|-
+|}
+
+==Gear==
+===Starting Gear===
+{| class="dccTable mw-collapsible mw-collapsed" 
+!SLOT
+!GEAR
+|-
+|}
+
+===Gear Gained===
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|}
+
+==Skills==
+{| class="dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|}
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|}
+
+==Passive Effects==
+
+==Ratings==
+{| class="dccProgTable"
+!TIME
+!LEADERBOARD
+!VIEWS
+!FOLLOWERS
+!FAVORITES
+!PATRONS
+|-
+|}
+
+==References==
+
+{{DEFAULTSORT:Donut/Floor_08}}
+

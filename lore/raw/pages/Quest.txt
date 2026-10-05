@@ -1,0 +1,110 @@
+{{Quote|Did you get the quest?|Donut[2|14]}}
+
+Quests are objectives issued by the World Dungeon's system AI or by NPCs and tracked in a dedicated tab of the crawler interface that unlocks on the third floor.[2|4] They are a primary source of experience and loot.[2|7]
+
+==AI Description==
+Upon first quest received:
+New achievement! It’s Elementary, My Dear Crawler!
+
+And you thought all you had to do was bonk monsters on the head.
+
+You’ve received a quest! Puzzles and intrigue and mysteries, oh my! If you want to survive in this world, you’re going to need to be more than just a pretty, sword-swinging barbarian. Some quests require brute strength, yes, but sometimes you also gotta use your noggin.
+
+Reward: We don’t want you getting bored. That’s your prize.[2|5]
+
+Upon first successful quest completion:
+New Achievement! Johnny Quest!
+
+Not only have you been given a quest, but you actually completed it without dying. We like it when you do what you’re told. It means you’re a good dungeon citizen and not a traitor to your people at all.
+
+Reward: In addition to the Gold Quest Box you’ve received for completing the quest, new quest locations will sometimes appear on your map. Notice how I italicized “sometimes”?[2|13]
+
+==Description==
+The quest system is unavailable on the first two floors and arrives without tutorial, as an admin notice announcing a new tab in the interface.[2|4] Each quest is announced with a trumpet chime, illusionary streamers, and text that slams into place in midair like a title card, and follows a consistent shape: a flavor paragraph in the AI's voice, a plainly worded objective, and a Reward line naming the payout.[2|4]
+
+Most quests trigger on a crawler's own actions or location, such as entering a district where a storyline is already running.[2|4] Others are handed out face to face by NPCs, most often by desperate locals in pubs, and tend to be low-value busywork; quest-givers sometimes carry a star over their minimap icon, though not every quest is flagged that way.[2|14] Objectives, targets, and destinations are frequently marked on the crawler's map.[2|24] A Quest Update can revise an active quest in place, redirecting the original objective and resetting its clock.[2|25]
+
+Most quests are optional and bound to the floor that issued them; an unfinished quest lapses when the crawler leaves the level.[2|15] The Jobs room of the Desperado Club functions as a standing quest board, offering mostly NPC assassinations and theft-themed work.[2|15] During a floor-wide event quest, crawlers are given a brief window to reach a saferoom, after which saferoom access inside the quest zone is shut off until the event concludes, and a temporary Quest Chat channel opens listing every participant.[2|24]
+
+A crawler's first quest earns the It's Elementary, My Dear Crawler! achievement,[2|5] and completing one without dying earns Johnny Quest, which causes new quest locations to occasionally appear on the map.[2|13]
+
+{{Spoiler|book=3|spoiler=Quest hunting can be automated from a personal space: a Quest Screen upgrade lists every quest available in the crawler's current area for 90,000 gold, an Adventurer's, Inc. Employment Agency license opens the general jobs-for-hire board for 100,000 gold, and the invite-only Naughty Boys Employment Agency, unlocked by Carl's Compensated Anarchist class, costs 500,000 gold.[3|2]
+A pass or fail quest names its failure condition in the quest text and stays active only while its trigger condition holds, such as remaining aboard a particular train.[3|12]}}
+
+{{Spoiler|book=5|spoiler=A quest can be resolved before it is ever issued, which earns the Premature Questjaculation achievement and forfeits the box the crawler would otherwise have received.[5|28]}}
+
+{{Spoiler|book=6|spoiler=Some quests are presented as a numbered menu of options, each with its own reward line, leaving the crawler to pick which outcome to pursue.[6|62]}}
+
+==Types of Quests==
+See Also: :Category:Quests
+
+===Individual Quests===
+Individual Quests are issued to a single crawler rather than to a party or a wider body of crawlers.
+
+{{Spoiler|book=4|spoiler=A quest may be individual because it comes from a god only that crawler worships, such as Find Out Who Killed My Son Quest on the fifth floor.[4|32]}}
+
+{{Spoiler|book=6|spoiler=Escort quests are a recognized variant, tasking a crawler with delivering a creature safely to a destination rather than killing anything.[6|26]}}
+
+===Party Quests===
+Party Quests are issued to every member of a party at once. Carl and Donut's first quest, the Show Must Go On, triggered when they walked into a ruined circus district and was assigned to both of them.[2|4] Quests taken from NPCs in pubs are generally party quests[2|14] and are frequently fetch or kill errands.[2|21]
+
+===Group Quests===
+Group Quests are issued to a wider body of crawlers than a single party, either everyone within an area or every party affected by the outcome. They designate a host party that is explicitly barred from opting out, and open a shared quest chat listing every participant; an example is Fools Who Broke the Glass Quest, on the third floor.[2|24]
+
+{{Spoiler|book=4|spoiler=Example: Dumber of the Flunkies Quest, on the fifth floor.[4|30]}}
+
+===Regional Quests===
+{{Spoiler|book=6|spoiler=Regional Quests sit between group and world quests, covering every crawler inside a defined geographic area of the floor rather than a blast radius or the entire level. Like group quests, they designate a host squad that cannot withdraw.[6|62]}}
+
+===World Quests===
+{{Spoiler|book=4|spoiler=World Quests are issued to every crawler on a floor and affect the floor as a whole. They are not always cooperative and do not always come with a communications channel: Get Orthrus put a bounty on a single fleeing target, pitting the crawlers escorting it against everyone else on the floor, and provided no shared chat.[4|30]}}
+
+{{Spoiler|book=5|spoiler=Example: Creeping Apocalypse, on the sixth floor.[5|48]}}
+
+===Mandatory Quests===
+{{Spoiler|book=8|spoiler=Mandatory Quests cannot be declined, ignored, or deferred. On the tenth floor they were welded directly onto the race tracks, and a heat could not be finished until the quest target on that track was dead.[8|43] They can also be issued floor-wide: Ad Infinitum was handed to every crawler active on the tenth floor mid-race, and its stated objective was to finish the race they were already running.[8|74]}}
+
+===Celestial and Sponsor Quests===
+{{Spoiler|book=4|spoiler=Adherents of a god are required to complete all church quests as a condition of worship, and deity quests arrive in the god's own voice rather than the system's. Emberus issued Carl two: an open-ended investigation into the murder of his son Geyrun, and a standing order to kill Hellik before the twelfth floor, rewarded with a Celestial God Box.[4|32]}}
+
+{{Spoiler|book=6|spoiler=A deity the crawler does not worship can also issue a quest. These arrive with an explicit warning that the crawler is not required to complete them, but that the god may take the refusal poorly.[6|17]}}
+
+==Rewards and Penalties==
+Alongside experience and gold, most quests pay out a quest box whose tier reflects the difficulty of the job: the Show Must Go On paid a gold box,[2|4] while an easier murder investigation on the same floor paid silver.[2|14] Experience is frequently the larger prize, and Carl gained three levels on completing his first quest.[2|11]
+
+Unusual solutions pay better. The Hadji achievement upgrades a quest box one tier and can be earned repeatedly, and Mordecai noted that a further tier exists which double-upgrades the prize instead.[2|13] Rewards can also be stolen: the Cockblock achievement hands the victim's promised reward (in this case a Silver Quest Box) to whoever kills the NPC a quest depended on. It can only be earned once, and a crawler who does it again is identified to the aggrieved party, who is then issued a quest to hunt them down.[2|22] Prizes remain subject to a showrunner veto: when the Bandit achievement double-upgraded 83 survivors' boxes to Celestial, Borant spent its single seasonal veto to void every prize except the one already opened, then patched both upgrade achievements out of the game.[2|Epilogue]
+
+{{Spoiler|book=3|spoiler=A pass or fail quest states its penalty in advance; failing one aboard the Dismemberment Limited would have transformed every crawler on the train into a Flesher.[3|12]}}
+
+{{Spoiler|book=4|spoiler=Boxes run from bronze on minor errands[4|15] up through platinum on major ones, and have contained skill potions and enchanted gear[4|13] as well as spellbooks.[4|32] One quest added a permanent fifty percent charisma bonus toward an entire race on top of its box.[4|10]
+A quest can also be failed through no fault of the crawler holding it, as when Carl's quest to free a captive gnome failed the moment an unrelated crawler killed the gnome in front of him.[4|6] Divine quests carry their own penalty structure, since failing or abandoning one results in a smite.[4|32]}}
+
+{{Spoiler|book=5|spoiler=Failing a world quest rewrote the rules of the entire sixth floor, imposing timed saferoom access governed by a blood bar and blanketing the map with the Gehenna Bramble spell.[5|52]}}
+
+{{Spoiler|book=6|spoiler=Quest boxes have also paid out infrastructure coupons, including a free town upgrade for a settlement the crawler controls.[6|2]}}
+
+==Story==
+Carl and Donut have an established pattern of taking quests they were advised to skip. Mordecai held that quests are worth doing only when a crawler is comfortably ahead of the difficulty curve, and that the pair should be grinding instead given the shortened floor timers.[2|7] Carl sought out the orc GumGum the same night Mordecai told him to leave the matter alone, drawing the pair into a murder investigation[2|14] that ended in a floor-wide event quest and nearly killed eighty crawlers.[2|24] Rather than solving that first circus quest as designed, Carl negotiated directly with the production team behind it and traded future cooperation for his own survival.[2|11]
+
+{{Spoiler|book=4|spoiler=Quests have driven most of the pair's major turning points, including the hunt for the Gate of the Feral Gods[4|15] and Carl's entanglement with Emberus, whose god quests remain open and carry a smite if they go unresolved.[4|32]}}
+
+{{Spoiler|book=5|spoiler=The deal Carl struck with the show's producers on the third floor[2|11] came due on the sixth as a two-part quest line.[5|15]}}
+
+==Dungeon Lore==
+Many quests are the crawler-facing surface of scripted dramas built by production teams for the viewing audience. Mordecai warned that any quest involving an elite belongs to a show with its own writers and producers, that the storyline will play out whether or not a crawler participates, and that elites are designed, printed, and imprinted with the memories their roles require.[2|7] He considered the increasingly elaborate quests of the third floor a symptom of compressed floor timers, with the showrunners compensating for lost days with denser content.[2|21]
+
+{{Spoiler|book=3|spoiler=Quest scenarios reset and replay for successive crawlers: the trapped engineer of the Dismemberment Limited was designated Levi the 7th, the quest having already triggered six times since the floor opened.[3|12]
+The system also uses quest rewards to settle scores with the showrunners. After Borant vetoed the Celestial prizes, it issued the affected crawlers coupons for free level-three personal spaces, preempting the sponsors and costing Borant both the sale and its cut.[3|2]}}
+
+{{Spoiler|book=6|spoiler=Herot recorded in the cookbook that an unstable AI generates quests reactively from what crawlers say out loud, having received a hunting quest within an hour of idly wishing for one.[6|38] The quest system also doubles as a communications channel: the goddess Eileithyia issued a trivial spider-killing quest purely to open a message thread the system was not permitted to monitor.[6|17]}}
+
+{{Spoiler|book=8|spoiler=The AI eventually began using mandatory quests to address the crawlers directly, admitting outright that the quest was not a quest at all, but the most convenient way it had to say what it wanted to say.[8|74]}}
+
+==Trivia==
+*The quest achievements lean on the cartoon Jonny Quest: Johnny Quest for completing one, Hadji for completing one unusually,[2|13] and Bandit for benefiting from someone else's unusual completion.[2|Epilogue]
+
+==Speculation==
+*Box tier may be set by a difficulty formula rather than by a show's writers, which would make the stated reward a preview of a quest's true scale. Carl read a silver reward as a signal that the job was smaller than it looked,[2|14] and Mordecai reached the same conclusion about that quest's real scope after the fact.[2|24]
+
+==References==
+

@@ -1,0 +1,30 @@
+{{SpoilH | 6}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type= Utility T'Ghee Card
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a T'Ghee utility card. 
+
+== AI Description ==
+
+T’Ghee Card. Very Rare.
+Utility Card.
+Combo.
+Consumable.
+You ever mix two completely incompatible foods together to see how they taste? Sometimes it’s great. Like chicken and waffles! Sometimes it’s... a bad idea.
+Like tuna and haggis.
+Temporarily combines two monster cards into a single creature. Summoning length is equal to the shorter of the two summoning phases. Post summoning, both monsters are tagged out for the remainder of combat, even if they still have health.
+Warning: This is a consumable card. It will be destroyed upon use. [6|4]
+
+==References==
+
+{{Navbox Items}}

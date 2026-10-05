@@ -1,0 +1,21 @@
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=Item, Consumable, Pharmaceutical
+|keywords=
+|effects=
+|source= Bad Llama
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a pharmaceutical item that is received as a loot drop after killing Bad Llamas. The system AI automatically adds these to the Pharmaceutical Items tab when Carl adds them to his inventory.
+
+==Story==
+===Book 1===
+Carl and Donut recieve some bags of {{PAGENAME}} after killing some Bad Llamas on the first floor. [1|8] They later trade them to Rory and Lorelai in exchange for the Goblin Copper Chopper. [1|15]
+
+==References==
+
+{{Navbox Items}}

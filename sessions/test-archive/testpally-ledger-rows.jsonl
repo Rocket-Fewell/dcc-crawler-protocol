@@ -1,0 +1,7 @@
+{"seq": 11, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": 9, "balance": 9, "reason": "Starting credits: Paladin package A", "source": "intake", "command": "create-crawler"}
+{"seq": 12, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": 22, "balance": 31, "reason": "Starting credits: Merchant package A", "source": "intake", "command": "create-crawler"}
+{"seq": 13, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": -3, "balance": 28, "reason": "Vending Wall: Rations (1 day) x5", "source": "intake", "command": "create-crawler"}
+{"seq": 14, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": -1, "balance": 27, "reason": "Vending Wall: Rope (50 ft, hempen)", "source": "intake", "command": "create-crawler"}
+{"seq": 15, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": -1, "balance": 26, "reason": "Vending Wall: Torch x3", "source": "intake", "command": "create-crawler"}
+{"seq": 16, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": -5, "balance": 21, "reason": "Vending Wall: Healer's Kit", "source": "intake", "command": "create-crawler"}
+{"seq": 17, "ts": "2026-10-04T18:04:13-05:00", "crawler": "TestPally", "delta": -1, "balance": 20, "reason": "Vending Wall: Waterskin", "source": "intake", "command": "create-crawler"}

@@ -1,0 +1,120 @@
+{{Quote|I focused on the X in the corner and mentally closed the box. Weird. I could control the information with my mind.|Carl[1|2]}}
+
+The Heads-Up Display (HUD) (alternatively called the UI, Crawler Interface, Menus, etc.) is a core Dungeon mechanic that allows Crawlers to view their status and access a suite of Crawler Menus, interactive maps, and communication tools.
+
+:See Also: Crawler • :Category:Crawler Interface • :Category:Dungeon Mechanics
+
+==Before the Tutorial==
+Error. You may not access this until you have completed the tutorial.[1|3]
+After descending the surface stairwells and before fully entering the First Floor, Crawlers gain access to a basic HUD.[1|2] Its functions remain limited until the Crawler reaches a Tutorial Guild Hall, which are seeded on floors one through three,[1|1] and completes the Tutorial, unlocking the expanded HUD and the full set of Crawler Menus.[1|4]
+
+Early functions include:
+* A countdown timer to level collapse in the upper right of the Crawler's vision.[1|2]
+* The ability to view and mentally "X" out of tooltips describing other Crawlers, mobs, NPCs, and points of interest.[1|2]
+* A health bar that appears above a mob only after it takes damage.[1|2]
+* Achievement and status notifications; during combat these queue as small messages in the upper left rather than auto-playing.[1|2]
+* Automatic translation of languages into Syndicate Standard.[1|3]
+* System AI announcements rendered as undismissable text, like subtitles.[1|2]
+
+==Operation==
+Interacting with the HUD feels like a "slight, haptic tingling" in the brain. A Crawler opens info-boxes by focusing on an object and closes them by mentally clicking the "X" in the corner of the tooltip.[1|2] All on-screen information vanishes when the Crawler closes their eyes.[1|2] Elements can be customized by focusing on them and mentally pinching them smaller or dragging them across the field of view.[1|4]
+
+Because the interface is wired directly into the user's neurology, different species run different layouts. As a quadruped, Princess Donut has a distinct interface that lets her trigger actions straight from her menu, sidestepping her inability to equip gear by hand.[1|7] The messaging system adapts to the user as well: for Carl it summons a floating virtual keyboard, and incoming messages arrive as a haptic buzz in the brain.[1|15]
+
+{{Spoiler|book=3|spoiler=The HUD runs on the Crawler's underlying wetware, identified in the interface as Syndicate Crawl Version 47.002.Human.[3|13]}}
+
+==Access==
+Inside the Dungeon, the HUD is always active unless the Crawler is in the presence of a Dungeon Administrator,[1|36][1|44] and it switches off whenever a Crawler is pulled up to a surface production trailer for a show.[2|19]
+
+{{Spoiler|book=3|spoiler=Ordinarily a Crawler would lose HUD access the moment they left the current floor. This season the Borant Corporation runs Dungeon Crawler World on a dual-layer planetary zone: a main zone reaching from the planet's core up to sea level, where Crawlers keep full access to their HUD and Menus, and a secondary zone above the surface, where the primary interface is blocked and only limited personal upgrades work. Because Borant built the season so cheaply, it skips the usual administrator bubble around below-sea-level trailers, so Crawlers often keep full access inside them.[3|20]}}
+
+{{Spoiler|book=5|spoiler=Some production vessels still impose their own containment zone even below sea level. Aboard a Valtay landing vessel resting on the ocean floor, Carl's crawler wetware locked him out of part of his interface, though game items like his gauntlet kept working.[5|30]}}
+
+{{Spoiler|book=7|spoiler=The interface is also cut off inside "zero zones," pockets that Syndicate liaisons can generate to operate outside the AI's reach.[7|36] Inside a warlord's shielded parley bubble during Faction Wars, the game interface likewise fails while non-game implants keep working.[7|34]}}
+
+==HUD Components==
+Components can be repositioned by focusing on an item and thinking about moving it, or by toggling settings within the various Crawler Menus.
+
+===Default Layout===
+After the tutorial, the basic HUD consists of (clockwise from the upper left):
+* Notifications collect in a folder at the top left, which blinks when something is unopened. They come in three kinds: 
+**Crawler Notifications seen only by the Crawler, such as "You've gained a skill level!" or "Level up!",[1|4][1|5] 
+**System Messages seen by everyone on every floor and sometimes voiced differently,[1|4] and 
+**Floor-Specific Notifications seen only by those on the current floor.[1|4]
+* A Health Bar, a long green bar in the top right representing the Crawler's HP.[1|4]
+* A Mana Bar directly beneath the Health Bar, of unspecified color.[1|4]
+* A countdown timer to level collapse, below the mana bar.[1|4]
+* A Minimap in the bottom right.[1|4]
+* The Hotlist, ten slots centered along the bottom that hold potions, special items, or spells.[1|4] Items such as potions stack up to 999 per slot, and using a potion from the Hotlist applies its effect without the Crawler having to physically drink it.[1|5]
+
+===Optional Components===
+Crawlers can further customize their HUD, adding or removing components such as a View Counter.
+
+{{Spoiler|book=3|spoiler=Additional tabs and features can be installed by third parties, most notably the upgrades sold by the Valtay Corporation as Neural Enhancers.[3|13] One early Valtay upgrade lets Carl see through portal-type doorways and take a "snap-a-photo" screenshot of the space beyond, described as a software feature rather than a spell or skill.[3|14]}}
+
+{{Spoiler|book=4|spoiler=A later Valtay Neural Enhancer adds current airspeed and elevation gauges, with toggles for relative surface speed and for height measured against either the planet's sea level or the local gravitational zone.[4|8]}}
+
+{{Spoiler|book=5|spoiler=A floor can add its own temporary status bar. On the Sixth Floor, every Crawler gained a "blood bar" below the health and mana bars, which fills by killing and drains while resting in a safe area; if it empties, the Crawler is locked out of safe rooms and personal spaces entirely.[5|52]}}
+
+{{Spoiler|book=6|spoiler=Divine items can add bars of their own. The Scavenger's Daughter back patch adds a Soul Essence bar below the mana bar, charged by melee kills and spent on a single empowered strike.[6|3]}}
+
+{{Spoiler|book=8|spoiler=By the lower floors, Carl's Hotlist is upgraded to twenty slots, and a Platinum Hotlist Expansion potion pushes it to twenty-five while unlocking the Contingency skill and a "Hotlist contingencies" tab. The tab lets a Crawler program up to ten conditional automations that fire one or more Hotlist items when preset circumstances are met, an upgrade on Carl's older Heart Balance skill, which could only auto-use a single potion at a set health threshold.[8|25]}}
+
+==Crawler Menus==
+You have been granted access to the Crawler Menu.[1|4]
+From the HUD, a Crawler reaches a suite of menus and tabs. The core set unlocked through the tutorial includes:[1|4][1|5][1|15]
+* Player Stats Menu
+* Ratings Menu
+* Health Menu
+* Skills Menu
+* Magic Menu
+* Party Menu
+* Inventory Menu
+* Pet Menu
+* Messaging Menu (includes a Scratchpad)
+
+Other tabs unlock as Crawlers progress: an Accounts tab tracks creator royalties once a Crawler starts earning them,[1|44] a Demolition Workshop tab appears once a Crawler's Explosives Handling skill is high enough (though it only functions at a Sapper's Table),[1|19] and a Quest tab is added the first time a Crawler stumbles into a quest.[2|4]
+
+{{Spoiler|book=3|spoiler=Later floors add still more menus and tabs:
+additional crafting workspaces, such as the Armorer's Workshop, usable at crafting tables[3|13]the Dungeon Anarchist's Cookbook (Item) second scratch pad[3|8]a Sponsorship tab for messaging benefactors[3|8]a Third-Party Upgrades tab[3|13]a Personal Spaces tab for placing and upgrading the party's personal space[3|3]a store and marketplace interface for buying and selling loot[3|3][4|3]}}
+
+{{Spoiler|book=4|spoiler=During a group quest, the interface opens a temporary Quest Chat room that lists every Crawler inside the bubble and tags each one's status beside their name, such as "Possessed" or "Enslaved".[4|29] Choosing to worship a god likewise adds a dedicated worship tab.[4|2]}}
+
+{{Spoiler|book=5|spoiler=The interface adds a Faction Wars Warlord tab as soon as a Warlord fields their first troops for Faction Wars.[5|75]}}
+
+{{Spoiler|book=6|spoiler=Two more sub-systems appear on the Eighth Floor:
+a Guild Jobs sub-tab under Quests, unlocked by taking a contract from a Guild of Suffering[6|19]a squad of collectible totem cards, examined and managed through a squad details tab[6|3][6|6]}}
+
+{{Spoiler|book=7|spoiler=On the Ninth Floor, the Warlord tab expands into a full Warlords Menu inside the flag room,[7|14] used to assign officer ranks and command troops.[7|5] Its war chat lets a warlord pick a broadcast band, such as Full Assault Band or Near Proximity Band, to control who receives a message.[7|24] A separate Bonded Pets tab appears once the party's guild has a pet stable.[7|5]}}
+
+==Story==
+In everyday use, the HUD is Carl and Donut's primary tool for navigating the World Dungeon, spotting mobs on the minimap, communicating with allies, and managing their ever-growing arsenal of spells and explosive loot.[1|15][1|4][1|19]
+
+{{Spoiler|book=7|spoiler=During Faction Wars on the Ninth Floor, Carl's HUD is temporarily augmented in the FUPA flag room, giving him a massive, multi-window command interface similar to what Game Guides use.[7|14] The flood of pop-ups leads him to accidentally hit a "Clear Screen" button, which momentarily deletes his entire HUD, including his health bar and minimap, leaving him feeling completely exposed and "naked" without his usual windows.[7|14]
+Later, a Residual named Paulie slips Carl a highly illegal neural enhancement hidden in a cup of coffee,[7|Prologue] which exploits Carl's "natural interface" to add a hidden Containment Interface tab to his HUD.[7|Christmas Morning] The tab does not control the rogue AI directly but the device that contains it, presenting a Fuse page whose "Override Conditions And Activate Fuse" button could destroy the entire solar system. Rather than trigger it, Carl instead presses "Disconnect Containment," which disables the failsafe entirely and frees the AI,[7|Christmas Morning] a choice that later neutralizes Princess Formidable's attempt to detonate it.[7|34][7|36]}}
+
+==Trivia==
+* The minimap uses a "fog of war" mechanic: it only fills in the layout of halls and rooms once a Crawler physically visits them, though safe rooms and tutorial guilds always appear once a Crawler gets close enough.[1|5]
+* Item statuses display contextually. Inside a safe room, for instance, a Crawler's explosives read as "Inert While in Safe Room," with their true status shown in parentheses and still ticking down as they are handled.[1|40]
+* On the Minimap, Crawlers appear as blue dots and hostile mobs as red, with an X marking anything dead. The Party menu shows when a member dies, and party chat is cut off for anyone sealed inside a boss room.[1|22][1|40]
+* Focusing on another Crawler shows their Crawler ID, level, race, class, and current title, plus their kill count as skulls beside the name (a large skull for every ten), which can be hovered to read the "Crawler Killer" tally.[1|22] Similarly, boss kills are marked as stars, starting at bronze for a neighborhood boss and rising in tier from there.[1|17] A displayed title can change mid-crawl and reverts when the floor collapses.[2|22]
+* In a "muted" area, spells cast from the menu and scrolls will not fire, though already-cast spells, potions, and magical items still work.[2|22]
+
+{{Spoiler|book=3|spoiler=A message from a dead Crawler is filed into a special "Messages from deceased Crawlers" folder, flagged as coming from a deceased Crawler, and removed from the list once it is closed.[3|3]The system only forms a chatroom when every member is connected to every other member, so Crawlers instead build sprawling contact networks to trade information, using mass-messaging and custom filter folders to manage the flood.[3|14]}}
+
+{{Spoiler|book=4|spoiler=On the Minimap and boss map, a boss can render as an orange star, and when a marker grows too large for the overlay the minimap automatically dims it.[4|29]A Crawler can be muted mid-quest, which scrubs their earlier messages from the log,[4|29] and the system can suspend a Crawler's messaging privileges outright for discussing forbidden topics.[4|14]Earth's human population was born with implants without their knowledge, but the Indigenous Planetary Species Protection Act caused all natives' implants to be scrambled once the crawl began.[4|Epilogue]}}
+
+{{Spoiler|book=5|spoiler=Hunters appear on the map as purple dots, and the map can be filtered by tag so that only one kind of marker (such as hunters) is shown.[5|22]The interface keeps a running ledger of every gold piece a Crawler has ever spent or been refunded.[5|58]}}
+
+{{Spoiler|book=6|spoiler=A hired mercenary shows on the local map as a white dot marked with a green cross.[6|3]}}
+
+{{Spoiler|book=7|spoiler=Psionic enemies can aggressively manipulate the HUD. During Faction Wars, hostile mind mages overwhelmed Carl's Mind Balance skill, freezing him in place and flooding his interface with a relentless wall of debuff notifications like "Self Harm" and "Intrusive Thoughts".[7|65]}}
+
+==Speculation==
+{{Spoiler|book=4|spoiler=Since Earth's citizens were born with implants that the Syndicate could scramble remotely, it is highly likely that Earth's technological progression was closely monitored, or even subtly manipulated, by the Syndicate for generations before the collapse.}}
+
+{{Spoiler|book=7|spoiler=The AI's growing instability and its knack for bypassing censorship filters suggest the HUD itself could eventually be weaponized against Crawlers. A fully "primal" AI could feed them false minimap data or fabricate Warlord chat messages to isolate allies or incite friendly fire.
+The fact that Paulie's illegal failsafe menu specifically requires a "natural interface" implies that biologically born Crawlers possess a unique neurological architecture that manufactured NPCs, Game Guides, and synthesized Elites lack. This biological loophole makes human Crawlers a distinct, unpatchable threat to the Syndicate's overarching control.}}
+
+==References==
+

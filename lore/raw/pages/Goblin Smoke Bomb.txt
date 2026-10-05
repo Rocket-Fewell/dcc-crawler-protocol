@@ -1,0 +1,34 @@
+
+{{Item
+|title={{PAGENAME}}
+|image=Goblin Smoke Bomb.png
+|imagecaption=
+|type=Low Explosives
+|effects=Opaque smoke in 10m radius for 3 minutes.
+|source=
+* Loot Boxes
+* Hobgobs and Boom Sticks }}{{Quote | quote = "Goblin smoke bombs are crap. They don’t understand the chemistry, so what you get is a lot of smoke in a small cone for a short amount of time. They’re good in enclosed spaces, but if there’s any ventilation, you might as well just pull your dick out and point at it.” -- Pustule}}
+Goblin Smoke Bombs are apple-sized spherical bombs with wicks.[1|20][2|5]  After the wick is lit and the fire ignites the bomb, they emit a cloud of stinking, multi-color, opaque smoke that covers a 10 meter radius for three minutes (180 seconds) before dispersing.[1|20]
+
+They are best used in enclosed spaces or, if in the open, by dropping multiple at once; otherwise, the smoke might catch on a Dungeon-generated breeze and float in the wrong direction.[2|4]
+
+Goblin Smoke Bombs may be looted inside the Dungeon, purchased from markets, or received in Goblin Boxes.[2|16][1|35]
+
+==AI Description==
+Most crawlers can only view cursory information about Goblin Smoke Bombs and other explosives.  However, if a crawler has at least (5) levels in the Explosives Handling Skill, they see the following:
+
+Goblin Smoke Bomb. Type: Deflagration. Effect: Opaque smoke over a 10 meter radius for 3 minutes. Status: Good. 89/100 
+Emits a stinking cloud of billowing, multi-color smoke that lasts for three minutes before dispersing. Use to either confuse enemies or as a stage prop at a hair metal concert.
+
+At around a status of 34/100, the status changes to "Discharge Imminent."[1|20]
+
+==Trivia==
+
+*Characters with the Bomb Surgeon Skill can deconstruct smoke bombs and use the components to build traps.[2|2]
+*Pustule, a Hobgoblin shopkeeper on the Third Floor, recommends using a Hobgoblin Smoke Curtain instead.[2|16]
+*Smoke and fog do not affect most noncorporeal ghost mobs, but do affect those with a physical presence.[2|21] 
+
+==References==
+
+{{Navbox Items}}
+

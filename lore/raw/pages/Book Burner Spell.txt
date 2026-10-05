@@ -1,0 +1,23 @@
+{{SpoilH | 6}}
+{{Spells
+|title1= {{PAGENAME}}
+| image1=
+|caption-image1=
+|effect= Cause an opponent to forget a spell
+|cost= 
+|casting=
+|cooldown= Once per day
+|target=
+|duration= 30 hours
+|associated equipment= Book Burner Patch
+|users= Carl
+}}
+{{PAGENAME}}  is a spell Carl gets as part of his Book Burner Patch on the Eighth Floor.
+
+==AI Description==
+
+Book Burner.
+Once per day, you may cause an opponent your level or lower to forget a spell for a period of 30 hours. For every opponent player level above your own, this spell has a 5% chance not to work. You must know the exact name of the spell or you may choose to target the last spell that was cast. [6|49]
+
+==References==
+

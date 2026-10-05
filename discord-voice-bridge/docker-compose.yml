@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs   # tts-usage.jsonl survives container rebuilds
+    # Register slash commands once (or after changing them):
+    #   docker compose run --rm bot node src/register-commands.js

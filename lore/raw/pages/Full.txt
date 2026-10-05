@@ -1,0 +1,16 @@
+{{Status Effects
+  | title1 = Full
+  | image1 = 
+  | names =
+  | type = Daily Buff
+  | causes = Food Box
+  | effect= * +5% Health Regeneration
+* -5% Debuff timer
+* -5% indirect damage 
+| duration = 1 Day (24 or 30 Hours)}}Full is a buff granted by consuming food from the Food Box Personal Space Upgrade.  The buff lasts all day, so the crawler only needs to consume one meal from the synthesizer per day.[4|3]
+
+==AI Description==
+You are full! Your warm tummy increases your healing speed by 5%. It decreases debuff times by 5%. It lowers all indirect damage by 5%.
+
+==References==
+

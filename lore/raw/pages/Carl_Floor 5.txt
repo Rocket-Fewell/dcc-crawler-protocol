@@ -1,0 +1,362 @@
+{{SpoilH|4}}
+{{Quote|How in the hell am I supposed to use a cover-up sleeve on my face?|Carl[4|2]}}
+This page documents Carl's gear, levels, stats, and skills as he progresses through the Fifth Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable"
+!TIME
+!NOTES
+!LVL
+!STR
+!INT
+!CON
+!DEX
+!CHA
+|-
+|15 d
+|Start of floor[4|1][4|2]
+|41
+|?
+|?
+|?
+|?
+|?
+|-
+|
+|Level up[4|12]
+|43
+|?
+|?
+|?
+|?
+|?
+|-
+|10 d 4h
+|Level up[4|17]
+|44
+|?
+|?
+|?
+|?
+|?
+|-
+|
+|DEX stated as 32 with gear, before daily buffs; STR stated as 80, likely with gear[4|22]
+|44
+|80
+|?
+|?
+|32
+|?
+|-
+|3 d 20h
+|w/ Battle Rattle (+1 all stats, +1 per patch)k and Earth Upgrade Patch (+5% STR)l[4|28]
+|44
+| +2/+5%kl
+| +2k
+| +2k
+| +2k
+| +2k
+|-
+|3 d 20h
+|Level up[4|28]
+|47
+|?
+|?
+|?
+|?
+|?
+|-
+|3 d 7h
+|w/ ring of +2 STRm[4|32]
+|47
+| +2m
+|
+|
+|
+|
+|-
+|
+|Emberus's boon (+25% CON for 30 hours)*[4|32]
+|47
+|
+|
+| +25%*
+|
+|
+|-
+|
+|Unenhanced STR stated as 75[4|34]
+|47
+|75
+|?
+|?
+|?
+|?
+|-
+| colspan="8" |Book 4 states few stat totals; this table records levels, stated values, and gear-based changes. Superscript letters match the gear key in the Ending Gear table: k Battle Rattle, l Earth Upgrade Patch, m Quan's ring of +2 STR. * Temporary. Carl ends the floor ranked first on the leaderboard.[4|34]
+|}
+
+==Gear==
+===Starting Gear===
+{| class="dccTable mw-collapsible mw-collapsed"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]Necklace of the Haute Bourgeoisiei[3|2]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb (upgraded once)[1|6][3|15]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]Xistera (right wrist and forearm)[2|17]Enchanted Auto Buckler of the Peach Pit (left wrist; from Katia)[3|29]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]Two rings of +2 STRh[2|6]
+|-
+|Legs
+|Enchanted BigBoi Boxersg (upgraded once)[1|35][2|13]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe; upgraded once)[1|6][3|9]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Personal Space
+|Royal Palace of Princess Donut (shared)[3|3]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]The Dungeon Anarchist's Cookbook (24th edition)[3|8]Night Wyrm's Ring of Divine Sufferingj (unequipped)[3|30]
+|}
+
+===Gear Gained===
+At the start of the floor, a Platinum Spicy Box gives Carl the Enchanted Toe Ring of the Leprous Bandit, worn on his left pinky toe, which grants the Sticky Feet Benefit and the Super Spreader Benefit. A Platinum Asshole's Box gives him the Extinction Sigil Tattoo (Wall Monitor Race) just below his left eye. He also receives 25 Surefires, crafting items that make projectiles guided, and Pawna's Tears, a potion that adds +5 to any skill or spell of his choosing, which he saves.[4|2]
+
+Carl renames a gnomish Drop Bear biplane the Nightmare II[4|15] and later flies it in the floor's final battle.[4|30] He loots a rebreather from the body of the Borant administrator Loita.[4|19]
+
+Near the end of the floor, he receives a Ring of Water Breathing, Drakea's Enchanted Kerchief of Disorder (worn on his head, since his cloak occupies his neck slot), the Enchanted Anarchist's Battle Rattle, and an Earth Upgrade Patch for it. The jacket replaces his old leather jacket.[4|28]
+
+After tearing off Quan Ch's arm, Carl takes a ring of +2 STR and Rockard's Ring of Sniping from it.[4|32] Becoming an adherent of Emberus gives him sun tattoos on both hands. He also receives the tome for the Ping Spell and a pair of Enchanted Handcuffs.[4|32]
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|Head
+|Drakea's Kerchief of Disorder[4|28]
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa[1|6]Necklace of the Haute Bourgeoisiei[3|2]
+|-
+|Jacket
+|Anarchist's Battle Rattlek[4|28]
+*Earth Upgrade Patchl[4|28]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb (upgraded once)[1|6][3|15]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]Xistera (right wrist and forearm)[2|17]Enchanted Auto Buckler of the Peach Pit (left wrist; from Katia)[3|29]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]Two rings of +2 STRh[2|6]Ring of +2 STRm[4|32]Rockard's Ring of Sniping[4|32]
+|-
+|Legs
+|Enchanted BigBoi Boxersg (upgraded once)[1|35][2|13]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe; upgraded once)[1|6][3|9]Toe Ring of the Leprous Bandit (left pinky toe)[4|2]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]Extinction Sigil Tattoo (face, just below left eye)[4|2]Emberus Tattoos (both hands)[4|32]
+|-
+|Personal Space
+|Royal Palace of Princess Donut (shared)[3|3]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]The Dungeon Anarchist's Cookbook (24th edition)[3|8]Night Wyrm's Ring of Divine Sufferingj (unequipped)[3|30]Pawna's Tears (unused)[4|2]Loita's rebreather[4|19]Enchanted Handcuffs[4|32]Ring of Water Breathing (unequipped)[4|28]
+|}
+
+==Skills==
+{| class="sortable dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Biplane Pilot
+|
+|4[4|30]
+|Gained during the final flight.[4|30]
+|-
+|Detect Traps
+|
+| +5
+|From Drakea's Enchanted Kerchief of Disorder.[4|28]
+|-
+|Infusion
+|
+|3[4|18]
+|
+|}
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Bang Bro
+|Acquired[3|2]
+|
+|
+|-
+|Fear
+|Acquired[2|2]
+|
+|
+|-
+|Heal
+|1[1|4]
+|
+|
+|-
+|Ping
+|Acquired[4|32]
+|
+|Costs 5 mana; five-minute cooldown. Reveals the location of non-crawlers and non-red-tagged mobs within one kilometer plus 500 meters per 10 INT. May be imbued with Fear at level 5.[4|32]
+|-
+|Protective Shell
+|15[1|35]
+|15
+|From Enchanted BigBoi Boxersg; 30-hour cooldown.[1|35]
+|-
+|Tripper
+|15[4|28]
+|15
+|Item spell from Drakea's Kerchief; no mana cost, five-hour cooldown. Triggers (but does not disarm) passage, motion, heat, and weight-based traps within 10 meters plus 10 meters per INT point.[4|28]
+|-
+|Wisp Armor
+|Acquired[2|11]
+|
+|
+|}
+
+==Passive Effects==
+*Attacks Gain
+**2% chance to stun target when struck with Gauntlet.[1|25]
+**10% chance to stun on a solid blow (Breadbasket, from Iron Punch).[2|14]
+**1.5% chance to disarm an attacker that strikes the buckler; the weapon may drop, break, or land in his inventory (Shatter, from the Peach Pit buckler).[3|29]
+**+15% barefoot attack damage while active (from Pedicure Kit).[1|30]
+**+100% damage to attacks originating below the waist (from Freeballing).[2|13]
+**-25% damage when using bladed weapons (from Compensated Anarchist).[2|2]
+**+50% range and accuracy for all thrown explosives (from Battle Rattle).[4|28]
+**10% chance for physical attacks to inflict Burn (from Emberus).[4|32]
+*Spellcasting
+**+25% mana cost for damage-dealing spells (from Compensated Anarchist).[2|2]
+*Training
+**+5% training speed for trapmaking and bomb-making skills (from Compensated Anarchist).[2|2]
+**+20% training speed for skills originating below the waist (from Freeballing).[2|13]
+**+10% experience and skill training under Good Rest (from the Royal Palace bed).[3|2]
+**+100% experience from killing Hellik worshippers (from Emberus).[4|32]
+*Movement
+**Can walk barefoot on walls and ceilings for DEX x 2 seconds, once every six hours (from Sticky Feet).[4|2]
+*Debuffs
+**Can pass his active debuffs to a target once per hour without losing them (from Super Spreader).[4|2]
+*All Equipped Armor gains:
+**Anti-Piercing Resistance (from Nightgaunt Cloak).[1|6]
+**10% Damage Reflect (from Spiked Kneepads).[1|12]
+*Negated Effects/Attacks:
+**Melee-based damage debuffs such as Stun, Knockback, Disarm, and Out-of-Breath (from Trollskin Shirt).[1|6]
+**Momentum-based attacks (from Kneepads).[1|12]
+**Feet cannot be broken while active (from Pedicure Kit).[1|30]
+*Immune to:
+**Cloud-based attacks (from the Earth Upgrade Patch).[4|28]
+**Burn (from Emberus).[4|32]
+*Resistant to:
+**Ice-based attacks (from Nightgaunt Cloak).[1|6]
+**Poison attacks (from Nightgaunt Cloak).[1|6]
+*Weak to:
+**Natural goblin enemies, such as fairy-class creatures, deal 20% more damage (from Goblin Pass Tattoo).[1|6]
+**Lizard-class enemies deal 20% more damage, and Wall Monitors deal 150% more (from the Extinction Sigil).[4|2]
+*Map & Detection
+**Creatures below 50% health are marked on his map (Ripe, from Rockard's Ring of Sniping).[4|32]
+**Non-hidden creatures wearing magical gear are marked on his map (Loaded, from Rockard's Ring).[4|32]
+**Temples and worshippers of Emberus and Hellik are marked on his map (from Emberus).[4|32]
+*Memberships & Allies
+**Access to the Desperado Club; prevents obtaining a Vanquisher Pass (from Desperado Pass Tattoo).[1|19]
+**Access to the Naughty Boys Employment Agency (from Compensated Anarchist and Battle Rattle).[2|2][4|28]
+**No automatic hostility from Goblins and free passage through goblin territory (from Goblin Pass).[1|6]
+**No automatic hostility from natural enemies of lizard-class creatures (from Extinction Sigil).[4|2]
+**Access to all Temples of Emberus and free access to Club Vanquisher (from Emberus).[4|32]
+**Sponsored by the Valtay Corporation and the Open Intellect Pacifist Action Network.[3|11][4|7]
+*Restrictions
+**Only one layer of armor or clothing may cover the crotch (from Freeballing).[2|13]
+**As an Acolyte of Emberus: may not harm fellow worshippers; must offer a drop of blood daily at a temple (or his personal-space shrine if none is found within 30 hours); must tithe 5% of looted gold; may not use gear blessed by Hellik; must complete church quests.[4|32]
+*Other
+**Traps activated by footsteps prompt an alarm and delay 5 seconds before triggering while active (from Pedicure Kit).[1|30]
+**Lowered detectability (from the Royal Palace shower).[3|2]
+**Can identify and analyze subspace portals (from the Valtay Neural Enhancer).[3|13]
+**Can remotely detonate explosives he has designated (Remote Detonator, from Drakea's Kerchief).[4|28]
+
+==Ratings==
+{| class="dccProgTable"
+!TIME
+!LEADERBOARD
+!VIEWS
+!FOLLOWERS
+!FAVORITES
+!SPONSOR
+|-
+|15 d[4|1]
+|3
+|1.43 Quintillion
+|7 Quadrillion
+|2.4 Quadrillion
+|Valtay Corporation
+|-
+|[4|4]
+|2
+|
+|
+|
+|Valtay Corporation
+|-
+|10 d 4h[4|17]
+|2
+|17.72 Quintillion
+|13 Quadrillion
+|4.1 Quadrillion
+|Valtay Corporation, Open Intellect Pacifist Action Network[4|7]
+|-
+|End of floor[4|34]
+|1
+|
+|
+|
+|
+|}
+
+Carl's bounty begins the floor at 800,000 gold.[4|1]
+
+==References==
+
+{{DEFAULTSORT:Carl/Floor_05}}

@@ -1,0 +1,281 @@
+{{SpoilH | 4}}
+{{DISPLAYTITLE:The Bubbles (Fifth Floor)}}
+{{Quote|Think of a sheet of bubble wrap. Every bubble is its own self-contained world. Each individual world has four zones or "quadrants."|Cascadia[4|1]}}
+{{Dungeon Floor
+|floor_number=5
+|title1=The Bubbles
+|image1=FloorX.jpg
+|caption-image1=Art by u/DrSpiderman, Reddit
+|theme=Isolated bubble domes split into four elemental quadrants
+|duration=15 Days
+|start_date=January 31
+|exits=4,688
+|crawlers=178,887 (at start)
+|crawler_levels=20s to 40s
+|mob_levels=20 to 55+
+|preceded_by=The Iron Tangle (Fourth Floor)
+|followed_by=The Hunting Grounds (Sixth Floor)
+|locations=
+* Bubble 543
+* The Lacuna
+* Hump Town
+* The Wasteland
+* Sandcastle of the Mad Dune Mage
+* Bridge of the Akula
+* Necropolis of Anser
+|npcs=
+* Bactrian
+* Changeling
+** Henrik
+** Juice Box
+** Ruby
+** Skarn
+** Svern
+* Dirigible Gnome
+** Bonnie
+** Commandant Kane
+** Leon
+** Wynne
+* Dromedarian
+** Clay
+|mobs=
+Air Quadrant
+* Male Thorny Devil
+* Feral Goose
+* Night Fright
+Water Quadrant
+* Big Boy Blue
+* Bubble Beluga
+* Concierge Shark
+* Juvenile Octo-Shark
+* Pain Amplifier Jelly
+|bosses=
+* Denise
+* The bugbears delight
+* Sentinel gun
+* Lusca! Octo-Shark Brood Mother Queen!
+* Quetzalcoatlus
+|quests=
+* Stay Out of City Hall Quest
+* Free Wynne from His Bondage Quest
+* Gate of the Feral Gods Quest
+* Dumber of the Flunkies Quest
+* Get Orthrus Quest
+* Where the Red God Glows Quest
+* Find Out Who Killed My Son Quest
+}}
+The Bubbles is the fifth floor of the World Dungeon, consisting of 1,172 isolated, dome-enclosed environments where crawlers are separated into small squads and forced to conquer four distinct elemental castles in order to unlock their stairwells.[4|1]
+
+Before the floor begins, the Royal Court of Princess Donut is randomly assigned to one of four possible starting locations: the Razorfox Kite City, the Dirigible Gnome Wasteland Fortress, the Nightgaunt Precipice, or the Great Dirt Island of the Wind Sirens.[4|1]
+
+== Description ==
+The fifth floor abandons the sprawling, interconnected maps of previous levels in favor of 1,172 isolated "bubbles" scattered across a dark, flat expanse known as the "lacuna."[4|1][4|30] Each dome-like bubble is divided into four distinct environmental quadrants: Land, Sea, Air, and Subterranean (or Tomb).[4|1] Crawlers are distributed randomly into these quadrants in squads, with each bubble holding just over 150 crawlers in total.[4|1][4|2] The isolated nature of the floor severely limits interaction and forces underpowered squads to rely on one another to unlock their exits.[4|1]
+
+== Introductory Announcement ==
+Hello, Crawlers. Welcome to the fifth floor! We are so very excited for you to enjoy this new and exciting level! We have just over 178,000 of you joining us. The last floor was somewhat of a mystery, and finding out how it worked was part of the fun. This floor is a little different. The layout is not so much a secret, and the rules are pretty simple. We want you guys to have a great time with this one.
+
+There are over 4,000 castles on this floor. Every castle contains a single stairwell. No two castles are the same. Think of a sheet of bubble wrap. Every bubble is its own self-contained world. Each individual world has four zones or "quadrants."
+
+There are a total of 1,172 bubbles. All of you are inside of a bubble, equally and randomly distributed the best we could. That comes to a little more than 150 crawlers per bubble. Like with the castles, every bubble is different.
+
+Each bubble is split into four quadrants. Land, Sea, Air, and Subterranean. Each quadrant has a single castle within. Your mission is to find the castle, raid it, and take the throne room. Once the throne room is occupied or the quadrant's boss is killed, the castle is considered conquered. The stairwell is also located in the throne room, so no need to be scrambling around, worried about not being able to find it. Easy, right? Take the castle, take the stairwell.
+
+But, there is a small hitch. In order for your stairwell to actually open up and be passable, all four castles in your bubble must first be taken. That's right, the Land, Sea, Air, and Subterranean castles must all fall in order for you to proceed to the sixth floor.
+
+Luckily for you, once you have taken your own castle, you may traverse outside of your quadrant to lend a hand to your fellow bubble buddies. Once all four castles are taken, the bubble is popped, and you may proceed outside of the bubble area if you wish. You may not enter other bubbles until they are also popped.
+
+Good luck, folks. Some of these castles are much easier to crack than others. Also, the second round of sponsorship bidding is underway. We'll have another message in a few hours after the regular recap episode. Now get out there and kill, kill, kill![4|1]
+
+== Layout ==
+
+The floor is made up of thousands of giant domes, or "bubbles," each one a sealed world unto itself.[4|1]
+
+=== Bubble 543 and Its Occupants ===
+Bubble 543 is the bubble where the Royal Court of Princess Donut starts. It is divided into four quadrants, listed in the order that the Royal Court enters them:
+* Air Quadrant: Castle of the Dirigible Gnomes
+* Land Quadrant: Sandcastle of the Mad Dune Mage
+* Water Quadrant: Bridge of the Akula
+* Subterranean Quadrant: The Necropolis of Anser
+{| class="fandom-table"
+|+
+!
+!Crawlers
+!Mobs
+!Bosses
+|-
+|Air Quadrant
+|
+* Carl
+* Donut
+* Firas
+* Katia Grim
+* Langley and five other salesmen-turned-archers
+* Louis
+|
+* Male Thorny Devil
+* Feral Goose
+* Night Fright
+|
+* Denise
+|-
+|Land Quadrant
+|
+* Gwendolyn Duet
+|
+* giant snakes
+* giant spiders
+* half-human half-scorpion punk rockers
+* Buzz-ard
+|
+* Ruckus
+* Mrs. Ghazi
+|-
+|Water Quadrant
+|
+* Britney
+* Chris Andrews
+* Vadim
+|
+* Big Boy Blue
+* Bubble Beluga
+* Concierge Shark
+* Juvenile Octo-Shark
+* Pain Amplifier Jelly
+|
+* The bugbears delight
+* Sentinel gun
+* Lusca! Octo-Shark Brood Mother Queen!
+|-
+|Subterranean Quadrant
+|
+* Bobby
+* Low Thi
+* Mike Barnes
+* Morris
+* Tyler Storm
+|
+|
+* Quetzalcoatlus
+|}
+
+=== Stairwell Locations ===
+There is a stairwell in every quadrant of every bubble. Stairwells remain locked until the entire bubble is popped.[4|1]
+
+== Locations ==
+* The Lacuna: The dark "in-between world" that houses all 1,172 bubbles, resembling an egg carton where each bubble sits in its own sunken depression.[4|30]
+* Bubble 543: The specific bubble where Carl, Donut, Katia, and several of their allies are placed.[4|1][4|2]
+* Hump Town: A camel-populated settlement within the Air quadrant of Bubble 543, featuring safe rooms such as "The Toe."[4|1]
+* The Wasteland: A flying dirigible fortress hovering high in the Air quadrant, commanded by gnomes.[4|3][4|9]
+* The Sandcastle of the Mad Dune Mage: A massive, four-level sandcastle built into the side of a tomb in the Land quadrant, ruled by the mage Ghazi.[4|2][4|20]
+* The Necropolis of Anser: A subterranean crypt serving as the Subterranean quadrant.[4|9][4|1]
+* Bridge of the Akula: A sunken submarine that serves as the castle for the Sea quadrant.[4|9]
+
+== Mechanics ==
+* Quadrant Lock: Crawlers cannot leave their starting quadrant until that quadrant's castle is conquered, either by taking the throne room or by killing the quadrant boss.[4|1]
+* Popping the Bubble: Once all four castles within a single bubble are defeated, the top half of the dome "pops" and disappears.[4|1][4|29] This opens the four stairwells and allows surviving crawlers to traverse the lacuna and interact with other popped bubbles.[4|1][4|30]
+* The Gate of the Feral Gods: A unique, three-part artifact (two pocket watches and a winding box) scattered across the quadrants.[4|15] When assembled, it can open a one-way teleportation portal to specific coordinates.[4|23] However, activating it rips a hole into the "Nothing," guaranteeing that a feral god will escape into the world at the portal's origin point once it closes.[4|15][4|23]
+
+== Events & Quests ==
+* Upon Entry to the Floor: The Royal Court is in Phase One of Four: The Gnomes.
+* Stairwell: There is no time limit to enter the Stairwells, but the bubble must be popped for the stairwells to unlock.[4|1]
+
+=== Quests ===
+* Stay Out of City Hall Quest
+* Free Wynne from His Bondage Quest
+* Squeeze out the Juice Box Quest
+* Gate of the Feral Gods Quest
+* Where the Red God Glows Quest
+* Dumber of the Flunkies Quest
+* Get Orthrus Quest
+* Find Out Who Killed My Son Quest
+* Kill Hellik Quest
+
+== Story ==
+Carl and Donut begin the fifth floor in the Air quadrant of Bubble 543.[4|1] Because they lack flight, reaching the floating gnome castle proves difficult, but they manage to conquer it by infiltrating the fortress and discovering Denise the Feral Goose Mother inside.[4|15][4|16] They coordinate with Chris in the Sea quadrant to liberate a sunken submarine,[4|9] and work with Katia's squad in the Land quadrant to defeat a massive sand ooze.[4|20][4|22] Unfortunately, the crawlers in the Subterranean quadrant are wiped out by traps and monsters before they can be rescued, but the final acts of the last living crawlers in that quadrant manage to pop the bubble.[4|16]
+
+To access the final stairwell without dying in the trap-filled Necropolis, Carl assembles the Gate of the Feral Gods.[4|27] Using the gate inadvertently unleashes Orthrus, a giant, two-headed puppy god, into the lacuna.[4|30][4|29] This triggers the arrival of the full-powered deity Emberus, who melts Bubble 18 in an attempt to find his lost puppy.[4|30] After barely surviving the god-tier chaos, Carl and Donut realize they can use the gate's mechanics to rescue hundreds of crawlers trapped in uncleared bubbles by teleporting them via the Desperado Club, intentionally sacrificing the empty bubbles to feral gods in the process.[4|32]
+
+== Achievements ==
+{| class="mw-collapsible fandom-table" style="width:100%"
+|+Achievements
+!Achievement
+!For
+!Reward
+|-
+|Quarry Sees Another Spring Achievement
+|Being a crawler on the Leaderboard
+|Gold Venison Box
+|-
+|Total, Utter Failure Achievement
+| Failing a Quest
+| Ha.
+|-
+|Cannonball! Achievement
+| Falling from great height
+| Silver Skydiver's Box
+|-
+|You're the Reason Why Daddy Drinks! Achievement
+| Raised the ire of the System AI but have corrected it
+| Gold Makeup Sex is the Best Sex Box
+|-
+|Wild Goose Chase! Achievement
+| It's lemonade
+| It's delicious
+|-
+|Milquetoast Achievement
+| Won a boss battle without killing the boss
+| Silver Pacifist's Box
+|-
+|I was in the Pool! Achievement
+| Spent more than 60 seconds fully submerged
+| Bronze I'm Wet Box
+|-
+|Who Let the Gods Out? Achievement
+| Allowed Feral God into your realm
+| You are about to hit the blooper reel
+|-
+|Rock Bottom Achievement
+| Dove more than 1000 meters below the surface
+| Gold I'm Wet Box
+|-
+|Fight the Power Achievement
+| Named co-defendants with the System AI in a lawsuit and won
+| Silver Summary Judgement Box
+|-
+|Janet Jackson’s Nipple Achievement
+| Being featured on a live special event
+| Platinum Fan Box
+|-
+|Soft Vore Achievement
+| Gotten eaten by a monster
+| Platinum Spicy Box
+|-
+|Flex in the City Achievement
+| Killed a City Boss with 5 or less crawlers
+| Go open your Boss Box
+|-
+|Man of God Achievement
+| Found Religion
+| You have religion
+|-
+|Disarming Personality Achievement
+| Ripped off a crawler's arm
+| Silver Savage Box
+|}
+
+== Trivia ==
+* The fifth floor was expected to last 12 days, but the AI inexplicably extended it to 15 days.[4|1]
+* The System AI demonstrates its growing fetishistic obsession with Carl, insulting him through achievement text and examination details when Carl kills the dirigible gnomes via falling damage rather than squishing their "Live Ammo Balls" with his bare feet.[4|13]
+* Donut receives a robotic, toy version of herself as merchandise from a fan box, which deeply delights her.[4|13]
+* The number of stairwell exits strictly follows the dungeon's halving rule, resulting in precisely 4,688 exits on this floor (1,172 bubbles multiplied by 4 castles).[4|1][1|1]
+
+== Speculation ==
+Primal Degeneration Escalation: The AI's behavior on this floor—throwing physical tantrums that shake the dungeon when Carl doesn't perform barefoot "squish" kills, and generating uniquely tailored, insulting item descriptions—may indicate that the Primal Engine is rapidly degrading into severe insanity.[4|13] Its dangerous, personal attachment to Carl forces crawlers to consider placating its fetishes just to survive.[4|13]
+
+== Gallery ==
+
+File:Fifth Floor by Aggravating Quail.webp|Fifth Floor by Aggravating Quail
+
+== References ==
+
+{{DEFAULTSORT:Dungeon Floor 05}}

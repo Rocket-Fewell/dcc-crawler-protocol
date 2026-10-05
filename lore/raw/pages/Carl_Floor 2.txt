@@ -1,0 +1,352 @@
+{{Quote|They were giving us these incredible upgrades, but I also knew the monsters were going to keep pace with our progress. And while I felt overpowered, a part of me feared I was actually falling behind.|Carl[1|30]}}
+This page documents Carl's gear, levels, stats, and skills as he progresses through the Second Floor.
+
+{{Navbox Stats}}
+
+==Levels & Stats==
+{| class="dccProgTable"
+!TIME
+!NOTES
+!LVL
+!STR
+!INT
+!CON
+!DEX
+!CHA
+|-
+|
+|Start of floor[1|27]
+|10
+|6/9c/12cf
+|3
+|5/12ade
+|5/6f
+|4
+|-
+|
+|Level up[1|33]
+|11
+|6/9c/12cf
+|3
+|5/12ade
+|5/6f
+|4
+|-
+|
+|Rev-Up Immunity Smoothie: Buzzed debuff (+3 CHA, -1 DEX; also inflicts Shaky Cam and Truth Serum)*[1|34]
+|11
+|6/9c/12cf
+|3
+|5/12ade
+|5/6f/5*
+|4/7*
+|-
+|
+|w/ Enchanted BigBoi Boxers +2 CONg[1|35]
+|11
+|6/9c/12cf
+|3
+|5/14adeg
+|5/6f
+|4
+|-
+|
+|Stated as one point below Zhang's 15 CON[1|42]
+|11
+|6/9c/12cf
+|3
+|5/14adeg
+|5/6f
+|4
+|-
+|
+|Level up[1|45]
+|12
+|6/9c/12cf
+|3
+|5/14adeg
+|5/6f
+|4
+|-
+|
+|Level up[1|47]
+|13
+|6/9c/12cf
+|3
+|5/14adeg
+|5/6f
+|4
+|-
+| colspan="8" |Base stat / stat with gear. Superscript letters match the gear key in the Ending Gear table: a Nightgaunt Cloak, c Toe Ring of the Splatter Skunk, d Silver Ring of +1 CON, e Silver Ring of +2 CON, f War Gauntlet (STR bonus in fist mode only), g BigBoi Boxers. * Temporary. Carl does not allocate any stat points on the Second Floor.
+|}
+
+==Gear==
+===Starting Gear===
+{| class="dccTable mw-collapsible mw-collapsed"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb[1|6]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]
+|-
+|Legs
+|Unenchanted boxers[1|1]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe)[1|6]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Vehicle
+|Goblin Copper Chopper[1|16]
+|}
+
+===Gear Gained===
+At the start of the floor, Carl receives the Enchanted Pedicure Kit of the Sylph. Used nightly in a Safe or Personal Space, it grants him +15% barefoot attack damage, +3 to the Smush Skill, the Unbreakable Buff (feet only), and the Celestially Nimble and Tidy Buff, which delays foot-triggered traps by 5 seconds. Each buff lasts 30 hours and requires him to stay barefoot.[1|30] Imani teaches him to use the kit.[1|32]
+
+Carl loots a Slingshot and bags of rocks from Unvaccinated Clurichaun Rev-Up Consultants and practices with it, though it deals little damage. He also invents Carl's Jug O' Boom during these fights.[1|32]
+
+The Krakaren Clone's boss box gives him the Enchanted BigBoi Boxers, which replace his worn-out boxers.[1|35]
+
+===Gear Lost===
+The Goblin Copper Chopper is destroyed by a boiler breach during the fight with the Rage Elemental.[1|40][1|41]
+
+===Ending Gear===
+{| class="dccTable mw-collapsible"
+!SLOT
+!GEAR
+|-
+|Head
+|
+|-
+|Neck
+|Nightgaunt Cloak of Stoutnessa (worn over jacket)[1|6]
+|-
+|Jacket
+|Unenchanted leather jacket (missing right arm)[1|15]
+|-
+|Undershirt
+|Trollskin Shirt of Pummelingb[1|6]
+|-
+|Wrists
+|War Gauntlet of the Exalted Grullf (right wrist)[1|25]
+|-
+|Hands
+|Silver Ring of +1 CONd (unspecified finger)[1|9]Silver Ring of +2 CONe (left ring finger)[1|19]
+|-
+|Legs
+|Enchanted BigBoi Boxersg[1|35]
+|-
+|Knees
+|Spiked Kneepads of the Shade Gnoll Riot Forces[1|12]
+|-
+|Feet
+|Toe Ring of the Splatter Skunkc (right index toe)[1|6]
+|-
+|Tattoos
+|Desperado Pass Tattoo (neck)[1|19]Goblin Pass Tattoo (left inner forearm)[1|5]
+|-
+|Weapon
+|Slingshot[1|32]
+|-
+|Other
+|Enchanted Pedicure Kit of the Sylph[1|30]
+|}
+
+==Skills==
+===Combat Skills===
+{| class="sortable dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Aiming Skill
+|1[1|32]
+|4[1|33]
+|
+|-
+|Foot Soldier Skill
+|6[1|25]
+|
+|
+|-
+|Iron Punch Skill
+|5/7f[1|25]
+|
+|Enchanted War Gauntlet of the Exalted Grull +2f
+|-
+|Jump Attack
+|?
+|?
+|
+|-
+|Powerful Strike Skill
+|?
+|
+|Includes:
+*Enchanted Toe Ring of the Splatter Skunk +3c
+*Enchanted War Gauntlet of the Exalted Grull +1f
+|-
+|Pugilism Skill
+|6[1|25]
+|10[1|30]
+|Raised by 3, to 10, with a Cheat Code Potion.[1|30]
+|-
+|Slingshot Skill
+|1
+|3[1|32][1|33]
+|
+|-
+|Smush Skill
+|6[1|25]
+|6/9[1|30]
+|Enchanted Pedicure Kit of the Sylph +3 while active.[1|30]
+|-
+|Steady Hand Skill
+|1[1|32]
+|
+|
+|-
+|Unarmed Combat Skill
+|6[1|25]
+|
+|
+|}
+
+===General Skills===
+{| class="sortable dccProgTable mw-collapsible"
+!SKILL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Chopper Pilot Skill
+|5[1|21]
+|
+|Chopper destroyed on this floor.[1|40]
+|-
+|Dangerous Explosives Handling Skill
+|5[1|19]
+|7[1|35]
+|Final level inferred from a general increase to his explosives skills after creating Carl's Jug O' Boom.[1|35] May reach 9 by the end of the floor.[1|41]
+|-
+|Determine Value Skill
+|2[1|25]
+|3[1|47]
+|Raised by a potion from the Frenzied Gerbil boss box.[1|47]
+|-
+|Explosives Handling Skill
+|5[1|19]
+|7[1|35]
+|May reach 9 by the end of the floor.[1|41]
+|-
+|Goblin Explosives Skill
+|5[1|19]
+|7[1|35]
+|Final level inferred from a general increase to his explosives skills after creating Carl's Jug O' Boom.[1|35] May reach 9 by the end of the floor.[1|41]
+|-
+|IED Skill
+|3[1|19]
+|7[1|35]
+|May reach 9 by the end of the floor.[1|41]
+|-
+|Incendiary Device Handling Skill
+|0[1|32]
+|5[1|32]
+|Gained from creating Carl's Jug O' Boom.[1|32] May reach 9 by the end of the floor.[1|41]
+|-
+|Regeneration Skill
+|7b[1|6]
+|
+|Enchanted Trollskin Shirt of Pummeling +7b
+|}
+
+==Spells==
+{| class="dccProgTable mw-collapsible"
+!SPELL
+!STARTING LEVEL
+!FINAL LEVEL
+!NOTES
+|-
+|Heal
+|1[1|4]
+|
+|
+|-
+|Protective Shell
+|15[1|35]
+|15[1|35]
+|Item spell from Enchanted BigBoi Boxersg; no mana cost, 30-hour cooldown. Creates a stationary barrier against physical attacks with a 4.5-meter radius lasting 20 seconds.[1|35]
+|}
+
+==Passive Effects==
+*Attacks Gain
+**2% chance to stun target when struck with Gauntlet.[1|25]
+**+15% barefoot attack damage while active (from Pedicure Kit).[1|30]
+*All Equipped Armor gains:
+**Anti-Piercing Resistance (from Nightgaunt Cloak).[1|6]
+**10% Damage Reflect (from Spiked Kneepads).[1|12]
+*Negated Effects/Attacks:
+**Melee-based damage debuffs such as Stun, Knockback, Disarm, and Out-of-Breath (from Trollskin Shirt).[1|6]
+**Momentum-based attacks (from Kneepads).[1|12]
+**Feet cannot be broken while active (from Pedicure Kit).[1|30]
+*Resistant to:
+**Ice-based attacks (from Nightgaunt Cloak).[1|6]
+**Poison attacks (from Nightgaunt Cloak).[1|6]
+*Weak to:
+**Natural goblin enemies, such as fairy-class creatures, deal 20% more damage (from Goblin Pass Tattoo).[1|6]
+*Memberships & Allies
+**Access to the Desperado Club; prevents obtaining a Vanquisher Pass (from Desperado Pass Tattoo).[1|19]
+**No automatic hostility from Goblins and free passage through goblin territory (from Goblin Pass).[1|6]
+*Other
+**Traps activated by footsteps prompt an alarm and delay 5 seconds before triggering while active (from Pedicure Kit).[1|30]
+
+==Ratings==
+Follows and favorites activate at the start of the floor; patronage begins on the Fourth Floor.[1|31]
+{| class="dccProgTable"
+!TIME
+!LEADERBOARD
+!VIEWS
+!FOLLOWERS
+!FAVORITES
+!PATRONS
+|-
+|5 d 10h[1|32]
+|n/a
+|69 Billion
+|635 Million
+|149 Million
+|n/a
+|-
+|~4 d 19h[1|38][1|39]
+|n/a
+|212 Billion
+|4.4 Billion
+|793 Million
+|n/a
+|}
+
+==References==
+
+{{DEFAULTSORT:Carl/Floor_02}}
+

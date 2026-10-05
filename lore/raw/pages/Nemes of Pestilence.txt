@@ -1,0 +1,32 @@
+{{SpoilH | 8}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=
+|keywords=
+|effects=
+*Eternal Protector of Rage
+*Bringer of Death
+|source= Assassin of Sekhmet Class
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is an item Donut receives as part of her Assassin of Sekhmet Class. She gives it to Mongo.
+
+== AI Description ==
+
+Enchanted hat. The Nemes of Pestilence.
+This item may only be equipped by a pet.
+Equipping this item to an eligible pet will imbue the following properties:
+Eternal Protector of Rage. Pet will become temporarily invulnerable and will gain 2× strength if it is within three meters of its owner and their health is below 10%. Invulnerability will last 60 seconds and can only trigger once per day.
+Bringer of Death. Bites from this pet have a 75% chance to inflict the Cruel Sepsis debuff. [8|8]
+
+==Story==
+===Book 8===
+
+==References==
+
+{{Navbox Items}}

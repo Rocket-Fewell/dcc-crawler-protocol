@@ -1,0 +1,18 @@
+Web snippets used for catalog/race-selection-canon.md (retrieved 2026-10-03 America/Chicago). Working copy; short excerpts only.
+These are NOT the novels' text and are not ledger-quotable (no WEB: kind in tools/ledger_check.py). Tag in catalog: WEB:<id>.
+
+[WEB:cookbook-floor3] https://crawlerscookbook.com/floors/floor-3/ (WebFetch, 2026-10-03; fan site)
+- "Race selection -- stat adjustments, physical transformation, new abilities. ~80% of crawlers keep their original race."
+- "The System AI recommends a short list of race options, but crawlers may have many more choices based on what happened to them on Floors 1 and 2."
+- Describes Carl's Primal as "Enhanced physical stats without exotic abilities" -> CONFLICTS with the Fandom Primal page (-1 to all base stats). Treated as a site error (ledger X row).
+
+[WEB:search-synthesis-80pct] WebSearch synthesis, 2026-10-03: "On the Third Floor, crawlers return to their Tutorial Guild Hall to choose a race, class, and stat allocation ... About 80% keep their original race" (derived from the Fandom Crawler page + NL explainer; not independent).
+
+[WEB:reddit-hear-me-out] https://www.reddit.com/r/DungeonCrawlerCarl/comments/1vg0mvg/hear_me_out/ (Reddit; direct fetch blocked; SEARCH SNIPPET ONLY, thread not read)
+- A commenter writes that "Mordecai sums it up in book 2 ... over 80% keep their race". Unverified community paraphrase; not used for any VERIFIED label.
+
+[WEB:reddit-mordecai-forms] https://www.reddit.com/r/DungeonCrawlerCarl/comments/1vhtpku/ (Reddit snippet only): commenters list Mordecai's guide forms (F1 Rat Hooligan, F2 Bugaboo, F3 Incubus, F4 Grulke, F5 Skyfowl, F6 Pocket Kuma/Kuma, F7 slime) - guide-assigned forms, not crawler picks.
+
+[WEB:fandom-live-tutorial-guild-hall] https://dungeon-crawler-carl.fandom.com/wiki/Tutorial_Guild_Hall (WebFetch, 2026-10-03): live page matches raw/pages/Tutorial Guild Hall.txt on the beds-for-race-transformation line and the F3 hall facts (refs shown as footnotes: Carl's Doomsday Scenario ch1 and ch3).
+[WEB:fandom-live-grulke] direct fetch of the live Grulke and Nodling Fandom pages returned HTTP 403; the local mirror was used. A WebSearch result (dungeoncrawlercarlwiki.com Mordecai page + Fandom Mordecai page snippet) lists Grulke Infantry as Mordecai's Floor 4 form and says he selected Changeling on the third floor.
+[WEB:backerkit-grulke] https://www.backerkit.com/c/projects/renegade-game-studios/dungeon-crawler-carl-rpg-unstoppable/updates/42220 (search snippet): "Floor 4: Grulke - Mordecai - Grulke Infantry. Level 50." with the AI description text.

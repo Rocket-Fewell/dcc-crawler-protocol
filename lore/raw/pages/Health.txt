@@ -1,0 +1,65 @@
+{{Quote|But there was no respawning. Dead was dead.|Carl[1|4]}}
+
+Health, which the system also calls health points, is a core Dungeon mechanic defining how much damage a character can withstand before death, displayed for crawlers as a Health Bar on the Heads-Up Display (HUD) and broken down in the Health Menu.[1|4] Health is not unique to crawlers: mobs[1|2], bosses[1|11], and NPCs all carry bars of their own.[2|25]
+
+==AI Description==
+The system publishes no readout defining health itself, but it posts an automated warning when a crawler's bar drops sharply.
+
+DANGER LOW HEALTH[1|11]
+
+==Description==
+A character's total health pool is tied to their Constitution level.[1|25] If health reaches zero, the character permanently dies.[1|4]
+
+===Health Bar===
+The Health Bar is a long green bar in the top right of a crawler's vision.[1|4] It drains from green toward red as damage accumulates[1|2] and blinks at critically low levels.[1|35] A mob's bar stays hidden until the creature has taken damage; once it appears, a crawler can read the remaining fraction at a glance and judge how much punishment the target has left in it.[1|2][1|3]
+
+===Health Menu===
+Reached through the Crawler Menus, the Health Menu expands the bar into a pie chart of active status conditions: buffs, debuffs, and injuries.[1|4] A crawler can drill down by body region for detail on each injury and on the healing already underway[1|8], and under enough damage the whole chart may blink red.[1|35]
+
+===Regeneration and Healing===
+Health regenerates slowly on its own, faster at higher Constitution[1|4], and the Regeneration Skill accelerates that process while triaging injuries automatically, repairing the most serious first unless the crawler reassigns priority by hand.[1|8] Recovery inside the dungeon far outpaces anything possible on the surface, on the order of two minutes for a near-fatal explosion[1|11], and health refills instantly on descending a stairwell to the next floor.[1|4]
+
+Magic and consumables supplement that. The level-one Heal Spell restores roughly 20 percent of health for two mana points[1|4]; a Standard Healing Potion restores at least half but does nothing for poison or other health-seeping conditions[1|5]; and pet-targeted magic does not cross over, since a Heal Critter scroll read over an injured crawler finds no valid target and is wasted.[1|24] Potions carry a cooldown known as potion sickness[2|25], its length tied to Constitution.[1|25] The hotlist enforces that timer, but a crawler can uncork a bottle and drink manually to bypass it, which triggers the sickness anyway[2|25] and inflicts Poison on top of it.[1|24] Scrolls have no countdown between reads and can be used on other crawlers, which makes them the most reliable way to heal a teammate.[1|25]
+
+Restoring health repairs the underlying wound rather than simply raising a number: a broken leg audibly sets itself as the bar climbs.[1|24] A crawler who takes enough damage falls unconscious rather than dying outright, and a healing potion poured into their mouth will bring them back around.[2|25] Some injuries keep draining health on their own[1|24]; a crawler bleeding internally will go on losing points until healed.[1|35]
+
+{{Spoiler|book=3|spoiler=Mobs do not appear to suffer potion sickness, though NPCs do. A potion also does not have to be swallowed: poured into a fragmenting potion ball and thrown, it will work on mobs and NPCs, though Mordecai doubted the trick would carry over to other crawlers.[3|7]
+A health pool can be permanently enlarged. A Superb Constitution Buff Potion raises Constitution by a random one to four points, but only two such potions will ever work on a given crawler, regardless of quality. A far rarer Cosmic Buff raises a random stat by ten and is not bound by that limit.[3|7]}}
+
+{{Spoiler|book=5|spoiler=Healing normally forces a projectile out of the wound as the flesh closes, but some enchanted ammunition resists this and applies a bleed effect that keeps draining health even after a successful heal.[5|5]}}
+
+{{Spoiler|book=7|spoiler=Some gear automates emergency healing. The Enchanted Toe Ring of the Well-Balanced stores a single potion and triggers it once health falls below a threshold the wearer sets.[7|4]}}
+
+===Limits and Exceptions===
+Healing does not regrow severed body parts.[1|29] The Taint locks out every method of restoring health for its duration, which makes it dangerous well out of proportion to the low-level mobs that inflict it.[1|32] Septic drains health faster than poison but cannot be stacked, and it clears with a simple heal spell or potion.[1|8]
+
+The Cockroach Skill offers a partial exemption from death. At level five it guarantees one survivable lethal hit per fight, leaving the crawler near death afterward; at level ten, health does not drop at all from the first fatal strike.[2|1]
+
+{{Spoiler|book=3|spoiler=Mordecai's Special Brew produces a constant stream of healing and rapid regeneration for thirty seconds, keeping health topped up through almost anything short of decapitation, self-detonation, or another instant kill. It adds roughly ten hours to the drinker's potion sickness, and only two will ever work on the same crawler.[3|7]}}
+
+{{Spoiler|book=5|spoiler=Certain items impose a healing lockout as the price of their benefits: the Ring of Divine Suffering inflicts Left to Fester the moment its wearer marks a target, and the debuff will not lift until that mark is dead.[5|5]
+Half-splat potions trade health for survival, cancelling what would otherwise be a fatal impact and leaving the drinker at five percent.[5|46]
+A full bar does not mean a whole body. A heal scroll can save a crawler's life without returning lost legs, and healed burns can still set into permanent scarring.[5|75]}}
+
+{{Spoiler|book=7|spoiler=The Dungeon Anarchist's Cookbook distinguishes two tiers of protection. Invulnerability heals its holder rapidly but will not save them from decapitation or from being blown apart, while Immortality prevents a health bar from forming at all and keeps its holder alive through nearly anything, including the loss of limbs. Immortality does not block pain, which is why the cookbook recommends pairing it with a Numb spell, and injuries taken while immortal must finish healing before the effect expires.[7|54]
+Health loss is not limited to combat. Indentured NPCs can starve down to critical health, but the system forbids them from self-terminating and, rather than letting them expire, saves them and adds time to their indentureship.[7|Milk]}}
+
+==Story==
+Carl saw his first health bar outside the Tutorial Guild, when a single punch dropped a goblin's bar past halfway and turned it red.[1|2] Mordecai unlocked the full interface a short time later and walked him through the health menu, the basic heal spell, and the limits of both.[1|4] Carl came out of the Krakaren fight deaf, blind, bleeding internally, and at six percent health and falling, surviving only because Donut read a heal scroll over him at what may have been the last possible second.[1|35]
+
+{{Spoiler|book=3|spoiler=Donut's Cockroach skill absorbed a killing blow during a night out at the Desperado Club, leaving the cat swaying with her health deep in the red.[3|2] Surviving that way carried a cost of its own: because the system counted her health as having reached zero, she received nothing for the fight, while Carl was given a poker chip.[3|7]}}
+
+==Trivia==
+*Ending a boss battle at very low health is itself rewarded. Carl received a Bronze Survivor's Box for finishing below ten percent, and Donut a Silver Survivor's Box for finishing below five.[1|25]
+
+{{Spoiler|book=4|spoiler=At least one race may pay for its durability with interface access. Chris Andrews, an Igneous, said that opening his health pie chart, moving items in and out of inventory, and using the chat feature all cost him health, a trade he described as the price of a very high Constitution. Carl had never heard of such a penalty and did not believe it was normal. However, Chris was possessed by Maggie My at the time, and whether she was telling the truth is left unclear.[4|14]}}
+
+==Speculation==
+*A crawler presumably falls unconscious somewhere below five or six percent health. Carl received a warning that he was about to pass out while sitting at six percent and still dropping, but no firm threshold is established.[1|35]
+*That untreated injuries keep draining health the same way they would above ground suggests the bar reads out a modeled physical body rather than an abstract pool of points.[1|24]
+
+==See Also==
+*Protections
+
+==References==
+

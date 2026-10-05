@@ -1,0 +1,198 @@
+{{SpoilH|6}}
+{{Item
+|title=
+|image=Scavenger's_Daughter.jpg
+|imagecaption=Original design by [https://www.instagram.com/p/C903ZYuRi4h/?img_index=1 dnd_artnewb (Instagram)]
+|type=Upgrade Patch (Back Patch)
+|keywords=Divine, Unique, Fleeting
+|effects=
+*All patch stat point benefits doubled
+*+25 Dexterity, +25 Strength
+*Notification when a deity enters the area
+*Climb Benefit
+*Soul Reaper Skill
+*Mysterious Bone Key Benefit
+*Varying temporary benefits near divine entities
+|source=
+*Celestial Predator Box, opened on the Eighth Floor
+*Reward for the Apex Predator Achievement
+|buy=N/A
+|sell=N/A
+}}
+
+{{Quote|The stitch quality is just divine. But the image itself is quite disgusting.|Donut[6|3]}}
+
+The Scavenger's Daughter Upgrade Patch is a divine, unique, and fleeting back upgrade patch awarded to Carl on the Eighth Floor in a Celestial Predator Box.[6|2] It doubles the stat point benefit of every other patch on the garment it is affixed to, grants flat bonuses to Dexterity and Strength alongside three further benefits, and confers shifting temporary effects in the presence of deities and demons.[6|3]
+
+==AI Description==
+===Initial description===
+The Scavenger’s Daughter.
+
+Upgrade Patch. Back Patch.
+
+This is a divine item.
+
+This is a unique item.
+
+This is a fleeting item.
+
+You may only affix one back patch at a time.
+
+This patch depicts a pile of scary skulls, all stacked up nice and neat. I wonder if there’s a story there?
+
+If this upgrade patch is affixed to an eligible garment, it will imbue the following upgrades:
+
+(Hidden until it is affixed and then worn.)
+
+Warning: Upgrade patches are fleeting items. You may remove them, but they will be destroyed in the process.
+
+Warning #2! This is a divine item. This means it gains differing abilities, buffs, and possibly debuffs depending on your proximity to certain deities and demons. It makes for new and exciting combinations![6|3]
+===Additional description after the patch is affixed===
+You have equipped a divine item.
+
+There are no deities in the area.
+
+The Scavenger’s Daughter Patch has gained the following upgrades:
+
+All patch stat point benefits are now doubled.
+
+In addition:
+
+Plus 25 points to Dexterity.
+
+Plus 25 points to Strength.
+
+You will receive a notification every time a deity enters the area.
+
+The Climb benefit.
+
+The Soul Reaper benefit.
+
+The Mysterious Bone Key benefit.
+
+This patch will imbue additional, varying benefits when it is in the presence of divine entities.[6|3]
+
+==Description==
+As a back patch, the Scavenger's Daughter is full sized, and only one back patch may be affixed at a time. Like all upgrade patches it is fleeting, removable but destroyed in the process, and because it is divine its upgrades stay hidden until it is both affixed and worn.[6|3]
+
+The patch doubles the stat point benefit of every regular patch on the same garment; on the Enchanted Anarchist's Battle Rattle this applied to five regular patches, each granting +1 to all stat points. It also grants a flat +25 to Dexterity and +25 to Strength, a notification whenever a deity enters the area, and the Climb Benefit, the Soul Reaper Skill, and the Mysterious Bone Key Benefit.[6|3]
+
+==Appearance==
+The patch is a thick, black piece of fabric embroidered with a white pile of skulls from various creatures, stacked into a pyramid. Additional transparent stitching, which Carl compared to fiberoptic wire, forms the image of a giant centipede crawling through the skulls.[6|3] The centipede becomes visible when the soul essence bar is filled, glowing in the color of whatever soul currently fills the bar.[6|7]
+
+===Gallery===
+
+Scavenger's_Daughter.jpg|Original design by [https://www.instagram.com/p/C903ZYuRi4h/?img_index=1 dnd_artnewb (Instagram)]
+Scavengers Daughter by Heckless.webp|Art by u/heckless, Reddit
+Scavengers Daughter by snuggiemouse copy.jpg|Original art by u/heckless, Reddit, cosplay by @snuggiemouse
+Scavenger's Daughter by the dusty druid.jpg|Art by @thedustydruid, Instagram
+Scavengers Daughter by glhrmvscv.jpg|Art by @glhrmvscv, Instagram
+Scavengers Daughter Doodlemancer.jpg|Art by u/the_doodlemancer, Reddit
+
+==Operation==
+===Soul Reaper===
+The Soul Reaper Skill adds a soul essence bar to the interface, sitting directly below the mana bar in the position previously occupied by the blood bar. Every creature killed with a melee attack charges the bar with the essence of the fallen, and the maximum capacity increases each time the bar is topped off and then drained. The system warns obliquely about carrying corrupted essence without stating the consequence, and Mordecai advised draining the bar as soon as it fills.[6|3] The bar takes on the color and character of whatever essence fills it.[6|7]
+
+===The Daughter's Kiss===
+A filled bar may be drained into the user's next melee attack, whose effects vary with the nature of the stored essence. Because the bar grows each time it is emptied, every successive strike is more powerful than the last and requires more souls to charge.[6|3] The skill appears in the interface the first time the bar is fully charged, announced with the message that the Scavenger's Daughter has been fed.[6|7]
+
+Purity matters. Essence drawn entirely from a single species produces a strike roughly twice as powerful, with stronger residual effects: a bar filled with Howling Gull essence unleashed a scream several times more powerful than the gulls could cast, and a charged punch reduced a dog-sized yuanat to dust and left a crater ten feet across.[6|27]
+
+===The Mysterious Bone Key===
+The Mysterious Bone Key Benefit may be used only once, creating a single-use key capable of opening any lock in the Dungeon. The key is formed from a bone taken from the user's own body, sized to the difficulty of the lock, and the bone does not grow back. Using the benefit also destroys the patch, the garment it is attached to, and every other patch on that garment.[6|3]
+
+===Divine Effects===
+While a deity is within range, the patch confers a temporary effect specific to that deity, announced with the message that the Scavenger's Daughter has opened her eyes. When the deity departs, the benefit fades over the following ten minutes.[6|16] Effects from multiple deities stack,[6|17] and a deity arriving while another is already present is announced with the message that her eyes remain open.[6|66]
+
+{| class="article-table" style="width:100%"
+! scope="col" |Deity
+! scope="col" |Temporary Effect
+|-
+! scope="row" |Ogun
+|All smash-related attacks +300%.[6|16]
+|-
+! scope="row" |Yemaya
+|All healing skills and spells cost no mana and have no cooldown.[6|17]
+|-
+! scope="row" |Eileithyia
+|All damage struck against female opponents is quartered. All female party members strike with a melee power of 500%.[6|17]
+|-
+! scope="row" |Amayon
+|All fire spells use Sheol fire instead of regular fire.[6|58]
+|-
+! scope="row" |Ysalte
+|All potions quaffed or physically handled outside the inventory turn to vinegar, returning as more powerful versions upon her banishment.[6|66]
+|}
+
+{{Spoiler|book=7|spoiler=The effect is distance-gated. A deity who enters the realm but remains far away returns a notice that they are too distant to activate the patch.[7|59]}}
+
+====Book 7 Spoilers====
+{| class="mw-collapsible mw-collapsed article-table" style="width:100%"
+! scope="col" |Deity
+! scope="col" |Temporary Effect
+|-
+! scope="row" |Khepri
+|Immortality for 90 seconds.[7|52]
+|-
+! scope="row" |Harpocrates
+|Level 15 Pied Piper skill,[7|70] later made permanent by Eris's random effect.[7|76]
+|-
+! scope="row" |Yarilo
+|Protection from all venereal diseases.[7|72]
+|-
+! scope="row" |Meatus
+|The wearer's penis detaches upon erection.[7|76]
+|-
+! scope="row" |Eris
+|Random effect, changing with each exposure. At the Nest tower it made one active god effect permanent.[7|76]
+|-
+! scope="row" |Multiple unnamed deities
+|Emerging from the temple portal at Club Vanquisher, they produced the Never-Ending Mana buff, the Shit-Faced and Stiff Legs debuffs, and suction cups at the fingertips.[7|54]
+|}
+
+====Book 8 Spoilers====
+{| class="mw-collapsible mw-collapsed article-table" style="width:100%"
+! scope="col" |Deity
+! scope="col" |Temporary Effect
+|-
+! scope="row" |Grull
+|All four-legged creatures present, friend or enemy, temporarily gain 2x power on their most powerful attack.[8|66]
+|-
+! scope="row" |Taranis
+|Lightning-based attacks 50% more powerful, but the wearer takes 100% more damage from lightning.[8|95]
+|-
+! scope="row" |Emberus
+|Immunity to Sheol-based attacks.[8|95]
+|-
+! scope="row" |Eris
+|At Hungry Eyes Village, a random temporary effect, item, or aura belonging to someone else present becomes permanent.[8|35] In the Parade of Horribles arena, an inventory swap with the nearest crawler.[8|97]
+|}
+
+{{Spoiler|book=8|spoiler=The patch can also register a presence it cannot identify, reporting that she blinks because she does not know what she sees. This occurred around Lucia Mar while she was inhabited by Chalchiuhtlicue, and the patch was described as shuddering in fear when that presence withdrew.[8|51] After the last of the deities departed the Parade of Horribles arena, the system reported that she closed her eyes and wept.[8|98]}}
+
+==Story==
+Carl earned the Apex Predator Achievement for killing more hunters than any other crawler on the Hunting Grounds and for killing the last one alive; the Celestial Predator Box it rewarded held the patch.[6|2] He opened the box in a safe room at the start of the Eighth Floor, which also earned him the "Fashion of the Gods!" achievement for obtaining his first divine item. He sewed a small peace symbol patch onto the Enchanted Anarchist's Battle Rattle first so the doubling effect would catch all of his regular patches, then affixed the Scavenger's Daughter by hand over Donut's objections.[6|3]
+
+He first charged the bar against level-20 duendes in Havana, filling it in about ten kills; the resulting Daughter's Kiss vaporized a fleeing duende and shattered the sidewalk.[6|7] A second use against a donkey-headed ghommid splitter broke the creature's head off rather than killing it.[6|14] Grinding bird mobs on the trek north toward the Desperado Club, he filled and drained the bar three more times and worked out that single-species essence produces a far stronger strike.[6|27]
+
+In the presence of the demon prince Amayon the patch converted Carl's fire attacks to Sheol fire,[6|58] and when he triggered his Martyr's Path benefit at low health it enhanced the resulting flames enough to bathe the city, and eventually the world, in Sheol fire, powering the demon's escape spell.[6|69] In the chaos of the floor's collapse he forgot to drain the essence bar, and a voice spoke in his mind warning him that carrying stored soul power was a mistake.[6|72]
+
+{{Spoiler|book=7|spoiler=The voice belonged to Shi Maria, speaking through the Eye of the Bedlam Bride tattoo. On arrival at Larracos the undrained essence left Carl with Soul Poisoning, a condition inflicted when the bar is left full too long that causes worsening jolts of pain; his Emberus ring partially blocked it. Unable to attack anything living inside the ceasefire zone, he drained the bar by punching a dead concierge shark.[7|1]
+Throughout Faction Wars the patch served as an early-warning system for deity presence across the battlefield.[7|59][7|61] Its most consequential gift came from Khepri, whose presence in his own temple granted Carl 90 seconds of immortality, long enough to survive detonating a Waffle Maker inside the Temple of Khepri[7|52] and to survive Vinata's attack outside it.[7|54]
+The war mage Akuma later stated in the warlord chat that his faction had taken the castle they seized only to test the potions they had gathered and to find "the Scavenger's Daughter," who was hidden within, and that they left once they had her.[7|78]}}
+
+{{Spoiler|book=8|spoiler=Akuma elaborated on the Tenth Floor that the war mages had left the Pineapple Cabaret specifically to find the Scavenger's Daughter, and that she was crucial both to keeping the Cabaret's denizens safe and to opening an escape route to the planet's surface.[8|38]
+During an encounter with Eris in Hungry Eyes Village, the patch's random divine effect[8|35] converted Imani's legendary totem card Jacobus the Reverse Tooth Fairy into a permanently summoned companion.[8|36]
+During the Parade of Horribles, the patch's deity effects were built into Carl's plan to set the gods against one another. He equipped Penelope with the Enchanted Spiked Kneepads of the Munificent Goddess Kina because they conferred the same temporary deity effects, and Taranis's lightning bonus formed one component of the contingency against Scolopendra.[8|95]}}
+
+==Trivia==
+*The patch shares its name with a real-world torture device, a compression frame that folded the victim's body forward, described as the inverse of the rack.
+*Mordecai rated the patch harder to use than Quan's celestial robe but far higher in ceiling, recounting a crawler who filled an essence reserve with gorgon souls and destroyed a country boss with a single attack.[6|3]
+
+==Speculation==
+{{Spoiler|book=8|spoiler=The centipede stitching may tie the patch to Scolopendra rather than being purely decorative. Rosetta recounted that Nekhebit, the Scavenger Mother of Mothers, bore three children, a son, a daughter (Apito), and a centipede, and that in some versions of the myth Scolopendra herself is the Scavenger, which would make the Scavenger's Daughter her offspring.[8|69]}}
+
+==References==
+
+{{Navbox Items}}
+

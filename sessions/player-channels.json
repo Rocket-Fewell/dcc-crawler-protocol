@@ -1,0 +1,24 @@
+{
+  "guild_id": "1556163673469222942",
+  "category_name": "Crawler Sheets",
+  "category_id": "1556414212106883103",
+  "crawlers": {
+    "Horn": {
+      "channel_id": "1556414213113774290",
+      "channel_name": "hornn-sheet",
+      "players": [
+        "Hornn",
+        "Caleb"
+      ]
+    },
+    "Bone Wifebeater": {
+      "channel_id": "1556414214028140624",
+      "channel_name": "moses-sheet",
+      "players": [
+        "Trailer Park Moses",
+        "Moses",
+        "John"
+      ]
+    }
+  }
+}

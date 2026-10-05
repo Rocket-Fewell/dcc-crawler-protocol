@@ -1,0 +1,103 @@
+{{SpoilH|3}}
+{{Location
+|title={{PAGENAME}}
+|image=Personal Space.jpg
+|imagecaption=
+|map=
+|mapcaption=
+|type=Upgradable Safe Area
+|system=
+|planet=
+|location=Accessed via Safe Rooms
+|species=
+|organization=
+|characters=
+|first=Book 3, Chapter 2
+}}
+{{Quote|You're a homeowner now. That is the reward. That and taxes and having to deal with Kenneth the megalomaniac HOA president.|System AI[3|2]}}
+
+A Personal Space is a customizable, upgradable safe area that a crawler can purchase or acquire starting on the fourth floor of the World Dungeon, giving them a private place to customize, rest, and store their belongings.[3|2]
+
+==AI Description==
+You have bought a home! It's every man's dream to someday own a place where he can fap in peace. No more filthy roommates not doing the dishes or making up excuses as to why they can't pay the rent. No more landlord who shows up without notice and conceals hidden cameras in the smoke detectors. It's all smooth sailing from now on.[3|2]
+
+==Description==
+Personal spaces are modular bases that function as private safe areas attached to a safe room. Standard safe-room rules apply inside: any mob that attacks is instantly teleported away, and violence or theft between crawlers is strictly forbidden.[1|20] Buying a space also earns the crawler the Welcome to the Neighborhood! achievement.[3|2]
+
+A newly opened space is an empty room that resembles the interior of an airplane hangar. The party leader sets the placement of the entrances, restrooms, and shared common areas, while each crawler customizes their own room.[3|3]
+
+{{Spoiler|book=4|spoiler=Any religious shrine a crawler takes on also appears inside their personal space. When Carl becomes an adherent of Emberus, a sun shrine manifests in the space and serves as his daily blood-offering site.[4|32]}}
+
+{{Spoiler|book=5|spoiler=The rules tighten later in the dungeon. Beginning on the Sixth Floor, "tenth floor rules" activate a "blood bar" that governs all safe-area access, personal spaces included. Entering starts a countdown; a full bar buys roughly ten hours inside, and once it empties the crawler is teleported out and cannot re-enter any safe room until the bar is refilled by killing enemies.[5|52][7|29]}}
+
+==Acquisition==
+Personal spaces are sold by Bopca proprietors in the safe rooms. Mordecai notes that the price usually starts around 40,000 gold, though for the current dungeon it had risen to a 50,000-gold starting price.[3|2] The price is officially "fixed" -- location managers tell the Bopcas what to charge -- but there is usually about 25% of wiggle room (down to 37,500 gold on a 50,000-gold space), and the system will not allow a sale below that floor. A proprietor talked below the floor must personally cover the difference.[3|2]
+
+Bopcas are incentivized to sell spaces through rewards such as earlier location selection on the next floor or a larger food budget, rather than through the sale price itself, so from their perspective the final price does not matter.[3|2]
+
+A space can also be claimed for free with a Personal Space Coupon.[3|2] Conjoining separate spaces into a higher-level communal space carries a joining fee of 5,000 gold per union.[3|2]
+
+==Levels==
+A space begins at level 1 and can be raised either by paying to upgrade it or by conjoining it with other spaces. Only one space in a merger needs to be level 3, but all participating crawlers must be in the same party. The resulting communal level depends on the combination: two level-three spaces make a level 4, and three make a level 5.[3|2][3|3]
+* Level 1: Owned by whoever buys it, though it can be shared with party members. Roughly a fourth the size of a level-five space, it is a single open room (plus a small crafting studio that holds up to five basic crafting tables) and is too small for larger upgrades like a Training Room.[3|3]
+* Level 2: A larger room that unlocks kitchen upgrades.[3|3]
+* Level 3: Larger still, with individual rooms big enough for a training module, though not as tall as a level-five space. It can be converted into a communal hall shared with other crawlers; once combined, the individual rooms shrink but everyone shares in the upgrades.[3|3]
+* Level 4: The only known difference from a level 5 is the absence of a dedicated manager's room.[3|3]
+* Level 5: Adds a private room for a manager, who can bring their own quarters into the space.[3|2][3|3]
+
+==Access==
+A personal space is private by default: other crawlers cannot enter unless a space owner whitelists them. Any crawler whose own space is attached to the communal hall can whitelist guests, but only once the hall reaches a high enough level -- a level-four communal space cannot whitelist outside visitors, while the Royal Court's level-five hall can.[3|21]
+
+When a crawler can reach more than one personal space, the exit no longer opens straight into the attached safe room. Instead it leads to a small, situationally generated vestibule -- much like the entrance to the Desperado Club -- lined with a separate door for each space that crawler is allowed to enter.[3|21]
+
+==Upgrades==
+Personal spaces can be heavily customized with purchased environmental upgrades. In a combined space, any upgrade is shared among all the rooms but remains tied to the crawler who bought it; environmental upgrades travel with that crawler if they leave, and if a party member dies, their upgrades are lost.[3|2][3|3] Upgrade coupons are each valid for up to 250,000 gold and cannot be combined for a single purchase.[3|2]
+
+Tier-one upgrades are organized into categories at the Bopca's upgrade menu:[3|2]
+* Bathroom -- e.g. an Upgraded Shower
+* Bed -- from a single-sized cot up to the Ultra-Stabilized Sleep Apparatus, which grants full rest after only two hours of sleep
+* Crafting -- a basic Crafting Studio or the Enhanced Crafting Studio
+* Kitchen (unlocked at level 2)
+* Kennel and Stable
+* Magic (empty at launch)
+* Quest -- a Quest Screen (90,000 gold), the Adventurer's, Inc. Employment Agency (100,000 gold), and the invite-only Naughty Boys Employment Agency (500,000 gold)
+* Social -- a Social Screen (50,000 gold)
+* Store Access (empty at launch)
+* Training -- a Training Room
+
+Another environmental upgrade is a Cleaner Bot, a flying, Roomba-like robot that magically scrubs the space clean; at 25,000 gold it is one of the cheapest upgrades available.[3|30]
+
+Tier-two upgrades become available on the Sixth Floor; among them is a Bomber's Studio add-on to the Training Room for practicing with explosives.[3|3]
+
+{{Spoiler|book=4|spoiler=Beginning on the sixth floor, the guild system lets crawlers share personal-space upgrades without having to join the same party.[4|33]}}
+
+{{Spoiler|book=5|spoiler=Tier-two beds include the Instacot 60, the second-best bed available, which fully refreshes a crawler after only sixty seconds of sleep and upgrades the Good Rest buff to Great Rest for a 15% stat bonus.[5|21] A special Vocal Coach training room -- a soundproof booth with a holographic voice instructor -- can also be won from a loot box, improving a crawler's singing and giving their voice-based illusions real substance.[5|36]}}
+
+{{Spoiler|book=6|spoiler=A rare Tier 3 "Doggie Door" -- normally unavailable until the ninth floor -- upgrades the space's entrance into a fast-travel waypoint, letting the owner (along with their guests and party members) exit through any door they have previously used on the current floor.[6|63]}}
+
+==Story==
+===Book 3===
+Upon reaching the fourth floor, Carl, Princess Donut, and Katia all receive coupons for a free Level 3 personal space.[3|2] Realizing the strategic benefit, they turn in their coupons together, conjoining their spaces into a massive, hangar-like Level 5 communal space.[3|2][3|3] Princess Donut takes charge of the customization and names it the Royal Palace of Princess Donut.[3|3]
+
+The team outfits the base with a living area, a kitchen, an Enhanced Crafting Studio, a Training Room, and a private room for their manager, Mordecai.[3|3] It becomes the central hub for the Royal Court of Princess Donut, where they rest, reset their buffs, and plan.[3|3][3|25]
+
+{{Spoiler|book=4|spoiler=As faction dynamics shift, Katia weighs pulling her space out of the communal hall so she can form her own party and gather the scattered survivors of Brynhild's Daughters before Eva can. She is reluctant to disrupt the shared space and hopes the incoming guild system will let her stay linked to the Royal Court rather than fully leave.[4|33]}}
+
+{{Spoiler|book=8|spoiler=Because Carl rarely uses his assigned bedroom -- instead sleeping in Donut's room with her -- Samantha eventually claims the room as her own, declaring she "won it in the breakup." She redecorates it with new wallpaper (installed by a put-upon crew of sluggalos) and hangs a swing from the ceiling that she insists is a chandelier.[8|Samantha's Book 7 Recap][8|34]}}
+
+==Trivia==
+* The AI's decision to hand out free personal space coupons was seen as a major insult to the showrunners. It cost the production its usual cut of the sale and preempted the sponsors who traditionally buy popular crawlers their upgrades, freeing those sponsors to spend the saved money on better gear instead.[3|2]
+* The Personal Space Coupons that Carl, Princess Donut, and Katia used to claim their space were the AI acting out after Borant vetoed the rewards from the third-floor group quest The Fools Who Broke the Glass. It slipped the coupons into a compensation box for every crawler the veto had shafted -- everyone except Quan Ch, whose own prize had already been upgraded to a Celestial box before the veto landed.[2|24][2|Epilogue][3|2]
+
+{{Spoiler|book=4|spoiler=The main bathroom mirrors those found in ordinary saferooms: a sink and mirror, an upgraded shower, and a wide stall containing a toilet, a stand-up urinal, and a magical litter box.[4|32]NPCs cannot enter specialized rooms such as the bathrooms, training room, or crafting room without being escorted in by a crawler.[4|32]}}
+
+{{Spoiler|book=6|spoiler=The space is kept tidy by its cleaner bot, which makes angry noises when Mongo scatters Dorito crumbs across the floor[6|11] or when Carl trails mud and blood inside.[7|29]}}
+
+==Speculation==
+Because the ceiling of a level-five space is so high, Mordecai has theorized that crawlers might be able to build a second floor onto their base if they ever run out of room for new upgrades.[3|3]
+
+==See also==
+* Royal Palace of Princess Donut
+
+==References==
+

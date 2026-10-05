@@ -1,0 +1,34 @@
+{{SpoilH | 5}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=
+|keywords=
+|effects=
+|source=
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is a bracelet.
+== AI Description ==
+
+Enchanted Obsidian Bracelet of the Raggle Rouser.
+This item has been upgraded three times.
+Warning: this item has a 50% chance to permanently break if it's upgraded again.
+
+This murky bracelet is light and kinda stylish if you're one of those sad sacks who always wears black and complains about how nobody ever understands you. It's made of obsidian glass, which is a type of rock that only forms under extreme, lava-based circumstances. And interestingly enough, this is what you'll turn into if you don't treat this item with the respect it deserves.
+
+This bracelet imbues the following effects.
+*+10 to Constitution
+*+5 to Dexterity
+*+15% Fire Resistance
+*Wearer may cast a level-10 Fireball spell once every twenty minutes. [5|23]
+
+==References==
+
+{{Navbox Items}}
+
+{{DEFAULTSORT:Obsidian Bracelet of the Raggle Rouser}}

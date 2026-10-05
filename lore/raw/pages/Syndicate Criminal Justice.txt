@@ -1,0 +1,92 @@
+{{SpoilH|3}}
+
+{{Quote|The Syndicate doesn't have or use long-term prisons.|Zev}}
+
+The Syndicate criminal justice system is the framework of courts, investigators, attorneys, and indentured-labor sentencing that the Syndicate uses to handle crime across the galaxy, distinct from the separate rules and penalties that govern conduct inside the Dungeon itself or during Faction Wars.
+
+== Overview ==
+
+The Syndicate keeps no long-term prisons. Instead, a convicted criminal is given a sentence measured in two linked numbers: a length in cycles and a credit "warrant." Zev explains the tradeoff to Carl directly: "The lighter the crime, the higher the warrant and the shorter the amount of time." A minor, first-time offense might carry a short sentence and a large warrant, while repeat offenders see their warrant driven down, sometimes below three digits, in exchange for a longer sentence, generally capping out around 20 cycles after three or four convictions.
+
+=== Franchising ===
+
+A licensed government or megacorporation can "buy out" a prisoner's warrant, a practice that functions as legalized indentured labor and is referred to in-universe as being "franchised." The buyer must pay the warrant amount itself, a franchise fee equal to roughly five times the warrant per cycle, and the convict's own back wages once released, on top of housing, feeding, and transporting them. Zev is explicit that this isn't true slavery, since the criminal is paid upon release, and the purchasing corporation must cover a "death tax" if the worker dies in custody, which keeps it in the corporation's financial interest to keep them alive. Because the math rarely works out, low-warrant, long-sentence convicts (those who've committed multiple offenses) are the ones most likely to actually get purchased and shipped off to frontier colonies, factories, or mining sites; someone with a one-cycle sentence is almost never bought, since the logistics alone would outlast the sentence.
+
+Buying out your own warrant is technically illegal, since the franchisee can't be legally associated with the purchasing entity, but Zev confirms it happens anyway through corporate loopholes; she cites Prince Maestro, who was franchised to a subsidiary of a subsidiary that was only later acquired by the Skull Empire, as a case that made "big news" precisely because of how blatantly the loophole was exploited.
+
+=== Crawlers and jurisdiction ===
+
+Crawlers occupy an unusual legal position. While inside the Dungeon, they aren't full Syndicate citizens, which is part of why Zev tells Carl a naga he injured "is off system, so the attack isn't under Borant jurisdiction. The regular rules apply. You're not a full citizen, and he is." Criminal charges filed against a crawler during the crawl are simply filed and shelved until they're released from the Dungeon, at which point prosecution can proceed normally. Crawlers become full Syndicate citizens once they reach the Tenth Floor.
+
+== Investigation and enforcement ==
+
+When within the dungeon, disputes over what actually happened during a broadcast, especially when the kua-tin showrunners and the System AI file contradictory reports, are handled by a Liaison: a neutral, non-AI fact-finder who is required to set aside the interests of both their employer and their own species. Orren describes his own role plainly: "I am a non-AI fact finder. Not quite a sheriff. Not quite an attorney. Not quite a judge... a liaison such as myself investigates. And if the facts warrant it, I recommend what should be done about it."
+
+Orren's investigation into the death of Admin Loita is the clearest on-page look at how this process works. After reconstructing the crawler Lucia Mar's history of unresolved kills (including an earlier admin, not counted since it was a first game guide), and painstakingly reverse-engineering exactly how Carl had engineered Loita's death, Orren presents Carl with a literal form to sign: a mostly-blank sheet headed "Admission of non-sanctioned violence by Crawler number 4,122 'Carl.'" Carl refuses to sign, and Orren ultimately can't find legal cause to pin the death on him, closing the matter without punishing Carl directly. Instead, the Syndicate imposes a punitive measure on Borant itself for the rest of the floor: no crawler may be teleported away by a third party until the next floor opens, and Carl's next scheduled appearance on Odette's show is cancelled outright (prompting Odette to file her own appeal). Carl's own reaction sums up how opaque the process feels from a crawler's side: "council meetings, court appeals, hand-written confessions."
+
+== Attorneys and the courts ==
+
+Crawlers facing criminal or civil matters are entitled to representation, and Carl is assigned a Nullian advocate, Quasar, during his very first meeting with Orren. Quasar makes the scope of his representation explicit from the outset: "My name is Quasar, by the way. I am your attorney. Nobody else's. So I ain't representing the cat or the weird lady who turned into a shovel. Just you." Over the course of the series he negotiates deals, cites specific Syndicate statutes from memory ("subsection 674, paragraph five or six of the secondary program amendment"), invokes attorney-client privilege repeatedly, and eventually negotiates Carl's own exit deal once Carl reaches the Tenth Floor, at which point Quasar thanks him, on behalf of the "Syndicate Intergalactic Bar Association," for generating so much legal work now that some 20,000 crawlers have reached that floor in a single season.
+
+Judges within this system can themselves be former or current crawlers. Victory, an orc attorney and judge "formerly of the Skull Empire," is picked by Carl as the Princess Posse's Faction Wars adjutant specifically because of her legal reputation; she notes dryly that she'd recently "sentenced my own aunt to indentureship because she didn't pay her taxes," and that she was the only candidate the other nominees had sued to try to keep out of the role. Years earlier, as a sitting judge, she'd ruled in Quasar's favor when he sued his own law school over anti-Nullian admission discrimination, a decision that "caught some flak" at the time. By the back half of the series, Victory rises from judge to Faction Wars adjutant to Acting Prime Minister of the Syndicate, a promotion triggered by the deaths of underage royal heirs ahead of her in the succession and a rival's conflict-of-interest scandal.
+
+== Known lawyers and judges ==
+
+* Quasar is Carl's own Nullian attorney, assigned to him during his first meeting with Orren. He represents Carl exclusively (explicitly declining to also represent Donut or anyone else in Carl's party), negotiates deals throughout the crawl, cites Syndicate statutes from memory, and eventually negotiates Carl's Tenth Floor exit deal on behalf of the Syndicate Intergalactic Bar Association.
+
+* Victory is an orc attorney and judge, "formerly of the Skull Empire," picked as the Princess Posse's Faction Wars adjutant for her legal reputation. As a sitting judge before the series begins, she ruled in Quasar's favor in his law-school discrimination suit. She later rises from judge to adjutant to Acting Prime Minister of the Syndicate.
+
+* Judge Deng Bao is an old, experienced grixist adjutant who "sits on one of the highest courts in the galaxy" outside the dungeon, and who traditionally serves as adjutant for whichever warlord won the previous season. He presides over King Rust's parlay with Carl and Donut on the Ninth Floor, and is later reassigned to serve as adjutant for the War Mage Rebellion, investigating the war mages' motives in person inside the flooded Larracos castle.
+
+* Kiki is a dromedarian attorney, Quasar's best friend since law school and the daughter of one of the galaxy's most notorious mob bosses. She has her own clients among the crawlers (including Daniel Bautista) and is brought in by Quasar, on a paid retainer, to help manage the legal fallout after mercenaries hired by Princess Chandra attack his family.
+
+* Princess Chandra, Esquire is a naga attorney who maneuvers her way into representing, and marrying, Donut after bribing a district judge's re-election campaign. She is Quasar's direct legal adversary, pursuing an aggressive campaign of suits and filings against him and the Royal Court over Donut's assets and conservatorship.
+
+* Panford is a Dreadnaught and the Lemig Sortion's Faction Wars adjutant, one of three adjudicators (with Opiee and Baroness Victory) who conduct a formal field ruling adjudication after Commander Stockade tries to have Carl killed. Despite representing Stockade's own faction, he rules against him.
+
+* Opiee is a small, floating Bune and the Madness's Faction Wars adjutant, the second of the three adjudicators in the same Stockade hearing, notable for his detached, almost academic interest in the mechanics of the case rather than any investment in the outcome.
+
+* Odette is not herself a lawyer, but she is a former adjutant candidate (she declines the role for Carl's team in favor of Baroness Victory) and, per her own private confession to Carl, a convicted criminal in her own right; see her embezzlement case below.
+
+ Orren, a Liaison, describes his own role as "not quite an attorney... not quite a judge," a neutral investigator rather than either a judge or attorney;
+
+== Known court cases and rulings ==
+
+=== Carl's assault charge ===
+
+After Carl stabs a naga named Nihit in the neck with a pen during a talk-show altercation, Nihit wants to press charges for assault. Zev walks Carl through what a conviction would likely mean: probably a light sentence, "maybe 30,000 credits and three cycles," though she notes a high-profile crawler like Carl would likely just get bought out immediately by an interested party such as the Skull Empire. Carl asks, half-joking, whether he can just buy out his own warrant, which is when Zev explains the self-buyout loophole and Prince Maestro's case (see Overview, above). This charge is left as one of many, since the text later notes crawlers who kill enough people routinely accumulate lawsuits from grieving families; Carl himself collects a photo of each plaintiff's mother as a running, darkly comic prize.
+
+=== Odette's embezzlement case ===
+
+{{Spoiler|book=6|spoiler=Odette privately tells Carl the story of her own crime and conviction. As a crawler generations earlier, desperate to finish her contract, she struck an illegal deal with the goddess-driving crawler Huanxin Jinx to rig the outcome of a floor in exchange for credits, then broke the deal at the last second, costing Mordecai's brother Uzzi his life in the process. Consumed by guilt after being released, Odette voluntarily filled out a confession form admitting to what she'd done. Nobody acted on it for a long time; by the time "some bureaucrat finally read my statement" and she was arrested, Huanxin had already had time to kill Odette's friend Armita in retaliation. Huanxin herself received only a token punishment (a temporary participation ban and a permanent ban from the goddess Dodola), while Odette was put on trial. She got lucky: her warrant was purchased by the man who would go on to become her husband. The episode is a rare on-page look at how the confession-and-warrant system plays out for a genuine, voluntary admission of guilt, and how unevenly it lands depending on who a defendant knows.}}
+
+=== The private-chat subscription case ===
+
+Partway through the series, Borant begins letting outside viewers pay to subscribe to crawlers' private messages with one another. Carl asks Quasar to sue over it, and Quasar tells him a case challenging the practice is already working its way through the courts, giving it 50/50 odds. The suit succeeds: an announcement confirms the subscription eavesdropping system is discontinued effective immediately, though Borant carves out the right to air any of those private conversations later during non-live broadcasts.
+
+=== The hunter release case ===
+
+On the ninth floor, a captured "hunter" named Iota explains to Carl that several families sued to nullify their contracts after Borant's ownership changed hands to Valtay, arguing the escalating environmental dangers weren't covered under their original terms. He credits a mantis family, trying to save her daughter, as the one who actually brought the suit. A Syndicate court ruled in the hunters' favor, and word spread that they'd be allowed to leave. The victory is short-lived: the ruling is nullified by the crawl's own AI, which invokes some unspecified "long law" to declare it's making its own rules and finishing the crawl on its own terms, trapping the hunters until the floor ends regardless of the court's decision. Iota bitterly notes this is an early warning sign, "the AI isn't complying with court orders it doesn't agree with... that's almost always the first step." Taken together with the cases below, this is the clearest example in the series of a favorable Syndicate ruling becoming unenforceable once the presiding AI degrades.
+
+=== Other notable cases ===
+
+* Borant/Valtay ownership ruling: A Syndicate court declares Borant an independent, non-governmental entity, automatically triggering a previously-filed ruling that hands Valtay 51% ownership of Borant; all existing legal contracts, including indenture contracts, are honored under the new ownership.
+* Feral gods injunction: Seven of the nine Faction Wars factions sue to stop Carl and Donut from releasing a feral god onto the ninth floor. The injunction nearly succeeds until Valtay's attorneys intervene on Borant's side; the suit is also forced into a different court altogether once Donut's Skull Empire stock ownership is factored in, since "taxpayers who are not in arrears are afforded different protections." Carl's resulting "Summary Judgement" prize includes photographs of the plaintiffs' mothers.
+* Hunter communication injunction: A separate court injunction bars hunters from communicating directly with anyone outside the dungeon at all, which the show's host frames as a direct response to how often hunters were suing over their treatment.
+* The AI-defendant ban: After brambles devastate the settlement of Zockau, a wave of lawsuits against the crawl's AI all fail, and the Syndicate Council itself, not just the subcommittee that oversees the crawl, rules that no further lawsuits may name the AI as a defendant, intending to slow its ongoing deterioration. The ruling immediately spawns a new wave of suits challenging the council's authority to have made it in the first place.
+* Litigation freeze: During a period of acute AI instability, the courts halt nearly all crawl-related litigation, including cases the AI is normally indifferent to; Quasar is left unable to even request the court order he'd otherwise need to contact Carl.
+* Potential lawsuit for Mordecai "stealing" Prior to the warlord council on the 8th floor, Carl and Donut learn that Mordecai has hired several of the changeling children with compression sickness as room attendants to protect them from the chaos at the end of the 6th floor. Zev warns Donut not to call it stealing too much because Mordecai could be charged should they pursue it. 
+{{Spoiler|book=8|spoiler=
+* The Princess Posse conservation suit: Donut's fan society files a lawsuit to stop the culling of canine variants slated for a preserve, an uphill fight funded largely by fan donations.
+* Quasar's discrimination suit: Long before the series begins, Quasar sues his own law school over admission discrimination against Nullians and wins, in a ruling handed down by then-Judge Victory (see above).
+* Chandra's conservatorship takeover: 
+After bribing a district judge's re-election campaign, the naga attorney Princess Chandra, Esquire maneuvers herself into representing Donut and files a cascade of suits and filings against Quasar and the Royal Court: rerouting Donut's funding and royalties into a trust she controls, seizing the Princess Posse's accounts (including Faction Wars prize money), drafting a challenge to whether the Donut Holes chain even qualifies as a legitimate sponsor, forming a shell corporation to pursue anyone profiting off Donut's likeness, and subpoenaing the Donut Holes' books. A separate, still-pending case decides whether the Donut Holes can keep a sponsorship auction win at all, contingent on paying a licensing fee to Chandra's conservatorship. Quasar, in turn, is scheduled to argue against her in a hearing over the legality of her marriage to Donut, expecting to lose but hoping the filing itself buys time against her other maneuvers.}}
+
+== Trivia ==
+
+* The system's central irony, that criminals are "paid" for their labor and can't legally be killed off by their franchisers, sits alongside Zev's own flat description of it as "still slavery," a line Carl doesn't disagree with.
+* Odette's case is one of the few times the series shows a Syndicate crime resolved almost entirely through personal guilt and a voluntary confession rather than any active investigation.
+* The AI's willingness to overrule a Syndicate court's decision in the hunters' case foreshadows its broader destabilization ("going Primal") later in the series.
+
+== References ==
+

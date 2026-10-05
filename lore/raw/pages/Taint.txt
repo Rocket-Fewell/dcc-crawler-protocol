@@ -1,0 +1,25 @@
+{{DISPLAYTITLE:The Taint}}
+{{Status_Effects
+|title1=The Taint
+|type=Debuff
+|causes=Infected mobs
+|effect=Target cannot heal
+|duration=5 min}}{{Quote | quote = On its own, the debuff wasn’t a big deal. I simply had to wait it out. I suspected it was part of a one/two punch. They first inflicted you with the taint, then they hit you with something else that seeped your health away. If that was the case, it didn’t matter if these guys were only level three. They were dangerous.}}
+The Taint is a five-minute debuff that prevents the target from healing.  It can be inflicted by contact with the skin or fluids of infected mobs, such as Unvaccinated Clurichaun.[1|32]  
+
+==AI Description==
+===Notification===
+Warning: You’ve been infected with the Taint.
+
+===Description===
+The summary can be viewed in the crawler's Health Menu.
+The Taint. Having the Taint is like having the giggles. Or like having the time of your life. But instead of it being a good thing, you are balancing on the precipice of death. You may not heal your health using any method while you are inflicted with the Taint.
+
+==Story==
+===Book 1===
+Carl and Donut come across a group of Clurichaun's on the Second Floor. When in contact with the body of a Clurican, you can become infected with the Taint. [1|32]
+
+When fighting the Krakaren Clone (Second Floor), Carl becomes infected with the Taint. He makes and drinks a Rev-Up Immunity Smoothie to cure himself. [1|34]
+
+==References==
+

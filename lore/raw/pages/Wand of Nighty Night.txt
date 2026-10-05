@@ -1,0 +1,22 @@
+{{SpoilH | 6}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=
+|keywords=
+|effects=
+|source=
+}}
+
+{{PAGENAME}}  is a wand that casts level 10 sleep on single opponent.
+
+== AI Description ==
+
+Wand of Nighty-Night. 10 Charges.
+Knocks an opponent out onto their ass. Casts a level-10 Sleep on a non-boss, single target for a period of five minutes. Opponent will reawaken if they sustain physical damage. Multiple casts compounds the effect, which is why this wand is so fancy. If you don’t know what that means, ask a math nerd. [6|49]
+
+==References==
+
+{{Navbox Items}}

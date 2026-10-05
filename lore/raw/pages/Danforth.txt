@@ -1,0 +1,24 @@
+{{SpoilH | 8}}
+{{DISPLAYTITLE:{{PAGENAME}}}}
+{{Item
+|title={{PAGENAME}}
+|image=
+|imagecaption=
+|type=
+|keywords= Bolt
+|effects=
+|source=Box
+|buy=
+|sell=
+}}
+
+{{PAGENAME}}  is an bolt that can be fired from a crossbow.
+
+== AI Description ==
+
+Enchanted crossbow bolt. The Danforth.
+This bolt does no physical damage. However, anyone hit with it will be anchored in place for (two seconds × your Crossbow skill level). More specifically, the area of their body that is hit with the bolt will be anchored in place. If they happen to be moving at the time, the physics involved might get a little . . . messy.
+
+==References==
+
+{{Navbox Items}}

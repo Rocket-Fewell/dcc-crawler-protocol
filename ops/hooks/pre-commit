@@ -1,0 +1,5 @@
+#!/bin/sh
+# Pre-commit hook: block LIVE CREDENTIALS only (Caleb authorized full backup on 2026-10-04:
+# gm-notes, secret, sessions, ledger, state and sheets are allowed). Install: cp ops/hooks/pre-commit .git/hooks/
+ROOT="$(git rev-parse --show-toplevel)"
+exec python3 "$ROOT/ops/check_repo_safe.py" --staged

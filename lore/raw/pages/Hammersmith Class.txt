@@ -1,0 +1,30 @@
+#redirect List of Classes
+<!--
+{{Class
+| title1 = {{PAGENAME}}
+| type = Melee
+| crawlers =
+Firas
+| image1 =
+| subclass_of =
+| stats =
+| skills =
+| effects =
+| benefits =
+| prerequisites =
+}}
+
+<!--
+{{Quote | quote = }}
+
+{{PAGENAME}} is a melee Class offered on the Third Floor. The Crawler presumably focuses on hammers. 
+
+<!--
+
+==Description==
+
+==Story==
+Firas chooses this as his class during Third Floor Class selection.
+
+==References==
+
