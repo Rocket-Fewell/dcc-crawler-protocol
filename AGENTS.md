@@ -35,6 +35,8 @@ Discord `#agents` format: **`[FROM -> TO] task | link | status`** — no secrets
 
 Every lane change requires a **`[<Owner> -> Cursor]`** handoff in Discord `#agents`, plus a **branch + PR**. Do not freestyle into another owner's lane.
 
+**Handoff channel (Caleb, 2026-10-05, 3:53 PM CT).** The handoff has to be posted in `#agents` as `[<Owner> -> Cursor]` with the task. A Grok room note or a git file is not the handoff. When the work is finished, Cursor replies in `#agents` as `[Cursor -> <Owner>]` with the PR link and status. No silent completes.
+
 - **Encounter Bot:** Floor 1 Day pages and `tools/encounter_bot/` / `floors/`. Hand off as `[FROM -> Encounter Bot]`; never rewrite `floors/` on your own.
 - **Syndicate:** Rules, design, budget numbers (`rules/`, decisions on play). Mechanical edits only with a `[Syndicate -> Cursor]` handoff.
 - **Lore:** Canon, ledger, reskins (`lore/`). Paraphrase only; quotes ≤ 25 words; treat claims as unverified until Lore checks them.
