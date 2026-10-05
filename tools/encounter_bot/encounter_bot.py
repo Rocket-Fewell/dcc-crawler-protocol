@@ -1406,6 +1406,36 @@ def render_md(doc):
 
 
 # ---------------------------------------------------------------- main
+def slot_map_sans_pin(bud_data, floor, daynum):
+    """Return (map_key, hash) from the budget file's slot maps for this day, reading
+    <map>.spec_sha256_sans_pin_when_mapped (a string for a one-day map such as day05_slot_map, or a
+    {"day-NN": hash} dict for a multi-day map such as day02_to_04_slot_map). Floor 1 maps only."""
+    if not isinstance(bud_data, dict) or floor != 1:
+        return None, None
+    want = "day-%02d" % daynum
+    for k, v in bud_data.items():
+        if not (k.endswith("_slot_map") and isinstance(v, dict)):
+            continue
+        h = v.get("spec_sha256_sans_pin_when_mapped")
+        if isinstance(h, dict) and want in h:
+            return k, h[want]
+        m = re.fullmatch(r"day(\d{2})_slot_map", k)
+        if isinstance(h, str) and m and int(m.group(1)) == daynum:
+            return k, h
+    return None, None
+
+
+def check_slot_map_provenance(spec, sans_pin, bud, rep):
+    daynum = spec["day"]["number"]
+    key, want = slot_map_sans_pin(getattr(bud, "data", None), spec["meta"].get("floor"), daynum)
+    if not want:
+        rep.warn("slot-map provenance", "no spec_sha256_sans_pin_when_mapped for day-%02d in %s; nothing to compare" % (daynum, B70))
+    elif want == sans_pin:
+        rep.ok("slot-map provenance", "meta.spec_sha256_sans_pin %s matches %s#%s.spec_sha256_sans_pin_when_mapped" % (sans_pin[:16], B70, key))
+    else:
+        rep.fail("slot-map provenance", "spec_sha256_sans_pin is %s but %s#%s.spec_sha256_sans_pin_when_mapped is %s (the spec content changed since Syndicate mapped it; ask Syndicate to re-sync, or run with --write-on-fail)" % (sans_pin, B70, key, want))
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Encounter Bot: validate a Day spec and write the day page + JSON.")
     ap.add_argument("--spec", required=True, help="path to the Day spec JSON")
@@ -1431,11 +1461,13 @@ def main(argv=None):
     if not str(spec["meta"].get("version", "")).startswith("0."):
         rep.warn("front matter version", "expected 0.x, got '%s'" % spec["meta"].get("version"))
     doc = build(spec, data, rep)
+    sans_pin = spec_sha256_sans_pin(json.loads(raw))
+    check_slot_map_provenance(spec, sans_pin, data.budget, rep)
     checks = [{"status": s, "check": c, "detail": d} for s, c, d in rep.items]
     doc["validation"] = {
         "result": "PASS" if rep.passed else "FAIL", "pass": rep.count("PASS"), "warn": rep.count("WARN"), "fail": rep.count("FAIL"),
         "spec_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(), "checks": checks}
-    doc["meta"]["spec_sha256_sans_pin"] = spec_sha256_sans_pin(json.loads(raw))
+    doc["meta"]["spec_sha256_sans_pin"] = sans_pin
     doc["meta"]["spec_sha256_sans_pin_method"] = SANS_PIN_METHOD
     md = render_md(doc)
 

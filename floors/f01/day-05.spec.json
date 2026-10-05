@@ -1302,8 +1302,8 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "e47ac0a7fe492be164e289a68f1a272aba5c81bf86b4f7acc5f59d7c92615229",
+    "expected_sha256": "8767822d4c882bfafcba4e94f932f1cf6d01184a1dd9fc835060dc502396941a",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.8"
+    "version": "0.1.9"
   }
 }

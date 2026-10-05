@@ -2,7 +2,7 @@
 Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
 
 
-- tables/achievements.csv and tables/achievements.xlsx: achievement catalog, 1,823 rows (data files). Owner: Syndicate. Status: draft. Header card: tables/achievements.md.
+- tables/achievements.csv and tables/achievements.xlsx: achievement catalog, 1,826 rows (data files). Owner: Syndicate. Status: draft. Header card: tables/achievements.md.
 - tables/chargen-5e.json: /create data (2024 PHB, written from memory; see meta.verify_todo, must be checked against the book; v0.1.5: Find Familiar line reworded, no pet hint; ability_methods.roll added in v0.1.4, decision 024; v0.1.6: its notes cite the current version). Status: draft v0.1.6.
 - tables/create-flow-lines.json: placeholder System lines + survey pool for /create. Status: draft.
 - tables/prebuilt-crawlers.json: 12 legal pre-builts (scripts/gen-prebuilt.js in the bridge). Status: draft.

@@ -1,0 +1,56 @@
+{
+ "total_pages": 37,
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": "Welcome to the Crawl",
+   "start": 5,
+   "end": 16,
+   "pages": 12
+  },
+  {
+   "chapter": 2,
+   "title": "Crawler Creation",
+   "start": 17,
+   "end": 37,
+   "pages": 21
+  }
+ ],
+ "toc": {
+  "ch1-top": 5,
+  "ch1-what-this-book-is": 5,
+  "ch1-the-premise-season-zero": 6,
+  "ch1-the-dungeon": 7,
+  "ch1-who-plays-what": 8,
+  "ch1-how-the-game-plays": 9,
+  "ch1-the-floor-clock": 10,
+  "ch1-saferooms": 11,
+  "ch1-credits-vendors-and-your-system-inventory": 12,
+  "ch1-achievements": 12,
+  "ch1-loot-boxes": 13,
+  "ch1-death-and-revival": 14,
+  "ch1-ratings-and-the-broadcast-name": 14,
+  "ch1-table-tone-and-safety": 15,
+  "ch1-words-you-will-need": 15,
+  "ch1-where-to-go-next": 16,
+  "ch2-top": 17,
+  "ch2-before-you-start": 17,
+  "ch2-table-settings-s1-and-s2": 19,
+  "ch2-name-look-and-hook-s3-and-s4": 20,
+  "ch2-species-s5-provisional": 21,
+  "ch2-class-s6": 23,
+  "ch2-background-s7": 26,
+  "ch2-ability-scores-s8": 28,
+  "ch2-skills-and-proficiencies-s9": 30,
+  "ch2-equipment-s10": 31,
+  "ch2-spells-s11": 33,
+  "ch2-the-survey-s13": 33,
+  "ch2-backstory-and-handle-s14": 34,
+  "ch2-standing-orders-s15": 34,
+  "ch2-review-and-confirm-s16-and-s17": 34,
+  "ch2-several-crawlers-one-active": 35,
+  "ch2-pre-built-crawlers": 36,
+  "ch2-worked-example-tamsin-vale": 36,
+  "ch2-level-1-checklist": 37
+ }
+}

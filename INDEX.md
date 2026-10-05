@@ -21,9 +21,9 @@ Summary: Every file in the campaign workspace, one line each.
 | characters/moses-barbarian.md | Trailer Park Moses (John) crawler sheet (Barbarian, Goliath, Artisan), intake sealed and registered in state | AI GM | draft v0.4 |
 | floors/f01/00-overview.md | Floor 1 The Orientation Pit: full 5e module (zones, boss, announcements, goblin-workshop cache) | Syndicate | draft v0.2.5 |
 | floors/00-campaign-narrative.md | Campaign spine: Continuum floor structure and story arc | Syndicate | draft v0.3 |
-| tables/achievements.csv | Achievement catalog, 1,823 rows (data); card in tables/achievements.md | Syndicate | draft |
+| tables/achievements.csv | Achievement catalog, 1,826 rows (data); card in tables/achievements.md | Syndicate | draft |
 | tables/achievements.xlsx | Achievement catalog, same data with filters (data) | Syndicate | draft |
-| tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.0 |
+| tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.1 |
 | tables/chargen-5e.json | /create data (2024 PHB written from memory; see meta.verify_todo; v0.1.5 rewords Find Familiar (no pet hint); v0.1.6 notes cite the current version; ability_methods.roll added in v0.1.4) | Syndicate | draft v0.1.6 |
 | tables/create-flow-lines.json | System lines and survey pool for the /create flow | Borent | draft |
 | tables/item-reskins.json | SRD item -> flavored name table (189 entries). A SYMLINK to ../../dcc-lore/tables/item-reskins.json (single source, owner Lore); hash in item-reskins.version.json | Lore | draft |

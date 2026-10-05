@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.8 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.9 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -30,8 +30,8 @@
     "canon_table_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
     "canon_ledger_version": "1.13",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.8",
-    "budget_file_sha256": "e47ac0a7fe492be164e289a68f1a272aba5c81bf86b4f7acc5f59d7c92615229",
+    "budget_file_version": "0.1.9",
+    "budget_file_sha256": "8767822d4c882bfafcba4e94f932f1cf6d01184a1dd9fc835060dc502396941a",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
     "spec_sha256_sans_pin": "2b6216f51a9324652294b0ff0045de4a59f032d3d33d69e462fcf1cfb03215ec",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
@@ -1838,8 +1838,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.8 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.8 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.1.9 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.9 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -2077,15 +2077,15 @@
   },
   "validation": {
     "result": "PASS",
-    "pass": 45,
+    "pass": 46,
     "warn": 2,
     "fail": 0,
-    "spec_sha256": "dddabebe39c6aeee5bcf58aad448b41ec6076c1b9e4732c3f67eaa9024269875",
+    "spec_sha256": "ab3019b90ff0c59bbb6ab66638685393225c53c67e77dc3ab32558f4f62210d4",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.8, sha256 e47ac0a7fe492be1; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.9, sha256 8767822d4c882bfa; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2316,6 +2316,11 @@
         "status": "PASS",
         "check": "audience manifest",
         "detail": "30 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
+      },
+      {
+        "status": "PASS",
+        "check": "slot-map provenance",
+        "detail": "meta.spec_sha256_sans_pin 2b6216f51a932465 matches rules/70-encounter-budget-5e.json#day02_to_04_slot_map.spec_sha256_sans_pin_when_mapped"
       }
     ]
   }
