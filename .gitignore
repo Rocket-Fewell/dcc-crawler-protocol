@@ -16,3 +16,9 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+
+# Path aliases recreated by the Cloud Agent install. The git root is the
+# flattened backup; the GM tools and voice bridge still look up
+# /workspace/dcc-campaign (decisions, sessions, tools) and /workspace/dcc-lore.
+/dcc-campaign/
+/dcc-lore
