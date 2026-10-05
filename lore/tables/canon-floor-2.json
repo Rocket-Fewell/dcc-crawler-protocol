@@ -1,0 +1,2022 @@
+{
+ "schema": "canon-floor-2/0.1.0",
+ "status": "reserve",
+ "reserve_note": "RESERVE source table. Not announced to the group and not for live use. Caleb asked for Floor 2 canon to be built, held in reserve and kept refined. Do not read it out, publish it, or wire it into a live floor until Caleb releases it.",
+ "floor": 2,
+ "floor_name_canon": "The Second Floor",
+ "floor_name_house": null,
+ "owner": "DCC Lore",
+ "updated": "2026-10-04",
+ "ledger_version": "1.13",
+ "consumer": "none yet (reserve). Future: Encounter Bot / Syndicate when released.",
+ "players_are": "Crawlers",
+ "tag_legend": {
+  "canon": "Appears in the books per the ledger (wiki-sourced; nothing here was checked against the novels, see ledger section 0).",
+  "inspired": "House-game extension or adaptation suggestion. ledger_rows then name the nearest canon basis only.",
+  "unverified": "Claimed as canon but the ledger row is UNVERIFIED (single fan-site claim) or an open X- conflict says the claim is not confirmed."
+ },
+ "confidence_legend": "Copied from the ledger Confidence column (VERIFIED / WIKI-ONLY / UNVERIFIED); several rows -> weakest label. null = no ledger row.",
+ "out_of_scope": "No CR, levels, difficulty, credits or loot amounts: Syndicate rules/10 and the loot decks own those. GM-only spine seeds and house Floor 2 zones are deliberately left out.",
+ "how_to_use": "Read as a canon reference only while status is reserve. announcement.quote is a ledger-row quote (25 words or fewer) or null; otherwise paraphrase the style.",
+ "floor_clock": {
+  "tag": "canon",
+  "canon_days": 6,
+  "canon_expected_days": 10,
+  "canon_note": "Six days is the Syndicate legal minimum; ten was the normal length guides expected. A one-off cut because fewer Crawlers survived than projected.",
+  "canon_rows": [
+   "M-332",
+   "M-333",
+   "M-334",
+   "M-339",
+   "M-340"
+  ],
+  "house": {
+   "tag": "inspired",
+   "house_days": 10,
+   "authority": "dcc-campaign/decisions/026-timed-floor-clock-override.md (Caleb, 2026-10-04): Floor 1 = 5, Floor 2 = 10. Read-only citation; this table never edits the campaign folder.",
+   "conflict_row": "X-062",
+   "why_inspired": "The ten-day figure matches the length canon guides expected, so a ten-day house Floor 2 reads as the \"normal\" version of the floor rather than the shortened one.",
+   "fixed_points_keep_absolute": [
+    {
+     "rule": "Safe rooms close one hour before collapse and eject occupants.",
+     "ledger_rows": [
+      "M-360",
+      "M-012"
+     ]
+    },
+    {
+     "rule": "Descending with more than six hours left holds the Crawler in stasis; in the last six hours descent costs no time.",
+     "ledger_rows": [
+      "M-366",
+      "M-368",
+      "M-277"
+     ]
+    }
+   ],
+   "beat_scaling_suggestion": "Canon patch beats at 31 h and 61 h elapsed (of 144 h) are about 22% and 42% of the clock; on a 240 h house clock that is about 52 h (early Day 3) and 102 h (mid Day 5). Keep the last-6-hours and last-hour rules absolute. All suggestion; no ledger row sets house timings.",
+   "collapse_order_note": "Decision 026 gives Floor 1 collapse order only; no Floor 2 zone-closure order exists. Backlog item."
+  },
+  "canon_confidence": "VERIFIED"
+ },
+ "floor_differences_from_floor_1": [
+  {
+   "id": "diff-timer",
+   "difference": "Collapse timer is six days, cut to the Syndicate minimum, instead of the ten guides expected.",
+   "floor1": "House Floor 1 = 5 days (decision 026); canon Floor 1 timer not captured here.",
+   "floor2": "Canon 6 days (expected 10). House Floor 2 = 10 days (decision 026).",
+   "ledger_rows": [
+    "M-332",
+    "M-333",
+    "M-340",
+    "X-062"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-safe-room-closure",
+   "difference": "Safe rooms close one hour before collapse and eject everyone.",
+   "floor1": "Safe rooms stay open until the floor ends.",
+   "floor2": "Closure by patch at about 4 d 17 h; countdown inside.",
+   "ledger_rows": [
+    "M-012",
+    "M-360",
+    "M-361",
+    "M-362",
+    "M-363"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-bosses-leave",
+   "difference": "Bosses can leave their chambers.",
+   "floor1": "Bosses cannot exit boss chambers.",
+   "floor2": "First seen with the Krakaren Clone.",
+   "ledger_rows": [
+    "A-123",
+    "M-272",
+    "M-374",
+    "M-450"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-stairwells",
+   "difference": "All stairwells exist from the start.",
+   "floor1": "Stairwells appear about 32 hours after opening.",
+   "floor2": "All 37,500 at minute one; same stasis rule (more than six hours left).",
+   "ledger_rows": [
+    "M-276",
+    "M-277",
+    "M-364",
+    "M-366",
+    "M-368"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-janitor",
+   "difference": "Grubs replace rats as janitor mobs, with a pupa-and-Vespa life cycle and a spawn cap.",
+   "floor1": "Rats eat the dead.",
+   "floor2": "1 to 15 grubs per corpse up to a per-quadrant cap.",
+   "ledger_rows": [
+    "M-265",
+    "M-384",
+    "M-385",
+    "M-391"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-bathroom",
+   "difference": "Relieving yourself outside a bathroom now summons a Rage Elemental.",
+   "floor1": "A bug-fix scolding about hallway use; no penalty.",
+   "floor2": "Human-born Crawlers and all humans; pets exempt; ends at collapse.",
+   "ledger_rows": [
+    "M-281",
+    "M-346",
+    "M-349",
+    "M-350"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-mailbox",
+   "difference": "Safe rooms gain a mailbox for the Dungeon Book of the Floor Club.",
+   "floor1": "No mailboxes.",
+   "floor2": "Subscribers get one tome per floor; others see an error line.",
+   "ledger_rows": [
+    "M-358",
+    "M-359",
+    "M-510",
+    "M-511"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-ratings",
+   "difference": "The audience economy turns on: follows, favorites, ratings, revised patronage.",
+   "floor1": "Viewers could not follow or favorite.",
+   "floor2": "Switched on at the opening announcement.",
+   "ledger_rows": [
+    "M-342",
+    "M-343",
+    "M-372",
+    "M-373"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-stories",
+   "difference": "Floor 2 introduces deliberate running storylines (Rev-Up) and media set-pieces, not just stand-alone mobs.",
+   "floor1": "Self-contained mobs and bosses.",
+   "floor2": "Rev-Up pyramid scheme, Death Watch, Rage Elemental trap.",
+   "ledger_rows": [
+    "M-375",
+    "M-376",
+    "M-427",
+    "M-491"
+   ],
+   "tag": "canon",
+   "confidence": "WIKI-ONLY"
+  },
+  {
+   "id": "diff-regions",
+   "difference": "The grid is split into regions that never connect, and halls are narrower.",
+   "floor1": "Square grid of neighborhoods.",
+   "floor2": "Unconnected regional sections; narrower arteries; cinderblock.",
+   "ledger_rows": [
+    "M-263",
+    "M-328",
+    "M-329",
+    "M-331"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "diff-population",
+   "difference": "Roughly 1.29 million Crawlers entered Floor 2 after the Floor 1 collapse killed over 700,000.",
+   "floor1": "Not captured as a row; Floor 1 ended in a collapse that killed over 700,000.",
+   "floor2": "1,292,526 at the countdown start; under one million by the third day.",
+   "ledger_rows": [
+    "M-334",
+    "M-335",
+    "M-336",
+    "M-518"
+   ],
+   "tag": "canon",
+   "confidence": "VERIFIED"
+  }
+ ],
+ "system_announcements": {
+  "voice": "Cascadia presents like a cheerful corporate host: congratulates, pads policy with sales language, then drops an ominous rule in a tidy sentence. Every announcement ends with a bright kill-kill-kill line. Patch notes arrive after a recap episode and read like apologetic changelogs. Not announced to the group in this reserve table.",
+  "beats": [
+   {
+    "id": "ann-open",
+    "when": "about 7 h after the floor opens, after episode 4",
+    "what": "Count under projections, timer cut to the minimum, wait until the last moment to descend, follows/favorites on, revised patronage, bathroom penalty, sign-off.",
+    "ledger_rows": [
+     "M-337",
+     "M-338",
+     "M-339",
+     "M-340",
+     "M-341",
+     "M-342",
+     "M-343",
+     "M-344",
+     "M-345",
+     "M-346",
+     "M-347",
+     "M-348"
+    ],
+    "confidence": "VERIFIED",
+    "quotes": [
+     {
+      "row": "M-340",
+      "quote": "You have six days to find a staircase down."
+     },
+     {
+      "row": "M-341",
+      "quote": "Once again, we urge you all to wait until the last possible moment to descend."
+     },
+     {
+      "row": "M-347",
+      "quote": "This elemental will kill them and everyone in their party before they can get their pants back up."
+     },
+     {
+      "row": "M-348",
+      "quote": "Have fun out there, and remember to kill, kill, kill!"
+     }
+    ]
+   },
+   {
+    "id": "ann-patch-safe-room",
+    "when": "about 4 d 17 h before collapse (after episode 5)",
+    "what": "Satan's Lil' Hedgehogs relocated; safe rooms will close one hour before collapse.",
+    "ledger_rows": [
+     "M-012",
+     "M-360",
+     "M-361",
+     "M-362",
+     "M-382"
+    ],
+    "confidence": "VERIFIED",
+    "quotes": [
+     {
+      "row": "M-382",
+      "quote": "The Satan's Lil' Hedgehogs mob is relocated to a deeper floor."
+     }
+    ]
+   },
+   {
+    "id": "ann-daily-day3",
+    "when": "about 3 d 11 h before collapse (daily announcement)",
+    "what": "Guides may explain Floor 3 race/class selection; non-sapient mobs no longer disintegrate in stairwells; Vespa cut; grubs have a 50% chance to pupate.",
+    "ledger_rows": [
+     "M-369",
+     "M-371",
+     "M-396",
+     "M-397"
+    ],
+    "confidence": "VERIFIED",
+    "quotes": [
+     {
+      "row": "M-371",
+      "quote": "Game Guides can now begin explaining Third Floor race/class selection."
+     },
+     {
+      "row": "M-369",
+      "quote": "Non-sapient mobs that enter a stairwell will no longer disintegrate."
+     }
+    ]
+   },
+   {
+    "id": "ann-recap-bathroom",
+    "when": "after the second recap episode",
+    "what": "A recap episode justifies the bathroom trap; the announcement says the rule ends at the floor collapse.",
+    "ledger_rows": [
+     "M-349",
+     "M-381",
+     "M-471"
+    ],
+    "confidence": "VERIFIED",
+    "quotes": []
+   },
+   {
+    "id": "ann-free-descent",
+    "when": "last 6 hours",
+    "what": "Crawlers can begin descending without losing time.",
+    "ledger_rows": [
+     "M-277",
+     "M-367",
+     "M-368"
+    ],
+    "confidence": "VERIFIED",
+    "quotes": [
+     {
+      "row": "M-368",
+      "quote": "Crawlers can begin descending to the Third Floor without losing time."
+     }
+    ]
+   }
+  ]
+ },
+ "timeline_by_countdown": [
+  {
+   "id": "t-open",
+   "countdown": "6 d 06 h",
+   "event": "Floor opens; Crawlers can start exploring.",
+   "ledger_rows": [
+    "M-380"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-start",
+   "countdown": "6 d 00 h",
+   "event": "Countdown timer starts; 1,292,526 Crawlers left; Dungeon Crawler World: Earth episode 4 airs.",
+   "ledger_rows": [
+    "M-334",
+    "M-337"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-open-ann",
+   "countdown": "5 d 23 h",
+   "event": "Cascadia's introductory announcement; ratings go live.",
+   "ledger_rows": [
+    "M-337",
+    "M-342",
+    "M-372"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-ep5",
+   "countdown": "4 d 18 h",
+   "event": "Episode 5 airs (safe-room siege shown).",
+   "ledger_rows": [
+    "M-381"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-patch",
+   "countdown": "4 d 17 h",
+   "event": "Patch: Hedgehogs relocated; safe rooms will close one hour before collapse.",
+   "ledger_rows": [
+    "M-360",
+    "M-382"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-daily",
+   "countdown": "3 d 11 h",
+   "event": "Daily announcement: guides may explain Floor 3; stairwell no-disintegrate; Vespa and pupa patch; under one million Crawlers.",
+   "ledger_rows": [
+    "M-336",
+    "M-369",
+    "M-371",
+    "M-396",
+    "M-397"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-free-descent",
+   "countdown": "0 d 06 h",
+   "event": "Descending costs no time.",
+   "ledger_rows": [
+    "M-367",
+    "M-368"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-sr-close",
+   "countdown": "0 d 01 h",
+   "event": "Safe rooms eject everyone inside.",
+   "ledger_rows": [
+    "M-012",
+    "M-360"
+   ],
+   "confidence": "VERIFIED"
+  },
+  {
+   "id": "t-collapse",
+   "countdown": "0 d 00 h",
+   "event": "Level collapse.",
+   "ledger_rows": [
+    "M-349"
+   ],
+   "confidence": "VERIFIED"
+  }
+ ],
+ "zones": [
+  {
+   "id": "c2-floor",
+   "name": "The Second Floor (floor-wide rules)",
+   "kind": "canon_floor_wide",
+   "tag": "canon",
+   "name_note": "Canon name: The Second Floor, the last Tutorial floor. No house name or house zone map exists yet (reserve).",
+   "ledger_rows": [
+    "A-123",
+    "A-139",
+    "M-012",
+    "M-014",
+    "M-016",
+    "M-327",
+    "M-328",
+    "M-329",
+    "M-330",
+    "M-331",
+    "M-351",
+    "M-352",
+    "M-353",
+    "M-364",
+    "M-365",
+    "M-366",
+    "M-367",
+    "M-368",
+    "M-370",
+    "M-372",
+    "M-373",
+    "M-374",
+    "M-375",
+    "M-376"
+   ],
+   "staging": "A giant grid of narrower cinderblock halls over cracked white concrete, cut into regions that never connect. All stairwells exist from minute one, so the floor is a race against the clock rather than a search for a key. Bosses may now leave their rooms, safe rooms close an hour before the end, and the audience machinery (follows, favorites, ratings) is live.",
+   "announcement": {
+    "style": "Cascadia sounds like a cheerful corporate announcer padding bad news with sales language; the one stern note is scolding Crawlers about bathrooms.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "haz2-boss-leaves",
+     "name": "Bosses leave their chambers",
+     "tag": "canon",
+     "what": "From this floor a boss can burst out and hit Crawlers in the hall; the first time earns a deadpan achievement. Floor 1 bosses never did this.",
+     "ledger_rows": [
+      "A-123",
+      "M-374",
+      "M-450"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-cinderblock",
+     "name": "Unbreakable-looking walls",
+     "tag": "canon",
+     "what": "Cinderblock cracks but does not fully break, so Crawlers cannot dig out; a boss can still wreck it.",
+     "ledger_rows": [
+      "M-329",
+      "M-451"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-restroom-portals",
+     "name": "Restroom portals and the one private place",
+     "tag": "canon",
+     "what": "Mismatched doors about every quarter mile open on the Crawler's own stall; the stall is the only spot shielded from cameras.",
+     "ledger_rows": [
+      "M-351",
+      "M-352",
+      "M-353"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-stairwells",
+     "name": "Stairwells (all present at the start)",
+     "tag": "canon",
+     "what": "Every Borough and City boss chamber holds one. Descending with more than six hours left means stasis until the floor ends; in the last six hours it costs no time.",
+     "ledger_rows": [
+      "A-139",
+      "M-016",
+      "M-364",
+      "M-365",
+      "M-366",
+      "M-367",
+      "M-368",
+      "M-369"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-guild-halls",
+     "name": "Tutorial Guild Halls",
+     "tag": "canon",
+     "what": "Still open on Floors 1-3; Game Guides are hidden from ordinary viewers; in the last days guides may begin explaining Floor 3 race/class selection.",
+     "ledger_rows": [
+      "M-370",
+      "M-371",
+      "M-373"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-ratings",
+     "name": "Ratings go live",
+     "tag": "canon",
+     "what": "Follows, favorites and ratings switch on after the opening announcement; numbers fill in slowly.",
+     "ledger_rows": [
+      "M-342",
+      "M-372"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-patronage",
+     "name": "Revised patronage",
+     "tag": "canon",
+     "what": "Three patrons per Crawler, auctions on later floors, and a patron who pays more gets better Benefactor Boxes for the Crawler (no amounts recorded here).",
+     "ledger_rows": [
+      "M-343",
+      "M-344",
+      "X-061"
+     ],
+     "note": "Start floor of the auctions differs between sources (X-061).",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-safe-rooms",
+   "name": "Floor 2 safe rooms (closure, mailbox, staffed and unstaffed)",
+   "kind": "canon_feature_set",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-010",
+    "M-011",
+    "M-012",
+    "M-013",
+    "M-354",
+    "M-355",
+    "M-356",
+    "M-357",
+    "M-358",
+    "M-359",
+    "M-360",
+    "M-361",
+    "M-362",
+    "M-363",
+    "M-382"
+   ],
+   "staging": "Safe rooms are lifted whole from Earth (a storm shelter, an industrial kitchen, a chicken restaurant). Some have a Bopca Protector who cooks and fusses; some are bare. The new things on this floor are the mailbox and the closing hour: an hour before collapse the room spits everyone out and a countdown tells you it is coming.",
+   "announcement": {
+    "style": "The closure arrives as a cheerful patch note after a recap episode; the System frames it as fixing Crawlers who stayed, partied and died in Floor 1 safe rooms.",
+    "quote": "Starting on the Second Floor, all safe rooms close one hour before level collapse, teleporting any crawlers still inside to just outside the room.",
+    "quote_row": "M-012"
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "haz2-safe-room-closure",
+     "name": "Safe room closure (one hour before collapse)",
+     "tag": "canon",
+     "what": "Anyone still inside is teleported just outside; a Time to Safe Room Closure countdown shows inside. Added by patch about 4 d 17 h before collapse, so before then a room could be used to wait out the clock.",
+     "ledger_rows": [
+      "M-012",
+      "M-360",
+      "M-361",
+      "M-362",
+      "M-363"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-storm-shelter",
+     "name": "Storm-shelter safe room with mailbox",
+     "tag": "canon",
+     "what": "Suburban-style mailbox with the flag up. Only Dungeon Book of the Floor Club (or similar) subscribers can open it; everyone else gets a System error line. One tome per floor.",
+     "ledger_rows": [
+      "M-357",
+      "M-358",
+      "M-359",
+      "M-510",
+      "M-511",
+      "M-513"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-big-shot-chicken",
+     "name": "Big Shot Chicken (staffed by Qwist)",
+     "tag": "canon",
+     "what": "A dusty chicken restaurant safe room run by a Bopca Protector who grooms and feeds guests. Where the Rage Elemental sieges the door.",
+     "ledger_rows": [
+      "M-467",
+      "M-468",
+      "M-506",
+      "M-507"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-mana-toast",
+     "name": "Unstaffed safe room with Mana Toast",
+     "tag": "canon",
+     "what": "A toaster oven gives each Crawler one piece of mana-restoring toast; no food or staff.",
+     "ledger_rows": [
+      "M-355",
+      "M-508",
+      "M-509"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "feat2-safe-room-beds",
+     "name": "Cots or private rooms",
+     "tag": "canon",
+     "what": "Every safe room has dusty cots or private rooms, free or rented on this floor.",
+     "ledger_rows": [
+      "M-354",
+      "M-356"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-club-tome-lost",
+     "name": "Floor Club tome is lost at collapse",
+     "tag": "canon",
+     "what": "A tome not collected before the floor collapses is destroyed (rule from a later book, applies to every floor).",
+     "ledger_rows": [
+      "M-512"
+     ],
+     "note": "Source cite is B6 ch2; kept because it governs the Floor 2 mailbox.",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-rev-up",
+   "name": "Rev-Up distillery and the Krakaren Clone",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "name_note": "Canon: the Rev-Up pyramid-scheme storyline. At least three Krakaren Clone instances exist on the floor.",
+   "ledger_rows": [
+    "A-034",
+    "A-123",
+    "B-004",
+    "K-123",
+    "K-124",
+    "M-093",
+    "M-427",
+    "M-428",
+    "M-429",
+    "M-430",
+    "M-442",
+    "M-443",
+    "M-444",
+    "M-445",
+    "M-446",
+    "M-447",
+    "M-448",
+    "M-449",
+    "M-450",
+    "M-451",
+    "M-452",
+    "M-453",
+    "M-454",
+    "M-455",
+    "M-456",
+    "M-457",
+    "M-458",
+    "M-459",
+    "M-460",
+    "M-520",
+    "T-064"
+   ],
+   "staging": "A moonshine distillery run like a multi-level-marketing scheme: sniffly clurichauns slinging rocks at the bottom, leaf-suited Laminak \"managers\" above, and a screaming tentacled Krakaren Clone at the top behind a Live-Laugh-Love sign. The boss does not wait in her room: she blasts out through the walls. Contact with the lower tiers gives the Taint (no healing), the boss adds Vigorous Measles, and the cure-by-prevention is a smoothie blended from moonshine and a Laminak corpse on a bicycle blender.",
+   "announcement": {
+    "style": "Mob and boss nameplates read like spam pamphlets and anti-vaccine parody; the achievement that fires when the boss bursts out is a cheerful \"welcome to the second floor.\"",
+    "quote": "Welcome to the second floor, bitches.",
+    "quote_row": "A-123"
+   },
+   "mobs": [
+    {
+     "id": "mob2-clurichaun",
+     "name": "Unvaccinated Clurichaun Rev-Up Consultant",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Runny-nosed, troll-like fairy cousin of leprechauns in green overalls: slingshot or grapple, very fast, contact leaves lime-green residue and the Taint for five minutes; corpses ooze toxic liquid.",
+     "ledger_rows": [
+      "M-432",
+      "M-433",
+      "M-434",
+      "M-435",
+      "M-436",
+      "M-437"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "mob2-laminak",
+     "name": "Laminak / Laminak Rev-Up Consultant Elite",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Fat, crow-sized fairies; the Elites look like winged soccer moms in leaf pantsuits, cast Magic Missile, resist health-seeping attacks and believe working for Rev-Up will get them to Floor 3.",
+     "ledger_rows": [
+      "M-428",
+      "M-438",
+      "M-439",
+      "M-440",
+      "M-441"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "boss2-krakaren-clone",
+     "name": "Krakaren Clone (Second Floor)",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Twenty-foot immobile octopus with screaming human-mouth tentacles, Taint snot and a Vigorous Measles mist. Bursts out of its chamber. At least three exist.",
+     "ledger_rows": [
+      "B-004",
+      "M-442",
+      "M-443",
+      "M-444",
+      "M-445",
+      "M-446",
+      "M-447",
+      "M-450",
+      "M-452"
+     ],
+     "note": "Neighborhood Boss per the wiki and the recap; one fan table says Borough (X-059).",
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz2-taint",
+     "name": "The Taint",
+     "tag": "canon",
+     "what": "Five-minute debuff: no healing by any method. Spread by touching clurichauns, their corpses or the boss snot.",
+     "ledger_rows": [
+      "M-434",
+      "M-446",
+      "M-453"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-measles",
+     "name": "Vigorous Measles mist",
+     "tag": "canon",
+     "what": "Communicable disease sprayed as an aerosol by the boss; prevented, not cured, by the Immunity Smoothie.",
+     "ledger_rows": [
+      "M-447",
+      "M-454",
+      "M-455"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-boss-breakout",
+     "name": "Boss breaks out through the walls",
+     "tag": "canon",
+     "what": "The clone blasts her door open and flails tentacles through cinderblock into the next room.",
+     "ledger_rows": [
+      "A-123",
+      "M-374",
+      "M-450",
+      "M-451"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-distillery",
+     "name": "Rev-Up moonshine distillery",
+     "tag": "canon",
+     "what": "Bolted-down moonshine tub, jugs, Alchemy Table and two bicycle-powered blenders with the smoothie recipe; the door to the boss chamber is under cut-out Live, Laugh, Love letters.",
+     "ledger_rows": [
+      "K-123",
+      "M-429",
+      "M-448",
+      "M-449"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "feat2-immunity-smoothie",
+     "name": "Rev-Up Immunity Smoothie",
+     "tag": "canon",
+     "what": "Temporary immunity to the Taint and Vigorous Measles; also Buzzed (drunk) debuff. Brewed from moonshine plus a Laminak Elite corpse.",
+     "ledger_rows": [
+      "K-123",
+      "K-124",
+      "M-449",
+      "M-455",
+      "M-456"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "feat2-location-manager",
+     "name": "Location Manager Damien (unseen)",
+     "tag": "canon",
+     "what": "A hidden Borant manager who oversees the Rev-Up area; dying Laminaks scream for him and he never comes.",
+     "ledger_rows": [
+      "M-430",
+      "M-441",
+      "M-457",
+      "M-458",
+      "M-459"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [
+    "X-059"
+   ],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-grub-fields",
+   "name": "Brindle Grub fields (janitor cycle: grub, pupa, Vespa)",
+   "kind": "canon_hazard_system",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-265",
+    "M-384",
+    "M-385",
+    "M-386",
+    "M-387",
+    "M-388",
+    "M-389",
+    "M-390",
+    "M-391",
+    "M-392",
+    "M-393",
+    "M-394",
+    "M-395",
+    "M-396",
+    "M-397",
+    "M-398",
+    "M-399",
+    "M-400",
+    "M-469",
+    "M-499"
+   ],
+   "staging": "The more things die in a quadrant, the more cat-sized worms the floor spawns to eat them. Kill too fast and the hall fills with grubs; leave them and they grow into cow-tailed grubs, then pulsating human-sized sacs with a visible countdown, then acid-spitting hornets. The trap for GMs and Crawlers is that destroying corpses does not stop new grubs.",
+   "announcement": {
+    "style": "Patch notes announce the grub problem was too lethal and quietly nerf it by half; the tone is a store manager adjusting inventory.",
+    "quote": "Brindle Grubs continue to generate on every corpse, but now have only a 50% chance of advancing to the pupa stage.",
+    "quote_row": "M-396"
+   },
+   "mobs": [
+    {
+     "id": "mob2-brindle-grub",
+     "name": "Brindle Grub",
+     "tag": "canon",
+     "role": "janitor mob",
+     "what": "Fuzzy cat-sized worm that eats corpses and grows; squeaks, bursts into goo; drops alchemy hemolymph.",
+     "ledger_rows": [
+      "M-384",
+      "M-385",
+      "M-387",
+      "M-388",
+      "M-389"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob2-cow-tailed-grub",
+     "name": "Cow-Tailed Brindle Grub",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Final pre-pupa form; bigger, with ineffective whip tails.",
+     "ledger_rows": [
+      "M-390"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "mob2-grub-pupa",
+     "name": "Grub pupa",
+     "tag": "canon",
+     "role": "timed mob",
+     "what": "Human-sized wet sac with flashing lights and a countdown of at least ten hours; bursting it early spills convulsing \"uncooked\" creatures.",
+     "ledger_rows": [
+      "M-391",
+      "M-392",
+      "M-393",
+      "M-394",
+      "M-469"
+     ],
+     "note": "Fan table says a damaged sac releases Vespas (X-060).",
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob2-brindled-vespa",
+     "name": "Brindled Vespa",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Hornet-like final stage that spits acid goo; population was halved by a patch.",
+     "ledger_rows": [
+      "M-393",
+      "M-395",
+      "M-397",
+      "M-499"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz2-grub-flood",
+     "name": "Grub flood (spawn cap per quadrant)",
+     "tag": "canon",
+     "what": "One to fifteen grubs per corpse, up to a hard cap per quadrant; destroying corpses does not stop it. A big fight can bury a neighborhood and drive a camp out.",
+     "ledger_rows": [
+      "M-265",
+      "M-384",
+      "M-385",
+      "M-386",
+      "M-398",
+      "M-399"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-pupa-clock",
+     "name": "Pupa countdown",
+     "tag": "canon",
+     "what": "A visible timer means \"move on\": when it ends a Vespa hatches. After the patch only half of grubs reach this stage.",
+     "ledger_rows": [
+      "M-392",
+      "M-393",
+      "M-396"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-vespa-acid",
+     "name": "Vespa acid spit",
+     "tag": "canon",
+     "what": "Ranged acid globs from airborne hornets.",
+     "ledger_rows": [
+      "M-395",
+      "M-397"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-grub-patches",
+     "name": "Grub patch notes",
+     "tag": "canon",
+     "what": "About 3 d 11 h before collapse the daily announcement halves the Vespas, lowers their acid, and gives grubs a 50% chance to pupate.",
+     "ledger_rows": [
+      "M-369",
+      "M-396",
+      "M-397"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [
+    "X-060"
+   ],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-kobold-pound",
+   "name": "Kobold training grounds and the dog pound (Ralph)",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "name_note": "Canon boss: Ralph, a Frenzied Gerbil, a Neighborhood Boss.",
+   "ledger_rows": [
+    "A-056",
+    "A-083",
+    "A-091",
+    "B-005",
+    "H-004",
+    "M-090",
+    "M-407",
+    "M-408",
+    "M-409",
+    "M-410",
+    "M-411",
+    "M-412",
+    "M-413",
+    "M-414",
+    "M-415",
+    "M-416",
+    "M-417",
+    "M-418",
+    "M-419",
+    "M-420",
+    "M-421",
+    "M-422",
+    "M-423",
+    "M-424",
+    "M-425",
+    "M-426",
+    "M-521",
+    "M-522",
+    "R-010",
+    "T-009"
+   ],
+   "staging": "Heavy distorted-barking music pours from a converted municipal dog pound: three hallways of cages, injured dingoes inside. Feeding a caged dingo a pet biscuit turns it from hostile to friendly, so the boss fight can be won by cashing in the animals the kobolds abuse. About forty kobolds march in with Ralph in a small cage; when the dingoes are loosed, one swallows him, but he is not dead. The prize room is a pet reward room with a line of caged monsters.",
+   "announcement": {
+    "style": "The boss intro is a darkly funny history lesson about gerbils and the Black Death, then a flat \"you might want to duck.\"",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "mob2-danger-dingo",
+     "name": "Danger Dingo",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Mastiff-sized canines with huge fangs and heavy-metal corpse-paint faces, ridden by kobolds; many are caged and hurt in the pound.",
+     "ledger_rows": [
+      "M-407",
+      "M-408",
+      "M-410",
+      "M-411"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "mob2-kobold-rider",
+     "name": "Kobold / Kobold Rider",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Yappy, fearless chihuahua-like brawlers who charge on dingoes with feathered lances.",
+     "ledger_rows": [
+      "M-412",
+      "M-413"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "boss2-ralph",
+     "name": "Ralph the Frenzied Gerbil",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Champion pit fighter of the kobold grounds: an absurdly cute gerbil whose mouth opens impossibly wide. Survives being swallowed and bursts out of the dingo.",
+     "ledger_rows": [
+      "B-005",
+      "M-414",
+      "M-415",
+      "M-416",
+      "M-417",
+      "M-418",
+      "M-419",
+      "M-420"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "mob2-mongo-cage",
+     "name": "Mongoliensis chick (Mongo)",
+     "tag": "canon",
+     "role": "pet / prize",
+     "what": "Aggressive pet-class chick in the last cage of the pet reward room; needs repeated feeding and time to bond.",
+     "ledger_rows": [
+      "H-004",
+      "M-422",
+      "M-425",
+      "M-426",
+      "R-010"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "mob2-dingo-control",
+     "name": "Dingo control spell (kobold slavery)",
+     "tag": "unverified",
+     "role": "mechanic",
+     "what": "A fan bestiary says kobolds hold the dingoes by a control spell that breaks in the Ralph fight.",
+     "ledger_rows": [
+      "M-408",
+      "M-409"
+     ],
+     "note": "UNVERIFIED single fan-site claim.",
+     "confidence": "UNVERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz2-deafening-music",
+     "name": "Distorted boss music",
+     "tag": "canon",
+     "what": "The chamber music is so loud the pair switch to chat; plan on no shouted calls.",
+     "ledger_rows": [
+      "M-414"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-kobold-cage-release",
+     "name": "Cages open mid-fight",
+     "tag": "unverified",
+     "what": "A surviving kobold can open the cages to throw dingoes into the fight; feeding them first keeps them neutral.",
+     "ledger_rows": [
+      "M-408",
+      "M-419",
+      "M-522"
+     ],
+     "note": "The wall-button detail comes from a web chapter summary only (UNVERIFIED).",
+     "confidence": "UNVERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-pet-biscuit-trick",
+     "name": "Feed the caged dingoes (PETA Enthusiast)",
+     "tag": "canon",
+     "what": "A pet biscuit turns a hostile dingo to neutral; a neat non-lethal solve that changes the boss fight.",
+     "ledger_rows": [
+      "A-091",
+      "M-410",
+      "M-411",
+      "M-421"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-pet-reward-room",
+     "name": "Pet reward room (Menagerie)",
+     "tag": "canon",
+     "what": "After Ralph: a reward room where a Kobold-corpse key opens the cages. The key opens one cage only; one pet per room.",
+     "ledger_rows": [
+      "A-083",
+      "M-422",
+      "M-423",
+      "M-424"
+     ],
+     "note": "Menagerie row A-083 is WIKI-ONLY (incomplete infobox).",
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "feat2-reward-room-cages",
+     "name": "Reward room cage line and the Ceramic Dalmatian achievement",
+     "tag": "unverified",
+     "what": "A web chapter summary describes a fighting pit with bones, chairs and ten cages of assorted monsters with Mongo in the last; the generic reward-room achievement has an open floor conflict.",
+     "ledger_rows": [
+      "A-056",
+      "M-521"
+     ],
+     "note": "Web-only (M-M-521); A-056 floor conflict unresolved.",
+     "confidence": "UNVERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "UNVERIFIED",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-mind-horror",
+   "name": "Mind Horror quadrants and the rest of the Floor 2 roster",
+   "kind": "canon_roster",
+   "tag": "canon",
+   "ledger_rows": [
+    "H-003",
+    "M-322",
+    "M-382",
+    "M-383",
+    "M-401",
+    "M-402",
+    "M-403",
+    "M-404",
+    "M-405",
+    "M-406",
+    "M-475",
+    "M-476",
+    "M-477",
+    "M-478",
+    "M-485"
+   ],
+   "staging": "Floating brain-jellyfish drift in slow packs on the way to the safe room; the danger is a psionic headache rather than a bite. Elsewhere the roster is thin: a hedgehog mob that was pulled, a rumoured acid-dart spitter, and a blimp-shaped neighborhood boss the party killed off-screen.",
+   "announcement": {
+    "style": "Mob nameplates stay in the deadpan-snarky voice; the hedgehog removal is a cheerful patch-note apology.",
+    "quote": "The Satan's Lil' Hedgehogs mob is relocated to a deeper floor.",
+    "quote_row": "M-382"
+   },
+   "mobs": [
+    {
+     "id": "mob2-mind-horror",
+     "name": "Mind Horror",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Slow, weak, jam-filled-kickball floating brains with dangling tentacles; psionic headache that high-Intelligence Crawlers shrug off.",
+     "ledger_rows": [
+      "M-401",
+      "M-402",
+      "M-403",
+      "M-404",
+      "M-405"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "npc2-mind-horror-guide",
+     "name": "Mind Horror as Game Guide (Frank Q and Maggie My)",
+     "tag": "canon",
+     "role": "npc",
+     "what": "A deep, rumbly-voiced Mind Horror serving as a murderous Game Guide for Crawler killers.",
+     "ledger_rows": [
+      "M-406"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "boss2-blimp",
+     "name": "Giant Blimp neighborhood boss (Meadow Lark kill)",
+     "tag": "canon",
+     "role": "boss",
+     "what": "A blimp-shaped neighborhood boss that Yolanda, Brandon and Chris killed; its wood became the float frame.",
+     "ledger_rows": [
+      "M-477",
+      "M-478"
+     ],
+     "note": "Thin: one wiki sentence per page, no mob page. See backlog.",
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob2-hedgehog",
+     "name": "Satan's Lil' Hedgehogs (pulled by patch)",
+     "tag": "canon",
+     "role": "removed mob",
+     "what": "Armor-piercing-quill mob seeded here and relocated to a deeper floor about 4 d 17 h before collapse. Do not field on Floor 2.",
+     "ledger_rows": [
+      "M-382",
+      "M-383"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob2-impaler",
+     "name": "Shambling Acid Impaler",
+     "tag": "unverified",
+     "role": "rumored mob",
+     "what": "Hairy green four-legged acid-dart spitter that Mordecai warned would be everywhere; the wiki also files it under previous seasons.",
+     "ledger_rows": [
+      "M-475",
+      "M-476",
+      "X-063"
+     ],
+     "note": "Open conflict X-063: no seen encounter.",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz2-psionic-headache",
+     "name": "Psionic headache",
+     "tag": "canon",
+     "what": "A health-sapping headache that can be felt before the monster is seen; weak against high Intelligence.",
+     "ledger_rows": [
+      "M-403",
+      "M-405"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-brandon-training",
+     "name": "Meadow Lark trains on Mind Horrors",
+     "tag": "canon",
+     "what": "The Meadow Lark fighters grind a Mind Horror quadrant between the first safe room and the stairwell hunt.",
+     "ledger_rows": [
+      "M-405",
+      "M-477",
+      "M-478"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [
+    "X-063"
+   ],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-rage-elemental",
+   "name": "The Rage Elemental and the bathroom penalty",
+   "kind": "canon_setpiece",
+   "tag": "canon",
+   "name_note": "Canon: a Wandering/summoned boss pulled from Floor 13 as a penalty. Not an encounter you roll on the floor.",
+   "ledger_rows": [
+    "A-047",
+    "A-131",
+    "B-029",
+    "M-092",
+    "M-345",
+    "M-346",
+    "M-347",
+    "M-349",
+    "M-350",
+    "M-381",
+    "M-400",
+    "M-461",
+    "M-462",
+    "M-463",
+    "M-464",
+    "M-465",
+    "M-466",
+    "M-467",
+    "M-468",
+    "M-469",
+    "M-470",
+    "M-471",
+    "M-472",
+    "M-473",
+    "M-474",
+    "T-007",
+    "T-008"
+   ],
+   "staging": "A stern announcement says anyone human who relieves themselves outside a bathroom summons a smoke monster that kills them and their party. It happens in front of a convoy of frail elderly residents. The monster shreds through fog and arrows, reverses gravity, and then camps outside a safe room pounding at the door, until it is lured into a stairwell hole with an oil slick and bombs.",
+   "announcement": {
+    "style": "Cascadia scolds with a prim \"we are disappointed in the disrespect\" and then states the penalty as a cheerful threat.",
+    "quote": "This elemental will kill them and everyone in their party before they can get their pants back up.",
+    "quote_row": "M-347"
+   },
+   "mobs": [
+    {
+     "id": "boss2-rage-elemental",
+     "name": "Rage Elemental",
+     "tag": "canon",
+     "role": "summoned boss",
+     "what": "Fifteen-foot black-and-purple smoke body with six obsidian-clawed legs and a horned skull. Arrows and missiles barely register, burning slows its self-heal, and it casts a limited-range Reverse Gravity.",
+     "ledger_rows": [
+      "B-029",
+      "M-461",
+      "M-462",
+      "M-463",
+      "M-464",
+      "M-465",
+      "M-466",
+      "M-467",
+      "M-468",
+      "M-469",
+      "M-470"
+     ],
+     "note": "Said to dissipate after 666 souls.",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz2-bathroom-penalty",
+     "name": "Bathroom penalty",
+     "tag": "canon",
+     "what": "Any human who relieves themselves outside a designated bathroom summons the elemental on the spot; kills the offender and the party. Pets are exempt; ends at collapse.",
+     "ledger_rows": [
+      "M-346",
+      "M-347",
+      "M-349",
+      "M-350",
+      "M-471"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-reverse-gravity",
+     "name": "Reverse Gravity",
+     "tag": "canon",
+     "what": "Flips gravity in a limited area; a convoy was flung to the ceiling.",
+     "ledger_rows": [
+      "A-131",
+      "M-465",
+      "M-472"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz2-safe-room-siege",
+     "name": "Siege of the safe room",
+     "tag": "canon",
+     "what": "The elemental pounds the door for hours; opening the door ejects it into the hall for 75 to 120 seconds, and the later closure rule removes the safe room as a refuge.",
+     "ledger_rows": [
+      "M-360",
+      "M-381",
+      "M-467",
+      "M-468"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-stairwell-kill",
+     "name": "Killing it with the stairwell",
+     "tag": "canon",
+     "what": "The canon solve is a heavily prepared lure: oil slick, bombs and a stairwell hole where the descent rule destroys it. It gives no experience.",
+     "ledger_rows": [
+      "A-047",
+      "M-470",
+      "M-473",
+      "T-008"
+     ],
+     "note": "The no-experience note is wiki wording; no amounts here.",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [
+    "X-064"
+   ],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-escort",
+   "name": "Meadow Lark convoy to the stairwell",
+   "kind": "canon_setpiece",
+   "tag": "canon",
+   "ledger_rows": [
+    "H-011",
+    "M-365",
+    "M-399",
+    "M-472",
+    "M-478",
+    "M-479",
+    "M-480",
+    "M-481",
+    "M-482",
+    "T-006",
+    "T-007",
+    "T-019"
+   ],
+   "staging": "A convoy of frail residents on a ten-car wheelchair train threads a grub-choked hall toward a stairwell the Crawlers scouted. Everything goes right until one resident drops his pants. Survivors then wait in a safe room while the Crawlers kill the elemental, and descend together.",
+   "announcement": {
+    "style": "Zev reports in as a producer: the elderly storyline is playing well with viewers.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "haz2-convoy-exposure",
+     "name": "Slow convoy in a swarm",
+     "tag": "canon",
+     "what": "A long train of frail NPCs is slow and an easy target for grubs and the elemental.",
+     "ledger_rows": [
+      "M-399",
+      "M-480"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-meadow-lark",
+     "name": "Meadow Lark party (Brandon, Chris, Imani, Yolanda)",
+     "tag": "canon",
+     "what": "Caretakers and elderly residents; thirty-six residents and three staff reach Floor 3, Yolanda and Randall die on Floor 2.",
+     "ledger_rows": [
+      "H-011",
+      "M-477",
+      "M-479",
+      "M-480",
+      "T-007"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-mistress-tiatha",
+     "name": "Mistress Tiatha (Meadow Lark manager)",
+     "tag": "canon",
+     "what": "A drinking Game Guide who told Brandon every Borough and City boss on the early floors holds a stairwell.",
+     "ledger_rows": [
+      "M-481",
+      "M-482"
+     ],
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-death-watch",
+   "name": "Death Watch Extreme Dungeon Mayhem (tunneled studio set-piece)",
+   "kind": "canon_setpiece",
+   "tag": "canon",
+   "name_note": "Canon: Skull Empire game show hosted by Prince Maestro. Crawlers are teleported into a rented studio trailer.",
+   "ledger_rows": [
+    "M-489",
+    "M-490",
+    "M-491",
+    "M-492",
+    "M-493",
+    "M-494",
+    "M-495",
+    "M-496",
+    "M-497",
+    "M-498",
+    "M-499",
+    "M-500",
+    "M-501",
+    "M-502",
+    "M-503",
+    "M-504",
+    "M-505",
+    "M-517",
+    "M-518",
+    "T-020"
+   ],
+   "staging": "A round-table panel show: two near-dead Crawlers frozen mid-fight are asked to guess who in other clips lives or dies, earning teleport points to save frozen friends. The studio audience chants and the host is a cruel, thin-skinned boar-like orc. Borant cannot refuse the show because the Skull Empire is a Syndicate member. A Crawler can flip the format by betting that the host cannot risk his own paid guests.",
+   "announcement": {
+    "style": "The host talks like a bully with a fan base: loud chants, insulting nicknames and tantrums when the interview slips.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "npc2-maestro",
+     "name": "Prince Maestro",
+     "tag": "canon",
+     "role": "npc",
+     "what": "Huge, muscular, bristle-haired boar-like orc host; cruel and egotistical, addresses Crawlers as meat.",
+     "ledger_rows": [
+      "M-491",
+      "M-501",
+      "M-502",
+      "M-503",
+      "M-504"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "npc2-mexx-55",
+     "name": "Mexx-55 (greeter robot)",
+     "tag": "canon",
+     "role": "npc",
+     "what": "Black, metallic, frisbee-shaped greeter robot of the rented tunnel trailer.",
+     "ledger_rows": [
+      "M-497"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz2-time-freeze",
+     "name": "Time Freeze and teleport points",
+     "tag": "canon",
+     "what": "Guests are held in a Time Freeze; each correct guess earns one teleport point to send someone to the nearest safe room.",
+     "ledger_rows": [
+      "M-492",
+      "M-493",
+      "M-494",
+      "M-499"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat2-death-watch-format",
+     "name": "Death Watch format and audience",
+     "tag": "canon",
+     "what": "Round-table guests, a studio of pre-teen boys chanting, not normally live; the format cannot be refused by Borant.",
+     "ledger_rows": [
+      "M-491",
+      "M-492",
+      "M-495",
+      "M-496",
+      "M-498"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-carl-gamble",
+     "name": "The audience-flip gambit",
+     "tag": "canon",
+     "what": "Walking off and demanding the points be spent on yourself works because the host cannot afford to endanger his paid guests.",
+     "ledger_rows": [
+      "M-490",
+      "M-500",
+      "M-504"
+     ],
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed"
+  },
+  {
+   "id": "c2-npcs",
+   "name": "Borant staff, guides and drifters (Floor 2 roster)",
+   "kind": "canon_roster",
+   "tag": "canon",
+   "ledger_rows": [
+    "H-003",
+    "H-021",
+    "H-028",
+    "M-350",
+    "M-377",
+    "M-378",
+    "M-379",
+    "M-457",
+    "M-458",
+    "M-459",
+    "M-482",
+    "M-483",
+    "M-484",
+    "M-485",
+    "M-486",
+    "M-487",
+    "M-488",
+    "M-489",
+    "M-490",
+    "M-514",
+    "M-515",
+    "M-516",
+    "T-064"
+   ],
+   "staging": "Borant admins run the crawl from the edges: Zev enters in a water suit and talks like a nervous friend, Mukta never enters at all and books the paying show, and hidden Location Managers tend the set-piece storylines. Agatha wanders the floor and drops the illegal Valtay gear in the stairwell on the way out.",
+   "announcement": {
+    "style": "Admins speak in apologetic corporate shorthand; Mukta is curt and pay-per-appearance.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "haz2-admin-exposure",
+     "name": "Admins are not protected on the first three floors",
+     "tag": "canon",
+     "what": "Staff have no protections on these floors; the bathroom penalty also kills admin humans and Site Prep workers are eaten.",
+     "ledger_rows": [
+      "M-350",
+      "M-379",
+      "M-484"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "npc2-zev",
+     "name": "Zev (Outreach Associate)",
+     "tag": "canon",
+     "what": "Kua-Tin Borant liaison in a bubbling-water helmet; suspended for warning Carl about the elemental.",
+     "ledger_rows": [
+      "H-021",
+      "M-483",
+      "M-484",
+      "M-485",
+      "M-486"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "npc2-mukta",
+     "name": "Mukta (Communications admin)",
+     "tag": "canon",
+     "what": "Bloom member who takes over PR remotely, closes his chats and rents the Crawlers to the highest bidder.",
+     "ledger_rows": [
+      "M-486",
+      "M-487",
+      "M-488",
+      "M-489",
+      "M-490"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "npc2-damien",
+     "name": "Damien (Location Manager)",
+     "tag": "canon",
+     "what": "Unseen manager of the Rev-Up and Krakaren area.",
+     "ledger_rows": [
+      "M-457",
+      "M-458",
+      "M-459"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "npc2-mordecai-bugaboo",
+     "name": "Mordecai in his Floor 2 Bugaboo form",
+     "tag": "canon",
+     "what": "Game Guide met in the guild hall after the Krakaren fight.",
+     "ledger_rows": [
+      "H-003",
+      "M-485"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "npc2-agatha",
+     "name": "Agatha and her cart",
+     "tag": "canon",
+     "what": "Wandering homeless Crawler with a squeaky cart who edits herself out of recaps and leaves illegal Valtay tech behind.",
+     "ledger_rows": [
+      "H-028",
+      "M-514",
+      "M-515",
+      "M-516"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed"
+  }
+ ],
+ "gaps": [
+  "No named quadrants, neighborhoods or Borough/City bosses are recorded for Floor 2 beyond the Krakaren Clone and Ralph.",
+  "The Giant Blimp boss has no attack, tier or chamber description (backlog rb-03).",
+  "Rot Stickers are on the infobox but have no text or cite (rb-06).",
+  "Only three safe rooms are documented (rb-11).",
+  "Li Jun, Li Na, Zhang and their manager have no separate rows beyond the Death Watch scene (rb-12).",
+  "Reward-room contents beyond Mongo are web-only (rb-08).",
+  "Mob levels, challenge ratings, credit values and loot amounts are deliberately omitted (Syndicate rules/10 and loot decks).",
+  "Later-book spoilers (Rev-Up as Apothecary satire, Floor 4 reuse) are noted once and not expanded; Floor 2 only."
+ ],
+ "refinement_backlog": [
+  {
+   "id": "rb-01",
+   "priority": "high",
+   "item": "Check every Floor 2 row against the novel text (chapters 30-47 and the epilogue).",
+   "why": "Nothing in the ledger was read against the book; all rows are fan-wiki, one recap transcript and web summary snippets (ledger section 0).",
+   "how": "Compare page cites B1 ch30-47 with a legitimate copy of the book; relabel rows; flag misreads.",
+   "ledger_rows": [
+    "M-327"
+   ]
+  },
+  {
+   "id": "rb-02",
+   "priority": "high",
+   "item": "Settle the Floor 2 clock for the house game and map patch beats onto it.",
+   "why": "Canon is six days; decision 026 says ten (X-062). The scaling and the zone-closure order are suggestions only.",
+   "how": "Caleb/Syndicate confirm 10 days; Lore writes a Floor 2 collapse-order note once a house zone map exists; encounter budget numbers come only from rules/70.",
+   "ledger_rows": [
+    "M-333",
+    "X-062"
+   ]
+  },
+  {
+   "id": "rb-03",
+   "priority": "high",
+   "item": "Identify the Blimp neighborhood boss.",
+   "why": "One infobox line and one wiki sentence; a web summary calls Brandon's fight a Mind Horror boss. No mob page, no tier, no attack.",
+   "how": "Read B1 ch37 and the Meadow Lark / Yolanda pages in the live wiki; search \"blimp\" in chapter summaries.",
+   "ledger_rows": [
+    "M-477",
+    "M-478"
+   ]
+  },
+  {
+   "id": "rb-04",
+   "priority": "high",
+   "item": "Krakaren Clone tier and the other two clone instances.",
+   "why": "Wiki and recap say Neighborhood; a fan table says Borough (X-059). At least three instances exist but only one fight is recorded; which carry stairwells is unknown.",
+   "how": "B1 ch32-35 and the Krakaren page; check boss chamber stairwell rule for Borough tier.",
+   "ledger_rows": [
+    "M-442",
+    "M-443",
+    "X-059"
+   ]
+  },
+  {
+   "id": "rb-05",
+   "priority": "medium",
+   "item": "Shambling Acid Impaler: seen or only warned about?",
+   "why": "Wiki says previous seasons and also that Mordecai warned they would be everywhere (X-063).",
+   "how": "B1 ch5 (Mordecai's warning); search ch30-47 for any Impaler encounter.",
+   "ledger_rows": [
+    "M-475",
+    "M-476",
+    "X-063"
+   ]
+  },
+  {
+   "id": "rb-06",
+   "priority": "medium",
+   "item": "Rot Stickers on Floor 2.",
+   "why": "Listed on the Floor 2 infobox with no text, no cite; they are a Floor 1 mob in the ledger.",
+   "how": "Check the Second Floor infobox history and B1 chapters for Rot Stickers after the stairwell.",
+   "ledger_rows": [
+    "M-297"
+   ]
+  },
+  {
+   "id": "rb-07",
+   "priority": "medium",
+   "item": "Danger Dingo control spell and the cage count.",
+   "why": "\"Enslaved by kobolds via a control spell\" is a single fan-site claim (M-M-409). Chapter summaries disagree on 14 vs 13 dingoes (M-M-522).",
+   "how": "B1 ch45-46.",
+   "ledger_rows": [
+    "M-409",
+    "M-522"
+   ]
+  },
+  {
+   "id": "rb-08",
+   "priority": "medium",
+   "item": "Pet reward room: cage list, key rule, and the Ceramic Dalmatian achievement floor.",
+   "why": "Only Mongo is documented; cage count is web-only; A-056 floor conflict (F9 page vs F2 master list) still open.",
+   "how": "B1 ch46; Menagerie and Ceramic Dalmatian achievement pages; keep amounts out.",
+   "ledger_rows": [
+    "A-056",
+    "A-083",
+    "M-422",
+    "M-423",
+    "M-521"
+   ]
+  },
+  {
+   "id": "rb-09",
+   "priority": "medium",
+   "item": "Patron auction start floor.",
+   "why": "Wiki transcription says the fourth floor; transcript and a recap site say floor three / \"each floor\" (X-061).",
+   "how": "B1 ch31 announcement text.",
+   "ledger_rows": [
+    "M-343",
+    "X-061"
+   ]
+  },
+  {
+   "id": "rb-10",
+   "priority": "medium",
+   "item": "Rage Elemental details: grub count, door ejection timing, no-experience kill, 666 souls.",
+   "why": "Wiki: thousands of grubs; a web summary: 666 (X-064). Timing 75 to 120 seconds from one wiki sentence.",
+   "how": "B1 ch38-40 text.",
+   "ledger_rows": [
+    "M-462",
+    "M-468",
+    "X-064"
+   ]
+  },
+  {
+   "id": "rb-11",
+   "priority": "medium",
+   "item": "Complete the Floor 2 safe-room list.",
+   "why": "Only Big Shot Chicken, the storm shelter and the unstaffed Mana Toast room are documented.",
+   "how": "Read B1 ch30, 38, 41, 47 and the Safe Rooms page; list every named safe room.",
+   "ledger_rows": [
+    "M-357",
+    "M-506",
+    "M-509"
+   ]
+  },
+  {
+   "id": "rb-12",
+   "priority": "medium",
+   "item": "Death Watch rules in detail (teleport points, VIP and surprise guests, Li Jun/Zhang pages).",
+   "why": "Rows come from one show page and the Maestro page; no row for Li Jun, Li Na, Zhang or Mexx beyond one line.",
+   "how": "B1 ch41-44; Li Jun page; Dungeon Crawl Tactics booking.",
+   "ledger_rows": [
+    "M-492",
+    "M-494",
+    "M-500"
+   ]
+  },
+  {
+   "id": "rb-13",
+   "priority": "medium",
+   "item": "Meadow Lark counts and Tiatha/guide details.",
+   "why": "Wiki says 39 residents travel, 36 arrive; one recap site says 38 residents; Tiatha has two lines.",
+   "how": "Meadow Lark, Brandon, Chris, Imani and Tiatha pages; B1 ch22, 37, 41.",
+   "ledger_rows": [
+    "M-479",
+    "M-480",
+    "M-481"
+   ]
+  },
+  {
+   "id": "rb-14",
+   "priority": "low",
+   "item": "Mind Horror relatives and Intelligence threshold.",
+   "why": "Wiki says Brain Boiler relative (B2 ch14) and \"high Intelligence\" resist with no threshold.",
+   "how": "Mind Horror page citations; B1 ch30 and B2 ch14.",
+   "ledger_rows": [
+    "M-401",
+    "M-403"
+   ]
+  },
+  {
+   "id": "rb-15",
+   "priority": "low",
+   "item": "Mine the Carl_Floor 2 and Donut_Floor 2 mirror pages.",
+   "why": "They are character-state pages (gear, stats, skills); not mined for Floor 2 hazards or NPCs.",
+   "how": "Read for hazard/NPC cites; keep levels and stats out of this table.",
+   "ledger_rows": []
+  },
+  {
+   "id": "rb-16",
+   "priority": "low",
+   "item": "Quest-free Floor 2: confirm no Floor 2 quest system exists.",
+   "why": "Wiki says no formal quests yet; stories play out shallowly.",
+   "how": "B1 ch30-47; wiki quests page.",
+   "ledger_rows": [
+    "M-376"
+   ]
+  },
+  {
+   "id": "rb-17",
+   "priority": "low",
+   "item": "Named zone geography and Borough/City bosses of Floor 2.",
+   "why": "No quadrant/neighborhood names, no named Borough or City boss beyond the clone and Ralph; stairwell positions are random.",
+   "how": "Check the novel for neighborhood boss names and the Floor 2 map description.",
+   "ledger_rows": [
+    "M-365"
+   ]
+  },
+  {
+   "id": "rb-18",
+   "priority": "low",
+   "item": "Floor 2 achievement list vs this table.",
+   "why": "Ledger has A-rows; reward boxes are loot and intentionally excluded.",
+   "how": "Cross-check ledger A- rows for F2 when the house achievement remap runs.",
+   "ledger_rows": [
+    "A-034",
+    "A-047",
+    "A-056",
+    "A-071",
+    "A-083",
+    "A-091",
+    "A-123",
+    "A-131",
+    "A-136"
+   ]
+  },
+  {
+   "id": "rb-19",
+   "priority": "low",
+   "item": "Build the house Floor 2 module (zones, bait, collapse order) from this reserve table when Caleb releases it.",
+   "why": "No floors/f02 exists; status \"reserve\" means not announced and not for live use.",
+   "how": "Encounter/Syndicate bots read this table; Lore supplies inspired zones tagged separately.",
+   "ledger_rows": []
+  }
+ ],
+ "open_conflicts": [
+  "X-059",
+  "X-060",
+  "X-061",
+  "X-062",
+  "X-063",
+  "X-064",
+  "X-065"
+ ]
+}

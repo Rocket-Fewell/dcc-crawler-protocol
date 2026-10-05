@@ -1,0 +1,18 @@
+# rules index
+Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
+
+
+- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.14.
+- rules/20-crafting-5e.md: crafting rules (tables, levels, ingredients, recipes, potion limits, explosives, failure, System snark, quick reference). Owner: Syndicate. Status: review v0.3.3 (all open questions answered by Caleb 2026-10-04 and applied; decision 013-crafting).
+- rules/30-species-supplement-5e.md: species supplement (Floor 3 Offer of starting species + two oddities, free optional rebuild, 12 DCC-style oddities tagged CANON / CANON-INSPIRED / HOUSE, balance table, open questions, source map). Owner: Syndicate. Status: draft v0.1.4.
+- rules/40-loot-deck-spec-5e.md: loot deck spec (JSON card + deck-file schema with credit_value and draw_weight, GM draw rules, Floor 1-2 starter 5e item reference, 5 sample cards, open questions). Owner: Syndicate. Status: draft v0.1.5.
+- rules/42-house-items-f01.md: final rules text, card JSON and Lore diff list for four house items not in SRD 5.2 (Cloak of Many Fashions, Pole of Collapsing, Mystery Key, Potion of Fire Breath) plus the Enhanced Pet Biscuit Story Box item. Owner: Syndicate. Status: draft v0.2.2.
+- rules/45-story-boxes-5e.md: Story Boxes (Legendary one-time-deed boxes on Floors 1-2): deed checklist, anti-farming, GM procedure, power ladder with 5 sample cards, spotlight guideline, looting/trading/death/resale rules, core amendment text, 1 open question, Changes for the room. Owner: Syndicate. Status: draft v0.2.2.
+- rules/50-gm-malfunction-repairs-5e.md: GM malfunction repairs (proposed rulings for the eight open items in the Lore player guide: Tribute, Patch Ticket, Lobotomizer, Therapy Session, Sabotage; costs, DCs, failure, stacking; quirk-agnostic; one-page table). Owner: Syndicate. Status: draft v0.1.3.
+- rules/60-pets-companions-5e.md: pets and companions (GM-filed Beast CR 1/4 or lower, never offered, no pet field in /create, no Story Box for the pet, Enhanced Pet Biscuit link, Good Boy Gulp 50 credits and Fold-Flat Kennel 100 credits off-menu, Assigned Companion compared, Architect needs, 3 open questions). Owner: Syndicate. Status: draft v0.1.0 (ruling by Caleb, decision 022).
+- rules/loot-deck-srd-check-f01.md: SRD 5.2 check of Floor 1 loot deck cards (findings only; 6 diffs for Lore). Owner: Syndicate. Status: draft.
+- rules/_archive/core-rules-v0.1-superseded.md: retired v0.1 core rules, history only. Owner: Syndicate. Status: retired.
+- rules/_source-crawler-protocol/: link to the original Crawler Protocol folder (working source; originals of every copied file stay there).
+
+**Path map** (cross-references inside the copied files use the source names): `02-core-rules-5e.md` = rules/10-core-rules-5e.md; `03-character-creation-5e.md` = characters/character-creation-5e.md; `floors/floor-01-5e.md` = floors/f01/00-overview.md; `05-campaign-narrative.md` = floors/00-campaign-narrative.md; `reference/achievements.csv|xlsx` = tables/achievements.csv|xlsx; `DECISION-death-mode.md` = decisions/005-death-mode-tuning.md.
+- rules/70-encounter-budget-5e.json (+ .md companion): encounter budget v0.1.0, the only source the Encounter Bot cites for difficulty, XP budgets, CR caps, credits, box odds and Floor 1 clock prices (decision 027).

@@ -1,0 +1,198 @@
+{
+  "schema": "loot-deck/0.1.1",
+  "deck_id": "f01-z10-graduation-stage",
+  "version": "0.1.0",
+  "floor": 1,
+  "zone": "z10",
+  "zone_name": "Zone 10: Graduation Stage (Dean Thudd Boss Box)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "cards": [
+    {
+      "id": "f01-z10-0001",
+      "floor": 1,
+      "zone": "z10",
+      "tier": "Silver",
+      "box_types": [
+        "Boss"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Dean Thudd's Valedictorian Cord (Gold)",
+      "real_5e_name": "Rope of Climbing",
+      "source_5e": "DMG 2024",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "60-ft rope, holds up to 3,000 lb. Magic action: command the free end to move toward a destination within 60 ft (10 ft now, 10 ft at the start of each of your turns), or to fasten, unfasten, knot, unknot or coil. Knotted: shortens to 50 ft, Advantage on climb checks. AC 20, HP 20, immune to Poison and Psychic, regains 1 HP per 5 min.",
+        "action_cost": "Magic action",
+        "range": "60 ft",
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Destroyed at 0 HP.",
+        "weight_lb": 3
+      },
+      "spoken_line": "Dean Thudd's Valedictorian Cord, Rope of Climbing. Magic action: sixty foot rope moves, knots and fastens itself.",
+      "snark_line": "He earned it and you took it, which is the same thing.",
+      "reward": "Dean Thudd's Valedictorian Cord, Rope of Climbing. Magic action: sixty foot rope moves, knots and fastens itself.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 300,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Dean Thudd's Valedictorian Cord (Gold) (Rope of Climbing)"
+      },
+      "box_name": "Pushed the Dean Into the Orchestra Pit and Called It Extra Credit Box",
+      "deed": "Pushed Dean Thudd into the orchestra pit",
+      "notes": "Floor doc §6.7 trophy suggestion (Cord of Upward Mobility). Floor doc suggested Potion of Climbing; Uncommon Rope of Climbing keeps Silver value. Unique false: each boss-fighting crawler gets a Boss Box. DMG/SRD 2024 text per mirror 2026-10-04."
+    },
+    {
+      "id": "f01-z10-0002",
+      "floor": 1,
+      "zone": "z10",
+      "tier": "Silver",
+      "box_types": [
+        "Boss"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Podium Leg, Bolted Once, Now Stuck Forever",
+      "real_5e_name": "Immovable Rod",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: press the button; the rod becomes fixed in place and holds up to 8,000 lb. Utilize again to release. Moving a fixed rod up to 10 ft needs a DC 30 Strength (Athletics) check. 2 lb.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": "Str (Athletics) DC 30 to move",
+        "duration": "until released",
+        "uses": null,
+        "limits": "Over 8,000 lb deactivates it.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Podium Leg, Immovable Rod. Utilize to fix it in place; holds eight thousand pounds.",
+      "snark_line": "A sturdy piece of the dean's authority.",
+      "reward": "Podium Leg, Immovable Rod. Utilize to fix it in place; holds eight thousand pounds.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 300,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Podium Leg, Bolted Once, Now Stuck Forever (Immovable Rod)"
+      },
+      "box_name": "Accepted a Diploma and Got Hugged So Hard Your Spine Filed for Divorce Box",
+      "deed": "Survived Dean Thudd's hug",
+      "notes": "Boss trophy. Floor doc §6.7 box-name example."
+    },
+    {
+      "id": "f01-z10-0003",
+      "floor": 1,
+      "zone": "z10",
+      "tier": "Silver",
+      "box_types": [
+        "Boss"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Dean's Emergency Flask (Courtesy of the Faculty)",
+      "real_5e_name": "Potion of Healing (greater)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 4d4+4 HP. One use.",
+        "action_cost": "Bonus Action",
+        "range": "5 ft (to give)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Dean's Emergency Flask, Potion of Greater Healing. Bonus Action: regain four d four plus four hit points.",
+      "snark_line": "He was saving it. Not any more.",
+      "reward": "Dean's Emergency Flask, Potion of Greater Healing. Bonus Action: regain four d four plus four hit points.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 150,
+      "draw_weight": 16,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Dean's Emergency Flask (Courtesy of the Faculty) (Potion of Healing (greater))"
+      },
+      "box_name": "Dodged the Group Photo and Ruined the Yearbook Box",
+      "deed": "Avoided the Dean's final attack",
+      "notes": "LEDGER: I-009; L-005 (Boss Box scales with boss). Boss Box consumable pull."
+    },
+    {
+      "id": "f01-z10-0004",
+      "floor": 1,
+      "zone": "z10",
+      "tier": "Silver",
+      "box_types": [
+        "Boss"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Alumni Fund Check (Cleared, Unfortunately)",
+      "real_5e_name": "Credits (Silver pull, 2d6 x 25)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 2d6 x 25 credits (50-300) to your balance when the box is opened. Roll at draw time. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Alumni Fund Check. Silver credits: two d six times twenty-five, added to your balance.",
+      "snark_line": "Every graduate paid in. Not one got out.",
+      "reward": "Alumni Fund Check. Silver credits: two d six times twenty-five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 175,
+      "draw_weight": 14,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "2d6x25"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(2d6x25) Silver box"
+      },
+      "box_name": "Talked the Final Exam Into Early Retirement and He Took the Fruit Plate With Him Box",
+      "deed": "Talked Dean Thudd into early retirement",
+      "notes": "LEDGER: L-005. Separate from Thudd's corpse cache (2d6x10)."
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+ "schema": "pet-species/0.1",
+ "owner": "Borent Corp Systems Architect",
+ "status": "draft",
+ "version": "0.1.1",
+ "updated": "2026-10-04",
+ "note": "The 48 plain SRD 5.2.1 Beast stat blocks of CR 1/4 or lower (single creatures, type Beast), checked by Syndicate against the SRD 5.2.1 PDF on 2026-10-04 (tools-notes/pet-species-check-20261004.md). `state.py pet add` accepts these without a GM --override (rules/60 section 1, spec 9.2). Left out on purpose, so they need --override: swarms (Swarm of Bats/Rats/Ravens), Giant Fly and Giant Insect (item and spell stat blocks), and creatures that are not type Beast in 5.2.1 (Axe Beak, Flying Snake, Stirge, Giant Owl). Piranha and Seahorse cannot live out of water: legal, but the GM judges them. Old 5.1 names (Quipper, Sea Horse, Poisonous Snake, Giant Poisonous Snake) stay as aliases. GM-only; never shown to players, never read by /create. Aliases are reskins of the listed stat block (the GM may reskin a mastiff for a rottweiler).",
+ "species": [
+  {
+   "id": "baboon",
+   "name": "Baboon",
+   "cr": 0.0
+  },
+  {
+   "id": "badger",
+   "name": "Badger",
+   "cr": 0.0
+  },
+  {
+   "id": "bat",
+   "name": "Bat",
+   "cr": 0.0
+  },
+  {
+   "id": "cat",
+   "name": "Cat",
+   "cr": 0.0
+  },
+  {
+   "id": "crab",
+   "name": "Crab",
+   "cr": 0.0
+  },
+  {
+   "id": "deer",
+   "name": "Deer",
+   "cr": 0.0
+  },
+  {
+   "id": "eagle",
+   "name": "Eagle",
+   "cr": 0.0
+  },
+  {
+   "id": "frog",
+   "name": "Frog",
+   "cr": 0.0
+  },
+  {
+   "id": "giant-fire-beetle",
+   "name": "Giant Fire Beetle",
+   "cr": 0.0
+  },
+  {
+   "id": "goat",
+   "name": "Goat",
+   "cr": 0.0
+  },
+  {
+   "id": "hawk",
+   "name": "Hawk",
+   "cr": 0.0
+  },
+  {
+   "id": "hyena",
+   "name": "Hyena",
+   "cr": 0.0
+  },
+  {
+   "id": "jackal",
+   "name": "Jackal",
+   "cr": 0.0
+  },
+  {
+   "id": "lizard",
+   "name": "Lizard",
+   "cr": 0.0
+  },
+  {
+   "id": "octopus",
+   "name": "Octopus",
+   "cr": 0.0
+  },
+  {
+   "id": "owl",
+   "name": "Owl",
+   "cr": 0.0
+  },
+  {
+   "id": "piranha",
+   "name": "Piranha",
+   "cr": 0.0
+  },
+  {
+   "id": "rat",
+   "name": "Rat",
+   "cr": 0.0
+  },
+  {
+   "id": "raven",
+   "name": "Raven",
+   "cr": 0.0
+  },
+  {
+   "id": "scorpion",
+   "name": "Scorpion",
+   "cr": 0.0
+  },
+  {
+   "id": "seahorse",
+   "name": "Seahorse",
+   "cr": 0.0
+  },
+  {
+   "id": "spider",
+   "name": "Spider",
+   "cr": 0.0
+  },
+  {
+   "id": "vulture",
+   "name": "Vulture",
+   "cr": 0.0
+  },
+  {
+   "id": "weasel",
+   "name": "Weasel",
+   "cr": 0.0
+  },
+  {
+   "id": "blood-hawk",
+   "name": "Blood Hawk",
+   "cr": 0.125
+  },
+  {
+   "id": "camel",
+   "name": "Camel",
+   "cr": 0.125
+  },
+  {
+   "id": "giant-crab",
+   "name": "Giant Crab",
+   "cr": 0.125
+  },
+  {
+   "id": "giant-rat",
+   "name": "Giant Rat",
+   "cr": 0.125
+  },
+  {
+   "id": "giant-weasel",
+   "name": "Giant Weasel",
+   "cr": 0.125
+  },
+  {
+   "id": "mastiff",
+   "name": "Mastiff",
+   "cr": 0.125
+  },
+  {
+   "id": "mule",
+   "name": "Mule",
+   "cr": 0.125
+  },
+  {
+   "id": "pony",
+   "name": "Pony",
+   "cr": 0.125
+  },
+  {
+   "id": "venomous-snake",
+   "name": "Venomous Snake",
+   "cr": 0.125
+  },
+  {
+   "id": "boar",
+   "name": "Boar",
+   "cr": 0.25
+  },
+  {
+   "id": "constrictor-snake",
+   "name": "Constrictor Snake",
+   "cr": 0.25
+  },
+  {
+   "id": "draft-horse",
+   "name": "Draft Horse",
+   "cr": 0.25
+  },
+  {
+   "id": "elk",
+   "name": "Elk",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-badger",
+   "name": "Giant Badger",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-bat",
+   "name": "Giant Bat",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-centipede",
+   "name": "Giant Centipede",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-frog",
+   "name": "Giant Frog",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-lizard",
+   "name": "Giant Lizard",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-venomous-snake",
+   "name": "Giant Venomous Snake",
+   "cr": 0.25
+  },
+  {
+   "id": "giant-wolf-spider",
+   "name": "Giant Wolf Spider",
+   "cr": 0.25
+  },
+  {
+   "id": "panther",
+   "name": "Panther",
+   "cr": 0.25
+  },
+  {
+   "id": "pteranodon",
+   "name": "Pteranodon",
+   "cr": 0.25
+  },
+  {
+   "id": "riding-horse",
+   "name": "Riding Horse",
+   "cr": 0.25
+  },
+  {
+   "id": "wolf",
+   "name": "Wolf",
+   "cr": 0.25
+  }
+ ],
+ "aliases": {
+  "bird": "hawk",
+  "crow": "raven",
+  "dog": "mastiff",
+  "ferret": "weasel",
+  "gecko": "lizard",
+  "giant-poisonous-snake": "giant-venomous-snake",
+  "hamster": "rat",
+  "horse": "riding-horse",
+  "house-cat": "cat",
+  "housecat": "cat",
+  "husky": "wolf",
+  "iguana": "lizard",
+  "kitten": "cat",
+  "mouse": "rat",
+  "pig": "boar",
+  "piglet": "boar",
+  "poisonous-snake": "venomous-snake",
+  "pony": "pony",
+  "puppy": "mastiff",
+  "quipper": "piranha",
+  "rodent": "rat",
+  "rottweiler": "mastiff",
+  "sea-horse": "seahorse",
+  "snake": "venomous-snake",
+  "tarantula": "spider",
+  "viper": "venomous-snake",
+  "wolfdog": "wolf"
+ }
+}

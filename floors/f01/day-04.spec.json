@@ -1,0 +1,1119 @@
+{
+  "schema": "encounter-bot-day-spec/0.1",
+  "meta": {
+    "owner": "Encounter Bot",
+    "status": "draft",
+    "version": "0.3",
+    "updated": "2026-10-04",
+    "floor": 1,
+    "floor_name": "The Orientation Pit",
+    "title": "Day {day} of {days}: The Break Room Goes Dark",
+    "summary": "Floor 1 timed playthrough, Day {day} of {days}: the Break Room and every vendor lose service, the terminal key is gone, and the Green Room is the only honest saferoom. Three routes, four encounters, key availability, early-descent handling, rest options with the rest-without-saferoom slot, last-chance hooks and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline). Collapse notices use Lore's draft wording; the final collapse is fixed and a missed collapse is death on every floor, with no Reprieve.",
+    "sources": [
+      "decisions/026-timed-floor-clock-override.md (including the stairwell and zone rulings)",
+      "floors/f01/00-overview.md (sections 2, 4, 5, 6, 7, 8, 9)",
+      "tables/loot-decks/*.json",
+      "tables/achievements.csv",
+      "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
+      "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
+      "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
+      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
+      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
+      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
+      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
+    ]
+  },
+  "clock": {
+    "days": 5,
+    "days_field": "clock.days",
+    "other_floors": {
+      "2": 10,
+      "3": 20
+    },
+    "short_rest_slots_per_day_cap": 4,
+    "short_rest_note": "A CAP, not a promise; the GM may end a day early.",
+    "day_ends": "At the party's saferoom Long Rest, or at 24 in-game hours if they have not had one (the System rolls the day over anyway). The last day is different: the floor collapses at 24 in-game hours into Day {days} no matter what.",
+    "lights_out": "Stays inside each day as a hazard: every 8 hours the Pit goes dark for 1 hour; outside saferooms the overview's Ceiling Ticks roll applies (00-overview.md section 2 rule 6, section 5.11).",
+    "authority": "decisions/026-timed-floor-clock-override.md (Caleb; Syndicate confirmations of ~9:25, ~9:35 and ~9:45 PM CT; Caleb rulings of ~10:00 PM CT (Floor 3 = 20 days) and ~10:02 PM CT (a missed collapse is death on every floor)). Overrides the old 'Floor clock: off' wording. The fixed final-collapse hour is a Syndicate default Caleb may veto. 00-overview.md section 2 rule 6 matches these rulings.",
+    "canon_note": "Canon books have ONE collapse at timer end. The stepwise collapse below is a HOUSE mechanic, tagged inspired.",
+    "collapse_order": [
+      {
+        "day": 1,
+        "event": "Nothing collapses (tutorial pace).",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 2,
+        "event": "Outer zones close.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 3,
+        "event": "Mid zones close.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 4,
+        "event": "The Break Room (Z6) and vendors lose service; the Break Room is no longer a saferoom.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 5,
+        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "tag": "inspired (house)"
+      }
+    ],
+    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a snarky notice (Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
+    "collapse_cost_slot": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.detour_tax.party_toll_by_size",
+        "note": "Detour Tax party toll (missed Stairwell key only)"
+      }
+    },
+    "rest_without_saferoom_slot": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size",
+        "note": "Rest-without-a-saferoom party fee (buys a quiet Short Rest, no Long Rest)"
+      }
+    },
+    "zone_groups": "Confirmed (decision 026, tagged inspired): outer zones (Z0 to Z4 plus 3b) close Day 2; mid zones (Z5, Z7 and Z8) close Day 3; on Day 4 the Break Room (Z6) and vendors lose service; on Day 5 only the corridor (Z10, Z11 and Z S) remains. The Z9 Green Room saferoom stays open to the end (inspired). Closed means hooks and services vanish; the route (Z6, Z8, Z9, Z10, Z11) is never cut.",
+    "stairwell_opens_day": 2,
+    "stairwell_opens": "About 32 hours after the floor opens, early Day 2 (canon M-276, VERIFIED). The Z10 boss arena also holds a stairwell (canon M-275). The Stairwell key and the Zone S door are house ideas, tagged inspired.",
+    "stasis_threshold_hours": 6,
+    "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "collapse_order_status": "confirmed per decision 026; the steps only remove hooks and services, and the Detour Tax is the only toll on the clock (a missed Stairwell key only)",
+    "final_collapse": {
+      "hour_of_last_day": 24,
+      "tag": "inspired",
+      "status": "Syndicate default, decision 026; Caleb may veto",
+      "text": "The final collapse comes at a FIXED moment: 24 in-game hours into Day {days} (hour {floor_hours} of the floor). A Long Rest never ends the floor and never skips it; the System cuts short any rest that would run past the collapse."
+    },
+    "collapse_miss": {
+      "scope": "every floor, Floor 1 included",
+      "tag": "canon-aligned (canon: a missed collapse ends the run)",
+      "death": true,
+      "reprieve_applies": false,
+      "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death rules follow Core section 6 (death is pretty much game over). Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
+      "stasis_counts": "Early-descent stasis (canon M-277) counts as reaching a stairwell.",
+      "detour_tax_scope": "The Detour Tax now covers only a missed Stairwell key, never a missed collapse."
+    },
+    "saferoom_rule": {
+      "only_saferoom": "z09",
+      "break_room_not_saferoom_from_day": 4,
+      "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
+    },
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+  },
+  "canon_table": {
+    "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
+    "floor_wide_id": "c-floor",
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+  },
+  "day": {
+    "number": 4,
+    "start_zone": "z09",
+    "start_zone_name": "The Green Room (Saferoom B)",
+    "start_note": "Default start is the Green Room.",
+    "collapse_today": "The Break Room (Z6) and vendors lose service: no terminal, no vendor stock, no corkboard, and the terminal key is lost. The route is not cut. Tagged inspired.",
+    "tomorrow_notice": {
+      "text": "FLOOR NOTICE. Tomorrow is the last day. Only the stage, the stairwell and the service corridor remain, plus the Green Room. After that the floor goes.",
+      "tag": "[PLAYER-FACING]"
+    },
+    "rest_options": [
+      {
+        "option": "Green Room (Z9) saferoom",
+        "note": "Honest saferoom and open to the end of the floor (inspired). Short Rests and the Long Rest that closes the day."
+      },
+      {
+        "option": "Break Room (Z6)",
+        "note": "Not a saferoom since it lost service on Day 4 (decision 026). The Green Room is the only saferoom to the end."
+      },
+      {
+        "option": "Rest outside a saferoom",
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). The Green Room is where the day's Long Rest happens."
+      }
+    ],
+    "carry_over": [
+      {
+        "enc_id": "enc-d02-02",
+        "note": "Zone S service door.",
+        "until_day": 5
+      },
+      {
+        "enc_id": "enc-d02-03",
+        "note": "Stairwell Threshold and early-descent choice.",
+        "until_day": 5
+      },
+      {
+        "enc_id": "enc-d03-03",
+        "note": "Stage Wings Recon.",
+        "until_day": 5
+      },
+      {
+        "enc_id": "enc-d01-04",
+        "note": "Lights-Out Ceiling Ticks (wandering; cap of two on the floor).",
+        "until_day": 5
+      }
+    ],
+    "short_rest_slots": [
+      "Slot 1 (suggested): after the Break Room outage, if needed.",
+      "Slot 2 (suggested): after the Ushers.",
+      "Slot 3 (suggested): reserve for Lights-Out.",
+      "Slot 4 (suggested): reserve; do not push the party to spend them."
+    ],
+    "last_chance_hooks": {
+      "heading": "what remains before only the corridor stays on Day 5",
+      "note": "Only the Green Room, the stage wings, Z S and the stairwell still hold hooks.",
+      "achievements": [
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic."
+        },
+        {
+          "id": "ACH-0189",
+          "note": "Peaceful Path (set up)."
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "f01-z09-0013",
+          "note": "Green-Room Smoothie."
+        }
+      ]
+    },
+    "stall_fallback": "If the party stalls, the Lights-Out hour arrives, the countdown ticks, and the System offers a Long Rest at the Green Room. A party with no key yet can still pay the toll, use tools or force the door, or take the boss route. Do not steer anyone toward early descent. A Crawler who is not at a stairwell when the floor collapses is dead, with no Reprieve (decision 026); keep the warning in view.",
+    "collapse_notice": {
+      "text": "Notice: the Break Room is now off duty. The vending terminal has gone to lunch and will not return. Resting there is no longer recommended. The Green Room remains open, for reasons of mercy and liability.",
+      "tag": "[PLAYER-FACING]",
+      "canon_tag": "inspired",
+      "status": "Lore draft v0.1 (floor1-collapse-notices.draft.md), house wording; Lore may still edit"
+    },
+    "early_descent": {
+      "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+      "player_prompt": {
+        "text": "STAIRWELL NOTICE: go down now and you sit in stasis until the floor collapses, keeping the achievement and losing the rest of the floor. Each of you decides for yourself, and nobody can decide for you. The System won't judge anyone who waits. It will judge a few other things.",
+        "tag": "[PLAYER-FACING]"
+      },
+      "gm_override_note": "The GM may override a Crawler's choice only with a logged reason (decision 026, Syndicate ruling). Never push a Crawler toward early descent; the choice is theirs. A Crawler in stasis has finished the floor; their sheet and boxes follow the Floor 2 arrival rules (00-overview.md section 7.3).",
+      "canon_refs": [
+        {
+          "ledger_id": "M-277",
+          "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
+        },
+        {
+          "ledger_id": "A-151",
+          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv."
+        },
+        {
+          "ledger_id": "M-275",
+          "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version)."
+        }
+      ],
+      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)"
+    },
+    "proposed_achievements": [
+      {
+        "name": "Early Withdrawal",
+        "trigger": "Choose early-descent stasis.",
+        "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+        "reward_slot": {
+          "b70": {
+            "kind": "text",
+            "path": "floors.1.achievement_rewards.proposed.early_withdrawal.reward"
+          }
+        },
+        "narration": "You left early. The floor is still here. So are you, in a closet.",
+        "narration_tag": "[PLAYER-FACING]",
+        "canon_ref": {
+          "ledger_id": "A-151",
+          "use": "Parallel canon: 'The Early Bird Gets To Squirm'."
+        }
+      },
+      {
+        "name": "Detour Tax",
+        "trigger": "Pay the missed-key toll and still descend.",
+        "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+        "reward_slot": {
+          "b70": {
+            "kind": "text",
+            "path": "floors.1.achievement_rewards.proposed.detour_tax.reward"
+          }
+        },
+        "narration": "You paid the fee and got there anyway. Efficient.",
+        "narration_tag": "[PLAYER-FACING]"
+      }
+    ],
+    "gm_warning": {
+      "tag": "[GM-FACING]",
+      "text": "Day 4 reminder, say it plainly: the floor falls at the end of Day 5, and missing it is death with no Reprieve. Tell the table about the free descent in the last six hours. Early-descent stasis counts as reaching a stairwell.",
+      "lore_line": "Reach a stairwell before the collapse or you do not leave. This is not a toll. This is not a detour. This is the end."
+    },
+    "budget_table": [
+      {
+        "label": "Detour Tax, party toll (missed Stairwell key only)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size"
+        }
+      },
+      {
+        "label": "Stairwell key, terminal bribe (party price)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size"
+        }
+      },
+      {
+        "label": "Zone S door forcing fee (party)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size"
+        }
+      },
+      {
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
+        }
+      },
+      {
+        "label": "Potion of Healing, vendor price (shared floor stock)",
+        "b70": {
+          "kind": "scalar",
+          "path": "floors.1.prices.potion_of_healing_vendor.price"
+        }
+      },
+      {
+        "label": "Daily XP guidance and caps",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ]
+        }
+      }
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-dash",
+      "tag": "dash",
+      "name": "Fast, dangerous dash: the Express Lane",
+      "path": "Z9 to Z10 stage (enc-d05-03) to Z11.",
+      "summary": "The Break Room is dark; the remaining route is Z9, the stage and the stairwell. Shortcuts are gone. Resting outside the Green Room costs.",
+      "stairwell_access": "Through Z10 and Z11 or the boss-arena stairwell.",
+      "canon_refs": [
+        {
+          "ledger_id": "M-275",
+          "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version)."
+        },
+        {
+          "ledger_id": "M-277",
+          "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0200",
+          "note": "Speed Clear: still possible if only one Long Rest has been taken after Day 1."
+        },
+        {
+          "id": "ACH-0868",
+          "note": "Dodge a telegraphed area attack."
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "The Break Room just went dark and you're one door closer to the stage. No snacks, no vending, no excuses.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Every shortcut left is the one with teeth. The audience loves a corridor with teeth.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Stage door reached in a hurry. If the Dean sees you sweating, he'll say it's the heat. It isn't.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    },
+    {
+      "id": "route-loot",
+      "tag": "loot",
+      "name": "Slow loot-and-achievement route: What's Left",
+      "path": "Z9, then the stage wings and Z S.",
+      "summary": "Pickings are slim. The Break Room and vendors are gone, the mid zones are gone, and the only boxes left are the ones already earned. The Green Room, the stage and the service hall are what remain.",
+      "stairwell_access": "Zone S service door (Mystery Key, tools, force or the toll) then the service stairwell.",
+      "canon_refs": [
+        {
+          "ledger_id": "A-139",
+          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic."
+        },
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker."
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "Pickings are slim. The Break Room's closed, the vendors are dead, and the only boxes left are the ones you've already earned. Make them count.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "You've got a Green Room, a stage and a service hall left to rob. It's a short list. It's a good list.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You squeezed the last drops from the building. The System is almost proud, which is as close to affection as it gets.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    },
+    {
+      "id": "route-clever",
+      "tag": "clever",
+      "name": "Clever route: Talk, Trade, Sneak",
+      "path": "Z9 to the stage wings to Zone S, with whatever key you still have.",
+      "summary": "The terminal key is gone. What remains is the Mystery Key (if drawn), tools, force, a toll at the door (price from the budget file) or getting past the boss by wits.",
+      "stairwell_access": "Zone S service door by the remaining ways; or the stage by the cheese routes in 00-overview.md section 6.4.",
+      "canon_refs": [
+        {
+          "ledger_id": "A-139",
+          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0189",
+          "note": "Peaceful Path (talk the boss down)."
+        },
+        {
+          "id": "ACH-0173",
+          "note": "Environmentalist."
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "Services are down but the building still has favors to trade. Pay what you owe, steal what's left, and keep a straight face.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The cleverest thing on Day 4 is knowing what you can skip. The audience is writing it down.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You're ready for the finish without being ready for the fight. The System calls that 'ambitious'.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    }
+  ],
+  "stairwell_key": {
+    "what": "The service key for the Zone S door (00-overview.md section 5.8, section 5.10). It opens the service stairwell that drops to Z11 and bypasses the boss.",
+    "ways": [
+      {
+        "id": "key-bruiser",
+        "how": "Take it from Bruiser's head in the Locker Room (Z8).",
+        "where": "z08",
+        "ref": "00-overview.md section 5.8",
+        "route": [
+          "dash",
+          "loot"
+        ],
+        "closes": "Lost on Day 3 when the mid zones (Z8) close; only if not already taken.",
+        "lost_on_day": 3
+      },
+      {
+        "id": "key-terminal",
+        "how": "Buy the unlisted spare from the Snakk-Matic terminal in the Break Room. HOUSE idea (inspired); the price comes only from the budget file.",
+        "where": "z06",
+        "ref": "enc-d01-01",
+        "route": [
+          "clever"
+        ],
+        "price_slot": {
+          "b70": {
+            "kind": "party",
+            "path": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size",
+            "note": "Terminal bribe (party price)"
+          }
+        },
+        "closes": "Lost on Day 4 when the Break Room and vendors lose service; the price is cited from the budget file.",
+        "lost_on_day": 4
+      },
+      {
+        "id": "key-mystery",
+        "how": "A Mystery Key pull (the Hubcap Key, card f01-z06-0004 or f01-any-0035) can be the Zone S lock if the GM picks it. [GM-ONLY] the lock choice is the GM's, written into session state, never into this page or a deck.",
+        "where": "any",
+        "ref": "tables/loot-decks/f01-z06-break-room.json",
+        "route": [
+          "clever",
+          "loot"
+        ],
+        "closes": "No deadline once drawn; exists only if a Mystery Key was pulled.",
+        "lost_on_day": null
+      }
+    ],
+    "keyless": "Thieves' Tools or Strength (Athletics) at the Zone S door works without a key, per 00-overview.md section 5.10 (check values there). It is loud and brings the boss and his ushers looking one minute later.",
+    "missing_key_cost": {
+      "instant_wipe": false,
+      "text": "Missing the key is a COST, not an instant wipe: a detour (back to Z8 or Z6 while those still serve), the Detour Tax toll, or the loud keyless forcing. Missing the collapse is a different matter: it is death (see the missed-collapse rule).",
+      "toll_slot": {
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size",
+          "note": "Detour Tax party toll"
+        }
+      }
+    },
+    "fake_stairwell": "The Big Green EXIT at Z7 is bait, not a stairwell (00-overview.md section 5.7). Taking it costs time and a fall.",
+    "canon_stairwell_notes": [
+      {
+        "ledger_id": "M-276",
+        "text": "Canon: stairwells appear about 32 hours after the Dungeon opens (about a day and a half in). House: early Day 2.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-277",
+        "text": "Canon: descending with more than six hours left on the floor holds the crawler in stasis until the floor collapses.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-275",
+        "text": "Canon: Borough and City boss arenas contain a stairwell (the Z10 stage is the house version).",
+        "tag": "canon"
+      }
+    ],
+    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so canon A-044 (stairs within an hour of arrival) is not attainable on Floor 1; it stays a canon reference only.",
+    "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "keyless_fee": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size",
+        "note": "Zone S door forcing fee (party)"
+      }
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-d04-01",
+      "name": "Service Outage: The Break Room Goes Dark",
+      "zone": "z06",
+      "zone_name": "The Break Room (closed)",
+      "route": [
+        "clever",
+        "loot"
+      ],
+      "route_primary": "clever",
+      "kind": "non-combat (hazard)",
+      "canon_zone": "z06",
+      "map_in_the_mind": {
+        "layout": "The Break Room with the lights half off, the terminal dark, the corkboard blank and a sign taped to the door: OUT OF ORDER, BOTH OF US.",
+        "exits": [
+          "Door to Z8 (closed, passable).",
+          "The rest of the route runs through Z8 to Z9."
+        ],
+        "hazards": [
+          "No services: no terminal, no vendors, no corkboard. It is no longer a saferoom (decision 026); the Green Room is the only saferoom."
+        ],
+        "cover": [
+          "Couch and fridge."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies.",
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "SERVICE OUTAGE. The terminal is dead, the vendors are dead, and the coffee has finally won. We apologize for nothing.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The fridge light clicks off. In the dark, a lone sandwich sits with a name taped to it. Nobody dares.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Last meal eaten, last crumb shared, last coin spent. Go on. The building isn't going to hold your hand.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-z06-0007",
+          "note": "Fridge sandwich: last chance to share it."
+        },
+        {
+          "kind": "placed",
+          "text": "Break Room services end today; no box ceremony or terminal.",
+          "overview_ref": "00-overview.md section 5.6",
+          "check_text": "Snakk-Matic terminal",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.1.boxes"
+              ],
+              "note": "n/a: services have ended, no ceremony"
+            }
+          }
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0899",
+          "note": "Share Food with the Party."
+        }
+      ],
+      "scaling": {
+        "2": "Same dark room.",
+        "3": "Same.",
+        "4": "Same."
+      },
+      "if_they_do_something_dumb": "If someone tries to use the dead terminal, the screen shows OUT OF ORDER and a snarky line. If they try to rest here as if it were still a saferoom, it is a field rest: only a Short Rest, with the price cited at {{b70:floors.1.prices.rest_without_saferoom}} and no Long Rest. Never a wipe.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        }
+      },
+      "quick_run": {
+        "setup": "The Break Room is dark and the door sign reads OUT OF ORDER, BOTH OF US.",
+        "decision": "Spend the last of the supplies and say goodbye to the room, or walk past it?",
+        "on_success": "They leave with leftovers shared and no illusions about resting here.",
+        "on_failure": "A Crawler tries to rest here and finds it is no longer a saferoom.",
+        "minutes": 4,
+        "tag": "pacing guide",
+        "cut_short": "Read the sign, say it is no longer a saferoom, and move on."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Try to rest in the dead Break Room",
+            "effect": "It is no longer a saferoom; any rest there is a field rest, only a Short Rest, and the day's Long Rest waits at the Green Room.",
+            "reacts_in": [
+              "enc-d04-02",
+              "enc-d04-04"
+            ]
+          },
+          {
+            "choice": "Spend the last supplies and credits",
+            "effect": "Leftover credits are what the Crawlers carry to the Zone S turnstile; potions not bought are gone.",
+            "reacts_in": [
+              "enc-d05-02",
+              "enc-d05-03"
+            ]
+          },
+          {
+            "choice": "Take the last look at the corkboard and terminal",
+            "effect": "The room is gone for good; the speaker says so, and the audience mourns it in the next notice.",
+            "reacts_in": [
+              "enc-d04-04"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Terminal key missed, and by whom",
+          "Anyone who tried to rest in the Break Room",
+          "Credits and potions left going into Day 5"
+        ]
+      }
+    },
+    {
+      "id": "enc-d04-02",
+      "name": "Field Rest in the Dark Halls",
+      "zone": "wandering",
+      "zone_name": "Wandering (outside a saferoom)",
+      "route": [
+        "dash"
+      ],
+      "route_primary": "dash",
+      "kind": "hazard + wandering combat",
+      "canon_zone": "zW",
+      "map_in_the_mind": {
+        "layout": "Wherever the party camps outside a saferoom: dark halls, red emergency light, a place with a door they can close.",
+        "exits": [
+          "The nearest saferoom (Z9).",
+          "Whatever route they came by."
+        ],
+        "hazards": [
+          "Red dim light; Ceiling Ticks interrupt a field rest per 00-overview.md section 2 rule 7. A field rest can only be a Short Rest."
+        ],
+        "cover": [
+          "What the room gives."
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "ticks",
+          "srd_id": "stirge",
+          "srd_name": "Stirge",
+          "our_name": "Ceiling Tick (Stirge)",
+          "name_source": "00-overview.md section 5.11 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.wandering.counts_by_party_size",
+              "key": "stirge"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.wandering.creatures",
+              "key": "stirge"
+            }
+          }
+        }
+      ],
+      "enemies_note": "Used only if the party chooses to rest outside the Green Room. Counts toward the floor's wandering cap of two.",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.wandering.fit"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "Resting outside the Green Room. Bold. Sleep is for people with walls.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Something small and hungry drops from the ceiling. It was waiting for you to get comfortable.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Pests cleared, rest ruined, sleep rescheduled. The System recommends the Green Room next time. Not that it cares.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-any-0045",
+          "note": "Welding Goggles, Night Shift (Silver)."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0006",
+          "note": "Dressing-Room Candle, Scented Like a Funeral: a light source."
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0860",
+          "note": "Win initiative."
+        },
+        {
+          "id": "ACH-0205",
+          "note": "Scenic Panic."
+        }
+      ],
+      "scaling": {
+        "2": "Fewer Ticks.",
+        "3": "A small group.",
+        "4": "A full group, as in 00-overview.md section 9.2."
+      },
+      "if_they_do_something_dumb": "Resting outside the Green Room is allowed, but it is only a Short Rest: the price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet one and grants no Long Rest. If the party tries to Long Rest in the open anyway, the System refuses and the Ticks interrupt. Never a wipe.",
+      "zone_color": {
+        "tag": "inspired",
+        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1, own words, optional read-aloud)",
+        "lines": [
+          {
+            "text": "The lights go out in sections, one hall at a time, until only your own lantern is left. The dark makes a sound, a slow settling, like a building thinking.",
+            "tag": "[PLAYER-FACING]"
+          },
+          {
+            "text": "You find a dead-end alcove and sit with your backs to the wall. Every few minutes the far end of the hall clicks, ticks, and goes quiet again.",
+            "tag": "[PLAYER-FACING]"
+          },
+          {
+            "text": "Someone has left a half-eaten ration and a note on the floor: \"Slept here. Do not recommend.\" No signature.",
+            "tag": "[PLAYER-FACING]"
+          },
+          {
+            "text": "Rest is possible, but it is not comfortable. Whoever takes watch hears the System's announcement chime from three zones away, muffled, like a door closing on a party you were not invited to.",
+            "tag": "[PLAYER-FACING]"
+          }
+        ],
+        "gm_note": "GM note (from Lore's hook): a rest here can be interrupted by a dumb, loud, wrong-footed mob, which keeps the cost real without being cruel."
+      },
+      "quick_run": {
+        "setup": "Dark halls and red light; the party is far from the Green Room and tired.",
+        "decision": "Pay for a quiet field rest (a Short Rest only), or push back to the Green Room?",
+        "on_success": "A quiet Short Rest is bought and the day's Long Rest waits at the Green Room.",
+        "on_failure": "Ceiling Ticks interrupt the rest and spoil it.",
+        "minutes": 6,
+        "tag": "pacing guide",
+        "cut_short": "Skip the camp description and roll once for the interruption."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Rest in the open, or go back to the Green Room",
+            "effect": "A paid, quiet field rest is only a Short Rest and grants no Long Rest; the Green Room holds the day's Long Rest. An interrupted rest spends a wandering Tick encounter from the cap of two.",
+            "reacts_in": [
+              "enc-d04-04",
+              "enc-d05-01"
+            ]
+          },
+          {
+            "choice": "Make noise or light a fire",
+            "effect": "A loud camp draws attention that echoes at the stage door.",
+            "reacts_in": [
+              "enc-d04-03"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Field rest taken, and whether the fee was paid (Budget at a glance)",
+          "Wandering encounters used (cap of two)",
+          "Short Rests used today (cap of four)"
+        ]
+      }
+    },
+    {
+      "id": "enc-d04-03",
+      "name": "Ushers at the Stage Door",
+      "zone": "z10",
+      "zone_name": "Graduation Stage (approach)",
+      "route": [
+        "dash",
+        "loot"
+      ],
+      "route_primary": "dash",
+      "kind": "combat",
+      "canon_zone": "z10",
+      "map_in_the_mind": {
+        "layout": "The corridor into the auditorium: STAFF ONLY doors, flashlights in the dark, rolled diplomas on a table, camera lights above.",
+        "exits": [
+          "Back to the Green Room (Z9).",
+          "Onto the stage (Z10).",
+          "To the service hall (Z S)."
+        ],
+        "hazards": [
+          "Flashlight beams spot the party.",
+          "Camera drones watching."
+        ],
+        "cover": [
+          "Trophy table and podium (half cover)."
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "ushers",
+          "srd_id": "skeleton",
+          "srd_name": "Skeleton",
+          "our_name": "Usher (Skeleton)",
+          "name_source": "00-overview.md section 6.4 nameplate",
+          "count_slot": "[COUNT: cite 00-overview.md section 9.3 no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet]",
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z10.creatures",
+              "key": "skeleton"
+            }
+          }
+        }
+      ],
+      "enemies_note": "Ushers sweep the approach with flashlights. Dean Thudd is on the stage (enc-d05-03).",
+      "budget_slot": "[BUDGET: no matching field in rules/70-encounter-budget-5e.json v0.1.1 yet; Syndicate]",
+      "voice_lines": {
+        "system_intro": {
+          "text": "The usher's flashlight finds you before you find the door. 'Please silence your screams,' says a polite voice from the dark. They don't mean the phones.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The Ushers fan out to cover both aisles. Somewhere behind them, a very large shadow adjusts a very small hat.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Ushers down, door open. The auditorium waits. So does the audience.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-any-0048",
+          "note": "Hi-Vis Safety Vest, Reflective."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0050",
+          "note": "Mop Handle of Mild Menace (Silver)."
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0065",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook if every Crawler plays a distinct part in beating the Ushers and approaching the stage as one plan. Table deed; one per floor."
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0867",
+          "note": "Block a hit with a shield or brace."
+        },
+        {
+          "id": "ACH-0861",
+          "note": "Lose initiative and still win."
+        }
+      ],
+      "scaling": {
+        "2": "Fewer Ushers; no flanking aisle.",
+        "3": "A small group.",
+        "4": "Both aisles covered, as written."
+      },
+      "if_they_do_something_dumb": "If the party stands in the beams and argues, the Ushers press the attack and the Dean notices. If they hide, the Ushers walk right past a quiet party. Never a wipe.",
+      "quick_run": {
+        "setup": "The stage door is guarded by Ushers sweeping the corridor with flashlights.",
+        "decision": "Fight the Ushers, or sneak past their beams?",
+        "on_success": "The Ushers are down or avoided and the stage door is open.",
+        "on_failure": "The beams catch the party and the Dean is warned.",
+        "minutes": 8,
+        "tag": "pacing guide",
+        "cut_short": "Run it as a single stealth check; combat only if it fails."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Fight the Ushers, or sneak past",
+            "effect": "Ushers cleared now means Phase 1 of the Dean fight has fewer of them; sneaking past leaves them for Day 5. A loud fight alerts the Dean.",
+            "reacts_in": [
+              "enc-d05-03"
+            ]
+          },
+          {
+            "choice": "Take their flashlights and lamps",
+            "effect": "Light sources help in the dark stage and during the Lights-Out hour on Day 5.",
+            "reacts_in": [
+              "enc-d05-03",
+              "enc-d05-04"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Ushers cleared or avoided",
+          "Dean alerted, yes or no",
+          "Flashlights or lamps taken"
+        ]
+      }
+    },
+    {
+      "id": "enc-d04-04",
+      "name": "Green Room Night Shift",
+      "zone": "z09",
+      "zone_name": "The Green Room (Saferoom B)",
+      "route": [
+        "clever",
+        "loot",
+        "dash"
+      ],
+      "route_primary": "loot",
+      "kind": "non-combat (rest)",
+      "canon_zone": "z09",
+      "map_in_the_mind": {
+        "layout": "The same backstage room, now the only honest saferoom left: a lone bulb in the mirror, the fruit plate, the photo.",
+        "exits": [
+          "Back to the corridor to Z8.",
+          "STAFF ONLY door to Z10."
+        ],
+        "hazards": [
+          "None; honest saferoom, open to the end (inspired)."
+        ],
+        "cover": [
+          "Chairs and the dressing table."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies. The Long Rest closes Day 4.",
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "SAFEROOM CERTIFIED. Still the only one. Statistically, this is where we hold our breath. Eat the fruit.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The lights dim one bulb at a time. The mirror shows your reflections a beat late. You get a long look at who you've become.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Day closed. One day left. The building is leaning toward you.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0013",
+          "note": "Green-Room Smoothie, Pre-Show Strength (Silver)."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0005",
+          "note": "Dressing-Room Body Spray, Industrial Lilac."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0003",
+          "note": "Dead Mirror Bulb, Briefly Alive."
+        },
+        {
+          "kind": "placed",
+          "text": "Box opening during the Long Rest: all earned boxes at once, lowest tier first.",
+          "overview_ref": "00-overview.md section 8.2",
+          "check_text": "Box openings",
+          "amount": {
+            "b70": [
+              {
+                "kind": "cite",
+                "paths": [
+                  "economy_audit.floor_1"
+                ],
+                "note": "Box openings"
+              },
+              {
+                "kind": "cite",
+                "paths": [
+                  "floors.1.boxes"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic, last chance."
+        },
+        {
+          "id": "ACH-0899",
+          "note": "Share Food with the Party."
+        }
+      ],
+      "scaling": {
+        "2": "Same room.",
+        "3": "Same.",
+        "4": "Same."
+      },
+      "if_they_do_something_dumb": "If they skip the rest and push on, the day rolls over at 24 in-game hours anyway; they start Day 5 unrested (a field rest is only a Short Rest, price cited at {{b70:floors.1.prices.rest_without_saferoom}}). If someone attacks another Crawler in the saferoom, the canon three-strikes freeze applies. Never a wipe.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        }
+      },
+      "quick_run": {
+        "setup": "The Green Room is the only saferoom left.",
+        "decision": "Take the Long Rest and open the boxes, or plan the last day first?",
+        "on_success": "Rested, boxed up and briefed for the last day.",
+        "on_failure": "They skip the rest and start Day 5 worn.",
+        "minutes": 6,
+        "tag": "pacing guide",
+        "cut_short": "Open boxes quickly and read only the day-close line."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Take the Long Rest and open the boxes",
+            "effect": "A rested party starts Day 5 ready for the Dean; a party that skipped this and the Day 1 rest faces Variant B at level 1.",
+            "reacts_in": [
+              "enc-d05-01",
+              "enc-d05-03"
+            ]
+          },
+          {
+            "choice": "Agree the last-day plan and who may go early",
+            "effect": "The agreed timing shapes who waits for the six-hour free descent and who takes stasis.",
+            "reacts_in": [
+              "enc-d05-04"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Long Rest taken in the Green Room",
+          "Plan for Day 5 (route, who waits, who descends)",
+          "GM Day 4 warning given"
+        ]
+      }
+    }
+  ],
+  "pending_inputs": [
+    {
+      "owner": "Syndicate",
+      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
+      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
+      "status": "partly filled; remaining slots listed in the report"
+    },
+    {
+      "owner": "Caleb",
+      "item": "Veto window on one Syndicate default (decision 026, ~9:45 PM CT)",
+      "waiting_for": "The final collapse is fixed at 24 in-game hours into the last day and a Long Rest never ends or skips the floor. (The missed-collapse rule is no longer open: Caleb ruled at ~10:02 PM CT that it is death on every floor, no Reprieve.)",
+      "status": "open (default applies)"
+    },
+    {
+      "owner": "Day-count field",
+      "item": "clock.days",
+      "waiting_for": "Floor 1 is 5 (field set), Floor 2 is 10, Floor 3 is 20 (Caleb, decision 026). Page text takes the day count from the field; nothing is hard-coded.",
+      "status": "settled"
+    },
+    {
+      "owner": "Lore",
+      "item": "Canon table, collapse notices, missed-floor line and zone color",
+      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
+      "status": "received"
+    },
+    {
+      "owner": "Syndicate",
+      "item": "ACH rows for canon A-044, A-151 and A-139",
+      "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
+      "status": "waiting (backlog)"
+    },
+    {
+      "owner": "Encounter Bot",
+      "item": "Days 1 to 5 pages",
+      "waiting_for": "Built with budget citations, the death-on-miss rule, quick runs, carry-on and zone color. Next: a Floor 2 (10-day) spec using the same script (use --allow-other-floors).",
+      "status": "done"
+    }
+  ],
+  "budget_file": {
+    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "path": "rules/70-encounter-budget-5e.json",
+    "version": "0.1.1"
+  }
+}

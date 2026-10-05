@@ -1,0 +1,1244 @@
+{
+  "schema": "encounter-bot-day-spec/0.1",
+  "meta": {
+    "owner": "Encounter Bot",
+    "status": "draft",
+    "version": "0.3",
+    "updated": "2026-10-04",
+    "floor": 1,
+    "floor_name": "The Orientation Pit",
+    "title": "Day {day} of {days}: Only the Corridor Stays",
+    "summary": "Floor 1 timed playthrough, Day {day} of {days}: only the Stairwell corridor (Z10, Z11, Z S) remains, plus the Green Room saferoom; Dean Thudd holds the stage, the Z S door has a toll, and the last six hours make descent free. Three routes, four encounters, key availability, early-descent handling, last-chance hooks and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline). Collapse notices use Lore's draft wording; the final collapse is fixed and a missed collapse is death on every floor, with no Reprieve.",
+    "sources": [
+      "decisions/026-timed-floor-clock-override.md (including the stairwell and zone rulings)",
+      "floors/f01/00-overview.md (sections 2, 4, 5, 6, 7, 8, 9)",
+      "tables/loot-decks/*.json",
+      "tables/achievements.csv",
+      "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
+      "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
+      "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
+      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
+      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
+      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
+      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
+    ]
+  },
+  "clock": {
+    "days": 5,
+    "days_field": "clock.days",
+    "other_floors": {
+      "2": 10,
+      "3": 20
+    },
+    "short_rest_slots_per_day_cap": 4,
+    "short_rest_note": "A CAP, not a promise; the GM may end a day early.",
+    "day_ends": "At the party's saferoom Long Rest, or at 24 in-game hours if they have not had one (the System rolls the day over anyway). The last day is different: the floor collapses at 24 in-game hours into Day {days} no matter what.",
+    "lights_out": "Stays inside each day as a hazard: every 8 hours the Pit goes dark for 1 hour; outside saferooms the overview's Ceiling Ticks roll applies (00-overview.md section 2 rule 6, section 5.11).",
+    "authority": "decisions/026-timed-floor-clock-override.md (Caleb; Syndicate confirmations of ~9:25, ~9:35 and ~9:45 PM CT; Caleb rulings of ~10:00 PM CT (Floor 3 = 20 days) and ~10:02 PM CT (a missed collapse is death on every floor)). Overrides the old 'Floor clock: off' wording. The fixed final-collapse hour is a Syndicate default Caleb may veto. 00-overview.md section 2 rule 6 matches these rulings.",
+    "canon_note": "Canon books have ONE collapse at timer end. The stepwise collapse below is a HOUSE mechanic, tagged inspired.",
+    "collapse_order": [
+      {
+        "day": 1,
+        "event": "Nothing collapses (tutorial pace).",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 2,
+        "event": "Outer zones close.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 3,
+        "event": "Mid zones close.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 4,
+        "event": "The Break Room (Z6) and vendors lose service; the Break Room is no longer a saferoom.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 5,
+        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "tag": "inspired (house)"
+      }
+    ],
+    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a snarky notice (Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
+    "collapse_cost_slot": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.detour_tax.party_toll_by_size",
+        "note": "Detour Tax party toll (missed Stairwell key only)"
+      }
+    },
+    "rest_without_saferoom_slot": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size",
+        "note": "Rest-without-a-saferoom party fee (buys a quiet Short Rest, no Long Rest)"
+      }
+    },
+    "zone_groups": "Confirmed (decision 026, tagged inspired): outer zones (Z0 to Z4 plus 3b) close Day 2; mid zones (Z5, Z7 and Z8) close Day 3; on Day 4 the Break Room (Z6) and vendors lose service; on Day 5 only the corridor (Z10, Z11 and Z S) remains. The Z9 Green Room saferoom stays open to the end (inspired). Closed means hooks and services vanish; the route (Z6, Z8, Z9, Z10, Z11) is never cut.",
+    "stairwell_opens_day": 2,
+    "stairwell_opens": "About 32 hours after the floor opens, early Day 2 (canon M-276, VERIFIED). The Z10 boss arena also holds a stairwell (canon M-275). The Stairwell key and the Zone S door are house ideas, tagged inspired.",
+    "stasis_threshold_hours": 6,
+    "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "collapse_order_status": "confirmed per decision 026; the steps only remove hooks and services, and the Detour Tax is the only toll on the clock (a missed Stairwell key only)",
+    "final_collapse": {
+      "hour_of_last_day": 24,
+      "tag": "inspired",
+      "status": "Syndicate default, decision 026; Caleb may veto",
+      "text": "The final collapse comes at a FIXED moment: 24 in-game hours into Day {days} (hour {floor_hours} of the floor). A Long Rest never ends the floor and never skips it; the System cuts short any rest that would run past the collapse."
+    },
+    "collapse_miss": {
+      "scope": "every floor, Floor 1 included",
+      "tag": "canon-aligned (canon: a missed collapse ends the run)",
+      "death": true,
+      "reprieve_applies": false,
+      "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death rules follow Core section 6 (death is pretty much game over). Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
+      "stasis_counts": "Early-descent stasis (canon M-277) counts as reaching a stairwell.",
+      "detour_tax_scope": "The Detour Tax now covers only a missed Stairwell key, never a missed collapse."
+    },
+    "saferoom_rule": {
+      "only_saferoom": "z09",
+      "break_room_not_saferoom_from_day": 4,
+      "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
+    },
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+  },
+  "canon_table": {
+    "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
+    "floor_wide_id": "c-floor",
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time."
+  },
+  "day": {
+    "number": 5,
+    "start_zone": "z09",
+    "start_zone_name": "The Green Room (Saferoom B)",
+    "start_note": "Default start is the Green Room.",
+    "collapse_today": "Only the Stairwell corridor stays: Z10, Z11 and Z S, plus the Z9 saferoom. The floor collapses at 24 in-game hours into Day {days} (fixed; hour {floor_hours} of the floor), whatever the party is doing, and a Crawler not at a stairwell then is dead. Tagged inspired.",
+    "tomorrow_notice": {
+      "text": "FINAL NOTICE. The floor collapses at the end of today's last hour, rested or not. A nap will not hold it, and the System will cut your rest short.",
+      "tag": "[PLAYER-FACING]"
+    },
+    "rest_options": [
+      {
+        "option": "Green Room (Z9) saferoom",
+        "note": "The only saferoom, open to the end of the floor (inspired). Short Rests and the Long Rest are allowed, but the Long Rest never ends or skips the floor, and the System cuts short any rest that would run past the collapse."
+      },
+      {
+        "option": "Break Room (Z6)",
+        "note": "Not a saferoom since it lost service on Day 4 (decision 026). The Green Room is the only saferoom to the end."
+      },
+      {
+        "option": "Rest outside a saferoom",
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). The Green Room is where the day's Long Rest happens."
+      }
+    ],
+    "carry_over": [
+      {
+        "enc_id": "enc-d02-03",
+        "note": "Stairwell Threshold (early-descent choice).",
+        "until_day": 5
+      },
+      {
+        "enc_id": "enc-d01-04",
+        "note": "Lights-Out Ceiling Ticks (wandering; cap of two on the floor).",
+        "until_day": 5
+      }
+    ],
+    "short_rest_slots": [
+      "Slot 1 (suggested): after the Green Room briefing, if needed.",
+      "Slot 2 (suggested): before the stage.",
+      "Slot 3 (suggested): after the stage.",
+      "Slot 4 (suggested): reserve; the clock decides."
+    ],
+    "last_chance_hooks": {
+      "heading": "final hooks",
+      "note": "Everything that is left is on this page.",
+      "achievements": [
+        {
+          "id": "ACH-0022",
+          "note": "Tutorial Complete."
+        },
+        {
+          "id": "ACH-0170",
+          "note": "Boss Claim."
+        },
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker."
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "f01-z10-0001",
+          "note": "Dean Thudd's Valedictorian Cord (Gold)."
+        },
+        {
+          "card_id": "f01-z10-0002",
+          "note": "Podium Leg."
+        },
+        {
+          "card_id": "f01-z10-0003",
+          "note": "Emergency Flask."
+        },
+        {
+          "card_id": "f01-z10-0004",
+          "note": "Alumni Fund Check."
+        }
+      ]
+    },
+    "stall_fallback": "If the party stalls, the countdown ticks, the Lights-Out hour arrives, and the System posts the six-hours warning. In the last six hours the descent is free, so a patient party simply waits at the stairwell if they are not ready to fight. If they cannot or will not fight the boss, the Z S toll door and the boss cheese routes are open; a missed key is only the detour or the Detour Tax (cited at {{b70:floors.1.prices.detour_tax}}). The collapse is fixed and a Long Rest does not move it. A Crawler not at a stairwell when it comes is dead, with no Reprieve; read the missed-floor line and warn the table before anyone dawdles.",
+    "collapse_notice": {
+      "text": "This is your final-morning reminder: in {hours} hours this floor collapses with you or without you. Only the corridor is left. The stairwell is down the hall. Please do not make us say it twice.",
+      "tag": "[PLAYER-FACING]",
+      "canon_tag": "inspired",
+      "status": "Lore draft v0.1 (floor1-collapse-notices.draft.md), house wording; Lore may still edit",
+      "hours_note": "The GM fills {hours} with the in-game hours left until the fixed collapse when reading this aloud."
+    },
+    "early_descent": {
+      "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+      "player_prompt": {
+        "text": "STAIRWELL NOTICE: go down now and you sit in stasis until the floor collapses, keeping the achievement and losing the rest of the floor. Each of you decides for yourself, and nobody can decide for you. The System won't judge anyone who waits. It will judge a few other things.",
+        "tag": "[PLAYER-FACING]"
+      },
+      "gm_override_note": "The GM may override a Crawler's choice only with a logged reason (decision 026, Syndicate ruling). Never push a Crawler toward early descent; the choice is theirs. A Crawler in stasis has finished the floor; their sheet and boxes follow the Floor 2 arrival rules (00-overview.md section 7.3).",
+      "canon_refs": [
+        {
+          "ledger_id": "M-277",
+          "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
+        },
+        {
+          "ledger_id": "A-151",
+          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv."
+        },
+        {
+          "ledger_id": "M-275",
+          "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version)."
+        }
+      ],
+      "free_window": {
+        "text": "Six hours remain. Anyone going down the stairs from this point descends freely. Anyone who went earlier is still napping in the stairwell. Hurry up.",
+        "tag": "[PLAYER-FACING]"
+      },
+      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)"
+    },
+    "floor_exit": {
+      "system_line": {
+        "text": "The floor has closed. Your attendance has been noted and your tenure has been terminated. We will not be sending flowers.",
+        "tag": "[PLAYER-FACING]"
+      },
+      "gm_warning": {
+        "text": "Table warning before anyone goes down: reach a stairwell before the collapse or you do not leave. Missing the collapse is death on every floor, with no Reprieve. Stasis from an early descent still counts as reaching a stairwell.",
+        "tag": "[PLAYER-FACING]"
+      }
+    },
+    "gm_warning": {
+      "tag": "[GM-FACING]",
+      "text": "Day 5 reminder, say it plainly: the floor falls at 24 in-game hours of today, whatever the party is doing. Missing it is death, and the Reprieve does not apply. Stasis from an early descent counts as reaching a stairwell.",
+      "lore_line": "Reach a stairwell before the collapse or you do not leave. This is not a toll. This is not a detour. This is the end."
+    },
+    "budget_table": [
+      {
+        "label": "Detour Tax, party toll (missed Stairwell key only)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size"
+        }
+      },
+      {
+        "label": "Stairwell key, terminal bribe (party price)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size"
+        }
+      },
+      {
+        "label": "Zone S door forcing fee (party)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size"
+        }
+      },
+      {
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
+        }
+      },
+      {
+        "label": "Potion of Healing, vendor price (shared floor stock)",
+        "b70": {
+          "kind": "scalar",
+          "path": "floors.1.prices.potion_of_healing_vendor.price"
+        }
+      },
+      {
+        "label": "Daily XP guidance and caps",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ]
+        }
+      },
+      {
+        "label": "Boss Variant B XP budget total at level 1",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.boss_variant_b_level1.xp_budget_total"
+        }
+      }
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-dash",
+      "tag": "dash",
+      "name": "Fast, dangerous dash: the Express Lane",
+      "path": "Z9 to Z10 stage (Dean Thudd, enc-d05-03) to Z11 (enc-d05-04).",
+      "summary": "Last day. The boss is the whole route. In the last hours the stairs are free; earlier they mean stasis.",
+      "stairwell_access": "Through Z10, then Z11 or the boss-arena stairwell.",
+      "canon_refs": [
+        {
+          "ledger_id": "M-275",
+          "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version)."
+        },
+        {
+          "ledger_id": "M-277",
+          "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
+        },
+        {
+          "ledger_id": "A-151",
+          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0200",
+          "note": "Speed Clear."
+        },
+        {
+          "id": "ACH-0868",
+          "note": "Dodge a telegraphed area attack."
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "Last day. The corridor is all that's left and the Dean is standing in it. Go through him or around him. The floor falls either way.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The clock is a drumbeat now. Every step is a bet, and the audience is all in.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Through the stage and down the stairs. If it was early, you sit in stasis. If you waited, you walk. Either way, you're out.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    },
+    {
+      "id": "route-loot",
+      "tag": "loot",
+      "name": "Slow loot-and-achievement route: Last Pickings",
+      "path": "Z9, then the boss for the Silver Boss Box, then the stairs.",
+      "summary": "Whatever is left is the Green Room boxes, the Z S hall and the boss's cache. The Silver Boss Box (Z10 deck) is the floor-clear reward.",
+      "stairwell_access": "Zone S service door by the remaining ways, or the boss stage.",
+      "canon_refs": [
+        {
+          "ledger_id": "A-139",
+          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0170",
+          "note": "Boss Claim."
+        },
+        {
+          "id": "ACH-0022",
+          "note": "Tutorial Complete."
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "Last day, last loot: whatever the stage coughs up and whatever the Dean drops. Make it good, because it's all there is.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The Silver box is on the other side of a very large man. The audience has opinions about your priorities.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Boxes earned, stage cleared, stairs taken. The System calls this 'a complete run' in a tone that is not entirely sincere.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    },
+    {
+      "id": "route-clever",
+      "tag": "clever",
+      "name": "Clever route: Talk, Trade, Sneak",
+      "path": "Z9 to the stage or Zone S, by wits.",
+      "summary": "The last door has a price, a key or a Dean. The toll turnstile at the Z S door (price from the budget file) is the clever way past a missing key; the boss has three cheese routes.",
+      "stairwell_access": "Zone S door by key, tools, force or toll; or the stage by the cheese routes.",
+      "canon_refs": [
+        {
+          "ledger_id": "A-139",
+          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0189",
+          "note": "Peaceful Path."
+        },
+        {
+          "id": "ACH-0173",
+          "note": "Environmentalist."
+        },
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker."
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "The last door has a price, a key or a Dean. Pick the one you can afford.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "No fight is the best fight, according to the people who aren't in it. The audience still wants blood, but only a little.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You solved the final exam without taking it. The System marks you 'Cheating, but efficient'.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    }
+  ],
+  "stairwell_key": {
+    "what": "The service key for the Zone S door (00-overview.md section 5.8, section 5.10). It opens the service stairwell that drops to Z11 and bypasses the boss.",
+    "ways": [
+      {
+        "id": "key-bruiser",
+        "how": "Take it from Bruiser's head in the Locker Room (Z8).",
+        "where": "z08",
+        "ref": "00-overview.md section 5.8",
+        "route": [
+          "dash",
+          "loot"
+        ],
+        "closes": "Lost on Day 3 when the mid zones (Z8) close; only if not already taken.",
+        "lost_on_day": 3
+      },
+      {
+        "id": "key-terminal",
+        "how": "Buy the unlisted spare from the Snakk-Matic terminal in the Break Room. HOUSE idea (inspired); the price comes only from the budget file.",
+        "where": "z06",
+        "ref": "enc-d01-01",
+        "route": [
+          "clever"
+        ],
+        "price_slot": {
+          "b70": {
+            "kind": "party",
+            "path": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size",
+            "note": "Terminal bribe (party price)"
+          }
+        },
+        "closes": "Lost on Day 4 when the Break Room and vendors lose service; the price is cited from the budget file.",
+        "lost_on_day": 4
+      },
+      {
+        "id": "key-mystery",
+        "how": "A Mystery Key pull (the Hubcap Key, card f01-z06-0004 or f01-any-0035) can be the Zone S lock if the GM picks it. [GM-ONLY] the lock choice is the GM's, written into session state, never into this page or a deck.",
+        "where": "any",
+        "ref": "tables/loot-decks/f01-z06-break-room.json",
+        "route": [
+          "clever",
+          "loot"
+        ],
+        "closes": "No deadline once drawn; exists only if a Mystery Key was pulled.",
+        "lost_on_day": null
+      }
+    ],
+    "keyless": "Thieves' Tools or Strength (Athletics) at the Zone S door works without a key, per 00-overview.md section 5.10 (check values there). It is loud and brings the boss and his ushers looking one minute later.",
+    "missing_key_cost": {
+      "instant_wipe": false,
+      "text": "Missing the key is a COST, not an instant wipe: a detour (back to Z8 or Z6 while those still serve), the Detour Tax toll, or the loud keyless forcing. Missing the collapse is a different matter: it is death (see the missed-collapse rule).",
+      "toll_slot": {
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size",
+          "note": "Detour Tax party toll"
+        }
+      }
+    },
+    "fake_stairwell": "The Big Green EXIT at Z7 is bait, not a stairwell (00-overview.md section 5.7). Taking it costs time and a fall.",
+    "canon_stairwell_notes": [
+      {
+        "ledger_id": "M-276",
+        "text": "Canon: stairwells appear about 32 hours after the Dungeon opens (about a day and a half in). House: early Day 2.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-277",
+        "text": "Canon: descending with more than six hours left on the floor holds the crawler in stasis until the floor collapses.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-275",
+        "text": "Canon: Borough and City boss arenas contain a stairwell (the Z10 stage is the house version).",
+        "tag": "canon"
+      }
+    ],
+    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so canon A-044 (stairs within an hour of arrival) is not attainable on Floor 1; it stays a canon reference only.",
+    "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "keyless_fee": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size",
+        "note": "Zone S door forcing fee (party)"
+      }
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-d05-01",
+      "name": "Final Morning: Only the Corridor Stays",
+      "zone": "z09",
+      "zone_name": "The Green Room (Saferoom B)",
+      "route": [
+        "clever",
+        "loot",
+        "dash"
+      ],
+      "route_primary": "clever",
+      "kind": "non-combat",
+      "canon_zone": "z09",
+      "map_in_the_mind": {
+        "layout": "The Green Room at the end of the world: the mirror's last bulbs, the fruit plate, the framed photo. A countdown ticks on a wall screen.",
+        "exits": [
+          "Back to Z8 (closed, passable).",
+          "STAFF ONLY door to the stage (Z10)."
+        ],
+        "hazards": [
+          "None; honest saferoom, open to the end (inspired)."
+        ],
+        "cover": [
+          "Chairs and the dressing table."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies.",
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "GOOD MORNING, CRAWLERS. This is the last day. We've kept the lights on for you. We didn't have to.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The countdown on the wall hits a number you can't unsee. The audience goes quiet. Even the foot people.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Briefed, rested, ready. Or not. The floor falls either way.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0013",
+          "note": "Green-Room Smoothie (Silver)."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0004",
+          "note": "Stage Whisper Cue Card (scroll)."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0014",
+          "note": "Stage-Crew Gaffer Wristbands (Silver, hand-pick only)."
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic, last chance."
+        }
+      ],
+      "scaling": {
+        "2": "Same.",
+        "3": "Same.",
+        "4": "Same."
+      },
+      "if_they_do_something_dumb": "If the party delays, the countdown reminds them and the Lights-Out hour arrives. A Long Rest here is allowed, but it never ends or skips the floor, and the System cuts short any rest that would run past the collapse. If they miss the collapse, it is death for anyone not at a stairwell: no Reprieve, no toll, no detour. Say so before they settle in.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        }
+      },
+      "quick_run": {
+        "setup": "The last morning: the countdown ticks and only the corridor remains.",
+        "decision": "Rest and plan, or head straight for the stairs?",
+        "on_success": "The party leaves with a plan and enough time.",
+        "on_failure": "They dawdle; the countdown does not wait and any rest is cut short.",
+        "minutes": 5,
+        "tag": "pacing guide",
+        "cut_short": "Read the final-morning reminder and ask for the plan in one sentence."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "How the last day is spent",
+            "effect": "The collapse is fixed at 24 in-game hours of today; a Long Rest is cut short if it would run past it. The plan decides whether the Crawlers meet the turnstile, the stage or both.",
+            "reacts_in": [
+              "enc-d05-02",
+              "enc-d05-03",
+              "enc-d05-04"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Hours left when the party leaves the Green Room (fill {hours})",
+          "Plan declared",
+          "GM Day 5 warning given"
+        ]
+      }
+    },
+    {
+      "id": "enc-d05-02",
+      "name": "Zone S: The Toll Turnstile",
+      "zone": "zS",
+      "zone_name": "Zone S: Service Corridor",
+      "route": [
+        "clever",
+        "loot"
+      ],
+      "route_primary": "clever",
+      "kind": "hazard (non-combat) + toll",
+      "canon_zone": "zS",
+      "map_in_the_mind": {
+        "layout": "The same utility hall, now with a System turnstile bolted across the service door and a slot that says PLEASE INSERT CREDITS.",
+        "exits": [
+          "Back to the stage wings.",
+          "The service door and the stairs beyond."
+        ],
+        "hazards": [
+          "The door itself (key, tools, force or toll).",
+          "Force is loud: the boss and ushers follow."
+        ],
+        "cover": [
+          "Pipe runs."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies unless the door is forced.",
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "A turnstile on the janitor's door. Of course there is. Insert credits, insert key, or insert yourself with some force.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The turnstile eats your payment, considers, and decides to keep the change. The audience loves a bureaucrat.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Gate open, stairs below. You paid, you picked, or you broke it. All three are valid.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Toll at the door: cited at {{b70:floors.1.prices.detour_tax}} (the Detour Tax, a missed Stairwell key only). House idea (inspired); a missed key costs, never wipes.",
+          "overview_ref": "00-overview.md section 5.10",
+          "check_text": "Opens with",
+          "amount": {
+            "b70": {
+              "kind": "party",
+              "path": "floors.1.prices.detour_tax.party_toll_by_size",
+              "note": "Detour Tax party toll"
+            }
+          }
+        },
+        {
+          "kind": "item",
+          "srd_id": "thieves-tools",
+          "note": "Picking the door."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0014",
+          "note": "Paint-Can Pry Bar: forcing, loudly."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0044",
+          "note": "Stuck Door Wedge (Silver): hold the gate open."
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0058",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook for a party that takes the bypass and the floor with no kills. One per floor; record at award."
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker."
+        },
+        {
+          "id": "ACH-0177",
+          "note": "Hidden Cache (only if it was discovered earlier; the 3b cache is an outer-zone hook)."
+        },
+        {
+          "id": "ACH-0877",
+          "note": "Disarm an enemy trap with junk."
+        }
+      ],
+      "scaling": {
+        "2": "The toll is the same; one more route through.",
+        "3": "Same.",
+        "4": "Same."
+      },
+      "if_they_do_something_dumb": "If the party forces the turnstile, it is loud and the boss follows. If they cannot pay or open it, they can still take the boss route. The cost is time, not death. Never a wipe.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        }
+      },
+      "proposed_achievements": [
+        {
+          "name": "Detour Tax",
+          "trigger": "Pay the missed-key toll and still descend.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "reward_slot": {
+            "b70": {
+              "kind": "text",
+              "path": "floors.1.achievement_rewards.proposed.detour_tax.reward"
+            }
+          },
+          "narration": "You paid the fee and got there anyway. Efficient.",
+          "narration_tag": "[PLAYER-FACING]"
+        }
+      ],
+      "quick_run": {
+        "setup": "A turnstile bolted across the service door says PLEASE INSERT CREDITS.",
+        "decision": "Pay the Detour Tax, pick the lock, force it, or take the stage instead?",
+        "on_success": "The gate opens to the stairs below.",
+        "on_failure": "Forcing it is loud and the Dean arrives.",
+        "minutes": 6,
+        "tag": "pacing guide",
+        "cut_short": "One choice, one roll, one consequence."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Pay, pick, force or skip the turnstile",
+            "effect": "Paying the Detour Tax may earn the Detour Tax nod; forcing it is loud and the Dean arrives; skipping it sends the party to the stage.",
+            "reacts_in": [
+              "enc-d05-03",
+              "enc-d05-04"
+            ]
+          },
+          {
+            "choice": "Taking the Zone S route",
+            "effect": "Bypassing the Dean this way forfeits the Boss Box and any Dean-only hooks.",
+            "reacts_in": [
+              "enc-d05-03"
+            ],
+            "later_note": "Whatever credits and gear are left go down with the party to the Floor 2 arrival."
+          }
+        ],
+        "gm_tracks": [
+          "Turnstile: paid, picked, forced or skipped",
+          "Amount owed if the toll was paid",
+          "Dean alerted by noise"
+        ]
+      }
+    },
+    {
+      "id": "enc-d05-03",
+      "name": "Graduation Stage: Dean Thudd",
+      "zone": "z10",
+      "zone_name": "Graduation Stage (Zone 10)",
+      "route": [
+        "dash",
+        "clever",
+        "loot"
+      ],
+      "route_primary": "dash",
+      "kind": "boss",
+      "canon_zone": "z10",
+      "map_in_the_mind": {
+        "layout": "A vast auditorium: the stage is a podium, a stack of diplomas and a trophy table, the orchestra pit runs along the front edge, hundreds of camera lights glow in the dark, and a booth window glows BROADCAST.",
+        "exits": [
+          "Back to the Green Room (Z9).",
+          "The wings toward the service hall (Z S).",
+          "The stairwell behind the stage (Z11)."
+        ],
+        "hazards": [
+          "The orchestra pit: shove or lure the boss in (00-overview.md section 6.4).",
+          "Group Photo: a telegraphed spotlight and countdown; step out or pay.",
+          "Camera drones overhead."
+        ],
+        "cover": [
+          "Podium and trophy table (half cover); the Ushers hold the wings."
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "dean",
+          "srd_id": "ogre",
+          "srd_name": "Ogre",
+          "our_name": "Dean Thudd, Head of Orientation (Ogre)",
+          "name_source": "00-overview.md section 6.4 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z10.counts_by_party_size",
+              "key": "ogre"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z10.creatures",
+              "key": "ogre"
+            }
+          }
+        },
+        {
+          "slot": "ushers",
+          "srd_id": "skeleton",
+          "srd_name": "Skeleton",
+          "our_name": "Usher (Skeleton)",
+          "name_source": "00-overview.md section 6.4 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z10.counts_by_party_size",
+              "key": "skeleton"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z10.creatures",
+              "key": "skeleton"
+            }
+          }
+        },
+        {
+          "slot": "dean-jv",
+          "srd_id": "bugbear-warrior",
+          "srd_name": "Bugbear Warrior",
+          "our_name": "Dean Thudd (JV) (Bugbear Warrior)",
+          "name_source": "00-overview.md section 6.6 nameplate (Variant B)",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z10.counts_by_party_size",
+              "key": "bugbear-warrior"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z10.creatures",
+              "key": "bugbear-warrior"
+            }
+          }
+        }
+      ],
+      "enemies_note": "Variant B (Dean Thudd, JV) is for a party fighting at level 1 (a dash that skips the Green Room rest) or for 2 Crawlers at level 2 (00-overview.md section 6.6). The Ushers add two in Phase 2. Lore lists the Dean and the Ushers as house (inspired) mobs; the JV nameplate is overview-only.",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.z10.fit"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "LADIES, GENTLEMEN, AND THE PEOPLE WITH OPINIONS ABOUT YOUR FEET: it's Graduation Day. The Dean has some words. Mostly with his club.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The walk-up song slows into a sad remix and more Ushers file in from the aisles. High above, a camera drone sputters and gives you a stare. Nobody mentions it.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Class dismissed. The Dean is down, thrown out, retired or hugging someone, and the audience will take any of them.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win_alt": {
+          "text": "The Dean sits in the front row with the fruit plate and starts a new chapter. HR is furious. HR is also eating a grape.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-z10-0001",
+          "note": "Dean Thudd's Valedictorian Cord (Gold) (Silver Boss Box pull)."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z10-0002",
+          "note": "Podium Leg, Bolted Once, Now Stuck Forever."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z10-0003",
+          "note": "Dean's Emergency Flask."
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z10-0004",
+          "note": "Alumni Fund Check."
+        },
+        {
+          "kind": "placed",
+          "text": "Thudd's corpse cache and the diploma stack; the Silver Boss Box for every Crawler who fought or talked him down.",
+          "overview_ref": "00-overview.md section 6.7",
+          "check_text": "corpse cache",
+          "amount": {
+            "b70": [
+              {
+                "kind": "text",
+                "path": "floors.1.fixed_encounters.z10.cash_dice_per_crawler",
+                "note": "Boss cash per Crawler"
+              },
+              {
+                "kind": "cite",
+                "paths": [
+                  "economy_audit.pull_expectations"
+                ],
+                "note": "Silver Boss Box"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0059",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook if the party is the first to take down a Floor 1 boss. Check the card's trigger text and Syndicate's ruling on whether Thudd counts; one per floor; record at award; never promise."
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0065",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook if every Crawler plays a distinct part of one plan against the boss. Table deed; one per floor."
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0170",
+          "note": "Boss Claim: folded into the Silver Boss Box."
+        },
+        {
+          "id": "ACH-0868",
+          "note": "Dodge a telegraphed area attack."
+        },
+        {
+          "id": "ACH-0173",
+          "note": "Environmentalist: pit finish."
+        },
+        {
+          "id": "ACH-0189",
+          "note": "Peaceful Path: talk him down."
+        },
+        {
+          "id": "ACH-0873",
+          "note": "Destroy a camera or drone."
+        }
+      ],
+      "scaling": {
+        "2": "Use Variant B (Dean Thudd, JV) with the Ushers, and give the clever options room. Add the Assigned Companion rule if the table uses it (00-overview.md section 9.3).",
+        "3": "Use the full Dean with fewer Ushers than the four-Crawler set; keep the pit and the diploma gambit.",
+        "4": "Full Dean and Ushers, as written (00-overview.md section 6.4 and 9.3)."
+      },
+      "if_they_do_something_dumb": "If the party dashes in at level 1 without the Green Room rest, run Variant B. If a Crawler descends early (stasis) before the fight, they are out of it; the fight runs with the rest. If someone shoves the Dean into the pit while the Ushers are still up, the Ushers pile on. Never a wipe by the clock; a death in the fight is a real death.",
+      "spine_plant_gm_only": "[GM-ONLY] Black Box glimpse at the start of Phase 2 (00-overview.md section 6.5). A camera drone is hit, a recorder housing ejects and is snatched back by a ceiling claw. No explanation, no reward.",
+      "proposed_achievements": [
+        {
+          "name": "Hold Please",
+          "trigger": "Talk Dean Thudd down without a fight.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "reward_slot": {
+            "b70": {
+              "kind": "text",
+              "path": "floors.1.achievement_rewards.proposed.hold_please.reward"
+            }
+          },
+          "narration": "You waited on hold and won. The System is baffled.",
+          "narration_tag": "[PLAYER-FACING]"
+        }
+      ],
+      "budget_variant_b": {
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.boss_variant_b_level1.xp_budget_total",
+          "note": "Variant B XP budget total at level 1"
+        }
+      },
+      "quick_run": {
+        "setup": "Dean Thudd, the Ushers and the audience on the Graduation Stage.",
+        "decision": "Fight, talk him down, use the pit and the spotlight, or skip him through Zone S?",
+        "on_success": "The Dean is down, thrown out or talked down and the stage is clear.",
+        "on_failure": "A Crawler drops in the fight; a death in the fight is a real death.",
+        "minutes": 25,
+        "tag": "pacing guide",
+        "cut_short": "Run one phase only, skip the Phase 2 Ushers, and resolve a talk-down or a pit shove in one scene."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Fight, talk down, cheese or bypass the Dean",
+            "effect": "The Boss Box drops only if the Dean is fought or talked down; talking him down can earn Hold Please. A death in the fight is a real death.",
+            "reacts_in": [
+              "enc-d05-04"
+            ]
+          },
+          {
+            "choice": "Stasis Crawlers are not in the fight",
+            "effect": "Anyone who descended early is out of the stage fight and waits in stasis; the rest fight on.",
+            "reacts_in": [
+              "enc-d05-04"
+            ],
+            "later_note": "Loot taken here, any Boss Box and the party's condition arrive with them on Floor 2."
+          }
+        ],
+        "gm_tracks": [
+          "Variant used (Dean or JV) and phase reached",
+          "Dean outcome: down, thrown out, talked down or bypassed",
+          "Boss Box and diploma cache claimed",
+          "Deaths in the fight"
+        ]
+      }
+    },
+    {
+      "id": "enc-d05-04",
+      "name": "The Stairwell: The Last Six Hours",
+      "zone": "z11",
+      "zone_name": "The Stairwell",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "dash",
+      "kind": "non-combat (descent)",
+      "canon_zone": "z11",
+      "map_in_the_mind": {
+        "layout": "The plain concrete stairwell behind the stage, spiral steps down, an index card on the rail.",
+        "exits": [
+          "Back to the stage.",
+          "Down to Floor 2.",
+          "The service stairwell joins here."
+        ],
+        "hazards": [
+          "None."
+        ],
+        "cover": [
+          "Rail and landing."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies. The free-descent window is the last six hours of this day.",
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "The Stairwell. The last six hours are free. Walk down like you own it, because the floor is about to belong to nobody.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The countdown hits the last stretch. Whoever's still on the floor hears a long, low hum under the stairs.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Everyone who made it is down. The System posts the Floor Summary and a very small smile.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Stairwell Checkpoint, Floor Summary and descent procedure.",
+          "overview_ref": "00-overview.md section 7.3",
+          "check_text": "Stairwell Checkpoint",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.1.boxes"
+              ],
+              "note": "n/a: a placed procedure, not a loot source"
+            }
+          }
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0022",
+          "note": "Tutorial Complete: pay once."
+        },
+        {
+          "id": "ACH-0200",
+          "note": "Speed Clear, if the par time held."
+        },
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker."
+        }
+      ],
+      "scaling": {
+        "2": "Same.",
+        "3": "Same.",
+        "4": "Same."
+      },
+      "if_they_do_something_dumb": "If a Crawler tries to descend earlier than the last six hours, run the early-descent block (stasis); the GM logs any override. Before anyone goes down, give the floor exit warning: missing the collapse is death on every floor, with no Reprieve. If a Crawler is still on the floor at the collapse, read the missed-floor line: they are dead.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        }
+      },
+      "proposed_achievements": [
+        {
+          "name": "Early Withdrawal",
+          "trigger": "Choose early-descent stasis.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "reward_slot": {
+            "b70": {
+              "kind": "text",
+              "path": "floors.1.achievement_rewards.proposed.early_withdrawal.reward"
+            }
+          },
+          "narration": "You left early. The floor is still here. So are you, in a closet.",
+          "narration_tag": "[PLAYER-FACING]",
+          "canon_ref": {
+            "ledger_id": "A-151",
+            "use": "Parallel canon: 'The Early Bird Gets To Squirm'."
+          }
+        }
+      ],
+      "quick_run": {
+        "setup": "The stairwell behind the stage in the last six hours of the floor.",
+        "decision": "Descend now with the whole party, or wait for stragglers and risk the clock?",
+        "on_success": "Everyone who reaches a stairwell lives and the Floor Summary posts.",
+        "on_failure": "A Crawler still on the floor at the collapse is dead; the Reprieve does not apply.",
+        "minutes": 6,
+        "tag": "pacing guide",
+        "cut_short": "Count heads, read the six-hours line, and run the descent in one beat."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Reach a stairwell before the collapse",
+            "effect": "Every Crawler at a stairwell when the floor collapses lives; stasis counts as reaching one. Anyone still on the floor is dead, with no Reprieve.",
+            "later_note": "Everyone who reaches a stairwell arrives at the Floor 2 arrival with the Floor Summary; the GM repeats that a missed collapse is death on every floor."
+          }
+        ],
+        "gm_tracks": [
+          "Who is at a stairwell, and in stasis or free",
+          "Hours left when each descent happens",
+          "Anyone still on the floor at the fixed collapse (dead)",
+          "Floor Summary posted",
+          "For anyone dead at the collapse: log a 'floor lost' write-off of the exact coins and items destroyed, and log anything a survivor looted before the collapse as a transfer first (decision 028)"
+        ]
+      }
+    }
+  ],
+  "pending_inputs": [
+    {
+      "owner": "Syndicate",
+      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
+      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
+      "status": "partly filled; remaining slots listed in the report"
+    },
+    {
+      "owner": "Caleb",
+      "item": "Veto window on one Syndicate default (decision 026, ~9:45 PM CT)",
+      "waiting_for": "The final collapse is fixed at 24 in-game hours into the last day and a Long Rest never ends or skips the floor. (The missed-collapse rule is no longer open: Caleb ruled at ~10:02 PM CT that it is death on every floor, no Reprieve.)",
+      "status": "open (default applies)"
+    },
+    {
+      "owner": "Day-count field",
+      "item": "clock.days",
+      "waiting_for": "Floor 1 is 5 (field set), Floor 2 is 10, Floor 3 is 20 (Caleb, decision 026). Page text takes the day count from the field; nothing is hard-coded.",
+      "status": "settled"
+    },
+    {
+      "owner": "Lore",
+      "item": "Canon table, collapse notices, missed-floor line and zone color",
+      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
+      "status": "received"
+    },
+    {
+      "owner": "Syndicate",
+      "item": "ACH rows for canon A-044, A-151 and A-139",
+      "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
+      "status": "waiting (backlog)"
+    },
+    {
+      "owner": "Encounter Bot",
+      "item": "Days 1 to 5 pages",
+      "waiting_for": "Built with budget citations, the death-on-miss rule, quick runs, carry-on and zone color. Next: a Floor 2 (10-day) spec using the same script (use --allow-other-floors).",
+      "status": "done"
+    }
+  ],
+  "budget_file": {
+    "expected_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "path": "rules/70-encounter-budget-5e.json",
+    "version": "0.1.1"
+  }
+}

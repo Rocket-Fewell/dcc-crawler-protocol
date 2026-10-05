@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "version": "0.1.1",
+  "stamp": "2026-10-04",
+  "status": "DRAFT placeholder lines written by the Borent build from the spec samples. Valtay/Syndicate: replace freely, keep the keys and {placeholders}. Each key has up to 3 variants; the bot picks one by hash of the user id (stable, no randomness).",
+  "voice": "System voice: dry, clear. Snark aims at the job, the choices and the gear, never the person."
+ },
+ "lines": {
+  "S1": [
+   "Welcome, Crawler. This is your private intake booth. Nobody else can see this. The Terms of Service are four hundred thousand words long and the only one you need is 'lethal.' Tap ACCEPT. DECLINE also continues, but louder.",
+   "Intake Kiosk online. Everything you type here is private and nothing is spoken aloud. ACCEPT the Terms or DECLINE them. Both lead to the same hallway.",
+   "Crawler intake. Please hold still while the System pretends to read your file."
+  ],
+  "S2": [
+   "Table comfort is Ludicrous. That's the default, not a promise. Tell us privately what you don't want. No explanation needed. We won't ask, we won't joke about it, and nobody else sees this.",
+   "Lines and veils. A line never appears. A veil may happen off-screen, but you will never see it. Say 'cut' in play any time. No explanation is requested or wanted."
+  ],
+  "S3": [
+   "Name for the paperwork. Not your Broadcast Name; that's earned on Floor 3. Pronouns, if you like. The cameras will guess otherwise."
+  ],
+  "S4": [
+   "One line: what you look like right now, in whatever you were wearing when the world ended. One line: why you are still funny or dangerous. We have cameras. We have so many cameras."
+  ],
+  "S5": [
+   "Latent Biology. Pick one. You'll look human on Floors 1-2 and the traits will get filed as quirks. Your file is under review."
+  ],
+  "S6": [
+   "Provisional Class. A talent that fell out of you. The official title comes later, with the paperwork. Level 1 only. No multiclassing; we don't have the forms."
+  ],
+  "S7": [
+   "Prior Employment. What you did before the crawl. Pick the job; the System will quietly decide what that says about you."
+  ],
+  "S8": [
+   "Six numbers decide how long you last. Pick a method. The audience has opinions about your Charisma already."
+  ],
+  "S8_roll_offer": [
+   "Roll: the System rolls three arrays of six scores (4d6, drop the lowest die, six times each). You keep ONE, and only an array that totals 73 or more. If none does, the System rolls all three again."
+  ],
+  "S8_roll_result": [
+   "Three arrays. Keep one that totals above 72. The numbers are not wrong. They are just yours."
+  ],
+  "S8_roll_keep_ok": [
+   "Keepable (total {total})"
+  ],
+  "S8_roll_keep_no": [
+   "Not keepable (total {total}, needs 73 or more)"
+  ],
+  "S8_roll_none": [
+   "None of the three totals above 72. The System has filed your luck and is rolling all three again."
+  ],
+  "S8_roll_assign": [
+   "Assign your scores. Each number goes to one ability, once. Decide where the highest one goes first; the audience is watching."
+  ],
+  "S8_roll_cap": [
+   "Background bonuses are added after. No score goes above 20."
+  ],
+  "S8_roll_giveup": [
+   "{rounds} rounds and no array above 72. That should not happen. Pick the standard array or point buy."
+  ],
+  "S8_roll_closed": [
+   "That method is closed today. Pick the standard array or point buy."
+  ],
+  "S9": [
+   "Proficiencies. What your body already knows how to do. The fixed ones came with the job. Pick the rest."
+  ],
+  "S10": [
+   "Equipment. Take the package, or take the cash and shop at the Intake Vending Wall. Everything is junk. Everything works."
+  ],
+  "S11": [
+   "Spells. Pick the ones you'll admit to. The audience prefers loud."
+  ],
+  "S13": [
+   "A short customer satisfaction survey. Your answers are private and will not be read aloud. Pass on any."
+  ],
+  "S14": [
+   "What did you do before the crawl? Two sentences. The System will read it out at your introduction, so make it worth reading out. Then: what should the audience call you? It's a request, not a promise."
+  ],
+  "S15": [
+   "Write what your body should do while your brain is in the bathroom. One line for orders. One for reactions. And if you want a name for your best trick, give it one."
+  ],
+  "S16": [
+   "Here's the file. Read it like it's going to be read aloud, because parts of it will be."
+  ],
+  "S17": [
+   "Confirm? This locks the file. Corrections after this go through the GM."
+  ],
+  "registered": [
+   "You're registered, {name}. Intake Tag {tag}. Your sheet channel has your card. Floor 1 starts when the table does.",
+   "Filed. {name}, Intake Tag {tag}. Try not to die in the first ten minutes."
+  ],
+  "held": [
+   "Filed, {name}. Pending review. A human will look at it and either approve it or send it back with a note.",
+   "Your file is in the tray, {name}. Someone with a stamp will get to it."
+  ],
+  "returned": [
+   "Your file came back, {name}. Go to {screen} and read the note: {note}"
+  ],
+  "party_full": [
+   "Party full."
+  ],
+  "already": [
+   "You already have a Crawler in this session: {name}. Corrections go through the GM."
+  ],
+  "not_set_up": [
+   "Table not set up."
+  ],
+  "taken": [
+   "That name is taken. Pick another."
+  ],
+  "near_dup": [
+   "That name sits inside another Crawler's name ('{other}'). Tools match partial names, so this could cause mix-ups. Tap Use it anyway, or pick another."
+  ],
+  "pick_for_me": [
+   "The System chose for you ({what}). Change it if you hate it."
+  ],
+  "restart_confirm": [
+   "Wipe your answers and start over? Your comfort answers stay."
+  ],
+  "quirk_human": [
+   "Baseline. Congratulations on being the control group."
+  ],
+  "toast_paperwork": [
+   "Paperwork Survivor"
+  ],
+  "toast_terms": [
+   "Don't Skip Intro"
+  ]
+ },
+ "survey": {
+  "core": [
+   "What were you holding when the world ended?",
+   "What's the last thing you bought that you absolutely did not need?",
+   "What's something harmless that you are nonetheless terrified of?",
+   "What do your friends make fun of you for?",
+   "Name a smell, food, or song that makes you happy. One. Don't be weird about it.",
+   "In a fight, what's your plan? Be honest; we'll know."
+  ],
+  "bonus_pool": [
+   {
+    "id": "left_behind",
+    "q": "Who did you leave behind? You don't have to answer.",
+    "drop_if_optouts": true
+   },
+   {
+    "id": "habit",
+    "q": "What's your worst habit?"
+   },
+   {
+    "id": "million",
+    "q": "What would you do with a million credits? (You will never have a million credits.)"
+   },
+   {
+    "id": "hill",
+    "q": "What's a hill you would die on? Literally, in this case."
+   },
+   {
+    "id": "shoe",
+    "q": "What's your shoe size?",
+    "drop": true,
+    "note": "TODO Caleb/Valtay: the foot bit. Dropped by default in /create; flip drop to false to include."
+   },
+   {
+    "id": "mother",
+    "q": "Describe your mother in three words.",
+    "drop": true,
+    "note": "Dropped by default (GUIDE Open Q9)."
+   }
+  ]
+ }
+}

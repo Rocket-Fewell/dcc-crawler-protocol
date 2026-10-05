@@ -1,0 +1,1299 @@
+#!/usr/bin/env python3
+"""Encounter Bot: day-page generator and validator for the timed Floor 1 playthrough.
+
+Owner: Encounter Bot | Status: draft | Version: 0.1 | Updated: 2026-10-04
+Summary: Pure local Python 3 (standard library only, no network, no model/API calls). Reads a Day spec (JSON) plus the
+reskin tables, loot decks, achievements.csv, Lore's Floor 1 canon table and the SRD text, validates everything, and writes
+floors/f01/day-NN.md and a sibling day-NN.json with the same content. Prints a plain PASS/FAIL summary.
+
+Usage:
+  python3 tools/encounter_bot/encounter_bot.py --spec floors/f01/day-01.spec.json
+  python3 tools/encounter_bot/encounter_bot.py --spec floors/f01/day-01.spec.json --check-only
+
+Safety: reads only the allowed inputs (never gm-notes/secret, .env or token files, sessions/, state). Writes only
+floors/f01/day-NN.md and day-NN.json (never 00-overview.md, INDEX.md, rules/, sessions/, the ledger or /workspace/dcc-lore/).
+"""
+import argparse
+import copy
+import csv
+import glob
+import hashlib
+import json
+import os
+import re
+import sys
+
+SCRIPT = os.path.realpath(__file__)
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SCRIPT)))  # /workspace/dcc-campaign
+LORE = "/workspace/dcc-lore"
+SRD_RAW = "/workspace/srd/raw.txt"
+CANON_TABLE = os.path.join(LORE, "tables", "canon-floor-1.json")
+LEDGER = os.path.join(LORE, "CANON-LEDGER.md")
+
+SLOT_RE = re.compile(r"\[([A-Z][A-Z0-9 \-/&']*):\s[^\]]*\]")
+TOKEN_RE = re.compile(r"\{(days|day|days_left|stasis_hours|floor_hours)\}")  # {hours} is deliberately NOT a token: the GM fills it from the clock
+TAGS = ("dash", "loot", "clever")
+PF = "[PLAYER-FACING]"
+B70 = "rules/70-encounter-budget-5e.json"
+BUDGET_PATH = os.path.join(ROOT, "rules", "70-encounter-budget-5e.json")
+B70_TOKEN = re.compile(r"\{\{b70:([A-Za-z0-9_.\-]+)\}\}")
+SIZES = ("2", "3", "4")
+MAX_SENTENCES = 4
+PROPOSED_TAG = "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+GM = "[GM-ONLY]"
+VOICE_KEYS = ("system_intro", "midpoint_twist", "win")
+STORY_IDS = {"f01-any-%04d" % n for n in range(55, 66)}  # 0055 (pet biscuit pair) .. 0065
+
+NUMERIC_LINTS = [
+    (re.compile(r"\b\d[\d,]*\s*(?:credits?|cr|xp|gp|sp|cp)\b", re.I), "credit/XP/price amount"),
+    (re.compile(r"\bCR\s*(?:\d|1/)", re.I), "CR number"),
+    (re.compile(r"\bDC\s*\d"), "DC number"),
+    (re.compile(r"\b\d+d\d+\b"), "dice expression"),
+]
+LEAK_RE = re.compile(
+    r"story\s*box|\bpets?\b|biscuit|\bdeeds?\b|legendary|gm-only|f01-any-00(?:5[5-9]|6[0-5])|benefactor|odd coin|black box|champ",
+    re.I)
+CHAMP_RE = re.compile(r"\bchamp(?:s|ion|ions)?\b", re.I)
+
+
+# ---------------------------------------------------------------- safe IO
+def _real(p):
+    return os.path.realpath(p)
+
+
+def check_read_allowed(path):
+    r = _real(path)
+    low = r.lower()
+    if "gm-notes/secret" in low or os.path.basename(low).startswith(".env") or "token" in os.path.basename(low) \
+            or "/sessions/" in low or low.endswith("state.json"):
+        raise PermissionError("read blocked by Encounter Bot safety rules: %s" % path)
+    ok = [_real(ROOT), _real(LORE), _real(os.path.dirname(SRD_RAW))]
+    if not any(r == o or r.startswith(o + os.sep) for o in ok):
+        raise PermissionError("read outside allowed roots: %s" % path)
+    return r
+
+
+def read_text(path):
+    with open(check_read_allowed(path), encoding="utf-8", errors="replace") as f:
+        return f.read()
+
+
+def read_json(path):
+    return json.loads(read_text(path))
+
+
+def check_write_allowed(path, floor=1, days=5, allow_other_floors=False):
+    """Only floors/f01/day-NN.md|json for NN <= days (other floor dirs only with --allow-other-floors)."""
+    r = _real(path)
+    name = os.path.basename(r)
+    d = _real(os.path.join(ROOT, "floors", "f%02d" % (floor if allow_other_floors else 1)))
+    if os.path.dirname(r) != d:
+        raise PermissionError("write only under floors/f01/ (or floors/fNN/ with --allow-other-floors): %s" % path)
+    m = re.match(r"^day-(\d\d)\.(md|json)$", name)
+    if not m:
+        raise PermissionError("write only day-NN.md / day-NN.json (never 00-overview.md or INDEX.md): %s" % name)
+    if not 1 <= int(m.group(1)) <= days:
+        raise PermissionError("day number %s is outside 1..clock.days (%d): %s" % (m.group(1), days, name))
+    return r
+
+
+# ---------------------------------------------------------------- helpers
+def walk_strings(o, path=""):
+    if isinstance(o, str):
+        yield path, o
+    elif isinstance(o, dict):
+        for k, v in o.items():
+            yield from walk_strings(v, path + "/" + str(k))
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            yield from walk_strings(v, path + "[%d]" % i)
+
+
+def subst(o, ctx):
+    if isinstance(o, str):
+        return TOKEN_RE.sub(lambda m: str(ctx[m.group(1)]), o)
+    if isinstance(o, dict):
+        return {k: subst(v, ctx) for k, v in o.items()}
+    if isinstance(o, list):
+        return [subst(v, ctx) for v in o]
+    return o
+
+
+def slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def words(s):
+    return re.findall(r"[a-z0-9']+", s.lower())
+
+
+def is_slot(s):
+    return isinstance(s, str) and bool(SLOT_RE.fullmatch(s.strip()))
+
+
+def is_fill(v):
+    """A former slot: still a bracketed slot, or a budget reference node {"b70": {...}}."""
+    return is_slot(v) or (isinstance(v, dict) and "b70" in v)
+
+
+def cite(path):
+    return "%s#%s" % (B70, path)
+
+
+class Budget:
+    """Read-only view of rules/70-encounter-budget-5e.json (never written)."""
+    def __init__(self):
+        self.data = None
+        self.sha256 = None
+        if os.path.exists(BUDGET_PATH):
+            with open(check_read_allowed(BUDGET_PATH), "rb") as fh:
+                raw = fh.read()
+            self.sha256 = hashlib.sha256(raw).hexdigest()
+            try:
+                self.data = json.loads(raw.decode("utf-8"))
+            except ValueError:
+                self.data = None
+
+    def get(self, path):
+        cur = self.data
+        for part in path.split("."):
+            if isinstance(cur, dict) and part in cur:
+                cur = cur[part]
+            elif isinstance(cur, list) and part.isdigit() and int(part) < len(cur):
+                cur = cur[int(part)]
+            else:
+                raise KeyError(path)
+        return cur
+
+
+def _by_size(vals):
+    return " / ".join("%s Crawlers: %s" % (p, vals[p]) for p in SIZES)
+
+
+def resolve_one(bud, r, errs):
+    """Resolve one budget reference to a value plus its field path(s). Numbers are shown only with their path."""
+    k = r.get("kind")
+    out = {"kind": k}
+    try:
+        if k == "party":
+            node = bud.get(r["path"])
+            vals = {p: node[p] for p in SIZES}
+            out.update(values=vals, paths={p: r["path"] + "." + p for p in SIZES},
+                       display="%s (%s)" % (_by_size(vals), cite(r["path"] + ".{2|3|4}")))
+        elif k == "count":
+            vals = {p: bud.get("%s.%s.%s" % (r["path"], p, r["key"])) for p in SIZES}
+            out.update(values=vals, paths={p: "%s.%s.%s" % (r["path"], p, r["key"]) for p in SIZES},
+                       display="%s (%s)" % (_by_size(vals), cite("%s.{2|3|4}.%s" % (r["path"], r["key"]))))
+        elif k == "cr":
+            lst = bud.get(r["path"])
+            cr = next(c["cr"] for c in lst if c["srd_id"] == r["key"])
+            pth = "%s[srd_id=%s].cr" % (r["path"], r["key"])
+            out.update(value=cr, path=pth, display="CR %s (%s)" % (cr, cite(pth)))
+        elif k == "fit":
+            base = bud.get(r["path"])
+            parent = r["path"].rsplit(".", 1)[0]
+            tier, lvl = bud.get(parent + ".tier"), bud.get(parent + ".budget_level")
+            vals = {p: dict(base[p]) for p in SIZES}
+            parts = []
+            for p in SIZES:
+                v = vals[p]
+                parts.append("%s: %s XP used of %s tier budget%s" % (p, v["xp_used"], v["tier_budget"],
+                             "" if v["within_tier"] else ", over by %s (kept per overview; GM may tighten)" % v["over_by"]))
+            out.update(values=vals, tier=tier, budget_level=lvl, paths={p: r["path"] + "." + p for p in SIZES},
+                       display="%s tier at level %s (%s, %s); %s (%s)" % (tier, lvl, cite(parent + ".tier"), cite(parent + ".budget_level"),
+                                                                        "; ".join(parts), cite(r["path"] + ".{2|3|4}")))
+        elif k in ("scalar", "text"):
+            v = bud.get(r["path"])
+            out.update(value=v, path=r["path"], display="%s (%s)" % (v, cite(r["path"])))
+        elif k == "cite":
+            for pth in r["paths"]:
+                bud.get(pth)
+            out.update(paths=list(r["paths"]), display="see %s" % "; ".join(cite(x) for x in r["paths"]))
+        else:
+            errs.append("unknown budget ref kind %r" % k)
+            out["display"] = "(unresolved)"
+    except (KeyError, StopIteration, TypeError) as ex:
+        errs.append("budget path not found for %s: %s" % (r, ex))
+        out["display"] = "(unresolved)"
+    if r.get("note"):
+        out["display"] = "%s: %s" % (r["note"], out["display"])
+    return out
+
+
+def resolve_tree(o, bud, errs, refs):
+    """Replace {{b70:path}} tokens with a citation and attach resolved values to {"b70": ...} nodes."""
+    if isinstance(o, str):
+        def sub(m):
+            try:
+                bud.get(m.group(1))
+            except KeyError:
+                errs.append("budget path not found: %s" % m.group(1))
+            refs.add(m.group(1))
+            return cite(m.group(1))
+        return B70_TOKEN.sub(sub, o)
+    if isinstance(o, dict):
+        if "b70" in o:
+            parts = o["b70"] if isinstance(o["b70"], list) else [o["b70"]]
+            outs = [resolve_one(bud, r, errs) for r in parts]
+            for r in parts:
+                for pth in ([r["path"]] if "path" in r else []) + list(r.get("paths", [])):
+                    refs.add(pth)
+            return dict(o, resolved={"parts": outs, "display": " | ".join(x["display"] for x in outs)})
+        return {k: resolve_tree(v, bud, errs, refs) for k, v in o.items()}
+    if isinstance(o, list):
+        return [resolve_tree(v, bud, errs, refs) for v in o]
+    return o
+
+
+def fill_text(v):
+    if isinstance(v, dict):
+        return v.get("resolved", {}).get("display", "(unresolved)")
+    return v
+
+
+def sentences(text):
+    return [s for s in re.findall(r"[^.!?]+(?:[.!?]+[\"')\]]*|$)", text) if s.strip()]
+
+
+class Report:
+    def __init__(self):
+        self.items = []  # (status, check, detail)
+
+    def add(self, status, check, detail=""):
+        self.items.append((status, check, detail))
+
+    def ok(self, check, detail=""):
+        self.add("PASS", check, detail)
+
+    def warn(self, check, detail):
+        self.add("WARN", check, detail)
+
+    def fail(self, check, detail):
+        self.add("FAIL", check, detail)
+
+    def count(self, st):
+        return sum(1 for s, _, _ in self.items if s == st)
+
+    @property
+    def passed(self):
+        return self.count("FAIL") == 0
+
+
+# ---------------------------------------------------------------- data
+class Data:
+    def __init__(self):
+        t = os.path.join(ROOT, "tables")
+        self.items = {e["srd_id"]: e for e in read_json(os.path.join(t, "item-reskins.json"))["entries"]}
+        sc = read_json(os.path.join(t, "species-class-reskins.json"))["entries"]
+        self.speciesclass = {(e["kind"], e["id"]): e for e in sc}
+        self.backgrounds = {e["id"]: e for e in read_json(os.path.join(t, "background-reskins.json"))["entries"]}
+        self.cards = {}
+        self.decks = {}
+        for f in sorted(glob.glob(os.path.join(t, "loot-decks", "*.json"))):
+            d = read_json(f)
+            if "cards" not in d:
+                continue
+            self.decks[d.get("deck_id", os.path.basename(f))] = f
+            for c in d["cards"]:
+                c["_deck"] = d.get("deck_id")
+                self.cards[c["id"]] = c
+        self.ach = {}
+        with open(check_read_allowed(os.path.join(t, "achievements.csv")), encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                self.ach[r["ID"]] = r
+        self.ach_names = {re.sub(r"^.*?:\s*", "", r["Name"]).strip().lower() for r in self.ach.values()}
+        self.overview = read_text(os.path.join(ROOT, "floors", "f01", "00-overview.md"))
+        self.ov_grams = set()
+        w = words(self.overview)
+        for i in range(len(w) - 9):
+            self.ov_grams.add(tuple(w[i:i + 10]))
+        try:
+            raw = read_text(SRD_RAW)
+            self.srd_lines = {l.strip() for l in raw.splitlines()}
+        except (OSError, PermissionError):
+            self.srd_lines = None
+        self.ledger = {}
+        try:
+            for line in read_text(LEDGER).splitlines():
+                m = re.match(r"^\|\s*([A-Z]-\d{3})\s*\|\s*([^|]*)\|", line)
+                if m:
+                    self.ledger[m.group(1)] = m.group(2).strip()
+        except (OSError, PermissionError):
+            pass
+        self.budget = Budget()
+        self.canon = None
+        self.canon_sha256 = None
+        if os.path.exists(CANON_TABLE):
+            with open(check_read_allowed(CANON_TABLE), "rb") as fh:
+                self.canon_sha256 = hashlib.sha256(fh.read()).hexdigest()
+            try:
+                self.canon = read_json(CANON_TABLE)
+            except ValueError:
+                self.canon = None
+        self.canon_zones = {z["id"]: z for z in self.canon["zones"]} if self.canon else {}
+
+    # display helpers
+    def card_label(self, c):
+        return "%s (%s)" % (c["reskin_name"], c["real_5e_name"])
+
+    def ach_label(self, r):
+        return "%s %s (Floor %s, %s)" % (r["ID"], r["Name"], r["Floor"], r["Rarity"])
+
+
+# ---------------------------------------------------------------- validation + resolution
+def build(spec, data, rep):
+    clock = spec["clock"]
+    days = clock.get("days")
+    daynum = spec["day"]["number"]
+    ctx = {"days": days, "day": daynum, "days_left": (days - daynum) if isinstance(days, int) else "?",
+           "stasis_hours": clock.get("stasis_threshold_hours", "?"),
+           "floor_hours": (days * 24) if isinstance(days, int) else "?"}
+    spec = subst(spec, ctx)
+    lint_spec = spec  # unresolved view: lints and the slot census run on what the spec itself says
+    bud = data.budget
+    b_errs, b_refs = [], set()
+    if bud.data is None:
+        rep.fail("budget file present", "%s missing or unreadable" % B70)
+    else:
+        pin = spec.get("budget_file", {}).get("expected_sha256")
+        if pin and pin != bud.sha256:
+            rep.warn("budget file hash", "spec pins %s but the file is %s (Syndicate changed it; re-check the cited paths, then update the pin)" % (pin[:12], bud.sha256[:12]))
+        else:
+            rep.ok("budget file present", "%s v%s, sha256 %s; every figure from it is a GM-adaptable guideline (authority_note)" % (
+                B70, bud.data.get("version"), bud.sha256[:16]))
+        spec = resolve_tree(copy.deepcopy(spec), bud, b_errs, b_refs)
+        if b_errs:
+            for m_ in b_errs:
+                rep.fail("budget reference", m_)
+        else:
+            rep.ok("budget references resolve", "%d distinct field paths cited, all present in %s" % (len(b_refs), B70))
+
+    # ---- clock
+    if isinstance(days, int) and days >= 1:
+        rep.ok("clock.days is a field", "clock.days=%d; page text uses {days}/{day}, nothing hard-coded" % days)
+    else:
+        rep.fail("clock.days is a field", "clock.days must be a positive integer")
+    co = clock.get("collapse_order", [])
+    if isinstance(days, int) and [c.get("day") for c in co] == list(range(1, days + 1)):
+        rep.ok("collapse_order covers every day", "%d entries, days 1..%d, all tagged: %s" % (
+            len(co), days, ", ".join(sorted({c.get("tag", "?") for c in co}))))
+    else:
+        rep.fail("collapse_order covers every day", "collapse_order must list days 1..clock.days")
+    if isinstance(days, int) and 1 <= daynum <= days:
+        rep.ok("day number in range", "Day %d of %d" % (daynum, days))
+    else:
+        rep.fail("day number in range", "day.number outside 1..clock.days")
+    if isinstance(clock.get("short_rest_slots_per_day_cap"), int):
+        rep.ok("short-rest cap field", "cap=%d per day (a cap, not a promise)" % clock["short_rest_slots_per_day_cap"])
+    else:
+        rep.fail("short-rest cap field", "missing integer short_rest_slots_per_day_cap")
+    for k in ("collapse_cost_slot", "rest_without_saferoom_slot"):
+        if not is_fill(clock.get(k)):
+            rep.fail("clock fill %s" % k, "must be a budget reference or a bracketed slot")
+    for k in ("final_day_end_slot", "collapse_miss_slot", "break_room_status_slot", "stasis_table_slot", "collapse_order_slot"):
+        if k in clock:
+            rep.fail("resolved item still a slot: %s" % k, "decision 026 (~9:45 PM CT) settled it; remove the slot and write the ruling")
+    if clock.get("collapse_order_status"):
+        rep.ok("collapse order status", clock["collapse_order_status"][:90])
+    else:
+        rep.fail("collapse order status", "clock.collapse_order_status required")
+    fc = clock.get("final_collapse", {})
+    if fc.get("hour_of_last_day") == 24 and "never ends the floor" in fc.get("text", "") and "cuts short" in fc.get("text", ""):
+        rep.ok("final collapse fixed", "24 in-game hours into Day %s; a Long Rest never ends or skips the floor; rests that would run past it are cut short" % days)
+    else:
+        rep.fail("final collapse fixed", "clock.final_collapse needs hour_of_last_day=24 and text saying a Long Rest never ends the floor and the System cuts short a rest running past it")
+    cm = clock.get("collapse_miss", {})
+    cmt = (cm.get("text", "") + " " + cm.get("stasis_counts", "") + " " + cm.get("detour_tax_scope", ""))
+    if (cm.get("death") is True and cm.get("reprieve_applies") is False and "dead" in cm.get("text", "") and "Reprieve" in cm.get("text", "")
+            and "stasis" in cmt and "Detour Tax" in cmt and "missed Stairwell key" in cmt and "Caleb" in cm.get("status", "")
+            and not cm.get("effects") and not cm.get("toll_slot")):
+        rep.ok("missed-collapse rule", "death on every floor, Floor 1 included; no Reprieve; stasis counts as reaching a stairwell; Detour Tax is for a missed key only")
+    else:
+        rep.fail("missed-collapse rule", "clock.collapse_miss must be Caleb's ~10:02 PM CT ruling: death, no Reprieve, stasis counts, Detour Tax only for a missed key, no hauled-down/toll/Exhaustion effects")
+    sr = clock.get("saferoom_rule", {})
+    if sr.get("only_saferoom") == "z09" and sr.get("break_room_not_saferoom_from_day") and "Green Room" in sr.get("text", ""):
+        rep.ok("saferoom rule", "Break Room not a saferoom from Day %s; the Green Room is the only saferoom to the end" % sr["break_room_not_saferoom_from_day"])
+    else:
+        rep.fail("saferoom rule", "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room")
+    if "Silver" in clock.get("achievement_caps", "") and "Story Box" in clock.get("achievement_caps", "") and "snark" in clock.get("achievement_caps", ""):
+        rep.ok("achievement caps noted", "soft cap, Silver ceiling, one Story Box per floor, snark-only allowed")
+    else:
+        rep.fail("achievement caps noted", "clock.achievement_caps must mention the soft cap, Silver ceiling, Story Box limit and snark-only")
+    zg = clock.get("zone_groups", "")
+    if "inspired" in zg and "never cut" in zg:
+        rep.ok("zone grouping confirmed", "outer/mid/Break Room/corridor groups set (inspired); route never cut")
+    else:
+        rep.fail("zone grouping confirmed", "clock.zone_groups must be the confirmed grouping, tagged inspired, saying the route is never cut")
+    if isinstance(clock.get("stairwell_opens_day"), int) and isinstance(clock.get("stasis_threshold_hours"), int) \
+            and clock.get("early_descent") and clock.get("stairwell_opens"):
+        rep.ok("stairwell timing and early-descent rule filled", "opens Day %d; stasis if more than %d hours remain (canon M-276/M-277)" % (
+            clock["stairwell_opens_day"], clock["stasis_threshold_hours"]))
+    else:
+        rep.fail("stairwell timing and early-descent rule filled", "need stairwell_opens_day, stasis_threshold_hours, stairwell_opens, early_descent")
+    for lid in ("M-275", "M-276", "M-277"):
+        if lid not in data.ledger and data.ledger:
+            rep.fail("ledger id %s" % lid, "not in CANON-LEDGER.md")
+    if re.search(r"decision 026|026-timed-floor-clock", clock.get("authority") or ""):
+        rep.ok("clock cites decision 026")
+    else:
+        rep.fail("clock cites decision 026", "clock.authority must cite decision 026")
+
+    # ---- canon table
+    if data.canon:
+        rep.ok("Lore canon table present", "%s (ledger %s, %d zones)" % (
+            CANON_TABLE, data.canon.get("ledger_version"), len(data.canon["zones"])))
+        pin = spec.get("canon_table", {}).get("expected_sha256")
+        if pin and pin != data.canon_sha256:
+            rep.warn("canon table hash", "spec pins %s but the file is %s (Lore rebuilt it; check ledger/content, then update the pin)" % (pin[:12], (data.canon_sha256 or "?")[:12]))
+        else:
+            rep.ok("canon table hash recorded", "sha256 %s, ledger v%s" % ((data.canon_sha256 or "?")[:16], data.canon.get("ledger_version")))
+    else:
+        rep.warn("Lore canon table present", "%s not found; canon tags omitted" % CANON_TABLE)
+
+    def check_ledger(lid, where):
+        if lid in data.ledger:
+            return True
+        if data.ledger:
+            rep.fail("ledger id %s" % lid, "not a row in CANON-LEDGER.md (%s)" % where)
+        else:
+            rep.warn("ledger id %s" % lid, "ledger unreadable (%s)" % where)
+        return False
+
+    def resolve_ach(a, where):
+        r = data.ach.get(a["id"])
+        if not r:
+            rep.fail("achievement id", "%s (%s) not in tables/achievements.csv" % (a["id"], where))
+            return dict(a, name=None, valid=False)
+        return dict(a, name=r["Name"], rarity=r["Rarity"], floor=r["Floor"], label=data.ach_label(r), valid=True)
+
+    def resolve_canon_ref(c, where):
+        check_ledger(c["ledger_id"], where)
+        name = data.ledger.get(c["ledger_id"], "")
+        in_csv = name.strip().lower() in data.ach_names if c["ledger_id"].startswith("A-") else None
+        out = dict(c, ledger_name=name)
+        if in_csv is not None:
+            out["in_achievements_csv"] = in_csv
+            if not in_csv:
+                out["status"] = "canon reference only (not a row in tables/achievements.csv)"
+        return out
+
+    # ---- routes
+    routes = []
+    tags_seen = set()
+    for r in spec["routes"]:
+        tags_seen.add(r.get("tag"))
+        vl = r.get("voice_lines", {})
+        miss = [k for k in VOICE_KEYS if k not in vl or vl[k].get("tag") != PF or not vl[k].get("text")]
+        if miss:
+            rep.fail("route %s voice lines" % r["id"], "missing or untagged %s" % miss)
+        rr = dict(r)
+        rr["achievements"] = [resolve_ach(a, r["id"]) for a in r.get("achievements", [])]
+        rr["canon_refs"] = [resolve_canon_ref(c, r["id"]) for c in r.get("canon_refs", [])]
+        routes.append(rr)
+    if set(TAGS) <= tags_seen and len(routes) >= 3:
+        rep.ok("three routes (dash, loot, clever)", "%d routes, each with System intro/midpoint/win [PLAYER-FACING]" % len(routes))
+    else:
+        rep.fail("three routes (dash, loot, clever)", "need dash, loot and clever routes; have %s" % sorted(tags_seen))
+
+    # ---- stairwell key
+    sk = dict(spec["stairwell_key"])
+    ways = sk.get("ways", [])
+    if len({w.get("id") for w in ways}) >= 2 and all(w.get("how") and w.get("where") for w in ways):
+        rep.ok("Stairwell key findable 2+ ways", "%d ways: %s" % (len(ways), ", ".join(w["id"] for w in ways)))
+    else:
+        rep.fail("Stairwell key findable 2+ ways", "need at least two distinct ways with how/where")
+    if sk.get("missing_key_cost", {}).get("instant_wipe") is False and is_fill(sk["missing_key_cost"].get("toll_slot")):
+        rep.ok("missing key is a cost, not a wipe", "instant_wipe=false; the Detour Tax toll is cited from the budget file")
+    else:
+        rep.fail("missing key is a cost, not a wipe", "missing_key_cost.instant_wipe must be false and toll_slot a slot")
+    if not sk.get("availability") or not sk.get("early_descent"):
+        rep.fail("stairwell availability and early-descent text", "stairwell_key.availability and .early_descent are required")
+    for n in sk.get("canon_stairwell_notes", []):
+        check_ledger(n["ledger_id"], "stairwell note")
+    # key deadlines vs collapse order
+    ev = {c["day"]: c["event"].lower() for c in co}
+    avail_today = []
+    for w in ways:
+        lost = w.get("lost_on_day")
+        if lost is not None:
+            expect = {"key-bruiser": "mid zones", "key-terminal": "break room"}.get(w["id"])
+            if not isinstance(lost, int) or (expect and expect not in ev.get(lost, "")):
+                rep.fail("key deadline %s" % w["id"], "lost_on_day=%s does not match the collapse step that removes it (%s)" % (lost, expect))
+        w["status_today"] = "available" if (lost is None or daynum < lost) else "LOST (hooks in a closed zone or a dark vendor; only if not already taken)"
+        if w["status_today"] == "available":
+            avail_today.append(w["id"])
+    rep.ok("key availability today", "Day %d: %s" % (daynum, ", ".join(avail_today) or "no key way left (keyless forcing or toll)"))
+
+    # ---- day-level blocks
+    dd = spec["day"]
+    early = dict(dd.get("early_descent", {}))
+    opens = clock.get("stairwell_opens_day")
+    step = ev.get(daynum, "")
+    if not step.startswith("nothing"):
+        cn = dd.get("collapse_notice", {})
+        if cn.get("tag") == PF and cn.get("text") and "Lore" in cn.get("status", "") and cn.get("canon_tag") == "inspired" \
+                and "PLACEHOLDER" not in cn["text"] + cn.get("status", ""):
+            if "{hours}" in cn["text"] and not cn.get("hours_note"):
+                rep.fail("collapse notice", "text has {hours}; add hours_note telling the GM to fill it from the clock")
+            else:
+                rep.ok("collapse notice", "Lore's wording, [PLAYER-FACING], tagged inspired%s" % (" ({hours} filled by the GM)" if "{hours}" in cn["text"] else ""))
+        else:
+            rep.fail("collapse notice", "needs Lore's wording (no PLACEHOLDER), PF tag, status naming Lore, canon_tag inspired")
+    if daynum == opens:
+        so = dd.get("stairwell_opening", {})
+        if so.get("tag") == PF and so.get("text"):
+            rep.ok("stairwell-opening announcement", "present on Day %d" % daynum)
+        else:
+            rep.fail("stairwell-opening announcement", "required on the day the stairwell opens")
+    if isinstance(opens, int) and daynum >= opens:
+        ep = early.get("player_prompt", {})
+        if ep.get("tag") == PF and ep.get("text") and early.get("gm_override_note") and early.get("canon_refs") \
+                and "sideline" in early.get("sideline_note", "") and not early.get("slots"):
+            early["canon_refs"] = [resolve_canon_ref(c, "early_descent") for c in early["canon_refs"]]
+            rep.ok("early-descent stasis handling", "player prompt [PLAYER-FACING], canon refs, GM override note and sideline-scenes note present")
+        else:
+            rep.fail("early-descent stasis handling", "needs player_prompt (PF), canon_refs, gm_override_note and the stasis sideline_note (decision 026 ruling 4)")
+    if isinstance(days, int) and daynum == days:
+        fe = dd.get("floor_exit", {})
+        sl = fe.get("system_line", {})
+        gw = fe.get("gm_warning", {})
+        sh = early.get("free_window", {})
+        if (sl.get("tag") == PF and sl.get("text") and gw.get("tag") == PF and "death" in gw.get("text", "") and "Reprieve" in gw.get("text", "")
+                and "stairwell" in gw.get("text", "") and sh.get("tag") == PF and "napping" in sh.get("text", "")
+                and "terminated" in sl.get("text", "") and not re.search(r"hauled|toll|detour|Exhaustion", sl["text"], re.I)):
+            rep.ok("last-day warnings", "six-hours-left line, Lore's death-version missed-floor line and the exit warning (death, no Reprieve) present")
+        else:
+            rep.fail("last-day warnings", "last day needs free_window (6-hours-left line), floor_exit.system_line (Lore's death version, no hauled/toll wording) and floor_exit.gm_warning (death, no Reprieve, stairwell)")
+    if daynum in (1, days - 1, days) if isinstance(days, int) else False:
+        gwn = dd.get("gm_warning", {})
+        if gwn.get("tag") == "[GM-FACING]" and re.search(r"dead|death", gwn.get("text", "")) and "Reprieve" in gwn.get("text", "") and "stairwell" in gwn.get("text", ""):
+            rep.ok("GM collapse warning", "present on Day %d (Floor 1 start, and the last two days): death on a missed collapse, no Reprieve" % daynum)
+        else:
+            rep.fail("GM collapse warning", "Day 1 and the last two days need day.gm_warning tagged [GM-FACING] saying a missed collapse is death with no Reprieve")
+    bt = dd.get("budget_table", [])
+    if bt and all(r.get("label") and "resolved" in r and "(unresolved)" not in r["resolved"]["display"] for r in bt):
+        rep.ok("budget table", "%d rows, each shown with its rules/70 field path (guideline)" % len(bt))
+    else:
+        rep.fail("budget table", "day.budget_table needs rows {label, b70} that all resolve")
+    ro = dd.get("rest_options", [])
+    if ro and all(r.get("option") and r.get("note") for r in ro):
+        bad_break = [r for r in ro if "Break Room" in r["option"] and daynum >= sr.get("break_room_not_saferoom_from_day", 99)
+                     and "not a saferoom" not in r["note"].lower()]
+        field_rest = [r for r in ro if "outside a saferoom" in r["option"].lower()]
+        rest_cite = cite("floors.1.prices.rest_without_saferoom")
+        if not field_rest or not all("Short Rest" in r["note"] and "no Long Rest" in r["note"] and rest_cite in r["note"]
+                                     and "Green Room" in r["note"] for r in field_rest):
+            rep.fail("rest options", "the rest-outside-a-saferoom option must say a field rest is only a Short Rest, the price buys a quiet Short Rest and grants no Long Rest, "
+                                     "the Green Room is where the Long Rest happens, and cite %s" % rest_cite)
+        elif bad_break:
+            rep.fail("rest options", "from the day the Break Room loses service it must read 'not a saferoom'")
+        else:
+            rep.ok("rest options", "%d options listed; Green Room is the only saferoom once the Break Room closes (Day %s on)" % (
+                len(ro), sr.get("break_room_not_saferoom_from_day", "?")))
+    else:
+        rep.fail("rest options", "day.rest_options required")
+    for co_ in dd.get("carry_over", []):
+        found = None
+        for f in sorted(glob.glob(os.path.join(ROOT, "floors", "f%02d" % spec["meta"]["floor"], "day-*.spec.json"))):
+            try:
+                other = json.loads(read_text(f))
+            except ValueError:
+                continue
+            if any(x["id"] == co_["enc_id"] for x in other.get("encounters", [])):
+                found = f
+        if not found:
+            rep.fail("carry-over %s" % co_["enc_id"], "encounter not found in any floors/fNN/day-*.spec.json")
+    eids = [e["id"] for e in spec["encounters"]]
+    if len(set(eids)) != len(eids) or not all(i.startswith("enc-d%02d-" % daynum) for i in eids):
+        rep.fail("encounter ids", "must be unique and start with enc-d%02d-" % daynum)
+
+    # ---- encounters
+    order = {}
+    for f_ in sorted(glob.glob(os.path.join(ROOT, "floors", "f%02d" % spec["meta"]["floor"], "day-*.spec.json"))):
+        try:
+            other_ = json.loads(read_text(f_))
+        except ValueError:
+            continue
+        for i_, x_ in enumerate(other_.get("encounters", [])):
+            order[x_["id"]] = (other_["day"]["number"], i_)
+    for i_, x_ in enumerate(spec["encounters"]):
+        order[x_["id"]] = (daynum, i_)
+    qr_bad, co_bad, co_refs, zc_bad = [], [], 0, []
+    encs = []
+    for e in spec["encounters"]:
+        eid = e["id"]
+        out = dict(e)
+        # required headings
+        mm = e.get("map_in_the_mind", {})
+        if not all(mm.get(k) for k in ("layout", "exits", "hazards", "cover")):
+            rep.fail("%s map in the mind" % eid, "layout, exits, hazards and cover are required")
+        vl = e.get("voice_lines", {})
+        bad = [k for k in VOICE_KEYS if k not in vl or vl[k].get("tag") != PF or not vl[k].get("text")]
+        bad += [k for k in vl if k not in VOICE_KEYS and k != "win_alt"]
+        bad += [k for k, v in vl.items() if v.get("tag") != PF]
+        if bad:
+            rep.fail("%s voice lines" % eid, "missing/untagged: %s" % sorted(set(bad)))
+        if sorted((e.get("scaling") or {}).keys()) != ["2", "3", "4"]:
+            rep.fail("%s scaling note" % eid, "need keys 2, 3, 4")
+        if not e.get("if_they_do_something_dumb"):
+            rep.fail("%s dumb fallback" % eid, "missing")
+        qr = e.get("quick_run", {})
+        if not (all(isinstance(qr.get(k), str) and qr.get(k) for k in ("setup", "decision", "on_success", "on_failure", "cut_short"))
+                and isinstance(qr.get("minutes"), int) and not isinstance(qr.get("minutes"), bool) and qr.get("tag") == "pacing guide"):
+            qr_bad.append(eid)
+        co = e.get("carry_on", {})
+        good = bool(co.get("changes")) and bool(co.get("gm_tracks")) and all(isinstance(g, str) and g for g in co.get("gm_tracks", []))
+        for c_ in co.get("changes", []):
+            if not (c_.get("choice") and c_.get("effect")) or not (c_.get("reacts_in") or c_.get("later_note")):
+                good = False
+            for rid in c_.get("reacts_in", []):
+                if rid not in order:
+                    rep.fail("%s carry-on reference" % eid, "%s is not an encounter in floors/f%02d/day-*.spec.json" % (rid, spec["meta"]["floor"]))
+                elif order[rid] <= order[eid]:
+                    rep.fail("%s carry-on reference" % eid, "%s is not later than this encounter" % rid)
+                else:
+                    co_refs += 1
+        if not good:
+            co_bad.append(eid)
+        zc = e.get("zone_color")
+        if zc is not None and not (zc.get("tag") == "inspired" and zc.get("lines") and all(l_.get("tag") == PF and l_.get("text") for l_ in zc["lines"])):
+            zc_bad.append(eid)
+        rts = e.get("route", [])
+        if not rts or not set(rts) <= set(TAGS) or e.get("route_primary") not in rts:
+            rep.fail("%s route tag" % eid, "route must be a subset of dash/loot/clever and include route_primary")
+        if not is_fill(e.get("budget_slot")):
+            rep.fail("%s budget_slot" % eid, "must be a budget reference or a bracketed slot")
+        if not e["enemies"] and not is_fill(e.get("cr_slot")):
+            rep.fail("%s cr_slot" % eid, "non-combat encounter needs a CR reference or slot")
+        # canon
+        cz = data.canon_zones.get(e.get("canon_zone"))
+        if e.get("canon_zone") and data.canon and not cz:
+            rep.fail("%s canon_zone" % eid, "%s not in canon-floor-1.json" % e["canon_zone"])
+        if cz:
+            for lid in cz.get("ledger_rows") or []:
+                if lid not in data.ledger and data.ledger:
+                    rep.warn("%s canon ledger row" % eid, "%s listed by Lore's table but not found in CANON-LEDGER.md" % lid)
+            q = (cz.get("announcement") or {}).get("quote")
+            if q and len(q.split()) > 25:
+                rep.fail("%s canon quote" % eid, "quote over 25 words")
+            out["canon"] = {
+                "table_id": cz["id"], "name": cz["name"], "tag": cz.get("tag"), "confidence": cz.get("confidence"),
+                "ledger_rows": cz.get("ledger_rows") or [], "announcement_style": (cz.get("announcement") or {}).get("style"),
+                "staging": cz.get("staging"), "table_refs": cz.get("table_refs") or []}
+        # enemies
+        canon_mobs = [m["name"] for m in (cz or {}).get("mobs", [])]
+        for mz in e.get("canon_mob_zones", []):
+            if mz not in data.canon_zones and data.canon:
+                rep.fail("%s canon_mob_zones" % eid, "%s not in canon-floor-1.json" % mz)
+            canon_mobs += [m["name"] for m in data.canon_zones.get(mz, {}).get("mobs", [])]
+        ens = []
+        for en in e["enemies"]:
+            sid, sname = en.get("srd_id", ""), en.get("srd_name", "")
+            ok = True
+            if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", sid) or sid != slug(sname):
+                rep.fail("%s enemy id format" % eid, "%s must be kebab-case of %s" % (sid, sname))
+                ok = False
+            if data.srd_lines is None:
+                rep.warn("%s enemy %s" % (eid, sid), "SRD text not available; format-checked only")
+            elif sname in data.srd_lines:
+                en = dict(en, srd_resolved=True)
+            else:
+                rep.warn("%s enemy %s" % (eid, sid), "'%s' not found as a heading in %s (format OK; unresolved)" % (sname, SRD_RAW))
+                en = dict(en, srd_resolved=False)
+            on = en.get("our_name", "")
+            if not on.endswith("(%s)" % sname):
+                rep.fail("%s enemy display" % eid, "our_name must read 'Our Name (5e Name)': %s" % on)
+            else:
+                base = on[: -len("(%s)" % sname)].strip()
+                if cz and base not in canon_mobs and base not in data.overview:
+                    rep.warn("%s enemy display" % eid, "'%s' not in Lore's mob list for %s or the overview" % (base, cz["id"]))
+                elif cz and base not in canon_mobs:
+                    rep.warn("%s enemy display" % eid, "'%s' is in the overview but not in Lore's %s mob list" % (base, cz["id"]))
+                if base not in data.overview:
+                    rep.fail("%s enemy display" % eid, "'%s' not found in 00-overview.md (monster names come from its nameplates)" % base)
+            for k in ("cr_slot", "count_slot"):
+                if not is_fill(en.get(k)):
+                    rep.fail("%s enemy %s" % (eid, k), "%s must be a budget reference or a bracketed slot, never a bare number" % k)
+            ens.append(en)
+        out["enemies"] = ens
+        if e["enemies"]:
+            rep.ok("%s enemies" % eid, ", ".join("%s=%s" % (x["srd_id"], "resolved" if x.get("srd_resolved") else "unresolved") for x in ens))
+        # loot
+        hooks = []
+        story_here = 0
+        for h in e.get("loot_hooks", []):
+            k = h["kind"]
+            h2 = dict(h)
+            if k in ("card", "story_box"):
+                c = data.cards.get(h["card_id"])
+                if not c:
+                    rep.fail("%s loot hook" % eid, "card %s not in tables/loot-decks/*.json" % h["card_id"])
+                else:
+                    h2.update(display=data.card_label(c), tier=c["tier"], deck=c["_deck"])
+                if k == "story_box":
+                    story_here += 1
+                    if h["card_id"] not in STORY_IDS or not h.get("gm_only"):
+                        rep.fail("%s story box hook" % eid, "%s must be one of f01-any-0055..0065 and gm_only=true" % h["card_id"])
+                    if not h.get("note", "").startswith(GM):
+                        rep.fail("%s story box hook" % eid, "note must start with [GM-ONLY]")
+                else:
+                    if h["card_id"] in STORY_IDS:
+                        rep.fail("%s loot hook" % eid, "%s is a Story Box card; use kind story_box" % h["card_id"])
+            elif k == "item":
+                it = data.items.get(h["srd_id"])
+                if not it:
+                    rep.fail("%s item hook" % eid, "srd_id %s not in tables/item-reskins.json" % h["srd_id"])
+                else:
+                    h2["display"] = it["combined_label"]
+            elif k == "placed":
+                if "00-overview.md" not in h.get("overview_ref", "") or h.get("check_text", "\0") not in data.overview:
+                    rep.fail("%s placed hook" % eid, "overview_ref/check_text not found in 00-overview.md")
+            else:
+                rep.fail("%s loot hook" % eid, "unknown kind %s" % k)
+            if "amount" in h and not is_fill(h["amount"]):
+                rep.fail("%s loot amount" % eid, "amount must be a budget reference or a bracketed slot: %s" % h["amount"])
+            hooks.append(h2)
+        out["loot_hooks"] = hooks
+        if not hooks and not is_fill(e.get("loot_note")):
+            rep.fail("%s loot hooks" % eid, "empty loot_hooks needs a loot_note reference or slot")
+        out["achievement_hooks"] = [resolve_ach(a, eid) for a in e.get("achievement_hooks", [])]
+        if not out["achievement_hooks"]:
+            rep.fail("%s achievement hooks" % eid, "at least one achievement id required")
+        # crawler hooks (species/class/background display names)
+        ch = []
+        for c in e.get("crawler_hooks", []):
+            if c["kind"] == "background":
+                ent = data.backgrounds.get(c["id"])
+            else:
+                ent = data.speciesclass.get((c["kind"], c["id"]))
+            if not ent:
+                rep.fail("%s crawler hook" % eid, "%s %s not in the reskin tables" % (c["kind"], c["id"]))
+                ch.append(c)
+            else:
+                ch.append(dict(c, display=ent["combined_label"]))
+        if ch:
+            out["crawler_hooks"] = ch
+        encs.append(out)
+
+    def check_proposed(lst, where):
+        out = []
+        for pa in lst:
+            ok = (pa.get("name") and pa.get("trigger") and pa.get("tag") == PROPOSED_TAG and is_fill(pa.get("reward_slot"))
+                  and "id" not in pa and (not pa.get("narration") or pa.get("narration_tag") == PF))
+            if not ok:
+                rep.fail("proposed achievement %s" % pa.get("name"), "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (%s)" % where)
+            if pa.get("name", "").strip().lower() in data.ach_names:
+                rep.warn("proposed achievement %s" % pa["name"], "name collides with an existing achievement; rename before filing")
+            if pa.get("canon_ref"):
+                check_ledger(pa["canon_ref"]["ledger_id"], where)
+                pa = dict(pa, canon_ref=dict(pa["canon_ref"], ledger_name=data.ledger.get(pa["canon_ref"]["ledger_id"], "")))
+            out.append(pa)
+        return out
+    n_prop = 0
+    for x, e_ in zip(encs, spec["encounters"]):
+        x["proposed_achievements"] = check_proposed(e_.get("proposed_achievements", []), x["id"])
+        n_prop += len(x["proposed_achievements"])
+    day_prop = check_proposed(spec["day"].get("proposed_achievements", []), "day")
+    n_prop += len(day_prop)
+    if n_prop:
+        rep.ok("proposed achievements", "%d hook entries tagged 'proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate'; rewards are slots; no ids invented" % n_prop)
+    rep.ok("loot hooks resolve", "%d card/item hooks checked against tables/loot-decks and item-reskins" % sum(
+        1 for x in encs for h in x["loot_hooks"] if h["kind"] in ("card", "item", "story_box") and h.get("display")))
+    n_ach = sum(len(x["achievement_hooks"]) for x in encs) + sum(len(r["achievements"]) for r in routes)
+    rep.ok("achievement ids resolve", "%d hooks checked against tables/achievements.csv" % n_ach)
+    warned = set()
+    for c in [c for r in routes for c in r["canon_refs"]] + list(early.get("canon_refs", [])):
+        if c.get("status") and c["ledger_id"] not in warned:
+            warned.add(c["ledger_id"])
+            rep.warn("canon ref %s" % c["ledger_id"], "%s ('%s'); cited as a canon reference only" % (c["status"], c["ledger_name"]))
+    last = dict(spec["day"].get("last_chance_hooks", {}))
+    last["achievements"] = [resolve_ach(a, "last_chance") for a in last.get("achievements", [])]
+    cl = []
+    for c in last.get("cards", []):
+        cd = data.cards.get(c["card_id"])
+        if not cd:
+            rep.fail("last-chance card", "%s not in decks" % c["card_id"])
+        else:
+            c = dict(c, display=data.card_label(cd), tier=cd["tier"], deck=cd["_deck"])
+        cl.append(c)
+    last["cards"] = cl
+    story_ids = sorted({h["card_id"] for x in encs for h in x["loot_hooks"] if h["kind"] == "story_box"})
+    if story_ids:
+        rep.ok("Story Box hooks are GM-only", "%s tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)" % ", ".join(story_ids))
+
+    # ---- lints over all text
+    full = list(walk_strings(lint_spec))
+    stripped = [(p, SLOT_RE.sub("", s)) for p, s in full]
+    hits = []
+    for p, s in stripped:
+        if p.startswith("/meta/sources") or p.endswith("/overview_ref") or p.endswith("/check_text"):
+            continue
+        for rx, label in NUMERIC_LINTS:
+            m = rx.search(s)
+            if m:
+                hits.append("%s: %s '%s'" % (p, label, m.group(0)))
+    if hits:
+        for h in hits:
+            rep.fail("no invented numbers", h)
+    else:
+        rep.ok("no invented CR/budget/credit/loot/DC numbers", "all such fields are bracketed slots or cite 00-overview.md")
+    champs = [p for p, s in full if CHAMP_RE.search(s)]
+    rep.ok("'Crawlers' never 'champs'") if not champs else rep.fail("'Crawlers' never 'champs'", ", ".join(champs))
+    # player-facing blocks: (where, text, set_piece)
+    pfb = []
+
+    def addpf(where, blk):
+        if isinstance(blk, dict) and blk.get("text"):
+            pfb.append((where, blk["text"], bool(blk.get("set_piece"))))
+    for r in routes:
+        for k, v in r["voice_lines"].items():
+            addpf("route %s %s" % (r["id"], k), v)
+    for x in encs:
+        for k, v in x["voice_lines"].items():
+            addpf("%s %s" % (x["id"], k), v)
+        for i_, ln in enumerate((x.get("zone_color") or {}).get("lines", [])):
+            addpf("%s zone color %d" % (x["id"], i_ + 1), ln)
+    for key in ("tomorrow_notice", "collapse_notice", "stairwell_opening"):
+        addpf(key, spec["day"].get(key))
+    fe_ = spec["day"].get("floor_exit")
+    if fe_:
+        addpf("floor_exit system line", fe_["system_line"])
+        addpf("floor_exit GM warning", fe_["gm_warning"])
+    for pa in [p_ for x in encs for p_ in x["proposed_achievements"]] + day_prop:
+        if pa.get("narration"):
+            pfb.append(("proposed %s narration" % pa["name"], pa["narration"], False))
+    gwb = spec["day"].get("gm_warning")
+    if gwb:
+        addpf("gm_warning", gwb)
+        if gwb.get("lore_line"):
+            pfb.append(("gm_warning lore line", gwb["lore_line"], False))
+    addpf("early_descent prompt", early.get("player_prompt"))
+    addpf("early_descent free window", early.get("free_window"))
+    pf = [(w, t_) for w, t_, _ in pfb]
+    # GM-facing extras scanned for leaks too (quick run, carry-on, zone-color GM note)
+    extra = []
+    for x in encs:
+        qr = x.get("quick_run", {})
+        extra += [("%s quick run %s" % (x["id"], k), qr.get(k, "")) for k in ("setup", "decision", "on_success", "on_failure", "cut_short")]
+        co = x.get("carry_on", {})
+        for i_, c_ in enumerate(co.get("changes", [])):
+            extra += [("%s carry-on %d" % (x["id"], i_ + 1), " ".join(str(c_.get(k, "")) for k in ("choice", "effect", "later_note")))]
+        extra += [("%s GM tracks" % x["id"], g) for g in co.get("gm_tracks", [])]
+        if (x.get("zone_color") or {}).get("gm_note"):
+            extra.append(("%s zone color GM note" % x["id"], x["zone_color"]["gm_note"]))
+    leaks = ["%s: '%s'" % (w, LEAK_RE.search(t_).group(0)) for w, t_ in pf + extra if LEAK_RE.search(t_)]
+    story_names = [c["reskin_name"] for i, c in data.cards.items() if i in STORY_IDS]
+    leaks += ["%s: Story Box card name" % w for w, t_ in pf + extra for n in story_names if n.lower() in t_.lower()]
+    rep.ok("Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on", "%d player-facing and %d GM extra blocks scanned" % (len(pf), len(extra))) if not leaks \
+        else [rep.fail("player-facing leak", l) for l in leaks]
+    overlap = []
+    for w, t_ in pf:
+        ws = words(t_)
+        if any(tuple(ws[i:i + 10]) in data.ov_grams for i in range(len(ws) - 9)):
+            overlap.append(w)
+    rep.ok("voice lines are original (no 10-word run copied from the overview)") if not overlap \
+        else rep.fail("voice lines copy the overview", ", ".join(overlap))
+    too_long = ["%s (%d sentences)" % (w, len(sentences(t_))) for w, t_, sp in pfb if not sp and len(sentences(t_)) > MAX_SENTENCES]
+    if too_long:
+        for m_ in too_long:
+            rep.fail("read-aloud length", "%s: over %d sentences and not tagged set_piece" % (m_, MAX_SENTENCES))
+    else:
+        rep.ok("read-aloud blocks are %d sentences or fewer" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
+    sps = [w for w, _, sp in pfb if sp]
+    if len(sps) > 1:
+        rep.fail("set pieces are rare", "%d on this page (%s); at most one per page" % (len(sps), "; ".join(sps)))
+    elif sps:
+        rep.warn("set pieces on this page", "1 (%s); keep set pieces rare, floor-wide" % sps[0])
+    else:
+        rep.ok("no set pieces on this page", "every read-aloud block is short")
+    if qr_bad:
+        rep.fail("quick run on every encounter", "missing or incomplete (setup, decision, on_success, on_failure, cut_short, integer minutes, tag 'pacing guide'): %s" % ", ".join(qr_bad))
+    else:
+        rep.ok("quick run on every encounter", "%d encounters; minutes are tagged 'pacing guide' (pacing, not difficulty)" % len(encs))
+    if co_bad:
+        rep.fail("carry-on on every encounter", "missing or incomplete (changes with reacts_in or later_note, gm_tracks): %s" % ", ".join(co_bad))
+    else:
+        rep.ok("carry-on on every encounter", "%d encounters, %d references to later encounters, all exist and are later" % (len(encs), co_refs))
+    if zc_bad:
+        rep.fail("zone color", "needs tag inspired and [PLAYER-FACING] lines: %s" % ", ".join(zc_bad))
+    longq = [p for p, s in full for q in re.findall(r'"([^"]+)"', s) if len(q.split()) > 25]
+    rep.ok("any quote is 25 words or fewer") if not longq else rep.fail("quote length", ", ".join(longq))
+
+    # ---- pending inputs
+    pend = spec.get("pending_inputs", [])
+    owners = " ".join(p["owner"] for p in pend)
+    items = " ".join(p["item"] for p in pend)
+    if "Syndicate" in owners and "Lore" in owners and "rules/70-encounter-budget-5e.json" in items and "clock.days" in items:
+        rep.ok("Pending inputs section", "%d entries: budget file, clock numbers, collapse zone groups/costs, canon table, day-count field" % len(pend))
+    else:
+        rep.fail("Pending inputs section", "must list Syndicate (budget file, clock numbers), Lore (collapse, canon table) and clock.days")
+
+    slots = []
+    for p, s in full:
+        for m in SLOT_RE.finditer(s):
+            lab = m.group(1)
+            slots.append({"label": lab, "text": m.group(0), "path": p, "kind": "proposal" if lab.startswith("PROPOSAL") else "slot"})
+    # proposals written as plain "PROPOSAL" text also count
+    proposals = sorted({p for p, s in full if "PROPOSAL" in s and not SLOT_RE.search(s)})
+
+    doc = {
+        "schema": "encounter-bot-day/0.1",
+        "meta": dict(spec["meta"], day=daynum, days=days, days_left=ctx["days_left"],
+                     generated_by="tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
+                     canon_table_sha256=data.canon_sha256, canon_ledger_version=(data.canon or {}).get("ledger_version"),
+                     budget_file=B70, budget_file_version=(bud.data or {}).get("version"), budget_file_sha256=bud.sha256,
+                     budget_file_label="every figure from the budget file is a GM-adaptable guideline (its authority_note)"),
+        "clock": spec["clock"],
+        "canon_table": dict(spec.get("canon_table", {}), present=bool(data.canon),
+                            schema=(data.canon or {}).get("schema"), ledger_version=(data.canon or {}).get("ledger_version"),
+                            sha256=data.canon_sha256),
+        "day": dict(spec["day"], last_chance_hooks=last, proposed_achievements=day_prop, **({"early_descent": early} if early else {})),
+        "routes": routes,
+        "stairwell_key": sk,
+        "encounters": encs,
+        "pending_inputs": pend,
+        "slots": slots,
+        "proposal_fields": proposals,
+    }
+    return doc
+
+
+# ---------------------------------------------------------------- markdown
+def bullets(items, indent=""):
+    return "".join("%s- %s\n" % (indent, i) for i in items)
+
+
+def gm(note):
+    return note if note.startswith(GM) or "[GM-ONLY]" in note else "%s %s" % (GM, note)
+
+
+def render_proposed(pa):
+    s = "**Proposed achievement** *%s* [%s]: trigger: %s" % (pa["name"], pa["tag"], pa["trigger"])
+    if pa.get("narration"):
+        s += " Narration %s: \"%s\"" % (pa["narration_tag"], pa["narration"])
+    if pa.get("canon_ref"):
+        s += " Canon parallel: %s \"%s\" (reference only)." % (pa["canon_ref"]["ledger_id"], pa["canon_ref"]["ledger_name"])
+    return s + " Reward (guideline, GM may adapt): %s" % fill_text(pa["reward_slot"])
+
+
+def render_md(doc):
+    m, clk, day = doc["meta"], doc["clock"], doc["day"]
+    L = []
+    w = L.append
+    w("# Floor %d (%s) - %s\n" % (m["floor"], m["floor_name"], m["title"]))
+    w("Owner: %s | Status: %s | Version: %s | Updated: %s\n" % (m["owner"], m["status"], m["version"], m["updated"]))
+    w("Summary: %s\n" % m["summary"])
+    w("Source: %s. Generated by `tools/encounter_bot/encounter_bot.py` from `floors/f01/day-%02d.spec.json`; edit the spec, not this file.\n" % (
+        "; ".join(m["sources"]), day["number"]))
+    w("Budget file: `%s` v%s, sha256 `%s`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.\n" % (
+        B70, m.get("budget_file_version"), m.get("budget_file_sha256")))
+    w("> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. "
+      "Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.\n")
+    # glance
+    w("## Day at a glance\n")
+    w("| Field | Value |\n|---|---|")
+    w("| Day | %d of %d (field `clock.days`; Floor 2 = %s, Floor 3 = %s) |" % (
+        m["day"], m["days"], clk["other_floors"]["2"], clk["other_floors"]["3"]))
+    w("| Start | %s |" % day["start_zone_name"])
+    w("| Day ends | %s |" % clk["day_ends"])
+    w("| Short-rest slots | up to %d per day. %s |" % (clk["short_rest_slots_per_day_cap"], clk["short_rest_note"]))
+    w("| Lights-Out | %s |" % clk["lights_out"])
+    w("| Clock authority | %s |" % clk["authority"])
+    w("| Stairwell | %s |" % clk["stairwell_opens"])
+    w("| Collapse today | %s |\n" % day["collapse_today"])
+    # collapse
+    w("## Collapse event\n")
+    w("**Today:** %s\n" % day["collapse_today"])
+    w("**Floor schedule** (%s; tagged *inspired*). %s\n" % (clk["collapse_order_status"], clk["canon_note"]))
+    w("| Day | Event | Tag |\n|---:|---|---|")
+    for c in clk["collapse_order"]:
+        w("| %d | %s%s | %s |" % (c["day"], c["event"], " **<- today**" if c["day"] == m["day"] else "", c["tag"]))
+    w("")
+    w("%s\n" % clk["closed_zone_rule"])
+    w("**Zone grouping (confirmed, tagged *inspired*):** %s\n" % clk["zone_groups"].replace("Confirmed (decision 026, tagged inspired): ", ""))
+    if day.get("collapse_notice"):
+        cn = day["collapse_notice"]
+        w("**Collapse notice** %s (%s; tagged *%s*): \"%s\"\n" % (cn["tag"], cn["status"], cn["canon_tag"], cn["text"]))
+        if cn.get("hours_note"):
+            w("*%s*\n" % cn["hours_note"])
+    if day.get("gm_warning"):
+        gwn = day["gm_warning"]
+        w("**GM warning (say it plainly)** %s: %s" % (gwn["tag"], gwn["text"]))
+        if gwn.get("lore_line"):
+            w("Lore's line for it: \"%s\"" % gwn["lore_line"])
+        w("")
+    if day.get("stairwell_opening"):
+        so = day["stairwell_opening"]
+        w("**Stairwell-opening announcement** %s (%s): \"%s\"\n" % (so["tag"], so["timing"], so["text"]))
+    fc, sr_ = clk["final_collapse"], clk["saferoom_rule"]
+    w("**Final collapse (fixed, tagged *inspired*):** %s (%s)\n" % (fc["text"], fc["status"]))
+    w("**Saferoom rule:** %s\n" % sr_["text"])
+    w("Prices on the clock (budget file, GM-adaptable guideline):\n")
+    for k, lab in (("collapse_cost_slot", "Detour Tax (party toll, missed Stairwell key only)"), ("rest_without_saferoom_slot", "Rest without a saferoom (party fee)")):
+        if k in clk:
+            w("- **%s:** %s" % (lab, fill_text(clk[k])))
+    w("")
+    if day.get("budget_table"):
+        w("### Budget at a glance (rules/70-encounter-budget-5e.json v%s, GM-adaptable guideline)\n" % m.get("budget_file_version"))
+        w("| Item | Value for 2 / 3 / 4 Crawlers, with field path |\n|---|---|")
+        for row in day["budget_table"]:
+            w("| %s | %s |" % (row["label"], fill_text(row)))
+        w("")
+    w("**Day close notice for tomorrow** %s: \"%s\"\n" % (day["tomorrow_notice"]["tag"], day["tomorrow_notice"]["text"]))
+    # routes
+    w("## Routes to the Stairwell\n")
+    w("Three ways to leave. The Big Green EXIT (Z7) is bait, not a Stairwell. %s\n" % doc["stairwell_key"]["availability"])
+    for r in doc["routes"]:
+        w("### Route `%s`: %s\n" % (r["tag"], r["name"]))
+        w("- **Path:** %s" % r["path"])
+        w("- **What it costs and gives:** %s" % r["summary"])
+        w("- **Stairwell access:** %s" % r["stairwell_access"])
+        if r["achievements"]:
+            w("- **Achievement ids:** " + "; ".join("%s - %s" % (a.get("label", a["id"]), a["note"]) for a in r["achievements"]))
+        for c in r["canon_refs"]:
+            w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
+        w("")
+        w("**Voice lines**\n")
+        for k in VOICE_KEYS:
+            v = r["voice_lines"][k]
+            w("- %s *%s*: \"%s\"" % (v["tag"], k.replace("_", " "), v["text"]))
+        w("")
+    # key
+    sk = doc["stairwell_key"]
+    w("## The Stairwell key\n")
+    w("%s\n" % sk["what"])
+    w("| Way | How | Where | Routes | Deadline | Status on Day %d |\n|---|---|---|---|---|---|" % m["day"])
+    for k in sk["ways"]:
+        extra = (" Price: %s" % fill_text(k["price_slot"])) if k.get("price_slot") else ""
+        w("| `%s` | %s%s | %s | %s | %s | %s |" % (k["id"], k["how"], extra, k["where"], ", ".join(k["route"]), k["closes"], k["status_today"]))
+    w("")
+    w("- **Keyless:** %s%s" % (sk["keyless"], (" Forcing fee: %s" % fill_text(sk["keyless_fee"])) if sk.get("keyless_fee") else ""))
+    w("- **Missing the key:** %s Toll: %s" % (sk["missing_key_cost"]["text"], fill_text(sk["missing_key_cost"]["toll_slot"])))
+    cm = clk["collapse_miss"]
+    w("- **Missing the collapse (every floor, Floor 1 included; %s):** %s %s %s" % (cm["status"], cm["text"], cm["stasis_counts"], cm["detour_tax_scope"]))
+    w("- **Fake stairwell:** %s" % sk["fake_stairwell"])
+    for n in sk.get("canon_stairwell_notes", []):
+        w("- **Canon (%s, %s):** %s" % (n["ledger_id"], n["tag"], n["text"]))
+    w("- **Stairwell timing:** %s" % sk["availability"])
+    w("- **Early descent:** %s\n" % sk["early_descent"])
+    ed = day.get("early_descent")
+    if ed:
+        w("### Early descent and stasis (Day %d)\n" % m["day"])
+        w("- **Rule:** %s" % ed["summary"])
+        w("- %s *player prompt*: \"%s\"" % (ed["player_prompt"]["tag"], ed["player_prompt"]["text"]))
+        if ed.get("free_window"):
+            w("- %s *free-descent window*: \"%s\"" % (ed["free_window"]["tag"], ed["free_window"]["text"]))
+        w("- **GM override:** %s" % ed["gm_override_note"])
+        for c in ed["canon_refs"]:
+            w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
+        w("- **GM note (stasis sideline scenes):** %s" % ed["sideline_note"])
+        w("")
+    w("### Rest options (Day %d)\n" % m["day"])
+    for r_ in day["rest_options"]:
+        w("- **%s:** %s" % (r_["option"], r_["note"]))
+    w("")
+    fe = day.get("floor_exit")
+    if fe:
+        w("### Floor 1 exit (Day %d)\n" % m["day"])
+        w("- %s *missed-floor line* (read when the floor collapses with a Crawler still on it: they are dead): \"%s\"" % (fe["system_line"]["tag"], fe["system_line"]["text"]))
+        w("- %s *GM warning at the exit* (say this out loud before anyone goes down): %s" % (fe["gm_warning"]["tag"], fe["gm_warning"]["text"]))
+        w("")
+    if day.get("carry_over"):
+        w("### Still playable from earlier pages\n")
+        for c in day["carry_over"]:
+            w("- `%s` %s (until Day %s)" % (c["enc_id"], c["note"], c["until_day"]))
+        w("")
+    # encounters
+    w("## Encounters\n")
+    for e in doc["encounters"]:
+        w("### %s: %s\n" % (e["id"], e["name"]))
+        w("- **Route tag:** %s (primary: **%s**) | **Zone:** %s (%s) | **Type:** %s" % (
+            " / ".join(e["route"]), e["route_primary"], e["zone_name"], e["zone"], e["kind"]))
+        c = e.get("canon")
+        if c:
+            w("- **Canon table:** `%s` %s, tag *%s*, confidence %s. Ledger rows: %s." % (
+                c["table_id"], c["name"], c["tag"], c["confidence"], ", ".join(c["ledger_rows"]) or "none (pure house content)"))
+            w("- **Announcement style (Lore):** %s" % c["announcement_style"])
+        w("")
+        mm = e["map_in_the_mind"]
+        w("#### Map in the mind\n")
+        w("- **Layout:** %s" % mm["layout"])
+        w("- **Exits:** " + " | ".join(mm["exits"]))
+        w("- **Hazards:** " + " | ".join(mm["hazards"]))
+        w("- **Cover:** " + " | ".join(mm["cover"]) + "\n")
+        w("#### Enemies\n")
+        if e["enemies"]:
+            w("| Slot | SRD id | Display (Our Name (5e Name)) | Count | CR |\n|---|---|---|---|---|")
+            for en in e["enemies"]:
+                flag = "" if en.get("srd_resolved") else " (unresolved)"
+                w("| %s | `%s`%s | %s | %s | %s |" % (en["slot"], en["srd_id"], flag, en["our_name"], fill_text(en["count_slot"]), fill_text(en["cr_slot"])))
+            w("")
+        else:
+            w("None. CR: %s" % fill_text(e["cr_slot"]))
+        w("%s\n\n**Budget (guideline, GM may adapt):** %s\n" % (e["enemies_note"], fill_text(e["budget_slot"])))
+        if e.get("budget_variant_b"):
+            w("**Variant B at level 1 (guideline):** %s\n" % fill_text(e["budget_variant_b"]))
+        w("#### Voice lines\n")
+        for k in VOICE_KEYS + ("win_alt",):
+            if k in e["voice_lines"]:
+                v = e["voice_lines"][k]
+                w("- %s *%s*%s: \"%s\"" % (v["tag"], k.replace("_", " ").replace("win alt", "win (alternate: no fight)"), " (set piece)" if v.get("set_piece") else "", v["text"]))
+        zc = e.get("zone_color")
+        if zc:
+            w("")
+            w("**Optional zone color** (read aloud if it helps; %s, %s; each block is short):\n" % (zc["source"], zc["tag"]))
+            for ln in zc["lines"]:
+                w("- %s \"%s\"" % (ln["tag"], ln["text"]))
+            if zc.get("gm_note"):
+                w("- %s" % zc["gm_note"])
+        w("")
+        w("#### Loot & Achievement hooks\n")
+        for h in e["loot_hooks"]:
+            amt = (" Amount: %s" % fill_text(h["amount"])) if h.get("amount") else ""
+            if h["kind"] == "story_box":
+                w("- **Story Box** `%s` %s: %s%s" % (h["card_id"], h.get("display", ""), gm(h["note"]), amt))
+            elif h["kind"] == "card":
+                w("- **Card** `%s` %s [%s, %s]: %s%s" % (h["card_id"], h.get("display", ""), h.get("tier", "?"), h.get("deck", "?"), h["note"], amt))
+            elif h["kind"] == "item":
+                w("- **Item** `%s` %s: %s%s" % (h["srd_id"], h.get("display", ""), h["note"], amt))
+            else:
+                w("- **Placed** %s (%s)%s" % (h["text"], h["overview_ref"], amt))
+        if not e["loot_hooks"]:
+            w("- No authored loot. %s" % fill_text(e.get("loot_note", "")))
+        if e.get("spine_plant_gm_only"):
+            w("- " + gm(e["spine_plant_gm_only"]))
+        for a in e["achievement_hooks"]:
+            w("- **Achievement** %s: %s" % (a.get("label", a["id"]), a["note"]))
+        for pa in e.get("proposed_achievements", []):
+            w("- " + render_proposed(pa))
+        w("")
+        w("#### Scaling note (2, 3, 4 Crawlers)\n")
+        for n in ("2", "3", "4"):
+            w("- **%s Crawlers:** %s" % (n, e["scaling"][n]))
+        for ch in e.get("crawler_hooks", []):
+            w("- **Class hook** %s: %s" % (ch.get("display", ch["id"]), ch["note"]))
+        w("")
+        w("#### If they do something dumb\n")
+        w(e["if_they_do_something_dumb"] + "\n")
+        co = e["carry_on"]
+        w("#### Carry-on (what this changes later)\n")
+        for c_ in co["changes"]:
+            later = ", ".join("`%s`" % x for x in c_.get("reacts_in", []))
+            tail = (" Reacts in: %s." % later) if later else ""
+            if c_.get("later_note"):
+                tail += " %s" % c_["later_note"]
+            w("- **%s:** %s%s" % (c_["choice"], c_["effect"], tail))
+        w("")
+        w("**GM tracks** (plain text for your own notes; nothing here is written to session state):\n")
+        for g in co["gm_tracks"]:
+            w("- [ ] %s" % g)
+        w("")
+        qr = e["quick_run"]
+        w("#### Optional quick run (safety net if the table stalls)\n")
+        w("*Use only if the table is dragging; the full encounter above is the default. Minutes are a pacing guide, not game difficulty.*\n")
+        w("- **Setup:** %s" % qr["setup"])
+        w("- **The decision:** %s" % qr["decision"])
+        w("- **On success:** %s" % qr["on_success"])
+        w("- **On failure:** %s" % qr["on_failure"])
+        w("- **Table time:** about %d minutes (%s)" % (qr["minutes"], qr["tag"]))
+        w("- **Cut short:** %s\n" % qr["cut_short"])
+    # day-level hooks
+    lc = day["last_chance_hooks"]
+    w("## Day loot and achievement hooks (%s)\n" % lc.get("heading", "what is closing next"))
+    w(lc["note"] + "\n")
+    for a in lc["achievements"]:
+        w("- **Achievement** %s: %s" % (a.get("label", a["id"]), a["note"]))
+    for c in lc["cards"]:
+        w("- **Card** `%s` %s [%s]: %s" % (c["card_id"], c.get("display", ""), c.get("tier", "?"), c["note"]))
+    if day.get("proposed_achievements") or any(x.get("proposed_achievements") for x in doc["encounters"]):
+        w("")
+        w("**Proposed achievements on this page** (Floor 1 seed list, GM discretion). %s" % clk["achievement_caps"])
+    for pa in day.get("proposed_achievements", []):
+        w("- " + render_proposed(pa))
+    w("")
+    w("## Short-rest slot map (cap, not a promise)\n")
+    w(bullets(day["short_rest_slots"]))
+    w("## If the party stalls\n")
+    w(day["stall_fallback"] + "\n")
+    # pending
+    w("## Pending inputs\n")
+    w("| Owner | Item | Waiting for | Status |\n|---|---|---|---|")
+    for p in doc["pending_inputs"]:
+        w("| %s | %s | %s | %s |" % (p["owner"], p["item"], p["waiting_for"], p["status"]))
+    w("")
+    w("### Slot census\n")
+    real = [s for s in doc["slots"] if s["kind"] == "slot"]
+    labels = {}
+    for s in real:
+        labels[s["label"]] = labels.get(s["label"], 0) + 1
+    w("%d empty slots across %d labels: %s. Proposal-flagged fields: %d.\n" % (
+        len(real), len(labels), ", ".join("%s x%d" % (k, v) for k, v in sorted(labels.items())), len(doc["proposal_fields"])))
+    v = doc["validation"]
+    w("---\n")
+    ct = doc["canon_table"]
+    w("*Canon table: `%s`, ledger v%s, sha256 `%s` (recorded at build time).*\n" % (CANON_TABLE.replace("/workspace/", ""), ct.get("ledger_version"), ct.get("sha256")))
+    w("*Build note: validation %s (%d PASS, %d WARN, %d FAIL) by `encounter_bot.py`; spec sha256 %s. Warnings: %s*\n" % (
+        v["result"], v["pass"], v["warn"], v["fail"], v["spec_sha256"][:12],
+        "; ".join("%s" % x["check"] for x in v["checks"] if x["status"] == "WARN") or "none"))
+    return "\n".join(L)
+
+
+# ---------------------------------------------------------------- main
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="Encounter Bot: validate a Day spec and write the day page + JSON.")
+    ap.add_argument("--spec", required=True, help="path to the Day spec JSON")
+    ap.add_argument("--out-dir", default=None, help="default floors/f01/; other floors need --allow-other-floors")
+    ap.add_argument("--allow-other-floors", action="store_true", help="allow floors/fNN/ (NN = meta.floor) as the output dir")
+    ap.add_argument("--check-only", action="store_true", help="validate only, write nothing")
+    ap.add_argument("--write-on-fail", action="store_true", help="write outputs even if validation fails")
+    a = ap.parse_args(argv)
+
+    rep = Report()
+    spec_path = a.spec if os.path.isabs(a.spec) else os.path.join(os.getcwd(), a.spec)
+    raw = read_text(spec_path)
+    spec = json.loads(raw)
+    data = Data()
+    required = ("meta", "clock", "day", "routes", "stairwell_key", "encounters", "pending_inputs")
+    missing = [k for k in required if k not in spec]
+    if missing:
+        print("FAIL: spec missing keys %s" % missing)
+        return 1
+    for k, v in (("owner", "Encounter Bot"), ("status", "draft"), ("updated", "2026-10-04")):
+        if spec["meta"].get(k) != v:
+            rep.warn("front matter %s" % k, "expected '%s', got '%s'" % (v, spec["meta"].get(k)))
+    if not str(spec["meta"].get("version", "")).startswith("0."):
+        rep.warn("front matter version", "expected 0.x, got '%s'" % spec["meta"].get("version"))
+    doc = build(spec, data, rep)
+    checks = [{"status": s, "check": c, "detail": d} for s, c, d in rep.items]
+    doc["validation"] = {
+        "result": "PASS" if rep.passed else "FAIL", "pass": rep.count("PASS"), "warn": rep.count("WARN"), "fail": rep.count("FAIL"),
+        "spec_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(), "checks": checks}
+    md = render_md(doc)
+
+    for s, c, d in rep.items:
+        print("%-4s %s%s" % (s, c, (": " + d) if d else ""))
+    print("-" * 60)
+    print("Encounter Bot validation: %s (%d PASS, %d WARN, %d FAIL)" % (
+        doc["validation"]["result"], rep.count("PASS"), rep.count("WARN"), rep.count("FAIL")))
+    print("Slots left empty on purpose: %d; proposal-flagged fields: %d" % (
+        sum(1 for s in doc["slots"] if s["kind"] == "slot"), len(doc["proposal_fields"])))
+    if a.check_only or (not rep.passed and not a.write_on_fail):
+        print("Nothing written (%s)." % ("check-only" if a.check_only else "validation failed"))
+        return 0 if rep.passed else 1
+    n = "day-%02d" % doc["meta"]["day"]
+    fl = doc["meta"]["floor"]
+    out_dir = a.out_dir or os.path.join(ROOT, "floors", "f%02d" % (fl if a.allow_other_floors else 1))
+    kw = dict(floor=fl, days=doc["meta"]["days"], allow_other_floors=a.allow_other_floors)
+    md_path = check_write_allowed(os.path.join(out_dir, n + ".md"), **kw)
+    js_path = check_write_allowed(os.path.join(out_dir, n + ".json"), **kw)
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md if md.endswith("\n") else md + "\n")
+    with open(js_path, "w", encoding="utf-8") as f:
+        json.dump(doc, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print("Wrote %s\nWrote %s" % (md_path, js_path))
+    return 0 if rep.passed else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

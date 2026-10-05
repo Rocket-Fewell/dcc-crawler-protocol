@@ -1,0 +1,537 @@
+{
+  "schema": "loot-deck/0.1.2",
+  "deck_id": "f01-any-story-boxes",
+  "version": "0.1.0",
+  "floor": 1,
+  "zone": "any",
+  "zone_name": "Floor 1: Story Boxes (Legendary one-offs, GM hand-pick only)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "cards": [
+    {
+      "id": "f01-any-0056",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Tiara of Bloody Succession (Fits Any Head, Fits Any Paws)",
+      "real_5e_name": "Circlet of Quick Wits (house: quadruped Int crown)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Worn on the head by one creature (no attunement); it resizes to fit any quadruped or biped. Once per long rest, the wearer may make one Intelligence check, or one Charisma (Persuasion) check against a creature that has not met the wearer, with Advantage; say so before rolling. Dormant until the wearer reaches level 3: the Sepsis rider. Once per long rest, right after you hit with an attack, the target makes a DC 12 Constitution saving throw or has the Poisoned condition until the end of its next turn.",
+        "action_cost": "None (passive)",
+        "range": "Self",
+        "damage": "Poisoned (dormant Sepsis rider, level 3)",
+        "save_dc": "Con DC 12 (dormant Sepsis rider, level 3)",
+        "duration": "one check",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One Advantage per long rest and no always-on bonus. The Sepsis rider does nothing until the wearer is level 3 (a named step; the GM re-checks the budget then), is once per long rest, and does nothing to creatures immune to Poisoned. It gives a non-sapient wearer no speech. Whoever wears it uses it; a quadruped companion can wear it. Not bound: it can be traded, sold or looted from a corpse like any item. Story hook only: wearing it enters the wearer in the Blood Sultanate line of succession (a Floor 9 thread; no effect on Floors 1-2). Fleeting was removed (an item that vanishes when it leaves the head cannot be traded or looted).",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Tiara of Bloody Succession, Circlet of Quick Wits. Once per rest, Advantage on one Intelligence check. Fits any quadruped.",
+      "snark_line": "Every four-legged Crawler deserves a crown, and this one comes with a grudge.",
+      "reward": "Tiara of Bloody Succession, Circlet of Quick Wits. Once per rest, Advantage on one Intelligence check. Fits any quadruped.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pets"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Tiara of Bloody Succession (Circlet of Quick Wits (house)) (story value 60000, not bound)"
+      },
+      "box_name": "Quadruped Box",
+      "deed": "First quadruped companion into the Crawl",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §6.5). GM-triggered Story Box (spec 2.8): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one per table per floor (log an override to exceed). LEDGER: L-001, A-165, I-014, M-231, M-232. trigger_deed: the first quadruped companion (any four-legged creature, not only a cat) enters the Crawl with a Crawler at the table, judged by the GM. power_note: Utility, rung 2 (one Advantage per long rest on an Intelligence or first-meeting Persuasion check; no always-on bonus); the Poisoned rider (DC 12, once per long rest) is dormant until level 3. Hook: the Blood Sultanate succession thread (Floor 9). Armor, weapons and Silver loot stay the main upgrades. Canon: box and deed are canon (A-165, VERIFIED B1 ch7; any quadruped is a HOUSE table rule); canon contents were the Crown of the Sepsis Whore; numbers here are HOUSE. RETUNED (Lore, rules/45 ladder): the always-on +2 to Intelligence checks, the every-turn Poisoned rider and the repeatable Persuasion Advantage were removed or limited to once per long rest; Fleeting was dropped because the item is now tradeable and lootable. DUPLICATE THEME: f01-any-0061 is also an A-165 quadruped crown; award only one of 0056 / 0061 for the first-quadruped deed (one Story Box per table per floor). Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 500 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04).",
+      "story_value": 60000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f01-any-0057",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Grudge Ring (Green Glass, Red Stone)",
+      "real_5e_name": "Ring of Divine Suffering (house: Marked for Death ring)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, spend 30 seconds of focus (outside combat) to mark one hostile non-Crawler creature you can see within 60 ft that the GM agrees is a real threat (a fictional rival fits; no vermin, no noncombatants). The mark lasts up to 1 hour. You have Advantage on the first attack roll you make against the marked creature, and the mark ends when you make it. Marking never requires or rewards a kill.",
+        "action_cost": "Action: 30 seconds of focus (outside combat)",
+        "range": "60 ft",
+        "damage": "None (mark)",
+        "save_dc": "None",
+        "duration": "up to 1 hour or until your first attack on the mark",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One mark at a time, one Advantage per long rest. It never marks a Crawler (no PvP). It runs only with the table's session-zero opt-in: the rival is fictional, never a real person and never a child, and a killing blow is not a deed. No healing is blocked and no hit points or Inspiration are restored. Hunters of Floor 6 will target the wearer (GM hook, no effect on Floors 1-2). No permanent stat bonus. No attunement. Not bound: it can be traded, sold or looted from a corpse like any item.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Grudge Ring, Ring of Divine Suffering. Once per long rest, mark a foe: no healing until it dies, then full health. Opt-in only.",
+      "snark_line": "It sounds scary because it is, and it does not care who you were angry at.",
+      "reward": "Grudge Ring, Ring of Divine Suffering. Once per long rest, mark a foe: no healing until it dies, then full health. Opt-in only.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Grudge Ring (Ring of Divine Suffering (house)) (story value 80000, not bound)"
+      },
+      "box_name": "That's the Spirit! Box",
+      "deed": "Entered the Crawl fighting a fictional rival",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §6.6). GM-triggered Story Box (spec 2.8): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one per table per floor (log an override to exceed). LEDGER: L-001, A-167, I-025, S-011, M-233, X-054. trigger_deed: a Crawler enters the Crawl in a live fight or confrontation with an opted-in fictional rival from their backstory, set up at session zero (no killing, no PvP; rules/45 section 2.4). Without the opt-in, do not run it. power_note: Utility, rung 2 (one Advantage per long rest on the first attack against a marked threat); no healing block, no full heal. Hook: Hunters of Floor 6 (no effect on Floors 1-2). Armor, weapons and Silver loot stay the main upgrades. Canon: box and deed canon (A-167, VERIFIED B3 ch19; Legendary vs Platinum tier conflict X-054, Legendary preferred); canon ring is +5 percent all stats plus the Marked for Death skill (I-025, S-011); numbers here are HOUSE. Not the same item as the core 6.7 Marked for Death Band (revival curse). RETUNED (Lore, rules/45 ladder and Caleb's rival rule): the no-healing curse, the full heal and Heroic Inspiration on the mark's death, the Rare label and attunement were removed; it is now Uncommon with no attunement, never marks Crawlers, and needs no kill. The earlier hold on this card is resolved. DUPLICATE THEME: f01-any-0062 is also an A-167 rival item; award only one of 0057 / 0062 for the rival deed (one Story Box per table per floor). Canon ring: +5 percent all stats plus Marked for Death (I-025); the stat bonus is not used. Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 500 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04).",
+      "story_value": 80000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f01-any-0058",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Olive Branch Lanyard (Laminated, Nobody Got Hurt)",
+      "real_5e_name": "Olive Branch Lanyard (house: redirect charm)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Reaction, once per Long Rest: when a creature you can see, and have not damaged, is about to make an attack roll against you, it makes a DC 12 Wisdom save. On a failure it must pick a different target within its reach or range, or lose the attack.",
+        "action_cost": "Reaction",
+        "range": "Sight",
+        "damage": "None",
+        "save_dc": "Wis DC 12",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Only works against a creature you have not damaged. One use per Long Rest. It does nothing to a creature that is immune to the Charmed condition (GM call) and does not stop area effects. The attacker chooses the new target, which may be one of your allies. Not bound: it can be traded, sold or looted from a corpse like any item.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Olive Branch Lanyard. Once per long rest, a creature you have not hurt that attacks you must pick another target or lose its attack.",
+      "snark_line": "Proof that you did it all without hurting anyone, laminated for your convenience.",
+      "reward": "Olive Branch Lanyard. Once per long rest, a creature you have not hurt that attacks you must pick another target or lose its attack.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pacifist"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Olive Branch Lanyard (story value 30000, not bound)"
+      },
+      "box_name": "Pacifist's Box",
+      "deed": "Left Floor 1 without a single kill",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §6.7). GM-triggered Story Box (spec 2.8): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one per table per floor (log an override to exceed). LEDGER: L-001, L-B43, A-092. trigger_deed: the Crawler (or the whole party) reaches the Floor 1 stairwell without having killed anything; traps, allies and the environment killing do not count against them, the GM judges. If the whole party qualifies there is still one Lanyard: the party names its owner. power_note: one defensive redirect per Long Rest that only works on foes you have not hurt, DC 12 (the rung 2 cap), no damage, uses the Reaction you already have. Armor, shields and healing stay the main defenses. Canon: Pacifist's Box is canon (L-B43, A-092) but the Legendary Pacifist's Boxes went to Meadow Lark on Floor 3 (B2 ch8), so this is a HOUSE Floor 1 version. Numbers HOUSE. RETUNED (Lore, rules/45 ladder): save DC lowered from 13 to 12 (rung 2 cap); the redirect is judged borderline rung 2 (a single attack, once per long rest). Syndicate may still rule it rung 1 or 2. Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 500 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04).",
+      "story_value": 30000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f01-any-0059",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Porkchop Express Wheel-Hub Maul",
+      "real_5e_name": "Maul (house: Rolling Ruin, +1 dormant until Floor 3)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Weapons",
+      "plain_mechanics": {
+        "text": "A Maul (2d6 Bludgeoning, Heavy, Two-Handed, Topple, 10 lb). Once per long rest, when you hit with it, the target makes a DC 12 Strength saving throw or is pushed 10 ft and has the Prone condition. Dormant until the party reaches Floor 3: it becomes a +1 maul (+1 bonus to attack and damage rolls).",
+        "action_cost": "Action",
+        "range": "Melee",
+        "damage": "2d6 Bludgeoning",
+        "save_dc": "Str DC 12 (push and Prone)",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "The push and Prone work only once per long rest. Heavy: Small creatures have Disadvantage on attack rolls with it. Huge or larger creatures are unaffected by the push and Prone. It is a Martial weapon: without proficiency you add no Proficiency Bonus. If you also have the Topple mastery, use one effect per hit, not both. The +1 is dormant on Floors 1-2 (named step: Floor 3; the GM re-checks the budget then). Not bound: it can be traded, sold or looted from a corpse like any item.",
+        "weight_lb": 10
+      },
+      "spoken_line": "Porkchop Express Wheel-Hub Maul. Once per long rest, a hit pushes ten feet and knocks the target prone. Plus one at Floor three.",
+      "snark_line": "Salvaged from something that rolled over a lot of people, and now it is your turn.",
+      "reward": "Porkchop Express Wheel-Hub Maul. Once per long rest, a hit pushes ten feet and knocks the target prone. Plus one at Floor three.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "boss"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Porkchop Express Wheel-Hub Maul (story value 35000, not bound)"
+      },
+      "box_name": "Stopped the Porkchop Express Box",
+      "deed": "First party to take down a Floor 1 Borough Boss",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §6.8). GM-triggered Story Box (spec 2.8): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one per table per floor (log an override to exceed). LEDGER: L-001, A-168, A-173, B-003. trigger_deed: the first party at the table to defeat a Floor 1 Borough Boss (Ball of Swine or any other the GM names; in the F1 module this is Dean Thudd unless the GM names another), judged by the GM. power_note: a Maul with one Strength-save shove per long rest (DC 12, the rung 2 cap) and no new damage dice; the +1 is dormant until Floor 3. Armor, spells and the Silver Boss Box stay relevant. Canon: the canon reward for the first Borough Boss is a Platinum Weapon Box (A-168, VERIFIED B1 ch14), not Legendary, so Legendary is an approved HOUSE upgrade for a table-first; Ball of Swine is B-003 (level 15 in the books). Numbers HOUSE. RETUNED (Lore, rules/45 ladder): the permanent +1 to attack and damage is dormant until Floor 3 and the shove is once per long rest (was short rest). Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 500 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04).",
+      "story_value": 35000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f01-any-0060",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Pet Biscuit Crate, Industrial (500)",
+      "real_5e_name": "Pet Biscuit, plain (house: x500 supply)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action, within 5 ft: feed one plain Pet Biscuit to a willing pet or companion Beast; it regains 1d4 hit points and is calm for 1 minute (it does not flee in panic, and you succeed on any Wisdom (Animal Handling) check to settle it). A pet gets this benefit from at most 3 biscuits per Long Rest. The crate holds 500 biscuits.",
+        "action_cost": "Utilize action",
+        "range": "5 ft",
+        "damage": "Heals 1d4",
+        "save_dc": "None",
+        "duration": "instant (calm lasts 1 minute)",
+        "uses": {
+          "max": 500,
+          "recharge": "none"
+        },
+        "limits": "Plain biscuits only: not Enhanced, no transformation, no effect on a Crawler (including a pet already made a Crawler). Beyond 3 biscuits per pet per Long Rest a biscuit is just a snack. It also covers the pet's ordinary food. 25 lb. Not bound: it can be traded, sold or looted from a corpse like any item. Awarded together with f01-any-0055 as one Story Box.",
+        "weight_lb": 25
+      },
+      "spoken_line": "Pet Biscuit Crate. Five hundred plain biscuits: one heals a pet one d four and calms it, three per pet per long rest.",
+      "snark_line": "Enough kibble to feed the entire Orientation Pit, if the Orientation Pit were a good boy.",
+      "reward": "Pet Biscuit Crate. Five hundred plain biscuits: one heals a pet one d four and calms it, three per pet per long rest.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pets"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Pet Biscuit Crate (story value 20000, not bound)"
+      },
+      "box_name": "Pet Box",
+      "deed": "Brought a pet into the Crawl",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §6.9). GM-triggered Story Box (spec 2.8): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. LEDGER: L-001, L-020, I-007, M-228. trigger_deed: same deed as f01-any-0055 (the Enhanced Pet Biscuit): the first Crawler at the table to bring a pet into the Crawl. It is the second pull of the same Legendary Pet Box, so it is awarded together with f01-any-0055 as ONE Story Box; log this card with the override reason 'same box' under the one-per-floor cap. power_note: Common-level pet supply, 1d4 healing capped at 3 per pet per Long Rest, no combat power. Canon: the Legendary Pet Box held Pet Biscuit x500 plus the Enhanced Pet Biscuit (M-228, VERIFIED B1 ch5); healing and calm numbers are HOUSE. Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 100 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04).",
+      "story_value": 20000,
+      "bound": false,
+      "sale_value": 100
+    },
+    {
+      "id": "f01-any-0061",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Little Crown, Four-Paw Fit",
+      "real_5e_name": "Circlet of the Crowd (house: quadruped charm crown)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Worn by one quadruped companion (resizes to fit; no attunement). Once per long rest, when the wearer or its owner meets a creature that has not met either of them, one of the two may make one Charisma (Persuasion or Performance) check with Advantage; say so before rolling. Dormant part: at owner level 3 it gains a second use per long rest. No effect on attacks, saves, AC or damage.",
+        "action_cost": "none",
+        "range": "30 ft (wearer and owner within 30 ft of each other)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "one check",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Quadruped wearer only. Second use stays locked until the owner is level 3. If the companion dies, the crown is ordinary loot.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Little Crown, Circlet of the Crowd. Once per rest, the wearer or its owner rolls one Charisma check with Advantage.",
+      "snark_line": "Four legs, one crown, zero understanding of taxes. The audience has already voted.",
+      "reward": "Little Crown, Circlet of the Crowd. Once per rest, the wearer or its owner rolls one Charisma check with Advantage.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "story_value": 30000,
+      "sale_value": 250,
+      "bound": false,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pets"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Little Crown, Four-Paw Fit (story value 30000)"
+      },
+      "box_name": "Four Paws Over the Threshold Box",
+      "deed": "Brought a four-legged companion into the Crawl and got it through the first fight alive",
+      "notes": "Canon basis: ledger L-001, A-165 (Legendary Quadruped Box, first cat in; Donut), I-014. Pattern B (Seed). trigger_deed: first quadruped companion (any four-legged creature, not only a cat) that enters the Crawl with a Crawler at the table AND gets through a first fight alive because of a risk its owner or the animal took; GM judged. power_note: Utility, rung 1 now; rung 2 later by named step only (level 3: second use). One social Advantage per rest, no combat numbers. Hook: the audience adores the wearer, and anything hostile that likes crowns can notice it. Recipient: the owner Crawler is the ledger name; the item sits on the companion. REVIEW (Lore): limits no longer say the System takes the crown back (no repossession, rules/45 section 6.3). DUPLICATE THEME: same canon box and deed as f01-any-0056 (Quadruped Box, A-165); award only one of 0056 / 0061 (one Story Box per table per floor). Canon contents were the Crown of the Sepsis Whore (I-014); numbers are HOUSE. Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 250 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04)."
+    },
+    {
+      "id": "f01-any-0062",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Grudge Pin, Enamel (Family Reunion 2019)",
+      "real_5e_name": "Pin of Settled Scores (house: grudge charm)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Pin worn on clothing (no attunement). When you earn it, name one fictional rival or estranged relative from your backstory (never a real person, never a child; the GM approves the name). Once per long rest, when you must make a saving throw against being Frightened by that rival or anyone acting for them, you have Advantage on that save. The first time the table plays out that rival being beaten, spared or forgiven (never killed), you gain Heroic Inspiration, once ever; after that the pin has no Inspiration left.",
+        "action_cost": "none",
+        "range": "self",
+        "damage": null,
+        "save_dc": null,
+        "duration": "one saving throw",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "PvP never counts and the rival is never another Crawler. A killing blow is not a deed. The GM may swap the rival for a different fictional one at any time, without giving a reason. The Inspiration is a one-time payout that stays with the Crawler who earned it. Not bound: it can be traded, sold or looted from a corpse like any item (the new holder gets the save edge only, never a second Inspiration).",
+        "weight_lb": 0
+      },
+      "spoken_line": "Grudge Pin, Pin of Settled Scores. Once per rest, Advantage on a fear save against your rival. Inspiration when the score is settled.",
+      "snark_line": "Nothing says family like a signed waiver. The audience is eating this up with a spoon.",
+      "reward": "Grudge Pin, Pin of Settled Scores. Once per rest, Advantage on a fear save against your rival. Inspiration when the score is settled.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "story_value": 25000,
+      "sale_value": 250,
+      "bound": false,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "rivals"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Grudge Pin, Enamel (story value 25000)"
+      },
+      "box_name": "Family Reunion, Now Streaming Box",
+      "deed": "Faced a fictional rival in the first fight of the Crawl and settled the score on camera",
+      "notes": "Canon basis: ledger A-167 (Legendary That's the Spirit! Box, entering while fighting a family member; Frank Q), I-025. Content: HOUSE reframe, opt-in at session zero, a fictional rival NPC, no killing, no PvP, nothing cursed. Pattern A (Echo). trigger_deed: the Crawler enters or begins Floor 1 in a live fight with an opted-in fictional rival from the backstory and resolves it without killing in a way the table remembers; never staged by the GM, never PvP. power_note: Story plus one small save edge (rung 1); the Inspiration is a single one-time payout and then the pin goes inert. Hook: the rival now knows the Crawler by name. REVIEW (Lore): the always-on Advantage on fear saves near the rival (a permanent save edge) is now once per long rest; 'no killing' and 'never a child' added to match rules/45 section 2.4. DUPLICATE THEME: same canon box (A-167) and deed as f01-any-0057; award only one of 0057 / 0062 (one Story Box per table per floor). Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 250 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04)."
+    },
+    {
+      "id": "f01-any-0063",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "consumable",
+      "reskin_name": "Laminated Truce Chit (Do Not Fold)",
+      "real_5e_name": "Truce Chit (house: one-shot parley)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action, once: hold it up to one named hostile creature you can see within 30 ft that has Intelligence 6 or higher and has not yet attacked this scene. It makes a DC 12 Wisdom saving throw. On a failure it must hear you out: for 1 minute it will not attack you or your allies and will talk if it can. On a success nothing happens (no truce). This ends at once if you or an ally hurts or threatens it. The chit is spent either way.",
+        "action_cost": "Utilize action",
+        "range": "30 ft",
+        "damage": null,
+        "save_dc": "Wis DC 12",
+        "duration": "1 minute on a failed save",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Named hostiles only. Not usable on a floor boss, on a creature already in a fight with you, or on anything with Intelligence 5 or lower. A success means no truce. It buys a conversation, not a win: the usual checks still apply to what is said.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Laminated Truce Chit, a house parley token. One use: one smart named hostile must pass a Wisdom save or hear you out.",
+      "snark_line": "Valid for one conversation. Void if you say 'but hear me out' twice.",
+      "reward": "Laminated Truce Chit, a house parley token. One use: one smart named hostile must pass a Wisdom save or hear you out.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "story_value": 20000,
+      "sale_value": 250,
+      "bound": false,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Laminated Truce Chit (story value 20000)"
+      },
+      "box_name": "Talked It Into Quitting Box",
+      "deed": "Talked a named hostile out of a fight, with the whole table watching, using its own rules against it",
+      "notes": "Pattern C (Keystone). trigger_deed: a named Floor 1 hostile (not a floor boss) that was about to fight stands down because of the Crawler's words and plan, first time at the table, risk real (low HP, no escape), witnessed. power_note: Story keystone, single use, no numbers beyond 1 minute; floor bosses excluded. Hook: the creature remembers who talked to it. Tradeable consumable; if unused it carries to the next floor. REVIEW (Lore): the forced truce was replaced by a Wisdom saving throw at DC 12 (success = no truce) at Caleb's request, so it reads like SRD Charm / Command style effects; ladder-compliant (consumable, one use, floor bosses excluded). Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 250 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04)."
+    },
+    {
+      "id": "f01-any-0064",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Annotated Floor Plan (Coffee Ring Included)",
+      "real_5e_name": "Plan of Unfair Advantage (house: environment charm)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Folded plan carried in your System Inventory (no attunement). Once per long rest, when you use a Utilize action on part of the room (a trap, door, shelf, light, vending machine) against a creature, that creature has Disadvantage on the first saving throw it makes against that effect. The effect must be something the room already offers; the plan adds no damage and no new effect.",
+        "action_cost": "None (passive)",
+        "range": "as the Utilize action",
+        "damage": null,
+        "save_dc": null,
+        "duration": "one saving throw",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One use per long rest, never on a floor boss. The GM decides what the room offers.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Annotated Floor Plan, Plan of Unfair Advantage. Once per rest, a room trick you use gives its target Disadvantage on its first save.",
+      "snark_line": "Every coffee ring marks a trap that worked. The cleaning staff has stopped asking.",
+      "reward": "Annotated Floor Plan, Plan of Unfair Advantage. Once per rest, a room trick you use gives its target Disadvantage on its first save.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "story_value": 30000,
+      "sale_value": 500,
+      "bound": false,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "traps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Annotated Floor Plan (story value 30000)"
+      },
+      "box_name": "Let the Room Do It Box",
+      "deed": "Beat a named Floor 1 hostile using only the room, never raising a weapon",
+      "notes": "Pattern A (Echo). trigger_deed: first Crawler at the table to defeat or drive off a named hostile using only the environment, without a weapon attack or spell of their own, at real risk. power_note: Capped, rung 2: Disadvantage on one save per long rest, no damage dice, no DC, no new action. Hook: the room is now a suspect; the System starts moving the furniture. REVIEW (Lore): ladder-compliant rung 2 (one Disadvantage on one save per long rest; no DC). 5e wording checked: Utilize action and Disadvantage on a saving throw are SRD 5.2 terms. Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 500 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04)."
+    },
+    {
+      "id": "f01-any-0065",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Group Photo, Mid-Handshake (Framed)",
+      "real_5e_name": "Keepsake of the Pictured (house: table-deed trophy)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Framed photo held by one Crawler (the table picks the holder; the GM default is a Crawler without a Story Box yet). The pictured Crawlers are the Crawlers present when the deed is recorded. While every Crawler pictured is alive and within 1 mile of the others, each of them always knows the compass direction to the others. Once per floor, the holder may ask the System to replay the moment in the photo: a free recap of who stood where when the plan began. No combat effect.",
+        "action_cost": "none",
+        "range": "1 mile",
+        "damage": null,
+        "save_dc": null,
+        "duration": "while every Crawler pictured is alive",
+        "uses": {
+          "max": 1,
+          "recharge": "floor"
+        },
+        "limits": "A dead pictured Crawler shows in grey and drops out of the direction sense. A replacement Crawler is not in the photo. Story and navigation only.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Group Photo, Keepsake of the Pictured. While every Crawler pictured lives, each always knows the direction to the others.",
+      "snark_line": "Everybody smile; Production has already chosen the poster.",
+      "reward": "Group Photo, Keepsake of the Pictured. While every Crawler pictured lives, each always knows the direction to the others.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "story_value": 20000,
+      "sale_value": 100,
+      "bound": false,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Group Photo, Mid-Handshake (story value 20000)"
+      },
+      "box_name": "Group Handshake Box",
+      "deed": "Every Crawler present carried out a distinct part of one plan, and it worked",
+      "notes": "Table deed (rules/45 section 6.2): counts as the one Story Box deed of every Crawler named in the deed line; the GM names every pictured Crawler in --witness and logs the others as sharing it. Pattern: Trophy (rung 0 plus a navigation perk). trigger_deed: every Crawler present (the Crawlers pictured when the deed is recorded) each did a distinct, necessary part of one improvised plan against something above their weight, unscripted, with real risk. power_note: Story and navigation only, no combat numbers. Hook: if one Crawler dies, the photo greys them out where everyone can see. REVIEW (Lore): snark line trimmed to one sentence for deck_check; 'all four Crawlers' became 'every Crawler pictured' (the Crawlers present when the deed is recorded), so it works for a two-Crawler table; the once-per-floor replay now uses uses.recharge 'floor' (new value, added to deck_check; Syndicate to add 'floor' to the recharge list in rules/40 section 1.1). Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used. sale_value 100 (System buyback at Floor-1 scale, multiplied by the sale floor's credits multiplier at runtime; independent of story_value, which is provenance only and never the buyback base). story_value is provenance (what the deed was worth to the Accountant), not a sale price; bound is false: the item can be looted, traded or sold like any item (Caleb's ruling 2026-10-04)."
+    }
+  ],
+  "deck_notes": "Story Boxes are hand-pick only (draw_weight 0) and GM-triggered for one named, one-time deed. Like every loot box, a Story Box can only be opened in a safe room. The deed is recorded and announced at award; the box then waits unopened until the next safe room. If the Crawler dies before that safe room, the unopened box is reclaimed and the slot is freed (Caleb's 2026-10-04 ruling; the one-per-floor cap no longer counts it). Story Box items are NOT bound (bound is false): they can be looted from a corpse, traded or sold, as in canon. story_value is provenance for the Accountant, not a sale price; sale_value is the System buyback at Floor-1 scale (times the sale floor's multiplier); credit_value stays 0. Cap one per table per floor (log an override to exceed)."
+}

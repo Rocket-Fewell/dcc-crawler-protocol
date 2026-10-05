@@ -1,0 +1,2681 @@
+{
+  "schema": "loot-deck/0.1.2",
+  "deck_id": "f01-any-orientation-pit",
+  "version": "0.1.0",
+  "floor": 1,
+  "zone": "any",
+  "zone_name": "Floor 1: The Orientation Pit (floor-wide pool)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "cards": [
+    {
+      "id": "f01-any-0001",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Sports Drink, Mystery Flavor",
+      "real_5e_name": "Potion of Healing",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 2d4+2 HP. One use.",
+        "action_cost": "Bonus Action",
+        "range": "5 ft (to give)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on use.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Sports Drink, Mystery Flavor, Potion of Healing. Bonus Action: regain two d four plus two hit points.",
+      "snark_line": "Tastes like a lawsuit and heals like a fairly priced one.",
+      "reward": "Sports Drink, Mystery Flavor, Potion of Healing. Bonus Action: regain two d four plus two hit points.",
+      "canon_status": "CANON",
+      "credit_value": 50,
+      "draw_weight": 30,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Sports Drink, Mystery Flavor (Potion of Healing)"
+      },
+      "box_name": "Bled on the Carpet Box",
+      "deed": "Took damage and kept going",
+      "notes": "LEDGER: I-009 (healing potion, B1), L-B02; flavor only, mechanics are 5e. Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Alpha used Red/Blue/Green flavors as placed potions; this is the box-draw version."
+    },
+    {
+      "id": "f01-any-0002",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Rope-Swing Energy Drink",
+      "real_5e_name": "Potion of Climbing",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink; for 1 hour you gain a Climb Speed equal to your Speed and have Advantage on Strength (Athletics) checks to climb. One use.",
+        "action_cost": "Bonus Action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on use.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Rope-Swing Energy Drink, Potion of Climbing. One hour: climb speed equals your speed, advantage on climbing checks.",
+      "snark_line": "Side effects include confidence and a sudden interest in ceilings.",
+      "reward": "Rope-Swing Energy Drink, Potion of Climbing. One hour: climb speed equals your speed, advantage on climbing checks.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 60,
+      "draw_weight": 18,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Rope-Swing Energy Drink (Potion of Climbing)"
+      },
+      "box_name": "Climbed Something You Weren't Supposed To Box",
+      "deed": "Climbed a wall, rail or ceiling",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0003",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Cease-and-Desist Letter (Addressed To Your Enemies)",
+      "real_5e_name": "Spell Scroll (Magic Missile, level 1)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Magic action: if Magic Missile is on your class's spell list (Sorcerer, Wizard), read the scroll to cast it at level 1: three darts, each 1d4+1 Force, auto-hit, up to 120 ft. The scroll then disintegrates.",
+        "action_cost": "Magic action",
+        "range": "120 ft",
+        "damage": "1d4+1 Force per dart (3 darts)",
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only a class with Magic Missile on its list can read it. No Material components needed.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Cease-and-Desist Letter, Spell Scroll of Magic Missile. Wizards and Sorcerers only: three darts, one d four plus one force each.",
+      "snark_line": "Legally binding, magically binding, and neither is ever enforced.",
+      "reward": "Cease-and-Desist Letter, Spell Scroll of Magic Missile. Wizards and Sorcerers only: three darts, one d four plus one force each.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 75,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [
+        "magic missile",
+        "wizard"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Cease-and-Desist Letter (Addressed To Your Enemies) (Spell Scroll (Magic Missile, level 1))"
+      },
+      "box_name": "Read the Fine Print Out Loud Box",
+      "deed": "Read something out loud that you shouldn't have",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Scroll DC 13 / +5 irrelevant (Magic Missile needs no roll)."
+    },
+    {
+      "id": "f01-any-0004",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Get-Well-Soon Card (Singing, Unsolicited)",
+      "real_5e_name": "Spell Scroll (Cure Wounds, level 1)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Magic action: if Cure Wounds is on your class's spell list (Bard, Cleric, Druid, Paladin, Ranger), read the scroll to cast it at level 1: touch a creature, it regains 2d8 + your spellcasting ability modifier HP. The scroll then disintegrates.",
+        "action_cost": "Magic action",
+        "range": "Touch",
+        "damage": "2d8 + spellcasting modifier HP restored",
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only classes with Cure Wounds on their list can read it.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Get-Well-Soon Card, Spell Scroll of Cure Wounds. Healers, Bards, Druids, Paladins, Rangers: touch heals two d eight plus your modifier.",
+      "snark_line": "It plays a tinny song while you bleed. That part is not a setting.",
+      "reward": "Get-Well-Soon Card, Spell Scroll of Cure Wounds. Healers, Bards, Druids, Paladins, Rangers: touch heals two d eight plus your modifier.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 75,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Get-Well-Soon Card (Singing, Unsolicited) (Spell Scroll (Cure Wounds, level 1))"
+      },
+      "box_name": "Patched Up a Friend Box",
+      "deed": "Healed or stabilized a teammate",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Only half the table can use it; low weight on purpose."
+    },
+    {
+      "id": "f01-any-0005",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Birthday Candle (Lit, Somehow)",
+      "real_5e_name": "Spell Scroll (Fire Bolt, cantrip)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Magic action: if Fire Bolt is on your class's spell list (Sorcerer, Wizard), read the scroll to cast it: ranged spell attack (+5), up to 120 ft, 1d10 Fire. A flammable object not worn or carried ignites. The scroll then disintegrates.",
+        "action_cost": "Magic action",
+        "range": "120 ft",
+        "damage": "1d10 Fire",
+        "save_dc": "Ranged spell attack +5 (scroll)",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only a class with Fire Bolt on its list can read it.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Birthday Candle, Spell Scroll of Fire Bolt. Wizards and Sorcerers only: ranged attack, one d ten fire, one hundred twenty feet.",
+      "snark_line": "Make a wish. The wish is arson.",
+      "reward": "Birthday Candle, Spell Scroll of Fire Bolt. Wizards and Sorcerers only: ranged attack, one d ten fire, one hundred twenty feet.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [
+        "fire",
+        "wizard"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Birthday Candle (Lit, Somehow) (Spell Scroll (Fire Bolt, cantrip))"
+      },
+      "box_name": "Set Something on Fire on Purpose Box",
+      "deed": "Used fire on purpose",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Fire Bolt ignition rider per spell text; verify wording when announced."
+    },
+    {
+      "id": "f01-any-0006",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Battery-Acid Slushie",
+      "real_5e_name": "Acid",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Attack action (replace one attack): throw at a creature or object you can see within 20 ft. It makes a Dex save (DC 8 + thrower's Dex modifier + proficiency bonus) or takes 2d6 Acid damage. One use.",
+        "action_cost": "Action",
+        "range": "20 ft",
+        "damage": "2d6 Acid",
+        "save_dc": "Dex DC 8 + Dex mod + prof",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on throw.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Battery-Acid Slushie, Acid. Throw twenty feet; failed dex save means two d six acid damage.",
+      "snark_line": "Brain freeze is the least of their problems.",
+      "reward": "Battery-Acid Slushie, Acid. Throw twenty feet; failed dex save means two d six acid damage.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 25,
+      "draw_weight": 16,
+      "unique": false,
+      "tailor_tags": [
+        "explosives",
+        "acid"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Battery-Acid Slushie (Acid)"
+      },
+      "box_name": "Threw Something Gross at Something Worse Box",
+      "deed": "Threw a dangerous liquid at an enemy",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec §3 listed this as a ranged attack with no save; 2024 uses a Dex save."
+    },
+    {
+      "id": "f01-any-0007",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Communion Cup, Chilled",
+      "real_5e_name": "Holy Water",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Attack action (replace one attack): throw at a creature you can see within 20 ft. A Fiend or Undead must make a Dex save (DC 8 + thrower's Dex modifier + proficiency bonus) or take 2d8 Radiant damage. No effect on other creature types. One use.",
+        "action_cost": "Action",
+        "range": "20 ft",
+        "damage": "2d8 Radiant (Fiends and Undead only)",
+        "save_dc": "Dex DC 8 + Dex mod + prof",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Does nothing to creatures that are not Fiends or Undead. Skeleton-type Mannequin Staff on Floor 1 count as Undead.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Communion Cup, Holy Water. Throw twenty feet at a fiend or undead: failed dex save means two d eight radiant.",
+      "snark_line": "Blessed by someone who has seen things. Mostly the bottom of cups.",
+      "reward": "Communion Cup, Holy Water. Throw twenty feet at a fiend or undead: failed dex save means two d eight radiant.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 25,
+      "draw_weight": 14,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Communion Cup, Chilled (Holy Water)"
+      },
+      "box_name": "Splashed the Dead for Fun Box",
+      "deed": "Damaged an undead creature",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0008",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Gas-Station Pepto, Chewable",
+      "real_5e_name": "Antitoxin",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink; for 1 hour you have Advantage on saving throws to avoid or end the Poisoned condition. One use.",
+        "action_cost": "Bonus Action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on use. Does not cure the condition by itself.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Gas-Station Pepto, Antitoxin. Bonus Action: one hour of advantage on saves against poison.",
+      "snark_line": "Do not read the ingredients. They are in a language called regret.",
+      "reward": "Gas-Station Pepto, Antitoxin. Bonus Action: one hour of advantage on saves against poison.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 14,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Gas-Station Pepto, Chewable (Antitoxin)"
+      },
+      "box_name": "Licked the Wrong Needle Box",
+      "deed": "Got poisoned and walked it off",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec said Drink with no action type; 2024 text is Bonus Action."
+    },
+    {
+      "id": "f01-any-0009",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Cooking Spray, Industrial Drum Size",
+      "real_5e_name": "Oil (flask)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Attack action (replace one attack): throw at a creature or object within 20 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is covered in oil for 1 minute; if it takes Fire damage in that time, +5 Fire damage. OR Utilize action: pour on level ground in a 5-ft square within 5 ft; if lit it burns until the end of the turn 2 rounds later, 5 Fire damage to any creature entering or ending its turn there (once per turn). Also fuels a Lamp or Lantern for 6 hours.",
+        "action_cost": "Action",
+        "range": "20 ft (thrown) / 5 ft (poured)",
+        "damage": "5 Fire (burning oil)",
+        "save_dc": "Dex DC 8 + Dex mod + prof",
+        "duration": "1 minute (coating) / 2 rounds (burning pool)",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed. Fire damage is only added if something ignites it.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Cooking Spray, Oil flask. Coat a target or pour a five foot pool; fire adds five damage.",
+      "snark_line": "Fry something, anything, preferably the bad thing.",
+      "reward": "Cooking Spray, Oil flask. Coat a target or pour a five foot pool; fire adds five damage.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.1,
+      "draw_weight": 16,
+      "unique": false,
+      "tailor_tags": [
+        "fire",
+        "cooking"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Cooking Spray, Industrial Drum Size (Oil (flask))"
+      },
+      "box_name": "Fried Something Unwise Box",
+      "deed": "Combined grease and fire",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Floor doc names oil as junk weapon oil (First Blood reward). Tagged fire."
+    },
+    {
+      "id": "f01-any-0010",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Bag of Lost Marbles (Not Yours)",
+      "real_5e_name": "Ball Bearings",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: spill the pouch over a level 10-ft square within 10 ft. A creature entering the area for the first time on a turn makes a DC 10 Dex save or falls Prone. Takes 10 minutes to pick up again.",
+        "action_cost": "Utilize action",
+        "range": "10 ft (centre within)",
+        "damage": null,
+        "save_dc": "Dex DC 10",
+        "duration": "until picked up (10 min)",
+        "uses": null,
+        "limits": "Reusable once recovered (10 minutes).",
+        "weight_lb": 2
+      },
+      "spoken_line": "Bag of Lost Marbles, Ball Bearings. Spill a ten foot square; first entry each turn, dex save ten or prone.",
+      "snark_line": "Your opponents lose their marbles. You are the one who found them.",
+      "reward": "Bag of Lost Marbles, Ball Bearings. Spill a ten foot square; first entry each turn, dex save ten or prone.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 14,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Bag of Lost Marbles (Not Yours) (Ball Bearings)"
+      },
+      "box_name": "Made the Floor Dangerous Box",
+      "deed": "Used terrain against enemies",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY about movement exception: 2024 text is 'first time on a turn', no half-speed exception."
+    },
+    {
+      "id": "f01-any-0011",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Bag of LEGO, Barefoot Edition",
+      "real_5e_name": "Caltrops",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: spread over a 5-ft square within 5 ft. A creature entering for the first time on a turn makes a DC 15 Dex save or takes 1 Piercing damage and its Speed drops to 0 until the start of its next turn. Takes 10 minutes to recover.",
+        "action_cost": "Utilize action",
+        "range": "5 ft (centre within)",
+        "damage": "1 Piercing",
+        "save_dc": "Dex DC 15",
+        "duration": "until picked up (10 min)",
+        "uses": null,
+        "limits": "Reusable once recovered (10 minutes).",
+        "weight_lb": 2
+      },
+      "spoken_line": "Bag of LEGO, Caltrops. Spread a five foot square; failed dex save fifteen means one damage and speed zero.",
+      "snark_line": "Every parent knows this weapon. No parent has ever beaten it.",
+      "reward": "Bag of LEGO, Caltrops. Spread a five foot square; failed dex save fifteen means one damage and speed zero.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 14,
+      "unique": false,
+      "tailor_tags": [
+        "traps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Bag of LEGO, Barefoot Edition (Caltrops)"
+      },
+      "box_name": "Left a Mess on Purpose Box",
+      "deed": "Set a trap with junk",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec said 'Speed -10 until it regains 1 HP'; 2024 text differs (Speed 0 until start of next turn)."
+    },
+    {
+      "id": "f01-any-0012",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Break-Room First-Aid Kit, Lightly Bitten",
+      "real_5e_name": "Healer's Kit",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: expend 1 of 10 uses to stabilize an Unconscious creature at 0 HP without a Wisdom (Medicine) check.",
+        "action_cost": "Utilize action",
+        "range": "Touch",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 10,
+          "recharge": "none"
+        },
+        "limits": "Stabilizes only; does not restore HP. 10 uses total.",
+        "weight_lb": 3
+      },
+      "spoken_line": "Break-Room First-Aid Kit, Healer's Kit. Ten uses: Utilize to stabilize a creature at zero hit points, no check.",
+      "snark_line": "Stabilize them. Do not ask what bit the kit.",
+      "reward": "Break-Room First-Aid Kit, Healer's Kit. Ten uses: Utilize to stabilize a creature at zero hit points, no check.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)"
+      },
+      "box_name": "Dragged Someone Out of the Fire Box",
+      "deed": "Stabilized a dying teammate",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Alpha: Bone stabilized Horn with a similar kit (Buddy System)."
+    },
+    {
+      "id": "f01-any-0013",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Tiki Torch, Unlicensed",
+      "real_5e_name": "Torch",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Burns for 1 hour: bright light 20 ft, dim light another 20 ft. Attack action: use as a Simple melee weapon; on a hit, 1 Fire damage.",
+        "action_cost": "Action",
+        "range": "20 ft light",
+        "damage": "1 Fire",
+        "save_dc": "None",
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Needs a flame source (Tinderbox is a Bonus Action).",
+        "weight_lb": 1
+      },
+      "spoken_line": "Tiki Torch, Torch. One hour of light, twenty feet bright. As a weapon: one fire damage.",
+      "snark_line": "Mood lighting for a crime scene.",
+      "reward": "Tiki Torch, Torch. One hour of light, twenty feet bright. As a weapon: one fire damage.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.01,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Tiki Torch, Unlicensed (Torch)"
+      },
+      "box_name": "Lit the Way Badly Box",
+      "deed": "Carried a light into the dark",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0014",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Paint-Can Pry Bar",
+      "real_5e_name": "Crowbar",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Passive: Advantage on Strength checks where the crowbar's leverage can be applied.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while held",
+        "uses": null,
+        "limits": "Not a weapon stat (improvised weapon).",
+        "weight_lb": 5
+      },
+      "spoken_line": "Paint-Can Pry Bar, Crowbar. Advantage on strength checks where leverage helps.",
+      "snark_line": "Solves every problem that has a lid.",
+      "reward": "Paint-Can Pry Bar, Crowbar. Advantage on strength checks where leverage helps.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 2,
+      "draw_weight": 14,
+      "unique": false,
+      "tailor_tags": [
+        "tools"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Paint-Can Pry Bar (Crowbar)"
+      },
+      "box_name": "Opened the Door Marked Do Not Box",
+      "deed": "Forced something open",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0015",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Big Honking Flashlight",
+      "real_5e_name": "Lantern, Hooded",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Burns Oil: bright light 30 ft, dim light another 30 ft; one oil flask lasts 6 hours. Bonus Action: lower the hood (dim light 5 ft radius only) or raise it again.",
+        "action_cost": "Bonus Action",
+        "range": "30 ft bright + 30 ft dim",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "6 hours per Oil flask",
+        "uses": null,
+        "limits": "Needs a flask of Oil and a flame to light.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Big Honking Flashlight, Hooded Lantern. Thirty feet bright, thirty dim; Bonus Action to lower the hood.",
+      "snark_line": "It lights your path and everyone else's attention.",
+      "reward": "Big Honking Flashlight, Hooded Lantern. Thirty feet bright, thirty dim; Bonus Action to lower the hood.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Big Honking Flashlight (Lantern, Hooded)"
+      },
+      "box_name": "Saw Something in the Dark Box",
+      "deed": "Explored a dark area",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY radius resolved: 30/30 plus hood."
+    },
+    {
+      "id": "f01-any-0016",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Hardware-Store Harness (Pitons Included, Regrettably)",
+      "real_5e_name": "Climber's Kit",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: anchor yourself; you can't fall more than 25 ft from the anchor point and can't move more than 25 ft from it without undoing the anchor as a Bonus Action.",
+        "action_cost": "Utilize action",
+        "range": "25 ft from anchor",
+        "damage": null,
+        "save_dc": null,
+        "duration": "until undone",
+        "uses": null,
+        "limits": "Needs a place to set the anchor.",
+        "weight_lb": 12
+      },
+      "spoken_line": "Hardware-Store Harness, Climber's Kit. Utilize to anchor: no falling more than twenty-five feet from the anchor.",
+      "snark_line": "Safety first. Second and third are also yours.",
+      "reward": "Hardware-Store Harness, Climber's Kit. Utilize to anchor: no falling more than twenty-five feet from the anchor.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 25,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Hardware-Store Harness (Pitons Included, Regrettably) (Climber's Kit)"
+      },
+      "box_name": "Went the Wrong Way Up Box",
+      "deed": "Climbed or dropped somewhere risky",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY resolved with 25 ft numbers."
+    },
+    {
+      "id": "f01-any-0017",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Volleyball Net, Reclaimed",
+      "real_5e_name": "Net",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Attack action (replace one attack): throw at a creature you can see within 15 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is Restrained until it escapes. Huge or larger succeed automatically. Escape: the target or a creature within 5 ft uses an action for a DC 10 Strength (Athletics) check, or the net is destroyed (AC 10, 5 HP, immune to Bludgeoning, Poison, Psychic).",
+        "action_cost": "Action",
+        "range": "15 ft",
+        "damage": null,
+        "save_dc": "Dex DC 8 + Dex mod + prof",
+        "duration": "until escape",
+        "uses": null,
+        "limits": "Huge or larger creatures auto-succeed on the save.",
+        "weight_lb": 3
+      },
+      "spoken_line": "Volleyball Net, Net. Throw fifteen feet; failed dex save means restrained until freed.",
+      "snark_line": "Nothing but net, and nothing but regret.",
+      "reward": "Volleyball Net, Net. Throw fifteen feet; failed dex save means restrained until freed.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Volleyball Net, Reclaimed (Net)"
+      },
+      "box_name": "Caught Something in a Net Box",
+      "deed": "Restrained an enemy",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY range resolved: 15 ft, Dex save, Huge+ immune."
+    },
+    {
+      "id": "f01-any-0018",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Raccoon Trap, Industrial",
+      "real_5e_name": "Hunting Trap",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: set it. A creature stepping on the plate makes a DC 13 Dex save or takes 1d4 Piercing damage and its Speed drops to 0 until the start of its next turn; thereafter movement is limited by the chain (about 3 ft) until it breaks free. Freeing: a creature uses its action for a DC 13 Strength (Athletics) check. Each failed check deals 1 Piercing.",
+        "action_cost": "Utilize action",
+        "range": "Touch (set); trap triggers underfoot",
+        "damage": "1d4 Piercing (+1 per failed escape)",
+        "save_dc": "Dex DC 13",
+        "duration": "until freed",
+        "uses": null,
+        "limits": "Must be chained to an immobile object.",
+        "weight_lb": 25
+      },
+      "spoken_line": "Raccoon Trap, Hunting Trap. Set it down: failed dex save thirteen means one d four piercing and no movement.",
+      "snark_line": "Guaranteed to catch something. Statistically, you.",
+      "reward": "Raccoon Trap, Hunting Trap. Set it down: failed dex save thirteen means one d four piercing and no movement.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [
+        "traps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Raccoon Trap, Industrial (Hunting Trap)"
+      },
+      "box_name": "Forgot Where You Put the Trap Box",
+      "deed": "Set or sprang a trap",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY free-DC resolved: DC 13 Strength (Athletics)."
+    },
+    {
+      "id": "f01-any-0019",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Padlock for a Locker Nobody Owns",
+      "real_5e_name": "Lock",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Comes with a key. Without the key, Thieves' Tools pick it with a successful DC 15 Dexterity (Sleight of Hand) check.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": "Dex (Sleight of Hand) DC 15 to pick",
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Needs Thieves' Tools to pick.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Padlock for a Locker Nobody Owns, Lock. Comes with a key; picking it takes thieves' tools and a dex check fifteen.",
+      "snark_line": "Somebody lost the key and everybody regrets it.",
+      "reward": "Padlock for a Locker Nobody Owns, Lock. Comes with a key; picking it takes thieves' tools and a dex check fifteen.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 10,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Padlock for a Locker Nobody Owns (Lock)"
+      },
+      "box_name": "Locked Something Up Box",
+      "deed": "Secured or picked a lock",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0020",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Extension Cord, Fifty Feet, Unplugged",
+      "real_5e_name": "Rope (hempen, 50 ft)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: tie a knot (DC 10 Dex (Sleight of Hand)). Bursts on a DC 20 Strength (Athletics) check. Binds an unwilling creature only if it is Grappled, Incapacitated or Restrained; escape: DC 15 Dex (Acrobatics) as an action.",
+        "action_cost": "Utilize action",
+        "range": "50 ft length",
+        "damage": null,
+        "save_dc": "Burst Str DC 20; escape Dex DC 15",
+        "duration": "permanent",
+        "uses": null,
+        "limits": "2024 numbers: burst DC 20 (starter kit card-data says DC 17, 2014).",
+        "weight_lb": 5
+      },
+      "spoken_line": "Extension Cord, Rope. Fifty feet; knots with a dex check ten, bursts at strength twenty.",
+      "snark_line": "Someone will tie a booth to something. We just know.",
+      "reward": "Extension Cord, Rope. Fifty feet; knots with a dex check ten, bursts at strength twenty.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Extension Cord, Fifty Feet, Unplugged (Rope (hempen, 50 ft))"
+      },
+      "box_name": "Tied It to Something Terrible Box",
+      "deed": "Used rope to haul, tow or climb",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Weight 5 lb per 2024 equipment table (spec VERIFY resolved). Alpha: Bone towed a booth with rope (Tow Package)."
+    },
+    {
+      "id": "f01-any-0021",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Staff-Lounge Hand Bell",
+      "real_5e_name": "Bell",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: ring it; the sound can be heard up to 60 ft away.",
+        "action_cost": "Utilize action",
+        "range": "60 ft",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "No other effect.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Staff-Lounge Hand Bell, Bell. Utilize: heard sixty feet away.",
+      "snark_line": "Cue the proctor. Cue the regret.",
+      "reward": "Staff-Lounge Hand Bell, Bell. Utilize: heard sixty feet away.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "pranks"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Staff-Lounge Hand Bell (Bell)"
+      },
+      "box_name": "Rang It Anyway Box",
+      "deed": "Made noise on purpose",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0022",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Mascot Head, Sweaty (Not That One)",
+      "real_5e_name": "Costume",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Armor",
+      "plain_mechanics": {
+        "text": "While worn, Advantage on any ability check to impersonate the type of person the costume represents. 4 lb.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while worn",
+        "uses": null,
+        "limits": "No AC. Floor 1 mascots are not impressed.",
+        "weight_lb": 4
+      },
+      "spoken_line": "Mascot Head, Costume. Advantage on checks to impersonate what it represents.",
+      "snark_line": "Smells like a warm yes.",
+      "reward": "Mascot Head, Costume. Advantage on checks to impersonate what it represents.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [
+        "hats",
+        "costumes"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Mascot Head, Sweaty (Not That One) (Costume)"
+      },
+      "box_name": "Dressed for the Wrong Occasion Box",
+      "deed": "Wore or fought in a costume",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0023",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Dean's List Magnifying Glass",
+      "real_5e_name": "Magnifying Glass",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with it needs sunlight-bright light, tinder and about 5 minutes.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while held",
+        "uses": null,
+        "limits": "Fire use needs sunlight-level light.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Dean's List Magnifying Glass. Advantage on checks to inspect highly detailed items.",
+      "snark_line": "Look closer. Nothing will improve.",
+      "reward": "Dean's List Magnifying Glass. Advantage on checks to inspect highly detailed items.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 100,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "reading",
+        "investigation"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Dean's List Magnifying Glass (Magnifying Glass)"
+      },
+      "box_name": "Read the Tiny Print Box",
+      "deed": "Investigated something carefully",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0024",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)",
+      "real_5e_name": "Rations (1 day)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Travel food for one day. 2 lb.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 day",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Counts as a day's food; a dog will also eat it.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Gas-Station Jerky Cubes, Rations. One day of travel food.",
+      "snark_line": "Chewy, salty, and nobody asks what animal.",
+      "reward": "Gas-Station Jerky Cubes, Rations. One day of travel food.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.5,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [
+        "dogs",
+        "food"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations (1 day))"
+      },
+      "box_name": "Shared a Snack Box",
+      "deed": "Shared food or fed an animal",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Tailor tag: dogs (hidden tailoring only, no public tag)."
+    },
+    {
+      "id": "f01-any-0025",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Hotel Desk Bell, Ding Ding",
+      "real_5e_name": "Signal Whistle",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: blow it; the sound can be heard up to 600 ft away.",
+        "action_cost": "Utilize action",
+        "range": "600 ft",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "No other effect.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Hotel Desk Bell, Signal Whistle. Utilize: heard six hundred feet away.",
+      "snark_line": "Calls the staff. The staff will not come.",
+      "reward": "Hotel Desk Bell, Signal Whistle. Utilize: heard six hundred feet away.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.05,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "noise"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Hotel Desk Bell, Ding Ding (Signal Whistle)"
+      },
+      "box_name": "Called for Help Loudly Box",
+      "deed": "Called out for help or attention",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Tailored slot: dog-whistle gag for Horn is in exclusive card below."
+    },
+    {
+      "id": "f01-any-0026",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Dog Whistle, Silent Except To Pebbles",
+      "real_5e_name": "Signal Whistle (house: gag skin)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: blow it; the sound can be heard up to 600 ft away. No special effect on any creature.",
+        "action_cost": "Utilize action",
+        "range": "600 ft",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "No bonus on dogs; jokes are on the item, not the dog.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Dog Whistle, Signal Whistle. Utilize: heard six hundred feet away.",
+      "snark_line": "It works on dogs. This is the part about dogs we are not discussing.",
+      "reward": "Dog Whistle, Signal Whistle. Utilize: heard six hundred feet away.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.05,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "dogs"
+      ],
+      "exclusive_to": "Horn",
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Dog Whistle, Silent Except To Pebbles (Signal Whistle (house: gag skin))"
+      },
+      "box_name": "Followed a Hunch Box",
+      "deed": "Looked for a missing friend",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Horn running gag (public dog hook). Hand-pick only (weight 0) so the gag lands once."
+    },
+    {
+      "id": "f01-any-0027",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Pebbles Snow Globe",
+      "real_5e_name": "Driftglobe",
+      "source_5e": "DMG 2024",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Within 60 ft, a command word makes it shed light as the Light spell (20 ft bright + 20 ft dim) or the Daylight spell (60 ft bright + 60 ft dim); Daylight once, then not again until next dawn. A second command word (Magic action) floats it up to 5 ft in the air; if you move more than 60 ft away it follows you; if blocked it sinks and goes dark. 1 lb.",
+        "action_cost": "Magic action",
+        "range": "60 ft",
+        "damage": "None",
+        "save_dc": null,
+        "duration": "until commanded off / until next dawn (Daylight)",
+        "uses": {
+          "max": 1,
+          "recharge": "dawn"
+        },
+        "limits": "Daylight once per dawn only.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Pebbles Snow Globe, Driftglobe. Command word for light or daylight; Magic action to float it.",
+      "snark_line": "Hand-picked. Do not read into it.",
+      "reward": "Pebbles Snow Globe, Driftglobe. Command word for light or daylight; Magic action to float it.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 100,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "dogs",
+        "light"
+      ],
+      "exclusive_to": "Horn",
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Pebbles Snow Globe (Driftglobe)"
+      },
+      "box_name": "Left Something Behind Box",
+      "deed": "Looked for a lost dog",
+      "notes": "Mechanics checked vs DMG 2024 text (aidedd 5.5 mirror) 2026-10-04. UNCOMMON, hand-picked into a Bronze box (Horn, alpha). Audit O15: not Common; float command is Magic action (2024). Already issued to Horn; weight 0 so it cannot be redrawn."
+    },
+    {
+      "id": "f01-any-0028",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Eternally Stained Wifebeater",
+      "real_5e_name": "Cloak of Many Fashions (house)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Worn as your outer garment (no attunement). Bonus Action: change its style, color and apparent quality to any cloak, hoodie, cape or vest you have seen. Looks only: no AC, no powers, no bonus to any check. Weight does not change.",
+        "action_cost": "Bonus Action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "until you change it",
+        "uses": null,
+        "limits": "Cosmetic only. Copies the look of other garments, never their properties or magic. You can wear only one outer-garment magic item at a time (house). It always stays a garment of about its own size. Touching it reveals nothing odd.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Eternally Stained Wifebeater, Cloak of Many Fashions. Bonus Action: change its style and color. Looks only.",
+      "snark_line": "It is stained. That part is not a setting.",
+      "reward": "Eternally Stained Wifebeater, Cloak of Many Fashions. Bonus Action: change its style and color. Looks only.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "clothing"
+      ],
+      "exclusive_to": "Bone Wifebeater",
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Eternally Stained Wifebeater (Cloak of Many Fashions (house))"
+      },
+      "box_name": "Showed Up in That Shirt Box",
+      "deed": "Wore the same shirt through everything",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §2). Follows the general shape of the DMG cloak from memory; not copied, not checked against the book. Already issued to Bone Wifebeater (alpha). weight 0 / hand-pick, exclusive. Same text as f01-z09-0015: only id, zone, weight, unique, exclusive_to, reskin and box fields differ."
+    },
+    {
+      "id": "f01-any-0029",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Collapsible Tent-Pole",
+      "real_5e_name": "Pole of Collapsing (house)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Works as a 10 ft Pole. Magic action while holding it: collapse it to a 1 ft rod (weight unchanged) or extend it back to 10 ft; it stops growing where something blocks it. As a Pole you can touch something up to 10 ft away, and you have Advantage on a Strength (Athletics) check to vault in a High or Long Jump. Not a weapon: extending it pushes and damages nothing.",
+        "action_cost": "Magic action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "until you change it",
+        "uses": null,
+        "limits": "No attack or damage use; one change per action. Collapsed it is a plain 1 ft rod. Extending into a creature or object stops it at that point.",
+        "weight_lb": 7
+      },
+      "spoken_line": "Collapsible Tent-Pole, Pole of Collapsing. Magic action: collapse to one foot or extend to ten.",
+      "snark_line": "Easy to carry. Hard to explain.",
+      "reward": "Collapsible Tent-Pole, Pole of Collapsing. Magic action: collapse to one foot or extend to ten.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "tools"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Collapsible Tent-Pole (Pole of Collapsing (house))"
+      },
+      "box_name": "Poked Something Gently Box",
+      "deed": "Prodded a trap or hazard from afar",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §3). DMG shape from memory, not copied. Action cost is Magic action (2024 term). The Pole part follows the SRD 5.2 Pole. Alpha item, kept low weight for redraw by other Crawlers."
+    },
+    {
+      "id": "f01-any-0030",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "Kevin the Sentient Rubber Duck",
+      "real_5e_name": "Rubber Duck (house: joke item, no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. No mechanical effect. Kevin gives terrible advice; the GM treats it as flavor only.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "No effect on dice, DCs, damage or saves. Never gives a real hint.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Kevin the Sentient Rubber Duck. Weird pull, joke item, no mechanical effect.",
+      "snark_line": "Kevin is not licensed.",
+      "reward": "Kevin the Sentient Rubber Duck. Weird pull, joke item, no mechanical effect.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Kevin the Sentient Rubber Duck (Rubber Duck (house: joke item, no effect))"
+      },
+      "box_name": "Took Bad Advice Seriously Box",
+      "deed": "Followed terrible advice",
+      "notes": "Alpha item. Weird pull. Kevin may speak up; never a hint. Weight 8."
+    },
+    {
+      "id": "f01-any-0031",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "Raffle Ticket No. 0000",
+      "real_5e_name": "Raffle Ticket (house: joke item, no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. No mechanical effect. The System never explains the raffle ticket.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Does nothing. Probably.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Raffle Ticket Zero Zero Zero Zero. Joke item. No mechanical effect.",
+      "snark_line": "Drawing is at some point. We will not say when.",
+      "reward": "Raffle Ticket Zero Zero Zero Zero. Joke item. No mechanical effect.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Raffle Ticket No. 0000 (Raffle Ticket (house: joke item, no effect))"
+      },
+      "box_name": "Won a Contest Nobody Entered Box",
+      "deed": "Cracked a register or searched a gallery",
+      "notes": "Matches the Shooting Gallery register's raffle ticket in the floor doc §5.5. Keep it a joke; never pay out."
+    },
+    {
+      "id": "f01-any-0032",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "Apology Voucher, Valid Nowhere",
+      "real_5e_name": "Apology Box voucher (house: joke item, no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. No mechanical effect. Compensates for System error in sentiment only.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "No cash value. The System is not sorry.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Apology Voucher, Valid Nowhere. Joke item. No mechanical effect.",
+      "snark_line": "We are sorry you were disappointed. This is the apology.",
+      "reward": "Apology Voucher, Valid Nowhere. Joke item. No mechanical effect.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Apology Voucher, Valid Nowhere (Apology Box voucher (house: joke item, no effect))"
+      },
+      "box_name": "Filed a Grievance Box",
+      "deed": "Complained loudly",
+      "notes": "LEDGER: none (HOUSE joke variant, core §4.7); canon joke-contents rows L-B61/L-B09 are WIKI-ONLY. Dud by design (core §4.3: never two duds in a row). Apology Box idea in core §4.7."
+    },
+    {
+      "id": "f01-any-0033",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "clue",
+      "reskin_name": "Maintenance Note, Greasy",
+      "real_5e_name": "Lore scrap (house: one-use hint)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action, once: read it; the GM gives you one true, useful sentence about the next zone (like one Proctor Bell hint). The note is then spent.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "One hint per card. Does not stack with Proctor Bell's per-zone limit.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Maintenance Note, Greasy. One use: the GM gives one true hint about the next zone.",
+      "snark_line": "Written by a man named Dale. Dale means well.",
+      "reward": "Maintenance Note, Greasy. One use: the GM gives one true hint about the next zone.",
+      "canon_status": "HOUSE",
+      "credit_value": 10,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [
+        "reading"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "clue",
+        "text": "item +1 Bronze box: Maintenance Note, Greasy (Lore scrap (house: one-use hint))"
+      },
+      "box_name": "Read a Dead Man's Mail Box",
+      "deed": "Read someone else's notes",
+      "notes": "Clue card. Do not duplicate Tanya's lore scroll (placed). Hint must be true."
+    },
+    {
+      "id": "f01-any-0034",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "clue",
+      "reskin_name": "Staff Map, Coffee-Stained",
+      "real_5e_name": "Map (house: marks one hidden spot)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "While consulting this accurate Map of Floor 1, +5 bonus to Wisdom (Survival) checks to find your way in the place it shows. House: it marks one hidden room (GM-only note).",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while held",
+        "uses": null,
+        "limits": "Only helps on Floor 1.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Staff Map, Coffee-Stained. Plus five to survival checks to find your way on this floor.",
+      "snark_line": "The coffee stain is where the exit is not.",
+      "reward": "Staff Map, Coffee-Stained. Plus five to survival checks to find your way on this floor.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 25,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "maps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "clue",
+        "text": "item +1 Bronze box: Staff Map, Coffee-Stained (Map (house: marks one hidden spot))"
+      },
+      "box_name": "Followed a Map Into a Wall Box",
+      "deed": "Found a hidden room or path",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. House rider: GM marks Zone S (service corridor) or 3b."
+    },
+    {
+      "id": "f01-any-0035",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "key",
+      "reskin_name": "Gas-Station Bathroom Key on a Hubcap",
+      "real_5e_name": "Mystery Key (house, single lock)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Keys",
+      "plain_mechanics": {
+        "text": "Utilize action: opens one specific lock on this floor, picked by the GM when the key is drawn (the GM does not say which). On that lock it unlocks it and the key is spent. On any other lock nothing happens and it is not spent. If you leave the floor with it unused, it becomes a plain hubcap key.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "until used or you leave the floor",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "One use, one lock. Cannot open a lock sealed by a boss, spine object or magic barrier. Never the only way through a required door.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Gas-Station Bathroom Key on a Hubcap. House Mystery Key: opens one GM-chosen lock on this floor; spent on use.",
+      "snark_line": "It opens something, and the System is not telling.",
+      "reward": "Gas-Station Bathroom Key on a Hubcap. House Mystery Key: opens one GM-chosen lock on this floor; spent on use.",
+      "canon_status": "HOUSE",
+      "credit_value": 25,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "key",
+        "text": "item +1 Bronze box: Gas-Station Bathroom Key on a Hubcap (Mystery Key (house, single lock))"
+      },
+      "box_name": "Found the Right Key Eventually Box",
+      "deed": "Hunted for a way through a locked door",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §4). GM only: pick the lock now and write it into session state, not this deck. Optional rooms are best (Break Room supply cabinet, a locker bank, the 3b Lost & Found cage). Zone S door works but skips the boss and the Boss Box, so decide on purpose. The real 5e Mystery Key is a chance-based key; this is a different item. Same text for f01-z06-0004 (weight 6)."
+    },
+    {
+      "id": "f01-any-0036",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Loose Change From Under the Couch Cushion",
+      "real_5e_name": "Credits (Bronze pull, 3d6 x 5)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Loose Change From Under the Couch Cushion. Bronze credits: three d six times five, added to your balance.",
+      "snark_line": "Found it. Do not ask where it was.",
+      "reward": "Loose Change From Under the Couch Cushion. Bronze credits: three d six times five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 52.5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "3d6x5"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(3d6x5) Bronze box"
+      },
+      "box_name": "Looked Under the Cushion Box",
+      "deed": "Searched furniture",
+      "notes": "LEDGER: L-001. Credit boxes are canon-shaped (tiered boxes, L-001); amount math is HOUSE core §4.2. credit_value = expected value (10.5 x 5). Roll at draw."
+    },
+    {
+      "id": "f01-any-0037",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Employee-of-the-Month Bonus (Withheld, Then Un-Withheld)",
+      "real_5e_name": "Credits (Bronze pull, 3d6 x 5)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Employee-of-the-Month Bonus. Bronze credits: three d six times five, added to your balance.",
+      "snark_line": "HR has reconsidered. Briefly.",
+      "reward": "Employee-of-the-Month Bonus. Bronze credits: three d six times five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 52.5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "3d6x5"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(3d6x5) Bronze box"
+      },
+      "box_name": "Employee of the Month by Accident Box",
+      "deed": "Survived and impressed nobody",
+      "notes": "LEDGER: L-001. Credit boxes are canon-shaped (tiered boxes, L-001); amount math is HOUSE core §4.2. credit_value = expected value (10.5 x 5). Roll at draw."
+    },
+    {
+      "id": "f01-any-0038",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Credits, Slightly Damp",
+      "real_5e_name": "Credits (Bronze pull, 3d6 x 5)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Credits, Slightly Damp. Bronze credits: three d six times five, added to your balance.",
+      "snark_line": "Please spend it before it ferments.",
+      "reward": "Credits, Slightly Damp. Bronze credits: three d six times five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 52.5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "3d6x5"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(3d6x5) Bronze box"
+      },
+      "box_name": "Participation Trophy Box",
+      "deed": "Showed up, technically",
+      "notes": "LEDGER: L-001. Credit boxes are canon-shaped (tiered boxes, L-001); amount math is HOUSE core §4.2. credit_value = expected value (10.5 x 5). Roll at draw."
+    },
+    {
+      "id": "f01-any-0039",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Sports Drink, Extra Strength Flavor",
+      "real_5e_name": "Potion of Healing (greater)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 4d4+4 HP. One use.",
+        "action_cost": "Bonus Action",
+        "range": "5 ft (to give)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on use.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Sports Drink, Extra Strength, Potion of Greater Healing. Bonus Action: regain four d four plus four hit points.",
+      "snark_line": "Tastes like two lawsuits.",
+      "reward": "Sports Drink, Extra Strength, Potion of Greater Healing. Bonus Action: regain four d four plus four hit points.",
+      "canon_status": "CANON",
+      "credit_value": 150,
+      "draw_weight": 24,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Sports Drink, Extra Strength Flavor (Potion of Healing (greater))"
+      },
+      "box_name": "Almost Died Impressively Box",
+      "deed": "Survived a fight at very low HP",
+      "notes": "LEDGER: I-009 (healing potion, B1); L-B02; Survivor's Box L-011. Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Price HOUSE (spec price VERIFY retained as HOUSE estimate)."
+    },
+    {
+      "id": "f01-any-0040",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Hazmat Slushie, Color of the Day",
+      "real_5e_name": "Potion of Resistance",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Drink (Bonus Action): you have Resistance to one damage type for 1 hour. The GM chooses the type or rolls 1d10: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, Thunder.",
+        "action_cost": "Bonus Action",
+        "range": null,
+        "damage": "Resistance (half damage) to one type",
+        "save_dc": null,
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Type chosen or rolled at drink time by the GM. Consumed.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Hazmat Slushie, Potion of Resistance. One hour of resistance to one damage type the GM picks.",
+      "snark_line": "The color tells you nothing. The color is a rumor.",
+      "reward": "Hazmat Slushie, Potion of Resistance. One hour of resistance to one damage type the GM picks.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 200,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Hazmat Slushie, Color of the Day (Potion of Resistance)"
+      },
+      "box_name": "Stood in the Wrong Puddle Box",
+      "deed": "Resisted a hazard or trap",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY resolved: GM chooses or rolls 1d10, 1 hour."
+    },
+    {
+      "id": "f01-any-0041",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Pocket Dragon Breath Mints (Extra Strong)",
+      "real_5e_name": "Potion of Fire Breath (house)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Drink (Bonus Action). For 1 hour, as a Bonus Action you can exhale fire at one creature you can see within 30 ft: Dex save DC 13, 4d6 Fire on a failure, half on a success. Ends after three exhalations or after 1 hour, whichever comes first.",
+        "action_cost": "Bonus Action",
+        "range": "30 ft",
+        "damage": "4d6 Fire (half on save)",
+        "save_dc": "Dex DC 13",
+        "duration": "1 hour or 3 uses",
+        "uses": {
+          "max": 3,
+          "recharge": "none"
+        },
+        "limits": "One exhalation per Bonus Action. Single target, no area. Spent after the third exhalation or the hour. As with any fire effect, flammable unattended objects it hits may ignite (GM).",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Pocket Dragon Breath Mints, Potion of Fire Breath. Three bonus action blasts, thirty feet, four d six fire, dex save thirteen.",
+      "snark_line": "Your breath finally has a purpose.",
+      "reward": "Pocket Dragon Breath Mints, Potion of Fire Breath. Three bonus action blasts, thirty feet, four d six fire, dex save thirteen.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 200,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [
+        "fire",
+        "explosives"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Pocket Dragon Breath Mints (Extra Strong) (Potion of Fire Breath (house))"
+      },
+      "box_name": "Burned the Whole Hallway Box",
+      "deed": "Used fire in a closed space",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §5). Numbers follow Lore's draft, which matches secondary listings of the DMG potion; not checked against the book. Uncommon, so inside the Floors 1-2 peak. Open: 4d6 at level 1 is strong (rules/42 §5.4)."
+    },
+    {
+      "id": "f01-any-0042",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Pre-Owned Laser Pointer (Cat Not Included)",
+      "real_5e_name": "Wand of Magic Missiles",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Weapons",
+      "plain_mechanics": {
+        "text": "7 charges. Magic action while holding it: expend 1-3 charges to cast Magic Missile (1 charge = level 1: three darts, 1d4+1 Force each, auto-hit, 120 ft; each extra charge raises the spell level by 1, adding a dart). Regains 1d6+1 charges at dawn. If you expend the last charge, roll d20: on a 1 the wand crumbles to ash. 1 lb.",
+        "action_cost": "Magic action",
+        "range": "120 ft",
+        "damage": "1d4+1 Force per dart",
+        "save_dc": "None (auto-hit)",
+        "duration": "instant",
+        "uses": {
+          "max": 7,
+          "recharge": "1d6+1 at dawn"
+        },
+        "limits": "Destroyed on a 1 (d20) after the last charge is spent.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Pre-Owned Laser Pointer, Wand of Magic Missiles. Seven charges; one charge fires three darts, one d four plus one force each.",
+      "snark_line": "Previous owner: a man named Gary. Gary is not available for comment.",
+      "reward": "Pre-Owned Laser Pointer, Wand of Magic Missiles. Seven charges; one charge fires three darts, one d four plus one force each.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 300,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [
+        "magic missile",
+        "cats"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Pre-Owned Laser Pointer (Cat Not Included) (Wand of Magic Missiles)"
+      },
+      "box_name": "Brave, Loud, and Mostly Lucky Box",
+      "deed": "Charged first and won anyway",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY resolved: 'cast the level 1 version, +1 level per extra charge'."
+    },
+    {
+      "id": "f01-any-0043",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Bungee Cord of Questionable Intent",
+      "real_5e_name": "Rope of Climbing",
+      "source_5e": "DMG 2024",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "60-ft rope, holds up to 3,000 lb. Magic action: command the free end to move toward a destination within 60 ft (10 ft now, 10 ft at the start of each of your turns), or to fasten, unfasten, knot, unknot or coil. Knotted: shortens to 50 ft and grants Advantage on ability checks to climb it. AC 20, HP 20, immune to Poison and Psychic, regains 1 HP every 5 min; destroyed at 0 HP.",
+        "action_cost": "Magic action",
+        "range": "60 ft",
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Destroyed at 0 HP.",
+        "weight_lb": 3
+      },
+      "spoken_line": "Bungee Cord of Questionable Intent, Rope of Climbing. Magic action: sixty foot rope moves, knots and fastens itself.",
+      "snark_line": "It is very strong. It has opinions about knots.",
+      "reward": "Bungee Cord of Questionable Intent, Rope of Climbing. Magic action: sixty foot rope moves, knots and fastens itself.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 300,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Bungee Cord of Questionable Intent (Rope of Climbing)"
+      },
+      "box_name": "Hauled the Whole Party Up Box",
+      "deed": "Climbed with allies",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY resolved (3,000 lb, 60 ft)."
+    },
+    {
+      "id": "f01-any-0044",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Stuck Door Wedge, Industrial",
+      "real_5e_name": "Immovable Rod",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: press the button; the rod becomes fixed in place (even in midair) and holds up to 8,000 lb. Utilize again to release. A creature can Utilize to move a fixed rod up to 10 ft with a DC 30 Strength (Athletics) check. More weight deactivates it. 2 lb.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": "Str (Athletics) DC 30 to move",
+        "duration": "until released",
+        "uses": null,
+        "limits": "Over 8,000 lb deactivates it.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Stuck Door Wedge, Immovable Rod. Utilize to fix it in place; holds eight thousand pounds.",
+      "snark_line": "Do not press the button near your own foot.",
+      "reward": "Stuck Door Wedge, Immovable Rod. Utilize to fix it in place; holds eight thousand pounds.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 300,
+      "draw_weight": 7,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Stuck Door Wedge, Industrial (Immovable Rod)"
+      },
+      "box_name": "Held the Door Shut Box",
+      "deed": "Jammed or held a door",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0045",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Welding Goggles, Night Shift",
+      "real_5e_name": "Goggles of Night",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Armor",
+      "plain_mechanics": {
+        "text": "While worn: Darkvision out to 60 ft; if you already have Darkvision, its range increases by 60 ft.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while worn",
+        "uses": null,
+        "limits": "No attunement.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Welding Goggles, Goggles of Night. Darkvision sixty feet; adds sixty if you already have it.",
+      "snark_line": "You will see everything. Most of it is unflattering.",
+      "reward": "Welding Goggles, Goggles of Night. Darkvision sixty feet; adds sixty if you already have it.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 250,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Welding Goggles, Night Shift (Goggles of Night)"
+      },
+      "box_name": "Walked Into the Dark Gladly Box",
+      "deed": "Navigated a dark area",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0046",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Library Sneakers (Silent Edition)",
+      "real_5e_name": "Boots of Elvenkind",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Armor",
+      "plain_mechanics": {
+        "text": "While worn: your steps make no sound on any surface; Advantage on Dexterity (Stealth) checks.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while worn",
+        "uses": null,
+        "limits": "No attunement.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Library Sneakers, Boots of Elvenkind. Silent steps; advantage on stealth checks.",
+      "snark_line": "Perfect for sneaking away from your friends.",
+      "reward": "Library Sneakers, Boots of Elvenkind. Silent steps; advantage on stealth checks.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 250,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Library Sneakers (Silent Edition) (Boots of Elvenkind)"
+      },
+      "box_name": "Tiptoed Past Something Awful Box",
+      "deed": "Sneaked past a threat",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY resolved: Advantage on all Dex (Stealth) checks, silent steps."
+    },
+    {
+      "id": "f01-any-0047",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Oven Mitts, Sticky-Fingered",
+      "real_5e_name": "Gloves of Thievery",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Armor",
+      "plain_mechanics": {
+        "text": "While worn, the gloves are imperceptible and you gain a +5 bonus to Dexterity (Sleight of Hand) checks. No attunement.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": "+5 Dex (Sleight of Hand)",
+        "duration": "while worn",
+        "uses": null,
+        "limits": "Spec said lock-picking also; 2024 text is Sleight of Hand only.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Oven Mitts, Gloves of Thievery. Imperceptible; plus five on sleight of hand checks.",
+      "snark_line": "Do not touch the dessert. The dessert is evidence.",
+      "reward": "Oven Mitts, Gloves of Thievery. Imperceptible; plus five on sleight of hand checks.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 250,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "thieving"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Oven Mitts, Sticky-Fingered (Gloves of Thievery)"
+      },
+      "box_name": "Pickpocketed a Pickpocket Box",
+      "deed": "Stole or picked something",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec VERIFY attunement resolved: none."
+    },
+    {
+      "id": "f01-any-0048",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Hi-Vis Safety Vest, Reflective",
+      "real_5e_name": "Cloak of Protection",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": "yes",
+      "category": "Armor",
+      "plain_mechanics": {
+        "text": "Requires attunement. While worn: +1 bonus to Armor Class and +1 bonus to all saving throws.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while worn and attuned",
+        "uses": null,
+        "limits": "Counts toward the 3-item attunement limit.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Hi-Vis Safety Vest, Cloak of Protection. Attune it for plus one Armor Class and plus one on all saving throws.",
+      "snark_line": "Visible from orbit. So are you.",
+      "reward": "Hi-Vis Safety Vest, Cloak of Protection. Attune it for plus one Armor Class and plus one on all saving throws.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 400,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [
+        "armor"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Hi-Vis Safety Vest, Reflective (Cloak of Protection)"
+      },
+      "box_name": "Survived the Obvious Hazard Box",
+      "deed": "Avoided damage by luck or skill",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Build-aware tailored pull for armor-light fighters. Counts as the crawler's permanent Uncommon on F1."
+    },
+    {
+      "id": "f01-any-0049",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Pearl From a Very Expensive Necklace (Allegedly)",
+      "real_5e_name": "Pearl of Power",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": "yes: spellcaster",
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Requires attunement by a spellcaster. While on your person, Magic action: regain one expended spell slot of level 3 or lower. Once used, not again until next dawn.",
+        "action_cost": "Magic action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "dawn"
+        },
+        "limits": "Spellcasters only; counts toward attunement limit.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Pearl From a Very Expensive Necklace, Pearl of Power. Spellcasters: once per dawn, regain one spell slot, third level or lower.",
+      "snark_line": "The necklace is fine. The pearl wanted out.",
+      "reward": "Pearl From a Very Expensive Necklace, Pearl of Power. Spellcasters: once per dawn, regain one spell slot, third level or lower.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 400,
+      "draw_weight": 4,
+      "unique": false,
+      "tailor_tags": [
+        "wizard",
+        "spellcasting"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Pearl From a Very Expensive Necklace (Allegedly) (Pearl of Power)"
+      },
+      "box_name": "Bet on the Wizard Box",
+      "deed": "Out-of-slots wizard won anyway",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-any-0050",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Mop Handle of Mild Menace",
+      "real_5e_name": "+1 Quarterstaff",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Weapons",
+      "plain_mechanics": {
+        "text": "A magic quarterstaff: +1 bonus to attack and damage rolls made with it. Quarterstaff: 1d6 Bludgeoning, Versatile (1d8), Topple mastery (if you have it). 4 lb.",
+        "action_cost": "Action",
+        "range": "Melee",
+        "damage": "1d6+1 Bludgeoning (1d8+1 two-handed)",
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "No attunement. Needs proficiency to add your proficiency bonus.",
+        "weight_lb": 4
+      },
+      "spoken_line": "Mop Handle of Mild Menace, plus one quarterstaff. Plus one to attack and damage; one d six bludgeoning.",
+      "snark_line": "It has seen things. It has mopped them.",
+      "reward": "Mop Handle of Mild Menace, plus one quarterstaff. Plus one to attack and damage; one d six bludgeoning.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 400,
+      "draw_weight": 4,
+      "unique": false,
+      "tailor_tags": [
+        "staff",
+        "quarterstaff"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Mop Handle of Mild Menace (+1 Quarterstaff)"
+      },
+      "box_name": "Hit It With a Stick Box",
+      "deed": "Won a fight with improvised weapons",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Reskin of a mundane quarterstaff; Weapon +1 is Uncommon (2024). Also counts as the crawler's permanent Uncommon."
+    },
+    {
+      "id": "f01-any-0051",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "consumable",
+      "reskin_name": "Aquarium Cocktail, Do Not Swallow Fish",
+      "real_5e_name": "Potion of Water Breathing",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Drink (Bonus Action): you can breathe underwater for 24 hours. One use.",
+        "action_cost": "Bonus Action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "24 hours",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Floor 1 has no water. Keep it for later floors.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Aquarium Cocktail, Potion of Water Breathing. Twenty-four hours of breathing underwater.",
+      "snark_line": "Floor One has no water. We are not sorry.",
+      "reward": "Aquarium Cocktail, Potion of Water Breathing. Twenty-four hours of breathing underwater.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 150,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Aquarium Cocktail, Do Not Swallow Fish (Potion of Water Breathing)"
+      },
+      "box_name": "Packed for the Wrong Floor Box",
+      "deed": "Prepared for a danger that wasn't there",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Joke-ish weird pull on F1, genuinely useful from later floors."
+    },
+    {
+      "id": "f01-any-0052",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Duffel Bag, Roomier Inside",
+      "real_5e_name": "Bag of Holding",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Holds up to 500 lb, not exceeding 64 cubic feet; the bag weighs 5 lb regardless of contents. Utilize action to retrieve an item. Overloading, piercing or tearing destroys it and scatters the contents in the Astral Plane. Never place it inside another extradimensional space.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Spec weight (15 lb) was wrong; 2024 is 5 lb. Redundant with System Inventory (core §5.9).",
+        "weight_lb": 5
+      },
+      "spoken_line": "Duffel Bag, Bag of Holding. Holds five hundred pounds; Utilize to retrieve an item.",
+      "snark_line": "Bottomless, like your shame.",
+      "reward": "Duffel Bag, Bag of Holding. Holds five hundred pounds; Utilize to retrieve an item.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 400,
+      "draw_weight": 0,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Duffel Bag, Roomier Inside (Bag of Holding)"
+      },
+      "box_name": "Packed Everything You Own Box",
+      "deed": "Carried too much",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. draw_weight 0 pending spec §5 Q5 (ban vs physical stash job). Hand-pick only."
+    },
+    {
+      "id": "f01-any-0053",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Sponsor-Adjacent Gift Envelope",
+      "real_5e_name": "Credits (Silver pull, 2d6 x 25)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 2d6 x 25 credits (50-300) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Sponsor-Adjacent Gift Envelope. Silver credits: two d six times twenty-five, added to your balance.",
+      "snark_line": "Sent by a mystery donor who is, suspiciously, the System.",
+      "reward": "Sponsor-Adjacent Gift Envelope. Silver credits: two d six times twenty-five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 175,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "2d6x25"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(2d6x25) Silver box"
+      },
+      "box_name": "Impressed the Wrong People Box",
+      "deed": "Won on style",
+      "notes": "LEDGER: L-001. credit_value = expected value (7 x 25). Roll at draw."
+    },
+    {
+      "id": "f01-any-0054",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Severance Package (Partial)",
+      "real_5e_name": "Credits (Silver pull, 2d6 x 25)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 2d6 x 25 credits (50-300) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Severance Package (Partial). Silver credits: two d six times twenty-five, added to your balance.",
+      "snark_line": "Not nearly enough. Enjoy the enough.",
+      "reward": "Severance Package (Partial). Silver credits: two d six times twenty-five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 175,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "2d6x25"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(2d6x25) Silver box"
+      },
+      "box_name": "Survived the Layoff Box",
+      "deed": "Survived against the odds",
+      "notes": "LEDGER: L-001. credit_value = expected value (7 x 25). Roll at draw."
+    },
+    {
+      "id": "f01-any-0055",
+      "floor": 1,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "consumable",
+      "reskin_name": "Enhanced Pet Biscuit",
+      "real_5e_name": "Enhanced Pet Biscuit (house: pet-to-Crawler consumable)",
+      "source_5e": "HOUSE",
+      "rarity": "Legendary",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: feed it to your willing pet (a Beast, CR 1/4 or lower). The pet becomes a Crawler: it gets the System interface (inventory, map, achievements, boxes), speech, Int/Wis/Cha of at least 10, and a class at the next saferoom (level = party level). One conversion per living pet-Crawler: a deleted pet-Crawler frees its conversion, but a new conversion needs a new Enhanced Pet Biscuit (which uses a Story Box slot). No effect on a creature that is already a Crawler.",
+        "action_cost": "Utilize action",
+        "range": "5 ft",
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Pet only: the GM decides what counts as yours. Irreversible. Roll d4 for one Biscuit Quirk (rules/42 §6.2). Boxes and loot of the new Crawler follow core §4.4 like any Crawler's.",
+        "weight_lb": 0.1
+      },
+      "spoken_line": "Enhanced Pet Biscuit. Feed it to your pet: the pet becomes a Crawler, with a System interface and a class at the next saferoom.",
+      "snark_line": "Good boy. Good, billable, ratings-eligible boy.",
+      "reward": "Enhanced Pet Biscuit. Feed it to your pet: the pet becomes a Crawler, with a System interface and a class at the next saferoom.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pets"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Enhanced Pet Biscuit (story value 40000, not bound)"
+      },
+      "box_name": "Pet Box",
+      "deed": "Brought a pet into the Crawl",
+      "notes": "Story Box card (spec §2.8): GM-triggered only, hand-pick, never drawn. trigger_deed: first Crawler at the table to bring a pet into the Crawl, judged by the GM (canon trigger not captured in the ledger). Banner adds the tier: Legendary Pet Box. Item canon I-007 and M-037; mechanics are HOUSE. power_note: Story keystone (pattern C), consumed once, rung 0 numbers: the new Crawler is a CR 1/4 Beast stat block plus a class at party level, so it adds a Crawler to encounter budgets and uses the owner's one consumable for the floor. Once fed it's consumed; the pet-Crawler can't be traded; one conversion per living pet-Crawler (a deleted pet-Crawler frees its conversion; a new conversion still needs a new Enhanced Pet Biscuit, which uses a Story Box slot). An unused biscuit is a normal tradable, sellable, lootable item. The pet-Crawler is a separate player-controlled Crawler played by the owner, takes no extra slot. Hook: the pet now has opinions, and the audience adores it. (rules/45 section 4.5) Not bound (bound is false): lootable, tradeable, sellable like any item; story_value is provenance only and never the buyback base; sale_value 100 (System buyback at Floor-1 scale, times the multiplier of the sale floor at runtime). Opens only in a safe room: the deed is recorded and announced at award and the box waits unopened until the next safe room. Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used.",
+      "story_value": 40000,
+      "bound": false,
+      "sale_value": 100
+    }
+  ],
+  "needs_verify": [
+    {
+      "candidate_reskin": "Beastmaster Treat Bag",
+      "real_5e_name": "Potion of Animal Friendship",
+      "tier": "Silver",
+      "suggested_credit_value": 150,
+      "spec_ref": "rules/40 §3.1 B (flag: VERIFY save DC and duration)",
+      "reason": "SRD 5.2 page only says 'you can cast the level 3 version of Animal Friendship (save DC 13)'; casting time, duration and beast count were not confirmed from the printed book. Not drawable."
+    },
+    {
+      "candidate_reskin": "Gym-Bro Protein Shake, Hill Flavor",
+      "real_5e_name": "Potion of Giant Strength (Hill)",
+      "tier": "Silver",
+      "suggested_credit_value": 200,
+      "spec_ref": "rules/40 §3.1 B (no flag in spec)",
+      "reason": "Could not find the item text in either SRD 5.2.1 mirror used (ilmatar has no page; aidedd 5.5 has no 'potion-of-giant-strength-hill' page). Strength 21 for 1 hour is from the spec only. Not drawable."
+    },
+    {
+      "candidate_reskin": "Riot Shield, Sharpie'd PROPERTY OF ORIENTATION (+1)",
+      "real_5e_name": "+1 Shield",
+      "tier": "Silver",
+      "suggested_credit_value": 400,
+      "spec_ref": "rules/40 §3.1 D (flag: VERIFY rarity, Uncommon in 2014)",
+      "reason": "SRD 5.2 lists '+1 Shield' under Armor but the rarity and exact AC text were not confirmed (2024 Shield is +2 AC base). Not drawable."
+    },
+    {
+      "candidate_reskin": "Heward's Handy Haversack (Sponsor Edition)",
+      "real_5e_name": "Heward's Handy Haversack",
+      "tier": "Gold",
+      "suggested_credit_value": 1500,
+      "spec_ref": "rules/40 §3.1 C (flag: VERIFY 2024 stats and SRD inclusion)",
+      "reason": "Gold/Rare is above the Floor 1 ceiling (Uncommon peak); Benefactor-only and Benefactors do not exist on Floor 1. Parked, not built."
+    },
+    {
+      "candidate_reskin": "Portable Hole in a Hoodie",
+      "real_5e_name": "Portable Hole",
+      "tier": "Gold",
+      "suggested_credit_value": 1500,
+      "spec_ref": "rules/40 §3.1 C (flag: VERIFY rarity and rules)",
+      "reason": "Gold/Rare is above the Floor 1 ceiling and Benefactor-only. Parked, not built."
+    }
+  ],
+  "pacing": {
+    "core_4_5_floors_1_2": "2-4 Bronze and 0-1 Silver per crawler per floor (core §4.5)",
+    "floor_doc_8_2_note": "floors/f01/00-overview.md §8.2 separately caps achievement boxes at 2 per crawler (plus the Welcome Box); core §4.5 is the rule that wins (spec v0.1.1 §2.6).",
+    "no_gold_or_higher": "Floor 1 ceiling Common default / Uncommon peak (core §3.6). No Gold+ cards in F1 decks."
+  },
+  "needs_verify_note": "Cards whose 2024 text could not be confirmed are NOT in cards[]; each is listed here with its reason. Mechanics for every live card were checked against SRD 5.2.1 / DMG 2024 mirrors on 2026-10-04, not the printed books."
+}

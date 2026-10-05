@@ -1,0 +1,49 @@
+{
+ "version": "0.1.2",
+ "sha256": "46204c8226c50c31fe7d390458073c2caf471b1cceb268552fee284128a39c38",
+ "built_at": "2026-10-04T21:39:37-05:00",
+ "entry_count": 32,
+ "note": "v0.1.2: Package A label 'Cardboard Carton From Your Desk' (no Box); package-b and acolyte flavor avoid 'cash'; needs_code recorded for the bridge credits templates",
+ "diff": {
+  "since_version": "0.1.1",
+  "added": [],
+  "removed": [],
+  "renamed": [
+   "package-a"
+  ]
+ },
+ "snapshot": {
+  "acolyte": "Youth-Group Pizza Wrangler",
+  "artisan": "Etsy Shop Founder, Three Sales",
+  "charlatan": "Pyramid-Scheme Boss Babe",
+  "criminal": "Call-Center Gift-Card Fraud Specialist",
+  "entertainer": "Wedding DJ With One Playlist",
+  "farmer": "Farm-to-Table Influencer",
+  "guard": "Hospital Parking-Garage Attendant",
+  "guide": "Trailhead Guide With a Laminated Map",
+  "hermit": "Doomsday Prepper, Collapse Postponed",
+  "merchant": "Warehouse Operations Manager",
+  "noble": "Trust-Fund Gallery Owner",
+  "sage": "Adjunct Professor on Four Campuses",
+  "sailor": "Cruise-Ship Buffet Deckhand",
+  "scribe": "Law-Firm Paralegal in Redline Hell",
+  "soldier": "Black-Friday Mall Security",
+  "wayfarer": "Couch-Surfing Burrito Courier",
+  "feat-alert": "Night-Shift Insomniac",
+  "feat-crafter": "Hot-Glue Gunslinger",
+  "feat-healer": "Weekend CPR-Class Graduate",
+  "feat-lucky": "Scratch-Ticket Gambler",
+  "feat-magic-initiate-cleric": "Group-Chat Prayer Warrior",
+  "feat-magic-initiate-druid": "Houseplant Whisperer",
+  "feat-magic-initiate-wizard": "Wikipedia Rabbit-Hole Scholar",
+  "feat-musician": "Karaoke Night Regular",
+  "feat-savage-attacker": "Drive-Thru Fry-Station Veteran",
+  "feat-skilled": "Tech-Support Jack-of-All-Trades",
+  "feat-tavern-brawler": "HOA-Meeting Brawler",
+  "feat-tough": "Gym Bro Who Spots at Dawn",
+  "asi-2-1": "Merit Raise and a Gift Card",
+  "asi-1-1-1": "Everyone Gets a Participation Trophy",
+  "package-a": "Cardboard Carton From Your Desk",
+  "package-b": "Severance Envelope, Unmarked"
+ }
+}

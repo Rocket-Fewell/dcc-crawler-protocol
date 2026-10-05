@@ -1,0 +1,4 @@
+#!/bin/sh
+# Pre-commit hook: block secrets and live campaign state. Install with tools/install_hooks.sh
+ROOT="$(git rev-parse --show-toplevel)"
+exec python3 "$ROOT/tools/check_repo_safe.py" --staged

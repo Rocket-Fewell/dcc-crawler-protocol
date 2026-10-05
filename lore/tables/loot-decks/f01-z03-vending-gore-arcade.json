@@ -1,0 +1,392 @@
+{
+  "schema": "loot-deck/0.1.1",
+  "deck_id": "f01-z03-vending-gore-arcade",
+  "version": "0.1.0",
+  "floor": 1,
+  "zone": "z03",
+  "zone_name": "Zone 3: Vending Gore Arcade",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "cards": [
+    {
+      "id": "f01-z03-0001",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Snack Cake, Expiration Date: Yes",
+      "real_5e_name": "Rations (1 day)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Travel food for one day. 2 lb.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 day",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "One day's food.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Snack Cake, Expiration Date: Yes, Rations. One day of food.",
+      "snark_line": "It is technically food. It is also technically old.",
+      "reward": "Snack Cake, Expiration Date: Yes, Rations. One day of food.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.5,
+      "draw_weight": 25,
+      "unique": false,
+      "tailor_tags": [
+        "food"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Snack Cake, Expiration Date: Yes (Rations (1 day))"
+      },
+      "box_name": "Robbed a Machine That Bites Box",
+      "deed": "Looted a hungry vendor",
+      "notes": "LEDGER: L-B04 (Apparel Box on F1 is WIKI-ONLY; vending flavor is HOUSE). Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Vending Gore d6=3 result."
+    },
+    {
+      "id": "f01-z03-0002",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Big Honking Flashlight (Vending Edition)",
+      "real_5e_name": "Lantern, Hooded",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Burns Oil: bright light 30 ft, dim light another 30 ft; one oil flask lasts 6 hours. Bonus Action: lower the hood (dim 5 ft) or raise it again.",
+        "action_cost": "Bonus Action",
+        "range": "30 ft + 30 ft",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "6 hours per Oil flask",
+        "uses": null,
+        "limits": "Needs Oil and a flame.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Big Honking Flashlight, Hooded Lantern. Thirty feet bright, thirty dim; Bonus Action to lower the hood.",
+      "snark_line": "Batteries not included, but oil is, and we are not discussing it.",
+      "reward": "Big Honking Flashlight, Hooded Lantern. Thirty feet bright, thirty dim; Bonus Action to lower the hood.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 15,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Big Honking Flashlight (Vending Edition) (Lantern, Hooded)"
+      },
+      "box_name": "Raided the Hardware Aisle Box",
+      "deed": "Opened a vendor",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Vending d6=4 mundane item."
+    },
+    {
+      "id": "f01-z03-0003",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Extension Cord, Fifty Feet (Vending Edition)",
+      "real_5e_name": "Rope (hempen, 50 ft)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: tie a knot (DC 10 Dex (Sleight of Hand)). Bursts on a DC 20 Strength (Athletics) check. Binds an unwilling creature only if it is Grappled, Incapacitated or Restrained; escape DC 15 Dex (Acrobatics). 5 lb.",
+        "action_cost": "Utilize action",
+        "range": "50 ft",
+        "damage": null,
+        "save_dc": "Burst Str DC 20; escape Dex DC 15",
+        "duration": "permanent",
+        "uses": null,
+        "limits": "2024 numbers.",
+        "weight_lb": 5
+      },
+      "spoken_line": "Extension Cord, Rope. Fifty feet; knots with a dex check ten, bursts at strength twenty.",
+      "snark_line": "The vending machine never plugged it in. Neither will you.",
+      "reward": "Extension Cord, Rope. Fifty feet; knots with a dex check ten, bursts at strength twenty.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 15,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Extension Cord, Fifty Feet (Vending Edition) (Rope (hempen, 50 ft))"
+      },
+      "box_name": "Grabbed the Rope from the Display Box",
+      "deed": "Reached into the vending machine",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-z03-0004",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Flaming Hot Nacho Cheese Pouch",
+      "real_5e_name": "Alchemist's Fire",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Attack action (replace one attack): throw at a creature or object you can see within 20 ft. Dex save (DC 8 + thrower's Dex modifier + proficiency bonus) or it takes 1d4 Fire damage and starts burning (1d4 Fire at the start of each of its turns until the flames are put out; see Burning in the Rules Glossary). One use. 1 lb.",
+        "action_cost": "Action",
+        "range": "20 ft",
+        "damage": "1d4 Fire, then 1d4 per turn while burning",
+        "save_dc": "Dex DC 8 + Dex mod + prof",
+        "duration": "until extinguished",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on throw.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Flaming Hot Nacho Cheese Pouch, Alchemist's Fire. Thrown twenty feet; failed dex save means one d four fire, burning each turn.",
+      "snark_line": "Do not lick the nozzle. We already tried.",
+      "reward": "Flaming Hot Nacho Cheese Pouch, Alchemist's Fire. Thrown twenty feet; failed dex save means one d four fire, burning each turn.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 25,
+      "unique": false,
+      "tailor_tags": [
+        "explosives",
+        "fire"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Flaming Hot Nacho Cheese Pouch (Alchemist's Fire)"
+      },
+      "box_name": "Stabbed the Vending Machine Box",
+      "deed": "Fought a vending machine",
+      "notes": "LEDGER: L-018, I-013 (explosives, goblin dynamite) flavor only. Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Spec sample id kept (f01-z03-0004). Spec VERIFY first-hit timing resolved: Dex save, burning per Rules Glossary."
+    },
+    {
+      "id": "f01-z03-0005",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Bag of LEGO (Vending Edition)",
+      "real_5e_name": "Caltrops",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: spread over a 5-ft square within 5 ft. A creature entering for the first time on a turn makes a DC 15 Dex save or takes 1 Piercing and its Speed drops to 0 until the start of its next turn. 10 minutes to recover.",
+        "action_cost": "Utilize action",
+        "range": "5 ft",
+        "damage": "1 Piercing",
+        "save_dc": "Dex DC 15",
+        "duration": "until picked up",
+        "uses": null,
+        "limits": "Reusable once recovered.",
+        "weight_lb": 2
+      },
+      "spoken_line": "Bag of LEGO, Caltrops. Spread a five foot square; failed dex save means one damage and speed zero.",
+      "snark_line": "Every parent's nightmare, now with receipts.",
+      "reward": "Bag of LEGO, Caltrops. Spread a five foot square; failed dex save means one damage and speed zero.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 15,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Bag of LEGO (Vending Edition) (Caltrops)"
+      },
+      "box_name": "Stepped on It Box",
+      "deed": "Used a vending machine item as a trap",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-z03-0006",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Fryer Grease, Reclaimed",
+      "real_5e_name": "Oil (flask)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Attack action (replace one attack): throw at a creature or object within 20 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is coated for 1 minute; Fire damage in that time adds 5 Fire. OR Utilize: pour on a 5-ft square within 5 ft; if lit, 5 Fire to any creature entering or ending its turn there (once per turn) for 2 rounds. Fuel for a lantern, 6 hours.",
+        "action_cost": "Action",
+        "range": "20 ft / 5 ft",
+        "damage": "5 Fire (burning oil)",
+        "save_dc": "Dex DC 8 + Dex mod + prof",
+        "duration": "1 minute / 2 rounds",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Fryer Grease, Oil flask. Coat a target or pour a pool; fire adds five damage.",
+      "snark_line": "Season it, light it, then cry.",
+      "reward": "Fryer Grease, Oil flask. Coat a target or pour a pool; fire adds five damage.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.1,
+      "draw_weight": 15,
+      "unique": false,
+      "tailor_tags": [
+        "fire",
+        "cooking"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Fryer Grease, Reclaimed (Oil (flask))"
+      },
+      "box_name": "Lit the Grease Fire Box",
+      "deed": "Burned something greasy",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-z03-0007",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "SOLD OUT FOREVER Sticker",
+      "real_5e_name": "Joke item (house: no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. No mechanical effect. A sticker the vending machine peels off and hands you.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Does nothing. It does look official.",
+        "weight_lb": 0
+      },
+      "spoken_line": "SOLD OUT FOREVER Sticker. Joke item. No mechanical effect.",
+      "snark_line": "Finally, a promise the System keeps.",
+      "reward": "SOLD OUT FOREVER Sticker. Joke item. No mechanical effect.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: SOLD OUT FOREVER Sticker (Joke item (house: no effect))"
+      },
+      "box_name": "Overstayed at the Machine Box",
+      "deed": "Kept raiding vending machines after the cap",
+      "notes": "Matches 'SOLD OUT FOREVER' cap in floor doc §5.3. Use as the dud when a crawler farms vending."
+    },
+    {
+      "id": "f01-z03-0008",
+      "floor": 1,
+      "zone": "z03",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Snack-Machine Change Slot, Jammed Open",
+      "real_5e_name": "Credits (Bronze pull, 3d6 x 5)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Snack-Machine Change Slot. Bronze credits: three d six times five, added to your balance.",
+      "snark_line": "The machine coughed it up. Do not thank the machine.",
+      "reward": "Snack-Machine Change Slot. Bronze credits: three d six times five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 52.5,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "3d6x5"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(3d6x5) Bronze box"
+      },
+      "box_name": "Broke the Change Machine Box",
+      "deed": "Smashed a change machine",
+      "notes": "LEDGER: L-001. credit_value = expected value. Roll at draw."
+    }
+  ]
+}

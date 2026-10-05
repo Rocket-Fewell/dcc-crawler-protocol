@@ -1,0 +1,3998 @@
+{
+ "meta": {
+  "version": "0.1.5",
+  "stamp": "2026-10-04",
+  "source": "Written from memory of the 2024 PHB / SRD 5.2 by the Borent build. Tables only list names, numbers and one-line plain effects; no book text.",
+  "verify_todo": [
+   {
+    "path": "classes.*.hit_die",
+    "note": "spec S6: Hit Die per class"
+   },
+   {
+    "path": "classes.*.skill_count / skills",
+    "note": "spec S9: class skill picks; Bard/Ranger 3, Rogue 4"
+   },
+   {
+    "path": "classes.*.choices",
+    "note": "spec S6: Fighting Style / Divine Order / Primal Order / Invocation / Expertise / Weapon Mastery counts and lists"
+   },
+   {
+    "path": "classes.*.spells",
+    "note": "spec S11: cantrip and level-1 counts, Paladin/Ranger 2 prepared at level 1, spell lists, slot counts"
+   },
+   {
+    "path": "backgrounds.*",
+    "note": "spec S7: 16 backgrounds (ASI triples, Origin feats, skills, tool); SRD-only table has 4"
+   },
+   {
+    "path": "origin_feats",
+    "note": "spec S7: Origin feat list for Human Versatile"
+   },
+   {
+    "path": "species.*",
+    "note": "spec S5: sub-choices, darkvision ranges, speed/size, Elf skill pick, Dragonborn darkvision"
+   },
+   {
+    "path": "point_buy.cost",
+    "note": "spec S8: cost table"
+   },
+   {
+    "path": "languages",
+    "note": "spec S9: 2024 language picks"
+   },
+   {
+    "path": "items.*.cost_cp / mechanics / junk",
+    "note": "spec S10: prices and mechanics lines"
+   },
+   {
+    "path": "classes.*.packages",
+    "note": "spec S10: starting equipment packages and gold options"
+   },
+   {
+    "path": "scores",
+    "note": "spec S8: rolling reroll allowance (Open Q1) RESOLVED in 0.1.4: no allowance; Roll is ability_methods.roll, default ON (create.allow_roll)"
+   },
+   {
+    "path": "items.{gaming_set,musical_instrument,artisans_tools,spellbook}.cost_cp",
+    "note": "srd_id 0.1.2: flat placeholder prices for family items; see each item's cost_note; needs a decision"
+   }
+  ],
+  "srd_id_note": "0.1.3: the four header items no longer carry cost_cp (no flat placeholder; price keys off the chosen variant srd_id; needs_variant_choice stays). 0.1.2: every items.* entry now has srd_id (stable kebab-case SRD id from DCC Lore tables/item-reskins.json, schema item-reskins/0.1.0; built from each entry's chargen_keys). Existing item keys (snake_case) are unchanged and still used by packages/choices; srd_id is what the sheet stores and what prices/mechanics key off, never a display name. Four items are choice slots whose srd_id is a generic HEADER id (holy-symbol, gaming-set, musical-instrument, artisans-tools): they carry srd_id_kind='header', needs_variant_choice=true and srd_variant_ids; /create must make the player pick a variant and the sheet must store the variant srd_id (headers are never priced). Price fixes: arcane_focus_staff and druidic_focus_staff 20 cp -> 500 cp (SRD 5.2.1 Arcane Focus Staff / Druidic Focus Wooden staff 5 gp). Spellbook 50 gp kept (SRD 5.1 gear table; not in SRD 5.2.1 tables).",
+  "roll_method_note": "0.1.4: added ability_methods (Roll: three arrays of 4d6dl1, keep ONE with total above 72, no upper limit, reroll all three if none qualifies, every die logged; decision 024). No other table changed."
+ },
+ "point_buy": {
+  "budget": 27,
+  "min": 8,
+  "max": 15,
+  "cost": {
+   "8": 0,
+   "9": 1,
+   "10": 2,
+   "11": 3,
+   "12": 4,
+   "13": 5,
+   "14": 7,
+   "15": 9
+  }
+ },
+ "standard_array": [
+  15,
+  14,
+  13,
+  12,
+  10,
+  8
+ ],
+ "ability_methods": {
+  "note": "0.1.4 (decision 024, spec v0.1.10): S8 methods. Standard array and point buy are unchanged (data in point_buy and standard_array). Roll is switched by the session setting create.allow_roll (default true). Background increases (+2/+1 or +1/+1/+1) are added after assignment under every method; no score above 20.",
+  "methods": [
+   "standard_array",
+   "point_buy",
+   "roll"
+  ],
+  "roll": {
+   "switch": "create.allow_roll",
+   "switch_default": true,
+   "arrays": 3,
+   "scores_per_array": 6,
+   "score_expression": "4d6dl1",
+   "score_min": 3,
+   "score_max": 18,
+   "keep_arrays": 1,
+   "keep_min_total_exclusive": 72,
+   "keep_min_total": 73,
+   "keep_max_total": null,
+   "reroll_all_when_none_qualify": true,
+   "voluntary_reroll": false,
+   "max_auto_rounds": 10,
+   "assign": "free",
+   "log": {
+    "tool": "tools/roll.py",
+    "expression": "4d6dl1",
+    "calls_per_round": 18,
+    "label": "S8 roll r<round> <A|B|C><1-6>"
+   },
+   "score_cap_after_background": 20,
+   "stats": {
+    "p_array_qualifies": 0.5623,
+    "p_round_fails": 0.0839,
+    "standard_array_total": 72,
+    "point_buy_max_total": 75
+   }
+  }
+ },
+ "skills": {
+  "Acrobatics": "dex",
+  "Animal Handling": "wis",
+  "Arcana": "int",
+  "Athletics": "str",
+  "Deception": "cha",
+  "History": "int",
+  "Insight": "wis",
+  "Intimidation": "cha",
+  "Investigation": "int",
+  "Medicine": "wis",
+  "Nature": "int",
+  "Perception": "wis",
+  "Performance": "cha",
+  "Persuasion": "cha",
+  "Religion": "int",
+  "Sleight of Hand": "dex",
+  "Stealth": "dex",
+  "Survival": "wis"
+ },
+ "origin_feats": [
+  "Alert",
+  "Crafter",
+  "Healer",
+  "Lucky",
+  "Magic Initiate (Cleric)",
+  "Magic Initiate (Druid)",
+  "Magic Initiate (Wizard)",
+  "Musician",
+  "Savage Attacker",
+  "Skilled",
+  "Tavern Brawler",
+  "Tough"
+ ],
+ "languages": {
+  "common": "Common",
+  "pick": 2,
+  "standard": [
+   "Common Sign Language",
+   "Draconic",
+   "Dwarvish",
+   "Elvish",
+   "Giant",
+   "Gnomish",
+   "Goblin",
+   "Halfling",
+   "Orc"
+  ]
+ },
+ "classes": {
+  "Barbarian": {
+   "name": "Barbarian",
+   "hit_die": 12,
+   "saves": [
+    "str",
+    "con"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Animal Handling",
+    "Athletics",
+    "Intimidation",
+    "Nature",
+    "Perception",
+    "Survival"
+   ],
+   "armor": [
+    "light",
+    "medium",
+    "shield"
+   ],
+   "priority": [
+    "str",
+    "con",
+    "dex",
+    "wis",
+    "cha",
+    "int"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "greataxe",
+       1
+      ],
+      [
+       "handaxe",
+       4
+      ],
+      [
+       "explorers_pack",
+       1
+      ]
+     ],
+     "gp": 15
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 75
+    }
+   ],
+   "features": [
+    "Rage (2 uses, long-rest recharge)",
+    "Unarmored Defense (10 + Dex + Con while unarmored)",
+    "Weapon Mastery (2 weapons)"
+   ],
+   "spellcasting": null,
+   "weapon_masteries": 2,
+   "unarmored": "barbarian",
+   "kiosk": "Anger management: failed. Monetized.",
+   "choices": [
+    {
+     "key": "weapon_masteries",
+     "label": "Weapon Mastery",
+     "count": 2,
+     "options": [
+      "dagger",
+      "handaxe",
+      "greataxe",
+      "greatsword",
+      "longsword",
+      "shortsword",
+      "scimitar",
+      "rapier",
+      "mace",
+      "flail",
+      "warhammer",
+      "battleaxe",
+      "morningstar",
+      "quarterstaff",
+      "spear",
+      "javelin",
+      "sickle",
+      "club",
+      "maul"
+     ],
+     "kind": "weapons",
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+    }
+   ]
+  },
+  "Bard": {
+   "name": "Bard",
+   "hit_die": 8,
+   "saves": [
+    "dex",
+    "cha"
+   ],
+   "skill_count": 3,
+   "skills": [
+    "Acrobatics",
+    "Animal Handling",
+    "Arcana",
+    "Athletics",
+    "Deception",
+    "History",
+    "Insight",
+    "Intimidation",
+    "Investigation",
+    "Medicine",
+    "Nature",
+    "Perception",
+    "Performance",
+    "Persuasion",
+    "Religion",
+    "Sleight of Hand",
+    "Stealth",
+    "Survival"
+   ],
+   "armor": [
+    "light"
+   ],
+   "priority": [
+    "cha",
+    "dex",
+    "con",
+    "wis",
+    "int",
+    "str"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "leather",
+       1
+      ],
+      [
+       "dagger",
+       2
+      ],
+      [
+       "musical_instrument",
+       1
+      ],
+      [
+       "entertainers_pack",
+       1
+      ]
+     ],
+     "gp": 19
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 90
+    }
+   ],
+   "features": [
+    "Bardic Inspiration (d6, Cha mod uses)",
+    "Spellcasting (Cha)"
+   ],
+   "weapon_masteries": 0,
+   "unarmored": null,
+   "kiosk": "Unlicensed entertainer.",
+   "choices": [],
+   "spells": {
+    "cantrip_list": [
+     "Blade Ward",
+     "Dancing Lights",
+     "Friends",
+     "Light",
+     "Mage Hand",
+     "Mending",
+     "Message",
+     "Minor Illusion",
+     "Prestidigitation",
+     "True Strike",
+     "Vicious Mockery"
+    ],
+    "level1_list": [
+     "Animal Friendship",
+     "Bane",
+     "Charm Person",
+     "Color Spray",
+     "Command",
+     "Comprehend Languages",
+     "Cure Wounds",
+     "Detect Magic",
+     "Disguise Self",
+     "Dissonant Whispers",
+     "Faerie Fire",
+     "Feather Fall",
+     "Healing Word",
+     "Heroism",
+     "Identify",
+     "Illusory Script",
+     "Longstrider",
+     "Silent Image",
+     "Sleep",
+     "Speak with Animals",
+     "Tasha's Hideous Laughter",
+     "Thunderwave",
+     "Unseen Servant"
+    ],
+    "cantrips": 2,
+    "level1_known": 4,
+    "spellbook": null,
+    "prepared": 4,
+    "ability": "cha",
+    "slots_l1": 2
+   }
+  },
+  "Cleric": {
+   "name": "Cleric",
+   "hit_die": 8,
+   "saves": [
+    "wis",
+    "cha"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "History",
+    "Insight",
+    "Medicine",
+    "Persuasion",
+    "Religion"
+   ],
+   "armor": [
+    "light",
+    "medium",
+    "shield"
+   ],
+   "priority": [
+    "wis",
+    "con",
+    "str",
+    "dex",
+    "cha",
+    "int"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "chain_shirt",
+       1
+      ],
+      [
+       "shield",
+       1
+      ],
+      [
+       "mace",
+       1
+      ],
+      [
+       "holy_symbol",
+       1
+      ],
+      [
+       "priests_pack",
+       1
+      ]
+     ],
+     "gp": 7
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 110
+    }
+   ],
+   "features": [
+    "Spellcasting (Wis)",
+    "Divine Order (Protector or Thaumaturge)"
+   ],
+   "weapon_masteries": 0,
+   "unarmored": null,
+   "kiosk": "Somebody up there signed for you. Unclear who.",
+   "choices": [
+    {
+     "key": "divine_order",
+     "label": "Divine Order",
+     "count": 1,
+     "options": [
+      "Protector",
+      "Thaumaturge"
+     ],
+     "help": "Protector: armor and martial weapons. Thaumaturge: an extra cantrip and better religion/arcana checks."
+    }
+   ],
+   "spells": {
+    "cantrip_list": [
+     "Guidance",
+     "Light",
+     "Mending",
+     "Resistance",
+     "Sacred Flame",
+     "Spare the Dying",
+     "Thaumaturgy"
+    ],
+    "level1_list": [
+     "Bane",
+     "Bless",
+     "Command",
+     "Create or Destroy Water",
+     "Cure Wounds",
+     "Detect Evil and Good",
+     "Detect Magic",
+     "Detect Poison and Disease",
+     "Guiding Bolt",
+     "Healing Word",
+     "Inflict Wounds",
+     "Protection from Evil and Good",
+     "Purify Food and Drink",
+     "Sanctuary",
+     "Shield of Faith"
+    ],
+    "cantrips": 3,
+    "level1_known": 4,
+    "spellbook": null,
+    "prepared": 4,
+    "ability": "wis",
+    "slots_l1": 2
+   }
+  },
+  "Druid": {
+   "name": "Druid",
+   "hit_die": 8,
+   "saves": [
+    "int",
+    "wis"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Arcana",
+    "Animal Handling",
+    "Insight",
+    "Medicine",
+    "Nature",
+    "Perception",
+    "Religion",
+    "Survival"
+   ],
+   "armor": [
+    "light",
+    "shield"
+   ],
+   "priority": [
+    "wis",
+    "con",
+    "dex",
+    "int",
+    "cha",
+    "str"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "leather",
+       1
+      ],
+      [
+       "shield",
+       1
+      ],
+      [
+       "sickle",
+       1
+      ],
+      [
+       "druidic_focus_staff",
+       1
+      ],
+      [
+       "explorers_pack",
+       1
+      ],
+      [
+       "herbalism_kit",
+       1
+      ]
+     ],
+     "gp": 9
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "features": [
+    "Spellcasting (Wis)",
+    "Druidic (secret language)",
+    "Primal Order (Magician or Warden)"
+   ],
+   "weapon_masteries": 0,
+   "unarmored": null,
+   "kiosk": "Smells like a compost bin with ambition.",
+   "choices": [
+    {
+     "key": "primal_order",
+     "label": "Primal Order",
+     "count": 1,
+     "options": [
+      "Magician",
+      "Warden"
+     ],
+     "help": "Magician: an extra cantrip and nature/arcana bonus. Warden: medium armor, shield, martial weapons."
+    }
+   ],
+   "spells": {
+    "cantrip_list": [
+     "Druidcraft",
+     "Guidance",
+     "Mending",
+     "Message",
+     "Poison Spray",
+     "Produce Flame",
+     "Resistance",
+     "Shillelagh",
+     "Spare the Dying",
+     "Starry Wisp",
+     "Thorn Whip",
+     "Thunderclap"
+    ],
+    "level1_list": [
+     "Animal Friendship",
+     "Charm Person",
+     "Create or Destroy Water",
+     "Cure Wounds",
+     "Detect Magic",
+     "Detect Poison and Disease",
+     "Entangle",
+     "Faerie Fire",
+     "Fog Cloud",
+     "Goodberry",
+     "Healing Word",
+     "Ice Knife",
+     "Jump",
+     "Longstrider",
+     "Purify Food and Drink",
+     "Speak with Animals",
+     "Thunderwave"
+    ],
+    "cantrips": 2,
+    "level1_known": 4,
+    "spellbook": null,
+    "prepared": 4,
+    "ability": "wis",
+    "slots_l1": 2
+   }
+  },
+  "Fighter": {
+   "name": "Fighter",
+   "hit_die": 10,
+   "saves": [
+    "str",
+    "con"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Acrobatics",
+    "Animal Handling",
+    "Athletics",
+    "History",
+    "Insight",
+    "Intimidation",
+    "Persuasion",
+    "Perception",
+    "Survival"
+   ],
+   "armor": [
+    "light",
+    "medium",
+    "heavy",
+    "shield"
+   ],
+   "priority": [
+    "str",
+    "con",
+    "dex",
+    "wis",
+    "cha",
+    "int"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "chain_mail",
+       1
+      ],
+      [
+       "greatsword",
+       1
+      ],
+      [
+       "flail",
+       1
+      ],
+      [
+       "javelin",
+       8
+      ],
+      [
+       "dungeoneers_pack",
+       1
+      ]
+     ],
+     "gp": 4
+    },
+    {
+     "id": "B",
+     "items": [
+      [
+       "studded",
+       1
+      ],
+      [
+       "scimitar",
+       1
+      ],
+      [
+       "shortsword",
+       1
+      ],
+      [
+       "longbow",
+       1
+      ],
+      [
+       "arrows",
+       1
+      ],
+      [
+       "quiver",
+       1
+      ],
+      [
+       "dungeoneers_pack",
+       1
+      ]
+     ],
+     "gp": 11
+    },
+    {
+     "id": "C",
+     "items": [],
+     "gp": 155
+    }
+   ],
+   "features": [
+    "Fighting Style (pick one feat)",
+    "Second Wind (heal 1d10+level, 2 uses)",
+    "Weapon Mastery (3 weapons)"
+   ],
+   "spellcasting": null,
+   "weapon_masteries": 3,
+   "unarmored": null,
+   "kiosk": "Fell into it. Kept falling.",
+   "choices": [
+    {
+     "key": "fighting_style",
+     "label": "Fighting Style",
+     "count": 1,
+     "options": [
+      "Archery",
+      "Blind Fighting",
+      "Defense",
+      "Dueling",
+      "Great Weapon Fighting",
+      "Interception",
+      "Protection",
+      "Thrown Weapon Fighting",
+      "Two-Weapon Fighting",
+      "Unarmed Fighting"
+     ],
+     "help": "A permanent combat trick. Defense is +1 AC while armored."
+    },
+    {
+     "key": "weapon_masteries",
+     "label": "Weapon Mastery",
+     "count": 3,
+     "options": [
+      "dagger",
+      "handaxe",
+      "greataxe",
+      "greatsword",
+      "longsword",
+      "shortsword",
+      "scimitar",
+      "rapier",
+      "mace",
+      "flail",
+      "warhammer",
+      "battleaxe",
+      "morningstar",
+      "quarterstaff",
+      "spear",
+      "javelin",
+      "sickle",
+      "club",
+      "maul",
+      "light_crossbow",
+      "shortbow",
+      "longbow"
+     ],
+     "kind": "weapons",
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+    }
+   ]
+  },
+  "Monk": {
+   "name": "Monk",
+   "hit_die": 8,
+   "saves": [
+    "str",
+    "dex"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Acrobatics",
+    "Athletics",
+    "History",
+    "Insight",
+    "Religion",
+    "Stealth"
+   ],
+   "armor": [],
+   "priority": [
+    "dex",
+    "wis",
+    "con",
+    "str",
+    "cha",
+    "int"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "spear",
+       1
+      ],
+      [
+       "dagger",
+       5
+      ],
+      [
+       "artisans_tools",
+       1
+      ],
+      [
+       "explorers_pack",
+       1
+      ]
+     ],
+     "gp": 11
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "features": [
+    "Martial Arts (d6 unarmed, Dex for unarmed)",
+    "Unarmored Defense (10 + Dex + Wis)"
+   ],
+   "spellcasting": null,
+   "weapon_masteries": 0,
+   "unarmored": "monk",
+   "kiosk": "Barefoot by choice. The foot audience thanks you.",
+   "choices": []
+  },
+  "Paladin": {
+   "name": "Paladin",
+   "hit_die": 10,
+   "saves": [
+    "wis",
+    "cha"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Athletics",
+    "Insight",
+    "Intimidation",
+    "Medicine",
+    "Persuasion",
+    "Religion"
+   ],
+   "armor": [
+    "light",
+    "medium",
+    "heavy",
+    "shield"
+   ],
+   "priority": [
+    "str",
+    "cha",
+    "con",
+    "wis",
+    "dex",
+    "int"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "chain_mail",
+       1
+      ],
+      [
+       "shield",
+       1
+      ],
+      [
+       "longsword",
+       1
+      ],
+      [
+       "javelin",
+       6
+      ],
+      [
+       "holy_symbol",
+       1
+      ],
+      [
+       "priests_pack",
+       1
+      ]
+     ],
+     "gp": 9
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 150
+    }
+   ],
+   "features": [
+    "Lay on Hands (5 HP pool)",
+    "Spellcasting (Cha)",
+    "Weapon Mastery (2 weapons)"
+   ],
+   "weapon_masteries": 2,
+   "unarmored": null,
+   "kiosk": "Took an oath. To what? Production is also curious.",
+   "choices": [
+    {
+     "key": "weapon_masteries",
+     "label": "Weapon Mastery",
+     "count": 2,
+     "options": [
+      "dagger",
+      "handaxe",
+      "greataxe",
+      "greatsword",
+      "longsword",
+      "shortsword",
+      "scimitar",
+      "rapier",
+      "mace",
+      "flail",
+      "warhammer",
+      "battleaxe",
+      "morningstar",
+      "quarterstaff",
+      "spear",
+      "javelin",
+      "sickle",
+      "club",
+      "maul",
+      "light_crossbow",
+      "shortbow",
+      "longbow"
+     ],
+     "kind": "weapons",
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+    }
+   ],
+   "spells": {
+    "cantrip_list": [],
+    "level1_list": [
+     "Bless",
+     "Command",
+     "Compelled Duel",
+     "Cure Wounds",
+     "Detect Evil and Good",
+     "Detect Magic",
+     "Detect Poison and Disease",
+     "Divine Favor",
+     "Heroism",
+     "Protection from Evil and Good",
+     "Purify Food and Drink",
+     "Searing Smite",
+     "Shield of Faith",
+     "Thunderous Smite",
+     "Wrathful Smite"
+    ],
+    "cantrips": 0,
+    "level1_known": 2,
+    "spellbook": null,
+    "prepared": 2,
+    "ability": "cha",
+    "slots_l1": 2
+   }
+  },
+  "Ranger": {
+   "name": "Ranger",
+   "hit_die": 10,
+   "saves": [
+    "str",
+    "dex"
+   ],
+   "skill_count": 3,
+   "skills": [
+    "Animal Handling",
+    "Athletics",
+    "Insight",
+    "Investigation",
+    "Nature",
+    "Perception",
+    "Stealth",
+    "Survival"
+   ],
+   "armor": [
+    "light",
+    "medium",
+    "shield"
+   ],
+   "priority": [
+    "dex",
+    "wis",
+    "con",
+    "str",
+    "cha",
+    "int"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "studded",
+       1
+      ],
+      [
+       "scimitar",
+       1
+      ],
+      [
+       "shortsword",
+       1
+      ],
+      [
+       "longbow",
+       1
+      ],
+      [
+       "arrows",
+       1
+      ],
+      [
+       "quiver",
+       1
+      ],
+      [
+       "druidic_focus_sprig",
+       1
+      ],
+      [
+       "explorers_pack",
+       1
+      ]
+     ],
+     "gp": 7
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 150
+    }
+   ],
+   "features": [
+    "Spellcasting (Wis)",
+    "Favored Enemy (Hunter's Mark always prepared)",
+    "Weapon Mastery (2 weapons)"
+   ],
+   "weapon_masteries": 2,
+   "unarmored": null,
+   "kiosk": "Knows which way is north. Rare skill.",
+   "choices": [
+    {
+     "key": "weapon_masteries",
+     "label": "Weapon Mastery",
+     "count": 2,
+     "options": [
+      "dagger",
+      "handaxe",
+      "greataxe",
+      "greatsword",
+      "longsword",
+      "shortsword",
+      "scimitar",
+      "rapier",
+      "mace",
+      "flail",
+      "warhammer",
+      "battleaxe",
+      "morningstar",
+      "quarterstaff",
+      "spear",
+      "javelin",
+      "sickle",
+      "club",
+      "maul",
+      "light_crossbow",
+      "shortbow",
+      "longbow"
+     ],
+     "kind": "weapons",
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+    }
+   ],
+   "spells": {
+    "cantrip_list": [],
+    "level1_list": [
+     "Alarm",
+     "Animal Friendship",
+     "Cure Wounds",
+     "Detect Magic",
+     "Detect Poison and Disease",
+     "Ensnaring Strike",
+     "Fog Cloud",
+     "Goodberry",
+     "Hail of Thorns",
+     "Hunter's Mark",
+     "Jump",
+     "Longstrider",
+     "Speak with Animals"
+    ],
+    "cantrips": 0,
+    "level1_known": 2,
+    "spellbook": null,
+    "prepared": 2,
+    "ability": "wis",
+    "slots_l1": 2
+   }
+  },
+  "Rogue": {
+   "name": "Rogue",
+   "hit_die": 8,
+   "saves": [
+    "dex",
+    "int"
+   ],
+   "skill_count": 4,
+   "skills": [
+    "Acrobatics",
+    "Athletics",
+    "Deception",
+    "Insight",
+    "Intimidation",
+    "Investigation",
+    "Perception",
+    "Persuasion",
+    "Sleight of Hand",
+    "Stealth"
+   ],
+   "armor": [
+    "light"
+   ],
+   "priority": [
+    "dex",
+    "int",
+    "con",
+    "wis",
+    "cha",
+    "str"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "leather",
+       1
+      ],
+      [
+       "dagger",
+       2
+      ],
+      [
+       "shortsword",
+       1
+      ],
+      [
+       "shortbow",
+       1
+      ],
+      [
+       "arrows",
+       1
+      ],
+      [
+       "quiver",
+       1
+      ],
+      [
+       "thieves_tools",
+       1
+      ],
+      [
+       "burglars_pack",
+       1
+      ]
+     ],
+     "gp": 8
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 100
+    }
+   ],
+   "features": [
+    "Expertise (2 skills)",
+    "Sneak Attack (1d6)",
+    "Thieves' Cant",
+    "Weapon Mastery (2 weapons)"
+   ],
+   "spellcasting": null,
+   "weapon_masteries": 2,
+   "unarmored": null,
+   "kiosk": "Your record says 'opportunist.' We say 'talent.'",
+   "choices": [
+    {
+     "key": "expertise",
+     "label": "Expertise",
+     "count": 2,
+     "from": "proficiencies",
+     "help": "Double your proficiency bonus on two skills (or Thieves' Tools) you are proficient in."
+    },
+    {
+     "key": "weapon_masteries",
+     "label": "Weapon Mastery",
+     "count": 2,
+     "options": [
+      "dagger",
+      "handaxe",
+      "shortsword",
+      "scimitar",
+      "rapier",
+      "mace",
+      "quarterstaff",
+      "spear",
+      "javelin",
+      "sickle",
+      "club",
+      "light_crossbow",
+      "shortbow"
+     ],
+     "kind": "weapons",
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+    }
+   ]
+  },
+  "Sorcerer": {
+   "name": "Sorcerer",
+   "hit_die": 6,
+   "saves": [
+    "con",
+    "cha"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Arcana",
+    "Deception",
+    "Insight",
+    "Intimidation",
+    "Persuasion",
+    "Religion"
+   ],
+   "armor": [],
+   "priority": [
+    "cha",
+    "con",
+    "dex",
+    "wis",
+    "int",
+    "str"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "spear",
+       1
+      ],
+      [
+       "dagger",
+       2
+      ],
+      [
+       "arcane_focus_crystal",
+       1
+      ],
+      [
+       "dungeoneers_pack",
+       1
+      ]
+     ],
+     "gp": 28
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "features": [
+    "Spellcasting (Cha)",
+    "Innate Sorcery (bonus action, 2 uses)"
+   ],
+   "weapon_masteries": 0,
+   "unarmored": null,
+   "kiosk": "Leaking. Please stop leaking on the kiosk.",
+   "choices": [],
+   "spells": {
+    "cantrip_list": [
+     "Acid Splash",
+     "Chill Touch",
+     "Dancing Lights",
+     "Fire Bolt",
+     "Light",
+     "Mage Hand",
+     "Mending",
+     "Message",
+     "Minor Illusion",
+     "Poison Spray",
+     "Prestidigitation",
+     "Ray of Frost",
+     "Shocking Grasp",
+     "True Strike"
+    ],
+    "level1_list": [
+     "Burning Hands",
+     "Charm Person",
+     "Chromatic Orb",
+     "Color Spray",
+     "Comprehend Languages",
+     "Detect Magic",
+     "Disguise Self",
+     "Expeditious Retreat",
+     "False Life",
+     "Feather Fall",
+     "Fog Cloud",
+     "Jump",
+     "Mage Armor",
+     "Magic Missile",
+     "Ray of Sickness",
+     "Shield",
+     "Silent Image",
+     "Sleep",
+     "Thunderwave",
+     "Witch Bolt"
+    ],
+    "cantrips": 4,
+    "level1_known": 2,
+    "spellbook": null,
+    "prepared": 2,
+    "ability": "cha",
+    "slots_l1": 2
+   }
+  },
+  "Warlock": {
+   "name": "Warlock",
+   "hit_die": 8,
+   "saves": [
+    "wis",
+    "cha"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Arcana",
+    "Deception",
+    "History",
+    "Intimidation",
+    "Investigation",
+    "Nature",
+    "Religion"
+   ],
+   "armor": [
+    "light"
+   ],
+   "priority": [
+    "cha",
+    "con",
+    "dex",
+    "wis",
+    "int",
+    "str"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "leather",
+       1
+      ],
+      [
+       "sickle",
+       1
+      ],
+      [
+       "dagger",
+       2
+      ],
+      [
+       "arcane_focus_orb",
+       1
+      ],
+      [
+       "book",
+       1
+      ],
+      [
+       "scholars_pack",
+       1
+      ]
+     ],
+     "gp": 15
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 100
+    }
+   ],
+   "features": [
+    "Eldritch Invocations (1)",
+    "Pact Magic (1 slot)"
+   ],
+   "weapon_masteries": 0,
+   "unarmored": null,
+   "kiosk": "Has a patron. Patron has notes.",
+   "choices": [
+    {
+     "key": "invocation",
+     "label": "Eldritch Invocation",
+     "count": 1,
+     "options": [
+      "Armor of Shadows",
+      "Eldritch Mind",
+      "Fiendish Vigor",
+      "Gaze of Two Minds",
+      "Lessons of the First Ones",
+      "Misty Visions",
+      "Pact of the Blade",
+      "Pact of the Chain",
+      "Pact of the Tome",
+      "Devil's Sight",
+      "Mask of Many Faces"
+     ],
+     "help": "A small permanent upgrade from your patron."
+    }
+   ],
+   "spells": {
+    "cantrip_list": [
+     "Chill Touch",
+     "Eldritch Blast",
+     "Friends",
+     "Mage Hand",
+     "Minor Illusion",
+     "Poison Spray",
+     "Prestidigitation",
+     "True Strike"
+    ],
+    "level1_list": [
+     "Armor of Agathys",
+     "Arms of Hadar",
+     "Charm Person",
+     "Comprehend Languages",
+     "Expeditious Retreat",
+     "Hellish Rebuke",
+     "Hex",
+     "Illusory Script",
+     "Protection from Evil and Good",
+     "Unseen Servant",
+     "Witch Bolt"
+    ],
+    "cantrips": 2,
+    "level1_known": 2,
+    "spellbook": null,
+    "prepared": 2,
+    "ability": "cha",
+    "slots_l1": 1
+   }
+  },
+  "Wizard": {
+   "name": "Wizard",
+   "hit_die": 6,
+   "saves": [
+    "int",
+    "wis"
+   ],
+   "skill_count": 2,
+   "skills": [
+    "Arcana",
+    "History",
+    "Insight",
+    "Investigation",
+    "Medicine",
+    "Religion"
+   ],
+   "armor": [],
+   "priority": [
+    "int",
+    "con",
+    "dex",
+    "wis",
+    "cha",
+    "str"
+   ],
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "dagger",
+       2
+      ],
+      [
+       "arcane_focus_staff",
+       1
+      ],
+      [
+       "robe",
+       1
+      ],
+      [
+       "spellbook",
+       1
+      ],
+      [
+       "scholars_pack",
+       1
+      ]
+     ],
+     "gp": 5
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 55
+    }
+   ],
+   "features": [
+    "Spellcasting (Int, spellbook)",
+    "Ritual Adept",
+    "Arcane Recovery (1/day on short rest)"
+   ],
+   "weapon_masteries": 0,
+   "unarmored": null,
+   "kiosk": "Reads. Gross.",
+   "choices": [],
+   "spells": {
+    "cantrip_list": [
+     "Acid Splash",
+     "Chill Touch",
+     "Dancing Lights",
+     "Fire Bolt",
+     "Light",
+     "Mage Hand",
+     "Mending",
+     "Message",
+     "Minor Illusion",
+     "Poison Spray",
+     "Prestidigitation",
+     "Ray of Frost",
+     "Shocking Grasp",
+     "True Strike"
+    ],
+    "level1_list": [
+     "Alarm",
+     "Burning Hands",
+     "Charm Person",
+     "Color Spray",
+     "Comprehend Languages",
+     "Detect Magic",
+     "Disguise Self",
+     "Expeditious Retreat",
+     "False Life",
+     "Feather Fall",
+     "Find Familiar",
+     "Fog Cloud",
+     "Grease",
+     "Identify",
+     "Illusory Script",
+     "Jump",
+     "Longstrider",
+     "Mage Armor",
+     "Magic Missile",
+     "Protection from Evil and Good",
+     "Ray of Sickness",
+     "Shield",
+     "Silent Image",
+     "Sleep",
+     "Tasha's Hideous Laughter",
+     "Tenser's Floating Disk",
+     "Thunderwave",
+     "Unseen Servant",
+     "Witch Bolt"
+    ],
+    "cantrips": 3,
+    "level1_known": null,
+    "spellbook": 6,
+    "prepared": 4,
+    "ability": "int",
+    "slots_l1": 2
+   }
+  }
+ },
+ "backgrounds": {
+  "Acolyte": {
+   "name": "Acolyte",
+   "asi": [
+    "int",
+    "wis",
+    "cha"
+   ],
+   "feat": "Magic Initiate (Cleric)",
+   "skills": [
+    "Insight",
+    "Religion"
+   ],
+   "tool": "Calligrapher's Supplies",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "calligraphers",
+       1
+      ],
+      [
+       "book",
+       1
+      ],
+      [
+       "holy_symbol",
+       1
+      ],
+      [
+       "parchment",
+       10
+      ],
+      [
+       "robe",
+       1
+      ]
+     ],
+     "gp": 8
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "youth pastor"
+  },
+  "Artisan": {
+   "name": "Artisan",
+   "asi": [
+    "str",
+    "dex",
+    "int"
+   ],
+   "feat": "Crafter",
+   "skills": [
+    "Investigation",
+    "Persuasion"
+   ],
+   "tool": "One Artisan's Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "artisans_tools",
+       1
+      ],
+      [
+       "pouch",
+       2
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 32
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "tradesperson"
+  },
+  "Charlatan": {
+   "name": "Charlatan",
+   "asi": [
+    "dex",
+    "con",
+    "cha"
+   ],
+   "feat": "Skilled",
+   "skills": [
+    "Deception",
+    "Sleight of Hand"
+   ],
+   "tool": "Forgery Kit",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "forgery_kit",
+       1
+      ],
+      [
+       "costume",
+       1
+      ],
+      [
+       "fine_clothes",
+       1
+      ]
+     ],
+     "gp": 15
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "MLM survivor"
+  },
+  "Criminal": {
+   "name": "Criminal",
+   "asi": [
+    "dex",
+    "con",
+    "int"
+   ],
+   "feat": "Alert",
+   "skills": [
+    "Sleight of Hand",
+    "Stealth"
+   ],
+   "tool": "Thieves' Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "dagger",
+       2
+      ],
+      [
+       "thieves_tools",
+       1
+      ],
+      [
+       "crowbar",
+       1
+      ],
+      [
+       "pouch",
+       2
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 16
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "exactly what it sounds like"
+  },
+  "Entertainer": {
+   "name": "Entertainer",
+   "asi": [
+    "str",
+    "dex",
+    "cha"
+   ],
+   "feat": "Musician",
+   "skills": [
+    "Acrobatics",
+    "Performance"
+   ],
+   "tool": "One Musical Instrument",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "musical_instrument",
+       1
+      ],
+      [
+       "costume",
+       2
+      ],
+      [
+       "mirror",
+       1
+      ],
+      [
+       "perfume",
+       1
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 11
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "wedding DJ"
+  },
+  "Farmer": {
+   "name": "Farmer",
+   "asi": [
+    "str",
+    "con",
+    "wis"
+   ],
+   "feat": "Tough",
+   "skills": [
+    "Animal Handling",
+    "Nature"
+   ],
+   "tool": "Carpenter's Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "sickle",
+       1
+      ],
+      [
+       "carpenters_tools",
+       1
+      ],
+      [
+       "healers_kit",
+       1
+      ],
+      [
+       "iron_pot",
+       1
+      ],
+      [
+       "shovel",
+       1
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 30
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "agricultural content creator"
+  },
+  "Guard": {
+   "name": "Guard",
+   "asi": [
+    "str",
+    "int",
+    "wis"
+   ],
+   "feat": "Alert",
+   "skills": [
+    "Athletics",
+    "Perception"
+   ],
+   "tool": "One Gaming Set",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "spear",
+       1
+      ],
+      [
+       "light_crossbow",
+       1
+      ],
+      [
+       "bolts",
+       1
+      ],
+      [
+       "gaming_set",
+       1
+      ],
+      [
+       "hooded_lantern",
+       1
+      ],
+      [
+       "manacles",
+       1
+      ],
+      [
+       "quiver",
+       1
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 12
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "bouncer"
+  },
+  "Guide": {
+   "name": "Guide",
+   "asi": [
+    "dex",
+    "con",
+    "wis"
+   ],
+   "feat": "Magic Initiate (Druid)",
+   "skills": [
+    "Stealth",
+    "Survival"
+   ],
+   "tool": "Cartographer's Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "shortbow",
+       1
+      ],
+      [
+       "arrows",
+       1
+      ],
+      [
+       "quiver",
+       1
+      ],
+      [
+       "cartographers",
+       1
+      ],
+      [
+       "bedroll",
+       1
+      ],
+      [
+       "pouch",
+       2
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 3
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "trail guide"
+  },
+  "Hermit": {
+   "name": "Hermit",
+   "asi": [
+    "con",
+    "wis",
+    "cha"
+   ],
+   "feat": "Healer",
+   "skills": [
+    "Medicine",
+    "Religion"
+   ],
+   "tool": "Herbalism Kit",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "quarterstaff",
+       1
+      ],
+      [
+       "herbalism_kit",
+       1
+      ],
+      [
+       "bedroll",
+       1
+      ],
+      [
+       "book",
+       1
+      ],
+      [
+       "lamp",
+       1
+      ],
+      [
+       "oil",
+       3
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 16
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "off-grid weirdo"
+  },
+  "Merchant": {
+   "name": "Merchant",
+   "asi": [
+    "con",
+    "int",
+    "cha"
+   ],
+   "feat": "Lucky",
+   "skills": [
+    "Animal Handling",
+    "Persuasion"
+   ],
+   "tool": "Navigator's Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "navigators_tools",
+       1
+      ],
+      [
+       "pouch",
+       2
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 22
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "operations manager"
+  },
+  "Noble": {
+   "name": "Noble",
+   "asi": [
+    "str",
+    "int",
+    "cha"
+   ],
+   "feat": "Skilled",
+   "skills": [
+    "History",
+    "Persuasion"
+   ],
+   "tool": "One Gaming Set",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "gaming_set",
+       1
+      ],
+      [
+       "fine_clothes",
+       1
+      ],
+      [
+       "perfume",
+       1
+      ]
+     ],
+     "gp": 29
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "trust-fund kid"
+  },
+  "Sage": {
+   "name": "Sage",
+   "asi": [
+    "con",
+    "int",
+    "wis"
+   ],
+   "feat": "Magic Initiate (Wizard)",
+   "skills": [
+    "Arcana",
+    "History"
+   ],
+   "tool": "Calligrapher's Supplies",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "quarterstaff",
+       1
+      ],
+      [
+       "calligraphers",
+       1
+      ],
+      [
+       "book",
+       1
+      ],
+      [
+       "parchment",
+       8
+      ],
+      [
+       "robe",
+       1
+      ]
+     ],
+     "gp": 8
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "grad student"
+  },
+  "Sailor": {
+   "name": "Sailor",
+   "asi": [
+    "str",
+    "dex",
+    "wis"
+   ],
+   "feat": "Tavern Brawler",
+   "skills": [
+    "Acrobatics",
+    "Perception"
+   ],
+   "tool": "Navigator's Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "dagger",
+       1
+      ],
+      [
+       "navigators_tools",
+       1
+      ],
+      [
+       "rope",
+       1
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 20
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "deckhand"
+  },
+  "Scribe": {
+   "name": "Scribe",
+   "asi": [
+    "dex",
+    "int",
+    "wis"
+   ],
+   "feat": "Skilled",
+   "skills": [
+    "Investigation",
+    "Perception"
+   ],
+   "tool": "Calligrapher's Supplies",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "calligraphers",
+       1
+      ],
+      [
+       "fine_clothes",
+       1
+      ],
+      [
+       "lamp",
+       1
+      ],
+      [
+       "oil",
+       3
+      ],
+      [
+       "parchment",
+       12
+      ]
+     ],
+     "gp": 23
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "paralegal"
+  },
+  "Soldier": {
+   "name": "Soldier",
+   "asi": [
+    "str",
+    "dex",
+    "con"
+   ],
+   "feat": "Savage Attacker",
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "tool": "One Gaming Set",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "spear",
+       1
+      ],
+      [
+       "shortbow",
+       1
+      ],
+      [
+       "arrows",
+       1
+      ],
+      [
+       "gaming_set",
+       1
+      ],
+      [
+       "healers_kit",
+       1
+      ],
+      [
+       "quiver",
+       1
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 14
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "mall security"
+  },
+  "Wayfarer": {
+   "name": "Wayfarer",
+   "asi": [
+    "dex",
+    "wis",
+    "cha"
+   ],
+   "feat": "Lucky",
+   "skills": [
+    "Insight",
+    "Stealth"
+   ],
+   "tool": "Thieves' Tools",
+   "packages": [
+    {
+     "id": "A",
+     "items": [
+      [
+       "dagger",
+       2
+      ],
+      [
+       "thieves_tools",
+       1
+      ],
+      [
+       "gaming_set",
+       1
+      ],
+      [
+       "bedroll",
+       1
+      ],
+      [
+       "pouch",
+       2
+      ],
+      [
+       "travelers_clothes",
+       1
+      ]
+     ],
+     "gp": 16
+    },
+    {
+     "id": "B",
+     "items": [],
+     "gp": 50
+    }
+   ],
+   "job": "couch-surfer"
+  }
+ },
+ "srd_backgrounds": [
+  "Acolyte",
+  "Criminal",
+  "Sage",
+  "Soldier"
+ ],
+ "species": {
+  "Dragonborn": {
+   "size": "Medium",
+   "speed": 30,
+   "traits": [
+    "Draconic Ancestry",
+    "Breath Weapon",
+    "Damage Resistance",
+    "Darkvision 60 ft"
+   ],
+   "quirk": "Acid reflux. Weaponized.",
+   "sub": {
+    "label": "Draconic ancestry",
+    "options": [
+     "Black",
+     "Blue",
+     "Brass",
+     "Bronze",
+     "Copper",
+     "Gold",
+     "Green",
+     "Red",
+     "Silver",
+     "White"
+    ]
+   }
+  },
+  "Dwarf": {
+   "size": "Medium",
+   "speed": 30,
+   "traits": [
+    "Darkvision 120 ft",
+    "Dwarven Resilience (poison resistance)",
+    "Dwarven Toughness (+1 HP at level 1, +1 again each level)",
+    "Stonecunning (Bonus Action: Tremorsense 60 ft for 10 minutes on stone)"
+   ],
+   "quirk": "Your pupils do a thing.",
+   "hp_per_level": 1
+  },
+  "Elf": {
+   "size": "Medium",
+   "speed": 30,
+   "traits": [
+    "Darkvision 60 ft",
+    "Elven Lineage",
+    "Fey Ancestry",
+    "Keen Senses",
+    "Trance"
+   ],
+   "quirk": "You don't sleep, you buffer.",
+   "sub": {
+    "label": "Elven lineage",
+    "options": [
+     "Drow",
+     "High Elf",
+     "Wood Elf"
+    ]
+   },
+   "extra_skill": {
+    "label": "Keen Senses skill",
+    "from": [
+     "Insight",
+     "Perception",
+     "Survival"
+    ]
+   }
+  },
+  "Gnome": {
+   "size": "Small",
+   "speed": 30,
+   "traits": [
+    "Darkvision 60 ft",
+    "Gnomish Cunning (Advantage on Int, Wis, Cha saves)",
+    "Gnomish Lineage"
+   ],
+   "quirk": "Hard to hypnotize. Telemarketers hated you.",
+   "sub": {
+    "label": "Gnomish lineage",
+    "options": [
+     "Forest Gnome",
+     "Rock Gnome"
+    ]
+   }
+  },
+  "Goliath": {
+   "size": "Medium",
+   "speed": 35,
+   "traits": [
+    "Giant Ancestry",
+    "Large Form (level 5)",
+    "Powerful Build"
+   ],
+   "quirk": "Big-boned, and the bones have opinions.",
+   "sub": {
+    "label": "Giant ancestry",
+    "options": [
+     "Cloud",
+     "Fire",
+     "Frost",
+     "Hill",
+     "Stone",
+     "Storm"
+    ]
+   }
+  },
+  "Halfling": {
+   "size": "Small",
+   "speed": 30,
+   "traits": [
+    "Brave",
+    "Halfling Nimbleness",
+    "Luck",
+    "Naturally Stealthy"
+   ],
+   "quirk": "Statistically suspicious."
+  },
+  "Human": {
+   "size": "Medium",
+   "speed": 30,
+   "traits": [
+    "Resourceful (Heroic Inspiration)",
+    "Skillful (1 extra skill)",
+    "Versatile (extra Origin feat)"
+   ],
+   "quirk": "Baseline. Congratulations on being the control group.",
+   "extra_skill": {
+    "label": "Skillful skill",
+    "from": "any"
+   },
+   "extra_feat": true
+  },
+  "Orc": {
+   "size": "Medium",
+   "speed": 30,
+   "traits": [
+    "Adrenaline Rush",
+    "Darkvision 120 ft",
+    "Relentless Endurance"
+   ],
+   "quirk": "You refuse to fall down. It's rude, honestly."
+  },
+  "Tiefling": {
+   "size": "Medium",
+   "speed": 30,
+   "traits": [
+    "Darkvision 60 ft",
+    "Fiendish Legacy",
+    "Otherworldly Presence"
+   ],
+   "quirk": "You run a little hot.",
+   "sub": {
+    "label": "Fiendish legacy",
+    "options": [
+     "Abyssal",
+     "Chthonic",
+     "Infernal"
+    ]
+   }
+  }
+ },
+ "spells": {
+  "Acid Splash": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Acid splashes up to two adjacent targets for damage."
+  },
+  "Blade Ward": {
+   "level": 0,
+   "school": "Abjuration",
+   "effect": "Resist weapon damage from enemies for a round."
+  },
+  "Chill Touch": {
+   "level": 0,
+   "school": "Necromancy",
+   "effect": "Ghostly hand hurts a target and stops its healing."
+  },
+  "Dancing Lights": {
+   "level": 0,
+   "school": "Illusion",
+   "effect": "Four floating lights you can steer."
+  },
+  "Druidcraft": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Tiny nature tricks: weather sense, bloom, snuff a flame."
+  },
+  "Eldritch Blast": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Ranged force beam; the best attack cantrip around."
+  },
+  "Fire Bolt": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Hurl fire at a target; ignites loose flammables."
+  },
+  "Friends": {
+   "level": 0,
+   "school": "Enchantment",
+   "effect": "Brief advantage on Charisma checks versus one non-hostile creature."
+  },
+  "Guidance": {
+   "level": 0,
+   "school": "Divination",
+   "effect": "Touch: ally adds a d4 to one ability check."
+  },
+  "Light": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Make one object glow like a torch."
+  },
+  "Mage Hand": {
+   "level": 0,
+   "school": "Conjuration",
+   "effect": "A ghostly hand that carries light things at range."
+  },
+  "Mending": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Repair a single break or tear."
+  },
+  "Message": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Whisper to a creature within sight; only they hear."
+  },
+  "Minor Illusion": {
+   "level": 0,
+   "school": "Illusion",
+   "effect": "A small sound or image you invent."
+  },
+  "Poison Spray": {
+   "level": 0,
+   "school": "Necromancy",
+   "effect": "Short-range poison burst; Constitution save or damage."
+  },
+  "Prestidigitation": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Small harmless magical tricks."
+  },
+  "Produce Flame": {
+   "level": 0,
+   "school": "Conjuration",
+   "effect": "A flame in your hand that lights things or is thrown."
+  },
+  "Ray of Frost": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Cold ray that damages and slows the target."
+  },
+  "Resistance": {
+   "level": 0,
+   "school": "Abjuration",
+   "effect": "Touch: ally adds a d4 to one saving throw."
+  },
+  "Sacred Flame": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Radiance falls on a target; Dexterity save or damage."
+  },
+  "Shillelagh": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Your club or staff hits with your spellcasting ability."
+  },
+  "Shocking Grasp": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Touch for lightning damage; the target cannot react."
+  },
+  "Spare the Dying": {
+   "level": 0,
+   "school": "Necromancy",
+   "effect": "Stabilize a dying creature."
+  },
+  "Starry Wisp": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Ranged radiant attack that reveals the target."
+  },
+  "Thaumaturgy": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Minor wonders: booming voice, tremors, flickering flames."
+  },
+  "Thorn Whip": {
+   "level": 0,
+   "school": "Transmutation",
+   "effect": "Vine lash that damages and drags a target closer."
+  },
+  "Thunderclap": {
+   "level": 0,
+   "school": "Evocation",
+   "effect": "Thunder burst around you; nearby creatures save or take damage."
+  },
+  "True Strike": {
+   "level": 0,
+   "school": "Divination",
+   "effect": "Attack with your spellcasting ability, with radiant damage."
+  },
+  "Vicious Mockery": {
+   "level": 0,
+   "school": "Enchantment",
+   "effect": "Insult a target so well it takes psychic damage."
+  },
+  "Alarm": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Ritual: a ward that pings you when something enters."
+  },
+  "Animal Friendship": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Charm a beast that fails a Wisdom save."
+  },
+  "Armor of Agathys": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Temporary HP; attackers take cold damage."
+  },
+  "Arms of Hadar": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Tendrils of dark energy burst around you."
+  },
+  "Bane": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Enemies subtract a d4 from attacks and saves."
+  },
+  "Bless": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Allies add a d4 to attacks and saves."
+  },
+  "Burning Hands": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Cone of fire from your hands."
+  },
+  "Charm Person": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "A humanoid regards you as a friendly acquaintance."
+  },
+  "Chromatic Orb": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Hurl an orb of your chosen element at a target."
+  },
+  "Color Spray": {
+   "level": 1,
+   "school": "Illusion",
+   "effect": "Flash of lights blinds nearby weak creatures."
+  },
+  "Command": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Give a one-word order; the target obeys on a failed save."
+  },
+  "Compelled Duel": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Force a creature to fight you rather than your allies."
+  },
+  "Comprehend Languages": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Ritual: understand any spoken or written language."
+  },
+  "Create or Destroy Water": {
+   "level": 1,
+   "school": "Transmutation",
+   "effect": "Conjure or remove a lot of water."
+  },
+  "Cure Wounds": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Touch: restore hit points."
+  },
+  "Detect Evil and Good": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Sense nearby celestials, fiends, undead and the like."
+  },
+  "Detect Magic": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Ritual: sense magic nearby."
+  },
+  "Detect Poison and Disease": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Ritual: sense poison and disease nearby."
+  },
+  "Disguise Self": {
+   "level": 1,
+   "school": "Illusion",
+   "effect": "Change how you look for an hour."
+  },
+  "Dissonant Whispers": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Maddening whispers hurt one target and make it flee."
+  },
+  "Divine Favor": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Your weapon hits for extra radiant damage."
+  },
+  "Ensnaring Strike": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Your next hit binds the target in vines."
+  },
+  "Entangle": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Grasping plants restrain creatures in an area."
+  },
+  "Expeditious Retreat": {
+   "level": 1,
+   "school": "Transmutation",
+   "effect": "Dash as a bonus action each turn."
+  },
+  "Faerie Fire": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Outline creatures in light so they are easier to hit."
+  },
+  "False Life": {
+   "level": 1,
+   "school": "Necromancy",
+   "effect": "Gain temporary hit points."
+  },
+  "Feather Fall": {
+   "level": 1,
+   "school": "Transmutation",
+   "effect": "Reaction: slow the fall of creatures."
+  },
+  "Find Familiar": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Ritual: call up a spirit scout that spies, carries touch spells and helps."
+  },
+  "Fog Cloud": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "A sphere of fog blocks sight."
+  },
+  "Goodberry": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Ten berries that each heal a little and feed a person."
+  },
+  "Grease": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Slick patch knocks creatures prone."
+  },
+  "Guiding Bolt": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Radiant bolt; the next attack on the target has advantage."
+  },
+  "Hail of Thorns": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Your next ranged hit bursts into thorns around the target."
+  },
+  "Healing Word": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Bonus action: heal an ally at range."
+  },
+  "Hellish Rebuke": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Reaction: burn whoever just hurt you."
+  },
+  "Heroism": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "An ally is fearless and gains temporary hit points each turn."
+  },
+  "Hex": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Curse a target for extra damage and ability-check penalties."
+  },
+  "Hunter's Mark": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Mark a target for extra damage and easy tracking."
+  },
+  "Ice Knife": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Shard of ice that then bursts for cold damage."
+  },
+  "Identify": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Ritual: learn what a magic item does."
+  },
+  "Illusory Script": {
+   "level": 1,
+   "school": "Illusion",
+   "effect": "Ritual: writing only chosen readers can read."
+  },
+  "Inflict Wounds": {
+   "level": 1,
+   "school": "Necromancy",
+   "effect": "Touch for heavy necrotic damage."
+  },
+  "Jump": {
+   "level": 1,
+   "school": "Transmutation",
+   "effect": "Triple a creature's jump distance."
+  },
+  "Longstrider": {
+   "level": 1,
+   "school": "Transmutation",
+   "effect": "Touch: +10 feet of speed."
+  },
+  "Mage Armor": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Unarmored target gets AC 13 + Dex."
+  },
+  "Magic Missile": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Three darts that always hit."
+  },
+  "Protection from Evil and Good": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Ward against aberrations, celestials, fiends, undead and more."
+  },
+  "Purify Food and Drink": {
+   "level": 1,
+   "school": "Transmutation",
+   "effect": "Ritual: make food and drink safe."
+  },
+  "Ray of Sickness": {
+   "level": 1,
+   "school": "Necromancy",
+   "effect": "Poison ray that can leave the target poisoned."
+  },
+  "Sanctuary": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Ward a creature so enemies must save to attack it."
+  },
+  "Searing Smite": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Your next hit burns the target."
+  },
+  "Shield": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "Reaction: +5 AC until your next turn and blocks Magic Missile."
+  },
+  "Shield of Faith": {
+   "level": 1,
+   "school": "Abjuration",
+   "effect": "+2 AC for a creature."
+  },
+  "Silent Image": {
+   "level": 1,
+   "school": "Illusion",
+   "effect": "An image you can move; no sound."
+  },
+  "Sleep": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Put weak creatures to sleep."
+  },
+  "Speak with Animals": {
+   "level": 1,
+   "school": "Divination",
+   "effect": "Ritual: talk to beasts."
+  },
+  "Tasha's Hideous Laughter": {
+   "level": 1,
+   "school": "Enchantment",
+   "effect": "Target falls prone laughing, helpless."
+  },
+  "Tenser's Floating Disk": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Ritual: a floating disk carries your stuff."
+  },
+  "Thunderous Smite": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Your next hit booms, damages and shoves."
+  },
+  "Thunderwave": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Thunder wave pushes creatures away and damages them."
+  },
+  "Unseen Servant": {
+   "level": 1,
+   "school": "Conjuration",
+   "effect": "Ritual: an invisible helper does chores."
+  },
+  "Witch Bolt": {
+   "level": 1,
+   "school": "Evocation",
+   "effect": "Lightning arc you can keep feeding each turn."
+  },
+  "Wrathful Smite": {
+   "level": 1,
+   "school": "Necromancy",
+   "effect": "Your next hit frightens the target."
+  }
+ },
+ "items": {
+  "dagger": {
+   "name": "Dagger",
+   "category": "weapons",
+   "cost_cp": 200,
+   "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick.",
+   "junk": "Box Cutter",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": true,
+    "mastery": "Nick"
+   },
+   "srd_id": "dagger"
+  },
+  "handaxe": {
+   "name": "Handaxe",
+   "category": "weapons",
+   "cost_cp": 500,
+   "mechanics": "1d6 slashing, Light, Thrown (20/60). Mastery: Vex.",
+   "junk": "Hatchet From a Camping Display",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": true,
+    "mastery": "Vex"
+   },
+   "srd_id": "handaxe"
+  },
+  "greataxe": {
+   "name": "Greataxe",
+   "category": "weapons",
+   "cost_cp": 3000,
+   "mechanics": "1d12 slashing, Heavy, Two-Handed. Mastery: Cleave.",
+   "junk": "Fire Axe (still has the BREAK GLASS sticker)",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Cleave"
+   },
+   "srd_id": "greataxe"
+  },
+  "greatsword": {
+   "name": "Greatsword",
+   "category": "weapons",
+   "cost_cp": 5000,
+   "mechanics": "2d6 slashing, Heavy, Two-Handed. Mastery: Graze.",
+   "junk": "Sheet-Metal Slab on a Pipe Handle",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Graze"
+   },
+   "srd_id": "greatsword"
+  },
+  "longsword": {
+   "name": "Longsword",
+   "category": "weapons",
+   "cost_cp": 1500,
+   "mechanics": "1d8 slashing, Versatile (1d10). Mastery: Sap.",
+   "junk": "Sharpened Stop Sign",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Sap"
+   },
+   "srd_id": "longsword"
+  },
+  "shortsword": {
+   "name": "Shortsword",
+   "category": "weapons",
+   "cost_cp": 1000,
+   "mechanics": "1d6 piercing, Finesse, Light. Mastery: Vex.",
+   "junk": "Pawnshop Shortsword",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": true,
+    "mastery": "Vex"
+   },
+   "srd_id": "shortsword"
+  },
+  "scimitar": {
+   "name": "Scimitar",
+   "category": "weapons",
+   "cost_cp": 2500,
+   "mechanics": "1d6 slashing, Finesse, Light. Mastery: Nick.",
+   "junk": "Curved Souvenir Machete",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": true,
+    "mastery": "Nick"
+   },
+   "srd_id": "scimitar"
+  },
+  "rapier": {
+   "name": "Rapier",
+   "category": "weapons",
+   "cost_cp": 2500,
+   "mechanics": "1d8 piercing, Finesse. Mastery: Vex.",
+   "junk": "Sharpened Curtain Rod",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": true,
+    "mastery": "Vex"
+   },
+   "srd_id": "rapier"
+  },
+  "mace": {
+   "name": "Mace",
+   "category": "weapons",
+   "cost_cp": 500,
+   "mechanics": "1d6 bludgeoning. Mastery: Sap.",
+   "junk": "Crowbar-Headed Mace",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Sap"
+   },
+   "srd_id": "mace"
+  },
+  "flail": {
+   "name": "Flail",
+   "category": "weapons",
+   "cost_cp": 1000,
+   "mechanics": "1d8 bludgeoning. Mastery: Sap.",
+   "junk": "Chain With a Padlock On It",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Sap"
+   },
+   "srd_id": "flail"
+  },
+  "warhammer": {
+   "name": "Warhammer",
+   "category": "weapons",
+   "cost_cp": 1500,
+   "mechanics": "1d8 bludgeoning, Versatile (1d10). Mastery: Push.",
+   "junk": "Framing Hammer",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Push"
+   },
+   "srd_id": "warhammer"
+  },
+  "battleaxe": {
+   "name": "Battleaxe",
+   "category": "weapons",
+   "cost_cp": 1000,
+   "mechanics": "1d8 slashing, Versatile (1d10). Mastery: Topple.",
+   "junk": "Wood-Splitting Axe",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Topple"
+   },
+   "srd_id": "battleaxe"
+  },
+  "morningstar": {
+   "name": "Morningstar",
+   "category": "weapons",
+   "cost_cp": 1500,
+   "mechanics": "1d8 piercing. Mastery: Sap.",
+   "junk": "Spiked Rebar Club",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Sap"
+   },
+   "srd_id": "morningstar"
+  },
+  "quarterstaff": {
+   "name": "Quarterstaff",
+   "category": "weapons",
+   "cost_cp": 20,
+   "mechanics": "1d6 bludgeoning, Versatile (1d8). Mastery: Topple.",
+   "junk": "Duct-Taped Mop Handle",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Topple"
+   },
+   "srd_id": "quarterstaff"
+  },
+  "spear": {
+   "name": "Spear",
+   "category": "weapons",
+   "cost_cp": 100,
+   "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap.",
+   "junk": "Broom Handle With a Kitchen Knife Taped On",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Sap"
+   },
+   "srd_id": "spear"
+  },
+  "javelin": {
+   "name": "Javelin",
+   "category": "weapons",
+   "cost_cp": 50,
+   "mechanics": "1d6 piercing, Thrown (30/120). Mastery: Slow.",
+   "junk": "Curtain-Rod Javelin",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Slow"
+   },
+   "srd_id": "javelin"
+  },
+  "sickle": {
+   "name": "Sickle",
+   "category": "weapons",
+   "cost_cp": 100,
+   "mechanics": "1d4 slashing, Light. Mastery: Nick.",
+   "junk": "Garden Sickle",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Nick"
+   },
+   "srd_id": "sickle"
+  },
+  "club": {
+   "name": "Club",
+   "category": "weapons",
+   "cost_cp": 10,
+   "mechanics": "1d4 bludgeoning, Light. Mastery: Slow.",
+   "junk": "Table-Leg Club",
+   "weapon": {
+    "kind": "simple",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Slow"
+   },
+   "srd_id": "club"
+  },
+  "maul": {
+   "name": "Maul",
+   "category": "weapons",
+   "cost_cp": 1000,
+   "mechanics": "2d6 bludgeoning, Heavy, Two-Handed. Mastery: Topple.",
+   "junk": "Spiked Sledgehammer",
+   "weapon": {
+    "kind": "martial",
+    "range": "melee",
+    "finesse_or_light": false,
+    "mastery": "Topple"
+   },
+   "srd_id": "maul"
+  },
+  "light_crossbow": {
+   "name": "Light Crossbow",
+   "category": "weapons",
+   "cost_cp": 2500,
+   "mechanics": "1d8 piercing, Ammunition (80/320), Loading, Two-Handed. Mastery: Slow.",
+   "junk": "Nail Gun With a Homemade Stock",
+   "weapon": {
+    "kind": "simple",
+    "range": "ranged",
+    "finesse_or_light": false,
+    "mastery": "Slow"
+   },
+   "srd_id": "light-crossbow"
+  },
+  "shortbow": {
+   "name": "Shortbow",
+   "category": "weapons",
+   "cost_cp": 2500,
+   "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex.",
+   "junk": "Compound Bow From a Sporting-Goods Display",
+   "weapon": {
+    "kind": "simple",
+    "range": "ranged",
+    "finesse_or_light": false,
+    "mastery": "Vex"
+   },
+   "srd_id": "shortbow"
+  },
+  "longbow": {
+   "name": "Longbow",
+   "category": "weapons",
+   "cost_cp": 5000,
+   "mechanics": "1d8 piercing, Ammunition (150/600), Heavy, Two-Handed. Mastery: Slow.",
+   "junk": "Big Compound Bow (price tag still on)",
+   "weapon": {
+    "kind": "martial",
+    "range": "ranged",
+    "finesse_or_light": false,
+    "mastery": "Slow"
+   },
+   "srd_id": "longbow"
+  },
+  "arrows": {
+   "name": "Arrows (20)",
+   "category": "weapons",
+   "cost_cp": 100,
+   "mechanics": "Ammunition for bows; 20 arrows.",
+   "junk": "Bundle of Arrows",
+   "srd_id": "arrows"
+  },
+  "bolts": {
+   "name": "Crossbow Bolts (20)",
+   "category": "weapons",
+   "cost_cp": 100,
+   "mechanics": "Ammunition for crossbows; 20 bolts.",
+   "junk": "Box of Nail-Gun Bolts",
+   "srd_id": "bolts"
+  },
+  "quiver": {
+   "name": "Quiver",
+   "category": "weapons",
+   "cost_cp": 100,
+   "mechanics": "Holds 20 arrows or 20 bolts.",
+   "junk": "Quiver Made From a Cut-Up Backpack",
+   "srd_id": "quiver"
+  },
+  "padded": {
+   "name": "Padded Armor",
+   "category": "armor",
+   "cost_cp": 500,
+   "mechanics": "AC 11 + Dex. Stealth disadvantage. Light armor.",
+   "junk": "Quilted Moving Blanket Coat",
+   "armor": {
+    "base": 11,
+    "dex": "full"
+   },
+   "srd_id": "padded-armor"
+  },
+  "leather": {
+   "name": "Leather Armor",
+   "category": "armor",
+   "cost_cp": 1000,
+   "mechanics": "AC 11 + Dex. Light armor.",
+   "junk": "Motorcycle Jacket",
+   "armor": {
+    "base": 11,
+    "dex": "full"
+   },
+   "srd_id": "leather-armor"
+  },
+  "studded": {
+   "name": "Studded Leather Armor",
+   "category": "armor",
+   "cost_cp": 4500,
+   "mechanics": "AC 12 + Dex. Light armor.",
+   "junk": "Studded Biker Vest",
+   "armor": {
+    "base": 12,
+    "dex": "full"
+   },
+   "srd_id": "studded-leather-armor"
+  },
+  "hide": {
+   "name": "Hide Armor",
+   "category": "armor",
+   "cost_cp": 1000,
+   "mechanics": "AC 12 + Dex (max 2). Medium armor.",
+   "junk": "Taxidermy Rug Poncho",
+   "armor": {
+    "base": 12,
+    "dex": "max2"
+   },
+   "srd_id": "hide-armor"
+  },
+  "chain_shirt": {
+   "name": "Chain Shirt",
+   "category": "armor",
+   "cost_cp": 5000,
+   "mechanics": "AC 13 + Dex (max 2). Medium armor.",
+   "junk": "Chain-Link Vest",
+   "armor": {
+    "base": 13,
+    "dex": "max2"
+   },
+   "srd_id": "chain-shirt"
+  },
+  "scale": {
+   "name": "Scale Mail",
+   "category": "armor",
+   "cost_cp": 5000,
+   "mechanics": "AC 14 + Dex (max 2). Stealth disadvantage. Medium armor.",
+   "junk": "Scale Mail From a Cosplay Booth",
+   "armor": {
+    "base": 14,
+    "dex": "max2"
+   },
+   "srd_id": "scale-mail"
+  },
+  "breastplate": {
+   "name": "Breastplate",
+   "category": "armor",
+   "cost_cp": 40000,
+   "mechanics": "AC 14 + Dex (max 2). Medium armor.",
+   "junk": "Sheet-Metal Breastplate",
+   "armor": {
+    "base": 14,
+    "dex": "max2"
+   },
+   "srd_id": "breastplate"
+  },
+  "half_plate": {
+   "name": "Half Plate Armor",
+   "category": "armor",
+   "cost_cp": 75000,
+   "mechanics": "AC 15 + Dex (max 2). Stealth disadvantage. Medium armor.",
+   "junk": "Hammered Hood-Panel Half Plate",
+   "armor": {
+    "base": 15,
+    "dex": "max2"
+   },
+   "srd_id": "half-plate-armor"
+  },
+  "ring_mail": {
+   "name": "Ring Mail",
+   "category": "armor",
+   "cost_cp": 3000,
+   "mechanics": "AC 14. Stealth disadvantage. Heavy armor.",
+   "junk": "Washer-Ring Coverall",
+   "armor": {
+    "base": 14,
+    "dex": "none"
+   },
+   "srd_id": "ring-mail"
+  },
+  "chain_mail": {
+   "name": "Chain Mail",
+   "category": "armor",
+   "cost_cp": 7500,
+   "mechanics": "AC 16. Needs Str 13. Stealth disadvantage. Heavy armor.",
+   "junk": "Chain-Link Fencing Laced Over a Work Coverall",
+   "armor": {
+    "base": 16,
+    "dex": "none"
+   },
+   "srd_id": "chain-mail"
+  },
+  "splint": {
+   "name": "Splint Armor",
+   "category": "armor",
+   "cost_cp": 20000,
+   "mechanics": "AC 17. Needs Str 15. Stealth disadvantage. Heavy armor.",
+   "junk": "Strapped-On Venetian-Blind Plates",
+   "armor": {
+    "base": 17,
+    "dex": "none"
+   },
+   "srd_id": "splint-armor"
+  },
+  "plate": {
+   "name": "Plate Armor",
+   "category": "armor",
+   "cost_cp": 150000,
+   "mechanics": "AC 18. Needs Str 15. Stealth disadvantage. Heavy armor.",
+   "junk": "Welded Car-Door Plate",
+   "armor": {
+    "base": 18,
+    "dex": "none"
+   },
+   "srd_id": "plate-armor"
+  },
+  "shield": {
+   "name": "Shield",
+   "category": "armor",
+   "cost_cp": 1000,
+   "mechanics": "+2 AC while wielded.",
+   "junk": "Stop Sign Shield",
+   "shield": true,
+   "srd_id": "shield"
+  },
+  "robe": {
+   "name": "Robe",
+   "category": "armor",
+   "cost_cp": 100,
+   "mechanics": "Clothing; no AC.",
+   "junk": "Sad Hotel Robe",
+   "srd_id": "robe"
+  },
+  "travelers_clothes": {
+   "name": "Traveler's Clothes",
+   "category": "armor",
+   "cost_cp": 200,
+   "mechanics": "Clothing; no mechanics.",
+   "junk": "Traveler's Clothes",
+   "srd_id": "travelers-clothes"
+  },
+  "fine_clothes": {
+   "name": "Fine Clothes",
+   "category": "armor",
+   "cost_cp": 1500,
+   "mechanics": "Clothing; shows wealth and rank.",
+   "junk": "Rented Prom Tux",
+   "srd_id": "fine-clothes"
+  },
+  "costume": {
+   "name": "Costume",
+   "category": "armor",
+   "cost_cp": 500,
+   "mechanics": "Clothing for performing or disguise.",
+   "junk": "Mascot Costume",
+   "srd_id": "costume"
+  },
+  "arcane_focus_crystal": {
+   "name": "Arcane Focus (Crystal)",
+   "category": "magic",
+   "cost_cp": 1000,
+   "mechanics": "Spellcasting focus for Sorcerers, Warlocks, Wizards.",
+   "junk": "Gift-Shop Crystal",
+   "srd_id": "arcane-focus-crystal"
+  },
+  "arcane_focus_orb": {
+   "name": "Arcane Focus (Orb)",
+   "category": "magic",
+   "cost_cp": 2000,
+   "mechanics": "Spellcasting focus for Sorcerers, Warlocks, Wizards.",
+   "junk": "Snow Globe",
+   "srd_id": "arcane-focus-orb"
+  },
+  "arcane_focus_staff": {
+   "name": "Arcane Focus (Quarterstaff)",
+   "category": "magic",
+   "cost_cp": 500,
+   "mechanics": "Quarterstaff (1d6 bludgeoning, Versatile 1d8, Topple) that is also your spellcasting focus.",
+   "junk": "Duct-Taped Mop Handle",
+   "srd_id": "arcane-focus-staff",
+   "cost_note": "Corrected 0.1.1 -> 0.1.2: was 20 cp (quarterstaff price); SRD 5.2.1 Arcane Focus Staff is 5 gp (500 cp)."
+  },
+  "holy_symbol": {
+   "name": "Holy Symbol",
+   "category": "magic",
+   "mechanics": "Spellcasting focus for Clerics and Paladins.",
+   "junk": "Dashboard Saint on a Lanyard",
+   "srd_id": "holy-symbol",
+   "srd_id_kind": "header",
+   "srd_variant_ids": [
+    "holy-symbol-amulet",
+    "holy-symbol-emblem",
+    "holy-symbol-reliquary"
+   ],
+   "cost_note": "Header id (not a priceable item). Player must pick a variant at /create: amulet, emblem or reliquary (srd_variant_ids); sheet stores the chosen variant srd_id. All three are 5 gp in SRD 5.2.1, so there is no flat cost_cp on a header; price keys off the chosen variant.",
+   "needs_variant_choice": true
+  },
+  "druidic_focus_staff": {
+   "name": "Druidic Focus (Quarterstaff)",
+   "category": "magic",
+   "cost_cp": 500,
+   "mechanics": "Quarterstaff that is also your Druid spellcasting focus.",
+   "junk": "Houseplant-Wrapped Broom Handle",
+   "srd_id": "druidic-focus-wooden-staff",
+   "cost_note": "Corrected 0.1.1 -> 0.1.2: was 20 cp (quarterstaff price); SRD 5.2.1 Druidic Focus Wooden staff is 5 gp (500 cp)."
+  },
+  "druidic_focus_sprig": {
+   "name": "Druidic Focus (Sprig of Mistletoe)",
+   "category": "magic",
+   "cost_cp": 100,
+   "mechanics": "Spellcasting focus for Druids and Rangers.",
+   "junk": "Plastic Mistletoe Sprig",
+   "srd_id": "druidic-focus-sprig-of-mistletoe"
+  },
+  "component_pouch": {
+   "name": "Component Pouch",
+   "category": "magic",
+   "cost_cp": 2500,
+   "mechanics": "Holds spell material components; usable as a focus where allowed.",
+   "junk": "Fanny Pack of Random Junk",
+   "srd_id": "component-pouch"
+  },
+  "spellbook": {
+   "name": "Spellbook",
+   "category": "magic",
+   "cost_cp": 5000,
+   "mechanics": "Holds your wizard spells; ritual-cast from it.",
+   "junk": "Cracked Phone App",
+   "srd_id": "spellbook",
+   "cost_note": "Not a header: single item. Price 50 gp (5000 cp) per room ruling: SRD 5.1 gear table lists Spellbook 50 gp; it is not in the SRD 5.2.1 equipment tables (Lore base_price is null for that reason). Keep 5000 cp; Accountant may price from this chargen value."
+  },
+  "backpack": {
+   "name": "Backpack",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Holds 30 lb.",
+   "junk": "Lost-and-Found Backpack",
+   "srd_id": "backpack"
+  },
+  "bedroll": {
+   "name": "Bedroll",
+   "category": "gear",
+   "cost_cp": 100,
+   "mechanics": "Sleeping gear.",
+   "junk": "Gym-Locker Sleeping Bag",
+   "srd_id": "bedroll"
+  },
+  "rations": {
+   "name": "Rations (1 day)",
+   "category": "gear",
+   "cost_cp": 50,
+   "mechanics": "1 day of food, 2 lb.",
+   "junk": "Gas-Station Jerky Cubes",
+   "srd_id": "rations"
+  },
+  "rope": {
+   "name": "Rope (50 ft, hempen)",
+   "category": "gear",
+   "cost_cp": 100,
+   "mechanics": "2 HP, DC 17 Strength to burst.",
+   "junk": "Stolen Trailer Clothesline",
+   "srd_id": "rope"
+  },
+  "torch": {
+   "name": "Torch",
+   "category": "gear",
+   "cost_cp": 1,
+   "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+   "junk": "Table-Leg Torch",
+   "srd_id": "torch"
+  },
+  "healers_kit": {
+   "name": "Healer's Kit",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+   "junk": "Expired Office First-Aid Kit",
+   "uses_max": 10,
+   "srd_id": "healers-kit"
+  },
+  "crowbar": {
+   "name": "Crowbar",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Advantage on Strength checks where leverage helps.",
+   "junk": "Paint-Can Pry Bar",
+   "srd_id": "crowbar"
+  },
+  "grappling_hook": {
+   "name": "Grappling Hook",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Attach to a rope; throw to anchor on a ledge.",
+   "junk": "Coat-Hanger Grapple",
+   "srd_id": "grappling-hook"
+  },
+  "ball_bearings": {
+   "name": "Ball Bearings (bag of 1,000)",
+   "category": "gear",
+   "cost_cp": 100,
+   "mechanics": "Spill on a 10 ft square: DC 10 Dex save or fall prone.",
+   "junk": "Bucket of Loose BB Pellets",
+   "srd_id": "ball-bearings"
+  },
+  "steel_mirror": {
+   "name": "Steel Mirror",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "Look around corners; signal flash.",
+   "junk": "Gas-Station Bathroom Mirror Tile",
+   "srd_id": "mirror"
+  },
+  "chain": {
+   "name": "Chain (10 ft)",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "10 HP, DC 20 Strength to burst.",
+   "junk": "Bike-Lock Chain Missing the Lock",
+   "srd_id": "chain"
+  },
+  "hooded_lantern": {
+   "name": "Hooded Lantern",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "Bright light 30 ft + dim 30 ft (or dim only when hooded); 1 flask of oil lasts 6 hours.",
+   "junk": "Camping Lantern",
+   "srd_id": "hooded-lantern"
+  },
+  "lamp": {
+   "name": "Lamp",
+   "category": "gear",
+   "cost_cp": 50,
+   "mechanics": "Bright light 15 ft + dim 15 ft; oil lasts 6 hours.",
+   "junk": "Desk Lamp With a Cord Cut Off",
+   "srd_id": "lamp"
+  },
+  "oil": {
+   "name": "Oil Flask",
+   "category": "gear",
+   "cost_cp": 10,
+   "mechanics": "Fuel a lamp for 6 hours, or throw: 5 fire damage on a hit (ignited).",
+   "junk": "Lighter-Fluid Bottle",
+   "srd_id": "oil"
+  },
+  "tinderbox": {
+   "name": "Tinderbox",
+   "category": "gear",
+   "cost_cp": 50,
+   "mechanics": "Light a fire (1 minute, or 1 action for a torch).",
+   "junk": "Matchbook",
+   "srd_id": "tinderbox"
+  },
+  "waterskin": {
+   "name": "Waterskin",
+   "category": "gear",
+   "cost_cp": 20,
+   "mechanics": "Holds 4 pints.",
+   "junk": "Squeeze Water Bottle",
+   "srd_id": "waterskin"
+  },
+  "pouch": {
+   "name": "Pouch",
+   "category": "gear",
+   "cost_cp": 50,
+   "mechanics": "Holds 6 lb of small items.",
+   "junk": "Ziplock Pouch",
+   "srd_id": "pouch"
+  },
+  "manacles": {
+   "name": "Manacles",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Bind a Small/Medium creature: DC 20 Dex to escape, DC 20 Str to break.",
+   "junk": "Plastic Zip-Cuffs",
+   "srd_id": "manacles"
+  },
+  "tent": {
+   "name": "Tent (2-person)",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Sleeps two.",
+   "junk": "Dorm-Room Pup Tent",
+   "srd_id": "tent"
+  },
+  "iron_pot": {
+   "name": "Iron Pot",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Holds 1 gallon.",
+   "junk": "Cast-Iron Pot",
+   "srd_id": "iron-pot"
+  },
+  "shovel": {
+   "name": "Shovel",
+   "category": "gear",
+   "cost_cp": 200,
+   "mechanics": "Dig.",
+   "junk": "Snow Shovel",
+   "srd_id": "shovel"
+  },
+  "caltrops": {
+   "name": "Caltrops (bag of 20)",
+   "category": "gear",
+   "cost_cp": 100,
+   "mechanics": "Cover a 5 ft square: DC 15 Dex save or take 1 piercing and stop moving.",
+   "junk": "Bag of Thumbtacks",
+   "srd_id": "caltrops"
+  },
+  "book": {
+   "name": "Book",
+   "category": "gear",
+   "cost_cp": 2500,
+   "mechanics": "A bound book of lore or prayers.",
+   "junk": "Paperback Someone Else Annotated",
+   "srd_id": "book"
+  },
+  "parchment": {
+   "name": "Parchment (sheet)",
+   "category": "gear",
+   "cost_cp": 10,
+   "mechanics": "One sheet for writing.",
+   "junk": "Printer Paper",
+   "srd_id": "parchment"
+  },
+  "perfume": {
+   "name": "Perfume",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "A vial of scent.",
+   "junk": "Sample-Counter Perfume",
+   "srd_id": "perfume"
+  },
+  "mirror": {
+   "name": "Mirror",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "A small handheld mirror.",
+   "junk": "Compact Mirror",
+   "srd_id": "mirror"
+  },
+  "gaming_set": {
+   "name": "Gaming Set (your choice)",
+   "category": "gear",
+   "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+   "junk": "Deck of Cards",
+   "choose": "gaming set",
+   "srd_id": "gaming-set",
+   "srd_id_kind": "header",
+   "srd_variant_ids": [
+    "dice",
+    "dragonchess",
+    "playing-cards",
+    "three-dragon-ante"
+   ],
+   "cost_note": "Header id (not a priceable item). Player must pick a variant at /create (srd_variant_ids); sheet stores the variant srd_id and price keys off it. The header has no cost_cp (the flat placeholder was removed in 0.1.3); the price comes from the chosen variant srd_id.",
+   "needs_variant_choice": true
+  },
+  "musical_instrument": {
+   "name": "Musical Instrument (your choice)",
+   "category": "gear",
+   "mechanics": "Tool for performing music; proficiency applies.",
+   "junk": "Karaoke Mic With One Working Song",
+   "choose": "instrument",
+   "srd_id": "musical-instrument",
+   "srd_id_kind": "header",
+   "srd_variant_ids": [
+    "bagpipes",
+    "drum",
+    "dulcimer",
+    "flute",
+    "horn",
+    "lute",
+    "lyre",
+    "pan-flute",
+    "shawm",
+    "viol"
+   ],
+   "cost_note": "Header id (not a priceable item). Player must pick a variant at /create (srd_variant_ids); sheet stores the variant srd_id and price keys off it. The header has no cost_cp (the flat placeholder was removed in 0.1.3); the price comes from the chosen variant srd_id.",
+   "needs_variant_choice": true
+  },
+  "artisans_tools": {
+   "name": "Artisan's Tools (your choice)",
+   "category": "gear",
+   "mechanics": "A set of artisan's tools; proficiency applies to checks with it.",
+   "junk": "Hardware-Store Tool Roll",
+   "choose": "artisan's tool type",
+   "srd_id": "artisans-tools",
+   "srd_id_kind": "header",
+   "srd_variant_ids": [
+    "alchemists-supplies",
+    "brewers-supplies",
+    "calligraphers-supplies",
+    "carpenters-tools",
+    "cartographers-tools",
+    "cobblers-tools",
+    "cooks-utensils",
+    "glassblowers-tools",
+    "jewelers-tools",
+    "leatherworkers-tools",
+    "masons-tools",
+    "painters-supplies",
+    "potters-tools",
+    "smiths-tools",
+    "tinkers-tools",
+    "weavers-tools",
+    "woodcarvers-tools"
+   ],
+   "cost_note": "Header id (not a priceable item). Player must pick a variant at /create (srd_variant_ids); sheet stores the variant srd_id and price keys off it. The header has no cost_cp (the flat placeholder was removed in 0.1.3); the price comes from the chosen variant srd_id.",
+   "needs_variant_choice": true
+  },
+  "thieves_tools": {
+   "name": "Thieves' Tools",
+   "category": "gear",
+   "cost_cp": 2500,
+   "mechanics": "Pick locks and disarm traps; proficiency applies.",
+   "junk": "Bobby Pins and a Gift Card",
+   "srd_id": "thieves-tools"
+  },
+  "navigators_tools": {
+   "name": "Navigator's Tools",
+   "category": "gear",
+   "cost_cp": 2500,
+   "mechanics": "Plot a course and navigate; proficiency applies.",
+   "junk": "Gas-Station GPS Kit",
+   "srd_id": "navigators-tools"
+  },
+  "calligraphers": {
+   "name": "Calligrapher's Supplies",
+   "category": "gear",
+   "cost_cp": 1000,
+   "mechanics": "Fine writing kit; proficiency applies.",
+   "junk": "Gel Pens and a Highlighter",
+   "srd_id": "calligraphers-supplies"
+  },
+  "cartographers": {
+   "name": "Cartographer's Tools",
+   "category": "gear",
+   "cost_cp": 1500,
+   "mechanics": "Draw maps; proficiency applies.",
+   "junk": "Road Atlas and Sharpies",
+   "srd_id": "cartographers-tools"
+  },
+  "herbalism_kit": {
+   "name": "Herbalism Kit",
+   "category": "gear",
+   "cost_cp": 500,
+   "mechanics": "Identify plants, make antitoxin and potions of healing (crafting); proficiency applies.",
+   "junk": "Tea-Bag Tin",
+   "srd_id": "herbalism-kit"
+  },
+  "forgery_kit": {
+   "name": "Forgery Kit",
+   "category": "gear",
+   "cost_cp": 1500,
+   "mechanics": "Forge documents; proficiency applies.",
+   "junk": "Office Supply Drawer",
+   "srd_id": "forgery-kit"
+  },
+  "carpenters_tools": {
+   "name": "Carpenter's Tools",
+   "category": "gear",
+   "cost_cp": 800,
+   "mechanics": "Build wood structures; proficiency applies.",
+   "junk": "Dollar-Store Tool Roll",
+   "srd_id": "carpenters-tools"
+  },
+  "explorers_pack": {
+   "name": "Explorer's Pack",
+   "category": "gear",
+   "cost_cp": 1000,
+   "mechanics": "Backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days rations, waterskin, 50 ft rope.",
+   "junk": "Lost-and-Found Backpack (someone else's gym clothes)",
+   "srd_id": "explorers-pack"
+  },
+  "dungeoneers_pack": {
+   "name": "Dungeoneer's Pack",
+   "category": "gear",
+   "cost_cp": 1200,
+   "mechanics": "Backpack, crowbar, hammer, 10 pitons, 10 torches, tinderbox, 10 days rations, waterskin, 50 ft rope.",
+   "junk": "Maintenance-Closet Duffel",
+   "srd_id": "dungeoneers-pack"
+  },
+  "scholars_pack": {
+   "name": "Scholar's Pack",
+   "category": "gear",
+   "cost_cp": 4000,
+   "mechanics": "Backpack, book, ink and pen, lamp, 10 oil flasks, parchment, tinderbox.",
+   "junk": "Lost-and-Found Backpack",
+   "srd_id": "scholars-pack"
+  },
+  "priests_pack": {
+   "name": "Priest's Pack",
+   "category": "gear",
+   "cost_cp": 3300,
+   "mechanics": "Backpack, blanket, holy water, lamp, 7 days rations, robe, tinderbox.",
+   "junk": "Church-Basement Donation Bag",
+   "srd_id": "priests-pack"
+  },
+  "entertainers_pack": {
+   "name": "Entertainer's Pack",
+   "category": "gear",
+   "cost_cp": 4000,
+   "mechanics": "Backpack, bedroll, 3 costumes, 5 candles, 5 days rations, waterskin, disguise kit.",
+   "junk": "Backstage Roller Bag",
+   "srd_id": "entertainers-pack"
+  },
+  "burglars_pack": {
+   "name": "Burglar's Pack",
+   "category": "gear",
+   "cost_cp": 1600,
+   "mechanics": "Backpack, 1,000 ball bearings, 10 ft string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 oil flasks, 5 days rations, tinderbox, waterskin, 50 ft rope.",
+   "junk": "Gym Bag of Suspicious Hardware",
+   "srd_id": "burglars-pack"
+  }
+ },
+ "hp_rules": {
+  "level1": "hit die max + Con modifier (+1 for Dwarven Toughness)"
+ }
+}

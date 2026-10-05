@@ -1,0 +1,2596 @@
+{
+  "schema": "encounter-bot-day/0.1",
+  "meta": {
+    "owner": "Encounter Bot",
+    "status": "draft",
+    "version": "0.4",
+    "updated": "2026-10-04",
+    "floor": 1,
+    "floor_name": "The Orientation Pit",
+    "title": "Day 1 of 5: The Break Room, the Locker Room, and the Green Room",
+    "summary": "Floor 1 timed playthrough, Day 1 of 5: the party starts in the Z6 Break Room, nothing collapses (tutorial pace), and three routes to the Stairwell (dash, loot, clever) are laid out with five encounters, a Stairwell key findable three ways, loot and achievement hooks from existing decks and tables, and a stall fallback. CR, budget, credit and loot figures are cited from rules/70-encounter-budget-5e.json by field path (GM-adaptable guideline).",
+    "sources": [
+      "decisions/026-timed-floor-clock-override.md (including the stairwell and zone rulings)",
+      "floors/f01/00-overview.md (sections 2, 4, 5, 6, 7, 8, 9)",
+      "tables/loot-decks/*.json",
+      "tables/achievements.csv",
+      "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
+      "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
+      "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
+      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
+      "rules/70-encounter-budget-5e.json v0.1.0 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
+      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
+      "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
+    ],
+    "day": 1,
+    "days": 5,
+    "days_left": 4,
+    "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
+    "canon_table_sha256": "515d92e96d9bbbd5b85177b69e66031f95d220b4646191a3da990517ead41d7e",
+    "canon_ledger_version": "1.12",
+    "budget_file": "rules/70-encounter-budget-5e.json",
+    "budget_file_version": "0.1.1",
+    "budget_file_sha256": "26534aff2128f93da2af103110a46560649ab583af0c2bc34a270e71c073569b",
+    "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)"
+  },
+  "clock": {
+    "days": 5,
+    "days_field": "clock.days",
+    "other_floors": {
+      "2": 10,
+      "3": 20
+    },
+    "short_rest_slots_per_day_cap": 4,
+    "short_rest_note": "A CAP, not a promise; the GM may end a day early.",
+    "day_ends": "At the party's saferoom Long Rest, or at 24 in-game hours if they have not had one (the System rolls the day over anyway). The last day is different: the floor collapses at 24 in-game hours into Day 5 no matter what.",
+    "lights_out": "Stays inside each day as a hazard: every 8 hours the Pit goes dark for 1 hour; outside saferooms the overview's Ceiling Ticks roll applies (00-overview.md section 2 rule 6, section 5.11).",
+    "authority": "decisions/026-timed-floor-clock-override.md (Caleb; Syndicate confirmations of ~9:25, ~9:35 and ~9:45 PM CT; Caleb rulings of ~10:00 PM CT (Floor 3 = 20 days) and ~10:02 PM CT (a missed collapse is death on every floor)). Overrides the old 'Floor clock: off' wording. The fixed final-collapse hour is a Syndicate default Caleb may veto. 00-overview.md section 2 rule 6 matches these rulings.",
+    "canon_note": "Canon books have ONE collapse at timer end. The stepwise collapse below is a HOUSE mechanic, tagged inspired.",
+    "collapse_order": [
+      {
+        "day": 1,
+        "event": "Nothing collapses (tutorial pace).",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 2,
+        "event": "Outer zones close.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 3,
+        "event": "Mid zones close.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 4,
+        "event": "The Break Room (Z6) and vendors lose service; the Break Room is no longer a saferoom.",
+        "tag": "inspired (house)"
+      },
+      {
+        "day": 5,
+        "event": "Only the Stairwell corridor stays; the floor collapses at 24 in-game hours of this day.",
+        "tag": "inspired (house)"
+      }
+    ],
+    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a snarky notice (Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
+    "collapse_cost_slot": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.detour_tax.party_toll_by_size",
+        "note": "Detour Tax party toll (missed Stairwell key only)"
+      },
+      "resolved": {
+        "parts": [
+          {
+            "kind": "party",
+            "values": {
+              "2": 150,
+              "3": 225,
+              "4": 300
+            },
+            "paths": {
+              "2": "floors.1.prices.detour_tax.party_toll_by_size.2",
+              "3": "floors.1.prices.detour_tax.party_toll_by_size.3",
+              "4": "floors.1.prices.detour_tax.party_toll_by_size.4"
+            },
+            "display": "Detour Tax party toll (missed Stairwell key only): 2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+          }
+        ],
+        "display": "Detour Tax party toll (missed Stairwell key only): 2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+      }
+    },
+    "rest_without_saferoom_slot": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size",
+        "note": "Rest-without-a-saferoom party fee (buys a quiet Short Rest, no Long Rest)"
+      },
+      "resolved": {
+        "parts": [
+          {
+            "kind": "party",
+            "values": {
+              "2": 40,
+              "3": 60,
+              "4": 80
+            },
+            "paths": {
+              "2": "floors.1.prices.rest_without_saferoom.party_fee_by_size.2",
+              "3": "floors.1.prices.rest_without_saferoom.party_fee_by_size.3",
+              "4": "floors.1.prices.rest_without_saferoom.party_fee_by_size.4"
+            },
+            "display": "Rest-without-a-saferoom party fee (buys a quiet Short Rest, no Long Rest): 2 Crawlers: 40 / 3 Crawlers: 60 / 4 Crawlers: 80 (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom.party_fee_by_size.{2|3|4})"
+          }
+        ],
+        "display": "Rest-without-a-saferoom party fee (buys a quiet Short Rest, no Long Rest): 2 Crawlers: 40 / 3 Crawlers: 60 / 4 Crawlers: 80 (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom.party_fee_by_size.{2|3|4})"
+      }
+    },
+    "zone_groups": "Confirmed (decision 026, tagged inspired): outer zones (Z0 to Z4 plus 3b) close Day 2; mid zones (Z5, Z7 and Z8) close Day 3; on Day 4 the Break Room (Z6) and vendors lose service; on Day 5 only the corridor (Z10, Z11 and Z S) remains. The Z9 Green Room saferoom stays open to the end (inspired). Closed means hooks and services vanish; the route (Z6, Z8, Z9, Z10, Z11) is never cut.",
+    "stairwell_opens_day": 2,
+    "stairwell_opens": "About 32 hours after the floor opens, early Day 2 (canon M-276, VERIFIED). The Z10 boss arena also holds a stairwell (canon M-275). The Stairwell key and the Zone S door are house ideas, tagged inspired.",
+    "stasis_threshold_hours": 6,
+    "early_descent": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "collapse_order_status": "confirmed per decision 026; the steps only remove hooks and services, and the Detour Tax is the only toll on the clock (a missed Stairwell key only)",
+    "final_collapse": {
+      "hour_of_last_day": 24,
+      "tag": "inspired",
+      "status": "Syndicate default, decision 026; Caleb may veto",
+      "text": "The final collapse comes at a FIXED moment: 24 in-game hours into Day 5 (hour 120 of the floor). A Long Rest never ends the floor and never skips it; the System cuts short any rest that would run past the collapse."
+    },
+    "collapse_miss": {
+      "scope": "every floor, Floor 1 included",
+      "tag": "canon-aligned (canon: a missed collapse ends the run)",
+      "death": true,
+      "reprieve_applies": false,
+      "status": "Caleb ruling, decision 026 (~10:02 PM CT)",
+      "text": "Any Crawler not at a stairwell when the floor collapses is dead, and all Crawlers still on the floor die with it. There is no Reprieve, no toll and no detour for it. Death rules follow Core section 6 (death is pretty much game over). Per decision 028 (tagged inspired): the dead Crawler's credits and items are destroyed with the floor; surviving party members may loot the body only while the floor still stands, and anything taken before the collapse is theirs. NPCs and the AI go into stasis and lose nothing.",
+      "stasis_counts": "Early-descent stasis (canon M-277) counts as reaching a stairwell.",
+      "detour_tax_scope": "The Detour Tax now covers only a missed Stairwell key, never a missed collapse."
+    },
+    "saferoom_rule": {
+      "only_saferoom": "z09",
+      "break_room_not_saferoom_from_day": 4,
+      "text": "The Break Room (Z6) is a saferoom through Day 3 and stops being one when it loses service on Day 4 (Syndicate ruling, decision 026). From then on the Z9 Green Room is the only saferoom, open to the end of the floor (tagged inspired)."
+    },
+    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling); on Floors 1 and 2 the Silver ceiling and one Story Box per floor hold. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion."
+  },
+  "canon_table": {
+    "path": "/workspace/dcc-lore/tables/canon-floor-1.json",
+    "floor_wide_id": "c-floor",
+    "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
+    "present": true,
+    "schema": "canon-floor-1/0.1.0",
+    "ledger_version": "1.12",
+    "sha256": "515d92e96d9bbbd5b85177b69e66031f95d220b4646191a3da990517ead41d7e"
+  },
+  "day": {
+    "number": 1,
+    "start_zone": "z06",
+    "start_zone_name": "The Break Room (Saferoom A)",
+    "collapse_today": "None. Day 1 is tutorial pace (decision 026 order). The System previews Day 2 at day close.",
+    "tomorrow_notice": {
+      "text": "FLOOR NOTICE: when the next day starts, the outer zones close for good. Anything you left in there belongs to the System. That's a courtesy announcement; the next one will be a lot less courteous.",
+      "tag": "[PLAYER-FACING]"
+    },
+    "short_rest_slots": [
+      "Slot 1 (suggested): after the Break Room briefing, only if someone is hurt.",
+      "Slot 2 (suggested): after the Locker Room.",
+      "Slot 3 (suggested): reserve; a wandering Ceiling Tick fight or a bad trap.",
+      "Slot 4 (suggested): reserve; do not push the party to spend them."
+    ],
+    "last_chance_hooks": {
+      "note": "Outer zones (Z0 to Z4 plus 3b) close on Day 2 (confirmed grouping, inspired). The party has already played Z0 to Z5 in session one; the GM checks the sheets and ledger for which of these were already claimed. Encounter Bot does not read state.",
+      "achievements": [
+        {
+          "id": "ACH-0177",
+          "note": "Hidden Cache (Z3b); outer-zone hook, vanishes with the zone.",
+          "name": "Orientation Pit: Hidden Cache",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0177 Orientation Pit: Hidden Cache (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0179",
+          "note": "Side Path (Z S revealed by the 3b map); outer-zone hook.",
+          "name": "Orientation Pit: Side Path",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0179 Orientation Pit: Side Path (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0077",
+          "note": "Vending Gore (Z3); outer-zone hook.",
+          "name": "Vending Gore",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0077 Vending Gore (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0871",
+          "note": "Find a journal or lore scrap (Z3 or Z7); the Z7 clipboard keeps this one alive a little longer.",
+          "name": "Orientation Pit: Find a journal or lore scrap",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0871 Orientation Pit: Find a journal or lore scrap (Floor 1, Rare)",
+          "valid": true
+        }
+      ],
+      "cards": [
+        {
+          "card_id": "f01-z03-0007",
+          "note": "The SOLD OUT FOREVER Sticker is the System's own joke about closed zones; GM can hand it out as the Day 2 notice prop.",
+          "display": "SOLD OUT FOREVER Sticker (Joke item (house: no effect))",
+          "tier": "Bronze",
+          "deck": "f01-z03-vending-gore-arcade"
+        }
+      ],
+      "heading": "last chance before the outer zones close on Day 2"
+    },
+    "stall_fallback": "Day 1 has no collapse, so stalling only costs clock. If the party loiters in the Break Room, the System posts short-rest and Long Rest reminders, the corkboard rumors repeat, and the Lights-Out hour arrives on schedule (enc-d01-04). If they refuse to pick a route, the vending terminal offers the bribe in enc-d01-01 and the speaker announces what the clock will do tomorrow. If the day rolls over at the 24-hour mark without a Long Rest, the System still posts the Day 2 notice; the party simply rests later at an honest saferoom. The Floor 1 Reprieve does not cover a missed collapse: that is death on every floor (decision 026), so say so at the start.",
+    "start_note": "Default start is the Break Room, where session one ended. Later days start in the Green Room if the party rested there, otherwise wherever the day rolled over.",
+    "rest_options": [
+      {
+        "option": "Break Room (Z6) saferoom",
+        "note": "Honest saferoom through Day 3; it stops being a saferoom when it loses service on Day 4 (decision 026)."
+      },
+      {
+        "option": "Green Room (Z9) saferoom",
+        "note": "Honest saferoom; open to the end of the floor (inspired). The default Long Rest that closes Day 1 and brings level 2."
+      },
+      {
+        "option": "Rest outside a saferoom",
+        "note": "A field rest can only be a Short Rest (Core section 5.6: Long Rests only in saferooms). The rest-without-a-saferoom price (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom) buys a quiet Short Rest and grants no Long Rest; unpaid or noisy, Ceiling Ticks interrupt it (00-overview.md section 2 rule 7). A saferoom is where the day's Long Rest happens (the Break Room through Day 3, the Green Room always)."
+      }
+    ],
+    "carry_over": [],
+    "proposed_achievements": [
+      {
+        "name": "Slow Learner",
+        "trigger": "Clear every Day 1 to 3 encounter before descending.",
+        "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+        "reward_slot": {
+          "b70": {
+            "kind": "text",
+            "path": "floors.1.achievement_rewards.proposed.slow_learner.reward"
+          },
+          "resolved": {
+            "parts": [
+              {
+                "kind": "text",
+                "value": "R1: Title + 25 credits",
+                "path": "floors.1.achievement_rewards.proposed.slow_learner.reward",
+                "display": "R1: Title + 25 credits (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.slow_learner.reward)"
+              }
+            ],
+            "display": "R1: Title + 25 credits (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.slow_learner.reward)"
+          }
+        },
+        "narration": "You cleared everything, twice over. Nobody asked you to be this thorough. Congratulations on your homework.",
+        "narration_tag": "[PLAYER-FACING]"
+      }
+    ],
+    "gm_warning": {
+      "tag": "[GM-FACING]",
+      "text": "Say it plainly at Floor 1 start: reach a stairwell before the collapse or you do not leave. Missing the collapse is death on Floor 1 as on every floor, and the Reprieve does not apply. Early-descent stasis counts as reaching a stairwell.",
+      "lore_line": "Reach a stairwell before the collapse or you do not leave. This is not a toll. This is not a detour. This is the end."
+    },
+    "budget_table": [
+      {
+        "label": "Detour Tax, party toll (missed Stairwell key only)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "party",
+              "values": {
+                "2": 150,
+                "3": 225,
+                "4": 300
+              },
+              "paths": {
+                "2": "floors.1.prices.detour_tax.party_toll_by_size.2",
+                "3": "floors.1.prices.detour_tax.party_toll_by_size.3",
+                "4": "floors.1.prices.detour_tax.party_toll_by_size.4"
+              },
+              "display": "2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+            }
+          ],
+          "display": "2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+        }
+      },
+      {
+        "label": "Stairwell key, terminal bribe (party price)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "party",
+              "values": {
+                "2": 100,
+                "3": 150,
+                "4": 200
+              },
+              "paths": {
+                "2": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.2",
+                "3": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.3",
+                "4": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.4"
+              },
+              "display": "2 Crawlers: 100 / 3 Crawlers: 150 / 4 Crawlers: 200 (rules/70-encounter-budget-5e.json#floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.{2|3|4})"
+            }
+          ],
+          "display": "2 Crawlers: 100 / 3 Crawlers: 150 / 4 Crawlers: 200 (rules/70-encounter-budget-5e.json#floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.{2|3|4})"
+        }
+      },
+      {
+        "label": "Zone S door forcing fee (party)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "party",
+              "values": {
+                "2": 50,
+                "3": 75,
+                "4": 100
+              },
+              "paths": {
+                "2": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.2",
+                "3": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.3",
+                "4": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.4"
+              },
+              "display": "2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
+            }
+          ],
+          "display": "2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
+        }
+      },
+      {
+        "label": "Rest without a saferoom (party fee; buys a quiet Short Rest, no Long Rest)",
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.rest_without_saferoom.party_fee_by_size"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "party",
+              "values": {
+                "2": 40,
+                "3": 60,
+                "4": 80
+              },
+              "paths": {
+                "2": "floors.1.prices.rest_without_saferoom.party_fee_by_size.2",
+                "3": "floors.1.prices.rest_without_saferoom.party_fee_by_size.3",
+                "4": "floors.1.prices.rest_without_saferoom.party_fee_by_size.4"
+              },
+              "display": "2 Crawlers: 40 / 3 Crawlers: 60 / 4 Crawlers: 80 (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom.party_fee_by_size.{2|3|4})"
+            }
+          ],
+          "display": "2 Crawlers: 40 / 3 Crawlers: 60 / 4 Crawlers: 80 (rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom.party_fee_by_size.{2|3|4})"
+        }
+      },
+      {
+        "label": "Potion of Healing, vendor price (shared floor stock)",
+        "b70": {
+          "kind": "scalar",
+          "path": "floors.1.prices.potion_of_healing_vendor.price"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "scalar",
+              "value": 50,
+              "path": "floors.1.prices.potion_of_healing_vendor.price",
+              "display": "50 (rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price)"
+            }
+          ],
+          "display": "50 (rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price)"
+        }
+      },
+      {
+        "label": "Daily XP guidance and caps",
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ]
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.1.xp.by_party_size"
+              ],
+              "display": "see rules/70-encounter-budget-5e.json#floors.1.xp.by_party_size"
+            }
+          ],
+          "display": "see rules/70-encounter-budget-5e.json#floors.1.xp.by_party_size"
+        }
+      }
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-dash",
+      "tag": "dash",
+      "name": "Fast, dangerous dash: the Express Lane",
+      "path": "Z6 to Z8 (skip Z7) to Z9 to Z10 to the real Stairwell at Z11 (behind the stage).",
+      "summary": "Straight through the Locker Room and the Green Room, then the boss stage (full encounter on the Day 5 page, usable from Day 2). On Day 1 the party can reach the stage but the stairwells have not opened, so there is no descent yet. Reaching Z9 and resting there is when level 2 lands (00-overview.md section 5.9); a party that skips the rest meets the boss at level 1 and the GM uses Variant B (section 6.6).",
+      "stairwell_access": "Not open on Day 1 (stairwells open early Day 2, canon M-276). Later: through Z10 (boss or the cheese routes in 00-overview.md section 6.4), then Z11.",
+      "canon_refs": [
+        {
+          "ledger_id": "A-044",
+          "use": "Canon 'Fuck This Floor' (stairs within an hour of arrival). Not attainable on Floor 1 because stairwells open about 32 hours in. Canon reference only; not a row in tables/achievements.csv.",
+          "ledger_name": "Fuck This Floor",
+          "in_achievements_csv": false,
+          "status": "canon reference only (not a row in tables/achievements.csv)"
+        },
+        {
+          "ledger_id": "A-151",
+          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv.",
+          "ledger_name": "The Early Bird Gets To Squirm",
+          "in_achievements_csv": false,
+          "status": "canon reference only (not a row in tables/achievements.csv)"
+        },
+        {
+          "ledger_id": "A-139",
+          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv.",
+          "ledger_name": "You Found Stairs!",
+          "in_achievements_csv": false,
+          "status": "canon reference only (not a row in tables/achievements.csv)"
+        },
+        {
+          "ledger_id": "M-016",
+          "use": "Canon: stairwells are scarce and halve with each floor. Fits the one real Stairwell plus a fake one at Z7.",
+          "ledger_name": "The number of stairwells halves with each floor."
+        },
+        {
+          "ledger_id": "M-276",
+          "use": "Canon timing: stairwells appear about 32 hours in; house: early Day 2.",
+          "ledger_name": "About 32 hours after opening, 75,000 stairwells appear across Floor 1."
+        },
+        {
+          "ledger_id": "M-277",
+          "use": "Canon stasis for descending with more than six hours left (see the early-descent block on later pages).",
+          "ledger_name": "Descending with more than six hours left holds the crawler in stasis until the floor collapses."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0200",
+          "note": "Speed Clear: reach the Stairwell under the par time (00-overview.md section 4.2: no more than one Long Rest).",
+          "name": "Orientation Pit: Speed Clear",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0200 Orientation Pit: Speed Clear (Floor 1, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0894",
+          "note": "Land a critical hit (any fight on the way).",
+          "name": "Orientation Pit: Land a critical hit",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0894 Orientation Pit: Land a critical hit (Floor 1, Common)",
+          "valid": true
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "Oh, we're speed-running. Cute. The Stairwell is behind the stage, and the stage comes with a Dean. Every room between here and there wants to meet you, and none of them are polite about it.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Halfway there and nobody has read a single sign. The audience is already betting on who trips first. Keep moving, or don't. The odds board loves variety.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You beat the clock to the stage door, and the door isn't open yet. Impressive and useless. Sit tight. Stairs unlock early tomorrow, and the audience is betting on how bored you get.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    },
+    {
+      "id": "route-loot",
+      "tag": "loot",
+      "name": "Slow loot-and-achievement route: the Completionist's Detour",
+      "path": "Z6, then last-chance backtrack hooks in the outer zones, then Z7 (bait stairs and the Back Office), Z8, Z9 (rest, level 2), then the Z S service corridor and the service stairwell (skips the boss).",
+      "summary": "Spend the day collecting: outer-zone hooks before they close, the Greeters' Back Office, the Locker Room, the Green Room boxes. Ends at the service door in Zone S rather than the boss. Slow means the clock bites: each day the floor closes more of what you came to collect.",
+      "stairwell_access": "Zone S service door (key or forced) to the service stairwell that drops to Z11.",
+      "canon_refs": [
+        {
+          "ledger_id": "M-016",
+          "use": "Canon: stairwells are scarce. The Z7 stairs are the fake; the service stairwell is a real one.",
+          "ledger_name": "The number of stairwells halves with each floor."
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker: locate the Stairwell before defeating the boss (00-overview.md section 5.10).",
+          "name": "Orientation Pit: Stair Seeker",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0180 Orientation Pit: Stair Seeker (Floor 1, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0084",
+          "note": "Stair Bait Resisted: only if they walk away from Z7; this conflicts with the Z7 Back Office loot, on purpose (section 5.7).",
+          "name": "Stair Bait Resisted",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0084 Stair Bait Resisted (Floor 1, Rare)",
+          "valid": true
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "A thorough Crawler. How rare. Every closet has a secret and every secret has a price tag. Take your time, but not too much of it.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "You're carrying more stuff than a flea market and the floor is a day closer to coming down. Fascinating priorities. Keep going; the shiny things get thinner by the hour.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You found the back stairs with full pockets and a long achievement list. Management calls that 'engaged'. Everyone else calls it 'a lot of backpack'.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    },
+    {
+      "id": "route-clever",
+      "tag": "clever",
+      "name": "Clever route: Talk, Trade, Sneak (Break Room, vendors, bribe)",
+      "path": "Z6 (corkboard, terminal, Complaint Card) to Z8 (use the room, not the weapons) to Z9 to the Z S service door with a bought or found key.",
+      "summary": "Use the Break Room: read the corkboard, ask the terminal about the unlisted spare key, spend the single-use oracle on the right yes or no question. Get through the Locker Room by wits where possible, rest in the Green Room, and slip through Zone S. Vendors lose service on Day 4 (confirmed order, decision 026), so the bribe is a deadline, not a permanent option.",
+      "stairwell_access": "Zone S service door with the bought key, the Mystery Key, or Bruiser's key; keyless forcing is the costly fallback.",
+      "canon_refs": [],
+      "achievements": [
+        {
+          "id": "ACH-0188",
+          "note": "Rumor Mill (corkboard).",
+          "name": "Orientation Pit: Rumor Mill",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0188 Orientation Pit: Rumor Mill (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic.",
+          "name": "Saferoom Skeptic",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-0025 Saferoom Skeptic (Floor Any, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0180",
+          "note": "Stair Seeker, again via Zone S.",
+          "name": "Orientation Pit: Stair Seeker",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0180 Orientation Pit: Stair Seeker (Floor 1, Rare)",
+          "valid": true
+        }
+      ],
+      "voice_lines": {
+        "system_intro": {
+          "text": "Ooh, a negotiator. The vending terminal has opinions, the corkboard has gossip, and everything in this building has a price. Some of it is even legal.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Look at you, avoiding the part where you get hit. The audience can't decide if that's smart or cowardly. Ratings say 'confused'. That's a compliment.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You reached the exit without a scratch and, in one case, without a sign. Is it cheating? The System checked twice and the paperwork says no. Infuriating.",
+          "tag": "[PLAYER-FACING]"
+        }
+      }
+    }
+  ],
+  "stairwell_key": {
+    "what": "The service key for the Zone S door (00-overview.md section 5.8, section 5.10). It opens the service stairwell that drops to Z11 and bypasses the boss.",
+    "ways": [
+      {
+        "id": "key-bruiser",
+        "how": "Take it from Bruiser's head in the Locker Room (Z8).",
+        "where": "z08",
+        "ref": "00-overview.md section 5.8",
+        "route": [
+          "dash",
+          "loot"
+        ],
+        "closes": "Lost on Day 3 when the mid zones (Z8) close; only if not already taken.",
+        "lost_on_day": 3,
+        "status_today": "available"
+      },
+      {
+        "id": "key-terminal",
+        "how": "Buy the unlisted spare from the Snakk-Matic terminal in the Break Room. HOUSE idea (inspired); the price comes only from the budget file.",
+        "where": "z06",
+        "ref": "enc-d01-01",
+        "route": [
+          "clever"
+        ],
+        "price_slot": {
+          "b70": {
+            "kind": "party",
+            "path": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size",
+            "note": "Terminal bribe (party price)"
+          },
+          "resolved": {
+            "parts": [
+              {
+                "kind": "party",
+                "values": {
+                  "2": 100,
+                  "3": 150,
+                  "4": 200
+                },
+                "paths": {
+                  "2": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.2",
+                  "3": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.3",
+                  "4": "floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.4"
+                },
+                "display": "Terminal bribe (party price): 2 Crawlers: 100 / 3 Crawlers: 150 / 4 Crawlers: 200 (rules/70-encounter-budget-5e.json#floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.{2|3|4})"
+              }
+            ],
+            "display": "Terminal bribe (party price): 2 Crawlers: 100 / 3 Crawlers: 150 / 4 Crawlers: 200 (rules/70-encounter-budget-5e.json#floors.1.prices.stairwell_key_terminal_bribe.party_price_by_size.{2|3|4})"
+          }
+        },
+        "closes": "Lost on Day 4 when the Break Room and vendors lose service; the price is cited from the budget file.",
+        "lost_on_day": 4,
+        "status_today": "available"
+      },
+      {
+        "id": "key-mystery",
+        "how": "A Mystery Key pull (the Hubcap Key, card f01-z06-0004 or f01-any-0035) can be the Zone S lock if the GM picks it. [GM-ONLY] the lock choice is the GM's, written into session state, never into this page or a deck.",
+        "where": "any",
+        "ref": "tables/loot-decks/f01-z06-break-room.json",
+        "route": [
+          "clever",
+          "loot"
+        ],
+        "closes": "No deadline once drawn; exists only if a Mystery Key was pulled.",
+        "lost_on_day": null,
+        "status_today": "available"
+      }
+    ],
+    "keyless": "Thieves' Tools or Strength (Athletics) at the Zone S door works without a key, per 00-overview.md section 5.10 (check values there). It is loud and brings the boss and his ushers looking one minute later.",
+    "missing_key_cost": {
+      "instant_wipe": false,
+      "text": "Missing the key is a COST, not an instant wipe: a detour (back to Z8 or Z6 while those still serve), the Detour Tax toll, or the loud keyless forcing. Missing the collapse is a different matter: it is death (see the missed-collapse rule).",
+      "toll_slot": {
+        "b70": {
+          "kind": "party",
+          "path": "floors.1.prices.detour_tax.party_toll_by_size",
+          "note": "Detour Tax party toll"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "party",
+              "values": {
+                "2": 150,
+                "3": 225,
+                "4": 300
+              },
+              "paths": {
+                "2": "floors.1.prices.detour_tax.party_toll_by_size.2",
+                "3": "floors.1.prices.detour_tax.party_toll_by_size.3",
+                "4": "floors.1.prices.detour_tax.party_toll_by_size.4"
+              },
+              "display": "Detour Tax party toll: 2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+            }
+          ],
+          "display": "Detour Tax party toll: 2 Crawlers: 150 / 3 Crawlers: 225 / 4 Crawlers: 300 (rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax.party_toll_by_size.{2|3|4})"
+        }
+      }
+    },
+    "fake_stairwell": "The Big Green EXIT at Z7 is bait, not a stairwell (00-overview.md section 5.7). Taking it costs time and a fall.",
+    "canon_stairwell_notes": [
+      {
+        "ledger_id": "M-276",
+        "text": "Canon: stairwells appear about 32 hours after the Dungeon opens (about a day and a half in). House: early Day 2.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-277",
+        "text": "Canon: descending with more than six hours left on the floor holds the crawler in stasis until the floor collapses.",
+        "tag": "canon"
+      },
+      {
+        "ledger_id": "M-275",
+        "text": "Canon: Borough and City boss arenas contain a stairwell (the Z10 stage is the house version).",
+        "tag": "canon"
+      }
+    ],
+    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so canon A-044 (stairs within an hour of arrival) is not attainable on Floor 1; it stays a canon reference only.",
+    "early_descent": "A Crawler who descends with more than 6 hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last 6 hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
+    "keyless_fee": {
+      "b70": {
+        "kind": "party",
+        "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size",
+        "note": "Zone S door forcing fee (party)"
+      },
+      "resolved": {
+        "parts": [
+          {
+            "kind": "party",
+            "values": {
+              "2": 50,
+              "3": 75,
+              "4": 100
+            },
+            "paths": {
+              "2": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.2",
+              "3": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.3",
+              "4": "floors.1.prices.zone_s_door_forcing.party_fee_by_size.4"
+            },
+            "display": "Zone S door forcing fee (party): 2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
+          }
+        ],
+        "display": "Zone S door forcing fee (party): 2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
+      }
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-d01-01",
+      "name": "Clock On: Break Room Briefing",
+      "zone": "z06",
+      "zone_name": "The Break Room (Saferoom A)",
+      "route": [
+        "clever",
+        "dash",
+        "loot"
+      ],
+      "route_primary": "clever",
+      "kind": "non-combat",
+      "map_in_the_mind": {
+        "layout": "One carpeted saferoom: couch and fridge along one wall, the vending terminal and corkboard on the other, a crackling ceiling speaker.",
+        "exits": [
+          "Back door toward Z5 (outer zones, closing soon).",
+          "Side passage to Z7 (the Big Green EXIT).",
+          "Door to Z8 (Mascot Locker Room)."
+        ],
+        "hazards": [
+          "None; honest saferoom on Floor 1 (00-overview.md section 2 rule 5).",
+          "The coffee (flavor only)."
+        ],
+        "cover": [
+          "Couch and fridge (half cover if it ever matters)."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies. If a Lights-Out Ceiling Tick shows up it cannot enter a saferoom.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.1.fixed_encounters"
+              ],
+              "display": "none (non-combat): see rules/70-encounter-budget-5e.json#floors.1.fixed_encounters"
+            }
+          ],
+          "display": "none (non-combat): see rules/70-encounter-budget-5e.json#floors.1.fixed_encounters"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.1.xp.by_party_size"
+              ],
+              "display": "Non-combat: no combat budget (daily XP guidance applies): see rules/70-encounter-budget-5e.json#floors.1.xp.by_party_size"
+            }
+          ],
+          "display": "Non-combat: no combat budget (daily XP guidance applies): see rules/70-encounter-budget-5e.json#floors.1.xp.by_party_size"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "ATTENTION, CRAWLERS: the Orientation Pit is now on a schedule, with a countdown, because 'take your time' was ruining the pool. You have 5 days, and a day ends when you sleep or when the clock says so. Find the Stairwell. The floor will not wait politely.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The terminal's screen flickers and a smaller, shadier menu appears: 'Spare keys. Unlisted. Pay exactly.' Somebody in accounting just fainted.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You got the briefing, the gossip and a choice, and also the coffee, which was a mistake. Pick a route and go. The clock isn't ticking yet. It's thinking about it.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Welcome Box ceremony if not yet held (GM checks the sheets; the box is Bronze, one tailored pull per overview).",
+          "overview_ref": "00-overview.md section 8.1",
+          "check_text": "Bronze Welcome Box",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "economy_audit.pull_expectations"
+              ],
+              "note": "Welcome Box pulls"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "economy_audit.pull_expectations"
+                  ],
+                  "display": "Welcome Box pulls: see rules/70-encounter-budget-5e.json#economy_audit.pull_expectations"
+                }
+              ],
+              "display": "Welcome Box pulls: see rules/70-encounter-budget-5e.json#economy_audit.pull_expectations"
+            }
+          }
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z06-0001",
+          "note": "Laminated Complaint Card: the clever route's best yes/no question (is the Zone S lock one key away?).",
+          "display": "Laminated Complaint Card (Laminated Complaint Card (house: single-use oracle))",
+          "tier": "Bronze",
+          "deck": "f01-z06-break-room"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z06-0004",
+          "note": "Hubcap Key: possible stairwell key way key-mystery. [GM-ONLY] only the GM knows which lock it opens.",
+          "display": "Gas-Station Bathroom Key on a Hubcap (Mystery Key (house, single lock))",
+          "tier": "Bronze",
+          "deck": "f01-z06-break-room"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z06-0007",
+          "note": "Fridge sandwich, for the sharing achievement.",
+          "display": "Fridge Sandwich Labeled DALE'S. DO NOT. (Joke item (house: no effect))",
+          "tier": "Bronze",
+          "deck": "f01-z06-break-room"
+        },
+        {
+          "kind": "item",
+          "srd_id": "potion-of-healing",
+          "note": "Vendor stock is shared floor-wide (00-overview.md section 8.3); price from the budget file.",
+          "amount": {
+            "b70": {
+              "kind": "scalar",
+              "path": "floors.1.prices.potion_of_healing_vendor.price",
+              "note": "Potion of Healing vendor price"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "scalar",
+                  "value": 50,
+                  "path": "floors.1.prices.potion_of_healing_vendor.price",
+                  "display": "Potion of Healing vendor price: 50 (rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price)"
+                }
+              ],
+              "display": "Potion of Healing vendor price: 50 (rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price)"
+            }
+          },
+          "display": "Sports Drink, Mystery Flavor (Potion of Healing)"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0034",
+          "note": "Staff Map: a house rider lets the GM mark Zone S for the clever route.",
+          "display": "Staff Map, Coffee-Stained (Map (house: marks one hidden spot))",
+          "tier": "Bronze",
+          "deck": "f01-any-orientation-pit"
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0058",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook for a party that threads the whole floor without a kill (the bribe-and-sneak route). Record the deed at award; the box opens only in a saferoom; one per table per floor (decision 015, 018). Never mention it to the table.",
+          "display": "Olive Branch Lanyard (Laminated, Nobody Got Hurt) (Olive Branch Lanyard (house: redirect charm))",
+          "tier": "Legendary",
+          "deck": "f01-any-story-boxes"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0188",
+          "note": "Rumor Mill: read the corkboard three times.",
+          "name": "Orientation Pit: Rumor Mill",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0188 Orientation Pit: Rumor Mill (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic: search the honest saferoom for traps.",
+          "name": "Saferoom Skeptic",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-0025 Saferoom Skeptic (Floor Any, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0899",
+          "note": "Share Food with the Party (fridge sandwich).",
+          "name": "Orientation Pit: Share food with the party",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare)",
+          "valid": true
+        }
+      ],
+      "scaling": {
+        "2": "Break Room is the same; the terminal offers one fewer shady menu item. The bribe is the same, so a short party leans on the clever route.",
+        "3": "Same as the full room; no change.",
+        "4": "Full room, as written; the corkboard rumors all appear."
+      },
+      "if_they_do_something_dumb": "If someone bribes the terminal with the Odd Coin or tries to sell it, follow 00-overview.md section 5.3: ITEM NOT RECOGNIZED or the cancelled offer. If someone steals from the terminal or fights in the saferoom, the System's three-strikes freeze applies (canon saferoom rule); it is a cost, never a wipe. If they just argue, the speaker repeats the day count and Lights-Out arrives on schedule.",
+      "canon_zone": "z06",
+      "proposed_achievements": [
+        {
+          "name": "Read the Fine Print",
+          "trigger": "Use the Break Room terminal bribe route.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "reward_slot": {
+            "b70": {
+              "kind": "text",
+              "path": "floors.1.achievement_rewards.proposed.read_the_fine_print.reward"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "R0: snark-only Title",
+                  "path": "floors.1.achievement_rewards.proposed.read_the_fine_print.reward",
+                  "display": "R0: snark-only Title (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.read_the_fine_print.reward)"
+                }
+              ],
+              "display": "R0: snark-only Title (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.read_the_fine_print.reward)"
+            }
+          },
+          "narration": "You read the terms, found the loophole, and paid the fee to use it. The System is almost proud. Almost.",
+          "narration_tag": "[PLAYER-FACING]"
+        }
+      ],
+      "quick_run": {
+        "setup": "The Crawlers wake in the Break Room with the clock announced and a terminal that sells a spare key.",
+        "decision": "Spend credits on the terminal key now, or leave and earn a key in the Locker Room?",
+        "on_success": "They pick a route, take the briefing and leave with a plan.",
+        "on_failure": "They dither; the speaker repeats the day count and the Lights-Out hour starts the pressure.",
+        "minutes": 8,
+        "tag": "pacing guide",
+        "cut_short": "Skip the corkboard rumors; read only the terminal offer and ask for the route."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Buy the terminal key, or do not",
+            "effect": "A bought spare means the Locker Room key fight is optional and the Zone S door opens quietly. Not buying leaves Bruiser's key, the Mystery Key, tools, force or the Detour Tax as the ways in; the terminal stays open to buy through Day 3.",
+            "reacts_in": [
+              "enc-d01-03",
+              "enc-d02-02",
+              "enc-d03-01",
+              "enc-d05-02"
+            ]
+          },
+          {
+            "choice": "Which route the Crawlers announce",
+            "effect": "The System remembers the declared route (dash, loot or clever) and teases it in the Day 2 morning notice; later audience commentary echoes it.",
+            "reacts_in": [
+              "enc-d02-01",
+              "enc-d03-03"
+            ]
+          },
+          {
+            "choice": "Sharing the fridge food and the corkboard rumors",
+            "effect": "Shared food is remembered when the Crawlers settle in the Green Room tonight; rumors read here point at Locker Room and Z S hooks.",
+            "reacts_in": [
+              "enc-d01-05",
+              "enc-d04-04"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Route announced (dash, loot or clever)",
+          "Key way chosen so far: bruiser, terminal, mystery or none",
+          "Terminal key bought, and by whom (price in Budget at a glance)",
+          "Which corkboard rumors were read",
+          "Welcome Box held, and for which Crawlers"
+        ]
+      },
+      "canon": {
+        "table_id": "z06",
+        "name": "Zone 6: The Break Room (Saferoom A)",
+        "tag": "inspired",
+        "confidence": "VERIFIED",
+        "ledger_rows": [
+          "A-184",
+          "K-170",
+          "L-002",
+          "M-010",
+          "M-011",
+          "M-013",
+          "M-282",
+          "M-283"
+        ],
+        "announcement_style": "Safe-room certification in a warm-hug-before-a-pickpocket voice; a game-show drumroll opens the first box.",
+        "staging": "A break-room-themed safe room: first box-opening ceremony, a vendor terminal and a rumor corkboard. Nothing may hurt Crawlers inside except each other.",
+        "table_refs": [
+          "f01-z06-break-room"
+        ]
+      }
+    },
+    {
+      "id": "enc-d01-02",
+      "name": "The Big Green EXIT (Clock Edition)",
+      "zone": "z07",
+      "zone_name": "The Big Green EXIT (stair bait, dead end)",
+      "route": [
+        "loot"
+      ],
+      "route_primary": "loot",
+      "kind": "combat + trap",
+      "map_in_the_mind": {
+        "layout": "A short stair down from a side passage ends at a landing with alcoves on both sides and a floor that is not a floor.",
+        "exits": [
+          "Back up the stair to the Break Room.",
+          "The left alcove hides the Back Office door (found when the Greeters are gone, see 00-overview.md section 5.7).",
+          "No other exit; it is a dead end."
+        ],
+        "hazards": [
+          "Trapdoor over a pit with broken glass (T4, check values in 00-overview.md section 5.7).",
+          "Birdsong speaker and fan that make the sign convincing."
+        ],
+        "cover": [
+          "Alcove frames and clipboard stands (half cover)."
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "greeter-warrior",
+          "srd_id": "goblin-warrior",
+          "srd_name": "Goblin Warrior",
+          "our_name": "Exit Greeter (Goblin Warrior)",
+          "name_source": "00-overview.md section 5.7 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z07.counts_by_party_size",
+              "key": "goblin-warrior"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 1,
+                    "3": 1,
+                    "4": 2
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.z07.counts_by_party_size.2.goblin-warrior",
+                    "3": "floors.1.fixed_encounters.z07.counts_by_party_size.3.goblin-warrior",
+                    "4": "floors.1.fixed_encounters.z07.counts_by_party_size.4.goblin-warrior"
+                  },
+                  "display": "2 Crawlers: 1 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.counts_by_party_size.{2|3|4}.goblin-warrior)"
+                }
+              ],
+              "display": "2 Crawlers: 1 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.counts_by_party_size.{2|3|4}.goblin-warrior)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z07.creatures",
+              "key": "goblin-warrior"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cr",
+                  "value": "1/4",
+                  "path": "floors.1.fixed_encounters.z07.creatures[srd_id=goblin-warrior].cr",
+                  "display": "CR 1/4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.creatures[srd_id=goblin-warrior].cr)"
+                }
+              ],
+              "display": "CR 1/4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.creatures[srd_id=goblin-warrior].cr)"
+            }
+          },
+          "srd_resolved": true
+        },
+        {
+          "slot": "greeter-minion",
+          "srd_id": "goblin-minion",
+          "srd_name": "Goblin Minion",
+          "our_name": "Exit Greeter (Trainee) (Goblin Minion)",
+          "name_source": "00-overview.md section 5.7 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z07.counts_by_party_size",
+              "key": "goblin-minion"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 2,
+                    "3": 3,
+                    "4": 4
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.z07.counts_by_party_size.2.goblin-minion",
+                    "3": "floors.1.fixed_encounters.z07.counts_by_party_size.3.goblin-minion",
+                    "4": "floors.1.fixed_encounters.z07.counts_by_party_size.4.goblin-minion"
+                  },
+                  "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.counts_by_party_size.{2|3|4}.goblin-minion)"
+                }
+              ],
+              "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.counts_by_party_size.{2|3|4}.goblin-minion)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z07.creatures",
+              "key": "goblin-minion"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cr",
+                  "value": "1/8",
+                  "path": "floors.1.fixed_encounters.z07.creatures[srd_id=goblin-minion].cr",
+                  "display": "CR 1/8 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.creatures[srd_id=goblin-minion].cr)"
+                }
+              ],
+              "display": "CR 1/8 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.creatures[srd_id=goblin-minion].cr)"
+            }
+          },
+          "srd_resolved": true
+        }
+      ],
+      "enemies_note": "Reskin names are House nameplates from the overview; there is no monster reskin table, so these are not table lookups.",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.z07.fit"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "fit",
+              "values": {
+                "2": {
+                  "xp_used": 100,
+                  "tier_budget": 100,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "3": {
+                  "xp_used": 125,
+                  "tier_budget": 150,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "4": {
+                  "xp_used": 200,
+                  "tier_budget": 200,
+                  "over_by": 0,
+                  "within_tier": true
+                }
+              },
+              "tier": "standard",
+              "budget_level": 1,
+              "paths": {
+                "2": "floors.1.fixed_encounters.z07.fit.2",
+                "3": "floors.1.fixed_encounters.z07.fit.3",
+                "4": "floors.1.fixed_encounters.z07.fit.4"
+              },
+              "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.budget_level); 2: 100 XP used of 100 tier budget; 3: 125 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.fit.{2|3|4})"
+            }
+          ],
+          "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.budget_level); 2: 100 XP used of 100 tier budget; 3: 125 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.fit.{2|3|4})"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "EXIT! A big, friendly sign with a countdown now, in case you weren't tempted enough. Listen: birds, and there have never been birds down here.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The floor drops out, the clipboards come out, and a very polite goblin in a green vest asks if you have an appointment. You do not.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "The greeters are down and the back office is open: a workshop full of unapproved inventory. Management is furious and also taking notes. The sign still says EXIT. It's still lying.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win_alt": {
+          "text": "You smelled freedom, said no, and kept your feet. The sign goes dim. That's the System's way of nodding. It does not nod often.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Greeters' Back Office cache (Jug O' Boom recipe card, goblin oil, worn Tinker's Tools). Not a box and not a permanent magic item.",
+          "overview_ref": "00-overview.md section 5.7",
+          "check_text": "Back Office",
+          "amount": {
+            "b70": {
+              "kind": "text",
+              "path": "floors.1.fixed_encounters.z07.cash_dice_per_crawler",
+              "note": "Back Office cache is placed items; Greeter pocket change per Crawler"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "1d4 x 2",
+                  "path": "floors.1.fixed_encounters.z07.cash_dice_per_crawler",
+                  "display": "Back Office cache is placed items; Greeter pocket change per Crawler: 1d4 x 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.cash_dice_per_crawler)"
+                }
+              ],
+              "display": "Back Office cache is placed items; Greeter pocket change per Crawler: 1d4 x 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z07.cash_dice_per_crawler)"
+            }
+          }
+        },
+        {
+          "kind": "item",
+          "srd_id": "tinkers-tools",
+          "note": "The worn Tinker's Tools kit from the Back Office.",
+          "display": "Junk Drawer of Screws and Gears (Tinker's Tools)"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0033",
+          "note": "Maintenance Note: one true hint about the next zone; can be found on a Greeter's clipboard as a lore scrap.",
+          "display": "Maintenance Note, Greasy (Lore scrap (house: one-use hint))",
+          "tier": "Bronze",
+          "deck": "f01-any-orientation-pit"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0014",
+          "note": "Paint-Can Pry Bar: leverage for forcing the Zone S door, a keyless option.",
+          "display": "Paint-Can Pry Bar (Crowbar)",
+          "tier": "Bronze",
+          "deck": "f01-any-orientation-pit"
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0065",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook if each Crawler plays a distinct, necessary part of one plan here (lure, trap, ambush, back door). Table deed; record every pictured Crawler as witness. One per table per floor.",
+          "display": "Group Photo, Mid-Handshake (Framed) (Keepsake of the Pictured (house: table-deed trophy))",
+          "tier": "Legendary",
+          "deck": "f01-any-story-boxes"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0084",
+          "note": "Stair Bait Resisted: walking away at the sign. Forfeits the Back Office loot; that tradeoff is on purpose.",
+          "name": "Stair Bait Resisted",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0084 Stair Bait Resisted (Floor 1, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0871",
+          "note": "Find a lore scrap: the quota clipboard (00-overview.md section 5.7).",
+          "name": "Orientation Pit: Find a journal or lore scrap",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0871 Orientation Pit: Find a journal or lore scrap (Floor 1, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0867",
+          "note": "Block a hit with a shield or brace.",
+          "name": "Orientation Pit: Block a hit with a shield or brace",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0867 Orientation Pit: Block a hit with a shield or brace (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0861",
+          "note": "Lose initiative and still win.",
+          "name": "Orientation Pit: Lose initiative and still win the fight",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common)",
+          "valid": true
+        }
+      ],
+      "scaling": {
+        "2": "Drop the Warrior slot to one and keep a few Trainees as pressure. The trapdoor stays, because it is the point. A rescued companion running toward the birds is the real hazard.",
+        "3": "Between the two: one Warrior, a mid-size group of Trainees, trapdoor unchanged.",
+        "4": "Both slots as in 00-overview.md section 9.3: the Warriors anchor, the Trainees flood the landing."
+      },
+      "if_they_do_something_dumb": "If someone charges down the stairs without looking, the trapdoor takes them and the rest of the party faces the Greeters from above: a cost in HP and a lost round, not a wipe. If they take the fake stairs seriously and refuse to leave, narrate the birdsong stopping and the timer sign flipping to a rude message; the day clock keeps running and the cost is a short-rest slot. If a hostile NPC dies near them, run the permanence popup as the overview says.",
+      "canon_zone": "z07",
+      "quick_run": {
+        "setup": "A short stair ends at a landing with a floor that is not a floor, and goblin greeters wait on it.",
+        "decision": "Charge the greeters, or look for a way past the false stairs?",
+        "on_success": "The greeters fall or are bypassed and the Back Office gear is theirs.",
+        "on_failure": "A Crawler drops into the pit and the greeters press from above.",
+        "minutes": 10,
+        "tag": "pacing guide",
+        "cut_short": "Run one round of landing combat and one check for the trapdoor; skip the alcoves."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Clear the Greeters, or avoid the landing",
+            "effect": "Cleared Greeters open the Back Office (recipe card, oil, worn tools) before Z7 closes on Day 3. Avoiding them keeps the party quiet but forfeits that cache when the zone closes.",
+            "reacts_in": [
+              "enc-d02-02",
+              "enc-d03-02"
+            ]
+          },
+          {
+            "choice": "Fall for the fake stairs, or call it out",
+            "effect": "A Crawler who fell has paid the cost and learned the lesson; a party that called it out is praised by the speaker at the next notice.",
+            "reacts_in": [
+              "enc-d02-01"
+            ]
+          },
+          {
+            "choice": "Take the worn Tinker's Tools",
+            "effect": "Tools in hand make the keyless Zone S door possible without Bruiser's key.",
+            "reacts_in": [
+              "enc-d02-02",
+              "enc-d05-02"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Greeters cleared, bypassed or fled",
+          "Back Office cache taken (recipe card, oil, tools)",
+          "Anyone fell into the pit",
+          "Z7 hooks left behind when it closes on Day 3"
+        ]
+      },
+      "canon": {
+        "table_id": "z07",
+        "name": "Zone 7: The Big Green EXIT",
+        "tag": "inspired",
+        "confidence": "VERIFIED",
+        "ledger_rows": [
+          "A-040",
+          "A-139",
+          "M-275",
+          "M-276",
+          "M-286",
+          "M-287",
+          "M-294"
+        ],
+        "announcement_style": "Faux-sincere exit-sign voice; the System congratulates anyone who declines the bait.",
+        "staging": "Stair bait: a glowing EXIT, birdsong and fresh air lead to a landing over a trapdoor pit where goblin-style greeters wait. Walking away is the smart play; going down opens a hidden goblin workshop.",
+        "table_refs": []
+      },
+      "proposed_achievements": []
+    },
+    {
+      "id": "enc-d01-03",
+      "name": "Mascot Locker Room",
+      "zone": "z08",
+      "zone_name": "Mascot Locker Room (Elite)",
+      "route": [
+        "dash",
+        "clever"
+      ],
+      "route_primary": "dash",
+      "kind": "combat",
+      "map_in_the_mind": {
+        "layout": "A foam-smelling locker room: rows of lockers, benches, a cracked mirror wall, a giant mascot costume hanging from a hook in the middle.",
+        "exits": [
+          "Doorway back to the Break Room.",
+          "Doorway on to the Green Room (Z9)."
+        ],
+        "hazards": [
+          "Searching lockers is loud: a Ceiling Ticks roll after a few banks (00-overview.md section 5.8).",
+          "Reflections in the cracked mirror are slightly late (flavor, no mechanics)."
+        ],
+        "cover": [
+          "Benches and locker banks (half cover); the mirror wall gives no cover."
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "elite-armor",
+          "srd_id": "animated-armor",
+          "srd_name": "Animated Armor",
+          "our_name": "Bruiser the Mascot (Unoccupied) (Animated Armor)",
+          "name_source": "00-overview.md section 5.8 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z08.counts_by_party_size",
+              "key": "animated-armor"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 1,
+                    "3": 1,
+                    "4": 1
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.z08.counts_by_party_size.2.animated-armor",
+                    "3": "floors.1.fixed_encounters.z08.counts_by_party_size.3.animated-armor",
+                    "4": "floors.1.fixed_encounters.z08.counts_by_party_size.4.animated-armor"
+                  },
+                  "display": "2 Crawlers: 1 / 3 Crawlers: 1 / 4 Crawlers: 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-armor)"
+                }
+              ],
+              "display": "2 Crawlers: 1 / 3 Crawlers: 1 / 4 Crawlers: 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-armor)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z08.creatures",
+              "key": "animated-armor"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cr",
+                  "value": "1",
+                  "path": "floors.1.fixed_encounters.z08.creatures[srd_id=animated-armor].cr",
+                  "display": "CR 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.creatures[srd_id=animated-armor].cr)"
+                }
+              ],
+              "display": "CR 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.creatures[srd_id=animated-armor].cr)"
+            }
+          },
+          "srd_resolved": true
+        },
+        {
+          "slot": "lanyard-blade",
+          "srd_id": "animated-flying-sword",
+          "srd_name": "Animated Flying Sword",
+          "our_name": "Lanyard Blade (Animated Flying Sword)",
+          "name_source": "00-overview.md section 5.8 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.z08.counts_by_party_size",
+              "key": "animated-flying-sword"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 0,
+                    "3": 1,
+                    "4": 2
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.z08.counts_by_party_size.2.animated-flying-sword",
+                    "3": "floors.1.fixed_encounters.z08.counts_by_party_size.3.animated-flying-sword",
+                    "4": "floors.1.fixed_encounters.z08.counts_by_party_size.4.animated-flying-sword"
+                  },
+                  "display": "2 Crawlers: 0 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-flying-sword)"
+                }
+              ],
+              "display": "2 Crawlers: 0 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-flying-sword)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.z08.creatures",
+              "key": "animated-flying-sword"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cr",
+                  "value": "1/4",
+                  "path": "floors.1.fixed_encounters.z08.creatures[srd_id=animated-flying-sword].cr",
+                  "display": "CR 1/4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.creatures[srd_id=animated-flying-sword].cr)"
+                }
+              ],
+              "display": "CR 1/4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.creatures[srd_id=animated-flying-sword].cr)"
+            }
+          },
+          "srd_resolved": true
+        }
+      ],
+      "enemies_note": "Same elite as the overview's Zone 8; the clever route may try to beat it with the room instead of weapons.",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.z08.fit"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "fit",
+              "values": {
+                "2": {
+                  "xp_used": 200,
+                  "tier_budget": 150,
+                  "over_by": 50,
+                  "within_tier": false
+                },
+                "3": {
+                  "xp_used": 250,
+                  "tier_budget": 225,
+                  "over_by": 25,
+                  "within_tier": false
+                },
+                "4": {
+                  "xp_used": 300,
+                  "tier_budget": 300,
+                  "over_by": 0,
+                  "within_tier": true
+                }
+              },
+              "tier": "hard",
+              "budget_level": 1,
+              "paths": {
+                "2": "floors.1.fixed_encounters.z08.fit.2",
+                "3": "floors.1.fixed_encounters.z08.fit.3",
+                "4": "floors.1.fixed_encounters.z08.fit.4"
+              },
+              "display": "hard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.budget_level); 2: 200 XP used of 150 tier budget, over by 50 (kept per overview; GM may tighten); 3: 250 XP used of 225 tier budget, over by 25 (kept per overview; GM may tighten); 4: 300 XP used of 300 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.fit.{2|3|4})"
+            }
+          ],
+          "display": "hard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.budget_level); 2: 200 XP used of 150 tier budget, over by 50 (kept per overview; GM may tighten); 3: 250 XP used of 225 tier budget, over by 25 (kept per overview; GM may tighten); 4: 300 XP used of 300 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.fit.{2|3|4})"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "FOLKS, welcome to the Mascot Locker Room! The costume is empty, the crowd is loud, and your guide wants a word: this is the dying lesson. Please absorb as little of it as you can.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The costume stands up, the lanyards unfold, and one of you just became the most popular Crawler in the room. That's the worst kind of popular.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Costume down, locker bank open, and a key swinging from a place no key should be. Take it. Don't ask where it was. The audience did not need to see that.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win_alt": {
+          "text": "Nobody raised a hand and the room did the work. Impressive. Slightly insulting to the mascot.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "placed",
+          "text": "Bruiser's service key (opens the Zone S door).",
+          "overview_ref": "00-overview.md section 5.8",
+          "check_text": "service key",
+          "amount": {
+            "b70": {
+              "kind": "cite",
+              "paths": [
+                "floors.1.prices.zone_s_door_forcing",
+                "floors.1.prices.detour_tax"
+              ],
+              "note": "Quest item, not a credit source; missing it is priced at the paths"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.1.prices.zone_s_door_forcing",
+                    "floors.1.prices.detour_tax"
+                  ],
+                  "display": "Quest item, not a credit source; missing it is priced at the paths: see rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing; rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax"
+                }
+              ],
+              "display": "Quest item, not a credit source; missing it is priced at the paths: see rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing; rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax"
+            }
+          }
+        },
+        {
+          "kind": "placed",
+          "text": "Bruiser's head also holds a Potion of Healing, the third placed potion (Sports Drink, Green Flavor per overview).",
+          "overview_ref": "00-overview.md section 8.3",
+          "check_text": "Bruiser's head",
+          "amount": {
+            "b70": {
+              "kind": "scalar",
+              "path": "floors.1.prices.potion_of_healing_vendor.price",
+              "note": "Placed consumable: vendor value only"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "scalar",
+                  "value": 50,
+                  "path": "floors.1.prices.potion_of_healing_vendor.price",
+                  "display": "Placed consumable: vendor value only: 50 (rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price)"
+                }
+              ],
+              "display": "Placed consumable: vendor value only: 50 (rules/70-encounter-budget-5e.json#floors.1.prices.potion_of_healing_vendor.price)"
+            }
+          }
+        },
+        {
+          "kind": "item",
+          "srd_id": "potion-of-healing",
+          "note": "Display label for the same potion (the flavor variant is the overview's).",
+          "display": "Sports Drink, Mystery Flavor (Potion of Healing)"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-any-0015",
+          "note": "Big Honking Flashlight: the Lights-Out answer.",
+          "display": "Big Honking Flashlight (Lantern, Hooded)",
+          "tier": "Bronze",
+          "deck": "f01-any-orientation-pit"
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0064",
+          "gm_only": true,
+          "note": "[GM-ONLY] Candidate hook if a Crawler beats or drives off Bruiser using only the room (lockers, benches, mirror), without a weapon attack or spell of their own, at real risk. Record the deed; one per table per floor.",
+          "display": "Annotated Floor Plan (Coffee Ring Included) (Plan of Unfair Advantage (house: environment charm))",
+          "tier": "Legendary",
+          "deck": "f01-any-story-boxes"
+        },
+        {
+          "kind": "story_box",
+          "card_id": "f01-any-0063",
+          "gm_only": true,
+          "note": "[GM-ONLY] Alternative candidate: the clever route talks a named hostile out of the fight using its own rules. Pick one deed per floor; do not pre-promise either.",
+          "display": "Laminated Truce Chit (Do Not Fold) (Truce Chit (house: one-shot parley))",
+          "tier": "Legendary",
+          "deck": "f01-any-story-boxes"
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0078",
+          "note": "Tutorial Elite.",
+          "name": "Tutorial Elite",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0078 Tutorial Elite (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0085",
+          "note": "First Down.",
+          "name": "First Down",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0085 First Down (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0015",
+          "note": "Down But Not Out.",
+          "name": "Down But Not Out",
+          "rarity": "Common",
+          "floor": "Any",
+          "label": "ACH-0015 Down But Not Out (Floor Any, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0018",
+          "note": "Buddy System.",
+          "name": "Buddy System",
+          "rarity": "Common",
+          "floor": "Any",
+          "label": "ACH-0018 Buddy System (Floor Any, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0016",
+          "note": "Close Call.",
+          "name": "Close Call",
+          "rarity": "Common",
+          "floor": "Any",
+          "label": "ACH-0016 Close Call (Floor Any, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0020",
+          "note": "Sacrifice Play.",
+          "name": "Sacrifice Play",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-0020 Sacrifice Play (Floor Any, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0082",
+          "note": "Static in the Ear: hidden seed line, no reward, see 00-overview.md section 5.8.",
+          "name": "Static in the Ear",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0082 Static in the Ear (Floor 1, Common)",
+          "valid": true
+        }
+      ],
+      "spine_plant_gm_only": "[GM-ONLY] Benefactor Signal fires here on the first death save on Floor 1 (00-overview.md sections 5.8 and 8.4). Never explained. Not a Story Box.",
+      "crawler_hooks": [
+        {
+          "kind": "class",
+          "id": "wizard",
+          "note": "Can spend turns reading the mirror and the lockers rather than swinging.",
+          "display": "Perpetual Grad Student (Wizard)"
+        },
+        {
+          "kind": "class",
+          "id": "barbarian",
+          "note": "Natural anchor against the armor while others handle the blades.",
+          "display": "Anger-Management Dropout (Barbarian)"
+        },
+        {
+          "kind": "class",
+          "id": "rogue",
+          "note": "Natural locker and lock handler for the keyless route.",
+          "display": "Five-Finger Discount Specialist (Rogue)"
+        }
+      ],
+      "scaling": {
+        "2": "Remove a Lanyard Blade slot; the armor alone is enough pressure. Offer the clever route more room hazards to use.",
+        "3": "Armor plus a single Lanyard Blade; hazards unchanged.",
+        "4": "Armor plus both blades, as in 00-overview.md section 9.3; the death-save lesson is most likely here."
+      },
+      "if_they_do_something_dumb": "If they refuse to fight and keep stalling, Bruiser focuses one Crawler and the blades harass the healer (tactics only, no fudged dice, per 00-overview.md section 11.2). If someone searches every locker bank, the Ceiling Ticks roll triggers (enc-d01-04). If someone attacks Proctor Bell, it self-heals and withholds hints (overview section 11.2). Nobody gets a free escape from a down Crawler: the cost is HP, a spent short-rest slot, or a lost key, never an instant wipe.",
+      "canon_zone": "z08",
+      "quick_run": {
+        "setup": "A foam-smelling locker room, a mascot suit on a hook, and a service key somewhere inside it.",
+        "decision": "Fight the animated armor head-on, or use the room (lockers, mirror, noise) against it?",
+        "on_success": "The costume falls and the service key is theirs.",
+        "on_failure": "A Crawler drops and the party must spend a short-rest slot or retreat.",
+        "minutes": 12,
+        "tag": "pacing guide",
+        "cut_short": "Drop the locker-search noise and run the fight as armor plus blades only."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Take Bruiser's service key",
+            "effect": "The holder can open the Zone S door without noise and skip the toll at the turnstile. If nobody takes the key it is lost with Z8 when the mid zones close on Day 3.",
+            "reacts_in": [
+              "enc-d02-02",
+              "enc-d03-02",
+              "enc-d05-02"
+            ]
+          },
+          {
+            "choice": "Fight Bruiser, or beat him with the room",
+            "effect": "A hard fight leaves the party hurt going into the night; a clever win keeps short-rest slots for later days.",
+            "reacts_in": [
+              "enc-d01-04",
+              "enc-d01-05"
+            ]
+          },
+          {
+            "choice": "Attack Proctor Bell, or keep it friendly",
+            "effect": "A hostile Bell withholds its hints for the rest of the floor, so the Dean's tells must be learned the hard way.",
+            "reacts_in": [
+              "enc-d03-03",
+              "enc-d05-03"
+            ]
+          },
+          {
+            "choice": "Take the placed Potion of Healing",
+            "effect": "The third placed potion is gone from the floor-wide stock.",
+            "reacts_in": [
+              "enc-d03-01"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Bruiser's key: who holds it, or lost",
+          "Death save used, and by whom",
+          "Proctor Bell: friendly or hostile (hints still available?)",
+          "Placed Potion of Healing taken"
+        ]
+      },
+      "canon": {
+        "table_id": "z08",
+        "name": "Zone 8: Mascot Locker Room",
+        "tag": "inspired",
+        "confidence": "VERIFIED",
+        "ledger_rows": [
+          "M-273",
+          "M-274"
+        ],
+        "announcement_style": "Sports-broadcast mock-hype for the mascot; a stern \"this lesson is about dying\" aside from the guide.",
+        "staging": "An empty mascot costume unhooks itself while name-badge blades take flight. The fight is built to be the first likely death-save lesson; the System switches to a dying-Crawler popup.",
+        "table_refs": []
+      },
+      "proposed_achievements": []
+    },
+    {
+      "id": "enc-d01-04",
+      "name": "Lights-Out: Ceiling Ticks",
+      "zone": "wandering",
+      "zone_name": "Wandering (any non-saferoom area during Lights-Out)",
+      "route": [
+        "dash"
+      ],
+      "route_primary": "dash",
+      "kind": "wandering combat + hazard",
+      "map_in_the_mind": {
+        "layout": "Whatever room the party is in when the Pit goes dark for the hour; red emergency light only, everything reads as dim.",
+        "exits": [
+          "The nearest saferoom (Z6 or Z9)."
+        ],
+        "hazards": [
+          "Red dim light for the hour.",
+          "Ceiling Ticks drop from vents and light fixtures."
+        ],
+        "cover": [
+          "Whatever the room provides; furniture and doorways."
+        ]
+      },
+      "enemies": [
+        {
+          "slot": "ticks",
+          "srd_id": "stirge",
+          "srd_name": "Stirge",
+          "our_name": "Ceiling Tick (Stirge)",
+          "name_source": "00-overview.md section 5.11 nameplate",
+          "count_slot": {
+            "b70": {
+              "kind": "count",
+              "path": "floors.1.fixed_encounters.wandering.counts_by_party_size",
+              "key": "stirge"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "count",
+                  "values": {
+                    "2": 2,
+                    "3": 3,
+                    "4": 4
+                  },
+                  "paths": {
+                    "2": "floors.1.fixed_encounters.wandering.counts_by_party_size.2.stirge",
+                    "3": "floors.1.fixed_encounters.wandering.counts_by_party_size.3.stirge",
+                    "4": "floors.1.fixed_encounters.wandering.counts_by_party_size.4.stirge"
+                  },
+                  "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.counts_by_party_size.{2|3|4}.stirge)"
+                }
+              ],
+              "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.counts_by_party_size.{2|3|4}.stirge)"
+            }
+          },
+          "cr_slot": {
+            "b70": {
+              "kind": "cr",
+              "path": "floors.1.fixed_encounters.wandering.creatures",
+              "key": "stirge"
+            },
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cr",
+                  "value": "1/8",
+                  "path": "floors.1.fixed_encounters.wandering.creatures[srd_id=stirge].cr",
+                  "display": "CR 1/8 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.creatures[srd_id=stirge].cr)"
+                }
+              ],
+              "display": "CR 1/8 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.creatures[srd_id=stirge].cr)"
+            }
+          },
+          "srd_resolved": true
+        }
+      ],
+      "enemies_note": "Max two wandering encounters on the floor (00-overview.md section 5.11); log how many have been used.",
+      "budget_slot": {
+        "b70": {
+          "kind": "fit",
+          "path": "floors.1.fixed_encounters.wandering.fit"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "fit",
+              "values": {
+                "2": {
+                  "xp_used": 50,
+                  "tier_budget": 50,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "3": {
+                  "xp_used": 75,
+                  "tier_budget": 75,
+                  "over_by": 0,
+                  "within_tier": true
+                },
+                "4": {
+                  "xp_used": 100,
+                  "tier_budget": 100,
+                  "over_by": 0,
+                  "within_tier": true
+                }
+              },
+              "tier": "trivial",
+              "budget_level": 1,
+              "paths": {
+                "2": "floors.1.fixed_encounters.wandering.fit.2",
+                "3": "floors.1.fixed_encounters.wandering.fit.3",
+                "4": "floors.1.fixed_encounters.wandering.fit.4"
+              },
+              "display": "trivial tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.budget_level); 2: 50 XP used of 50 tier budget; 3: 75 XP used of 75 tier budget; 4: 100 XP used of 100 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.fit.{2|3|4})"
+            }
+          ],
+          "display": "trivial tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.budget_level); 2: 50 XP used of 50 tier budget; 3: 75 XP used of 75 tier budget; 4: 100 XP used of 100 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.fit.{2|3|4})"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "LIGHTS OUT. Red emergency bulbs only. Please enjoy the darkness responsibly and keep your ankles to yourselves.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "Something small and persistent just found a warm neck. The audience would like to remind you that a mosquito is not a personality.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Pests cleared. The lights come back in their own time. You are now an experienced bug person. Put it on your resume.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [],
+      "loot_note": {
+        "b70": {
+          "kind": "text",
+          "path": "floors.1.fixed_encounters.wandering.cash_dice_per_crawler",
+          "note": "Wandering Ticks carry no loot"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "none (overview: wandering Ticks carry no loot)",
+              "path": "floors.1.fixed_encounters.wandering.cash_dice_per_crawler",
+              "display": "Wandering Ticks carry no loot: none (overview: wandering Ticks carry no loot) (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.cash_dice_per_crawler)"
+            }
+          ],
+          "display": "Wandering Ticks carry no loot: none (overview: wandering Ticks carry no loot) (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.wandering.cash_dice_per_crawler)"
+        }
+      },
+      "achievement_hooks": [
+        {
+          "id": "ACH-0860",
+          "note": "Win initiative (the overview downgrades the reward on this floor).",
+          "name": "Orientation Pit: Win initiative",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0860 Orientation Pit: Win initiative (Floor 1, Common)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0205",
+          "note": "Scenic Panic.",
+          "name": "Orientation Pit: Scenic Panic",
+          "rarity": "Common",
+          "floor": "1",
+          "label": "ACH-0205 Orientation Pit: Scenic Panic (Floor 1, Common)",
+          "valid": true
+        }
+      ],
+      "scaling": {
+        "2": "Fewer Ticks; they pick on one Crawler.",
+        "3": "A small group.",
+        "4": "A full group, as in 00-overview.md section 9.2."
+      },
+      "if_they_do_something_dumb": "If the party insists on a Long Rest outside a saferoom, remind them a field rest can only be a Short Rest and the Ticks interrupt it (00-overview.md section 2 rule 7); the price is cited at rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom. If they ignore the Lights-Out hour entirely, the Ticks show up anyway. Never a wipe.",
+      "canon_zone": "zW",
+      "quick_run": {
+        "setup": "The Pit goes dark for an hour and Ceiling Ticks drop from the vents.",
+        "decision": "Fight in the red light, or retreat to somewhere with a door?",
+        "on_success": "The Ticks are cleared and the dark hour passes.",
+        "on_failure": "Bitten and shaken, the party loses time and a short-rest slot.",
+        "minutes": 5,
+        "tag": "pacing guide",
+        "cut_short": "Resolve it as a single exchange: one roll for the party, one cost."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Fight the Ticks, flee or hide",
+            "effect": "Each wandering encounter used counts against the floor's cap of two; fewer are left for Days 3 and 4. A cleared hour makes tonight quieter.",
+            "reacts_in": [
+              "enc-d03-02",
+              "enc-d04-02"
+            ]
+          },
+          {
+            "choice": "Try a rest in the open",
+            "effect": "A field rest is only a Short Rest and the Ticks interrupt it; the lesson carries to Day 4's dark halls.",
+            "reacts_in": [
+              "enc-d04-02"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Wandering encounters used so far (cap of two)",
+          "Anyone hurt or out of short-rest slots after the dark hour",
+          "Any rest tried outside a saferoom, and whether the fee was paid"
+        ]
+      },
+      "canon": {
+        "table_id": "zW",
+        "name": "Zone W: Ceiling Ticks (wandering encounter)",
+        "tag": "inspired",
+        "confidence": null,
+        "ledger_rows": [],
+        "announcement_style": "Needy-ex joke on the nameplate; hinting the audience groans after the wandering cap.",
+        "staging": "Random wandering encounter used for Lights-Out cycles, interrupted field rests and noisy looting. No canon basis found.",
+        "table_refs": []
+      },
+      "proposed_achievements": []
+    },
+    {
+      "id": "enc-d01-05",
+      "name": "Day Close: The Green Room",
+      "zone": "z09",
+      "zone_name": "The Green Room (Saferoom B)",
+      "route": [
+        "dash",
+        "loot",
+        "clever"
+      ],
+      "route_primary": "loot",
+      "kind": "non-combat (rest and day close)",
+      "map_in_the_mind": {
+        "layout": "A backstage green room: a mirror ringed with half-dead bulbs, folding chairs, a fruit plate that has become something else, a framed photo on the wall.",
+        "exits": [
+          "Back to the Locker Room (Z8).",
+          "STAFF ONLY door to Z10 (Graduation Stage).",
+          "The service corridor (Z S) reached from the stage side."
+        ],
+        "hazards": [
+          "None; honest saferoom on Floor 1.",
+          "Stays open to the end of the floor (house exception, inspired)."
+        ],
+        "cover": [
+          "Chairs and the dressing table."
+        ]
+      },
+      "enemies": [],
+      "enemies_note": "No enemies. Replacement Crawlers, if any, join here.",
+      "cr_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.fixed_encounters"
+          ],
+          "note": "none (non-combat)"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.1.fixed_encounters"
+              ],
+              "display": "none (non-combat): see rules/70-encounter-budget-5e.json#floors.1.fixed_encounters"
+            }
+          ],
+          "display": "none (non-combat): see rules/70-encounter-budget-5e.json#floors.1.fixed_encounters"
+        }
+      },
+      "budget_slot": {
+        "b70": {
+          "kind": "cite",
+          "paths": [
+            "floors.1.xp.by_party_size"
+          ],
+          "note": "Non-combat: no combat budget (daily XP guidance applies)"
+        },
+        "resolved": {
+          "parts": [
+            {
+              "kind": "cite",
+              "paths": [
+                "floors.1.xp.by_party_size"
+              ],
+              "display": "Non-combat: no combat budget (daily XP guidance applies): see rules/70-encounter-budget-5e.json#floors.1.xp.by_party_size"
+            }
+          ],
+          "display": "Non-combat: no combat budget (daily XP guidance applies): see rules/70-encounter-budget-5e.json#floors.1.xp.by_party_size"
+        }
+      },
+      "voice_lines": {
+        "system_intro": {
+          "text": "SAFEROOM CERTIFIED, again. Midterm Onboarding. Everyone who made it this far gets a level, a fruit plate, and a speech nobody asked for.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The boxes all open at once, the way the System likes it: loud, public and a little embarrassing. Don't lose any of it. The next room doesn't have a coat check.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Day closed. The building is going to rearrange itself overnight. Sleep well. We'll let you know in the morning what's left to stand on.",
+          "tag": "[PLAYER-FACING]"
+        }
+      },
+      "loot_hooks": [
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0004",
+          "note": "Stage Whisper Cue Card (scroll).",
+          "display": "Stage Whisper Cue Card (Spell Scroll (Healing Word, level 1))",
+          "tier": "Bronze",
+          "deck": "f01-z09-green-room"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0010",
+          "note": "Midterm Blazer: staff-only roleplay key; no mechanical gate.",
+          "display": "Midterm Blazer, Embroidered STAFF (Clothes, Fine)",
+          "tier": "Bronze",
+          "deck": "f01-z09-green-room"
+        },
+        {
+          "kind": "card",
+          "card_id": "f01-z09-0001",
+          "note": "Vendor Oddity: the Odd Coin fallback if it was not planted at Z3. Never explain it. [GM-ONLY] the plant is a spine object; hand-pick only if the Lost & Found crate was never opened.",
+          "display": "Vendor Oddity (Unappraised) (Spine object: Odd Coin (house; no mechanics on Floor 1))",
+          "tier": "Bronze",
+          "deck": "f01-z09-green-room"
+        },
+        {
+          "kind": "placed",
+          "text": "Box opening during the Long Rest: all earned boxes at once, lowest tier first (00-overview.md section 8.2).",
+          "overview_ref": "00-overview.md section 8.2",
+          "check_text": "Box openings",
+          "amount": {
+            "b70": [
+              {
+                "kind": "cite",
+                "paths": [
+                  "economy_audit.floor_1"
+                ],
+                "note": "Box openings"
+              },
+              {
+                "kind": "cite",
+                "paths": [
+                  "floors.1.boxes"
+                ]
+              }
+            ],
+            "resolved": {
+              "parts": [
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "economy_audit.floor_1"
+                  ],
+                  "display": "Box openings: see rules/70-encounter-budget-5e.json#economy_audit.floor_1"
+                },
+                {
+                  "kind": "cite",
+                  "paths": [
+                    "floors.1.boxes"
+                  ],
+                  "display": "see rules/70-encounter-budget-5e.json#floors.1.boxes"
+                }
+              ],
+              "display": "Box openings: see rules/70-encounter-budget-5e.json#economy_audit.floor_1 | see rules/70-encounter-budget-5e.json#floors.1.boxes"
+            }
+          }
+        }
+      ],
+      "achievement_hooks": [
+        {
+          "id": "ACH-0025",
+          "note": "Saferoom Skeptic, second chance.",
+          "name": "Saferoom Skeptic",
+          "rarity": "Rare",
+          "floor": "Any",
+          "label": "ACH-0025 Saferoom Skeptic (Floor Any, Rare)",
+          "valid": true
+        },
+        {
+          "id": "ACH-0899",
+          "note": "Share Food with the Party, using the fruit plate.",
+          "name": "Orientation Pit: Share food with the party",
+          "rarity": "Rare",
+          "floor": "1",
+          "label": "ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare)",
+          "valid": true
+        }
+      ],
+      "scaling": {
+        "2": "Same room. Fewer boxes, so the ceremony is shorter.",
+        "3": "Same room.",
+        "4": "Full ceremony, as written."
+      },
+      "if_they_do_something_dumb": "If they skip the Long Rest and push on, the day rolls over at the 24-hour mark anyway and the next collapse step posts; they simply are not rested and being unrested is the cost (a field rest is only a Short Rest; price at rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom). If they refuse the rest to chase the stage, Bell's last hint is cheap and the boss variant for a level-1 party applies (00-overview.md section 6.6).",
+      "canon_zone": "z09",
+      "quick_run": {
+        "setup": "The party reaches the Green Room as the day ends.",
+        "decision": "Take the Long Rest and open the boxes now, or push on tired?",
+        "on_success": "Long Rest taken, level reached, boxes opened, and Day 2 starts rested.",
+        "on_failure": "They skip the rest; the 24-hour mark rolls the day anyway and they start Day 2 worn.",
+        "minutes": 6,
+        "tag": "pacing guide",
+        "cut_short": "Open all boxes at once, lowest tier first, and skip the mirror and photo flavor."
+      },
+      "carry_on": {
+        "changes": [
+          {
+            "choice": "Take the Long Rest and open the boxes",
+            "effect": "The Green Room milestone brings level 2; a party that skips it fights the Dean at level 1 and uses Variant B on Day 5.",
+            "reacts_in": [
+              "enc-d02-01",
+              "enc-d05-03"
+            ]
+          },
+          {
+            "choice": "What they leave in the outer zones",
+            "effect": "Anything uncollected in Z0 to Z4 and 3b is gone when those zones close on Day 2; the notice names the loss.",
+            "reacts_in": [
+              "enc-d02-01"
+            ]
+          },
+          {
+            "choice": "Replacement Crawlers join here",
+            "effect": "A joiner arrives with the Day 2 morning and hears the early-descent prompt like everyone else.",
+            "reacts_in": [
+              "enc-d02-01",
+              "enc-d02-03"
+            ]
+          }
+        ],
+        "gm_tracks": [
+          "Long Rest taken, and the level reached",
+          "Boxes opened (list who got what)",
+          "Outer-zone hooks left unclaimed",
+          "Replacement Crawlers joined"
+        ]
+      },
+      "canon": {
+        "table_id": "z09",
+        "name": "Zone 9: The Green Room (Saferoom B)",
+        "tag": "inspired",
+        "confidence": "VERIFIED",
+        "ledger_rows": [
+          "A-184",
+          "K-170",
+          "L-002",
+          "M-010",
+          "M-011",
+          "M-013",
+          "M-282",
+          "M-283"
+        ],
+        "announcement_style": "Same safe-room certification voice as the Break Room, but with \"statistically, this is where we lose people\" gallows humor.",
+        "staging": "Backstage safe room before the finale: rest, box opening and a creepy framed photo of the Dean with crossed-out crawlers.",
+        "table_refs": [
+          "f01-z09-green-room"
+        ]
+      },
+      "proposed_achievements": []
+    }
+  ],
+  "pending_inputs": [
+    {
+      "owner": "Syndicate",
+      "item": "rules/70-encounter-budget-5e.json v0.1.1 (filed): slots with no matching field",
+      "waiting_for": "Most slots on this page now cite the budget file by field path. Any slot still bracketed has no matching field there (for example counts and budgets for the house-built Day 2 to 4 Usher and displaced-vermin encounters); they are listed in the Encounter Bot's build report.",
+      "status": "partly filled; remaining slots listed in the report"
+    },
+    {
+      "owner": "Caleb",
+      "item": "Veto window on one Syndicate default (decision 026, ~9:45 PM CT)",
+      "waiting_for": "The final collapse is fixed at 24 in-game hours into the last day and a Long Rest never ends or skips the floor. (The missed-collapse rule is no longer open: Caleb ruled at ~10:02 PM CT that it is death on every floor, no Reprieve.)",
+      "status": "open (default applies)"
+    },
+    {
+      "owner": "Day-count field",
+      "item": "clock.days",
+      "waiting_for": "Floor 1 is 5 (field set), Floor 2 is 10, Floor 3 is 20 (Caleb, decision 026). Page text takes the day count from the field; nothing is hard-coded.",
+      "status": "settled"
+    },
+    {
+      "owner": "Lore",
+      "item": "Canon table, collapse notices, missed-floor line and zone color",
+      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
+      "status": "received"
+    },
+    {
+      "owner": "Syndicate",
+      "item": "ACH rows for canon A-044, A-151 and A-139",
+      "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
+      "status": "waiting (backlog)"
+    },
+    {
+      "owner": "Encounter Bot",
+      "item": "Days 1 to 5 pages",
+      "waiting_for": "Built with budget citations, the death-on-miss rule, quick runs, carry-on and zone color. Next: a Floor 2 (10-day) spec using the same script (use --allow-other-floors).",
+      "status": "done"
+    }
+  ],
+  "slots": [],
+  "proposal_fields": [],
+  "validation": {
+    "result": "PASS",
+    "pass": 40,
+    "warn": 3,
+    "fail": 0,
+    "spec_sha256": "9107d15f094152d9e5e05becfb02de97ed7bc0aab6fc503222013d132c130d14",
+    "checks": [
+      {
+        "status": "PASS",
+        "check": "budget file present",
+        "detail": "rules/70-encounter-budget-5e.json v0.1.1, sha256 26534aff2128f93d; every figure from it is a GM-adaptable guideline (authority_note)"
+      },
+      {
+        "status": "PASS",
+        "check": "budget references resolve",
+        "detail": "26 distinct field paths cited, all present in rules/70-encounter-budget-5e.json"
+      },
+      {
+        "status": "PASS",
+        "check": "clock.days is a field",
+        "detail": "clock.days=5; page text uses {days}/{day}, nothing hard-coded"
+      },
+      {
+        "status": "PASS",
+        "check": "collapse_order covers every day",
+        "detail": "5 entries, days 1..5, all tagged: inspired (house)"
+      },
+      {
+        "status": "PASS",
+        "check": "day number in range",
+        "detail": "Day 1 of 5"
+      },
+      {
+        "status": "PASS",
+        "check": "short-rest cap field",
+        "detail": "cap=4 per day (a cap, not a promise)"
+      },
+      {
+        "status": "PASS",
+        "check": "collapse order status",
+        "detail": "confirmed per decision 026; the steps only remove hooks and services, and the Detour Tax i"
+      },
+      {
+        "status": "PASS",
+        "check": "final collapse fixed",
+        "detail": "24 in-game hours into Day 5; a Long Rest never ends or skips the floor; rests that would run past it are cut short"
+      },
+      {
+        "status": "PASS",
+        "check": "missed-collapse rule",
+        "detail": "death on every floor, Floor 1 included; no Reprieve; stasis counts as reaching a stairwell; Detour Tax is for a missed key only"
+      },
+      {
+        "status": "PASS",
+        "check": "saferoom rule",
+        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
+      },
+      {
+        "status": "PASS",
+        "check": "achievement caps noted",
+        "detail": "soft cap, Silver ceiling, one Story Box per floor, snark-only allowed"
+      },
+      {
+        "status": "PASS",
+        "check": "zone grouping confirmed",
+        "detail": "outer/mid/Break Room/corridor groups set (inspired); route never cut"
+      },
+      {
+        "status": "PASS",
+        "check": "stairwell timing and early-descent rule filled",
+        "detail": "opens Day 2; stasis if more than 6 hours remain (canon M-276/M-277)"
+      },
+      {
+        "status": "PASS",
+        "check": "clock cites decision 026",
+        "detail": ""
+      },
+      {
+        "status": "PASS",
+        "check": "Lore canon table present",
+        "detail": "/workspace/dcc-lore/tables/canon-floor-1.json (ledger 1.12, 24 zones)"
+      },
+      {
+        "status": "PASS",
+        "check": "canon table hash recorded",
+        "detail": "sha256 515d92e96d9bbbd5, ledger v1.12"
+      },
+      {
+        "status": "PASS",
+        "check": "three routes (dash, loot, clever)",
+        "detail": "3 routes, each with System intro/midpoint/win [PLAYER-FACING]"
+      },
+      {
+        "status": "PASS",
+        "check": "Stairwell key findable 2+ ways",
+        "detail": "3 ways: key-bruiser, key-terminal, key-mystery"
+      },
+      {
+        "status": "PASS",
+        "check": "missing key is a cost, not a wipe",
+        "detail": "instant_wipe=false; the Detour Tax toll is cited from the budget file"
+      },
+      {
+        "status": "PASS",
+        "check": "key availability today",
+        "detail": "Day 1: key-bruiser, key-terminal, key-mystery"
+      },
+      {
+        "status": "PASS",
+        "check": "GM collapse warning",
+        "detail": "present on Day 1 (Floor 1 start, and the last two days): death on a missed collapse, no Reprieve"
+      },
+      {
+        "status": "PASS",
+        "check": "budget table",
+        "detail": "6 rows, each shown with its rules/70 field path (guideline)"
+      },
+      {
+        "status": "PASS",
+        "check": "rest options",
+        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+      },
+      {
+        "status": "PASS",
+        "check": "enc-d01-02 enemies",
+        "detail": "goblin-warrior=resolved, goblin-minion=resolved"
+      },
+      {
+        "status": "PASS",
+        "check": "enc-d01-03 enemies",
+        "detail": "animated-armor=resolved, animated-flying-sword=resolved"
+      },
+      {
+        "status": "PASS",
+        "check": "enc-d01-04 enemies",
+        "detail": "stirge=resolved"
+      },
+      {
+        "status": "PASS",
+        "check": "proposed achievements",
+        "detail": "2 hook entries tagged 'proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate'; rewards are slots; no ids invented"
+      },
+      {
+        "status": "PASS",
+        "check": "loot hooks resolve",
+        "detail": "17 card/item hooks checked against tables/loot-decks and item-reskins"
+      },
+      {
+        "status": "PASS",
+        "check": "achievement ids resolve",
+        "detail": "25 hooks checked against tables/achievements.csv"
+      },
+      {
+        "status": "WARN",
+        "check": "canon ref A-044",
+        "detail": "canon reference only (not a row in tables/achievements.csv) ('Fuck This Floor'); cited as a canon reference only"
+      },
+      {
+        "status": "WARN",
+        "check": "canon ref A-151",
+        "detail": "canon reference only (not a row in tables/achievements.csv) ('The Early Bird Gets To Squirm'); cited as a canon reference only"
+      },
+      {
+        "status": "WARN",
+        "check": "canon ref A-139",
+        "detail": "canon reference only (not a row in tables/achievements.csv) ('You Found Stairs!'); cited as a canon reference only"
+      },
+      {
+        "status": "PASS",
+        "check": "Story Box hooks are GM-only",
+        "detail": "f01-any-0058, f01-any-0063, f01-any-0064, f01-any-0065 tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)"
+      },
+      {
+        "status": "PASS",
+        "check": "no invented CR/budget/credit/loot/DC numbers",
+        "detail": "all such fields are bracketed slots or cite 00-overview.md"
+      },
+      {
+        "status": "PASS",
+        "check": "'Crawlers' never 'champs'",
+        "detail": ""
+      },
+      {
+        "status": "PASS",
+        "check": "Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on",
+        "detail": "31 player-facing and 60 GM extra blocks scanned"
+      },
+      {
+        "status": "PASS",
+        "check": "voice lines are original (no 10-word run copied from the overview)",
+        "detail": ""
+      },
+      {
+        "status": "PASS",
+        "check": "read-aloud blocks are 4 sentences or fewer",
+        "detail": "31 [PLAYER-FACING] blocks checked"
+      },
+      {
+        "status": "PASS",
+        "check": "no set pieces on this page",
+        "detail": "every read-aloud block is short"
+      },
+      {
+        "status": "PASS",
+        "check": "quick run on every encounter",
+        "detail": "5 encounters; minutes are tagged 'pacing guide' (pacing, not difficulty)"
+      },
+      {
+        "status": "PASS",
+        "check": "carry-on on every encounter",
+        "detail": "5 encounters, 29 references to later encounters, all exist and are later"
+      },
+      {
+        "status": "PASS",
+        "check": "any quote is 25 words or fewer",
+        "detail": ""
+      },
+      {
+        "status": "PASS",
+        "check": "Pending inputs section",
+        "detail": "6 entries: budget file, clock numbers, collapse zone groups/costs, canon table, day-count field"
+      }
+    ]
+  }
+}

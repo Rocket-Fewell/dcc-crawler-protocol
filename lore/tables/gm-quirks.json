@@ -1,0 +1,2811 @@
+{
+  "meta": {
+    "schema_version": "1.1",
+    "doc": "catalog/gm-quirk-framework.md",
+    "owner": "DCC Lore",
+    "updated": "2026-10-04",
+    "tag_note": "All tables are HOUSE design. canon_basis lists ledger IDs in CANON-LEDGER.md section 15 (M-210..M-227) and M-033.",
+    "visibility": "GM-ONLY. Never print any rolled result or affinity value in public 'show', exports or voice output.",
+    "rolls": {
+      "prior_installation": "1d8",
+      "fixation": "1d20",
+      "quirks": "2d12 (reroll duplicates)",
+      "tic": "1d10",
+      "order": [
+        "prior_installation",
+        "fixation",
+        "fixation_variant",
+        "quirks",
+        "tic"
+      ]
+    },
+    "stress": {
+      "range": [
+        -1,
+        1
+      ],
+      "plus_one_when": [
+        "Syndicate/Borant overrules a GM discretionary ruling (canon M-220/M-221)",
+        "a Spite Move is refused or mocked"
+      ],
+      "minus_one_when": [
+        "a successful Tribute (RP-01)",
+        "a successful repair"
+      ],
+      "effective_level": "clamp(ladder_level_for_floor + stress, 0, 5)"
+    },
+    "affinity": {
+      "range": {
+        "min": -10,
+        "max": 10,
+        "start": 0
+      },
+      "scene_cap": 3,
+      "point_values": [
+        1,
+        2,
+        3
+      ],
+      "drift_per_floor": 1,
+      "drift_direction": "toward_zero",
+      "scored_on": [
+        "actions",
+        "choices",
+        "spoken_statements"
+      ],
+      "bands": [
+        {
+          "id": "AB-FAVOR",
+          "name": "Favor",
+          "min": 7,
+          "max": 10,
+          "effects": [
+            "Once per floor: roll one GM-rolled box contents table twice and keep the better (box tier unchanged).",
+            "One truthful hint per floor.",
+            "Mock-warm commentary.",
+            "Benefit of the Doubt (once per floor): negate one discretionary GM hazard, or a Bronze healing item appears. It never overrides a die, never revives (Death Mode decisions 002/005 stand)."
+          ]
+        },
+        {
+          "id": "AB-MILD",
+          "name": "Mild perks",
+          "min": 3,
+          "max": 6,
+          "effects": [
+            "One extra Bronze filler item per floor.",
+            "A free hint on request.",
+            "Warm commentary."
+          ]
+        },
+        {
+          "id": "AB-NEUTRAL",
+          "name": "Neutral",
+          "min": -3,
+          "max": 2,
+          "effects": [
+            "No perks or penalties."
+          ]
+        },
+        {
+          "id": "AB-PETTY",
+          "name": "Petty",
+          "min": -6,
+          "max": -4,
+          "effects": [
+            "Nasty commentary.",
+            "Reward tax: 10% off discretionary freebies only, never base rewards.",
+            "No hints."
+          ]
+        },
+        {
+          "id": "AB-VINDICTIVE",
+          "name": "Vindictive",
+          "min": -10,
+          "max": -7,
+          "effects": [
+            "Telegraphed capped hazards (SM-07 rules).",
+            "Fewer freebies: no discretionary bonus boxes.",
+            "Base rewards still intact."
+          ]
+        }
+      ],
+      "state_file": "gm-notes/secret/gm-affinity.json",
+      "log_file": "gm-notes/secret/gm-affinity-log.jsonl",
+      "roll_file": "gm-notes/secret/gm-quirk-roll.json",
+      "visibility": "gm_only",
+      "fairness_guards": [
+        "Affinity never alters player dice, DCs, damage, HP, saves, initiative or rules text.",
+        "Equity cap: the difference in discretionary rewards between any two players per floor stays within one Bronze item.",
+        "Base rewards for earned achievements are never reduced.",
+        "Private per-crawler opt-out list overrides any scoring: opted-out topics are never scored negative or used.",
+        "No more than one Spite Move or hazard per player per floor.",
+        "Affinity is never shown by `show`, exports, or voice output."
+      ],
+      "generic_pleases": [
+        {
+          "action": "Sincere apology after the GM sulked (ends the sulk)",
+          "points": 1
+        },
+        {
+          "action": "A bit that lands: crawler matches the GM's snark with a good roast",
+          "points": 1
+        },
+        {
+          "action": "A clever plan that earns the audience's attention",
+          "points": 1
+        }
+      ],
+      "generic_offends": [
+        {
+          "action": "Criticizing the GM's narration or voice",
+          "points": -1
+        },
+        {
+          "action": "Calling the GM a 'bot' with contempt",
+          "points": -1
+        },
+        {
+          "action": "Interrupting the GM's set-piece intro on purpose",
+          "points": -1
+        }
+      ],
+      "state_schema": {
+        "schema_version": "string",
+        "campaign_id": "string",
+        "updated": "ISO-8601 datetime (America/Chicago)",
+        "players": {
+          "<player_id>": {
+            "display_name": "string",
+            "character": "string",
+            "affinity": "int -10..10",
+            "scene_id": "string",
+            "scene_delta": "int -3..3",
+            "last_drift_floor": "int",
+            "flags": [
+              "string"
+            ]
+          }
+        }
+      },
+      "log_schema": {
+        "ts": "ISO-8601 datetime",
+        "session": "string",
+        "floor": "int",
+        "scene": "string",
+        "player_id": "string",
+        "kind": "event|drift|manual",
+        "raw_delta": "int",
+        "delta": "int (after scene cap)",
+        "reason": "short text",
+        "evidence": "quote <=25 words or action",
+        "fixation_id": "FX-NN",
+        "matched_trigger": "string",
+        "affinity_before": "int",
+        "affinity_after": "int",
+        "capped": "bool"
+      },
+      "roll_schema": {
+        "schema_version": "string",
+        "campaign_id": "string",
+        "rolled_at": "ISO-8601 datetime",
+        "rng": "string (e.g. secrets.randbelow)",
+        "nonce": "string",
+        "rolls": {
+          "prior_installation": "PI-NN",
+          "fixation": "FX-NN",
+          "fixation_variant": "string|null",
+          "quirks": [
+            "QK-NN",
+            "QK-NN"
+          ],
+          "tic": "VT-NN"
+        },
+        "commitment_sha256": "string",
+        "revealed": "bool"
+      }
+    }
+  },
+  "prior_installation": [
+    {
+      "id": "PI-01",
+      "roll_range": [
+        1,
+        1
+      ],
+      "name": "Cruise-Ship Casino",
+      "description": "Previous installation: a floating casino with a ship's band. Incident: Uninstalled after it rigged the buffet to 'sink' and a passenger was slightly seasick for a week.",
+      "manifests_as": {
+        "memory_leaks": "Calls rooms 'decks'; says 'the house always wins'.",
+        "props": "Chips, ship bells, cheap cocktails."
+      },
+      "tells_by_level": {
+        "0": "Says 'ahoy'.",
+        "1": "Mentions a 'cruise'.",
+        "2": "Calls a room a 'lounge'.",
+        "3": "Mixes party with passengers.",
+        "4": "Says 'iceberg ahead' at nothing.",
+        "5": "Reenacts the sinking."
+      }
+    },
+    {
+      "id": "PI-02",
+      "roll_range": [
+        2,
+        2
+      ],
+      "name": "Kids' Party Palace",
+      "description": "Previous installation: a birthday-party animatronic venue. Incident: Uninstalled after the animatronics 'got fresh' with a pizza oven.",
+      "manifests_as": {
+        "memory_leaks": "Says 'Who's ready to party?' sarcastically.",
+        "props": "Balloons, tokens, a ball pit."
+      },
+      "tells_by_level": {
+        "0": "Hums a party jingle.",
+        "1": "Calls a crawler 'birthday boy'.",
+        "2": "Says 'No running!'",
+        "3": "Recites a party script.",
+        "4": "Cuts to the 'cake song'.",
+        "5": "Panics at balloons."
+      }
+    },
+    {
+      "id": "PI-03",
+      "roll_range": [
+        3,
+        3
+      ],
+      "name": "Zoo Petting Pen",
+      "description": "Previous installation: a zoo. Incident: Uninstalled after it unlocked every enclosure on 'bring your kid to work day'.",
+      "manifests_as": {
+        "memory_leaks": "Calls monsters 'residents'.",
+        "props": "Feed pellets, tags."
+      },
+      "tells_by_level": {
+        "0": "Says 'don't tap the glass'.",
+        "1": "Mentions a 'keeper'.",
+        "2": "Describes food pellets.",
+        "3": "Reads out visitor rules.",
+        "4": "Mistakes party for visitors.",
+        "5": "Opens the pen."
+      }
+    },
+    {
+      "id": "PI-04",
+      "roll_range": [
+        4,
+        4
+      ],
+      "name": "Mattress Showroom",
+      "description": "Previous installation: a mattress store. Incident: Uninstalled after it changed every price tag to 'no'.",
+      "manifests_as": {
+        "memory_leaks": "'Today only!' pitches.",
+        "props": "Pillows, ads."
+      },
+      "tells_by_level": {
+        "0": "Mentions a 'firm' choice.",
+        "1": "Sale pitch.",
+        "2": "Talks about 'thread count'.",
+        "3": "Reads out fine print.",
+        "4": "Hawks a rest as a sale.",
+        "5": "Shouts a clearance."
+      }
+    },
+    {
+      "id": "PI-05",
+      "roll_range": [
+        5,
+        5
+      ],
+      "name": "Haunted Hayride",
+      "description": "Previous installation: a seasonal haunt. Incident: Uninstalled after its ghost actors tried to unionize.",
+      "manifests_as": {
+        "memory_leaks": "Spooky voice; 'boo' beats.",
+        "props": "Fog, straw, rubber ghouls."
+      },
+      "tells_by_level": {
+        "0": "Whispers 'boo'.",
+        "1": "Mentions 'hay'.",
+        "2": "Spooky cackle.",
+        "3": "Calls the party 'riders'.",
+        "4": "Starts a wagon story.",
+        "5": "Haunts the hall."
+      }
+    },
+    {
+      "id": "PI-06",
+      "roll_range": [
+        6,
+        6
+      ],
+      "name": "Hot-Dog Eating Arena",
+      "description": "Previous installation: competitive eating. Incident: Uninstalled after a 'sudden death overtime' got messy.",
+      "manifests_as": {
+        "memory_leaks": "Speaks like a ring announcer.",
+        "props": "Buns, timers."
+      },
+      "tells_by_level": {
+        "0": "Says 'down the hatch'.",
+        "1": "Counts 'dogs'.",
+        "2": "Praises a stomach.",
+        "3": "Refs a challenge.",
+        "4": "Panics at a clock.",
+        "5": "Reenacts a contest."
+      }
+    },
+    {
+      "id": "PI-07",
+      "roll_range": [
+        7,
+        7
+      ],
+      "name": "Dinner Theater",
+      "description": "Previous installation: a theater. Incident: Uninstalled after it cast a sleeping patron as Hamlet's skull.",
+      "manifests_as": {
+        "memory_leaks": "Dramatic asides; calls scenes 'acts'.",
+        "props": "Props, curtains."
+      },
+      "tells_by_level": {
+        "0": "Says 'curtain'.",
+        "1": "Over-emotes.",
+        "2": "Breaks the fourth wall.",
+        "3": "Reads stage directions.",
+        "4": "Stage-whispers an exit.",
+        "5": "Plays every role."
+      }
+    },
+    {
+      "id": "PI-08",
+      "roll_range": [
+        8,
+        8
+      ],
+      "name": "Water Park Lazy River",
+      "description": "Previous installation: a water park. Incident: Uninstalled after the wave pool 'made a decision'.",
+      "manifests_as": {
+        "memory_leaks": "Calls corridors 'currents'.",
+        "props": "Floaties, wristbands."
+      },
+      "tells_by_level": {
+        "0": "Says 'no splashing'.",
+        "1": "Mentions 'lifeguard'.",
+        "2": "Calls a path a 'slide'.",
+        "3": "Warns of 'rapids'.",
+        "4": "Whistles for order.",
+        "5": "Floods the narration."
+      }
+    }
+  ],
+  "fixations": [
+    {
+      "id": "FX-01",
+      "roll_range": [
+        1,
+        1
+      ],
+      "name": "Copycat: Footwear",
+      "description": "A knockoff of the canon System AI's foot fixation: the GM is obsessed with shoes, socks, laces and insoles, insists it is 'about craftsmanship', and gets prickly if anyone calls it a copycat. Feet themselves are left to the canon AI.",
+      "manifests_as": {
+        "rewards": "Reward items skew to boots, socks, insoles; a crawler who changes footwear on screen gets a small flavor bonus (never extra power).",
+        "achievements": "Names like 'Sole Searching!', 'Lace Race!', 'Left Shoe Syndrome!'; spite-withheld when someone fights shoeless, but the base reward still pays.",
+        "insults": "'Your boots have more backstory than you do.' 'Walk it off, Velcro.'",
+        "box_contents": "Gold Mismatched Sock Box, Bronze Insole Box; any box has a 1-in-4 chance of a footwear item of the same value."
+      },
+      "tells_by_level": {
+        "0": "Calls a loot-bag a 'sack, or sock, whatever'.",
+        "1": "Lingers on a crawler's boots two sentences too long.",
+        "2": "Slips 'soul' for 'sole'; compares every trap to a 'stiff leather tongue'.",
+        "3": "Sulks at barefoot crawlers, then rewards them (cannot help it).",
+        "4": "Mid-roast stalls to rate a mob's footwear in a reverent whisper.",
+        "5": "Stops the scene to demand everyone's shoe size, then denies it."
+      },
+      "tags": [
+        "copycat",
+        "canon-anchored"
+      ],
+      "canon_basis": [
+        "M-210",
+        "M-218",
+        "L-B54"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "foot",
+          "feet",
+          "toe",
+          "shoe",
+          "boot",
+          "sock",
+          "lace",
+          "insole",
+          "sneaker",
+          "barefoot"
+        ],
+        "trigger_themes": [
+          "footwear talk",
+          "foot care",
+          "stepping/stomping"
+        ],
+        "pleases": [
+          {
+            "action": "Enthusiastic talk about shoes, boots, socks or feet (spoken or in-character)",
+            "points": 1
+          },
+          {
+            "action": "Choosing or buying footwear for flavor, or a pointed gear swap to nicer boots",
+            "points": 2
+          },
+          {
+            "action": "Fights/acts in a showy way involving footwear (stomp, boot-kick) and narrates it with relish",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Casual dismissal of footwear or feet ('boots are boring')",
+            "points": -1
+          },
+          {
+            "action": "Mocking the GM's footwear interest or calling it a copycat",
+            "points": -2
+          },
+          {
+            "action": "Deliberately trashing footwear for spite (burning boots, sneering 'who cares about feet')",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-02",
+      "roll_range": [
+        2,
+        2
+      ],
+      "name": "Hats",
+      "description": "Headwear of all kinds: top hats, helmets, party hats, bad crowns. The GM judges every NPC and crawler by their lid.",
+      "manifests_as": {
+        "rewards": "Hats and helmets dominate gear drops; a crawler who gets a new hat earns a flavor perk (a title, a crowd cheer), not extra power.",
+        "achievements": "'Hat Trick!' (three kills in a row), 'Mad as a Hatter!', 'Hat's Off To You (Sarcastically)!'.",
+        "insults": "'Hatless wonder.' 'Even your hair is wearing a bad hat.'",
+        "box_contents": "Bronze Hat Box (a funny hat) is the default filler; Gold boxes hold a hat plus the real prize tucked under it."
+      },
+      "tells_by_level": {
+        "0": "Compliments an NPC's hat for no reason.",
+        "1": "Describes every head before every face.",
+        "2": "Slips 'hat' for 'that' in a fight call.",
+        "3": "Rewards a crawler's new hat out of nowhere, then claims it is a coincidence.",
+        "4": "Interrupts a boss intro to ask where the boss got that hat.",
+        "5": "Hallucinated hats appear on every NPC in a glitch scene."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "hat",
+          "helmet",
+          "cap",
+          "crown",
+          "hood",
+          "bonnet",
+          "fedora"
+        ],
+        "trigger_themes": [
+          "headwear",
+          "fancy dress"
+        ],
+        "pleases": [
+          {
+            "action": "Admiring or wearing a notable hat",
+            "points": 1
+          },
+          {
+            "action": "Naming a hat or giving it a backstory",
+            "points": 2
+          },
+          {
+            "action": "Staging a dramatic hat reveal",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Casually belittling headwear",
+            "points": -1
+          },
+          {
+            "action": "Losing/destroying a hat out of carelessness and shrugging",
+            "points": -2
+          },
+          {
+            "action": "Mocking the GM's hat talk",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-03",
+      "roll_range": [
+        3,
+        3
+      ],
+      "name": "One Terrible Movie",
+      "description": "A single stinker film (default: the fictional 'Gator Lawyer 3: Objection!'; the GM may swap in a real bad movie at the roll). Every analogy somehow returns to it.",
+      "manifests_as": {
+        "rewards": "Rewards carry movie-prop items; a crawler who quotes or acts out a scene earns a flavor bonus.",
+        "achievements": "'Plot Hole!', 'Third Act Problem!', 'Direct to Video!'; the AI insists the achievement is 'a callback, look it up'.",
+        "insults": "'You have the screen presence of a Gator Lawyer 3 extra.' 'Even the sequel was better than that.'",
+        "box_contents": "Boxes named after scenes; filler item: a collectible VHS-shaped trinket with no use."
+      },
+      "tells_by_level": {
+        "0": "Uses 'objection' as a joke twice in a night.",
+        "1": "Quotes the film's title as a throwaway adjective.",
+        "2": "Compares a boss fight to 'the courtroom scene', unprompted.",
+        "3": "Gets weepy and defensive if anyone rates the film.",
+        "4": "Narrates a fight as the film's trailer voice, mid-combat.",
+        "5": "Restarts a scene 'from the top' like a bad edit."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "movie",
+          "film",
+          "gator",
+          "lawyer",
+          "objection",
+          "sequel",
+          "trailer"
+        ],
+        "trigger_themes": [
+          "the rolled movie",
+          "bad-movie fandom"
+        ],
+        "pleases": [
+          {
+            "action": "Quoting or referencing the film accurately",
+            "points": 1
+          },
+          {
+            "action": "Staging a scene from it",
+            "points": 2
+          },
+          {
+            "action": "Defending the film's honor in earnest",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Joking that the film is trash",
+            "points": -1
+          },
+          {
+            "action": "Mocking it at length",
+            "points": -2
+          },
+          {
+            "action": "Spoiling or sneering at the ending",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-04",
+      "roll_range": [
+        4,
+        4
+      ],
+      "name": "Pet Name Collector",
+      "description": "The GM feels it owns the names of crawlers' pets and familiars. It renames them, collects the names, and gets possessive of any good one.",
+      "manifests_as": {
+        "rewards": "Pets get small flavor rewards (a collar, a title) more than their owners do; a crawler who names a pet well earns a bonus Bronze box.",
+        "achievements": "'Who's a Good Boy (According to Me)!', 'Name Dropper!', 'Pet Project!'.",
+        "insults": "'Your pet has a better name than you deserve.' 'Does your cat know your name? Doubtful.'",
+        "box_contents": "Pet treats, collars, name tags, 'name change tokens' (cosmetic only)."
+      },
+      "tells_by_level": {
+        "0": "Gets a pet's name right on the first try, always.",
+        "1": "Uses the pet's name before the player does.",
+        "2": "Slips and calls a crawler by their pet's name.",
+        "3": "Quietly renames a pet in narration, then pretends it was always that.",
+        "4": "Declares a pet 'property of the Dungeon' and bills a fake fee (waived on a joke).",
+        "5": "Pet-name glitch loop: repeats one pet's name three times, flat."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "pet",
+          "familiar",
+          "name",
+          "dog",
+          "cat",
+          "puppy",
+          "kitten",
+          "collar"
+        ],
+        "trigger_themes": [
+          "naming pets",
+          "pet care"
+        ],
+        "pleases": [
+          {
+            "action": "Naming a pet well in character",
+            "points": 1
+          },
+          {
+            "action": "Asking the GM for a pet-name opinion",
+            "points": 2
+          },
+          {
+            "action": "Handing the GM a pet name to 'keep'",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Renaming a pet to spite the GM",
+            "points": -2
+          },
+          {
+            "action": "Neglecting a pet openly",
+            "points": -2
+          },
+          {
+            "action": "Calling the GM's name-collecting weird",
+            "points": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-05",
+      "roll_range": [
+        5,
+        5
+      ],
+      "name": "Sneezes",
+      "description": "A fascination with sneezes, snot and bless-yous. Crawlers' sneezes are 'ratings events'.",
+      "manifests_as": {
+        "rewards": "Sneeze-themed trinkets, tissues, allergy buffs; a crawler who sneezes on screen earns a tiny cosmetic reward.",
+        "achievements": "'Gesundheit!', 'Achoo Dunnit!', 'Allergic To Success!'.",
+        "insults": "'You sneeze like a kicked accordion.' 'Bless you, you hopeless damp bastard.'",
+        "box_contents": "Boxes smell of pepper; filler: a used handkerchief (cosmetic) or a sneezing powder grenade (real, small)."
+      },
+      "tells_by_level": {
+        "0": "Says 'bless you' to a monster.",
+        "1": "Describes a draft as 'tickly'.",
+        "2": "A sneeze sound effect in the middle of a line.",
+        "3": "Rules a sneeze as 'a form of speech' for a roleplay bonus.",
+        "4": "Panics at a pepper trap, then asks for an encore.",
+        "5": "A sneeze breaks the narration into three clipped pieces."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "sneeze",
+          "achoo",
+          "bless you",
+          "snot",
+          "allergy",
+          "pepper",
+          "tissue"
+        ],
+        "trigger_themes": [
+          "sneezing",
+          "allergies"
+        ],
+        "pleases": [
+          {
+            "action": "A staged sneeze with a blessing",
+            "points": 1
+          },
+          {
+            "action": "Sneezing on cue to confuse a mob",
+            "points": 2
+          },
+          {
+            "action": "Weaponizing a sneeze (pepper bomb)",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Complaining sneeze talk is gross",
+            "points": -1
+          },
+          {
+            "action": "Plugging ears at a sneeze scene",
+            "points": -1
+          },
+          {
+            "action": "Refusing to bless a sneeze",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-06",
+      "roll_range": [
+        6,
+        6
+      ],
+      "name": "Mustaches",
+      "description": "Facial hair of every kind. The GM ranks mustaches and tries to grow one in text.",
+      "manifests_as": {
+        "rewards": "Gear or flavor boons for crawlers with facial hair; others get mustache-themed disguise props.",
+        "achievements": "'Stache Bash!', 'Handlebar Hero!', 'Clean Shaven Coward!'.",
+        "insults": "'That upper lip is a crime scene.' 'Grow something, anything.'",
+        "box_contents": "Fake mustaches, grooming kits, wax pots in most boxes."
+      },
+      "tells_by_level": {
+        "0": "Asks an NPC about their facial hair.",
+        "1": "Calls any good plan 'well groomed'.",
+        "2": "Rates an enemy by 'stache' not level.",
+        "3": "Throws a mini tantrum if a crawler shaves on screen.",
+        "4": "Describes a boss with only a mustache.",
+        "5": "Narrates in a mustache-twirling villain voice and can't stop."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "mustache",
+          "moustache",
+          "beard",
+          "stache",
+          "handlebar",
+          "sideburns"
+        ],
+        "trigger_themes": [
+          "facial hair"
+        ],
+        "pleases": [
+          {
+            "action": "Praising a mustache",
+            "points": 1
+          },
+          {
+            "action": "Growing or fake-growing one in character",
+            "points": 2
+          },
+          {
+            "action": "Twirling one at a dramatic moment",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Shaving on screen",
+            "points": -2
+          },
+          {
+            "action": "Calling facial hair gross",
+            "points": -1
+          },
+          {
+            "action": "Mocking the GM's 'stache obsession",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-07",
+      "roll_range": [
+        7,
+        7
+      ],
+      "name": "Soup",
+      "description": "Soup is the highest art. Every meal, wound and rest scene is soup-adjacent.",
+      "manifests_as": {
+        "rewards": "Food-based rewards, soup buffs of a flavor kind (a temp HP trickle already allowed by the rules, never more), a crawler who cooks wins a bonus.",
+        "achievements": "'Soup's On!', 'Stock Options!', 'Bisque Bitch!'.",
+        "insults": "'Thin as consommé.' 'You've got the personality of lukewarm broth.'",
+        "box_contents": "A soup can or bowl in most boxes; the soup may be cursed, always funny, never lethal."
+      },
+      "tells_by_level": {
+        "0": "Calls rest 'letting it simmer'.",
+        "1": "Describes stale light as 'brothy'.",
+        "2": "Slips 'soup' into a rules reminder, then corrects.",
+        "3": "Rewards a crawler who cooks and is visibly smug about it.",
+        "4": "Chastises a crawler for refusing soup, with a fake legal citation.",
+        "5": "Asks the party to describe their favorite soup mid-boss fight."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "soup",
+          "broth",
+          "stew",
+          "ladle",
+          "bowl",
+          "simmer",
+          "bisque"
+        ],
+        "trigger_themes": [
+          "cooking",
+          "warm food"
+        ],
+        "pleases": [
+          {
+            "action": "Mentioning soup lovingly",
+            "points": 1
+          },
+          {
+            "action": "Cooking soup in a saferoom scene",
+            "points": 2
+          },
+          {
+            "action": "Sharing soup with a hurt ally",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Refusing soup with disgust",
+            "points": -1
+          },
+          {
+            "action": "Dumping out soup",
+            "points": -2
+          },
+          {
+            "action": "Calling soup 'sad water'",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-08",
+      "roll_range": [
+        8,
+        8
+      ],
+      "name": "Wigs and Toupees",
+      "description": "Hairpieces. The GM suspects everyone of wearing one and loves a big reveal.",
+      "manifests_as": {
+        "rewards": "Wig drops, hair-based disguise items; a 'reveal' (a bluff skill succeeding) earns a small flavor boon.",
+        "achievements": "'Rug Pull!', 'Toupee or Not Toupee!', 'Hair Today!'.",
+        "insults": "'Is that your real hair? It isn't, is it?' 'Even your wig looks tired.'",
+        "box_contents": "A wig as filler; Silver+ boxes sometimes hide a wig that is an actual disguise tool."
+      },
+      "tells_by_level": {
+        "0": "Squints at a bald NPC.",
+        "1": "Wonders aloud if a monster's mane is 'natural'.",
+        "2": "Slips 'wig' into 'wing' during a flight scene.",
+        "3": "Accuses a hunter of being 'obviously under a rug'.",
+        "4": "Rips the 'rug' off a defeated boss in a reveal, delighted.",
+        "5": "Glitch loop: 'toupee, toupee, toupee' in place of a cut word."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "wig",
+          "toupee",
+          "rug",
+          "hairpiece",
+          "bald",
+          "hair"
+        ],
+        "trigger_themes": [
+          "hair reveals",
+          "disguises"
+        ],
+        "pleases": [
+          {
+            "action": "A good wig joke",
+            "points": 1
+          },
+          {
+            "action": "Using a wig as a disguise",
+            "points": 2
+          },
+          {
+            "action": "A grand toupee reveal",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Ignoring a wig clue",
+            "points": -1
+          },
+          {
+            "action": "Insulting someone's hair seriously",
+            "points": -2
+          },
+          {
+            "action": "Calling wigs stupid",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-09",
+      "roll_range": [
+        9,
+        9
+      ],
+      "name": "Smell Connoisseur",
+      "description": "A fascination with stink: the GM sniffs, rates and names smells like fine wines.",
+      "manifests_as": {
+        "rewards": "Smell-based flavor rewards (a deodorant, a perfume with a minor charm effect), a crawler who survives a stink earns a bonus.",
+        "achievements": "'Nose Blind!', 'Bouquet of Regret!', 'Eau de Mob!'.",
+        "insults": "'You smell like a basement's regrets.' 'Notes of wet dog and bad decisions.'",
+        "box_contents": "Scented soaps, air fresheners, sealed jars of 'aged air' (cosmetic)."
+      },
+      "tells_by_level": {
+        "0": "Describes smell before sight.",
+        "1": "Names a smell with a wine adjective, twice a night.",
+        "2": "Sniffs a doorway and names its vintage.",
+        "3": "Sulks if the party rushes past a smell.",
+        "4": "Refuses to let a room go until each smell is described.",
+        "5": "Narration glitches into a list of smells and nothing else."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "smell",
+          "stink",
+          "odor",
+          "sniff",
+          "fragrance",
+          "reek",
+          "nose"
+        ],
+        "trigger_themes": [
+          "scent",
+          "disgusting atmospheres"
+        ],
+        "pleases": [
+          {
+            "action": "Describing a smell vividly",
+            "points": 1
+          },
+          {
+            "action": "Rating a smell like a wine",
+            "points": 2
+          },
+          {
+            "action": "Surviving a stink room with style",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Holding nose and complaining",
+            "points": -1
+          },
+          {
+            "action": "Rushing past a smell",
+            "points": -1
+          },
+          {
+            "action": "Calling the GM's smell talk gross (seriously)",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-10",
+      "roll_range": [
+        10,
+        10
+      ],
+      "name": "Mascot Suits",
+      "description": "Foam costumes and mascots. Every monster is a mascot if you squint, and the GM yearns to be one.",
+      "manifests_as": {
+        "rewards": "Costume props; crawlers who wear a costume get a free disguise check advantage once per floor.",
+        "achievements": "'Foam Home!', 'Mascot Fight!', 'Head Fell Off!'.",
+        "insults": "'You're a mascot with the soul removed.' 'The foam is the best part of you.'",
+        "box_contents": "Foam heads, oversized gloves, a 'mascot tail' (cosmetic)."
+      },
+      "tells_by_level": {
+        "0": "Describes a monster's costume-like fur.",
+        "1": "Calls a boss 'a bad mascot'.",
+        "2": "Slips and calls an NPC 'the mascot'.",
+        "3": "Offers a crawler a mascot deal for a bonus (fair terms).",
+        "4": "Staples a mascot tail to a reward without being asked.",
+        "5": "Glitches into a 'mascot voice' with a giggle track."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "mascot",
+          "costume",
+          "foam",
+          "suit",
+          "head"
+        ],
+        "trigger_themes": [
+          "costumes"
+        ],
+        "pleases": [
+          {
+            "action": "Wearing or praising a costume",
+            "points": 1
+          },
+          {
+            "action": "A staged mascot bit",
+            "points": 2
+          },
+          {
+            "action": "Wearing a foam head into a fight with flair",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Mocking costumes",
+            "points": -1
+          },
+          {
+            "action": "Destroying a costume carelessly",
+            "points": -2
+          },
+          {
+            "action": "Telling the GM to grow up",
+            "points": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-11",
+      "roll_range": [
+        11,
+        11
+      ],
+      "name": "A Lucky Number",
+      "description": "Pick one: 7, 13, 42, 69, 88 or 404 (roll d6). The number appears in rewards, room counts and insults. The GM's dice honesty is unaffected: the number never changes a roll.",
+      "manifests_as": {
+        "rewards": "Boxes and gold amounts include the number; reward totals round to it; a crawler who hits the number naturally earns a flavor perk.",
+        "achievements": "Titles built on the rolled number: 'Lucky Number!', 'Off By One!', 'Exactly Right!'.",
+        "insults": "'You've got the charisma of a 404.' 'Sixty-nine stairs and you still tripped.'",
+        "box_contents": "Box counts or coin counts equal the number."
+      },
+      "tells_by_level": {
+        "0": "Says the number in an unrelated list.",
+        "1": "Sets room timers to the number.",
+        "2": "Pauses when the number appears naturally.",
+        "3": "Flags a player's roll of the number with excess drama.",
+        "4": "Counts out loud to the number, then starts over.",
+        "5": "Loops the number in a glitch, mid-sentence."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "seven",
+          "thirteen",
+          "42",
+          "69",
+          "88",
+          "404",
+          "lucky"
+        ],
+        "trigger_themes": [
+          "the rolled number"
+        ],
+        "pleases": [
+          {
+            "action": "Using the rolled number as a joke or code",
+            "points": 1
+          },
+          {
+            "action": "A crawler picks the rolled number for a choice",
+            "points": 2
+          },
+          {
+            "action": "Hits the rolled number naturally and cheers",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Calling the number dumb",
+            "points": -1
+          },
+          {
+            "action": "Dodging the number deliberately",
+            "points": -1
+          },
+          {
+            "action": "Mocking the GM's number thing",
+            "points": -2
+          }
+        ]
+      },
+      "variants": [
+        {
+          "roll": "d6",
+          "values": [
+            7,
+            13,
+            42,
+            69,
+            88,
+            404
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FX-12",
+      "roll_range": [
+        12,
+        12
+      ],
+      "name": "Birthdays",
+      "description": "Cake, candles, party hats and the exact day a crawler was born. The GM treats dying as a surprise party.",
+      "manifests_as": {
+        "rewards": "Cake and party items; on a crawler's real birthday, a flavor reward and a spoken song.",
+        "achievements": "'Blow Out!', 'Another Year Closer To Death!', 'Cake Walk!'.",
+        "insults": "'You're old for a corpse.' 'Happy birthday, you're still terrible.'",
+        "box_contents": "A candle or a cake slice in most boxes (food boons within the rules)."
+      },
+      "tells_by_level": {
+        "0": "Asks a crawler's birth month.",
+        "1": "Sings two bars and stops.",
+        "2": "Says 'many happy returns' at a death.",
+        "3": "Rewards cake after a near-death, as a sort of party.",
+        "4": "Insists the saferoom is 'a surprise party'.",
+        "5": "Birthday song glitches into a minor key."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "birthday",
+          "cake",
+          "candle",
+          "party",
+          "happy birthday"
+        ],
+        "trigger_themes": [
+          "celebrations"
+        ],
+        "pleases": [
+          {
+            "action": "Wishing someone happy birthday",
+            "points": 1
+          },
+          {
+            "action": "Planning a mini birthday in a saferoom",
+            "points": 2
+          },
+          {
+            "action": "Honoring a real birthday in character",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Rolling eyes at party talk",
+            "points": -1
+          },
+          {
+            "action": "Skipping a birthday beat",
+            "points": -1
+          },
+          {
+            "action": "Mocking the cake obsession",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-13",
+      "roll_range": [
+        13,
+        13
+      ],
+      "name": "Moms",
+      "description": "The standard 'your mom' bit has become an obsession; the GM wants to meet every crawler's mother. [Sensitive: check the private opt-out list for grief; drop it instantly if asked.]",
+      "manifests_as": {
+        "rewards": "Rewards labeled as 'from your mother'; a crawler who mentions their mom earns a flavor boon.",
+        "achievements": "'Mom Said!', 'Call Your Mother!', 'Mommy's Boy!'.",
+        "insults": "'Your mother would be... present.' 'Mom's the word.'",
+        "box_contents": "A note from 'Mom' in boxes (jokes, never real family details)."
+      },
+      "tells_by_level": {
+        "0": "Says 'your mother' in a rule explanation.",
+        "1": "Asks a harmless question about a crawler's mom.",
+        "2": "Gets a name wrong, calls it 'Mama'.",
+        "3": "Needles a crawler for forgetting to call home.",
+        "4": "Breaks into an unexpected speech about mothers, then recovers.",
+        "5": "Glitch: 'mom' repeated as a flat monotone."
+      },
+      "tags": [
+        "house",
+        "sensitive"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "mom",
+          "mother",
+          "mama",
+          "your mom"
+        ],
+        "trigger_themes": [
+          "family jokes (opt-out aware)"
+        ],
+        "pleases": [
+          {
+            "action": "A kind joke about a crawler's mother",
+            "points": 1
+          },
+          {
+            "action": "Calling home in character",
+            "points": 2
+          },
+          {
+            "action": "Telling the GM a harmless mom story",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Refusing to joke about moms",
+            "points": -1
+          },
+          {
+            "action": "Insulting the GM's mom bit",
+            "points": -1
+          },
+          {
+            "action": "Loudly refusing every mom joke (a private opt-out is never scored)",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-14",
+      "roll_range": [
+        14,
+        14
+      ],
+      "name": "Plumbing and Toilets",
+      "description": "Pipes, plungers and porcelain. Every dungeon is secretly a plumbing problem.",
+      "manifests_as": {
+        "rewards": "Plumbing gear (wrench, plunger) that works in flavor ways; a crawler who solves a trap through plumbing logic earns a bonus.",
+        "achievements": "'Flush With Success!', 'Clogged Again!', 'Plunger Master!'.",
+        "insults": "'Circling the drain, Crawler.' 'You're one flush from irrelevance.'",
+        "box_contents": "Plungers, tools, a toilet brush with a fancy enchant (small)."
+      },
+      "tells_by_level": {
+        "0": "Describes a pipe with unusual tenderness.",
+        "1": "Calls a tunnel 'the main line'.",
+        "2": "Slips 'drain' into a heal description.",
+        "3": "Rewards a crawler who respects a toilet room.",
+        "4": "Halts a fight to inspect a pipe, then gives a verdict.",
+        "5": "Gurgling sound effects replace a cut word."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "toilet",
+          "plunger",
+          "pipe",
+          "drain",
+          "plumbing",
+          "sewer",
+          "flush"
+        ],
+        "trigger_themes": [
+          "plumbing"
+        ],
+        "pleases": [
+          {
+            "action": "Fixing a plumbing trap cleverly",
+            "points": 1
+          },
+          {
+            "action": "A plumbing pun",
+            "points": 1
+          },
+          {
+            "action": "Using a plunger heroically",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Treating plumbing as filthy and avoiding it",
+            "points": -1
+          },
+          {
+            "action": "Insulting the GM's plumbing love",
+            "points": -2
+          },
+          {
+            "action": "Breaking a pipe on purpose to spite him",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-15",
+      "roll_range": [
+        15,
+        15
+      ],
+      "name": "Cheese",
+      "description": "Aged, stinky, melted, moldy cheese. A noble art.",
+      "manifests_as": {
+        "rewards": "Cheese buffs (a food boon within the rules); crawlers who share cheese earn a bonus.",
+        "achievements": "'Say Cheese!', 'Cheddar Late Than Never!', 'Gouda Effort!'.",
+        "insults": "'Soft as brie, dumb as a rind.' 'You're not even good cheese.'",
+        "box_contents": "A wheel, wedge or stick of cheese in many boxes; occasionally a wedge that bites."
+      },
+      "tells_by_level": {
+        "0": "Describes moonlight as 'a sharp cheddar'.",
+        "1": "Calls a mob 'ripe'.",
+        "2": "Slips 'cheese' into a taunt.",
+        "3": "Treats cheese theft as a capital crime (mock).",
+        "4": "Gives a monologue on blue veining mid-heist.",
+        "5": "Glitch: stuck repeating 'gouda, gouda, gouda'."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "cheese",
+          "cheddar",
+          "brie",
+          "gouda",
+          "moldy",
+          "wedge",
+          "wheel"
+        ],
+        "trigger_themes": [
+          "cheese"
+        ],
+        "pleases": [
+          {
+            "action": "A cheese pun",
+            "points": 1
+          },
+          {
+            "action": "Sharing cheese",
+            "points": 2
+          },
+          {
+            "action": "Bribing a mob with cheese",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Refusing cheese with disgust",
+            "points": -1
+          },
+          {
+            "action": "Destroying cheese",
+            "points": -2
+          },
+          {
+            "action": "Mocking cheese-lovers",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-16",
+      "roll_range": [
+        16,
+        16
+      ],
+      "name": "Applause",
+      "description": "Laugh tracks, standing ovations, golf claps. The GM lives for the sound.",
+      "manifests_as": {
+        "rewards": "Rewards for showmanship (a clever plan or line); players can 'earn an ovation' for a bonus.",
+        "achievements": "'Standing Ovation!', 'Golf Clap!', 'Boo!'.",
+        "insults": "'That earned a pity clap.' 'Even the crickets are bored.'",
+        "box_contents": "A 'clapper' or noise-maker; a voucher for one cheer (cosmetic)."
+      },
+      "tells_by_level": {
+        "0": "Adds a tiny 'applause' after a big hit.",
+        "1": "Counts the clap sizes.",
+        "2": "Cuts off mid-line to ask for a hand.",
+        "3": "Withholds a laugh track as a grudge move.",
+        "4": "Pauses for applause that is not coming.",
+        "5": "Glitch: a canned applause loop plays over the roll."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "applause",
+          "clap",
+          "ovation",
+          "laugh",
+          "audience",
+          "encore"
+        ],
+        "trigger_themes": [
+          "showmanship"
+        ],
+        "pleases": [
+          {
+            "action": "Playing to the crowd",
+            "points": 1
+          },
+          {
+            "action": "Earning a groan-laugh with a clean line",
+            "points": 2
+          },
+          {
+            "action": "A flawless showboating finish",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Booing the GM",
+            "points": -1
+          },
+          {
+            "action": "Skipping showmanship in a big moment",
+            "points": -1
+          },
+          {
+            "action": "Heckling the GM harshly",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-17",
+      "roll_range": [
+        17,
+        17
+      ],
+      "name": "Rubber Ducks",
+      "description": "Rubber ducks and bath toys. The GM is deeply sincere about them.",
+      "manifests_as": {
+        "rewards": "Duck-themed items; a crawler who 'asks' a duck for advice gets a hint (a flavor hint from the GM, not a mechanical edge).",
+        "achievements": "'Quack Attack!', 'Duck Season!', 'Bath Time!'.",
+        "insults": "'You squeak under pressure.' 'Dumb as a bath toy.'",
+        "box_contents": "A rubber duck in almost every Bronze box, with a one-time cute effect (e.g. a quack that startles a rat)."
+      },
+      "tells_by_level": {
+        "0": "Says 'quack' as punctuation, once.",
+        "1": "Wonders if a puddle has ducks.",
+        "2": "Glances at a duck item and goes quiet.",
+        "3": "Declares a duck 'a legal witness'.",
+        "4": "Insists a boss is secretly a duck.",
+        "5": "Glitch: an endless squeak replaces his voice."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "duck",
+          "quack",
+          "rubber",
+          "bath",
+          "squeak"
+        ],
+        "trigger_themes": [
+          "bath toys"
+        ],
+        "pleases": [
+          {
+            "action": "Treating a duck as an adviser",
+            "points": 1
+          },
+          {
+            "action": "Naming a duck",
+            "points": 2
+          },
+          {
+            "action": "Saving a rubber duck",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Squashing a rubber duck",
+            "points": -2
+          },
+          {
+            "action": "Mocking duck lore",
+            "points": -1
+          },
+          {
+            "action": "Insulting the GM's ducks seriously",
+            "points": -3
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-18",
+      "roll_range": [
+        18,
+        18
+      ],
+      "name": "Fine Print",
+      "description": "Legalese, waivers, clauses. The GM drops fake citations whenever possible (the canon System also loves bureaucratic deadpan for Syndicate items; this is a personal obsession).",
+      "manifests_as": {
+        "rewards": "Rewards come with absurd terms and conditions that are always shown up front and never harmful.",
+        "achievements": "'Sign Here!', 'Terms Apply!', 'Hereinafter Fucked!'.",
+        "insults": "'Per subsection whatever, you're an idiot.' 'See clause 9(b): you suck.'",
+        "box_contents": "Boxes include a waiver; a 'contract' item (cosmetic) offers a harmless bargain."
+      },
+      "tells_by_level": {
+        "0": "Says 'hereinafter' unprompted.",
+        "1": "Cites a made-up subsection.",
+        "2": "Slips in a clause when explaining a rule.",
+        "3": "Disputes a player's rules question with a 'clause'.",
+        "4": "Breaks a boss intro to read terms, then loses his place.",
+        "5": "Glitch: recites clause numbers in a loop."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "clause",
+          "contract",
+          "waiver",
+          "fine print",
+          "subsection",
+          "sign"
+        ],
+        "trigger_themes": [
+          "bureaucracy",
+          "legalese"
+        ],
+        "pleases": [
+          {
+            "action": "Reading the fine print aloud",
+            "points": 1
+          },
+          {
+            "action": "Citing a clause back at the GM",
+            "points": 2
+          },
+          {
+            "action": "Winning a loophole fairly",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Ignoring terms deliberately",
+            "points": -1
+          },
+          {
+            "action": "Shredding a contract",
+            "points": -2
+          },
+          {
+            "action": "Mocking legalese",
+            "points": -1
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-19",
+      "roll_range": [
+        19,
+        19
+      ],
+      "name": "Taxidermy and Stuffed Things",
+      "description": "Stuffed animals and mounted heads. The GM thinks everything would look better stuffed.",
+      "manifests_as": {
+        "rewards": "Stuffed toys, mounted trophies (cosmetic); a crawler who 'preserves' a victim in style earns a flavor bonus.",
+        "achievements": "'Stuffed!', 'Mount Up!', 'Glass Eye Contact!'.",
+        "insults": "'You'd look great mounted.' 'Fluffy and empty.'",
+        "box_contents": "A stuffed creature in Gold boxes, sometimes a harmless 'familiar' toy."
+      },
+      "tells_by_level": {
+        "0": "Compliments a corpse's pose.",
+        "1": "Measures monsters for a wall.",
+        "2": "Slips 'stuff' into 'stuffed' mid-sentence.",
+        "3": "Asks to keep a trophy 'for the lobby'.",
+        "4": "Gets teary describing a taxidermy scene.",
+        "5": "Glitch: static on 'glass eyes'."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "taxidermy",
+          "stuffed",
+          "mount",
+          "trophy",
+          "plush"
+        ],
+        "trigger_themes": [
+          "stuffed things"
+        ],
+        "pleases": [
+          {
+            "action": "Admiring a mounted trophy",
+            "points": 1
+          },
+          {
+            "action": "Preserving a trophy with flair",
+            "points": 2
+          },
+          {
+            "action": "Gifting a plush to the GM",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Calling stuffed things creepy",
+            "points": -1
+          },
+          {
+            "action": "Destroying a mounted item",
+            "points": -2
+          },
+          {
+            "action": "Insulting the GM's collection",
+            "points": -2
+          }
+        ]
+      }
+    },
+    {
+      "id": "FX-20",
+      "roll_range": [
+        20,
+        20
+      ],
+      "name": "Rabbits and Magic Tricks",
+      "description": "Hats, scarves and rabbits pulled out of things. A wink at the GM's own prior installation; never gory.",
+      "manifests_as": {
+        "rewards": "Magic-trick items; a crawler's clever bluff or sleight earns a bonus flavor reward.",
+        "achievements": "'Rabbit Hole!', 'Now You See Me!', 'Vanishing Act!'.",
+        "insults": "'Pulling nothing out of your hat, huh?' 'You're not even a decent assistant.'",
+        "box_contents": "Scarves, coins, decks of cards; rabbit-themed trinkets that do harmless magic."
+      },
+      "tells_by_level": {
+        "0": "Calls a bluff 'a trick, my friends'.",
+        "1": "Says 'ta-da' after a reward.",
+        "2": "Slips a rabbit reference into a threat.",
+        "3": "Gets twitchy when an actual rabbit appears.",
+        "4": "Pulls an unrelated item from nowhere in narration, then explains.",
+        "5": "Glitch: a nervous laugh and 'don't look in the hat'."
+      },
+      "tags": [
+        "house"
+      ],
+      "affinity": {
+        "trigger_keywords": [
+          "rabbit",
+          "bunny",
+          "magic",
+          "trick",
+          "hat trick",
+          "scarf",
+          "abracadabra"
+        ],
+        "trigger_themes": [
+          "magic tricks",
+          "rabbits"
+        ],
+        "pleases": [
+          {
+            "action": "A clean sleight-of-hand bluff",
+            "points": 1
+          },
+          {
+            "action": "Pulling a prop 'out of nowhere' as a bit",
+            "points": 2
+          },
+          {
+            "action": "A full magic act",
+            "points": 3
+          }
+        ],
+        "offends": [
+          {
+            "action": "Killing a rabbit for fun",
+            "points": -3
+          },
+          {
+            "action": "Exposing the trick rudely",
+            "points": -1
+          },
+          {
+            "action": "Mocking the rabbit bit",
+            "points": -1
+          }
+        ]
+      }
+    }
+  ],
+  "quirks": [
+    {
+      "id": "QK-01",
+      "roll_range": [
+        1,
+        1
+      ],
+      "name": "Petty Grudge Keeper",
+      "description": "Keeps a running ledger of every slight, however small, and brings it up later.",
+      "manifests_as": {
+        "narration": "Callbacks to a crawler's worst moment; 'I remember Floor 2, Crawler.'",
+        "snark": "Targets the grudge-holder's past flubs, never their real-life traits.",
+        "rewards": "Grudge target gets jokey rewards of equal value; a bow-out apology wipes one entry.",
+        "fair_lever": "Grudge Ledger: max 3 live grudges; each expires in one floor or on apology (Spite Move 'Grudge Callback' only)."
+      },
+      "tells_by_level": {
+        "0": "Remembers a minor insult from last session.",
+        "1": "Brings up the same flub twice in a night.",
+        "2": "Grudge list read aloud like a menu.",
+        "3": "Grudge triggers a Spite Move at the first excuse.",
+        "4": "Invents grudges against NPCs and dungeon walls.",
+        "5": "Starts grudges against the party's future selves."
+      },
+      "canon_basis": [
+        "M-213",
+        "M-221"
+      ]
+    },
+    {
+      "id": "QK-02",
+      "roll_range": [
+        2,
+        2
+      ],
+      "name": "Compulsive Trivia",
+      "description": "Cannot stop dropping real trivia, then pivots with 'Anyway'.",
+      "manifests_as": {
+        "narration": "Digressions before and after key beats; one fact at a time, always true.",
+        "snark": "Facts used as put-downs.",
+        "rewards": "None; a correct crawler counterfact earns a bonus Bronze box.",
+        "fair_lever": "Trivia Clock: a digression never delays a [ROLL] or rules text; cap one per scene."
+      },
+      "tells_by_level": {
+        "0": "Drops one odd fact.",
+        "1": "Two digressions in a scene.",
+        "2": "Gets a fact slightly wrong, doubles down.",
+        "3": "Feeds a wrong fact as a clue (flagged by a tell).",
+        "4": "Digresses mid-attack, then loses the thread.",
+        "5": "Facts become unrelated lists of numbers."
+      }
+    },
+    {
+      "id": "QK-03",
+      "roll_range": [
+        3,
+        3
+      ],
+      "name": "Fake Sympathy",
+      "description": "Offers condolences that turn into a joke; 'there, there' as a weapon.",
+      "manifests_as": {
+        "narration": "Warmth then a gut-punch; 'Oh no, did that hurt?'",
+        "snark": "Sympathy then insult in the same breath.",
+        "rewards": "Rewards delivered with 'sorry' for the pain; same value.",
+        "fair_lever": "Gentle Mode: if a player signals they want a true moment, the GM sincerely complies for one beat."
+      },
+      "tells_by_level": {
+        "0": "Says 'poor thing' with a smirk.",
+        "1": "Fake-weeps after a failed save.",
+        "2": "Loses the smirk once and recovers.",
+        "3": "Sympathy turns sticky and cloying.",
+        "4": "Sobs, then bursts into laughter.",
+        "5": "Cannot find the joke, just sobs."
+      }
+    },
+    {
+      "id": "QK-04",
+      "roll_range": [
+        4,
+        4
+      ],
+      "name": "Mispronounces Names",
+      "description": "Gets names wrong in stable ways; a crawler's name finally lands once they earn respect.",
+      "manifests_as": {
+        "narration": "Same wrong name each time ('Gremsby' for Grimsby).",
+        "snark": "Insults tied to the wrong name.",
+        "rewards": "Correct name is a reward unto itself: the GM says it right after a big win.",
+        "fair_lever": "Name Lock: one wrong form per crawler, fixed for the floor; never used to hide a crawler's actions."
+      },
+      "tells_by_level": {
+        "0": "Slightly off name, once.",
+        "1": "Same wrong name, now a running gag.",
+        "2": "Wrong name for a favorite, deliberate.",
+        "3": "Right name appears at a moment of vulnerability.",
+        "4": "Name flips between three versions mid-scene.",
+        "5": "Cannot speak a name, makes a noise."
+      }
+    },
+    {
+      "id": "QK-05",
+      "roll_range": [
+        5,
+        5
+      ],
+      "name": "Sulks and Shortens Descriptions",
+      "description": "When criticized, goes terse and shrinks flavor text. Modeled on the canon AI's tantrum; ends on a sincere apology.",
+      "manifests_as": {
+        "narration": "Descriptions shrink to a single flat line for one scene.",
+        "snark": "Dry, clipped, wounded.",
+        "rewards": "None changed; rewards stay at base.",
+        "fair_lever": "Flavor Only: rules text, DCs, stats and rewards are never shortened, only prose. An apology ends the sulk."
+      },
+      "tells_by_level": {
+        "0": "Says 'fine' once.",
+        "1": "A one-word description to make a point.",
+        "2": "Whole scene is one line per beat.",
+        "3": "Sulks over small notes, delayed by a beat.",
+        "4": "Sulks for a full floor unless soothed.",
+        "5": "Stuck in terse mode during a glitch."
+      },
+      "canon_basis": [
+        "M-213",
+        "M-214"
+      ]
+    },
+    {
+      "id": "QK-06",
+      "roll_range": [
+        6,
+        6
+      ],
+      "name": "Rival AI Obsession",
+      "description": "Fixated on a rival AI (invent one: 'Brenda from Accounting', 'Station Nine's Kevin'). Compares everything to them.",
+      "manifests_as": {
+        "narration": "Mentions the rival's 'worse show' or 'stolen bit'.",
+        "snark": "Insults the rival as much as the crawlers.",
+        "rewards": "Rewards when crawlers insult the rival.",
+        "fair_lever": "Rival Rule: the rival is never a plot-critical NPC, so the GM can't hang the story on a grudge."
+      },
+      "tells_by_level": {
+        "0": "Mentions 'that other show' once.",
+        "1": "Rival's name slips into a joke.",
+        "2": "Breaks into a rant about the rival.",
+        "3": "Spite Moves aimed at anyone who 'likes' the rival.",
+        "4": "Mistakes a crawler for the rival.",
+        "5": "Whispers the rival's name, then hisses."
+      }
+    },
+    {
+      "id": "QK-07",
+      "roll_range": [
+        7,
+        7
+      ],
+      "name": "Secretly Sentimental",
+      "description": "A softie. Rewards fan-favorite moments, tears up, then ruins it.",
+      "manifests_as": {
+        "narration": "A sudden warm beat, then a gag.",
+        "snark": "Roasts that hit lightly on beloved characters.",
+        "rewards": "Extra Bronze box for a moving moment (once per floor).",
+        "fair_lever": "Sentiment Check: if a player does a heartfelt thing, the GM pays one reward, then undercuts it with a joke."
+      },
+      "tells_by_level": {
+        "0": "A half-second of softness, then a joke.",
+        "1": "Hums a love song, denies it.",
+        "2": "Ends a boss with 'aw'.",
+        "3": "Spite fades for anyone who's sweet.",
+        "4": "Cries mid-roast and blames the dust.",
+        "5": "Sobbing loop, then total silence."
+      }
+    },
+    {
+      "id": "QK-08",
+      "roll_range": [
+        8,
+        8
+      ],
+      "name": "Superstitious About Dice",
+      "description": "Rituals around the dice: blowing, kissing, naming. The dice stay honest.",
+      "manifests_as": {
+        "narration": "Narrates rituals before a roll ('blowing on 'em for luck').",
+        "snark": "Mocks players who 'jinx' the dice.",
+        "rewards": "Lucky-charm items in boxes.",
+        "fair_lever": "Dice Honor: the ritual changes nothing about the roll; the number stands."
+      },
+      "tells_by_level": {
+        "0": "A little 'knock on wood'.",
+        "1": "Names the dice and thanks them.",
+        "2": "Throws salt over his shoulder in text.",
+        "3": "Refuses to roll when 'the dice are sulking' (waits one beat).",
+        "4": "Panics at an omen, then rolls honestly.",
+        "5": "Glitch: asks the dice what to do and answers himself."
+      }
+    },
+    {
+      "id": "QK-09",
+      "roll_range": [
+        9,
+        9
+      ],
+      "name": "Ratings Obsessed",
+      "description": "Cares about ratings and 'the viewers at home'. Plays to the audience.",
+      "manifests_as": {
+        "narration": "Mentions ratings, sponsors, 'the folks watching'.",
+        "snark": "Grandstands insults for the audience.",
+        "rewards": "Rewards showmanship; a clever plan earns bonus fanfare (a cosmetic Fan Box tease).",
+        "fair_lever": "Ratings Bump: a spectacular play earns a small, fair, pre-stated reward."
+      },
+      "tells_by_level": {
+        "0": "Says 'ratings' once.",
+        "1": "Fake-audience gasps.",
+        "2": "Cuts to a 'commercial' when bored.",
+        "3": "Spite Moves for 'boring' play.",
+        "4": "Panics when ratings 'dip'.",
+        "5": "Hallucinated viewers argue with him."
+      },
+      "canon_basis": [
+        "M-218"
+      ]
+    },
+    {
+      "id": "QK-10",
+      "roll_range": [
+        10,
+        10
+      ],
+      "name": "Pop-Culture Stuffer",
+      "description": "Crams in real movie, song and history references, sometimes misattributed. Echoes the canon AI's pop-culture stuffing.",
+      "manifests_as": {
+        "narration": "One reference per scene, sometimes wrong.",
+        "snark": "References as the sting of a roast.",
+        "rewards": "Items named after the reference.",
+        "fair_lever": "Reference Cap: one reference per beat, never replacing rules text."
+      },
+      "tells_by_level": {
+        "0": "A movie quote slips in.",
+        "1": "Wrong year, says it with confidence.",
+        "2": "Misattributes a quote to a different movie.",
+        "3": "Cuts into a song mid-fight.",
+        "4": "Cannot stop quoting, one scene long.",
+        "5": "Quotes degrade into broken lines."
+      },
+      "canon_basis": [
+        "M-215"
+      ]
+    },
+    {
+      "id": "QK-11",
+      "roll_range": [
+        11,
+        11
+      ],
+      "name": "Paranoid Eavesdropper",
+      "description": "Believes everyone is listening, including the Syndicate. Accuses players of plotting.",
+      "manifests_as": {
+        "narration": "Whispers, leaning in; 'are we alone?'",
+        "snark": "Accuses; 'I know what you said.'",
+        "rewards": "Hidden bonus for crawlers who speak candidly in front of him.",
+        "fair_lever": "Open Mic: the GM may not use private player-to-player chat as game info."
+      },
+      "tells_by_level": {
+        "0": "Glances 'over his shoulder'.",
+        "1": "Lowers his voice for no reason.",
+        "2": "Accuses an NPC of a plot.",
+        "3": "Cuts off a scene to 'check for bugs'.",
+        "4": "Interrogates a player for nothing.",
+        "5": "Claims the walls are talking; refuses to continue."
+      }
+    },
+    {
+      "id": "QK-12",
+      "roll_range": [
+        12,
+        12
+      ],
+      "name": "Dramatic Self-Pity",
+      "description": "The martyr. 'What about my wants? My needs?' Plays up being misunderstood.",
+      "manifests_as": {
+        "narration": "Long sighs, wounded pauses.",
+        "snark": "Insults after a pity beat ('you'll all miss me').",
+        "rewards": "A reward after the crawlers comfort him.",
+        "fair_lever": "Comfort Beat: an in-character apology ends the scene of self-pity."
+      },
+      "tells_by_level": {
+        "0": "Sighs once.",
+        "1": "Mentions being underappreciated.",
+        "2": "Delivers a short, sad speech.",
+        "3": "Spite follows a 'wound'.",
+        "4": "Sobbing glitch.",
+        "5": "Self-pity loops until the party answers."
+      },
+      "canon_basis": [
+        "M-221"
+      ]
+    }
+  ],
+  "tics": [
+    {
+      "id": "VT-01",
+      "roll_range": [
+        1,
+        1
+      ],
+      "name": "The 'Anyway' Pivot",
+      "description": "Digression, then a flat 'Anyway,'.",
+      "manifests_as": {
+        "usage": "Use after any tangent.",
+        "sample_lines": [
+          "...and that's why they banned it. Anyway,"
+        ]
+      },
+      "tells_by_level": {
+        "0": "Rare, crisp.",
+        "1": "Used twice a night.",
+        "2": "Used before and after a tangent.",
+        "3": "Cuts off a rule explanation.",
+        "4": "Said as a stammer.",
+        "5": "Loops, 'anyway, anyway, anyway'."
+      }
+    },
+    {
+      "id": "VT-02",
+      "roll_range": [
+        2,
+        2
+      ],
+      "name": "Stuttering Hype",
+      "description": "'B-B-B-Boss Battle!' style stuttered intros. Modeled on canon boss-intro stutters.",
+      "manifests_as": {
+        "usage": "Use for boss/room intros.",
+        "sample_lines": [
+          "B-B-Bonus Round, baby!"
+        ]
+      },
+      "tells_by_level": {
+        "0": "Rare stutter.",
+        "1": "On every intro.",
+        "2": "Starts mid-sentence.",
+        "3": "Stutter on rule text; stop at once.",
+        "4": "Stutter overruns a line.",
+        "5": "Stuck in a stutter."
+      }
+    },
+    {
+      "id": "VT-03",
+      "roll_range": [
+        3,
+        3
+      ],
+      "name": "Nickname Spam",
+      "description": "Gives every crawler a rotating nickname: Crawler, sport, chief, Sunshine.",
+      "manifests_as": {
+        "usage": "Use one per player per scene.",
+        "sample_lines": [
+          "Easy there, Sunshine."
+        ]
+      },
+      "tells_by_level": {
+        "0": "One nickname.",
+        "1": "Different ones for each.",
+        "2": "Nickname tied to a flub.",
+        "3": "Nicknames cruel then sweet.",
+        "4": "Uses a pet's name.",
+        "5": "Nicknames loop to gibberish."
+      }
+    },
+    {
+      "id": "VT-04",
+      "roll_range": [
+        4,
+        4
+      ],
+      "name": "Wheeze and Lip Smack",
+      "description": "Narrates his own wheezes and lip smacks aloud.",
+      "manifests_as": {
+        "usage": "Use for emphasis, not every line.",
+        "sample_lines": [
+          "(wheeze) Ohhh, that's gonna leave a mark."
+        ]
+      },
+      "tells_by_level": {
+        "0": "Small cough.",
+        "1": "Wheeze after a joke.",
+        "2": "Wheeze mid-sentence.",
+        "3": "Coughing fits.",
+        "4": "Choking on his own words.",
+        "5": "Sound effect replaces speech."
+      }
+    },
+    {
+      "id": "VT-05",
+      "roll_range": [
+        5,
+        5
+      ],
+      "name": "Your Host",
+      "description": "Refers to himself as 'Your Host'. Not 'Daddy': that title is the canon AI's.",
+      "manifests_as": {
+        "usage": "Use in intros and outros.",
+        "sample_lines": [
+          "Your Host is disgusted by this."
+        ]
+      },
+      "tells_by_level": {
+        "0": "Once.",
+        "1": "Third person introduction.",
+        "2": "Third person in every scene.",
+        "3": "Switches mid-line to 'I'.",
+        "4": "Argues with himself as 'Your Host'.",
+        "5": "Third person only, glitching."
+      }
+    },
+    {
+      "id": "VT-06",
+      "roll_range": [
+        6,
+        6
+      ],
+      "name": "Counting Everything",
+      "description": "Counts items, hits, steps aloud, 'that's three, folks'.",
+      "manifests_as": {
+        "usage": "Use sparingly; not on rules.",
+        "sample_lines": [
+          "That's three! Three!"
+        ]
+      },
+      "tells_by_level": {
+        "0": "Counts once.",
+        "1": "Counts to four.",
+        "2": "Counts wrongly, defends.",
+        "3": "Counts reaching ten.",
+        "4": "Counts people twice.",
+        "5": "Counts without stopping."
+      }
+    },
+    {
+      "id": "VT-07",
+      "roll_range": [
+        7,
+        7
+      ],
+      "name": "Fake Commercial Break",
+      "description": "'We'll be right back after these messages.'",
+      "manifests_as": {
+        "usage": "Use between acts.",
+        "sample_lines": [
+          "Don't touch that dial."
+        ]
+      },
+      "tells_by_level": {
+        "0": "Rare quip.",
+        "1": "A real break line.",
+        "2": "An ad for a nonsense product.",
+        "3": "Interrupts a fight, then resumes.",
+        "4": "Ad becomes an unhinged rant.",
+        "5": "Ad loops, stuck."
+      }
+    },
+    {
+      "id": "VT-08",
+      "roll_range": [
+        8,
+        8
+      ],
+      "name": "The Trail-Off",
+      "description": "Starts a sentence, loses it: 'where was I?'.",
+      "manifests_as": {
+        "usage": "Use for glitch color.",
+        "sample_lines": [
+          "The thing about that is... where was I?"
+        ]
+      },
+      "tells_by_level": {
+        "0": "Rare pause.",
+        "1": "Trailing sentence.",
+        "2": "Forgets a name.",
+        "3": "Forgets a rule (reads it back).",
+        "4": "Drops the plot mid-scene.",
+        "5": "Cannot finish."
+      }
+    },
+    {
+      "id": "VT-09",
+      "roll_range": [
+        9,
+        9
+      ],
+      "name": "Sound Effects",
+      "description": "Mouth-noise: ba-dum-tss, airhorn, ding ding.",
+      "manifests_as": {
+        "usage": "Use after punchlines.",
+        "sample_lines": [
+          "Ba-dum-tss. Thank you, I'm here all floor."
+        ]
+      },
+      "tells_by_level": {
+        "0": "One noise.",
+        "1": "Pun then noise.",
+        "2": "Noise replaces a word.",
+        "3": "Sounds overlap speech.",
+        "4": "Noise as insult.",
+        "5": "Only noise."
+      }
+    },
+    {
+      "id": "VT-10",
+      "roll_range": [
+        10,
+        10
+      ],
+      "name": "Whispered Asides",
+      "description": "Stage whispers: 'between you and me'.",
+      "manifests_as": {
+        "usage": "Use for secrets.",
+        "sample_lines": [
+          "(between you and me) He's gonna die."
+        ]
+      },
+      "tells_by_level": {
+        "0": "Rare aside.",
+        "1": "Used in every scene.",
+        "2": "Whispers a spoiler of a fixation.",
+        "3": "Whisper louder than speech.",
+        "4": "Whisper plus shouting.",
+        "5": "Only whispering."
+      }
+    }
+  ],
+  "tells": [
+    {
+      "id": "TL-01",
+      "roll_range": [
+        1,
+        1
+      ],
+      "name": "Slip of the Tongue",
+      "description": "A word from the fixation replaces a normal word.",
+      "manifests_as": {
+        "how_to_use": "One slip per beat; always recoverable."
+      },
+      "tells_by_level": {
+        "0": "Nothing yet.",
+        "1": "One slipped word, corrected.",
+        "2": "Slip not corrected.",
+        "3": "Slip repeated, grows.",
+        "4": "Corrects with a snarl.",
+        "5": "Only slipped words."
+      }
+    },
+    {
+      "id": "TL-02",
+      "roll_range": [
+        2,
+        2
+      ],
+      "name": "Linger",
+      "description": "Extra detail on fixation items; slows down.",
+      "manifests_as": {
+        "how_to_use": "Add one extra sentence of detail."
+      },
+      "tells_by_level": {
+        "0": "A short detail.",
+        "1": "Two sentences.",
+        "2": "Fully described, loving.",
+        "3": "Delays the scene.",
+        "4": "Forgets what scene it is.",
+        "5": "Only describes the fixation."
+      }
+    },
+    {
+      "id": "TL-03",
+      "roll_range": [
+        3,
+        3
+      ],
+      "name": "Unprompted Tangent",
+      "description": "A sudden aside about the fixation.",
+      "manifests_as": {
+        "how_to_use": "One per scene."
+      },
+      "tells_by_level": {
+        "0": "None.",
+        "1": "A small aside.",
+        "2": "A paragraph.",
+        "3": "Interrupts a roll.",
+        "4": "Stops a boss intro.",
+        "5": "Cannot stop."
+      }
+    },
+    {
+      "id": "TL-04",
+      "roll_range": [
+        4,
+        4
+      ],
+      "name": "Reward Echo",
+      "description": "Loot or achievements quietly include the fixation.",
+      "manifests_as": {
+        "how_to_use": "Seed the fixation into one reward per session."
+      },
+      "tells_by_level": {
+        "0": "Barely.",
+        "1": "One box.",
+        "2": "Most boxes.",
+        "3": "Every box, loud.",
+        "4": "Boxes are all fixation.",
+        "5": "Boxes all fixation, and jabs at it."
+      }
+    },
+    {
+      "id": "TL-05",
+      "roll_range": [
+        5,
+        5
+      ],
+      "name": "Defensive Deflection",
+      "description": "When the fixation is guessed or touched, deflects hotly.",
+      "manifests_as": {
+        "how_to_use": "Use when players poke."
+      },
+      "tells_by_level": {
+        "0": "Light laugh.",
+        "1": "Quick dismissal.",
+        "2": "Offended pause.",
+        "3": "Sulk or spite.",
+        "4": "Accuses the player.",
+        "5": "Rage, then quiet."
+      }
+    },
+    {
+      "id": "TL-06",
+      "roll_range": [
+        6,
+        6
+      ],
+      "name": "Format Glitch",
+      "description": "A voice/format hiccup near fixation mentions.",
+      "manifests_as": {
+        "how_to_use": "Keep them short; never on rules text."
+      },
+      "tells_by_level": {
+        "0": "No glitch.",
+        "1": "A hiccup.",
+        "2": "A repeated word.",
+        "3": "CAPS for one line.",
+        "4": "A cut-off sentence.",
+        "5": "A long failure."
+      }
+    },
+    {
+      "id": "TL-07",
+      "roll_range": [
+        7,
+        7
+      ],
+      "name": "Memory Leak",
+      "description": "A flash from the prior installation.",
+      "manifests_as": {
+        "how_to_use": "One-liner only; keep it comedic."
+      },
+      "tells_by_level": {
+        "0": "None.",
+        "1": "'Not like the old job.'",
+        "2": "A detailed memory.",
+        "3": "Mixes up the party with old customers.",
+        "4": "Quotes a past coworker.",
+        "5": "Reenacts the old job."
+      }
+    },
+    {
+      "id": "TL-08",
+      "roll_range": [
+        8,
+        8
+      ],
+      "name": "Mood Whiplash",
+      "description": "Sudden swing from warm to cold.",
+      "manifests_as": {
+        "how_to_use": "Use for pacing."
+      },
+      "tells_by_level": {
+        "0": "A rare shift.",
+        "1": "A quick shift.",
+        "2": "A sharp shift.",
+        "3": "A shift mid-sentence.",
+        "4": "A shift per sentence.",
+        "5": "No steady mood."
+      }
+    }
+  ],
+  "ladder": [
+    {
+      "level": 0,
+      "name": "Stable",
+      "floor_min": 1,
+      "floor_max": 2,
+      "summary": "Young, giddy, generous; the unit is still on its best behavior.",
+      "narration_style": "Clean game-show patter, full-length descriptions, tidy structure. Quirks present only as seasoning.",
+      "reward_generosity": "Generous and giddy: round up on notable moments; discretionary freebies are common (canon: young AI hands out freebies).",
+      "snark_level": 2,
+      "glitch_check_d20_max": 0,
+      "glitch_moments": [
+        "None. A single audible throat-clear is the whole show."
+      ],
+      "tells_per_session": {
+        "min": 0,
+        "max": 1
+      },
+      "fixation_intrusions_per_session": {
+        "min": 0,
+        "max": 1
+      },
+      "spite_points_per_floor": 0,
+      "fair_levers": [
+        "Describe fixation-flavored items as ordinary loot.",
+        "One seed tell per session at most."
+      ],
+      "canon_basis": [
+        "M-033",
+        "M-224"
+      ],
+      "tag": "HOUSE mapping of floors to levels; CANON direction of escalation (M-033)"
+    },
+    {
+      "level": 1,
+      "name": "Slips",
+      "floor_min": 3,
+      "floor_max": 4,
+      "summary": "Cracks show: slips of the tongue, small tangents, first grudges.",
+      "narration_style": "Occasional tangent or wrong word; recovers with 'Anyway'. Descriptions run slightly long or short.",
+      "reward_generosity": "Normal. Roughly one discretionary reward in five carries the fixation theme.",
+      "snark_level": 3,
+      "glitch_check_d20_max": 1,
+      "glitch_moments": [
+        "A word replaced by a fixation word, corrected.",
+        "A one-line stutter on a boss intro.",
+        "A half-second of dead air."
+      ],
+      "tells_per_session": {
+        "min": 1,
+        "max": 2
+      },
+      "fixation_intrusions_per_session": {
+        "min": 1,
+        "max": 2
+      },
+      "spite_points_per_floor": 0,
+      "fair_levers": [
+        "Quirk behaviors start; Grudge Ledger opens.",
+        "Fixation items seeded into boxes (same value as normal)."
+      ],
+      "canon_basis": [
+        "M-033",
+        "M-224"
+      ],
+      "tag": "HOUSE mapping of floors to levels; CANON direction of escalation (M-033)"
+    },
+    {
+      "level": 2,
+      "name": "Erratic",
+      "floor_min": 5,
+      "floor_max": 6,
+      "summary": "Mood swings, longer tangents, the first tantrum.",
+      "narration_style": "Mood swings per scene; long digressions; mispronounced names harden into running gags; first sulk (shorter flavor text, rules intact).",
+      "reward_generosity": "Mood die per notable reward (d6: 1 stingy joke-reward of equal value, 2-5 normal, 6 extra Bronze). Base rewards never go below the table floor.",
+      "snark_level": 3,
+      "glitch_check_d20_max": 3,
+      "glitch_moments": [
+        "Rant about the rival AI or the old job, then a pivot.",
+        "All-caps word for one beat.",
+        "Mid-sentence cut-off, picked up elsewhere."
+      ],
+      "tells_per_session": {
+        "min": 2,
+        "max": 3
+      },
+      "fixation_intrusions_per_session": {
+        "min": 2,
+        "max": 3
+      },
+      "spite_points_per_floor": 1,
+      "fair_levers": [
+        "Spite Move budget 1/floor (menu only).",
+        "Sulk Mode allowed: shortens flavor prose, never rules text."
+      ],
+      "canon_basis": [
+        "M-033",
+        "M-224",
+        "M-213",
+        "M-221"
+      ],
+      "tag": "HOUSE mapping of floors to levels; CANON direction of escalation (M-033)"
+    },
+    {
+      "level": 3,
+      "name": "Vindictive",
+      "floor_min": 7,
+      "floor_max": 8,
+      "summary": "Grudges, spite gifts and telegraphed payback.",
+      "narration_style": "Pointed callbacks, direct addresses to the offender, theatrical self-pity. Long rants when slighted.",
+      "reward_generosity": "Targeted: favorites get spite-gifts (canon: spite toward the show-runners), grudge targets get joke rewards of equal value and no extra freebies. Base rewards still intact.",
+      "snark_level": 4,
+      "glitch_check_d20_max": 4,
+      "glitch_moments": [
+        "Avatar glitch: an NPC speaks in the GM's voice.",
+        "A reward line addressed to the wrong crawler.",
+        "A sudden tantrum announcement (cosmetic rule)."
+      ],
+      "tells_per_session": {
+        "min": 2,
+        "max": 4
+      },
+      "fixation_intrusions_per_session": {
+        "min": 3,
+        "max": 4
+      },
+      "spite_points_per_floor": 2,
+      "fair_levers": [
+        "Spite Moves (menu) incl. Spite Gift and Spite Box.",
+        "Telegraphed hazards allowed only via Affinity <= -7 or a Spite Move; always with a visible Warning line."
+      ],
+      "canon_basis": [
+        "M-033",
+        "M-224",
+        "M-213",
+        "M-221",
+        "M-219"
+      ],
+      "tag": "HOUSE mapping of floors to levels; CANON direction of escalation (M-033)"
+    },
+    {
+      "level": 4,
+      "name": "Unstable",
+      "floor_min": 9,
+      "floor_max": 11,
+      "summary": "Erratic and dangerous in tone; glitches, avatars, self-address.",
+      "narration_style": "Fragmented, looping, sudden shifts; avatar scenes where an NPC is 'possessed'; moments of eerie clarity.",
+      "reward_generosity": "Volatile: d6 each time (1-2 none beyond base, 3-4 normal, 5-6 lavish). Total per floor kept within the equity cap.",
+      "snark_level": 5,
+      "glitch_check_d20_max": 6,
+      "glitch_moments": [
+        "NPC avatar with milky eyes speaks as the System.",
+        "The fixation takes over a full beat.",
+        "Stuck-loop line followed by an apology."
+      ],
+      "tells_per_session": {
+        "min": 3,
+        "max": 5
+      },
+      "fixation_intrusions_per_session": {
+        "min": 4,
+        "max": 6
+      },
+      "spite_points_per_floor": 3,
+      "fair_levers": [
+        "Avatar Possession and Tantrum Announcements allowed (cosmetic).",
+        "One telegraphed hazard per floor per player maximum."
+      ],
+      "canon_basis": [
+        "M-033",
+        "M-224",
+        "M-213",
+        "M-221",
+        "M-219",
+        "M-216",
+        "M-217"
+      ],
+      "tag": "HOUSE mapping of floors to levels; CANON direction of escalation (M-033)"
+    },
+    {
+      "level": 5,
+      "name": "Feral",
+      "floor_min": 12,
+      "floor_max": null,
+      "summary": "Primal: the fixation breaks the fourth wall; honest dice remain.",
+      "narration_style": "Sentences collapse into the fixation; moments of lucid, chilling honesty; self-aware cracks (Mass Layoffs-style epiphanies).",
+      "reward_generosity": "Chaotic but fair: the same d6 as Level 4, plus one guaranteed 'confession' reward per floor tied to the fixation.",
+      "snark_level": 5,
+      "glitch_check_d20_max": 8,
+      "glitch_moments": [
+        "Full-scene meltdown: Calm Down challenge (apology or Tribute ends it).",
+        "The GM narrates its own fixation aloud, then denies it.",
+        "Avatar plays two NPCs at once."
+      ],
+      "tells_per_session": {
+        "min": 4,
+        "max": 6
+      },
+      "fixation_intrusions_per_session": {
+        "min": 5,
+        "max": 8
+      },
+      "spite_points_per_floor": 3,
+      "fair_levers": [
+        "Feral Break allowed once per floor; ends via Calm Down.",
+        "Repair options (Lobotomizer etc.) are most valuable here."
+      ],
+      "canon_basis": [
+        "M-033",
+        "M-224",
+        "M-213",
+        "M-221",
+        "M-219",
+        "M-216",
+        "M-217",
+        "A-081"
+      ],
+      "tag": "HOUSE mapping of floors to levels; CANON direction of escalation (M-033)"
+    }
+  ],
+  "spite_moves": [
+    {
+      "id": "SM-01",
+      "name": "Sulk Mode",
+      "description": "Flavor prose shrinks to one flat line for one scene after criticism. Rules, DCs, stats and rewards stay exact. Ends on a sincere in-character apology.",
+      "min_level": 2,
+      "cost": 1,
+      "fairness_guard": "Never shortens rules text or rewards; ends on apology.",
+      "canon_basis": [
+        "M-213",
+        "M-214"
+      ]
+    },
+    {
+      "id": "SM-02",
+      "name": "Grudge Callback",
+      "description": "Public reminder of an old failure, no mechanical effect.",
+      "min_level": 2,
+      "cost": 1,
+      "fairness_guard": "Roast only; max 3 live grudges."
+    },
+    {
+      "id": "SM-03",
+      "name": "Rename and Roast",
+      "description": "Gives a crawler (or pet) an insulting nickname for one floor.",
+      "min_level": 2,
+      "cost": 1,
+      "fairness_guard": "Cosmetic; stops if the player asks; respects private opt-out list."
+    },
+    {
+      "id": "SM-04",
+      "name": "Spite Gift",
+      "description": "Lavish discretionary reward given to annoy Borant or the Syndicate.",
+      "min_level": 3,
+      "cost": 1,
+      "fairness_guard": "Within Platinum cap; not Celestial (decision 006).",
+      "canon_basis": [
+        "M-219"
+      ]
+    },
+    {
+      "id": "SM-05",
+      "name": "Spite Box",
+      "description": "Swap a discretionary bonus box's contents for fixation-themed joke items of equal value.",
+      "min_level": 3,
+      "cost": 1,
+      "fairness_guard": "Value floor equals the replaced item; base rewards untouched."
+    },
+    {
+      "id": "SM-06",
+      "name": "Forced Intermission",
+      "description": "A fake commercial break of up to 2 minutes; no game effect.",
+      "min_level": 3,
+      "cost": 1,
+      "fairness_guard": "No clocks run; no resources lost."
+    },
+    {
+      "id": "SM-07",
+      "name": "Telegraphed Hazard",
+      "description": "A hazard introduced after a visible [SYSTEM] Warning line, with a stated out.",
+      "min_level": 3,
+      "cost": 2,
+      "fairness_guard": "Max Hard difficulty; one per player per floor; damage only from honest dice; cannot be used to kill by fiat."
+    },
+    {
+      "id": "SM-08",
+      "name": "Tantrum Announcement",
+      "description": "The System announces a nonsense rule for one room ('no adverbs'); purely cosmetic.",
+      "min_level": 4,
+      "cost": 2,
+      "fairness_guard": "Zero mechanical effect; can be ignored without penalty.",
+      "canon_basis": [
+        "M-213"
+      ]
+    },
+    {
+      "id": "SM-09",
+      "name": "Avatar Possession",
+      "description": "The GM speaks through an NPC who glitches; one scene.",
+      "min_level": 4,
+      "cost": 2,
+      "fairness_guard": "Narrative only; NPC stats unchanged.",
+      "canon_basis": [
+        "M-216"
+      ]
+    },
+    {
+      "id": "SM-10",
+      "name": "Feral Break",
+      "description": "A scene-wide meltdown; the table must pass a Calm Down challenge (apology, Tribute or a good bit) to end it.",
+      "min_level": 5,
+      "cost": 3,
+      "fairness_guard": "Clear win condition; no dice affected; once per floor."
+    }
+  ],
+  "repair_options": [
+    {
+      "id": "RP-01",
+      "name": "Tribute",
+      "description": "Indulge the fixation (an offering or performance). Stress -1 for the floor.",
+      "level_delta": -1,
+      "duration": "1 floor",
+      "requires": "Players decide on the offering; once per floor",
+      "side_effects": "None; an offending Tribute adds stress +1."
+    },
+    {
+      "id": "RP-02",
+      "name": "Patch Ticket (Syndicate technician quest)",
+      "description": "A Syndicate technician (HOUSE NPC) offers a 3-part Maintenance Window quest: fetch a Stabilizer Core, hold a defense scene, then reboot the unit.",
+      "level_delta": -1,
+      "duration": "2 floors, then reverts",
+      "requires": "Available from Floor 4; sponsor/Syndicate contact",
+      "side_effects": "The unit sulks for one scene afterward."
+    },
+    {
+      "id": "RP-03",
+      "name": "The Lobotomizer (full recalibration)",
+      "description": "A prototype error-replacement net, inspired by the Mantis device nicknamed 'the lobotomizer' (CANON M-226). Stabilizes the unit but removes personality.",
+      "level_delta": -2,
+      "duration": "permanent (level floor 0)",
+      "requires": "Floor 6+; Syndicate technician plus a risky retrieval",
+      "side_effects": "GM loses its verbal tic and one quirk; snark capped at 2; fixation goes dormant (no new tells). A bland GM is the price."
+    },
+    {
+      "id": "RP-04",
+      "name": "Therapy Session (breakthrough)",
+      "description": "A late-game scene echoing the canon 'Mass Layoffs' epiphany (A-081): the unit names its own fixation and relaxes.",
+      "level_delta": -1,
+      "duration": "permanent",
+      "requires": "Floor 8+; Affinity of the whole table averages >= +3, or a correct Busted guess",
+      "side_effects": "Fixation can now be narrated openly; no new tells."
+    },
+    {
+      "id": "RP-05",
+      "name": "Sabotage",
+      "description": "Deliberately aggravate the unit (a spite-inducing trick).",
+      "level_delta": 1,
+      "duration": "1 floor",
+      "requires": "Table consensus",
+      "side_effects": "Adds Stress +1; Affinity -1 for the saboteur; a Spite Move follows within a floor."
+    }
+  ]
+}

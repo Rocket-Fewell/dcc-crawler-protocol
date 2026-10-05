@@ -1,0 +1,345 @@
+{
+  "schema": "loot-deck/0.1.1",
+  "deck_id": "f01-z06-break-room",
+  "version": "0.1.0",
+  "floor": 1,
+  "zone": "z06",
+  "zone_name": "Zone 6: The Break Room (Saferoom A)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "cards": [
+    {
+      "id": "f01-z06-0001",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "consumable",
+      "reskin_name": "Laminated Complaint Card",
+      "real_5e_name": "Laminated Complaint Card (house: single-use oracle)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action, once: ask the System one yes/no question about the current floor; it answers truthfully, yes or no. The card is then spent.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Must be a yes/no question about the floor you are on. A question that is not yes/no is refused and the card is not spent.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Laminated Complaint Card. One use: ask the System one yes-or-no question about this floor. It must answer truthfully.",
+      "snark_line": "The System has never lost a complaint; it files them under Funny.",
+      "reward": "Laminated Complaint Card. One use: ask the System one yes-or-no question about this floor. It must answer truthfully.",
+      "canon_status": "HOUSE",
+      "credit_value": 25,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Laminated Complaint Card (Laminated Complaint Card (house: single-use oracle))"
+      },
+      "box_name": "Filed a Formal Complaint Box",
+      "deed": "Filed a formal complaint with the System",
+      "notes": "Alpha-test item (2026-10-04, Bone). Open: are spine secrets exempt from 'truthfully'? (spec §5 Q3)."
+    },
+    {
+      "id": "f01-z06-0002",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Sports Drink, Blue Flavor",
+      "real_5e_name": "Potion of Healing",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 2d4+2 HP. One use.",
+        "action_cost": "Bonus Action",
+        "range": "5 ft (to give)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on use.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Sports Drink, Blue Flavor, Potion of Healing. Bonus Action: regain two d four plus two hit points.",
+      "snark_line": "Tastes like a lawsuit.",
+      "reward": "Sports Drink, Blue Flavor, Potion of Healing. Bonus Action: regain two d four plus two hit points.",
+      "canon_status": "CANON",
+      "credit_value": 50,
+      "draw_weight": 25,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Sports Drink, Blue Flavor (Potion of Healing)"
+      },
+      "box_name": "Bled on the Break Room Carpet Box",
+      "deed": "Took damage and reached the saferoom",
+      "notes": "LEDGER: I-009; L-B02. Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04. Alpha draw (Bone). Break Room vendor stock is 2 for the floor; box potions are extra and cost vendor-stock nothing."
+    },
+    {
+      "id": "f01-z06-0003",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "Kevin the Sentient Rubber Duck",
+      "real_5e_name": "Rubber Duck (house: joke item, no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. No mechanical effect. Kevin gives terrible advice; the GM treats it as flavor only.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "No effect on dice, DCs, damage or saves.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Kevin the Sentient Rubber Duck. Weird pull, joke item, no mechanical effect.",
+      "snark_line": "Kevin is not licensed.",
+      "reward": "Kevin the Sentient Rubber Duck. Weird pull, joke item, no mechanical effect.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Kevin the Sentient Rubber Duck (Rubber Duck (house: joke item, no effect))"
+      },
+      "box_name": "Took Bad Advice Seriously Box",
+      "deed": "Followed terrible advice",
+      "notes": "Alpha item (Bone). Duplicate of the any-deck Kevin; keep one in play per crawler."
+    },
+    {
+      "id": "f01-z06-0004",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "key",
+      "reskin_name": "Gas-Station Bathroom Key on a Hubcap",
+      "real_5e_name": "Mystery Key (house, single lock)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Keys",
+      "plain_mechanics": {
+        "text": "Utilize action: opens one specific lock on this floor, picked by the GM when the key is drawn (the GM does not say which). On that lock it unlocks it and the key is spent. On any other lock nothing happens and it is not spent. If you leave the floor with it unused, it becomes a plain hubcap key.",
+        "action_cost": "Utilize action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "until used or you leave the floor",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "One use, one lock. Cannot open a lock sealed by a boss, spine object or magic barrier. Never the only way through a required door.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Gas-Station Bathroom Key on a Hubcap. House Mystery Key: opens one GM-chosen lock on this floor; spent on use.",
+      "snark_line": "It opens something, and the System is not telling.",
+      "reward": "Gas-Station Bathroom Key on a Hubcap. House Mystery Key: opens one GM-chosen lock on this floor; spent on use.",
+      "canon_status": "HOUSE",
+      "credit_value": 25,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "key",
+        "text": "item +1 Bronze box: Gas-Station Bathroom Key on a Hubcap (Mystery Key (house, single lock))"
+      },
+      "box_name": "Found the Right Key Eventually Box",
+      "deed": "Hunted for a way through a locked door",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §4). Break Room copy, same text as f01-any-0035. GM only: pick the lock at draw and write it into session state (suggest the Break Room supply cabinet or the 3b cage)."
+    },
+    {
+      "id": "f01-z06-0005",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Credits, Slightly Damp",
+      "real_5e_name": "Credits (Bronze pull, 3d6 x 5)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Credits, Slightly Damp. Bronze credits: three d six times five. They are damp. Do not ask what from.",
+      "snark_line": "Please spend it before it ferments.",
+      "reward": "Credits, Slightly Damp. Bronze credits: three d six times five. They are damp. Do not ask what from.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 52.5,
+      "draw_weight": 25,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "3d6x5"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(3d6x5) Bronze box"
+      },
+      "box_name": "Participation Trophy Box",
+      "deed": "Showed up, technically",
+      "notes": "LEDGER: L-001. Spec sample 5 id (f01-z06-0005) but credits:null and roll at draw per spec preference."
+    },
+    {
+      "id": "f01-z06-0006",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Break-Room First-Aid Kit, Lightly Bitten",
+      "real_5e_name": "Healer's Kit",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: expend 1 of 10 uses to stabilize an Unconscious creature at 0 HP without a Wisdom (Medicine) check.",
+        "action_cost": "Utilize action",
+        "range": "Touch",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 10,
+          "recharge": "none"
+        },
+        "limits": "Stabilizes only.",
+        "weight_lb": 3
+      },
+      "spoken_line": "Break-Room First-Aid Kit, Healer's Kit. Ten uses: Utilize to stabilize a creature at zero hit points.",
+      "snark_line": "Stabilize them. Do not ask what bit the kit.",
+      "reward": "Break-Room First-Aid Kit, Healer's Kit. Ten uses: Utilize to stabilize a creature at zero hit points.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 12,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)"
+      },
+      "box_name": "Dragged Someone Out of the Fire Box",
+      "deed": "Stabilized a dying teammate",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (web mirror) 2026-10-04."
+    },
+    {
+      "id": "f01-z06-0007",
+      "floor": 1,
+      "zone": "z06",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "Fridge Sandwich Labeled DALE'S. DO NOT.",
+      "real_5e_name": "Joke item (house: no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. Eating it counts as food for one day (rations) but the label says no. Eating it in front of Dale triggers Lunch Thief.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 day",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Dale has seen what you did.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Fridge Sandwich Labeled Dale's. Joke item; counts as one day of food.",
+      "snark_line": "Dale saw. Dale will always have seen.",
+      "reward": "Fridge Sandwich Labeled Dale's. Joke item; counts as one day of food.",
+      "canon_status": "HOUSE",
+      "credit_value": 1,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Fridge Sandwich Labeled DALE'S. DO NOT. (Joke item (house: no effect))"
+      },
+      "box_name": "Ate Dale's Lunch Box",
+      "deed": "Ate a labeled sandwich",
+      "notes": "Pairs with NEW achievement Lunch Thief. Mechanically a ration."
+    }
+  ]
+}

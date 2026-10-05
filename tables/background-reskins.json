@@ -1,0 +1,387 @@
+{
+ "schema": "background-reskins/0.1.0",
+ "meta": {
+  "title": "Background (Prior Employment) reskins: 5e background and S7 choices -> modern-Earth display name (names and flavor only)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "version": "0.1.2",
+  "version_file": "tables/background-reskins.version.json (sha256, built_at, entry_count, diff); history in tables/background-reskins.CHANGELOG.md",
+  "id_scheme": {
+   "id": "background ids are the lower-cased chargen-5e.json background keys (acolyte ... wayfarer). Choice ids: feat-<origin feat>, asi-2-1, asi-1-1-1, package-a, package-b. Never change once published.",
+   "stored_on_sheet": "Sheets keep storing the 5e background key, origin feat and package id as today; this table only changes what /create and announcements show.",
+   "lookup": "Look up by id, or by (kind, chargen_value): chargen_value is the exact string used in chargen-5e.json (background key, origin_feats entry, package id) or the spec string for the ability bonus picks.",
+   "fallback": "If an id is missing, fall back to srd_name (exact, case-insensitive)."
+  },
+  "display_rule": "Show combined_label = 'Display Name (5e Name)'. Names and flavor only: ability score bonuses, feats, skills, tools, equipment and gold are untouched. Skill and tool names stay plain. label_name, when present, is the short 5e name used in the label because srd_name itself has parentheses (Magic Initiate): labels never nest parentheses.",
+  "kinds": {
+   "background": "the 16 backgrounds on S7 (chargen-5e.json backgrounds); chargen_job keeps the earlier placeholder job line from that file",
+   "choice": "other labels on S7: parent_id origin-feat (the 12 origin feats in chargen-5e.json origin_feats), background-asi (the +2 / +1 and +1 / +1 / +1 picks), background-kit (starting-gear Package A and Package B, shared by all backgrounds)"
+  },
+  "tone": "DCC dungeon-crawl gallows humor, prior jobs that went badly, modern Earth, petty and funny. Adults-only table, cursing cleared. Crawlers, never the other word. One industry and one punchline per entry.",
+  "counts": {
+   "background": 16,
+   "choice": 16
+  },
+  "total": 32,
+  "needs_code": {
+   "owner": "Architect",
+   "what": "bgnames.js packageLabel(t, pkg, gpText, plain) is called from screens.js with gpText built from GP ('{gp} GP left over' for a package with items, '{gp} GP' for the gold option). Switch the S10 background menu to credits so it matches the class menu (package-class-a, package-class-b, package-gold in create-screens-reskins).",
+   "templates": {
+    "package_with_items": "<combined_label> - {gp} credits left over",
+    "gold_option": "<combined_label> - {gp} credits"
+   },
+   "examples": [
+    "Cardboard Carton From Your Desk (Package A) - 8 credits left over",
+    "Severance Envelope, Unmarked (Package B) - 50 credits"
+   ],
+   "units": "1 credit = 1 GP (Core 5.10). The amounts are the chargen-5e.json gp numbers, unchanged. Whole credits print without decimals (15 credits); a fraction prints with decimals (0.5 credit); 1 cp = 0.01 credit. Singular 'credit' for an amount of 1 or less. Starting-package amounts are whole numbers.",
+   "not_changed_here": "The table stores names and flavor only; no amount is stored in this file."
+  },
+  "consumers": [
+   "/create S7 (Prior Employment) and S10 package screens",
+   "sheet cards",
+   "System announcements"
+  ]
+ },
+ "entries": [
+  {
+   "id": "acolyte",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Acolyte",
+   "display_name": "Youth-Group Pizza Wrangler",
+   "combined_label": "Youth-Group Pizza Wrangler (Acolyte)",
+   "chargen_value": "Acolyte",
+   "flavor": "Ran Wednesday-night youth group on two pizzas and divine patience. Found out heaven has no petty credits.",
+   "chargen_job": "youth pastor"
+  },
+  {
+   "id": "artisan",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Artisan",
+   "display_name": "Etsy Shop Founder, Three Sales",
+   "combined_label": "Etsy Shop Founder, Three Sales (Artisan)",
+   "chargen_value": "Artisan",
+   "flavor": "Your handmade candle empire grossed 41 dollars, and 40 of it was your mother. The glue gun is still plugged in.",
+   "chargen_job": "tradesperson"
+  },
+  {
+   "id": "charlatan",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Charlatan",
+   "display_name": "Pyramid-Scheme Boss Babe",
+   "combined_label": "Pyramid-Scheme Boss Babe (Charlatan)",
+   "chargen_value": "Charlatan",
+   "flavor": "Sold leggings, essential oils and a dream to everyone you ever met. Your upline still posts about your journey.",
+   "chargen_job": "MLM survivor"
+  },
+  {
+   "id": "criminal",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Criminal",
+   "display_name": "Call-Center Gift-Card Fraud Specialist",
+   "combined_label": "Call-Center Gift-Card Fraud Specialist (Criminal)",
+   "chargen_value": "Criminal",
+   "flavor": "Talked 400 strangers into reading you their card numbers 'for verification'. Your headset is evidence now.",
+   "chargen_job": "exactly what it sounds like"
+  },
+  {
+   "id": "entertainer",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Entertainer",
+   "display_name": "Wedding DJ With One Playlist",
+   "combined_label": "Wedding DJ With One Playlist (Entertainer)",
+   "chargen_value": "Entertainer",
+   "flavor": "Played the Cupid Shuffle at nine years of receptions, and the bride's dad still found a reason to be mad.",
+   "chargen_job": "wedding DJ"
+  },
+  {
+   "id": "farmer",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Farmer",
+   "display_name": "Farm-to-Table Influencer",
+   "combined_label": "Farm-to-Table Influencer (Farmer)",
+   "chargen_value": "Farmer",
+   "flavor": "Fourteen thousand followers, one goat, zero crops. The goat has the better engagement rate.",
+   "chargen_job": "agricultural content creator"
+  },
+  {
+   "id": "guard",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Guard",
+   "display_name": "Hospital Parking-Garage Attendant",
+   "combined_label": "Hospital Parking-Garage Attendant (Guard)",
+   "chargen_value": "Guard",
+   "flavor": "Defended a ticket machine from nine thousand people with 'no change'. The boom gate is your only friend.",
+   "chargen_job": "bouncer"
+  },
+  {
+   "id": "guide",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Guide",
+   "display_name": "Trailhead Guide With a Laminated Map",
+   "combined_label": "Trailhead Guide With a Laminated Map (Guide)",
+   "chargen_value": "Guide",
+   "flavor": "Led conga lines of tourists up a hill swearing it was 'only ten more minutes'. It was never ten minutes.",
+   "chargen_job": "trail guide"
+  },
+  {
+   "id": "hermit",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Hermit",
+   "display_name": "Doomsday Prepper, Collapse Postponed",
+   "combined_label": "Doomsday Prepper, Collapse Postponed (Hermit)",
+   "chargen_value": "Hermit",
+   "flavor": "Stockpiled four years of canned beans and a bunker for an apocalypse that got canceled for weather.",
+   "chargen_job": "off-grid weirdo"
+  },
+  {
+   "id": "merchant",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Merchant",
+   "display_name": "Warehouse Operations Manager",
+   "combined_label": "Warehouse Operations Manager (Merchant)",
+   "chargen_value": "Merchant",
+   "flavor": "Ran a million-square-foot warehouse by calling people family and rationing bathroom breaks. HR has a binder with your name on it.",
+   "chargen_job": "operations manager"
+  },
+  {
+   "id": "noble",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Noble",
+   "display_name": "Trust-Fund Gallery Owner",
+   "combined_label": "Trust-Fund Gallery Owner (Noble)",
+   "chargen_value": "Noble",
+   "flavor": "Opened a gallery to show your own paintings with your grandmother's money. Sold exactly one, to your grandmother.",
+   "chargen_job": "trust-fund kid"
+  },
+  {
+   "id": "sage",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Sage",
+   "display_name": "Adjunct Professor on Four Campuses",
+   "combined_label": "Adjunct Professor on Four Campuses (Sage)",
+   "chargen_value": "Sage",
+   "flavor": "Taught intro rhetoric at four colleges for the combined salary of one decent sandwich. Parking cost more than the pay.",
+   "chargen_job": "grad student"
+  },
+  {
+   "id": "sailor",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Sailor",
+   "display_name": "Cruise-Ship Buffet Deckhand",
+   "combined_label": "Cruise-Ship Buffet Deckhand (Sailor)",
+   "chargen_value": "Sailor",
+   "flavor": "Mopped a buffet line the length of a football field. You can identify a norovirus rumor by sound alone.",
+   "chargen_job": "deckhand"
+  },
+  {
+   "id": "scribe",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Scribe",
+   "display_name": "Law-Firm Paralegal in Redline Hell",
+   "combined_label": "Law-Firm Paralegal in Redline Hell (Scribe)",
+   "chargen_value": "Scribe",
+   "flavor": "Highlighted 'herein' eleven thousand times and billed in six-minute increments. Your wrist has a pension plan.",
+   "chargen_job": "paralegal"
+  },
+  {
+   "id": "soldier",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Soldier",
+   "display_name": "Black-Friday Mall Security",
+   "combined_label": "Black-Friday Mall Security (Soldier)",
+   "chargen_value": "Soldier",
+   "flavor": "Stood between a discount toaster and four hundred people. You lost the toaster but kept the vest.",
+   "chargen_job": "mall security"
+  },
+  {
+   "id": "wayfarer",
+   "kind": "background",
+   "parent_id": null,
+   "srd_name": "Wayfarer",
+   "display_name": "Couch-Surfing Burrito Courier",
+   "combined_label": "Couch-Surfing Burrito Courier (Wayfarer)",
+   "chargen_value": "Wayfarer",
+   "flavor": "Delivered dinners by day and slept on six couches a month. Your car smells like both, and you know every sofa in three counties.",
+   "chargen_job": "couch-surfer"
+  },
+  {
+   "id": "feat-alert",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Alert",
+   "display_name": "Night-Shift Insomniac",
+   "combined_label": "Night-Shift Insomniac (Alert)",
+   "chargen_value": "Alert",
+   "flavor": "Hasn't slept through the night since the 2019 inventory audit. Nothing sneaks up on someone who counts ceiling tiles."
+  },
+  {
+   "id": "feat-crafter",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Crafter",
+   "display_name": "Hot-Glue Gunslinger",
+   "combined_label": "Hot-Glue Gunslinger (Crafter)",
+   "chargen_value": "Crafter",
+   "flavor": "Fixes everything with a glue gun and optimism. The repair holds until it is looked at."
+  },
+  {
+   "id": "feat-healer",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Healer",
+   "display_name": "Weekend CPR-Class Graduate",
+   "combined_label": "Weekend CPR-Class Graduate (Healer)",
+   "chargen_value": "Healer",
+   "flavor": "Passed a two-hour course on a dummy named Annie. Everybody's choking is now your business."
+  },
+  {
+   "id": "feat-lucky",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Lucky",
+   "display_name": "Scratch-Ticket Gambler",
+   "combined_label": "Scratch-Ticket Gambler (Lucky)",
+   "chargen_value": "Lucky",
+   "flavor": "Never won more than twelve dollars. Somehow always the twelve you needed."
+  },
+  {
+   "id": "feat-magic-initiate-cleric",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Magic Initiate (Cleric)",
+   "display_name": "Group-Chat Prayer Warrior",
+   "combined_label": "Group-Chat Prayer Warrior (Magic Initiate, Cleric)",
+   "chargen_value": "Magic Initiate (Cleric)",
+   "flavor": "Types 'thoughts and prayers' faster than anybody alive. Surprisingly, some of them land.",
+   "label_name": "Magic Initiate, Cleric"
+  },
+  {
+   "id": "feat-magic-initiate-druid",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Magic Initiate (Druid)",
+   "display_name": "Houseplant Whisperer",
+   "combined_label": "Houseplant Whisperer (Magic Initiate, Druid)",
+   "chargen_value": "Magic Initiate (Druid)",
+   "flavor": "Talks to a pothos nine times a day. The pothos has opinions about your landlord.",
+   "label_name": "Magic Initiate, Druid"
+  },
+  {
+   "id": "feat-magic-initiate-wizard",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Magic Initiate (Wizard)",
+   "display_name": "Wikipedia Rabbit-Hole Scholar",
+   "combined_label": "Wikipedia Rabbit-Hole Scholar (Magic Initiate, Wizard)",
+   "chargen_value": "Magic Initiate (Wizard)",
+   "flavor": "Started on 'lasagna' and finished on medieval siege engines at 4 AM. Knows one real spell and no lasagna recipe.",
+   "label_name": "Magic Initiate, Wizard"
+  },
+  {
+   "id": "feat-musician",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Musician",
+   "display_name": "Karaoke Night Regular",
+   "combined_label": "Karaoke Night Regular (Musician)",
+   "chargen_value": "Musician",
+   "flavor": "Owns the Wednesday slot and a laminated song list. Has been asked to stop, kindly, by four different bartenders."
+  },
+  {
+   "id": "feat-savage-attacker",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Savage Attacker",
+   "display_name": "Drive-Thru Fry-Station Veteran",
+   "combined_label": "Drive-Thru Fry-Station Veteran (Savage Attacker)",
+   "chargen_value": "Savage Attacker",
+   "flavor": "Survived a Friday rush on a fryer with a mind of its own. When you strike, you strike twice for good measure."
+  },
+  {
+   "id": "feat-skilled",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Skilled",
+   "display_name": "Tech-Support Jack-of-All-Trades",
+   "combined_label": "Tech-Support Jack-of-All-Trades (Skilled)",
+   "chargen_value": "Skilled",
+   "flavor": "Fixed printers, passwords and one marriage over a screen-share. Have you tried turning it off and on again?"
+  },
+  {
+   "id": "feat-tavern-brawler",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Tavern Brawler",
+   "display_name": "HOA-Meeting Brawler",
+   "combined_label": "HOA-Meeting Brawler (Tavern Brawler)",
+   "chargen_value": "Tavern Brawler",
+   "flavor": "Got into a fistfight over a mailbox color at a public hearing. The minutes are still being disputed."
+  },
+  {
+   "id": "feat-tough",
+   "kind": "choice",
+   "parent_id": "origin-feat",
+   "srd_name": "Tough",
+   "display_name": "Gym Bro Who Spots at Dawn",
+   "combined_label": "Gym Bro Who Spots at Dawn (Tough)",
+   "chargen_value": "Tough",
+   "flavor": "Lifts at 5 AM and tells everyone about it. Your hit points are made of protein powder and spite."
+  },
+  {
+   "id": "asi-2-1",
+   "kind": "choice",
+   "parent_id": "background-asi",
+   "srd_name": "+2 / +1",
+   "display_name": "Merit Raise and a Gift Card",
+   "combined_label": "Merit Raise and a Gift Card (+2 / +1)",
+   "chargen_value": "+2 / +1",
+   "flavor": "Two points to one stat, one point to another. Management called it recognition."
+  },
+  {
+   "id": "asi-1-1-1",
+   "kind": "choice",
+   "parent_id": "background-asi",
+   "srd_name": "+1 / +1 / +1",
+   "display_name": "Everyone Gets a Participation Trophy",
+   "combined_label": "Everyone Gets a Participation Trophy (+1 / +1 / +1)",
+   "chargen_value": "+1 / +1 / +1",
+   "flavor": "One point to each of the three stats the job listed. Nobody wins, and everybody gets a little something."
+  },
+  {
+   "id": "package-a",
+   "kind": "choice",
+   "parent_id": "background-kit",
+   "srd_name": "Package A",
+   "display_name": "Cardboard Carton From Your Desk",
+   "combined_label": "Cardboard Carton From Your Desk (Package A)",
+   "chargen_value": "A",
+   "flavor": "Whatever you carried out the front door when they walked you out. It is mostly yours."
+  },
+  {
+   "id": "package-b",
+   "kind": "choice",
+   "parent_id": "background-kit",
+   "srd_name": "Package B",
+   "display_name": "Severance Envelope, Unmarked",
+   "combined_label": "Severance Envelope, Unmarked (Package B)",
+   "chargen_value": "B",
+   "flavor": "Credits in hand, no gear, and a note that says 'good luck'. Shop at the Vending Wall and hope."
+  }
+ ]
+}

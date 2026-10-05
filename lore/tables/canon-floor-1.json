@@ -1,0 +1,1759 @@
+{
+ "schema": "canon-floor-1/0.1.0",
+ "floor": 1,
+ "floor_name_canon": "The First Floor",
+ "floor_name_house": "The Orientation Pit",
+ "owner": "DCC Lore",
+ "updated": "2026-10-04",
+ "ledger_version": "1.13",
+ "consumer": "Encounter Bot (floors/f01/)",
+ "players_are": "Crawlers",
+ "tag_legend": {
+  "canon": "Appears in the books per the ledger (wiki-sourced; nothing here was checked against the novels, see ledger section 0).",
+  "inspired": "House-game extension. ledger_rows then name the nearest canon basis only.",
+  "unverified": "Claimed as canon but the ledger row is UNVERIFIED (single fan-site claim) or the claim is thin."
+ },
+ "confidence_legend": "Copied from the ledger Confidence column (VERIFIED / WIKI-ONLY / UNVERIFIED); several rows -> weakest label. null = no ledger row (pure house content).",
+ "out_of_scope": "No CR, levels, difficulty, credits or loot amounts: Syndicate rules/10 and the loot decks own those. table_refs only point at existing deck ids. GM-only spine seeds are deliberately left out.",
+ "how_to_use": "Pick canon entries for flavor and staging; house zones list the canon basis for reskinned mobs. announcement.quote is a ledger-row quote (25 words or fewer) or null; otherwise paraphrase the style.",
+ "zones": [
+  {
+   "id": "c-floor",
+   "name": "The First Floor (floor-wide rules)",
+   "kind": "canon_floor_wide",
+   "tag": "canon",
+   "name_note": "Canon name: The First Floor. House game wraps it as \"The Orientation Pit\" (see house zones).",
+   "ledger_rows": [
+    "M-010",
+    "M-011",
+    "M-013",
+    "M-016",
+    "M-263",
+    "M-264",
+    "M-272",
+    "M-276",
+    "M-277",
+    "M-282",
+    "M-283",
+    "M-285",
+    "T-002",
+    "T-005"
+   ],
+   "staging": "A giant square grid of halls split into neighborhoods; each neighborhood has one local mob type and one boss, and its mobs stop respawning when the boss dies. Stairwells only appear about a day and a half in, and safe rooms look like transplanted Earth rest stops.",
+   "announcement": {
+    "style": "Cascadia talks like a store manager opening for business; patch notes read as cheerful changelogs that scold Crawlers.",
+    "quote": "Hello, Crawlers!",
+    "quote_row": null,
+    "quote_source": "W:First Floor (Introductory Announcement)"
+   },
+   "mobs": [
+    {
+     "id": "mob-rat",
+     "name": "Rat",
+     "tag": "canon",
+     "role": "janitor mob",
+     "what": "Small, hissing, poisonous-bite rodents that infest every neighborhood and eat dead Crawlers.",
+     "ledger_rows": [
+      "M-265",
+      "M-266"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-restroom-portal",
+     "name": "Hallway restroom portals",
+     "tag": "canon",
+     "what": "Mismatched Earth doors that all open onto the user's own stall; early bugs made a second entrant explode or get sucked in until patches fixed them. Use as a one-off early-floor gag, not a standing hazard.",
+     "ledger_rows": [
+      "M-278",
+      "M-279",
+      "M-280",
+      "M-281",
+      "T-005"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat-safe-room-rules",
+     "name": "Safe room rules",
+     "tag": "canon",
+     "what": "Boxes open only inside; attackers get teleported away; three-strikes rule on violence/theft; explosives are inert.",
+     "ledger_rows": [
+      "K-170",
+      "M-010",
+      "M-011",
+      "M-013"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat-safe-room-look",
+     "name": "Earth rest-stop safe rooms",
+     "tag": "canon",
+     "what": "Fast-food joints and waiting rooms from Earth, with three wall screens.",
+     "ledger_rows": [
+      "M-282",
+      "M-283"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat-stairwell",
+     "name": "Stairwells",
+     "tag": "canon",
+     "what": "Appear after the first-day cycle; Borough and City boss arenas always contain one; early descent means stasis until the floor ends.",
+     "ledger_rows": [
+      "A-139",
+      "M-016",
+      "M-275",
+      "M-276",
+      "M-277"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat-guild-hall",
+     "name": "Tutorial Guild Hall",
+     "tag": "canon",
+     "what": "Where the HUD and menus unlock and a guide is assigned.",
+     "ledger_rows": [
+      "A-146",
+      "H-003",
+      "M-284"
+     ],
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-hoarder",
+   "name": "The Hoarder's neighborhood (Scatterer nest)",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "name_note": "Canon boss: the Hoarder, a first Neighborhood Boss.",
+   "ledger_rows": [
+    "A-011",
+    "B-001",
+    "M-014",
+    "M-269",
+    "M-270",
+    "M-271",
+    "T-004"
+   ],
+   "staging": "Once Crawlers step into the boss room the broken door re-forms and locks behind them. The boss rises out of the garbage and retches out bugs; her built-in weakness is that the flow of minions can be choked at her mouth.",
+   "announcement": {
+    "style": "Deadpan achievement popup states plainly what the Crawler just did to the boss.",
+    "quote": "You have struck a blow against a dungeon boss and caused damage to it.",
+    "quote_row": "A-011"
+   },
+   "mobs": [
+    {
+     "id": "mob-scatterer",
+     "name": "Scatterer",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Bread-loaf-sized cockroach swarm mob.",
+     "ledger_rows": [
+      "M-267"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-scatterer-brood-guardian",
+     "name": "Scatterer Brood Guardian",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Cat-sized, faster, tougher cockroach that charges.",
+     "ledger_rows": [
+      "M-268"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "boss-hoarder",
+     "name": "The Hoarder",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Giant garbage-troll boss who vomits Scatterers; one signature trick, one clean weakness.",
+     "ledger_rows": [
+      "B-001",
+      "M-269",
+      "M-271"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-sealed-chamber",
+     "name": "Sealing boss chamber",
+     "tag": "canon",
+     "what": "Door re-forms behind Crawlers and locks with glowing bars; the boss never leaves the room.",
+     "ledger_rows": [
+      "M-270",
+      "M-272"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-goblin-quarter",
+   "name": "Goblin territory (Murder Dozer, workshop and the meth war)",
+   "kind": "canon_setpiece",
+   "tag": "canon",
+   "name_note": "Canon: Floor 1 goblin clan area; the clan's boss is the Goblin War Chieftain.",
+   "ledger_rows": [
+    "A-009",
+    "A-094",
+    "I-013",
+    "I-024",
+    "M-286",
+    "M-287",
+    "M-288",
+    "M-289",
+    "M-290",
+    "M-291",
+    "M-292",
+    "M-293",
+    "M-294"
+   ],
+   "staging": "Goblins rush in numbers and come back with the whole clan if you only kill one; the opening gag is a steam-powered Murder Dozer. The clan boss is meant to be beaten with cleverness (a cart of munitions), not toe-to-toe.",
+   "announcement": {
+    "style": "Explosion achievements fire as gleeful popups about causing a wall-shaking boom.",
+    "quote": "You’ve caused a wall-shaking explosion within the dungeon!",
+    "quote_row": "A-009"
+   },
+   "mobs": [
+    {
+     "id": "mob-goblin",
+     "name": "Goblin",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Small, green, clever, loud; pineapple-topped clubs; the clan answers for a killed member.",
+     "ledger_rows": [
+      "M-286",
+      "M-287"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-goblin-engineer",
+     "name": "Goblin Engineer",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Machine-driver in odd headgear; the first one pilots the Murder Dozer.",
+     "ledger_rows": [
+      "M-288"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-goblin-bomb-bard",
+     "name": "Goblin Bomb Bard",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Ranged explosives specialist.",
+     "ledger_rows": [
+      "M-290"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-goblin-shamanka",
+     "name": "Goblin Shamanka",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Magic-using clan leader who can focus a blast.",
+     "ledger_rows": [
+      "M-291"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-murder-dozer",
+     "name": "Goblin Murder Dozer",
+     "tag": "canon",
+     "role": "vehicle",
+     "what": "Spiked, steam-powered goblin juggernaut meant to run Crawlers down.",
+     "ledger_rows": [
+      "M-289"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "boss-goblin-war-chieftain",
+     "name": "Goblin War Chieftain",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Goblin clan boss; canon beat is killing it with a cart of explosives.",
+     "ledger_rows": [
+      "M-293"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-goblin-explosives",
+     "name": "Goblin explosives",
+     "tag": "canon",
+     "what": "Dynamite and sparking bombs lobbed by Bomb Bards.",
+     "ledger_rows": [
+      "I-013",
+      "M-290"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat-goblin-workshop",
+     "name": "Goblin workshop",
+     "tag": "canon",
+     "what": "A goblin base that can be looted; the canon raid ends with an infamous boss-room explosion (mature content, optional).",
+     "ledger_rows": [
+      "A-124",
+      "M-294"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat-meth-war",
+     "name": "Goblin vs llama meth war",
+     "tag": "canon",
+     "what": "Background turf war between the clan and the llamas that Crawlers can inflame.",
+     "ledger_rows": [
+      "M-292"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-llama",
+   "name": "Bad Llama neighborhood",
+   "kind": "canon_neighborhood",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-292",
+    "M-295",
+    "M-296"
+   ],
+   "staging": "Horse-sized llamas lob glowing lava spit; the plan is to read the glow, then hit the throat pouch. They are the other side of the goblin turf war.",
+   "announcement": {
+    "style": "No dedicated announcement captured; use the standard Crawler-hostile mob nameplate with a snarky one-liner.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "mob-bad-llama",
+     "name": "Bad Llama",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Lava-spitting, meth-dealing llama; throat pouch is the weak point.",
+     "ledger_rows": [
+      "M-295",
+      "M-296"
+     ],
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-lava-spit",
+     "name": "Lava spit",
+     "tag": "canon",
+     "what": "Ranged glob that scorches; the throat pouch glows before a spit and bursting it kills the llama.",
+     "ledger_rows": [
+      "M-295",
+      "M-296"
+     ],
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-rot-sticker",
+   "name": "Rot Sticker neighborhood",
+   "kind": "canon_neighborhood",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-297",
+    "M-298"
+   ],
+   "staging": "Wall-running suicide bombers attach, pop a few seconds later and knock the Crawler down; the rest then swarm the one on the floor.",
+   "announcement": {
+    "style": "No dedicated announcement captured.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "mob-rot-sticker",
+     "name": "Rot Sticker",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Small, chittering ravioli-shaped kamikaze mob that runs on walls and ceilings.",
+     "ledger_rows": [
+      "M-297",
+      "M-298"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-take-down-swarm",
+     "name": "Knockdown-then-swarm",
+     "tag": "canon",
+     "what": "The self-destruct knocks the target down; swarming follows.",
+     "ledger_rows": [
+      "M-297",
+      "M-298"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-juicer",
+   "name": "The Juicer's gym (troglodyte neighborhood)",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "name_note": "Canon boss: the Juicer, a Neighborhood Boss in the troglodyte area.",
+   "ledger_rows": [
+    "A-115",
+    "B-002",
+    "M-299",
+    "M-300",
+    "M-301",
+    "M-302",
+    "M-303",
+    "M-304",
+    "M-305",
+    "M-306"
+   ],
+   "staging": "Automatic gym doors slide shut, the lights turn red and boss music kicks in. A pack of troglodyte support mobs poison and tie up the Crawlers while the boss lobs flaming weights; the winning idea is to hit his overstrained veins.",
+   "announcement": {
+    "style": "A clever kill gets a deadpan popup from the System (here, using one mob's body against another).",
+    "quote": "You killed two mobs at once using only their own bodies against each other.",
+    "quote_row": "A-115"
+   },
+   "mobs": [
+    {
+     "id": "mob-troglodyte-basher",
+     "name": "Troglodyte Basher",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Human-sized melee troglodyte in the Juicer's room.",
+     "ledger_rows": [
+      "M-301"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-troglodyte-virtuoso",
+     "name": "Troglodyte Virtuoso",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Small whip-tongued poisoner with long reach.",
+     "ledger_rows": [
+      "M-300"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-troglodyte-pygmy",
+     "name": "Troglodyte Pygmy",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Tiny, fast, leaping biter.",
+     "ledger_rows": [
+      "M-302"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "boss-juicer",
+     "name": "The Juicer",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Steroid-bloated lizard-man boss who throws burning free weights.",
+     "ledger_rows": [
+      "B-002",
+      "M-304",
+      "M-305"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-troglodyte-poison",
+     "name": "Troglodyte poison",
+     "tag": "canon",
+     "what": "Bites and tongue lashes can apply the painful Poison Debuff.",
+     "ledger_rows": [
+      "M-299",
+      "M-300"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz-flaming-weights",
+     "name": "Flaming thrown weights",
+     "tag": "canon",
+     "what": "The boss's one signature attack: heavy plates that ignite in flight.",
+     "ledger_rows": [
+      "M-304"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat-boss-room-lockdown",
+     "name": "Boss room lights and music",
+     "tag": "canon",
+     "what": "Doors close, red lights, boss music: the canon \"fight begins\" beat.",
+     "ledger_rows": [
+      "M-306"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-ball-of-swine",
+   "name": "Ball of Swine arena (Borough Boss)",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "name_note": "Canon boss: the Ball of Swine, a.k.a. the Porkchop Express, a Borough Boss. Tier wording disputed once (X-009).",
+   "ledger_rows": [
+    "A-010",
+    "B-003",
+    "M-307",
+    "M-308",
+    "M-309",
+    "M-310",
+    "M-311",
+    "M-312",
+    "M-324",
+    "T-006"
+   ],
+   "staging": "A concentric maze of tunnels with a safe courtyard at the gate. A fused sphere of aristocrats rolls on floor tracks while rising and falling walls steer it at the Crawlers, all staged as a rave. Wedge it in place, break it open, then mop up the dazed Tusklings; the stairwell is in the middle.",
+   "announcement": {
+    "style": "A short \"you have found a Borough Boss chamber\" popup in the usual deadpan.",
+    "quote": "So, you’ve stumbled into the chamber of the second-weakest type of boss.",
+    "quote_row": "A-010"
+   },
+   "mobs": [
+    {
+     "id": "boss-ball-of-swine",
+     "name": "Ball of Swine",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Rolling battle formation of fused Tusklings; one attack: roll over you.",
+     "ledger_rows": [
+      "B-003",
+      "M-307",
+      "M-308"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-tuskling-knight",
+     "name": "Tuskling Knight",
+     "tag": "canon",
+     "role": "minion",
+     "what": "Tuxedoed pig-faced aristocrat; weak and unarmed once the ball pops.",
+     "ledger_rows": [
+      "M-311",
+      "M-324"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-tuskling-courtesan",
+     "name": "Tuskling Courtesan",
+     "tag": "canon",
+     "role": "minion",
+     "what": "Gowned female Tuskling, slightly tougher than a Knight.",
+     "ledger_rows": [
+      "M-311"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-tuskling-dominatrix",
+     "name": "Tuskling Dominatrix",
+     "tag": "canon",
+     "role": "minion",
+     "what": "Last Tuskling standing; a leader of the formation.",
+     "ledger_rows": [
+      "B-003"
+     ],
+     "note": "Appears on the wiki page for the Ball; no dedicated ledger quote beyond B-003.",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "haz-rolling-tracks",
+     "name": "Rolling tracks and shifting walls",
+     "tag": "canon",
+     "what": "Grooves in the floor mark the sphere's path; walls rise and fall to redirect it; loud music hides its approach.",
+     "ledger_rows": [
+      "M-307",
+      "M-309"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "haz-ball-forcefield",
+     "name": "Forcefielded stairwell",
+     "tag": "canon",
+     "what": "The exit sits behind a red forcefield until the boss dies.",
+     "ledger_rows": [
+      "M-310"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat-ball-courtyard",
+     "name": "Staging courtyard",
+     "tag": "canon",
+     "what": "A single gate and a courtyard the Ball will not enter; Crawlers can plan there.",
+     "ledger_rows": [
+      "M-312"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat-ball-wedge",
+     "name": "Wedge weakness",
+     "tag": "canon",
+     "what": "The sphere fills the tunnel, so a solid angled ramp can pin it.",
+     "ledger_rows": [
+      "M-308"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [
+    "X-009"
+   ],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-floating-crystal",
+   "name": "Floating-crystal neighborhood boss",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-313"
+   ],
+   "staging": "A brittle, hovering crystal boss that a heavy hitter can shatter in a few blows. Little else is recorded.",
+   "announcement": {
+    "style": "No announcement captured.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "boss-floating-crystal",
+     "name": "Floating crystal",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Neighborhood boss that looks like a hovering crystal.",
+     "ledger_rows": [
+      "M-313"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [],
+   "features": [],
+   "gaps": [
+    "No ledger quote on attacks, chamber or System intro."
+   ],
+   "table_refs": [],
+   "items": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-street-preacher",
+   "name": "Street Preacher (neighborhood boss, patched to Borough Boss)",
+   "kind": "canon_boss",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-314"
+   ],
+   "staging": "Only the patch-note upgrade from Neighborhood to Borough Boss is recorded; use as flavor for a promoted boss.",
+   "announcement": {
+    "style": "Patch-note style: the System announces the promotion in a changelog bullet.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "boss-street-preacher",
+     "name": "Street Preacher",
+     "tag": "canon",
+     "role": "boss",
+     "what": "Boss promoted by patch; no fight description captured.",
+     "ledger_rows": [
+      "M-314"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [],
+   "features": [],
+   "gaps": [
+    "No ledger quote on how it fights."
+   ],
+   "table_refs": [],
+   "items": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "c-roster",
+   "name": "Other Floor 1 neighborhoods (mob roster)",
+   "kind": "canon_roster",
+   "tag": "canon",
+   "ledger_rows": [
+    "M-315",
+    "M-316",
+    "M-317",
+    "M-318",
+    "M-319",
+    "M-320",
+    "M-321",
+    "M-322",
+    "M-323",
+    "M-325",
+    "M-326"
+   ],
+   "staging": "Pick-list of other Floor 1 mobs that have no ledger-backed set-piece yet; use as local neighborhood flavor. Items marked unverified rest on a single fan-site list.",
+   "announcement": {
+    "style": "Broadcast-recap style: new mobs are introduced on the show with a quick highlight reel.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "mob-chilly-goat",
+     "name": "Chilly Goat",
+     "tag": "canon",
+     "role": "mob",
+     "what": "White horned goat with a mouth full of fangs.",
+     "ledger_rows": [
+      "M-318"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-scat-thug",
+     "name": "Scat Thug",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Raccoon-headed spear carrier about as strong as a goblin.",
+     "ledger_rows": [
+      "M-319"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-green-slime",
+     "name": "Green Slime",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Acidic blob that dissolves cloth and skin.",
+     "ledger_rows": [
+      "M-320"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-vine-creeper",
+     "name": "Vine Creeper",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Thorny plant that bursts from pods and swallows Crawlers.",
+     "ledger_rows": [
+      "M-321"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-bugaboo",
+     "name": "Bugaboo",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Lurking, creepy ambusher.",
+     "ledger_rows": [
+      "M-322"
+     ],
+     "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "mob-axebeak",
+     "name": "Axebeak",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Named mob only.",
+     "ledger_rows": [
+      "M-323"
+     ],
+     "note": "Name only; nothing else captured.",
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-blender-fiend",
+     "name": "Blender Fiend (patched out)",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Collective mob removed from Floor 1 by patch after a mass kill. Use as a rumor, not an encounter.",
+     "ledger_rows": [
+      "M-315"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-spine-wolf",
+     "name": "Spine-covered wolf",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Seen in the first episode; no further detail.",
+     "ledger_rows": [
+      "M-316"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-fire-blob",
+     "name": "Fire blob",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Shapeless flaming blob seen in the first episode.",
+     "ledger_rows": [
+      "M-316"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-floating-stingray",
+     "name": "Floating stingray",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Hovering ray that fires Magic Missiles from its eye stalks.",
+     "ledger_rows": [
+      "M-316"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-floating-eyeball",
+     "name": "Floating eyeball",
+     "tag": "canon",
+     "role": "mob",
+     "what": "Groups of drifting eyeballs seen in the first episode.",
+     "ledger_rows": [
+      "M-316"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-three-headed-baboon",
+     "name": "Three-headed baboon",
+     "tag": "canon",
+     "role": "mob",
+     "what": "New mob shown in a later recap.",
+     "ledger_rows": [
+      "M-317"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-toothy-eggplant",
+     "name": "Eggplant with teeth",
+     "tag": "canon",
+     "role": "mob",
+     "what": "New mob shown in a later recap.",
+     "ledger_rows": [
+      "M-317"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob-thorn-cadaver",
+     "name": "Thorn Cadaver",
+     "tag": "unverified",
+     "role": "mob",
+     "what": "Spiky undead mob; floor placement from one fan site only.",
+     "ledger_rows": [
+      "M-325"
+     ],
+     "note": "Mob exists (kneepads page), Floor 1 placement unconfirmed.",
+     "confidence": "UNVERIFIED"
+    },
+    {
+     "id": "mob-hobgoblin-maze",
+     "name": "Hobgoblin (maze)",
+     "tag": "unverified",
+     "role": "mob",
+     "what": "Large goblinoid claimed for the maze areas by one fan site.",
+     "ledger_rows": [
+      "M-326"
+     ],
+     "confidence": "UNVERIFIED"
+    }
+   ],
+   "hazards": [],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "UNVERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z00",
+   "name": "Zone 0: Intake Hall",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "M-285",
+    "T-002"
+   ],
+   "staging": "Pure intake. Crawlers step out of the booths into a long hall under a cynical welcome banner; no fight.",
+   "announcement": {
+    "style": "Bureaucratic welcome-desk tone; a hallway screen gets one Crawler's name wrong.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z01",
+   "name": "Zone 1: The Atrium",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-145",
+    "A-146",
+    "H-003",
+    "M-284"
+   ],
+   "staging": "Teaching room around a dead fountain. A rail-mounted fortune-teller automaton coaches the first skill tests against a jammed shutter and a graffitied directory.",
+   "announcement": {
+    "style": "Faux-cheerful tutorial-guide voice that promises to teach Crawlers to live \"briefly\".",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "hz-jammed-shutter",
+     "name": "Jammed security shutter",
+     "tag": "inspired",
+     "what": "The obstacle that teaches skill checks and helping; no combat.",
+     "ledger_rows": [],
+     "confidence": null
+    },
+    {
+     "id": "hz-fountain-coins",
+     "name": "Corroded fountain coins",
+     "tag": "inspired",
+     "what": "Sharp-edged bait that nicks the greedy.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "features": [
+    {
+     "id": "npc-proctor-bell",
+     "name": "Proctor Bell (guide automaton)",
+     "tag": "inspired",
+     "what": "House analog of the Tutorial Game Guide: glass booth on ceiling rails, rolls ahead of the party zone to zone.",
+     "ledger_rows": [
+      "H-003",
+      "M-284"
+     ],
+     "confidence": "WIKI-ONLY"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z02",
+   "name": "Zone 2: Vent Row",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "M-265",
+    "M-266"
+   ],
+   "staging": "First fight: rats burst from two banks of bent vent grates while UI brackets pop over the openings. Teaches initiative, opportunity attacks and flanking.",
+   "announcement": {
+    "style": "Dry post-fight quip comparing the win to a menial night-shift job.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "hmob-vent-rat",
+     "name": "Vent Rat",
+     "tag": "inspired",
+     "role": "mob",
+     "what": "House reskin of the canon floor rat; pack biter that likes ankles.",
+     "ledger_rows": [
+      "M-265",
+      "M-266"
+     ],
+     "analog_of": "mob-rat",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "hz-vent-ambush",
+     "name": "Vent ambush points",
+     "tag": "inspired",
+     "what": "Bent grates are where the pack emerges from.",
+     "ledger_rows": [
+      "M-265"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z03",
+   "name": "Zone 3: Vending Gore Arcade",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-185",
+    "M-265"
+   ],
+   "staging": "A long hall of breathing vending machines around a fallen Crawler's body. Teaches looting, corpse looting and the cost of reaching into a hungry machine.",
+   "announcement": {
+    "style": "Snarky achievement popups; vending machines speak in cheerful consumer slogans.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "hz-hungry-vendors",
+     "name": "Hungry Vendors",
+     "tag": "inspired",
+     "what": "Intact machines bite and hold a reaching arm; prying them open is loud.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "features": [
+    {
+     "id": "npc-tanya-ruiz",
+     "name": "Tanya Ruiz (fallen Crawler, lore scrap)",
+     "tag": "inspired",
+     "what": "A corpse that doubles as a loot-lesson and a hint note.",
+     "ledger_rows": [
+      "A-185"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [
+    "f01-z03-vending-gore-arcade"
+   ],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z04",
+   "name": "Zone 4: Hall of Fair Warnings",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-040",
+    "A-145",
+    "M-266"
+   ],
+   "staging": "A clean corridor of honest warning signs and three traps, with a rescue target hanging in a net. Teaches saves, trap spotting and disarming with junk.",
+   "announcement": {
+    "style": "Mock-exasperated deadpan: the signs said TRAP, repeatedly, and the System notes that reading was available.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "hz-welcome-mat",
+     "name": "T1 Welcome Mat",
+     "tag": "inspired",
+     "what": "Pressure plates swing a wet-floor sign into whoever steps on them.",
+     "ledger_rows": [
+      "A-040"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "hz-ticket-please",
+     "name": "T2 Ticket, Please",
+     "tag": "inspired",
+     "what": "Turnstile with a hidden needle that poisons (canon uses a Poison Debuff on early mobs).",
+     "ledger_rows": [
+      "A-040",
+      "M-266"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "hz-snare-net",
+     "name": "T3 Snare net",
+     "tag": "inspired",
+     "what": "Holds the rescue target; restrains anyone caught.",
+     "ledger_rows": [
+      "A-040"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "npc-dale-pruitt",
+     "name": "Dale Pruitt (rescue NPC)",
+     "tag": "inspired",
+     "what": "Civilian ductwork enthusiast, house NPC; a permanence lesson if not protected.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "items": [
+    {
+     "srd_id": "net",
+     "srd_name": "Net",
+     "game_display_name": "Volleyball Net, Reclaimed",
+     "used_for": "Dale's snare net"
+    },
+    {
+     "srd_id": "thieves-tools",
+     "srd_name": "Thieves' Tools",
+     "game_display_name": "Bobby Pins and a Gift Card",
+     "used_for": "Disarming and picking"
+    }
+   ],
+   "table_refs": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "WIKI-ONLY",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z05",
+   "name": "Zone 5: Shooting Gallery",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "M-273"
+   ],
+   "staging": "A carnival range with plywood cutouts and moving conveyors; staff mannequins fire from behind a far counter. Teaches cover and ranged combat.",
+   "announcement": {
+    "style": "Carnival-barker patter about cover; jokes at the cutouts' expense.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "hmob-mannequin-staff",
+     "name": "Mannequin Staff",
+     "tag": "inspired",
+     "role": "mob",
+     "what": "Smiling department-store mannequins in staff polos with bows; Earth-stereotype mob in the canon tutorial spirit.",
+     "ledger_rows": [
+      "M-273"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "hz-conveyors",
+     "name": "Prize-carousel conveyors",
+     "tag": "inspired",
+     "what": "Conveyor belts carry a standing Crawler along the room.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "features": [],
+   "items": [
+    {
+     "srd_id": "shortbow",
+     "srd_name": "Shortbow",
+     "game_display_name": "Compound Bow From a Sporting-Goods Display",
+     "used_for": "The mannequins' bows (closest reskin; floor doc calls them pink toy bows)"
+    }
+   ],
+   "table_refs": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z06",
+   "name": "Zone 6: The Break Room (Saferoom A)",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon. Safe-room rules themselves are canon.",
+   "ledger_rows": [
+    "A-184",
+    "K-170",
+    "L-002",
+    "M-010",
+    "M-011",
+    "M-013",
+    "M-282",
+    "M-283"
+   ],
+   "staging": "A break-room-themed safe room: first box-opening ceremony, a vendor terminal and a rumor corkboard. Nothing may hurt Crawlers inside except each other.",
+   "announcement": {
+    "style": "Safe-room certification in a warm-hug-before-a-pickpocket voice; a game-show drumroll opens the first box.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [],
+   "features": [
+    {
+     "id": "feat-saferoom-a",
+     "name": "Safe room services",
+     "tag": "canon",
+     "what": "Rest, box opening, protection from mobs; explosives inert.",
+     "ledger_rows": [
+      "A-184",
+      "K-170",
+      "L-002",
+      "M-010",
+      "M-011",
+      "M-013"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat-breakroom-dressing",
+     "name": "Break Room theming (couch, fridge, corkboard, vendor)",
+     "tag": "inspired",
+     "what": "House dressing in the canon Earth-rest-stop style.",
+     "ledger_rows": [
+      "M-282"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [
+    "f01-z06-break-room"
+   ],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z07",
+   "name": "Zone 7: The Big Green EXIT",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-040",
+    "A-139",
+    "M-275",
+    "M-276",
+    "M-286",
+    "M-287",
+    "M-294"
+   ],
+   "staging": "Stair bait: a glowing EXIT, birdsong and fresh air lead to a landing over a trapdoor pit where goblin-style greeters wait. Walking away is the smart play; going down opens a hidden goblin workshop.",
+   "announcement": {
+    "style": "Faux-sincere exit-sign voice; the System congratulates anyone who declines the bait.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "hmob-exit-greeter",
+     "name": "Exit Greeter",
+     "tag": "inspired",
+     "role": "mob",
+     "what": "Clipboard-carrying goblin-style staff in EXIT-sign hats who ambush at the landing.",
+     "ledger_rows": [
+      "M-286",
+      "M-287"
+     ],
+     "analog_of": "mob-goblin",
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "hmob-exit-greeter-trainee",
+     "name": "Exit Greeter (Trainee)",
+     "tag": "inspired",
+     "role": "minion",
+     "what": "Junior version of the greeter.",
+     "ledger_rows": [
+      "M-286"
+     ],
+     "analog_of": "mob-goblin",
+     "confidence": "VERIFIED"
+    }
+   ],
+   "hazards": [
+    {
+     "id": "hz-trapdoor",
+     "name": "T4 Trapdoor of Opportunity",
+     "tag": "inspired",
+     "what": "Concealed floor over a short pit with broken glass; the stairs are fake.",
+     "ledger_rows": [
+      "A-040",
+      "A-139"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [
+    {
+     "id": "feat-greeter-office",
+     "name": "Greeters' back office (goblin workshop)",
+     "tag": "inspired",
+     "what": "Hidden closet-workshop in the goblin-workshop tradition; optional find.",
+     "ledger_rows": [
+      "M-294"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z08",
+   "name": "Zone 8: Mascot Locker Room",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "M-273",
+    "M-274"
+   ],
+   "staging": "An empty mascot costume unhooks itself while name-badge blades take flight. The fight is built to be the first likely death-save lesson; the System switches to a dying-Crawler popup.",
+   "announcement": {
+    "style": "Sports-broadcast mock-hype for the mascot; a stern \"this lesson is about dying\" aside from the guide.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "hmob-bruiser-mascot",
+     "name": "Bruiser the Mascot (Unoccupied)",
+     "tag": "inspired",
+     "role": "elite",
+     "what": "Giant empty pit-bull mascot costume; padded foam over something heavy.",
+     "ledger_rows": [
+      "M-273",
+      "M-274"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "hmob-lanyard-blade",
+     "name": "Lanyard Blade",
+     "tag": "inspired",
+     "role": "minion",
+     "what": "Animated ID badge on a lanyard with razor edges.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "hazards": [
+    {
+     "id": "hz-cracked-mirror",
+     "name": "Cracked mirror wall",
+     "tag": "inspired",
+     "what": "Reflection lags and teases species; atmosphere only.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z09",
+   "name": "Zone 9: The Green Room (Saferoom B)",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon. Safe-room rules themselves are canon.",
+   "ledger_rows": [
+    "A-184",
+    "K-170",
+    "L-002",
+    "M-010",
+    "M-011",
+    "M-013",
+    "M-282",
+    "M-283"
+   ],
+   "staging": "Backstage safe room before the finale: rest, box opening and a creepy framed photo of the Dean with crossed-out crawlers.",
+   "announcement": {
+    "style": "Same safe-room certification voice as the Break Room, but with \"statistically, this is where we lose people\" gallows humor.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [],
+   "features": [
+    {
+     "id": "feat-saferoom-b",
+     "name": "Safe room services",
+     "tag": "canon",
+     "what": "Rest, box opening, protection from mobs; explosives inert.",
+     "ledger_rows": [
+      "A-184",
+      "K-170",
+      "L-002",
+      "M-010",
+      "M-011",
+      "M-013"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [
+    "f01-z09-green-room"
+   ],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z10",
+   "name": "Zone 10: Graduation Stage (Dean Thudd)",
+   "kind": "house_boss",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-010",
+    "M-014",
+    "M-270",
+    "M-272",
+    "M-273",
+    "M-274",
+    "M-307",
+    "M-308",
+    "M-309"
+   ],
+   "staging": "A hangar-sized auditorium with an orchestra pit and hundreds of camera lights. A hulking dean in a tiny mortarboard fights with one telegraphed area attack; clever play (pit, diploma, talking him down) is rewarded.",
+   "announcement": {
+    "style": "Full game-show host voice: a title-bout introduction, a versus card and hype for the champion, matching the canon boss-intro style.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "hboss-dean-thudd",
+     "name": "Dean Thudd, Head of Orientation",
+     "tag": "inspired",
+     "role": "boss",
+     "what": "House boss: oversized dean who flunks Crawlers with a podium-and-flagpole club; one telegraphed group-photo attack.",
+     "ledger_rows": [
+      "M-272",
+      "M-273",
+      "M-274"
+     ],
+     "note": "Item reskin hint only: nearest reskin for the club is the greatclub.",
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "hmob-usher",
+     "name": "Usher",
+     "tag": "inspired",
+     "role": "minion",
+     "what": "Flashlight-armed theater usher; joins in the second half of the fight.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "hazards": [
+    {
+     "id": "hz-orchestra-pit",
+     "name": "Orchestra pit",
+     "tag": "inspired",
+     "what": "Front-of-stage drop that can be used against the boss.",
+     "ledger_rows": [
+      "M-308"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "hz-group-photo",
+     "name": "Group Photo spotlight",
+     "tag": "inspired",
+     "what": "Telegraphed floor spotlight and countdown; dodge it or pay.",
+     "ledger_rows": [
+      "M-274",
+      "M-307"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [],
+   "items": [
+    {
+     "srd_id": "greatclub",
+     "srd_name": "Greatclub",
+     "game_display_name": "Fence Post With Opinions",
+     "used_for": "Dean Thudd's club (closest reskin)"
+    }
+   ],
+   "table_refs": [
+    "f01-z10-graduation-stage",
+    "f01-any-story-boxes"
+   ],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "z11",
+   "name": "Zone 11: The Stairwell",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-139",
+    "M-016",
+    "M-275",
+    "M-276",
+    "M-277",
+    "T-006"
+   ],
+   "staging": "A plain concrete stairwell behind the stage; the real exit, no bait. The System closes the floor with a summary card.",
+   "announcement": {
+    "style": "End-of-show sign-off: the guide automaton begrudgingly says it is proud, then warns that most will die next floor.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [],
+   "features": [
+    {
+     "id": "feat-real-stairwell",
+     "name": "Real stairwell and floor summary",
+     "tag": "canon",
+     "what": "Canon stairwell mechanic; the checkpoint and summary card are house additions.",
+     "ledger_rows": [
+      "A-139",
+      "M-016",
+      "M-275"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "zS",
+   "name": "Zone S: Service Corridor (side path)",
+   "kind": "house_zone",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [
+    "A-139",
+    "M-275"
+   ],
+   "staging": "Hidden utility hall to a service stairwell that bypasses the boss. Forcing the door is loud.",
+   "announcement": {
+    "style": "Contemptuous raccoon-through-the-janitor-door joke for skipping the final exam.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [],
+   "hazards": [
+    {
+     "id": "hz-service-door",
+     "name": "Locked service door",
+     "tag": "inspired",
+     "what": "Opens with the right key or tools; noise draws the boss.",
+     "ledger_rows": [
+      "A-139"
+     ],
+     "confidence": "VERIFIED"
+    }
+   ],
+   "features": [],
+   "items": [
+    {
+     "srd_id": "thieves-tools",
+     "srd_name": "Thieves' Tools",
+     "game_display_name": "Bobby Pins and a Gift Card",
+     "used_for": "Picking the service door"
+    }
+   ],
+   "table_refs": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": "VERIFIED",
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  },
+  {
+   "id": "zW",
+   "name": "Zone W: Ceiling Ticks (wandering encounter)",
+   "kind": "house_wander",
+   "tag": "inspired",
+   "name_note": "House zone: tag inspired. Canon rows listed are the nearest canon basis, not proof the zone itself is canon.",
+   "ledger_rows": [],
+   "staging": "Random wandering encounter used for Lights-Out cycles, interrupted field rests and noisy looting. No canon basis found.",
+   "announcement": {
+    "style": "Needy-ex joke on the nameplate; hinting the audience groans after the wandering cap.",
+    "quote": null,
+    "quote_row": null
+   },
+   "mobs": [
+    {
+     "id": "hmob-ceiling-tick",
+     "name": "Ceiling Tick",
+     "tag": "inspired",
+     "role": "wanderer",
+     "what": "Clingy blood-sucking ceiling parasite.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "hazards": [
+    {
+     "id": "hz-lights-out",
+     "name": "Lights-Out cycle",
+     "tag": "inspired",
+     "what": "Periodic darkness where wanderers are rolled.",
+     "ledger_rows": [],
+     "confidence": null
+    }
+   ],
+   "features": [],
+   "table_refs": [],
+   "items": [],
+   "gaps": [],
+   "conflicts": [],
+   "confidence": null,
+   "confidence_scope": "weakest ledger row listed (canon basis for inspired entries)"
+  }
+ ]
+}

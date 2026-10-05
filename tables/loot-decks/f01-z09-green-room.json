@@ -1,0 +1,722 @@
+{
+  "schema": "loot-deck/0.1.1",
+  "deck_id": "f01-z09-green-room",
+  "version": "0.1.2",
+  "floor": 1,
+  "zone": "z09",
+  "zone_name": "Zone 9: The Green Room (Saferoom B)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-04",
+  "cards": [
+    {
+      "id": "f01-z09-0001",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "clue",
+      "reskin_name": "Vendor Oddity (Unappraised)",
+      "real_5e_name": "Spine object: Odd Coin (house; no mechanics on Floor 1)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "A coin, probably. Value: ???. This item cannot be sold. It has no mechanical effect on Floor 1.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Cannot be sold; do not explain it. Sell attempt: terminal says ITEM NOT RECOGNIZED or offers 500 credits and cancels.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Vendor Oddity, Unappraised. A coin, probably. It cannot be sold.",
+      "snark_line": "Value unknown, and trying to sell it is embarrassing for everyone.",
+      "reward": "Vendor Oddity, Unappraised. A coin, probably. It cannot be sold.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "clue",
+        "text": "item +1 Bronze box: Vendor Oddity (Unappraised) (Spine object: Odd Coin (house; no mechanics on Floor 1))"
+      },
+      "box_name": "Opened Something Nobody Opens Box",
+      "deed": "Opened a box in the Green Room",
+      "notes": "SEED-ODDCOIN FALLBACK ONLY (draw_weight 0, hand-pick only): if the Lost & Found crate (Zone 3) was never opened, the coin shows up here as a Weird pull in the first Green Room box. Must be planted on F1; never explain it. credit_value 0 because it cannot be sold."
+    },
+    {
+      "id": "f01-z09-0002",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "junk",
+      "reskin_name": "Fruit Plate That Has Become Something Else",
+      "real_5e_name": "Joke item (house: no effect)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Joke item. No mechanical effect. It is looking at you.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "Do not eat.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Fruit Plate That Has Become Something Else. Joke item. No mechanical effect.",
+      "snark_line": "Enjoy the fruit.",
+      "reward": "Fruit Plate That Has Become Something Else. Joke item. No mechanical effect.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Fruit Plate That Has Become Something Else (Joke item (house: no effect))"
+      },
+      "box_name": "Ate Backstage Food Box",
+      "deed": "Searched the Green Room",
+      "notes": "Floor doc §5.9 flavor. Pure dud."
+    },
+    {
+      "id": "f01-z09-0003",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Dead Mirror Bulb, Briefly Alive",
+      "real_5e_name": "Spell Scroll (Light, cantrip)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Magic action: if Light is on your class's spell list (Bard, Cleric, Sorcerer, Wizard), read the scroll to cast it: touch one Large or smaller object not worn or carried by someone else; it sheds bright light in a 20-ft radius and dim light 20 ft more for 1 hour. Covering it with something opaque blocks the light. The scroll then disintegrates.",
+        "action_cost": "Magic action",
+        "range": "Touch",
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only a class with Light on its list can read it. No Material component needed. Consumed.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Dead Mirror Bulb, Spell Scroll of Light. Bards, Clerics, Sorcerers, Wizards: touch an object; twenty feet of bright light for one hour.",
+      "snark_line": "It was dead, then it got better. Tell no other bulbs.",
+      "reward": "Dead Mirror Bulb, Spell Scroll of Light. Bards, Clerics, Sorcerers, Wizards: touch an object; twenty feet of bright light for one hour.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [
+        "light",
+        "wizard"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Dead Mirror Bulb, Briefly Alive (Spell Scroll (Light, cantrip))"
+      },
+      "box_name": "Relit the Dressing-Room Mirror Box",
+      "deed": "Brought light to a dark corner of the Green Room",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Cantrip scroll: no save or attack, so DC 13 / +5 is irrelevant. Green Room flavor: half the mirror bulbs are dead (floor doc 5.9)."
+    },
+    {
+      "id": "f01-z09-0004",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Stage Whisper Cue Card",
+      "real_5e_name": "Spell Scroll (Healing Word, level 1)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: if Healing Word is on your class's spell list (Bard, Cleric, Druid), read the scroll to cast it at level 1: one creature you can see within 60 ft regains 2d4 + your spellcasting ability modifier HP. The scroll then disintegrates.",
+        "action_cost": "Bonus Action",
+        "range": "60 ft",
+        "damage": "2d4 + spellcasting modifier HP restored",
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only a class with Healing Word on its list can read it. Verbal component only. Consumed.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Stage Whisper Cue Card, Spell Scroll of Healing Word. Bards, Clerics, Druids: Bonus Action, sixty feet, heal two d four plus modifier.",
+      "snark_line": "Whispered from the wings. The audience hears everything anyway.",
+      "reward": "Stage Whisper Cue Card, Spell Scroll of Healing Word. Bards, Clerics, Druids: Bonus Action, sixty feet, heal two d four plus modifier.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 75,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Stage Whisper Cue Card (Spell Scroll (Healing Word, level 1))"
+      },
+      "box_name": "Whispered a Line From the Wings Box",
+      "deed": "Talked a downed teammate back on their feet",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Level 1 scroll; no save or attack. Healing Word casting time is a Bonus Action, so the scroll is too. Pairs with the pre-boss rest."
+    },
+    {
+      "id": "f01-z09-0005",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Dressing-Room Body Spray, Industrial Lilac",
+      "real_5e_name": "Perfume",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Utilize action: apply it to yourself. For 1 hour you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 ft of you. One 4-oz vial, one application.",
+        "action_cost": "Utilize action",
+        "range": "5 ft (target of the check)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only works on Indifferent Humanoids. Consumed on application. Floor 1 mascots and Ushers are not impressed.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Dressing-Room Body Spray, Perfume. Utilize to apply; one hour of advantage on Persuasion against an indifferent humanoid within five feet.",
+      "snark_line": "Smells like three decades of opening nights.",
+      "reward": "Dressing-Room Body Spray, Perfume. Utilize to apply; one hour of advantage on Persuasion against an indifferent humanoid within five feet.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Dressing-Room Body Spray, Industrial Lilac (Perfume)"
+      },
+      "box_name": "Smelled Like Victory, Mostly Lilac Box",
+      "deed": "Rested in the Green Room",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Utilize action is the house reading (2024 text says only 'after applying'). Useful for the Thudd talk-down route (floor doc 6.6) only if Thudd is Indifferent; GM call."
+    },
+    {
+      "id": "f01-z09-0006",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Dressing-Room Candle, Scented Like a Funeral",
+      "real_5e_name": "Candle",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Once lit, it sheds bright light in a 5-ft radius and dim light for 5 ft more for 1 hour. Lighting it takes a Bonus Action with a Tinderbox or any open flame.",
+        "action_cost": "none",
+        "range": "5 ft bright + 5 ft dim",
+        "damage": null,
+        "save_dc": null,
+        "duration": "1 hour",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Burns out after 1 hour; needs a flame source.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Dressing-Room Candle, Candle. One hour of light: five feet bright, five more dim.",
+      "snark_line": "The replacement for the dead bulbs, dying on the same schedule.",
+      "reward": "Dressing-Room Candle, Candle. One hour of light: five feet bright, five more dim.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0.01,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Dressing-Room Candle, Scented Like a Funeral (Candle)"
+      },
+      "box_name": "Made Do With Half the Lights Box",
+      "deed": "Worked in a badly lit room",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Value 0.01 (1 cp). Burglar's Pack item, not a duplicate of the Torch or Birthday Candle scroll in the any-deck."
+    },
+    {
+      "id": "f01-z09-0007",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "tailored",
+      "kind": "item",
+      "reskin_name": "Stage Makeup Kit, Half-Dried",
+      "real_5e_name": "Disguise Kit",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Utilize action: apply makeup to create a visual disguise; Charisma check, DC 10, using the kit (add your proficiency bonus if proficient). It can also be used to craft a Costume. 3 lb.",
+        "action_cost": "Utilize action",
+        "range": "Self or touch",
+        "damage": null,
+        "save_dc": "Cha check DC 10",
+        "duration": "until washed off",
+        "uses": null,
+        "limits": "Visual disguise only: no voice, mannerism or height change.",
+        "weight_lb": 3
+      },
+      "spoken_line": "Stage Makeup Kit, Disguise Kit. Utilize to apply makeup; Charisma check ten makes a visual disguise.",
+      "snark_line": "Contour like nobody is watching. Four million people are watching.",
+      "reward": "Stage Makeup Kit, Disguise Kit. Utilize to apply makeup; Charisma check ten makes a visual disguise.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 25,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [
+        "costumes",
+        "makeup"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Stage Makeup Kit, Half-Dried (Disguise Kit)"
+      },
+      "box_name": "Put On a Face for the Audience Box",
+      "deed": "Disguised yourself or impersonated someone",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Disguise Kit tool entry (Ability Charisma, Utilize: Apply makeup DC 10). The 'visual only' limit is the 2014/2024 flavor text; GM call on edge cases."
+    },
+    {
+      "id": "f01-z09-0008",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Vanity Mirror, Half the Bulbs Dead",
+      "real_5e_name": "Mirror",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "A handheld steel mirror: use it to peek around corners without exposing yourself, to signal by reflecting light, or for cosmetics. No other effect. 1/2 lb.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "permanent",
+        "uses": null,
+        "limits": "No mechanical bonus; the GM rules what a peek reveals.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Vanity Mirror, Mirror. Peek around corners without stepping out, or flash a signal with reflected light.",
+      "snark_line": "Reflects well on no one.",
+      "reward": "Vanity Mirror, Mirror. Peek around corners without stepping out, or flash a signal with reflected light.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 5,
+      "draw_weight": 10,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Vanity Mirror, Half the Bulbs Dead (Mirror)"
+      },
+      "box_name": "Checked Your Reflection Mid-Crisis Box",
+      "deed": "Looked around a corner before charging in",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Weight 1/2 lb. Pairs with the bulb-ringed mirror in the zone description."
+    },
+    {
+      "id": "f01-z09-0009",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Curtain Rigging Pulley, Stage Left",
+      "real_5e_name": "Block and Tackle",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Passive while rigged: you can hoist up to four times the weight you can normally lift. 5 lb.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while rigged",
+        "uses": null,
+        "limits": "Needs something to anchor it to; a lift, not a throw.",
+        "weight_lb": 5
+      },
+      "spoken_line": "Curtain Rigging Pulley, Block and Tackle. Hoist up to four times the weight you can normally lift.",
+      "snark_line": "Built for lifting curtains. Works on anything heavy and uninterested.",
+      "reward": "Curtain Rigging Pulley, Block and Tackle. Hoist up to four times the weight you can normally lift.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Curtain Rigging Pulley, Stage Left (Block and Tackle)"
+      },
+      "box_name": "Hauled the Stage Props Box",
+      "deed": "Lifted or moved something heavy",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Mason's Tools craft item; 1 gp."
+    },
+    {
+      "id": "f01-z09-0010",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Midterm Blazer, Embroidered STAFF",
+      "real_5e_name": "Clothes, Fine",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Expensive-looking clothes: some events and locations admit only people wearing Fine Clothes (GM decides which). No AC, no other effect. 6 lb.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "while worn",
+        "uses": null,
+        "limits": "Cosmetic and access only; no AC.",
+        "weight_lb": 6
+      },
+      "spoken_line": "Midterm Blazer, Fine Clothes. Some events and places admit only people wearing these.",
+      "snark_line": "Dress for the job you will not survive to keep.",
+      "reward": "Midterm Blazer, Fine Clothes. Some events and places admit only people wearing these.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 15,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [
+        "clothing"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Midterm Blazer, Embroidered STAFF (Clothes, Fine)"
+      },
+      "box_name": "Dressed for the Funeral Early Box",
+      "deed": "Dressed up for a high-stakes room",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Fine Clothes, 15 gp. Staff-only door flavor (floor doc 5.9); no mechanical gate is written on F1, so purely a roleplay key."
+    },
+    {
+      "id": "f01-z09-0011",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Prop Arrows, Foam Tips Removed",
+      "real_5e_name": "Arrows (20)",
+      "source_5e": "PHB 2024",
+      "rarity": "Mundane",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Twenty arrows: ammunition for a Shortbow or Longbow; each shot uses one arrow. After a fight you can spend 1 minute to recover half the arrows you used (rounded down); the rest are lost. A Quiver (1 gp) holds them; this bundle does not include one. 1 lb.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "until spent",
+        "uses": {
+          "max": 20,
+          "recharge": "none"
+        },
+        "limits": "Useless without a Shortbow or Longbow. Damage comes from the bow. Recover half the arrows used (rounded down) with 1 minute after a fight; the rest are lost.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Prop Arrows, Arrows. Twenty pieces of ammunition for a shortbow or longbow.",
+      "snark_line": "Someone removed the foam. That someone is a problem for later.",
+      "reward": "Prop Arrows, Arrows. Twenty pieces of ammunition for a shortbow or longbow.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 1,
+      "draw_weight": 8,
+      "unique": false,
+      "tailor_tags": [
+        "archery"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Prop Arrows, Foam Tips Removed (Arrows (20))"
+      },
+      "box_name": "Shot Something Across the Room Box",
+      "deed": "Hit an enemy from range",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Arrows 20 / 1 lb / 1 gp. Ammunition-recovery rule added 2026-10-04 per Syndicate's SRD check."
+    },
+    {
+      "id": "f01-z09-0012",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "credits",
+      "kind": "credits",
+      "reskin_name": "Backstage Per Diem Envelope, Water-Stained",
+      "real_5e_name": "Credits (Bronze pull, 3d6 x 5)",
+      "source_5e": "HOUSE",
+      "rarity": "n/a",
+      "attunement": null,
+      "category": "Credits",
+      "plain_mechanics": {
+        "text": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+        "action_cost": "none",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": null,
+        "limits": "Added when the box is opened.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Backstage Per Diem Envelope. Bronze credits: three d six times five, added to your balance.",
+      "snark_line": "Meant for catering. Catering was cancelled in your honor.",
+      "reward": "Backstage Per Diem Envelope. Bronze credits: three d six times five, added to your balance.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 52.5,
+      "draw_weight": 20,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": {
+        "credits": null,
+        "roll": "3d6x5"
+      },
+      "ledger": {
+        "type": "credits",
+        "text": "credits +(3d6x5) Bronze box"
+      },
+      "box_name": "Took the Per Diem and Ran Box",
+      "deed": "Searched a dressing-room drawer",
+      "notes": "LEDGER: L-001. credit_value = expected value (10.5 x 5). Roll at draw."
+    },
+    {
+      "id": "f01-z09-0013",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "consumable",
+      "kind": "consumable",
+      "reskin_name": "Green-Room Smoothie, Pre-Show Strength",
+      "real_5e_name": "Potion of Healing (greater)",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 4d4+4 HP. One use.",
+        "action_cost": "Bonus Action",
+        "range": "5 ft (to give)",
+        "damage": null,
+        "save_dc": null,
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Consumed on use.",
+        "weight_lb": 0.5
+      },
+      "spoken_line": "Green-Room Smoothie, Potion of Greater Healing. Bonus Action: regain four d four plus four hit points.",
+      "snark_line": "Gluten-free, sugar-free, and somehow still against the rules.",
+      "reward": "Green-Room Smoothie, Potion of Greater Healing. Bonus Action: regain four d four plus four hit points.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 150,
+      "draw_weight": 5,
+      "unique": false,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Green-Room Smoothie, Pre-Show Strength (Potion of Healing (greater))"
+      },
+      "box_name": "Arrived Late, Apologized Early Box",
+      "deed": "Joined the crawl late as a replacement crawler",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. Same real item as the any-deck and z10 Greater Healing on purpose: consumables may repeat (spec 2.3), and it is the pre-boss heal. Low weight: Silver only opens here as the replacement-crawler late-entry box (floor doc 5.9); GM may hand-pick instead. Spec price HOUSE (VERIFY retained)."
+    },
+    {
+      "id": "f01-z09-0014",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Silver",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Stage-Crew Gaffer Wristbands, Pointing Hand",
+      "real_5e_name": "Bracers of Archery",
+      "source_5e": "SRD 5.2",
+      "rarity": "Uncommon",
+      "attunement": "yes",
+      "category": "Armor",
+      "plain_mechanics": {
+        "text": "Requires attunement. While worn: proficiency with the Longbow and Shortbow, and +2 bonus to damage rolls made with them.",
+        "action_cost": "None (passive)",
+        "range": null,
+        "damage": "+2 damage with Longbow/Shortbow",
+        "save_dc": null,
+        "duration": "while worn and attuned",
+        "uses": null,
+        "limits": "Counts toward the 3-item attunement limit and is the crawler's permanent Uncommon on F1 (floor doc 8: 0-1 per crawler).",
+        "weight_lb": 1
+      },
+      "spoken_line": "Stage-Crew Gaffer Wristbands, Bracers of Archery. Attune: shortbow and longbow proficiency, plus two damage with them.",
+      "snark_line": "Points at the exit. The exit is not impressed.",
+      "reward": "Stage-Crew Gaffer Wristbands, Bracers of Archery. Attune: shortbow and longbow proficiency, plus two damage with them.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 400,
+      "draw_weight": 0,
+      "unique": false,
+      "tailor_tags": [
+        "archery"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Silver box: Stage-Crew Gaffer Wristbands, Pointing Hand (Bracers of Archery)"
+      },
+      "box_name": "Arrived Dressed for the Part Box",
+      "deed": "Joined the crawl late with a bow in hand",
+      "notes": "Mechanics checked vs SRD 5.2.1 text (5e24srd.com / ilmatar mirrors) 2026-10-04. HAND-PICK ONLY (weight 0): permanent Uncommon item, so GM gives it deliberately (replacement archer; do not stack with another permanent Uncommon on the same crawler). Value 400 from spec 3.1 D."
+    },
+    {
+      "id": "f01-z09-0015",
+      "floor": 1,
+      "zone": "z09",
+      "tier": "Bronze",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "gear",
+      "kind": "item",
+      "reskin_name": "Wardrobe-Rack Hoodie, Many Moods",
+      "real_5e_name": "Cloak of Many Fashions (house)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Worn as your outer garment (no attunement). Bonus Action: change its style, color and apparent quality to any cloak, hoodie, cape or vest you have seen. Looks only: no AC, no powers, no bonus to any check. Weight does not change.",
+        "action_cost": "Bonus Action",
+        "range": null,
+        "damage": null,
+        "save_dc": null,
+        "duration": "until you change it",
+        "uses": null,
+        "limits": "Cosmetic only. Copies the look of other garments, never their properties or magic. You can wear only one outer-garment magic item at a time (house). It always stays a garment of about its own size. Touching it reveals nothing odd.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Wardrobe-Rack Hoodie, Cloak of Many Fashions. Bonus Action: change its style and color. Looks only.",
+      "snark_line": "Looks great on every Crawler. Looks do not stop knives.",
+      "reward": "Wardrobe-Rack Hoodie, Cloak of Many Fashions. Bonus Action: change its style and color. Looks only.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 50,
+      "draw_weight": 6,
+      "unique": false,
+      "tailor_tags": [
+        "clothing"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Bronze box: Wardrobe-Rack Hoodie, Many Moods (Cloak of Many Fashions (house))"
+      },
+      "box_name": "Changed Outfits Mid-Fight Box",
+      "deed": "Switched costumes backstage",
+      "notes": "HOUSE design (rules/42-house-items-f01.md §2). Follows the general shape of the DMG cloak from memory; not copied, not checked against the book. Same text for f01-any-0028 (unique, weight 0, exclusive card for the alpha holder): only id, zone, weight, unique, exclusive_to, reskin and box fields differ."
+    }
+  ]
+}

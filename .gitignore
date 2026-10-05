@@ -1,0 +1,44 @@
+# Live campaign state, secrets and generated junk. NEVER commit these.
+# (tools/check_repo_safe.py and the pre-commit hook also block them even with `git add -f`.)
+
+# secrets
+gm-notes/secret/
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+token
+tokens
+token.txt
+tokens.txt
+token.json
+tokens.json
+*.token
+
+# live session data
+sessions/
+sessions-data/
+credit-ledger*
+state.json
+state.*.json
+session.json
+backups/
+exports/
+*.bak
+
+# logs, deps, caches
+bot.log
+*.log
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# live player sheets (kept in the campaign folder, not in this repo)
+characters/hornn-wizard.md
+characters/moses-barbarian.md
