@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Per-boot layout. The campaign tools and the voice bridge default to
-# /workspace/dcc-campaign and /workspace/dcc-lore. No package installs here.
+# Cloud Agent only. Recreates the dcc-campaign and dcc-lore compat aliases
+# next to this checkout. The campaign tools should not depend on this.
+# No package installs here.
 set -euo pipefail
 bash "$(dirname "$0")/layout.sh"

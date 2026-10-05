@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Cloud Agent install. Idempotent. Must exit.
+# Compat shim only. The campaign tools should not depend on these aliases.
 set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 if ! command -v ffmpeg >/dev/null 2>&1 || ! command -v rsync >/dev/null 2>&1; then
   sudo apt-get update
@@ -13,7 +16,7 @@ if ! command -v node >/dev/null 2>&1 || ! node -e 'const p=process.versions.node
     | sudo tar -xJ -C /usr/local --strip-components=1
 fi
 
-bash "$(dirname "$0")/layout.sh"
+bash "$ROOT/.cursor/layout.sh"
 
-npm ci --prefix /workspace/discord-voice-bridge
-npm ci --prefix /workspace/bot
+npm ci --prefix "$ROOT/discord-voice-bridge"
+npm ci --prefix "$ROOT/bot"
