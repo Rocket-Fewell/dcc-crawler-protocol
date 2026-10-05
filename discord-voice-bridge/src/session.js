@@ -15,14 +15,17 @@
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import { resolveCampaignRoot } from './paths.js';
 
 export const DEFAULT_SESSION = 'alpha';
-export const DEFAULT_CAMPAIGN_DIR = '/workspace/dcc-campaign';
+/** Resolved at module load for callers that want a string constant; prefer campaignDir(env). */
+export const DEFAULT_CAMPAIGN_DIR = resolveCampaignRoot();
 const RESERVED = new Set(['backups', 'secret', 'archive', 'sessions', 'characters', 'tmp']);
 const ID = /^[a-z0-9][a-z0-9_-]{0,30}$/;
 
 export const validSessionId = (id) => typeof id === 'string' && ID.test(id) && !RESERVED.has(id);
-export const campaignDir = (env = process.env) => env.DCC_CAMPAIGN_DIR || DEFAULT_CAMPAIGN_DIR;
+/** DCC_CAMPAIGN_ROOT wins over legacy DCC_CAMPAIGN_DIR; else repo/box resolution. */
+export const campaignDir = (env = process.env) => resolveCampaignRoot(env);
 export const dataDir = (id, env = process.env) =>
   id === DEFAULT_SESSION ? join(campaignDir(env), 'sessions') : join(campaignDir(env), 'sessions-data', id);
 export const charactersDir = (id, env = process.env) =>

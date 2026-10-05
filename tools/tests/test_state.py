@@ -487,15 +487,18 @@ class WriteSafetyTests(StateTestCase):
         self.assertEqual(self.crawler("Grimsby")["hp"]["current"], 30)
         self.assertGreaterEqual(len(self.backups()), 1)  # pre-restore state was backed up
 
-    def test_default_dir_is_workspace_when_env_unset(self):
+    def test_default_dir_resolves_without_env(self):
+        """With DCC_CAMPAIGN_ROOT/DIR unset, campaign_dir() resolves via tools/ parent (portable)."""
         with mock.patch.dict(os.environ):
             os.environ.pop("DCC_CAMPAIGN_DIR", None)
+            os.environ.pop("DCC_CAMPAIGN_ROOT", None)
             os.environ.pop("DCC_SESSION", None)
-            self.assertEqual(state.campaign_dir(), "/workspace/dcc-campaign")
+            import dcc_paths
+            expected = str(dcc_paths.campaign_root())  # reads env live
+            self.assertEqual(state.campaign_dir(), expected)
             # Data dir follows DCC_SESSION / sessions/active-session.json / alpha (not hard-coded to alpha).
-            import campaign_session as cs
-            self.assertEqual(state.state_path(), os.path.join(cs.data_dir(), "state.json"))
-            self.assertTrue(state.state_path().startswith("/workspace/dcc-campaign/"))
+            self.assertEqual(state.state_path(), os.path.join(state.csession.data_dir(), "state.json"))
+            self.assertTrue(state.state_path().startswith(expected + os.sep))
 
 
 if __name__ == "__main__":

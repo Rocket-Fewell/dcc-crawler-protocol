@@ -8,6 +8,7 @@ Legendary one-offs are Story Boxes (state.py `loot story-box`; rules/40 section 
 recorded as story_value (provenance), never as economy value and never auto-credited. A sale pays the card's sale_value x the floor multiplier."""
 import glob
 import json
+import dcc_paths as _paths
 import os
 import re
 import sys
@@ -25,7 +26,7 @@ class LootError(Exception):
 
 
 def decks_dir():
-    return os.path.join(os.environ.get("DCC_CAMPAIGN_DIR") or "/workspace/dcc-campaign", "tables", "loot-decks")
+    return os.path.join(str(_paths.campaign_root()), "tables", "loot-decks")
 
 
 def norm_zone(z):
@@ -136,7 +137,7 @@ FLAG_VALUE_KEYS = ("flag_line", "flag", "line", "value")
 
 
 def budget_path():
-    return os.path.join(os.environ.get("DCC_CAMPAIGN_DIR") or "/workspace/dcc-campaign", BUDGET_REL)
+    return os.path.join(str(_paths.campaign_root()), BUDGET_REL)
 
 
 def _floor_of(key):

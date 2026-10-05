@@ -1,7 +1,9 @@
 import sys,re,os,collections
-sys.path.insert(0,'/workspace/dcc-lore/tools')
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
 from wk import *
-OUT='/workspace/dcc-lore/catalog'; os.makedirs(OUT,exist_ok=True)
+OUT=str(LORE_ROOT/'catalog'); os.makedirs(OUT,exist_ok=True)
 def isredir(v): return v.lstrip().lower().startswith('#redirect')
 def pg(cat,exclude=()):
     r=[]
@@ -263,4 +265,4 @@ for k in sorted(D):
 open(f'{OUT}/achievements.md','a').write(f"\n## Unnamed ('N/A') achievements listed on the per-floor hub pages ({len(un)})\n| Floor | For | Reward |\n|---|---|---|\n"+'\n'.join(un)+'\n')
 print('unnamed',len(un))
 
-import sys; sys.path.insert(0,"/workspace/dcc-lore/tools"); import apply_headers; apply_headers.main()  # keep convention headers after regeneration
+import apply_headers; apply_headers.main()  # keep convention headers after regeneration

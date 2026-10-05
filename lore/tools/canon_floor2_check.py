@@ -8,7 +8,10 @@ ledger row (or, for quote_source, not found in that local page); forbidden numer
 words appear; 'players' is used instead of 'Crawlers'; the .md view is out of date vs the builder.
 Usage: python3 tools/canon_floor2_check.py [json_path]"""
 import json, re, sys, os, hashlib
-ROOT = '/workspace/dcc-lore'
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
+ROOT = str(LORE_ROOT)
 JP = sys.argv[1] if len(sys.argv) > 1 else ROOT + '/tables/canon-floor-2.json'
 LEDGER = ROOT + '/CANON-LEDGER.md'
 RANK = {'UNVERIFIED': 0, 'WIKI-ONLY': 1, 'VERIFIED': 2}

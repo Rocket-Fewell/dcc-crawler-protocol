@@ -3,9 +3,10 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, symlinkSync, readFileSync, 
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { resolveCampaignRoot } from '../../src/paths.js';
 import { handleInteraction } from '../../src/commands/index.js';
 
-export const REAL_CAMPAIGN = process.env.DCC_REAL_CAMPAIGN || '/workspace/dcc-campaign';
+export const REAL_CAMPAIGN = process.env.DCC_REAL_CAMPAIGN || resolveCampaignRoot();
 
 const SANDBOXES = [];
 process.on('exit', () => {

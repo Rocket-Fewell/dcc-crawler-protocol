@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.6",
+    "version": "0.7",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -208,11 +208,14 @@
       "text": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
       "tag": "[PLAYER-FACING]",
       "canon_tag": "inspired",
-      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md, sha256 d23a39b90cbe…), house wording; voice-split [SYSTEM] dry + [GM] color",
+      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md), house wording; voice-split [SYSTEM] dry + [GM] color",
       "gm_color": {
         "text": "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome.",
         "tag": "[GM-FACING]"
-      }
+      },
+      "source": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "source_version": "0.2",
+      "source_expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
     },
     "stairwell_opening": {
       "text": "ATTENTION, CRAWLERS: the stairwell is open, the real one, behind the stage. Go down early and you sit in stasis until the floor falls, because management doesn't hand out head starts. Go down late and you get to walk. Choose like adults.",
@@ -347,7 +350,7 @@
         },
         "gm_color": {
           "text": "Stairs are open and you're already leaning toward them. Adorable. He's been rehearsing.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -393,7 +396,7 @@
         },
         "gm_color": {
           "text": "The outer zones are gone, so the shiny things are fewer and angrier.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -440,7 +443,7 @@
         },
         "gm_color": {
           "text": "The janitor's door is unlocked in spirit, if not in fact. Management likes a good workaround almost as much as a bad one.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     }
@@ -586,7 +589,7 @@
         },
         "gm_color": {
           "text": "Rise, shine, and read the new house rules. They're short and unfriendly.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -671,7 +674,7 @@
       ],
       "zone_color": {
         "tag": "inspired",
-        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd…, own words, optional read-aloud)",
+        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
         "lines": [
           {
             "text": "A section of ceiling lets go behind you, and the noise rolls down the corridor like applause.",
@@ -697,7 +700,9 @@
             "text": "Dust hangs in the air and every footstep leaves a print. Somewhere a mob is following the prints, and it is patient.",
             "tag": "[PLAYER-FACING]"
           }
-        ]
+        ],
+        "source_version": "0.2",
+        "source_expected_sha256": "a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4"
       },
       "quick_run": {
         "setup": "Morning in the Green Room: the System announces the outer zones are gone and the stairwell is open.",
@@ -1006,7 +1011,7 @@
         },
         "gm_color": {
           "text": "Whoever went down, went down. Whoever stayed, stayed. The System has a pool going on both.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1170,9 +1175,9 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
+    "expected_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.14"
+    "version": "0.1.15"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

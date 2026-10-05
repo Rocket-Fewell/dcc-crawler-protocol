@@ -36,7 +36,18 @@ NEUTRAL_ROLL_MESSAGE = "GM traits rolled and sealed"
 OVERRIDE_FLAGS = "--force --i-know-this-reveals"
 GM_BANNER = ("*** GM-ONLY / SECRET: for your private reasoning. NEVER paste, quote, hint at or speak this output "
              "in chat, voice, a [ROLL] line or any file. ***")
-DEFAULT_TABLE_PATHS = ["lore/tables/gm-quirks.json", "/workspace/dcc-lore/tables/gm-quirks.json"]
+def default_table_paths():
+    """Lore gm-quirks.json candidates: env-resolved lore root, then campaign-relative lore/."""
+    import dcc_paths as _paths
+    lore = _paths.lore_root()
+    return [
+        str(lore / "tables" / "gm-quirks.json"),
+        "lore/tables/gm-quirks.json",
+    ]
+
+# Eager list for tests/callers; table_path() re-resolves via default_table_paths() so env wins.
+DEFAULT_TABLE_PATHS = default_table_paths()
+
 TABLE_KEYS = ["meta", "prior_installation", "fixations", "quirks", "tics", "tells", "ladder", "spite_moves", "repair_options"]
 ROLL_TABLES = {"prior_installation": "PI", "fixations": "FX", "quirks": "QK", "tics": "VT", "tells": "TL"}
 MANIFEST_KEYS = {
@@ -99,11 +110,12 @@ def table_path():
     env = os.environ.get("DCC_GM_QUIRKS_TABLE")
     if env:
         return env
-    for p in DEFAULT_TABLE_PATHS:
+    paths = default_table_paths()
+    for p in paths:
         full = p if os.path.isabs(p) else os.path.join(_campaign(), p)
         if os.path.exists(full):
             return full
-    return os.path.join(_campaign(), DEFAULT_TABLE_PATHS[0])
+    return os.path.join(_campaign(), paths[0])
 
 
 _table_cache = {}

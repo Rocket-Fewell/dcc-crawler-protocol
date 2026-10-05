@@ -4,13 +4,14 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, readFileSync, rmSync, utimesSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { resolveLoreRoot } from '../src/paths.js';
 import test from 'node:test';
 import { asiLabel, backgroundFlavor, backgroundLabel, bgNamesPath, buildBgIndex, checkBgNamesHash, featLabel, flatParens, packageLabel } from '../src/create/bgnames.js';
 import { LAYERS, buildLayerIndex, checkLayerHash, layerEntry, layerFlags, layerText, loadLayers, registerLayer } from '../src/create/layers.js';
 import { loadTables, tablesFor } from '../src/create/data.js';
 import { Player, makeCtx, makeSandbox } from './helpers/create-harness.js';
 
-const LORE = '/workspace/dcc-lore/tables';
+const LORE = join(resolveLoreRoot(), 'tables');
 const E = (id, kind, parent, srd, display, value, extra = {}) => ({ id, kind, parent_id: parent, srd_name: srd, display_name: display, combined_label: `${display} (${extra.label_name ?? srd})`, chargen_value: value, flavor: `PLACEHOLDER flavor of ${id}.`, ...extra });
 const FIXTURE = {
   schema: 'background-reskins/0.1.0',

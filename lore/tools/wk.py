@@ -1,5 +1,9 @@
 import json,re,collections
-D=json.load(open('/workspace/dcc-lore/raw/all.json'))
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
+D=json.load(open(LORE_ROOT/'raw'/'all.json'))
 D={k:v.replace('{{PAGENAME}}',k) for k,v in D.items()}
 def cats(t): return [c.strip() for c in re.findall(r'\[\[Category:([^\]|]*)',t,flags=re.I)]
 def find_templates(t):

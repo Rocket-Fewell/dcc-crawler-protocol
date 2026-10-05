@@ -13,7 +13,8 @@ import species_class_reskins as scr  # noqa: E402
 
 CAMPAIGN = os.path.dirname(TOOLS)
 LIVE_TABLES = os.path.join(CAMPAIGN, "tables")
-LORE_FILE = "/workspace/dcc-lore/tables/species-class-reskins.json"
+import dcc_paths as _paths  # noqa: E402
+LORE_FILE = str(_paths.lore_root() / "tables" / "species-class-reskins.json")
 
 
 def ent(i, kind, srd, disp, parent=None, short=None):

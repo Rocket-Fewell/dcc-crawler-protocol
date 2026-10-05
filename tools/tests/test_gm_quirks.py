@@ -24,7 +24,7 @@ state = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(state)
 import gm_quirks as gq  # noqa: E402  (state.py put tools/ on sys.path)
 
-TABLE_PATH = gq.DEFAULT_TABLE_PATHS[1]
+TABLE_PATH = gq.default_table_paths()[0]  # resolved lore root (portable)
 ID_RE = re.compile(r"\b(?:PI|FX|QK|VT)-\d\d\b")
 
 

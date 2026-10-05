@@ -2,7 +2,11 @@
 Every file in the lore folder needs one line in DESC (or a folder-level rule); missing files are printed and listed as '(no description yet)'.
 Usage: python3 tools/gen_index.py   (owner is always DCC Lore; status is read from the file header when present)"""
 import os,re,glob
-ROOT='/workspace/dcc-lore'; DATE='2026-10-03'
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
+ROOT=str(LORE_ROOT); DATE='2026-10-03'
 YT={'FHLzs9fjyU8':'Mana Toast Book 3 chapter-by-chapter recap (auto-captions)','edNtE1movic':'Mana Toast Book 4 chapter-by-chapter recap','R6QqZjlm-rA':'Book Recaps short recap of Book 3','SwwA5Px34pw':'Book Recaps short recap of Book 4','r0w4mNaSf-4':'Bored In Ohio Book 3 deep-dive reaction podcast (not yet mined)','6cvFdM1lLWU':'Jason Downs short "Book 3 misunderstood"','ua29K1aKKrc':'Lance Jepsen short on AI-fetish lore','wByubA0akII':'The EXP Live short','j6jRXuCgsAA':'Mana Toast Book 1 recap','sS36rv-jPLg':'Mana Toast Book 2 recap','TKcMxF2dA3w':'Mana Toast Book 5 recap','7Q49XeziMX0':'Mana Toast Book 6 recap','FurNY4o0uCo':'Mana Toast Book 7 recap','kk6nspvVf_M':'Mana Toast Book 8 recap','QTk6BtBipPk':'Bookborn Books 1-7 recap (contains errors)'}
 DESC={
 'INDEX.md':'This index: one line per file in the lore folder.',
@@ -80,7 +84,7 @@ a=[os.path.relpath(os.path.join(ROOT,'_archive',f),ROOT) for f in sorted(os.list
 write('_archive/INDEX.md','Archive Index','Retired versions kept for history; never delete.',table(a,'_archive/'))
 top=['INDEX.md','CANON-LEDGER.md','ledger-rules.md','status-and-todo.md','mechanics.md','characters.md','floors-and-plot-by-book.md']
 cat=[x for x in files('catalog')]
-body=f"""Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (symlink to `/workspace/dcc-lore`). Rules: `/workspace/dcc-campaign/NAMING-CONVENTIONS.md`.
+body=f"""Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (repo-relative; on some boxes a symlink into this tree). Rules: campaign root `NAMING-CONVENTIONS.md` (sibling of `lore/` in a fresh checkout, or set `DCC_CAMPAIGN_ROOT`).
 
 **Start here:** `CANON-LEDGER.md` is the master record of canon findings (each with an exact quote, source tag, confidence and date). Add to it only by the procedure in `ledger-rules.md`. Nothing in this folder was checked against the novels' text.
 

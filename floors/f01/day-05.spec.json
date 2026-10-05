@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.5",
+    "version": "0.6",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -206,12 +206,15 @@
       "text": "Final-morning reminder. This floor collapses in {hours} hours. Only the corridor remains open. The stairwell is down the hall.",
       "tag": "[PLAYER-FACING]",
       "canon_tag": "inspired",
-      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md, sha256 d23a39b90cbe…), house wording; voice-split [SYSTEM] dry + [GM] color",
+      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md), house wording; voice-split [SYSTEM] dry + [GM] color",
       "hours_note": "The GM fills {hours} with the in-game hours left until the fixed collapse when reading this aloud.",
       "gm_color": {
         "text": "Please do not make us say it twice.",
         "tag": "[GM-FACING]"
-      }
+      },
+      "source": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "source_version": "0.2",
+      "source_expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
     },
     "early_descent": {
       "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
@@ -399,7 +402,7 @@
         },
         "gm_color": {
           "text": "Last day. The corridor is all that's left and the Dean is standing in it. Go through him or around him. The floor falls either way.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -442,7 +445,7 @@
         },
         "gm_color": {
           "text": "Last day, last loot: whatever the stage coughs up and whatever the Dean drops. Make it good, because it's all there is.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -489,7 +492,7 @@
         },
         "gm_color": {
           "text": "The last door has a price, a key or a Dean. Pick the one you can afford.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     }
@@ -633,7 +636,7 @@
         },
         "gm_color": {
           "text": "We've kept the lights on for you. We didn't have to.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -755,7 +758,7 @@
         },
         "gm_color": {
           "text": "A turnstile on the janitor's door. Of course there is. Insert credits, insert key, or insert yourself with some force.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -994,7 +997,7 @@
         },
         "gm_color": {
           "text": "LADIES, GENTLEMEN, AND THE PEOPLE WITH OPINIONS ABOUT YOUR FEET: it's Graduation Day. The Dean has some words. Mostly with his club.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1145,41 +1148,34 @@
         "audience": "player",
         "canon_tag": "inspired",
         "set_piece": true,
-        "source": "/workspace/dcc-lore/drafts/floor1-dean-thudd-intro.draft.md (Lore draft v0.2, sha256 d821d0839503…)",
+        "source": "/workspace/dcc-lore/drafts/floor1-dean-thudd-intro.draft.md",
         "paragraphs": [
           {
             "n": 1,
-            "text": "Boss encounter: Graduation Stage. Opponent: Dean Thudd.",
-            "optional": true,
-            "voice": "system"
+            "text": "Ladies, gentlemen, and assorted off-world viewers, welcome to the Graduation Stage! The lights are hot, the orchestra pit is open, and tonight's final exam has a name.",
+            "optional": false
           },
           {
             "n": 2,
-            "text": "Ladies, gentlemen, and assorted off-world viewers, welcome to the Graduation Stage! The lights are hot, the orchestra pit is open, and tonight's final exam has a name.",
-            "optional": false,
-            "voice": "gm"
+            "text": "Standing seven feet of tenure in a mortarboard that does not fit, with a flagpole in one fist and a podium in the other, the head of Orientation himself: Dean Thudd!",
+            "optional": false
           },
           {
             "n": 3,
-            "text": "Standing seven feet of tenure in a mortarboard that does not fit, with a flagpole in one fist and a podium in the other, the head of Orientation himself: Dean Thudd!",
-            "optional": false,
-            "voice": "gm"
+            "text": "In the other corner, the class of Crawlers who skipped the syllabus, ignored the posted warnings, and somehow made it here anyway. Their record this floor is better than expected, and the Dean takes that personally.",
+            "optional": true
           },
           {
             "n": 4,
-            "text": "In the other corner, the class of Crawlers who skipped the syllabus, ignored the posted warnings, and somehow made it here anyway. Their record this floor is better than expected, and the Dean takes that personally.",
-            "optional": true,
-            "voice": "gm"
-          },
-          {
-            "n": 5,
             "text": "Your final grade will be posted when the building stops shaking. Please silence your weapons. Or don't. Good luck, Crawlers.",
-            "optional": true,
-            "voice": "gm"
+            "optional": true
           }
         ],
         "text": "Ladies, gentlemen, and assorted off-world viewers, welcome to the Graduation Stage! The lights are hot, the orchestra pit is open, and tonight's final exam has a name.\n\nStanding seven feet of tenure in a mortarboard that does not fit, with a flagpole in one fist and a podium in the other, the head of Orientation himself: Dean Thudd!\n\nIn the other corner, the class of Crawlers who skipped the syllabus, ignored the posted warnings, and somehow made it here anyway. Their record this floor is better than expected, and the Dean takes that personally.\n\nYour final grade will be posted when the building stops shaking. Please silence your weapons. Or don't. Good luck, Crawlers.",
-        "gm_note": "Optional dry [SYSTEM] open first, then [GM] set-piece banter (Lore draft v0.2). Stop after the first two [GM] paragraphs if the table is restless; the last two are optional. Do not put banter under a [SYSTEM] tag."
+        "gm_note": "[GM-FACING] Optional dry [SYSTEM] open (system_open): read first as System, then these [GM] paragraphs. Paragraphs 1 and 2 alone work for a shorter table: stop after the first two paragraphs if the table is restless; the last two are optional. Do not put banter under a [SYSTEM] tag.",
+        "source_version": "0.2",
+        "source_expected_sha256": "d821d0839503df04e4bd579a8b4f7cdc2a1c46b8e12a499eda04c3d52e217bf5",
+        "system_open": "Boss encounter: Graduation Stage. Opponent: Dean Thudd."
       }
     },
     {
@@ -1235,7 +1231,7 @@
         },
         "gm_color": {
           "text": "The System posts the Floor Summary and a very small smile.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1364,9 +1360,9 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
+    "expected_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.14"
+    "version": "0.1.15"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

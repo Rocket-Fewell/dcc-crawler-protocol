@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.5",
+    "version": "0.7",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -17,10 +17,10 @@
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
       "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
-      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.14 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
+      "rules/70-encounter-budget-5e.json v0.1.15 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
-      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
+      "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
       "/workspace/dcc-lore/CANON-LEDGER.md rows M-546, M-539, M-541, M-545, M-547, M-548 and M-554 (Lore's cold-open beats: horn and light-beam stairwells, one-hour entrance window, Natives, Crawler on the first step onto Floor 1, stairwell opening under someone, animals registered)",
       "Caleb cold-start lock (2026-10-05): new campaigns open at the surface stairwell; one live table at a time, many saved campaigns; day pages are shared templates and never hardcode a party",
@@ -34,10 +34,10 @@
     "achievements_csv_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.14",
-    "budget_file_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
+    "budget_file_version": "0.1.15",
+    "budget_file_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "db0d7536385776b73135e38f43e35c323d341511b8e7748c48e65c301dff8e39",
+    "spec_sha256_sans_pin": "cd90cccfdd1a5b9dee7afbab3b03974e9b8fc7c3332648e4fffe4a7917f5a1bb",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -80,7 +80,7 @@
         "tag": "inspired (house)"
       }
     ],
-    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a snarky notice (Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
+    "closed_zone_rule": "Closed zones lose their loot and achievement hooks and the System announces it with a dry floor notice (optional GM color may follow; Lore's wording on the day pages). Zone 9 (The Green Room) saferoom stays open to the end (house exception, inspired).",
     "collapse_cost_slot": {
       "b70": {
         "kind": "party",
@@ -183,8 +183,12 @@
     "start_zone_name": "The glowing surface stairwell, down into Zone 0: Intake Hall",
     "collapse_today": "None. Day 1 is tutorial pace (decision 026 order). The System previews Day 2 at day close.",
     "tomorrow_notice": {
-      "text": "FLOOR NOTICE: when the next day starts, the outer zones close for good. Anything you left in there belongs to the System. That's a courtesy announcement; the next one will be a lot less courteous.",
+      "text": "FLOOR NOTICE. When the next day starts, the outer zones close. Anything left in those zones is forfeited to the System.",
       "tag": "[PLAYER-FACING]",
+      "gm_color": {
+        "text": "That was the courtesy version. Tomorrow's notice will not be.",
+        "tag": "[GM-FACING]"
+      },
       "audience": "player"
     },
     "short_rest_slots": [
@@ -279,7 +283,7 @@
       "heading": "last chance before the outer zones close on Day 2"
     },
     "stall_fallback": "At the top of the stairs the one-hour entrance window does the work: the System counts it down, and anyone still on the surface when it closes is a Native, not a Crawler (canon M-539, M-541, M-545); that player rolls a fresh Crawler who joins at the next saferoom (Core Book Ch1, Death and Revival, Replacement Crawler). Once inside, Day 1 has no collapse, so stalling only costs clock. If the party loiters in the Atrium, Proctor Bell sells hints until they try the shutter (enc-d01-07). If they loiter in the Break Room, the System posts Short Rest and Long Rest reminders, the corkboard rumors repeat, and the Lights-Out hour arrives on schedule (enc-d01-04). If they refuse to pick a route, the vending terminal offers the bribe in enc-d01-01 and the speaker announces what the clock will do tomorrow. If the day rolls over at the 24-hour mark without a Long Rest, the System still posts the Day 2 notice; the party simply rests later at an honest saferoom. The Floor 1 Reprieve does not cover a missed collapse: that is death on every floor (decision 026), so say so at the start.",
-    "start_note": "Cold start (Caleb, 2026-10-05): the table begins on the surface at a glowing stairwell with the one-hour entrance window running, and each character becomes a Crawler on the first step onto Floor 1, in the Intake Hall (Z0; canon M-547). Intake runs in the booths: Death Mode first, then character creation (00-overview.md sections 1 and 5.0). Day 1 then runs the tutorial line, Z1 to Z5, to the Break Room (Z6, the first saferoom and the Welcome Boxes), and on through Z8 (Z7 optional) to the Green Room (Z9), where the default Long Rest closes the day. A Long Rest taken in the Break Room also closes Day 1, and Day 2 then starts there. Play order is the order on this page; encounter ids keep their earlier numbers so later pages still point at them. The floor clock starts when the surface entrances open, at the horn and the light beams (Syndicate, 2026-10-05): floor hour 0 is that moment, and the one-hour entrance window runs inside floor hours 0 to 1. This page is a shared template: a saved campaign resuming mid-floor starts from its own session files, not from this cold open.",
+    "start_note": "Cold start (Caleb, 2026-10-05): the table begins on the surface at a glowing stairwell with the one-hour entrance window running, and each character becomes a Crawler on the first step onto Floor 1, in the Intake Hall (Z0; canon M-547). Intake runs in the booths: registration and paperwork first, then character creation (00-overview.md sections 1 and 5.0). Day 1 then runs the tutorial line, Z1 to Z5, to the Break Room (Z6, the first saferoom and the Welcome Boxes), and on through Z8 (Z7 optional) to the Green Room (Z9), where the default Long Rest closes the day. A Long Rest taken in the Break Room also closes Day 1, and Day 2 then starts there. Play order is the order on this page; encounter ids keep their earlier numbers so later pages still point at them. The floor clock starts when the surface entrances open, at the horn and the light beams (Syndicate, 2026-10-05): floor hour 0 is that moment, and the one-hour entrance window runs inside floor hours 0 to 1. This page is a shared template: a saved campaign resuming mid-floor starts from its own session files, not from this cold open.",
     "rest_options": [
       {
         "option": "Break Room (Z6) saferoom",
@@ -587,7 +591,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "Oh, we're speed-running. Cute. The stairwell is behind the stage, and the stage comes with a Dean. Every room between here and there wants to meet you, and none of them are polite about it.",
+          "text": "Route logged: direct path to the stairwell behind the stage. The stage is occupied. Intermediate zones remain active.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -598,6 +602,11 @@
         },
         "win": {
           "text": "You beat the clock to the stage door, and the door isn't open yet. Impressive and useless. Sit tight. Stairs unlock early tomorrow, and the audience is betting on how bored you get.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Oh, we're speed-running. Cute. None of the rooms between here and there are polite about it.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -641,7 +650,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "A thorough Crawler. How rare. Every closet has a secret and every secret has a price tag. Take your time, but not too much of it.",
+          "text": "Route logged: full clear. Closets, caches, and priced secrets remain available on the current schedule.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -652,6 +661,11 @@
         },
         "win": {
           "text": "You found the back stairs with full pockets and a long achievement list. Management calls that 'engaged'. Everyone else calls it 'a lot of backpack'.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "A thorough Crawler. How rare. Take your time, but not too much of it.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -699,7 +713,7 @@
       ],
       "voice_lines": {
         "system_intro": {
-          "text": "Ooh, a negotiator. The vending terminal has opinions, the corkboard has gossip, and everything in this building has a price. Some of it is even legal.",
+          "text": "Route logged: negotiation and bypass. Vending terminal, corkboard, and priced options are online.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -710,6 +724,11 @@
         },
         "win": {
           "text": "You reached the exit without a scratch and, in one case, without a sign. Is it cheating? The System checked twice and the paperwork says no. Infuriating.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Ooh, a negotiator. Some of those prices are even legal.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -895,7 +914,7 @@
         "audience": "gm"
       },
       "enemies": [],
-      "enemies_note": "No enemies. Intake runs here: Death Mode first (00-overview.md section 1), then character creation in the booths (section 5.0).",
+      "enemies_note": "No enemies. Intake runs here: registration and paperwork first (00-overview.md section 1), then character creation in the booths (section 5.0).",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -940,17 +959,22 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "A horn like a stadium trumpet rolls over the city, and stairwells open in the pavement, each one firing a beam of light straight into the sky. The entrances stay open for one hour. Anyone still up here when they close stays up here as a Native, and the System wishes them luck with that. Walk down, and keep walking: you become a Crawler the moment your foot touches Floor 1, not one stair sooner.",
+          "text": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay open for one hour. Anyone still on the surface when they close remains a Native. Walk down: you become a Crawler the moment your foot touches Floor 1, not one stair sooner.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
         "midpoint_twist": {
-          "text": "Your foot touches the floor and a chime goes off inside your skull: CRAWLER REGISTERED. Anything alive over the weight limit gets registered too, so somebody's dog now has a nameplate. A booth door clunks open and waits.",
+          "text": "Your foot touches the floor. A chime registers: CRAWLER REGISTERED. Anything alive over the weight limit is registered too. A booth door opens and waits.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
         "win": {
-          "text": "Paperwork filed, Death Mode chosen, nameplates printed with at least one name spelled wrong. Welcome to the Orientation Pit. The booths open onto an atrium, and something in there is clacking its jaw.",
+          "text": "Paperwork filed. Nameplates printed, at least one misspelled. Welcome to the Orientation Pit. The booths open onto an atrium.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "The System wishes the surface crowd luck with that. Also: yes, the dog gets a nameplate, and something in the atrium is already clacking its jaw. Try not to take it personally.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -1004,8 +1028,8 @@
             ]
           },
           {
-            "choice": "Death Mode and the misspelled nameplate",
-            "effect": "Death Mode is logged before the first fight; the misspelled name starts the audience nickname that the floor summary records.",
+            "choice": "Registration and the misspelled nameplate",
+            "effect": "Registration is logged before the first fight; the misspelled name starts the audience nickname that the floor summary records.",
             "reacts_in": [
               "enc-d01-08",
               "enc-d05-04"
@@ -1015,7 +1039,7 @@
         "gm_tracks": [
           "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 5 (floor hour 120). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Who entered before the one-hour window closed, and any Natives left on the surface",
-          "Death Mode logged for each Crawler",
+          "Registration logged for each Crawler",
           "Animals registered (canon M-554) and the Assigned Companion for a two-Crawler table",
           "Misspelled nameplate (audience-nickname plant)"
         ],
@@ -2356,7 +2380,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "ATTENTION, CRAWLERS: the Orientation Pit is now on a schedule, with a countdown, because 'take your time' was ruining the pool. You have 5 days, and a day ends when you sleep or when the clock says so. Find the stairwell. The floor will not wait politely.",
+          "text": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have 5 days. A day ends at Long Rest or at twenty-four in-game hours. Find the stairwell before the floor ends.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -2367,6 +2391,11 @@
         },
         "win": {
           "text": "You got the briefing, the gossip and a choice, and also the coffee, which was a mistake. Pick a route and go. The clock isn't ticking yet. It's thinking about it.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "We put a countdown on it because 'take your time' was ruining the pool. The floor will not wait politely.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -2790,7 +2819,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "EXIT! A big, friendly sign with a countdown now, in case you weren't tempted enough. Listen: birds, and there have never been birds down here.",
+          "text": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -2806,6 +2835,11 @@
         },
         "win_alt": {
           "text": "You smelled freedom, said no, and kept your feet. The sign goes dim. That's the System's way of nodding. It does not nod often.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Big, friendly letters. In case you weren't tempted enough.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -3166,7 +3200,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "FOLKS, welcome to the Mascot Locker Room! The costume is empty, the crowd is loud, and your guide wants a word: this is the dying lesson. Please absorb as little of it as you can.",
+          "text": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -3182,6 +3216,11 @@
         },
         "win_alt": {
           "text": "Nobody raised a hand and the room did the work. Impressive. Slightly insulting to the mascot.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "FOLKS, welcome! Please absorb as little of the dying lesson as you can.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -3576,7 +3615,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "LIGHTS OUT. Red emergency bulbs only. Please enjoy the darkness responsibly and keep your ankles to yourselves.",
+          "text": "LIGHTS OUT. Red emergency lighting only. Remain in place until the cycle ends.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -3587,6 +3626,11 @@
         },
         "win": {
           "text": "Pests cleared. The lights come back in their own time. You are now an experienced bug person. Put it on your resume.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Please enjoy the darkness responsibly and keep your ankles to yourselves.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -3762,7 +3806,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "SAFEROOM CERTIFIED, again. Midterm Onboarding. Everyone who made it this far gets a level, a fruit plate, and a speech nobody asked for.",
+          "text": "SAFEROOM CERTIFIED. Midterm Onboarding is complete. Level granted; fruit plate issued. Mandatory briefing follows.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         },
@@ -3772,7 +3816,12 @@
           "audience": "player"
         },
         "win": {
-          "text": "Day closed. The building is going to rearrange itself overnight. Sleep well. We'll let you know in the morning what's left to stand on.",
+          "text": "Day closed. Zone schedule updates overnight. Long Rest recorded. Morning notice will list what remains open.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Sleep well. We'll let you know in the morning what's left to stand on.",
           "tag": "[PLAYER-FACING]",
           "audience": "player"
         }
@@ -3951,8 +4000,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.14 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.14 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.1.15 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.15 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -3973,7 +4022,7 @@
     {
       "owner": "Lore",
       "item": "Canon table, collapse notices, missed-floor line and zone color",
-      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
+      "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md v0.2 (sha256 d23a39b90cbe…; Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames; voice-split), floor1-zone-color.draft.md v0.2 (sha256 a1ef4c1cedbd…; read-aloud color) and floor1-dean-thudd-intro.draft.md v0.2 (sha256 d821d0839503…). If Lore edits any of them, re-run the script.",
       "status": "received",
       "audience": "gm"
     },
@@ -4023,6 +4072,11 @@
         "field": "text"
       },
       {
+        "path": "/routes/0/voice_lines/gm_color",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
         "path": "/routes/1/voice_lines/system_intro",
         "kind": "route_voice_line",
         "field": "text"
@@ -4034,6 +4088,11 @@
       },
       {
         "path": "/routes/1/voice_lines/win",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/gm_color",
         "kind": "route_voice_line",
         "field": "text"
       },
@@ -4053,6 +4112,11 @@
         "field": "text"
       },
       {
+        "path": "/routes/2/voice_lines/gm_color",
+        "kind": "route_voice_line",
+        "field": "text"
+      },
+      {
         "path": "/encounters/0/voice_lines/system_intro",
         "kind": "voice_line",
         "field": "text",
@@ -4066,6 +4130,12 @@
       },
       {
         "path": "/encounters/0/voice_lines/win",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d01-06"
+      },
+      {
+        "path": "/encounters/0/voice_lines/gm_color",
         "kind": "voice_line",
         "field": "text",
         "encounter": "enc-d01-06"
@@ -4179,6 +4249,12 @@
         "encounter": "enc-d01-01"
       },
       {
+        "path": "/encounters/6/voice_lines/gm_color",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d01-01"
+      },
+      {
         "path": "/encounters/6/proposed_achievements/0",
         "kind": "achievement_narration",
         "field": "narration",
@@ -4210,6 +4286,12 @@
         "encounter": "enc-d01-02"
       },
       {
+        "path": "/encounters/7/voice_lines/gm_color",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d01-02"
+      },
+      {
         "path": "/encounters/8/voice_lines/system_intro",
         "kind": "voice_line",
         "field": "text",
@@ -4234,6 +4316,12 @@
         "encounter": "enc-d01-03"
       },
       {
+        "path": "/encounters/8/voice_lines/gm_color",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d01-03"
+      },
+      {
         "path": "/encounters/9/voice_lines/system_intro",
         "kind": "voice_line",
         "field": "text",
@@ -4247,6 +4335,12 @@
       },
       {
         "path": "/encounters/9/voice_lines/win",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d01-04"
+      },
+      {
+        "path": "/encounters/9/voice_lines/gm_color",
         "kind": "voice_line",
         "field": "text",
         "encounter": "enc-d01-04"
@@ -4270,6 +4364,12 @@
         "encounter": "enc-d01-05"
       },
       {
+        "path": "/encounters/10/voice_lines/gm_color",
+        "kind": "voice_line",
+        "field": "text",
+        "encounter": "enc-d01-05"
+      },
+      {
         "path": "/day/tomorrow_notice",
         "kind": "system_notice",
         "field": "text"
@@ -4287,12 +4387,12 @@
     "pass": 53,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "d6a492704bdaeb15cff36f13b5e4027f8a7d42f2873de0ed6c2255f45afcdc7c",
+    "spec_sha256": "8701382ae2f40d4780281da65314c801c7febf990910894920b4d5c34091659f",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.14, sha256 3096be23394258dc; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.15, sha256 25bb26b4d6d63474; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -4477,7 +4577,7 @@
       {
         "status": "PASS",
         "check": "Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on",
-        "detail": "49 player-facing and 134 GM extra blocks scanned"
+        "detail": "58 player-facing and 134 GM extra blocks scanned"
       },
       {
         "status": "PASS",
@@ -4487,7 +4587,7 @@
       {
         "status": "PASS",
         "check": "read-aloud blocks are 4 sentences or fewer",
-        "detail": "49 [PLAYER-FACING] blocks checked"
+        "detail": "58 [PLAYER-FACING] blocks checked"
       },
       {
         "status": "PASS",
@@ -4537,17 +4637,17 @@
       {
         "status": "PASS",
         "check": "audience manifest",
-        "detail": "47 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
+        "detail": "56 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
       },
       {
         "status": "PASS",
         "check": "slot-map provenance",
-        "detail": "meta.spec_sha256_sans_pin db0d7536385776b7 matches rules/70-encounter-budget-5e.json#day01_slot_map.spec_sha256_sans_pin_when_mapped"
+        "detail": "meta.spec_sha256_sans_pin cd90cccfdd1a5b9d matches rules/70-encounter-budget-5e.json#day01_slot_map.spec_sha256_sans_pin_when_mapped"
       },
       {
         "status": "PASS",
         "check": "rendered audience separation",
-        "detail": "47 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
+        "detail": "56 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
       },
       {
         "status": "PASS",

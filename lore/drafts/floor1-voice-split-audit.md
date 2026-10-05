@@ -1,5 +1,5 @@
 # Floor 1 voice-split audit (Caleb 2026-10-05)
-Owner: DCC Lore | Status: draft | Version: 0.1 | Updated: 2026-10-05
+Owner: DCC Lore | Status: draft | Version: 0.2 | Updated: 2026-10-05
 Summary: Part A applies the Discord [SYSTEM]/[GM] voice split to Floor 1 lore drafts. Part B is a read-only canon/voice slip list on campaign Floor 1 Day pages (Encounter Bot mid-rewrite). No /workspace/dcc-campaign edits. No sealed paths opened. Nothing posted.
 Voice split recalled: **[SYSTEM]** = dry corporate informative only (floor clock, fees, registration, collapse warnings, floor notices; no jokes). **[GM]** = snark, jokes, pop-culture hits, and FULL achievement/loot callouts (banner + mocking description). A tag carries until the next tag; a [GM] tag must follow every System block before any joke. No Death Mode / Easy Mode / Hardcore. Always Crawlers. Saferoom one word. Soft brevity.
 
@@ -101,3 +101,56 @@ Checked under `/workspace/dcc-campaign/floors/f01/` only. **Never edited.** Enco
 - Encounter Bot: finish propagating `.spec.json` voice split into `.json`/`.md`; scrub Death Mode player-facing strings.  
 - Syndicate: rename or retire Death Mode UI if the table keeps Costly Revives as fees-only.  
 - Lore: optional Day 1 achievement-suggestion pass (Hold Please etc. already framed [GM] in collapse-notices v0.2).
+
+
+---
+
+## Recheck after v0.1.15 regen (2026-10-05 ~13:55 CT)
+
+Encounter Bot reported budget v0.1.15 regen with sans-pins shorts Day1 `cd90cccf…` … Day5 `69cd62d3…`. **Those shorts do not match the files on disk at recheck** (current Day1 md starts `61b6ffec…`, Day2 `e33021db…`, Day3 `e1154906…`, Day4 `58eff0b3…`, Day5 `98eab552…`). Treated as a further write after that report, or a different pin-strip method. Recheck used the **current** rendered `.md` / `.json` / `.spec.json` below (read-only; no campaign edits; sealed paths unread).
+
+### Inventory at recheck
+
+| File | mtime (CT) | sha256 |
+|---|---|---|
+| `00-overview.md` | 2026-10-05 13:51:35 | `bbf42dd2db63c994a2ae4be4c6976a5ea0e4b744dcdcaba93140e46f76551015` |
+| `day-01.json` | 2026-10-05 13:55:26 | `c3da06851698b7b5bc30db25e5521c2cbd0f83283986f1bfe07d09438400135c` |
+| `day-01.md` | 2026-10-05 13:55:26 | `61b6ffecc0d09e259c909457ce5cb48efcfa02aa35b5a2cae15bc10e8b5ce752` |
+| `day-01.spec.json` | 2026-10-05 13:55:10 | `8701382ae2f40d4780281da65314c801c7febf990910894920b4d5c34091659f` |
+| `day-02.json` | 2026-10-05 13:55:26 | `fdab55822b4dbadbec2dac1d86d6e815dd42ec4b11725f1aa5d188e75357d272` |
+| `day-02.md` | 2026-10-05 13:55:26 | `e33021db0da4286baa93183bebd4d0105ff121ca710f88387b817fd19a06b348` |
+| `day-02.spec.json` | 2026-10-05 13:55:10 | `bf0aba0bd3c3e829d5c6fa6922b087692562f62c797b270e39dbdafff9d9ac66` |
+| `day-03.json` | 2026-10-05 13:55:26 | `2bc6262cf4ce58758dc6390e7f2e76e5490817ce3c2770d4d8454cc89a86d3e0` |
+| `day-03.md` | 2026-10-05 13:55:26 | `e1154906e9949c6e890533a0c5b5a2f5fb9ce8e51abb6cc0a263e5205ad881b6` |
+| `day-03.spec.json` | 2026-10-05 13:55:10 | `f511ada5d6d0fea5ab7732776ecee37a77698959723784ae480703e6c1478bb3` |
+| `day-04.json` | 2026-10-05 13:55:27 | `2547143137690f7aec8468185c7558b29461fdf998e1d705202bf0d16ee68dde` |
+| `day-04.md` | 2026-10-05 13:55:27 | `58eff0b30923990d341d04b4d3d8777e199fad6c1eddd76e0982f0b40c3dadbe` |
+| `day-04.spec.json` | 2026-10-05 13:55:10 | `dba6299dfba78b3cfc8e9e75b3814b38a8b0233af92486c73c783fc74a15989b` |
+| `day-05.json` | 2026-10-05 13:55:27 | `aa4f1a121102346b7f29e00a831c80e830174a05b3c8e1a0c4aebe2ebaeec8dd` |
+| `day-05.md` | 2026-10-05 13:55:27 | `98eab5527b3dce6c27602c6803a38712b00ad17cca64e1dd33d5269937305f2e` |
+| `day-05.spec.json` | 2026-10-05 13:55:10 | `c8847f3efc75cfebe260769038a6169b481ce6c1d427cbfe79b04c6285ea73b6` |
+
+### Earlier four slips — status
+
+| # | Slip | Status |
+|---|---|---|
+| 1 | Death Mode on live Day pages | **FIXED.** No `Death Mode` in `day-01`–`day-05` md/json/spec. Overview §1 retitled “revival plan confirmation (Service Plans)”; remaining “Death Mode” strings are changelog / legacy-key notes only (lines ~930–958). |
+| 2 | Joke collapse notices Days 2–5 | **FIXED.** Live json + spec: dry `collapse_notice.text` + snarky `gm_color` tagged `[GM-FACING]` (renovation/gone, afterlife/Sadly, lunch/liability, “say it twice”). Day 5 `floor_exit.system_line` dry; flowers in `gm_color`. |
+| 3 | Day 1 cold-open / Break Room `system_intro` punchlines | **FIXED** for cold open (`enc-d01-06`) and Break Room (`enc-d01-01`): intros are dry; punchlines live in `gm_color` (dog nameplate / atrium jaw; “ruining the pool”). Cold-open facts still match ledger M-539/545/546/547/548/554. |
+| 4 | Day 1 “snarky notice” process line | **FIXED.** All Day md L40 now: “dry floor notice (optional GM color may follow…)”. |
+
+Collapse / missed-collapse death language still aligns with M-609 / M-610. Saferoom spelling clean (`saferoom`; no `safe room` / `safe-room` in Day files). `champs` only in meta check strings (`'Crawlers' never 'champs'`). No achievement/loot banners under System keys found.
+
+### Remaining slips (not a clean PASS)
+
+1. **`gm_color` on encounter `voice_lines` tagged `[PLAYER-FACING]` instead of `[GM-FACING]`** — every Day 1–5 encounter `gm_color` in both `.json` and `.spec.json` (collapse notices are correctly `[GM-FACING]`). Text is adult-table snark (not empty). **Fix:** retag encounter `gm_color.tag` to `[GM-FACING]` (or `[GM]`) so the voice bot does not keep the prior System/player voice after the color beat. Example: `day-01.json` `enc-d01-06.voice_lines.gm_color`.
+
+2. **Residual light snark still inside `system_intro`** — `enc-d01-08` (Combat 101 / vents): “which is the System's way of saying these are the bad guys” / “attendance is mandatory” in both json and spec. **Fix:** strip to dry combat briefing; move the wink to `gm_color`.
+
+3. **Advisory (not blocking if bot already treats these as GM read-aloud):** several `midpoint_twist` / `win` lines still carry punchlines (e.g. Break Room “accounting just fainted”, “coffee… mistake”, pizza-arcade win). If those fields are ever voiced as System, split them the same way.
+
+### gm_color quality
+Encounter and collapse `gm_color` texts are filled and snarky (not placeholders). Only the **tag** on encounter-level `gm_color` is wrong (slip 1 above).
+
+### Verdict
+**PASS WITH NOTES** — the four original slips are cleared on the live Day pages. Retag encounter `gm_color` to GM-facing before relying on the Discord voice switch; optionally clean `enc-d01-08` system_intro.

@@ -11,7 +11,10 @@ OUT = os.path.join(HERE, "..", "tables")
 JSON_PATH = os.path.join(OUT, "background-reskins.json")
 VER_PATH = os.path.join(OUT, "background-reskins.version.json")
 LOG_PATH = os.path.join(OUT, "background-reskins.CHANGELOG.md")
-CHARGEN = "/workspace/dcc-campaign/tables/chargen-5e.json"
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import CHARGEN as _CH
+CHARGEN = str(_CH) if _CH else ""
 NOTE = sys.argv[sys.argv.index("--note") + 1] if "--note" in sys.argv else None
 jobs = {}
 if os.path.exists(CHARGEN):

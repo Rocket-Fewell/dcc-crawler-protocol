@@ -20,7 +20,8 @@ import os
 import random
 import sys
 
-DEFAULT_TABLE = os.environ.get("DCC_GM_QUIRKS_TABLE") or "/workspace/dcc-lore/tables/gm-quirks.json"
+import dcc_paths as _paths  # noqa: E402
+DEFAULT_TABLE = os.environ.get("DCC_GM_QUIRKS_TABLE") or str(_paths.lore_root() / "tables" / "gm-quirks.json")
 
 
 def load_table(path=None):

@@ -15,7 +15,9 @@ unless you pass an output path. Scratch/audit helper, not a campaign tool.
 """
 import glob, json, os, random, sys, hashlib, collections
 
-ROOT = os.environ.get("DCC_CAMPAIGN_DIR", "/workspace/dcc-campaign")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "tools"))
+import dcc_paths as _paths  # noqa: E402
+ROOT = os.environ.get("DCC_CAMPAIGN_ROOT") or os.environ.get("DCC_CAMPAIGN_DIR") or str(_paths.campaign_root())
 PT = [("consumable", .30), ("gear", .25), ("credits", .15), ("tailored", .18), ("weird", .10)]  # 99-00 = upgrade (.02)
 UPG = .02
 

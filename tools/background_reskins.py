@@ -6,7 +6,7 @@ Summary: tables/background-reskins.json (Lore's format background-reskins/0.1.0;
 Usage:
   python3 tools/background_reskins.py --ids [--json]        every id the table must cover (16 backgrounds, 2 bonus choices, 12 Origin feats, 32 gear packages)
   python3 tools/background_reskins.py [--path FILE] [--strict] [--json]   hash + structure + coverage report
-      --path     check another copy (e.g. Lore's /workspace/dcc-lore/tables/background-reskins.json); its version file is read from the same folder
+      --path     check another copy (e.g. Lore's lore/tables/background-reskins.json); its version file is read from the same folder
       --strict   also exit 1 when any required id has no entry
   python3 tools/background_reskins.py --enable | --disable [--session ID]   set create.background_reskin true/false in that session's session.json
   No table in tables/ = "absent", exit 0 (with --strict, absent is also exit 0: nothing is live; use --path to check Lore's file before the drop-in).
@@ -19,13 +19,14 @@ import os
 import re
 import sys
 
+import dcc_paths as _paths  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 CAMPAIGN = os.path.dirname(HERE)
 TABLES = os.path.join(CAMPAIGN, "tables")
 KINDS = ("background", "choice")
 PARENTS = ("origin-feat", "background-asi", "background-kit")
 ASI = (("asi-2-1", "+2 / +1"), ("asi-1-1-1", "+1 / +1 / +1"))
-LORE_COPY = "/workspace/dcc-lore/tables/background-reskins.json"
+LORE_COPY = str(_paths.lore_root() / "tables" / "background-reskins.json")
 MAX_LABEL = 100
 
 

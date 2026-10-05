@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "tools"))
+import dcc_paths as _paths
 """Check tables/chargen-5e.json items carry valid srd_id values from DCC Lore's item-reskins.json.
 
 Read-only. Usage: python3 check_chargen_srd_ids.py [chargen.json] [item-reskins.json]
@@ -8,7 +11,7 @@ import json, sys, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CG = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, '..', 'tables', 'chargen-5e.json')
-RS = sys.argv[2] if len(sys.argv) > 2 else '/workspace/dcc-lore/tables/item-reskins.json'
+RS = sys.argv[2] if len(sys.argv) > 2 else str(_paths.lore_root() / 'tables' / 'item-reskins.json')
 
 cg = json.load(open(CG))
 rs = json.load(open(RS))

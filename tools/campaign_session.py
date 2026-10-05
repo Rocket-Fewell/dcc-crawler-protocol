@@ -16,9 +16,12 @@ import re
 import sys
 
 DEFAULT_SESSION = "alpha"
-DEFAULT_CAMPAIGN_DIR = "/workspace/dcc-campaign"
 _ID = re.compile(r"^[a-z0-9][a-z0-9_-]{0,30}$")
 RESERVED = {"backups", "secret", "archive", "sessions", "characters", "tmp"}
+
+# Portable root: DCC_CAMPAIGN_ROOT (preferred) or legacy DCC_CAMPAIGN_DIR, else tools/'s parent.
+import dcc_paths as _paths  # noqa: E402  (same tools/ folder; stdlib + sibling)
+DEFAULT_CAMPAIGN_DIR = _paths.CAMPAIGN_ROOT  # resolved at import; env overrides still read live in campaign_dir()
 
 
 class SessionError(Exception):
@@ -30,7 +33,7 @@ def valid_id(sid):
 
 
 def campaign_dir():
-    return os.environ.get("DCC_CAMPAIGN_DIR") or DEFAULT_CAMPAIGN_DIR
+    return str(_paths.campaign_root())
 
 
 def active_file():

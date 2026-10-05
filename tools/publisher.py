@@ -26,7 +26,8 @@ import urllib.request
 
 API = "https://discord.com/api/v10"
 MSG_LIMIT = 1900          # Discord's hard limit is 2000; keep headroom
-DEFAULT_CAMPAIGN_DIR = "/workspace/dcc-campaign"
+import dcc_paths as _paths  # noqa: E402
+DEFAULT_CAMPAIGN_DIR = _paths.CAMPAIGN_ROOT
 
 # Permission bits
 P_ADMIN, P_MANAGE_CHANNELS = 1 << 3, 1 << 4
@@ -49,7 +50,7 @@ class DiscordError(Exception):
 # --------------------------------------------------------------------------- paths
 
 def campaign_dir():
-    return os.environ.get("DCC_CAMPAIGN_DIR") or DEFAULT_CAMPAIGN_DIR
+    return str(_paths.campaign_root())
 
 
 def sessions_dir():

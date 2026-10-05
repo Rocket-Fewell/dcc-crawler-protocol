@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """state.py - live campaign state manager for the DCC 5e campaign (stdlib only).
 
-State file: <campaign>/sessions/state.json   (campaign dir: $DCC_CAMPAIGN_DIR, default /workspace/dcc-campaign)
+State file: <campaign>/sessions/state.json   (campaign dir: $DCC_CAMPAIGN_ROOT or legacy $DCC_CAMPAIGN_DIR; default = tools/ parent)
 
 Every write: takes a lock file -> validates the NEW state -> copies the old state.json to
 sessions/backups/state-<timestamp>.json (newest 20 kept) -> writes a temp file, re-reads it,
@@ -30,7 +30,7 @@ import gm_quirks  # GM-only secret traits + affinity (gm-notes/secret/); see too
 import ledgers
 import loot
 
-DEFAULT_CAMPAIGN_DIR = "/workspace/dcc-campaign"
+DEFAULT_CAMPAIGN_DIR = csession.DEFAULT_CAMPAIGN_DIR  # via dcc_paths; ROOT/DIR env honored live
 SCHEMA_VERSION = 1
 BACKUP_KEEP = 20
 LOCK_TIMEOUT_S = 10.0
@@ -60,7 +60,7 @@ class StateError(Exception):
 # --------------------------------------------------------------------------- paths / time
 
 def campaign_dir():
-    return os.environ.get("DCC_CAMPAIGN_DIR") or DEFAULT_CAMPAIGN_DIR
+    return csession.campaign_dir()
 
 
 def sessions_dir():
@@ -1488,7 +1488,7 @@ def cmd_box(a):
 
 
 def cmd_banner(a):
-    """banner log TEXT | show: archive of the banners the System read out (sessions/banner-archive.jsonl)."""
+    """banner log TEXT | show: archive of achievement/loot banners spoken at the table (sessions/banner-archive.jsonl; [GM] voice per decision 032)."""
     if a.action == "show":
         rows = ledgers.read("banner")[-a.n:]
         return {"ok": True, "banners": rows}, "\n".join(f"{r['ts'][:16]} F{r.get('floor')} {r.get('crawler') or '-'}: {r['text']}" for r in rows) or "(no banners archived)"
@@ -3083,7 +3083,7 @@ def build_parser():
     sp.add_argument("crawler")
     sp.add_argument("title")
     sp.add_argument("--note")
-    sp.add_argument("--reward", help="the reward line the System read on the banner; stored with the achievement and shown on the sheet card")
+    sp.add_argument("--reward", help="the reward line spoken on the achievement banner ([GM] voice per decision 032); stored with the achievement and shown on the sheet card")
 
     sp = add("condition", cmd_condition, "condition add|remove CRAWLER NAME")
     sp.add_argument("action", choices=["add", "remove"])
@@ -3100,7 +3100,7 @@ def build_parser():
     sp.add_argument("--contents", help="open: what came out (item names / credits)")
     sp.add_argument("--safe-room", dest="safe_room", action="store_true", help="open: confirm the party is in a safe room (or set the scene: `scene safe-room on`); boxes cannot be opened otherwise")
 
-    sp = add("banner", cmd_banner, "banner log TEXT | show: archive the achievement banners the System read out")
+    sp = add("banner", cmd_banner, "banner log TEXT | show: archive achievement/loot banners spoken at the table ([GM] per decision 032)")
     sp.add_argument("action", choices=["log", "show"])
     sp.add_argument("text", nargs="?")
     sp.add_argument("--crawler")

@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "changelog": [
+    "0.1.15 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 dry-System / decision 032 voice-split specs (Death Mode scrub, System blocks dry, gm_color jokes, Lore v0.2 collapse/zone/Dean/ACH drafts). Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
     "0.1.14 (2026-10-05): provenance only, no values changed: re-synced day01_slot_map and day02_to_04_slot_map day-02 spec_sha256_sans_pin_when_mapped for Encounter Bot's cold-open Day 1 (horn/beams/stairwell → Z6) and Day 2 Bone/Horn-neutralization (\"if not cleared on Day 1\"). Floor clock start = surface entrances open / prior floor timer expiry. Days 3–5 hashes unchanged. Previous day-02 was 171c19eab8cf….",
     "0.1.13 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 specs after the v0.1.12 pin + Ch1 batch (Day 5 Reprieve soften, Ch1 pointers, early-descent Reprieve expiry, caps-sentence reword). Every slot path and price unchanged.",
     "0.1.12 (2026-10-05): wording only, no values changed: floors.1.prices.rest_without_saferoom.applies_to (and long_rest_rule) aligned to decision 031 / core §5.6 — fee buys quiet for a Short Rest in a noisy spot (20/Crawler, cap 60); free if already quiet; never a Long Rest outside a saferoom. Numbers, field paths and every other value unchanged.",
@@ -4917,7 +4918,7 @@
   ],
   "day01_slot_map": {
     "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
-    "spec_sha256_sans_pin_when_mapped": "db0d7536385776b73135e38f43e35c323d341511b8e7748c48e65c301dff8e39",
+    "spec_sha256_sans_pin_when_mapped": "cd90cccfdd1a5b9dee7afbab3b03974e9b8fc7c3332648e4fffe4a7917f5a1bb",
     "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version and achievements_catalog.expected_sha256 deleted if present (method updated by the Encounter Bot to also skip the achievements catalog version and sha; the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pins on this file and on the canon table and achievements catalog, so a budget or catalog bump no longer breaks this provenance; real slot content changes still do.",
     "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
     "count": 32,
@@ -5271,9 +5272,9 @@
   "day02_to_04_slot_map": {
     "status": "v0.1.2 addition (Encounter Bot request). The CR slots of these encounters already resolve (floors.1.fixed_encounters.z10.creatures key skeleton, z02.creatures key giant-rat, wandering.creatures key stirge) and are unchanged.",
     "spec_sha256_sans_pin_when_mapped": {
-      "day-02": "fbca5883975c887c555197a2b35b8a5b52fc9abf99063b9cc568aad76bb5f888",
-      "day-03": "eaa66710ea39899b366c2bae0da16ca9c9e0cc5406d279f5ce93a93161162f7b",
-      "day-04": "3d957631dff62af97fdffc263774d2ff1b071ddc723319f746552355e8e25f0c"
+      "day-02": "569630df000a00f9a6d32157de9ec5f8a8efa9c7148db1c711f84a8e3535d912",
+      "day-03": "d8dcc535c16a9afdc6d1d164a894830e934aff4436122fa8af39a753d58e8b3f",
+      "day-04": "ffc748d3028de33d7b5a77e3239e9ad64d9bcf5b2cb6a90f792c435337e4bf12"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 9,
@@ -5422,7 +5423,7 @@
   },
   "day05_slot_map": {
     "status": "PROVENANCE ONLY (v0.1.9): no slots are mapped for Day 5; its spec cites this file by field path (b70 cites) and needs no fills. Recorded so all five Day specs carry a provenance hash.",
-    "spec_sha256_sans_pin_when_mapped": "9e97409cab5223324ca533e3954a665616ff162017e1c6a580444074a6635370",
+    "spec_sha256_sans_pin_when_mapped": "69cd62d3d8e173236436fbbd39955a4327eb1819c40a69388689ec97e5c2f6e0",
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 0,
     "slots": []

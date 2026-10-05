@@ -1,9 +1,10 @@
 # Tools Index
-Owner: DCC Lore | Status: review | Version: 1.9 | Updated: 2026-10-04
-Summary: Scripts that generate catalogs, the ledger and the indexes. Paths inside them are absolute or relative to this folder; do not move them.
+Owner: DCC Lore | Status: review | Version: 2.0 | Updated: 2026-10-05
+Summary: Scripts that generate catalogs, the ledger and the indexes. Roots come from tools/paths.py (repo-relative; optional env overrides). Do not hardcode box paths.
 
 | Path | Description | Owner | Status |
 |---|---|---|---|
+| paths.py | Shared LORE_ROOT / CAMPAIGN_ROOT / VOICE_BRIDGE_SRC helper (env DCC_LORE_ROOT, DCC_CAMPAIGN_ROOT, DCC_VOICE_BRIDGE_SRC; absolute() not resolve()). | DCC Lore | n/a (data/code) |
 | apply_headers.py | Adds the convention header to every .md file (run after regenerating catalogs). | DCC Lore | n/a (data/code) |
 | gen.py | Regenerates the table-based catalogs in catalog/ from raw/all.json. | DCC Lore | n/a (data/code) |
 | gen_index.py | Regenerates INDEX.md and the folder INDEX.md files. | DCC Lore | n/a (data/code) |
@@ -36,3 +37,7 @@ Summary: Scripts that generate catalogs, the ledger and the indexes. Paths insid
 | canon_floor_check.py | Validates canon-floor-1.json: every ledger row id exists, confidence matches the ledger, tags, quotes <=25 words, no CR/level/credit/loot text, md view fresh. | DCC Lore | n/a (data/code) |
 | canon_floor2_build.py | Builds tables/canon-floor-2.json and .md (Floor 2 RESERVE canon table; data in the script; ledger confidence copied from CANON-LEDGER.md; ids from work/pass19-row-map.json and work/pass18-row-map.json). | DCC Lore | n/a (data/code) |
 | canon_floor2_check.py | Validates canon-floor-2.json: status "reserve", every ledger row id exists, confidence matches the ledger, tags, quotes <=25 words, no CR/level/credit/loot text, clock/differences/timeline/backlog sections present, md view fresh. | DCC Lore | n/a (data/code) |
+
+Change note v2.0 (2026-10-05): all tools use `paths.py` (LORE_ROOT / CAMPAIGN_ROOT / VOICE_BRIDGE_SRC). Env overrides: `DCC_LORE_ROOT`, `DCC_CAMPAIGN_ROOT`, `DCC_VOICE_BRIDGE_SRC`. No hardcoded `/workspace` or `/home/box` paths. Fresh-checkout verified.
+
+- 2026-10-05: `paths.voice_bridge_src()` now checks `DCC_VOICE_BRIDGE_SRC`, then the repo mirror `<campaign root>/bot/src/create`, then legacy siblings; warn-and-skip only if none exist (Architect request).

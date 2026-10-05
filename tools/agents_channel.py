@@ -9,7 +9,7 @@
 Needs env GM_DISCORD_TOKEN (same bot and env-only pattern as discord_gm.py). The token is never printed, logged
 or written anywhere. Discord REST v10 over plain urllib; one retry on 429 after `retry_after`.
 `post --as NAME` posts through that agent's webhook instead (AGENTS_WEBHOOK_<NAME> from env, else from
-/workspace/discord-voice-bridge/.env.agents; webhook URLs are secrets and are never printed). read/pins always use
+<bridge>/.env.agents (DCC_BRIDGE_DIR / bot/ / discord-voice-bridge); webhook URLs are secrets and are never printed). read/pins always use
 GM_DISCORD_TOKEN (webhooks cannot read). `post` refuses text that looks like a secret (scan from check_repo_safe.py plus sk-, long base64, the live token).
 """
 import argparse
@@ -31,7 +31,8 @@ CHANNEL = os.environ.get("DCC_AGENTS_CHANNEL_ID", "1556724390467735613")   # #ag
 CT = ZoneInfo("America/Chicago")
 MAX_LEN = 2000
 AGENTS = ["Accountant", "Syndicate", "Lore", "Encounter Bot", "Book Author", "Architect"]
-AGENTS_FILE = os.environ.get("AGENTS_WEBHOOK_FILE", "/workspace/discord-voice-bridge/.env.agents")
+import dcc_paths as _paths  # noqa: E402
+AGENTS_FILE = str(_paths.agents_webhook_file())
 WEBHOOK_URL = re.compile(r"^https://(?:ptb\.|canary\.)?discord(?:app)?\.com/api/(?:v\d+/)?webhooks/\d+/[A-Za-z0-9_-]+$")
 EXTRA = [
     ("sk-style-key", re.compile(r"(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{8,}")),

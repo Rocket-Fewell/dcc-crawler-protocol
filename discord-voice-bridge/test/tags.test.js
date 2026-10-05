@@ -25,7 +25,7 @@ test('untagged text uses the narrator voice', () => {
 test('[GM], [SYSTEM], [ROLL] per line; tag applies until the next tag; tags are stripped', () => {
   const raw = [
     'Untagged intro.',
-    '[SYSTEM] Achievement unlocked!',
+    '[SYSTEM] The floor collapses in 6 hours.',
     'Still the system talking.',
     '[ROLL] d20 + 5 = 17',
     'this continuation of the roll is silent too',
@@ -34,7 +34,7 @@ test('[GM], [SYSTEM], [ROLL] per line; tag applies until the next tag; tags are 
   ].join('\n');
   assert.deepEqual(parseTaggedLines(raw), [
     { voice: 'gm', text: 'Untagged intro.' },
-    { voice: 'system', text: 'Achievement unlocked!\nStill the system talking.' },
+    { voice: 'system', text: 'The floor collapses in 6 hours.\nStill the system talking.' },
     { voice: 'gm', text: 'The goblin snarls.' },
     { voice: 'system', text: 'lowercase and colon work' },
   ]);
@@ -106,8 +106,8 @@ test('config: system voice settings, defaults and fallbacks', () => {
   assert.equal(c.tts.maxMessageChars, 1500);
   assert.equal(c.tts.openai.voices.gm.voice, 'onyx');
   assert.equal(c.tts.openai.voices.system.voice, 'coral');
-  assert.match(c.tts.openai.voices.system.instructions, /game-show host/);
-  assert.match(c.tts.openai.voices.system.instructions, /smug/);
+  assert.match(c.tts.openai.voices.system.instructions, /dry, informative, corporate/);
+  assert.match(c.tts.openai.voices.system.instructions, /no jokes/);
 
   const c2 = loadConfig({
     ...env,
@@ -154,7 +154,7 @@ test('providers send the right voice settings per voice (mock HTTP server)', asy
     assert.equal(seen[0].body.voice, 'onyx');
     assert.match(seen[0].body.instructions, /dungeon announcer/);
     assert.equal(seen[1].body.voice, 'coral');
-    assert.match(seen[1].body.instructions, /game-show host/);
+    assert.match(seen[1].body.instructions, /dry, informative, corporate/);
     assert.equal(seen[2].body.voice, 'onyx');
 
     // ElevenLabs: patch fetch to hit the mock server

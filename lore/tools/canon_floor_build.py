@@ -4,7 +4,10 @@ Data lives in this file; ledger ids are resolved from CANON-LEDGER.md and work/p
 from the ledger rows (weakest label wins). Run: python3 tools/canon_floor_build.py   then   python3 tools/canon_floor_check.py
 Owner: DCC Lore | Written 2026-10-04 (Pass 18)."""
 import json, re, os, sys, hashlib
-ROOT = '/workspace/dcc-lore'
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
+ROOT = str(LORE_ROOT)
 LEDGER = ROOT + '/CANON-LEDGER.md'
 RM = json.load(open(ROOT + '/work/pass18-row-map.json'))
 def r(*keys): return [RM[k] for k in keys]

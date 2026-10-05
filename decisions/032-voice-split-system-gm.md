@@ -24,4 +24,4 @@ Summary: Table TTS / GM-output tag contract: System is dry corporate; achievemen
 
 ## Follow-up
 
-- Encounter Bot: scrub Day-page System `voice_line` / `route_voice_line` snark; move achievement/loot color to GM; may add optional `[GM]` color beats (new manifest kind OK — extract treats unknown kinds as narration).
+- Encounter Bot: scrub Day-page System `voice_line` / `route_voice_line` snark; move achievement/loot color to GM; optional joke beats use manifest kind `gm_color` (extract/encounter_text treat unknown kinds including `gm_color` as narration; `/encounter` preview lists the kind).

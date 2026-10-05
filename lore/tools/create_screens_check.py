@@ -16,7 +16,11 @@ STAGE = "--stage" in sys.argv
 if STAGE: MAIN, LINES = sys.argv[sys.argv.index("--stage") + 1], sys.argv[sys.argv.index("--stage") + 2]
 else: MAIN, LINES = os.path.join(T, "create-screens-reskins.json"), os.path.join(T, "create-flow-lines.proposed.json")
 VER = os.path.join(T, "create-screens-reskins.version.json"); AUDIT = os.path.join(T, "create-screens-reskins.audit.md")
-CHARGEN = "/workspace/dcc-campaign/tables/chargen-5e.json"; ORIG = "/workspace/dcc-campaign/tables/create-flow-lines.json"
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import CHARGEN as _CH, CREATE_FLOW_LINES as _ORIG
+CHARGEN = str(_CH) if _CH else ""
+ORIG = str(_ORIG) if _ORIG else ""
 SC = os.path.join(T, "species-class-reskins.json")
 errs, warns, infos = [], [], []; E = errs.append; W = warns.append; I = infos.append
 PH = re.compile(r"\{[a-z_]+\}")

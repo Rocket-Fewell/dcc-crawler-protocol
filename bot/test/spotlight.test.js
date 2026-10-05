@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { test } from 'node:test';
 import { loadConfig, loadWakeConfig } from '../src/config.js';
+import { resolveCampaignRoot } from '../src/paths.js';
 import { SttBridge } from '../src/stt.js';
 import { createSpotlightFilter, decide, hasWakeWord, nameMatches, normalizeName, readSpotlight } from '../src/spotlight.js';
 import { WakeUsageLogger, parseWakeJsonl, summarizeWakes } from '../src/usage.js';
@@ -165,7 +166,7 @@ test('filter: reads the file live; disabled / broken input never blocks', () => 
 test('config: spotlight defaults and overrides', () => {
   const env = { DISCORD_TOKEN: 't', CLIENT_ID: '111111111111111111', GUILD_ID: '222222222222222222', TRANSCRIPT_CHANNEL_ID: '444444444444444444', GM_OUTPUT_CHANNEL_ID: '555555555555555555', OPENAI_API_KEY: 'x' };
   const c = loadConfig(env).spotlight;
-  assert.deepEqual(c, { enabled: true, file: '/workspace/dcc-campaign/sessions/spotlight.json', maxAgeMinutes: 20 });
+  assert.deepEqual(c, { enabled: true, file: path.join(resolveCampaignRoot(env), 'sessions', 'spotlight.json'), maxAgeMinutes: 20 });
   const o = loadConfig({ ...env, SPOTLIGHT_FILTER_ENABLED: 'false', SPOTLIGHT_FILE: '/tmp/s.json', SPOTLIGHT_MAX_AGE_MINUTES: '45' }).spotlight;
   assert.deepEqual(o, { enabled: false, file: '/tmp/s.json', maxAgeMinutes: 45 });
 });

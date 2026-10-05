@@ -8,8 +8,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 T = os.path.join(HERE, "..", "tables")
 P = sys.argv[1] if len(sys.argv) > 1 else os.path.join(T, "species-class-reskins.json")
 VER = os.path.join(T, "species-class-reskins.version.json")
-CHARGEN = "/workspace/dcc-campaign/tables/chargen-5e.json"
-SUPP = "/workspace/dcc-campaign/rules/30-species-supplement-5e.md"
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import CHARGEN as _CH, SPECIES_SUPP as _SUP
+CHARGEN = str(_CH) if _CH else ""
+SUPP = str(_SUP) if _SUP else ""
 REQ = ["id", "kind", "parent_id", "srd_name", "display_name", "combined_label", "nation", "flavor", "spoken"]
 KINDS = ["species", "species_variant", "species_lineage", "class", "class_option"]
 errs, warns, infos = [], [], []

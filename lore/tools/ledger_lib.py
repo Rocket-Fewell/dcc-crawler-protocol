@@ -1,7 +1,11 @@
 """Helpers for building/checking CANON-LEDGER.md.  All quotes are pulled programmatically from local source
 files so they are exact substrings (see ledger_check.py).  Written 2026-10-03 (Pass 4)."""
 import re, os, json
-ROOT='/workspace/dcc-lore'
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
+ROOT=str(LORE_ROOT)
 PAGES=ROOT+'/raw/pages'
 _cache={}
 def fname(title): return re.sub(r'[^\w\-\.\' ()]','_',title)+'.txt'

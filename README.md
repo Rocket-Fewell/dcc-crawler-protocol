@@ -1,6 +1,8 @@
 # DCC campaign: rules, floors, tools and canon (local staging repo)
 
-Design and tooling repo for the Dungeon Crawler campaign run on Discord: house rules, decisions, Floor 1 day pages, loot/achievement/reskin tables, the Python campaign tools and their tests, and Lore's canon tables and ledger. Start with `INDEX.md` and `STATE-OF-BUILD.md`.
+This is a **tabletop campaign / AI-DM source pack** (*Dungeon Crawler Carl*–inspired, D&D 5e 2024) with small Discord tools that serve the table — **not** a software product to package or modernize. Outside agents: start with **`AGENTS.md`**, then **`ENV-SETUP.md`** (§7 = how to reach the crew; §8 = `DCC_*` env vars). Then `INDEX.md` / `STATE-OF-BUILD.md`.
+
+Design and tooling for the Discord campaign: house rules, decisions, Floor 1 day pages, loot/achievement/reskin tables, Python campaign tools and tests, and Lore's canon tables and ledger.
 
 ## Full backup (authorized by Caleb, 2026-10-04)
 This repo is a FULL private backup of the project, refreshed by `ops/backup-push.sh` (copy of `/workspace/backup-push.sh`), which runs `ops/backup-sync.py` to mirror (with delete-sync) every source below.

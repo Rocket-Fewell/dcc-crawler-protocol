@@ -2,13 +2,14 @@
 """Snapshot the campaign data (characters, sessions, state, decisions, gm-notes) to a timestamped tar.gz.
 
 Usage: python3 tools/snapshot.py [--label after-intake] [--keep 60]
-Writes to /workspace/backups/dcc-campaign/ (outside the campaign tree, mode 700).
+Writes to $DCC_BACKUP_DIR (default: <campaign-parent>/backups/dcc-campaign, mode 700).
 Includes sessions-data/ (every non-alpha session) and gm-notes/secret/ (incl. per-session secrets) (the backup folder is private); never copy these archives into shared folders.
 Also writes a player-safe CSV-free summary line to stdout (file count and size only).
 """
 import argparse, os, re, tarfile, time
-ROOT = os.environ.get("DCC_CAMPAIGN_DIR", "/workspace/dcc-campaign")
-DEST = os.environ.get("DCC_BACKUP_DIR", "/workspace/backups/dcc-campaign")
+import dcc_paths as _paths  # noqa: E402
+ROOT = str(_paths.campaign_root())
+DEST = os.environ.get("DCC_BACKUP_DIR") or str(_paths.campaign_root().parent / "backups" / "dcc-campaign")
 INCLUDE = ["characters", "sessions", "sessions-data", "decisions", "gm-notes", "floors", "rules", "tables", "DECISIONS.md", "INDEX.md"]
 
 def main():

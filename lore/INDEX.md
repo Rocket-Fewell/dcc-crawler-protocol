@@ -1,8 +1,8 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.11 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.14 | Updated: 2026-10-05
 Summary: One line per file in the lore folder: path, description, owner, status.
 
-Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (symlink to `/workspace/dcc-lore`). Rules: `/workspace/dcc-campaign/NAMING-CONVENTIONS.md`.
+Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (repo-relative; on some boxes a symlink into this tree). Rules: campaign root `NAMING-CONVENTIONS.md` (sibling of `lore/` in a fresh checkout, or set `DCC_CAMPAIGN_ROOT`).
 
 **Start here:** `CANON-LEDGER.md` is the master record of canon findings (each with an exact quote, source tag, confidence and date). Add to it only by the procedure in `ledger-rules.md`. Race selection: see `catalog/race-selection-canon.md`. Class selection (F3/F6/F9): see `catalog/class-selection-canon.md`. Hunters/sponsors/Prize Carousel/Midnight Market: see `catalog/hunters-and-sponsors-canon.md`. Gods/Ascendency/Nothing/Faction Wars/T'Ghee: see `catalog/gods-faction-wars-canon.md`. Nothing in this folder was checked against the novels' text.
 
@@ -103,7 +103,8 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | drafts/floor1-zone-color.draft.md | Floor 1 Day 2–4 optional zone color beats, voice-split v0.2. sha256 a1ef4c1cedbd… | DCC Lore | draft |
 | drafts/srd-nonsrd-audit.md | Which of the 16 listed backgrounds and 12 origin-feat entries are in SRD 5.2.1 (4 backgrounds, 4 feats) and which are not, with a one-line appendix action for each non-SRD item. Names only. | DCC Lore | draft |
 | drafts/achievement-suggestions-days-02-05-lore-pass.md | Lore names-and-flavor pass on Days 2–5 achievement suggestions; v0.2 marks banners/flavor [GM] end to end. sha256 216303c74dc6… | DCC Lore | draft |
-| drafts/floor1-voice-split-audit.md | Voice-split Part A change log + Part B read-only Day-page slip list (Death Mode, System jokes, mtimes/sha256). sha256 49ce6e8e872b… | DCC Lore | draft |
+| drafts/core-book-items-monsters-status.md | Read-only inventory for Core Book Items+Monsters chapters (counts, paths, gaps, blockers); scan 2026-10-05. sha256 d6e8d1725da1… | DCC Lore | draft |
+| drafts/floor1-voice-split-audit.md | Voice-split Part A change log + Part B Day-page slip list; recheck after budget v0.1.15 regen (2026-10-05). sha256 831e1be75cc9… | DCC Lore | draft |
 
 ## audits/
 | Path | Description | Owner | Status |
@@ -183,6 +184,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 ## tools/
 | Path | Description | Owner | Status |
 |---|---|---|---|
+| tools/paths.py | Portable roots for tools (DCC_LORE_ROOT / DCC_CAMPAIGN_ROOT / DCC_VOICE_BRIDGE_SRC). | DCC Lore | review |
 | tools/INDEX.md | Index of the tools folder. | DCC Lore | review |
 | tools/apply_headers.py | Adds the convention header to every .md file (run after regenerating catalogs). | DCC Lore | n/a (data/code) |
 | tools/gen.py | Regenerates the table-based catalogs in catalog/ from raw/all.json. | DCC Lore | n/a (data/code) |

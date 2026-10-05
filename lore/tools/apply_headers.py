@@ -1,11 +1,15 @@
-"""Idempotently puts the NAMING-CONVENTIONS header on every .md file in /workspace/dcc-lore (outside raw/ and work/):
+"""Idempotently puts the NAMING-CONVENTIONS header on every .md file under the lore root (outside raw/ and work/):
     # Title
     Owner: DCC Lore | Status: ... | Version: x.y | Updated: YYYY-MM-DD
     Summary: one line
 Run after tools/gen.py or tools/voice_index.py (both call it at the end) because they rewrite the catalog files.
 Usage: python3 tools/apply_headers.py"""
 import os,re
-ROOT='/workspace/dcc-lore'
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT
+ROOT=str(LORE_ROOT)
 DATE='2026-10-03'
 # path -> (status, version, summary)  [title comes from the file's own first '# ' line]
 META={

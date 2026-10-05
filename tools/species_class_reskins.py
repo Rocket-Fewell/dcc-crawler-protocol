@@ -7,7 +7,7 @@ Usage:
   python3 tools/species_class_reskins.py --enable | --disable [--session ID]   set create.species_class_reskin true/false in that session's session.json (the switch is OFF by default)
   python3 tools/species_class_reskins.py --ids [--json]      every id the table must cover (species, lineages, classes, class options; kind and expected srd_name)
   python3 tools/species_class_reskins.py [--path FILE] [--strict] [--house] [--json]   hash + structure + coverage report
-      --path     check another copy (e.g. Lore's /workspace/dcc-lore/tables/species-class-reskins.json); its version file is read from the same folder
+      --path     check another copy (e.g. Lore's lore/tables/species-class-reskins.json); its version file is read from the same folder
       --strict   also exit 1 when any /create id (species, lineage, class, class option) has no entry
       --house    also require the 12 Floor 3 oddities from rules/30 section 4 (21 species in all)
   No table in tables/ = "absent", exit 0. The bridge and publisher show the names only while create.species_class_reskin is true in session.json (default false).
@@ -22,12 +22,13 @@ import os
 import re
 import sys
 
+import dcc_paths as _paths  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 CAMPAIGN = os.path.dirname(HERE)
 TABLES = os.path.join(CAMPAIGN, "tables")
 SCHEMA = "species-class-reskins/0.1.0"
 KINDS = ("species", "species_variant", "species_lineage", "class", "class_option")
-LORE_COPY = "/workspace/dcc-lore/tables/species-class-reskins.json"
+LORE_COPY = str(_paths.lore_root() / "tables" / "species-class-reskins.json")
 MAX_LABEL = 100
 
 

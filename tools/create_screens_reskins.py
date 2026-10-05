@@ -5,7 +5,7 @@ Summary: tables/create-screens-reskins.json (Lore's format create-screens-reskin
 
 Usage:
   python3 tools/create_screens_reskins.py [--path FILE] [--strict] [--json]   hash + structure + content report
-      --path     check another copy (e.g. /workspace/dcc-lore/tables/create-screens-reskins.json); its version file is read from the same folder
+      --path     check another copy (e.g. lore/tables/create-screens-reskins.json); its version file is read from the same folder
       --strict   also exit 1 on a content WARN (length limits, chargen_ref not found)
   python3 tools/create_screens_reskins.py --source-map [--json]   which row ids the bridge code wires (grep of src/create) and which source_match=not_found rows are still unresolved
   python3 tools/create_screens_reskins.py --money-words [--json]   Lore text (backgrounds, items, screens, flow lines) that still says GP/cp/gold/cash: report only, the bridge shows credits (src/create/money.js)
@@ -22,10 +22,11 @@ import os
 import re
 import sys
 
+import dcc_paths as _paths  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 CAMPAIGN = os.path.dirname(HERE)
 TABLES = os.path.join(CAMPAIGN, "tables")
-BRIDGE = os.environ.get("DCC_BRIDGE_DIR", "/workspace/discord-voice-bridge")
+BRIDGE = os.environ.get("DCC_BRIDGE_DIR") or str(_paths.bridge_root())
 SCHEMA = "create-screens-reskins/0.1.0"
 KINDS_STATE = ("label", "text")
 RENAMED = {"hint-s8-method-line": ({"method"}, {"method_label"}), "select-s8-assign": ({"ab"}, {"ability_label"}),

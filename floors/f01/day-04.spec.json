@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.5",
+    "version": "0.6",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -200,11 +200,14 @@
       "text": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
       "tag": "[PLAYER-FACING]",
       "canon_tag": "inspired",
-      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md, sha256 d23a39b90cbe…), house wording; voice-split [SYSTEM] dry + [GM] color",
+      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md), house wording; voice-split [SYSTEM] dry + [GM] color",
       "gm_color": {
         "text": "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability.",
         "tag": "[GM-FACING]"
-      }
+      },
+      "source": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "source_version": "0.2",
+      "source_expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
     },
     "early_descent": {
       "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
@@ -389,7 +392,7 @@
         },
         "gm_color": {
           "text": "The Break Room just went dark and you're one door closer to the stage. No snacks, no vending, no excuses.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -432,7 +435,7 @@
         },
         "gm_color": {
           "text": "Pickings are slim. The Break Room's closed, the vendors are dead, and the only boxes left are the ones you've already earned. Make them count.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -475,7 +478,7 @@
         },
         "gm_color": {
           "text": "Services are down but the building still has favors to trade. Pay what you owe, steal what's left, and keep a straight face.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     }
@@ -618,7 +621,7 @@
         },
         "gm_color": {
           "text": "The coffee has finally won. We apologize for nothing.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -776,7 +779,7 @@
         },
         "gm_color": {
           "text": "Resting outside the Green Room. Bold. Sleep is for people with walls.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -809,7 +812,7 @@
       "if_they_do_something_dumb": "Resting outside the Green Room is allowed, but it is only a Short Rest: the price ({{b70:floors.1.prices.rest_without_saferoom}}) buys a quiet one and grants no Long Rest. If the party tries to Long Rest in the open anyway, the System refuses and the Ticks interrupt. Never a wipe. GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not (for example the dark halls on Days 4 and 5).",
       "zone_color": {
         "tag": "inspired",
-        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd…, own words, optional read-aloud)",
+        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
         "lines": [
           {
             "text": "The lights go out in sections, one hall at a time, until only your own lantern is left. The dark makes a sound, a slow settling, like a building thinking.",
@@ -832,7 +835,9 @@
             "tag": "[PLAYER-FACING]"
           }
         ],
-        "gm_note": "GM note (from Lore's hook): a rest here can be interrupted by a dumb, loud, wrong-footed mob, which keeps the cost real without being cruel."
+        "gm_note": "GM note (from Lore's hook): a rest here can be interrupted by a dumb, loud, wrong-footed mob, which keeps the cost real without being cruel.",
+        "source_version": "0.2",
+        "source_expected_sha256": "a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4"
       },
       "quick_run": {
         "setup": "Dark halls and red light; the party is far from the Green Room and tired.",
@@ -941,7 +946,7 @@
         },
         "gm_color": {
           "text": "The usher's flashlight finds you before you find the door. 'Please silence your screams,' says a polite voice from the dark. They don't mean the phones.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1065,7 +1070,7 @@
         },
         "gm_color": {
           "text": "The building is leaning toward you.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1202,9 +1207,9 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
+    "expected_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.14"
+    "version": "0.1.15"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

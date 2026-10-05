@@ -5,6 +5,7 @@ Summary: Files in tools/ - the AI GM's dice roller and live-state manager (Pytho
 | Path | Description | Owner | Status |
 |---|---|---|---|
 | README.md | Exact commands and examples for roll.py and state.py (read this first) | Borent | draft |
+| dcc_paths.py | Portable campaign/lore/bridge roots (`DCC_CAMPAIGN_ROOT` / `DCC_LORE_ROOT`; legacy `*_DIR` aliases) | Borent | draft |
 | roll.py | Dice roller: NdM, kh/kl/dh/dl, adv/dis, crits; prints [ROLL] line and logs to sessions/rolls-YYYY-MM-DD.log (alpha) or sessions-data/<id>/rolls-YYYY-MM-DD.log (other sessions) | Borent | draft |
 | state.py | Live state manager for sessions/state.json: crawlers, HP, inventory, credits, revive/bypass caps, backups, snapshot, validate | Borent | draft |
 | tests/test_roll.py | unittest suite for roll.py (parsing, keep/drop, bounds, crits, log, CLI) | Borent | draft |
@@ -14,7 +15,7 @@ Summary: Files in tools/ - the AI GM's dice roller and live-state manager (Pytho
 | tests/test_gm_quirks.py | unittest suite for gm_quirks.py and sim_floors.py (schema, roll refusal, commitment, caps, drift, opt-outs, secrecy) | Borent | draft |
 | discord_gm.py (spotlight + stop subcommands) | `stop` writes sessions/voice-control.json (bridge flushes speech); `spotlight set/clear/show`: writes sessions/spotlight.json atomically so the Discord bridge only wakes the GM for that player or the wake word "AI" (fails open) | Borent | draft |
 | tests/test_discord_gm.py | unittest suite for the spotlight subcommand (atomic write, state, aliases, validation, no network) | Borent | draft |
-| snapshot.py | Timestamped backup of characters/sessions/decisions/gm-notes to /workspace/backups/dcc-campaign (keeps 60). Run: python3 tools/snapshot.py --label after-intake | Borent | final |
+| snapshot.py | Timestamped backup of characters/sessions/decisions/gm-notes to $DCC_BACKUP_DIR (default <campaign-parent>/backups/dcc-campaign; keeps 60). Run: python3 tools/snapshot.py --label after-intake | Borent | final |
 
 - `tools/publisher.py` (via `discord_gm.py publish|setup-channels|register-channel|channels`): posts each crawler's full card to their own read-only channel; map `sessions/player-channels.json`, snapshots `sessions/published-snapshots.json`, item text `exports/card-data.json`. See tools/README.md.
 - `sessions/credit-ledger.jsonl`: append-only credit ledger written by state.py (`--reason`); `state.py ledger show|verify|import`.

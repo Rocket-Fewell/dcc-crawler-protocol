@@ -31,9 +31,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from spec_hash_sans_pin import METHOD as SANS_PIN_METHOD, spec_sha256_sans_pin  # noqa: E402
 
 SCRIPT = os.path.realpath(__file__)
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SCRIPT)))  # /workspace/dcc-campaign
-LORE = "/workspace/dcc-lore"
-SRD_RAW = "/workspace/srd/raw.txt"
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SCRIPT)))  # campaign root (box or flattened repo)
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+import dcc_paths as _paths  # noqa: E402
+LORE = os.environ.get("DCC_LORE_ROOT") or str(_paths.lore_root())
+_srd_cand = [
+    os.environ.get("DCC_SRD_RAW"),
+    os.path.join(ROOT, "srd", "raw.txt"),
+    os.path.join(os.path.dirname(ROOT), "srd", "raw.txt"),
+    "/workspace/srd/raw.txt",
+]
+SRD_RAW = next((p for p in _srd_cand if p and os.path.isfile(p)), _srd_cand[-1])
 CANON_TABLE = os.path.join(LORE, "tables", "canon-floor-1.json")
 LEDGER = os.path.join(LORE, "CANON-LEDGER.md")
 
@@ -49,6 +57,7 @@ MAX_SENTENCES = 4
 PROPOSED_TAG = "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
 GM = "[GM-ONLY]"
 VOICE_KEYS = ("system_intro", "midpoint_twist", "win")
+OPTIONAL_VOICE_KEYS = ("win_alt", "gm_color")  # optional spoken beats; gm_color = [GM] snark after dry System
 STORY_IDS = {"f01-any-%04d" % n for n in range(55, 66)}  # 0055 (pet biscuit pair) .. 0065
 
 NUMERIC_LINTS = [
@@ -376,10 +385,13 @@ def add_audience(doc, rep):
         blk["audience"] = "player"
     for i, r in enumerate(doc["routes"]):
         for k, v in r.get("voice_lines", {}).items():
-            add("/routes/%d/voice_lines/%s" % (i, k), "route_voice_line", "text", v)
+            # gm_color is spoken GM snark after dry System — never System kinds (decision 032)
+            kind = "gm_color" if k == "gm_color" else "route_voice_line"
+            add("/routes/%d/voice_lines/%s" % (i, k), kind, "text", v)
     for i, e in enumerate(doc["encounters"]):
         for k, v in e.get("voice_lines", {}).items():
-            add("/encounters/%d/voice_lines/%s" % (i, k), "voice_line", "text", v, encounter=e["id"])
+            kind = "gm_color" if k == "gm_color" else "voice_line"
+            add("/encounters/%d/voice_lines/%s" % (i, k), kind, "text", v, encounter=e["id"])
         for j, ln in enumerate((e.get("zone_color") or {}).get("lines", [])):
             add("/encounters/%d/zone_color/lines/%d" % (i, j), "zone_color", "text", ln, encounter=e["id"], optional=True)
         sp = e.get("set_piece_intro")
@@ -403,15 +415,24 @@ def add_audience(doc, rep):
             e["zone_color"]["gm_note_audience"] = "gm"
         e["audience_default"] = "gm"
     d = doc["day"]
+    def add_nested_gm_color(parent_path, parent_blk, **kw):
+        """Nested notice gm_color is spoken GM color, not System (kind gm_color)."""
+        if isinstance(parent_blk, dict) and isinstance(parent_blk.get("gm_color"), dict):
+            add("%s/gm_color" % parent_path, "gm_color", "text", parent_blk["gm_color"], **kw)
+
     for key, kind in (("tomorrow_notice", "system_notice"), ("collapse_notice", "system_notice"), ("stairwell_opening", "system_notice")):
         add("/day/%s" % key, kind, "text", d.get(key))
+        add_nested_gm_color("/day/%s" % key, d.get(key))
         if key == "collapse_notice" and isinstance(d.get(key), dict) and d[key].get("hours_note"):
             d[key]["hours_note_audience"] = "gm"
     ed = d.get("early_descent") or {}
     add("/day/early_descent/player_prompt", "system_notice", "text", ed.get("player_prompt"))
+    add_nested_gm_color("/day/early_descent/player_prompt", ed.get("player_prompt"))
     add("/day/early_descent/free_window", "system_notice", "text", ed.get("free_window"))
+    add_nested_gm_color("/day/early_descent/free_window", ed.get("free_window"))
     fe = d.get("floor_exit") or {}
     add("/day/floor_exit/system_line", "system_notice", "text", fe.get("system_line"))
+    add_nested_gm_color("/day/floor_exit/system_line", fe.get("system_line"))
     add("/day/floor_exit/gm_warning", "exit_warning_read_aloud", "text", fe.get("gm_warning"),
         note="key is named gm_warning but the text is read to the players; the GM-only warning is /day/gm_warning")
     for j, pa in enumerate(d.get("proposed_achievements", [])):
@@ -667,8 +688,13 @@ def build(spec, data, rep):
         tags_seen.add(r.get("tag"))
         vl = r.get("voice_lines", {})
         miss = [k for k in VOICE_KEYS if k not in vl or vl[k].get("tag") != PF or not vl[k].get("text")]
+        miss += [k for k in vl if k not in VOICE_KEYS and k not in OPTIONAL_VOICE_KEYS]
+        for k, v in vl.items():
+            want = "[GM-FACING]" if k == "gm_color" else PF
+            if v.get("tag") != want:
+                miss.append(k)
         if miss:
-            rep.fail("route %s voice lines" % r["id"], "missing or untagged %s" % miss)
+            rep.fail("route %s voice lines" % r["id"], "missing or untagged %s" % sorted(set(miss)))
         rr = dict(r)
         rr["achievements"] = [resolve_ach(a, r["id"]) for a in r.get("achievements", [])]
         rr["canon_refs"] = [resolve_canon_ref(c, r["id"]) for c in r.get("canon_refs", [])]
@@ -820,8 +846,12 @@ def build(spec, data, rep):
             rep.fail("%s map in the mind" % eid, "layout, exits, hazards and cover are required")
         vl = e.get("voice_lines", {})
         bad = [k for k in VOICE_KEYS if k not in vl or vl[k].get("tag") != PF or not vl[k].get("text")]
-        bad += [k for k in vl if k not in VOICE_KEYS and k != "win_alt"]
-        bad += [k for k, v in vl.items() if v.get("tag") != PF]
+        bad += [k for k in vl if k not in VOICE_KEYS and k not in OPTIONAL_VOICE_KEYS]
+        # Required voice keys stay [PLAYER-FACING]; optional gm_color is [GM-FACING] (spoken after dry System)
+        for k, v in vl.items():
+            want = "[GM-FACING]" if k == "gm_color" else PF
+            if v.get("tag") != want:
+                bad.append(k)
         if bad:
             rep.fail("%s voice lines" % eid, "missing/untagged: %s" % sorted(set(bad)))
         if sorted((e.get("scaling") or {}).keys()) != ["2", "3", "4"]:
@@ -1316,6 +1346,9 @@ def render_md(doc):
     if day.get("collapse_notice"):
         cn = day["collapse_notice"]
         w("**Collapse notice** %s (%s; tagged *%s*): \"%s\"\n" % (cn["tag"], cn["status"], cn["canon_tag"], cn["text"]))
+        if isinstance(cn.get("gm_color"), dict) and cn["gm_color"].get("text"):
+            gc = cn["gm_color"]
+            w("**GM color (after System)** %s: \"%s\"\n" % (gc.get("tag", "[PLAYER-FACING]"), gc["text"]))
         if cn.get("hours_note"):
             w("*%s*\n" % cn["hours_note"])
     if day.get("gm_warning"):
@@ -1349,7 +1382,11 @@ def render_md(doc):
         for row in day["budget_table"]:
             w("| %s | %s |" % (row["label"], fill_text(row)))
         w("")
-    w("**Day close notice for tomorrow** %s: \"%s\"\n" % (day["tomorrow_notice"]["tag"], day["tomorrow_notice"]["text"]))
+    tn = day["tomorrow_notice"]
+    w("**Day close notice for tomorrow** %s: \"%s\"\n" % (tn["tag"], tn["text"]))
+    if isinstance(tn.get("gm_color"), dict) and tn["gm_color"].get("text"):
+        gc = tn["gm_color"]
+        w("**GM color (after System)** %s: \"%s\"\n" % (gc.get("tag", "[PLAYER-FACING]"), gc["text"]))
     # routes
     w("## Routes to the Stairwell\n")
     w("Three ways to leave. The Big Green EXIT (Z7) is bait, not a stairwell. %s\n" % doc["stairwell_key"]["availability"])
@@ -1366,9 +1403,14 @@ def render_md(doc):
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
         w("")
         w("**Voice lines**\n")
-        for k in VOICE_KEYS:
+        for k in VOICE_KEYS + OPTIONAL_VOICE_KEYS:
+            if k not in r["voice_lines"]:
+                continue
             v = r["voice_lines"][k]
-            w("- %s *%s*: \"%s\"" % (v["tag"], k.replace("_", " "), v["text"]))
+            label = k.replace("_", " ")
+            if k == "gm_color":
+                label = "gm color (after System)"
+            w("- %s *%s*: \"%s\"" % (v["tag"], label, v["text"]))
         w("")
     # key
     sk = doc["stairwell_key"]
@@ -1455,10 +1497,13 @@ def render_md(doc):
         if e.get("budget_variant_b"):
             w("**Variant B at level 1 (guideline):** %s\n" % fill_text(e["budget_variant_b"]))
         w("#### Voice lines\n")
-        for k in VOICE_KEYS + ("win_alt",):
+        for k in VOICE_KEYS + OPTIONAL_VOICE_KEYS:
             if k in e["voice_lines"]:
                 v = e["voice_lines"][k]
-                w("- %s *%s*%s: \"%s\"" % (v["tag"], k.replace("_", " ").replace("win alt", "win (alternate: no fight)"), " (set piece)" if v.get("set_piece") else "", v["text"]))
+                label = k.replace("_", " ").replace("win alt", "win (alternate: no fight)")
+                if k == "gm_color":
+                    label = "gm color (after System)"
+                w("- %s *%s*%s: \"%s\"" % (v["tag"], label, " (set piece)" if v.get("set_piece") else "", v["text"]))
         spi = e.get("set_piece_intro")
         if spi:
             w("")

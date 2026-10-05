@@ -10,12 +10,19 @@ OUT = os.path.join(HERE, "..", "tables")
 P = {"main": os.path.join(OUT, "create-screens-reskins.json"), "lines": os.path.join(OUT, "create-flow-lines.proposed.json"),
      "audit": os.path.join(OUT, "create-screens-reskins.audit.md"), "ver": os.path.join(OUT, "create-screens-reskins.version.json"),
      "log": os.path.join(OUT, "create-screens-reskins.CHANGELOG.md")}
-ORIG = "/workspace/dcc-campaign/tables/create-flow-lines.json"
-SRC = "/workspace/discord-voice-bridge/src/create"
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import CREATE_FLOW_LINES as _ORIG, VOICE_BRIDGE_SRC as _VBS
+ORIG = str(_ORIG) if _ORIG else ""
+SRC = str(_VBS) if _VBS else ""
+if not ORIG:
+    sys.exit("create_screens_build: create-flow-lines.json not found (set DCC_CAMPAIGN_ROOT)")
+if not SRC:
+    print("WARN: DCC_VOICE_BRIDGE_SRC / discord-voice-bridge/src/create not found; code_ref look-up will be skipped", file=sys.stderr)
 NOTE = sys.argv[sys.argv.index("--note") + 1] if "--note" in sys.argv else None
 PH = re.compile(r"\{[a-z_]+\}")
 def sha(path): return hashlib.sha256(open(path, "rb").read()).hexdigest()
-srcs = {f: open(os.path.join(SRC, f), encoding="utf-8").read().split("\n") for f in ("screens.js", "rules.js", "flow.js", "ui.js") if os.path.exists(os.path.join(SRC, f))}
+srcs = ({f: open(os.path.join(SRC, f), encoding="utf-8").read().split("\n") for f in ("screens.js", "rules.js", "flow.js", "ui.js") if os.path.exists(os.path.join(SRC, f))} if SRC else {})
 def locate(old):
     """Best-effort code reference (read-only look at the bridge source). The check does not depend on it."""
     if not srcs: return None, "no_source"

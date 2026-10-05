@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.7",
+    "version": "0.8",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -347,7 +347,7 @@
         },
         "gm_color": {
           "text": "Oh, we're speed-running. Cute. None of the rooms between here and there are polite about it.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -389,7 +389,7 @@
         },
         "gm_color": {
           "text": "A thorough Crawler. How rare. Take your time, but not too much of it.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -430,7 +430,7 @@
         },
         "gm_color": {
           "text": "Ooh, a negotiator. Some of those prices are even legal.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     }
@@ -586,7 +586,7 @@
         },
         "gm_color": {
           "text": "The System wishes the surface crowd luck with that. Also: yes, the dog gets a nameplate, and something in the atrium is already clacking its jaw. Try not to take it personally.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -831,7 +831,7 @@
       },
       "voice_lines": {
         "system_intro": {
-          "text": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate, which is the System's way of saying these are the bad guys. This is Combat 101, and attendance is mandatory.",
+          "text": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
           "tag": "[PLAYER-FACING]"
         },
         "midpoint_twist": {
@@ -841,6 +841,10 @@
         "win": {
           "text": "Rats down. You are now qualified to work the night shift at a children's pizza arcade. The vents rattle with dropped change, if you're the kind of Crawler who checks vents.",
           "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "The System's way of saying these are the bad guys. Attendance is mandatory.",
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1446,7 +1450,7 @@
         },
         "gm_color": {
           "text": "We put a countdown on it because 'take your time' was ruining the pool. The floor will not wait politely.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1683,7 +1687,7 @@
         },
         "gm_color": {
           "text": "Big, friendly letters. In case you weren't tempted enough.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1886,7 +1890,7 @@
         },
         "gm_color": {
           "text": "FOLKS, welcome! Please absorb as little of the dying lesson as you can.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -2118,7 +2122,7 @@
         },
         "gm_color": {
           "text": "Please enjoy the darkness responsibly and keep your ankles to yourselves.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [],
@@ -2243,7 +2247,7 @@
         },
         "gm_color": {
           "text": "Sleep well. We'll let you know in the morning what's left to stand on.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -2387,9 +2391,9 @@
     "expected_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9"
   },
   "budget_file": {
-    "expected_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
+    "expected_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.14"
+    "version": "0.1.15"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

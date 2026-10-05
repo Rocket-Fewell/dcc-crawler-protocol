@@ -40,7 +40,7 @@ class SpotlightTests(unittest.TestCase):
 
     def test_default_path_is_campaign_sessions_spotlight_json(self):
         os.environ.pop("SPOTLIGHT_FILE")
-        self.assertTrue(os.path.normpath(gm.spotlight_path()).endswith(os.path.join("dcc-campaign", "sessions", "spotlight.json")))
+        self.assertTrue(os.path.normpath(gm.spotlight_path()).endswith(os.path.join("sessions", "spotlight.json")))
 
     def test_set_writes_player_aliases_note_and_iso_timestamp(self):
         out = self.run_cli("spotlight", "set", "Trailer Park Moses", "--alias", "Moses", "--alias", "TPM", "--note", "vending wall")
@@ -149,7 +149,7 @@ class StopTests(unittest.TestCase):
 
     def test_default_path(self):
         os.environ.pop("VOICE_CONTROL_FILE")
-        self.assertTrue(os.path.normpath(gm.voice_control_path()).endswith(os.path.join("dcc-campaign", "sessions", "voice-control.json")))
+        self.assertTrue(os.path.normpath(gm.voice_control_path()).endswith(os.path.join("sessions", "voice-control.json")))
 
     def test_stop_writes_flush_with_unique_id_and_iso_ts(self):
         out = self.run_cli("stop")

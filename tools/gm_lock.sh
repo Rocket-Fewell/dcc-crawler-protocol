@@ -3,7 +3,7 @@
 # The lock is per campaign session: alpha (default) uses sessions/.gm-lock, any other session uses sessions-data/<id>/.gm-lock.
 # Session = 2nd argument, else $DCC_SESSION, else the persisted active session (sessions/active-session.json), else alpha.
 # acquire: exit 0 if lock taken, exit 1 if another run holds a fresh lock (<120s old).
-C=${DCC_CAMPAIGN_DIR:-/workspace/dcc-campaign}
+C=${DCC_CAMPAIGN_ROOT:-${DCC_CAMPAIGN_DIR:-$(cd "$(dirname "$0")/.." && pwd)}}
 S=${2:-${DCC_SESSION:-}}
 if [ -z "$S" ] && [ -f "$C/sessions/active-session.json" ]; then
   S=$(sed -n 's/.*"session"[[:space:]]*:[[:space:]]*"\([a-z0-9_-]*\)".*/\1/p' "$C/sessions/active-session.json" | head -1)

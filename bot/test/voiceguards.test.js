@@ -12,6 +12,7 @@ import { commandData } from '../src/commands/index.js';
 import * as shushCmd from '../src/commands/shush.js';
 import * as skipCmd from '../src/commands/skip.js';
 import { loadConfig, loadWakeConfig } from '../src/config.js';
+import { resolveCampaignRoot } from '../src/paths.js';
 import { DuplicateGuard, compareTexts, normalizeForDedupe } from '../src/dedupe.js';
 import { GmWakeState } from '../src/gmpause.js';
 import { SpeechQueue } from '../src/queue.js';
@@ -36,7 +37,7 @@ test('config: voice protections defaults and overrides', () => {
   assert.equal(v.maxQueuedChunks, 12);
   assert.equal(v.maxQueuedSeconds, 90);
   assert.equal(v.controlEnabled, true);
-  assert.equal(v.controlFile, '/workspace/dcc-campaign/sessions/voice-control.json');
+  assert.equal(v.controlFile, path.join(resolveCampaignRoot(env), 'sessions', 'voice-control.json'));
   const o = loadConfig({ ...env, DUPLICATE_WINDOW_SECONDS: '0', MAX_QUEUED_CHUNKS: '5', MAX_QUEUED_SECONDS: '30', VOICE_CONTROL_FILE: '/tmp/vc.json', VOICE_CONTROL_ENABLED: 'false' }).voice;
   assert.deepEqual([o.duplicateWindowSeconds, o.maxQueuedChunks, o.maxQueuedSeconds, o.controlFile, o.controlEnabled], [0, 5, 30, '/tmp/vc.json', false]);
   assert.ok(loadConfig(env).gmWakeStateFile.endsWith(path.join('logs', 'gm-wake-state.json')));
@@ -244,7 +245,7 @@ test('voice control file: missing at startup then created => flush; real interva
 });
 
 test('python `discord_gm.py stop` output is understood by the watcher (cross-tool contract)', () => {
-  const py = '/workspace/dcc-campaign/tools/discord_gm.py';
+  const py = path.join(resolveCampaignRoot(), 'tools', 'discord_gm.py');
   if (!existsSync(py)) return;
   const dir = tmp();
   try {

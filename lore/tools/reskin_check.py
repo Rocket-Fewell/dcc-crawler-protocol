@@ -6,7 +6,10 @@ import json, os, re, sys, glob, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 P = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "tables", "item-reskins.json")
 DECKS = os.path.join(HERE, "..", "tables", "loot-decks", "*.json")
-CHARGEN = "/workspace/dcc-campaign/tables/chargen-5e.json"
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import CHARGEN as _CH
+CHARGEN = str(_CH) if _CH else ""
 REQ = ["srd_id","srd_name","category","subcategory","display_name","combined_label","snark","source_tag","ledger_ref","name_origin",
        "legacy_names","chargen_keys","floor_variants","base_price","base_price_cp","price_flag","price_note","resolve_to_variant","variants","non_srd","price_credits_proposed","mechanic_note"]
 CATS = {"weapon","armor","shield","ammunition","focus","gear","pack","tool"}

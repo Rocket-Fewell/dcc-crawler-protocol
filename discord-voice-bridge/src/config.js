@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { campaignDir, charactersDir, dataDir, DEFAULT_SESSION } from './session.js';
 
@@ -222,7 +223,7 @@ export function loadConfig(env = process.env, { mode = 'bot' } = {}) {
       maxQueuedSeconds: num(env, 'MAX_QUEUED_SECONDS', 90, { min: 0, max: 36000 }),
       // File kill switch written by `discord_gm.py stop`.
       controlEnabled: bool(env, 'VOICE_CONTROL_ENABLED', true),
-      controlFile: str(env, 'VOICE_CONTROL_FILE', '/workspace/dcc-campaign/sessions/voice-control.json'),
+      controlFile: str(env, 'VOICE_CONTROL_FILE', join(campaignDir(env), 'sessions', 'voice-control.json')),
       controlPollMs: num(env, 'VOICE_CONTROL_POLL_MS', 500, { min: 100, max: 60000 }),
       eventsLogEnabled: bool(env, 'VOICE_EVENTS_LOG_ENABLED', true),
       eventsLogPath: str(env, 'VOICE_EVENTS_LOG', `${PROJECT_ROOT}logs/voice-events.jsonl`),
@@ -230,7 +231,7 @@ export function loadConfig(env = process.env, { mode = 'bot' } = {}) {
     // Wake-up filter: while the GM runs a "spotlight" exchange only that player (or the wake word "AI") wakes it.
     spotlight: {
       enabled: bool(env, 'SPOTLIGHT_FILTER_ENABLED', true),
-      file: str(env, 'SPOTLIGHT_FILE', '/workspace/dcc-campaign/sessions/spotlight.json'),
+      file: str(env, 'SPOTLIGHT_FILE', join(campaignDir(env), 'sessions', 'spotlight.json')),
       maxAgeMinutes: num(env, 'SPOTLIGHT_MAX_AGE_MINUTES', 20, { min: 1, max: 1440 }),
     },
     // Which campaign session ("alpha" = the live game) this process is configured for; see src/session.js.

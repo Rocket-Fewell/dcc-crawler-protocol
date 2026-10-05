@@ -1,5 +1,6 @@
 import sys,re
-sys.path.insert(0,'/workspace/dcc-lore/tools')
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
 from wk import D,cats,info,clean,spoil,find_templates,fields
 from ledger_lib import *
 ORD={'first':1,'second':2,'third':3,'fourth':4,'fifth':5,'sixth':6,'seventh':7,'eighth':8,'ninth':9,'tenth':10,'eleventh':11,'twelfth':12}

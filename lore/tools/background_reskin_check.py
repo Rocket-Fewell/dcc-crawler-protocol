@@ -8,7 +8,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 T = os.path.join(HERE, "..", "tables")
 P = sys.argv[1] if len(sys.argv) > 1 else os.path.join(T, "background-reskins.json")
 VER = os.path.join(T, "background-reskins.version.json")
-CHARGEN = "/workspace/dcc-campaign/tables/chargen-5e.json"
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import CHARGEN as _CH
+CHARGEN = str(_CH) if _CH else ""
 REQ = ["id", "kind", "parent_id", "srd_name", "display_name", "combined_label", "chargen_value", "flavor"]
 GROUPS = {"origin-feat", "background-asi", "background-kit"}
 ASI_VALUES = ["+2 / +1", "+1 / +1 / +1"]

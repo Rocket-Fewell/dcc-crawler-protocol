@@ -3,7 +3,7 @@
   "meta": {
     "owner": "Encounter Bot",
     "status": "draft",
-    "version": "0.5",
+    "version": "0.6",
     "updated": "2026-10-05",
     "floor": 1,
     "floor_name": "The Orientation Pit",
@@ -203,11 +203,14 @@
       "text": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
       "tag": "[PLAYER-FACING]",
       "canon_tag": "inspired",
-      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md, sha256 d23a39b90cbe…), house wording; voice-split [SYSTEM] dry + [GM] color",
+      "status": "Lore draft v0.2 (floor1-collapse-notices.draft.md), house wording; voice-split [SYSTEM] dry + [GM] color",
       "gm_color": {
         "text": "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly.",
         "tag": "[GM-FACING]"
-      }
+      },
+      "source": "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md",
+      "source_version": "0.2",
+      "source_expected_sha256": "d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c"
     },
     "early_descent": {
       "summary": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
@@ -363,7 +366,7 @@
         },
         "gm_color": {
           "text": "Half the building just stopped existing and you're still sprinting. Commitment! The Dean's still at the end of it, and he doesn't care what you left behind.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -410,7 +413,7 @@
         },
         "gm_color": {
           "text": "Last call on the middle of the building. The bait stairs, the locker room and the gallery are gone by morning. Grab what you want and run.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     },
@@ -453,7 +456,7 @@
         },
         "gm_color": {
           "text": "Today the terminal's offering one last special on the key. While supplies last, which is until tomorrow. Pay, sneak or scout the stage. The clever Crawler does all three.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       }
     }
@@ -598,7 +601,7 @@
         },
         "gm_color": {
           "text": "Everything must go, mostly your credits.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -812,7 +815,7 @@
         },
         "gm_color": {
           "text": "The hall is closing and so is your window. Rats and worse are leaving the zones that were turned off, and they're all headed your way.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -868,7 +871,7 @@
       ],
       "zone_color": {
         "tag": "inspired",
-        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd…, own words, optional read-aloud)",
+        "source": "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md",
         "lines": [
           {
             "text": "The walls start shedding old posters and warning signs. Under them is raw stone with tally marks scratched by earlier Crawlers. Some tallies stop mid-row.",
@@ -890,7 +893,9 @@
             "text": "A crowd of mobs has stopped to watch the floor fall. They look as unhappy about it as you do.",
             "tag": "[PLAYER-FACING]"
           }
-        ]
+        ],
+        "source_version": "0.2",
+        "source_expected_sha256": "a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4"
       },
       "quick_run": {
         "setup": "A hall of sealed lockers with one clear path to the Green Room, and vermin fleeing the closing zones.",
@@ -1009,7 +1014,7 @@
         },
         "gm_color": {
           "text": "The wings. Where heroes wait and stagehands judge them. Take notes. The pit is right there.",
-          "tag": "[PLAYER-FACING]"
+          "tag": "[GM-FACING]"
         }
       },
       "loot_hooks": [
@@ -1122,9 +1127,9 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "3096be23394258dcd77674742955a30901e44d670b973ab23fc3d26811e6fcdb",
+    "expected_sha256": "25bb26b4d6d63474a402e097506e523ac2a05e8457f9069b9387f896952080d5",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.14"
+    "version": "0.1.15"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

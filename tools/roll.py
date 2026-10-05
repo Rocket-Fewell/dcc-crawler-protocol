@@ -9,7 +9,7 @@ Usage:
 Output (one line, also appended to <campaign>/sessions/rolls-YYYY-MM-DD.log for alpha, <campaign>/sessions-data/<id>/rolls-YYYY-MM-DD.log for other sessions):
   [ROLL] Grimsby Stealth (Grimsby): 2d20kh1+5 -> [17, 4] keep 17 +5 = 22
 
-Campaign dir: $DCC_CAMPAIGN_DIR, default /workspace/dcc-campaign.
+Campaign dir: $DCC_CAMPAIGN_ROOT or legacy $DCC_CAMPAIGN_DIR; default = tools/ parent.
 Exit codes: 0 ok, 2 invalid input.
 """
 import argparse
@@ -20,7 +20,8 @@ import re
 import secrets
 import sys
 
-DEFAULT_CAMPAIGN_DIR = "/workspace/dcc-campaign"
+import dcc_paths as _paths  # noqa: E402
+DEFAULT_CAMPAIGN_DIR = _paths.CAMPAIGN_ROOT
 
 # Sane limits
 MAX_EXPR_LEN = 200
@@ -37,7 +38,7 @@ class RollError(ValueError):
 
 
 def campaign_dir():
-    return os.environ.get("DCC_CAMPAIGN_DIR") or DEFAULT_CAMPAIGN_DIR
+    return str(_paths.campaign_root())
 
 
 # --------------------------------------------------------------------------- parsing

@@ -129,13 +129,13 @@ test('tag contract end to end: [SYSTEM] -> system id, [GM]/untagged -> narrator 
   const m = await mockFish();
   try {
     const p = createTtsProvider(cfgFor(m.base));
-    const chunks = prepareSpeech('Untagged intro.\n[SYSTEM] Achievement unlocked!\n[ROLL] d20 = 17\nsilent continuation\n[GM] The goblin snarls.');
+    const chunks = prepareSpeech('Untagged intro.\n[SYSTEM] The floor collapses in 6 hours.\n[ROLL] d20 = 17\nsilent continuation\n[GM] The goblin snarls.');
     for (const c of chunks) await drain(await p.synthesize(c.text, c.voice));
     assert.deepEqual(
       m.seen.map((s) => [s.body.text, s.body.reference_id]),
       [
         ['Untagged intro.', env.FISH_VOICE_ID_NARRATOR],
-        ['Achievement unlocked!', env.FISH_VOICE_ID_SYSTEM],
+        ['The floor collapses in 6 hours.', env.FISH_VOICE_ID_SYSTEM],
         ['The goblin snarls.', env.FISH_VOICE_ID_NARRATOR],
       ]
     );

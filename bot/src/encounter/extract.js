@@ -15,10 +15,23 @@ export const SYSTEM_TAG = '**[SYSTEM]** ';
 export const GM_TAG = '**[GM]** ';
 
 /** Voice by manifest kind (decision 032 / Caleb Oct 5 2026): dry System lines get **[SYSTEM]**; everything else is narrator/GM.
- * SYSTEM_KINDS is an allow-list only. Unknown or new kinds (e.g. optional [GM] color beats Encounter Bot may add) are narration — never System.
- * Achievements and loot-box color are GM. Collapse/exit warnings stay System. */
-const SYSTEM_KINDS = new Set(['voice_line', 'route_voice_line', 'system_notice', 'exit_warning_read_aloud']);
-export { SYSTEM_KINDS };
+ * SYSTEM_KINDS is an allow-list only. Unknown or new kinds (including Encounter Bot's `gm_color` optional joke beats) are narration — never System.
+ * Achievements and loot-box color are GM. Collapse/exit warnings stay System.
+ * Safety net: any entry whose kind is `gm_color` OR whose path ends with `/gm_color` is always GM voice, even if a stale
+ * manifest still labels it `voice_line` / `route_voice_line` (Encounter Bot is fixing those kinds at the source). */
+export const SYSTEM_KINDS = new Set(['voice_line', 'route_voice_line', 'system_notice', 'exit_warning_read_aloud']);
+
+/** True when this manifest entry is GM color (kind or path), regardless of a mis-tagged System kind. */
+export function isGmColor(e) {
+  if (!e) return false;
+  if (e.kind === 'gm_color') return true;
+  const path = String(e.path || '');
+  return path === 'gm_color' || path.endsWith('/gm_color');
+}
+
+export function voiceOf(e) {
+  return isGmColor(e) ? 'gm' : (SYSTEM_KINDS.has(e.kind) ? 'system' : 'gm');
+}
 
 export class EncounterError extends Error {}
 
@@ -89,7 +102,7 @@ const slotOf = (e) => {
 export function listEntries(doc) {
   return doc.audience_manifest.player_blocks
     .filter((e) => e && typeof e.path === 'string' && typeof e.kind === 'string' && typeof e.field === 'string')
-    .map((e) => ({ ...e, group: groupOf(doc, e), slot: slotOf(e), voice: SYSTEM_KINDS.has(e.kind) ? 'system' : 'gm' }));
+    .map((e) => ({ ...e, group: groupOf(doc, e), slot: slotOf(e), voice: voiceOf(e) }));
 }
 
 /** GM-side hint: which groups exist and which kind/slot NAMES each offers. No GM text, no player text. */

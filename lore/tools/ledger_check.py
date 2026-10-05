@@ -3,7 +3,9 @@
 named in the same table row.  Usage: python3 tools/ledger_check.py [path]   (default: CANON-LEDGER.md)
 Exit code 1 if any quote fails or exceeds 25 words."""
 import re,sys
-sys.path.insert(0,'/workspace/dcc-lore/tools')
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT as _LR; ROOT=str(_LR)
 from ledger_lib import *
 path=sys.argv[1] if len(sys.argv)>1 else ROOT+'/CANON-LEDGER.md'
 TAG=re.compile(r'\b(W|FW2|NL|YT):([^;|]+)')

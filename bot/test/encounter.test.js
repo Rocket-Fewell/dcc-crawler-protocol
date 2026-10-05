@@ -2,13 +2,14 @@ import assert from 'node:assert/strict';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { resolveCampaignRoot } from '../src/paths.js';
 import test from 'node:test';
 import { PermissionFlagsBits } from 'discord.js';
 import * as enc from '../src/commands/encounter.js';
 import { commandData, commands, handleInteraction } from '../src/commands/index.js';
-import { MAX_MESSAGE, buildPreview, hintFor, hintText, listEntries, loadPage, resolvePointer, splitText, toMessages } from '../src/encounter/extract.js';
+import { MAX_MESSAGE, SYSTEM_KINDS, buildPreview, hintFor, hintText, listEntries, loadPage, resolvePointer, splitText, toMessages } from '../src/encounter/extract.js';
 
-const REAL = process.env.DCC_REAL_CAMPAIGN || '/workspace/dcc-campaign';
+const REAL = process.env.DCC_REAL_CAMPAIGN || resolveCampaignRoot();
 const haveReal = [1, 2, 3, 4, 5].every((n) => existsSync(join(REAL, 'floors', 'f01', `day-0${n}.json`)));
 const tmps = [];
 process.on('exit', () => { for (const d of tmps) { try { rmSync(d, { recursive: true, force: true }); } catch { /* best effort */ } } });
@@ -173,6 +174,96 @@ test('show_only_when blocks are held back with an ephemeral note until confirm:t
   assert.match(conf, /Achievement unlocked: Test Pilot\./);
   assert.doesNotMatch(conf, /\[SYSTEM\]/);
 });
+
+test('decision 032 voice split: achievements and gm_color are GM; clock/collapse/exit stay System; mixed System+gm_color re-tags [GM]', () => {
+  const doc = fixtureDoc();
+  // Allow-list only: unknown/new kinds (including Encounter Bot's gm_color) are narration
+  assert.ok(SYSTEM_KINDS.has('system_notice'));
+  assert.ok(SYSTEM_KINDS.has('exit_warning_read_aloud'));
+  assert.ok(!SYSTEM_KINDS.has('achievement_narration'));
+  assert.ok(!SYSTEM_KINDS.has('gm_color'));
+
+  const ach = buildPreview(doc, { encounter: 'enc-t-01', block: 'achievement_narration', confirm: true }).messages[0];
+  assert.match(ach, /Achievement unlocked: Test Pilot\./);
+  assert.doesNotMatch(ach, /\[SYSTEM\]/, 'achievement banner/description is narrator, not System');
+
+  const collapse = buildPreview(doc, { block: 'collapse_notice', hours: 6 }).messages[0];
+  assert.match(collapse, /\*\*\[SYSTEM\]\*\* The floor collapses in 6 hours/);
+
+  const exitWarn = buildPreview(doc, { block: 'floor_exit_warning' }).messages[0];
+  assert.match(exitWarn, /\*\*\[SYSTEM\]\*\* Reach a stairwell/);
+
+  // Encounter Bot optional [GM] color beat kind: gm_color — listed in hint, no error, GM voice
+  doc.day.gm_color = { text: 'The audience snickers at your timing.' };
+  doc.audience_manifest.player_blocks.push({
+    path: '/day/gm_color', kind: 'gm_color', field: 'text',
+  });
+  const colorEntry = listEntries(doc).find((e) => e.kind === 'gm_color');
+  assert.equal(colorEntry.voice, 'gm');
+  assert.match(hintText(doc), /gm_color/);
+  assert.match(hintFor(doc).find((g) => g.id === 'day').kinds.join(','), /gm_color/);
+
+  // Day-level only (short): system_notice then gm_color in one message must carry **[GM]** before the joke
+  const dayMixed = buildPreview(doc, { hours: 6 }); // no encounter => day notices only
+  assert.equal(dayMixed.error, undefined);
+  assert.ok(dayMixed.messages.some((m) => /\*\*\[SYSTEM\]\*\*/.test(m) && /\*\*\[GM\]\*\* The audience snickers/.test(m)),
+    `expected SYSTEM + [GM] gm_color in one message, got:\n${dayMixed.messages.join('\n---\n')}`);
+  // Explicit toMessages order: system_notice then gm_color
+  const ordered = toMessages([
+    { voice: 'system', text: 'Welcome. Registration complete.' },
+    { voice: 'gm', text: 'The audience snickers at your timing.' },
+  ]);
+  assert.equal(ordered.length, 1);
+  assert.match(ordered[0], /\*\*\[SYSTEM\]\*\* Welcome\. Registration complete\./);
+  assert.match(ordered[0], /\*\*\[GM\]\*\* The audience snickers at your timing\./);
+  // Alone, a pure gm_color message needs no System tag (untagged = narrator)
+  const alone = buildPreview(doc, { block: 'gm_color' });
+  assert.equal(alone.error, undefined);
+  assert.match(alone.messages[0], /audience snickers/);
+  assert.doesNotMatch(alone.messages[0], /\[SYSTEM\]/);
+
+  const mixed = toMessages([
+    { voice: 'system', text: 'Registration complete. Fee: 0 credits.' },
+    { voice: 'gm', text: 'New achievement! Paperwork Hero. You filed on time. Nobody is impressed.' },
+  ]);
+  assert.equal(mixed.length, 1);
+  assert.match(mixed[0], /\*\*\[SYSTEM\]\*\* Registration complete/);
+  assert.match(mixed[0], /\*\*\[GM\]\*\* New achievement! Paperwork Hero/);
+});
+
+
+test('safety net: path ending /gm_color or kind gm_color is GM even when kind is voice_line (stale manifest)', () => {
+  const doc = fixtureDoc();
+  const joke = 'The System wishes the surface crowd luck with that. Also: yes, the dog gets a nameplate.';
+  doc.encounters[0].voice_lines = { ...(doc.encounters[0].voice_lines || {}), gm_color: { text: joke } };
+  // Stale generator bug: path is .../gm_color but kind is still voice_line (would be System without the safety net)
+  doc.audience_manifest.player_blocks.push({
+    path: '/encounters/0/voice_lines/gm_color', kind: 'voice_line', field: 'text', encounter: 'enc-t-01',
+  });
+  const entry = listEntries(doc).find((e) => String(e.path).endsWith('/gm_color'));
+  assert.ok(entry, 'gm_color path entry present');
+  assert.equal(entry.voice, 'gm', 'path /gm_color must force GM voice even when kind is voice_line');
+  const preview = buildPreview(doc, { encounter: 'enc-t-01', block: 'gm_color', includeOptional: true });
+  assert.equal(preview.error, undefined, preview.error);
+  const blob = preview.messages.join('\n');
+  assert.match(blob, /dog gets a nameplate/);
+  assert.match(blob, /\*\*\[GM\]\*\*.*dog gets a nameplate|dog gets a nameplate/, 'gm_color joke must be tagged [GM] or untagged narrator, never System-only');
+  // Ensure the joke line is not introduced only under [SYSTEM]
+  for (const m of preview.messages) {
+    if (m.includes('dog gets a nameplate')) {
+      assert.ok(!m.startsWith('**[SYSTEM]** ') || m.includes('**[GM]** '), `joke must not be pure System: ${m.slice(0, 120)}`);
+    }
+  }
+  // kind === gm_color still GM (already covered elsewhere); pin again with SYSTEM_KINDS collision impossible
+  doc.audience_manifest.player_blocks.push({
+    path: '/encounters/0/extra_color', kind: 'gm_color', field: 'text', encounter: 'enc-t-01',
+  });
+  doc.encounters[0].extra_color = { text: 'Extra snark beat.' };
+  assert.equal(listEntries(doc).find((e) => e.kind === 'gm_color' && e.path.endsWith('extra_color')).voice, 'gm');
+});
+
+
+
 
 test('collapse_notice needs hours: refused with a clear message when missing, filled (and trimmed to a plain number) when given', () => {
   const doc = fixtureDoc();

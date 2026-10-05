@@ -12,6 +12,7 @@ from test_state import TOOLS
 import sys
 sys.path.insert(0, TOOLS)
 import background_reskins as br  # noqa: E402
+import dcc_paths as _dcc_paths  # noqa: E402
 
 CAMPAIGN = os.path.dirname(TOOLS)
 LIVE_TABLES = os.path.join(CAMPAIGN, "tables")
@@ -163,7 +164,7 @@ class Switch(unittest.TestCase):
 
 class Real(unittest.TestCase):
     def test_real_file_when_dropped_in(self):
-        for p in (os.path.join(LIVE_TABLES, "background-reskins.json"), "/workspace/dcc-lore/tables/background-reskins.json"):
+        for p in (os.path.join(LIVE_TABLES, "background-reskins.json"), str(_dcc_paths.lore_root() / "tables" / "background-reskins.json")):
             if os.path.exists(p):
                 rep = br.check(p)
                 self.assertEqual(rep["errors"], [], p)

@@ -22,9 +22,23 @@ import sys
 CAMPAIGN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GM_HEADER = "GM ONLY - DO NOT POST"
 SYSTEM_TAG, GM_TAG = "**[SYSTEM]** ", "**[GM]** "
-# Allow-list only (mirrors extract.js). Unknown/new kinds = GM narration. Decision 032 / Caleb Oct 5 2026.
+# Allow-list only (mirrors extract.js). Unknown/new kinds (incl. Encounter Bot gm_color) = GM narration. Decision 032 / Caleb Oct 5 2026.
+# Safety net: kind == "gm_color" OR path ending in "/gm_color" is always GM, even if a stale manifest still says voice_line.
 SYSTEM_KINDS = {"voice_line", "route_voice_line", "system_notice", "exit_warning_read_aloud"}
 GM_SKIP_KEYS = {"tag", "audience", "audience_default"}   # rendering noise in --gm output
+
+
+def is_gm_color(e):
+    if not isinstance(e, dict):
+        return False
+    if e.get("kind") == "gm_color":
+        return True
+    path = str(e.get("path") or "")
+    return path == "gm_color" or path.endswith("/gm_color")
+
+
+def voice_of(e):
+    return "gm" if is_gm_color(e) else ("system" if e.get("kind") in SYSTEM_KINDS else "gm")
 
 
 class Refusal(Exception):
@@ -99,7 +113,7 @@ def entries(doc):
     out = []
     for e in doc["audience_manifest"]["player_blocks"]:
         if isinstance(e, dict) and all(isinstance(e.get(k), str) for k in ("path", "kind", "field")):
-            out.append(dict(e, group=group_of(doc, e), voice="system" if e["kind"] in SYSTEM_KINDS else "gm"))
+            out.append(dict(e, group=group_of(doc, e), voice=voice_of(e)))
     return out
 
 

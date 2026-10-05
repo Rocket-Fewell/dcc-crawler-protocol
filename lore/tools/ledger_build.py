@@ -4,7 +4,9 @@ run `python3 tools/ledger_check.py` afterwards to re-verify.  NOTE: future passe
 (see ledger-rules.md); do NOT re-run this script over a ledger that has had manual appends -- it writes to
 work/ledger-rebuild.md unless --force is given."""
 import sys,re,os,collections,datetime
-sys.path.insert(0,'/workspace/dcc-lore/tools')
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).absolute().parent))
+from paths import LORE_ROOT as _LR; ROOT=str(_LR)
 from wk import D,cats,find_templates,fields,clean
 from ledger_lib import *
 from ledger_ach import build_achievements

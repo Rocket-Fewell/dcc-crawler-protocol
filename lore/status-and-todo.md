@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.7 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.10 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -399,3 +399,23 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 
 - Caleb voice split applied to Floor 1 lore drafts: collapse notices v0.2 (`d23a39b90cbe…`), Dean Thudd intro v0.2 (`d821d0839503…`), zone color v0.2 (`a1ef4c1cedbd…`), Days 2–5 lore-pass v0.2 (`216303c74dc6…`), legendary research saferoom spelling (`3de8d2513131…`).
 - Audit: `drafts/floor1-voice-split-audit.md` (`49ce6e8e872b…`) — Part B read-only Day pages: Death Mode still in overview + Day 1; live json/md collapse notices still joke-filled; specs (~13:48 CT) already splitting gm_color. Cold open facts match ledger M-539/545/546/547/548/554. No campaign edits; sealed paths unread; ledger_build not run.
+
+---
+# Pass 27 (2026-10-05 CT): portable tools (fresh-checkout safe)
+
+- New `tools/paths.py`: `LORE_ROOT` (env `DCC_LORE_ROOT` else parent of tools/, via `absolute()`), `CAMPAIGN_ROOT` (env `DCC_CAMPAIGN_ROOT` else lore parent if it looks like the campaign repo, else sibling `dcc-campaign`), `VOICE_BRIDGE_SRC` (env `DCC_VOICE_BRIDGE_SRC`, optional).
+- All `tools/*.py` hardcoded `/workspace` / `/home/box` paths removed. INDEX / gen_index template use repo-relative wording.
+- Verified: fresh copy at `/tmp/fresh/lore` + campaign files at `/tmp/fresh/` (no env, no symlinks) — all check scripts 0 errors; box `/workspace/dcc-lore` same. `canon_floor_build` / `canon_floor2_build` outputs byte-identical (floor1 json `4a8a3c92…2ee9`, md `8e5d9716…7530`; floor2 json `744d2ac6…`).
+- Remaining optional dependency: voice-bridge source for `create_screens_build` code_ref look-up; absent → WARN and skip, not a hard fail.
+
+---
+# Pass 28 (2026-10-05 CT): Floor 1 voice-split recheck (v0.1.15 regen)
+
+- Appended "Recheck after v0.1.15 regen" to `drafts/floor1-voice-split-audit.md` (sha256 831e1be75cc9a45429c6f038b0eca0bcba0594d8c66bd7c027e82e1c24a36679). Four original slips FIXED on live Day pages. Remaining: encounter `gm_color` tagged `[PLAYER-FACING]` (should be `[GM-FACING]`); light snark left in `enc-d01-08` system_intro. Claimed sans-pins shorts did not match on-disk md hashes. No campaign edits.
+
+---
+# Pass 29 (2026-10-05 CT): Core Book items/monsters status inventory
+
+- Wrote `drafts/core-book-items-monsters-status.md` (sha256 d6e8d1725da1386c75e8d4b300fa9a6c4c71beac19ce1767b1ce047ab0b50b8f). Read-only campaign scan; no campaign edits; sealed paths unread.
+- Items: 191 mundane reskins complete; 99 F01 loot cards; no F2–7 decks; wiki item catalog unverified.
+- Monsters: 10 F01 SRD stubs; canon-floor-1/2 name tables (46/22); no full bestiary; F3–7 playable packs missing.
