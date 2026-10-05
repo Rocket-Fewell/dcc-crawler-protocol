@@ -1,5 +1,5 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.14 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.15 | Updated: 2026-10-05
 Summary: One line per file in the lore folder: path, description, owner, status.
 
 Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (repo-relative; on some boxes a symlink into this tree). Rules: campaign root `NAMING-CONVENTIONS.md` (sibling of `lore/` in a fresh checkout, or set `DCC_CAMPAIGN_ROOT`).
@@ -103,6 +103,8 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | drafts/floor1-zone-color.draft.md | Floor 1 Day 2–4 optional zone color beats, voice-split v0.2. sha256 a1ef4c1cedbd… | DCC Lore | draft |
 | drafts/srd-nonsrd-audit.md | Which of the 16 listed backgrounds and 12 origin-feat entries are in SRD 5.2.1 (4 backgrounds, 4 feats) and which are not, with a one-line appendix action for each non-SRD item. Names only. | DCC Lore | draft |
 | drafts/achievement-suggestions-days-02-05-lore-pass.md | Lore names-and-flavor pass on Days 2–5 achievement suggestions; v0.2 marks banners/flavor [GM] end to end. sha256 216303c74dc6… | DCC Lore | draft |
+| drafts/core-book-magic-items-v0.1.md | Core Book Ch.6 magic-item shortlist v0.1 (50 entries: SRD/CANON/HOUSE). sha256 3ca5bf252746… | DCC Lore | draft |
+| drafts/core-book-magic-items-v0.1.json | Machine-readable companion to core-book-magic-items-v0.1.md. sha256 e10de7bd8709… | DCC Lore | draft |
 | drafts/core-book-items-monsters-status.md | Read-only inventory for Core Book Items+Monsters chapters (counts, paths, gaps, blockers); scan 2026-10-05. sha256 d6e8d1725da1… | DCC Lore | draft |
 | drafts/floor1-voice-split-audit.md | Voice-split Part A change log + Part B Day-page slip list; recheck after budget v0.1.15 regen (2026-10-05). sha256 831e1be75cc9… | DCC Lore | draft |
 

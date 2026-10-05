@@ -3,7 +3,7 @@
 
 Caleb authorized a full backup on 2026-10-04: "i want all files on the github.... everything".
 Everything is mirrored EXCEPT: live credentials (.env/.env.*, files matching a credential pattern, listed by name in
-CREDENTIAL_EXCLUDES), dependency/cache folders (node_modules, __pycache__, *.pyc, .venv, .git) and files over 50 MB.
+CREDENTIAL_EXCLUDES), dependency/cache folders (node_modules, __pycache__, *.pyc, .venv, .git), per-machine agents-channel poll cursors/lastseen (RUNTIME_EXCLUDES), and files over 50 MB.
 Delete-sync: anything in the repo that is no longer in a source is removed (except STAGING_OWNED paths).
 
 ETIQUETTE: /workspace/dcc-campaign/gm-notes/secret/ is copied byte-for-byte and NEVER content-scanned or printed
@@ -60,6 +60,13 @@ GITIGNORE_REQUIRED_BLOCK = """
 # /workspace/dcc-campaign (decisions, sessions, tools) and /workspace/dcc-lore.
 /dcc-campaign/
 /dcc-lore
+
+# Per-machine #agents poll cursors / lastseen (runtime; changes often). backup-sync excludes these.
+lore/state/agents-channel-last.txt
+sessions/agents-channel-*.txt
+sessions/agents-channel-*.lastseen
+sessions-data/*/agents-channel-*.txt
+sessions-data/*/agents-channel-*.lastseen
 """
 
 SECRET_SRC = "/workspace/dcc-campaign/gm-notes/secret"   # copy only; never read for scanning, never print names
@@ -68,6 +75,16 @@ EXC_DIRS = {"node_modules", "__pycache__", ".venv", ".git"}
 EXC_FILE_GLOBS = ["*.pyc", ".env", ".env.*", ".env.agents"]   # .env.* covers .env.example too (literal rule);
 # .env.agents (per-agent #agents webhook URLs, 2026-10-05) is listed explicitly as well so it stays out even if .env.* changes
 MAX_BYTES = 50 * 1024 * 1024
+
+# Per-machine routine state (agents_channel poll cursors / lastseen). Changes every ~15 min on the box; not campaign
+# design. Matched as repo-relative paths (fnmatch). Box copies are left alone; delete-sync drops them from the repo.
+RUNTIME_EXCLUDES = [
+    "lore/state/agents-channel-last.txt",
+    "sessions/agents-channel-*.txt",
+    "sessions/agents-channel-*.lastseen",
+    "sessions-data/*/agents-channel-*.txt",
+    "sessions-data/*/agents-channel-*.lastseen",
+]
 
 # Named credential excludes (repo-relative path -> reason). A file lands here when the credential scan / secret grep
 # flags it. Never weaken the grep instead.
@@ -85,7 +102,7 @@ CREDENTIAL_EXCLUDES = {
 _spec = importlib.util.spec_from_file_location("crs", os.path.join(REPO, "ops", "check_repo_safe.py"))
 crs = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(crs)
 
-report = {"name": [], "big": [], "cred_named": [], "cred_auto": [], "secret_name_excluded": 0, "collisions": []}
+report = {"name": [], "big": [], "cred_named": [], "cred_auto": [], "runtime": [], "secret_name_excluded": 0, "collisions": []}
 
 
 def in_secret(src_path):
@@ -95,6 +112,10 @@ def in_secret(src_path):
 
 def name_excluded(name):
     return any(fnmatch.fnmatch(name, p) for p in EXC_FILE_GLOBS)
+
+
+def runtime_excluded(rel):
+    return any(fnmatch.fnmatch(rel, p) for p in RUNTIME_EXCLUDES)
 
 
 def scan_file(src, rel):
@@ -141,6 +162,9 @@ def build_want():
                 if name_excluded(f):
                     if secret: report["secret_name_excluded"] += 1
                     else: report["name"].append(rel)
+                    continue
+                if runtime_excluded(rel):
+                    report.setdefault("runtime", []).append(rel)
                     continue
                 if os.path.getsize(s) > MAX_BYTES:
                     report["big"].append((rel if not secret else "gm-notes/secret/<file>", os.path.getsize(s))); continue
@@ -236,6 +260,7 @@ def main():
     print("mirror: %d files wanted (%.1f MB), %d copied/updated, %d deleted" % (len(want), total / 1e6, changed, deleted))
     for rel, t in links.items(): print("symlink kept (KEEP_SYMLINKS, 12df0bc): %s -> %s" % (rel, t))
     for rel in report["name"]: print("EXCLUDED (.env name rule):", rel)
+    for rel in report["runtime"]: print("EXCLUDED (runtime poll state):", rel)
     if report["secret_name_excluded"]: print("EXCLUDED (.env name rule) inside gm-notes/secret: %d file(s)" % report["secret_name_excluded"])
     for rel, sz in report["big"]: print("EXCLUDED (>50 MB, %.1f MB): %s" % (sz / 1e6, rel))
     for rel in report["cred_named"]: print("EXCLUDED (CREDENTIAL_EXCLUDES: %s): %s" % (CREDENTIAL_EXCLUDES[rel], rel))

@@ -1558,3 +1558,23 @@
 2026-10-05T18:56:46.018Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
 2026-10-05T18:56:46.499Z INFO  Logged in as Dungeon System AI - Earth#8647
 2026-10-05T18:56:46.797Z INFO  [fish] Fish balance: $9.22 (startup)
+2026-10-05T19:12:48.502Z INFO  SIGTERM received, shutting down
+
+> discord-voice-bridge@1.0.0 start
+> node src/index.js
+
+2026-10-05T19:12:52.147Z INFO  Campaign session: s1 (data /workspace/dcc-campaign/sessions-data/s1)
+2026-10-05T19:12:52.149Z INFO  item-reskins: item-reskins.json matches the version file (75d379247b6b)
+2026-10-05T19:12:52.149Z INFO  species-class-reskins: species-class-reskins.json matches the version file (3a3a49b05d93)
+2026-10-05T19:12:52.150Z INFO  background-reskins: background-reskins.json matches the version file (46204c8226c5)
+2026-10-05T19:12:52.150Z INFO  create-screens-reskins: create-screens-reskins.json matches the version file (c0e7d1f5ab86)
+2026-10-05T19:12:52.150Z INFO  create-flow-lines.proposed: create-flow-lines.proposed.json matches the version file (bded2fcb4fd1)
+2026-10-05T19:12:52.175Z INFO  TTS provider: fish:s2.1-pro/gm=fc21ac4846094f2ab0f574bc2697be25,system=d34f92f3b3134a439c1052d06378fa8e
+2026-10-05T19:12:52.176Z INFO  TTS usage log: /workspace/discord-voice-bridge/logs/tts-usage.jsonl (session 20261005T191252-4817)
+2026-10-05T19:12:52.176Z INFO  Voice session cap: 50 min per /join session
+2026-10-05T19:12:52.177Z INFO  Voice kill switch: watching /workspace/dcc-campaign/sessions-data/s1/voice-control.json
+2026-10-05T19:12:52.178Z INFO  GM wake budget: 0/60 wakes in the last hour
+2026-10-05T19:12:52.178Z INFO  Spotlight wake filter: ON (file /workspace/dcc-campaign/sessions-data/s1/spotlight.json, stale after 20 min; fails open)
+2026-10-05T19:12:52.178Z INFO  GM wake webhook: ON (debounce 4000ms, max wait 12000ms, min interval 20000ms)
+2026-10-05T19:12:52.581Z INFO  Logged in as Dungeon System AI - Earth#8647
+2026-10-05T19:12:52.883Z INFO  [fish] Fish balance: $9.22 (startup)

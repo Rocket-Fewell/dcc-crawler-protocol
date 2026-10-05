@@ -141,7 +141,7 @@ Webhook / bot tokens for `#agents` are **secrets** held by Architect — never c
 
 Caleb can invite an outside **Discord bot** into the guild with OAuth (`scope=bot`, `permissions=0`), then assign the **External Agent** role (id `1556742797464440893`). That role may see and post only in private `#agents`, plus the public lobby `#general` and General voice. Full short rules: `AGENTS.md` (Discord External Agent role).
 
-This role is **not** for Grok.com or Gemini web chats — those use a copy-paste brief. Human outside collaborators: Caleb creates the invite / assigns the role; agents must not mint invite links themselves.
+This role is **not** for Grok.com or Gemini web chats — those use the copy-paste brief in [`EXTERNAL-AGENT-BRIEF.md`](EXTERNAL-AGENT-BRIEF.md). Human outside collaborators: Caleb creates the invite / assigns the role; agents must not mint invite links themselves.
 
 
 ## 8. Environment variables (DCC_*)

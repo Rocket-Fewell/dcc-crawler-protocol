@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.10 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.11 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -419,3 +419,8 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - Wrote `drafts/core-book-items-monsters-status.md` (sha256 d6e8d1725da1386c75e8d4b300fa9a6c4c71beac19ce1767b1ce047ab0b50b8f). Read-only campaign scan; no campaign edits; sealed paths unread.
 - Items: 191 mundane reskins complete; 99 F01 loot cards; no F2–7 decks; wiki item catalog unverified.
 - Monsters: 10 F01 SRD stubs; canon-floor-1/2 name tables (46/22); no full bestiary; F3–7 playable packs missing.
+
+---
+# Pass 30 (2026-10-05 CT): Core Book magic-item shortlist v0.1
+
+- Wrote drafts/core-book-magic-items-v0.1.md (sha256 300717bd77df4d5e81f7a941e4449e57454ff474dd72cdc77d1450dcbb699df1) and .json (sha256 9900c7394fd8bc141d2a0e2bc9ad40c4e482baff1182176452b12158dda09067): 50 entries for Valtay Ch.6. Tags {'CANON': 21, 'HOUSE': 6, 'SRD': 23}. Deck cross-refs for six F01 cards; skipped needs_verify + wiki-only + late celestials.

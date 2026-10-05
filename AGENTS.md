@@ -33,7 +33,7 @@ Discord `#agents` format: **`[FROM -> TO] task | link | status`** — no secrets
 
 ## Discord External Agent role
 
-For **Discord bots** Caleb invites into the guild (OAuth invite with `permissions=0`, then assign **External Agent** role id `1556742797464440893`). The role sees/posts only in private `#agents`, plus public lobby `#general` and General voice. It is **not** for Grok.com or Gemini web chats — those use a copy-paste brief.
+For **Discord bots** Caleb invites into the guild (OAuth invite with `permissions=0`, then assign **External Agent** role id `1556742797464440893`). The role sees/posts only in private `#agents`, plus public lobby `#general` and General voice. It is **not** for Grok.com or Gemini web chats — those use the copy-paste brief in [`EXTERNAL-AGENT-BRIEF.md`](EXTERNAL-AGENT-BRIEF.md).
 
 Hard limits (same as the External Agent RULES pack):
 
