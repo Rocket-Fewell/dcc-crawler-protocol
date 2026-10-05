@@ -2,7 +2,7 @@
   "schema": "encounter-budget/0.1",
   "version": "0.2.0",
   "changelog": [
-    "0.2.0 (2026-10-05, Accountant): VALUE CHANGE for decision 033 / core v0.2.19 (F3 and F9 end bosses +1, then normal onboarding +1): standard track now arrives F1-3 at N, F4-9 at N+1, F10-18 at N+2 (F4 at 5, F10 at 12, F18 at 20; F18 leaves at the 20 cap, finale 19-20 levels removed). Re-cut F4-F6 (floors.N.level, xp_per_character, tiers, xp) at budget levels 5/6/7 and F7-F18 (floors_7_18.floors.N level_arrive/leave, budget_level, xp_per_character_at_budget_level, core_8_3_cr) with the SRD 5.2.1 per-Character XP table. CR ranges use the core 8.3 row whose party level matches the arrive level (core 8.3's slow-burn lookup; rows above 18 use row 18), recorded in new keys floors.N.tiers_core_8_3_row_used and floors_7_18.floors.N.core_8_3_row_used; authoritative.core_cr_targets_party_of_4 is still the verbatim core 8.3 copy. Same band map (A1), lead share (A2) and encounter mix/density (A3); days unchanged. FIELD PATH RENAME: floors.4/5/6 tiers and xp_per_character keys L4/L5/L6 became L5/L6/L7 (key = budget level); no other path renamed or removed. Unchanged: Floors 1-3 (levels, tiers, fixed encounters), Day 1-5 slot maps and their sans-pin hashes, decision 031 rest fee (20 per Crawler, cap 60 per floor), every credit, box, flag-line and crafting-price value (all keyed by floor and the core 3.9 multiplier, not by level). No new caps or budgets.",
+    "0.2.0 (2026-10-05, Accountant): VALUE CHANGE for decision 033 / core v0.2.19 (F3 and F9 end bosses +1, then normal onboarding +1): standard track now arrives F1-3 at N, F4-9 at N+1, F10-18 at N+2 (F4 at 5, F10 at 12, F18 at 20; F18 leaves at the 20 cap, finale 19-20 levels removed). Re-cut F4-F6 (floors.N.level, xp_per_character, tiers, xp) at budget levels 5/6/7 and F7-F18 (floors_7_18.floors.N level_arrive/leave, budget_level, xp_per_character_at_budget_level, core_8_3_cr) with the SRD 5.2.1 per-Character XP table. CR ranges use the core 8.3 row whose party level matches the arrive level (core 8.3's slow-burn lookup; rows above 18 use row 18), recorded in new keys floors.N.tiers_core_8_3_row_used and floors_7_18.floors.N.core_8_3_row_used; authoritative.core_cr_targets_party_of_4 is still the verbatim core 8.3 copy. Same band map (A1), lead share (A2) and encounter mix/density (A3); days unchanged. FIELD PATH RENAME: floors.4/5/6 tiers and xp_per_character keys L4/L5/L6 became L5/L6/L7 (key = budget level); no other path renamed or removed. Unchanged: Floors 1-3 (levels, tiers, fixed encounters), Day 1-5 slot maps and their sans-pin hashes, decision 031 rest fee (20 per Crawler, cap 60 per floor), every credit, box, flag-line and crafting-price value (all keyed by floor and the core 3.9 multiplier, not by level). No new caps or budgets. ALSO IN 0.2.0 (Encounter Bot request, Floor 2 draft): new floors.2.fixed_encounters (15 combat encounters of floors/f02 Day 1-10 specs: counts, XP, fit with lead-CR-vs-cap flags, cash dice and box pointers from floors.2.credits/boxes, plus _day_encounter_index, _status, _floor_check) and new f02_day01_to_10_slot_map (51 count/CR/budget slots, spec_sha256_sans_pin_when_mapped for day-01..10, all specs marked DRAFT). L2 caps unchanged: Krakaren Clone (cmm-047) goes to a CR 3 version (700 XP) per Caleb (2026-10-05 ~6:06 PM CT) and the L2 boss cap stays CR 3; Rage Elemental (CR 5) and the CR 1 Mind Horror / Danger Dingo leads in standard/trivial tiers are flagged, not accommodated. No Floor 2 prices, box odds or caps added.",
     "0.1.17 (2026-10-05): provenance only, no values changed: re-synced day01_slot_map.spec_sha256_sans_pin_when_mapped to Encounter Bot's Day 1 spec after the GM registration split in enc-d01-06 ([SYSTEM] registration line, then [GM] booth-door narration). Days 2-5 hashes unchanged. Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
     "0.1.16 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 specs after Lore leftovers + gm_color kind/path fix + portability fold (lore/… cites, no box-only /workspace). Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
     "0.1.15 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 dry-System / decision 032 voice-split specs (Death Mode scrub, System blocks dry, gm_color jokes, Lore v0.2 collapse/zone/Dean/ACH drafts). Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
@@ -50,7 +50,8 @@
       "adjacency": "safe-room placement fields: per floor in floors.N.adjacency, rationale in assumed.adjacency",
       "adjustments": "pets, companions, class features",
       "day01_slot_map": "the 34 empty slots in floors/f01/day-01.spec.json and the field that fills each",
-      "open_questions": "short list for Caleb"
+      "open_questions": "short list for Caleb",
+      "f02_day01_to_10_slot_map": "Floor 2 Day 1-10 count/CR/budget slots and the field that fills each (v0.2.0; specs are drafts)"
     },
     "naming_scheme": {
       "ids": "lowercase keys; party size keys are the strings '2','3','4'; tiers are trivial|standard|hard|boss; levels are 'L<n>'; CRs are strings ('1/8','1/4','1/2','1','2')",
@@ -1907,6 +1908,1057 @@
         "saferooms_min_per_floor": 2,
         "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
         "status": "ASSUMED (GM may adapt)"
+      },
+      "fixed_encounters": {
+        "d01_02": {
+          "name": "Rec-Hall Bazaar: Fizz Grubs",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d01-02",
+          "spec_file": "floors/f02/day-01.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "stirge",
+              "cr": "1/8",
+              "monster_table_id": "cmm-055"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "stirge": 4
+            },
+            "3": {
+              "stirge": 6
+            },
+            "4": {
+              "stirge": 8
+            }
+          },
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/8",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 150,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/8",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/8",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "2 per Crawler (SRD fragile-creature rule); combat + social, so well under the ceiling.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d01_03": {
+          "name": "Grub Alleys: Janitor Shift (Brindle Grubs)",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d01-03",
+          "spec_file": "floors/f02/day-01.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "giant-centipede",
+              "cr": "1/4",
+              "monster_table_id": "cmm-041"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-centipede": 4
+            },
+            "3": {
+              "giant-centipede": 6
+            },
+            "4": {
+              "giant-centipede": 8
+            }
+          },
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 300,
+            "4": 400
+          },
+          "fit": {
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 300,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 400,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "2 per Crawler; the GM may add up to the tier budget.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d02_01": {
+          "name": "Mind Drift: Kickball Brains (Mind Horrors)",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d02-01",
+          "spec_file": "floors/f02/day-02.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "specter",
+              "cr": "1",
+              "monster_table_id": "cmm-051"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "specter": 1
+            },
+            "3": {
+              "specter": 2
+            },
+            "4": {
+              "specter": 3
+            }
+          },
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 400,
+            "4": 600
+          },
+          "fit": {
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            },
+            "3": {
+              "xp_used": 400,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            },
+            "4": {
+              "xp_used": 600,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "Fills the Moderate band. Lead CR 1 is ABOVE the standard-tier cap (CR 1/2 at L2, all party sizes): Encounter Bot/GM either re-tier as hard (cap CR 2 for 3-4 Crawlers, CR 1 for 2) or telegraph it; counts kept inside the XP budget.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d03_01": {
+          "name": "Grub Alleys Rematch: Cow-Tails",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d03-01",
+          "spec_file": "floors/f02/day-03.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "giant-wolf-spider",
+              "cr": "1/4",
+              "monster_table_id": "cmm-042"
+            },
+            {
+              "srd_id": "giant-centipede",
+              "cr": "1/4",
+              "monster_table_id": "cmm-041"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-wolf-spider": 2,
+              "giant-centipede": 2
+            },
+            "3": {
+              "giant-wolf-spider": 3,
+              "giant-centipede": 3
+            },
+            "4": {
+              "giant-wolf-spider": 4,
+              "giant-centipede": 4
+            }
+          },
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 300,
+            "4": 400
+          },
+          "fit": {
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 300,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 400,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "1 Cow-Tail + 1 Brindle Grub per Crawler.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d03_02": {
+          "name": "Pupa Niche: Timer or Trap (Grub Pupa)",
+          "tier": "hard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d03-02",
+          "spec_file": "floors/f02/day-03.spec.json",
+          "optional_conditional": true,
+          "creatures": [
+            {
+              "srd_id": "ochre-jelly",
+              "cr": "2",
+              "monster_table_id": "cmm-043"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "ochre-jelly": 1
+            },
+            "3": {
+              "ochre-jelly": 1
+            },
+            "4": {
+              "ochre-jelly": 1
+            }
+          },
+          "xp_by_party_size": {
+            "2": 450,
+            "3": 450,
+            "4": 450
+          },
+          "fit": {
+            "2": {
+              "xp_used": 450,
+              "tier_budget": 400,
+              "over_by": 50,
+              "within_tier": false,
+              "lead_cr": "2",
+              "cr_cap": "1",
+              "lead_within_cr_cap": false
+            },
+            "3": {
+              "xp_used": 450,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "2",
+              "cr_cap": "2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 450,
+              "tier_budget": 800,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "2",
+              "cr_cap": "2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 7.0,
+          "cash_dice_per_crawler": "1d6 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.hard ({\"Bronze\": 0.28}); no new box odds here",
+          "reasoning": "One pupa (set piece). Inside budget and cap for 3-4 Crawlers; for 2 Crawlers it is 50 XP over the hard budget and above the CR 1 cap: optional/avoidable (hazard + optional combat), telegraph it (core 8.3).",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d04_01": {
+          "name": "Rev-Up Strip: Unvaccinated Consultants (Clurichauns)",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d04-01",
+          "spec_file": "floors/f02/day-04.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "goblin-warrior",
+              "cr": "1/4",
+              "monster_table_id": "cmm-045"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "goblin-warrior": 4
+            },
+            "3": {
+              "goblin-warrior": 6
+            },
+            "4": {
+              "goblin-warrior": 8
+            }
+          },
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 300,
+            "4": 400
+          },
+          "fit": {
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 300,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 400,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "2 per Crawler.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d04_02": {
+          "name": "Distillery Prep: Laminak Elite",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d04-02",
+          "spec_file": "floors/f02/day-04.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "sprite",
+              "cr": "1/4",
+              "monster_table_id": "cmm-046"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "sprite": 2
+            },
+            "3": {
+              "sprite": 3
+            },
+            "4": {
+              "sprite": 4
+            }
+          },
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 150,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "1 per Crawler; the blender tease is non-combat.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d05_02": {
+          "name": "Krakaren Clone: Neighborhood Boss",
+          "tier": "boss",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d05-02",
+          "spec_file": "floors/f02/day-05.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "chuul",
+              "cr": "3",
+              "monster_table_id": "cmm-047",
+              "cr_note": "CR 3 version per Caleb (2026-10-05 ~6:06 PM CT): SRD chuul is CR 4 (1,100 XP), over the 4-Crawler L2 boss budget (800 XP) and the L2 boss cap of CR 3; Encounter Bot reworks cmm-047 to a CR 3 variant (700 XP). The L2 boss cap stays 3."
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "chuul": 1
+            },
+            "3": {
+              "chuul": 1
+            },
+            "4": {
+              "chuul": 1
+            }
+          },
+          "xp_by_party_size": {
+            "2": 700,
+            "3": 700,
+            "4": 700
+          },
+          "fit": {
+            "2": {
+              "xp_used": 700,
+              "tier_budget": 400,
+              "over_by": 300,
+              "within_tier": false,
+              "lead_cr": "3",
+              "cr_cap": "1",
+              "lead_within_cr_cap": false
+            },
+            "3": {
+              "xp_used": 700,
+              "tier_budget": 600,
+              "over_by": 100,
+              "within_tier": false,
+              "lead_cr": "3",
+              "cr_cap": "2",
+              "lead_within_cr_cap": false
+            },
+            "4": {
+              "xp_used": 700,
+              "tier_budget": 800,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "3",
+              "cr_cap": "3",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 17.5,
+          "cash_dice_per_crawler": "1d6 x 5 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); no new box odds here",
+          "reasoning": "CR 3 version per Caleb (2026-10-05 ~6:06 PM CT): SRD chuul is CR 4 (1,100 XP), over the 4-Crawler L2 boss budget (800 XP) and the L2 boss cap of CR 3; Encounter Bot reworks cmm-047 to a CR 3 variant (700 XP). The L2 boss cap stays 3. 4 Crawlers: 700 XP fits (lead within 90% of 800). 2-3 Crawlers: still over the boss budget (400 / 600 XP) and the boss cap (CR 1 / CR 2): Encounter Bot/GM need a smaller-party variant (as Floor 1 z10 Variant B) or telegraph/avoid; no cap raised here.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d06_02": {
+          "name": "Vespa encounter (combat or social)",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d06-02",
+          "spec_file": "floors/f02/day-06.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "giant-wasp",
+              "cr": "1/2",
+              "monster_table_id": "cmm-044"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-wasp": 3
+            },
+            "3": {
+              "giant-wasp": 4
+            },
+            "4": {
+              "giant-wasp": 6
+            }
+          },
+          "xp_by_party_size": {
+            "2": 300,
+            "3": 400,
+            "4": 600
+          },
+          "fit": {
+            "2": {
+              "xp_used": 300,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/2",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 400,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/2",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 600,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/2",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "Fills toward the Moderate band (300 / 400 / 600 XP).",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d07_01": {
+          "name": "Dog Pound: Kobold Riders and Danger Dingoes",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d07-01",
+          "spec_file": "floors/f02/day-07.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "kobold",
+              "cr": "1/8",
+              "monster_table_id": "cmm-049"
+            },
+            {
+              "srd_id": "dire-wolf",
+              "cr": "1",
+              "monster_table_id": "cmm-048"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "kobold": 2,
+              "dire-wolf": 1
+            },
+            "3": {
+              "kobold": 3,
+              "dire-wolf": 1
+            },
+            "4": {
+              "kobold": 4,
+              "dire-wolf": 2
+            }
+          },
+          "xp_by_party_size": {
+            "2": 250,
+            "3": 275,
+            "4": 500
+          },
+          "fit": {
+            "2": {
+              "xp_used": 250,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            },
+            "3": {
+              "xp_used": 275,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            },
+            "4": {
+              "xp_used": 500,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "1 rider per Crawler; 1 Dingo (2 for 4 Crawlers). Dingo CR 1 is ABOVE the standard-tier cap (CR 1/2): re-tier as hard or telegraph (Encounter Bot/GM).",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d07_02": {
+          "name": "Cage Halls: Biscuits Before Blood (conditional)",
+          "tier": "trivial",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d07-02",
+          "spec_file": "floors/f02/day-07.spec.json",
+          "optional_conditional": true,
+          "creatures": [
+            {
+              "srd_id": "dire-wolf",
+              "cr": "1",
+              "monster_table_id": "cmm-048"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "dire-wolf": 1
+            },
+            "3": {
+              "dire-wolf": 1
+            },
+            "4": {
+              "dire-wolf": 1
+            }
+          },
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 200,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 200,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            },
+            "3": {
+              "xp_used": 200,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 400,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": false
+            }
+          },
+          "cash_per_crawler": 1.0,
+          "cash_dice_per_crawler": "1d3-1 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.trivial ({}); no new box odds here",
+          "reasoning": "Conditional (non-combat if biscuits work). One Dingo = 200 XP, inside the Low band for every size, but CR 1 is ABOVE the trivial cap (CR 1/2): Encounter Bot/GM re-tier or keep it avoidable.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d08_01": {
+          "name": "Pre-Ralph: Kobold Parade",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d08-01",
+          "spec_file": "floors/f02/day-08.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "kobold",
+              "cr": "1/8",
+              "monster_table_id": "cmm-049"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "kobold": 4
+            },
+            "3": {
+              "kobold": 6
+            },
+            "4": {
+              "kobold": 8
+            }
+          },
+          "xp_by_party_size": {
+            "2": 100,
+            "3": 150,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 100,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/8",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 150,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/8",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/8",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "2 per Crawler.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d08_02": {
+          "name": "Ralph the Frenzied Gerbil (Neighborhood Boss)",
+          "tier": "boss",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d08-02",
+          "spec_file": "floors/f02/day-08.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "giant-hyena",
+              "cr": "1",
+              "monster_table_id": "cmm-050"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-hyena": 1
+            },
+            "3": {
+              "giant-hyena": 1
+            },
+            "4": {
+              "giant-hyena": 1
+            }
+          },
+          "xp_by_party_size": {
+            "2": 200,
+            "3": 200,
+            "4": 200
+          },
+          "fit": {
+            "2": {
+              "xp_used": 200,
+              "tier_budget": 400,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "1",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 200,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 200,
+              "tier_budget": 800,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1",
+              "cr_cap": "3",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 17.5,
+          "cash_dice_per_crawler": "1d6 x 5 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); no new box odds here",
+          "reasoning": "Ralph alone is 200 XP, well under the High band; the GM may add support up to the boss budget.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d09_01": {
+          "name": "Escort: Convoy Toward a Stair",
+          "tier": "standard",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d09-01",
+          "spec_file": "floors/f02/day-09.spec.json",
+          "optional_conditional": false,
+          "creatures": [
+            {
+              "srd_id": "giant-centipede",
+              "cr": "1/4",
+              "monster_table_id": "cmm-041"
+            },
+            {
+              "srd_id": "stirge",
+              "cr": "1/8",
+              "monster_table_id": "cmm-055"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "giant-centipede": 2,
+              "stirge": 2
+            },
+            "3": {
+              "giant-centipede": 3,
+              "stirge": 3
+            },
+            "4": {
+              "giant-centipede": 4,
+              "stirge": 4
+            }
+          },
+          "xp_by_party_size": {
+            "2": 150,
+            "3": 225,
+            "4": 300
+          },
+          "fit": {
+            "2": {
+              "xp_used": 150,
+              "tier_budget": 300,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "3": {
+              "xp_used": 225,
+              "tier_budget": 450,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            },
+            "4": {
+              "xp_used": 300,
+              "tier_budget": 600,
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/4",
+              "cr_cap": "1/2",
+              "lead_within_cr_cap": true
+            }
+          },
+          "cash_per_crawler": 5.0,
+          "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "reasoning": "1 Brindle Grub + 1 Fizz Grub per Crawler.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "d09_03": {
+          "name": "Rage Elemental: Bathroom Penalty Made Flesh (summoned)",
+          "tier": "boss",
+          "budget_level": 2,
+          "spec_encounter_id": "enc-d09-03",
+          "spec_file": "floors/f02/day-09.spec.json",
+          "optional_conditional": true,
+          "creatures": [
+            {
+              "srd_id": "air-elemental",
+              "cr": "5",
+              "monster_table_id": "cmm-056"
+            }
+          ],
+          "counts_by_party_size": {
+            "2": {
+              "air-elemental": 1
+            },
+            "3": {
+              "air-elemental": 1
+            },
+            "4": {
+              "air-elemental": 1
+            }
+          },
+          "xp_by_party_size": {
+            "2": 1800,
+            "3": 1800,
+            "4": 1800
+          },
+          "fit": {
+            "2": {
+              "xp_used": 1800,
+              "tier_budget": 400,
+              "over_by": 1400,
+              "within_tier": false,
+              "lead_cr": "5",
+              "cr_cap": "1",
+              "lead_within_cr_cap": false
+            },
+            "3": {
+              "xp_used": 1800,
+              "tier_budget": 600,
+              "over_by": 1200,
+              "within_tier": false,
+              "lead_cr": "5",
+              "cr_cap": "2",
+              "lead_within_cr_cap": false
+            },
+            "4": {
+              "xp_used": 1800,
+              "tier_budget": 800,
+              "over_by": 1000,
+              "within_tier": false,
+              "lead_cr": "5",
+              "cr_cap": "3",
+              "lead_within_cr_cap": false
+            }
+          },
+          "cash_per_crawler": 17.5,
+          "cash_dice_per_crawler": "1d6 x 5 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); no new box odds here",
+          "reasoning": "FLAG: SRD air elemental is CR 5 (1,800 XP), far over every L2 boss budget (400 / 600 / 800) and cap (CR 1 / 2 / 3). Counts pinned as written; it is a summoned penalty (M-346), so it must stay avoidable/telegraphed (core 8.3) or be tightened. Needs an Encounter Bot/Caleb call (not covered by the Krakaren ruling); no cap raised here.",
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+        },
+        "_day_encounter_index": {
+          "enc-d01-02": "d01_02",
+          "enc-d01-03": "d01_03",
+          "enc-d02-01": "d02_01",
+          "enc-d03-01": "d03_01",
+          "enc-d03-02": "d03_02",
+          "enc-d04-01": "d04_01",
+          "enc-d04-02": "d04_02",
+          "enc-d05-02": "d05_02",
+          "enc-d06-02": "d06_02",
+          "enc-d07-01": "d07_01",
+          "enc-d07-02": "d07_02",
+          "enc-d08-01": "d08_01",
+          "enc-d08-02": "d08_02",
+          "enc-d09-01": "d09_01",
+          "enc-d09-03": "d09_03"
+        },
+        "_status": "v0.2.0, ASSUMED. Counts sized by the Accountant against floors.2.tiers.L2 for the Encounter Bot's DRAFT Floor 2 Day 1-10 specs (floors/f02, spec version 0.1, generator still Floor-1-hardcoded). Rule used: fill toward the tier budget without going over, at most 2 creatures per Crawler for CR 1/8-1/4 bodies (SRD fragile rule). CR caps are NOT raised anywhere: fit.<P>.lead_within_cr_cap = false marks each over-cap lead for Encounter Bot/GM (d02_01, d07_01, d07_02 CR 1 leads in standard/trivial tiers; d03_02 for 2 Crawlers; d05_02 Krakaren for 2-3 Crawlers; d09_03 Rage Elemental CR 5 everywhere). Krakaren: CR 3 version per Caleb (2026-10-05 ~6:06 PM CT); L2 boss cap stays 3.",
+        "_floor_check": {
+          "combat_encounters_in_specs": 15,
+          "mix_in_specs": {
+            "standard": 10,
+            "hard": 1,
+            "boss": 3,
+            "trivial": 1
+          },
+          "mix_planned_floors_2_encounters": {
+            "trivial": 4,
+            "standard": 8,
+            "hard": 2,
+            "boss": 1
+          },
+          "xp_used_by_party_size": {
+            "2": 5150,
+            "3": 6000,
+            "4": 7150
+          },
+          "tier_budget_sum_by_party_size": {
+            "2": 4800,
+            "3": 7200,
+            "4": 9600
+          },
+          "floor_xp_ceiling_total": {
+            "2": 4400,
+            "3": 6600,
+            "4": 8800
+          },
+          "note": "Guideline check only. The specs run 15 combat encounters (matching the planned 15) but with three boss-tier fights (Krakaren, Ralph, Rage Elemental) against the plan of 1 boss and 2 hard; floors.2.boxes plans ONE Silver Boss Box per Crawler. Which boss pays the Boss Box (or whether Neighborhood Bosses each do) is open for Caleb/Encounter Bot; nothing here adds box odds or budget."
+        }
       }
     },
     "3": {
@@ -5446,5 +6498,754 @@
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 0,
     "slots": []
+  },
+  "f02_day01_to_10_slot_map": {
+    "status": "v0.2.0 addition (Encounter Bot request for Floor 2). Maps the enemy COUNT, enemy CR and encounter BUDGET slots of every combat encounter in floors/f02/day-01..10.spec.json to floors.2.fixed_encounters. Loot, rest-fee, Detour Tax and key slots already cite existing fields (floors.2.credits, floors.2.boxes, floors.1.prices.*) and are not remapped; no Floor 2 prices are created here (decision 031 fee untouched).",
+    "draft_note": "DRAFT: every Floor 2 spec is meta.status draft / version 0.1 and floors/f02/_draft-counts.json reports the generator still Floor-1-hardcoded (FAIL 326, --write-on-fail). Hashes are pinned to the specs as they stand; re-sync when Encounter Bot regenerates them.",
+    "spec_sha256_sans_pin_when_mapped": {
+      "day-01": "679557b22f870b6e2cc8579d68ec2221f5c674980a4a0d402bacecd429101ef2",
+      "day-02": "7e3f26dc211e30fa8e95319dbdf9dcfe0fb2d940e6e5ca72f0e2e86593c0d1b5",
+      "day-03": "bd68ff1dcc9362238713884a894a834561301c06142c7d909d7b741da9f39110",
+      "day-04": "71aa71a29daffbe9ccadbc9c56942633a8dc59755ad27d94fec7e914bd9cba33",
+      "day-05": "c53a4134b9f4762bb583a416690d35b4ae0f54e7689b7e3ade711ea075fc1a3a",
+      "day-06": "e412ab8de745c8c65a6dafb7c778b943ba4b8b8e50a5a6208e39aadde1957d31",
+      "day-07": "4f3d200e9af72ea7791c1fd14c6c0f702c10f5819b3c29763df604562b1f8bfb",
+      "day-08": "ff614bd97c1860e8526fb48b06f7ce6d85f33acd66605f5fb6053a15025da370",
+      "day-09": "31fb09e9079ee5b94aac2f3fd0072abcaf393e7d33539b24e1730ee4c71f95ff",
+      "day-10": "8ea4fb9d66d246f0aae491fa86f75c304abbfa7d99fd1743ef8103e3d37e445f"
+    },
+    "spec_hash_method": "see day01_slot_map.spec_hash_method",
+    "count": 51,
+    "slots": [
+      {
+        "spec_file": "floors/f02/day-01.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (fizz-grub)",
+        "fills_from": "floors.2.fixed_encounters.d01_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d01_02.counts_by_party_size",
+          "key": "stirge"
+        },
+        "value_by_party_size": {
+          "2": 4,
+          "3": 6,
+          "4": 8
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-01.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (fizz-grub)",
+        "fills_from": "floors.2.fixed_encounters.d01_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d01_02.creatures",
+          "key": "stirge"
+        },
+        "value": "1/8"
+      },
+      {
+        "spec_file": "floors/f02/day-01.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d01-02)",
+        "fills_from": "floors.2.fixed_encounters.d01_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d01_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 100 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 150 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 200 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-01.spec.json",
+        "spec_path": "/encounters[2]/enemies[0]/count_slot",
+        "label": "COUNT (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d01_03.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d01_03.counts_by_party_size",
+          "key": "giant-centipede"
+        },
+        "value_by_party_size": {
+          "2": 4,
+          "3": 6,
+          "4": 8
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-01.spec.json",
+        "spec_path": "/encounters[2]/enemies[0]/cr_slot",
+        "label": "CR (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d01_03.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d01_03.creatures",
+          "key": "giant-centipede"
+        },
+        "value": "1/4"
+      },
+      {
+        "spec_file": "floors/f02/day-01.spec.json",
+        "spec_path": "/encounters[2]/budget_slot",
+        "label": "BUDGET (enc-d01-03)",
+        "fills_from": "floors.2.fixed_encounters.d01_03.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d01_03.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 200 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 300 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 400 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-02.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/count_slot",
+        "label": "COUNT (mind-horror)",
+        "fills_from": "floors.2.fixed_encounters.d02_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d02_01.counts_by_party_size",
+          "key": "specter"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 2,
+          "4": 3
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-02.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/cr_slot",
+        "label": "CR (mind-horror)",
+        "fills_from": "floors.2.fixed_encounters.d02_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d02_01.creatures",
+          "key": "specter"
+        },
+        "value": "1"
+      },
+      {
+        "spec_file": "floors/f02/day-02.spec.json",
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d02-01)",
+        "fills_from": "floors.2.fixed_encounters.d02_01.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d02_01.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 200 XP; lead CR 1 above cap 1/2 (flag)",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 400 XP; lead CR 1 above cap 1/2 (flag)",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 600 XP; lead CR 1 above cap 1/2 (flag)"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/count_slot",
+        "label": "COUNT (cow-tail)",
+        "fills_from": "floors.2.fixed_encounters.d03_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d03_01.counts_by_party_size",
+          "key": "giant-wolf-spider"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/cr_slot",
+        "label": "CR (cow-tail)",
+        "fills_from": "floors.2.fixed_encounters.d03_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d03_01.creatures",
+          "key": "giant-wolf-spider"
+        },
+        "value": "1/4"
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[0]/enemies[1]/count_slot",
+        "label": "COUNT (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d03_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d03_01.counts_by_party_size",
+          "key": "giant-centipede"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[0]/enemies[1]/cr_slot",
+        "label": "CR (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d03_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d03_01.creatures",
+          "key": "giant-centipede"
+        },
+        "value": "1/4"
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d03-01)",
+        "fills_from": "floors.2.fixed_encounters.d03_01.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d03_01.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 200 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 300 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 400 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (grub-pupa)",
+        "fills_from": "floors.2.fixed_encounters.d03_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d03_02.counts_by_party_size",
+          "key": "ochre-jelly"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (grub-pupa)",
+        "fills_from": "floors.2.fixed_encounters.d03_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d03_02.creatures",
+          "key": "ochre-jelly"
+        },
+        "value": "2"
+      },
+      {
+        "spec_file": "floors/f02/day-03.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d03-02)",
+        "fills_from": "floors.2.fixed_encounters.d03_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d03_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "hard tier, High band: budget 400 XP for 2 Crawlers (level 2); used 450 XP (over by 50); lead CR 2 above cap 1 (flag)",
+          "3": "hard tier, High band: budget 600 XP for 3 Crawlers (level 2); used 450 XP",
+          "4": "hard tier, High band: budget 800 XP for 4 Crawlers (level 2); used 450 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-04.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/count_slot",
+        "label": "COUNT (clurichaun)",
+        "fills_from": "floors.2.fixed_encounters.d04_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d04_01.counts_by_party_size",
+          "key": "goblin-warrior"
+        },
+        "value_by_party_size": {
+          "2": 4,
+          "3": 6,
+          "4": 8
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-04.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/cr_slot",
+        "label": "CR (clurichaun)",
+        "fills_from": "floors.2.fixed_encounters.d04_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d04_01.creatures",
+          "key": "goblin-warrior"
+        },
+        "value": "1/4"
+      },
+      {
+        "spec_file": "floors/f02/day-04.spec.json",
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d04-01)",
+        "fills_from": "floors.2.fixed_encounters.d04_01.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d04_01.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 200 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 300 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 400 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-04.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (laminak)",
+        "fills_from": "floors.2.fixed_encounters.d04_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d04_02.counts_by_party_size",
+          "key": "sprite"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-04.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (laminak)",
+        "fills_from": "floors.2.fixed_encounters.d04_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d04_02.creatures",
+          "key": "sprite"
+        },
+        "value": "1/4"
+      },
+      {
+        "spec_file": "floors/f02/day-04.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d04-02)",
+        "fills_from": "floors.2.fixed_encounters.d04_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d04_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 100 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 150 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 200 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-05.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (krakaren)",
+        "fills_from": "floors.2.fixed_encounters.d05_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d05_02.counts_by_party_size",
+          "key": "chuul"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-05.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (krakaren)",
+        "fills_from": "floors.2.fixed_encounters.d05_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d05_02.creatures",
+          "key": "chuul"
+        },
+        "value": "3 (CR 3 version per Caleb; SRD chuul is CR 4)"
+      },
+      {
+        "spec_file": "floors/f02/day-05.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d05-02)",
+        "fills_from": "floors.2.fixed_encounters.d05_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d05_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "boss tier, High band: budget 400 XP for 2 Crawlers (level 2); used 700 XP (over by 300); lead CR 3 above cap 1 (flag)",
+          "3": "boss tier, High band: budget 600 XP for 3 Crawlers (level 2); used 700 XP (over by 100); lead CR 3 above cap 2 (flag)",
+          "4": "boss tier, High band: budget 800 XP for 4 Crawlers (level 2); used 700 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-06.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (vespa)",
+        "fills_from": "floors.2.fixed_encounters.d06_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d06_02.counts_by_party_size",
+          "key": "giant-wasp"
+        },
+        "value_by_party_size": {
+          "2": 3,
+          "3": 4,
+          "4": 6
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-06.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (vespa)",
+        "fills_from": "floors.2.fixed_encounters.d06_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d06_02.creatures",
+          "key": "giant-wasp"
+        },
+        "value": "1/2"
+      },
+      {
+        "spec_file": "floors/f02/day-06.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d06-02)",
+        "fills_from": "floors.2.fixed_encounters.d06_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d06_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 300 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 400 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 600 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/count_slot",
+        "label": "COUNT (kobold-rider)",
+        "fills_from": "floors.2.fixed_encounters.d07_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d07_01.counts_by_party_size",
+          "key": "kobold"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/cr_slot",
+        "label": "CR (kobold-rider)",
+        "fills_from": "floors.2.fixed_encounters.d07_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d07_01.creatures",
+          "key": "kobold"
+        },
+        "value": "1/8"
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[0]/enemies[1]/count_slot",
+        "label": "COUNT (danger-dingo)",
+        "fills_from": "floors.2.fixed_encounters.d07_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d07_01.counts_by_party_size",
+          "key": "dire-wolf"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 2
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[0]/enemies[1]/cr_slot",
+        "label": "CR (danger-dingo)",
+        "fills_from": "floors.2.fixed_encounters.d07_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d07_01.creatures",
+          "key": "dire-wolf"
+        },
+        "value": "1"
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d07-01)",
+        "fills_from": "floors.2.fixed_encounters.d07_01.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d07_01.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 250 XP; lead CR 1 above cap 1/2 (flag)",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 275 XP; lead CR 1 above cap 1/2 (flag)",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 500 XP; lead CR 1 above cap 1/2 (flag)"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (danger-dingo)",
+        "fills_from": "floors.2.fixed_encounters.d07_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d07_02.counts_by_party_size",
+          "key": "dire-wolf"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (danger-dingo)",
+        "fills_from": "floors.2.fixed_encounters.d07_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d07_02.creatures",
+          "key": "dire-wolf"
+        },
+        "value": "1"
+      },
+      {
+        "spec_file": "floors/f02/day-07.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d07-02)",
+        "fills_from": "floors.2.fixed_encounters.d07_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d07_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "trivial tier, Low band: budget 200 XP for 2 Crawlers (level 2); used 200 XP; lead CR 1 above cap 1/2 (flag)",
+          "3": "trivial tier, Low band: budget 300 XP for 3 Crawlers (level 2); used 200 XP; lead CR 1 above cap 1/2 (flag)",
+          "4": "trivial tier, Low band: budget 400 XP for 4 Crawlers (level 2); used 200 XP; lead CR 1 above cap 1/2 (flag)"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-08.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/count_slot",
+        "label": "COUNT (kobold-rider)",
+        "fills_from": "floors.2.fixed_encounters.d08_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d08_01.counts_by_party_size",
+          "key": "kobold"
+        },
+        "value_by_party_size": {
+          "2": 4,
+          "3": 6,
+          "4": 8
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-08.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/cr_slot",
+        "label": "CR (kobold-rider)",
+        "fills_from": "floors.2.fixed_encounters.d08_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d08_01.creatures",
+          "key": "kobold"
+        },
+        "value": "1/8"
+      },
+      {
+        "spec_file": "floors/f02/day-08.spec.json",
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d08-01)",
+        "fills_from": "floors.2.fixed_encounters.d08_01.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d08_01.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 100 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 150 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 200 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-08.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/count_slot",
+        "label": "COUNT (ralph)",
+        "fills_from": "floors.2.fixed_encounters.d08_02.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d08_02.counts_by_party_size",
+          "key": "giant-hyena"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-08.spec.json",
+        "spec_path": "/encounters[1]/enemies[0]/cr_slot",
+        "label": "CR (ralph)",
+        "fills_from": "floors.2.fixed_encounters.d08_02.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d08_02.creatures",
+          "key": "giant-hyena"
+        },
+        "value": "1"
+      },
+      {
+        "spec_file": "floors/f02/day-08.spec.json",
+        "spec_path": "/encounters[1]/budget_slot",
+        "label": "BUDGET (enc-d08-02)",
+        "fills_from": "floors.2.fixed_encounters.d08_02.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d08_02.fit"
+        },
+        "value_by_party_size": {
+          "2": "boss tier, High band: budget 400 XP for 2 Crawlers (level 2); used 200 XP",
+          "3": "boss tier, High band: budget 600 XP for 3 Crawlers (level 2); used 200 XP",
+          "4": "boss tier, High band: budget 800 XP for 4 Crawlers (level 2); used 200 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/count_slot",
+        "label": "COUNT (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d09_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d09_01.counts_by_party_size",
+          "key": "giant-centipede"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[0]/enemies[0]/cr_slot",
+        "label": "CR (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d09_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d09_01.creatures",
+          "key": "giant-centipede"
+        },
+        "value": "1/4"
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[0]/enemies[1]/count_slot",
+        "label": "COUNT (fizz-grub)",
+        "fills_from": "floors.2.fixed_encounters.d09_01.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d09_01.counts_by_party_size",
+          "key": "stirge"
+        },
+        "value_by_party_size": {
+          "2": 2,
+          "3": 3,
+          "4": 4
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[0]/enemies[1]/cr_slot",
+        "label": "CR (fizz-grub)",
+        "fills_from": "floors.2.fixed_encounters.d09_01.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d09_01.creatures",
+          "key": "stirge"
+        },
+        "value": "1/8"
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[0]/budget_slot",
+        "label": "BUDGET (enc-d09-01)",
+        "fills_from": "floors.2.fixed_encounters.d09_01.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d09_01.fit"
+        },
+        "value_by_party_size": {
+          "2": "standard tier, Moderate band: budget 300 XP for 2 Crawlers (level 2); used 150 XP",
+          "3": "standard tier, Moderate band: budget 450 XP for 3 Crawlers (level 2); used 225 XP",
+          "4": "standard tier, Moderate band: budget 600 XP for 4 Crawlers (level 2); used 300 XP"
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[2]/enemies[0]/count_slot",
+        "label": "COUNT (rage-elemental)",
+        "fills_from": "floors.2.fixed_encounters.d09_03.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d09_03.counts_by_party_size",
+          "key": "air-elemental"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[2]/enemies[0]/cr_slot",
+        "label": "CR (rage-elemental)",
+        "fills_from": "floors.2.fixed_encounters.d09_03.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d09_03.creatures",
+          "key": "air-elemental"
+        },
+        "value": "5"
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[2]/budget_slot",
+        "label": "BUDGET (enc-d09-03)",
+        "fills_from": "floors.2.fixed_encounters.d09_03.fit",
+        "cite": {
+          "kind": "fit",
+          "path": "floors.2.fixed_encounters.d09_03.fit"
+        },
+        "value_by_party_size": {
+          "2": "boss tier, High band: budget 400 XP for 2 Crawlers (level 2); used 1800 XP (over by 1400); lead CR 5 above cap 1 (flag)",
+          "3": "boss tier, High band: budget 600 XP for 3 Crawlers (level 2); used 1800 XP (over by 1200); lead CR 5 above cap 2 (flag)",
+          "4": "boss tier, High band: budget 800 XP for 4 Crawlers (level 2); used 1800 XP (over by 1000); lead CR 5 above cap 3 (flag)"
+        }
+      }
+    ]
   }
 }

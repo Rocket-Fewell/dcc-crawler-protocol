@@ -1,4 +1,4 @@
-# 02 — Core Rules (5e Overlay) v0.2.19
+# 02 — Core Rules (5e Overlay) v0.2.20
 Owner: Syndicate | Status: draft | Version: 0.2.18 | Updated: 2026-10-05
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
@@ -1063,30 +1063,30 @@ Examples: Giant Rat → *Vent Rat*; Animated Armor → *Mascot Suit (Unoccupied)
 
 ### 8.3 CR targets by floor (standard track, party of 4)
 
-Use the **2024 DMG XP budget** for the actual party size and level; this table gives starting points.
+Use the **2024 DMG XP budget** for the actual party size and level; this table gives starting points. **Party level** follows decision **033** / §2.2 (arrive N on F1–3, N+1 on F4–9, N+2 on F10–18). CR bands are keyed to that party level (same ranges previously listed under the floor whose old N/N+1 party level matched).
 
-| Floor | Party level | Mobs (in groups) | Elites | Floor boss (with support) |
-|------:|:-----------:|:----------------:|:------:|:-------------------------:|
-| 1 | 1–2 | 0 – 1/4 | 1/2 – 1 | 2 |
-| 2 | 2–3 | 1/8 – 1/2 | 1 – 2 | 3 – 4 |
-| 3 | 3–4 | 1/4 – 1 | 2 – 3 | 4 – 5 |
-| 4 | 4–5 | 1/2 – 1 | 2 – 3 | 5 – 6 |
-| 5 | 5–6 | 1 – 2 | 3 – 4 | 7 – 8 |
-| 6 | 6–7 | 1 – 2 | 4 – 6 (hunters) | 8 – 9 |
-| 7 | 7–8 | 2 – 3 | 5 – 6 | 9 – 10 |
-| 8 | 8–9 | 2 – 3 | 6 – 7 | 10 – 11 |
-| 9 | 9–10 | 3 – 4 | 7 – 8 | 11 – 12 |
-| 10 | 10–11 | 3 – 5 | 8 – 9 | 12 – 13 |
-| 11 | 11–12 | 4 – 5 | 9 – 10 | 13 – 14 |
-| 12 | 12–13 | 4 – 6 | 10 – 11 | 14 – 16 |
-| 13 | 13–14 | 5 – 6 | 11 – 12 | 15 – 16 |
-| 14 | 14–15 | 5 – 7 | 12 – 13 | 16 – 17 |
-| 15 | 15–16 | 6 – 8 | 13 – 14 | 17 – 19 |
-| 16 | 16–17 | 6 – 8 | 14 – 15 | 18 – 20 |
-| 17 | 17–18 | 7 – 9 | 15 – 16 | 19 – 21 |
-| 18 | 18–20 | 8 – 10 | 16 – 18 | 21 – 24+ (finale) |
+| Floor | Party level (arrive → leave) | Mobs (in groups) | Elites | Floor boss (with support) |
+|------:|:----------------------------:|:----------------:|:------:|:-------------------------:|
+| 1 | 1 → 2 | 0 – 1/4 | 1/2 – 1 | 2 |
+| 2 | 2 → 3 | 1/8 – 1/2 | 1 – 2 | 3 – 4 |
+| 3 | 3 → 4 | 1/4 – 1 | 2 – 3 | 4 – 5 |
+| 4 | 5 → 6 | 1 – 2 | 3 – 4 | 7 – 8 |
+| 5 | 6 → 7 | 1 – 2 | 4 – 6 | 8 – 9 |
+| 6 | 7 → 8 | 2 – 3 | 5 – 6 (hunters) | 9 – 10 |
+| 7 | 8 → 9 | 2 – 3 | 6 – 7 | 10 – 11 |
+| 8 | 9 → 10 | 3 – 4 | 7 – 8 | 11 – 12 |
+| 9 | 10 → 11 | 3 – 5 | 8 – 9 | 12 – 13 |
+| 10 | 12 → 13 | 4 – 6 | 10 – 11 | 14 – 16 |
+| 11 | 13 → 14 | 5 – 6 | 11 – 12 | 15 – 16 |
+| 12 | 14 → 15 | 5 – 7 | 12 – 13 | 16 – 17 |
+| 13 | 15 → 16 | 6 – 8 | 13 – 14 | 17 – 19 |
+| 14 | 16 → 17 | 6 – 8 | 14 – 15 | 18 – 20 |
+| 15 | 17 → 18 | 7 – 9 | 15 – 16 | 19 – 21 |
+| 16 | 18 → 19 | 8 – 10 | 16 – 18 | 21 – 24+ |
+| 17 | 19 → 20 | 8 – 10 | 16 – 18 | 21 – 24+ |
+| 18 | 20 → 20 (cap) | 8 – 10 | 16 – 18 | 21 – 24+ (finale) |
 
-**Slow-burn track:** look up the row whose party level matches yours, not the floor number.
+**Lookup by level:** if the party's level does not match the floor row (slow-burn, catch-up, mid-floor), use the CR bands for the row whose party level matches yours. Levels 19–20 and Floor 18's cap share the same CR bands.
 
 **Difficulty mix per floor:** mostly Moderate, some Low (to burn resources and give toasts), 1–3 High per floor (elites, boss). Deadly-beyond-High fights should be **avoidable or telegraphed** (the catalog loves "David vs Goliath," but the fight should be a choice).
 
@@ -1205,6 +1205,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
 | **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
 | **v0.2.16** | 2026-10-04 | **Whole credits only (rules lead ruling, 2026-10-04):** §5.10 says balances are never fractional (matches `tools/state.py` and decision 028); sp/cp are list prices only (1 sp = 0.1, 1 cp = 0.01 credit, reference); the "0.5 credit, 0.05 credit" balance wording is removed; buying rounds UP per cart line (matches `bot/src/create/rules.js`), selling at half rounds DOWN per line (matches `tools/state.py` pet buyback). No price changed. |
+| **v0.2.20** | 2026-10-05 | **§8.3 party levels aligned to decision 033** (Accountant follow-up after rules/70 v0.2.0): floor rows use arrive→leave bands (F4@5 … F18@20); CR bands follow party level (old N-row ranges). Floors 16–18 share the top CR band. |
 | **v0.2.19** | 2026-10-05 | **F3/F9 double level bumps (decision 033, Caleb executive):** §2.2 arrive bands N / N+1 / N+2; F3 and F9 end boss +1 then normal onboarding; arrive F4 at 5, F10 at 12, F18 at 20 (finale 19–20 levels removed). §2.3 one-level rule updated. §6.4.3 refund desk re-keyed to arrive levels (floors 4 / 8 / 11 / 15). Accountant re-cuts rules/70 + 75; Book Author Ch1/Ch2. |
 | **v0.2.18** | 2026-10-05 | **Field-rest fee clarified (Season Zero):** §5.6 — Short Rest free if already quiet; rules/70 fee buys quiet for a Short Rest in a noisy spot; never a Long Rest outside a saferoom. Decision 031. Day pages already matched. No number changed. |
 | **v0.2.17** | 2026-10-04 | **Rules lead rulings (2026-10-04):** (1) Platinum floors: §4.5 wins, no Platinum on F1–8. §4.1 Platinum row now says Legendary achievements F9+ (Gold row: Legendary achievements F3–8, Silver on F1–2); Appendix A maps a Legendary-loot achievement to Gold F3–8 (Silver F1–2) / Platinum F9–14. (2) Story Box cap override is the GM's with a logged reason, Caleb can veto (Caleb's later 2026-10-04 ruling: the rota is a guideline and the only hard Story Box rule is one per floor, which the GM can override with a logged reason; the GM may adapt as play goes). Same text in §4.1, §4.5 and §4.7. Unopened box still bound; item inside tradeable, lootable, sellable. No number changed. |

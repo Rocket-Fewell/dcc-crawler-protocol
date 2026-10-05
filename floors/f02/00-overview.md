@@ -65,7 +65,7 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 | Brindled Vespa | giant-wasp | 1/2 | cmm-044 | CANON |
 | Unvaccinated Clurichaun Rev-Up Consultant | goblin-warrior | 1/4 | cmm-045 | CANON |
 | Laminak Rev-Up Consultant Elite | sprite | 1/4 | cmm-046 | CANON |
-| Krakaren Clone (Second Floor) | chuul | 4 | cmm-047 | Neighborhood Boss |
+| Krakaren Clone (Second Floor) | chuul (HOUSE CR 3) | 3 | cmm-047 | Neighborhood Boss; Caleb CR 3 |
 | Danger Dingo | dire-wolf | 1 | cmm-048 | CANON |
 | Kobold Rider | kobold | 1/8 | cmm-049 | CANON |
 | Ralph the Frenzied Gerbil | giant-hyena | 1 | cmm-050 | Neighborhood Boss |
@@ -96,4 +96,4 @@ X-059 Neighborhood Boss (closed); X-060 pupa dual-burst (closed); X-061 patronag
 
 ## 6. Open questions
 
-Accountant: floors.2.fixed_encounters pins. Lore: RESERVE release + A-056. Syndicate: achievement rewards. Architect: encounter_bot multi-floor overview/canon. Caleb: Soft Open district name freeze; Krakaren CR 4 vs L2 cap 3.
+Accountant: floors.2.fixed_encounters pins. Lore: RESERVE release + A-056. Syndicate: achievement rewards. Architect: encounter_bot multi-floor overview/canon. Caleb (2026-10-05): Soft Open FINAL district name; Krakaren HOUSE CR 3 (fits L2 boss caps).

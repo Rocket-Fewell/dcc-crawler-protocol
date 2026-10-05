@@ -1,7 +1,7 @@
 # CR-by-Floor Encounter Difficulty Compendium (5e 2024)
 Owner: Syndicate | Status: **DRAFT** | Version: 0.2.0 | Updated: 2026-10-05
 Summary: Per-floor expected party level, budgeted CR/XP bands and Continuum tone notes for Floors 1–18. A GM/Encounter Bot companion to `rules/70-encounter-budget-5e.json`. Numbers come from rules/70; Continuum tone from the floor bible and campaign narrative. No species invented here.
-Depends on: `rules/70-encounter-budget-5e.json` **v0.2.0** (XP budgets, CR caps, days, flag lines; the only source the Encounter Bot cites for those numbers), `rules/10-core-rules-5e.md` **v0.2.19** (§2.2 level track, §4.5 box pacing, §8.3 CR targets), `floors/04-floor-bible.md` **v0.4** (titles, Continuum ladder, seeds; creative draft), `floors/00-campaign-narrative.md` **v0.3** (spine; wins on Continuum structure), `floors/f01/` Day pages (Floor 1 only). Decisions 026, 028, Q-001 (clocks and missed-collapse death); decision 033 (F3/F9 double level bumps: arrive F4 at 5, F10 at 12, F18 at 20).
+Depends on: `rules/70-encounter-budget-5e.json` **v0.2.0** (XP budgets, CR caps, days, flag lines; the only source the Encounter Bot cites for those numbers), `rules/10-core-rules-5e.md` **v0.2.20** (§2.2 level track, §4.5 box pacing, §8.3 CR targets), `floors/04-floor-bible.md` **v0.4** (titles, Continuum ladder, seeds; creative draft), `floors/00-campaign-narrative.md` **v0.3** (spine; wins on Continuum structure), `floors/f01/` Day pages (Floor 1 only). Decisions 026, 028, Q-001 (clocks and missed-collapse death); decision 033 (F3/F9 double level bumps: arrive F4 at 5, F10 at 12, F18 at 20).
 
 > **Status:** DRAFT v0.2.0 (re-cut for decision 033). Budgets are **guidelines** (rules/70 authority note; Caleb 2026-10-04: the GM may adapt). Nothing here invents creatures, species Offers or Floor 2+ encounter lists.
 > **Project:** *Crawler Protocol: Season Zero* — original fan RPG inspired by *Dungeon Crawler Carl*. Private play only.
@@ -16,7 +16,7 @@ Depends on: `rules/70-encounter-budget-5e.json` **v0.2.0** (XP budgets, CR caps,
 |---|---|
 | **Arrive / leave level** | Standard track (core v0.2.19 §2.2, decision 033): arrive Floor N at level **N** on F1–3, **N+1** on F4–9, **N+2** on F10–18; leave at arrive+1. F3 and F9 end bosses grant +1 and the normal descent/onboarding +1 still fires (F4 at 5, F10 at 12). F18 arrives at the level-20 cap (finale 19–20 levels removed). Floor 1 split: pre–Green Room at L1, boss at L2 (rules/70 `floors.1.level`). |
 | **Budget level** | The party level used for SRD XP budgets and CR caps on that floor (= arrive level). |
-| **core §8.3 row** | core §8.3 is still keyed by floor with a party-level column from the old N/N+1 track; rules/70 v0.2.0 uses the row whose **party level matches** the arrive level (core §8.3's slow-burn rule; levels 19–20 use row 18). |
+| **core §8.3 row** | core **v0.2.20** §8.3 party-level column matches decision 033 arrive→leave; CR bands follow party level. rules/70 v0.2.0 uses the same match (levels 19–20 / F18 share the top band). |
 | **Tier** | trivial / standard / hard / boss (rules/70 `tiers`). F1 maps half-Low / Low / Moderate / High; F2+ maps Low / Moderate / High / High. |
 | **CR caps (4 Crawlers)** | Lead-creature CR ceiling for a 4-Crawler party (rules/70 `floors.N.tiers.*.cr_caps.4`). Caps for 2 and 3 Crawlers are in the JSON. |
 | **XP budget (4 Crawlers)** | Total XP envelope for one encounter of that tier (rules/70). Daily and floor ceilings are also in the JSON. |

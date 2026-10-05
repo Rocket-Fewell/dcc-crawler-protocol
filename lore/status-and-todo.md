@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.13 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.14 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -436,3 +436,8 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - Caleb rulings folded: X-059/060/063/080 → closers X-081..X-084 / M-762..M-765. Monster table `drafts/core-book-monster-table-v0.2` (sha256 aab24a95f9b3… / a21ca645bfbb…).
 - F3–7 bestiary `drafts/core-book-bestiary-f3-f7-v0.1` (94 rows; sha256 2181aceb6409… / c06a12cc2be0…).
 - CANON-LEDGER.md → v1.16 section 9.6. ledger_build.py not run. No campaign edits.
+
+---
+# Pass 33 (2026-10-05 CT): Soft Open F2 canon pass
+
+- Wrote `audits/f02-days-1-10-canon-pass-2026-10-05.md` (sha256 c7a0bd0a42bb678dee8e7911e2cb03de660db3aa3e20a061011eae4775209503). Verdict PASS WITH FIXES. Blocker: Krakaren Neighborhood stair claimed under M-365 (Borough/City only). Top fixes: retag mis-cited proposed achievements (M-467→M-506 Qwist; M-386→M-385 corpse/grubs; M-355→M-508/509 Mana Toast); stop tagging non-A-row hooks as canon achievements. No campaign edits.
