@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.1.17",
+  "version": "0.2.0",
   "changelog": [
+    "0.2.0 (2026-10-05, Accountant): VALUE CHANGE for decision 033 / core v0.2.19 (F3 and F9 end bosses +1, then normal onboarding +1): standard track now arrives F1-3 at N, F4-9 at N+1, F10-18 at N+2 (F4 at 5, F10 at 12, F18 at 20; F18 leaves at the 20 cap, finale 19-20 levels removed). Re-cut F4-F6 (floors.N.level, xp_per_character, tiers, xp) at budget levels 5/6/7 and F7-F18 (floors_7_18.floors.N level_arrive/leave, budget_level, xp_per_character_at_budget_level, core_8_3_cr) with the SRD 5.2.1 per-Character XP table. CR ranges use the core 8.3 row whose party level matches the arrive level (core 8.3's slow-burn lookup; rows above 18 use row 18), recorded in new keys floors.N.tiers_core_8_3_row_used and floors_7_18.floors.N.core_8_3_row_used; authoritative.core_cr_targets_party_of_4 is still the verbatim core 8.3 copy. Same band map (A1), lead share (A2) and encounter mix/density (A3); days unchanged. FIELD PATH RENAME: floors.4/5/6 tiers and xp_per_character keys L4/L5/L6 became L5/L6/L7 (key = budget level); no other path renamed or removed. Unchanged: Floors 1-3 (levels, tiers, fixed encounters), Day 1-5 slot maps and their sans-pin hashes, decision 031 rest fee (20 per Crawler, cap 60 per floor), every credit, box, flag-line and crafting-price value (all keyed by floor and the core 3.9 multiplier, not by level). No new caps or budgets.",
     "0.1.17 (2026-10-05): provenance only, no values changed: re-synced day01_slot_map.spec_sha256_sans_pin_when_mapped to Encounter Bot's Day 1 spec after the GM registration split in enc-d01-06 ([SYSTEM] registration line, then [GM] booth-door narration). Days 2-5 hashes unchanged. Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
     "0.1.16 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 specs after Lore leftovers + gm_color kind/path fix + portability fold (lore/… cites, no box-only /workspace). Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
     "0.1.15 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 dry-System / decision 032 voice-split specs (Death Mode scrub, System blocks dry, gm_color jokes, Lore v0.2 collapse/zone/Dean/ACH drafts). Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
@@ -239,7 +240,7 @@
       "note": "CR 11, 12, 13 are missing from the SRD text extraction used here (7,200 / 8,400 / 10,000 are the standard values); verify before relying on them. CR 0 is 0 or 10 XP; this file uses 0."
     },
     "level_track": {
-      "source": "core 2.2 standard track: arrive on Floor N at level N, leave at N+1; Floor 1 gains level 2 at the Green Room (core 2.3, overview rule 3)",
+      "source": "core v0.2.19 2.2 standard track (decision 033): arrive Floor N at level N on F1-3, N+1 on F4-9, N+2 on F10-18 (F4 at 5, F10 at 12, F18 at 20 = cap); F3 and F9 end bosses grant +1 and the normal descent/onboarding +1 still fires; leave at arrive+1 (F9 leaves at 11 before F10 onboarding; F18 stays at 20, finale 19-20 levels removed); Floor 1 gains level 2 at the Green Room (core 2.3, overview rule 3), stairwell grants no extra level",
       "slow_burn": "table option; look up the floor whose level matches (core 8.3 note)"
     },
     "core_cr_targets_party_of_4": {
@@ -397,7 +398,8 @@
           "21",
           "24"
         ]
-      }
+      },
+      "lookup_note": "v0.2.0 (decision 033): core 8.3 rows are still keyed by floor with a party-level column written for the old N / N+1 track (core v0.2.19 did not patch 8.3). This file picks the row whose party level matches the floor's arrive level (core 8.3's own slow-burn rule; arrive levels 19-20 use row 18, party level 18-20). The row used is recorded per floor (floors.N.tiers_core_8_3_row_used, floors_7_18.floors.N.core_8_3_row_used)."
     },
     "clock": {
       "source": "decision 026 (Caleb) + Syndicate confirmation",
@@ -745,7 +747,7 @@
           "before_green_room_z9": 1,
           "boss_z10": 2
         },
-        "note": "Floor 1 only: encounters before the Green Room (Z9) budget at level 1; the boss budgets at level 2 (overview rule 3). Floor N>=2: whole floor budgets at level N (descent level applies at the first saferoom of the next floor, core 2.3)."
+        "note": "Floor 1 only: encounters before the Green Room (Z9) budget at level 1; the boss budgets at level 2 (overview rule 3). Floor N>=2: whole floor budgets at the floor's arrive level (core v0.2.19 2.2, decision 033: N on F2-3, N+1 on F4-9, N+2 on F10-18) (descent level applies at the first saferoom of the next floor, core 2.3)."
       },
       "tier_band_map": {
         "map": {
@@ -2125,12 +2127,12 @@
         "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
       },
       "level": {
-        "arrive": 4,
-        "leave": 5,
-        "track": "standard (core 2.2)",
-        "status": "authoritative",
-        "budget_level": 4,
-        "note": "Whole floor budgets at level 4."
+        "arrive": 5,
+        "leave": 6,
+        "track": "standard (core 2.2, decision 033: F4-F9 arrive at N+1)",
+        "status": "authoritative (core v0.2.19 §2.2, decision 033)",
+        "budget_level": 5,
+        "note": "Whole floor budgets at level 5 (decision 033: arrive Floor 4 at level 5). CR caps use the core 8.3 row whose party level matches (row 5), the same lookup core 8.3 gives for the slow-burn track; v0.1.17 budgeted this floor at level 4."
       },
       "tier_band_map": {
         "map": {
@@ -2142,52 +2144,52 @@
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
       "xp_per_character": {
-        "L4": {
-          "low": 250,
-          "moderate": 375,
-          "high": 500
+        "L5": {
+          "low": 500,
+          "moderate": 750,
+          "high": 1100
         }
       },
       "tiers": {
-        "L4": {
+        "L5": {
           "xp_budget_total": {
             "2": {
-              "trivial": 500,
-              "standard": 750,
-              "hard": 1000,
-              "boss": 1000
-            },
-            "3": {
-              "trivial": 750,
-              "standard": 1125,
-              "hard": 1500,
-              "boss": 1500
-            },
-            "4": {
               "trivial": 1000,
               "standard": 1500,
-              "hard": 2000,
-              "boss": 2000
+              "hard": 2200,
+              "boss": 2200
+            },
+            "3": {
+              "trivial": 1500,
+              "standard": 2250,
+              "hard": 3300,
+              "boss": 3300
+            },
+            "4": {
+              "trivial": 2000,
+              "standard": 3000,
+              "hard": 4400,
+              "boss": 4400
             }
           },
           "cr_caps": {
             "2": {
-              "trivial": "1",
-              "standard": "1",
-              "hard": "3",
-              "boss": "3"
+              "trivial": "2",
+              "standard": "2",
+              "hard": "4",
+              "boss": "5"
             },
             "3": {
-              "trivial": "1",
-              "standard": "1",
-              "hard": "3",
-              "boss": "4"
+              "trivial": "2",
+              "standard": "2",
+              "hard": "4",
+              "boss": "7"
             },
             "4": {
-              "trivial": "1",
-              "standard": "1",
-              "hard": "3",
-              "boss": "5"
+              "trivial": "2",
+              "standard": "2",
+              "hard": "4",
+              "boss": "8"
             }
           }
         }
@@ -2211,25 +2213,25 @@
         "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
         "by_party_size": {
           "2": {
-            "floor_xp_ceiling_total": 22000,
-            "daily_xp_budget_typical": 1100.0,
-            "daily_xp_budget_per_crawler": 550.0,
-            "daily_xp_cap_normal_day": 3000,
-            "daily_xp_cap_boss_day": 1750
+            "floor_xp_ceiling_total": 45000,
+            "daily_xp_budget_typical": 2250.0,
+            "daily_xp_budget_per_crawler": 1125.0,
+            "daily_xp_cap_normal_day": 6200,
+            "daily_xp_cap_boss_day": 3700
           },
           "3": {
-            "floor_xp_ceiling_total": 33000,
-            "daily_xp_budget_typical": 1650.0,
-            "daily_xp_budget_per_crawler": 550.0,
-            "daily_xp_cap_normal_day": 4500,
-            "daily_xp_cap_boss_day": 2625
+            "floor_xp_ceiling_total": 67500,
+            "daily_xp_budget_typical": 3375.0,
+            "daily_xp_budget_per_crawler": 1125.0,
+            "daily_xp_cap_normal_day": 9300,
+            "daily_xp_cap_boss_day": 5550
           },
           "4": {
-            "floor_xp_ceiling_total": 44000,
-            "daily_xp_budget_typical": 2200.0,
-            "daily_xp_budget_per_crawler": 550.0,
-            "daily_xp_cap_normal_day": 6000,
-            "daily_xp_cap_boss_day": 3500
+            "floor_xp_ceiling_total": 90000,
+            "daily_xp_budget_typical": 4500.0,
+            "daily_xp_budget_per_crawler": 1125.0,
+            "daily_xp_cap_normal_day": 12400,
+            "daily_xp_cap_boss_day": 7400
           }
         },
         "status": "derived from SRD budgets + ASSUMED mix/density"
@@ -2315,7 +2317,8 @@
         "saferooms_min_per_floor": 2,
         "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
         "status": "ASSUMED (GM may adapt)"
-      }
+      },
+      "tiers_core_8_3_row_used": "5"
     },
     "5": {
       "name": "(floor name per floor doc; core 2.1 working names only)",
@@ -2330,12 +2333,12 @@
         "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
       },
       "level": {
-        "arrive": 5,
-        "leave": 6,
-        "track": "standard (core 2.2)",
-        "status": "authoritative",
-        "budget_level": 5,
-        "note": "Whole floor budgets at level 5."
+        "arrive": 6,
+        "leave": 7,
+        "track": "standard (core 2.2, decision 033: F4-F9 arrive at N+1)",
+        "status": "authoritative (core v0.2.19 §2.2, decision 033)",
+        "budget_level": 6,
+        "note": "Whole floor budgets at level 6 (decision 033: arrive Floor 5 at level 6). CR caps use the core 8.3 row whose party level matches (row 6), the same lookup core 8.3 gives for the slow-burn track; v0.1.17 budgeted this floor at level 5."
       },
       "tier_band_map": {
         "map": {
@@ -2347,52 +2350,52 @@
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
       "xp_per_character": {
-        "L5": {
-          "low": 500,
-          "moderate": 750,
-          "high": 1100
+        "L6": {
+          "low": 600,
+          "moderate": 1000,
+          "high": 1400
         }
       },
       "tiers": {
-        "L5": {
+        "L6": {
           "xp_budget_total": {
             "2": {
-              "trivial": 1000,
-              "standard": 1500,
-              "hard": 2200,
-              "boss": 2200
+              "trivial": 1200,
+              "standard": 2000,
+              "hard": 2800,
+              "boss": 2800
             },
             "3": {
-              "trivial": 1500,
-              "standard": 2250,
-              "hard": 3300,
-              "boss": 3300
+              "trivial": 1800,
+              "standard": 3000,
+              "hard": 4200,
+              "boss": 4200
             },
             "4": {
-              "trivial": 2000,
-              "standard": 3000,
-              "hard": 4400,
-              "boss": 4400
+              "trivial": 2400,
+              "standard": 4000,
+              "hard": 5600,
+              "boss": 5600
             }
           },
           "cr_caps": {
             "2": {
               "trivial": "2",
               "standard": "2",
-              "hard": "4",
-              "boss": "5"
+              "hard": "6",
+              "boss": "6"
             },
             "3": {
               "trivial": "2",
               "standard": "2",
-              "hard": "4",
+              "hard": "6",
               "boss": "7"
             },
             "4": {
               "trivial": "2",
               "standard": "2",
-              "hard": "4",
-              "boss": "8"
+              "hard": "6",
+              "boss": "9"
             }
           }
         }
@@ -2416,25 +2419,25 @@
         "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
         "by_party_size": {
           "2": {
-            "floor_xp_ceiling_total": 57400,
-            "daily_xp_budget_typical": 2296.0,
-            "daily_xp_budget_per_crawler": 1148.0,
-            "daily_xp_cap_normal_day": 6200,
-            "daily_xp_cap_boss_day": 3700
+            "floor_xp_ceiling_total": 74400,
+            "daily_xp_budget_typical": 2976.0,
+            "daily_xp_budget_per_crawler": 1488.0,
+            "daily_xp_cap_normal_day": 8000,
+            "daily_xp_cap_boss_day": 4800
           },
           "3": {
-            "floor_xp_ceiling_total": 86100,
-            "daily_xp_budget_typical": 3444.0,
-            "daily_xp_budget_per_crawler": 1148.0,
-            "daily_xp_cap_normal_day": 9300,
-            "daily_xp_cap_boss_day": 5550
+            "floor_xp_ceiling_total": 111600,
+            "daily_xp_budget_typical": 4464.0,
+            "daily_xp_budget_per_crawler": 1488.0,
+            "daily_xp_cap_normal_day": 12000,
+            "daily_xp_cap_boss_day": 7200
           },
           "4": {
-            "floor_xp_ceiling_total": 114800,
-            "daily_xp_budget_typical": 4592.0,
-            "daily_xp_budget_per_crawler": 1148.0,
-            "daily_xp_cap_normal_day": 12400,
-            "daily_xp_cap_boss_day": 7400
+            "floor_xp_ceiling_total": 148800,
+            "daily_xp_budget_typical": 5952.0,
+            "daily_xp_budget_per_crawler": 1488.0,
+            "daily_xp_cap_normal_day": 16000,
+            "daily_xp_cap_boss_day": 9600
           }
         },
         "status": "derived from SRD budgets + ASSUMED mix/density"
@@ -2520,7 +2523,8 @@
         "saferooms_min_per_floor": 2,
         "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
         "status": "ASSUMED (GM may adapt)"
-      }
+      },
+      "tiers_core_8_3_row_used": "6"
     },
     "6": {
       "name": "(floor name per floor doc; core 2.1 working names only)",
@@ -2535,12 +2539,12 @@
         "long_rest_where": "honest saferoom only (core 5.6; overview rule 7)"
       },
       "level": {
-        "arrive": 6,
-        "leave": 7,
-        "track": "standard (core 2.2)",
-        "status": "authoritative",
-        "budget_level": 6,
-        "note": "Whole floor budgets at level 6."
+        "arrive": 7,
+        "leave": 8,
+        "track": "standard (core 2.2, decision 033: F4-F9 arrive at N+1)",
+        "status": "authoritative (core v0.2.19 §2.2, decision 033)",
+        "budget_level": 7,
+        "note": "Whole floor budgets at level 7 (decision 033: arrive Floor 6 at level 7). CR caps use the core 8.3 row whose party level matches (row 7), the same lookup core 8.3 gives for the slow-burn track; v0.1.17 budgeted this floor at level 6."
       },
       "tier_band_map": {
         "map": {
@@ -2552,52 +2556,52 @@
         "status": "authoritative for F1 (overview 9.2 labels); ASSUMED for F2+ (core 8.3: mostly Moderate, some Low, 1-3 High per floor)"
       },
       "xp_per_character": {
-        "L6": {
-          "low": 600,
-          "moderate": 1000,
-          "high": 1400
+        "L7": {
+          "low": 750,
+          "moderate": 1300,
+          "high": 1700
         }
       },
       "tiers": {
-        "L6": {
+        "L7": {
           "xp_budget_total": {
             "2": {
-              "trivial": 1200,
-              "standard": 2000,
-              "hard": 2800,
-              "boss": 2800
+              "trivial": 1500,
+              "standard": 2600,
+              "hard": 3400,
+              "boss": 3400
             },
             "3": {
-              "trivial": 1800,
-              "standard": 3000,
-              "hard": 4200,
-              "boss": 4200
+              "trivial": 2250,
+              "standard": 3900,
+              "hard": 5100,
+              "boss": 5100
             },
             "4": {
-              "trivial": 2400,
-              "standard": 4000,
-              "hard": 5600,
-              "boss": 5600
+              "trivial": 3000,
+              "standard": 5200,
+              "hard": 6800,
+              "boss": 6800
             }
           },
           "cr_caps": {
             "2": {
-              "trivial": "2",
-              "standard": "2",
-              "hard": "6",
-              "boss": "6"
-            },
-            "3": {
-              "trivial": "2",
-              "standard": "2",
+              "trivial": "3",
+              "standard": "3",
               "hard": "6",
               "boss": "7"
             },
-            "4": {
-              "trivial": "2",
-              "standard": "2",
+            "3": {
+              "trivial": "3",
+              "standard": "3",
               "hard": "6",
-              "boss": "9"
+              "boss": "8"
+            },
+            "4": {
+              "trivial": "3",
+              "standard": "3",
+              "hard": "6",
+              "boss": "10"
             }
           }
         }
@@ -2621,25 +2625,25 @@
         "definition": "floor_xp_ceiling_total = sum over planned encounters of the tier's xp_budget_total; daily_xp_budget_typical = that / clock.days. Caps: normal day = 1 hard + 2 standard + 1 trivial; boss day = boss + 1 standard. 2024 SRD has no adventuring-day XP table, so these are house guidelines (ASSUMED).",
         "by_party_size": {
           "2": {
-            "floor_xp_ceiling_total": 87600,
-            "daily_xp_budget_typical": 2920.0,
-            "daily_xp_budget_per_crawler": 1460.0,
-            "daily_xp_cap_normal_day": 8000,
-            "daily_xp_cap_boss_day": 4800
+            "floor_xp_ceiling_total": 111300,
+            "daily_xp_budget_typical": 3710.0,
+            "daily_xp_budget_per_crawler": 1855.0,
+            "daily_xp_cap_normal_day": 10100,
+            "daily_xp_cap_boss_day": 6000
           },
           "3": {
-            "floor_xp_ceiling_total": 131400,
-            "daily_xp_budget_typical": 4380.0,
-            "daily_xp_budget_per_crawler": 1460.0,
-            "daily_xp_cap_normal_day": 12000,
-            "daily_xp_cap_boss_day": 7200
+            "floor_xp_ceiling_total": 166950,
+            "daily_xp_budget_typical": 5565.0,
+            "daily_xp_budget_per_crawler": 1855.0,
+            "daily_xp_cap_normal_day": 15150,
+            "daily_xp_cap_boss_day": 9000
           },
           "4": {
-            "floor_xp_ceiling_total": 175200,
-            "daily_xp_budget_typical": 5840.0,
-            "daily_xp_budget_per_crawler": 1460.0,
-            "daily_xp_cap_normal_day": 16000,
-            "daily_xp_cap_boss_day": 9600
+            "floor_xp_ceiling_total": 222600,
+            "daily_xp_budget_typical": 7420.0,
+            "daily_xp_budget_per_crawler": 1855.0,
+            "daily_xp_cap_normal_day": 20200,
+            "daily_xp_cap_boss_day": 12000
           }
         },
         "status": "derived from SRD budgets + ASSUMED mix/density"
@@ -2726,15 +2730,16 @@
         "saferooms_min_per_floor": 2,
         "boss_rest_before": "offer a short or long rest in the nearest honest saferoom before the boss; never force it",
         "status": "ASSUMED (GM may adapt)"
-      }
+      },
+      "tiers_core_8_3_row_used": "7"
     }
   },
   "floors_7_18": {
     "status": "formula and placeholders only",
     "steps": [
-      "level = floor number (standard track); band map = BAND_STD (A1)",
+      "level = arrive level on the standard track (core v0.2.19 §2.2, decision 033: F1-3 arrive at N, F4-9 at N+1, F10-18 at N+2, F18 at the level-20 cap); band map = BAND_STD (A1); core 8.3 CR ranges = the core 8.3 row whose party level matches the arrive level (rows above 18 use row 18, party level 18-20)",
       "tier budget(P) = SRD per-character XP at the budget level for the band x party size P",
-      "CR cap(tier) = min(core 8.3 upper bound for the tier, highest CR whose XP <= lead_share x tier budget); lead_share = 0.9 for boss, 1.0 otherwise",
+      "CR cap(tier) = min(core 8.3 upper bound for the tier (row matched by level, see step 1), highest CR whose XP <= lead_share x tier budget); lead_share = 0.9 for boss, 1.0 otherwise",
       "encounters total = round(days x per_day_typical); mix rule as floors.2.encounters.formula",
       "daily XP budget = sum(tier counts x tier budget) / days; caps: normal day 1 hard + 2 standard + 1 trivial; boss day boss + 1 standard",
       "encounter credits per Crawler = tier dice x cash_scale; cash_scale = credit multiplier (A9) so rewards keep pace with fees",
@@ -2743,38 +2748,6 @@
     ],
     "floors": {
       "7": {
-        "level_arrive": 7,
-        "level_leave": 8,
-        "budget_level": 7,
-        "xp_per_character_at_budget_level": {
-          "low": 750,
-          "moderate": 1300,
-          "high": 1700
-        },
-        "core_8_3_cr": {
-          "mob": [
-            "2",
-            "3"
-          ],
-          "elite": [
-            "5",
-            "6"
-          ],
-          "boss": [
-            "9",
-            "10"
-          ]
-        },
-        "credit_multiplier": 5,
-        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
-        "encounters_per_day_typical": "PLACEHOLDER",
-        "mix": "PLACEHOLDER (apply mix rule)",
-        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
-        "box_targets": "core 4.5 row for the floor band",
-        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
-      },
-      "8": {
         "level_arrive": 8,
         "level_leave": 9,
         "budget_level": 8,
@@ -2804,9 +2777,10 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "8"
       },
-      "9": {
+      "8": {
         "level_arrive": 9,
         "level_leave": 10,
         "budget_level": 9,
@@ -2836,9 +2810,10 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "9"
       },
-      "10": {
+      "9": {
         "level_arrive": 10,
         "level_leave": 11,
         "budget_level": 10,
@@ -2861,48 +2836,17 @@
             "13"
           ]
         },
-        "credit_multiplier": 20,
+        "credit_multiplier": 5,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
         "mix": "PLACEHOLDER (apply mix rule)",
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "10"
       },
-      "11": {
-        "level_arrive": 11,
-        "level_leave": 12,
-        "budget_level": 11,
-        "xp_per_character_at_budget_level": {
-          "low": 1900,
-          "moderate": 2900,
-          "high": 4100
-        },
-        "core_8_3_cr": {
-          "mob": [
-            "4",
-            "5"
-          ],
-          "elite": [
-            "9",
-            "10"
-          ],
-          "boss": [
-            "13",
-            "14"
-          ]
-        },
-        "credit_multiplier": 20,
-        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
-        "encounters_per_day_typical": "PLACEHOLDER",
-        "mix": "PLACEHOLDER (apply mix rule)",
-        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
-        "box_targets": "core 4.5 row for the floor band",
-        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
-      },
-      "12": {
+      "10": {
         "level_arrive": 12,
         "level_leave": 13,
         "budget_level": 12,
@@ -2932,9 +2876,10 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "12"
       },
-      "13": {
+      "11": {
         "level_arrive": 13,
         "level_leave": 14,
         "budget_level": 13,
@@ -2964,9 +2909,10 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "13"
       },
-      "14": {
+      "12": {
         "level_arrive": 14,
         "level_leave": 15,
         "budget_level": 14,
@@ -2996,9 +2942,10 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "14"
       },
-      "15": {
+      "13": {
         "level_arrive": 15,
         "level_leave": 16,
         "budget_level": 15,
@@ -3021,16 +2968,17 @@
             "19"
           ]
         },
-        "credit_multiplier": 50,
+        "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
         "mix": "PLACEHOLDER (apply mix rule)",
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "15"
       },
-      "16": {
+      "14": {
         "level_arrive": 16,
         "level_leave": 17,
         "budget_level": 16,
@@ -3053,16 +3001,17 @@
             "20"
           ]
         },
-        "credit_multiplier": 50,
+        "credit_multiplier": 20,
         "days": "PLACEHOLDER (decision 026: later floors grow longer)",
         "encounters_per_day_typical": "PLACEHOLDER",
         "mix": "PLACEHOLDER (apply mix rule)",
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "16"
       },
-      "17": {
+      "15": {
         "level_arrive": 17,
         "level_leave": 18,
         "budget_level": 17,
@@ -3092,11 +3041,12 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "17"
       },
-      "18": {
+      "16": {
         "level_arrive": 18,
-        "level_leave": "19-20 (finale)",
+        "level_leave": 19,
         "budget_level": 18,
         "xp_per_character_at_budget_level": {
           "low": 5000,
@@ -3124,7 +3074,74 @@
         "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
         "box_targets": "core 4.5 row for the floor band",
         "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
-        "status": "formula only; nothing here is invented detail"
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "18"
+      },
+      "17": {
+        "level_arrive": 19,
+        "level_leave": 20,
+        "budget_level": 19,
+        "xp_per_character_at_budget_level": {
+          "low": 5500,
+          "moderate": 10700,
+          "high": 17200
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "8",
+            "10"
+          ],
+          "elite": [
+            "16",
+            "18"
+          ],
+          "boss": [
+            "21",
+            "24"
+          ]
+        },
+        "credit_multiplier": 50,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "18"
+      },
+      "18": {
+        "level_arrive": 20,
+        "level_leave": "20 (cap; decision 033 removed the finale 19-20 levels)",
+        "budget_level": 20,
+        "xp_per_character_at_budget_level": {
+          "low": 6400,
+          "moderate": 13200,
+          "high": 22000
+        },
+        "core_8_3_cr": {
+          "mob": [
+            "8",
+            "10"
+          ],
+          "elite": [
+            "16",
+            "18"
+          ],
+          "boss": [
+            "21",
+            "24"
+          ]
+        },
+        "credit_multiplier": 50,
+        "days": "PLACEHOLDER (decision 026: later floors grow longer)",
+        "encounters_per_day_typical": "PLACEHOLDER",
+        "mix": "PLACEHOLDER (apply mix rule)",
+        "cash_per_crawler": "PLACEHOLDER (tier dice x credit multiplier, if A9 is kept)",
+        "box_targets": "core 4.5 row for the floor band",
+        "audit_line": "PLACEHOLDER: see proposed_floor_growth_curve.table (flag line proposal)",
+        "status": "formula only; nothing here is invented detail",
+        "core_8_3_row_used": "18"
       }
     }
   },
