@@ -1,5 +1,5 @@
-# 03 — Character Creation (5e Intake) v0.2.4
-Owner: Syndicate | Status: draft | Version: 0.2.4 | Updated: 2026-10-04
+# 03 — Character Creation (5e Intake) v0.2.5
+Owner: Syndicate | Status: draft | Version: 0.2.5 | Updated: 2026-10-04
 Summary: How the System runs 5e 2024 character creation (intake) for crawlers, including table setup (Death Mode, comfort) and the crawler sheet template.
 Source: crawler-protocol/03-character-creation-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -290,7 +290,7 @@ Rules for the draft:
 
 - **Class:** take the class's listed starting-equipment package **or** its listed credits option (the GP-in-place-of-gear option), per the 2024 PHB / SRD 5.2.
 - **Background:** take the background's equipment package **or** its credits option (50 credits, which is 50 GP in the 2024 rules). The two background packages read as **Cardboard Carton From Your Desk (Package A)** (the items, plus any credits left over) and **Severance Envelope, Unmarked (Package B)** (credits only).
-- **Credits** is the display label for GP, 1 credit = 1 GP (`02` §5.10); copper shows as a fraction of a credit (1 cp = 0.01 credit) per `02` §5.10. Starting credits are exactly what 5e chargen gives; the Crawl adds **no** stipend.
+- **Credits** is the display label for GP, 1 credit = 1 GP (`02` §5.10); credits are whole numbers only; sp/cp are SRD list prices (1 cp = 0.01 credit), charged rounded up to whole credits per cart line, and selling at half rounds down per line (`02` §5.10). Starting credits are exactly what 5e chargen gives; the Crawl adds **no** stipend.
 - Buying gear with the credits option: the System runs it as the **Intake Vending Wall** (5e prices, PHB equipment lists). No magic items at intake.
 
 ### 6.2 Reskin the kit as junk
@@ -642,6 +642,7 @@ The **Fan Profile** and **opt-outs** are **not** on the player-visible sheet. Th
 | v0.2.2 | 2026-10-04 | Pointer paragraph in §10.3 for several Crawlers per player (one active, others benched; swaps only at session zero or between sessions; sheet channel per Crawler; `/delete`); extra cross-reference in the replacement row. No intake step, number or rule changed. Earlier history lives in the header and status lines. |
 | v0.2.3 | 2026-10-04 | §3.6: **Roll** added as a third ability-score method (three arrays of 4d6 drop lowest, keep ONE array totalling 73+, reroll all three if none qualifies, every die logged, assign freely, switch `create.allow_roll` default ON; decision 024); step 6 name, `SCORES:` line, sheet template line, checklist and Open Q4 follow. Standard array and point buy unchanged. |
 | v0.2.4 | 2026-10-04 | Book Author stale-text fixes (rulings already made): "Credits = GP" reworded (credits is the display label for GP, 1 credit = 1 GP, copper per core §5.10); player-facing "gold" becomes "credits" (class and background options, step 7, sample dialogue); Floor 1 Reprieve is ON by default for Season Zero Floor 1 (tables may turn it off) and never covers a collapse death; Detour Tax is only for a missed Stairwell key; background packages named (Cardboard Carton From Your Desk (Package A), Severance Envelope, Unmarked (Package B)); rules base pointer updated; Roll threshold wording "73 or more" with its source (verified: decision 024, chargen-5e.json keep_min_total 73, bot ROLL_MIN_TOTAL 73). No number changed. |
+| v0.2.5 | 2026-10-04 | §6 credits line: whole credits only, sp/cp are list prices, buy rounds up and sell-at-half rounds down per line (core v0.2.16 §5.10). |
 
 ---
 

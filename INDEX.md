@@ -5,7 +5,7 @@ Summary: Every file in the campaign workspace, one line each.
 | Path | Description | Owner | Status |
 |---|---|---|---|
 | NAMING-CONVENTIONS.md | Folder layout and file naming rules | Borent | final |
-| STATE-OF-BUILD.md | Handoff: who owns what, what needs Caleb, what is live vs pending, open questions, standing rulings, backlog, how to update, live/ops runbook (v0.1.5) | Syndicate + Architect | living |
+| STATE-OF-BUILD.md | Handoff: who owns what, what needs Caleb, what is live vs pending, open questions, standing rulings, backlog, how to update, live/ops runbook (v0.1.6) | Syndicate + Architect | living |
 | lore/INDEX.md | Canon catalogs, sources and research tools | DCC Lore | living |
 | lore/CANON-LEDGER.md | Verified/unverified canon findings with sources | DCC Lore | in progress |
 | rules/_source-crawler-protocol/02-core-rules-5e.md | 5e (2024) overlay: loot boxes, death and revival | Syndicate | draft v0.2.2 |
@@ -14,8 +14,8 @@ Summary: Every file in the campaign workspace, one line each.
 | decisions/002-death-mode.md | Death Mode decision: Costly Revives, very costly and rare | Borent | final |
 | decisions/003-death-bypasses.md | Earned death bypasses vs revives | Borent | final |
 | decisions/004-crafting-system.md | Crafting system added; ownership split | Borent | final |
-| rules/10-core-rules-5e.md | 5e (2024) overlay: achievements, loot boxes, death/revival, Floor 1 quickstart, crafting pointer, pets pointer, Roll method pointer | Syndicate | draft v0.2.15 |
-| characters/character-creation-5e.md | 5e character creation (intake) guide and crawler sheet template (§3.6: Roll method) | Syndicate | draft v0.2.4 |
+| rules/10-core-rules-5e.md | 5e (2024) overlay: achievements, loot boxes, death/revival, Floor 1 quickstart, crafting pointer, pets pointer, Roll method pointer | Syndicate | draft v0.2.16 |
+| characters/character-creation-5e.md | 5e character creation (intake) guide and crawler sheet template (§3.6: Roll method) | Syndicate | draft v0.2.5 |
 | characters/create-flow-spec-5e.md | Create flow spec: screen-by-screen build spec for the silent Discord /create flow (16 active screens, S12 retired; data model, edge cases, glossary, beta test script; section 8: several Crawlers per player; section 9: GM-filed pets, no pet question in /create; S8 Roll method (v0.1.10), active Crawler, session lock, text channel per Crawler, /delete, NEEDS BUILD list; acceptance and audit checklists) | Syndicate | draft v0.1.12 |
 | characters/hornn-wizard.md | Hornn crawler sheet (Wizard, Human, Merchant), intake sealed and registered in state | AI GM | draft v0.4 |
 | characters/moses-barbarian.md | Trailer Park Moses (John) crawler sheet (Barbarian, Goliath, Artisan), intake sealed and registered in state | AI GM | draft v0.4 |
@@ -23,7 +23,7 @@ Summary: Every file in the campaign workspace, one line each.
 | floors/00-campaign-narrative.md | Campaign spine: Continuum floor structure and story arc | Syndicate | draft v0.3 |
 | tables/achievements.csv | Achievement catalog, 1,826 rows (data); card in tables/achievements.md | Syndicate | draft |
 | tables/achievements.xlsx | Achievement catalog, same data with filters (data) | Syndicate | draft |
-| tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.1 |
+| tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.3 |
 | tables/chargen-5e.json | /create data (2024 PHB written from memory; see meta.verify_todo; v0.1.5 rewords Find Familiar (no pet hint); v0.1.6 notes cite the current version; ability_methods.roll added in v0.1.4) | Syndicate | draft v0.1.6 |
 | tables/create-flow-lines.json | System lines and survey pool for the /create flow | Borent | draft |
 | tables/item-reskins.json | SRD item -> flavored name table (189 entries). A SYMLINK to ../../dcc-lore/tables/item-reskins.json (single source, owner Lore); hash in item-reskins.version.json | Lore | draft |

@@ -15,7 +15,7 @@
       "tables/loot-decks/*.json",
       "tables/achievements.csv",
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
-      "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
+      "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
       "rules/70-encounter-budget-5e.json v{budget_version} and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
@@ -217,10 +217,6 @@
           "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
         },
         {
-          "ledger_id": "A-151",
-          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv."
-        },
-        {
           "ledger_id": "M-275",
           "use": "Canon: boss arenas hold a stairwell (the Z10 stage is the house version)."
         }
@@ -229,7 +225,15 @@
         "text": "Six hours remain. Anyone going down the stairs from this point descends freely. Anyone who went earlier is still napping in the stairwell. Hurry up.",
         "tag": "[PLAYER-FACING]"
       },
-      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)"
+      "sideline_note": "A Crawler in stasis is out of the floor, not out of the game. Their player gets short sideline System scenes until the party arrives on Floor 2: waiting-room gags, and a vote on the party's next move. The GM decides how much weight the vote carries, keeps each scene brief, and cuts back to the main table. (Syndicate ruling, decision 026.)",
+      "achievements": [
+        {
+          "id": "ACH-1826",
+          "canon_ledger_id": "A-151",
+          "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
+        }
+      ]
     },
     "floor_exit": {
       "system_line": {
@@ -340,10 +344,6 @@
         {
           "ledger_id": "M-277",
           "use": "Canon: descending with more than six hours left holds the Crawler in stasis until the collapse."
-        },
-        {
-          "ledger_id": "A-151",
-          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv."
         }
       ],
       "achievements": [
@@ -354,6 +354,12 @@
         {
           "id": "ACH-0868",
           "note": "Dodge a telegraphed area attack."
+        },
+        {
+          "id": "ACH-1826",
+          "canon_ledger_id": "A-151",
+          "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
         }
       ],
       "voice_lines": {
@@ -378,12 +384,7 @@
       "path": "Z9, then the boss for the Silver Boss Box, then the stairs.",
       "summary": "Whatever is left is the Green Room boxes, the Z S hall and the boss's cache. The Silver Boss Box (Z10 deck) is the floor-clear reward.",
       "stairwell_access": "Zone S service door by the remaining ways, or the boss stage.",
-      "canon_refs": [
-        {
-          "ledger_id": "A-139",
-          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
-        }
-      ],
+      "canon_refs": [],
       "achievements": [
         {
           "id": "ACH-0170",
@@ -392,6 +393,12 @@
         {
           "id": "ACH-0022",
           "note": "Tutorial Complete."
+        },
+        {
+          "id": "ACH-1825",
+          "canon_ledger_id": "A-139",
+          "note": "Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait.",
+          "gm_note": "Reward: see the catalog row (tables/achievements.csv, ACH-1825)."
         }
       ],
       "voice_lines": {
@@ -416,12 +423,7 @@
       "path": "Z9 to the stage or Zone S, by wits.",
       "summary": "The last door has a price, a key or a Dean. The toll turnstile at the Z S door (price from the budget file) is the clever way past a missing key; the boss has three cheese routes.",
       "stairwell_access": "Zone S door by key, tools, force or toll; or the stage by the cheese routes.",
-      "canon_refs": [
-        {
-          "ledger_id": "A-139",
-          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
-        }
-      ],
+      "canon_refs": [],
       "achievements": [
         {
           "id": "ACH-0189",
@@ -434,6 +436,12 @@
         {
           "id": "ACH-0180",
           "note": "Stair Seeker."
+        },
+        {
+          "id": "ACH-1825",
+          "canon_ledger_id": "A-139",
+          "note": "Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait.",
+          "gm_note": "Reward: see the catalog row (tables/achievements.csv, ACH-1825)."
         }
       ],
       "voice_lines": {
@@ -528,7 +536,7 @@
         "tag": "canon"
       }
     ],
-    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so canon A-044 (stairs within an hour of arrival) is not attainable on Floor 1; it stays a canon reference only.",
+    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so ACH-1824 Not Unpacking (catalog row for canon A-044) is not earnable on Floor 1; it is listed for continuity only.",
     "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
     "keyless_fee": {
       "b70": {
@@ -1229,9 +1237,9 @@
           },
           "narration": "You left early. The floor is still here. So are you, in a closet.",
           "narration_tag": "[PLAYER-FACING]",
-          "canon_ref": {
-            "ledger_id": "A-151",
-            "use": "Parallel canon: 'The Early Bird Gets To Squirm'."
+          "catalog_parallel": {
+            "id": "ACH-1826",
+            "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
           }
         }
       ],
@@ -1287,12 +1295,6 @@
       "item": "Canon table, collapse notices, missed-floor line and zone color",
       "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
       "status": "received"
-    },
-    {
-      "owner": "Syndicate",
-      "item": "ACH rows for canon A-044, A-151 and A-139",
-      "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
-      "status": "waiting (backlog)"
     },
     {
       "owner": "Encounter Bot",

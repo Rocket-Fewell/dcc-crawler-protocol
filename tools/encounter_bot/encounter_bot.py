@@ -308,6 +308,11 @@ class Data:
             for r in csv.DictReader(f):
                 self.ach[r["ID"]] = r
         self.ach_names = {re.sub(r"^.*?:\s*", "", r["Name"]).strip().lower() for r in self.ach.values()}
+        # catalog rows that carry a canon ledger row ("Canon ref A-044 ..." in Notes), e.g. ACH-1824..1826 (catalog v1.1)
+        self.ach_by_canon = {}
+        for r in self.ach.values():
+            for lid in re.findall(r"Canon ref (A-\d{3})", r.get("Notes", "")):
+                self.ach_by_canon.setdefault(lid, r["ID"])
         self.overview = read_text(os.path.join(ROOT, "floors", "f01", "00-overview.md"))
         self.ov_grams = set()
         w = words(self.overview)
@@ -414,6 +419,13 @@ def add_audience(doc, rep):
     for key in ("gm_warning", "warning_checks"):
         if isinstance(d.get(key), dict):
             d[key]["audience"] = "gm"
+    for r in doc["routes"]:
+        for q in r.get("achievements", []) or []:
+            q["audience"] = "gm"
+    for q in ed.get("achievements", []) or []:
+        q["audience"] = "gm"
+    for q in (d.get("last_chance_hooks") or {}).get("achievements", []) or []:
+        q["audience"] = "gm"
     for key in ("clock", "stairwell_key"):
         if isinstance(doc.get(key), dict):
             doc[key]["audience"] = "gm"
@@ -571,13 +583,22 @@ def build(spec, data, rep):
         if not r:
             rep.fail("achievement id", "%s (%s) not in tables/achievements.csv" % (a["id"], where))
             return dict(a, name=None, valid=False)
-        return dict(a, name=r["Name"], rarity=r["Rarity"], floor=r["Floor"], label=data.ach_label(r), valid=True)
+        out = dict(a, name=r["Name"], rarity=r["Rarity"], floor=r["Floor"], label=data.ach_label(r), valid=True)
+        if a.get("canon_ledger_id"):
+            lid = a["canon_ledger_id"]
+            check_ledger(lid, where)
+            out["canon_ledger_name"] = data.ledger.get(lid, "")
+            if data.ach_by_canon.get(lid) != a["id"]:
+                rep.fail("achievement canon lineage", "%s (%s): catalog row does not cite canon %s in its Notes" % (a["id"], where, lid))
+        return out
 
     def resolve_canon_ref(c, where):
         check_ledger(c["ledger_id"], where)
         name = data.ledger.get(c["ledger_id"], "")
-        in_csv = name.strip().lower() in data.ach_names if c["ledger_id"].startswith("A-") else None
+        in_csv = (name.strip().lower() in data.ach_names or c["ledger_id"] in data.ach_by_canon) if c["ledger_id"].startswith("A-") else None
         out = dict(c, ledger_name=name)
+        if c["ledger_id"] in data.ach_by_canon:
+            out["catalog_id"] = data.ach_by_canon[c["ledger_id"]]
         if in_csv is not None:
             out["in_achievements_csv"] = in_csv
             if not in_csv:
@@ -657,6 +678,7 @@ def build(spec, data, rep):
         if ep.get("tag") == PF and ep.get("text") and early.get("gm_override_note") and early.get("canon_refs") \
                 and "sideline" in early.get("sideline_note", "") and not early.get("slots"):
             early["canon_refs"] = [resolve_canon_ref(c, "early_descent") for c in early["canon_refs"]]
+            early["achievements"] = [resolve_ach(a, "early_descent") for a in early.get("achievements", [])]
             rep.ok("early-descent stasis handling", "player prompt [PLAYER-FACING], canon refs, GM override note and sideline-scenes note present")
         else:
             rep.fail("early-descent stasis handling", "needs player_prompt (PF), canon_refs, gm_override_note and the stasis sideline_note (decision 026 ruling 4)")
@@ -923,6 +945,12 @@ def build(spec, data, rep):
             if pa.get("canon_ref"):
                 check_ledger(pa["canon_ref"]["ledger_id"], where)
                 pa = dict(pa, canon_ref=dict(pa["canon_ref"], ledger_name=data.ledger.get(pa["canon_ref"]["ledger_id"], "")))
+            if pa.get("catalog_parallel"):
+                cp = data.ach.get(pa["catalog_parallel"].get("id"))
+                if not cp:
+                    rep.fail("proposed achievement %s" % pa.get("name"), "catalog_parallel %s not in tables/achievements.csv (%s)" % (pa["catalog_parallel"].get("id"), where))
+                else:
+                    pa = dict(pa, catalog_parallel=dict(pa["catalog_parallel"], name=cp["Name"], rarity=cp["Rarity"], label=data.ach_label(cp)))
             out.append(pa)
         return out
     n_prop = 0
@@ -1053,6 +1081,23 @@ def build(spec, data, rep):
         rep.fail("carry-on on every encounter", "missing or incomplete (changes with reacts_in or later_note, gm_tracks): %s" % ", ".join(co_bad))
     else:
         rep.ok("carry-on on every encounter", "%d encounters, %d references to later encounters, all exist and are later" % (len(encs), co_refs))
+    F1_ACH_NOTES = {"ACH-1824": "Not earnable on Floor 1", "ACH-1826": "earnable only via stasis"}
+    hooks_ = [a for r in routes for a in r["achievements"]] + [a for x in encs for a in x["achievement_hooks"]] + list(early.get("achievements", []))
+    hooks_ += [a for a in last.get("achievements", [])]
+    hooks_ += [dict(p_["catalog_parallel"], note="") for p_ in [p_ for x in encs for p_ in x["proposed_achievements"]] + day_prop if p_.get("catalog_parallel")]
+    an_bad = [a["id"] for a in hooks_ if spec["meta"].get("floor") == 1 and a["id"] in F1_ACH_NOTES and F1_ACH_NOTES[a["id"]] not in a.get("gm_note", "")]
+    an_bad += ["%s (needs 'once per Crawler' in its note)" % a["id"] for a in hooks_ if a["id"] in ("ACH-1824", "ACH-1825", "ACH-1826") and a.get("note") != "" and "once per Crawler" not in a.get("note", "")]
+    n_cont = sum(1 for a in hooks_ if a["id"] in F1_ACH_NOTES or a["id"] == "ACH-1825")
+    if an_bad:
+        rep.fail("catalog continuity notes", "Floor 1 hooks need a gm_note (%s) and 'once per Crawler': %s" % ("; ".join("%s: '%s'" % kv for kv in F1_ACH_NOTES.items()), ", ".join(an_bad)))
+    elif n_cont:
+        rep.ok("catalog continuity notes", "%d hook(s) for ACH-1824/1825/1826; ACH-1824 and ACH-1826 carry their Floor 1 GM-only notes" % n_cont)
+    gm_notes_ = {a["gm_note"] for a in hooks_ if a.get("gm_note")}
+    leak_ = [w_ for w_, t_, _ in pfb for g_ in gm_notes_ if g_ in t_]
+    if leak_:
+        rep.fail("GM notes kept out of player text", "achievement GM note appears in player block(s): %s" % ", ".join(leak_))
+    elif gm_notes_:
+        rep.ok("GM notes kept out of player text", "%d achievement GM note(s); none appears in any [PLAYER-FACING] block" % len(gm_notes_))
     rf_ = clk_.get("rest_fee_note", {}) if isinstance((clk_ := spec["clock"]), dict) else {}
     fee_txt_ = [(p_, s_) for p_, s_ in full if "rest_without_saferoom}}" in s_ or "rest-without-a-saferoom price" in s_]
     rf_bad = [p_ for p_, s_ in fee_txt_ if "already quiet" not in s_]
@@ -1119,12 +1164,24 @@ def gm(note):
     return note if note.startswith(GM) or "[GM-ONLY]" in note else "%s %s" % (GM, note)
 
 
+def ach_line(a):
+    s = "%s: %s" % (a.get("label", a["id"]), a["note"])
+    if a.get("canon_ledger_id"):
+        s += " (catalog row for canon %s)" % a["canon_ledger_id"]
+    if a.get("gm_note"):
+        s += " " + gm(a["gm_note"])
+    return s
+
+
 def render_proposed(pa):
     s = "**Proposed achievement** *%s* [%s]: trigger: %s" % (pa["name"], pa["tag"], pa["trigger"])
     if pa.get("narration"):
         s += " Narration %s: \"%s\"" % (pa["narration_tag"], pa["narration"])
     if pa.get("canon_ref"):
         s += " Canon parallel: %s \"%s\" (reference only)." % (pa["canon_ref"]["ledger_id"], pa["canon_ref"]["ledger_name"])
+    if pa.get("catalog_parallel"):
+        cp = pa["catalog_parallel"]
+        s += " Catalog parallel: %s%s." % (cp.get("label", cp["id"]), (" " + gm(cp["gm_note"])) if cp.get("gm_note") else "")
     return s + " Reward (guideline, GM may adapt): %s" % fill_text(pa["reward_slot"])
 
 
@@ -1209,7 +1266,7 @@ def render_md(doc):
         w("- **What it costs and gives:** %s" % r["summary"])
         w("- **Stairwell access:** %s" % r["stairwell_access"])
         if r["achievements"]:
-            w("- **Achievement ids:** " + "; ".join("%s - %s" % (a.get("label", a["id"]), a["note"]) for a in r["achievements"]))
+            w("- **Achievement ids:** " + "; ".join(ach_line(a) for a in r["achievements"]))
         for c in r["canon_refs"]:
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
         w("")
@@ -1246,6 +1303,8 @@ def render_md(doc):
         w("- **GM override:** %s" % ed["gm_override_note"])
         for c in ed["canon_refs"]:
             w("- **Canon ref** %s \"%s\": %s" % (c["ledger_id"], c["ledger_name"], c["use"]))
+        for a in ed.get("achievements", []):
+            w("- **Achievement** %s" % ach_line(a))
         w("- **GM note (stasis sideline scenes):** %s" % ed["sideline_note"])
         w("")
     w("### Rest options (Day %d)\n" % m["day"])
@@ -1330,7 +1389,7 @@ def render_md(doc):
         if e.get("spine_plant_gm_only"):
             w("- " + gm(e["spine_plant_gm_only"]))
         for a in e["achievement_hooks"]:
-            w("- **Achievement** %s: %s" % (a.get("label", a["id"]), a["note"]))
+            w("- **Achievement** %s" % ach_line(a))
         for pa in e.get("proposed_achievements", []):
             w("- " + render_proposed(pa))
         w("")
@@ -1369,7 +1428,7 @@ def render_md(doc):
     w("## Day loot and achievement hooks (%s)\n" % lc.get("heading", "what is closing next"))
     w(lc["note"] + "\n")
     for a in lc["achievements"]:
-        w("- **Achievement** %s: %s" % (a.get("label", a["id"]), a["note"]))
+        w("- **Achievement** %s" % ach_line(a))
     for c in lc["cards"]:
         w("- **Card** `%s` %s [%s]: %s" % (c["card_id"], c.get("display", ""), c.get("tier", "?"), c["note"]))
     if day.get("proposed_achievements") or any(x.get("proposed_achievements") for x in doc["encounters"]):

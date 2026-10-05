@@ -1,5 +1,5 @@
-# 02 — Core Rules (5e Overlay) v0.2.15
-Owner: Syndicate | Status: draft | Version: 0.2.15 | Updated: 2026-10-04
+# 02 — Core Rules (5e Overlay) v0.2.16
+Owner: Syndicate | Status: draft | Version: 0.2.16 | Updated: 2026-10-04
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -624,7 +624,8 @@ Each crawler has an extradimensional **System Inventory**:
 
 ### 5.10 Credits, vendors, appraisal
 
-- **1 credit = 1 GP.** *Credits* is the display label for GP in everything a Crawler sees. Use 5e prices. Starting credits per 5e chargen. Copper is shown as a fraction of a credit (1 cp = 0.01 credit): whole credits print without decimals (15 credits), fractions with decimals (0.5 credit, 0.05 credit), and "credit" is singular for 1 or less.
+- **1 credit = 1 GP.** *Credits* is the display label for GP in everything a Crawler sees. Use 5e prices. Starting credits per 5e chargen. **Credits are whole numbers only** (matches `tools/state.py` and decision 028): a balance is never fractional. Copper and silver exist only as list prices on SRD gear (for reference, 1 sp = 0.1 credit, 1 cp = 0.01 credit); "credit" is singular for 1.
+- **Rounding (whole credits per line).** *Buying:* a sub-credit price is charged rounded **up** to whole credits per cart line (1 Torch costs 1 credit; 10 Torches on one line also cost 1 credit). *Selling at half:* rounded **down** to whole credits per line, so an item worth under 2 credits sells for 0 unless grouped with others on one line.
 - **Vendors:** buy at 5e prices ± the AI's mood; sell at half. Haggling = Charisma (Persuasion/Deception/Intimidation) vs. vendor DC (typically 12–18); success ≈ 10–25% off. Continuum vendors remember you.
 - **Identifying items:** 5e as written (*Identify*, Short Rest study). System terminals and dock appraisers can identify for a fee.
 
@@ -1202,6 +1203,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.13** | 2026-10-04 | **Missed-collapse loot (pointer only):** one bullet in §6.2 points to `decisions/028-collapse-death-loot.md` (Caleb, 2026-10-04): a Crawler's credits and items are destroyed with the floor, survivors may loot only while the floor stands, "floor lost" ledger write-off. No other rule or number changed. |
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
 | **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
+| **v0.2.16** | 2026-10-04 | **Whole credits only (rules lead ruling, 2026-10-04):** §5.10 says balances are never fractional (matches `tools/state.py` and decision 028); sp/cp are list prices only (1 sp = 0.1, 1 cp = 0.01 credit, reference); the "0.5 credit, 0.05 credit" balance wording is removed; buying rounds UP per cart line (matches `bot/src/create/rules.js`), selling at half rounds DOWN per line (matches `tools/state.py` pet buyback). No price changed. |
 
 **v0.2.8 details**
 

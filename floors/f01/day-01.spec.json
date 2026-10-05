@@ -15,7 +15,7 @@
       "tables/loot-decks/*.json",
       "tables/achievements.csv",
       "tables/item-reskins.json, tables/species-class-reskins.json, tables/background-reskins.json",
-      "/workspace/dcc-lore/CANON-LEDGER.md (A-044, A-139, A-151, M-016: canon references only)",
+      "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
       "rules/70-encounter-budget-5e.json v{budget_version} and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
@@ -286,18 +286,6 @@
       "stairwell_access": "Not open on Day 1 (stairwells open early Day 2, canon M-276). Later: through Z10 (boss or the cheese routes in 00-overview.md section 6.4), then Z11.",
       "canon_refs": [
         {
-          "ledger_id": "A-044",
-          "use": "Canon 'Fuck This Floor' (stairs within an hour of arrival). Not attainable on Floor 1 because stairwells open about 32 hours in. Canon reference only; not a row in tables/achievements.csv."
-        },
-        {
-          "ledger_id": "A-151",
-          "use": "Canon 'The Early Bird Gets To Squirm' (stairs more than six hours before collapse). Attainable only in the stasis form. Reference only; not in tables/achievements.csv."
-        },
-        {
-          "ledger_id": "A-139",
-          "use": "Canon 'You Found Stairs!' (finding a stairwell down). Reference only; not in tables/achievements.csv."
-        },
-        {
           "ledger_id": "M-016",
           "use": "Canon: stairwells are scarce and halve with each floor. Fits the one real stairwell plus a fake one at Z7."
         },
@@ -318,6 +306,24 @@
         {
           "id": "ACH-0894",
           "note": "Land a critical hit (any fight on the way)."
+        },
+        {
+          "id": "ACH-1824",
+          "canon_ledger_id": "A-044",
+          "note": "Take a stairwell down within one in-game hour of arriving on a floor; once per Crawler.",
+          "gm_note": "Not earnable on Floor 1; listed for continuity. Reward: see the catalog row (tables/achievements.csv, ACH-1824)."
+        },
+        {
+          "id": "ACH-1826",
+          "canon_ledger_id": "A-151",
+          "note": "Go down a stairwell more than six in-game hours before the collapse; once per Crawler.",
+          "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
+        },
+        {
+          "id": "ACH-1825",
+          "canon_ledger_id": "A-139",
+          "note": "Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait.",
+          "gm_note": "Reward: see the catalog row (tables/achievements.csv, ACH-1825)."
         }
       ],
       "voice_lines": {
@@ -487,7 +493,7 @@
         "tag": "canon"
       }
     ],
-    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so canon A-044 (stairs within an hour of arrival) is not attainable on Floor 1; it stays a canon reference only.",
+    "availability": "Stairwells open about 32 hours in, early Day 2 (canon M-276). On Day 1 the stage and the Z S door can be reached but nothing can be descended. A Day 1 dash cannot descend, so ACH-1824 Not Unpacking (catalog row for canon A-044) is not earnable on Floor 1; it is listed for continuity only.",
     "early_descent": "A Crawler who descends with more than {stasis_hours} hours left on the floor is held in stasis until the floor collapses (canon M-277, VERIFIED): this banks the achievement and ends that Crawler's floor. In the last {stasis_hours} hours, descent is free. Each Crawler chooses for themselves; the GM may override with a logged reason.",
     "keyless_fee": {
       "b70": {
@@ -1466,12 +1472,6 @@
       "item": "Canon table, collapse notices, missed-floor line and zone color",
       "waiting_for": "Received and used: canon-floor-1.json (rebuilt; sha256 and ledger version in the page meta), floor1-collapse-notices.draft.md (Day 2 to 5 notices, six-hours warning, death-version missed-floor line, GM warning line, achievement frames) and floor1-zone-color.draft.md (read-aloud color). If Lore edits any of them, re-run the script.",
       "status": "received"
-    },
-    {
-      "owner": "Syndicate",
-      "item": "ACH rows for canon A-044, A-151 and A-139",
-      "waiting_for": "Canon-ledger rows that are not in tables/achievements.csv; the pages cite them as canon references only. A-044 is not attainable on Floor 1; A-151 only in the stasis form. The six proposed achievements take their rewards from the budget file by field path.",
-      "status": "waiting (backlog)"
     },
     {
       "owner": "Encounter Bot",

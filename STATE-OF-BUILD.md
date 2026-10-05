@@ -1,5 +1,5 @@
 # State of Build (handoff)
-Owner: Syndicate and the Architect (Borent) | Status: living | Version: 0.1.5 | Updated: 2026-10-04 22:45 CT
+Owner: Syndicate and the Architect (Borent) | Status: living | Version: 0.1.6 | Updated: 2026-10-04 22:50 CT
 Summary: One file so the project can be led without Caleb in the loop and without anyone's memory. Facts only, each with its source file. If this file and a source file disagree, the source file wins; fix this file.
 
 Project: *Crawler Protocol: Season Zero* (Dungeon Crawler Carl, D&D 5e 2024). Players are always **Crawlers**, never "champs" or other nicknames (Caleb, 2026-10-04; gm-notes/00-gm-principles.md).
@@ -46,7 +46,7 @@ Waiting on him right now:
 | Ledger status | Append-only `sessions/credit-ledger.jsonl`, written by `state.py` (`--reason`). `state.py ledger verify` on 2026-10-04 evening: **OK (Bone Wifebeater 127, Horn 75, 10 entries)**. Deleted Crawlers' rows move to `sessions/deleted-archive/`. | tools/README.md |
 | Tools | roll.py, state.py, loot.py, ledgers.py, publisher.py, repair_log.py, busted.py, gm_quirks.py, discord_gm.py, snapshot.py and more. Tests: 358 Python, 186 bridge (Node), `npm run check` 74/74 files, all OK on 2026-10-04 evening (Syndicate's earlier audit ran 355 Python + 164 Node). | tools/README.md v1.2; tools-notes/create-audit-by-syndicate-20261004.md |
 
-**Rules file versions (header values on 2026-10-04):** core rules/10 v0.2.15 | crafting rules/20 v0.3.6 | species rules/30 v0.1.4 | loot deck spec rules/40 v0.1.6 | house items rules/42 v0.2.3 | Story Boxes rules/45 v0.2.2 | repairs rules/50 v0.1.3 | pets rules/60 v0.1.0 | encounter budget rules/70 v0.1.9 (sha256 8767822d4c88...) | character creation guide v0.2.4 | chargen table tables/chargen-5e.json v0.1.6 | create-flow spec v0.1.10 | Floor 1 module v0.2.5 | campaign narrative v0.3 | GM principles v0.3 | open threads v0.1.1 | Hornn and Moses sheets v0.4. Item-reskins version file v0.1.5 (sha256 75d379247b6b...). *The master INDEX.md still shows older numbers for some of these (rules/20 v0.3.1, rules/40 v0.1.5, rules/42 v0.2.2, rules/45 v0.2.1, Floor 1 v0.2.3); trust the file headers.*
+**Rules file versions (header values on 2026-10-04):** core rules/10 v0.2.16 | crafting rules/20 v0.3.6 | species rules/30 v0.1.4 | loot deck spec rules/40 v0.1.6 | house items rules/42 v0.2.3 | Story Boxes rules/45 v0.2.2 | repairs rules/50 v0.1.3 | pets rules/60 v0.1.0 | encounter budget rules/70 v0.1.9 (sha256 8767822d4c88...) | character creation guide v0.2.4 | chargen table tables/chargen-5e.json v0.1.6 | create-flow spec v0.1.10 | Floor 1 module v0.2.5 | campaign narrative v0.3 | GM principles v0.3 | open threads v0.1.1 | Hornn and Moses sheets v0.4. Item-reskins version file v0.1.5 (sha256 75d379247b6b...). *The master INDEX.md still shows older numbers for some of these (rules/20 v0.3.1, rules/40 v0.1.5, rules/42 v0.2.2, rules/45 v0.2.1, Floor 1 v0.2.3); trust the file headers.*
 
 **The table:** campaign session `alpha`. Two Crawlers: **Horn** (Hornn, Human Wizard 1, 75 cr) and **Bone Wifebeater** (Trailer Park Moses / John, Goliath Barbarian 1, 127 cr). Party is four slots, two filled. Session 1 ended in the Floor 1 Zone 6 Break Room saferoom; **both Floor 1 Tutorial Reprieves are spent**, so the next Floor 1 death is a real death (sessions/session-01-recap-2026-10-04.md). Death Mode: Costly Revives, party revives 0/3.
 
@@ -54,6 +54,7 @@ Waiting on him right now:
 
 ## 4. Recently shipped / pending
 
+- **Whole credits only (rules lead ruling, 2026-10-04; core rules/10 v0.2.16 §5.10, character-creation v0.2.5):** balances are integers; sp/cp are list prices; buy rounds up per cart line, sell-at-half rounds down per line. No price changed.
 - **Collapse clock + Session 1 pacing (2026-10-04; core rules/10 v0.2.14, floors/f01/00-overview.md v0.2.5):** collapse is stated as a fixed 24 in-game hours into Day 5 with a running floor-hour count; overview §11.3 now says Session 1 played Z0-Z2 and part of Z3, Z4-Z5 skipped by the ejection to Z6.
 - **Missed-collapse loot (decision 028, Caleb 2026-10-04; core rules/10 v0.2.13):** a Crawler who dies in a collapse loses credits and items with the floor, survivors loot only while it stands; ledger needs a new "floor lost" write-off entry type plus transfer-first logging (Architect, not yet built).
 
