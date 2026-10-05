@@ -17,7 +17,8 @@
       "decisions/026",
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
-      "floors/f01 carry-overs"
+      "floors/f01 carry-overs",
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
     ]
   },
   "budget_file": {
@@ -637,6 +638,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Open follows/favorites first time (M-342).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -649,6 +652,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Read full bathroom popup (M-346).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -661,6 +666,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If Thudd fought/talked on F1: diploma scrap on screen.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -673,6 +680,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If Odd Coin carried: Vendor Oddity Unappraised.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -904,6 +913,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Touch SEED-STATICSIGIL.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -916,6 +927,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Read unread clauses aloud.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -928,6 +941,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "First Fizz death-burst.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -940,6 +955,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If Bell on F1: cracked booth sells 1-cr lies.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -1158,6 +1175,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Learn spawn-from-corpses (M-384).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1170,6 +1189,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Destroy corpse; grubs still come (M-386).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1182,6 +1203,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If Dale lived F1: escort board rumor. If dead: scrap.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1194,6 +1217,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If Thudd bypassed: makeup ad.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]

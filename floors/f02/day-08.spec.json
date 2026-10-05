@@ -17,7 +17,8 @@
       "decisions/026",
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
-      "floors/f01 carry-overs"
+      "floors/f01 carry-overs",
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
     ]
   },
   "budget_file": {
@@ -593,6 +594,12 @@
           "id": "ACH-0940",
           "note": "Soft Open: Fall and survive: Soft Open catalog hook for enc-d08-01.",
           "tag": "house"
+        },
+        {
+          "id": "ACH-1832",
+          "note": "PETA Enthusiast (catalog ACH-1832; ledger A-091). Soft Open wire.",
+          "tag": "canon",
+          "ledger_row": "A-091"
         }
       ],
       "scaling": {
@@ -637,6 +644,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Jaw tease.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -649,6 +658,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Kobold-attuned key.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -661,6 +672,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Neutrals don't join kobolds.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -673,6 +686,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Path without full clear.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -849,6 +864,12 @@
           "id": "ACH-0941",
           "note": "Soft Open: Use a flare or signal: Soft Open catalog hook for enc-d08-02.",
           "tag": "house"
+        },
+        {
+          "id": "ACH-1833",
+          "note": "Wait, Bosses Can Leave Their Rooms? (catalog ACH-1833; ledger A-123). Soft Open wire.",
+          "tag": "canon",
+          "ledger_row": "A-123"
         }
       ],
       "scaling": {
@@ -894,6 +915,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Defeat Ralph.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -906,6 +929,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Ralph reappears from a dingo (house).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -918,6 +943,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Fire A-123 if not already.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -930,6 +957,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Sit through gerbil bit.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -1061,6 +1090,18 @@
           "id": "ACH-0942",
           "note": "Soft Open: Send a message via System mail: Soft Open catalog hook for enc-d08-03.",
           "tag": "house"
+        },
+        {
+          "id": "ACH-1831",
+          "note": "Menagerie (catalog ACH-1831; ledger A-083): Discover pet reward room (A-083).",
+          "tag": "canon",
+          "ledger_row": "A-083"
+        },
+        {
+          "id": "ACH-1829",
+          "note": "I'll Take the Ceramic Dalmatian, Pat! (catalog ACH-1829; ledger A-056): Reward room toast (A-056) HOUSE Soft Open; canon floor unsettled.",
+          "tag": "house",
+          "ledger_row": "A-056"
         }
       ],
       "scaling": {
@@ -1099,30 +1140,6 @@
       },
       "proposed_achievements": [
         {
-          "name": "Menagerie (wired)",
-          "trigger": "Discover pet reward room (A-083).",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": "A-083",
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
-          "name": "Ceramic Dalmatian (HOUSE wired)",
-          "trigger": "Reward room toast (A-056) HOUSE Soft Open; canon floor unsettled.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "house",
-          "ledger_row": "A-056",
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
           "name": "One Key One Cage",
           "trigger": "Key breaks after one non-kobold use.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
@@ -1132,6 +1149,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Key breaks after one non-kobold use.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1144,6 +1163,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Mongoliensis chick bonding time.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]

@@ -17,20 +17,21 @@
       "decisions/026",
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
-      "floors/f01 carry-overs"
+      "floors/f01 carry-overs",
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
     ],
     "day": 1,
     "days": 10,
     "days_left": 9,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
     "canon_table_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9",
-    "achievements_csv_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e",
+    "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.17",
-    "budget_file_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1",
+    "budget_file_version": "0.2.0",
+    "budget_file_sha256": "11a243b1b67737498a6ed434feaf91868dc558b0abc8a4277d8aecbd20a6114c",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "99e6d19523c0edf1115c891e622d2a1ff38f1897be4d606676f27f701a547067",
+    "spec_sha256_sans_pin": "679557b22f870b6e2cc8579d68ec2221f5c674980a4a0d402bacecd429101ef2",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -449,8 +450,8 @@
           "ledger_id": "A-083",
           "use": "Soft Open cite A-083 (canon-floor-2 / ledger).",
           "ledger_name": "Menagerie",
-          "in_achievements_csv": false,
-          "status": "canon reference only (not a row in tables/achievements.csv)"
+          "catalog_id": "ACH-1831",
+          "in_achievements_csv": true
         }
       ],
       "voice_lines": {}
@@ -474,8 +475,8 @@
           "ledger_id": "A-091",
           "use": "Soft Open cite A-091 (canon-floor-2 / ledger).",
           "ledger_name": "PETA Enthusiast",
-          "in_achievements_csv": false,
-          "status": "canon reference only (not a row in tables/achievements.csv)"
+          "catalog_id": "ACH-1832",
+          "in_achievements_csv": true
         }
       ],
       "voice_lines": {}
@@ -882,7 +883,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "Open follows/favorites first time (M-342).",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Bathroom Briefing",
@@ -894,7 +899,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "Read full bathroom popup (M-346).",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Alumni Scrawl",
@@ -906,7 +915,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "If Thudd fought/talked on F1: diploma scrap on screen.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Odd Coin Shrug",
@@ -918,7 +931,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "If Odd Coin carried: Vendor Oddity Unappraised.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         }
       ],
       "audience_default": "gm"
@@ -1284,7 +1301,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "Touch SEED-STATICSIGIL.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Fine Print Hero",
@@ -1296,7 +1317,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "Read unread clauses aloud.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Fizz Pop First",
@@ -1308,7 +1333,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "First Fizz death-burst.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Proctor Echo",
@@ -1320,7 +1349,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "If Bell on F1: cracked booth sells 1-cr lies.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         }
       ],
       "audience_default": "gm"
@@ -1672,7 +1705,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "Learn spawn-from-corpses (M-384).",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Don't Salt the Dead",
@@ -1684,7 +1721,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "Destroy corpse; grubs still come (M-386).",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Dale Sighting",
@@ -1696,7 +1737,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "If Dale lived F1: escort board rumor. If dead: scrap.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         },
         {
           "name": "Thudd Alumni Ad",
@@ -1708,7 +1753,11 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "narration": "If Thudd bypassed: makeup ad.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "narration_audience": "player",
+          "audience": "gm"
         }
       ],
       "audience_default": "gm"
@@ -1870,6 +1919,34 @@
         "encounter": "enc-d01-01"
       },
       {
+        "path": "/encounters/0/proposed_achievements/0",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-01",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/0/proposed_achievements/1",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-01",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/0/proposed_achievements/2",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-01",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/0/proposed_achievements/3",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-01",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
         "path": "/encounters/1/voice_lines/system_intro",
         "kind": "system_notice",
         "field": "text",
@@ -1892,6 +1969,34 @@
         "kind": "gm_color",
         "field": "text",
         "encounter": "enc-d01-02"
+      },
+      {
+        "path": "/encounters/1/proposed_achievements/0",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-02",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/1/proposed_achievements/1",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-02",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/1/proposed_achievements/2",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-02",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/1/proposed_achievements/3",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-02",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
       },
       {
         "path": "/encounters/2/voice_lines/system_intro",
@@ -1918,6 +2023,34 @@
         "encounter": "enc-d01-03"
       },
       {
+        "path": "/encounters/2/proposed_achievements/0",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-03",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/2/proposed_achievements/1",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-03",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/2/proposed_achievements/2",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-03",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
+        "path": "/encounters/2/proposed_achievements/3",
+        "kind": "achievement_narration",
+        "field": "narration",
+        "encounter": "enc-d01-03",
+        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
+      },
+      {
         "path": "/day/tomorrow_notice",
         "kind": "system_notice",
         "field": "text"
@@ -1941,15 +2074,15 @@
   },
   "validation": {
     "result": "FAIL",
-    "pass": 39,
+    "pass": 37,
     "warn": 4,
-    "fail": 39,
-    "spec_sha256": "ac38437c9a95ddcf6d69bf3929947db81887e44b4ad0bf66d35408cb43b5acdf",
+    "fail": 40,
+    "spec_sha256": "8bae102074abe1076b08ca92fb75684eb7ead29ee286bde65777d42803284399",
     "checks": [
       {
-        "status": "PASS",
-        "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.17, sha256 113dcdbedb3cbbcf; every figure from it is a GM-adaptable guideline (authority_note)"
+        "status": "WARN",
+        "check": "budget file hash",
+        "detail": "spec pins 113dcdbedb3c but the file is 11a243b1b677 (Syndicate changed it; re-check the cited paths, then update the pin)"
       },
       {
         "status": "PASS",
@@ -2247,16 +2380,6 @@
         "detail": "24 hooks checked against tables/achievements.csv"
       },
       {
-        "status": "WARN",
-        "check": "canon ref A-083",
-        "detail": "canon reference only (not a row in tables/achievements.csv) ('Menagerie'); cited as a canon reference only"
-      },
-      {
-        "status": "WARN",
-        "check": "canon ref A-091",
-        "detail": "canon reference only (not a row in tables/achievements.csv) ('PETA Enthusiast'); cited as a canon reference only"
-      },
-      {
         "status": "PASS",
         "check": "Story Box hooks are GM-only",
         "detail": "f02-any-story-01 tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)"
@@ -2275,6 +2398,11 @@
         "status": "PASS",
         "check": "'Crawlers' never 'champs'",
         "detail": ""
+      },
+      {
+        "status": "FAIL",
+        "check": "player-facing leak",
+        "detail": "proposed Odd Coin Shrug narration: 'Odd Coin'"
       },
       {
         "status": "FAIL",
@@ -2339,7 +2467,7 @@
       {
         "status": "PASS",
         "check": "audience manifest",
-        "detail": "17 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
+        "detail": "29 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
       },
       {
         "status": "WARN",
@@ -2349,12 +2477,12 @@
       {
         "status": "PASS",
         "check": "rendered audience separation",
-        "detail": "17 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
+        "detail": "29 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
       },
       {
-        "status": "PASS",
+        "status": "WARN",
         "check": "doubled full stop",
-        "detail": "no '..' artifacts in the rendered page"
+        "detail": "'..' in .md line(s) [7]"
       }
     ]
   }

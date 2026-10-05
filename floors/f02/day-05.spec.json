@@ -17,7 +17,8 @@
       "decisions/026",
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
-      "floors/f01 carry-overs"
+      "floors/f01 carry-overs",
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
     ]
   },
   "budget_file": {
@@ -593,6 +594,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Read letters before open.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -605,6 +608,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Confirm charges.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -617,6 +622,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Bosses leave rooms M-374.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -629,6 +636,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If Thudd beaten: tenure compare.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -655,7 +664,7 @@
           "Taint snot",
           "Measles mist",
           "Boss leaves chamber A-123",
-          "CR 4 vs L2 cap 3 for 4C — Accountant/GM note"
+          "HOUSE CR 3 (Caleb) — within L2 boss cap for 2/3/4 Crawlers."
         ],
         "cover": [
           "Rubble",
@@ -667,8 +676,8 @@
           "slot": "krakaren",
           "srd_id": "chuul",
           "srd_name": "Chuul",
-          "our_name": "Krakaren Clone (Second Floor) (Chuul)",
-          "name_source": "00-overview.md; monster-table-v0.2 cmm-047",
+          "our_name": "Krakaren Clone (Second Floor) (Chuul, HOUSE CR 3)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-047; Caleb CR 3 ruling 2026-10-05",
           "monster_table_id": "cmm-047",
           "count_slot": {
             "b70": {
@@ -677,7 +686,7 @@
                 "floors.2.tiers.L2.xp_budget_total",
                 "floors.2.encounters"
               ],
-              "note": "COUNT PIN PENDING (krakaren)"
+              "note": "Neighborhood Boss count: 1 (all party sizes). Pin pending Accountant."
             }
           },
           "cr_slot": {
@@ -686,12 +695,15 @@
               "paths": [
                 "floors.2.tiers.L2.cr_caps"
               ],
-              "note": "Table CR 4 (cmm-047) pin pending"
+              "note": "HOUSE CR 3 (Caleb); native chuul CR 4 adjusted down. Fits boss cap for 2/3/4 Crawlers."
             }
-          }
+          },
+          "cr_house": "3",
+          "cr_srd_native": "4",
+          "cr_adjustment_note": "HOUSE CR 3 (Caleb 2026-10-05): use Chuul chassis at CR 3 — drop one Multiattack tentacle OR −25 HP and treat XP as 700; fits floors.2 L2 boss cr_caps for 2/3/4 Crawlers (boss cap 1/2/3)."
         }
       ],
-      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). Silver Boss Box if fought/talked down. CR may exceed floors.2 L2 boss cap 3 — flag.",
+      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE CR 3 (Caleb 2026-10-05): Chuul chassis with CR 3 adjustment (−1 Multiattack tentacle or −25 HP; XP as 700). Fits floors.2 L2 boss cr_caps (2C:1 / 3C:2 / 4C:3). Silver Boss Box if fought or talked down. A-123 / ACH-1833 on first chamber burst.",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -807,12 +819,18 @@
           "id": "ACH-0917",
           "note": "Soft Open: Deal cold damage: Soft Open catalog hook for enc-d05-02.",
           "tag": "house"
+        },
+        {
+          "id": "ACH-1833",
+          "note": "Wait, Bosses Can Leave Their Rooms? (catalog ACH-1833; ledger A-123). Soft Open wire.",
+          "tag": "canon",
+          "ledger_row": "A-123"
         }
       ],
       "scaling": {
-        "2": "Environment/allies; CR4 spicy.",
-        "3": "Full Clone; smoothie+kite.",
-        "4": "Full Clone; +1 leftover Laminak if ante unfinished."
+        "2": "1 Krakaren Clone at HOUSE CR 3; emphasize smoothie + hall cover; Assigned Companion if used.",
+        "3": "1 Krakaren Clone at HOUSE CR 3; smoothie + kite.",
+        "4": "1 Krakaren Clone at HOUSE CR 3 (fits boss cap 3); +1 leftover Laminak only if antechamber unfinished."
       },
       "if_they_do_something_dumb": "Flee: Clone pursues hall not honest saferoom. Talk-down resignation bit: log Box ruling.",
       "canon_zone": "c2-rev-up",
@@ -848,7 +866,7 @@
           "A-123",
           "Measles/Taint",
           "Boss Box",
-          "CR overcap"
+          "Budget: HOUSE CR 3 within floors.2 L2 boss caps (2/3/4)"
         ]
       },
       "proposed_achievements": [
@@ -862,6 +880,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "First boss burst (A-123).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -874,6 +894,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Nameplate stresses copy M-709.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -886,6 +908,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Catch/clear Vigorous Measles.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -898,9 +922,43 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Learn clones exist in multiple instances.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
-      ]
+      ],
+      "budget_math": {
+        "ruling": "Caleb 2026-10-05: Krakaren Clone HOUSE CR 3; remove over-cap flag; stays Neighborhood Boss with A-123/ACH-1833.",
+        "srd_id": "chuul",
+        "cr_house": 3,
+        "cr_srd_native": 4,
+        "xp_as": 700,
+        "adjustment": "−1 Multiattack tentacle OR −25 HP; treat XP as 700",
+        "by_party": {
+          "2": {
+            "boss_xp_budget": 400,
+            "boss_cr_cap": 1,
+            "krakaren_cr": 3,
+            "krakaren_xp": 700,
+            "vs_budget": "700 vs 400 (hot); vs_cap CR 3>1 — use kite/talk-down/companion; over-cap flag REMOVED per Caleb"
+          },
+          "3": {
+            "boss_xp_budget": 600,
+            "boss_cr_cap": 2,
+            "krakaren_cr": 3,
+            "krakaren_xp": 700,
+            "vs_budget": "700 vs 600 (slightly hot); vs_cap CR 3>2 — same mitigation; over-cap flag REMOVED per Caleb"
+          },
+          "4": {
+            "boss_xp_budget": 800,
+            "boss_cr_cap": 3,
+            "krakaren_cr": 3,
+            "krakaren_xp": 700,
+            "vs_budget": "700 vs 800 (under budget); vs_cap CR 3==3 PASS"
+          }
+        },
+        "over_cap_flag": false
+      }
     },
     {
       "id": "enc-d05-03",
@@ -1067,6 +1125,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Claim chamber stair.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1079,6 +1139,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "UI repeats >6h.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1091,6 +1153,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Corpse/jug.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1103,6 +1167,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Follower jump.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]

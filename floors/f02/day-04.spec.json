@@ -17,7 +17,8 @@
       "decisions/026",
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
-      "floors/f01 carry-overs"
+      "floors/f01 carry-overs",
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
     ]
   },
   "budget_file": {
@@ -640,6 +641,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "No heal 5 minutes (M-434).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -652,6 +655,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "First clurichaun down.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -664,6 +669,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Corpse goo refreshes Taint.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -676,6 +683,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Laminaks scream for Damien; he never comes (M-430).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -837,6 +846,12 @@
           "id": "ACH-0909",
           "note": "Soft Open: Survive a day cycle: Soft Open catalog hook for enc-d04-02.",
           "tag": "house"
+        },
+        {
+          "id": "ACH-1827",
+          "note": "Dungeonpreneur (catalog ACH-1827; ledger A-034): Invent Immunity Smoothie (A-034).",
+          "tag": "canon",
+          "ledger_row": "A-034"
         }
       ],
       "scaling": {
@@ -873,18 +888,6 @@
       },
       "proposed_achievements": [
         {
-          "name": "Dungeonpreneur (wired)",
-          "trigger": "Invent Immunity Smoothie (A-034).",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": "A-034",
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
           "name": "Leaf Pantsuit Down",
           "trigger": "Drop Laminak Elite.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
@@ -894,6 +897,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Drop Laminak Elite.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -906,6 +911,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Drink smoothie.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -918,6 +925,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Copy card without fight.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -1087,6 +1096,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Meet Bopca Qwist (M-506).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1099,6 +1110,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Door-pounding stories (M-381 vibe).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1111,6 +1124,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Adjacency rest.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1123,6 +1138,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Refuse a lying sticker.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]

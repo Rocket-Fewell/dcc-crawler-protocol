@@ -17,7 +17,8 @@
       "decisions/026",
       "rules/70-encounter-budget-5e.json v0.1.17",
       "rules/45-story-boxes-5e.md",
-      "floors/f01 carry-overs"
+      "floors/f01 carry-overs",
+      "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired."
     ]
   },
   "budget_file": {
@@ -655,6 +656,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Feel headache before sight (M-403).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -667,6 +670,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Int 16+ shrugs.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -679,6 +684,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If F1 static: radio HOLD NOT YET.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -691,6 +698,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Non-subscriber error M-511.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -870,6 +879,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Subscriber opens tome (M-358).",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -882,6 +893,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Toaster claim M-355 if variant.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -894,6 +907,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Prove honest today.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -906,6 +921,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "If pet thread: leash reacts to bark tape.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         }
       ]
@@ -1060,18 +1077,8 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
-          "name": "Hedgehog Sighting",
-          "trigger": "Rumor only; do not field after patch (cmm-053).",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
+          "narration": "Check followers after Day 1.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
         },
         {
@@ -1084,19 +1091,23 @@
             "kind": "slot",
             "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
           },
+          "narration": "Find stair; stasis warning M-366.",
+          "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+        }
+      ],
+      "flavor_lines": [
+        {
+          "text": "Rumor only; do not field after patch (cmm-053).",
+          "name": "Hedgehog Sighting",
+          "demoted_from": "proposed_achievement",
+          "reason": "Syndicate 18:04 CT: no real deed — flavor only, not an achievement"
         },
         {
+          "text": "Does not exist on F2.",
           "name": "F1 Reprieve Reminder",
-          "trigger": "Does not exist on F2.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "house",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "demoted_from": "proposed_achievement",
+          "reason": "Syndicate 18:04 CT: no real deed — flavor only, not an achievement"
         }
       ]
     }
