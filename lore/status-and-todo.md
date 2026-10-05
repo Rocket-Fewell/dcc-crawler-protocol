@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.4 | Updated: 2026-10-04
+Owner: DCC Lore | Status: review | Version: 2.5 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -359,3 +359,21 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 # Pass 25 (2026-10-04 CT): house spelling "saferoom"
 
 - Syndicate ruling: house text says "saferoom". Edited the generators (`tools/canon_floor_build.py` 11 replacements, `tools/canon_floor2_build.py` 27) and rebuilt tables/canon-floor-1 and canon-floor-2; also `drafts/floor1-collapse-notices.draft.md` (1 saferoom, 1 "Stairwell" lowercased). Left alone: ids, ledger quotes, "Time to Safe Room Closure" (System label), the wiki page title "Safe Rooms", the zone name "Zone 11: The Stairwell". New shas are in tables/INDEX.md change note v0.25. Checks: canon_floor_check 0 errors, canon_floor2_check 0 errors, ledger_check 0 failures.
+
+---
+# Pass 24 (2026-10-04 CT): saferoom spelling in the loot decks
+
+- `tools/loot_decks_build.py` prose safe room -> saferoom (7 spots), decks rebuilt: f01-any-orientation-pit v0.1.1 (4), f01-any-story-boxes v0.1.1 (23); tables/INDEX.md v0.27 (+3 in older change notes). deck_check 0 errors.
+- Read-only vs rules/40 v0.1.8: no Platinum awarded on Floors 1-8 (2 canon mentions in notes). Stale pins to report: `spec v0.1.1 §2.6` in the orientation-pit and achievement-deck pacing notes; builder comments cite rules/40 v0.1.1 / v0.1.3. Not changed.
+
+---
+# Learning pass, 2026-10-05 12:2x AM CT (ledger Pass 21): Floor 3, The Over City
+
+- New ledger section 9.4: M-651..M-706 (56 rows) and conflicts X-076..X-079. Sources: W:Third Floor, W:Village Guard Swordsman, W:Gate Pass, W:Street Urchin, W:Shadow Leaks, W:Elite, YT:sS36rv-jPLg (Book 2 recap), FW2:book2-overview. `ledger_check.py` failures: 0. Ledger v1.14, ledger-rules v1.12.
+- Headline: canon says Floor 3 "traditionally" runs 20 days and the AI cut it to 8 this season (cite B2 ch2, in the wiki's Speculation section). Caleb's house 20-day Floor 3 clock (decision 026) matches the traditional length; Floor 2 shows the same pattern (traditional 10, cut to the legal minimum 6, X-062).
+- Village law for the RPG: no jail, death penalty for theft, attacking NPCs or passing out drunk; guards are slow, daytime-only and will not follow into the ruins, but fleeing bars you from that village for good; hitting a guard brands you a troublemaker (recap only). A Gate Pass covers you only in the issuing township.
+- Opening-announcement rules: citizens worth zero XP, guards buffed, bathroom penalty gone but restrooms remain, sponsors can bid early (program starts Floor 4).
+- Elites: introduced on Floor 3, thousands across Floors 3/6/9, writers hot-patch them, fairness rules loosened around them, black cross on the minimap after Meet an Elite.
+- Open: X-077 (does the early-descent stasis rule apply on Floor 3? Events list says "no limitations", uncited).
+- TODO 52: build `tables/canon-floor-3.json` (zones: villages/ruins/circus/Skyfowl settlement/clubs; mobs; laws) only when Caleb or Syndicate asks; Floor 3 is not in play yet. TODO 53: find a cite for the Floor 3 "no limitations" stairwell line (X-077). TODO 54: mine Desperado Club, Bopca personal-space and Floor 3 quest pages for a second Floor 3 pass.
+- Nothing was read against the novels. Nothing was posted to any room.

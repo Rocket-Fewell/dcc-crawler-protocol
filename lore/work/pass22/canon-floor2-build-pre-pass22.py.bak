@@ -1,0 +1,379 @@
+#!/usr/bin/env python3
+"""Builds tables/canon-floor-2.json and tables/canon-floor-2.md (Floor 2 canon RESERVE source table).
+status "reserve": not announced to the group, not for live use. Data lives in this file; ledger ids are resolved from
+CANON-LEDGER.md and work/pass19-row-map.json (Floor 2 rows) / work/pass18-row-map.json (Floor 1 comparison rows);
+confidence is COPIED from the ledger rows (weakest label wins).
+Run: python3 tools/canon_floor2_build.py   then   python3 tools/canon_floor2_check.py
+Owner: DCC Lore | Written 2026-10-04 (Pass 19)."""
+import json, re, os, sys, hashlib, copy
+ROOT = '/workspace/dcc-lore'
+LEDGER = ROOT + '/CANON-LEDGER.md'
+RM = json.load(open(ROOT + '/work/pass19-row-map.json'))
+RM1 = json.load(open(ROOT + '/work/pass18-row-map.json'))
+def r(*keys): return [RM[k] for k in keys]
+def r1(*keys): return [RM1[k] for k in keys]
+RANK = {'UNVERIFIED': 0, 'WIKI-ONLY': 1, 'VERIFIED': 2}
+
+def load_ledger():
+    rows = {}
+    for line in open(LEDGER, encoding='utf-8'):
+        m = re.match(r'^\| ([A-Z]-[A-Z]?\d+) \|', line)
+        if not m: continue
+        cells = [c.strip() for c in re.split(r'(?<!\\)\|', line.strip().strip('|'))]
+        conf = None
+        for c in cells:
+            if c.startswith(('VERIFIED', 'WIKI-ONLY', 'UNVERIFIED')):
+                conf = c.split(' ')[0].split(';')[0]; break
+        quotes = [c[1:-1].replace('\\|', '|') for c in cells if len(c) > 2 and c.startswith('"') and c.endswith('"')]
+        rows[m.group(1)] = {'conf': conf, 'quotes': quotes}
+    return rows
+L = load_ledger()
+def conf_of(ids):
+    cs = [L[i]['conf'] for i in ids if i in L and L[i]['conf']]
+    if not cs: return None
+    return min(cs, key=lambda c: RANK[c])
+def quote_of(rid): return L[rid]['quotes'][0]
+
+def mob(id, name, tag, rows, role, desc, note=None):
+    d = {'id': id, 'name': name, 'tag': tag, 'role': role, 'what': desc, 'ledger_rows': rows}
+    if note: d['note'] = note
+    return d
+def haz(id, name, tag, rows, desc, note=None):
+    d = {'id': id, 'name': name, 'tag': tag, 'what': desc, 'ledger_rows': rows}
+    if note: d['note'] = note
+    return d
+def feat(id, name, tag, rows, desc, note=None): return haz(id, name, tag, rows, desc, note)
+def ann(style, quote_row=None):
+    if quote_row in RM: quote_row = RM[quote_row]
+    return {'style': style, 'quote': quote_of(quote_row) if quote_row else None, 'quote_row': quote_row}
+
+C = 'canon'; I = 'inspired'; U = 'unverified'
+ZONES = []
+def zone(**k): ZONES.append(k)
+
+# ================================================================= CANON (book Floor 2). No house Floor 2 module exists yet.
+zone(id='c2-floor', name='The Second Floor (floor-wide rules)', kind='canon_floor_wide', tag=C,
+ name_note='Canon name: The Second Floor, the last Tutorial floor. No house name or house zone map exists yet (reserve).',
+ ledger_rows=r('f2_final_tutorial', 'f2_regions', 'f2_walls', 'f2_ground', 'f2_arteries', 'f2_bosses_leave', 'f2_stories', 'f2_no_quests', 'f2_guild_halls', 'f2_stair_all', 'f2_stair_bosses', 'f2_stair_stasis', 'f2_stair_headstart', 'f2_stair_free', 'f2_restroom_portals', 'f2_restroom_spacing', 'f2_restroom_privacy', 'f2_ratings_on', 'f2_guides_hidden') + ['M-012', 'M-014', 'M-016', 'A-123', 'A-139'],
+ staging='A giant grid of narrower cinderblock halls over cracked white concrete, cut into regions that never connect. All stairwells exist from minute one, so the floor is a race against the clock rather than a search for a key. Bosses may now leave their rooms, saferooms close an hour before the end, and the audience machinery (follows, favorites, ratings) is live.',
+ announcement=ann('Cascadia sounds like a cheerful corporate announcer padding bad news with sales language; the one stern note is scolding Crawlers about bathrooms.', None) | {'quote': None, 'quote_row': None},
+ mobs=[],
+ hazards=[haz('haz2-boss-leaves', 'Bosses leave their chambers', C, r('f2_bosses_leave', 'krak_first') + ['A-123'], 'From this floor a boss can burst out and hit Crawlers in the hall; the first time earns a deadpan achievement. Floor 1 bosses never did this.'),
+          haz('haz2-cinderblock', 'Unbreakable-looking walls', C, r('f2_walls', 'krak_walls'), 'Cinderblock cracks but does not fully break, so Crawlers cannot dig out; a boss can still wreck it.')],
+ features=[feat('feat2-restroom-portals', 'Restroom portals and the one private place', C, r('f2_restroom_portals', 'f2_restroom_spacing', 'f2_restroom_privacy'), 'Mismatched doors about every quarter mile open on the Crawler\'s own stall; the stall is the only spot shielded from cameras.'),
+           feat('feat2-stairwells', 'Stairwells (all present at the start)', C, r('f2_stair_all', 'f2_stair_bosses', 'f2_stair_stasis', 'f2_stair_headstart', 'f2_stair_free', 'f2_stair_nonsapient') + ['M-016', 'A-139'], 'Every Borough and City boss chamber holds one. Descending with more than six hours left means stasis until the floor ends; in the last six hours it costs no time.'),
+           feat('feat2-guild-halls', 'Tutorial Guild Halls', C, r('f2_guild_halls', 'f2_guides_hidden', 'f2_guides_f3'), 'Still open on Floors 1-3; Game Guides are hidden from ordinary viewers; in the last days guides may begin explaining Floor 3 race/class selection.'),
+           feat('feat2-ratings', 'Ratings go live', C, r('f2_ratings_on', 'f2_ann_follows'), 'Follows, favorites and ratings switch on after the opening announcement; numbers fill in slowly.'),
+           feat('feat2-patronage', 'Revised patronage', C, r('f2_ann_patrons', 'f2_ann_boxes', 'x_patron_start'), 'Three patrons per Crawler, auctions on later floors, and a patron who pays more gets better Benefactor Boxes for the Crawler (no amounts recorded here).', note='Start floor of the auctions differs between sources (X-061).')])
+
+zone(id='c2-safe-rooms', name='Floor 2 saferooms (closure, mailbox, staffed and unstaffed)', kind='canon_feature_set', tag=C,
+ ledger_rows=r('f2_sr_spacing', 'f2_sr_staffing', 'f2_sr_beds', 'f2_sr_look', 'f2_sr_mailbox', 'f2_sr_mail_error', 'f2_sr_close', 'f2_sr_close_why', 'f2_sr_close_clock', 'f2_sr_ch39', 'f2_patch_hedgehog') + ['M-010', 'M-011', 'M-012', 'M-013'],
+ staging='Saferooms are lifted whole from Earth (a storm shelter, an industrial kitchen, a chicken restaurant). Some have a Bopca Protector who cooks and fusses; some are bare. The new things on this floor are the mailbox and the closing hour: an hour before collapse the room spits everyone out and a countdown tells you it is coming.',
+ announcement=ann('The closure arrives as a cheerful patch note after a recap episode; the System frames it as fixing Crawlers who stayed, partied and died in Floor 1 saferooms.', 'M-012') ,
+ mobs=[],
+ hazards=[haz('haz2-safe-room-closure', 'Saferoom closure (one hour before collapse)', C, r('f2_sr_close', 'f2_sr_close_why', 'f2_sr_close_clock', 'f2_sr_ch39') + ['M-012'], 'Anyone still inside is teleported just outside; a Time to Safe Room Closure countdown shows inside. Added by patch about 4 d 17 h before collapse, so before then a room could be used to wait out the clock.')],
+ features=[feat('feat2-storm-shelter', 'Storm-shelter saferoom with mailbox', C, r('f2_sr_look', 'f2_sr_mailbox', 'f2_sr_mail_error', 'club_mailbox', 'club_def', 'club_f2'), 'Suburban-style mailbox with the flag up. Only Dungeon Book of the Floor Club (or similar) subscribers can open it; everyone else gets a System error line. One tome per floor.'),
+           feat('feat2-big-shot-chicken', 'Big Shot Chicken (staffed by Qwist)', C, r('qwist', 'qwist_job', 're_door', 're_eject'), 'A dusty chicken restaurant saferoom run by a Bopca Protector who grooms and feeds guests. Where the Rage Elemental sieges the door.'),
+           feat('feat2-mana-toast', 'Unstaffed saferoom with Mana Toast', C, r('manatoast_def', 'manatoast_where', 'f2_sr_staffing'), 'A toaster oven gives each Crawler one piece of mana-restoring toast; no food or staff.'),
+           feat('feat2-safe-room-beds', 'Cots or private rooms', C, r('f2_sr_beds', 'f2_sr_spacing'), 'Every saferoom has dusty cots or private rooms, free or rented on this floor.'),
+           feat('feat2-club-tome-lost', 'Floor Club tome is lost at collapse', C, r('club_lost'), 'A tome not collected before the floor collapses is destroyed (rule from a later book, applies to every floor).', note='Source cite is B6 ch2; kept because it governs the Floor 2 mailbox.')])
+
+zone(id='c2-rev-up', name='Rev-Up distillery and the Krakaren Clone', kind='canon_boss', tag=C,
+ name_note='Canon: the Rev-Up pyramid-scheme storyline. At least three Krakaren Clone instances exist on the floor.',
+ ledger_rows=['B-004', 'K-123', 'K-124', 'T-064', 'M-093', 'A-034', 'A-123'] + r('revup_intro', 'revup_chain', 'revup_pamphlet', 'revup_damien', 'krak_boss', 'krak_instances', 'krak_ai', 'krak_look', 'krak_snot', 'krak_mist', 'krak_chamber', 'krak_distillery', 'krak_first', 'krak_walls', 'krak_kill', 'taint_def', 'measles_def', 'smoothie_effect', 'smoothie_buzz', 'damien_loc', 'locmgr_hidden', 'locmgr_three', 'krak_ch34', 'ch33_summary', 'x_krak_tier'),
+ staging='A moonshine distillery run like a multi-level-marketing scheme: sniffly clurichauns slinging rocks at the bottom, leaf-suited Laminak "managers" above, and a screaming tentacled Krakaren Clone at the top behind a Live-Laugh-Love sign. The boss does not wait in her room: she blasts out through the walls. Contact with the lower tiers gives the Taint (no healing), the boss adds Vigorous Measles, and the cure-by-prevention is a smoothie blended from moonshine and a Laminak corpse on a bicycle blender.',
+ announcement=ann('Mob and boss nameplates read like spam pamphlets and anti-vaccine parody; the achievement that fires when the boss bursts out is a cheerful "welcome to the second floor."', 'A-123'),
+ mobs=[mob('mob2-clurichaun', 'Unvaccinated Clurichaun Rev-Up Consultant', C, r('clur_look', 'clur_attack', 'clur_taint', 'clur_corpse', 'clur_banjo', 'clur_opening'), 'mob', 'Runny-nosed, troll-like fairy cousin of leprechauns in green overalls: slingshot or grapple, very fast, contact leaves lime-green residue and the Taint for five minutes; corpses ooze toxic liquid.'),
+       mob('mob2-laminak', 'Laminak / Laminak Rev-Up Consultant Elite', C, r('lam_look', 'lam_elite', 'lam_immune', 'lam_scream', 'revup_chain'), 'mob', 'Fat, crow-sized fairies; the Elites look like winged soccer moms in leaf pantsuits, cast Magic Missile, resist health-seeping attacks and believe working for Rev-Up will get them to Floor 3.'),
+       mob('boss2-krakaren-clone', 'Krakaren Clone (Second Floor)', C, ['B-004'] + r('krak_boss', 'krak_instances', 'krak_ai', 'krak_look', 'krak_snot', 'krak_mist', 'krak_first', 'krak_kill'), 'boss', 'Twenty-foot immobile octopus with screaming human-mouth tentacles, Taint snot and a Vigorous Measles mist. Bursts out of its chamber. At least three exist.', note='Neighborhood Boss per the wiki and the recap; one fan table says Borough (X-059).')],
+ hazards=[haz('haz2-taint', 'The Taint', C, r('taint_def', 'clur_taint', 'krak_snot'), 'Five-minute debuff: no healing by any method. Spread by touching clurichauns, their corpses or the boss snot.'),
+          haz('haz2-measles', 'Vigorous Measles mist', C, r('measles_def', 'krak_mist', 'smoothie_effect'), 'Communicable disease sprayed as an aerosol by the boss; prevented, not cured, by the Immunity Smoothie.'),
+          haz('haz2-boss-breakout', 'Boss breaks out through the walls', C, r('krak_first', 'krak_walls', 'f2_bosses_leave') + ['A-123'], 'The clone blasts her door open and flails tentacles through cinderblock into the next room.')],
+ features=[feat('feat2-distillery', 'Rev-Up moonshine distillery', C, r('krak_chamber', 'krak_distillery', 'revup_pamphlet') + ['K-123'], 'Bolted-down moonshine tub, jugs, Alchemy Table and two bicycle-powered blenders with the smoothie recipe; the door to the boss chamber is under cut-out Live, Laugh, Love letters.'),
+           feat('feat2-immunity-smoothie', 'Rev-Up Immunity Smoothie', C, r('smoothie_effect', 'smoothie_buzz', 'krak_distillery') + ['K-123', 'K-124'], 'Temporary immunity to the Taint and Vigorous Measles; also Buzzed (drunk) debuff. Brewed from moonshine plus a Laminak Elite corpse.'),
+           feat('feat2-location-manager', 'Location Manager Damien (unseen)', C, r('damien_loc', 'locmgr_hidden', 'locmgr_three', 'revup_damien', 'lam_scream'), 'A hidden Borant manager who oversees the Rev-Up area; dying Laminaks scream for him and he never comes.')])
+
+zone(id='c2-grub-fields', name='Brindle Grub fields (janitor cycle: grub, pupa, Vespa)', kind='canon_hazard_system', tag=C,
+ ledger_rows=['M-265'] + r('grub_spawn', 'grub_corpses', 'grub_swarm', 'grub_basic', 'grub_goo', 'grub_hemolymph', 'grub_cowtail', 'grub_pupa', 'grub_pupa_timer', 'grub_vespa_emerge', 'grub_pupa_burst', 'grub_vespa_look', 'grub_patch_pupa', 'grub_patch_vespa', 'grub_story', 'grub_ch37', 'grub_vs_elemental', 're_pupae', 'x_pupa_burst', 'dw_frozen_scene'),
+ staging='The more things die in a quadrant, the more cat-sized worms the floor spawns to eat them. Kill too fast and the hall fills with grubs; leave them and they grow into cow-tailed grubs, then pulsating human-sized sacs with a visible countdown, then acid-spitting hornets. The trap for GMs and Crawlers is that destroying corpses does not stop new grubs.',
+ announcement=ann('Patch notes announce the grub problem was too lethal and quietly nerf it by half; the tone is a store manager adjusting inventory.', 'grub_patch_pupa'),
+ mobs=[mob('mob2-brindle-grub', 'Brindle Grub', C, r('grub_spawn', 'grub_basic', 'grub_goo', 'grub_hemolymph', 'grub_corpses'), 'janitor mob', 'Fuzzy cat-sized worm that eats corpses and grows; squeaks, bursts into goo; drops alchemy hemolymph.'),
+       mob('mob2-cow-tailed-grub', 'Cow-Tailed Brindle Grub', C, r('grub_cowtail'), 'mob', 'Final pre-pupa form; bigger, with ineffective whip tails.'),
+       mob('mob2-grub-pupa', 'Grub pupa', C, r('grub_pupa', 'grub_pupa_timer', 'grub_vespa_emerge', 'grub_pupa_burst', 're_pupae'), 'timed mob', 'Human-sized wet sac with flashing lights and a countdown of at least ten hours; bursting it early spills convulsing "uncooked" creatures.', note='Fan table says a damaged sac releases Vespas (X-060).'),
+       mob('mob2-brindled-vespa', 'Brindled Vespa', C, r('grub_vespa_look', 'grub_vespa_emerge', 'grub_patch_vespa', 'dw_frozen_scene'), 'mob', 'Hornet-like final stage that spits acid goo; population was halved by a patch.')],
+ hazards=[haz('haz2-grub-flood', 'Grub flood (spawn cap per quadrant)', C, r('grub_spawn', 'grub_corpses', 'grub_swarm', 'grub_story', 'grub_ch37') + ['M-265'], 'One to fifteen grubs per corpse, up to a hard cap per quadrant; destroying corpses does not stop it. A big fight can bury a neighborhood and drive a camp out.'),
+          haz('haz2-pupa-clock', 'Pupa countdown', C, r('grub_pupa_timer', 'grub_vespa_emerge', 'grub_patch_pupa'), 'A visible timer means "move on": when it ends a Vespa hatches. After the patch only half of grubs reach this stage.'),
+          haz('haz2-vespa-acid', 'Vespa acid spit', C, r('grub_vespa_look', 'grub_patch_vespa'), 'Ranged acid globs from airborne hornets.')],
+ features=[feat('feat2-grub-patches', 'Grub patch notes', C, r('grub_patch_pupa', 'grub_patch_vespa', 'f2_stair_nonsapient'), 'About 3 d 11 h before collapse the daily announcement halves the Vespas, lowers their acid, and gives grubs a 50% chance to pupate.')])
+
+zone(id='c2-kobold-pound', name='Kobold training grounds and the dog pound (Ralph)', kind='canon_boss', tag=C,
+ name_note='Canon boss: Ralph, a Frenzied Gerbil, a Neighborhood Boss.',
+ ledger_rows=['B-005', 'A-091', 'A-083', 'A-056', 'T-009', 'H-004', 'M-090', 'R-010'] + r('dingo_look', 'dingo_masters', 'dingo_biscuit_dot', 'dingo_fed_all', 'dingo_control', 'kobold_chi', 'kobold_lance', 'ralph_pound', 'ralph_kobolds', 'ralph_look', 'ralph_ai', 'ralph_regular', 'ralph_fight', 'ralph_phase2', 'ralph_ch45', 'reward_room', 'reward_key', 'reward_cages', 'mongo_pet', 'mongo_tame', 'web_pet_room_ten', 'web_fourteen_dingoes'),
+ staging='Heavy distorted-barking music pours from a converted municipal dog pound: three hallways of cages, injured dingoes inside. Feeding a caged dingo a pet biscuit turns it from hostile to friendly, so the boss fight can be won by cashing in the animals the kobolds abuse. About forty kobolds march in with Ralph in a small cage; when the dingoes are loosed, one swallows him, but he is not dead. The prize room is a pet reward room with a line of caged monsters.',
+ announcement=ann('The boss intro is a darkly funny history lesson about gerbils and the Black Death, then a flat "you might want to duck."', None) | {'quote': None, 'quote_row': None},
+ mobs=[mob('mob2-danger-dingo', 'Danger Dingo', C, r('dingo_look', 'dingo_masters', 'dingo_fed_all', 'dingo_biscuit_dot'), 'mob', 'Mastiff-sized canines with huge fangs and heavy-metal corpse-paint faces, ridden by kobolds; many are caged and hurt in the pound.'),
+       mob('mob2-kobold-rider', 'Kobold / Kobold Rider', C, r('kobold_chi', 'kobold_lance'), 'mob', 'Yappy, fearless chihuahua-like brawlers who charge on dingoes with feathered lances.'),
+       mob('boss2-ralph', 'Ralph the Frenzied Gerbil', C, ['B-005'] + r('ralph_pound', 'ralph_kobolds', 'ralph_look', 'ralph_ai', 'ralph_regular', 'ralph_fight', 'ralph_phase2'), 'boss', 'Champion pit fighter of the kobold grounds: an absurdly cute gerbil whose mouth opens impossibly wide. Survives being swallowed and bursts out of the dingo.'),
+       mob('mob2-mongo-cage', 'Mongoliensis chick (Mongo)', C, ['H-004', 'R-010'] + r('mongo_pet', 'mongo_tame', 'reward_room'), 'pet / prize', 'Aggressive pet-class chick in the last cage of the pet reward room; needs repeated feeding and time to bond.'),
+       mob('mob2-dingo-control', 'Dingo control spell (kobold slavery)', U, r('dingo_control', 'dingo_masters'), 'mechanic', 'A fan bestiary says kobolds hold the dingoes by a control spell that breaks in the Ralph fight.', note='UNVERIFIED single fan-site claim.')],
+ hazards=[haz('haz2-deafening-music', 'Distorted boss music', C, r('ralph_pound'), 'The chamber music is so loud the pair switch to chat; plan on no shouted calls.'),
+          haz('haz2-kobold-cage-release', 'Cages open mid-fight', U, r('ralph_fight', 'web_fourteen_dingoes', 'dingo_masters'), 'A surviving kobold can open the cages to throw dingoes into the fight; feeding them first keeps them neutral.', note='The wall-button detail comes from a web chapter summary only (UNVERIFIED).')],
+ features=[feat('feat2-pet-biscuit-trick', 'Feed the caged dingoes (PETA Enthusiast)', C, r('dingo_biscuit_dot', 'dingo_fed_all', 'ralph_ch45') + ['A-091'], 'A pet biscuit turns a hostile dingo to neutral; a neat non-lethal solve that changes the boss fight.'),
+           feat('feat2-pet-reward-room', 'Pet reward room (Menagerie)', C, r('reward_room', 'reward_key', 'reward_cages') + ['A-083'], 'After Ralph: a reward room where a Kobold-corpse key opens the cages. The key opens one cage only; one pet per room.', note='Menagerie row A-083 is WIKI-ONLY (incomplete infobox).'),
+           feat('feat2-reward-room-cages', 'Reward room cage line and the Ceramic Dalmatian achievement', U, r('web_pet_room_ten') + ['A-056'], 'A web chapter summary describes a fighting pit with bones, chairs and ten cages of assorted monsters with Mongo in the last; the generic reward-room achievement has an open floor conflict.', note='Web-only (M-%s); A-056 floor conflict unresolved.' % RM['web_pet_room_ten'])])
+
+zone(id='c2-mind-horror', name='Mind Horror quadrants and the rest of the Floor 2 roster', kind='canon_roster', tag=C,
+ ledger_rows=['H-003', 'M-322'] + r('mh_look', 'mh_body', 'mh_psionic', 'mh_slow', 'mh_first', 'mh_guide', 'impaler', 'impaler_warn', 'x_impaler', 'f2_patch_hedgehog', 'f2_patch_hedgehog_why', 'blimp_boss', 'blimp_float', 'zev_ch35'),
+ staging='Floating brain-jellyfish drift in slow packs on the way to the saferoom; the danger is a psionic headache rather than a bite. Elsewhere the roster is thin: a hedgehog mob that was pulled, a rumoured acid-dart spitter, and a blimp-shaped neighborhood boss the party killed off-screen.',
+ announcement=ann('Mob nameplates stay in the deadpan-snarky voice; the hedgehog removal is a cheerful patch-note apology.', 'f2_patch_hedgehog'),
+ mobs=[mob('mob2-mind-horror', 'Mind Horror', C, r('mh_look', 'mh_body', 'mh_psionic', 'mh_slow', 'mh_first'), 'mob', 'Slow, weak, jam-filled-kickball floating brains with dangling tentacles; psionic headache that high-Intelligence Crawlers shrug off.'),
+       mob('npc2-mind-horror-guide', 'Mind Horror as Game Guide (Frank Q and Maggie My)', C, r('mh_guide'), 'npc', 'A deep, rumbly-voiced Mind Horror serving as a murderous Game Guide for Crawler killers.'),
+       mob('boss2-blimp', 'Giant Blimp neighborhood boss (Meadow Lark kill)', C, r('blimp_boss', 'blimp_float'), 'boss', 'A blimp-shaped neighborhood boss that Yolanda, Brandon and Chris killed; its wood became the float frame.', note='Thin: one wiki sentence per page, no mob page. See backlog.'),
+       mob('mob2-hedgehog', "Satan's Lil' Hedgehogs (pulled by patch)", C, r('f2_patch_hedgehog', 'f2_patch_hedgehog_why'), 'removed mob', 'Armor-piercing-quill mob seeded here and relocated to a deeper floor about 4 d 17 h before collapse. Do not field on Floor 2.'),
+       mob('mob2-impaler', 'Shambling Acid Impaler', U, r('impaler', 'impaler_warn', 'x_impaler'), 'rumored mob', 'Hairy green four-legged acid-dart spitter that Mordecai warned would be everywhere; the wiki also files it under previous seasons.', note='Open conflict X-063: no seen encounter.')],
+ hazards=[haz('haz2-psionic-headache', 'Psionic headache', C, r('mh_psionic', 'mh_first'), 'A health-sapping headache that can be felt before the monster is seen; weak against high Intelligence.')],
+ features=[feat('feat2-brandon-training', 'Meadow Lark trains on Mind Horrors', C, r('blimp_boss', 'blimp_float', 'mh_first'), 'The Meadow Lark fighters grind a Mind Horror quadrant between the first saferoom and the stairwell hunt.')])
+
+zone(id='c2-rage-elemental', name='The Rage Elemental and the bathroom penalty', kind='canon_setpiece', tag=C,
+ name_note='Canon: a Wandering/summoned boss pulled from Floor 13 as a penalty. Not an encounter you roll on the floor.',
+ ledger_rows=['B-029', 'T-007', 'T-008', 'M-092', 'A-131', 'A-047'] + r('re_origin', 're_dissipate', 're_smoke', 're_burning', 're_gravity', 're_look', 're_door', 're_eject', 're_pupae', 're_stair_kill', 're_summon', 're_ch38', 're_ch40', 're_ch31', 'f2_ann_penalty', 'f2_ann_penalty_kill', 'f2_ann_disappointed', 'f2_penalty_humans', 'f2_penalty_admin', 'f2_timeline_ep5', 'grub_vs_elemental', 'x_grub_kill_count'),
+ staging='A stern announcement says anyone human who relieves themselves outside a bathroom summons a smoke monster that kills them and their party. It happens in front of a convoy of frail elderly residents. The monster shreds through fog and arrows, reverses gravity, and then camps outside a saferoom pounding at the door, until it is lured into a stairwell hole with an oil slick and bombs.',
+ announcement=ann('Cascadia scolds with a prim "we are disappointed in the disrespect" and then states the penalty as a cheerful threat.', 'f2_ann_penalty_kill'),
+ mobs=[mob('boss2-rage-elemental', 'Rage Elemental', C, ['B-029'] + r('re_origin', 're_dissipate', 're_smoke', 're_burning', 're_gravity', 're_look', 're_door', 're_eject', 're_pupae', 're_stair_kill'), 'summoned boss', 'Fifteen-foot black-and-purple smoke body with six obsidian-clawed legs and a horned skull. Arrows and missiles barely register, burning slows its self-heal, and it casts a limited-range Reverse Gravity.', note='Said to dissipate after 666 souls.')],
+ hazards=[haz('haz2-bathroom-penalty', 'Bathroom penalty', C, r('f2_ann_penalty', 'f2_ann_penalty_kill', 'f2_penalty_humans', 'f2_penalty_admin', 're_summon'), 'Any human who relieves themselves outside a designated bathroom summons the elemental on the spot; kills the offender and the party. Pets are exempt; ends at collapse.'),
+          haz('haz2-reverse-gravity', 'Reverse Gravity', C, r('re_gravity', 're_ch38') + ['A-131'], 'Flips gravity in a limited area; a convoy was flung to the ceiling.'),
+          haz('haz2-safe-room-siege', 'Siege of the saferoom', C, r('re_door', 're_eject', 'f2_timeline_ep5', 'f2_sr_close'), 'The elemental pounds the door for hours; opening the door ejects it into the hall for 75 to 120 seconds, and the later closure rule removes the saferoom as a refuge.')],
+ features=[feat('feat2-stairwell-kill', 'Killing it with the stairwell', C, r('re_stair_kill', 're_ch40') + ['T-008', 'A-047'], 'The canon solve is a heavily prepared lure: oil slick, bombs and a stairwell hole where the descent rule destroys it. It gives no experience.', note='The no-experience note is wiki wording; no amounts here.')])
+
+zone(id='c2-escort', name='Meadow Lark convoy to the stairwell', kind='canon_setpiece', tag=C,
+ ledger_rows=['H-011', 'T-006', 'T-007', 'T-019'] + r('ml_ten_car', 'ml_descend', 'blimp_float', 'grub_ch37', 're_ch38', 'tiatha_stairs', 'tiatha_drink', 'f2_stair_bosses'),
+ staging='A convoy of frail residents on a ten-car wheelchair train threads a grub-choked hall toward a stairwell the Crawlers scouted. Everything goes right until one resident drops his pants. Survivors then wait in a saferoom while the Crawlers kill the elemental, and descend together.',
+ announcement=ann('Zev reports in as a producer: the elderly storyline is playing well with viewers.', None) | {'quote': None, 'quote_row': None},
+ mobs=[],
+ hazards=[haz('haz2-convoy-exposure', 'Slow convoy in a swarm', C, r('ml_ten_car', 'grub_ch37'), 'A long train of frail NPCs is slow and an easy target for grubs and the elemental.')],
+ features=[feat('feat2-meadow-lark', 'Meadow Lark party (Brandon, Chris, Imani, Yolanda)', C, ['H-011', 'T-007'] + r('ml_ten_car', 'ml_descend', 'blimp_boss'), 'Caretakers and elderly residents; thirty-six residents and three staff reach Floor 3, Yolanda and Randall die on Floor 2.'),
+           feat('feat2-mistress-tiatha', 'Mistress Tiatha (Meadow Lark manager)', C, r('tiatha_stairs', 'tiatha_drink'), 'A drinking Game Guide who told Brandon every Borough and City boss on the early floors holds a stairwell.')])
+
+zone(id='c2-death-watch', name='Death Watch Extreme Dungeon Mayhem (tunneled studio set-piece)', kind='canon_setpiece', tag=C,
+ name_note='Canon: Skull Empire game show hosted by Prince Maestro. Crawlers are teleported into a rented studio trailer.',
+ ledger_rows=['T-020'] + r('dw_format', 'dw_segment', 'dw_freeze', 'dw_points', 'dw_audience', 'dw_not_live', 'dw_trailer', 'dw_syndicate', 'dw_frozen_scene', 'dw_carl_gamble', 'dw_hiatus', 'maestro_look', 'maestro_temper', 'maestro_ch42', 'snick', 'mukta_booking', 'mukta_free', 'ch44_under_million', 'epilogue'),
+ staging='A round-table panel show: two near-dead Crawlers frozen mid-fight are asked to guess who in other clips lives or dies, earning teleport points to save frozen friends. The studio audience chants and the host is a cruel, thin-skinned boar-like orc. Borant cannot refuse the show because the Skull Empire is a Syndicate member. A Crawler can flip the format by betting that the host cannot risk his own paid guests.',
+ announcement=ann('The host talks like a bully with a fan base: loud chants, insulting nicknames and tantrums when the interview slips.', None) | {'quote': None, 'quote_row': None},
+ mobs=[mob('npc2-maestro', 'Prince Maestro', C, r('dw_format', 'maestro_look', 'maestro_temper', 'maestro_ch42', 'dw_hiatus'), 'npc', 'Huge, muscular, bristle-haired boar-like orc host; cruel and egotistical, addresses Crawlers as meat.'),
+       mob('npc2-mexx-55', 'Mexx-55 (greeter robot)', C, r('dw_trailer'), 'npc', 'Black, metallic, frisbee-shaped greeter robot of the rented tunnel trailer.')],
+ hazards=[haz('haz2-time-freeze', 'Time Freeze and teleport points', C, r('dw_freeze', 'dw_points', 'dw_segment', 'dw_frozen_scene'), 'Guests are held in a Time Freeze; each correct guess earns one teleport point to send someone to the nearest saferoom.')],
+ features=[feat('feat2-death-watch-format', 'Death Watch format and audience', C, r('dw_format', 'dw_segment', 'dw_audience', 'dw_not_live', 'dw_syndicate'), 'Round-table guests, a studio of pre-teen boys chanting, not normally live; the format cannot be refused by Borant.'),
+           feat('feat2-carl-gamble', 'The audience-flip gambit', C, r('dw_carl_gamble', 'maestro_ch42', 'mukta_free'), 'Walking off and demanding the points be spent on yourself works because the host cannot afford to endanger his paid guests.')])
+
+zone(id='c2-npcs', name='Borant staff, guides and drifters (Floor 2 roster)', kind='canon_roster', tag=C,
+ ledger_rows=['H-021', 'H-028', 'H-003', 'T-064'] + r('zev_role', 'zev_suit', 'zev_ch35', 'zev_suspended', 'mukta_role', 'mukta_remote', 'mukta_booking', 'mukta_free', 'damien_loc', 'locmgr_hidden', 'locmgr_three', 'agatha_cart', 'agatha_valtay', 'agatha_arrival', 'f2_behind', 'f2_council', 'f2_morning', 'f2_penalty_admin', 'tiatha_drink'),
+ staging='Borant admins run the crawl from the edges: Zev enters in a water suit and talks like a nervous friend, Mukta never enters at all and books the paying show, and hidden Location Managers tend the set-piece storylines. Agatha wanders the floor and drops the illegal Valtay gear in the stairwell on the way out.',
+ announcement=ann('Admins speak in apologetic corporate shorthand; Mukta is curt and pay-per-appearance.', None) | {'quote': None, 'quote_row': None},
+ mobs=[],
+ hazards=[haz('haz2-admin-exposure', 'Admins are not protected on the first three floors', C, r('zev_suit', 'f2_penalty_admin', 'f2_morning'), 'Staff have no protections on these floors; the bathroom penalty also kills admin humans and Site Prep workers are eaten.')],
+ features=[feat('npc2-zev', 'Zev (Outreach Associate)', C, ['H-021'] + r('zev_role', 'zev_suit', 'zev_ch35', 'zev_suspended'), 'Kua-Tin Borant liaison in a bubbling-water helmet; suspended for warning Carl about the elemental.'),
+           feat('npc2-mukta', 'Mukta (Communications admin)', C, r('mukta_role', 'mukta_remote', 'mukta_booking', 'mukta_free', 'zev_suspended'), 'Bloom member who takes over PR remotely, closes his chats and rents the Crawlers to the highest bidder.'),
+           feat('npc2-damien', 'Damien (Location Manager)', C, r('damien_loc', 'locmgr_hidden', 'locmgr_three'), 'Unseen manager of the Rev-Up and Krakaren area.'),
+           feat('npc2-mordecai-bugaboo', 'Mordecai in his Floor 2 Bugaboo form', C, ['H-003'] + r('zev_ch35'), 'Game Guide met in the guild hall after the Krakaren fight.'),
+           feat('npc2-agatha', 'Agatha and her cart', C, ['H-028'] + r('agatha_cart', 'agatha_valtay', 'agatha_arrival'), 'Wandering homeless Crawler with a squeaky cart who edits herself out of recaps and leaves illegal Valtay tech behind.')])
+
+# ================================================================= top-level extras
+FLOOR_DIFFERENCES = [
+ dict(id='diff-timer', difference='Collapse timer is six days, cut to the Syndicate minimum, instead of the ten guides expected.', floor1='House Floor 1 = 5 days (decision 026); canon Floor 1 timer not captured here.', floor2='Canon 6 days (expected 10). House Floor 2 = 10 days (decision 026).', ledger_rows=r('f2_timer_short', 'f2_timer_why', 'f2_ann_six', 'x_timer_house'), tag=C),
+ dict(id='diff-safe-room-closure', difference='Saferooms close one hour before collapse and eject everyone.', floor1='Saferooms stay open until the floor ends.', floor2='Closure by patch at about 4 d 17 h; countdown inside.', ledger_rows=r('f2_sr_close', 'f2_sr_close_why', 'f2_sr_close_clock', 'f2_sr_ch39') + ['M-012'], tag=C),
+ dict(id='diff-bosses-leave', difference='Bosses can leave their chambers.', floor1='Bosses cannot exit boss chambers.', floor2='First seen with the Krakaren Clone.', ledger_rows=r1('boss_no_exit') + r('f2_bosses_leave', 'krak_first') + ['A-123'], tag=C),
+ dict(id='diff-stairwells', difference='All stairwells exist from the start.', floor1='Stairwells appear about 32 hours after opening.', floor2='All 37,500 at minute one; same stasis rule (more than six hours left).', ledger_rows=r1('stair_timing', 'stair_stasis') + r('f2_stair_all', 'f2_stair_stasis', 'f2_stair_free'), tag=C),
+ dict(id='diff-janitor', difference='Grubs replace rats as janitor mobs, with a pupa-and-Vespa life cycle and a spawn cap.', floor1='Rats eat the dead.', floor2='1 to 15 grubs per corpse up to a per-quadrant cap.', ledger_rows=r1('rat_janitor') + r('grub_spawn', 'grub_corpses', 'grub_pupa'), tag=C),
+ dict(id='diff-bathroom', difference='Relieving yourself outside a bathroom now summons a Rage Elemental.', floor1='A bug-fix scolding about hallway use; no penalty.', floor2='Human-born Crawlers and all humans; pets exempt; ends at collapse.', ledger_rows=r1('restroom_patch') + r('f2_ann_penalty', 'f2_penalty_humans', 'f2_penalty_admin'), tag=C),
+ dict(id='diff-mailbox', difference='Saferooms gain a mailbox for the Dungeon Book of the Floor Club.', floor1='No mailboxes.', floor2='Subscribers get one tome per floor; others see an error line.', ledger_rows=r('f2_sr_mailbox', 'f2_sr_mail_error', 'club_def', 'club_mailbox'), tag=C),
+ dict(id='diff-ratings', difference='The audience economy turns on: follows, favorites, ratings, revised patronage.', floor1='Viewers could not follow or favorite.', floor2='Switched on at the opening announcement.', ledger_rows=r('f2_ratings_on', 'f2_ann_follows', 'f2_ann_patrons', 'f2_guides_hidden'), tag=C),
+ dict(id='diff-stories', difference='Floor 2 introduces deliberate running storylines (Rev-Up) and media set-pieces, not just stand-alone mobs.', floor1='Self-contained mobs and bosses.', floor2='Rev-Up pyramid scheme, Death Watch, Rage Elemental trap.', ledger_rows=r('f2_stories', 'f2_no_quests', 'revup_intro', 'dw_format'), tag=C),
+ dict(id='diff-regions', difference='The grid is split into regions that never connect, and halls are narrower.', floor1='Square grid of neighborhoods.', floor2='Unconnected regional sections; narrower arteries; cinderblock.', ledger_rows=r1('f1_layout') + r('f2_regions', 'f2_arteries', 'f2_walls'), tag=C),
+ dict(id='diff-population', difference='Roughly 1.29 million Crawlers entered Floor 2 after the Floor 1 collapse killed over 700,000.', floor1='Not captured as a row; Floor 1 ended in a collapse that killed over 700,000.', floor2='1,292,526 at the countdown start; under one million by the third day.', ledger_rows=r('f2_count_start', 'f2_collapse_toll', 'f2_count_mid', 'ch44_under_million'), tag=C),
+]
+
+SYSTEM_ANNOUNCEMENTS = {
+ 'voice': 'Cascadia presents like a cheerful corporate host: congratulates, pads policy with sales language, then drops an ominous rule in a tidy sentence. Every announcement ends with a bright kill-kill-kill line. Patch notes arrive after a recap episode and read like apologetic changelogs. Not announced to the group in this reserve table.',
+ 'beats': [
+  dict(id='ann-open', when='about 7 h after the floor opens, after episode 4', what='Count under projections, timer cut to the minimum, wait until the last moment to descend, follows/favorites on, revised patronage, bathroom penalty, sign-off.', ledger_rows=r('f2_ann_timing', 'f2_ann_tone', 'f2_ann_count', 'f2_ann_six', 'f2_ann_wait', 'f2_ann_follows', 'f2_ann_patrons', 'f2_ann_boxes', 'f2_ann_disappointed', 'f2_ann_penalty', 'f2_ann_penalty_kill', 'f2_ann_signoff'), quote_rows=['f2_ann_six', 'f2_ann_wait', 'f2_ann_penalty_kill', 'f2_ann_signoff']),
+  dict(id='ann-patch-safe-room', when='about 4 d 17 h before collapse (after episode 5)', what='Satan\'s Lil\' Hedgehogs relocated; saferooms will close one hour before collapse.', ledger_rows=r('f2_patch_hedgehog', 'f2_sr_close', 'f2_sr_close_why', 'f2_sr_close_clock') + ['M-012'], quote_rows=['f2_patch_hedgehog']),
+  dict(id='ann-daily-day3', when='about 3 d 11 h before collapse (daily announcement)', what='Guides may explain Floor 3 race/class selection; non-sapient mobs no longer disintegrate in stairwells; Vespa cut; grubs have a 50% chance to pupate.', ledger_rows=r('f2_guides_f3', 'f2_stair_nonsapient', 'grub_patch_vespa', 'grub_patch_pupa'), quote_rows=['f2_guides_f3', 'f2_stair_nonsapient']),
+  dict(id='ann-recap-bathroom', when='after the second recap episode', what='A recap episode justifies the bathroom trap; the announcement says the rule ends at the floor collapse.', ledger_rows=r('re_summon', 'f2_penalty_humans', 'f2_timeline_ep5'), quote_rows=[]),
+  dict(id='ann-free-descent', when='last 6 hours', what='Crawlers can begin descending without losing time.', ledger_rows=r('f2_stair_free', 'f2_stair_headstart') + r1('stair_stasis'), quote_rows=['f2_stair_free']),
+ ]}
+TIMELINE = [
+ dict(id='t-open', countdown='6 d 06 h', event='Floor opens; Crawlers can start exploring.', ledger_rows=r('f2_timeline_open')),
+ dict(id='t-start', countdown='6 d 00 h', event='Countdown timer starts; 1,292,526 Crawlers left; Dungeon Crawler World: Earth episode 4 airs.', ledger_rows=r('f2_count_start', 'f2_ann_timing')),
+ dict(id='t-open-ann', countdown='5 d 23 h', event='Cascadia\'s introductory announcement; ratings go live.', ledger_rows=r('f2_ann_timing', 'f2_ratings_on', 'f2_ann_follows')),
+ dict(id='t-ep5', countdown='4 d 18 h', event='Episode 5 airs (saferoom siege shown).', ledger_rows=r('f2_timeline_ep5')),
+ dict(id='t-patch', countdown='4 d 17 h', event='Patch: Hedgehogs relocated; saferooms will close one hour before collapse.', ledger_rows=r('f2_patch_hedgehog', 'f2_sr_close')),
+ dict(id='t-daily', countdown='3 d 11 h', event='Daily announcement: guides may explain Floor 3; stairwell no-disintegrate; Vespa and pupa patch; under one million Crawlers.', ledger_rows=r('f2_guides_f3', 'f2_stair_nonsapient', 'grub_patch_vespa', 'grub_patch_pupa', 'f2_count_mid')),
+ dict(id='t-free-descent', countdown='0 d 06 h', event='Descending costs no time.', ledger_rows=r('f2_stair_free', 'f2_stair_headstart')),
+ dict(id='t-sr-close', countdown='0 d 01 h', event='Saferooms eject everyone inside.', ledger_rows=r('f2_sr_close') + ['M-012']),
+ dict(id='t-collapse', countdown='0 d 00 h', event='Level collapse.', ledger_rows=r('f2_penalty_humans')),
+]
+
+def clock():
+    return {
+     'tag': C,
+     'canon_days': 6,
+     'canon_expected_days': 10,
+     'canon_note': 'Six days is the Syndicate legal minimum; ten was the normal length guides expected. A one-off cut because fewer Crawlers survived than projected.',
+     'canon_rows': r('f2_timer_short', 'f2_timer_why', 'f2_ann_count', 'f2_ann_six', 'f2_count_start'),
+     'house': {
+       'tag': I,
+       'house_days': 10,
+       'authority': 'dcc-campaign/decisions/026-timed-floor-clock-override.md (Caleb, 2026-10-04): Floor 1 = 5, Floor 2 = 10. Read-only citation; this table never edits the campaign folder.',
+       'conflict_row': RM['x_timer_house'],
+       'why_inspired': 'The ten-day figure matches the length canon guides expected, so a ten-day house Floor 2 reads as the "normal" version of the floor rather than the shortened one.',
+       'fixed_points_keep_absolute': [
+         dict(rule='Saferooms close one hour before collapse and eject occupants.', ledger_rows=r('f2_sr_close') + ['M-012']),
+         dict(rule='Descending with more than six hours left holds the Crawler in stasis; in the last six hours descent costs no time.', ledger_rows=r('f2_stair_stasis', 'f2_stair_free') + r1('stair_stasis'))],
+       'beat_scaling_suggestion': 'Canon patch beats at 31 h and 61 h elapsed (of 144 h) are about 22% and 42% of the clock; on a 240 h house clock that is about 52 h (early Day 3) and 102 h (mid Day 5). Keep the last-6-hours and last-hour rules absolute. All suggestion; no ledger row sets house timings.',
+       'collapse_order_note': 'Decision 026 gives Floor 1 collapse order only; no Floor 2 zone-closure order exists. Backlog item.'}}
+
+# ----------------------------------------------------------------- refinement backlog
+BACKLOG = [
+ dict(id='rb-01', priority='high', item='Check every Floor 2 row against the novel text (chapters 30-47 and the epilogue).', why='Nothing in the ledger was read against the book; all rows are fan-wiki, one recap transcript and web summary snippets (ledger section 0).', how='Compare page cites B1 ch30-47 with a legitimate copy of the book; relabel rows; flag misreads.', rows=r('f2_final_tutorial')),
+ dict(id='rb-02', priority='high', item='Settle the Floor 2 clock for the house game and map patch beats onto it.', why='Canon is six days; decision 026 says ten (X-062). The scaling and the zone-closure order are suggestions only.', how='Caleb/Syndicate confirm 10 days; Lore writes a Floor 2 collapse-order note once a house zone map exists; encounter budget numbers come only from rules/70.', rows=r('f2_timer_why', 'x_timer_house')),
+ dict(id='rb-03', priority='high', item='Identify the Blimp neighborhood boss.', why='One infobox line and one wiki sentence; a web summary calls Brandon\'s fight a Mind Horror boss. No mob page, no tier, no attack.', how='Read B1 ch37 and the Meadow Lark / Yolanda pages in the live wiki; search "blimp" in chapter summaries.', rows=r('blimp_boss', 'blimp_float')),
+ dict(id='rb-04', priority='high', item='Krakaren Clone tier and the other two clone instances.', why='Wiki and recap say Neighborhood; a fan table says Borough (X-059). At least three instances exist but only one fight is recorded; which carry stairwells is unknown.', how='B1 ch32-35 and the Krakaren page; check boss chamber stairwell rule for Borough tier.', rows=r('krak_boss', 'krak_instances', 'x_krak_tier')),
+ dict(id='rb-05', priority='medium', item='Shambling Acid Impaler: seen or only warned about?', why='Wiki says previous seasons and also that Mordecai warned they would be everywhere (X-063).', how='B1 ch5 (Mordecai\'s warning); search ch30-47 for any Impaler encounter.', rows=r('impaler', 'impaler_warn', 'x_impaler')),
+ dict(id='rb-06', priority='medium', item='Rot Stickers on Floor 2.', why='Listed on the Floor 2 infobox with no text, no cite; they are a Floor 1 mob in the ledger.', how='Check the Second Floor infobox history and B1 chapters for Rot Stickers after the stairwell.', rows=r1('rot_sticker_bomb')),
+ dict(id='rb-07', priority='medium', item='Danger Dingo control spell and the cage count.', why='"Enslaved by kobolds via a control spell" is a single fan-site claim (M-%s). Chapter summaries disagree on 14 vs 13 dingoes (M-%s).' % (RM['dingo_control'], RM['web_fourteen_dingoes']), how='B1 ch45-46.', rows=r('dingo_control', 'web_fourteen_dingoes')),
+ dict(id='rb-08', priority='medium', item='Pet reward room: cage list, key rule, and the Ceramic Dalmatian achievement floor.', why='Only Mongo is documented; cage count is web-only; A-056 floor conflict (F9 page vs F2 master list) still open.', how='B1 ch46; Menagerie and Ceramic Dalmatian achievement pages; keep amounts out.', rows=r('reward_room', 'reward_key', 'web_pet_room_ten') + ['A-056', 'A-083']),
+ dict(id='rb-09', priority='medium', item='Patron auction start floor.', why='Wiki transcription says the fourth floor; transcript and a recap site say floor three / "each floor" (X-061).', how='B1 ch31 announcement text.', rows=r('f2_ann_patrons', 'x_patron_start')),
+ dict(id='rb-10', priority='medium', item='Rage Elemental details: grub count, door ejection timing, no-experience kill, 666 souls.', why='Wiki: thousands of grubs; a web summary: 666 (X-064). Timing 75 to 120 seconds from one wiki sentence.', how='B1 ch38-40 text.', rows=r('re_eject', 're_dissipate', 'x_grub_kill_count')),
+ dict(id='rb-11', priority='medium', item='Complete the Floor 2 saferoom list.', why='Only Big Shot Chicken, the storm shelter and the unstaffed Mana Toast room are documented.', how='Read B1 ch30, 38, 41, 47 and the Safe Rooms page; list every named saferoom.', rows=r('qwist', 'f2_sr_look', 'manatoast_where')),
+ dict(id='rb-12', priority='medium', item='Death Watch rules in detail (teleport points, VIP and surprise guests, Li Jun/Zhang pages).', why='Rows come from one show page and the Maestro page; no row for Li Jun, Li Na, Zhang or Mexx beyond one line.', how='B1 ch41-44; Li Jun page; Dungeon Crawl Tactics booking.', rows=r('dw_segment', 'dw_points', 'dw_carl_gamble')),
+ dict(id='rb-13', priority='medium', item='Meadow Lark counts and Tiatha/guide details.', why='Wiki says 39 residents travel, 36 arrive; one recap site says 38 residents; Tiatha has two lines.', how='Meadow Lark, Brandon, Chris, Imani and Tiatha pages; B1 ch22, 37, 41.', rows=r('ml_descend', 'ml_ten_car', 'tiatha_stairs')),
+ dict(id='rb-14', priority='low', item='Mind Horror relatives and Intelligence threshold.', why='Wiki says Brain Boiler relative (B2 ch14) and "high Intelligence" resist with no threshold.', how='Mind Horror page citations; B1 ch30 and B2 ch14.', rows=r('mh_psionic', 'mh_look')),
+ dict(id='rb-15', priority='low', item='Mine the Carl_Floor 2 and Donut_Floor 2 mirror pages.', why='They are character-state pages (gear, stats, skills); not mined for Floor 2 hazards or NPCs.', how='Read for hazard/NPC cites; keep levels and stats out of this table.', rows=[]),
+ dict(id='rb-16', priority='low', item='Quest-free Floor 2: confirm no Floor 2 quest system exists.', why='Wiki says no formal quests yet; stories play out shallowly.', how='B1 ch30-47; wiki quests page.', rows=r('f2_no_quests')),
+ dict(id='rb-17', priority='low', item='Named zone geography and Borough/City bosses of Floor 2.', why='No quadrant/neighborhood names, no named Borough or City boss beyond the clone and Ralph; stairwell positions are random.', how='Check the novel for neighborhood boss names and the Floor 2 map description.', rows=r('f2_stair_bosses')),
+ dict(id='rb-18', priority='low', item='Floor 2 achievement list vs this table.', why='Ledger has A-rows; reward boxes are loot and intentionally excluded.', how='Cross-check ledger A- rows for F2 when the house achievement remap runs.', rows=['A-123', 'A-034', 'A-047', 'A-071', 'A-083', 'A-091', 'A-131', 'A-136', 'A-056']),
+ dict(id='rb-19', priority='low', item='Build the house Floor 2 module (zones, bait, collapse order) from this reserve table when Caleb releases it.', why='No floors/f02 exists; status "reserve" means not announced and not for live use.', how='Encounter/Syndicate bots read this table; Lore supplies inspired zones tagged separately.', rows=[]),
+]
+
+GAPS = [
+ 'No named quadrants, neighborhoods or Borough/City bosses are recorded for Floor 2 beyond the Krakaren Clone and Ralph.',
+ 'The Giant Blimp boss has no attack, tier or chamber description (backlog rb-03).',
+ 'Rot Stickers are on the infobox but have no text or cite (rb-06).',
+ 'Only three saferooms are documented (rb-11).',
+ 'Li Jun, Li Na, Zhang and their manager have no separate rows beyond the Death Watch scene (rb-12).',
+ 'Reward-room contents beyond Mongo are web-only (rb-08).',
+ 'Mob levels, challenge ratings, credit values and loot amounts are deliberately omitted (Syndicate rules/10 and loot decks).',
+ 'Later-book spoilers (Rev-Up as Apothecary satire, Floor 4 reuse) are noted once and not expanded; Floor 2 only.',
+]
+
+# ----------------------------------------------------------------- finalize
+def sort_ids(ids): return sorted(set(ids), key=lambda x: (x[0], int(re.sub(r'\D', '', x))))
+def finalize(ZONES):
+    for z in ZONES:
+        z.setdefault('table_refs', []); z.setdefault('items', []); z.setdefault('gaps', [])
+        z['ledger_rows'] = sort_ids(z['ledger_rows'])
+        z['conflicts'] = [x for x in z['ledger_rows'] if x.startswith('X-')]
+        z['ledger_rows'] = [x for x in z['ledger_rows'] if not x.startswith('X-')]
+        z['confidence'] = conf_of(z['ledger_rows'])
+        z['confidence_scope'] = 'weakest ledger row listed'
+        for k in ('mobs', 'hazards', 'features'):
+            for e in z[k]:
+                e['ledger_rows'] = sort_ids(e['ledger_rows'])
+                e['confidence'] = conf_of([x for x in e['ledger_rows'] if not x.startswith('X-')])
+                has_x = any(x.startswith('X-') for x in e['ledger_rows'])
+                if e['tag'] == U and e['confidence'] != 'UNVERIFIED' and not has_x: raise SystemExit('unverified tag needs UNVERIFIED row or open X conflict: ' + e['id'])
+                if e['tag'] == C and not [x for x in e['ledger_rows'] if not x.startswith('X-')]: raise SystemExit('canon entry without ledger row: ' + e['id'])
+                if e['tag'] == C and e['confidence'] is None: raise SystemExit('no conf ' + e['id'])
+        if z['tag'] == C and not z['ledger_rows']: raise SystemExit('canon zone without rows ' + z['id'])
+
+def build():
+    Z = copy.deepcopy(ZONES)
+    finalize(Z)
+    for d in FLOOR_DIFFERENCES + TIMELINE:
+        d['ledger_rows'] = sort_ids(d['ledger_rows']); d['confidence'] = conf_of([x for x in d['ledger_rows'] if not x.startswith('X-')])
+    ann_ = copy.deepcopy(SYSTEM_ANNOUNCEMENTS)
+    for b in ann_['beats']:
+        b['ledger_rows'] = sort_ids(b['ledger_rows']); b['confidence'] = conf_of(b['ledger_rows'])
+        b['quotes'] = [{'row': RM[q], 'quote': quote_of(RM[q])} for q in b.pop('quote_rows')]
+    ck = clock(); ck['canon_rows'] = sort_ids(ck['canon_rows']); ck['canon_confidence'] = conf_of(ck['canon_rows'])
+    bl = copy.deepcopy(BACKLOG)
+    for b in bl: b['ledger_rows'] = sort_ids(b.pop('rows'))
+    doc = {
+     'schema': 'canon-floor-2/0.1.0',
+     'status': 'reserve',
+     'reserve_note': 'RESERVE source table. Not announced to the group and not for live use. Caleb asked for Floor 2 canon to be built, held in reserve and kept refined. Do not read it out, publish it, or wire it into a live floor until Caleb releases it.',
+     'floor': 2,
+     'floor_name_canon': 'The Second Floor',
+     'floor_name_house': None,
+     'owner': 'DCC Lore',
+     'updated': '2026-10-04',
+     'ledger_version': re.search(r'Version: ([\d.]+)', open(LEDGER).read().split('\n')[1]).group(1),
+     'consumer': 'none yet (reserve). Future: Encounter Bot / Syndicate when released.',
+     'players_are': 'Crawlers',
+     'tag_legend': {
+       'canon': 'Appears in the books per the ledger (wiki-sourced; nothing here was checked against the novels, see ledger section 0).',
+       'inspired': 'House-game extension or adaptation suggestion. ledger_rows then name the nearest canon basis only.',
+       'unverified': 'Claimed as canon but the ledger row is UNVERIFIED (single fan-site claim) or an open X- conflict says the claim is not confirmed.'},
+     'confidence_legend': 'Copied from the ledger Confidence column (VERIFIED / WIKI-ONLY / UNVERIFIED); several rows -> weakest label. null = no ledger row.',
+     'out_of_scope': 'No CR, levels, difficulty, credits or loot amounts: Syndicate rules/10 and the loot decks own those. GM-only spine seeds and house Floor 2 zones are deliberately left out.',
+     'how_to_use': 'Read as a canon reference only while status is reserve. announcement.quote is a ledger-row quote (25 words or fewer) or null; otherwise paraphrase the style.',
+     'floor_clock': ck,
+     'floor_differences_from_floor_1': FLOOR_DIFFERENCES,
+     'system_announcements': ann_,
+     'timeline_by_countdown': TIMELINE,
+     'zones': Z,
+     'gaps': GAPS,
+     'refinement_backlog': bl,
+     'open_conflicts': [RM[k] for k in ('x_krak_tier', 'x_pupa_burst', 'x_patron_start', 'x_timer_house', 'x_impaler', 'x_grub_kill_count', 'x_tuskling_f2')],
+    }
+    return doc
+
+def md(doc):
+    out = ['# Canon Floor 2 source table - RESERVE (readable view)',
+           'Owner: DCC Lore | Status: reserve | Version: 0.1 | Updated: 2026-10-04',
+           'Summary: Readable view of tables/canon-floor-2.json: Floor 2 canon (zones, bosses, hazards, NPCs, announcements, clock, differences from Floor 1) with tag and ledger row ids. RESERVE: not announced to the group, not for live use. No CR, levels, credits or loot.', '',
+           f"> **RESERVE.** {doc['reserve_note']}", '',
+           f"Generated by tools/canon_floor2_build.py from CANON-LEDGER.md v{doc['ledger_version']}. Do not edit by hand; edit the builder and re-run. Tags: **canon** (books, per ledger), **inspired** (house suggestion; rows = nearest canon basis), **unverified**. Confidence is copied from the ledger.", '']
+    ck = doc['floor_clock']
+    out += ['## Floor clock', f"- Canon: **{ck['canon_days']} days** (guides expected {ck['canon_expected_days']}). {ck['canon_note']} Rows: {', '.join(ck['canon_rows'])} [{ck['canon_confidence']}]",
+            f"- House (inspired): {ck['house']['house_days']} days. Authority: {ck['house']['authority']} Conflict row {ck['house']['conflict_row']}. {ck['house']['why_inspired']}"]
+    for f in ck['house']['fixed_points_keep_absolute']: out.append(f"- Keep absolute: {f['rule']} Rows: {', '.join(sorted(set(f['ledger_rows'])))}")
+    out += [f"- Beat scaling (inspired): {ck['house']['beat_scaling_suggestion']}", f"- {ck['house']['collapse_order_note']}", '']
+    out += ['## Differences from Floor 1']
+    for d in doc['floor_differences_from_floor_1']:
+        out.append(f"- **{d['difference']}** Floor 1: {d['floor1']} Floor 2: {d['floor2']} [{d['tag']}, {d['confidence']}] rows: {', '.join(d['ledger_rows'])}")
+    out += ['', '## System announcement style', doc['system_announcements']['voice']]
+    for b in doc['system_announcements']['beats']:
+        out.append(f"- **{b['id']}** ({b['when']}): {b['what']} [{b['confidence']}] rows: {', '.join(b['ledger_rows'])}" + ''.join(f" Quote ({q['row']}): \"{q['quote']}\"" for q in b['quotes']))
+    out += ['', '## Timeline (countdown to collapse)']
+    for t in doc['timeline_by_countdown']: out.append(f"- {t['countdown']}: {t['event']} [{t['confidence']}] rows: {', '.join(t['ledger_rows'])}")
+    out.append('')
+    for z in doc['zones']:
+        out.append(f"## {z['id']} - {z['name']}")
+        out.append(f"- Kind: {z['kind']} | Tag: **{z['tag']}** | Confidence: {z['confidence'] or 'n/a'}")
+        if z.get('name_note'): out.append(f"- Name note: {z['name_note']}")
+        out.append(f"- Ledger rows: {', '.join(z['ledger_rows']) or 'none'}" + (f" | Conflicts: {', '.join(z['conflicts'])}" if z['conflicts'] else ''))
+        out.append(f"- Staging: {z['staging']}")
+        a = z['announcement']
+        out.append(f"- Announcement style: {a['style']}" + (f" Quote ({a.get('quote_row')}): \"{a['quote']}\"" if a.get('quote') else ''))
+        for k, label in (('mobs', 'Mobs / NPCs'), ('hazards', 'Hazards'), ('features', 'Features / NPCs')):
+            if z[k]:
+                out.append(f"- {label}:")
+                for e in z[k]:
+                    out.append(f"  - **{e['name']}** [{e['tag']}, {e['confidence'] or 'no ledger row'}] rows: {', '.join(e['ledger_rows']) or 'none'} - {e['what']}" + (f" _{e['note']}_" if e.get('note') else ''))
+        out.append('')
+    out += ['## Gaps (honest list)'] + [f'- {g}' for g in doc['gaps']] + ['', '## Open conflicts', '- ' + ', '.join(doc['open_conflicts']), '', '## Refinement backlog (what to verify next)']
+    for b in doc['refinement_backlog']:
+        out.append(f"- **{b['id']}** [{b['priority']}] {b['item']} Why: {b['why']} How: {b['how']}" + (f" Rows: {', '.join(b['ledger_rows'])}" if b['ledger_rows'] else ''))
+    return '\n'.join(out) + '\n'
+
+if __name__ == '__main__':
+    doc = build()
+    jp = ROOT + '/tables/canon-floor-2.json'
+    open(jp, 'w', encoding='utf-8').write(json.dumps(doc, indent=1, ensure_ascii=False) + '\n')
+    open(ROOT + '/tables/canon-floor-2.md', 'w', encoding='utf-8').write(md(doc))
+    print('sha256', hashlib.sha256(open(jp, 'rb').read()).hexdigest())
+    nm = sum(len(z['mobs']) for z in ZONES); nh = sum(len(z['hazards']) for z in ZONES); nf = sum(len(z['features']) for z in ZONES)
+    from collections import Counter
+    tc = Counter(e['tag'] for z in ZONES for k in ('mobs', 'hazards', 'features') for e in z[k]); tc.update(z['tag'] for z in ZONES)
+    print('zones', len(ZONES), 'mobs', nm, 'hazards', nh, 'features', nf, 'tags', dict(tc), 'backlog', len(BACKLOG), 'gaps', len(GAPS))

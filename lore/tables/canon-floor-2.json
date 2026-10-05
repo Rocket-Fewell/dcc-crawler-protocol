@@ -6,8 +6,8 @@
  "floor_name_canon": "The Second Floor",
  "floor_name_house": null,
  "owner": "DCC Lore",
- "updated": "2026-10-04",
- "ledger_version": "1.13",
+ "updated": "2026-10-05",
+ "ledger_version": "1.15",
  "consumer": "none yet (reserve). Future: Encounter Bot / Syndicate when released.",
  "players_are": "Crawlers",
  "tag_legend": {
@@ -453,7 +453,8 @@
     "M-373",
     "M-374",
     "M-375",
-    "M-376"
+    "M-376",
+    "M-718"
    ],
    "staging": "A giant grid of narrower cinderblock halls over cracked white concrete, cut into regions that never connect. All stairwells exist from minute one, so the floor is a race against the clock rather than a search for a key. Bosses may now leave their rooms, saferooms close an hour before the end, and the audience machinery (follows, favorites, ratings) is live.",
    "announcement": {
@@ -639,13 +640,26 @@
      "id": "feat2-mana-toast",
      "name": "Unstaffed saferoom with Mana Toast",
      "tag": "canon",
-     "what": "A toaster oven gives each Crawler one piece of mana-restoring toast; no food or staff.",
+     "what": "A toaster oven gives each Crawler one piece of mana-restoring toast; no food or staff. The Book 1 recap puts it in the Kobold quadrant, in an industrial kitchen with a working freezer.",
      "ledger_rows": [
       "M-355",
       "M-508",
-      "M-509"
+      "M-509",
+      "M-733"
      ],
+     "note": "The kitchen link (M-733) is recap-transcript only, WIKI-ONLY.",
      "confidence": "WIKI-ONLY"
+    },
+    {
+     "id": "feat2-team-li-na-safe-room",
+     "name": "Unnamed hallway saferoom (Team Li Na escape)",
+     "tag": "canon",
+     "what": "The nearest saferoom to the frozen Death Watch ambush; the four survivors slip past the fight into it and patch up the manager with a healing potion.",
+     "ledger_rows": [
+      "M-727",
+      "M-728"
+     ],
+     "confidence": "VERIFIED"
     },
     {
      "id": "feat2-safe-room-beds",
@@ -759,7 +773,7 @@
      "name": "Krakaren Clone (Second Floor)",
      "tag": "canon",
      "role": "boss",
-     "what": "Twenty-foot immobile octopus with screaming human-mouth tentacles, Taint snot and a Vigorous Measles mist. Bursts out of its chamber. At least three exist.",
+     "what": "Twenty-foot immobile octopus with screaming human-mouth tentacles, Taint snot and a Vigorous Measles mist. Bursts out of its chamber. At least three exist; its nameplate stresses it is a copy, not the Krakaren itself.",
      "ledger_rows": [
       "B-004",
       "M-442",
@@ -769,9 +783,10 @@
       "M-446",
       "M-447",
       "M-450",
-      "M-452"
+      "M-452",
+      "M-709"
      ],
-     "note": "Neighborhood Boss per the wiki and the recap; one fan table says Borough (X-059).",
+     "note": "Neighborhood Boss per the wiki, the recap and the AI nameplate text (M-709); one fan table says Borough (X-059).",
      "confidence": "WIKI-ONLY"
     }
    ],
@@ -1114,7 +1129,7 @@
      "name": "Mongoliensis chick (Mongo)",
      "tag": "canon",
      "role": "pet / prize",
-     "what": "Aggressive pet-class chick in the last cage of the pet reward room; needs repeated feeding and time to bond.",
+     "what": "Aggressive pet-class chick in one of the ten cages of the pet reward room; needs repeated feeding and time to bond.",
      "ledger_rows": [
       "H-004",
       "M-422",
@@ -1122,6 +1137,7 @@
       "M-426",
       "R-010"
      ],
+     "note": "\"Last cage\" is web-only (M-521); the ten-cage count is now VERIFIED (M-710).",
      "confidence": "WIKI-ONLY"
     },
     {
@@ -1181,26 +1197,41 @@
      "id": "feat2-pet-reward-room",
      "name": "Pet reward room (Menagerie)",
      "tag": "canon",
-     "what": "After Ralph: a reward room where a Kobold-corpse key opens the cages. The key opens one cage only; one pet per room.",
+     "what": "After Ralph: a reward room where a Kobold-corpse key opens the cages. One key means one pet. The key is attuned to kobolds and breaks after one use by anyone else. An unbonded pet stays behind at collapse and will not stay in a saferoom uncaged.",
      "ledger_rows": [
       "A-083",
       "M-422",
       "M-423",
-      "M-424"
+      "M-424",
+      "M-711",
+      "M-714",
+      "M-715"
      ],
      "note": "Menagerie row A-083 is WIKI-ONLY (incomplete infobox).",
      "confidence": "WIKI-ONLY"
     },
     {
      "id": "feat2-reward-room-cages",
-     "name": "Reward room cage line and the Ceramic Dalmatian achievement",
-     "tag": "unverified",
-     "what": "A web chapter summary describes a fighting pit with bones, chairs and ten cages of assorted monsters with Mongo in the last; the generic reward-room achievement has an open floor conflict.",
+     "name": "Reward room cage line (ten cages)",
+     "tag": "canon",
+     "what": "Ten cages of pets: a loud long-beaked Juvenile Riven Wing, a green slime, a rat, a two-legged mohawked Tummy Acher, a Brindle Grub and the mongoliensis chick. Donut passes on the Tummy Acher for Mongo.",
      "ledger_rows": [
-      "A-056",
-      "M-521"
+      "M-710",
+      "M-712",
+      "M-713"
      ],
-     "note": "Web-only (M-M-521); A-056 floor conflict unresolved.",
+     "note": "Cage count and pet list now VERIFIED (wiki + recap); supersedes web-only M-M-521.",
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "feat2-ceramic-dalmatian",
+     "name": "Generic reward-room achievement (Ceramic Dalmatian)",
+     "tag": "unverified",
+     "what": "The generic reward-room achievement text; the floor it first fires on is still an open conflict.",
+     "ledger_rows": [
+      "A-056"
+     ],
+     "note": "A-056 is UNVERIFIED (F9 page vs F2 master list).",
      "confidence": "UNVERIFIED"
     }
    ],
@@ -1271,12 +1302,14 @@
      "name": "Giant Blimp neighborhood boss (Meadow Lark kill)",
      "tag": "canon",
      "role": "boss",
-     "what": "A blimp-shaped neighborhood boss that Yolanda, Brandon and Chris killed; its wood became the float frame.",
+     "what": "A giant blimp boss lurking in an abandoned warehouse. Yolanda shot it down from range before it could leave its lair, with Brandon and Chris along. Its wood became the float frame.",
      "ledger_rows": [
       "M-477",
-      "M-478"
+      "M-478",
+      "M-707",
+      "M-708"
      ],
-     "note": "Thin: one wiki sentence per page, no mob page. See backlog.",
+     "note": "Still no mob page, attack or AI text; tier is neighborhood per Yolanda's page. See backlog rb-03.",
      "confidence": "VERIFIED"
     },
     {
@@ -1304,6 +1337,19 @@
      ],
      "note": "Open conflict X-063: no seen encounter.",
      "confidence": "VERIFIED"
+    },
+    {
+     "id": "mob2-rot-stickers-f2",
+     "name": "Rot Stickers (Floor 2 listing)",
+     "tag": "unverified",
+     "role": "listed mob",
+     "what": "Latch-on exploding mobs from Floor 1 that the Floor 2 infobox also lists, with no Floor 2 encounter on record.",
+     "ledger_rows": [
+      "M-297",
+      "X-080"
+     ],
+     "note": "Open conflict X-080: treat as a Floor 1 mob unless a Floor 2 cite turns up.",
+     "confidence": "VERIFIED"
     }
    ],
    "hazards": [
@@ -1311,10 +1357,11 @@
      "id": "haz2-psionic-headache",
      "name": "Psionic headache",
      "tag": "canon",
-     "what": "A health-sapping headache that can be felt before the monster is seen; weak against high Intelligence.",
+     "what": "A health-sapping headache that can be felt before the monster is seen; weak against high Intelligence. The wiki notes a Crawler with an Intelligence of 3 feels it early.",
      "ledger_rows": [
       "M-403",
-      "M-405"
+      "M-405",
+      "M-716"
      ],
      "confidence": "VERIFIED"
     }
@@ -1601,9 +1648,30 @@
      "name": "Mexx-55 (greeter robot)",
      "tag": "canon",
      "role": "npc",
-     "what": "Black, metallic, frisbee-shaped greeter robot of the rented tunnel trailer.",
+     "what": "Black, metallic, frisbee-shaped greeter robot that hovers near the ceiling with one blinking blue light and a soothing, flat female voice. Mexx units run the cheap Senegal Production Systems trailers the Maestro rents.",
      "ledger_rows": [
-      "M-497"
+      "M-497",
+      "M-729",
+      "M-730",
+      "M-731"
+     ],
+     "confidence": "VERIFIED"
+    },
+    {
+     "id": "npc2-team-li-na",
+     "name": "Team Li Na (Li Jun, Zhang, Li Na and their manager)",
+     "tag": "canon",
+     "role": "npc",
+     "what": "Warehouse coworkers from China plus Li Jun's sister. Li Jun has deep acne scars; Zhang is bald and about Carl's age. Pulled onto the show mid-ambush, Zhang offers to save the others and Li Jun refuses to choose.",
+     "ledger_rows": [
+      "M-719",
+      "M-720",
+      "M-721",
+      "M-722",
+      "M-724",
+      "M-725",
+      "M-727",
+      "M-728"
      ],
      "confidence": "VERIFIED"
     }
@@ -1628,25 +1696,28 @@
      "id": "feat2-death-watch-format",
      "name": "Death Watch format and audience",
      "tag": "canon",
-     "what": "Round-table guests, a studio of pre-teen boys chanting, not normally live; the format cannot be refused by Borant.",
+     "what": "Round-table guests, a studio of pre-teen boys chanting, not normally live; the format cannot be refused by Borant. Guests guess whether Crawlers in clips lived or died; Carl and Donut are sprung on the audience as surprise VIP guests.",
      "ledger_rows": [
       "M-491",
       "M-492",
       "M-495",
       "M-496",
-      "M-498"
+      "M-498",
+      "M-723",
+      "M-726"
      ],
-     "confidence": "VERIFIED"
+     "confidence": "WIKI-ONLY"
     },
     {
      "id": "feat2-carl-gamble",
      "name": "The audience-flip gambit",
      "tag": "canon",
-     "what": "Walking off and demanding the points be spent on yourself works because the host cannot afford to endanger his paid guests.",
+     "what": "Walking off and demanding the points be spent on yourself works because the show runs on a shoestring and the host cannot afford to endanger his paid guests.",
      "ledger_rows": [
       "M-490",
       "M-500",
-      "M-504"
+      "M-504",
+      "M-732"
      ],
      "confidence": "WIKI-ONLY"
     }
@@ -1785,11 +1856,11 @@
  ],
  "gaps": [
   "No named quadrants, neighborhoods or Borough/City bosses are recorded for Floor 2 beyond the Krakaren Clone and Ralph.",
-  "The Giant Blimp boss has no attack, tier or chamber description (backlog rb-03).",
-  "Rot Stickers are on the infobox but have no text or cite (rb-06).",
-  "Only three saferooms are documented (rb-11).",
-  "Li Jun, Li Na, Zhang and their manager have no separate rows beyond the Death Watch scene (rb-12).",
-  "Reward-room contents beyond Mongo are web-only (rb-08).",
+  "The Giant Blimp boss has a lair (an abandoned warehouse) but no attack, AI text or chamber description (backlog rb-03).",
+  "Rot Stickers are on the Floor 2 infobox, but their own page lists the First Floor only (X-080, rb-06).",
+  "Only four saferooms are documented, one of them unnamed (rb-11).",
+  "Team Li Na's manager is unnamed in the wiki, and Li Na has no Floor 2 scene of her own beyond the escape (rb-12).",
+  "Which pet sat in which reward-room cage, and Mongo in the last one, is web-only (rb-08).",
   "Mob levels, challenge ratings, credit values and loot amounts are deliberately omitted (Syndicate rules/10 and loot decks).",
   "Later-book spoilers (Rev-Up as Apothecary satire, Floor 4 reuse) are noted once and not expanded; Floor 2 only."
  ],
@@ -1821,9 +1892,12 @@
    "item": "Identify the Blimp neighborhood boss.",
    "why": "One infobox line and one wiki sentence; a web summary calls Brandon's fight a Mind Horror boss. No mob page, no tier, no attack.",
    "how": "Read B1 ch37 and the Meadow Lark / Yolanda pages in the live wiki; search \"blimp\" in chapter summaries.",
+   "progress": "Pass 22 (2026-10-05): lair (an abandoned warehouse) and the ranged kill before it left its lair found (M-707); the infobox lists it as the Meadow Lark blimp boss (M-708). Still no mob page, attack, AI text or chamber.",
    "ledger_rows": [
     "M-477",
-    "M-478"
+    "M-478",
+    "M-707",
+    "M-708"
    ]
   },
   {
@@ -1832,9 +1906,11 @@
    "item": "Krakaren Clone tier and the other two clone instances.",
    "why": "Wiki and recap say Neighborhood; a fan table says Borough (X-059). At least three instances exist but only one fight is recorded; which carry stairwells is unknown.",
    "how": "B1 ch32-35 and the Krakaren page; check boss chamber stairwell rule for Borough tier.",
+   "progress": "Pass 22 (2026-10-05): the AI nameplate text also says Neighborhood Boss (M-709), supporting the preferred reading of X-059. The other two instances are still unrecorded.",
    "ledger_rows": [
     "M-442",
     "M-443",
+    "M-709",
     "X-059"
    ]
   },
@@ -1856,8 +1932,10 @@
    "item": "Rot Stickers on Floor 2.",
    "why": "Listed on the Floor 2 infobox with no text, no cite; they are a Floor 1 mob in the ledger.",
    "how": "Check the Second Floor infobox history and B1 chapters for Rot Stickers after the stairwell.",
+   "progress": "Pass 22 (2026-10-05): the Rot Stickers page lists the First Floor only and no Floor 2 encounter turned up in the wiki or the Book 1 recap; logged as conflict X-080.",
    "ledger_rows": [
-    "M-297"
+    "M-297",
+    "X-080"
    ]
   },
   {
@@ -1877,12 +1955,19 @@
    "item": "Pet reward room: cage list, key rule, and the Ceramic Dalmatian achievement floor.",
    "why": "Only Mongo is documented; cage count is web-only; A-056 floor conflict (F9 page vs F2 master list) still open.",
    "how": "B1 ch46; Menagerie and Ceramic Dalmatian achievement pages; keep amounts out.",
+   "progress": "Pass 22 (2026-10-05): ten cages, one key and one pet, the kobold-attuned key, the pet list and the Tummy Acher offer are now VERIFIED (M-710..M-715). The A-056 floor conflict and which pet sat in which cage are still open.",
    "ledger_rows": [
     "A-056",
     "A-083",
     "M-422",
     "M-423",
-    "M-521"
+    "M-521",
+    "M-710",
+    "M-711",
+    "M-712",
+    "M-713",
+    "M-714",
+    "M-715"
    ]
   },
   {
@@ -1914,10 +1999,13 @@
    "item": "Complete the Floor 2 saferoom list.",
    "why": "Only Big Shot Chicken, the storm shelter and the unstaffed Mana Toast room are documented.",
    "how": "Read B1 ch30, 38, 41, 47 and the Safe Rooms page; list every named saferoom.",
+   "progress": "Pass 22 (2026-10-05): the recap puts the Mana Toast room in an industrial kitchen in the Kobold quadrant (M-733, recap only), and Team Li Na escape into an unnamed saferoom (M-727). Four saferooms known; no new named ones.",
    "ledger_rows": [
     "M-357",
     "M-506",
-    "M-509"
+    "M-509",
+    "M-727",
+    "M-733"
    ]
   },
   {
@@ -1926,10 +2014,16 @@
    "item": "Death Watch rules in detail (teleport points, VIP and surprise guests, Li Jun/Zhang pages).",
    "why": "Rows come from one show page and the Maestro page; no row for Li Jun, Li Na, Zhang or Mexx beyond one line.",
    "how": "B1 ch41-44; Li Jun page; Dungeon Crawl Tactics booking.",
+   "progress": "Pass 22 (2026-10-05): Team Li Na, the clip-guessing format, the surprise VIP reveal, Mexx units and the rented trailer added (M-719..M-732). The VIP reveal is recap-only; the Dungeon Crawl Tactics booking is still thin.",
    "ledger_rows": [
     "M-492",
     "M-494",
-    "M-500"
+    "M-500",
+    "M-719",
+    "M-723",
+    "M-726",
+    "M-729",
+    "M-732"
    ]
   },
   {
@@ -1950,9 +2044,12 @@
    "item": "Mind Horror relatives and Intelligence threshold.",
    "why": "Wiki says Brain Boiler relative (B2 ch14) and \"high Intelligence\" resist with no threshold.",
    "how": "Mind Horror page citations; B1 ch30 and B2 ch14.",
+   "progress": "Pass 22 (2026-10-05): mostly done. Brain Boiler relative (M-717) and the wiki note that a Crawler with an Intelligence of 3 feels the headache early (M-716). The wiki gives no resist threshold.",
    "ledger_rows": [
     "M-401",
-    "M-403"
+    "M-403",
+    "M-716",
+    "M-717"
    ]
   },
   {
@@ -1961,6 +2058,7 @@
    "item": "Mine the Carl_Floor 2 and Donut_Floor 2 mirror pages.",
    "why": "They are character-state pages (gear, stats, skills); not mined for Floor 2 hazards or NPCs.",
    "how": "Read for hazard/NPC cites; keep levels and stats out of this table.",
+   "progress": "Pass 22 (2026-10-05): the live Donut/Floor 2 page was edited on 2026-10-04, after the mirror was taken; refresh the mirror copy before mining.",
    "ledger_rows": []
   },
   {
@@ -1969,8 +2067,10 @@
    "item": "Quest-free Floor 2: confirm no Floor 2 quest system exists.",
    "why": "Wiki says no formal quests yet; stories play out shallowly.",
    "how": "B1 ch30-47; wiki quests page.",
+   "progress": "Pass 22 (2026-10-05): done. The Quest page says the quest system is unavailable on Floors 1-2 and arrives on Floor 3 (M-718).",
    "ledger_rows": [
-    "M-376"
+    "M-376",
+    "M-718"
    ]
   },
   {
@@ -2017,6 +2117,7 @@
   "X-062",
   "X-063",
   "X-064",
-  "X-065"
+  "X-065",
+  "X-080"
  ]
 }

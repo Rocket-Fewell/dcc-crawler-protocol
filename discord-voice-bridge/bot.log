@@ -1370,3 +1370,16 @@
 2026-10-05T03:54:10.998Z INFO  [voice] Voice: connecting -> ready
 2026-10-05T03:54:11.006Z INFO  [voice] Joined voice channel General
 2026-10-05T03:54:11.006Z INFO  [stt] STT listening for speakers
+2026-10-05T03:59:48.268Z INFO  [voice] Voice: ready -> destroyed
+2026-10-05T03:59:48.269Z INFO  Left voice channel
+2026-10-05T03:59:48.511Z INFO  [fish] Fish balance: $9.28 (session closed)
+2026-10-05T04:12:42.431Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T04:42:41.995Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T05:12:42.165Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T05:42:42.090Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T06:12:42.043Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T06:42:42.183Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T07:12:42.264Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T07:42:42.304Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T08:12:42.207Z INFO  [fish] Fish balance: $9.28 (interval)
+2026-10-05T08:42:42.011Z INFO  [fish] Fish balance: $9.28 (interval)

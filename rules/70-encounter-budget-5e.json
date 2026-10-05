@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "changelog": [
+    "0.1.11 (2026-10-04): wording only, no values changed: core v0.2.17 §4.5 reads the Legendary cap of 2 as PER CRAWLER, so live text now says each Crawler's total stays at 2 (0.5 per Crawler on F13-14 + 0.25 per Crawler on F15-18 = 2 per Crawler; Accountant confirmed no numbers move); added proposed_floor_growth_curve.story_boxes_note (Story Boxes F1-2 are a separate track outside the cap and outside this budget, core §4.1/4.5/4.7). Historical changelog lines left as written.",
     "0.1.10 (2026-10-04): provenance re-sync after Floor 1 achievement-ref swap to ACH-1824..1826; no values changed. spec_sha256_sans_pin_when_mapped re-synced in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map from tools/encounter_bot/spec_hash_sans_pin.py (method now also skips achievements_catalog.version and .expected_sha256); every slot path in the maps re-checked against the current specs.",
     "0.1.9 (2026-10-04): provenance-only: slot maps now match on sans-pin spec hash so budget bumps no longer break provenance; no values changed. spec_sha256_when_mapped in day01_slot_map and day02_to_04_slot_map is replaced by spec_sha256_sans_pin_when_mapped (helper tools/encounter_bot/spec_hash_sans_pin.py; method in day01_slot_map.spec_hash_method); new day05_slot_map holds only the Day 5 sans-pin hash (no slots mapped).",
     "0.1.8 (2026-10-04, Accountant's four cleanups of v0.1.7; no value changed): (1) rules/20 version cites in the Q6 text replaced by 'current section 9.1a' so they stop going stale; (2) rules/20 coupon paragraph reworded in rules/20 v0.3.6 (no value change here); (3) CORRECTION to the v0.1.7 line below: its 'every other value unchanged' did not cover the provenance hashes; day01_slot_map.spec_sha256_when_mapped and day02_to_04_slot_map.spec_sha256_when_mapped were re-synced to the current floors/f01/day-0N.spec.json (the Encounter Bot rewrote the specs at 22:36); PROVENANCE ONLY: every slot path in both maps was re-checked against the current specs and still resolves, no slot or value changed, and floors/ was not touched; (4) ratio_check averages now use unrounded ratios: 3.01 / 6.03 / 9.89 floors of liquid income (v0.1.7 printed 3.02 / 6.04 / 9.89 from the 1-decimal ratios). Every price, flag line and other value is unchanged.",
@@ -1919,7 +1920,7 @@
         "days for F4-F6 = 20 / 25 / 30 (house rule, room vote 2026-10-04; canon timers 10/15/17 are reference only); F7-F18 held at 30 (placeholder: at least F6's length, since floors get longer as you go down; no source)",
         "encounters = round(1.5 x days), mix rule of floors.2.encounters.formula, credit dice as assumed.cash_per_crawler_f1_scale times the credit multiplier (A9)",
         "3 credit-paying R1 toasts per floor x 25 average x multiplier (A6)",
-        "box counts = the midpoint of core 4.5's range (Legendary 0.5 on F13-14, 0.25 on F15-18 so the campaign total stays at 2)",
+        "box counts = the midpoint of core 4.5's range (Legendary 0.5 on F13-14, 0.25 on F15-18 so each Crawler's total stays at 2 (core §4.5 per-Crawler cap))",
         "Bronze and Silver box values from the live F1 decks; Gold, Platinum and Legendary: pull = 0.15 x credit-pull mean + 0.85 x geometric midpoint of the rules/40 item range (the same method puts a Silver item pull within about 12% of the live decks: 223 vs 251), Gold box 2.5 pulls, Platinum 3, Legendary 3. NO F3+ decks exist yet, so these are placeholders",
         "flag line (F3+) = the same cushion the F1-2 line carries over expected income: 2.165 x expected counted income, rounded to the nearest 500 (1,500 / mean of F1 and F2 expected 692.8); not a fixed multiple of 1,500"
       ]
@@ -1927,8 +1928,9 @@
     "flag_line_rule": {
       "statement": "ONE rule for every floor F3 and later: flag line = 2.165 x expected counted income for that floor (the table's expected_counted), rounded to the nearest 500. 2.165 is the cushion the authoritative F1-F2 line carries over expected income (1,500 divided by the mean of the F1 and F2 expected all-in totals, 692.8). It is NOT a fixed multiple of 1,500 and not a fixed number per band. Floors 1 and 2 stay at the authoritative 1,500.",
       "source_of_truth": "The flag lines in this file (flag_line_by_floor, and the same numbers in table[].flag_line) are the source of truth for the loot tool's inflation flag. The tool's fixed INFLATION_FLAG = 1500 is only the F1-F2 value and the fallback.",
-      "not_monotonic": "Flag lines are NOT required to rise every floor. Expected income dips at F15 (F14 142443 -> F15 121800) on purpose: Legendary boxes are 0.5 per Crawler on F13-14 and 0.25 on F15-18 so the campaign Legendary total stays at 2 (core 4.5), so the F15-F18 flag line (263500) is lower than the F13-F14 line (308500) even though the multiplier steps up to x50."
+      "not_monotonic": "Flag lines are NOT required to rise every floor. Expected income dips at F15 (F14 142443 -> F15 121800) on purpose: Legendary boxes are 0.5 per Crawler on F13-14 and 0.25 on F15-18 so each Crawler's Legendary total stays at 2 (core §4.5 per-Crawler cap), so the F15-F18 flag line (263500) is lower than the F13-F14 line (308500) even though the multiplier steps up to x50."
     },
+    "story_boxes_note": "Story Boxes (F1-2) are a separate track outside the Legendary cap and outside this budget (core §4.1/4.5/4.7).",
     "growth_rate": {
       "summary": "Expected counted income per Crawler per floor jumps at F3 (first Gold box, first 20-day floor) and then rises mostly by box-tier steps (Gold, Platinum, Legendary) and by the credit multiplier acting on encounter credits and R1 credits. Geometric mean growth per floor between the endpoints of each band is given below.",
       "per_band_geometric_mean": {"F3->F4": 1.0, "F5->F9": 1.648, "F10->F14": 1.405, "F15->F18": 1.0, "F3->F18": 1.278},
@@ -1937,7 +1939,7 @@
         "F5": "credit multiplier x5 (encounter credits, R1, fees)",
         "F9": "first Platinum box (0-1)",
         "F10": "credit multiplier x20",
-        "F13": "Legendary boxes begin (campaign total <= 2)",
+        "F13": "Legendary boxes begin (per Crawler <= 2)",
         "F15": "credit multiplier x50"
       }
     },

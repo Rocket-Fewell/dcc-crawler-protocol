@@ -1,9 +1,9 @@
 # Loot Deck Spec (5e Overlay)
-Owner: Syndicate | Status: draft | Version: 0.1.6 | Updated: 2026-10-04
-Summary: JSON card and deck-file format for pre-built per-floor/zone loot decks (every card says exactly what the item is and does), GM draw rules, a starter 5e item stat reference for Floors 1-2, five sample cards, a Legendary Story Box rule (§2.8), and open questions.
-Depends on: rules/42-house-items-f01.md v0.2.2 (final text for the four house items and the Enhanced Pet Biscuit), rules/10-core-rules-5e.md v0.2.8 (§3.5 tailoring, §3.6 ceilings, §4 loot boxes incl. the Story Box exception; wins on any conflict), rules/45-story-boxes-5e.md v0.2 (Story Box design), decisions/015-story-boxes.md, gm-notes/30-player-channel-card-format.md, gm-notes/00-gm-principles.md ("Loot box and item detail", "Achievement announcements"). Consumers: DCC Lore (writes decks), AI GM (draws and reads), Borent (`state.py loot draw <floor> <zone>`, Discord bridge), the Accountant (credit audit), Valtay Corp core book (formats item entries from these fields).
+Owner: Syndicate | Status: draft | Version: 0.1.8 | Updated: 2026-10-04
+Summary: JSON card and deck-file format for pre-built per-floor/zone loot decks (every card says exactly what the item is and does), GM draw rules, a starter 5e item stat reference for Floors 1-2, five sample cards, a Legendary Story Box rule (§2.8), box ceilings and caps (§2.2), achievement rewards (§2.9), death and collapse loot (§2.10), whole-credit rules, and open questions.
+Depends on: rules/42-house-items-f01.md v0.2.3 (final text for the four house items and the Enhanced Pet Biscuit), rules/10-core-rules-5e.md v0.2.17 (§3.5 tailoring, §3.6 ceilings, §4 loot boxes incl. the Story Box exception and the §4.5 pacing caps, §5.10 whole credits, §6.2 death; wins on any conflict), rules/45-story-boxes-5e.md v0.2.4 (Story Box design), rules/70-encounter-budget-5e.json v0.1.10 (box odds per encounter, F3+ flag lines; the only source the Encounter Bot cites for loot-box odds), tables/achievements.md v1.3 (catalog, 1,826 rows), decisions/015-story-boxes.md, decisions/018-story-box-answers.md, decisions/028-collapse-death-loot.md, decisions/QUESTIONABLE.md v0.1.7 (Q-003 `loot totals`), gm-notes/30-player-channel-card-format.md, gm-notes/00-gm-principles.md ("Loot box and item detail", "Achievement announcements"). Consumers: DCC Lore (writes decks), AI GM (draws and reads), Borent (`state.py loot draw <floor> <zone>`, Discord bridge), the Accountant (credit audit), Valtay Corp core book (formats item entries from these fields).
 
-> **Status:** DRAFT v0.1.5. Nothing here is LOCKED except the Story Box exception (§2.8), which Caleb approved on 2026-10-04. Six tiers and the Celestial cap (one per crawler) are LOCKED in core §4 and only referenced here. **Project:** *Crawler Protocol: Season Zero*, private fan RPG inspired by *Dungeon Crawler Carl*.
+> **Status:** DRAFT v0.1.8. Nothing here is LOCKED except the Story Box exception (§2.8), which Caleb approved on 2026-10-04. Six tiers, the Celestial cap (one per Crawler), the §4.5 pacing caps, saferoom-only opening (§4.4) and whole-number credits (§5.10) are LOCKED in core and only referenced here. **Project:** *Crawler Protocol: Season Zero*, private fan RPG inspired by *Dungeon Crawler Carl*.
 > **Why this exists:** Caleb's alpha-run feedback (2026-10-04): loot box items lacked detail. Rule: **every item states exactly what it is and what it does.** A card is the unit that makes that impossible to forget.
 > **Scope:** format and procedure only. Box tiers, pulls (d100) and credits-per-pull stay in core §4.2.
 > **Tags:** `CANON` = fact tied to a CANON-LEDGER entry; `CANON-INSPIRED` = shaped by canon but not a canon item; `HOUSE` = our invention. `VERIFY` = I was not sure of the exact 2024 number/rarity; check the SRD 5.2 / 2024 DMG before a card goes live. Canon claims here: tiers L-001, saferoom opening L-002, semi-random contents L-003, Pet Biscuit I-007, limited stat potions K-159 (all ledger VERIFIED, wiki-sourced, **not** checked against the novels). Voice skeletons come from `dcc-lore/catalog/system-voice.md` §1.2 (paraphrased, no quotes copied).
@@ -32,7 +32,7 @@ Depends on: rules/42-house-items-f01.md v0.2.2 (final text for the four house it
 | `box_types` | string[] | Y | `["any"]` or limited: `Boss`, `Quest`, `Fan`, `Benefactor` (core §4.7) |
 | `pull_type` | enum | Y | Core §4.2 row: `consumable` `gear` `credits` `tailored` `weird` (`upgrade` is a roll result, not a card type) |
 | `kind` | enum | Y | `item` `consumable` `credits` `key` `pet` `stat_bump` `junk` (no mechanics gag) `clue` (lore scrap, seed) |
-| `reskin_name` | string | Y | What the crawler sees first |
+| `reskin_name` | string | Y | What the Crawler sees first |
 | `real_5e_name` | string | Y | The actual 5e (or house) item. Never blank. |
 | `source_5e` | enum | Y | `SRD 5.2` `DMG 2024` `PHB 2024` `Other 5e (VERIFY)` `HOUSE` (named `source_5e`, not `5e_source`, so scripts can use it as an identifier) |
 | `rarity` | enum | Y | `Mundane` `Common` `Uncommon` `Rare` `Very Rare` `Legendary` `Artifact` `n/a` |
@@ -40,10 +40,10 @@ Depends on: rules/42-house-items-f01.md v0.2.2 (final text for the four house it
 | `category` | enum | Y | Inventory-card section: `Weapons` `Armor` `Consumables` `Keys` `Misc`; or `Credits` / `Stats` (not inventory lines; shown in the credits line / sheet) |
 | `plain_mechanics` | object | Y | See 1.2. Never dropped on announce. |
 | `spoken_line` | string | Y | **<= 25 words**, voice-safe, includes reskin name, real name and the one key effect. Numbers spelled for speech ("one d four"). |
-| `snark_line` | string | Y | One System-voice line. Text channel by default; spoken only if the Fish budget allows. |
+| `snark_line` | string | Y | One System-voice line. Text channel by default; spoken only if the Fish budget allows. Any longer flavor (banner patter, read-aloud) is **3-4 sentences max**. |
 | `reward` | string | Y | **Read-aloud and tone group** (with `spoken_line`, `snark_line`): the exact reward line the System reads on the achievement banner. May be snark-only (no item named). Also surfaces on the player's sheet card via `state.py achievement add --reward`. |
 | `canon_status` | enum | Y | `CANON` `CANON-INSPIRED` `HOUSE`. Describes the **flavor/concept**; mechanics are 5e unless `source_5e` is `HOUSE`. |
-| `credit_value` | number | Y | Estimated economy value in credits (1 credit = 1 GP, core §5.10). For `credits` cards: the actual amount (or expected value if rolled, see `grant`). For audit only; never a sale price promise. |
+| `credit_value` | number | Y | Estimated economy value in credits (1 credit = 1 GP, core §5.10). For `credits` cards: the actual amount (or expected value if rolled, see `grant`). For audit only; never a sale price promise. It may carry an SRD list price below 1 credit (Oil 0.1, Torch 0.01) because it is an estimate, not a balance; every real charge or payout is in **whole credits** (§1.6). |
 | `draw_weight` | int | Y | 0-100 relative weight inside the filtered pool. **0 = never auto-drawn** (GM hand-pick only). |
 | `unique` | bool | Y | `true` = at most one copy per party for the whole campaign (see §2.3) |
 | `tailor_tags` | string[] | Y | System-only broad-theme hooks from the hidden Fan Profile, built by the System from survey answers kept in private notes and from play (`["dogs","hats","explosives"]`). No public tags and nothing from the profile is exposed. Empty `[]` if none. Never secret quirk/affinity data. |
@@ -51,11 +51,11 @@ Depends on: rules/42-house-items-f01.md v0.2.2 (final text for the four house it
 | `grant` | object/null | Y | Non-item payloads, see 1.3. `null` for plain items. |
 | `ledger` | object | Y | `{ "type": "credits|item|stat_bump|key|pet|clue", "text": "..." }`, the line the bridge logs (1.4) |
 | `box_name` | string | Y | The box is named after the deed, canon style, without the tier prefix (e.g. `"Tent-Pole Rescue Box"`; the banner adds the tier). Rule in 2.6. Never a "Desperado Box". |
-| `deed` | string | Y | What the crawler did to earn the box (e.g. `"Rescued the tent-pole"`). Logged in the box ledger. |
+| `deed` | string | Y | What the Crawler did to earn the box (e.g. `"Rescued the tent-pole"`). Logged in the box ledger. |
 | `notes` | string | Y | GM-only notes; may be `""`. Never read aloud. For a Story Box card (§2.8) it also holds a `trigger_deed:` line. |
 | `story_value` | number | N | **Optional, Story Box cards only** (tier `Legendary`, §2.8). Value in the §3.2 Legendary range, logged on its own ledger line with the deed. **Provenance only:** never a price or a buyback base. Absent on every other card. |
 | `bound` | boolean | N | **Optional, with `story_value`.** `true` = cannot be sold or traded. Story Box cards now use `false` (tradeable, lootable, sellable; Caleb, 2026-10-04). Absent on other cards. |
-| `sale_value` | number | N | **Optional, Story Box cards only.** The System's fixed buyback in credits at Floor-1 scale, set by power rung (rules/45 §4.6: rung 0 = 100, rung 1 = 250, rung 2 = 500). A System fee, so it multiplies by the floor credit multiplier of the sale floor. Never derived from `story_value`. Absent on other cards. |
+| `sale_value` | number | N | **Optional, Story Box cards only.** The System's fixed buyback in credits at Floor-1 scale, set by power rung (rules/45 §4.6: rung 0 = 100, rung 1 = 250, rung 2 = 500). A System fee, so it multiplies by the floor credit multiplier of the sale floor. Never derived from `story_value`. Always a whole number of credits. Absent on other cards. |
 
 Optional fields: a deck that omits `story_value`, `bound` and `sale_value` stays valid (schema label `loot-deck/0.1.1`); a deck that uses them says `loot-deck/0.1.2` (proposed bump; Borent confirms). On a Story Box card `credit_value` is `0`.
 
@@ -76,7 +76,7 @@ Optional fields: a deck that omits `story_value`, `bound` and `sale_value` stays
 ### 1.3 Credits, stat bumps, keys, pets (`grant`)
 
 - **Credits:** `kind:"credits"`, `category:"Credits"`, `grant:{"credits":30,"roll":"3d6x5"}`. If `credits` is a number, that is the amount (it must have been produced by `tools/roll.py` or hand-authored as a *placed* amount, noted in `notes`). If `credits` is `null` and `roll` is set, the GM rolls at draw time (preferred, real dice) and `credit_value` is the expected value. Ranges: Bronze 3d6x5 (15-90), Silver 2d6x25 (50-300), Gold 2d6x250 (500-3,000), Platinum 2d6x2,500, Legendary 2d6x10,000 (core §4.2).
-- **Stat bump:** `kind:"stat_bump"`, `category:"Stats"`, `grant:{"ability":"STR","amount":1,"permanent":true,"max_score":20}` (temporary: `"permanent":false,"duration":"1 hour"`). **HOUSE; draft-disabled.** Permanent bumps are above the F1-2 ceiling (core §3.6) and "rewards never change dice, DCs, damage, saves" (GM principles); default `draw_weight` 0 until Caleb rules (§5 Q4). Canon note: stat-boost potions are limited in number of uses (ledger K-159); keep a lifetime cap per crawler if enabled.
+- **Stat bump:** `kind:"stat_bump"`, `category:"Stats"`, `grant:{"ability":"STR","amount":1,"permanent":true,"max_score":20}` (temporary: `"permanent":false,"duration":"1 hour"`). **HOUSE; draft-disabled.** Permanent bumps are above the F1-2 ceiling (core §3.6) and "rewards never change dice, DCs, damage, saves" (GM principles); default `draw_weight` 0 until Caleb rules (§5 Q4). Canon note: stat-boost potions are limited in number of uses (ledger K-159); keep a lifetime cap per Crawler if enabled.
 - **Key:** `kind:"key"`, `category:"Keys"`. State what it opens in `notes` (GM only) and say in `plain_mechanics.limits` whether it is consumed.
 - **Pet:** `kind:"pet"`. Pets are DM-run creatures; mechanics text must give the 5e stat block used (e.g. SRD Cat) and HP. Canon seed: Pet Box / Pet Biscuit (L-B45, I-007) = CANON-INSPIRED.
 
@@ -86,7 +86,7 @@ Human line = `ledger.text`. Structured line (proposed; Borent confirms):
 ```
 LOOT | <crawler> | F<floor>/<zone> | <card id> | <tier> | <kind> | value <credit_value> | <ledger.text>
 ```
-Examples of `ledger.text`: `credits +50 Bronze box`; `item +1 Bronze box: Laminated Complaint Card`; `stat_bump STR +1 Gold box`. Credits also post the change-post line from gm-notes/30: `Credits: 25 -> 75 (+50, Bronze box pull)` and append to `sessions/credit-ledger.jsonl` (`delta`, `balance`, `reason`:`"Bronze box pull f01-z06-0005"`, `source`:`"box"`). Item draws log `credit_value` so the Accountant can total value granted per crawler per floor.
+Examples of `ledger.text`: `credits +50 Bronze box`; `item +1 Bronze box: Laminated Complaint Card`; `stat_bump STR +1 Gold box`. Credits also post the change-post line from gm-notes/30: `Credits: 25 -> 75 (+50, Bronze box pull)` and append to `sessions/credit-ledger.jsonl` (`delta`, `balance`, `reason`:`"Bronze box pull f01-z06-0005"`, `source`:`"box"`). Item draws log `credit_value` so the Accountant can total value granted per Crawler per floor.
 
 ### 1.5 Deck file wrapper + full example
 
@@ -145,6 +145,12 @@ Examples of `ledger.text`: `credits +50 Bronze box`; `item +1 Bronze box: Lamina
 }
 ```
 
+### 1.6 Whole credits (core §5.10, v0.2.16)
+- **Balances are whole numbers only** (matches `tools/state.py` and decision 028). Silver and copper exist only as SRD list prices (for reference, 1 sp = 0.1 credit, 1 cp = 0.01 credit).
+- **Buying:** a sub-credit price is charged rounded **up** to whole credits per line (1 Torch costs 1 credit; 10 Torches on one line also cost 1 credit).
+- **Selling at half:** rounded **down** to whole credits per line, so an item worth under 2 credits sells for 0 unless grouped with others on one line.
+- `grant.credits` and every ledger `delta` are integers. Rolled credit pulls (§1.3) already are.
+
 ---
 
 ## 2. Rules for the GM drawing cards
@@ -153,22 +159,25 @@ Examples of `ledger.text`: `credits +50 Bronze box`; `item +1 Bronze box: Lamina
 1. Open boxes only in a saferoom, all at once, lowest tier first (core §4.4; canon L-002).
 2. For each pull, roll d100 with `tools/roll.py` and read the §4.2 row to get `pull_type` (consumable / gear / credits / tailored / weird; 99-00 = roll again one tier up, ceiling permitting).
 3. **Weighted draw:** filter the deck(s) by `tier` (box tier; consumable pulls may also take one tier down), `pull_type`, `box_types` containing `any` or the box's type, `draw_weight > 0`, floor rarity ceiling (3.6: F1-2 default Common, peak Uncommon), then pick by `draw_weight`. Roll the weights with `roll.py` (`d<sum>`); never "feel" a number.
-4. **Hand-pick** is allowed (core §4.2) but log `override: GM pick` in the session log. Don't quietly favor one crawler.
+4. **Hand-pick** is allowed (core §4.2) but log `override: GM pick` in the session log. Don't quietly favor one Crawler.
 5. Mark the card drawn in state (`loot.drawn[]`). Announce (2.5), write inventory notes (2.5), log the ledger line (1.4).
 
 ### 2.2 Tier weighting and ceilings
-- Box tier is set by the deed (core §4.1, §4.7, pacing §4.5). **Floors 1-2: Bronze and Silver only** (Boss Box = Silver). The approved GM-triggered Story Box exception (§2.8) is governed by `rules/45-story-boxes-5e.md` v0.2. Gold/Platinum cards in F1-2 decks are `draw_weight: 0` and `box_types:["Benefactor"]` (Benefactor boxes may exceed the ceiling, core §4.7) or hand-picked.
+- Box tier is set by the deed (core §4.1, §4.7, pacing §4.5). **Floors 1-2: Bronze and Silver only** (Boss Box = Silver). The approved GM-triggered Story Box exception (§2.8) is governed by `rules/45-story-boxes-5e.md` v0.2.4. Gold/Platinum cards in F1-2 decks are `draw_weight: 0` and `box_types:["Benefactor"]` (Benefactor boxes may exceed the ceiling, core §4.7) or hand-picked.
+- **Box ceilings by floor (core §4.5 pacing, per Crawler per floor; LOCKED):** Floors 1-2 Bronze and Silver only; Gold from Floor 3; **no Platinum on Floors 1-8** (0-1 from Floor 9); Legendary only from Floor 13, **campaign total of 2 at most** (core §4.5 is a per-Crawler table, so the 2 is per Crawler). Benefactor Boxes (core §4.7) and Story Boxes (§2.8) are the only exceptions. A Story Box sits outside the §4.5 pacing table (core §4.1), so it never counts against the Legendary cap.
+- **Ceiling substitution.** If a deed, Boss Box rank or achievement names a tier above the floor's ceiling, the GM gives the **ceiling tier** and logs it in the box ledger (`ceiling: <named tier> -> <given tier>, F<n>`). Example: ACH-1824 Not Unpacking names a Platinum box; on Floor 4 it pays the Gold ceiling, logged.
 - Suggested within-deck weights (HOUSE, tunable): common consumable 20-30, cheap gear 10-20, uncommon item 5-10, weird/joke 5-10, key 3-5, anything unique 1-5.
-- **Celestial:** never auto-drawn. Celestial cards live only in a hand-built per-crawler deck, `draw_weight: 0`. Before issuing, check the crawler has not had one (`state.py box` enforces max 1). The System grumbles about the Syndicate tax (GM principles). Contents follow core §4.1 (Legendary box plus a DM-designed reward).
+- **Celestial:** never auto-drawn. Celestial cards live only in a hand-built per-Crawler deck, `draw_weight: 0`. Before issuing, check the Crawler has not had one (`state.py box` enforces max 1). The System grumbles about the Syndicate tax (GM principles). Contents follow core §4.1 (Legendary box plus a DM-designed reward).
 
 ### 2.3 Duplicates
 - `unique: true` = once per **party** for the campaign; remove from the live pool when drawn. Spine-adjacent items, named NPC trophies, and one-off House oddities are unique.
-- Non-unique consumables (potions, oils) may repeat; two of the **same non-consumable** may not appear in one box or go to the same crawler in one floor. Reroll once, then the GM picks.
-- Duds (`kind:"junk"`) are allowed but never two real boxes in a row for a crawler (core §4.3).
+- Non-unique consumables (potions, oils) may repeat; two of the **same non-consumable** may not appear in one box or go to the same Crawler in one floor. Reroll once, then the GM picks.
+- Duds (`kind:"junk"`) are allowed but never two real boxes in a row for a Crawler (core §4.3).
 
 ### 2.4 Tailoring (core §3.5, "achievements are guidelines")
-- A `tailored` pull matches `tailor_tags` against the crawler's **hidden** Fan Profile (likes, fixations, running gag), built by the System from survey answers kept in private notes and from play. There are no public tags and nothing from the profile is exposed. At least 1 pull in every 3 boxes nods to the profile (core §4.3); the Welcome Box must include one (floor 1 §5.6).
-- Gag cards are exclusive: `exclusive_to` = that crawler; other crawlers never draw them. Gags escalate; about once a floor or two a gag turns out to be useful, and then it counts against the power budget.
+- A `tailored` pull matches `tailor_tags` against the Crawler's **hidden** Fan Profile (likes, fixations, running gag), built by the System from survey answers kept in private notes and from play. There are no public tags and nothing from the profile is exposed. At least 1 pull in every 3 boxes nods to the profile (core §4.3); the Welcome Box must include one (floor 1 §5.6).
+- Gag cards are exclusive: `exclusive_to` = that Crawler; other Crawlers never draw them. Gags escalate; about once a floor or two a gag turns out to be useful, and then it counts against the power budget.
+- **Tailored per Crawler.** Rewards are fitted to each Crawler's build and hidden profile, so two Crawlers earning the same achievement may get different items of the same tier.
 - Tailor the item, not the power. Build-aware, not build-servile (half of meaningful drops usable by the build). Pettiness allowed, but never a whole floor's worth of value.
 - Tailoring never uses GM-secret quirk or affinity data (secrets never appear, gm-notes/30).
 - A GM-written one-off card (made at the table) must be saved into the deck file afterward with a full schema entry.
@@ -187,38 +196,50 @@ then the text channel gets (reskin first; real name and mechanics beneath, match
   <real_5e_name> (<rarity>[, attunement]): <plain_mechanics.text>
   "<snark_line>"
 ```
-- The same `plain_mechanics.text` is written to the crawler's inventory notes in state. Credits post the old -> new line. Keep the banner short (Fish cost): banner, one description line, reward.
+- The same `plain_mechanics.text` is written to the Crawler's inventory notes in state. Credits post the old -> new line. Keep the banner short (Fish cost): banner, one description line, reward.
 
 ### 2.6 Naming and box ledger
-- **Name every box after the deed that earned it** (`box_name`, `deed`; core §4.8). Never use a "Desperado Box": canon has no such box. The Desperado Pass Tattoo comes in a first Asshole's Box (CANON L-019, per DCC Lore). Benefactor boxes with no crawler deed may use the type-only name `Benefactor Box`.
-- **Box cap:** core has no fixed "2 Bronze boxes per floor" cap. Floor 1 Bronze/Silver box limits are the pacing table in core §4.5 (Floors 1-2: 2-4 Bronze, 0-1 Silver per crawler per floor); core §4.8 covers naming only. Any overage is logged in the box ledger (with `deed`).
+- **Name every box after the deed that earned it** (`box_name`, `deed`; core §4.8). Never use a "Desperado Box": canon has no such box. The Desperado Pass Tattoo comes in a first Asshole's Box (CANON L-019, per DCC Lore). Benefactor boxes with no Crawler deed may use the type-only name `Benefactor Box`.
+- **Box cap:** core has no fixed "2 Bronze boxes per floor" cap. Floor 1 Bronze/Silver box limits are the pacing table in core §4.5 (Floors 1-2: 2-4 Bronze, 0-1 Silver per Crawler per floor); core §4.8 covers naming only. Any overage is logged in the box ledger (with `deed`).
 
 ---
 
 ### 2.7 Running more than one session (alpha and beta)
-- Deck files are session-agnostic: no session names, crawler names or draw state inside a deck file. Every session reads the same files in `tables/loot-decks/`.
+- Deck files are session-agnostic: no session names, Crawler names or draw state inside a deck file. Every session reads the same files in `tables/loot-decks/`.
 - Draw history (`loot.drawn[]`), the box ledger, and `unique` checks belong to the session's own state, so a one-of-a-kind item drawn in one session never blocks another session.
 - `loot draw` and the loot ledger need to take a session ID or state path (proposed to the Architect). A deck never changes mid-session; if a deck version changes, a running session keeps the version it started on.
-- Credit totals for the Accountant's audit are counted per session, per crawler, per floor.
+- Credit totals for the Accountant's audit are counted per session, per Crawler, per floor.
 
-### 2.8 Legendary one-off boxes on Floors 1-2 (Story Boxes) [HOUSE, APPROVED by Caleb 2026-10-04; authoritative system: `rules/45-story-boxes-5e.md` v0.2]
+### 2.8 Legendary one-off boxes on Floors 1-2 (Story Boxes) [HOUSE, APPROVED by Caleb 2026-10-04; authoritative system: `rules/45-story-boxes-5e.md` v0.2.4]
 
 **Basis.** In the books a Legendary box shows up very early: ledger L-001 (six tiers; the Legendary Pet Box Carl opened in the tutorial, cite B1 ch5), I-007 and M-037 (the Enhanced Pet Biscuit from that box; Donut and Prepotente consumed these), A-165 (Legendary Quadruped Box, B1 ch7) and A-167 (Legendary That's the Spirit! Box, B3 ch19). All wiki-sourced and VERIFIED in the ledger, none checked against the novels.
 
-**Core conflict (resolved).** Caleb approved the Story Box exception on 2026-10-04 and core §4.1, §4.5 and §4.7 carry the one-line amendment (core v0.2.8). The authoritative system is `rules/45-story-boxes-5e.md` v0.2, a draft with one open question left (item strength; Caleb answered the other five on 2026-10-04) (decision `decisions/015-story-boxes.md`). Before that, core §4.1 listed Legendary as an ordinary tier but says the floor ceiling (§3.6, peak Uncommon on Floors 1-2) still applies to the five ordinary tiers, with no Legendary boxes on Floor 2. Core §4.5 shows no Legendary box on Floors 1-2. The only exemptions were Benefactor Boxes (§4.7) and Celestial (DM-gated, one per Crawler). A Story Box was not covered by those, so it is now a **narrow, approved exception**: hand-picked, bound, one named one-time deed, one per table per floor, with a logged override to exceed the cap. Where this section and core differ, core wins.
+**Core conflict (resolved).** Caleb approved the Story Box exception on 2026-10-04 and core §4.1, §4.5 and §4.7 carry the one-line amendment (added in core v0.2.6-v0.2.10; override wording updated in core v0.2.17). The authoritative system is `rules/45-story-boxes-5e.md` v0.2.4, a draft with one open question left (item strength; Caleb answered the other five on 2026-10-04) (decision `decisions/015-story-boxes.md`). Before that, core §4.1 listed Legendary as an ordinary tier but says the floor ceiling (§3.6, peak Uncommon on Floors 1-2) still applies to the five ordinary tiers, with no Legendary boxes on Floor 2. Core §4.5 shows no Legendary box on Floors 1-2. The only exemptions were Benefactor Boxes (§4.7) and Celestial (DM-gated, one per Crawler). A Story Box was not covered by those, so it is now a **narrow, approved exception**: hand-picked, one named one-time deed, one per table per floor, which the GM may exceed with a logged reason (Caleb can veto). The **unopened box** is bound to its Crawler like every box (core §4.4); the **item inside is not bound** once opened (decision 018). Where this section and core differ, core wins.
 
 **Rules (all HOUSE, tunable):**
 1. **GM-triggered only.** A Story Box is for a rare, one-time, first-of-its-kind deed that the GM judges on the spot. It is never a random draw, never an upgrade roll (the 99-00 row stops at the ceiling), and never part of the pacing table (§4.5).
 2. **Cards.** Tier `Legendary`; `draw_weight` 0; hand-pick only; `box_name` from the deed without the tier prefix (e.g. `"Pet Box"`; the banner adds the tier: Legendary Pet Box); the trigger goes in `notes` as `trigger_deed: ...`. No other new fields besides optional `story_value` and `bound` (§1.1).
-3. **Cap.** At most **one Story Box per table per Floor**, counted from the session's loot ledger across the whole floor, not per play night (a logged override may exceed it).
+3. **Cap.** At most **one Story Box per table per Floor**, counted from the session's loot ledger across the whole floor, not per play night. The **GM may override it with a logged reason**; Caleb can veto (Caleb's ruling, 2026-10-04, later than decision 018; core §4.1, rules/45 rule 5). The GM may adapt as play goes. The cap counts Story Boxes held by live, non-deleted Crawlers; an unopened Story Box reclaimed on its Crawler's death frees its slot (core §6.2, rules/45 §6.3). The spotlight rota ("a first Story Box for every living Crawler before anyone gets a second") is a **GM guideline only**, never a block (decision 018).
 4. **Contents.** Hand-designed. The headline is at most 5e **Legendary** rarity (core §4.1, a Legendary box's top). Every item is stated per the `plain_mechanics` rule (action cost, range, duration, uses, limits). Prefer items that open a new option or story thread over raw numbers; GM principles say rewards never change dice, DCs or saves. Other pulls follow core §4.1 (the Legendary box's three pulls) but should be small and Floor-appropriate.
 5. **Value and sale.** `credit_value` is `0`. `story_value` (the §3.2 Legendary range, 20,000-250,000) is **provenance only**: logged on its own ledger line with the deed, never a price, never a buyback base, never converted to credits. Story Box items are **not bound** (`bound: false`): once opened they trade, loot and sell. The System's buyback is a fixed `sale_value` per power rung (rules/45 §4.6: rung 0 = 100, rung 1 = 250, rung 2 = 500 at Floor-1 scale); as a System fee it multiplies by the floor credit multiplier of the sale floor. Sales between Crawlers are free-form ordinary credit transfers with `story_value` kept as provenance. The Accountant excludes the award's `story_value` from the 1,500-per-floor inflation flag (§3.2 audit hint) and reports it separately each session, but counts sale proceeds like any credits and **flags, never blocks**.
 6. **Tools (request to the Architect; Borent confirms).** `state.py loot draw` treats Legendary cards as hand-pick only (`--pick <card_id>`), checks the one-per-table-per-floor cap in each session's loot ledger with a logged override option, and `loot totals` reports economy value and story value separately.
-7. **Celestial stays separate.** A Story Box does not count against the one-per-Crawler Celestial cap and never replaces it.
+7. **Celestial and Legendary caps stay separate.** A Story Box does not count against the one-per-Crawler Celestial cap or the core §4.5 Legendary campaign cap, and never replaces either.
 8. **Announce** as in §2.5: banner plus the item line; the banner names the tier, so the box reads "Legendary Pet Box". Never drop the mechanics line.
 9. **Opening.** Saferoom only, like every loot box (core §4.4, unchanged). The deed is recorded and announced at award time; the box is held unopened until the next saferoom.
 
 First example: Enhanced Pet Biscuit (`f01-any-0055`, `rules/42-house-items-f01.md` §6). Two additional box stubs (Legendary Quadruped Box, That's the Spirit! Box) are listed there as to-design.
+
+### 2.9 Achievement rewards (catalog `tables/achievements.csv` v1.3, 1,826 rows)
+- **Guidelines, not a fixed table.** The System decides what is notable and tailors the reward to the Crawler (§2.4; core §3.5, Appendix A). A catalog row is a suggestion.
+- **Snark-only is allowed.** A row with `Has Reward` = No, or a reward of "— (snark only)", pays a System line and nothing else (core Appendix A: R0). The card `reward` field may likewise be snark-only (§1.1).
+- **Box rewards obey the ceilings** in §2.2: a named tier above the floor's ceiling pays the ceiling tier, logged. Catalog rarity (Common / Rare / Legendary) is the **achievement's** rarity tag, never a box tier.
+- **ACH-1824 Not Unpacking** (canon ref A-044): a Platinum box (canon-faithful) plus Title, floor caps apply (Floors 1-8 pay the ceiling tier, logged). It never awards a Legendary box and never counts against the Legendary cap. ACH-1824, ACH-1825 (Down Is a Direction, A-139) and ACH-1826 (Left Before the Cake, A-151) are **once per Crawler, ever**.
+- Credits in an achievement reward take the floor credit multiplier (core §3.9); box credit pulls do not (§3.2).
+
+### 2.10 Death and loot (core §6.2, decision 028)
+- **Unopened boxes** are reclaimed by the System on death and vanish; an unopened Story Box frees its cap slot (core §6.2).
+- **Opened items**, Legendary and Story Box items included, are ordinary loot: the corpse cache (core §5.9) can be looted, and the items traded or sold (sale at half, §1.6; Story Box items at their fixed `sale_value`).
+- **Missed collapse** (decision 028): a Crawler who dies because the floor collapsed loses credits and items with the floor. Survivors may loot the body only while the floor still stands; what they took before the collapse is theirs, and nothing is looted after it. The ledger logs a `floor-lost` write-off (exact coins and items, balance to zero); `loot-body` needs a Dead body, so a collapse death gets `floor-lost` only. Anything looted first is logged as a transfer before the write-off.
 
 ## 3. Starter stat reference (Floors 1-2)
 
@@ -262,6 +283,8 @@ Tier = suggested card tier. `Value` = suggested `credit_value`: **mundane = 2024
 | Healer's Kit (10 uses) | Bronze | Mundane | Utilize, 1 use: stabilize a creature at 0 HP without a Medicine check. 3 lb. | 5 | |
 | Torch | Bronze | Mundane | Burns 1 hour: bright light 20 ft, dim 20 ft more. Melee hit with it = 1 Fire. 1 lb. | 0.01 | |
 
+Values under 1 (Oil 0.1, Torch 0.01) are SRD list prices kept for the audit only; a purchase rounds up and a sale at half rounds down to whole credits per line (§1.6).
+
 **C. Tools and gear**
 
 | Item | Tier | Rarity | Plain mechanics | Value | Flag |
@@ -302,14 +325,14 @@ Tier = suggested card tier. `Value` = suggested `credit_value`: **mundane = 2024
 |---|---|---|---|
 | Bronze | 0-100 | 15-90 (3d6x5) | Junk and 0-value gags allowed |
 | Silver | 100-500 | 50-300 (2d6x25) | Uncommon headline items |
-| Gold | 500-5,000 | 500-3,000 (2d6x250) | Rare headline items |
-| Platinum | 5,000-50,000 | 5,000-30,000 | Not on F1-2 |
-| Legendary | 20,000-250,000 | 20,000-120,000 | Not on F1-2 as an ordinary box. A GM-triggered Story Box (§2.8) logs this range as `story_value` (provenance only), not `credit_value` |
-| Celestial | DM's call | DM's call | One per crawler |
+| Gold | 500-5,000 | 500-3,000 (2d6x250) | Rare headline items. From Floor 3 (core §4.5) |
+| Platinum | 5,000-50,000 | 5,000-30,000 | **Not on F1-8** (core §4.5: 0-1 from F9) |
+| Legendary | 20,000-250,000 | 20,000-120,000 | Ordinary box only from F13, campaign total 2 at most (core §4.5). A GM-triggered Story Box (§2.8) logs this range as `story_value` (provenance only), not `credit_value` |
+| Celestial | DM's call | DM's call | One per Crawler |
 
 **Floor multiplier (Lore, with Caleb's delegation, 2026-10-04).** Box credit pulls use the ranges above (and core §4.2) as written and do **not** get the floor credit multiplier on top. Achievement rewards and System fees (buyback, repairs, crafting prices) keep it (core §3.9).
 
-**Audit hint (HOUSE):** per crawler per floor on F1-2, total `credit_value` granted by boxes should land around 300-1,000 (2-4 Bronze plus 0-1 Silver, core §4.5). Treat anything above about 1,500 as inflation to flag, and re-tune weights before nerfing items (core §3.7). `story_value` from Story Boxes (§2.8) is **excluded** from this flag and reported separately. Sale proceeds from a Story Box item are ordinary credits: they count toward the flag, and the Accountant flags them but never blocks the sale (rules/45 §6.5).
+**Audit hint (HOUSE):** per Crawler per floor on F1-2, total `credit_value` granted by boxes should land around 300-1,000 (2-4 Bronze plus 0-1 Silver, core §4.5). Treat anything above about 1,500 as inflation to flag, and re-tune weights before nerfing items (core §3.7). `story_value` from Story Boxes (§2.8) is **excluded** from this flag and reported separately. Sale proceeds from a Story Box item are ordinary credits: they count toward the flag, and the Accountant flags them but never blocks the sale (rules/45 §6.5). The 1,500 line is authoritative for F1-2 here; F3-F18 flag lines (2.165 x expected counted income, rounded to 500) and per-encounter box odds live in `rules/70-encounter-budget-5e.json` v0.1.10 (`flag_line_by_floor`). Per Q-003 (QUESTIONABLE v0.1.7), `loot totals` may also count cash and R1 credits for the optional Floor 2 valve; default output is unchanged.
 
 ---
 
@@ -416,10 +439,10 @@ Credits: 25 -> 55 (+30, Bronze box pull)
 4. Stat bump cards: off until you rule? If on, permanent only from Gold up, with a lifetime cap, or never on F1-2? (GM principles say rewards never change dice, DCs or saves.)
 5. Bag of Holding is redundant with System Inventory: ban it from decks, or give it a new job (a droppable, stealable physical stash)?
 6. Is `credit_value` allowed to feed XP-like pacing checks, or is it audit-only?
-7. Should item draws also log to a new `sessions/loot-ledger.jsonl` (Borent), or only to the existing credit ledger and state notes?
+7. ~~Loot ledger~~ ANSWERED by tooling: item draws log to the session loot ledger (`loot-ledger.jsonl`, `tools/ledgers.py`), alongside the box ledger and the credit ledger.
 8. Fish budget: is 25 words per `spoken_line` right, and should `snark_line` always go to text only?
 9. ~~Story Boxes (§2.8)~~ RESOLVED 2026-10-04: Caleb approved the narrow exception; cap is one per table per floor with a logged override (core §4.1, decision 015).
-10. A pet turned Crawler by the Enhanced Pet Biscuit: does it use one of the four player slots (decision 013)? Proposed default: no, but it counts for encounter budgets (details in rules/42-house-items-f01.md §7).
+10. ~~Biscuit pet slot~~ RESOLVED 2026-10-04: no extra slot (decision 022 item 4; rules/60 §6).
 
 ---
 
@@ -452,6 +475,10 @@ Source: SRD 5.2.1 (Wizards of the Coast, CC-BY-4.0), official PDF; paraphrased, 
 
 
 **v0.1.4 (2026-10-04, audit):** Story Box exception marked approved in §2.8, Open question 9 resolved, header status and core pointer brought to v0.2.6; `tailor_tags` and the tailored-pull rule now say the Fan Profile is hidden (S12 dropped). No schema change.
+
+**v0.1.8 (2026-10-04, rules lead rulings):** §2.8 cap override is the GM's with a logged reason, Caleb can veto (Caleb's later 2026-10-04 ruling); pointers to core v0.2.17 and rules/45 v0.2.4. Platinum floors unchanged (already §4.5: none on F1-8).
+
+**v0.1.7 (2026-10-04, overnight audit against core v0.2.16, rules/70 v0.1.10, rules/20 v0.3.6, decision 030, catalog v1.3, QUESTIONABLE v0.1.7):** pointers refreshed; §2.2 box ceilings (no Platinum F1-8, Legendary F13+ with campaign total 2, ceiling substitution logged); §1.6 whole credits (buy rounds up per line, sell at half rounds down); §2.8 cap override is Caleb's, rota is a guideline, unopened box bound but item not, death frees the slot, Story Boxes outside the Legendary cap; new §2.9 achievement rewards (snark-only, tailored per Crawler, ACH-1824/1825/1826) and §2.10 death and collapse loot (decision 028); §3.2 floor notes and rules/70 flag-line pointer; open questions 7 and 10 closed; flavor 3-4 sentences max. No schema change, no card value changed.
 
 **v0.1.6 (2026-10-04):** `uses.recharge` gains `"floor"` (once per floor, used by 0065 Group Photo).
 

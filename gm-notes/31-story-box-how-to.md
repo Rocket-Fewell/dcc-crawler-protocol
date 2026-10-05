@@ -19,7 +19,7 @@ Read the warnings. A HOLD note from Lore or a missing `power_note` is a warning,
 **If the holder dies before opening:** the box is reclaimed automatically (see below). To give that deed out again use `--reaward "why"` on the same `loot story-box` line: allowed only if EVERY earlier award of that deed was reclaimed and none was opened, sold or released by a /delete (a deed closed by /delete stays closed). The new box gets id `sb-F-deed-r2`; the ledger records `reaward_of` and your reason.
 
 **Rules you will hit:**
-- Floors 1-2 only. Only one Story Box per floor; the cap counts LIVING Crawlers only (a deleted Crawler frees the slot, a dead Crawler's UNOPENED Story Box is reclaimed and frees the slot; one already opened still counts). Only the ACTIVE Crawler receives one. A second needs `--override-cap "why"` (logged). Only do that when Caleb says so.
+- Floors 1-2 only. Only one Story Box per floor; the cap counts LIVING Crawlers only (a deleted Crawler frees the slot, a dead Crawler's UNOPENED Story Box is reclaimed and frees the slot; one already opened still counts). Only the ACTIVE Crawler receives one. A second needs `--override-cap "why"` (logged). It is your call: give a real reason in the logged "why" (Caleb 2026-10-04 ruling, decision 018 addendum). Caleb can veto.
 - A deed pays once. `loot deeds` shows what was paid. A genuinely different deed gets its own `--deed-id`.
 - `--deed` must say what happened, in a sentence. No deed text, no box.
 - Quadruped Box: any four-legged companion counts, not only a cat. One per table.

@@ -8,6 +8,7 @@ Two kinds of line:
   busted_call a player's Busted call: ONLY the player's own call text and Busted / Not busted (no sealed data), plus the Therapy flag.
 Each line: seq, ts, type, ..., prev (hash of the previous line, 64 zeros for the first), hash = sha256(prev + "|" + canonical json of the
 line without `hash`). `verify` recomputes the chain and prints no content."""
+import argparse
 import hashlib
 import json
 import os
@@ -23,6 +24,19 @@ RAPPORT_WORDS = ["frosty", "cool", "warm", "cozy"]
 class RepairLogError(Exception):
     pass
 
+
+
+def _cli_int(raw, signed=False):
+    """argparse type for integer CLI options (same rule as state.py): ASCII digits 0-9 only, no spaces, decimals or leading zeros; a lone 0 is fine.
+    signed=True also accepts a leading '+' (for deltas such as +2); '-' is accepted either way and range checks stay with each command."""
+    pat = r"0|[+-]?[1-9][0-9]*" if signed else r"0|-?[1-9][0-9]*"
+    if not re.fullmatch(pat, str(raw)):
+        raise argparse.ArgumentTypeError(f"must be a whole number written with the digits 0-9 only (no spaces, {'' if signed else chr(39) + '+' + chr(39) + ' signs, '}decimals or leading zeros; a lone 0 is fine), got {str(raw)!r}")
+    return int(raw)
+
+
+def _cli_signed(raw):
+    return _cli_int(raw, signed=True)
 
 def _gq():
     import gm_quirks
@@ -189,12 +203,12 @@ def add_parsers(sub, common):
     sp.add_argument("--kind", required=True, choices=sorted(COMMIT_KINDS), help="fit (Tribute Fit tier) | busted (grade) | rapport (word)")
     sp.add_argument("--value", required=True)
     sp.add_argument("--crawler", required=True)
-    sp.add_argument("--floor", type=int, required=True)
+    sp.add_argument("--floor", type=_cli_int, required=True)
     sp.add_argument("--scene")
     sp.add_argument("--note")
     sp = leaf("tell", cmd_tell, "GM: a tell was shown in this scene (scene + floor only; opens Busted calls for that scene)")
     sp.add_argument("--scene", required=True)
-    sp.add_argument("--floor", type=int, required=True)
+    sp.add_argument("--floor", type=_cli_int, required=True)
     leaf("verify", cmd_verify, "recompute the hash chain (prints no content)")
     sp = leaf("calls", cmd_calls, "players' own Busted calls and results (their text only; no sealed data)")
     sp.add_argument("--crawler")

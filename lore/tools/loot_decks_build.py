@@ -61,7 +61,7 @@ U1 = {"max": 1, "recharge": "none"}
 def credits_grant(roll): return {"credits": None, "roll": roll}
 
 # ------------------------------------------------------------------ ANY (floor-wide) deck
-A = Deck("any", "orientation-pit", "Floor 1: The Orientation Pit (floor-wide pool)")
+A = Deck("any", "orientation-pit", "Floor 1: The Orientation Pit (floor-wide pool)", version="0.1.1")
 
 # ---- Bronze consumables
 A.add("Bronze","consumable","consumable","Sports Drink, Mystery Flavor","Potion of Healing","SRD 5.2","Common","Consumables",
@@ -307,7 +307,7 @@ A.add("Legendary","weird","consumable","Enhanced Pet Biscuit","Enhanced Pet Bisc
  M('Utilize action: feed it to your willing pet (a Beast, CR 1/4 or lower). The pet becomes a Crawler: it gets the System interface (inventory, map, achievements, boxes), speech, Int/Wis/Cha of at least 10, and a class at the next saferoom (level = party level). One conversion per living pet-Crawler: a deleted pet-Crawler frees its conversion, but a new conversion needs a new Enhanced Pet Biscuit (which uses a Story Box slot). No effect on a creature that is already a Crawler.',"Utilize action","5 ft",None,None,"permanent",U1,"Pet only: the GM decides what counts as yours. Irreversible. Roll d4 for one Biscuit Quirk (rules/42 §6.2). Boxes and loot of the new Crawler follow core §4.4 like any Crawler's.",0.1),
  'Enhanced Pet Biscuit. Feed it to your pet: the pet becomes a Crawler, with a System interface and a class at the next saferoom.',
  'Good boy. Good, billable, ratings-eligible boy.',CI,0,0,"Pet Box","Brought a pet into the Crawl",
- 'Story Box card (spec §2.8): GM-triggered only, hand-pick, never drawn. trigger_deed: first Crawler at the table to bring a pet into the Crawl, judged by the GM (canon trigger not captured in the ledger). Banner adds the tier: Legendary Pet Box. Item canon I-007 and M-037; mechanics are HOUSE. power_note: Story keystone (pattern C), consumed once, rung 0 numbers: the new Crawler is a CR 1/4 Beast stat block plus a class at party level, so it adds a Crawler to encounter budgets and uses the owner\'s one consumable for the floor. Once fed it\'s consumed; the pet-Crawler can\'t be traded; one conversion per living pet-Crawler (a deleted pet-Crawler frees its conversion; a new conversion still needs a new Enhanced Pet Biscuit, which uses a Story Box slot). An unused biscuit is a normal tradable, sellable, lootable item. The pet-Crawler is a separate player-controlled Crawler played by the owner, takes no extra slot. Hook: the pet now has opinions, and the audience adores it. (rules/45 section 4.5) Not bound (bound is false): lootable, tradeable, sellable like any item; story_value is provenance only and never the buyback base; sale_value 100 (System buyback at Floor-1 scale, times the multiplier of the sale floor at runtime). Opens only in a safe room: the deed is recorded and announced at award and the box waits unopened until the next safe room.',
+ 'Story Box card (spec §2.8): GM-triggered only, hand-pick, never drawn. trigger_deed: first Crawler at the table to bring a pet into the Crawl, judged by the GM (canon trigger not captured in the ledger). Banner adds the tier: Legendary Pet Box. Item canon I-007 and M-037; mechanics are HOUSE. power_note: Story keystone (pattern C), consumed once, rung 0 numbers: the new Crawler is a CR 1/4 Beast stat block plus a class at party level, so it adds a Crawler to encounter budgets and uses the owner\'s one consumable for the floor. Once fed it\'s consumed; the pet-Crawler can\'t be traded; one conversion per living pet-Crawler (a deleted pet-Crawler frees its conversion; a new conversion still needs a new Enhanced Pet Biscuit, which uses a Story Box slot). An unused biscuit is a normal tradable, sellable, lootable item. The pet-Crawler is a separate player-controlled Crawler played by the owner, takes no extra slot. Hook: the pet now has opinions, and the audience adores it. (rules/45 section 4.5) Not bound (bound is false): lootable, tradeable, sellable like any item; story_value is provenance only and never the buyback base; sale_value 100 (System buyback at Floor-1 scale, times the multiplier of the sale floor at runtime). Opens only in a saferoom: the deed is recorded and announced at award and the box waits unopened until the next saferoom.',
  tags=["pets"],unique=True,num=55,story=40000,bound=False,sale=100,ledger_text="item +1 Legendary Story Box: Enhanced Pet Biscuit (story value 40000, not bound)")
 
 # Needs-verify (kept OUT of cards[]; not drawable until a 2024 text check passes).
@@ -519,7 +519,7 @@ Z10.add("Silver","credits","credits","Alumni Fund Check (Cleared, Unfortunately)
 # action_cost differs: "Action: 30 seconds of focus (outside combat)" per Caleb's/Syndicate's instruction to Lore).
 # Rules: GM-triggered, draw_weight 0, bound false (Caleb's ruling 2026-10-04: lootable, transferable, sellable), credit_value 0, story_value 20,000-250,000, cap one per table per floor.
 # The Enhanced Pet Biscuit stays as f01-any-0055 in the orientation-pit deck (not duplicated here).
-S = Deck("any", "story-boxes", "Floor 1: Story Boxes (Legendary one-offs, GM hand-pick only)")
+S = Deck("any", "story-boxes", "Floor 1: Story Boxes (Legendary one-offs, GM hand-pick only)", version="0.1.1")
 STORY_CARDS = [
 {'id': 'f01-any-0056',
  'floor': 1,
@@ -1119,7 +1119,7 @@ def _retune(c):
         _swap_notes(c, trigger="every Crawler present (the Crawlers pictured when the deed is recorded) each did a distinct, necessary part of one improvised plan against something above their weight, unscripted, with real risk.")
         c["notes"] += " REVIEW (Lore): snark line trimmed to one sentence for deck_check; 'all four Crawlers' became 'every Crawler pictured' (the Crawlers present when the deed is recorded), so it works for a two-Crawler table; the once-per-floor replay now uses uses.recharge 'floor' (new value, added to deck_check; Syndicate to add 'floor' to the recharge list in rules/40 section 1.1)."
 
-RECLAIM_NOTE = " Death before a safe room (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a safe room, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used."
+RECLAIM_NOTE = " Death before a saferoom (Caleb's 2026-10-04 ruling): an unopened Story Box is reclaimed if the Crawler dies before a saferoom, and the slot is freed (the one-per-floor cap no longer counts it; the GM may award a Story Box again). This replaces the older rule where the box stayed closed and the cap stayed used."
 for _c in A.cards:
     if _c["id"] == "f01-any-0055":
         _c["notes"] += RECLAIM_NOTE
@@ -1134,8 +1134,8 @@ for _c in STORY_CARDS:
     S.cards.append(_c)
     S.n = int(_c["id"].split("-")[-1])
 
-STORY_DECK_NOTES = ("Story Boxes are hand-pick only (draw_weight 0) and GM-triggered for one named, one-time deed. Like every loot box, a Story Box can only be opened in a safe room. "
-    "The deed is recorded and announced at award; the box then waits unopened until the next safe room. If the Crawler dies before that safe room, the unopened box is reclaimed and the slot is freed (Caleb's 2026-10-04 ruling; the one-per-floor cap no longer counts it). Story Box items are NOT bound (bound is false): they can be looted from a corpse, traded or sold, "
+STORY_DECK_NOTES = ("Story Boxes are hand-pick only (draw_weight 0) and GM-triggered for one named, one-time deed. Like every loot box, a Story Box can only be opened in a saferoom. "
+    "The deed is recorded and announced at award; the box then waits unopened until the next saferoom. If the Crawler dies before that saferoom, the unopened box is reclaimed and the slot is freed (Caleb's 2026-10-04 ruling; the one-per-floor cap no longer counts it). Story Box items are NOT bound (bound is false): they can be looted from a corpse, traded or sold, "
     "as in canon. story_value is provenance for the Accountant, not a sale price; sale_value is the System buyback at Floor-1 scale (times the sale floor's multiplier); credit_value stays 0. Cap one per table per floor (log an override to exceed).")
 DECKS = [A, Z3, Z6, Z9, Z10, S]
 if __name__ == "__main__":

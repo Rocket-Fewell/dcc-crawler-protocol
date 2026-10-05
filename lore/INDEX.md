@@ -1,5 +1,5 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.6 | Updated: 2026-10-04
+Owner: DCC Lore | Status: review | Version: 2.8 | Updated: 2026-10-05
 Summary: One line per file in the lore folder: path, description, owner, status.
 
 Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (symlink to `/workspace/dcc-lore`). Rules: `/workspace/dcc-campaign/NAMING-CONVENTIONS.md`.
@@ -17,7 +17,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | Path | Description | Owner | Status |
 |---|---|---|---|
 | INDEX.md | This index: one line per file in the lore folder. | DCC Lore | review |
-| CANON-LEDGER.md | Master canon ledger: dated entries with exact quotes, source tags and VERIFIED/WIKI-ONLY/UNVERIFIED confidence. Append-only. | DCC Lore | review |
+| CANON-LEDGER.md | Master canon ledger (v1.14; section 9.4 Floor 3 Over City added 2026-10-05): dated entries with exact quotes, source tags and VERIFIED/WIKI-ONLY/UNVERIFIED confidence. Append-only. | DCC Lore | review |
 | ledger-rules.md | Rules for appending to the ledger (IDs, quote limit, confidence, dating). | DCC Lore | review |
 | status-and-todo.md | Pass history, coverage tables, source caveats and the running TODO list (the old INDEX body, plus Pass 4). | DCC Lore | review |
 | mechanics.md | 25-section mechanics reference (stats, XP, death, loot boxes, bosses, safe rooms, parties, AI behaviour). | DCC Lore | review |
@@ -87,6 +87,8 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | tables/canon-floor-1.md | Readable view of tables/canon-floor-1.json (generated). | DCC Lore | draft |
 | tables/canon-floor-2.json | Floor 2 canon RESERVE source table (status "reserve": not announced, not for live use; 10 canon zones/set-pieces, mobs, hazards, NPCs, floor clock canon 6 days vs house 10, differences from Floor 1, announcement style, timeline, gaps, refinement backlog; tag, confidence, ledger row ids). | DCC Lore | reserve |
 | tables/canon-floor-2.md | Readable view of tables/canon-floor-2.json (generated). | DCC Lore | reserve |
+| tables/canon-floor-2.version.json | Version, sha256 and counts of the current Floor 2 reserve table build. | DCC Lore | reserve |
+| tables/canon-floor-2.CHANGELOG.md | One line per Floor 2 reserve table build. | DCC Lore | reserve |
 
 ## guides/ and drafts/
 | Path | Description | Owner | Status |
@@ -225,4 +227,5 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 Pass 18 (ledger) provenance: `work/pass18_rows.py` (appended M-263..M-326; do not re-run) and `work/pass18-row-map.json` (row key to id map read by tools/canon_floor_build.py; keep). Scratch JSON/transcript folds from Pass 3 (`work/*.json`, `*.fold`, `b7wiki.txt`). Not KB content; safe for tools to overwrite. Ledger rebuilds write to `work/ledger-rebuild.md`.
 Pass 19 (ledger) provenance: `work/pass19_rows.py` (appended M-327..M-524 and X-059..X-065; do not re-run) and `work/pass19-row-map.json` (row key to id map read by tools/canon_floor2_build.py; keep).
 Pass 20 (ledger) provenance: `work/pass20_rows.py` (appended M-525..M-650 and X-066..X-075; do not re-run) and `work/pass20-row-map.json` (row key to id map; keep).
-
+Pass 21 (ledger) provenance: `work/pass21_rows.py` (appended M-651..M-706 and X-076..X-079, Floor 3 Over City; do not re-run), `work/pass21-row-map.json` (row key to id map; keep) and `work/ledger-pre-pass21.bak` (pre-append backup).
+Pass 22 (ledger) provenance: `work/pass22/rows.py` and `work/pass22/block.md` (appended M-707..M-733 and X-080, Floor 2 refinement; do not re-run), `work/pass22/fetch.py`, `titles.txt` and `live.json` (live-wiki revision check of 48 Floor 2 pages, 2026-10-05), `work/pass22/canon-floor2-build-pre-pass22.py.bak` (builder before edits) and `work/ledger-pre-pass22.bak` (pre-append backup).

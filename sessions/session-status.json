@@ -1,8 +1,8 @@
 {
-  "status": "open",
-  "since": "2026-10-04T22:54:11-05:00",
+  "status": "closed",
+  "since": "2026-10-04T22:59:48-05:00",
   "by": "bridge",
   "opens": 1,
-  "reopened": true,
-  "note": "bridge /join"
+  "closed_at_epoch": 1791172788.3722537,
+  "note": "bridge /leave"
 }

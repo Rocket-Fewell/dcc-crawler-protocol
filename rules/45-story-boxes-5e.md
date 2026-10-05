@@ -1,9 +1,9 @@
 # Story Boxes (5e Overlay)
-Owner: Syndicate | Status: draft | Version: 0.2.2 | Updated: 2026-10-04
+Owner: Syndicate | Status: draft | Version: 0.2.4 | Updated: 2026-10-04
 Summary: Design of the Legendary Story Box for Floors 1-2: what counts as a Story-Box deed (checklist, anti-farming, example deeds), the GM procedure in the System's voice, the power ladder (3 patterns, 5 worked cards in loot-deck schema 0.1.2), how Story Boxes differ from Benefactor Boxes and relate to achievements and the Fan Profile, the spotlight guideline across four Crawlers, looting, trading, death and resale rules, the beta reset, the core amendment text, one open question, and the changes the room must make (Lore, Architect, Accountant).
-Depends on: rules/40-loot-deck-spec-5e.md v0.1.5 (§1.1 fields, `story_value` and `bound`, schema `loot-deck/0.1.2`, §2.5 announcing, §2.8 short rule, §3.2 audit hint), rules/42-house-items-f01.md v0.2.2 §6 (Enhanced Pet Biscuit, card f01-any-0055), rules/10-core-rules-5e.md v0.2.10 (§3.4-3.8, §4.1, §4.4, §4.5, §4.7, §6.2, §6.9), gm-notes/00-gm-principles.md ("Achievement announcements", "Loot box and item detail", exchange framework), gm-notes/30-player-channel-card-format.md, characters/create-flow-spec-5e.md v0.1.4 (hidden Fan Profile, S13), `dcc-lore/drafts/f01-legendary-oneoffs-research.md`, `tables/loot-decks/f01-any-story-boxes.json` (Lore's first five cards, read only), tools/state.py `loot story-box` (read only). Consumers: AI GM (runs it), Architect/Borent (tooling), the Accountant (story-value line), DCC Lore (deck), Valtay Corp (player book: do NOT print §2.5 or §2.6).
+Depends on: rules/40-loot-deck-spec-5e.md v0.1.7 (§1.1 fields, `story_value` and `bound`, schema `loot-deck/0.1.2`, §2.5 announcing, §2.8 short rule, §3.2 audit hint), rules/42-house-items-f01.md v0.2.3 §6 (Enhanced Pet Biscuit, card f01-any-0055), rules/10-core-rules-5e.md v0.2.16 (§3.4-3.8, §4.1, §4.4, §4.5, §4.7, §6.2, §6.9), gm-notes/00-gm-principles.md ("Achievement announcements", "Loot box and item detail", exchange framework), gm-notes/30-player-channel-card-format.md, characters/create-flow-spec-5e.md v0.1.13 (hidden Fan Profile, S13), `dcc-lore/drafts/f01-legendary-oneoffs-research.md`, `tables/loot-decks/f01-any-story-boxes.json` (Lore's first five cards, read only), tools/state.py `loot story-box` (read only). Consumers: AI GM (runs it), Architect/Borent (tooling), the Accountant (story-value line), DCC Lore (deck), Valtay Corp (player book: do NOT print §2.5 or §2.6).
 
-> **Status:** DRAFT v0.2.2. Nothing here is LOCKED except what the room already agreed (§1.2). Caleb answered five of the six open questions on 2026-10-04 (§9); only item strength (old Q2) stays open. **Project:** *Crawler Protocol: Season Zero*, private fan RPG inspired by *Dungeon Crawler Carl*.
+> **Status:** DRAFT v0.2.4. Nothing here is LOCKED except what the room already agreed (§1.2). Caleb answered five of the six open questions on 2026-10-04 (§9); only item strength (old Q2) stays open. **Project:** *Crawler Protocol: Season Zero*, private fan RPG inspired by *Dungeon Crawler Carl*.
 > **Why this exists:** Caleb approved Legendary Story Boxes on Floor 1 (2026-10-04) and asked for "a really good system". Canon puts three Legendary boxes on Floor 1 or the tutorial. A Season Zero table needs one that is rare, fair, readable and hard to farm.
 > **Who reads it:** the AI GM and Caleb. Players do not see §2.5, §2.6 or the card list; they cannot request a Story Box (core §3.5 rule 6).
 > **Tags:** `CANON` = tied to a CANON-LEDGER entry; `CANON-INSPIRED` = shaped by canon, not a canon item; `HOUSE` = our invention. Canon claims here are ledger rows L-001, I-007, M-037, A-165, A-167 (wiki-sourced, VERIFIED in the ledger, **not checked against the novels**) and the Lore research draft. System lines are written fresh in the voice described in `dcc-lore/catalog/system-voice.md` §1.2; nothing is copied. Players are "Crawlers".
@@ -34,11 +34,11 @@ A **Story Box** is a **Legendary** box that the GM hands to one Crawler (or one 
 | 2 | **Tradeable and lootable** (Caleb, 2026-10-04). Story Box items are not bound: once opened they can be traded, looted from corpses and sold per canon. `story_value` is tracked apart from credits and is never converted automatically; a sale is a normal credit transaction (§6.5). |
 | 3 | **One named deed per box,** with the deed sentence written **at award time**, not afterward. |
 | 4 | **A deed cannot pay twice** (for anyone, in that session). |
-| 5 | **Cap: one per table per floor** (the whole floor, not per play night), with a logged override by Caleb only. This is the only hard limit on awards; the spotlight rota is a GM guideline (§6.1). **Count rule (Caleb, 2026-10-04):** the cap counts only Story Boxes held by live (non-deleted) Crawlers. Deleting a Crawler with `/delete` frees its slot; its archived ledger rows are for audit only and do not count. A dead Crawler that is not deleted still counts if it holds an opened or already-awarded Story Box item (§6.3). **A Story Box reclaimed unopened at its Crawler's death does not count** (Caleb, 2026-10-04): its slot is freed, so the per-floor cap and the "one per living Crawler" counting treat it as not held (§6.3). The Crawler must be the player's active Crawler to receive one (create-flow spec §8). |
+| 5 | **Cap: one per table per floor** (the whole floor, not per play night), which **the GM may override with a logged reason** (Caleb can veto; Caleb's ruling, 2026-10-04, later than decision 018). This is the only hard limit on awards; the spotlight rota is a GM guideline (§6.1), and the GM may adapt as play goes. **Count rule (Caleb, 2026-10-04):** the cap counts only Story Boxes held by live (non-deleted) Crawlers. Deleting a Crawler with `/delete` frees its slot; its archived ledger rows are for audit only and do not count. A dead Crawler that is not deleted still counts if it holds an opened or already-awarded Story Box item (§6.3). **A Story Box reclaimed unopened at its Crawler's death does not count** (Caleb, 2026-10-04): its slot is freed, so the per-floor cap and the "one per living Crawler" counting treat it as not held (§6.3). The Crawler must be the player's active Crawler to receive one (create-flow spec §8). |
 | 6 | **`story_value` has its own ledger line** and is **excluded from the Accountant's 1,500-credit economy flag** when awarded. If the item is later sold, the sale price is an ordinary credit transaction and is flagged like any other (§6.5). |
 | 7 | **Every card carries a power note** (`power_note:` in `notes`; format in §4.3). |
 | 8 | Tooling is the Architect's job (§8, §10). This file is the design. |
-| 9 | **Saferoom only.** Like every loot box, a Story Box can be opened only in a safe room (core §4.4, unchanged). The deed is recorded and announced at award time; the box is held unopened until the next saferoom. |
+| 9 | **Saferoom only.** Like every loot box, a Story Box can be opened only in a saferoom (core §4.4, unchanged). The deed is recorded and announced at award time; the box is held unopened until the next saferoom. |
 
 ### 1.3 Terms
 | Term | Meaning |
@@ -86,7 +86,7 @@ Write these **before the banner** (this is "award time"): the **deed** sentence,
 6. **Retcons.** After the banner, only Caleb can undo a Story Box. A table-consent retcon before the banner simply means no deed happened.
 7. **Dying, looting or selling does not reopen it.** Death, revival, looting, trading, selling or a restart never makes a closed deed pay again (§6.3, §6.5).
 8. **Pets are not manufactured.** One Enhanced Pet Biscuit per pet, ever; no crafting or duplicating a second one. The Biscuit is tradeable like any Story Box item, but it works only on the pet named in the deed, so a trade never makes a second pet-Crawler.
-9. **The cap is the cap.** It is the one hard limit on awards. An override needs Caleb's name and a reason in the log.
+9. **The cap is the cap.** It is the one hard limit on awards. The GM may override it with a logged reason (Caleb can veto).
 10. **Missing record means missing box.** If the deed sentence or a witness line is absent by the end of the session, the Accountant flags it and Caleb decides.
 11. **The examples stay secret.** §2.5 and §2.6 are GM-only. Do not paste them into player text, the book, a channel or a banner.
 
@@ -95,7 +95,7 @@ Write these **before the banner** (this is "award time"): the **deed** sentence,
 **The pet-companion case.** Canon paid two different boxes for a cat on Floor 1: one for the person who brought it (Pet Box, with a biscuit) and one for the animal being the first of its kind (Quadruped Box). With a cap of one per floor, the table version is **one pet deed per floor**:
 - If the deed is **the owner's act** (carried it through the entry, shielded it, went back for it), award the **Pet Box** (the Enhanced Pet Biscuit, rules/42 §6).
 - If the deed is **the animal's own act** (it did something absurd and brave that decided a scene), award the **Quadruped Box** (a crown or collar-type item worn by the animal; example 1, §4.4). The ledger name is the owner Crawler; the item sits on the animal.
-- If both happen on the same floor, only the first is a Story Box. The second is paid as a normal Silver box at most (Floor 1 cap in core §4.5) and a Title, logged "story-eligible, capped" so Caleb can use his override or move it to Floor 2 if the deed there is new.
+- If both happen on the same floor, only the first is a Story Box. The second is paid as a normal Silver box at most (Floor 1 cap in core §4.5) and a Title, logged "story-eligible, capped" so the GM can override the cap with a logged reason (Caleb can veto) or move it to Floor 2 if the deed there is new.
 - Bringing a pet to **creation** is not a deed. The deed needs a beat in play where something was at risk (G3). The GM never offers a pet to start the chain (G2).
 - Any quadruped counts. A Biscuit-made pet-Crawler is a **separate player-controlled Crawler, played by the player who made it** (the pet's owner, who used the Biscuit). It takes **no extra player slot** and **counts for encounter budgets** like any Crawler (rules/42 §6.2).
 
@@ -152,10 +152,10 @@ You met the rival you left behind and finished the argument in front of an audie
 Reward: You've received a Legendary Family Reunion, Now Streaming Box!
 ```
 **Step 5. Hold the box.** The box goes into the Crawler's System Inventory **unopened**, with one line (no dice):
-`[SYSTEM] Box held. Production will open it in a safe room, where the lawyers can watch.`
+`[SYSTEM] Box held. Production will open it in a saferoom, where the lawyers can watch.`
 Then let the table react for one beat and play on.
 
-**Step 6. Open in the next saferoom** (Caleb, 2026-10-04: loot boxes, Story Boxes included, can ONLY be opened in a safe room; core §4.4 is unchanged). If the Crawler dies first, the unopened box is reclaimed with their other unopened boxes (core §6.2); the deed stays recorded (no second payout) but the box no longer counts toward the cap, so another Crawler can be awarded one (§6.3). At the opening give one beat of suspense, one line, no dice (the contents are already chosen; do not fake a roll):
+**Step 6. Open in the next saferoom** (Caleb, 2026-10-04: loot boxes, Story Boxes included, can ONLY be opened in a saferoom; core §4.4 is unchanged). If the Crawler dies first, the unopened box is reclaimed with their other unopened boxes (core §6.2); the deed stays recorded (no second payout) but the box no longer counts toward the cap, so another Crawler can be awarded one (§6.3). At the opening give one beat of suspense, one line, no dice (the contents are already chosen; do not fake a roll):
 `[SYSTEM] Opening. Production asks the audience to hold its applause. The audience declines.`
 Then read the item the way rules/40 §2.5 says, with the power note's player-visible parts:
 ```
@@ -168,7 +168,7 @@ Then read the item the way rules/40 §2.5 says, with the power note's player-vis
 A Story Box holds **one headline item** and at most **one small extra** (a Bronze-value consumable or a clue). It never holds credits or a stat bump.
 
 **Step 7. Record at award time** (right after the banner; do not wait for the saferoom). Run it for real, copying the §2.2 text exactly (until the Architect adds `--hold`, §10, record the award and open it in the saferoom with the same command):
-`python3 tools/state.py loot story-box 1 any --crawler <name> --pick <card_id> --deed "<sentence>" --deed-id <slug> --witness "<names>" --gm-note "<gates met>" --when "<time>"` (add `--override-cap "<Caleb's reason>"` only with Caleb's logged OK).
+`python3 tools/state.py loot story-box 1 any --crawler <name> --pick <card_id> --deed "<sentence>" --deed-id <slug> --witness "<names>" --gm-note "<gates met>" --when "<time>"` (add `--override-cap "<reason>"` when the GM overrides the cap; the reason is logged and Caleb can veto).
 
 **Step 8. Ledger lines.** Three things must exist after Step 7:
 1. **Box ledger** (`story-box`): deed, deed id, witness, floor, card, box name, status (`held` until opened, then `opened`), override reason if any.
@@ -312,13 +312,13 @@ Story Box items sell. The System's buyback is a **fixed `sale_value` per power r
 ### 5.1 Story Box vs Benefactor Box
 | | **Story Box** | **Benefactor Box** (core §4.7) |
 |---|---|---|
-| Who sends it | The System, for a deed (box name taken from the deed) | A sponsor; no crawler deed needed |
+| Who sends it | The System, for a deed (box name taken from the deed) | A sponsor; no Crawler deed needed |
 | Trigger | One named, unscripted, witnessed, one-time deed | A sponsor's whim, a deal or a rider (§5.2 of core) |
 | Floor ceiling | Stays inside it: small numbers, Legendary label on the box | **May exceed it**: off-world tech, glitchy gear |
 | Power | Capped by §4.1 (rungs 0-2 on Floors 1-2) | Not tied to tier; a Bronze one can beat a Gold ordinary box |
 | Value | `story_value` (provenance only, never a price) plus a fixed `sale_value` by rung (§4.6); the award is excluded from the 1,500 flag, a sale is not | Ordinary `credit_value`; counts in the economy audit |
 | Trade | Box is bound until opened (core §4.4); the opened item trades, loots and sells (§6.5) | Box is bound until opened (core §4.4); contents then trade as ordinary items |
-| Cap | One per table per floor (Caleb override logged) | About one per sponsor per floor; outside the pacing table |
+| Cap | One per table per floor (GM override with a logged reason; Caleb can veto) | About one per sponsor per floor; outside the pacing table |
 | Contents | One hand-made item that echoes the deed | Odd items, gadgets, a rider |
 | Who picks | GM, hand-pick only | GM; sponsor's style |
 The room chose **not** to route Story Boxes through Benefactor Boxes (rules/40 Q9, option B): a Benefactor Box has no deed and would break the "named deed" rule.
@@ -341,7 +341,7 @@ The room chose **not** to route Story Boxes through Benefactor Boxes (rules/40 Q
 ## 6. Spotlight guideline, looting, trading, death, resale, and the beta reset
 
 ### 6.1 Four Crawlers: the spotlight guideline (GM guidance, not a hard rule)
-The **cap is the only hard rule**: at most one Story Box per table per floor, with a logged override by Caleb. Everything else in this section is GM guidance.
+The **cap is the only hard rule**: at most one Story Box per table per floor, which the GM may override with a logged reason (Caleb can veto). Everything else in this section is GM guidance.
 1. **Spotlight guideline: try to give every living Crawler a first Story Box before anyone gets a second.** If a deed would give a second box to a Crawler while others have none, the GM may still award it (cap permitting) and logs one line saying why, or may pay a normal reward (Silver at most on Floor 1) plus a Title and log "story-eligible, capped". A deed pays once: Story Box or normal, not both.
 2. **Tie-breaks for who earns it** when two Crawlers qualify at once: (a) the one who took the bigger risk; (b) the one with no Story Box yet; (c) the one who has opened fewer boxes this floor; (d) the table votes. No dice.
 3. **Spotlight return.** When one Crawler gets a Story Box, try to frame a spotlight scene for each of the other three in the same session and pay any earned notable moment (Heroic Inspiration, a consumable, a Title). Those are earned, not gifted.
@@ -387,6 +387,8 @@ Everything the **session** owns starts empty: the deed registry (`story-box` led
 ---
 
 ## 7. Core amendment text (applied to core v0.2.8)
+
+> **Note (v0.2.4):** the quote below is the text as first applied. Since core v0.2.17 the cap override reads "the GM may exceed it with a logged reason; Caleb can veto" (Caleb's ruling, 2026-10-04).
 
 The one line, placed in core §4.1 (after the floor-ceiling paragraph), §4.5 (under the table) and §4.7 (a new "Story Box" row):
 
@@ -464,7 +466,7 @@ Every spot that must change because Story Box items are tradeable, lootable and 
 | C1 | Ledger rules | Story Box award: still no credit line, `story_value` on its own line (provenance), excluded from the 1,500 flag. Sale or trade: a normal credit line or transfer, with `story_value` and deed id in the note |
 | C2 | Inflation flag (1,500 credits per Crawler per floor, rules/40 §3.2) | Sale proceeds count. **Flag it, do not block it.** The report shows the flag; the sale is never reversed |
 | C3 | Buyback check | `sale_value` must match the rung table (§4.6) times the sale floor's multiplier; any other price paid by the System is an error. Sales between Crawlers are free-form and never an error |
-| C4 | Story value totals | Report by earner and deed; the current holder may differ after loot or trade. A cap override still needs Caleb's name and a reason |
+| C4 | Story value totals | Report by earner and deed; the current holder may differ after loot or trade. A cap override needs the GM's logged reason (Caleb can veto) |
 | C5 | Box credit pulls | Do not apply the floor multiplier to box credit pulls (rules/40 §3.2); achievement rewards and System fees (buyback, repairs, crafting prices) keep it |
 | C6 | Missing record | Missing deed sentence or witness line at the end of the session is still flagged (§2.3 rule 10) |
 | C7 | Reclaimed unopened Story Box (v0.2.2, Caleb 2026-10-04) | When a Crawler dies holding an unopened Story Box, the System reclaims it and the slot is freed. The ledger row for the reclaimed box is the Accountant's / Lore's (Lore: card side; Accountant: tracking). Archived and reclaimed rows are audit-only for the cap |
@@ -481,6 +483,8 @@ Every spot that must change because Story Box items are tradeable, lootable and 
 
 | Version | Date | Notes |
 |---|---|---|
+| v0.2.4 | 2026-10-04 | Caleb's ruling (later than decision 018): the rota is a guideline only and the one hard Story Box rule is one per floor, which **the GM can override with a logged reason**; the GM may adapt as play goes; Caleb can veto. Changed in §1.2 row 5, §2.3 item 9, §2.4, the award command, the comparison table, §6 intro, the audit table C4, and a note on §7. Unopened box still bound (core §4.4); item inside tradeable, lootable, sellable. |
+| v0.2.3 | 2026-10-04 | Tidy only: `Depends on` pointers refreshed (rules/40 v0.1.7, rules/42 v0.2.3, core v0.2.16, create-flow v0.1.13); "safe room" spelled "saferoom" in prose; "Crawler" capitalized in prose. No rule changed. |
 | v0.2.2 | 2026-10-04 | Death rule (Caleb): a Story Box that is still UNOPENED when its Crawler dies is reclaimed by the System and its slot is freed, so another Crawler can be awarded one (per-floor cap and "one per living Crawler" counting). Opened or already-awarded Story Box items are unchanged: lootable, not bound, cap slot stays used until the dead Crawler is deleted. The deed stays closed (no second payout). Also (no Caleb ruling needed, D-6): table-deed wording in §6.2 now reads "every active Crawler, or all but one plus a witness" so it works at a two-player table. Edits: §1.2 row 5, §3 step 6, §6.2, §6.3 two rows, §9 answered row 3, §10.2 row A16, §10.3 new row C7 (ledger row for a reclaimed box is the Accountant's / Lore's). Source: `decisions/020-multiple-crawlers-active-swap.md` v1.2. §6.1 item 6 records the duplicate-theme pairs (0055/0060, 0056/0061, 0057/0062; at most one box per pair). |
 | v0.2.1 | 2026-10-04 | Cap count rule (Caleb): deleting a Crawler frees its Story Box slot; the one-per-floor cap counts only Story Boxes held by live (non-deleted) Crawlers, archived ledger rows are audit-only; a dead Crawler not yet deleted still counts. One note in §1.2 row 5, one in §6.3, Architect row A16 in §10.2. The cap itself (one per table per floor, logged override by Caleb only) is unchanged. Source: `decisions/020-multiple-crawlers-active-swap.md`. |
 | v0.2 | 2026-10-04 | Caleb's answers (decision 018): tradeable, saferoom-only opening, rota guideline, buyback by rung. |

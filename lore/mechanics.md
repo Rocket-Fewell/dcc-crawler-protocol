@@ -1,5 +1,5 @@
 # DCC Mechanics (Pass 1)
-Owner: DCC Lore | Status: review | Version: 1.1 | Updated: 2026-10-04
+Owner: DCC Lore | Status: review | Version: 1.2 | Updated: 2026-10-05
 Summary: 25-section mechanics reference: stats, XP, death, loot boxes, bosses, safe rooms, parties and more.
 
 > Source key: **[FW]** = Dungeon Crawler Carl Fandom wiki (dungeon-crawler-carl.fandom.com; pulled via its MediaWiki API on 2026-10-03). Citations like `(1:4)` = Book 1, Chapter 4 as cited by the wiki; `(5:E)` = Book 5 epilogue. **[DCCnl]** = fan site dungeoncrawlercarl.nl explainers. **[UNVERIFIED]** = wiki "Speculation" sections or things I could not cross-check. Everything is paraphrased; spoilers through Book 8 are included.
@@ -213,3 +213,13 @@ The wiki tracks pop-culture references per book (Book N Pop Culture References p
 ---
 ### Pass 3 resolution of section 25 (appended Oct 3, 2026 CT; text above unchanged)
 Full table: `catalog/reconciliation.md`. Summary: per-spell/item/race/achievement/patch/boon gaps are closed at **catalog level** (`catalog/*`); crafting, Midnight Market (Paca; hidden under the Desperado Club), Prize Carousel, Hunters, Blood Hunter, Skyfowl/Bopca/Kua-Tin are now documented there. Gate of the Feral Gods custody chain (B5 loan to Orren -> B7 Elle/Akuma -> Paca's stomach -> Justice Light -> shattered Nothing) is **resolved** except the fate of its other components. Still **OPEN**: XP curve, HP formula, exact unconscious threshold (best reading: roughly 5-10%, build-dependent), which Nekhebit child is "the Scavenger's Daughter". Floor 7 is canonically a ~10-minute "Great Race" pod level (see `catalog/books-5-8-detail.md`). System/AI voice: `catalog/system-voice.md`.
+
+## Pass 21 addendum (2026-10-05): Floor 3, The Over City (ledger 9.4, M-651..M-706)
+- **Timer.** Floor 3 normally runs 20 days; this season the AI cut it to 8 (M-659, X-076). The house 20-day clock matches the normal length.
+- **Layout.** Underground with a fake sky, plank streets, hundreds of guarded villages inside foggy monster ruins; arrival point is random (M-651..M-658).
+- **Village law.** No jail: theft, attacking NPCs or passing out drunk gets you executed. Guards work daytime only, are slow, and won't chase you into the ruins, but you can never go back to that village (M-667..M-672, X-079). A magistrate's Gate Pass covers you only in its own town (M-674, M-675).
+- **Announcement rules.** Citizens give zero XP, guards were buffed, bathroom penalties are gone, and sponsors can bid early before the program opens on Floor 4 (M-660..M-666).
+- **Safe rooms and stairs.** Village inns are safe rooms, more sit every few miles in the ruins; some stairwells only appear after a quest or boss (M-677..M-681). Whether early descent still means stasis here is open (X-077).
+- **Night.** Mobs are much worse after dark; Street Urchins clean corpses and leave you alone unless you get in the way (M-688..M-692).
+- **Elites.** Scripted, plot-armored NPC stars across Floors 3/6/9; writers patch them live, fairness rules bend around them, and a Crawler in their story is an expendable extra (M-698..M-704).
+

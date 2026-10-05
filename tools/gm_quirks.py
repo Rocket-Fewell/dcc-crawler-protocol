@@ -15,6 +15,7 @@ neutral line to the public roll log (never the dice results).
 This module has no import of state.py (state.py imports it): state.py hands over its primitives
 (FileLock, atomic_write_json, ...) through bind(). Errors are GMError; state.main prints them and exits 1.
 """
+import argparse
 import copy
 import datetime as dt
 import hashlib
@@ -61,6 +62,19 @@ class GMError(Exception):
 
 core = None  # set by bind(): the state.py primitives
 
+
+
+def _cli_int(raw, signed=False):
+    """argparse type for integer CLI options (same rule as state.py): ASCII digits 0-9 only, no spaces, decimals or leading zeros; a lone 0 is fine.
+    signed=True also accepts a leading '+' (for deltas such as +2); '-' is accepted either way and range checks stay with each command."""
+    pat = r"0|[+-]?[1-9][0-9]*" if signed else r"0|-?[1-9][0-9]*"
+    if not re.fullmatch(pat, str(raw)):
+        raise argparse.ArgumentTypeError(f"must be a whole number written with the digits 0-9 only (no spaces, {'' if signed else chr(39) + '+' + chr(39) + ' signs, '}decimals or leading zeros; a lone 0 is fine), got {str(raw)!r}")
+    return int(raw)
+
+
+def _cli_signed(raw):
+    return _cli_int(raw, signed=True)
 
 def bind(state_module_globals):
     """Receive state.py's primitives (called by state.build_parser)."""
@@ -1062,20 +1076,20 @@ def add_parsers(sub, common):
         sp.add_argument("player_id", nargs="?", help="lowercase id = slug of the crawler's player name in state.json (e.g. caleb)")
         sp.add_argument("--name", help="display name (default: crawler's player)")
         sp.add_argument("--character", help="character name (default: the crawler's name)")
-        sp.add_argument("--floor", type=int, help="floor to treat as already drifted (default: state.json current_floor, else 0)")
+        sp.add_argument("--floor", type=_cli_int, help="floor to treat as already drifted (default: state.json current_floor, else 0)")
         sp.add_argument("--from-state", action="store_true", help="register every crawler's player from state.json (idempotent)")
         sp = leaf(asub, "add", cmd_aff_add, "score a player: affinity add <player_id> <delta> --reason ... --scene S --floor N --session X")
         sp.add_argument("player_id")
-        sp.add_argument("delta", type=int, help="-10..+10 (usual +/-1..3); the scene net is clamped to +/-3")
+        sp.add_argument("delta", type=_cli_signed, help="-10..+10 (usual +/-1..3); the scene net is clamped to +/-3")
         sp.add_argument("--reason", required=True, help="REQUIRED short reason")
         sp.add_argument("--evidence", help="quote (<= 25 words) or short description of the action")
         sp.add_argument("--fixation-id", help="FX-NN (must match the sealed fixation)")
         sp.add_argument("--trigger", help="the matched trigger keyword/theme")
         sp.add_argument("--scene", required=True)
-        sp.add_argument("--floor", type=int, required=True)
+        sp.add_argument("--floor", type=_cli_int, required=True)
         sp.add_argument("--session", required=True)
         sp = leaf(asub, "drift", cmd_aff_drift, "once per floor: every score moves 1 toward 0 (idempotent per floor)")
-        sp.add_argument("--floor", type=int, required=True)
+        sp.add_argument("--floor", type=_cli_int, required=True)
         sp.add_argument("--session")
         sp = leaf(asub, "status", cmd_aff_status, "show affinity, band and scene delta (GM-only)")
         sp.add_argument("player_id", nargs="?")
@@ -1089,15 +1103,15 @@ def add_parsers(sub, common):
     sp.add_argument("--i-know-this-reveals", action="store_true")
     sp.add_argument("--campaign-id", help="override the derived campaign id")
     sp = leaf(gsub, "show-gm", cmd_show_gm, "GM-ONLY: print the sealed traits (warning banner)")
-    sp.add_argument("--level", type=int, help="print only the tells for this level 0..5 (adds the generic tell table)")
+    sp.add_argument("--level", type=_cli_int, help="print only the tells for this level 0..5 (adds the generic tell table)")
     leaf(gsub, "verify", cmd_gm_verify, "recompute the commitment hash from the sealed roll + nonce (prints no traits)")
     leaf(gsub, "status", cmd_gm_status, "public: is it rolled, when, and the commitment hash")
     sp = leaf(gsub, "level", cmd_level, "effective degeneration level + glitch d20 max for a floor (public)")
-    sp.add_argument("floor", type=int)
-    sp.add_argument("--stress", type=int, default=0, choices=[-1, 0, 1])
+    sp.add_argument("floor", type=_cli_int)
+    sp.add_argument("--stress", type=_cli_int, default=0, choices=[-1, 0, 1])
     sp = leaf(gsub, "guess", cmd_guess, "Busted call: prints only 'Busted' or 'Not busted' (one call per crawler per scene)")
     sp.add_argument("--crawler", required=True)
-    sp.add_argument("--floor", type=int, required=True)
+    sp.add_argument("--floor", type=_cli_int, required=True)
     sp.add_argument("--scene", required=True, help="scene id: one call per crawler per scene")
     sp.add_argument("--kind", required=True, help="fixation | quirk | tic | tell | prior-installation")
     sp.add_argument("--trigger", required=True, help="the player's call, in their own words")
@@ -1109,7 +1123,7 @@ def add_parsers(sub, common):
     aff = sub.add_parser("affinity", help="GM-only per-player Affinity: register | add | drift | status | new-scene")
     affinity_commands(aff.add_subparsers(dest="aff_cmd", required=True, metavar="SUBCOMMAND"))
 
-    leaf(sub, "show-gm", cmd_show_gm, "GM-ONLY alias of `gm-quirks show-gm`").add_argument("--level", type=int)
+    leaf(sub, "show-gm", cmd_show_gm, "GM-ONLY alias of `gm-quirks show-gm`").add_argument("--level", type=_cli_int)
 
 
 if __name__ == "__main__":  # python3 tools/gm_quirks.py guess --crawler X ...  (goes through state.py for locking and paths)

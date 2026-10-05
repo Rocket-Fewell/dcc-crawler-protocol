@@ -18,7 +18,7 @@
       "/workspace/dcc-lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "/workspace/dcc-lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "/workspace/dcc-lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.1: collapse notices, six-hours warning, missed-floor line, achievement frames)",
-      "rules/70-encounter-budget-5e.json v0.1.10 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.1.11 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "/workspace/dcc-lore/drafts/floor1-zone-color.draft.md (Lore draft v0.1: optional read-aloud zone color)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)"
@@ -28,11 +28,11 @@
     "days_left": 0,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
     "canon_table_sha256": "c5d67e380ca3e8510be846dd7fa8923c4e1dabade1846cb34d1f11762d614bbe",
-    "achievements_csv_sha256": "15f7495dda7249a17afb2dde4ed1ca42f1eb5a5b66beb1c62f6335b81d89f98d",
+    "achievements_csv_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e",
     "canon_ledger_version": "1.13",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.1.10",
-    "budget_file_sha256": "b71bb9b56bf53355774c43c6bcfaf14c5257f62f8e1d7b1dedd22db181b2c45b",
+    "budget_file_version": "0.1.11",
+    "budget_file_sha256": "3c272ca334e1a80cff6bcce93483581fbfe7e993dc52c901770b241c8bd06cab",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
     "spec_sha256_sans_pin": "3b2a03d40eaad91895be29185cfb16f7cfd456f37f07d795c12dd08ba8a32678",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
@@ -2176,8 +2176,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.1.10 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.10 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.1.11 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.1.11 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -2431,12 +2431,12 @@
     "pass": 51,
     "warn": 2,
     "fail": 0,
-    "spec_sha256": "e0418238a0988838a4649158b932d263baf25d5556de78344f60dbc59c6531ef",
+    "spec_sha256": "475e21ea16ef1081d6e9cf9208ff9b54047fe1238b74d6f15466ada26f73124d",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.1.10, sha256 b71bb9b56bf53355; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.1.11, sha256 3c272ca334e1a80c; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2506,7 +2506,7 @@
       {
         "status": "PASS",
         "check": "achievements catalog pinned",
-        "detail": "tables/achievements.csv v1.3, sha256 15f7495dda7249a1, 1826 rows"
+        "detail": "tables/achievements.csv v1.3.1, sha256 11ae2445df90e767, 1826 rows"
       },
       {
         "status": "PASS",
