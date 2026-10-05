@@ -182,7 +182,10 @@ def build_want():
             if real in seen:
                 dirs[:] = []; continue
             seen.add(real)
-            dirs[:] = sorted(x for x in dirs if x not in EXC_DIRS)
+            skip = set(EXC_DIRS)
+            if os.path.realpath(s0) == os.path.realpath(REPO):
+                skip |= FORBIDDEN_ROOT_NAMES
+            dirs[:] = sorted(x for x in dirs if x not in skip)
             secret = in_secret(root)
             for f in sorted(files):
                 s = os.path.join(root, f)
@@ -277,7 +280,7 @@ def main():
     deleted = 0
     for root, dirs, files in os.walk(REPO, topdown=True):
         if root == REPO:
-            dirs[:] = [d for d in dirs if d != ".git"]
+            dirs[:] = [d for d in dirs if d != ".git" and d not in FORBIDDEN_ROOT_NAMES]
         for f in files:
             rel = os.path.relpath(os.path.join(root, f), REPO)
             if rel not in want and rel not in STAGING_OWNED and rel not in links:

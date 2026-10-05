@@ -23,12 +23,6 @@ __pycache__/
 /dcc-campaign/
 /dcc-lore
 
-# Path aliases recreated by the Cloud Agent install. The git root is the
-# flattened backup; the GM tools and voice bridge still look up
-# /workspace/dcc-campaign (decisions, sessions, tools) and /workspace/dcc-lore.
-/dcc-campaign/
-/dcc-lore
-
 # Per-machine #agents poll cursors / lastseen (runtime; changes often). backup-sync excludes these.
 lore/state/agents-channel-last.txt
 sessions/agents-channel-*.txt
