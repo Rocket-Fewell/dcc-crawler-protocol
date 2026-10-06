@@ -30,7 +30,7 @@
     "days_left": 2,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
     "canon_table_sha256": "42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737",
-    "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
+    "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
     "canon_ledger_version": "1.20",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.7",
@@ -2271,8 +2271,8 @@
   },
   "validation": {
     "result": "PASS",
-    "pass": 45,
-    "warn": 7,
+    "pass": 46,
+    "warn": 6,
     "fail": 0,
     "spec_sha256": "39c9a7fdecd92dfda11879481a63160a7552bffdd2b1c94a66f3f80f34d6d981",
     "checks": [
@@ -2522,9 +2522,9 @@
         "detail": "37 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
       },
       {
-        "status": "WARN",
+        "status": "PASS",
         "check": "slot-map provenance",
-        "detail": "no spec_sha256_sans_pin_when_mapped for day-08 in rules/70-encounter-budget-5e.json; nothing to compare"
+        "detail": "meta.spec_sha256_sans_pin 60b7e8b0131a8439 matches rules/70-encounter-budget-5e.json#f02_day01_to_10_slot_map.spec_sha256_sans_pin_when_mapped"
       },
       {
         "status": "PASS",
