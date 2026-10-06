@@ -2,7 +2,7 @@
   "version": 1,
   "crawlers": {
     "Eisenhorn": {
-      "published_at": "2026-10-05T20:12:25-05:00",
+      "published_at": "2026-10-05T20:50:32-05:00",
       "view": {
         "name": "Eisenhorn",
         "player": "Hornn",
@@ -197,11 +197,15 @@
           "Weapon mastery: Duct-Taped Mop (Quarterstaff), Hatchet From a Camping Display (Handaxe)",
           "Languages: Common, Common Sign Language, Giant"
         ],
-        "pet": null
+        "pet": {
+          "name": "Rolly",
+          "species": "Cat",
+          "cr": "0"
+        }
       },
       "message_ids": [
-        "1556836494256119839",
-        "1556836494952366114"
+        "1556846086210191421",
+        "1556846086789005396"
       ]
     },
     "Shirayuki": {
@@ -400,7 +404,7 @@
       ]
     },
     "Mr. White": {
-      "published_at": "2026-10-05T20:36:30-05:00",
+      "published_at": "2026-10-05T20:50:32-05:00",
       "view": {
         "name": "Mr. White",
         "player": "Trailer Park Moses",
@@ -574,11 +578,15 @@
           "Tools: One Gaming Set",
           "Languages: Common, Goblin, Orc"
         ],
-        "pet": null
+        "pet": {
+          "name": "Wolf (unnamed)",
+          "species": "Wolf",
+          "cr": "1/4"
+        }
       },
       "message_ids": [
-        "1556842557030268961",
-        "1556842558162862151"
+        "1556846088089243782",
+        "1556846089142018089"
       ]
     }
   }

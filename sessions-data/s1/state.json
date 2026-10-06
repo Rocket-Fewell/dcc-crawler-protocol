@@ -7,7 +7,7 @@
     "death_mode": "Costly Revives",
     "comfort": "Ludicrous",
     "created": "2026-10-05T13:21:00-05:00",
-    "updated": "2026-10-05T20:35:57-05:00",
+    "updated": "2026-10-05T20:50:28-05:00",
     "proctor_hints": {
       "zone_1": {
         "Eisenhorn": {
@@ -535,7 +535,19 @@
           "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
         ]
       },
-      "status": "active"
+      "status": "active",
+      "pet": {
+        "name": "Rolly",
+        "species": "Cat",
+        "species_srd_id": "cat",
+        "cr": 0.0,
+        "description": "Pet raccoon (Cat stat block reskin: climb 30, Stealth). Eisenhorn was holding him when the world ended. Player said 'Raleigh' at the table (likely STT for Rolly); confirm spelling.",
+        "quote": "Q1: My Pet Raccoon: Rolly",
+        "filed_by": "DCC AI GM",
+        "filed_on": "2026-10-05T20:50:28-05:00",
+        "status": "alive",
+        "floor": 1
+      }
     },
     {
       "name": "Shirayuki",
@@ -1295,7 +1307,19 @@
           "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
         ]
       },
-      "status": "active"
+      "status": "active",
+      "pet": {
+        "name": "Wolf (unnamed)",
+        "species": "Wolf",
+        "species_srd_id": "wolf",
+        "cr": 0.25,
+        "description": "Adolescent wolf (Wolf stat block, CR 1/4). Mr. White had it with him when the world ended. Not yet named by the player; introduce in fiction at resume.",
+        "quote": "Q1: i am carrying a spiked gauntlet on each hand, i also had my adolescent wolf",
+        "filed_by": "DCC AI GM",
+        "filed_on": "2026-10-05T20:50:28-05:00",
+        "status": "alive",
+        "floor": 1
+      }
     }
   ]
 }

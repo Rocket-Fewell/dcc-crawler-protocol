@@ -1,7 +1,7 @@
 # Classes and Backgrounds
 Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1 | Updated: 2026-10-05
 Summary: Chapter 4. Twelve SRD classes under Crawl reskins with play guidance, Fighting Styles, four SRD backgrounds in full, non-SRD appendix under reskin names only. No pets, no Story Box deeds, no survey reprint.
-Sources: characters/character-creation-5e.md v0.2.5; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 026–031, 033; rules/10-core-rules-5e.md v0.2.19; SRD 5.2 (CC-BY-4.0).
+Sources: characters/character-creation-5e.md v0.2.5; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 026–031, 033; rules/10-core-rules-5e.md v0.2.21; SRD 5.2 (CC-BY-4.0).
 
 <!-- BEGIN -->
 

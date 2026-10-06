@@ -7,7 +7,7 @@
     "death_mode": "Costly Revives",
     "comfort": "Ludicrous",
     "created": "2026-10-05T13:21:00-05:00",
-    "updated": "2026-10-05T20:16:36-05:00",
+    "updated": "2026-10-05T20:50:28-05:00",
     "proctor_hints": {
       "zone_1": {
         "Eisenhorn": {
@@ -20,24 +20,22 @@
     },
     "combat": {
       "encounter": "enc-d01-08 Vent Row",
-      "round": 1,
+      "round": 2,
       "order": [
-        "Mr.Whaite 17",
+        "Mr. White 17",
         "Eisenhorn 14",
         "Vent Rats 13",
         "Shirayuki 4"
       ],
-      "turn": "Mr.Whaite",
+      "turn": "Mr. White",
       "rats": {
-        "VR1": 7,
-        "VR2": 7,
-        "VR3": 7,
+        "VR1": 0,
+        "VR2": 0,
+        "VR3": 0,
         "VR4": 7
       },
-      "positions": "VR1+VR2 10 ft from Mr.Whaite at torchlight edge; VR3+VR4 at vent 20 ft down hall",
-      "pending_toasts": [
-        "Mr.Whaite ACH-0860 Win Initiative (snark-only, bundle end of round)"
-      ]
+      "positions": "PAUSED 2026-10-05 ~8:33 PM CT by Caleb, resume here tomorrow. VR1, VR2, VR3 dead (Shirayuki greatsword 9 to VR3 at the vent, R1). Shirayuki at the vent 20 ft down the hall, next to VR4 (7/7), which has the jerky. Round 2 starts with Mr. White; VR4 acts this round at 13.",
+      "pending_toasts": []
     }
   },
   "party": {
@@ -537,7 +535,19 @@
           "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
         ]
       },
-      "status": "active"
+      "status": "active",
+      "pet": {
+        "name": "Rolly",
+        "species": "Cat",
+        "species_srd_id": "cat",
+        "cr": 0.0,
+        "description": "Pet raccoon (Cat stat block reskin: climb 30, Stealth). Eisenhorn was holding him when the world ended. Player said 'Raleigh' at the table (likely STT for Rolly); confirm spelling.",
+        "quote": "Q1: My Pet Raccoon: Rolly",
+        "filed_by": "DCC AI GM",
+        "filed_on": "2026-10-05T20:50:28-05:00",
+        "status": "alive",
+        "floor": 1
+      }
     },
     {
       "name": "Shirayuki",
@@ -837,7 +847,7 @@
       "status": "active"
     },
     {
-      "name": "Mr.Whaite",
+      "name": "Mr. White",
       "player": "Trailer Park Moses",
       "class": "Monk",
       "species": "Goliath",
@@ -954,7 +964,7 @@
         },
         {
           "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
-          "qty": 5,
+          "qty": 4,
           "notes": "",
           "mechanics": "1 day of food, 2 lb.",
           "category": "gear",
@@ -1012,7 +1022,14 @@
           "floor": 1,
           "note": "ACH-0079 R0, sat through Proctor Bell's spiel, enc-d01-07",
           "at": "2026-10-05T20:00:38-05:00",
-          "reward": "Absolutely nothing, Mr. Wait. Patience is its own reward, and it's a crappy one."
+          "reward": "Absolutely nothing, Mr. White. Patience is its own reward, and it's a crappy one."
+        },
+        {
+          "name": "Win Initiative",
+          "floor": 1,
+          "note": "snark-only, Vent Row R1",
+          "at": "2026-10-05T20:29:16-05:00",
+          "reward": "None. Bragging rights only."
         }
       ],
       "boxes": {
@@ -1239,7 +1256,7 @@
             "round": 1,
             "array": "B"
           },
-          "who": "Mr.Whaite"
+          "who": "Mr. White"
         },
         "initiative": 4,
         "passives": {

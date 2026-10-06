@@ -7,7 +7,7 @@
     "death_mode": "Costly Revives",
     "comfort": "Ludicrous",
     "created": "2026-10-05T13:21:00-05:00",
-    "updated": "2026-10-05T20:12:21-05:00",
+    "updated": "2026-10-05T20:35:57-05:00",
     "proctor_hints": {
       "zone_1": {
         "Eisenhorn": {
@@ -17,6 +17,25 @@
           "at": "2026-10-05T20:12-05:00"
         }
       }
+    },
+    "combat": {
+      "encounter": "enc-d01-08 Vent Row",
+      "round": 2,
+      "order": [
+        "Mr. White 17",
+        "Eisenhorn 14",
+        "Vent Rats 13",
+        "Shirayuki 4"
+      ],
+      "turn": "Mr. White",
+      "rats": {
+        "VR1": 0,
+        "VR2": 0,
+        "VR3": 0,
+        "VR4": 7
+      },
+      "positions": "PAUSED 2026-10-05 ~8:33 PM CT by Caleb, resume here tomorrow. VR1, VR2, VR3 dead (Shirayuki greatsword 9 to VR3 at the vent, R1). Shirayuki at the vent 20 ft down the hall, next to VR4 (7/7), which has the jerky. Round 2 starts with Mr. White; VR4 acts this round at 13.",
+      "pending_toasts": []
     }
   },
   "party": {
@@ -816,7 +835,7 @@
       "status": "active"
     },
     {
-      "name": "Mr.Whaite",
+      "name": "Mr. White",
       "player": "Trailer Park Moses",
       "class": "Monk",
       "species": "Goliath",
@@ -933,7 +952,7 @@
         },
         {
           "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
-          "qty": 5,
+          "qty": 4,
           "notes": "",
           "mechanics": "1 day of food, 2 lb.",
           "category": "gear",
@@ -991,7 +1010,14 @@
           "floor": 1,
           "note": "ACH-0079 R0, sat through Proctor Bell's spiel, enc-d01-07",
           "at": "2026-10-05T20:00:38-05:00",
-          "reward": "Absolutely nothing, Mr. Wait. Patience is its own reward, and it's a crappy one."
+          "reward": "Absolutely nothing, Mr. White. Patience is its own reward, and it's a crappy one."
+        },
+        {
+          "name": "Win Initiative",
+          "floor": 1,
+          "note": "snark-only, Vent Row R1",
+          "at": "2026-10-05T20:29:16-05:00",
+          "reward": "None. Bragging rights only."
         }
       ],
       "boxes": {
@@ -1218,7 +1244,7 @@
             "round": 1,
             "array": "B"
           },
-          "who": "Mr.Whaite"
+          "who": "Mr. White"
         },
         "initiative": 4,
         "passives": {
