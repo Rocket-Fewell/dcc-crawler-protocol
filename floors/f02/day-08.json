@@ -15,7 +15,7 @@
       "lore/drafts/core-book-monster-table-v0.2.md",
       "core-book/chapters/01-welcome.md",
       "decisions/026",
-      "rules/70-encounter-budget-5e.json v0.2.6",
+      "rules/70-encounter-budget-5e.json v0.2.7",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
       "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
@@ -23,7 +23,7 @@
       "lore/drafts/f02-achievement-framing-v0.1.json (Lore 2026-10-05 18:15 CT)",
       "Lore 18:08/18:10/18:15/18:19 CT: M-365 off Krakaren stair; cite fixes M-385/M-508-509/M-506; f02-achievement-framing-v0.1 wired; no ledger ids in PF narration; Story Box interim f01 deck.",
       "Syndicate locked: 37 DEMOTE-SUGGESTED cut to flavor; 67 FRAMED + ACH-1827..1835 kept. Lore 18:10 cites + framing wired. Reconcile pass post-overlap.",
-      "Syndicate 18:36 CT: Krakaren sole Soft Open Silver; Ralph+ACH-1828/1830/1835 Bronze; framed rows R0; achievement Bronze is a soft guideline of about 2-3 per Crawler per floor (budget v0.2.6; was a hard cap of 2). Accountant: restore Challenge Rating numerals; keep Krakaren over-cap at 2–3; ACH-1830/1834/oil-1835 on Rage trigger. Lore f02 Story Box deck (hold 0001/0011)."
+      "Syndicate 18:36 CT: Krakaren sole Soft Open Silver; Ralph+ACH-1828/1830/1835 Bronze; framed rows R0; achievement Bronze is a soft guideline of about 2-3 per Crawler per floor (budget v0.2.7; was a hard cap of 2). Accountant: restore Challenge Rating numerals; keep Krakaren over-cap at 2–3; ACH-1830/1834/oil-1835 on Rage trigger. Lore f02 Story Box deck (hold 0001/0011)."
     ],
     "day": 8,
     "days": 10,
@@ -33,8 +33,8 @@
     "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
     "canon_ledger_version": "1.19",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.6",
-    "budget_file_sha256": "08d4737b116f50eaa4eb0477b2b2fff64f9c45b14ee4ad7fb571425da03af022",
+    "budget_file_version": "0.2.7",
+    "budget_file_sha256": "f239fe8035a3087f999d0496453980ef5b2c2d3a5e99cbc16d921d002c0be1a7",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
     "spec_sha256_sans_pin": "60b7e8b0131a8439d6da4bd803d961bf5af5e010422264e29da174ed69dedc87",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
@@ -1948,7 +1948,7 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.2.6 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
+      "item": "rules/70-encounter-budget-5e.json v0.2.7 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
       "waiting_for": "floors.2 pins / Soft Open clock numbers confirmed; any bracketed slot without a matching field",
       "status": "open",
       "audience": "gm"
@@ -2274,12 +2274,12 @@
     "pass": 45,
     "warn": 7,
     "fail": 0,
-    "spec_sha256": "921b7cb9e2cb31a3ce22b8babe2e399132c320aaf310043a2f8e920bec7b934f",
+    "spec_sha256": "e5df5f31dd9bf48d74e83522c1ba14b10819a6aefaab1651ce2e9009be9e10c7",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.2.6, sha256 08d4737b116f50ea; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.2.7, sha256 f239fe8035a3087f; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",

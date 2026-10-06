@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "changelog": [
+    "0.2.7 (2026-10-06 ~9:10 AM CT, Accountant): provenance only, no values changed: all ten f02_day01_to_10_slot_map sans-pin hashes re-synced to PR #15 (F2 Source lines now cite the budget via {budget_version} and the soft about 2-3 achievement Bronze wording; canon pin to ledger v1.19 is excluded from the hash). Recomputed independently from the PR #15 patch on main 85a4f08. Floor 1 sans-pins unchanged. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
     "0.2.6 (2026-10-05 ~9:40 PM CT, Accountant): F2 achievement Bronze is a SOFT guideline of about 2-3 per Crawler per floor (Caleb ~9:15 PM CT; GM may exceed for great moments and logs it). f2_box_rulings.achievement_bronze_cap_per_crawler_per_floor keeps its path, value 2 becomes the text about 2-3 (soft); past_the_cap and the F2 watch reworded. All ten F2 sans-pins re-synced to PR #13. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
     "0.2.5 (2026-10-05 ~7:35 PM CT, Accountant): provenance only, no values changed: f02_day01_to_10_slot_map day-05 sans-pin hash re-synced to Encounter Bot's 19:15 CT pass (Story Box f02-any-0001 Clone Nameplate Charm bound to d05_02 per Syndicate 19:12 as the unmask-the-clone-mid-fight deed only, hand-picked, opens in a saferoom; Story Boxes sit outside this budget and the Legendary cap, core 4.1/4.5/4.7). Day-05 slots (3) re-checked: they resolve, encounter ids and names match, creature key chuul matches d05_02. Days 1-4 and 6-10 sans-pins and all Floor 1 sans-pins unchanged; every count, CR, XP, box, credit, Silver Boss Box and decision 031 rest fee unchanged; no caps raised.",
     "0.2.4 (2026-10-05 ~7:10 PM CT, Accountant): provenance only, no values changed: all ten f02_day01_to_10_slot_map sans-pin hashes re-synced to Encounter Bot's 19:03 CT F2 content pass (Syndicate's 4 stale-Silver fixes, Story Boxes f02-any-0001/0011 released, d05_02 Krakaren LOCKED hard-tier wording, F1+F2 re-pinned to v0.2.2). All 53 slots still resolve and their creature keys match; Floor 1 sans-pins unchanged; every count, CR, XP, box, credit and decision 031 rest fee unchanged; no caps raised.",
@@ -6640,18 +6641,18 @@
   },
   "f02_day01_to_10_slot_map": {
     "status": "v0.2.0 addition (Encounter Bot request for Floor 2), re-pinned in v0.2.1. Maps the enemy COUNT, enemy CR and encounter BUDGET slots of every planned combat encounter in floors/f02/day-01..10.spec.json to floors.2.fixed_encounters. Loot, rest-fee, Detour Tax and key slots already cite existing fields (floors.2.credits, floors.2.boxes, floors.1.prices.*) and are not remapped; no Floor 2 prices are created here (decision 031 fee untouched). The Rage Elemental trigger spawn has no slots (floors.2.trigger_spawns.rage_elemental, out of budget).",
-    "draft_note": "DRAFT: every Floor 2 spec is meta.status draft / version 0.1. Hashes are pinned (v0.2.1) to the specs as they stand on disk at re-pin (Encounter Bot's 18:28 CT regeneration, which followed the 18:16 one). That pass already carries most of Syndicate's achievement trim (72 proposed: 67 FRAMED + 4 CANON-WIRED + 1 UNFRAMED); Lore's canon fixes are still pending, so another regeneration and sans-pin hash re-sync may follow. v0.2.2: all ten sans-pin hashes re-synced to Encounter Bot's 18:44 CT regeneration (the v0.2.1 re-pin pass; pinned ids, names and slot paths re-checked). v0.2.4: all ten re-synced again to Encounter Bot's 19:03 CT F2 content pass (53 slots re-checked). v0.2.5: day-05 re-synced to Encounter Bot's 19:15 CT pass (f02-any-0001 bound to d05_02); other nine unchanged. v0.2.6: all ten re-synced to PR #13 (soft about 2-3 achievement Bronze line; day-03 ACH-1835 seed note).",
+    "draft_note": "DRAFT: every Floor 2 spec is meta.status draft / version 0.1. Hashes are pinned (v0.2.1) to the specs as they stand on disk at re-pin (Encounter Bot's 18:28 CT regeneration, which followed the 18:16 one). That pass already carries most of Syndicate's achievement trim (72 proposed: 67 FRAMED + 4 CANON-WIRED + 1 UNFRAMED); Lore's canon fixes are still pending, so another regeneration and sans-pin hash re-sync may follow. v0.2.2: all ten sans-pin hashes re-synced to Encounter Bot's 18:44 CT regeneration (the v0.2.1 re-pin pass; pinned ids, names and slot paths re-checked). v0.2.4: all ten re-synced again to Encounter Bot's 19:03 CT F2 content pass (53 slots re-checked). v0.2.5: day-05 re-synced to Encounter Bot's 19:15 CT pass (f02-any-0001 bound to d05_02); other nine unchanged. v0.2.6: all ten re-synced to PR #13 (soft about 2-3 achievement Bronze line; day-03 ACH-1835 seed note). v0.2.7: all ten re-synced to PR #15 (F2 Source-line edit).",
     "spec_sha256_sans_pin_when_mapped": {
-      "day-01": "a3c3c5364ecc7db7aadfe76edf5e4cc06ddf868e54ea09fc7af4c66cd3da2753",
-      "day-02": "ef4b291221def7a25381ce3ffd809cde65ba97f3eb06555669664b848a4c57af",
-      "day-03": "fc874c93d263c180a6e733b6f12df6586a1d21a106bfc2944d67651a532e5b5d",
-      "day-04": "4fda2e3f83144d8fcc65146f9cd9e9748cce7f7d848092ed9e06c98a161e514a",
-      "day-05": "a35b553c3ebed8518edd3787043c46f7e77aa3c3aecb72bf86d15bc5ef3d948b",
-      "day-06": "7f6aef191c5930af363efc190724f17011a4a07a7cb652ba6f2f4bc9cc267917",
-      "day-07": "42827295157fc773a6ed272259b017c4f7b36919e275184bbfe98339aa9f05e2",
-      "day-08": "79b86e7273beeb33c65d6618c80d2cd42bc69c74302802952f87fc98f9ea3da6",
-      "day-09": "2404af3b53b7aa85a0ff2f83192ae5f9cb4d86f315d5f1a6e0956a90eea3e6d4",
-      "day-10": "dd371067b9fded4e6605198f42b865f795bf8c2380352b97e6fb6dc824c845c6"
+      "day-01": "a2f1e1966f7ded72819ce48595ca313b2b41b85ba0eb7a4fb7be5e5438915644",
+      "day-02": "f1e0bae2cef2aa6c4b9a5c07c4e9231b81fe2167a61dc161b8938dfceb66295a",
+      "day-03": "4ce971e58ba0e865a6efa2157ae3052116b244ba643ae2c69438f630e2032172",
+      "day-04": "67fa2dc3aeba4287f87bf9bce58eb570f71891ab8c03071c9ec5a21962744286",
+      "day-05": "c21eb66a7a544f7b742ee98950da8f4adedf696999a3a552afbe43945c3d619d",
+      "day-06": "c4713112dc35baf2e86a044321a3d81c48b147d3b964f7ad1ea2117f6acd8cbb",
+      "day-07": "62011eaaf87719bd2406ad97008574a6f613d25ea42c4258e7c8827ad0a10510",
+      "day-08": "60b7e8b0131a8439d6da4bd803d961bf5af5e010422264e29da174ed69dedc87",
+      "day-09": "ef46a685d69dbbebc7d24ff592f3801b3c2fd2a7ac3dc5cb226ddfa1096aa372",
+      "day-10": "2a947d4a5f009c003f93552942b95eed7dca26958575e6c1dcc3de2a94e4d5ec"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 53,
