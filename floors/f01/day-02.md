@@ -213,7 +213,7 @@ No enemies.
 - **Card** `f01-z03-0007` SOLD OUT FOREVER Sticker (Joke item (house: no effect)) [Bronze, f01-z03-vending-gore-arcade]: SOLD OUT FOREVER Sticker: a prop for the outer-zone closing gag.
 - **Placed** Box opening during the Long Rest: all earned boxes at once, lowest tier first. (00-overview.md section 8.2) Amount: Box openings: see rules/70-encounter-budget-5e.json#economy_audit.floor_1 | see rules/70-encounter-budget-5e.json#floors.1.boxes
 - **Achievement** ACH-0025 Saferoom Skeptic (Floor Any, Rare): Saferoom Skeptic, second chance.
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party (fruit plate).
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party (fruit plate).
 - **Proposed achievement** *Last One Out* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Hold a closing zone until the party is clear, then reach the Green Room. Narration [PLAYER-FACING]: "Someone had to be the last one out, and it turned out to be you." Reward (guideline, GM may adapt): R2: Heroic Inspiration (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.last_one_out.reward)
 
 #### Scaling note (2, 3, 4 Crawlers)
@@ -413,7 +413,7 @@ The mid zones (Z5, Z7, Z8) close on Day 3 and take Bruiser's key with them. If t
 - **Achievement** ACH-0084 Stair Bait Resisted (Floor 1, Rare): Stair Bait Resisted (Z7).
 - **Achievement** ACH-0078 Tutorial Elite (Floor 1, Common): Tutorial Elite (Z8).
 - **Achievement** ACH-0867 Orientation Pit: Block a hit with a shield or brace (Floor 1, Common): Block a hit with a shield or brace (Z5 gallery, if not cleared on Day 1; open until Z5 closes on Day 3).
-- **Achievement** ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common): Lose initiative and still win (Z5 gallery or any fight; Z5 is still open today).
+- **Achievement** ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common): Lose initiative and still win (Z5 gallery or any fight; Z5 is still open today).
 - **Card** `f01-any-0033` Maintenance Note, Greasy (Lore scrap (house: one-use hint)) [Bronze]: Maintenance Note: one true hint about the next zone, a good pre-collapse nudge.
 
 **Proposed achievements on this page** (Floor 1 seed list, GM discretion). Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.
@@ -447,4 +447,4 @@ Day 2 is the first day the clock bites. If the party stalls in the Green Room, t
 
 *Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e` (recorded at build time).*
 
-*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 80b7eb3d00f7. Warnings: none*
+*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 d87e2250b47f. Warnings: none*

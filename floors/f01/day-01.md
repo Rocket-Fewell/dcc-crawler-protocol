@@ -537,7 +537,7 @@ Skeletons are vulnerable to bludgeoning as written; let the crowbars shine (00-o
 
 - **Placed** Cash register: credits and a raffle ticket that does nothing (00-overview.md section 5.5). (00-overview.md section 5.5) Amount: Register change per Crawler: 1d4 x 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.cash_dice_per_crawler)
 - **Achievement** ACH-0867 Orientation Pit: Block a hit with a shield or brace (Floor 1, Common): Block a hit with a shield or brace (the 3b riot shield earns its keep).
-- **Achievement** ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common): Lose initiative and still win.
+- **Achievement** ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common): Lose initiative and still win.
 - **Achievement** ACH-0894 Orientation Pit: Land a critical hit (Floor 1, Common): Land a critical hit.
 
 #### Scaling note (2, 3, 4 Crawlers)
@@ -611,7 +611,7 @@ No enemies. If a Lights-Out Ceiling Tick shows up it cannot enter a saferoom.
 - **Story Box** `f01-any-0058` Olive Branch Lanyard (Laminated, Nobody Got Hurt) (Olive Branch Lanyard (house: redirect charm)): [GM-ONLY] Candidate hook for a party that threads the whole floor without a kill (the bribe-and-sneak route). Record the deed at award; the box opens only in a saferoom; one per table per floor (decision 015, 018). Never mention it to the table.
 - **Achievement** ACH-0188 Orientation Pit: Rumor Mill (Floor 1, Common): Rumor Mill: read the corkboard three times.
 - **Achievement** ACH-0025 Saferoom Skeptic (Floor Any, Rare): Saferoom Skeptic: search the honest saferoom for traps.
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party (fridge sandwich).
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party (fridge sandwich).
 - **Proposed achievement** *Read the Fine Print* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Use the Break Room terminal bribe route. Narration [PLAYER-FACING]: "You read the terms, found the loophole, and paid the fee to use it. The System is almost proud. Almost." Reward (guideline, GM may adapt): R0: snark-only Title (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.read_the_fine_print.reward)
 
 #### Scaling note (2, 3, 4 Crawlers)
@@ -692,7 +692,7 @@ Reskin names are House nameplates from the overview; there is no monster reskin 
 - **Achievement** ACH-0084 Stair Bait Resisted (Floor 1, Rare): Stair Bait Resisted: walking away at the sign. Forfeits the Back Office loot; that tradeoff is on purpose.
 - **Achievement** ACH-0871 Orientation Pit: Find a journal or lore scrap (Floor 1, Rare): Find a lore scrap: the quota clipboard (00-overview.md section 5.7).
 - **Achievement** ACH-0867 Orientation Pit: Block a hit with a shield or brace (Floor 1, Common): Block a hit with a shield or brace.
-- **Achievement** ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common): Lose initiative and still win.
+- **Achievement** ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common): Lose initiative and still win.
 
 #### Scaling note (2, 3, 4 Crawlers)
 
@@ -920,7 +920,7 @@ No enemies. Replacement Crawlers, if any, join here.
 - **Card** `f01-z09-0001` Vendor Oddity (Unappraised) (Spine object: Odd Coin (house; no mechanics on Floor 1)) [Bronze, f01-z09-green-room]: Vendor Oddity: the Odd Coin fallback if it was not planted at Z3. Never explain it. [GM-ONLY] the plant is a spine object; hand-pick only if the Lost & Found crate was never opened.
 - **Placed** Box opening during the Long Rest: all earned boxes at once, lowest tier first (00-overview.md section 8.2). (00-overview.md section 8.2) Amount: Box openings: see rules/70-encounter-budget-5e.json#economy_audit.floor_1 | see rules/70-encounter-budget-5e.json#floors.1.boxes
 - **Achievement** ACH-0025 Saferoom Skeptic (Floor Any, Rare): Saferoom Skeptic, second chance.
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party, using the fruit plate.
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party, using the fruit plate.
 
 #### Scaling note (2, 3, 4 Crawlers)
 
@@ -1002,4 +1002,4 @@ At the top of the stairs the one-hour entrance window does the work: the System 
 
 *Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e` (recorded at build time).*
 
-*Build note: validation PASS (53 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 e342594b171e. Warnings: none*
+*Build note: validation PASS (53 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 08213791f369. Warnings: none*

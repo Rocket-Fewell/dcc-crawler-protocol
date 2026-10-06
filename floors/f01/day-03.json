@@ -29,7 +29,7 @@
     "days_left": 2,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
     "canon_table_sha256": "aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e",
-    "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
+    "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
     "canon_ledger_version": "1.20",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.7",
@@ -245,10 +245,10 @@
         {
           "id": "ACH-0899",
           "note": "Share Food with the Party.",
-          "name": "Orientation Pit: Share food with the party",
+          "name": "Orientation Pit: Share the Snacks",
           "rarity": "Rare",
           "floor": "1",
-          "label": "ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare)",
+          "label": "ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare)",
           "valid": true,
           "audience": "gm"
         },
@@ -699,10 +699,10 @@
         {
           "id": "ACH-0873",
           "note": "Destroy a camera or drone.",
-          "name": "Orientation Pit: Destroy a camera or drone",
+          "name": "Orientation Pit: Camera Shy",
           "rarity": "Common",
           "floor": "1",
-          "label": "ACH-0873 Orientation Pit: Destroy a camera or drone (Floor 1, Common)",
+          "label": "ACH-0873 Orientation Pit: Camera Shy (Floor 1, Common)",
           "valid": true,
           "audience": "gm"
         },
@@ -1035,10 +1035,10 @@
         {
           "id": "ACH-0899",
           "note": "Share Food with the Party.",
-          "name": "Orientation Pit: Share food with the party",
+          "name": "Orientation Pit: Share the Snacks",
           "rarity": "Rare",
           "floor": "1",
-          "label": "ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare)",
+          "label": "ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare)",
           "valid": true,
           "audience": "gm"
         },
@@ -1413,10 +1413,10 @@
         {
           "id": "ACH-0861",
           "note": "Lose initiative and still win.",
-          "name": "Orientation Pit: Lose initiative and still win the fight",
+          "name": "Orientation Pit: Lost Initiative, Won Anyway",
           "rarity": "Common",
           "floor": "1",
-          "label": "ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common)",
+          "label": "ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common)",
           "valid": true,
           "audience": "gm"
         },
@@ -1745,10 +1745,10 @@
         {
           "id": "ACH-0873",
           "note": "Destroy a camera or drone.",
-          "name": "Orientation Pit: Destroy a camera or drone",
+          "name": "Orientation Pit: Camera Shy",
           "rarity": "Common",
           "floor": "1",
-          "label": "ACH-0873 Orientation Pit: Destroy a camera or drone (Floor 1, Common)",
+          "label": "ACH-0873 Orientation Pit: Camera Shy (Floor 1, Common)",
           "valid": true,
           "audience": "gm"
         },
@@ -2128,7 +2128,7 @@
     "pass": 50,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "a33527899ff02a94d2e0224151759ae0a68392dfd3ecfbb51429be583cf0561e",
+    "spec_sha256": "96d09674b859814e4de63d60f581ae24108b9ac85ff713ed628400ca44aa09a6",
     "checks": [
       {
         "status": "PASS",
@@ -2208,7 +2208,7 @@
       {
         "status": "PASS",
         "check": "achievements catalog pinned",
-        "detail": "tables/achievements.csv v1.4, sha256 e0e444a53b76bdf2, 1835 rows"
+        "detail": "tables/achievements.csv v1.5, sha256 9a79c6d50a49fe59, 1835 rows"
       },
       {
         "status": "PASS",

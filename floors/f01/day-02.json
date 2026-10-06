@@ -29,7 +29,7 @@
     "days_left": 3,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
     "canon_table_sha256": "aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e",
-    "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
+    "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
     "canon_ledger_version": "1.20",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.7",
@@ -270,10 +270,10 @@
         {
           "id": "ACH-0861",
           "note": "Lose initiative and still win (Z5 gallery or any fight; Z5 is still open today).",
-          "name": "Orientation Pit: Lose initiative and still win the fight",
+          "name": "Orientation Pit: Lost Initiative, Won Anyway",
           "rarity": "Common",
           "floor": "1",
-          "label": "ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common)",
+          "label": "ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common)",
           "valid": true,
           "audience": "gm"
         }
@@ -1032,10 +1032,10 @@
         {
           "id": "ACH-0899",
           "note": "Share Food with the Party (fruit plate).",
-          "name": "Orientation Pit: Share food with the party",
+          "name": "Orientation Pit: Share the Snacks",
           "rarity": "Rare",
           "floor": "1",
-          "label": "ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare)",
+          "label": "ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare)",
           "valid": true,
           "audience": "gm"
         }
@@ -2152,7 +2152,7 @@
     "pass": 50,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "80b7eb3d00f7846c7631587d71e5389615c56a4e1ef505d42368799db3efed78",
+    "spec_sha256": "d87e2250b47fff8c23dfff64e8917f175e96c4f6961e70ff50fea6d443d40a52",
     "checks": [
       {
         "status": "PASS",
@@ -2232,7 +2232,7 @@
       {
         "status": "PASS",
         "check": "achievements catalog pinned",
-        "detail": "tables/achievements.csv v1.4, sha256 e0e444a53b76bdf2, 1835 rows"
+        "detail": "tables/achievements.csv v1.5, sha256 9a79c6d50a49fe59, 1835 rows"
       },
       {
         "status": "PASS",
