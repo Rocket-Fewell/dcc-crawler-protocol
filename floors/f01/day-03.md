@@ -110,7 +110,7 @@ Three ways to leave. The Big Green EXIT (Z7) is bait, not a stairwell. Stairwell
 - **Path:** Z6 terminal (last day) to the stage wings to Zone S.
 - **What it costs and gives:** Today is the last day to buy the terminal key; tomorrow the Break Room and vendors lose service. Scout the stage wings, check the pit, and pick a way past the boss or around him.
 - **Stairwell access:** Zone S service door with the terminal key (bought today) or the Mystery Key; keyless forcing otherwise.
-- **Achievement ids:** ACH-0873 Orientation Pit: Destroy a camera or drone (Floor 1, Common): Destroy a camera or drone.; ACH-0180 Orientation Pit: Stair Seeker (Floor 1, Rare): Stair Seeker.; ACH-1825 Down Is a Direction (Floor Any, Common): Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait. (catalog row for canon A-139)
+- **Achievement ids:** ACH-0873 Orientation Pit: Camera Shy (Floor 1, Common): Destroy a camera or drone.; ACH-0180 Orientation Pit: Stair Seeker (Floor 1, Rare): Stair Seeker.; ACH-1825 Down Is a Direction (Floor Any, Common): Find a stairwell down for the first time; once per Crawler. On Floor 1 the real stairwell is behind the stage; the Big Green EXIT is bait. (catalog row for canon A-139)
 - [GM-ONLY] Achievement ACH-1825: Reward: see the catalog row (tables/achievements.csv, ACH-1825).
 
 **Voice lines**
@@ -201,7 +201,7 @@ No enemies.
 - **Card** `f01-z06-0001` Laminated Complaint Card (Laminated Complaint Card (house: single-use oracle)) [Bronze, f01-z06-break-room]: Laminated Complaint Card: ask the System one yes or no question about the floor.
 - **Story Box** `f01-any-0058` Olive Branch Lanyard (Laminated, Nobody Got Hurt) (Olive Branch Lanyard (house: redirect charm)): [GM-ONLY] Candidate hook for a party that has spent the floor buying and sneaking instead of killing. Record at award; one per floor.
 - **Achievement** ACH-0188 Orientation Pit: Rumor Mill (Floor 1, Common): Rumor Mill.
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party.
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party.
 - **Achievement** ACH-0197 Orientation Pit: Bleed Tax (Floor 1, Common): Bleed Tax.
 - **Proposed achievement** *Read the Fine Print* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Use the Break Room terminal bribe route. Narration [PLAYER-FACING]: "You read the terms, found the loophole, and paid the fee to use it. The System is almost proud. Almost." Reward (guideline, GM may adapt): R0: snark-only Title (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.read_the_fine_print.reward)
 
@@ -284,7 +284,7 @@ Confirmed by Syndicate (decision 026, ruling 5), tagged inspired: creatures from
 - **Card** `f01-any-0045` Welding Goggles, Night Shift (Goggles of Night) [Silver, f01-any-orientation-pit]: Welding Goggles, Night Shift (Silver): useful in the dark hall.
 - **Card** `f01-any-0015` Big Honking Flashlight (Lantern, Hooded) [Bronze, f01-any-orientation-pit]: Big Honking Flashlight: Lights-Out answer.
 - **Achievement** ACH-0860 Orientation Pit: Win initiative (Floor 1, Common): Win initiative.
-- **Achievement** ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common): Lose initiative and still win.
+- **Achievement** ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common): Lose initiative and still win.
 - **Achievement** ACH-0205 Orientation Pit: Scenic Panic (Floor 1, Common): Scenic Panic.
 - **Proposed achievement** *Last One Out* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Hold a closing zone until the party is clear, then reach the Green Room. Narration [PLAYER-FACING]: "Someone had to be the last one out, and it turned out to be you." Reward (guideline, GM may adapt): R2: Heroic Inspiration (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.last_one_out.reward)
 
@@ -358,7 +358,7 @@ Ushers are on watch only if the party is spotted. Dean Thudd is on the stage, se
 - **Card** `f01-any-0046` Library Sneakers (Silent Edition) (Boots of Elvenkind) [Silver, f01-any-orientation-pit]: Library Sneakers (Silent Edition): helpful for sneaking past the Ushers.
 - **Card** `f01-any-0048` Hi-Vis Safety Vest, Reflective (Cloak of Protection) [Silver, f01-any-orientation-pit]: Hi-Vis Safety Vest, Reflective: a funny disguise for a staff area.
 - **Story Box** `f01-any-0064` Annotated Floor Plan (Coffee Ring Included) (Plan of Unfair Advantage (house: environment charm)): [GM-ONLY] Candidate hook if a Crawler beats or drives off a named hostile using only the room (orchestra pit, trophy table), no weapon or spell of their own. One per floor; pick one deed; do not pre-promise.
-- **Achievement** ACH-0873 Orientation Pit: Destroy a camera or drone (Floor 1, Common): Destroy a camera or drone.
+- **Achievement** ACH-0873 Orientation Pit: Camera Shy (Floor 1, Common): Destroy a camera or drone.
 - **Achievement** ACH-0173 Orientation Pit: Environmentalist (Floor 1, Rare): Environmentalist (setup; pays if the pit finishes the boss).
 
 #### Scaling note (2, 3, 4 Crawlers)
@@ -400,7 +400,7 @@ If someone wanders on stage too early, the Dean notices and the boss encounter s
 The terminal key and the vendor stock end after today. Bruiser's key is already gone.
 
 - **Achievement** ACH-0188 Orientation Pit: Rumor Mill (Floor 1, Common): Rumor Mill.
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party.
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party.
 - **Achievement** ACH-0197 Orientation Pit: Bleed Tax (Floor 1, Common): Bleed Tax.
 - **Card** `f01-z06-0002` Sports Drink, Blue Flavor (Potion of Healing) [Bronze]: Sports Drink, Blue Flavor.
 - **Card** `f01-z06-0006` Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit) [Bronze]: First-aid kit.
@@ -437,6 +437,6 @@ If the party stalls, the System posts the next-collapse countdown (Break Room an
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.19, sha256 `d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e` (recorded at build time).*
 
-*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 f85acfd14a6c. Warnings: none*
+*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 96d09674b859. Warnings: none*

@@ -34,7 +34,7 @@
   "canon_table": {
     "path": "lore/tables/canon-floor-2.json",
     "floor_wide_id": "c2-floor",
-    "expected_sha256": "b08fb9a38b8632716594df9ab1258335bd9160320de73ef15cc1ef3d800fb765",
+    "expected_sha256": "42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737",
     "status": "reserve",
     "note": "RESERVE; bot still hardcodes F1 canon until Architect bump."
   },

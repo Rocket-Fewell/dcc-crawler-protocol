@@ -383,7 +383,7 @@ GM note: [GM-FACING] Optional dry [SYSTEM] open (system_open): read first as Sys
 - **Achievement** ACH-0868 Orientation Pit: Dodge a telegraphed AoE (Floor 1, Common): Dodge a telegraphed area attack.
 - **Achievement** ACH-0173 Orientation Pit: Environmentalist (Floor 1, Rare): Environmentalist: pit finish.
 - **Achievement** ACH-0189 Orientation Pit: Peaceful Path (Floor 1, Rare): Peaceful Path: talk him down.
-- **Achievement** ACH-0873 Orientation Pit: Destroy a camera or drone (Floor 1, Common): Destroy a camera or drone.
+- **Achievement** ACH-0873 Orientation Pit: Camera Shy (Floor 1, Common): Destroy a camera or drone.
 - **Proposed achievement** *Hold Please* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Talk Dean Thudd down without a fight. Narration [PLAYER-FACING]: "You waited on hold and won. The System is baffled." Reward (guideline, GM may adapt): R5: Bronze box named for the deed (the Silver Boss Box still drops, overview 6.7) (rules/70-encounter-budget-5e.json#floors.1.achievement_rewards.proposed.hold_please.reward)
 
 #### Scaling note (2, 3, 4 Crawlers)
@@ -531,6 +531,6 @@ If the party stalls, the countdown ticks, the Lights-Out hour arrives, and the S
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.19, sha256 `d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e` (recorded at build time).*
 
-*Build note: validation PASS (52 PASS, 2 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 22fd9040bad4. Warnings: enc-d05-03 enemy display; set pieces on this page*
+*Build note: validation PASS (52 PASS, 2 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 1e49ba5f671c. Warnings: enc-d05-03 enemy display; set pieces on this page*

@@ -207,7 +207,7 @@ No enemies.
 
 - **Card** `f01-z06-0007` Fridge Sandwich Labeled DALE'S. DO NOT. (Joke item (house: no effect)) [Bronze, f01-z06-break-room]: Fridge sandwich: last chance to share it.
 - **Placed** Break Room services end today; no box ceremony or terminal. (00-overview.md section 5.6) Amount: n/a: services have ended, no ceremony: see rules/70-encounter-budget-5e.json#floors.1.boxes
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party.
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party.
 
 #### Scaling note (2, 3, 4 Crawlers)
 
@@ -358,7 +358,7 @@ Ushers sweep the approach with flashlights. Dean Thudd is on the stage (enc-d05-
 - **Card** `f01-any-0050` Mop Handle of Mild Menace (+1 Quarterstaff) [Silver, f01-any-orientation-pit]: Mop Handle of Mild Menace (Silver).
 - **Story Box** `f01-any-0065` Group Photo, Mid-Handshake (Framed) (Keepsake of the Pictured (house: table-deed trophy)): [GM-ONLY] Candidate hook if every Crawler plays a distinct part in beating the Ushers and approaching the stage as one plan. Table deed; one per floor.
 - **Achievement** ACH-0867 Orientation Pit: Block a hit with a shield or brace (Floor 1, Common): Block a hit with a shield or brace.
-- **Achievement** ACH-0861 Orientation Pit: Lose initiative and still win the fight (Floor 1, Common): Lose initiative and still win.
+- **Achievement** ACH-0861 Orientation Pit: Lost Initiative, Won Anyway (Floor 1, Common): Lose initiative and still win.
 
 #### Scaling note (2, 3, 4 Crawlers)
 
@@ -427,7 +427,7 @@ No enemies. The Long Rest closes Day 4.
 - **Card** `f01-z09-0003` Dead Mirror Bulb, Briefly Alive (Spell Scroll (Light, cantrip)) [Bronze, f01-z09-green-room]: Dead Mirror Bulb, Briefly Alive.
 - **Placed** Box opening during the Long Rest: all earned boxes at once, lowest tier first. (00-overview.md section 8.2) Amount: Box openings: see rules/70-encounter-budget-5e.json#economy_audit.floor_1 | see rules/70-encounter-budget-5e.json#floors.1.boxes
 - **Achievement** ACH-0025 Saferoom Skeptic (Floor Any, Rare): Saferoom Skeptic, last chance.
-- **Achievement** ACH-0899 Orientation Pit: Share food with the party (Floor 1, Rare): Share Food with the Party.
+- **Achievement** ACH-0899 Orientation Pit: Share the Snacks (Floor 1, Rare): Share Food with the Party.
 
 #### Scaling note (2, 3, 4 Crawlers)
 
@@ -502,6 +502,6 @@ If the party stalls, the Lights-Out hour arrives, the countdown ticks, and the S
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.19, sha256 `d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e` (recorded at build time).*
 
-*Build note: validation PASS (52 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 1644204d1ff1. Warnings: none*
+*Build note: validation PASS (52 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 6f9561ad6427. Warnings: none*

@@ -117,7 +117,7 @@
     "path": "lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
-    "expected_sha256": "d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a"
+    "expected_sha256": "aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e"
   },
   "day": {
     "number": 3,
@@ -1133,8 +1133,8 @@
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",
-    "version": "1.4",
-    "expected_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8"
+    "version": "1.5",
+    "expected_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc"
   },
   "lore_drafts": {
     "collapse_notices": {
