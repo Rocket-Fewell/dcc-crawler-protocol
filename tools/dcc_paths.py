@@ -1,12 +1,10 @@
 """Portable roots for DCC campaign tools (fresh-checkout safe).
 
 CAMPAIGN_ROOT = env DCC_CAMPAIGN_ROOT, else legacy DCC_CAMPAIGN_DIR, else parent of
-                this tools/ dir (works in box layout and flattened repo layout),
-                else box fallback /workspace/dcc-campaign when present.
-LORE_ROOT     = env DCC_LORE_ROOT, else <campaign>/lore (symlink on the box, real
-                folder in the repo), else sibling dcc-lore, else /workspace/dcc-lore.
+                this tools/ dir (works in the flattened repo layout).
+LORE_ROOT     = env DCC_LORE_ROOT, else <campaign>/lore, else sibling dcc-lore.
 BRIDGE_ROOT   = env DCC_BRIDGE_DIR, else <campaign>/bot, else
-                <campaign>/discord-voice-bridge, else /workspace/discord-voice-bridge.
+                <campaign>/discord-voice-bridge, else a sibling discord-voice-bridge.
 
 ROOT wins over the legacy *_DIR alias when both are set. absolute() is used (not
 resolve()) so a campaign lore/ symlink keeps the repo layout.
@@ -18,15 +16,6 @@ from pathlib import Path
 
 _TOOLS = Path(__file__).absolute().parent
 _CAMPAIGN_FROM_FILE = _TOOLS.parent
-_BOX_CAMPAIGN = Path("/workspace/dcc-campaign")
-_BOX_LORE = Path("/workspace/dcc-lore")
-_BOX_BRIDGE = Path("/workspace/discord-voice-bridge")
-
-
-def _looks_like_campaign(p: Path) -> bool:
-    if not p.is_dir():
-        return False
-    return (p / "NAMING-CONVENTIONS.md").is_file() or (p / "tables" / "chargen-5e.json").is_file()
 
 
 def _looks_like_lore(p: Path) -> bool:
@@ -48,10 +37,6 @@ def campaign_root() -> Path:
     env = _env_path("DCC_CAMPAIGN_ROOT", "DCC_CAMPAIGN_DIR")
     if env is not None:
         return env
-    if _looks_like_campaign(_CAMPAIGN_FROM_FILE):
-        return _CAMPAIGN_FROM_FILE
-    if _looks_like_campaign(_BOX_CAMPAIGN):
-        return _BOX_CAMPAIGN
     return _CAMPAIGN_FROM_FILE
 
 
@@ -67,8 +52,6 @@ def lore_root() -> Path:
     sibling = camp.parent / "dcc-lore"
     if _looks_like_lore(sibling):
         return sibling.absolute()
-    if _looks_like_lore(_BOX_LORE):
-        return _BOX_LORE
     return via_campaign.absolute()
 
 
@@ -84,8 +67,6 @@ def bridge_root() -> Path:
     sibling = camp.parent / "discord-voice-bridge"
     if (sibling / "package.json").is_file() or (sibling / "src").is_dir():
         return sibling.absolute()
-    if (_BOX_BRIDGE / "package.json").is_file() or (_BOX_BRIDGE / "src").is_dir():
-        return _BOX_BRIDGE
     return (camp / "bot").absolute()
 
 
