@@ -1,7 +1,7 @@
 # Crawler Creation
 Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species PROVISIONAL, Fan Profile hidden, Midterm Onboarding pointer; standard level track lives in Chapter 1 (core v0.2.19 / decision 033).
-Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–031, 033; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.19. Generated from: chargen-5e.json v0.1.6, species-class-reskins.json v0.1.5, background-reskins.json v0.1.2, create-screens-reskins.json v0.1.3.
+Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species PROVISIONAL, Fan Profile hidden, Midterm Onboarding pointer; standard level track lives in Chapter 1 (core v0.2.21 / decision 033).
+Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–031, 033; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.21. Generated from: chargen-5e.json v0.1.6, species-class-reskins.json v0.1.5, background-reskins.json v0.1.2, create-screens-reskins.json v0.1.3.
 
 <!-- BEGIN -->
 

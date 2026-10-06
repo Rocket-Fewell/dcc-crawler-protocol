@@ -4,7 +4,7 @@ Summary: Which source fed which chapter, with versions and known conflicts.
 
 | Chapter | Sources |
 |---|---|
-| 1 | rules/10-core-rules-5e.md v0.2.19; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; decisions 018, 026-031, 033; characters/character-creation-5e.md v0.2.5 |
+| 1 | rules/10-core-rules-5e.md v0.2.21; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; decisions 018, 026-031, 033, 034; characters/character-creation-5e.md v0.2.5 |
 | 2 | characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 029, 033 |
 | 4 | same chargen + reskins as Ch2; decisions 024, 029, 033; core v0.2.17 overlays (rests, Midterm Onboarding, credits); SRD 5.2 class/background chassis |
 

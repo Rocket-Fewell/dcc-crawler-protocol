@@ -17,6 +17,11 @@ marker version -> apply upstream to live (old live file backed up first); otherw
 BLOCKED path stops the whole run before anything is written (exit 3). Protected paths (session state, ledgers,
 player sheets, GM secrets, logs, keys) and excluded paths are never written. Then staging fast-forwards to
 origin/main. DRY_RUN=1 prints the plan only.
+OWN rule (2026-10-05, branch-mode backup, decision 035): the nightly now pushes to branch backup/nightly and a PR merges
+it into main, so main's changes since the marker include this backup's OWN branch content. A path whose GitHub version
+(mode + blob) equals the version in the branch head this backup last pushed (DCC_BACKUP_BRANCH_MARKER, default
+<box>/.backup-last-branch-sha) is not a GitHub edit: live is kept (category OWN), the mirror carries live onward,
+nothing is written to live. Missing/invalid branch marker = rule off (more CONFLICTs, never fewer).
 
 Paths: a fresh checkout runs this file from ops/ and reads the checkout (DCC_BACKUP_REPO /
 DCC_CAMPAIGN_ROOT override). The box copy that lives outside the repo defaults to the live trees under
@@ -76,6 +81,7 @@ else:
 
 # Pull-first state (box copy only; both live outside every mirrored source).
 MARKER = os.environ.get("DCC_BACKUP_MARKER") or os.path.join(BOX, ".backup-last-synced-sha")
+BRANCH_MARKER = os.environ.get("DCC_BACKUP_BRANCH_MARKER") or os.path.join(BOX, ".backup-last-branch-sha")
 PULL_BAK = os.environ.get("DCC_PULL_BAK_DIR") or os.path.join(BOX, "backup-pull-bak")
 # Files that live only in the staging repo (never deleted by delete-sync, never overwritten by a source file).
 STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md"}
@@ -336,7 +342,7 @@ PULL_PROTECTED_ALLOW = ["characters/INDEX.md", "characters/character-creation-5e
                         "characters/create-flow-spec-5e.md", "characters/_archive/*"]
 EXIT_CONFLICT = 3   # CONFLICT / BLOCKED: nothing written to live, staging not moved, nothing pushed
 EXIT_STOP = 4       # cannot pull safely (marker missing, history rewritten, staging diverged, ...)
-CAT_ORDER = ["CONFLICT", "BLOCKED", "KEPT", "APPLY", "NOOP", "STAGING", "DROPPED"]
+CAT_ORDER = ["CONFLICT", "BLOCKED", "KEPT", "APPLY", "NOOP", "OWN", "STAGING", "DROPPED"]
 
 
 def _git(*args, check=True):
@@ -481,6 +487,25 @@ def _diff_raw(a, b):
     return items
 
 
+def _own_tree():
+    """{rel: (mode, sha)} of the branch head this backup last pushed (OWN rule), or None when the marker is unusable."""
+    if not os.path.isfile(BRANCH_MARKER):
+        return None, None
+    sha = open(BRANCH_MARKER).read().strip()
+    if not sha or _git("cat-file", "-e", sha + "^{commit}", check=False).returncode:
+        print("PULL: WARN branch marker %s (%r) is not a commit here; OWN rule off" % (BRANCH_MARKER, sha))
+        return None, None
+    sha = _gits("rev-parse", sha + "^{commit}")
+    out = _git("ls-tree", "-r", "-z", "--full-tree", sha).stdout.decode("utf-8", "surrogateescape")
+    tree = {}
+    for e in out.split("\0"):
+        if "\t" in e:
+            meta, rel = e.split("\t", 1)
+            mode, _typ, osha = meta.split()
+            tree[rel] = (mode, osha)
+    return sha, tree
+
+
 def _dirty_paths():
     out = _git("status", "--porcelain=v1", "-z", "--no-renames", "--untracked-files=all").stdout.decode("utf-8", "surrogateescape")
     return {e[3:] for e in out.split("\0") if len(e) > 3}
@@ -540,6 +565,9 @@ def pull_main():
                     % (head[:12], up[:12]))
     keep_live = set(os.environ.get("DCC_PULL_KEEP_LIVE", "").replace(",", " ").split())
     print("PULL: marker %s -> origin/main %s (staging HEAD %s)" % (marker[:12], up[:12], head[:12]))
+    own_sha, own = _own_tree()
+    if own_sha:
+        print("PULL: OWN rule base = last pushed branch head %s" % own_sha[:12])
 
     roots = _allowed_roots()
     single = {s for s, _ in SINGLE_FILES}
@@ -575,6 +603,8 @@ def pull_main():
                     it["cat"], it["why"] = "CONFLICT", "live path is a folder or a dangling symlink"
                 elif lid == it["up_id"]:
                     it["cat"], it["why"] = "NOOP", "live already matches GitHub"
+                elif own is not None and own.get(rel) == ((it["nmode"], it["nsha"]) if it["up_id"] else None):
+                    it["cat"], it["why"] = "OWN", "GitHub has this backup's own branch version; live changed since, live kept"
                 elif prot:
                     it["cat"], it["why"] = "BLOCKED", "protected (%s): never written by the pull; GitHub changed it and live differs" % prot
                 elif it["up_id"] and int(_gits("cat-file", "-s", it["nsha"])) > MAX_BYTES:

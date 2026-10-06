@@ -1,3 +1,5 @@
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 import json,sys
 sys.path.insert(0,'.')
 from gmq_fix import FIX
@@ -19,5 +21,5 @@ doc={
   "stress":{"range":[-1,1],"plus_one_when":["Syndicate/Borant overrules a GM discretionary ruling (canon M-220/M-221)","a Spite Move is refused or mocked"],"minus_one_when":["a successful Tribute (RP-01)","a successful repair"],"effective_level":"clamp(ladder_level_for_floor + stress, 0, 5)"},
   "affinity":AFFMETA},
  "prior_installation":PI,"fixations":FIX,"quirks":QUIRKS,"tics":TICS,"tells":TELLS,"ladder":LADDER,"spite_moves":SPITE,"repair_options":REPAIR}
-json.dump(doc,open('/workspace/dcc-lore/tables/gm-quirks.json','w'),indent=2,ensure_ascii=False)
+json.dump(doc,open(_os.path.join(_LORE, 'tables/gm-quirks.json'),'w'),indent=2,ensure_ascii=False)
 print({k:len(v) for k,v in doc.items() if isinstance(v,list)})

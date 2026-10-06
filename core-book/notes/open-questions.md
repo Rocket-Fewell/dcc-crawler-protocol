@@ -19,3 +19,4 @@ Summary: Open questions for Caleb / Syndicate arising from drafting. Each also a
 15. Do collapse-death rules need a worked example for Floor 1 in Ch1? (Currently stated, not exemplified.)
 16. Upgrade Coupon cap compared to Floor-1 list vs charged price: flagged for Caleb in crafting (decision 030).
 17. Ch4 ran 33 PDF pages vs ~30 plan — trim in edit pass?
+18. Session turn order (decision 034): the pet-Crawler slot default (own slot straight after the owner's) is not printed in Ch1 because decision 022 keeps pets out of the player chapters. Print it in the GM chapter (Ch11) when drafted, or does Caleb want it in Ch1?

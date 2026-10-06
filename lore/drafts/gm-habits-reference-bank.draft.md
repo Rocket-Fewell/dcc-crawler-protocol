@@ -9,7 +9,7 @@ Audience: future AI-GM / Syndicate implementers (not for live play wiring yet)
 
 **This file is REFERENCE ONLY.** It is a research bank of habits players praise (and habits that kill fun), tagged for the DCC AI GM's locked voice. **Do not implement these into bots, prompts, or rails yet.** Caleb ruled: **no rails project for play yet.** Implement only **after** playthroughs, when the table has real data.
 
-**Voice locked:** dark, snarky, gory, insulting, and funny. Players are **Crawlers**, never "champs." Table flavor is already capped at **3–4 sentences** (existing house rule); any habit that wants long prose must shrink to that cap or die.
+**Voice locked:** dark, snarky, gory, insulting, and funny. Players are **Crawlers**, never "champs." Table flavor is kept **punchy** (soft guideline since Caleb's 2026-10-05 ruling: no monologues, longer only when the moment earns it); any habit that wants long prose must shrink to that cap or die.
 
 **Tags (voice fit):**
 - **KEEP** — fits the snarky dungeon show as-is (or as a short bite).
@@ -147,7 +147,7 @@ Each entry has:
 ### K01 — Long monologues / purple room essays
 **Plain habit (bad):** Narrate a page before anyone can act.
 **Why it kills fun:** Players check out; agency stalls.
-**Tag:** AVOID (also fights the 3–4 sentence flavor cap)
+**Tag:** AVOID (also fights the punchy-flavor guideline)
 **House-tone example:** "Room: blood, two doors, one smell you will regret. Go."
 
 ### K02 — Untelegraphed gotcha deaths
@@ -211,7 +211,7 @@ Each entry has:
 ### D01 — Lead with actionable room facts
 **Plain habit:** First sentences: size vibe, threat tells, interactables, exits. Save lore crumbs for when they look.
 **Why Crawlers care:** They can act immediately.
-**Tag:** KEEP (fits 3–4 sentence cap)
+**Tag:** KEEP (fits the punchy-flavor guideline)
 **House-tone example:** "Ten-by-ten. Wet floor. Chest on a dais. Doors north and west. Something under the tiles hates weight."
 
 ### D02 — Always present exits
@@ -343,7 +343,7 @@ Each entry has:
 **House-tone example:** "Door ticks. Hall reeks. What do you actually do?"
 
 ### H20 — Recap in one snarky breath
-**Plain habit:** Session start: 3–4 sentences max of where they are and what is on fire.
+**Plain habit:** Session start: a few punchy sentences on where they are and what is on fire.
 **Why Crawlers care:** Orientation without a sermon.
 **Tag:** KEEP
 **House-tone example:** "Last time you robbed a corpse, annoyed a vendor, and fled a cone. Stairs still exist. Clock still bites."
@@ -393,7 +393,7 @@ Revisit this bank only after real sessions (Caleb: no rails implement-now). Chec
 
 1. Which KEEP habits actually showed up in logs, and which were ignored under stress?
 2. Did any ADAPT items drift into warm-coach voice by accident?
-3. Did the 3–4 sentence flavor cap hold, or did room text bloat?
+3. Did flavor stay punchy, or did room text bloat without the moment earning it?
 4. Were deaths telegraphed enough that Crawlers blamed choices, not blindsides?
 5. Did creative plans get priced fairly, or blocked?
 6. Were rulings consistent across the party?
@@ -431,7 +431,7 @@ Public GM advice mined for this bank. No book text copied. Reddit threads were r
 21. Designing Dungeons (His Majesty the Worm docs) — telegraph weird attacks; room basics — https://dungeons.hismajestytheworm.games/docs/chapter8/
 22. Gnome Stew — hints, clues, and description (bury clues among equal detail) — https://gnomestew.com/hints-clues-and-description/
 
-**Local context (not a web source):** DCC System/AI voice notes in `catalog/system-voice.md` (snarky, insulting, theatrical). Players called Crawlers. Flavor length house-capped at 3–4 sentences. No `/workspace/dcc-campaign` edits; sealed GM paths unread.
+**Local context (not a web source):** DCC System/AI voice notes in `catalog/system-voice.md` (snarky, insulting, theatrical). Players called Crawlers. Flavor length a soft punchy guideline (no hard cap since 2026-10-05). No campaign edits outside lore/; sealed GM paths unread.
 
 ---
 

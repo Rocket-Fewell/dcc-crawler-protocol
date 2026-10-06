@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 """Pass 20 (2026-10-04): premise verification rows (M-525.. and X-066..). APPENDS section 9.3 to CANON-LEDGER.md just before
 '### Pass log'. Quotes are located programmatically (exact substrings). Idempotent: refuses to run if M-525 exists.
 Writes work/pass20-row-map.json (key -> ledger id). Usage: python3 work/pass20_rows.py [--dry]"""
 import re, sys, json
-sys.path.insert(0, '/workspace/dcc-lore/tools')
+sys.path.insert(0, _os.path.join(_LORE, 'tools'))
 from ledger_lib import *
 LEDGER = ROOT + '/CANON-LEDGER.md'
 START = 525

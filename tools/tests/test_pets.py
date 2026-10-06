@@ -28,6 +28,16 @@ class PetTests(StateTestCase):
     def add(self, owner="Ann", name="Pebbles", species="dog", *extra, expect=0):
         return self.run_cmd("pet", "add", owner, "--name", name, "--species", species, *extra, expect=expect)
 
+    def test_add_dry_run_saves_nothing(self):
+        out, _ = self.add("Ann", "Pebbles", "dog", "--dry-run")
+        self.assertIn("DRY RUN", out)
+        self.assertNotIn("pet", self.crawler("Ann"))
+        self.assertEqual(self.rows(), [])
+        self.add("Ann", "Pebbles", "dog")   # the real add still works afterwards
+        self.assertEqual(self.crawler("Ann")["pet"]["name"], "Pebbles")
+        self.run_cmd("pet", "remove", "Ann", "--reason", "x", "--dry-run", expect=1)
+        self.assertEqual(self.crawler("Ann")["pet"]["name"], "Pebbles")
+
     def test_add_show_and_card_line(self):
         out, _ = self.add("Ann", "Pebbles", "rottweiler", "--quote", "my dog Pebbles", "--description", "big, dumb, loyal")
         self.assertIn("Mastiff", self.crawler("Ann")["pet"]["species"])   # rottweiler is a reskinned mastiff

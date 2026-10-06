@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 """Pass 19 (2026-10-04): builds the Floor 2 canon ledger rows (M-327.. and X-059..) from local sources and APPENDS them
 to CANON-LEDGER.md as section 9.2 (just before '### Pass log'). Quotes are located programmatically (exact substrings).
 Idempotent: refuses to run if the first new ID already exists. Writes work/pass19-row-map.json (key -> ledger id).
 Usage: python3 work/pass19_rows.py [--dry]"""
 import re, sys, json
-sys.path.insert(0, '/workspace/dcc-lore/tools')
+sys.path.insert(0, _os.path.join(_LORE, 'tools'))
 from ledger_lib import *
 LEDGER = ROOT + '/CANON-LEDGER.md'
 START = 327

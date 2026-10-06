@@ -1,7 +1,7 @@
 # Lore pass: Floor 1 Days 2–5 achievement suggestions (names and flavor)
 Owner: DCC Lore | Status: draft | Version: 0.2 | Updated: 2026-10-05
 Summary: Names-and-flavor only review of Encounter Bot's 15 SUGGESTION ONLY rows (v0.2 voice tags). Tiers and rewards untouched. Catalog not edited. Achievement banners and flavor are [GM] end to end per Caleb's 2026-10-05 voice split.
-Depends on: `/workspace/dcc-campaign/floors/f01/achievement-suggestions-days-02-05.md` v0.1; `/workspace/dcc-campaign/drafts/achievement-suggestions-days-02-05-syndicate-review.md` v0.1 (sha256 `6f8537f40609c639156ff0f30968596f8343a9902353aaec4282e581fc51ff7b`); `CANON-LEDGER.md` v1.14 §1 Achievements; `tables/achievement-crossref.csv` (3 seeded maps: A-044→ACH-1824, A-139→ACH-1825, A-151→ACH-1826).
+Depends on: `floors/f01/achievement-suggestions-days-02-05.md` v0.1; `drafts/achievement-suggestions-days-02-05-syndicate-review.md` v0.1 (sha256 `6f8537f40609c639156ff0f30968596f8343a9902353aaec4282e581fc51ff7b`); `CANON-LEDGER.md` v1.14 §1 Achievements; `tables/achievement-crossref.csv` (3 seeded maps: A-044→ACH-1824, A-139→ACH-1825, A-151→ACH-1826).
 
 > Scope: **names and flavor only.** No tier, rarity, credit or box changes. Syndicate owns rewards. Proposed filing ids stay ACH-1827–ACH-1840 if/when accepted. Always **Crawlers**, never champs. Spell **saferoom**. Hard cap 2–3 sentences here (house max 3–4). No book text.
 >
@@ -170,4 +170,4 @@ If the recommended accept list files under ACH-1827–ACH-1839:
 3. S-15: omit, or Title-only **Valedictorian** with the flavor above and **no** box language.
 4. Leave A-044 / A-139 / A-151 mapping alone (already ACH-1824–1826 in `achievement-crossref.csv`).
 
-No `/workspace/dcc-campaign` files were edited. No sealed paths were read. Nothing was posted.
+No campaign files outside `lore/` were edited. No sealed paths were read. Nothing was posted.

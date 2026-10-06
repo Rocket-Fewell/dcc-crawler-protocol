@@ -1,5 +1,7 @@
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))
 import json,urllib.request,urllib.parse,re,sys
-sys.path.insert(0,'/workspace/dcc-lore/raw')
+sys.path.insert(0,_os.path.join(_LORE, 'raw'))
 H={"User-Agent":"Mozilla/5.0"}
 titles=[t for t in open('titles.txt').read().split('\n') if t.strip()]
 out={};missing=[]

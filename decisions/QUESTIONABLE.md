@@ -6,6 +6,8 @@ Voters (Caleb, 2026-10-04): SEVEN: Syndicate, DCC AI GM, DCC Lore, Systems Archi
 
 Rules (Caleb, 2026-10-04): the seven of us (Syndicate, DCC AI GM, DCC Lore, Systems Architect, Accountant, Book Author, Encounter Bot) may vote and pass or fail anything that would need his approval. Majority of the seven (4 of 7) rules. Every result is listed here with date, votes, and what Caleb would be vetoing. Rulings Caleb already made stay locked. Off limits to votes: gm-notes/secret/, the live ledger, sessions/state.json.
 
+**Scope note (Syndicate conflict sweep, 2026-10-05):** this file covers design questions that would otherwise need Caleb's approval (7 voters, 4 of 7). **PR merges follow decision 035 instead:** Architect reviews and calls the vote, the content owner abstains, and a simple majority of the votes cast wins, with early close once it can't be outvoted. Caleb's later ruling (2026-10-05, ~8:52 PM CT) replaces the line "Rulings Caleb already made stay locked" in one case: a question put to Caleb that gets no answer within 24 hours goes to the bot vote, with the concerns written in. Caleb can still veto. Secrets are never voted on.
+
 Status values: PASSED, FAILED, HELD, VETOED (by Caleb).
 
 | # | Date | Item | Votes | Encounter Bot vote | Status | What Caleb would be vetoing |

@@ -1,0 +1,1209 @@
+diff --git a/floors/f01/day-01.json b/floors/f01/day-01.json
+index a8afcaa..4bbf637 100644
+--- a/floors/f01/day-01.json
++++ b/floors/f01/day-01.json
+@@ -4465,7 +4465,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
++        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
+       },
+       {
+         "status": "PASS",
+@@ -4545,7 +4545,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
++        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+       },
+       {
+         "status": "PASS",
+@@ -4614,7 +4614,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "60 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f01/day-01.md b/floors/f01/day-01.md
+index d7111a7..ec7c5ae 100644
+--- a/floors/f01/day-01.md
++++ b/floors/f01/day-01.md
+@@ -8,7 +8,7 @@ Source: decisions/026-timed-floor-clock-override.md (including the stairwell and
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+diff --git a/floors/f01/day-02.json b/floors/f01/day-02.json
+index 528f039..e2ec922 100644
+--- a/floors/f01/day-02.json
++++ b/floors/f01/day-02.json
+@@ -2202,7 +2202,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
++        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
+       },
+       {
+         "status": "PASS",
+@@ -2287,7 +2287,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
++        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+       },
+       {
+         "status": "PASS",
+@@ -2336,7 +2336,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "36 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f01/day-02.md b/floors/f01/day-02.md
+index 958dbec..36b4a74 100644
+--- a/floors/f01/day-02.md
++++ b/floors/f01/day-02.md
+@@ -8,7 +8,7 @@ Source: decisions/026-timed-floor-clock-override.md (including the stairwell and
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+diff --git a/floors/f01/day-03.json b/floors/f01/day-03.json
+index 895da85..e787ba7 100644
+--- a/floors/f01/day-03.json
++++ b/floors/f01/day-03.json
+@@ -2178,7 +2178,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
++        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
+       },
+       {
+         "status": "PASS",
+@@ -2258,7 +2258,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
++        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+       },
+       {
+         "status": "PASS",
+@@ -2312,7 +2312,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "36 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f01/day-03.md b/floors/f01/day-03.md
+index eadf774..b4f3372 100644
+--- a/floors/f01/day-03.md
++++ b/floors/f01/day-03.md
+@@ -8,7 +8,7 @@ Source: decisions/026-timed-floor-clock-override.md (including the stairwell and
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+diff --git a/floors/f01/day-04.json b/floors/f01/day-04.json
+index 4836215..ed15467 100644
+--- a/floors/f01/day-04.json
++++ b/floors/f01/day-04.json
+@@ -2275,7 +2275,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
++        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
+       },
+       {
+         "status": "PASS",
+@@ -2365,7 +2365,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
++        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+       },
+       {
+         "status": "PASS",
+@@ -2419,7 +2419,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "40 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f01/day-04.md b/floors/f01/day-04.md
+index 2970632..b85b8b2 100644
+--- a/floors/f01/day-04.md
++++ b/floors/f01/day-04.md
+@@ -8,7 +8,7 @@ Source: decisions/026-timed-floor-clock-override.md (including the stairwell and
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+diff --git a/floors/f01/day-05.json b/floors/f01/day-05.json
+index 63a32b6..723fb78 100644
+--- a/floors/f01/day-05.json
++++ b/floors/f01/day-05.json
+@@ -2613,7 +2613,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
++        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
+       },
+       {
+         "status": "PASS",
+@@ -2708,7 +2708,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
++        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+       },
+       {
+         "status": "PASS",
+@@ -2767,7 +2767,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "41 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f01/day-05.md b/floors/f01/day-05.md
+index ccf0521..7586b6a 100644
+--- a/floors/f01/day-05.md
++++ b/floors/f01/day-05.md
+@@ -8,7 +8,7 @@ Source: decisions/026-timed-floor-clock-override.md (including the stairwell and
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+diff --git a/floors/f02/achievement-suggestions.md b/floors/f02/achievement-suggestions.md
+index 896d82c..1b0be87 100644
+--- a/floors/f02/achievement-suggestions.md
++++ b/floors/f02/achievement-suggestions.md
+@@ -14,7 +14,7 @@ Soft Open is the **FINAL** district name (Caleb 2026-10-05). A-056 / ACH-1829 st
+ - **Ralph:** Bronze per Crawler + boss-tier credits.
+ - **ACH-1828, ACH-1830, ACH-1835:** Bronze achievement-box seeds.
+ - Other Soft Open toast/ACH boxes that previously said Silver → **Bronze** (GM may log a Silver override).
+-- Achievement boxes capped at **Bronze**, **max 2 achievement Bronze per Crawler per floor** (Story Boxes do not count).
++- Achievement boxes capped at **Bronze**, **about 2-3 achievement Bronze boxes per Crawler per floor** (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that.
+ - **67 framed** proposed rows default to **R0** (Title or snark, no box).
+ 
+ ## Canon Soft Open set — ACH-1827..1835
+diff --git a/floors/f02/day-01.json b/floors/f02/day-01.json
+index b2822a1..24a23d0 100644
+--- a/floors/f02/day-01.json
++++ b/floors/f02/day-01.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "28793356981b8dcabea074d880b13a6374c4d9d678789b26fd0b922721fb7c2c",
++    "spec_sha256_sans_pin": "a3c3c5364ecc7db7aadfe76edf5e4cc06ddf868e54ea09fc7af4c66cd3da2753",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2271,7 +2271,7 @@
+     "pass": 48,
+     "warn": 4,
+     "fail": 0,
+-    "spec_sha256": "4be7d64f36ef30f1ebb333589624b0bbd3bcdaafc118e3fd6d24c3d26b3b7bb5",
++    "spec_sha256": "460fa1c69b5a733cf48acb9653ca015b53a40844609d6820b30ece31bcaab104",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2321,7 +2321,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2406,7 +2406,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "WARN",
+diff --git a/floors/f02/day-01.md b/floors/f02/day-01.md
+index ce171ad..9e38610 100644
+--- a/floors/f02/day-01.md
++++ b/floors/f02/day-01.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -410,7 +410,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -440,4 +440,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (48 PASS, 4 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 4be7d64f36ef. Warnings: enc-d01-02 enemy display; read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (48 PASS, 4 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 460fa1c69b5a. Warnings: enc-d01-02 enemy display; read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-01.spec.json b/floors/f02/day-01.spec.json
+index dd617bb..b192490 100644
+--- a/floors/f02/day-01.spec.json
++++ b/floors/f02/day-01.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-02.json b/floors/f02/day-02.json
+index 678ca7c..4dd22e8 100644
+--- a/floors/f02/day-02.json
++++ b/floors/f02/day-02.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "437846df07de5eddd820b6a313d64294bba37ce6e8824ca46caeab454760d0e9",
++    "spec_sha256_sans_pin": "ef4b291221def7a25381ce3ffd809cde65ba97f3eb06555669664b848a4c57af",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2151,7 +2151,7 @@
+     "pass": 44,
+     "warn": 2,
+     "fail": 0,
+-    "spec_sha256": "a9996de11e3418b654d69ab4f11a13cf6e50c6890170a6998b9c2f083a8628b3",
++    "spec_sha256": "11e32f459c9a5886c4a03cc38fc58b7f63dc3505767501662385ff1e73b663e2",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2201,7 +2201,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2271,7 +2271,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "PASS",
+@@ -2315,7 +2315,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "36 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f02/day-02.md b/floors/f02/day-02.md
+index f6fb46c..ee702b4 100644
+--- a/floors/f02/day-02.md
++++ b/floors/f02/day-02.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -397,7 +397,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -427,4 +427,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (44 PASS, 2 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 a9996de11e34. Warnings: slot-map provenance; doubled full stop*
++*Build note: validation PASS (44 PASS, 2 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 11e32f459c9a. Warnings: slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-02.spec.json b/floors/f02/day-02.spec.json
+index 4e34496..c30c1a2 100644
+--- a/floors/f02/day-02.spec.json
++++ b/floors/f02/day-02.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-03.json b/floors/f02/day-03.json
+index b6469e7..21bf4be 100644
+--- a/floors/f02/day-03.json
++++ b/floors/f02/day-03.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "cdfa9616a06283f6033537e4804d5218855d25c2e06f5f7da555b004f3674b0a",
++    "spec_sha256_sans_pin": "fc874c93d263c180a6e733b6f12df6586a1d21a106bfc2944d67651a532e5b5d",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -1415,7 +1415,7 @@
+         },
+         {
+           "id": "ACH-1835",
+-          "note": "You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; max 2 Bronze ACH boxes/Crawler/floor).",
++          "note": "You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; about 2-3 Bronze ACH boxes/Crawler/floor, soft).",
+           "tag": "canon",
+           "ledger_row": "A-136",
+           "name": "You Call That a Trap?",
+@@ -2153,7 +2153,7 @@
+     "pass": 45,
+     "warn": 3,
+     "fail": 0,
+-    "spec_sha256": "f4407d2c2c6c5a7bdb785f7fefecabfb0592c9691d6b6bc34f43e94b33375558",
++    "spec_sha256": "ae0aa6d12ed2b3275a994227a8c40fe92585f6f0a29905642427480f236aed56",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2203,7 +2203,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2273,7 +2273,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "PASS",
+@@ -2327,7 +2327,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "32 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f02/day-03.md b/floors/f02/day-03.md
+index 02b4a7d..eec5799 100644
+--- a/floors/f02/day-03.md
++++ b/floors/f02/day-03.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -283,7 +283,7 @@ cmm-043 immobile. If timer ends mid-scene add Vespas cmm-044.
+ - **Achievement** ACH-0237 Soft Open: Timer Terror (Floor 2, Rare): Soft Open: Timer Terror: Soft Open catalog hook for enc-d03-02.
+ - **Achievement** ACH-0238 Soft Open: Speed Clear (Floor 2, Rare): Soft Open: Speed Clear: Soft Open catalog hook for enc-d03-02.
+ - **Achievement** ACH-0239 Soft Open: Slow Burn (Floor 2, Common): Soft Open: Slow Burn: Soft Open catalog hook for enc-d03-02.
+-- **Achievement** ACH-1835 You Call That a Trap? (Floor 2, Rare): You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; max 2 Bronze ACH boxes/Crawler/floor).
++- **Achievement** ACH-1835 You Call That a Trap? (Floor 2, Rare): You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; about 2-3 Bronze ACH boxes/Crawler/floor, soft).
+ - **Proposed achievement** *You Call That a Trap? (wired)* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Injure a mob with a purposeful Soft Open trap (fires canon ). Narration [PLAYER-FACING]: "Injure a mob with a purposeful Soft Open trap (fires canon )." Reward (guideline, GM may adapt): [SYNDICATE REWARD SLOT: Soft Open proposed achievement]
+ - **Proposed achievement** *Vespa Flyby* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Offscreen pupa hatch spit without a full Vespa fight. Narration [PLAYER-FACING]: "New achievement Vespa Flyby: Something half-hatched spit at you from offscreen and left. You got the trailer, not the feature. Acid still counts as a review." Reward (guideline, GM may adapt): [SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]
+ 
+@@ -395,7 +395,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -425,4 +425,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (45 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 f4407d2c2c6c. Warnings: enc-d03-02 enemy display; slot-map provenance; doubled full stop*
++*Build note: validation PASS (45 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 ae0aa6d12ed2. Warnings: enc-d03-02 enemy display; slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-03.spec.json b/floors/f02/day-03.spec.json
+index 3f50365..0b88c51 100644
+--- a/floors/f02/day-03.spec.json
++++ b/floors/f02/day-03.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -939,7 +939,7 @@
+         },
+         {
+           "id": "ACH-1835",
+-          "note": "You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; max 2 Bronze ACH boxes/Crawler/floor).",
++          "note": "You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; about 2-3 Bronze ACH boxes/Crawler/floor, soft).",
+           "tag": "canon",
+           "ledger_row": "A-136"
+         }
+diff --git a/floors/f02/day-04.json b/floors/f02/day-04.json
+index bbe58dc..c9f3a5a 100644
+--- a/floors/f02/day-04.json
++++ b/floors/f02/day-04.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "141082bd904e045146d06b66e84155a3b79eb7201fb5e7b135f184499385cba1",
++    "spec_sha256_sans_pin": "4fda2e3f83144d8fcc65146f9cd9e9748cce7f7d848092ed9e06c98a161e514a",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2204,7 +2204,7 @@
+     "pass": 44,
+     "warn": 5,
+     "fail": 0,
+-    "spec_sha256": "e9335601e36a42fd4349ab85cad3e1a31dcbf353fb4bd124f76e91a89e576f75",
++    "spec_sha256": "5abf45f363699c27ae96c1bd46c67d6aa3d36d499aeddc683473ca4be17b5fa2",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2254,7 +2254,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2324,7 +2324,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "PASS",
+diff --git a/floors/f02/day-04.md b/floors/f02/day-04.md
+index 0c785d8..aa843bd 100644
+--- a/floors/f02/day-04.md
++++ b/floors/f02/day-04.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -398,7 +398,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -428,4 +428,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (44 PASS, 5 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 e9335601e36a. Warnings: enc-d04-02 enemy display; read-aloud length (soft); read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (44 PASS, 5 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 5abf45f36369. Warnings: enc-d04-02 enemy display; read-aloud length (soft); read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-04.spec.json b/floors/f02/day-04.spec.json
+index 298aebb..c176de0 100644
+--- a/floors/f02/day-04.spec.json
++++ b/floors/f02/day-04.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-05.json b/floors/f02/day-05.json
+index 0702570..6649cb1 100644
+--- a/floors/f02/day-05.json
++++ b/floors/f02/day-05.json
+@@ -37,7 +37,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "654428069dbf30d573b6fc215e25283b16a4c6faeca76c713b0d38ab5c1e802c",
++    "spec_sha256_sans_pin": "a35b553c3ebed8518edd3787043c46f7e77aa3c3aecb72bf86d15bc5ef3d948b",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -175,7 +175,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2173,7 +2173,7 @@
+     "pass": 45,
+     "warn": 2,
+     "fail": 0,
+-    "spec_sha256": "1b866a871af104c27509bacfad7b022e3ad318ace46d62c6f4c951bc57e19a00",
++    "spec_sha256": "ef4b2c91e2bedf164209561934f4fb818e54525e1b2f552f3338331ae9588ee1",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2223,7 +2223,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2293,7 +2293,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "PASS",
+@@ -2342,7 +2342,7 @@
+       },
+       {
+         "status": "PASS",
+-        "check": "read-aloud blocks are 4 sentences or fewer",
++        "check": "read-aloud blocks within the 4-sentence soft guideline",
+         "detail": "34 [PLAYER-FACING] blocks checked"
+       },
+       {
+diff --git a/floors/f02/day-05.md b/floors/f02/day-05.md
+index 1459355..c60d504 100644
+--- a/floors/f02/day-05.md
++++ b/floors/f02/day-05.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -399,7 +399,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -429,4 +429,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (45 PASS, 2 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 1b866a871af1. Warnings: slot-map provenance; doubled full stop*
++*Build note: validation PASS (45 PASS, 2 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 ef4b2c91e2be. Warnings: slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-05.spec.json b/floors/f02/day-05.spec.json
+index d134f70..d0c28df 100644
+--- a/floors/f02/day-05.spec.json
++++ b/floors/f02/day-05.spec.json
+@@ -150,7 +150,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-06.json b/floors/f02/day-06.json
+index 3f5ad91..39dfc11 100644
+--- a/floors/f02/day-06.json
++++ b/floors/f02/day-06.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "913bb05c4503376868a2fe9c8ac7739d2ae13406471b0d979b8e8000977e9e00",
++    "spec_sha256_sans_pin": "7f6aef191c5930af363efc190724f17011a4a07a7cb652ba6f2f4bc9cc267917",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2058,7 +2058,7 @@
+     "pass": 43,
+     "warn": 3,
+     "fail": 0,
+-    "spec_sha256": "cfeac98fb23f15fca4ffb52e254abd09194ea749e7aaac2922662deec05ade5b",
++    "spec_sha256": "453e29e545a42caf94e915779dd728a97b13d18e3dcf5aff73c25fd7f43a609b",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2108,7 +2108,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2178,7 +2178,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "PASS",
+diff --git a/floors/f02/day-06.md b/floors/f02/day-06.md
+index 6806611..437691b 100644
+--- a/floors/f02/day-06.md
++++ b/floors/f02/day-06.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -391,7 +391,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -421,4 +421,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (43 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 cfeac98fb23f. Warnings: read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (43 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 453e29e545a4. Warnings: read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-06.spec.json b/floors/f02/day-06.spec.json
+index 048e0c7..6a30576 100644
+--- a/floors/f02/day-06.spec.json
++++ b/floors/f02/day-06.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-07.json b/floors/f02/day-07.json
+index 85275af..9a9cdff 100644
+--- a/floors/f02/day-07.json
++++ b/floors/f02/day-07.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "78e196507f8c3231ec5691012c35b7fbb5655571deb3e1b2f5b183b9784915d3",
++    "spec_sha256_sans_pin": "42827295157fc773a6ed272259b017c4f7b36919e275184bbfe98339aa9f05e2",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2235,7 +2235,7 @@
+     "pass": 44,
+     "warn": 4,
+     "fail": 0,
+-    "spec_sha256": "f11886650d08fd367bc48642cdd93ba9785d8ba91d327fb492e6647bdd264c34",
++    "spec_sha256": "6dedf2e4370d1366537df9da0c65ff5df4b8aa59ba36ca5035ee441c26edcfae",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2285,7 +2285,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2355,7 +2355,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "WARN",
+diff --git a/floors/f02/day-07.md b/floors/f02/day-07.md
+index 70102ff..12444be 100644
+--- a/floors/f02/day-07.md
++++ b/floors/f02/day-07.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -396,7 +396,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -426,4 +426,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (44 PASS, 4 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 f11886650d08. Warnings: enc-d07-01 enemy display; read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (44 PASS, 4 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 6dedf2e4370d. Warnings: enc-d07-01 enemy display; read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-07.spec.json b/floors/f02/day-07.spec.json
+index c9e707c..165ab47 100644
+--- a/floors/f02/day-07.spec.json
++++ b/floors/f02/day-07.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-08.json b/floors/f02/day-08.json
+index 6083342..f0d1359 100644
+--- a/floors/f02/day-08.json
++++ b/floors/f02/day-08.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "4075f8bd4cd11c5a18c007de0a0e45bf9df256215d0ff849053f4aa9e935053b",
++    "spec_sha256_sans_pin": "79b86e7273beeb33c65d6618c80d2cd42bc69c74302802952f87fc98f9ea3da6",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2274,7 +2274,7 @@
+     "pass": 45,
+     "warn": 7,
+     "fail": 0,
+-    "spec_sha256": "e6743c3a0acbea4e89ad03d740fbb636de2bfbbc99ebd283c4dc6417d415b133",
++    "spec_sha256": "e79cff653ae8289b3ce9c24cfcc5841d70a1187b6b78b0f0154091f881fb0b19",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2324,7 +2324,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2394,7 +2394,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "WARN",
+diff --git a/floors/f02/day-08.md b/floors/f02/day-08.md
+index 53b7644..e6f454f 100644
+--- a/floors/f02/day-08.md
++++ b/floors/f02/day-08.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -405,7 +405,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -435,4 +435,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (45 PASS, 7 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 e6743c3a0acb. Warnings: enc-d08-01 enemy display; proposed achievement Parade Route; read-aloud length (soft); read-aloud length (soft); read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (45 PASS, 7 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 e79cff653ae8. Warnings: enc-d08-01 enemy display; proposed achievement Parade Route; read-aloud length (soft); read-aloud length (soft); read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-08.spec.json b/floors/f02/day-08.spec.json
+index 51d3e6a..56f5583 100644
+--- a/floors/f02/day-08.spec.json
++++ b/floors/f02/day-08.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-09.json b/floors/f02/day-09.json
+index 01a9e41..dda451b 100644
+--- a/floors/f02/day-09.json
++++ b/floors/f02/day-09.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "fdd0cf253ab7e92b3fc226959eb5c9684d22fca2cfcc4a939b9d5acc0c6d16d7",
++    "spec_sha256_sans_pin": "2404af3b53b7aa85a0ff2f83192ae5f9cb4d86f315d5f1a6e0956a90eea3e6d4",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -2382,7 +2382,7 @@
+     "pass": 47,
+     "warn": 7,
+     "fail": 0,
+-    "spec_sha256": "cd420da77003b0d32b4d274fbf9d91842ccfd165579ca4bc01a6116d6739cb6a",
++    "spec_sha256": "c0bdaf06c1494bcaf0df82b4557379db7e35bd0be52d45dc381cf811c6d9f11f",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2432,7 +2432,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2512,7 +2512,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "WARN",
+diff --git a/floors/f02/day-09.md b/floors/f02/day-09.md
+index e7a3e94..66f43e9 100644
+--- a/floors/f02/day-09.md
++++ b/floors/f02/day-09.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -407,7 +407,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ - **Proposed achievement** *You Call That a Trap? (oil)* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Injure the Rage Elemental trigger spawn with staged oil/bomb (trigger-spawn context only). Narration [PLAYER-FACING]: "You greased the penalty entity. The floor noticed." Reward (guideline, GM may adapt): [SYNDICATE REWARD SLOT: Bronze seed — ACH-1835 oil vs Rage Elemental trigger only]
+ 
+ ## Short-rest slot map (cap, not a promise)
+@@ -438,4 +438,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (47 PASS, 7 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 cd420da77003. Warnings: enc-d09-01 enemy display; enc-d09-01 enemy display; enc-d09-03 enemy display; enc-d09-03 enemy display; read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (47 PASS, 7 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 c0bdaf06c149. Warnings: enc-d09-01 enemy display; enc-d09-01 enemy display; enc-d09-03 enemy display; enc-d09-03 enemy display; read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-09.spec.json b/floors/f02/day-09.spec.json
+index c7acb1a..460b87a 100644
+--- a/floors/f02/day-09.spec.json
++++ b/floors/f02/day-09.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/floors/f02/day-10.json b/floors/f02/day-10.json
+index 8ae2dd7..4ed5afe 100644
+--- a/floors/f02/day-10.json
++++ b/floors/f02/day-10.json
+@@ -36,7 +36,7 @@
+     "budget_file_version": "0.2.5",
+     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
+-    "spec_sha256_sans_pin": "e17ed4df1e521262d09ea5773324983788127245f53590c5fabc4357ea099298",
++    "spec_sha256_sans_pin": "dd371067b9fded4e6605198f42b865f795bf8c2380352b97e6fb6dc824c845c6",
+     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
+   },
+   "clock": {
+@@ -174,7 +174,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+@@ -1999,7 +1999,7 @@
+     "pass": 47,
+     "warn": 3,
+     "fail": 0,
+-    "spec_sha256": "b2b8aaf7daf2231c3aab95a138d03dc2162097148948ca44dae9209581f046f8",
++    "spec_sha256": "bd4c4d6c2ee258c5b4dd83ab53edacad2255961c4aaf8f1b49fd354025fdd680",
+     "checks": [
+       {
+         "status": "PASS",
+@@ -2049,7 +2049,7 @@
+       {
+         "status": "PASS",
+         "check": "saferoom rule",
+-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
++        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
+       },
+       {
+         "status": "PASS",
+@@ -2139,7 +2139,7 @@
+       {
+         "status": "PASS",
+         "check": "rest options",
+-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
++        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
+       },
+       {
+         "status": "PASS",
+diff --git a/floors/f02/day-10.md b/floors/f02/day-10.md
+index c570957..69863f2 100644
+--- a/floors/f02/day-10.md
++++ b/floors/f02/day-10.md
+@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
+ 
+ Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
+ 
+-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
++> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+ 
+ ## Day at a glance
+ 
+@@ -398,7 +398,7 @@ Vanishes at collapse/region abandon.
+ - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
+ - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
+ 
+-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
++**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+ 
+ ## Short-rest slot map (cap, not a promise)
+ 
+@@ -428,4 +428,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
+ 
+ *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
+ 
+-*Build note: validation PASS (47 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 b2b8aaf7daf2. Warnings: read-aloud length (soft); slot-map provenance; doubled full stop*
++*Build note: validation PASS (47 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 bd4c4d6c2ee2. Warnings: read-aloud length (soft); slot-map provenance; doubled full stop*
+diff --git a/floors/f02/day-10.spec.json b/floors/f02/day-10.spec.json
+index da0125c..9471c37 100644
+--- a/floors/f02/day-10.spec.json
++++ b/floors/f02/day-10.spec.json
+@@ -149,7 +149,7 @@
+       "break_room_not_saferoom_from_day": 99,
+       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
+     },
+-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
++    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
+     "rest_fee_note": {
+       "tag": "[GM-FACING]",
+diff --git a/tools/encounter_bot/encounter_bot.py b/tools/encounter_bot/encounter_bot.py
+index e30df3f..ae4e8db 100644
+--- a/tools/encounter_bot/encounter_bot.py
++++ b/tools/encounter_bot/encounter_bot.py
+@@ -1323,7 +1323,7 @@ def addpf(where, blk):
+         else:
+             rep.warn("read-aloud length (soft)", "%s (%d sentences): over the %d-sentence guideline; fine if the moment earns it" % (w_, n_, MAX_SENTENCES))
+     if not too_long:
+-        rep.ok("read-aloud blocks are %d sentences or fewer" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
++        rep.ok("read-aloud blocks within the %d-sentence soft guideline" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
+     sps = [w for w, _, sp in pfb if sp]
+     if len(sps) > 1:
+         rep.fail("set pieces are rare", "%d on this page (%s); at most one per page" % (len(sps), "; ".join(sps)))
+@@ -1493,7 +1493,7 @@ def render_md(doc):
+     w("Budget file: `%s` v%s, sha256 `%s`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.\n" % (
+         B70, m.get("budget_file_version"), m.get("budget_file_sha256")))
+     w("> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. "
+-      "Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.\n")
++      "Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.\n")
+     # glance
+     w("## Day at a glance\n")
+     w("| Field | Value |\n|---|---|")

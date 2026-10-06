@@ -1220,6 +1220,8 @@ def cmd_pet(a):
     fn = {"add": _pet_add, "kill": _pet_mark_dead, "mark-dead": _pet_mark_dead, "remove": _pet_remove, "convert": _pet_convert, "shop": _pet_shop, "heal": _pet_heal}.get(a.action)
     if not fn:
         raise StateError("pet add|show|mark-dead|remove|convert|shop|heal")
+    if getattr(a, "dry_run", False) and a.action not in ("add", "shop"):
+        raise StateError(f"REFUSED: pet {a.action} has no --dry-run preview; nothing was saved. Run it without --dry-run to apply it")
     return fn(a)
 
 
@@ -1262,6 +1264,9 @@ def _pet_add(a):
         c["pet"] = pet
         box["owner"] = c["name"]
         return state, c
+    if getattr(a, "dry_run", False):   # preview only: run the same checks on a copy, write nothing, log nothing
+        fn(copy.deepcopy(read_state_file()))
+        return {"ok": True, "dry_run": True, "owner": box["owner"], "pet": name}, f"DRY RUN: {box['owner']} would get a pet: {name} the {sname} (CR {_cr_text(cr)}). Nothing saved."
     _RUN.update(reason=f"pet added: {name}", source="pet")
     mutate(fn)
     ledgers.append("pet", {"event": "added", "owner": box["owner"], "pet": name, "species": sname, "cr": cr, "description": desc, "quote": (a.quote or "").strip()[:300], "override": ov, "by": a.by or "gm"})

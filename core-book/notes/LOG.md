@@ -30,3 +30,11 @@ Sun Oct  4 12:43:26 CDT 2026: created filespace and plan
 - Ch4 milestone bullet + Floor 3 progression note updated to match.
 - No refund-desk floor numbers printed in Ch1–4 (Ch9 not drafted); no old F5/F9/F13/F17 gates found.
 - Never opened gm-notes/, player sheets, live state, ledger, or secrets.
+
+## 2026-10-05 21:00 CT - Session turn order (decision 034, core v0.2.21)
+- Ch1 "How the Game Plays": new "Session Turn Order" subsection (between What We Add and Levels and Advancement), plus a "Turn order" row in What We Add and a "Session order" glossary entry. Rolled once at session start, used for exploration all session; initiative replaces it for that fight only, then resumes with the Crawler after the one whose turn started the fight; joiners go last; dead / benched / away-on-Standing-Orders Crawlers skipped, not re-rolled, keep their slot if back same session; order governs moves, not in-character talk. Tagged HOUSE.
+- Not printed: the pet / pet-Crawler slot default (decision 022 keeps pets out of the player chapters) and the GM spotlight tooling. Flagged in open-questions.
+- Sources bumped to core v0.2.21: Ch1 header (+ decision 034), Ch2 src header (regenerated via drafts/gen-ch2-tables.py), Ch4 header, notes/source-map.md row 1 (+034). Level track re-checked against core §2.2/§2.3/§8.3 v0.2.21: Ch1/Ch2/Ch4 still match (N / N+1 / N+2; F3 and F9 boss +1; F4@5, F10@12, F18@20; F1 Green Room split; F1 boss CR 2 consistent).
+- Build: build/dcc-core-rulebook-v0.1.pdf, **74 pages** (Front 1-5, Ch1 6-19, Ch2 20-41, Ch4 42-74). New section on p.11.
+- Absolute-path check: no /workspace or /home/box paths in repo files (README only mentions them in its "never hardcode" rule).
+- Never opened gm-notes/, player sheets, live state, ledger, or secrets.

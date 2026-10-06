@@ -1,5 +1,7 @@
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 import sys,re
-sys.path.insert(0,'/workspace/dcc-lore/tools'); sys.path.insert(0,'/workspace/dcc-lore/work')
+sys.path.insert(0,_os.path.join(_LORE, 'tools')); sys.path.insert(0,_os.path.join(_LORE, 'work'))
 from ledger_lib import *
 import revival_rows as R
 TAG=re.compile(r'\b(W|FW2|NL|YT):([^;|]+)')

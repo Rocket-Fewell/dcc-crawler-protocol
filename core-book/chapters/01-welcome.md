@@ -1,7 +1,7 @@
 # Welcome to the Crawl
 Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (Silver/Gold/Platinum by floor; Legendary cap 2/Crawler), death, standard level track (arrive N / N+1 / N+2; F3 and F9 end-boss bumps; F18 at 20), Ratings, table tone, glossary.
-Sources: decisions 018, 026-031, 033; rules/10-core-rules-5e.md v0.2.19; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
+Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (Silver/Gold/Platinum by floor; Legendary cap 2/Crawler), death, standard level track (arrive N / N+1 / N+2; F3 and F9 end-boss bumps; F18 at 20), session turn order (034), Ratings, table tone, glossary.
+Sources: decisions 018, 026-031, 033, 034; rules/10-core-rules-5e.md v0.2.21; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
 
 <!-- BEGIN -->
 
@@ -165,6 +165,20 @@ Ability scores, d20 tests, Advantage and Disadvantage, proficiency, Armor Class,
 | Death | Death is permanent; revival is rare and costly. | Ch. 9 |
 | Identity | Latent species, a Floor 3 reveal and rebuild. | Ch. 2, Ch. 3 |
 | Fame | Ratings and the Broadcast Name. | Ch. 1, Ch. 13 |
+| Turn order | Crawler order rolled once per session for exploration; initiative still runs combat. | Ch. 1 |
+
+### Session Turn Order
+
+At the start of every session, the System rolls once to set the order in which the Crawlers take their turns, and announces it. That **session order** holds for every exploration turn for the rest of the session: every hallway, every vending machine, every bad idea. {{HOUSE}} (decision 034)
+
+- **Combat cuts in, then hands back.** When a fight starts, roll initiative as normal. Initiative replaces the session order for that fight only. When the fight ends, exploration picks up in session order with the Crawler after the one whose turn started the fight.
+- **Late arrivals go last.** A Crawler who joins partway through the session goes to the end of the order.
+- **Missing Crawlers are skipped, not re-rolled.** If a Crawler is dead, benched, or running on Standing Orders because their player stepped away, the System skips that slot and moves on. A Crawler who comes back later in the same session keeps their old slot.
+- **The order is for moves, not mouths.** Anyone can talk in character at any time. The order only decides whose move the System resolves next.
+
+::: system
+Turn order has been randomized for fairness. Complaints about the turn order will also be randomized.
+:::
 
 ### Levels and Advancement
 
@@ -388,6 +402,7 @@ Every player also has a **private opt-out**. At creation you can tell the System
 | **Floor Onboarding** | The first-saferoom level-up on a new floor after a descent. |
 | **Active Crawler** | The one Crawler a player has in play this session. |
 | **Benched Crawler** | A Crawler on file that is not in play. |
+| **Session order** | The Crawler turn order rolled at the start of each session and used for exploration. |
 | **Standing Orders** | The default tactic your Crawler follows when you can't act. |
 | **Ratings** | The audience's opinion of you. |
 | **Broadcast Name** | The name the audience gives you, minted on Floor 3. |
