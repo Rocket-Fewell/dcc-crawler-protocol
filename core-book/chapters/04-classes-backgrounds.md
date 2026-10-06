@@ -32,7 +32,6 @@ No pet rules. No Story Box deed lists. No survey questions and no Fan Profile fi
 
 | Our Name (5e Name) | Hit Die | Saves | Armor | Skills | Level 1 hook |
 |---|:---:|---|---|:---:|---|
-
 | Anger-Management Dropout (Barbarian) | d12 | STR/CON | light, medium, shield; Unarmored Defense | 2 | Rage; Unarmored Defense; Mastery 2 |
 | Open-Mic Menace (Bard) | d8 | DEX/CHA | light | 3 | Inspiration; Spellcasting |
 | Urgent-Care Chaplain (Cleric) | d8 | WIS/CHA | light, medium, shield | 2 | Spellcasting; Divine Order |
@@ -54,7 +53,6 @@ Fighters pick a Fighting Style at **level 1**. **Paladins and Rangers pick at le
 
 | Our Name (5e Name) | Benefit (summary) |
 |---|---|
-
 | Carnival-Booth Sharpshooter (Archery) | +2 to attack rolls with ranged weapons. |
 | Power-Outage Brawler (Blind Fighting) | Blindsight 10 feet while conscious (as SRD). |
 | Bubble-Wrap Enthusiast (Defense) | +1 Armor Class while wearing armor. |
@@ -571,7 +569,6 @@ Thesis progress: 4%. Funding: 0%. Fire Bolt: employed.
 
 | Our Name (5e Name) | Summary |
 |---|---|
-
 | Hallway Bodyguard (Protector) | Armor and martial weapons. Stands between the bleeding and the elevator. |
 | Church Rummage-Sale Mystic (Thaumaturge) | Extra cantrip and sharper at religion. Reads a tarot deck with the price tags still on. |
 
@@ -579,7 +576,6 @@ Thesis progress: 4%. Funding: 0%. Fire Bolt: employed.
 
 | Our Name (5e Name) | Summary |
 |---|---|
-
 | Farmers-Market Hedge Magician (Magician) | Extra cantrip and nature smarts. Sells heirloom tomatoes that are, technically, still cursed. |
 | Trail-Crew Warden (Warden) | Medium armor, shield and martial weapons. Maintains the trail and slaps anyone who feeds the wildlife. |
 

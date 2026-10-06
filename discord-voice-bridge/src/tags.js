@@ -12,6 +12,11 @@
  * whitespace and markdown such as `**[SYSTEM]**` or `> [GM]`). A tag applies to its own line and to
  * every following line until the next tag. Tags inside ``` code fences are ignored.
  * Mixed messages: after a [SYSTEM] line, re-tag [GM] before any snark so carry-over stays correct.
+ *
+ * Safety net (Caleb Oct 6 2026): rules notes and corrections to a Crawler's requested action are
+ * always System voice. An untagged line that opens with "Rules note", "Rule note", "Rules check",
+ * "Rules correction" or "System note" is spoken in the system voice for that line only, then the
+ * previous voice resumes. The GM should still tag these [SYSTEM].
  */
 
 export const VOICE_GM = 'gm';
@@ -20,6 +25,7 @@ export const VOICES = [VOICE_GM, VOICE_SYSTEM];
 
 const TAG_LINE = /^[\s>*_~`|]*\[(SYSTEM|GM|ROLL)\][*_~`|]*[ \t]*:?[ \t]*(.*)$/i;
 const SKIP = null; // marker for [ROLL]
+const RULES_NOTE_LINE = /^[\s>*_~`|]*(?:rules?\s+(?:note|check|correction)|system\s+note)\b/i;
 
 /**
  * Split raw message text into voiced segments. Consecutive lines with the same voice are merged.
@@ -53,6 +59,11 @@ export function parseTaggedLines(raw, { defaultVoice = VOICE_GM } = {}) {
       const tag = m[1].toUpperCase();
       voice = tag === 'ROLL' ? SKIP : tag === 'SYSTEM' ? VOICE_SYSTEM : VOICE_GM;
       if (m[2]) push(m[2]);
+    } else if (!inFence && voice !== VOICE_SYSTEM && RULES_NOTE_LINE.test(line)) {
+      const prev = voice;
+      voice = VOICE_SYSTEM;
+      push(line);
+      voice = prev;
     } else {
       push(line);
     }

@@ -2,14 +2,14 @@ import assert from 'node:assert/strict';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { resolveCampaignRoot } from '../src/paths.js';
+import { REAL_CAMPAIGN } from './helpers/roots.js';
 import test from 'node:test';
 import { PermissionFlagsBits } from 'discord.js';
 import * as enc from '../src/commands/encounter.js';
 import { commandData, commands, handleInteraction } from '../src/commands/index.js';
 import { MAX_MESSAGE, SYSTEM_KINDS, buildPreview, hintFor, hintText, listEntries, loadPage, resolvePointer, splitText, toMessages } from '../src/encounter/extract.js';
 
-const REAL = process.env.DCC_REAL_CAMPAIGN || resolveCampaignRoot();
+const REAL = REAL_CAMPAIGN;
 const haveReal = [1, 2, 3, 4, 5].every((n) => existsSync(join(REAL, 'floors', 'f01', `day-0${n}.json`)));
 const tmps = [];
 process.on('exit', () => { for (const d of tmps) { try { rmSync(d, { recursive: true, force: true }); } catch { /* best effort */ } } });

@@ -381,3 +381,16 @@ Shows the invoker an **ephemeral preview** of exactly what players may see from 
 
 ### Money words (`src/create/money.js`)
 `money(text)` rewrites GP / cp / gold / cash to "credits" (1 credit = 1 GP, 1 cp = 0.01 credit; whole credits without decimals, fractions with, singular for an amount of 1 or less) on the bridge's money sentences: S10 package labels (class and background, `<label> - N credits left over`), the S10 menus, intro, help and errors, price lists (`priceText`: integer cp in, credits text out) and the S10 flow line. Display only: `rules.js` math, totals, ledger values and `{gp}` are never read from the text (test/money.test.js pins the line costs and cart totals to the pre-change integers). Lore's rows `hint-money-gp` / `hint-money-cp` are used when present. Rows with `plain_on` (S1, S2, S13, comfort-only) show the old text on those views (`viewT` in screenstext.js).
+
+## New-player roles (Oct 6 2026)
+
+`src/roles.js`, run on every start (idempotent, additive only) and by `npm run roles:sync` (`-- --dry-run` to preview):
+
+- Every human gets a personal role named after their Discord username, tracked by user id in `<campaign>/sessions/player-roles.json` (a taken name gets `-2`, `-3`, ...). Bots are skipped.
+- The shared **Crawler** role: read + send in #agents, #gm-voice, #general, #table-transcript and #create; View/Connect/Speak/Voice Activity (+ text chat) in the GM voice channel (`VOICE_CHANNEL_ID`, "General"); role-level **Deafen Members**. Never Mute Members. Members holding **External Agent** keep that setup and do not get Crawler.
+- Players **see only those channels plus their own sheet**: the Crawler role has View Channel denied on every other channel and category (categories that hold a players' channel are left alone). @everyone is never changed.
+- Sheet channels (every session's `player-channels.json`: alpha `sessions/` and `sessions-data/<id>/`; owners from that session's `state.json` `build.discord_user_id`): Crawler denied, the owner's personal role allowed View + Read History + Send (a role allow beats a role deny). A sheet with no clear owner is just hidden.
+- Channels created later: hidden from Crawler at once on ChannelCreate unless the name/id is on the players' list; a new sheet gets its owner's allow 5 s later (when the channel map is saved) and again from `/create`, which locks right after `setup-channels`, before the first card. A channel made while the bridge is down is fixed by the next start-up sync or `npm run roles:sync`.
+- Join: `guildMemberAdd` when the **Server Members Intent** is enabled in the Developer Portal (detected at start; `DISCORD_MEMBERS_INTENT=true|false` forces it). Without it a new human gets their roles the first time they post, use a command or join voice.
+- GM voice guard: if the bridge bot is server-muted it unmutes itself at once. A server-deafen is left alone and posts nothing (local log line only). While deafened the bridge hears nothing: no transcription, no GM wake from speech.
+- `ROLES_SYNC_ON_START=false` skips the start-up sync. `PLAYER_ACCESS_CHANNELS` adds channel names/ids to the Crawler list. `PLAYER_ROLES_FILE` overrides the store path.

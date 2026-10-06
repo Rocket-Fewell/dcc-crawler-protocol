@@ -343,15 +343,84 @@ def make_view(c, data):
     }
 
 
+def _pet_stats(srd_id):
+    """Public SRD stat fields for a pet species from tables/pet-species.json (ac, hp, attacks). Missing or empty values stay out ({} / None)."""
+    try:
+        with open(os.path.join(campaign_dir(), "tables", "pet-species.json"), encoding="utf-8") as f:
+            table = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    return next((e for e in table.get("species", []) if isinstance(e, dict) and e.get("id") == srd_id), None) or {}
+
+
+def _pet_kind(pet):
+    """What the pet IS on the sheet: pet.kind (e.g. 'raccoon' on a Cat stat block), else its species, lower case."""
+    return str(pet.get("kind") or pet.get("species") or "pet").strip().lower()
+
+
+def _pet_display_name(pet):
+    """'unnamed <kind>' for a pet the player has not named yet (pet.unnamed, no name, or the GM placeholder '<Species> (unnamed)')."""
+    name = str(pet.get("name") or "").strip()
+    if pet.get("unnamed") is True or not name or re.search(r"\(unnamed\)\s*$", name, re.I):
+        return f"unnamed {_pet_kind(pet)}"
+    return name
+
+
+def _int_or_none(v):
+    return v if isinstance(v, int) and not isinstance(v, bool) else None
+
+
 def pet_public(c, data):
     """The owner's plain pet (decision 022), only while it is alive and pets are enabled; None otherwise, so nothing about pets shows on a sheet without one.
-    Name, species and CR only: the GM's notes never reach Discord."""
+    PUBLIC fields only: display name, kind, species, CR, HP current/max, AC and up to two attacks (pet record first, then the species table).
+    Never description, quote, filed_by or any other GM note. A field with no value is left out (the card then shows less, never '?')."""
     pet = c.get("pet")
     if not isinstance(pet, dict) or pet.get("status") != "alive" or not (data or {}).get("pets_enabled", True):
         return None
     cr = pet.get("cr")
     crt = {0: "0", 0.125: "1/8", 0.25: "1/4"}.get(cr, str(cr))
-    return {"name": str(pet.get("name", "")), "species": str(pet.get("species", "")), "cr": crt}
+    st = _pet_stats(pet.get("species_srd_id"))
+    out = {"name": _pet_display_name(pet), "species": str(pet.get("species", "")), "kind": _pet_kind(pet), "cr": crt}
+    hp_max = _int_or_none(pet.get("hp_max")) if pet.get("hp_max") is not None else _int_or_none(st.get("hp"))
+    hp_cur = _int_or_none(pet.get("hp_current"))
+    if hp_cur is None and hp_max is not None:
+        hp_cur = hp_max
+    if hp_cur is not None:
+        out["hp_current"] = hp_cur
+    if hp_max is not None:
+        out["hp_max"] = hp_max
+    ac = _int_or_none(pet.get("ac")) if pet.get("ac") is not None else _int_or_none(st.get("ac"))
+    if ac is not None:
+        out["ac"] = ac
+    attacks = []
+    for a in (pet.get("attacks") or st.get("attacks") or [])[:2]:
+        if isinstance(a, dict) and str(a.get("name") or "").strip():
+            row = {"name": str(a["name"]).strip(), "damage": str(a.get("damage") or "").strip()}
+            if _int_or_none(a.get("to_hit")) is not None:
+                row["to_hit"] = a["to_hit"]
+            attacks.append(row)
+    if attacks:
+        out["attacks"] = attacks
+    return out
+
+
+def pet_block(p):
+    """Short pet block for the owner's card: a header line (name, kind, stat block if reskinned, CR), then HP/AC and attacks only when known."""
+    kind = p.get("kind") or p.get("species", "").lower()
+    reskin = f", {p['species']} stat block" if p.get("species") and p["species"].lower() != kind else ""
+    lines = [f"**Pet (GM-run): {p['name']}** - {kind}{reskin} (CR {p['cr']})"]
+    stats = []
+    if p.get("hp_current") is not None:
+        stats.append(f"HP {p['hp_current']}/{p['hp_max']}" if p.get("hp_max") is not None else f"HP {p['hp_current']}")
+    if p.get("ac") is not None:
+        stats.append(f"AC {p['ac']}")
+    if stats:
+        lines.append("  ".join(stats))
+    for a in p.get("attacks") or []:
+        th = f" {int(a['to_hit']):+d} to hit," if a.get("to_hit") is not None else ""
+        dmg = a.get("damage") or ""
+        lines.append(f"{a['name']}:{th} {dmg}".rstrip(" ,") if (th or dmg) else a["name"])
+    return "\n".join(lines)
 
 
 def _join(x):
@@ -491,7 +560,7 @@ def render_card(c, data, ledger=None, old_view=None, changes=None):
                 + "  ".join(f"{a.upper()} {s}" for a, s in v["abilities"].items()) + "\n```")
     head.append(f"Conditions: {', '.join(v['conditions']) or 'none'} | Loot boxes: {boxes}")
     if v.get("pet"):
-        head.append(f"Pet (GM-run): {v['pet']['name']}, {v['pet']['species']} (CR {v['pet']['cr']})")
+        head.append(pet_block(v["pet"]))
     if v["death_saves"] and (v["death_saves"].get("successes") or v["death_saves"].get("fails")):
         head.append(f"Death saves: {v['death_saves'].get('successes', 0)} successes / {v['death_saves'].get('fails', 0)} fails")
     for label, key in (("Standing Orders", "standing_orders"), ("Signature attack", "signature"), ("Standing Reaction", "standing_reaction")):

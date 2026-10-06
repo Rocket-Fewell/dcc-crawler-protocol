@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, readFileSync, readdirSync, rmSync, utimesSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { resolveLoreRoot } from '../src/paths.js';
+import { REAL_LORE } from './helpers/roots.js';
 import test from 'node:test';
 import { baseIdOf, buildNameIndex, checkNamesHash, classLabel, classOptionId, classOptionLabel, kid, lineageId, lineageLabel, nameLabel, speciesLabel, variantLabel } from '../src/create/names.js';
 import { tablesFor } from '../src/create/data.js';
 import { loadTables } from '../src/create/data.js';
 import { Player, REAL_CAMPAIGN, drive, makeCtx, makeSandbox } from './helpers/create-harness.js';
 
-const LORE = join(resolveLoreRoot(), 'tables');
+const LORE = join(REAL_LORE, 'tables');
 const ent = (id, kind, srd, display, parent = null, short = srd, extra = {}) => ({ id, kind, parent_id: parent, srd_name: srd, display_name: display, combined_label: `${display} (${short})`, nation: kind.startsWith('class') ? null : 'Testland', flavor: 'x', spoken: 'x', ...extra });
 const FIXTURE = {
   schema: 'species-class-reskins/0.1.0',

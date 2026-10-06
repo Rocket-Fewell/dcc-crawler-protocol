@@ -1,5 +1,5 @@
 # Master Index
-Owner: Borent Corp Systems Architect | Status: draft | Version: 0.2.2 | Updated: 2026-10-05
+Owner: Borent Corp Systems Architect | Status: draft | Version: 0.2.3 | Updated: 2026-10-06
 Summary: Every file in the campaign workspace, one line each.
 
 | Path | Description | Owner | Status |
@@ -18,7 +18,7 @@ Summary: Every file in the campaign workspace, one line each.
 | decisions/002-death-mode.md | Death Mode decision: Costly Revives, very costly and rare | Borent | final |
 | decisions/003-death-bypasses.md | Earned death bypasses vs revives | Borent | final |
 | decisions/004-crafting-system.md | Crafting system added; ownership split | Borent | final |
-| rules/10-core-rules-5e.md | 5e (2024) overlay: achievements, loot boxes, death/revival, Floor 1 quickstart, crafting pointer, pets pointer, Roll method pointer | Syndicate | draft v0.2.17 |
+| rules/10-core-rules-5e.md | 5e (2024) overlay: achievements, loot boxes, death/revival, Floor 1 quickstart, crafting pointer, pets pointer, Roll method pointer, System skills by use (§6.5.1) | Syndicate | draft v0.2.22 |
 | characters/character-creation-5e.md | 5e character creation (intake) guide and crawler sheet template (§3.6: Roll method) | Syndicate | draft v0.2.5 |
 | characters/create-flow-spec-5e.md | Create flow spec: screen-by-screen build spec for the silent Discord /create flow (16 active screens, S12 retired; data model, edge cases, glossary, beta test script; section 8: several Crawlers per player; section 9: GM-filed pets, no pet question in /create; S8 Roll method (v0.1.10), active Crawler, session lock, text channel per Crawler, /delete, NEEDS BUILD list; acceptance and audit checklists) | Syndicate | draft v0.1.13 |
 | characters/hornn-wizard.md | Hornn crawler sheet (Wizard, Human, Merchant), intake sealed and registered in state | AI GM | draft v0.4 |
@@ -28,13 +28,13 @@ Summary: Every file in the campaign workspace, one line each.
 | floors/04-floor-bible.md | Continuum floor bible: F1–18 arc, Continuum ladder, unique floors, seeds (for Caleb's input) | Syndicate | draft v0.4 |
 | tables/achievements.csv | Achievement catalog, 1,826 rows (data); card in tables/achievements.md | Syndicate | draft |
 | tables/achievements.xlsx | Achievement catalog, same data with filters (data) | Syndicate | draft |
-| tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.3.1 |
+| tables/achievements.md | Header card for the achievement catalog | Syndicate | draft v1.5 |
 | tables/chargen-5e.json | /create data (2024 PHB written from memory; see meta.verify_todo; v0.1.5 rewords Find Familiar (no pet hint); v0.1.6 notes cite the current version; ability_methods.roll added in v0.1.4) | Syndicate | draft v0.1.6 |
 | tables/create-flow-lines.json | System lines and survey pool for the /create flow | Borent | draft |
 | tables/item-reskins.json | SRD item -> flavored name table (189 entries). A SYMLINK to ../../dcc-lore/tables/item-reskins.json (single source, owner Lore); hash in item-reskins.version.json | Lore | draft |
 | tables/pet-species.json | SRD Beast list (CR 1/4 or lower) for GM-run pets | Borent | draft |
 | tables/prebuilt-crawlers.json | 12 legal pre-built crawlers for /create | Borent | draft |
-| DECISIONS.md | One-line summary of every table decision (001-024) | Borent | living |
+| DECISIONS.md | One-line summary of every table decision (001-035, 037; 036 pending) | Borent | living |
 | gm-notes/INDEX.md | Index of the GM notes (secret folder intentionally not listed) | AI GM | draft |
 | gm-notes/00-gm-principles.md | How the AI GM runs the table (ruleset, voice tags, rewards, loot, comfort, address rule) | AI GM | draft v0.1 |
 | gm-notes/10-open-threads.md | Pending decisions, handoffs and live-session log | AI GM | draft v0.1 |

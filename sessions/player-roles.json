@@ -1,0 +1,24 @@
+{
+ "version": 1,
+ "crawler_role_id": "1557036821500665959",
+ "players": {
+  "376517850724040714": {
+   "role_id": "1557036825196101748",
+   "role_name": "hornn428",
+   "username": "hornn428",
+   "created_at": "2026-10-06T14:28:28.406Z"
+  },
+  "1177041830337056828": {
+   "role_id": "1557036829474037881",
+   "role_name": "troublegrimm",
+   "username": "troublegrimm",
+   "created_at": "2026-10-06T14:28:28.946Z"
+  },
+  "783884998230278164": {
+   "role_id": "1557036831273517058",
+   "role_name": "trailerparkmoses",
+   "username": "trailerparkmoses",
+   "created_at": "2026-10-06T14:28:29.346Z"
+  }
+ }
+}

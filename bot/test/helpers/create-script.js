@@ -18,7 +18,7 @@ function treeHash(dir) {
 }
 const state = (dir) => JSON.parse(readFileSync(join(dir, 'sessions-data', 'beta', 'state.json'), 'utf8'));
 const py = (dir, script, ...a) => {
-  try { return { code: 0, out: execFileSync('python3', [join(dir, 'tools', script), ...a], { env: { ...process.env, DCC_CAMPAIGN_DIR: dir, DCC_AUTO_PUBLISH: '0' }, encoding: 'utf8', stdio: 'pipe' }) }; } catch (e) { return { code: e.status, out: `${e.stdout}${e.stderr}` }; }
+  try { return { code: 0, out: execFileSync('python3', [join(dir, 'tools', script), ...a], { env: { ...process.env, DCC_CAMPAIGN_ROOT: dir, DCC_CAMPAIGN_DIR: dir, DCC_AUTO_PUBLISH: '0' }, encoding: 'utf8', stdio: 'pipe' }) }; } catch (e) { return { code: e.status, out: `${e.stdout}${e.stderr}` }; }
 };
 const mod = (s) => Math.floor((s - 10) / 2);
 const text = (dir, ...p) => readFileSync(join(dir, ...p), 'utf8');

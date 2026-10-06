@@ -1173,7 +1173,59 @@ def _pet_errors(c):
         errs.append(f"pet.status must be one of {', '.join(PET_STATUSES)}")
     if isinstance(pet.get("description"), str) and len(pet["description"]) > 300:
         errs.append("pet.description is at most 300 characters")
+    errs += _pet_extra_errors(pet)
     return errs
+
+
+PET_KIND_MAX = 40
+
+
+def _pet_extra_errors(pet):
+    """Optional public pet fields (all may be absent): kind (what it is on the sheet, e.g. 'raccoon' on a Cat stat block), hp_current/hp_max, unnamed."""
+    errs = []
+    if "kind" in pet and not (isinstance(pet["kind"], str) and pet["kind"].strip() and len(pet["kind"]) <= PET_KIND_MAX):
+        errs.append(f"pet.kind must be a non-empty string of at most {PET_KIND_MAX} characters")
+    isint = lambda v: isinstance(v, int) and not isinstance(v, bool)
+    if "hp_max" in pet and not (isint(pet["hp_max"]) and pet["hp_max"] >= 1):
+        errs.append("pet.hp_max must be a whole number of at least 1")
+    if "hp_current" in pet:
+        if not (isint(pet["hp_current"]) and pet["hp_current"] >= 0):
+            errs.append("pet.hp_current must be a whole number of at least 0")
+        elif isint(pet.get("hp_max")) and pet["hp_current"] > pet["hp_max"]:
+            errs.append("pet.hp_current cannot be above pet.hp_max")
+    if "unnamed" in pet and not isinstance(pet["unnamed"], bool):
+        errs.append("pet.unnamed must be true or false")
+    return errs
+
+
+def _pet_extra_fields(a, existing=None):
+    """--kind / --hp-max / --hp-current / --unnamed|--named -> the changed fields ({} = nothing given). Checked against the pet's existing values."""
+    ch = {}
+    if getattr(a, "kind", None) is not None:
+        k = a.kind.strip()
+        if not k or len(k) > PET_KIND_MAX:
+            raise StateError(f"--kind must be 1 to {PET_KIND_MAX} characters (e.g. --kind raccoon)")
+        ch["kind"] = k
+    if getattr(a, "hp_max", None) is not None:
+        if a.hp_max < 1:
+            raise StateError("--hp-max must be at least 1")
+        ch["hp_max"] = a.hp_max
+    if getattr(a, "hp_current", None) is not None:
+        if a.hp_current < 0:
+            raise StateError("--hp-current must be at least 0")
+        ch["hp_current"] = a.hp_current
+    if getattr(a, "unnamed", False) and getattr(a, "named", False):
+        raise StateError("--unnamed and --named cannot be used together")
+    if getattr(a, "unnamed", False):
+        ch["unnamed"] = True
+    if getattr(a, "named", False):
+        ch["unnamed"] = False
+    merged = {**(existing or {}), **ch}
+    if "hp_max" in ch and "hp_current" not in ch and "hp_current" not in merged:
+        ch["hp_current"] = merged["hp_current"] = ch["hp_max"]   # a newly tracked pet starts at full HP
+    if isinstance(merged.get("hp_current"), int) and isinstance(merged.get("hp_max"), int) and merged["hp_current"] > merged["hp_max"]:
+        raise StateError(f"pet HP {merged['hp_current']} cannot be above its max {merged['hp_max']}")
+    return ch
 
 
 def pet_crawler_gone(state, c):
@@ -1188,7 +1240,9 @@ def pet_crawler_gone(state, c):
 
 def _pet_line(c):
     pet = c["pet"]
-    return f"{c['name']}: {pet['name']} the {pet['species']} (CR {_cr_text(pet['cr'])}) [{pet['status']}]" + (f" - {pet['description']}" if pet.get("description") else "")
+    extra = "".join([f", kind {pet['kind']}" if pet.get("kind") else "", ", unnamed" if pet.get("unnamed") else "",
+                     f", HP {pet['hp_current']}/{pet['hp_max']}" if "hp_current" in pet and "hp_max" in pet else (f", HP {pet['hp_current']}" if "hp_current" in pet else "")])
+    return f"{c['name']}: {pet['name']} the {pet['species']} (CR {_cr_text(pet['cr'])}{extra}) [{pet['status']}]" + (f" - {pet['description']}" if pet.get("description") else "")
 
 
 def _owner_for_pet(state, name):
@@ -1204,7 +1258,8 @@ def _off(state):
 
 
 def cmd_pet(a):
-    """pet add OWNER --name N --species S [--description T] [--quote T] [--cr 1/4] [--override WHY] | pet show [OWNER] | pet mark-dead OWNER --reason T (alias kill)
+    """pet add OWNER --name N --species S [--description T] [--quote T] [--cr 1/4] [--override WHY] [--kind K] [--hp-max N] [--hp-current N] [--unnamed]
+    | pet set OWNER [--kind K] [--hp-max N] [--hp-current N] [--unnamed|--named] | pet show [OWNER] | pet mark-dead OWNER --reason T (alias kill)
     | pet remove OWNER --reason T | pet convert OWNER --file SPEC | pet shop OWNER [ITEM] [--qty N] [--sell] --reason T [--floor N] [--override WHY] | pet heal OWNER --reason T.
     GM-only. Never reachable from /create or a player command."""
     if a.action == "show":
@@ -1217,18 +1272,20 @@ def cmd_pet(a):
         return data, head + ("\n".join(_pet_line(c) for c in rows) if rows else "(no pets on file)")
     if not a.owner:
         raise StateError(f"usage: pet {a.action} OWNER ...")
-    fn = {"add": _pet_add, "kill": _pet_mark_dead, "mark-dead": _pet_mark_dead, "remove": _pet_remove, "convert": _pet_convert, "shop": _pet_shop, "heal": _pet_heal}.get(a.action)
+    fn = {"add": _pet_add, "set": _pet_set, "kill": _pet_mark_dead, "mark-dead": _pet_mark_dead, "remove": _pet_remove, "convert": _pet_convert, "shop": _pet_shop, "heal": _pet_heal}.get(a.action)
     if not fn:
-        raise StateError("pet add|show|mark-dead|remove|convert|shop|heal")
-    if getattr(a, "dry_run", False) and a.action not in ("add", "shop"):
+        raise StateError("pet add|set|show|mark-dead|remove|convert|shop|heal")
+    if getattr(a, "dry_run", False) and a.action not in ("add", "shop", "set"):
         raise StateError(f"REFUSED: pet {a.action} has no --dry-run preview; nothing was saved. Run it without --dry-run to apply it")
     return fn(a)
 
 
 def _pet_add(a):
-    if not (a.species or "").strip() or not (a.name or "").strip():
-        raise StateError("usage: pet add OWNER --name N --species S [--description T] [--quote \"the player's own words\"] [--cr 1/4] [--override WHY]")
-    name = a.name.strip()
+    if not (a.species or "").strip() or not ((a.name or "").strip() or getattr(a, "unnamed", False)):
+        raise StateError("usage: pet add OWNER --name N --species S [--description T] [--quote \"the player's own words\"] [--cr 1/4] [--override WHY] [--kind K] [--hp-max N] [--hp-current N] [--unnamed]")
+    extra = _pet_extra_fields(a)
+    if extra.get("unnamed") is False:
+        extra.pop("unnamed")   # --named on add is the default: nothing to store
     desc = (a.description or a.notes or "").strip()
     if len(desc) > 300:
         raise StateError("--description is at most 300 characters")
@@ -1243,6 +1300,7 @@ def _pet_add(a):
         sid, sname, cr = _slug(a.species), a.species.strip(), (_cr_value(a.cr) if a.cr is not None else PET_MAX_CR)
     if cr < 0 or (cr > PET_MAX_CR and not ov):
         raise StateError(f"REFUSED: a plain pet must be an SRD Beast of CR 1/4 or lower (got CR {_cr_text(cr)}); a GM ruling needs --override \"why\" (logged)")
+    name = (a.name or "").strip() or f"{extra.get('kind', sname).strip().title()} (unnamed)"   # --unnamed without --name: the GM placeholder the card shows as "unnamed <kind>"
     box = {}
 
     def fn(state):
@@ -1261,6 +1319,7 @@ def _pet_add(a):
                "status": "alive", "floor": state["campaign"]["current_floor"]}
         if ov:
             pet["override"] = ov
+        pet.update(extra)   # optional public fields only when given: an old-style add stores exactly what it always did
         c["pet"] = pet
         box["owner"] = c["name"]
         return state, c
@@ -1272,6 +1331,35 @@ def _pet_add(a):
     ledgers.append("pet", {"event": "added", "owner": box["owner"], "pet": name, "species": sname, "cr": cr, "description": desc, "quote": (a.quote or "").strip()[:300], "override": ov, "by": a.by or "gm"})
     return {"ok": True, "owner": box["owner"], "pet": name}, (f"{box['owner']} now has a pet: {name} the {sname} (CR {_cr_text(cr)}). GM-run; no party slot, credits, XP or loot; cannot be traded; "
                                                           f"ordinary healing does nothing for it (Good Boy Gulp does); death is final")
+
+
+def _pet_set(a):
+    """pet set OWNER [--kind K] [--hp-max N] [--hp-current N] [--unnamed|--named]: change the optional public fields of a LIVING plain pet (logged).
+    The name, species, CR and GM notes are not changed here."""
+    box = {}
+
+    def fn(state):
+        _off(state)
+        c = _owner_for_pet(state, a.owner)
+        pet = living_pet(c)
+        if not pet:
+            raise StateError(f"{c['name']} has no living plain pet")
+        ch = _pet_extra_fields(a, pet)
+        if not ch:
+            raise StateError("pet set needs at least one of --kind, --hp-max, --hp-current, --unnamed, --named")
+        if ch.get("unnamed") is False:
+            ch.pop("unnamed")
+            pet.pop("unnamed", None)
+        box.update(owner=c["name"], pet=pet["name"], before={k: pet.get(k) for k in ch}, changes=ch)
+        pet.update(ch)
+        return state, c
+    if getattr(a, "dry_run", False):
+        fn(copy.deepcopy(read_state_file()))
+        return {"ok": True, "dry_run": True, "owner": box["owner"], "pet": box["pet"], "changes": box["changes"]}, f"DRY RUN: {box['owner']}'s pet {box['pet']} would get {box['changes']}. Nothing saved."
+    _RUN.update(reason=f"pet updated: {a.owner}", source="pet")
+    mutate(fn)
+    ledgers.append("pet", {"event": "updated", "owner": box["owner"], "pet": box["pet"], "before": box["before"], "changes": box["changes"], "by": a.by or "gm"})
+    return {"ok": True, "owner": box["owner"], "pet": box["pet"], "changes": box["changes"]}, f"{box['owner']}'s pet {box['pet']} updated: " + ", ".join(f"{k} {v}" for k, v in box["changes"].items())
 
 
 def _pet_mark_dead(a):
@@ -3197,8 +3285,8 @@ def build_parser():
     sp.add_argument("--keep-channel", dest="keep_channel", action="store_true", help="delete: do not delete the Crawler's Discord text channel")
     sp.add_argument("--dry-run", dest="dry_run", action="store_true")
 
-    sp = add("pet", cmd_pet, "GM-run plain pet (decision 022): pet add OWNER --species S --name N [--cr 1/4] | show [OWNER] | kill OWNER --reason T | shop OWNER ITEM --reason T [--sell]")
-    sp.add_argument("action", choices=["add", "show", "kill", "mark-dead", "remove", "convert", "shop", "heal"])
+    sp = add("pet", cmd_pet, "GM-run plain pet (decision 022): pet add OWNER --species S --name N [--cr 1/4] | set OWNER [--kind K] [--hp-max N] [--hp-current N] [--unnamed|--named] | show [OWNER] | kill OWNER --reason T | shop OWNER ITEM --reason T [--sell]")
+    sp.add_argument("action", choices=["add", "set", "show", "kill", "mark-dead", "remove", "convert", "shop", "heal"])
     sp.add_argument("owner", nargs="?")
     sp.add_argument("item", nargs="?", help="shop: heal-critter-potion | pet-carrier (omit for the price list)")
     sp.add_argument("--species", help="add: an SRD Beast of CR 1/4 or lower (tables/pet-species.json; dog/rottweiler = mastiff)")
@@ -3207,6 +3295,11 @@ def build_parser():
     sp.add_argument("--description", help="add: free text, max 300 chars")
     sp.add_argument("--notes", help="add: alias of --description")
     sp.add_argument("--quote", help="add: the player's own words from the questionnaire (audit)")
+    sp.add_argument("--kind", help="add/set: what the pet is on the sheet when it differs from its stat block (e.g. raccoon on a Cat stat block); public")
+    sp.add_argument("--hp-max", dest="hp_max", type=_cli_int, help="add/set: the pet's max HP (tracked on the record; public)")
+    sp.add_argument("--hp-current", dest="hp_current", type=_cli_int, help="add/set: the pet's current HP (0..max; public)")
+    sp.add_argument("--unnamed", action="store_true", help="add/set: the player has not named it yet: the sheet shows 'unnamed <kind>' (add: --name may be omitted)")
+    sp.add_argument("--named", action="store_true", help="set: clear the unnamed flag")
     sp.add_argument("--override", help="GM ruling, logged: species off the list / CR above 1/4 (add), or no living pet (shop)")
     sp.add_argument("--file", help="convert: the pet-Crawler spec JSON (same as create-crawler)")
     sp.add_argument("--qty", type=_cli_int)

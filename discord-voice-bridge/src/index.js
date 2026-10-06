@@ -24,6 +24,7 @@ import { SttBridge } from './stt.js';
 import { GmOutputBridge, createTtsProvider } from './tts.js';
 import { GmWakeNotifier } from './wake.js';
 import { VoiceSession } from './voice.js';
+import { PlayerRoles, createVoiceGuard, detectMembersIntent, formatReport } from './roles.js';
 
 let config;
 try {
@@ -58,14 +59,21 @@ log.info(`Campaign session: ${config.campaign.sessionId} (data ${config.campaign
   }
 }
 
+// GuildMembers (privileged) is requested only when the Developer Portal grants it: asking for a refused intent stops login (4014).
+const membersIntent = await detectMembersIntent(config.discord.token);
+if (membersIntent.enabled) log.info(`GuildMembers intent: ON (${membersIntent.source}); new members get their role on join`);
+else log.warn(`GuildMembers intent: OFF (${membersIntent.source}). Enable "Server Members Intent" in the Developer Portal (Bot tab) for roles on join; until then a new player gets their role the first time they post, use a command or join voice, or via npm run roles:sync`);
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildVoiceStates,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent, // privileged: enable in the Developer Portal
+    ...(membersIntent.enabled ? [GatewayIntentBits.GuildMembers] : []), // privileged: "Server Members Intent"
   ],
 });
+// New-player roles (src/roles.js): personal role per human + the shared Crawler role; sheet channels lock to their owner.
+const roles = new PlayerRoles({ config, membersIntent: membersIntent.enabled, logger: log.child('roles') });
 
 const session = new VoiceSession({ logger: log.child('voice') });
 const provider = config.tts.enabled ? createTtsProvider(config) : null;
@@ -204,7 +212,16 @@ if (wake.enabled) {
 }
 const stt = new SttBridge({ client, config, logger: log.child('stt'), onTranscript: (line) => wake.notify(line) });
 const gm = new GmOutputBridge({ client, config, session, queue, logger: log.child('tts'), sessionCap, dedupe, events });
-const ctx = { config, client, session, queue, stt, sessionCap, dedupe, gmState, flushVoice, wake, logger: log };
+const ctx = { config, client, session, queue, stt, sessionCap, dedupe, gmState, flushVoice, wake, logger: log, roles };
+/** /create calls this right after the sheet channel is made (before the first card is posted): lock it to its owner's role. */
+ctx.lockSheetChannels = async () => {
+  const guild = await client.guilds.fetch(config.discord.guildId);
+  await guild.channels.fetch();
+  await guild.roles.fetch();
+  const sheets = await roles.lockSheets(guild);
+  for (const s of sheets) if (s.status === 'locked') log.info(`roles: sheet #${s.name} locked to ${s.ownerRole}`);
+  return sheets;
+};
 
 /**
  * Activate another campaign session in place (admin `/session use <id>`; the caller has already checked we are not in voice).
@@ -272,6 +289,16 @@ client.once(Events.ClientReady, async (c) => {
     if (!ch) log.warn(`${name} (${id}) not found or not visible to the bot`);
     else if (!ch.isTextBased()) log.warn(`${name} (${id}) is not a text channel`);
   }
+  if (!/^(0|false|off|no)$/i.test(process.env.ROLES_SYNC_ON_START ?? '')) {
+    try {   // idempotent backfill on every start: additive only (see src/roles.js)
+      await guild.roles.fetch();
+      await guild.channels.fetch();
+      const r = await roles.sync(guild);
+      for (const l of formatReport(r).split('\n')) (l.includes('PROBLEM') ? log.warn : log.info)(l);
+    } catch (err) {
+      log.error(`roles sync failed: ${err.message}`);
+    }
+  }
   if (config.discord.autoJoin) {
     try {
       const vc = await guild.channels.fetch(config.discord.voiceChannelId);
@@ -284,6 +311,31 @@ client.once(Events.ClientReady, async (c) => {
 
 client.on(Events.InteractionCreate, (i) => handleInteraction(i, ctx));
 client.on(Events.MessageCreate, (m) => gm.handle(m).catch((err) => log.error('GM output handler error:', err)));
+// Roles: on join (needs the GuildMembers intent), else lazily the first time a human is seen (message, command, voice).
+const lazyRole = (member) => {
+  if (member?.guild?.id !== config.discord.guildId || typeof member?.roles?.add !== 'function') return;
+  roles.ensureKnown(member).catch((err) => log.warn(`roles: could not set up ${member.user?.username}: ${err.message}`));
+};
+client.on(Events.GuildMemberAdd, (m) => roles.onMemberAdd(m).catch((err) => log.error(`roles: guildMemberAdd for ${m.user?.username} failed: ${err.message}`)));
+client.on(Events.InteractionCreate, (i) => lazyRole(i.member));
+client.on(Events.MessageCreate, (m) => { if (!m.author?.bot && !m.webhookId) lazyRole(m.member); });
+// GM voice self-guard: a server mute on the bridge bot is undone at once; a server deafen is intended (players hold Deafen Members), left alone and never announced.
+const voiceGuard = createVoiceGuard({
+  getBotId: () => client.user?.id,
+  guildId: config.discord.guildId,
+  logger: log.child('guard'),
+});
+client.on(Events.VoiceStateUpdate, (o, n) => {
+  voiceGuard(o, n).catch((err) => log.warn(`voice guard: ${err.message}`));
+  if (n.member && !n.member.user?.bot) lazyRole(n.member);
+});
+// Any channel created later: hidden from the Crawler role at once unless it is on the players' list; if it is a sheet
+// (discord_gm.py setup-channels, /create), its owner's role is let in once the channel map is saved (5 s, and again by /create).
+client.on(Events.ChannelCreate, (ch) => {
+  if (ch.guild?.id !== config.discord.guildId) return;
+  roles.onChannelCreate(ch).catch((err) => log.warn(`roles: could not hide new channel #${ch.name}: ${err.message}`));
+  setTimeout(() => ctx.lockSheetChannels().catch((err) => log.warn(`roles: sheet lock after channel create failed: ${err.message}`)), 5000).unref?.();
+});
 client.on(Events.Error, (err) => log.error('Discord client error:', err));
 client.on(Events.Warn, (m) => log.warn(m));
 

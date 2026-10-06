@@ -13,6 +13,7 @@ import * as shushCmd from '../src/commands/shush.js';
 import * as skipCmd from '../src/commands/skip.js';
 import { loadConfig, loadWakeConfig } from '../src/config.js';
 import { resolveCampaignRoot } from '../src/paths.js';
+import { REAL_CAMPAIGN } from './helpers/roots.js';
 import { DuplicateGuard, compareTexts, normalizeForDedupe } from '../src/dedupe.js';
 import { GmWakeState } from '../src/gmpause.js';
 import { SpeechQueue } from '../src/queue.js';
@@ -245,7 +246,7 @@ test('voice control file: missing at startup then created => flush; real interva
 });
 
 test('python `discord_gm.py stop` output is understood by the watcher (cross-tool contract)', () => {
-  const py = path.join(resolveCampaignRoot(), 'tools', 'discord_gm.py');
+  const py = path.join(REAL_CAMPAIGN, 'tools', 'discord_gm.py');
   if (!existsSync(py)) return;
   const dir = tmp();
   try {

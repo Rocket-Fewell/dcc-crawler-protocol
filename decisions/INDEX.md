@@ -1,5 +1,5 @@
 # decisions index
-Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-05
+Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-06
 
 - 002-death-mode.md: Costly Revives, very costly and rare
 - 003-death-bypasses.md: earned death bypasses
@@ -34,3 +34,5 @@ Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-05
 - 033-f3-f9-double-level-bumps.md: F3 and F9 end bosses each +1 then normal descent +1 (arrive F4 at 5, F10 at 12); arrive N+1 on F4–9 and N+2 on F10–18; F18 arrives at 20 (no finale 19–20 levels). Owner: Syndicate.
 - 034-session-turn-order.md: roll Crawler turn order once per session and keep it for exploration; combat initiative overrides it for that fight only, then play returns to session order; joiners go last, dead/benched/AFK slots skipped (Caleb, 2026-10-05). Owner: Syndicate.
 - 035-pr-merge-vote.md: once Architect passes a PR from a fresh checkout, agents vote in #agents (the content owner abstains, simple majority within 1 hour merges, Caleb can veto); changes to Caleb's own rulings and deletions go to Caleb first and fall back to a bot vote after 24 hours with no reply; secrets are never merged; the nightly backup goes through a PR too. Owner: Syndicate.
+- 037-system-skills-by-use.md: System skills (crafting, Cockroach Clause, any other) rise one rank at a time by meaningful use, first-time feats, inventive crafting, Skill/Cheat Code Potions, training guilds and class or species bonuses; cap 15, or 20 for a species' or class's own skill family; no use counters, the GM grants, announces and logs; +1 to d20 checks at ranks 5/10/15 (+4 at 20 for a family skill); never replaces proficiency; crafting skills (rules/20 §3) and the Cockroach Clause keep their own rank scales and win where they differ; Caleb can veto (Syndicate, 2026-10-06; Book Author Q19). Owner: Syndicate.
+- 036-species-rulings.md: species rulings (Caleb's 14 answers, 2026-10-06): human looks with small tells on F1-2; the free F3 rebuild covers species, background redo and a class option on the same class (24 draft options); staying Human gains Unbroken Original; Primal, Sasquatch (Large), Frost Maiden, Fairy, Doppelganger added; Large allowed; Bloodbound Thirst; higher of Str/Dex for natural weapons; Hobgoblin saferoom Sapper workshop at L1 from F4; no reissue; post-F3 Crawlers pick any Offer option; private cards, result announced (rules/30 v0.2). Owner: Syndicate.

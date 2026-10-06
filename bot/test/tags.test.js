@@ -226,3 +226,18 @@ test('GmOutputBridge: tags drive voices, [ROLL] never spoken, bot/self ignored',
   assert.equal(enqueued.length, 2);
   assert.deepEqual(enqueued[1], [{ voice: 'gm', text: 'Embed' }, { voice: 'gm', text: 'Visible embed text.' }]);
 });
+
+test('rules notes and action corrections fall back to the system voice for that line only', () => {
+  assert.deepEqual(
+    parseTaggedLines('Hornn lines up the shot.\nRules note: a spear is not a finesse weapon, so no Sneak Attack.\nThe rat squeals.'),
+    [
+      { voice: 'gm', text: 'Hornn lines up the shot.' },
+      { voice: 'system', text: 'Rules note: a spear is not a finesse weapon, so no Sneak Attack.' },
+      { voice: 'gm', text: 'The rat squeals.' },
+    ],
+  );
+  assert.deepEqual(parseTaggedLines('**System note** - that attack needs line of sight.'), [
+    { voice: 'system', text: '**System note** - that attack needs line of sight.' },
+  ]);
+  assert.deepEqual(parseTaggedLines('The ruleset notes nothing here.'), [{ voice: 'gm', text: 'The ruleset notes nothing here.' }]);
+});

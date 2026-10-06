@@ -56,7 +56,7 @@ export function makeEnv(ctx, d) {
     async rollRound(dr, round) {
       const who = String(dr.name || dr.scoreRolls?.who || dr.uname || 'crawler');   // after a Restart the name is wiped: fall back to the Crawler name the rounds were rolled under
       const jobs = R.ROLL_IDS.flatMap((id) => [1, 2, 3, 4, 5, 6].map((n) => ({ id, n })));
-      const out = await Promise.all(jobs.map(({ id, n }) => run(config.create.python, [join(config.campaign.dir, 'tools', 'roll.py'), '--json', '--who', who, '--label', `S8 roll r${round} ${id}${n}`, '4d6dl1'], { env: { ...process.env, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_SESSION: config.campaign.sessionId }, cwd: config.campaign.dir })));   // roll.py logs into THIS session's data dir
+      const out = await Promise.all(jobs.map(({ id, n }) => run(config.create.python, [join(config.campaign.dir, 'tools', 'roll.py'), '--json', '--who', who, '--label', `S8 roll r${round} ${id}${n}`, '4d6dl1'], { env: { ...process.env, DCC_CAMPAIGN_ROOT: config.campaign.dir, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_SESSION: config.campaign.sessionId }, cwd: config.campaign.dir })));   // roll.py logs into THIS session's data dir
       const byId = { A: [], B: [], C: [] };
       out.forEach((r, k) => {
         let dice = null;
@@ -158,7 +158,7 @@ export async function render(d, env0) {
       ensureDir(draftsDir(env.config));
       writeFileSync(specPath, JSON.stringify(spec), { mode: 0o600 });
       const run = ctx.create?.run ?? defaultRun;
-      const card = await cardText((script, ...a) => run(env.config.create.python, [join(env.config.campaign.dir, 'tools', script), '--session', env.config.campaign.sessionId, ...a], { env: { ...process.env, DCC_CAMPAIGN_DIR: env.config.campaign.dir }, cwd: env.config.campaign.dir }), specPath);
+      const card = await cardText((script, ...a) => run(env.config.create.python, [join(env.config.campaign.dir, 'tools', script), '--session', env.config.campaign.sessionId, ...a], { env: { ...process.env, DCC_CAMPAIGN_ROOT: env.config.campaign.dir, DCC_CAMPAIGN_DIR: env.config.campaign.dir }, cwd: env.config.campaign.dir }), specPath);
       embeds[0].setDescription(cut(`${d.notice ? `> ${d.notice}\n\n` : ''}*${prompt}*\n\n**BUILD**\n${buildBlock(d, t)}`, 4000));
       embeds.push(new EmbedBuilder().setColor(0x57f287).setTitle(tx(t, 'hint-s16-card', 'Player-channel card (as it will be posted)')).setDescription(cut(card ?? tx(t, 'hint-s16-card-missing', '(card preview unavailable)'), 3000)));
       try { (await import('node:fs')).unlinkSync(specPath); } catch { /* ignore */ }
@@ -357,7 +357,7 @@ async function saveComfort(i, d, env) {
     const run = env.ctx.create?.run ?? defaultRun;
     let r = { ok: true };
     for (const ix of d.crawlerIndexes ?? [d.crawlerIndex]) {
-      const one = await run(config.create.python, [join(config.campaign.dir, 'tools', 'state.py'), '--session', config.campaign.sessionId, 'set', `crawlers.${ix}.fan_profile.opt_outs`, JSON.stringify(d.optouts)], { env: { ...process.env, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_AUTO_PUBLISH: '0' }, cwd: config.campaign.dir });
+      const one = await run(config.create.python, [join(config.campaign.dir, 'tools', 'state.py'), '--session', config.campaign.sessionId, 'set', `crawlers.${ix}.fan_profile.opt_outs`, JSON.stringify(d.optouts)], { env: { ...process.env, DCC_CAMPAIGN_ROOT: config.campaign.dir, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_AUTO_PUBLISH: '0' }, cwd: config.campaign.dir });
       if (!one.ok) r = one;
     }
     deleteDraft(config, d.uid);
