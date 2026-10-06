@@ -1,6 +1,31 @@
 {
-  "guild_id": "",
+  "guild_id": "1556163673469222942",
   "category_name": "Crawler Sheets (s1)",
-  "category_id": "",
-  "crawlers": {}
+  "category_id": "1556818436041220158",
+  "crawlers": {
+    "Eisenhorn": {
+      "players": [
+        "Hornn"
+      ],
+      "channel_id": "1556818438012276796",
+      "channel_name": "s1-hornn-eisenhorn",
+      "owner": "Hornn"
+    },
+    "Shirayuki": {
+      "players": [
+        "Grimmtrouble"
+      ],
+      "channel_id": "1556821573334470746",
+      "channel_name": "s1-grimmtrouble-shirayuki",
+      "owner": "Grimmtrouble"
+    },
+    "Mr. White": {
+      "players": [
+        "Trailer Park Moses"
+      ],
+      "channel_id": "1556829951934734406",
+      "channel_name": "s1-trailer-park-moses-mr-white",
+      "owner": "Trailer Park Moses"
+    }
+  }
 }

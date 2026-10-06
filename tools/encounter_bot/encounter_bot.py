@@ -112,7 +112,8 @@ B70 = "rules/70-encounter-budget-5e.json"
 BUDGET_PATH = os.path.join(ROOT, "rules", "70-encounter-budget-5e.json")
 B70_TOKEN = re.compile(r"\{\{b70:([A-Za-z0-9_.\-]+)\}\}")
 SIZES = ("2", "3", "4")
-MAX_SENTENCES = 4
+MAX_SENTENCES = 4  # soft guideline only: over this is a WARN, never a FAIL (Caleb 2026-10-05)
+HARD_MAX_SENTENCES = 10  # over this the WARN says "consider set_piece"; still a WARN, never a FAIL
 PROPOSED_TAG = "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
 GM = "[GM-ONLY]"
 VOICE_KEYS = ("system_intro", "midpoint_twist", "win")
@@ -125,6 +126,8 @@ SYSTEM_INTRO_AS_GM_NARRATION = frozenset({
     "enc-d02-02",
 })
 STORY_IDS = {"f01-any-%04d" % n for n in range(55, 66)}  # 0055 (pet biscuit pair) .. 0065
+# Floor 2 Soft Open story deck (lore/tables/loot-decks/f02-any-story-boxes.json), all 13 cards.
+STORY_IDS |= {"f02-any-%04d" % n for n in range(1, 14)}  # all 13 Floor 2 Story Boxes (0001 and 0011 re-bound and approved by Syndicate 18:57 Oct 5 2026)
 
 NUMERIC_LINTS = [
     (re.compile(r"\b\d[\d,]*\s*(?:credits?|cr|xp|gp|sp|cp)\b", re.I), "credit/XP/price amount"),
@@ -342,6 +345,61 @@ def sentences(text):
     return [s for s in re.findall(r"[^.!?]+(?:[.!?]+[\"')\]]*|$)", text) if s.strip()]
 
 
+def _norm_name(text):
+    """Lower-case, single-spaced, no leading 'the ' (so 'The Green Room' matches 'the Z9 Green Room')."""
+    t = re.sub(r"\s+", " ", str(text or "").replace("*", "")).strip().lower()
+    return t[4:] if t.startswith("the ") else t
+
+
+def names_saferoom(text, name):
+    """True if `text` names the saferoom `name` (case-insensitive, leading 'The' optional)."""
+    n = _norm_name(name)
+    return bool(n) and n in re.sub(r"\s+", " ", str(text or "").replace("*", "")).lower()
+
+
+def parse_floor_saferooms(overview):
+    """Saferooms named in a floor overview (floors/fNN/00-overview.md), in listed order: [(zone_id, name), ...].
+
+    Source of truth is the overview's at-a-glance "Saferooms" row, e.g.
+      Floor 1: | **Saferooms** | 2: **The Break Room** (Zone 6) and **The Green Room** (Zone 9) |
+      Floor 2: | Saferooms | Storm Shelter A (mailbox M-358); Big Shot Chicken B (Qwist M-506). May lie elsewhere (Core Ch1) |
+    Names are the bold segments if any, else the ';'-separated chunks with parentheticals dropped. Each name's zone id
+    comes from a "(Zone N)" right after it, else "<name> zNN" anywhere in the overview (the Regions row), else the
+    zone table row "| N | **<name>** |". Names with no zone id (e.g. "May lie elsewhere") are not saferooms and are dropped.
+    """
+    m = re.search(r"^\|\s*\**\s*Saferooms\s*\**\s*\|(.*?)\|\s*$", overview or "", re.M | re.I)
+    if not m:
+        return []
+    cell = m.group(1)
+    bold = [(b.group(1).strip(), cell[b.end():]) for b in re.finditer(r"\*\*([^*]+)\*\*", cell)]
+    if bold:
+        cands = bold
+    else:
+        cands = []
+        for chunk in re.split(r";", cell):
+            name = re.sub(r"\([^)]*\)", "", chunk).split(". ")[0].strip(" .")
+            if name:
+                cands.append((name, chunk[chunk.find(name) + len(name):] if name in chunk else ""))
+    out = []
+    for name, after in cands:
+        name = re.sub(r"^\d+\s*:\s*", "", name).strip()
+        zone = None
+        zm = re.match(r"\s*\(\s*Zone\s+([0-9]+|[A-Z])\s*\)", after)
+        if not zm:
+            zm = re.search(re.escape(name) + r"\s+\(?\s*(z[0-9]+|z[A-Z])\b", overview)
+            if zm:
+                zone = zm.group(1)
+                zm = None
+        if not zone and not zm:
+            zm = re.search(r"^\|\s*([0-9]+|[A-Z])\s*\|\s*\**\s*" + re.escape(name) + r"\s*\**\s*\|", overview, re.M)
+        if zm and not zone:
+            z = zm.group(1)
+            zone = "z%02d" % int(z) if z.isdigit() else "z" + z
+        if zone and name and (zone, name) not in out:
+            out.append((zone, name))
+    return out
+
+
 class Report:
     def __init__(self):
         self.items = []  # (status, check, detail)
@@ -404,6 +462,13 @@ class Data:
             overview_path = os.path.join(floor_pages_dir(1), "00-overview.md")
         self.overview_path = overview_path
         self.overview = read_text(overview_path)
+        # Per-floor saferooms come from this floor's own overview only (never Floor 1's fallback copy):
+        # [(zone_id, name), ...] in listed order. The last one listed is the late-floor Long Rest anchor
+        # (Floor 1: The Green Room z09; Floor 2: Big Shot Chicken B z27). Empty = the floor has no Saferooms row yet.
+        own_ov = os.path.join(floor_pages_dir(self.floor), "00-overview.md")
+        self.saferoom_source = display_path(own_ov)
+        self.saferooms = parse_floor_saferooms(self.overview if overview_path == own_ov else "")
+        self.saferoom_anchor = self.saferooms[-1] if self.saferooms else (None, None)
         self.ov_grams = set()
         w = words(self.overview)
         for i in range(len(w) - 9):
@@ -682,10 +747,21 @@ def build(spec, data, rep):
     else:
         rep.fail("missed-collapse rule", "clock.collapse_miss must be Caleb's ~10:02 PM CT ruling: death, no Reprieve, stasis counts, Detour Tax only for a missed key, no hauled-down/toll/Exhaustion effects")
     sr = clock.get("saferoom_rule", {})
-    if sr.get("only_saferoom") == "z09" and sr.get("break_room_not_saferoom_from_day") and "Green Room" in sr.get("text", ""):
-        rep.ok("saferoom rule", "Break Room not a saferoom from Day %s; the Green Room is the only saferoom to the end" % sr["break_room_not_saferoom_from_day"])
+    # Floor-aware: valid saferooms come from floors/fNN/00-overview.md (Data.saferooms), never a hardcoded name.
+    # only_saferoom must be the floor's late-floor anchor (last saferoom listed) and the rule text must name it.
+    anchor_zone, anchor_name = data.saferoom_anchor
+    listed = ", ".join("%s (%s)" % (n_, z_) for z_, n_ in data.saferooms) or "none"
+    if not data.saferooms:
+        rep.fail("saferoom rule", "Floor %d: no saferooms found in %s (needs an at-a-glance '| Saferooms |' row whose names map to zone ids)" % (
+            data.floor, data.saferoom_source))
+    elif (sr.get("only_saferoom") == anchor_zone and isinstance(sr.get("break_room_not_saferoom_from_day"), int)
+          and names_saferoom(sr.get("text", ""), anchor_name)):
+        rep.ok("saferoom rule", "Floor %d saferooms (%s): %s; %s is the late-floor saferoom anchor%s" % (
+            data.floor, data.saferoom_source, listed, anchor_name,
+            "" if sr["break_room_not_saferoom_from_day"] >= 99 else "; Break Room not a saferoom from Day %s" % sr["break_room_not_saferoom_from_day"]))
     else:
-        rep.fail("saferoom rule", "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room")
+        rep.fail("saferoom rule", "Floor %d: clock.saferoom_rule needs only_saferoom=%s, break_room_not_saferoom_from_day (int, 99 = never) and text naming %s (saferooms from %s: %s)" % (
+            data.floor, anchor_zone, anchor_name, data.saferoom_source, listed))
     if "Silver" in clock.get("achievement_caps", "") and "Story Box" in clock.get("achievement_caps", "") and "snark" in clock.get("achievement_caps", ""):
         rep.ok("achievement caps noted", "soft cap, Silver ceiling, one Story Box per floor, snark-only allowed")
     else:
@@ -889,15 +965,18 @@ def build(spec, data, rep):
                      and "not a saferoom" not in r["note"].lower()]
         field_rest = [r for r in ro if "outside a saferoom" in r["option"].lower()]
         rest_cite = cite("floors.1.prices.rest_without_saferoom")
+        anchor_name = data.saferoom_anchor[1]  # floor-aware: Floor 1 The Green Room, Floor 2 Big Shot Chicken B
         if not field_rest or not all("Short Rest" in r["note"] and "no Long Rest" in r["note"] and rest_cite in r["note"]
-                                     and "Green Room" in r["note"] for r in field_rest):
+                                     and anchor_name and names_saferoom(r["note"], anchor_name) for r in field_rest):
             rep.fail("rest options", "the rest-outside-a-saferoom option must say a field rest is only a Short Rest, the price buys a quiet Short Rest and grants no Long Rest, "
-                                     "the Green Room is where the Long Rest happens, and cite %s" % rest_cite)
+                                     "%s is where the Long Rest happens, and cite %s" % (anchor_name or "this floor's saferoom (none found in %s)" % data.saferoom_source, rest_cite))
         elif bad_break:
             rep.fail("rest options", "from the day the Break Room loses service it must read 'not a saferoom'")
+        elif sr.get("break_room_not_saferoom_from_day", 99) < 99:
+            rep.ok("rest options", "%d options listed; %s is the only saferoom once the Break Room closes (Day %s on)" % (
+                len(ro), anchor_name, sr.get("break_room_not_saferoom_from_day", "?")))
         else:
-            rep.ok("rest options", "%d options listed; Green Room is the only saferoom once the Break Room closes (Day %s on)" % (
-                len(ro), sr.get("break_room_not_saferoom_from_day", "?")))
+            rep.ok("rest options", "%d options listed; the field rest points to %s for the Long Rest" % (len(ro), anchor_name))
     else:
         rep.fail("rest options", "day.rest_options required")
     for co_ in dd.get("carry_over", []):
@@ -1068,7 +1147,7 @@ def build(spec, data, rep):
                 if k == "story_box":
                     story_here += 1
                     if h["card_id"] not in STORY_IDS or not h.get("gm_only"):
-                        rep.fail("%s story box hook" % eid, "%s must be one of f01-any-0055..0065 and gm_only=true" % h["card_id"])
+                        rep.fail("%s story box hook" % eid, "%s must be a STORY_IDS card (f01-any-0055..0065 or f02-any Soft Open deck) and gm_only=true" % h["card_id"])
                     if not h.get("note", "").startswith(GM):
                         rep.fail("%s story box hook" % eid, "note must start with [GM-ONLY]")
                 else:
@@ -1237,11 +1316,16 @@ def build(spec, data, rep):
             overlap.append(w)
     rep.ok("voice lines are original (no 10-word run copied from the overview)") if not overlap \
         else rep.fail("voice lines copy the overview", ", ".join(overlap))
-    too_long = ["%s (%d sentences)" % (w, len(sentences(t_))) for w, t_, sp in pfb if not sp and len(sentences(t_)) > MAX_SENTENCES]
-    if too_long:
-        for m_ in too_long:
-            rep.fail("read-aloud length", "%s: over %d sentences and not tagged set_piece" % (m_, MAX_SENTENCES))
-    else:
+    # Caleb 2026-10-05: flavor length is a SOFT guideline (keep it punchy; the GM may go longer when the moment earns it).
+    # Over MAX_SENTENCES is a WARN and never fails the run; set_piece blocks are exempt. Over HARD_MAX_SENTENCES the WARN
+    # suggests tagging set_piece, but it is still only a WARN.
+    too_long = [(w, len(sentences(t_))) for w, t_, sp in pfb if not sp and len(sentences(t_)) > MAX_SENTENCES]
+    for w_, n_ in too_long:
+        if n_ > HARD_MAX_SENTENCES:
+            rep.warn("read-aloud length (soft)", "%s (%d sentences): well over the %d-sentence guideline; trim or tag set_piece if it is a set piece" % (w_, n_, MAX_SENTENCES))
+        else:
+            rep.warn("read-aloud length (soft)", "%s (%d sentences): over the %d-sentence guideline; fine if the moment earns it" % (w_, n_, MAX_SENTENCES))
+    if not too_long:
         rep.ok("read-aloud blocks are %d sentences or fewer" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
     sps = [w for w, _, sp in pfb if sp]
     if len(sps) > 1:

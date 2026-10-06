@@ -2,7 +2,7 @@
 Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
 
 
-- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.17.
+- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.21.
 - rules/20-crafting-5e.md: crafting rules (tables, levels, ingredients, recipes, potion limits, explosives, failure, System snark, quick reference). Owner: Syndicate. Status: review v0.3.7 (all open questions answered by Caleb 2026-10-04 and applied; decision 013-crafting; workstation prices follow the F3-18 schedule in 9.1a, decision 030).
 - rules/30-species-supplement-5e.md: species supplement (Floor 3 Offer of starting species + two oddities, free optional rebuild, 12 DCC-style oddities tagged CANON / CANON-INSPIRED / HOUSE, balance table, open questions, source map). Owner: Syndicate. Status: draft v0.1.4.
 - rules/40-loot-deck-spec-5e.md: loot deck spec (JSON card + deck-file schema with credit_value and draw_weight, GM draw rules, Floor 1-2 starter 5e item reference, 5 sample cards, open questions). Owner: Syndicate. Status: draft v0.1.8.

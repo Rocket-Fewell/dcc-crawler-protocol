@@ -1,0 +1,585 @@
+{
+  "version": 1,
+  "crawlers": {
+    "Eisenhorn": {
+      "published_at": "2026-10-05T20:12:25-05:00",
+      "view": {
+        "name": "Eisenhorn",
+        "player": "Hornn",
+        "status": "active",
+        "class": "Rogue",
+        "species": "Orc",
+        "level": 1,
+        "xp": 0,
+        "hp": {
+          "current": 10,
+          "max": 10,
+          "temp": 0
+        },
+        "ac": 13,
+        "hit_dice": {
+          "current": 1,
+          "max": 1
+        },
+        "abilities": {
+          "str": 18,
+          "dex": 15,
+          "con": 14,
+          "int": 7,
+          "wis": 11,
+          "cha": 12
+        },
+        "credits": 10,
+        "conditions": [],
+        "boxes": {},
+        "death_saves": {
+          "successes": 0,
+          "fails": 0
+        },
+        "inventory": [
+          {
+            "name": "Motorcycle Jacket (Leather Armor)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "AC 11 + Dex. Light armor."
+          },
+          {
+            "name": "Box Cutter (Dagger)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick."
+          },
+          {
+            "name": "Pawnshop Shortsword (Shortsword)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d6 piercing, Finesse, Light. Mastery: Vex."
+          },
+          {
+            "name": "Compound Bow From a Sporting-Goods Display (Shortbow)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex."
+          },
+          {
+            "name": "Prop Arrows, Foam Tips Removed (Arrows)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Ammunition for bows; 20 arrows."
+          },
+          {
+            "name": "Quiver Made From a Cut-Up Backpack (Quiver)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Holds 20 arrows or 20 bolts."
+          },
+          {
+            "name": "Bobby Pins and a Gift Card (Thieves' Tools)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Pick locks and disarm traps; proficiency applies."
+          },
+          {
+            "name": "Gym Bag of Suspicious Hardware (Burglar's Pack)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Backpack, 1,000 ball bearings, 10 ft string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 oil flasks, 5 days rations, tinderbox, waterskin, 50 ft rope."
+          },
+          {
+            "name": "Broom Handle With a Kitchen Knife Taped On (Spear)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap."
+          },
+          {
+            "name": "Bag of Mismatched Casino Dice (Dice)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it."
+          },
+          {
+            "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check."
+          },
+          {
+            "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "Clothing; no mechanics."
+          },
+          {
+            "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
+            "qty": 5,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "1 day of food, 2 lb."
+          },
+          {
+            "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "2 HP, DC 17 Strength to burst."
+          },
+          {
+            "name": "Tiki Torch, Unlicensed (Torch)",
+            "qty": 3,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour."
+          },
+          {
+            "name": "Squeeze Water Bottle (Waterskin)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Holds 4 pints."
+          },
+          {
+            "name": "Intake Bag",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Cosmetic. Holds nothing special."
+          },
+          {
+            "name": "Paint-Can Pry Bar (Crowbar)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Crowbar: advantage on Strength checks where leverage helps."
+          }
+        ],
+        "achievements": [
+          "Paperwork Survivor"
+        ],
+        "achievement_text": {},
+        "standing_orders": "Gets to the nearest saferoom that has no mobs enroute, otherwise gets behind the highest strength conscious party member and auto attacks",
+        "standing_reaction": "Opportunity Attacks: on",
+        "signature": "Fuggem: slide behind enemy and shank.",
+        "build": [
+          "Origin feat: Savage Attacker",
+          "Skills: Athletics, Intimidation, Stealth, Sleight of Hand, Deception, Acrobatics",
+          "Expertise: Thieves' Tools, Stealth",
+          "Tools: One Gaming Set, Thieves' Tools",
+          "Weapon mastery: Duct-Taped Mop (Quarterstaff), Hatchet From a Camping Display (Handaxe)",
+          "Languages: Common, Common Sign Language, Giant"
+        ],
+        "pet": null
+      },
+      "message_ids": [
+        "1556836494256119839",
+        "1556836494952366114"
+      ]
+    },
+    "Shirayuki": {
+      "published_at": "2026-10-05T19:13:08-05:00",
+      "view": {
+        "name": "Shirayuki",
+        "player": "Grimmtrouble",
+        "status": "active",
+        "class": "Fighter",
+        "species": "Human",
+        "level": 1,
+        "xp": 0,
+        "hp": {
+          "current": 12,
+          "max": 12,
+          "temp": 0
+        },
+        "ac": 16,
+        "hit_dice": {
+          "current": 1,
+          "max": 1
+        },
+        "abilities": {
+          "str": 15,
+          "dex": 14,
+          "con": 14,
+          "int": 8,
+          "wis": 13,
+          "cha": 11
+        },
+        "credits": 9,
+        "conditions": [],
+        "boxes": {},
+        "death_saves": {
+          "successes": 0,
+          "fails": 0
+        },
+        "inventory": [
+          {
+            "name": "Chain-Link Fencing Laced Over a Work Coverall (Chain Mail)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "AC 16. Needs Str 13. Stealth disadvantage. Heavy armor."
+          },
+          {
+            "name": "Sheet-Metal Slab on a Pipe Handle (Greatsword)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "2d6 slashing, Heavy, Two-Handed. Mastery: Graze."
+          },
+          {
+            "name": "Chain With a Padlock On It (Flail)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d8 bludgeoning. Mastery: Sap."
+          },
+          {
+            "name": "Curtain-Rod Javelin (Javelin)",
+            "qty": 8,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d6 piercing, Thrown (30/120). Mastery: Slow."
+          },
+          {
+            "name": "Maintenance-Closet Duffel (Dungeoneer's Pack)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Backpack, crowbar, hammer, 10 pitons, 10 torches, tinderbox, 10 days rations, waterskin, 50 ft rope."
+          },
+          {
+            "name": "Box Cutter (Dagger)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick."
+          },
+          {
+            "name": "Bobby Pins and a Gift Card (Thieves' Tools)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Pick locks and disarm traps; proficiency applies."
+          },
+          {
+            "name": "Bag of Mismatched Casino Dice (Dice)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it."
+          },
+          {
+            "name": "Gym-Locker Sleeping Bag (Bedroll)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Sleeping gear."
+          },
+          {
+            "name": "Ziplock Pouch (Pouch)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Holds 6 lb of small items."
+          },
+          {
+            "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "Clothing; no mechanics."
+          },
+          {
+            "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
+            "qty": 5,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "1 day of food, 2 lb."
+          },
+          {
+            "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "2 HP, DC 17 Strength to burst."
+          },
+          {
+            "name": "Tiki Torch, Unlicensed (Torch)",
+            "qty": 3,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour."
+          },
+          {
+            "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check."
+          },
+          {
+            "name": "Squeeze Water Bottle (Waterskin)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Holds 4 pints."
+          },
+          {
+            "name": "Intake Bag",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Cosmetic. Holds nothing special."
+          }
+        ],
+        "achievements": [
+          "Paperwork Survivor"
+        ],
+        "achievement_text": {},
+        "standing_orders": "White Requiem: The Snow Ghost summons a storm of spectral white bones that erupts around her target. The bones lock the target in place and deal heavy necrotic damage. If the target is already severel",
+        "standing_reaction": "Opportunity Attacks: on",
+        "signature": "",
+        "build": [
+          "Origin feat: Lucky, Skilled",
+          "Class picks: Dueling",
+          "Skills: Insight, Stealth, Animal Handling, Athletics, Acrobatics, Religion, Sleight of Hand, Survival",
+          "Tools: Thieves' Tools",
+          "Weapon mastery: Box Cutter (Dagger), Hatchet From a Camping Display (Handaxe), Fire Axe, BREAK GLASS Sticker Intact (Greataxe)",
+          "Languages: Common, Common Sign Language, Draconic"
+        ],
+        "pet": null
+      },
+      "message_ids": [
+        "1556821574563274755",
+        "1556821576026951752"
+      ]
+    },
+    "Mr. White": {
+      "published_at": "2026-10-05T20:36:30-05:00",
+      "view": {
+        "name": "Mr. White",
+        "player": "Trailer Park Moses",
+        "status": "active",
+        "class": "Monk",
+        "species": "Goliath",
+        "level": 1,
+        "xp": 0,
+        "hp": {
+          "current": 11,
+          "max": 11,
+          "temp": 0
+        },
+        "ac": 15,
+        "hit_dice": {
+          "current": 1,
+          "max": 1
+        },
+        "abilities": {
+          "str": 15,
+          "dex": 18,
+          "con": 16,
+          "int": 11,
+          "wis": 13,
+          "cha": 12
+        },
+        "credits": 20,
+        "conditions": [],
+        "boxes": {},
+        "death_saves": {
+          "successes": 0,
+          "fails": 0
+        },
+        "inventory": [
+          {
+            "name": "Broom Handle With a Kitchen Knife Taped On (Spear)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap."
+          },
+          {
+            "name": "Box Cutter (Dagger)",
+            "qty": 5,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick."
+          },
+          {
+            "name": "Confiscated Chemistry Set (Alchemist's Supplies)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "A set of artisan's tools; proficiency applies to checks with it."
+          },
+          {
+            "name": "Lost-and-Found Duffel, Someone Else's Gym Clothes (Explorer's Pack)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days rations, waterskin, 50 ft rope."
+          },
+          {
+            "name": "Compound Bow From a Sporting-Goods Display (Shortbow)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex."
+          },
+          {
+            "name": "Prop Arrows, Foam Tips Removed (Arrows)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Ammunition for bows; 20 arrows."
+          },
+          {
+            "name": "Bag of Mismatched Casino Dice (Dice)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it."
+          },
+          {
+            "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
+            "qty": 2,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check."
+          },
+          {
+            "name": "Quiver Made From a Cut-Up Backpack (Quiver)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "weapons",
+            "mechanics": "Holds 20 arrows or 20 bolts."
+          },
+          {
+            "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "Clothing; no mechanics."
+          },
+          {
+            "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
+            "qty": 4,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "1 day of food, 2 lb."
+          },
+          {
+            "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "2 HP, DC 17 Strength to burst."
+          },
+          {
+            "name": "Tiki Torch, Unlicensed (Torch)",
+            "qty": 3,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour."
+          },
+          {
+            "name": "Squeeze Water Bottle (Waterskin)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Holds 4 pints."
+          },
+          {
+            "name": "Intake Bag",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Cosmetic. Holds nothing special."
+          }
+        ],
+        "achievements": [
+          "Paperwork Survivor",
+          "Don't Skip Intro",
+          "Win Initiative"
+        ],
+        "achievement_text": {
+          "Don't Skip Intro": "Absolutely nothing, Mr. White. Patience is its own reward, and it's a crappy one.",
+          "Win Initiative": "None. Bragging rights only."
+        },
+        "standing_orders": "SMASH",
+        "standing_reaction": "Opportunity Attacks: on",
+        "signature": "LETS FUCK THEM UP!!!",
+        "build": [
+          "Origin feat: Savage Attacker",
+          "Skills: Athletics, Intimidation, Stealth, Insight",
+          "Tools: One Gaming Set",
+          "Languages: Common, Goblin, Orc"
+        ],
+        "pet": null
+      },
+      "message_ids": [
+        "1556842557030268961",
+        "1556842558162862151"
+      ]
+    }
+  }
+}

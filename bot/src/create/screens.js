@@ -555,8 +555,8 @@ export const SCREENS = {
         select(cid(d.uid, 'S10', 'kc'), ownerKit(env.t, classLabel(env.t, d.class)), optionsFromPackages(c, env.t, d, 'class'), { selected: [d.kitClass] }),
         select(cid(d.uid, 'S10', 'kb'), ownerKit(env.t, backgroundLabel(env.t, d.background)), optionsFromPackages(b, env.t, d, 'background'), { selected: [d.kitBg] }),
         row(button(cid(d.uid, 'S10', 'shop'), tx(env.t, 'button-s10-shop', 'Vending Wall (buy)'), { style: ButtonStyle.Primary, disabled: !(d.kitClass && d.kitBg) }), button(cid(d.uid, 'S10', 'prices'), tx(env.t, 'button-s10-prices', 'Price list')), button(cid(d.uid, 'S10', 'clear'), tx(env.t, 'button-s10-clear', 'Clear shopping'), { disabled: !(d.cart ?? []).length })),
-        // one pick per variant header in the chosen packages (holy symbol, gaming set, instrument, artisan's tools): max two
-        ...R.pendingVariants(d, env.t).slice(0, 2).map((v) => select(cid(d.uid, 'S10', 'var', `${v.src}~${v.id}`), tx(env.t, 'hint-s10-variant', `Pick your ${env.t.chargen.items[v.id].name.replace(/ \(your choice\)/, '')} (${v.src} package)`, { item: env.t.chargen.items[v.id].name.replace(/ \(your choice\)/, ''), src: v.src }),
+        // one variant pick at a time (Discord allows 5 rows: 2 package menus + buttons + this + nav); unpicked types show first, so a second one appears after the first is chosen
+        ...[...R.pendingVariants(d, env.t)].sort((a, b) => (a.chosen && a.options.includes(a.chosen) ? 1 : 0) - (b.chosen && b.options.includes(b.chosen) ? 1 : 0)).slice(0, 1).map((v) => select(cid(d.uid, 'S10', 'var', `${v.src}~${v.id}`), tx(env.t, 'hint-s10-variant', `Pick your ${env.t.chargen.items[v.id].name.replace(/ \(your choice\)/, '')} (${v.src} package)`, { item: env.t.chargen.items[v.id].name.replace(/ \(your choice\)/, ''), src: v.src }),
           v.options.map((o) => ({ label: K.labelFor(env.t, o), value: o, description: `${K.plainName(env.t, o)} - ${priceText(env.t, K.priceCp(env.t, o, v.id))}` })), { selected: v.chosen ? [v.chosen] : [] })),
       ];
     },

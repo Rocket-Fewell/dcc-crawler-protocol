@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.15 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.18 | Updated: 2026-10-05
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -446,3 +446,23 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 # Pass 34 (2026-10-05 CT): F2 achievement framing v0.1
 
 - Wrote `drafts/f02-achievement-framing-v0.1.md` + `.json` (sha256 md 85460e228c239eed… / json d5c6324b9d05573d…). Framed 67; DEMOTE 37; CANON-WIRED 5; cites fixed 4. No campaign edits.
+
+---
+# Pass 35 (2026-10-05 CT): Soft Open F2 Story Box deck
+
+- Wrote `tables/loot-decks/f02-any-story-boxes.json` (sha256 957022b30602bc23ac29f162469608f97aaaa3d9967ab19037537de0b3c1c7bd). 13 Legendary hand-pick candidates; cap one award per table per Soft Open floor. No companion .md (F1 story deck has none in loot-decks/). deck_check 0 errors. No campaign edits.
+
+---
+# Learning pass, 2026-10-05 6:2x PM CT (Pass 36; ledger Pass 33): clubs and Personal Spaces
+
+- Closes most of TODO 54 (Desperado Club, Bopca personal-space pages). New ledger section 9.7: M-766..M-825 (60 rows) and X-085. New `catalog/clubs-and-personal-spaces-canon.md`. Sources: W:Desperado Club, W:Club Vanquisher, W:Desperado Pass Tattoo, W:Destruction of the Desperado Club, W:Personal Space, W:Bopca, YT:FHLzs9fjyU8. ledger_check failures: 0 (three Pass 32 quote-format failures fixed and logged). Ledger v1.17, ledger-rules v1.14.
+- Headline for the RPG: the Desperado dance floor is NOT a safe room, and every club door on a floor opens into the same shared room (but you always exit where you came in, so no fast travel). Bopca haggling has a hard 25% floor enforced by the System.
+- TODO 55: mine the Floor 3 quest pages (Vengeance of the Daughter, Show Must Go On, Where the Sidewalk Ends) still left from TODO 54. TODO 56: X-085 bard dual club access needs a named example or the text.
+- Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
+
+---
+# Pass 36 (2026-10-05 CT): F2 Story Box Syndicate fixes
+
+- f02-any-0001 → Clone Unmasked Box (expose clone mid-fight; no Boss Box double-pay).
+- f02-any-0011 → Not On The Call Sheet Box (unscripted player plan; distinct from A-136).
+- sha256 cd3521385e9d00e5634dd5095ab622a8c535ac151ca1d5545507fb5c5f5360c2. deck_check 0 errors.

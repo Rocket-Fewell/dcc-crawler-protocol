@@ -1,0 +1,688 @@
+{
+  "schema": "loot-deck/0.1.2",
+  "deck_id": "f02-any-story-boxes",
+  "version": "0.1.1",
+  "floor": 2,
+  "zone": "any",
+  "zone_name": "Floor 2 Soft Open: Story Boxes (Legendary one-offs, GM hand-pick only)",
+  "owner": "DCC Lore",
+  "updated": "2026-10-05",
+  "cards": [
+    {
+      "id": "f02-any-0001",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Clone Nameplate Charm (This One Is a Copy)",
+      "real_5e_name": "Charm of Copy Recognition (house: unmask mid-fight)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Worn as a pin (no attunement). Once per long rest, when you start a fight against a named Soft Open boss or Elite, you may learn whether it is a clone, duplicate, or original (GM yes/no) and gain Advantage on your first attack roll against it this fight.",
+        "action_cost": "None (passive)",
+        "range": "Self",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "one attack",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One Advantage per long rest. Clone/original answer is story only (no extra damage). Does nothing to unnamed vermin. This Story Box is for unmasking mid-fight, never for the kill (the Soft Open Silver Boss Box pays the clear). Not bound: tradeable, sellable, lootable.",
+        "weight_lb": 0.1
+      },
+      "spoken_line": "Clone Nameplate Charm. Once per rest, learn if a Soft Open boss is a copy and gain Advantage on your first attack.",
+      "snark_line": "You read the fine print on a Neighborhood Boss. Soft Open hates literacy.",
+      "reward": "Clone Nameplate Charm. Once per rest, learn if a Soft Open boss is a copy and gain Advantage on your first attack.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "boss"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Clone Nameplate Charm (story value 50000, not bound)"
+      },
+      "box_name": "Clone Unmasked Box",
+      "deed": "Exposed Soft Open's Krakaren as a clone mid-fight (nameplate/tell called out before it dropped)",
+      "notes": "LEDGER: M-709, X-059 (Neighborhood Boss tier). trigger_deed: a Crawler exposes Soft Open's Krakaren as a clone mid-fight (reads the nameplate/tell aloud or forces the copy reveal) before it is dropped or talked down — one-time, named, not the kill. The Silver Boss Box still pays the clear separately; this card must not double-pay that deed. A-123 (bosses leave chambers) is adjacent flavor only, not this item. power_note: Utility rung 2 (one Advantage + yes/no clone read). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 50000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f02-any-0002",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Pupa Timing Whistle (Do Not Blow Early)",
+      "real_5e_name": "Whistle of Hatch Warning (house: pupa timer)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, as a Bonus Action, blow the whistle while within 30 ft of a Soft Open pupa sac or similar timed hatch. You learn whether the timer will pop this round, next round, or later (GM three-way call) and creatures you choose within 10 ft of you have Advantage on Dexterity saving throws against the hatch until the end of your next turn.",
+        "action_cost": "Bonus Action",
+        "range": "30 ft (whistle); 10 ft (allies)",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "until end of your next turn",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One use per long rest. Advantage only vs hatch/spit effects from that sac. Destroying a sac early still releases half-formed creatures (Soft Open ruling X-060); the whistle does not stop that.",
+        "weight_lb": 0.2
+      },
+      "spoken_line": "Pupa Timing Whistle. Once per rest, learn the hatch window and give nearby allies Advantage on the blast.",
+      "snark_line": "Blow it early and Soft Open will still invent a wasp with commitment issues.",
+      "reward": "Pupa Timing Whistle. Once per rest, learn the hatch window and give nearby allies Advantage on the blast.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "traps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Pupa Timing Whistle (story value 35000, not bound)"
+      },
+      "box_name": "Hatch Discipline Box",
+      "deed": "Handled a Soft Open pupa sac on purpose (timer ride or early destroy) without a party wipe",
+      "notes": "LEDGER: X-060, M-385, M-396 (context). trigger_deed: Soft Open grub-to-pupa-to-Vespa beat resolved as a deliberate choice. power_note: Utility rung 2 (timing read + short Advantage bubble). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 35000,
+      "bound": false,
+      "sale_value": 250
+    },
+    {
+      "id": "f02-any-0003",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Psionic Earplug Pair (One Size Fits Guilt)",
+      "real_5e_name": "Earplugs of Fogged Thought (house: Mind Horror edge)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Worn in the ears (no attunement). Once per long rest, when you would make a saving throw against a Soft Open psionic or psychic effect, you may make it with Advantage. If your Intelligence is 16 or higher, you may instead grant that Advantage to one ally within 30 ft who can hear you.",
+        "action_cost": "None (passive)",
+        "range": "Self or 30 ft (ally)",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "one save",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One Advantage per long rest. Does nothing against non-psionic effects. Not bound.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Psionic Earplug Pair. Once per rest, Advantage on one Soft Open psychic save, or pass it to an ally if Int 16+.",
+      "snark_line": "Your skull filed a weather report. Soft Open billed you for postage.",
+      "reward": "Psionic Earplug Pair. Once per rest, Advantage on one Soft Open psychic save, or pass it to an ally if Int 16+.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Psionic Earplug Pair (story value 30000, not bound)"
+      },
+      "box_name": "Mailbox Migraine Box",
+      "deed": "Survived a Soft Open Mind Horror contact and opened (or properly failed) a saferoom mailbox beat",
+      "notes": "LEDGER: M-403, M-358, M-511. trigger_deed: Soft Open Mind Horror plus mailbox set piece (subscriber open or honest error). power_note: Utility rung 2. GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 30000,
+      "bound": false,
+      "sale_value": 250
+    },
+    {
+      "id": "f02-any-0004",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "One-Cage Ribbon (Figure It Out, Einstein)",
+      "real_5e_name": "Ribbon of the Single Latch (house: Menagerie key reminder)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "A faded ribbon tied to a spent Soft Open cage key. Once per floor, when you choose which cage, lock, or pet door to open under a one-use key rule, you may ask the GM one yes/no question about which choice is safest for the party (no loot spoilers). Story only afterward.",
+        "action_cost": "Action",
+        "range": "Self",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "floor"
+        },
+        "limits": "Once per Soft Open floor. Answer is yes/no only. Does not create a new key. Not bound.",
+        "weight_lb": 0
+      },
+      "spoken_line": "One-Cage Ribbon. Once per Soft Open floor, one yes-or-no question before you spend a one-use cage key.",
+      "snark_line": "You have a key. Soft Open still thinks you are slow.",
+      "reward": "One-Cage Ribbon. Once per Soft Open floor, one yes-or-no question before you spend a one-use cage key.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pets"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: One-Cage Ribbon (story value 25000, not bound)"
+      },
+      "box_name": "Menagerie Choice Box",
+      "deed": "Resolved Soft Open Menagerie / pound key choice without stranding the party",
+      "notes": "LEDGER: A-083, M-414. Item is HOUSE; Menagerie deed is ledger-backed (WIKI-ONLY A-083). power_note: Story rung 0-1 (one yes/no per floor). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 25000,
+      "bound": false,
+      "sale_value": 100
+    },
+    {
+      "id": "f02-any-0005",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Steve's Ghost Smile Pin (Do Not Ask How)",
+      "real_5e_name": "Pin of Calmed Pack (house: dingo soothe)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, as an Action, offer food or a calm gesture to one Soft Open Beast within 30 ft that is hostile only from hunger or territory (GM call: Danger Dingoes fit). It makes a DC 12 Wisdom saving throw. On a failure it becomes Indifferent to you and your allies for 10 minutes and will not join a fight against you unless attacked.",
+        "action_cost": "Action",
+        "range": "30 ft",
+        "damage": "None",
+        "save_dc": "Wis DC 12",
+        "duration": "10 minutes",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Beasts only; no sapient mobs; no Crawlers. Ends early if you or an ally harm it. Not a Boss Box substitute. Not bound.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Steve's Ghost Smile Pin. Once per rest, one Soft Open Beast may go Indifferent on a failed DC 12 Wisdom save.",
+      "snark_line": "You fed the problem. Soft Open calls that animal friendship.",
+      "reward": "Steve's Ghost Smile Pin. Once per rest, one Soft Open Beast may go Indifferent on a failed DC 12 Wisdom save.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "pets"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Steve's Ghost Smile Pin (story value 40000, not bound)"
+      },
+      "box_name": "PETA Enthusiast Box",
+      "deed": "Removed hostility from Soft Open Danger Dingoes (or peer Beasts) before the Ralph pit without a wipe",
+      "notes": "LEDGER: A-091. Canon reward line nods to Steve Irwin; pin and numbers are HOUSE. power_note: Capped edge rung 2 (DC 12 Indifferent). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 40000,
+      "bound": false,
+      "sale_value": 250
+    },
+    {
+      "id": "f02-any-0006",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Recipe Laminate (Rev-Up Adjacent, Taxes Pending)",
+      "real_5e_name": "Laminated Smoothie Card (house: Immunity Smoothie echo)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Once per long rest, during a Short Rest with access to Soft Open blender gear or an Alchemy Table, you may recreate one Immunity Smoothie dose (Buzzed; advantage on saves vs Soft Open Taint and Vigorous Measles until your next Long Rest). Requires the Soft Open ingredients the GM agrees you still have. Dormant until Floor 3: a second dose per long rest.",
+        "action_cost": "Action: part of a Short Rest",
+        "range": "Self or one willing Crawler",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "until next Long Rest (Buzzed rider)",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Needs ingredients and tools. Does not invent a new Codex recipe by itself (Dungeonpreneur A-034 stays separate). One dose per long rest on Soft Open; second dose unlocks on Floor 3. Not bound.",
+        "weight_lb": 0.1
+      },
+      "spoken_line": "Recipe Laminate. Once per rest, brew one Immunity Smoothie dose if you still have Soft Open ingredients.",
+      "snark_line": "You invented brunch that hates measles. Soft Open will still tax the royalties.",
+      "reward": "Recipe Laminate. Once per rest, brew one Immunity Smoothie dose if you still have Soft Open ingredients.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Recipe Laminate (story value 45000, not bound)"
+      },
+      "box_name": "Dungeonpreneur Box",
+      "deed": "Invented Soft Open Immunity Smoothie (or peer stackable potion/device) at the Rev-Up blender",
+      "notes": "LEDGER: A-034, K-123, K-124, K-125 (context). Item HOUSE; invent deed is A-034-shaped. Does not replace A-034 royalties. power_note: Utility rung 1-2 (disease/Taint edge). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 45000,
+      "bound": false,
+      "sale_value": 250
+    },
+    {
+      "id": "f02-any-0007",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Door Barricade Charm (Do Not Open, Do Not Pee)",
+      "real_5e_name": "Charm of the Hammered Hatch (house: Rage siege brace)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, as an Action while inside a Soft Open saferoom or certified bathroom, brace one door or hatch. For 10 minutes that portal has +2 AC against smash attempts and creatures outside have Disadvantage on Strength checks to force it. Does nothing if anyone in the room relieving themselves outside a saferoom or bathroom summoned a Rage Elemental this floor (the charm sulks).",
+        "action_cost": "Action",
+        "range": "Touch (one door)",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "10 minutes",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Saferoom/bathroom only. Rage Elemental is an avoidable CR 5 Soft Open punishment spawn (M-346), NOT a boss and never pays a Boss Box. Charm does not kill or banish it. Not bound.",
+        "weight_lb": 0.2
+      },
+      "spoken_line": "Door Barricade Charm. Once per rest, brace a saferoom or bathroom door for ten minutes against smash attempts.",
+      "snark_line": "Soft Open's Rage Elemental is not a boss. It is a bathroom policy with teeth.",
+      "reward": "Door Barricade Charm. Once per rest, brace a saferoom or bathroom door for ten minutes against smash attempts.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Door Barricade Charm (story value 40000, not bound)"
+      },
+      "box_name": "Bathroom Policy Box",
+      "deed": "Survived a Soft Open Rage Elemental summon or saferoom door-siege without a wipe (no Boss Box)",
+      "notes": "LEDGER: M-346, M-467. Rage is punishment spawn, not boss (house Soft Open ruling). power_note: Utility rung 1-2. GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 40000,
+      "bound": false,
+      "sale_value": 250
+    },
+    {
+      "id": "f02-any-0008",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Wheeled Lure Axle Cap (Not the Whole Bomb)",
+      "real_5e_name": "Axle Cap of the Rolling Distraction (house: Grease Monkey echo)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, as an Action, deploy a wheeled noise lure within 30 ft. Until the end of your next turn, one Soft Open creature of the GM's choice that can hear it has Disadvantage on Perception checks and must move at least 10 ft toward the lure if it starts its turn within 30 ft and can move (no opportunity attacks from this forced step).",
+        "action_cost": "Action",
+        "range": "30 ft",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "until end of your next turn",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One creature. No damage. Does not create a MOAB. Huge or larger may ignore the move (GM). Not bound.",
+        "weight_lb": 1
+      },
+      "spoken_line": "Wheeled Lure Axle Cap. Once per rest, deploy a noise lure that pulls one Soft Open creature ten feet.",
+      "snark_line": "You built a wheeled device. Soft Open is already writing Dale out of the credits.",
+      "reward": "Wheeled Lure Axle Cap. Once per rest, deploy a noise lure that pulls one Soft Open creature ten feet.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "traps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Wheeled Lure Axle Cap (story value 45000, not bound)"
+      },
+      "box_name": "Grease Monkey Box",
+      "deed": "Built and used a Soft Open wheeled lure or bomb cart against a Soft Open threat (Rage kite fits)",
+      "notes": "LEDGER: A-047, K-137 (context). Item HOUSE; MOAB-scale weapon stays Soft Open set dressing. power_note: Capped edge rung 2 (forced step + Disadvantage Perception). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 45000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f02-any-0009",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Ejection Tag (T-Minus Manners)",
+      "real_5e_name": "Tag of the Last Hour (house: saferoom eject)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per Soft Open floor, when saferooms are within 1 hour of closure, you may Activate the tag as a Bonus Action. You and up to three willing Crawlers within 10 ft learn the exact remaining minutes to eject (GM) and may each stow or retrieve one item as part of this Bonus Action without provoking opportunity attacks.",
+        "action_cost": "Bonus Action",
+        "range": "10 ft",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "floor"
+        },
+        "limits": "Once per Soft Open floor. Does not stop eject or save loot left inside after closure. Not bound.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Ejection Tag. Once per Soft Open floor, learn the eject clock and stow or grab one item in a hurry.",
+      "snark_line": "Saferooms close one hour early. Soft Open does not do last calls politely.",
+      "reward": "Ejection Tag. Once per Soft Open floor, learn the eject clock and stow or grab one item in a hurry.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Ejection Tag (story value 30000, not bound)"
+      },
+      "box_name": "Saferoom Closure Box",
+      "deed": "Got the party clear of a Soft Open saferoom before T-1h eject without losing a Crawler inside",
+      "notes": "LEDGER: M-012, M-360. power_note: Utility rung 1 (clock + frantic stow). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 30000,
+      "bound": false,
+      "sale_value": 100
+    },
+    {
+      "id": "f02-any-0010",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "consumable",
+      "reskin_name": "Studio Guest Pass (Mexx-55 Approved, Maybe)",
+      "real_5e_name": "Pass of the Frozen Clip (house: Death Watch one-shot)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Consumables",
+      "plain_mechanics": {
+        "text": "Consumable. As an Action, tear the pass: you and one willing ally within 5 ft teleport to the nearest honest Soft Open saferoom you have already visited (GM picks if several). You arrive standing, no attack. Single use; then scrap paper.",
+        "action_cost": "Action",
+        "range": "5 ft (ally)",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "instant",
+        "uses": {
+          "max": 1,
+          "recharge": "none"
+        },
+        "limits": "Only to a Soft Open saferoom you already entered. Fails if none exist or if saferooms have already ejected this floor. Counts as one R3 consumable for Soft Open budget. Not bound while unused.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Studio Guest Pass. One use: you and one ally snap to a Soft Open saferoom you already visited.",
+      "snark_line": "Optional trauma with studio lighting. Soft Open still owns the cut.",
+      "reward": "Studio Guest Pass. One use: you and one ally snap to a Soft Open saferoom you already visited.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Studio Guest Pass (story value 35000, not bound)"
+      },
+      "box_name": "Death Watch Guest Box",
+      "deed": "Completed Soft Open Death Watch Extreme Dungeon Mayhem as a guest (or flipped the host bit and walked)",
+      "notes": "LEDGER: M-491, M-492, M-500. Item HOUSE; show is ledger-backed. power_note: Utility consumable rung 1 (saferoom snap). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 35000,
+      "bound": false,
+      "sale_value": 250
+    },
+    {
+      "id": "f02-any-0011",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Improviser's Grease Pencil (Not On The Call Sheet)",
+      "real_5e_name": "Grease Pencil of the Unscripted Plan (house: one-shot scheme)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, as an Action, mark an unoccupied space within 10 ft as the landing zone for a plan you describe at the table (improvised wire, bait, wedge, whatever). The first Soft Open enemy that enters that space this combat makes a DC 12 Dexterity saving throw or takes 1d6 bludgeoning, slashing, or fire damage (your choice when marking) and has the Prone condition. Then the mark is spent until you rest.",
+        "action_cost": "Action",
+        "range": "10 ft",
+        "damage": "1d6 bludgeoning, slashing, or fire",
+        "save_dc": "Dex DC 12",
+        "duration": "until triggered or end of combat",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "One mark. Allies who enter it are safe (it knows). Damage capped at 1d6 (rung 2). Story Box deed is only for an unscripted player-invented plan the GM did not put in the Soft Open page — not for merely using oil, a bomb, or any catalog trap that fires You Call That a Trap? (A-136). Distinct from A-136. Not a Sapper's Table. Not bound.",
+        "weight_lb": 0.2
+      },
+      "spoken_line": "Improviser's Grease Pencil. Once per rest, mark a space: first Soft Open foe in pays DC 12 Dexterity or 1d6 and Prone.",
+      "snark_line": "Production did not write this bit. Soft Open is rewriting the episode around you.",
+      "reward": "Improviser's Grease Pencil. Once per rest, mark a space: first Soft Open foe in pays DC 12 Dexterity or 1d6 and Prone.",
+      "canon_status": "HOUSE",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [
+        "traps"
+      ],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Improviser's Grease Pencil (story value 40000, not bound)"
+      },
+      "box_name": "Not On The Call Sheet Box",
+      "deed": "Won a Soft Open fight with a one-time trap or plan the players invented and the GM did not script",
+      "notes": "LEDGER: none required (HOUSE). Distinct from A-136 You Call That a Trap? (that achievement still fires for purposeful trap damage; this Story Box is only for a one-time unscripted player plan the Soft Open day page did not script). trigger_deed: GM judges a spontaneous Soft Open scheme that worked once. power_note: Capped edge rung 2 (1d6 + Prone, DC 12). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 40000,
+      "bound": false,
+      "sale_value": 500
+    },
+    {
+      "id": "f02-any-0012",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Qwist's Favor Feather (Clucks of Concern)",
+      "real_5e_name": "Feather of the Staffed Saferoom (house: Bopca fuss)",
+      "source_5e": "HOUSE",
+      "rarity": "Common",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, while inside a Soft Open staffed saferoom, present the feather. One Short Rest there costs no field-rest fee even if the hall outside is noisy (decision 031 quiet-rest buy). Once per Soft Open floor, Qwist (or peer Bopca) will answer one yes/no question about whether a nearby sticker is honest today.",
+        "action_cost": "Action",
+        "range": "Saferoom",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "one Short Rest / one answer",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Staffed Soft Open saferoom only. Sticker question once per floor. No Long Rest outside a saferoom. Not bound.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Qwist's Favor Feather. Once per rest, a free quiet Short Rest in a staffed Soft Open saferoom.",
+      "snark_line": "You are being mothered by a chicken-adjacent professional. Soft Open still wants a tip.",
+      "reward": "Qwist's Favor Feather. Once per rest, a free quiet Short Rest in a staffed Soft Open saferoom.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Qwist's Favor Feather (story value 25000, not bound)"
+      },
+      "box_name": "Big Shot Chicken Box",
+      "deed": "Met Soft Open Bopca Qwist and fortified or sheltered at Big Shot Chicken through a siege window",
+      "notes": "LEDGER: M-506, M-355 (staffed saferoom context). power_note: Utility rung 1 (fee waiver + sticker yes/no). GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 25000,
+      "bound": false,
+      "sale_value": 100
+    },
+    {
+      "id": "f02-any-0013",
+      "floor": 2,
+      "zone": "any",
+      "tier": "Legendary",
+      "box_types": [
+        "any"
+      ],
+      "pull_type": "weird",
+      "kind": "item",
+      "reskin_name": "Parade Handle Ribbon (Push, Don't Panic)",
+      "real_5e_name": "Ribbon of the Frail Escort (house: Meadow Lark echo)",
+      "source_5e": "HOUSE",
+      "rarity": "Uncommon",
+      "attunement": null,
+      "category": "Misc",
+      "plain_mechanics": {
+        "text": "Once per long rest, as an Action while escorting one or more Soft Open noncombatant NPCs, choose up to three willing noncombatants within 10 ft. Until the end of your next turn they ignore Difficult Terrain from Soft Open grubs or debris and you have Advantage on the next Strength (Athletics) or Wisdom (Insight) check made to keep them moving.",
+        "action_cost": "Action",
+        "range": "10 ft",
+        "damage": "None",
+        "save_dc": "None",
+        "duration": "until end of your next turn",
+        "uses": {
+          "max": 1,
+          "recharge": "long rest"
+        },
+        "limits": "Noncombatant Soft Open NPCs only. Does not grant AC or hit points. Not bound.",
+        "weight_lb": 0
+      },
+      "spoken_line": "Parade Handle Ribbon. Once per rest, three Soft Open noncombatants ignore grub terrain and you gain Advantage on the next push check.",
+      "snark_line": "Heroism looks like push handles and sweat. Soft Open sold tickets anyway.",
+      "reward": "Parade Handle Ribbon. Once per rest, three Soft Open noncombatants ignore grub terrain and you gain Advantage on the next push check.",
+      "canon_status": "CANON-INSPIRED",
+      "credit_value": 0,
+      "draw_weight": 0,
+      "unique": true,
+      "tailor_tags": [],
+      "exclusive_to": null,
+      "grant": null,
+      "ledger": {
+        "type": "item",
+        "text": "item +1 Legendary Story Box: Parade Handle Ribbon (story value 35000, not bound)"
+      },
+      "box_name": "Wheelchair Train Box",
+      "deed": "Escorted Soft Open frail residents through a grub-choked hall without losing the group",
+      "notes": "LEDGER: M-480. Soft Open escort beat. power_note: Utility rung 1-2. GM-triggered Story Box (spec 2.8 / rules/45): hand-pick only (weight 0), not bound (lootable, tradeable, sellable), never drawn at random. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Opens only in a saferoom: deed recorded and announced at award; box waits unopened until the next saferoom. Death before a saferoom: unopened box reclaimed and slot freed (Caleb 2026-10-04). sale_value is System buyback at Floor-1 scale (times the sale floor's credits multiplier at runtime); story_value is provenance only, never credits. credit_value stays 0. Power note keeps numbers inside Floor 1-2 ceiling (core §3.6: peak Uncommon; rung 0-2; DC <= 12; once per long rest). Loot and achievement callouts play as [GM] (decision 032). Soft Open (Floor 2) only.",
+      "story_value": 35000,
+      "bound": false,
+      "sale_value": 250
+    }
+  ],
+  "deck_notes": "Story Boxes are hand-pick only (draw_weight 0) and GM-triggered for one named, one-time Soft Open deed. Like every loot box, a Story Box can only be opened in a saferoom. The deed is recorded and announced at award; the box then waits unopened until the next saferoom. If the Crawler dies before that saferoom, the unopened box is reclaimed and the slot is freed (Caleb's 2026-10-04 ruling; the one-per-floor cap no longer counts it). Story Box items are NOT bound (bound is false): they can be looted from a corpse, traded or sold, as in canon. story_value is provenance for the Accountant, not a sale price; sale_value is the System buyback at Floor-1 scale (times the sale floor's multiplier); credit_value stays 0. Cap one Legendary Story Box per table per Soft Open floor (log an override to exceed; Caleb can veto). Soft Open ordinary loot ceiling stays Silver (core §4.5); Story Box is the Legendary exception and keeps item numbers inside §3.6 (peak Uncommon). Rage Elemental is an avoidable CR 5 punishment spawn (bathroom/saferoom rule), not a boss and never pays a Boss Box. Loot callouts play as [GM] (decision 032). Candidates: 13 cards (f02-any-0001..0013); award exactly one unless the GM logs a cap override."
+}

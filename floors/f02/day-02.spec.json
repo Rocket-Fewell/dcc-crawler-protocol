@@ -15,17 +15,21 @@
       "lore/drafts/core-book-monster-table-v0.2.md",
       "core-book/chapters/01-welcome.md",
       "decisions/026",
-      "rules/70-encounter-budget-5e.json v0.1.17",
+      "rules/70-encounter-budget-5e.json v0.2.2",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
       "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
-      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward. [SUPERSEDED by Syndicate 18:36 CT: Ralph pays Bronze per Crawler plus boss-tier credits; Krakaren holds the only Silver.]",
+      "lore/drafts/f02-achievement-framing-v0.1.json (Lore 2026-10-05 18:15 CT)",
+      "Lore 18:08/18:10/18:15/18:19 CT: M-365 off Krakaren stair; cite fixes M-385/M-508-509/M-506; f02-achievement-framing-v0.1 wired; no ledger ids in PF narration; Story Box interim f01 deck.",
+      "Syndicate locked: 37 DEMOTE-SUGGESTED cut to flavor; 67 FRAMED + ACH-1827..1835 kept. Lore 18:10 cites + framing wired. Reconcile pass post-overlap.",
+      "Syndicate 18:36 CT: Krakaren sole Soft Open Silver; Ralph+ACH-1828/1830/1835 Bronze; framed rows R0; ACH Bronze cap 2/Crawler/floor. Accountant: restore Challenge Rating numerals; keep Krakaren over-cap at 2–3; ACH-1830/1834/oil-1835 on Rage trigger. Lore f02 Story Box deck (hold 0001/0011)."
     ]
   },
   "budget_file": {
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.17",
-    "expected_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1"
+    "version": "0.2.5",
+    "expected_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1"
   },
   "canon_table": {
     "path": "lore/tables/canon-floor-2.json",
@@ -51,47 +55,47 @@
     "collapse_order": [
       {
         "day": 1,
-        "event": "Open; stairwells present (M-364); ratings on (M-342).",
+        "event": "nothing closes on Soft Open today; pressure continues — Open; stairwells present (M-364); ratings on (M-342).",
         "tag": "canon+house"
       },
       {
         "day": 2,
-        "event": "Grub/Mind pressure.",
+        "event": "nothing closes on Soft Open today; pressure continues — Grub/Mind pressure.",
         "tag": "inspired (house)"
       },
       {
         "day": 3,
-        "event": "Pupa timers matter.",
+        "event": "nothing closes on Soft Open today; pressure continues — Pupa timers matter.",
         "tag": "inspired (house)"
       },
       {
         "day": 4,
-        "event": "Rev-Up strip.",
+        "event": "nothing closes on Soft Open today; pressure continues — Rev-Up strip.",
         "tag": "inspired (house)"
       },
       {
         "day": 5,
-        "event": "Krakaren Neighborhood Boss window.",
+        "event": "nothing closes on Soft Open today; pressure continues — Krakaren Neighborhood Boss window.",
         "tag": "house timing; boss canon"
       },
       {
         "day": 6,
-        "event": "Patch: hedgehogs out (M-382); saferoom closure rule (M-012); grub nerf (M-396).",
+        "event": "nothing closes on Soft Open today; pressure continues — Patch: hedgehogs out (M-382); saferoom closure rule (M-012); grub nerf (M-396).",
         "tag": "canon beats on house clock"
       },
       {
         "day": 7,
-        "event": "Dog Pound primary.",
+        "event": "nothing closes on Soft Open today; pressure continues — Dog Pound primary.",
         "tag": "inspired (house)"
       },
       {
         "day": 8,
-        "event": "Ralph + Menagerie; F3 Offer tease (M-371).",
+        "event": "nothing closes on Soft Open today; pressure continues — Ralph + Menagerie; F3 Offer tease (M-371).",
         "tag": "canon+house"
       },
       {
         "day": 9,
-        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
+        "event": "nothing closes on Soft Open today; pressure continues — Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -145,11 +149,11 @@
       "break_room_not_saferoom_from_day": 99,
       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
     "rest_fee_note": {
       "tag": "[GM-FACING]",
-      "text": "GM ruling: no fee if the spot is already quiet. Until Floor 2 prices are pinned, use Floor 1 field-rest fee at this floor's credit multiplier (Core Book Ch1 / decision 031)."
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not."
     }
   },
   "routes": [
@@ -173,7 +177,24 @@
           "use": "Soft Open cite M-364 (canon-floor-2 / ledger)."
         }
       ],
-      "voice_lines": {}
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Soft Open dash route logged: shortest path toward a claimed stair.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "The halls get louder the faster you move. Ratings love a sprint.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You made time. Soft Open did not promise you a clean finish.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Dash still pays in Soft Open — if the bathroom rule did not just end the table.",
+          "tag": "[GM-FACING]"
+        }
+      }
     },
     {
       "id": "loot",
@@ -200,7 +221,24 @@
           "use": "Soft Open cite A-083 (canon-floor-2 / ledger)."
         }
       ],
-      "voice_lines": {}
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Soft Open loot route logged: bazaar, alleys, and anything that rattles.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "A vendor smiles like a trap. It might be both.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "Pockets heavier. Clock unchanged.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Silver ceiling still applies. Special boxes are hand-picked only.",
+          "tag": "[GM-FACING]"
+        }
+      }
     },
     {
       "id": "clever",
@@ -222,7 +260,24 @@
           "use": "Soft Open cite A-091 (canon-floor-2 / ledger)."
         }
       ],
-      "voice_lines": {}
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Soft Open clever route logged: talk, trap, and don't pee wrong.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "midpoint_twist": {
+          "text": "A bathroom door is right there. Use it. The floor is watching.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "win": {
+          "text": "You solved Soft Open like a puzzle. The audience wanted blood anyway.",
+          "tag": "[PLAYER-FACING]"
+        },
+        "gm_color": {
+          "text": "Clever route is where Grease Monkey and trap hooks live.",
+          "tag": "[GM-FACING]"
+        }
+      }
     }
   ],
   "stairwell_key": {
@@ -244,7 +299,7 @@
       },
       {
         "id": "stair-boss",
-        "how": "Claim stair in Krakaren/Borough boss chamber (M-365).",
+        "how": "Claim stair in the Soft Open Krakaren Neighborhood Boss chamber (HOUSE stair; floor stairs per M-364).",
         "where": "z26",
         "ref": "00-overview.md",
         "route": [
@@ -293,8 +348,7 @@
         "path": "floors.1.prices.zone_s_door_forcing.party_fee_by_size",
         "note": "Zone S door forcing fee (party)"
       }
-    },
-    "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve does not apply on Floor 2 and expires when a Crawler descends from Floor 1 (Core Book Ch1, Reprieve). It never covers a missed collapse."
+    }
   },
   "day": {
     "number": 2,
@@ -342,7 +396,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest is only a Short Rest; the price buys a quiet Short Rest and grants no Long Rest. The Soft Open Long Rest happens in a certified saferoom (Storm Shelter / Big Shot Chicken — Soft Open's Green Room-pattern anchors). Cite {{b70:floors.1.prices.rest_without_saferoom}} until Floor 2 prices are pinned (Core Book Ch1 / decision 031)."
+        "note": "A field rest is only a Short Rest; the price buys a quiet Short Rest and grants no Long Rest (no fee if the spot is already quiet). The Green Room pattern on Soft Open is a certified saferoom (Storm Shelter A / Big Shot Chicken B) for Long Rest. Cite {{b70:floors.1.prices.rest_without_saferoom}} until Floor 2 prices are pinned (Core Book Ch1 / decision 031 / core v0.2.20)."
       }
     ],
     "carry_over": [
@@ -442,7 +496,7 @@
           "gm_note": "On Floor 1, earnable only via stasis. Reward: see the catalog row (tables/achievements.csv, ACH-1826)."
         }
       ],
-      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
+      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1 / core v0.2.20, Reprieve). Soft Open has no Floor 1 Reprieve. It never covers a missed collapse."
     }
   },
   "encounters": [
@@ -497,7 +551,7 @@
               "paths": [
                 "floors.2.tiers.L2.cr_caps"
               ],
-              "note": "Table CR 1 (cmm-051) pin pending"
+              "note": "Table Challenge Rating (cmm-051) pin pending"
             }
           }
         }
@@ -545,7 +599,7 @@
           "kind": "placed",
           "text": "Goo + ratings pamphlet.",
           "overview_ref": "00-overview.md",
-          "check_text": "pamphlet",
+          "check_text": "Silver",
           "amount": {
             "b70": {
               "kind": "cite",
@@ -567,7 +621,7 @@
               "paths": [
                 "floors.2.boxes"
               ],
-              "note": "Silver F1-2"
+              "note": "Bronze Soft Open"
             }
           }
         }
@@ -641,7 +695,7 @@
           }
         ],
         "gm_tracks": [
-          "Floor hour",
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Packs",
           "False saferoom"
         ]
@@ -649,59 +703,84 @@
       "proposed_achievements": [
         {
           "name": "Psionic Weather",
-          "trigger": "Feel headache before sight (M-403).",
+          "trigger": "Feel the Mind Horror headache before you see the source.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Feel headache before sight (M-403).",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Psionic Weather: Your skull filed a weather report before your eyes did. The headache arrived fashionably early and will not tip.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-403"
+            ],
+            "cite_note": "ok"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Psionic Weather!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
         },
         {
           "name": "Int Flex",
-          "trigger": "Int 16+ shrugs.",
+          "trigger": "Shrug the psionic headache with Intelligence 16+.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Int 16+ shrugs.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Int Flex: Intelligence sixteen and up: the Mind Horror's migraine bounced off you like a compliment. Everyone else is tasting copper and regret. Flex responsibly.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
-          "name": "Benefactor Static",
-          "trigger": "If F1 static: radio HOLD NOT YET.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "house",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-403"
+            ],
+            "cite_note": "ok — high-Int shrug of same attack"
           },
-          "narration": "If F1 static: radio HOLD NOT YET.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "voice": "GM",
+          "callout_banner": "New achievement! Int Flex!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
         },
         {
           "name": "Mailbox Error",
-          "trigger": "Non-subscriber error M-511.",
+          "trigger": "Non-subscriber gets the mailbox error.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Non-subscriber error M-511.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Mailbox Error: You are not a subscriber. The saferoom mailbox knows. It told you no with the enthusiasm of a bouncer who hates your shoes.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-511"
+            ],
+            "cite_note": "ok"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Mailbox Error!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
+        }
+      ],
+      "flavor_lines": [
+        {
+          "text": "If Floor 1 static thread exists: radio says HOLD NOT YET.",
+          "name": "Benefactor Static",
+          "demoted_from": "proposed_achievement",
+          "reason": "No Soft Open deed — pure flavor, callback, patch tease, UI warning, or almost-action.",
+          "tag": "[GM-FACING]"
         }
       ]
     },
@@ -863,7 +942,7 @@
           }
         ],
         "gm_tracks": [
-          "Floor hour",
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Honesty",
           "Mailbox",
           "Boxes"
@@ -872,45 +951,69 @@
       "proposed_achievements": [
         {
           "name": "Floor Club",
-          "trigger": "Subscriber opens tome (M-358).",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Subscriber opens tome (M-358).",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
-          "name": "Mana Toast",
-          "trigger": "Toaster claim M-355 if variant.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Toaster claim M-355 if variant.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
-        },
-        {
-          "name": "Search the Sticker",
-          "trigger": "Prove honest today.",
+          "trigger": "A subscriber opens the saferoom mailbox tome.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Prove honest today.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Floor Club: Subscriber verified. The saferoom mailbox opened its little suburban mouth and handed you floor gossip like a cult newsletter. Welcome to the club. Dues are blood.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-358"
+            ],
+            "cite_note": "ok — mailbox on F2; subscriber open is M-511 adjacent"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Floor Club!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
+        },
+        {
+          "name": "Mana Toast",
+          "trigger": "Claim Mana Toast from a Soft Open toaster variant.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Mana Toast: You claimed a burned triangle of toast that restores mana. Cuisine on Soft Open is either a miracle or a war crime. Today it is both, and it is yours.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-508",
+              "M-509"
+            ],
+            "cite_note": "FIXED: was M-355 (staffed vs unstaffed); toast = M-508/M-509"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Mana Toast!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
+        },
+        {
+          "name": "Search the Sticker",
+          "trigger": "Prove today's saferoom sticker is honest.",
+          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "canon_or_house": "house",
+          "ledger_row": null,
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Search the Sticker: You checked whether the saferoom sticker was lying. Honesty is hot. Paranoia is hotter. The false ones still smile.",
+          "narration_tag": "[PLAYER-FACING]",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "voice": "GM",
+          "callout_banner": "New achievement! Search the Sticker!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
         },
         {
           "name": "Pebbles Lead",
@@ -918,13 +1021,16 @@
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "If pet thread: leash reacts to bark tape.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Pebbles Lead: The leash twitched at bark-tape like it remembered a better dog. Your companion has taste. Your enemies have volume.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "voice": "GM",
+          "callout_banner": "New achievement! Pebbles Lead!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
         }
       ]
     },
@@ -1063,38 +1169,58 @@
           }
         ],
         "gm_tracks": [
-          "Floor hour",
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day {days} (floor hour {floor_hours}). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Stasis list"
         ]
       },
       "proposed_achievements": [
         {
           "name": "Follower Flex",
-          "trigger": "Check followers after Day 1.",
+          "trigger": "Check follower count after Day 1.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Check followers after Day 1.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Follower Flex: You checked the follower count after Day 1. Numbers went up. Dignity did not. The audience likes you the way a raccoon likes an unlocked dumpster.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-342"
+            ],
+            "cite_note": "ok — follows on"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Follower Flex!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
         },
         {
           "name": "Early Stair Peek",
-          "trigger": "Find stair; stasis warning M-366.",
+          "trigger": "Find a stairwell and get the early-descent stasis warning.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Find stair; stasis warning M-366.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Early Stair Peek: You found stairs early and got the stasis warning. Soft Open will freeze you like leftover casserole until the clock says you may finish dying properly.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate"
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-366"
+            ],
+            "cite_note": "ok"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Early Stair Peek!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box)."
         }
       ],
       "flavor_lines": [
@@ -1110,7 +1236,8 @@
           "demoted_from": "proposed_achievement",
           "reason": "Syndicate 18:04 CT: no real deed — flavor only, not an achievement"
         }
-      ]
+      ],
+      "loot_note": "[SLOT: Soft Open loot — cite floors.2.credits / floors.2.boxes when pinned]"
     }
   ],
   "achievements_catalog": {
@@ -1129,27 +1256,27 @@
   },
   "pending_inputs": [
     {
-      "owner": "Accountant",
-      "item": "floors.2.fixed_encounters pins",
-      "waiting_for": "--write-on-fail until bumped",
+      "owner": "Syndicate",
+      "item": "rules/70-encounter-budget-5e.json v{budget_version} (filed) + Soft Open clock.days={days} HOUSE (decision 026 / Core Ch1)",
+      "waiting_for": "floors.2 pins / Soft Open clock numbers confirmed; any bracketed slot without a matching field",
       "status": "open"
     },
     {
       "owner": "Lore",
-      "item": "canon-floor-2 RESERVE pass + A-056",
-      "waiting_for": "canon pass on day pages",
+      "item": "Soft Open collapse/canon table (lore/tables/canon-floor-2.json) + A-056 HOUSE placement",
+      "waiting_for": "canon pass / RESERVE release",
       "status": "open"
     },
     {
-      "owner": "Syndicate",
-      "item": "achievement rewards + F2 Story Box deck",
-      "waiting_for": "achievement-suggestions.md",
+      "owner": "Accountant",
+      "item": "floors.2.fixed_encounters + f02_day01_to_10_slot_map re-pin after Soft Open revisions",
+      "waiting_for": "Encounter Bot regen sans-pins",
       "status": "open"
     },
     {
       "owner": "Architect",
-      "item": "encounter_bot multi-floor overview/canon",
-      "waiting_for": "hardcodes f01",
+      "item": "encounter_bot Soft Open / floor-aware validator (saferoom z09, Green Room, 4-sentence hard cap now soft per Caleb)",
+      "waiting_for": "floor-aware/soft checks",
       "status": "open"
     }
   ]

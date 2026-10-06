@@ -1,81 +1,23 @@
 {
-  "f1_hooks_approx": 107,
-  "f1_per_day_avg": 21.4,
-  "f2_achievement_hooks": 252,
-  "f2_proposed_achievements": 109,
-  "f2_demoted_flavor_no_deed": 3,
-  "f2_deed_total": 361,
-  "f2_per_day_avg": 36.1,
-  "f2_per_day_avg_vs_f1_per_day_avg": 1.69,
-  "ratio_vs_f1_daily_avg": 1.69,
-  "note": "After Rage Elemental demotion to trigger spawn: ACH-1830/1834 live on trigger_spawns only (not planned enc-d09-03). ACH-1828 still on enc-d09-02. Deed count is encounter hooks+proposed only.",
-  "catalog_ach_wired_sample": [
-    "ACH-1825",
-    "ACH-1826",
-    "ACH-1827",
-    "ACH-1828",
-    "ACH-1829"
+  "f2_deed_total": 325,
+  "f2_hooks": 253,
+  "f2_proposed": 72,
+  "framed": 67,
+  "canon_wired": 4,
+  "unframed": 1,
+  "unframed_names": [
+    "Stair Mouth Clear"
   ],
-  "by_day": {
-    "1": {
-      "hooks": 24,
-      "proposed": 12,
-      "demoted": 0,
-      "deed": 36
-    },
-    "2": {
-      "hooks": 24,
-      "proposed": 10,
-      "demoted": 2,
-      "deed": 34
-    },
-    "3": {
-      "hooks": 25,
-      "proposed": 11,
-      "demoted": 1,
-      "deed": 36
-    },
-    "4": {
-      "hooks": 25,
-      "proposed": 11,
-      "demoted": 0,
-      "deed": 36
-    },
-    "5": {
-      "hooks": 25,
-      "proposed": 12,
-      "demoted": 0,
-      "deed": 37
-    },
-    "6": {
-      "hooks": 24,
-      "proposed": 12,
-      "demoted": 0,
-      "deed": 36
-    },
-    "7": {
-      "hooks": 25,
-      "proposed": 11,
-      "demoted": 0,
-      "deed": 36
-    },
-    "8": {
-      "hooks": 28,
-      "proposed": 10,
-      "demoted": 0,
-      "deed": 38
-    },
-    "9": {
-      "hooks": 28,
-      "proposed": 8,
-      "demoted": 0,
-      "deed": 36
-    },
-    "10": {
-      "hooks": 24,
-      "proposed": 12,
-      "demoted": 0,
-      "deed": 36
-    }
-  }
+  "demoted_flavor": 40,
+  "f2_per_day_avg": 32.5,
+  "ratio_vs_f1": 1.52,
+  "f1_instances": 107,
+  "f1_per_day_avg": 21.4,
+  "generator": {
+    "PASS": 452,
+    "WARN": 40,
+    "FAIL": 0
+  },
+  "budget_pin": "0.2.1",
+  "silver_ruling": "Krakaren sole Silver; Ralph+ACH-1828/1830/1835 Bronze; framed R0; ACH Bronze cap 2"
 }

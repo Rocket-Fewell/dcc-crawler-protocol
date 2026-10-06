@@ -1,7 +1,12 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.2.0",
+  "version": "0.2.5",
   "changelog": [
+    "0.2.5 (2026-10-05 ~7:35 PM CT, Accountant): provenance only, no values changed: f02_day01_to_10_slot_map day-05 sans-pin hash re-synced to Encounter Bot's 19:15 CT pass (Story Box f02-any-0001 Clone Nameplate Charm bound to d05_02 per Syndicate 19:12 as the unmask-the-clone-mid-fight deed only, hand-picked, opens in a saferoom; Story Boxes sit outside this budget and the Legendary cap, core 4.1/4.5/4.7). Day-05 slots (3) re-checked: they resolve, encounter ids and names match, creature key chuul matches d05_02. Days 1-4 and 6-10 sans-pins and all Floor 1 sans-pins unchanged; every count, CR, XP, box, credit, Silver Boss Box and decision 031 rest fee unchanged; no caps raised.",
+    "0.2.4 (2026-10-05 ~7:10 PM CT, Accountant): provenance only, no values changed: all ten f02_day01_to_10_slot_map sans-pin hashes re-synced to Encounter Bot's 19:03 CT F2 content pass (Syndicate's 4 stale-Silver fixes, Story Boxes f02-any-0001/0011 released, d05_02 Krakaren LOCKED hard-tier wording, F1+F2 re-pinned to v0.2.2). All 53 slots still resolve and their creature keys match; Floor 1 sans-pins unchanged; every count, CR, XP, box, credit and decision 031 rest fee unchanged; no caps raised.",
+    "0.2.3 (2026-10-05 ~7:05 PM CT, Accountant): wording only, no values changed: floors.2.fixed_encounters.d05_02.cr_cap_flag_note now cites Caleb's ~6:48 PM CT ruling (GM scales the Krakaren down to hard tier at 2-3 Crawlers; CR 3 as pinned at 4) in place of 'until Caleb rules'. Every count, CR, XP, box, credit, slot map and sans-pin hash unchanged; decision 031 rest fee unchanged; no caps raised.",
+    "0.2.2 (2026-10-05 ~6:55 PM CT, Accountant): Floor 2 box rulings recorded from Syndicate's design call (2026-10-05 18:36 CT, Caleb can override); values changed only for Floor 2 box text and the floor check. (1) d08_02 Ralph pays ONE Bronze per Crawler plus boss-tier encounter credits, no Silver (was 'normal Silver' in 0.2.1); the Krakaren Silver Boss Box (d05_02) is the floor's only Silver. (2) New floors.2.boxes.f2_box_rulings: achievement box seeds cap at Bronze (ACH-1828/1830/1835 pay Bronze), the five spec Silver mentions (d01_02, d03_02, d06_03, d08_03, d09_03) become Bronze unless the GM logs an override, achievement Bronze cap 2 per Crawler per floor (past it Title, credits or snark only), Story Boxes outside the cap, the 67 FRAMED rows' reward slot GM-tailored inside the caps. (3) _floor_check.box_math: Bronze 3.16 per Crawler (fights 1.26 + Ralph 1 + deeds 0.9), Silver 1; the v0.2.1 over-Silver flag is RESOLVED; economy_vs_specs all-in 793.4 per Crawler (line 1,500). (4) d05_02 cr_cap_flag_note: over-cap flag KEPT; until Caleb rules, the GM scales the Krakaren down at 2-3 Crawlers to land in hard tier. (5) f02_day01_to_10_slot_map: all ten sans-pin hashes re-synced to Encounter Bot's 18:44 CT regeneration; slots, ids and names re-checked. Unchanged: Floor 1 everything, every pin's counts, CR and XP, decision 031 rest fee (20 per Crawler, cap 60 per floor), box odds, credit dice, flag lines and crafting prices; no caps raised.",
+    "0.2.1 (2026-10-05 ~6:25 PM CT, Accountant): Floor 2 re-pin to 18:16 regen: Krakaren sole Silver Boss Box; Ralph normal Silver; Rage Elemental out-of-budget trigger spawn; d09_03 Stair Claim pinned. Caleb rulings (2026-10-05 ~6:14 PM CT): (1) floors.2.fixed_encounters.d05_02 Krakaren Clone (chuul, HOUSE CR 3, native CR 4) is a Neighborhood Boss and pays the floor's SINGLE Silver Boss Box (new boolean silver_boss_box on every F2 pin, true only here; new floors.2.boxes.boss_box_payer); L2 boss cap stays 3 (fit arithmetic for 2-3 Crawlers unchanged, see d05_02.cr_cap_flag_note). (2) d08_02 Ralph the Frenzied Gerbil stays a planned boss-tier fight but pays a normal Silver / non-boss reward, NOT a Silver Boss Box (boxes text rewritten from the spec loot_hooks; flagged: a per-Crawler normal Silver plus the Boss Box is 2 Silver per Crawler, over core 4.5's 0-1). (3) The Rage Elemental (CR 5) left fixed_encounters for new floors.2.trigger_spawns.rage_elemental, marked OUT OF BUDGET (outside the boss budget, boss count, XP budget and box budget; no Silver Boss Box; CR 5 is a deliberate exception over the L2 caps because it is out of budget). (4) Path d09_03 / enc-d09-03 now holds 'Stair Claim: Convoy Cap' (hard): giant wasp CR 1/2 (cmm-044) + giant centipede CR 1/4 (cmm-041), 3+1 / 4+2 / 6+2 for 2/3/4 Crawlers = 350 / 500 / 700 XP vs 400 / 600 / 800, within tier and caps. Pin names re-synced verbatim to the spec names (d01_02, d01_03, d02_01, d03_02, d04_01, d04_02, d06_02, d07_01, d07_02, d08_02, d09_03); creatures, tiers and files re-checked, no other drift. f02_day01_to_10_slot_map rebuilt from the specs (51 -> 53 slots: the 3 Rage Elemental slots replaced by 5 Stair Claim slots; every other slot identical) and all ten sans-pin hashes re-synced to the spec files on disk at re-pin (Encounter Bot's 18:28 CT regeneration; against the 18:23 files every pinned id, name, creature and tier is unchanged; only prose and achievement rows moved). _status and _floor_check recomputed (mix 10 standard / 2 hard / 2 boss / 1 trivial; XP used 3700 / 4700 / 6050; one Boss Box; box_math and economy_vs_specs added). Floor 2 specs are still DRAFT: Lore's canon fixes and Syndicate's achievement trim are pending another regeneration (the 18:28 pass shows the trim as 67 FRAMED + 4 CANON-WIRED + 1 UNFRAMED, not the ruled 67 + 5), so another sans-pin hash re-sync may follow. Unchanged: Floor 1 pins and slot maps (day01, day02_to_04, day05) and their hashes, decision 031 rest fee (20 per Crawler, cap 60 per floor), every credit, box-odds, flag-line, crafting-price and F3+ value. No caps raised, no budgets added.",
     "0.2.0 (2026-10-05, Accountant): VALUE CHANGE for decision 033 / core v0.2.19 (F3 and F9 end bosses +1, then normal onboarding +1): standard track now arrives F1-3 at N, F4-9 at N+1, F10-18 at N+2 (F4 at 5, F10 at 12, F18 at 20; F18 leaves at the 20 cap, finale 19-20 levels removed). Re-cut F4-F6 (floors.N.level, xp_per_character, tiers, xp) at budget levels 5/6/7 and F7-F18 (floors_7_18.floors.N level_arrive/leave, budget_level, xp_per_character_at_budget_level, core_8_3_cr) with the SRD 5.2.1 per-Character XP table. CR ranges use the core 8.3 row whose party level matches the arrive level (core 8.3's slow-burn lookup; rows above 18 use row 18), recorded in new keys floors.N.tiers_core_8_3_row_used and floors_7_18.floors.N.core_8_3_row_used; authoritative.core_cr_targets_party_of_4 is still the verbatim core 8.3 copy. Same band map (A1), lead share (A2) and encounter mix/density (A3); days unchanged. FIELD PATH RENAME: floors.4/5/6 tiers and xp_per_character keys L4/L5/L6 became L5/L6/L7 (key = budget level); no other path renamed or removed. Unchanged: Floors 1-3 (levels, tiers, fixed encounters), Day 1-5 slot maps and their sans-pin hashes, decision 031 rest fee (20 per Crawler, cap 60 per floor), every credit, box, flag-line and crafting-price value (all keyed by floor and the core 3.9 multiplier, not by level). No new caps or budgets. ALSO IN 0.2.0 (Encounter Bot request, Floor 2 draft): new floors.2.fixed_encounters (15 combat encounters of floors/f02 Day 1-10 specs: counts, XP, fit with lead-CR-vs-cap flags, cash dice and box pointers from floors.2.credits/boxes, plus _day_encounter_index, _status, _floor_check) and new f02_day01_to_10_slot_map (51 count/CR/budget slots, spec_sha256_sans_pin_when_mapped for day-01..10, all specs marked DRAFT). L2 caps unchanged: Krakaren Clone (cmm-047) goes to a CR 3 version (700 XP) per Caleb (2026-10-05 ~6:06 PM CT) and the L2 boss cap stays CR 3; Rage Elemental (CR 5) and the CR 1 Mind Horror / Danger Dingo leads in standard/trivial tiers are flagged, not accommodated. No Floor 2 prices, box odds or caps added.",
     "0.1.17 (2026-10-05): provenance only, no values changed: re-synced day01_slot_map.spec_sha256_sans_pin_when_mapped to Encounter Bot's Day 1 spec after the GM registration split in enc-d01-06 ([SYSTEM] registration line, then [GM] booth-door narration). Days 2-5 hashes unchanged. Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
     "0.1.16 (2026-10-05): provenance only, no values changed: re-synced spec_sha256_sans_pin_when_mapped in day01_slot_map, day02_to_04_slot_map (day-02/03/04) and day05_slot_map to Encounter Bot's Floor 1 specs after Lore leftovers + gm_color kind/path fix + portability fold (lore/… cites, no box-only /workspace). Every slot path and price unchanged (decision 031 rest fee 20/cap 60 intact).",
@@ -51,7 +56,7 @@
       "adjustments": "pets, companions, class features",
       "day01_slot_map": "the 34 empty slots in floors/f01/day-01.spec.json and the field that fills each",
       "open_questions": "short list for Caleb",
-      "f02_day01_to_10_slot_map": "Floor 2 Day 1-10 count/CR/budget slots and the field that fills each (v0.2.0; specs are drafts)"
+      "f02_day01_to_10_slot_map": "Floor 2 Day 1-10 count/CR/budget slots and the field that fills each (v0.2.0; re-pinned v0.2.1; specs are drafts)"
     },
     "naming_scheme": {
       "ids": "lowercase keys; party size keys are the strings '2','3','4'; tiers are trivial|standard|hard|boss; levels are 'L<n>'; CRs are strings ('1/8','1/4','1/2','1','2')",
@@ -1898,7 +1903,19 @@
         "non_fight_deed_boxes": "achievement deeds, quests, Welcome Box: GM judgment, see economy_audit for F1-2 expected counts",
         "boss_box_condition": "Boss Box drops only if the boss is fought or talked down; bypassing via Zone S forfeits it (overview 6.7, 7.2)",
         "story_box": "NOT in these odds: 0%. Story Boxes are GM hand-picked for one named deed, F1-2 only, cap 1 per table per floor, open only in a saferoom (rules/45).",
-        "status": "odds ASSUMED; ceilings and pacing authoritative"
+        "status": "odds ASSUMED; ceilings and pacing authoritative",
+        "boss_box_payer": "floors.2.fixed_encounters.d05_02 Krakaren Clone ONLY (Caleb 2026-10-05 ~6:14 PM CT): one Silver Boss Box per Crawler per floor, the floor's ONLY Silver. odds_per_encounter_by_tier.boss applies to it alone; d08_02 Ralph (boss tier) pays one Bronze per Crawler plus boss-tier credits, no Silver (Syndicate design ruling 2026-10-05 18:36 CT, Caleb can override); floors.2.trigger_spawns are out of budget and pay none.",
+        "f2_box_rulings": {
+          "source": "Syndicate design ruling 2026-10-05 18:36 CT, Caleb can override",
+          "silver": "Krakaren's Silver Boss Box is the floor's only Silver (1 per Crawler, inside core 4.5's 0-1).",
+          "ralph_d08_02": "one Bronze per Crawler plus boss-tier encounter credits; no Silver",
+          "achievement_box_seeds": "F2 achievement box seeds cap at Bronze like F1: ACH-1828, ACH-1830 and ACH-1835 pay Bronze. The five spec Silver mentions (d01_02 toast odds, d03_02 elite toast odds, d06_03 show-gift, d08_03 reward room, d09_03 on clear) become Bronze unless the GM logs an override.",
+          "achievement_bronze_cap_per_crawler_per_floor": 2,
+          "past_the_cap": "pay a Title, credits or snark only",
+          "story_boxes": "outside this cap (rules/45; floors.2.boxes.story_box)",
+          "framed_rows_reward_slot": "the 67 FRAMED achievement rows' reward slot is GM-tailored inside these caps: default R0, Title or snark; Bronze only when the deed earns it",
+          "status": "ruled (design call); no odds or prices created; the five former Silver mentions stay unpriced"
+        }
       },
       "adjacency": {
         "boss_max_zones_from_saferoom": 1,
@@ -1911,7 +1928,7 @@
       },
       "fixed_encounters": {
         "d01_02": {
-          "name": "Rec-Hall Bazaar: Fizz Grubs",
+          "name": "Rec-Hall Bazaar: Vendors, Sigil, Fizz Grubs",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d01-02",
@@ -1972,11 +1989,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "2 per Crawler (SRD fragile-creature rule); combat + social, so well under the ceiling.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d01_03": {
-          "name": "Grub Alleys: Janitor Shift (Brindle Grubs)",
+          "name": "Grub Alleys: Janitor Shift",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d01-03",
@@ -2037,11 +2055,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "2 per Crawler; the GM may add up to the tier budget.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d02_01": {
-          "name": "Mind Drift: Kickball Brains (Mind Horrors)",
+          "name": "Mind Drift: Kickball Brains",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d02-01",
@@ -2102,6 +2121,7 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "Fills the Moderate band. Lead CR 1 is ABOVE the standard-tier cap (CR 1/2 at L2, all party sizes): Encounter Bot/GM either re-tier as hard (cap CR 2 for 3-4 Crawlers, CR 1 for 2) or telegraph it; counts kept inside the XP budget.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
@@ -2175,11 +2195,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "1 Cow-Tail + 1 Brindle Grub per Crawler.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d03_02": {
-          "name": "Pupa Niche: Timer or Trap (Grub Pupa)",
+          "name": "Pupa Niche: Timer or Trap",
           "tier": "hard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d03-02",
@@ -2240,11 +2261,12 @@
           "cash_per_crawler": 7.0,
           "cash_dice_per_crawler": "1d6 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.hard ({\"Bronze\": 0.28}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "One pupa (set piece). Inside budget and cap for 3-4 Crawlers; for 2 Crawlers it is 50 XP over the hard budget and above the CR 1 cap: optional/avoidable (hazard + optional combat), telegraph it (core 8.3).",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d04_01": {
-          "name": "Rev-Up Strip: Unvaccinated Consultants (Clurichauns)",
+          "name": "Rev-Up Strip: Unvaccinated Consultants",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d04-01",
@@ -2305,11 +2327,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "2 per Crawler.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d04_02": {
-          "name": "Distillery Prep: Laminak Elite",
+          "name": "Distillery Prep: Laminak Elite and the Blender",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d04-02",
@@ -2370,6 +2393,7 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "1 per Crawler; the blender tease is non-combat.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
@@ -2435,12 +2459,14 @@
           },
           "cash_per_crawler": 17.5,
           "cash_dice_per_crawler": "1d6 x 5 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
-          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); no new box odds here",
+          "boxes": "SILVER BOSS BOX: the floor's ONLY Boss Box (Caleb 2026-10-05 ~6:14 PM CT). One per Crawler who fought or talked the Krakaren down, per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); the spec places 'Silver Boss Box (floor's only Boss Box) per Crawler who fought or talked down'. No new box odds here.",
+          "silver_boss_box": true,
           "reasoning": "CR 3 version per Caleb (2026-10-05 ~6:06 PM CT): SRD chuul is CR 4 (1,100 XP), over the 4-Crawler L2 boss budget (800 XP) and the L2 boss cap of CR 3; Encounter Bot reworks cmm-047 to a CR 3 variant (700 XP). The L2 boss cap stays 3. 4 Crawlers: 700 XP fits (lead within 90% of 800). 2-3 Crawlers: still over the boss budget (400 / 600 XP) and the boss cap (CR 1 / CR 2): Encounter Bot/GM need a smaller-party variant (as Floor 1 z10 Variant B) or telegraph/avoid; no cap raised here.",
-          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
+          "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)",
+          "cr_cap_flag_note": "Spec day-05 budget_math says 'over-cap flag REMOVED per Caleb' and its cr_slot note says the CR 3 version 'fits boss cap for 2/3/4 Crawlers'. This file keeps the arithmetic: floors.2.tiers.L2.cr_caps boss = CR 1 / 2 / 3 for 2 / 3 / 4 Crawlers, so fit.2 and fit.3 still read lead_within_cr_cap false (700 XP vs 400 / 600). The ruling relayed to the Accountant (~6:14 PM CT) says only that the L2 boss cap stays 3; whether 2-3 Crawler tables run the CR 3 version as an accepted exception is for Caleb to confirm. No cap raised. v0.2.2 (Syndicate design ruling 2026-10-05 18:36 CT, Caleb can override): KEEP the over-cap flag. Until Caleb rules, at 2-3 Crawlers the GM scales the Krakaren down (lower HP, fewer attacks) so the fight lands in hard tier; at 4 Crawlers the CR 3 version runs as pinned. No cap raised. v0.2.3 (Caleb 2026-10-05 ~6:48 PM CT, relayed via Syndicate/Architect in #agents): CONFIRMED as the standing rule. At 2-3 Crawlers the GM scales the Krakaren down (lower HP, fewer attacks) so the fight lands in hard tier; at 4 Crawlers the CR 3 version runs as pinned. The over-cap arithmetic stays recorded; no cap raised."
         },
         "d06_02": {
-          "name": "Vespa encounter (combat or social)",
+          "name": "Post-Patch Hall: Vespas or Guide Collection",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d06-02",
@@ -2501,11 +2527,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "Fills toward the Moderate band (300 / 400 / 600 XP).",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d07_01": {
-          "name": "Dog Pound: Kobold Riders and Danger Dingoes",
+          "name": "Dog Pound Gates: Music and Riders",
           "tier": "standard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d07-01",
@@ -2574,11 +2601,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "1 rider per Crawler; 1 Dingo (2 for 4 Crawlers). Dingo CR 1 is ABOVE the standard-tier cap (CR 1/2): re-tier as hard or telegraph (Encounter Bot/GM).",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d07_02": {
-          "name": "Cage Halls: Biscuits Before Blood (conditional)",
+          "name": "Cage Halls: Biscuits Before Blood",
           "tier": "trivial",
           "budget_level": 2,
           "spec_encounter_id": "enc-d07-02",
@@ -2639,6 +2667,7 @@
           "cash_per_crawler": 1.0,
           "cash_dice_per_crawler": "1d3-1 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.trivial ({}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "Conditional (non-combat if biscuits work). One Dingo = 200 XP, inside the Low band for every size, but CR 1 is ABOVE the trivial cap (CR 1/2): Encounter Bot/GM re-tier or keep it avoidable.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
@@ -2704,11 +2733,12 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "2 per Crawler.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d08_02": {
-          "name": "Ralph the Frenzied Gerbil (Neighborhood Boss)",
+          "name": "Ralph the Frenzied Gerbil",
           "tier": "boss",
           "budget_level": 2,
           "spec_encounter_id": "enc-d08-02",
@@ -2768,8 +2798,9 @@
           },
           "cash_per_crawler": 17.5,
           "cash_dice_per_crawler": "1d6 x 5 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
-          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); no new box odds here",
-          "reasoning": "Ralph alone is 200 XP, well under the High band; the GM may add support up to the boss budget.",
+          "boxes": "NOT a Silver Boss Box and NO Silver (Syndicate design ruling 2026-10-05 18:36 CT, Caleb can override; Caleb ~6:14 PM CT already ruled it is not the Boss Box). Ralph pays ONE Bronze box per Crawler who fought or talked him down, plus the boss-tier encounter credits (cash_per_crawler / cash_dice_per_crawler). floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}) is the Krakaren's Boss Box line and does NOT apply to Ralph. Counted in _floor_check.box_math as 1.0 Bronze per Crawler.",
+          "silver_boss_box": false,
+          "reasoning": "Planned boss fight (spec kind 'boss (planned; non-Boss-Box reward)'): budgeted at boss tier for XP and CR. Ralph alone is 200 XP, well under the High band; the GM may add support up to the boss budget. Reward per Syndicate (18:36 CT): one Bronze box per Crawler plus boss-tier encounter credits, no Silver, never the Silver Boss Box. This keeps F2 Silver at the single Krakaren Boss Box (core 4.5, F1-2 Silver 0-1 per Crawler).",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d09_01": {
@@ -2842,72 +2873,82 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
           "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.standard ({\"Bronze\": 0.07}); no new box odds here",
+          "silver_boss_box": false,
           "reasoning": "1 Brindle Grub + 1 Fizz Grub per Crawler.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "d09_03": {
-          "name": "Rage Elemental: Bathroom Penalty Made Flesh (summoned)",
-          "tier": "boss",
+          "name": "Stair Claim: Convoy Cap",
+          "tier": "hard",
           "budget_level": 2,
           "spec_encounter_id": "enc-d09-03",
           "spec_file": "floors/f02/day-09.spec.json",
-          "optional_conditional": true,
+          "optional_conditional": false,
           "creatures": [
             {
-              "srd_id": "air-elemental",
-              "cr": "5",
-              "monster_table_id": "cmm-056"
+              "srd_id": "giant-wasp",
+              "cr": "1/2",
+              "monster_table_id": "cmm-044"
+            },
+            {
+              "srd_id": "giant-centipede",
+              "cr": "1/4",
+              "monster_table_id": "cmm-041"
             }
           ],
           "counts_by_party_size": {
             "2": {
-              "air-elemental": 1
+              "giant-wasp": 3,
+              "giant-centipede": 1
             },
             "3": {
-              "air-elemental": 1
+              "giant-wasp": 4,
+              "giant-centipede": 2
             },
             "4": {
-              "air-elemental": 1
+              "giant-wasp": 6,
+              "giant-centipede": 2
             }
           },
           "xp_by_party_size": {
-            "2": 1800,
-            "3": 1800,
-            "4": 1800
+            "2": 350,
+            "3": 500,
+            "4": 700
           },
           "fit": {
             "2": {
-              "xp_used": 1800,
+              "xp_used": 350,
               "tier_budget": 400,
-              "over_by": 1400,
-              "within_tier": false,
-              "lead_cr": "5",
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/2",
               "cr_cap": "1",
-              "lead_within_cr_cap": false
+              "lead_within_cr_cap": true
             },
             "3": {
-              "xp_used": 1800,
+              "xp_used": 500,
               "tier_budget": 600,
-              "over_by": 1200,
-              "within_tier": false,
-              "lead_cr": "5",
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/2",
               "cr_cap": "2",
-              "lead_within_cr_cap": false
+              "lead_within_cr_cap": true
             },
             "4": {
-              "xp_used": 1800,
+              "xp_used": 700,
               "tier_budget": 800,
-              "over_by": 1000,
-              "within_tier": false,
-              "lead_cr": "5",
-              "cr_cap": "3",
-              "lead_within_cr_cap": false
+              "over_by": 0,
+              "within_tier": true,
+              "lead_cr": "1/2",
+              "cr_cap": "2",
+              "lead_within_cr_cap": true
             }
           },
-          "cash_per_crawler": 17.5,
-          "cash_dice_per_crawler": "1d6 x 5 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
-          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.boss ({\"Silver\": 1.0}); no new box odds here",
-          "reasoning": "FLAG: SRD air elemental is CR 5 (1,800 XP), far over every L2 boss budget (400 / 600 / 800) and cap (CR 1 / 2 / 3). Counts pinned as written; it is a summoned penalty (M-346), so it must stay avoidable/telegraphed (core 8.3) or be tightened. Needs an Encounter Bot/Caleb call (not covered by the Krakaren ruling); no cap raised here.",
+          "cash_per_crawler": 7.0,
+          "cash_dice_per_crawler": "1d6 x 2 (floors.2.credits, F1 scale, x1 on Floor 2; pool = x party size)",
+          "boxes": "per floors.2.boxes.odds_per_encounter_by_tier.hard ({\"Bronze\": 0.28}); no new box odds here. NOT a Boss Box. The spec's loot_hooks say 'Silver box odds on clear (normal Silver — not Boss Box).' but floors.2.boxes gives a hard fight no Silver odds, so none are created; FLAG: a Silver here would be a second Silver per Crawler over core 4.5 (F1-2 Silver 0-1).",
+          "silver_boss_box": false,
+          "reasoning": "Planned Day 9 closer replacing the former Rage Elemental slot (Caleb 2026-10-05 ~6:14 PM CT). Brindled Vespa (giant wasp CR 1/2, 100 XP) + Brindle Grub (giant centipede CR 1/4, 50 XP), at most 2 bodies per Crawler (SRD fragile rule), Vespas at the d06_02 standard counts (3 / 4 / 6) plus grubs: 350 / 500 / 700 XP against the hard (High) budget 400 / 600 / 800; lead CR 1/2 within the hard cap CR 1 / 2 / 2. Matches the spec scaling (2: one Vespa wave + few grubs; 3: as written; 4: full Vespa + grub pressure). Day 9 total with d09_01: 500 / 725 / 1000 XP, under the normal-day cap 1200 / 1800 / 2400.",
           "status": "ASSUMED (GM may adapt); spec is a DRAFT (Encounter Bot 0.1)"
         },
         "_day_encounter_index": {
@@ -2927,13 +2968,13 @@
           "enc-d09-01": "d09_01",
           "enc-d09-03": "d09_03"
         },
-        "_status": "v0.2.0, ASSUMED. Counts sized by the Accountant against floors.2.tiers.L2 for the Encounter Bot's DRAFT Floor 2 Day 1-10 specs (floors/f02, spec version 0.1, generator still Floor-1-hardcoded). Rule used: fill toward the tier budget without going over, at most 2 creatures per Crawler for CR 1/8-1/4 bodies (SRD fragile rule). CR caps are NOT raised anywhere: fit.<P>.lead_within_cr_cap = false marks each over-cap lead for Encounter Bot/GM (d02_01, d07_01, d07_02 CR 1 leads in standard/trivial tiers; d03_02 for 2 Crawlers; d05_02 Krakaren for 2-3 Crawlers; d09_03 Rage Elemental CR 5 everywhere). Krakaren: CR 3 version per Caleb (2026-10-05 ~6:06 PM CT); L2 boss cap stays 3.",
+        "_status": "v0.2.2, ASSUMED. Counts sized by the Accountant against floors.2.tiers.L2 for the Encounter Bot's DRAFT Floor 2 Day 1-10 specs (floors/f02, spec version 0.1). Rule used: fill toward the tier budget without going over, at most 2 creatures per Crawler for CR 1/8-1/4 bodies (SRD fragile rule). CR caps are NOT raised anywhere: fit.<P>.lead_within_cr_cap = false marks each over-cap lead for Encounter Bot/GM (d02_01, d07_01, d07_02 CR 1 leads in standard/trivial tiers; d03_02 for 2 Crawlers; d05_02 Krakaren for 2-3 Crawlers, see its cr_cap_flag_note). Krakaren: HOUSE CR 3 version per Caleb (2026-10-05 ~6:06 PM CT); L2 boss cap stays 3; it pays the floor's single Silver Boss Box (Caleb ~6:14 PM CT). Ralph (d08_02): planned boss fight, one Bronze per Crawler plus boss-tier credits, no Silver, not a Boss Box (Syndicate 18:36 CT, v0.2.2). enc-d09-03 is now 'Stair Claim: Convoy Cap' (hard). The Rage Elemental is no longer here: floors.2.trigger_spawns.rage_elemental (OUT OF BUDGET). Every pin has silver_boss_box (true only for d05_02).",
         "_floor_check": {
           "combat_encounters_in_specs": 15,
           "mix_in_specs": {
             "standard": 10,
-            "hard": 1,
-            "boss": 3,
+            "hard": 2,
+            "boss": 2,
             "trivial": 1
           },
           "mix_planned_floors_2_encounters": {
@@ -2943,9 +2984,9 @@
             "boss": 1
           },
           "xp_used_by_party_size": {
-            "2": 5150,
-            "3": 6000,
-            "4": 7150
+            "2": 3700,
+            "3": 4700,
+            "4": 6050
           },
           "tier_budget_sum_by_party_size": {
             "2": 4800,
@@ -2957,7 +2998,103 @@
             "3": 6600,
             "4": 8800
           },
-          "note": "Guideline check only. The specs run 15 combat encounters (matching the planned 15) but with three boss-tier fights (Krakaren, Ralph, Rage Elemental) against the plan of 1 boss and 2 hard; floors.2.boxes plans ONE Silver Boss Box per Crawler. Which boss pays the Boss Box (or whether Neighborhood Bosses each do) is open for Caleb/Encounter Bot; nothing here adds box odds or budget."
+          "excluded_out_of_budget": [
+            "floors.2.trigger_spawns.rage_elemental (CR 5, 1,800 XP): not in the mix, XP, boss count, cash or box math"
+          ],
+          "box_math": {
+            "silver_boss_boxes_per_crawler": 1,
+            "silver_boss_box_payer": "d05_02 Krakaren Clone (Caleb 2026-10-05 ~6:14 PM CT); counted once",
+            "boss_tier_fights": [
+              "d05_02 (pays the Silver Boss Box)",
+              "d08_02 Ralph (one Bronze per Crawler + boss-tier credits, no Silver; Syndicate 18:36 CT)"
+            ],
+            "fight_bronze_expected_per_crawler_spec_mix": 1.26,
+            "fight_bronze_arithmetic": "10 standard x 0.07 + 2 hard x 0.28 + 1 trivial x 0 + 2 boss x 0 = 1.26 (planned mix: 1.12)",
+            "deed_bronze_expected_per_crawler": 0.9,
+            "bronze_expected_per_crawler": 3.16,
+            "silver_expected_per_crawler": 1,
+            "core_4_5_ceiling_f1_2": {
+              "Bronze": "2-4",
+              "Silver": "0-1"
+            },
+            "verdict": "v0.2.2: Bronze 3.16 expected fits core 4.5's 2-4. Silver 1 per Crawler (the Krakaren Boss Box only) fits 0-1; the over-Silver flag of v0.2.1 is RESOLVED by Syndicate's 18:36 CT ruling (Ralph Bronze; the five spec Silver mentions become Bronze). Watch (guideline, not a breach of a hard cap): fights 1.26 + Ralph 1 + the full achievement Bronze cap of 2 = 4.26, a little over the 2-4 pacing band, before any of the five unpriced former-Silver mentions; GM pacing keeps a table near 3-4.",
+            "ralph_bronze_per_crawler": 1.0,
+            "bronze_arithmetic": "fights 1.26 (spec-mix odds) + Ralph 1.0 + deeds 0.9 = 3.16"
+          },
+          "economy_vs_specs": {
+            "encounter_cash_expected_per_crawler_spec_mix": 100.0,
+            "encounter_cash_planned": 75.5,
+            "arithmetic": "cash 100.0 (spec mix) + R1 toasts 75.0 + Bronze 3.16 x 43.293 + Silver Boss Box 481.552 = 793.4; line 1500",
+            "note": "Guideline check only; economy_audit.floor_2 (planned mix, 719.5) is unchanged. v0.2.2 drops the v0.2.1 'with Ralph's Silver' case (1231.0): Ralph pays Bronze now. 793.4 sits about 706 under the 1,500 line.",
+            "all_in_expected_per_crawler": 793.4
+          },
+          "note": "Guideline check only. v0.2.1/v0.2.2: 15 planned combat encounters (10 standard, 2 hard, 2 boss, 1 trivial) against the plan's 15 (4 / 8 / 2 / 1). Two boss-tier fights, ONE Silver Boss Box (Krakaren). The Rage Elemental is out of budget and excluded from every number here. v0.2.2: Ralph pays one Bronze per Crawler, no Silver (Syndicate 18:36 CT)."
+        }
+      },
+      "trigger_spawns": {
+        "_status": "v0.2.1: avoidable trigger / punishment spawns. OUT OF BUDGET: nothing here counts toward floors.2 encounters, xp, credits or boxes.",
+        "rage_elemental": {
+          "id": "trigger-rage-elemental",
+          "name": "Rage Elemental (Bathroom Penalty)",
+          "kind": "trigger spawn / punishment",
+          "OUT_OF_BUDGET": true,
+          "out_of_budget_wording": "OUT OF BUDGET. The Rage Elemental is not a planned encounter. It sits outside the boss budget, the boss count, the XP budget (floor ceiling and daily caps) and the box budget, and it pays no Silver Boss Box. It spawns only if a Crawler urinates or defecates outside a saferoom or a bathroom, on any day until collapse, and likely kills everyone. Its CR 5 (1,800 XP) is a deliberate exception over every L2 cap (boss cap CR 1 / 2 / 3, boss budget 400 / 600 / 800 XP for 2 / 3 / 4 Crawlers) because it is out of budget; no L2 cap is raised.",
+          "ruling": "Caleb 2026-10-05 ~6:14 PM CT (Floor 2 Rage Elemental stays CR 5 but is avoidable; trigger/punishment spawn outside the boss budget and count; no Boss Box).",
+          "spec_source": "floors/f02/day-09.spec.json trigger_spawns.rage_elemental (the same block also sits at day.trigger_spawns.rage_elemental); available_any_day true",
+          "planned_encounter": false,
+          "available_any_day": true,
+          "trigger": "Spawns ONLY if a Crawler urinates or defecates anywhere other than a saferoom or a designated bathroom (Day 1 bathroom rule / M-346). companion exempt. Ends at collapse. Likely kills everyone — treat as avoidable TPK risk.",
+          "creature": {
+            "srd_id": "air-elemental",
+            "cr": "5",
+            "monster_table_id": "cmm-056",
+            "xp_as": 1800
+          },
+          "counts_toward": {
+            "boss_budget": false,
+            "boss_count": false,
+            "encounter_count": false,
+            "xp_budget": false,
+            "daily_xp_caps": false,
+            "box_budget": false
+          },
+          "silver_boss_box": false,
+          "boxes": "none: no Silver Boss Box and no box odds in this file (floors.2.boxes does not apply). The spec adds 'If somehow survived/lured, Syndicate may frame a toast/Silver (not Boss Box) — not promised.' Any such Silver is unbudgeted, would be over core 4.5 (F1-2 Silver 0-1) on top of the Krakaren Boss Box, and must be logged by the GM.",
+          "credits": "none in this file (no encounter cash dice; out of budget)",
+          "vs_l2_caps_by_party_size": {
+            "2": {
+              "xp_as": 1800,
+              "boss_budget": 400,
+              "over_by": 1400,
+              "boss_cr_cap": "1",
+              "cr": "5",
+              "exception": "deliberate (out of budget)"
+            },
+            "3": {
+              "xp_as": 1800,
+              "boss_budget": 600,
+              "over_by": 1200,
+              "boss_cr_cap": "2",
+              "cr": "5",
+              "exception": "deliberate (out of budget)"
+            },
+            "4": {
+              "xp_as": 1800,
+              "boss_budget": 800,
+              "over_by": 1000,
+              "boss_cr_cap": "3",
+              "cr": "5",
+              "exception": "deliberate (out of budget)"
+            }
+          },
+          "achievement_hooks_if_spawned": [
+            "ACH-1828",
+            "ACH-1830",
+            "ACH-1834"
+          ],
+          "slot_map": "none: the spec gives this spawn no count, CR or budget slot",
+          "formerly": "floors.2.fixed_encounters.d09_03 (v0.2.0, boss tier, CR 5 over every cap); enc-d09-03 is now the Stair Claim",
+          "status": "AUTHORITATIVE for the out-of-budget status (Caleb ruling); counts 1 at every party size as written; spec is a DRAFT"
         }
       }
     },
@@ -6500,22 +6637,22 @@
     "slots": []
   },
   "f02_day01_to_10_slot_map": {
-    "status": "v0.2.0 addition (Encounter Bot request for Floor 2). Maps the enemy COUNT, enemy CR and encounter BUDGET slots of every combat encounter in floors/f02/day-01..10.spec.json to floors.2.fixed_encounters. Loot, rest-fee, Detour Tax and key slots already cite existing fields (floors.2.credits, floors.2.boxes, floors.1.prices.*) and are not remapped; no Floor 2 prices are created here (decision 031 fee untouched).",
-    "draft_note": "DRAFT: every Floor 2 spec is meta.status draft / version 0.1 and floors/f02/_draft-counts.json reports the generator still Floor-1-hardcoded (FAIL 326, --write-on-fail). Hashes are pinned to the specs as they stand; re-sync when Encounter Bot regenerates them.",
+    "status": "v0.2.0 addition (Encounter Bot request for Floor 2), re-pinned in v0.2.1. Maps the enemy COUNT, enemy CR and encounter BUDGET slots of every planned combat encounter in floors/f02/day-01..10.spec.json to floors.2.fixed_encounters. Loot, rest-fee, Detour Tax and key slots already cite existing fields (floors.2.credits, floors.2.boxes, floors.1.prices.*) and are not remapped; no Floor 2 prices are created here (decision 031 fee untouched). The Rage Elemental trigger spawn has no slots (floors.2.trigger_spawns.rage_elemental, out of budget).",
+    "draft_note": "DRAFT: every Floor 2 spec is meta.status draft / version 0.1. Hashes are pinned (v0.2.1) to the specs as they stand on disk at re-pin (Encounter Bot's 18:28 CT regeneration, which followed the 18:16 one). That pass already carries most of Syndicate's achievement trim (72 proposed: 67 FRAMED + 4 CANON-WIRED + 1 UNFRAMED); Lore's canon fixes are still pending, so another regeneration and sans-pin hash re-sync may follow. v0.2.2: all ten sans-pin hashes re-synced to Encounter Bot's 18:44 CT regeneration (the v0.2.1 re-pin pass; pinned ids, names and slot paths re-checked). v0.2.4: all ten re-synced again to Encounter Bot's 19:03 CT F2 content pass (53 slots re-checked). v0.2.5: day-05 re-synced to Encounter Bot's 19:15 CT pass (f02-any-0001 bound to d05_02); other nine unchanged.",
     "spec_sha256_sans_pin_when_mapped": {
-      "day-01": "679557b22f870b6e2cc8579d68ec2221f5c674980a4a0d402bacecd429101ef2",
-      "day-02": "7e3f26dc211e30fa8e95319dbdf9dcfe0fb2d940e6e5ca72f0e2e86593c0d1b5",
-      "day-03": "bd68ff1dcc9362238713884a894a834561301c06142c7d909d7b741da9f39110",
-      "day-04": "71aa71a29daffbe9ccadbc9c56942633a8dc59755ad27d94fec7e914bd9cba33",
-      "day-05": "c53a4134b9f4762bb583a416690d35b4ae0f54e7689b7e3ade711ea075fc1a3a",
-      "day-06": "e412ab8de745c8c65a6dafb7c778b943ba4b8b8e50a5a6208e39aadde1957d31",
-      "day-07": "4f3d200e9af72ea7791c1fd14c6c0f702c10f5819b3c29763df604562b1f8bfb",
-      "day-08": "ff614bd97c1860e8526fb48b06f7ce6d85f33acd66605f5fb6053a15025da370",
-      "day-09": "31fb09e9079ee5b94aac2f3fd0072abcaf393e7d33539b24e1730ee4c71f95ff",
-      "day-10": "8ea4fb9d66d246f0aae491fa86f75c304abbfa7d99fd1743ef8103e3d37e445f"
+      "day-01": "28793356981b8dcabea074d880b13a6374c4d9d678789b26fd0b922721fb7c2c",
+      "day-02": "437846df07de5eddd820b6a313d64294bba37ce6e8824ca46caeab454760d0e9",
+      "day-03": "cdfa9616a06283f6033537e4804d5218855d25c2e06f5f7da555b004f3674b0a",
+      "day-04": "141082bd904e045146d06b66e84155a3b79eb7201fb5e7b135f184499385cba1",
+      "day-05": "654428069dbf30d573b6fc215e25283b16a4c6faeca76c713b0d38ab5c1e802c",
+      "day-06": "913bb05c4503376868a2fe9c8ac7739d2ae13406471b0d979b8e8000977e9e00",
+      "day-07": "78e196507f8c3231ec5691012c35b7fbb5655571deb3e1b2f5b183b9784915d3",
+      "day-08": "4075f8bd4cd11c5a18c007de0a0e45bf9df256215d0ff849053f4aa9e935053b",
+      "day-09": "fdd0cf253ab7e92b3fc226959eb5c9684d22fca2cfcc4a939b9d5acc0c6d16d7",
+      "day-10": "e17ed4df1e521262d09ea5773324983788127245f53590c5fabc4357ea099298"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
-    "count": 51,
+    "count": 53,
     "slots": [
       {
         "spec_file": "floors/f02/day-01.spec.json",
@@ -7206,30 +7343,58 @@
       {
         "spec_file": "floors/f02/day-09.spec.json",
         "spec_path": "/encounters[2]/enemies[0]/count_slot",
-        "label": "COUNT (rage-elemental)",
+        "label": "COUNT (vespa)",
         "fills_from": "floors.2.fixed_encounters.d09_03.counts_by_party_size",
         "cite": {
           "kind": "count",
           "path": "floors.2.fixed_encounters.d09_03.counts_by_party_size",
-          "key": "air-elemental"
+          "key": "giant-wasp"
         },
         "value_by_party_size": {
-          "2": 1,
-          "3": 1,
-          "4": 1
+          "2": 3,
+          "3": 4,
+          "4": 6
         }
       },
       {
         "spec_file": "floors/f02/day-09.spec.json",
         "spec_path": "/encounters[2]/enemies[0]/cr_slot",
-        "label": "CR (rage-elemental)",
+        "label": "CR (vespa)",
         "fills_from": "floors.2.fixed_encounters.d09_03.creatures",
         "cite": {
           "kind": "cr",
           "path": "floors.2.fixed_encounters.d09_03.creatures",
-          "key": "air-elemental"
+          "key": "giant-wasp"
         },
-        "value": "5"
+        "value": "1/2"
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[2]/enemies[1]/count_slot",
+        "label": "COUNT (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d09_03.counts_by_party_size",
+        "cite": {
+          "kind": "count",
+          "path": "floors.2.fixed_encounters.d09_03.counts_by_party_size",
+          "key": "giant-centipede"
+        },
+        "value_by_party_size": {
+          "2": 1,
+          "3": 2,
+          "4": 2
+        }
+      },
+      {
+        "spec_file": "floors/f02/day-09.spec.json",
+        "spec_path": "/encounters[2]/enemies[1]/cr_slot",
+        "label": "CR (brindle-grub)",
+        "fills_from": "floors.2.fixed_encounters.d09_03.creatures",
+        "cite": {
+          "kind": "cr",
+          "path": "floors.2.fixed_encounters.d09_03.creatures",
+          "key": "giant-centipede"
+        },
+        "value": "1/4"
       },
       {
         "spec_file": "floors/f02/day-09.spec.json",
@@ -7241,9 +7406,9 @@
           "path": "floors.2.fixed_encounters.d09_03.fit"
         },
         "value_by_party_size": {
-          "2": "boss tier, High band: budget 400 XP for 2 Crawlers (level 2); used 1800 XP (over by 1400); lead CR 5 above cap 1 (flag)",
-          "3": "boss tier, High band: budget 600 XP for 3 Crawlers (level 2); used 1800 XP (over by 1200); lead CR 5 above cap 2 (flag)",
-          "4": "boss tier, High band: budget 800 XP for 4 Crawlers (level 2); used 1800 XP (over by 1000); lead CR 5 above cap 3 (flag)"
+          "2": "hard tier, High band: budget 400 XP for 2 Crawlers (level 2); used 350 XP",
+          "3": "hard tier, High band: budget 600 XP for 3 Crawlers (level 2); used 500 XP",
+          "4": "hard tier, High band: budget 800 XP for 4 Crawlers (level 2); used 700 XP"
         }
       }
     ]

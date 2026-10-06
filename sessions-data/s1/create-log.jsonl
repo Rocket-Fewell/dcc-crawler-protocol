@@ -1,1 +1,9 @@
 {"ts":"2026-10-05T21:39:25.555Z","event":"build_cancelled","uid":"376517850724040714","screen":"S2","status":"draft","had_rolls":false}
+{"ts":"2026-10-05T23:41:13.921Z","event":"build_cancelled","uid":"376517850724040714","screen":"S1","status":"draft","had_rolls":false}
+{"ts":"2026-10-06T00:00:40.702Z","event":"registered","crawler":"Eisenhorn","uid":"376517850724040714","tag":"CRAWLER #0982-X","session":"s1","card_posted":true,"via":"create-flow"}
+{"ts":"2026-10-06T00:09:49.503Z","event":"build_cancelled","uid":"376517850724040714","screen":"S1","status":"draft","had_rolls":false}
+{"ts":"2026-10-06T00:13:08.168Z","event":"registered","crawler":"Shirayuki","uid":"1177041830337056828","tag":"CRAWLER #4731-M","session":"s1","card_posted":true,"via":"create-flow"}
+{"ts":"2026-10-06T00:14:49.401Z","event":"build_cancelled","uid":"1177041830337056828","screen":"S3","status":"draft","had_rolls":false}
+{"ts":"2026-10-06T00:19:47.969Z","event":"build_cancelled","uid":"1177041830337056828","screen":"S3","status":"draft","had_rolls":false}
+{"ts":"2026-10-06T00:27:54.975Z","event":"build_cancelled","uid":"783884998230278164","screen":"S10","status":"draft","had_rolls":true}
+{"ts":"2026-10-06T00:46:25.761Z","event":"registered","crawler":"Mr.Whaite","uid":"783884998230278164","tag":"CRAWLER #4496-B","session":"s1","card_posted":true,"via":"create-flow"}

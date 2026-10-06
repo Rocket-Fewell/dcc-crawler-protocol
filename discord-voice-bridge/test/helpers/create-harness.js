@@ -74,7 +74,10 @@ export class Player {
   followups = [];
 
   capture(p) {
-    if (p.embeds || p.components) this.msg = p;
+    if (p.embeds || p.components) {
+      if ((p.components?.length ?? 0) > 5) throw new Error(`Discord allows at most 5 component rows; screen rendered ${p.components.length}`);   // live 50035 on S10, Oct 5 2026
+      this.msg = p;
+    }
     this.lastText = [p.content, ...(p.embeds ?? []).map((e) => { const j = e.toJSON ? e.toJSON() : e; return `${j.title ?? ''}\n${j.description ?? ''}`; })].filter(Boolean).join('\n');
   }
 
@@ -162,7 +165,14 @@ export async function drive(p, o = {}) {
   await p.click('Pick for me'); if (O.onS9) await O.onS9(p); await p.click('Next'); // S9
   if (O.kit) {
     await p.choose('S10:kc', O.kit.kc); await p.choose('S10:kb', O.kit.kb);
-    for (const c of p.components().filter((x) => x.custom_id?.includes(':S10:var:'))) await p.chooseId(c.custom_id, O.kit.variants?.[c.custom_id.split(':').pop().split('~')[0]] ?? c.options[0].value);
+    // S10 shows one type pick at a time (5-row limit): pick, re-render, repeat until no unpicked menu is left
+    const picked = new Set();
+    for (let n = 0; n < 6; n++) {
+      const c = p.components().find((x) => x.custom_id?.includes(':S10:var:') && !picked.has(x.custom_id));
+      if (!c) break;
+      picked.add(c.custom_id);
+      await p.chooseId(c.custom_id, O.kit.variants?.[c.custom_id.split(':').pop().split('~')[0]] ?? c.options[0].value);
+    }
     if (O.kit.shop) await p.form('S10:shop', { list: O.kit.shop });
   } else { await p.click('Pick for me'); if (O.noShop) await p.click('Clear shopping'); }
   await p.click('Next'); // S10

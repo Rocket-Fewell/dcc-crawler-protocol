@@ -1,5 +1,5 @@
 # Canon Ledger Rules
-Owner: DCC Lore | Status: review | Version: 1.13 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 1.14 | Updated: 2026-10-05
 Summary: How every future pass must append to CANON-LEDGER.md: one dated entry per finding, with an exact quote and a source tag.
 
 The ledger is `CANON-LEDGER.md` in this folder (reachable as `lore/CANON-LEDGER.md` from the campaign workspace). It is the master "hard memory" of DCC canon. This file is the full procedure; section 0 of the ledger is the short version.
@@ -22,18 +22,18 @@ The ledger is `CANON-LEDGER.md` in this folder (reachable as `lore/CANON-LEDGER.
 6. Run `python3 tools/ledger_check.py` from the lore folder. It must report `failures: 0`. Fix any quote it rejects.
 7. **Do not re-run `tools/ledger_build.py` over a ledger that has had manual appends.** It writes to `work/ledger-rebuild.md` by default. Only pass `CANON-LEDGER.md` as the output path for the initial build.
 
-## 2. ID prefixes and the next free ID (as of 2026-10-05, Pass 22)
+## 2. ID prefixes and the next free ID (as of 2026-10-05, Pass 33)
 | Prefix | Section | Last used | Next free |
 |---|---|---|---|
 | A- | 1 Achievements | A-190 | A-191 |
-| M- | 2 Mechanics rulings (also sec 13–17 process; sec 9.1 Floor 1 creatures/hazards; sec 9.2 Floor 2 rules/creatures/NPCs; sec 9.3 premise verification; sec 9.4 Floor 3; sec 9.5 Floor 2 refinement; sec 9.6 Floors 3–7 bestiary) | M-765 | M-766 |
+| M- | 2 Mechanics rulings (also sec 13–17 process; sec 9.1 Floor 1 creatures/hazards; sec 9.2 Floor 2 rules/creatures/NPCs; sec 9.3 premise verification; sec 9.4 Floor 3; sec 9.5 Floor 2 refinement; sec 9.6 Floors 3–7 bestiary; sec 9.7 clubs and Personal Spaces) | M-825 | M-826 |
 | L- | 3 Loot box facts (also sec 13 examples) | L-023 (L-023 sits in sec 3 after L-020; L-021..L-022 are in sec 13) | L-024 |
 | L-B | 3b Loot box type index | (see table) | L-B76 (L-B01..L-B75 used) |
 | S- / P- / I- / C- / R- | 4a Skills / 4b Spells / 4c Items (I- also sec 13–14) / 4d Classes (C- also sec 12) / 4e Races (R- also sec 11) | S-018 / P-016 / I-035 / C-050 / R-081 | S-019 / P-017 / I-036 / C-051 / R-082 |
 | B- | 5 Bosses | B-030 | B-031 |
 | H- | 6 Characters (also sec 13–14 examples) | H-057 | H-058 |
 | T- | 7 Plot beats (also sec 13–14 examples) | T-073 | T-074 |
-| X- | 8 Conflicts / Unverified (X-054..X-056 live in sec 16.1, X-057..X-058 in sec 17.3, X-059..X-065 in sec 9.2c, X-066..X-075 in sec 9.3c, X-076..X-079 in sec 9.4c, X-080 in sec 9.5c) | X-080 (X-A01..X-A21 are generated flags) | X-081 |
+| X- | 8 Conflicts / Unverified (X-054..X-056 live in sec 16.1, X-057..X-058 in sec 17.3, X-059..X-065 in sec 9.2c, X-066..X-075 in sec 9.3c, X-076..X-079 in sec 9.4c, X-080 in sec 9.5c, X-081..X-084 in sec 9.6b, X-085 in sec 9.7c) | X-085 (X-A01..X-A21 are generated flags) | X-086 |
 | K- (and X-C for crafting conflicts) | 10 Crafting | K-187 (X-C12) | K-188 (X-C13) |
 | R- (11.1 process, 11.2 per race) | 11 Races and Floor 3 race selection | R-081 | R-082 |
 | C- (12.1 process, 12.2 examples) | 12 Classes and Floor 3/6/9 class selection | C-050 | C-051 |
@@ -83,3 +83,5 @@ Always check the tail of the section before choosing an ID. If the table above i
 **Section 9.4 note (Pass 21, 2026-10-05):** Floor 3 (The Over City) setting, law, timer, safe-room, stairwell, night-mob and Elite rows were appended as M-651..M-706 in section 9.4 (just above the Pass log, after 9.3), with conflicts X-076..X-079 in 9.4c. X-076 records the canon traditional 20-day Floor 3 timer (cut to 8 this season) against the house 20-day clock (decision 026): they match. Race/class selection stays in sections 11-12. Next free: M-707, X-080.
 
 **Section 9.5 note (Pass 22, 2026-10-05):** Floor 2 refinement rows from the scheduled reserve pass (blimp boss, clone nameplate, pet reward room, Mind Horror, quests, Team Li Na and Death Watch, Mexx, Kobold-quadrant kitchen safe room) were appended as M-707..M-733 in section 9.5 (just above the Pass log, after 9.4), with conflict X-080 (Rot Stickers) in 9.5c. Recap-transcript-only rows are WIKI-ONLY (recap transcript, auto-captions), following M-559 and M-673. Next free: M-734, X-081.
+
+**Section 9.7 note (Pass 33, 2026-10-05):** Club and Personal Space rows (Desperado Club, Club Vanquisher, Personal Space levels/prices, Bopca haggling) were appended as M-766..M-825 in section 9.7 (just above section 10), with conflict X-085 in 9.7c. The same pass re-copied three Pass 32 quotes (M-748, M-755, M-758) that carried a raw `{{PAGENAME}}` or cite marker, logged in the Pass log. Next free: M-826, X-086.

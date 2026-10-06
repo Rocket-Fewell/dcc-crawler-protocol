@@ -1,5 +1,5 @@
-# 02 — Core Rules (5e Overlay) v0.2.20
-Owner: Syndicate | Status: draft | Version: 0.2.18 | Updated: 2026-10-05
+# 02 — Core Rules (5e Overlay) v0.2.21
+Owner: Syndicate | Status: draft | Version: 0.2.21 | Updated: 2026-10-05
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -182,7 +182,11 @@ Players type moves in chat. The AI DM adjudicates and rolls.
 
 #### 2.5.1 Exploration mode (default)
 
-- Free-form posting order. The AI resolves moves in the order that makes fictional sense (fastest/safest first), not strictly post order.
+- **Session turn order (Caleb, 2026-10-05; decision 034):** at the start of every session the AI rolls once to set the Crawler turn order, prints it, and keeps it for all exploration that session. Crawlers take exploration turns in that order.
+  - A Crawler who joins mid-session goes to the **end** of the order. A dead, benched or away (Autopilot) Crawler's slot is **skipped**, never re-rolled; if they come back the same session they keep their old slot.
+  - A plain pet acts on its owner's turn. A pet-Crawler (Enhanced Pet Biscuit) gets its own slot, placed straight after its owner's.
+  - The order sets whose turn it is, not who may talk: anyone can chat in character any time; the AI resolves *moves* in session order.
+  - The AI hands the spotlight to the next Crawler in order at the end of each turn (`discord_gm.py spotlight set`).
 - The AI asks **one** clarifying question for a vague move, then proceeds.
 - Use **passive Perception / Investigation / Insight** liberally to keep chat moving.
 - Group checks (5e) for party-wide efforts: stealth through a hall, climbing, searching a room.
@@ -190,6 +194,7 @@ Players type moves in chat. The AI DM adjudicates and rolls.
 #### 2.5.2 Combat mode: initiative
 
 - The AI rolls initiative for everyone (crawlers and enemies) in one post and prints the order.
+- **Initiative replaces the session turn order for that fight only.** When combat ends, exploration goes back to the session order, picking up with the Crawler after the one whose exploration turn triggered the fight.
 - **Default:** standard 5e individual initiative.
 - **Crawler blocks (homebrew, default ON):** consecutive crawlers in the initiative order form a **block**. All crawlers in a block may post their turns in any order; the AI resolves them in initiative order. This is the main chat speed-up.
 - **Enemy grouping:** identical enemies act on one initiative count (5e DMG practice).
@@ -1205,6 +1210,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
 | **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
 | **v0.2.16** | 2026-10-04 | **Whole credits only (rules lead ruling, 2026-10-04):** §5.10 says balances are never fractional (matches `tools/state.py` and decision 028); sp/cp are list prices only (1 sp = 0.1, 1 cp = 0.01 credit, reference); the "0.5 credit, 0.05 credit" balance wording is removed; buying rounds UP per cart line (matches `bot/src/create/rules.js`), selling at half rounds DOWN per line (matches `tools/state.py` pet buyback). No price changed. |
+| **v0.2.21** | 2026-10-05 | **Session turn order (Caleb, 2026-10-05; decision 034):** §2.5.1 rolls one Crawler turn order at session start and keeps it for exploration all session (replaces free-form posting order); joiners go last, dead/benched/AFK slots are skipped, pet-Crawlers act right after their owner; §2.5.2 initiative overrides it for that fight only, then play returns to session order. No number or table changed. |
 | **v0.2.20** | 2026-10-05 | **§8.3 party levels aligned to decision 033** (Accountant follow-up after rules/70 v0.2.0): floor rows use arrive→leave bands (F4@5 … F18@20); CR bands follow party level (old N-row ranges). Floors 16–18 share the top CR band. |
 | **v0.2.19** | 2026-10-05 | **F3/F9 double level bumps (decision 033, Caleb executive):** §2.2 arrive bands N / N+1 / N+2; F3 and F9 end boss +1 then normal onboarding; arrive F4 at 5, F10 at 12, F18 at 20 (finale 19–20 levels removed). §2.3 one-level rule updated. §6.4.3 refund desk re-keyed to arrive levels (floors 4 / 8 / 11 / 15). Accountant re-cuts rules/70 + 75; Book Author Ch1/Ch2. |
 | **v0.2.18** | 2026-10-05 | **Field-rest fee clarified (Season Zero):** §5.6 — Short Rest free if already quiet; rules/70 fee buys quiet for a Short Rest in a noisy spot; never a Long Rest outside a saferoom. Decision 031. Day pages already matched. No number changed. |

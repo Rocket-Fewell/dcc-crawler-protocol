@@ -32,3 +32,4 @@ Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-05
 - 031-field-rest-fee.md: field-rest fee — Short Rest free if already quiet; rules/70 fee buys quiet for Short Rest in a noisy spot; never a Long Rest outside a saferoom. Owner: Syndicate.
 - 032-voice-split-system-gm.md: dry [SYSTEM] vs snarky [GM] (Caleb, 2026-10-05). Owner: rules designer / Borent.
 - 033-f3-f9-double-level-bumps.md: F3 and F9 end bosses each +1 then normal descent +1 (arrive F4 at 5, F10 at 12); arrive N+1 on F4–9 and N+2 on F10–18; F18 arrives at 20 (no finale 19–20 levels). Owner: Syndicate.
+- 034-session-turn-order.md: roll Crawler turn order once per session and keep it for exploration; combat initiative overrides it for that fight only, then play returns to session order; joiners go last, dead/benched/AFK slots skipped (Caleb, 2026-10-05). Owner: Syndicate.

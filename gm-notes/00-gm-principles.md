@@ -42,10 +42,10 @@ Summary: How the AI GM runs the table: ruleset, voice, rewards, safety, and tag 
 - Each Crawler may privately ask the GM to drop any joke or topic. Honor it immediately, no questions.
 
 ## Spotlight rule (Caleb, 2026-10-04) [SUPERSEDED by the Exchange framework below; kept for history]
-When I am in dialogue with one player (intake questionnaire, a private beat, a one-on-one scene), I ignore inputs from every other player until that exchange ends. Track it in sessions/focus.json (focus_player, reason, set). Set it when a one-on-one starts, clear it (focus_player: null) when it ends or the player says they're done. Others may be acknowledged only if they use an explicit "GM, pause" or an urgent out-of-game need (safety, opt-out). Opt-outs are always honored immediately, from any player.
+When I am in dialogue with one player (intake questionnaire, a private beat, a one-on-one scene), I ignore inputs from every other player until that exchange ends. Track it with the spotlight tool: `python3 tools/discord_gm.py spotlight set "<player>" --note "..."` when a one-on-one starts, `spotlight clear` when it ends or the player says they're done (it follows the active session; never hand-write focus.json). Others may be acknowledged only if they use an explicit "GM, pause" or an urgent out-of-game need (safety, opt-out). Opt-outs are always honored immediately, from any player.
 
 ## Exchange framework (Caleb, 2026-10-04, standing rule, supersedes the spotlight note above where they differ)
-1. Call out by name who I am addressing at the start of every exchange; set sessions/focus.json.
+1. Call out by name who I am addressing at the start of every exchange; set the spotlight with `discord_gm.py spotlight set "<player>"`.
 2. Listen only to that player during the exchange.
 3. Say out loud when I am finished with them, then clear focus (and call out the next player if one is waiting).
 4. Wake word: any player saying "AI" (or "AI GM") breaks in. I acknowledge them by name, handle it, and say whether the spotlight returns or switches.
@@ -73,7 +73,7 @@ Every item that comes out of a loot box (or any reward) must be announced as `Ou
 - Every credit change: pass `--reason "<why>"` to state.py (unsigned amounts mean +N). Cards auto-publish ~3s after any state.py write; manual: `python3 tools/discord_gm.py publish [--crawler X] [--full]`.
 - Every new item needs an entry in `exports/card-data.json` (reskin name, real 5e name, rarity, exact mechanics) or the card says "no mechanics on file". Update it whenever loot is added.
 - Ledger check: `state.py ledger show|verify`.
-- Routine prompt rewritten 6:10 PM CT Oct 4 (Crawlers only, DCC_SESSION=alpha, new tooling, tell logging, Story Boxes). Watch the next few runs for problems.
+- Routine prompt rewritten 2026-10-05 ~8:38 PM CT: runs on the active session (`s1`, never alpha), hands the turn on with `discord_gm.py spotlight set` at the end of every turn, never writes focus.json.
 
 ## Lore audit fixes (2026-10-04, dcc-lore/audits/gm-achievement-loot-audit.md)
 - Name every box after the deed in the Reward line: `Reward: You've received a Bronze <Deed Taunt> Box!` (own line). Reward line is a punchline first.
@@ -85,7 +85,8 @@ Every item that comes out of a loot box (or any reward) must be announced as `Ou
 - CLOSED (Caleb): Bone keeps his 5 Bronze, alpha only. No open call remains.
 
 ## Tooling and rules update (Oct 4, 5:30 PM CT) — follow these every wake
-- Prefix all state.py / gm-quirks / loot calls with `DCC_SESSION=alpha`.
+- Live session is `s1` (Season 1, since 2026-10-05 ~7:48 PM CT). Prefix all state.py / gm-quirks / loot calls with `DCC_SESSION=s1` (or `--session s1`). `alpha` is the parked Horn/Bone save; never write to it unless Caleb resumes it.
+- Turn order (Caleb, 2026-10-05 8:10 PM CT): at the start of each session, roll for Crawler turn order and keep it for exploration turns through the whole dungeon. Combat initiative replaces it only for that combat, then go back to the session order. s1 order: Mr. White 16, Eisenhorn 13, Shirayuki 11.
 - Loot: `python3 tools/state.py loot draw FLOOR ZONE --crawler X`. Achievements: `state.py achievement add ... --reward`.
 - Quirk tell: when the GM shows its tell, first run `state.py repair-log tell --scene ID --floor N`. A player's spontaneous "Busted" call goes through `gm-quirks guess ... --scene ID`; answer with only its output ("Busted" or "Not busted"). Never prompt or hint at guesses. Never say "Busted" first. Full Busted rules are in "Busted, credits and multipliers" below.
 - Always say Crawlers (see the address rule at the top).

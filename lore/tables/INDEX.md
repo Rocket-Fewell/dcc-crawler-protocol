@@ -1,5 +1,5 @@
 # Lore Tables Index
-Owner: DCC Lore | Status: draft | Version: 0.29 | Updated: 2026-10-05
+Owner: DCC Lore | Status: draft | Version: 0.31 | Updated: 2026-10-05
 Summary: Machine-readable tables for the campaign bots (JSON is exempt from headers; schema is documented in the catalog file).
 
 | Path | Description | Owner | Status |
@@ -23,6 +23,7 @@ Summary: Machine-readable tables for the campaign bots (JSON is exempt from head
 | item-reskins.version.json | Written by tools/reskin_build.py after every successful build: version (patch counter, bumped each build), sha256 of item-reskins.json, built_at, entry_count, diff vs previous build (added/removed/price_changed/renamed) and a snapshot used for the next diff. | DCC Lore | draft |
 | item-reskins.CHANGELOG.md | One line per reskin build (date, version, sha256 first 12, entry count, optional --note, diff counts). Do not edit by hand. | DCC Lore | draft |
 | loot-decks/ach-f01-orientation-pit.json | Floor 1 achievement deck (achievement-deck/0.1). | DCC Lore | draft |
+| loot-decks/f02-any-story-boxes.json | Floor 2 Soft Open Story Box deck (Legendary one-offs, schema loot-deck/0.1.2): 13 cards f02-any-0001..0013, all draw_weight 0, bound false, story_value 25,000-50,000 (provenance), sale_value 100-500 (System buyback Floor-1 scale), GM hand-pick only; cap one per table per Soft Open floor. sha256 cd3521385e9d… | DCC Lore | draft |
 | loot-decks/f01-any-story-boxes.json | Floor 1 Story Box deck (Legendary one-offs, schema loot-deck/0.1.2): 10 cards f01-any-0056..0065, all draw_weight 0, bound false (lootable, tradeable, sellable), story_value 20,000-80,000 (provenance), sale_value 100-500 (System buyback), GM hand-pick only (`--pick`). The Enhanced Pet Biscuit stays f01-any-0055 in the orientation-pit deck. Spec 2.8; approved by Caleb 2026-10-04. | DCC Lore | draft |
 | canon-floor-1.json | Floor 1 canon source table for the Encounter Bot (schema canon-floor-1/0.1.0): 10 canon zones/set-pieces (floor rules, Hoarder, goblins, Bad Llama, Rot Stickers, Juicer, Ball of Swine, floating crystal, Street Preacher, mob roster) and 14 house zones z00-z11, zS, zW, each with mobs, hazards, features, staging, announcement style, tag (canon / inspired / unverified) and CANON-LEDGER row ids with confidence copied from the ledger. No CR, levels, credits or loot. Build: tools/canon_floor_build.py; check: tools/canon_floor_check.py. | DCC Lore | draft |
 | canon-floor-1.md | Readable view of canon-floor-1.json (generated; do not edit by hand). | DCC Lore | draft |
@@ -86,3 +87,5 @@ Change note v0.27 (2026-10-04): house spelling "saferoom" swept through the loot
 Change note v0.28 (2026-10-05): `canon-floor-2.json` v0.1.1 (sha256 744d2ac6612d…, reserve, not announced) rebuilt after the Pass 22 scheduled refinement: ledger section 9.5 (M-707..M-733, X-080) wired in, 4 entries added, reward-room cages retagged canon, backlog progress notes. New `canon-floor-2.version.json` and `canon-floor-2.CHANGELOG.md`.
 
 Change note v0.29 (2026-10-05): `canon-floor-1.json` rebuilt by tools/canon_floor_build.py because CANON-LEDGER.md moved to v1.15 (check had failed only on staleness). Only `ledger_version` (1.13 to 1.15) and the md generated-from line changed; counts unchanged (24 zones, 46 mobs, 23 hazards, 17 features). json sha256 c5d67e380ca3… to 4a8a3c92a967…, md 4b4916ad3088… to 8e5d97169e88…. canon_floor_check and canon_floor2_check 0 errors.
+Change note v0.30 (2026-10-05): added Soft Open Story Box deck `loot-decks/f02-any-story-boxes.json` (13 Legendary hand-pick cards f02-any-0001..0013; schema loot-deck/0.1.2; bound false; Rage Elemental called out as non-boss punishment spawn). deck_check: 0 errors. sha256 cd3521385e9d…
+Change note (2026-10-05, Syndicate review): f02-any-0001 re-bound to clone-unmask mid-fight (no Boss Box double-pay); f02-any-0011 re-bound to one-time unscripted player plan (distinct from A-136). deck_check 0 errors. sha256 cd3521385e9d…

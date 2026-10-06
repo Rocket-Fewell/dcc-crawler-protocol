@@ -125,7 +125,7 @@ First to kill a boss (that is a Boss Box); cleared a zone; won with a great roll
 
 ## 3. GM procedure (step by step)
 
-Use the Exchange framework: name the player you are addressing, set `sessions/focus.json`, and clear it when done. Keep the spoken parts short (Fish budget): banner, one description line, reward.
+Use the Exchange framework: name the player you are addressing, set the spotlight with `python3 tools/discord_gm.py spotlight set "<player>"`, and `spotlight clear` when done. Keep the spoken parts short (Fish budget): banner, one description line, reward.
 
 **Step 1. Notice.** Say nothing. Mark the time in the log. Run the §2.1 gates and signals. If a hard gate fails, stop and pay a normal achievement. If the gates pass but you have no card that fits, say **"Achievement under review by Production"** (core §3.3, Pending Review), finish the scene, and design the item between sessions; deliver it at the next session start. Never improvise a strong item under pressure.
 

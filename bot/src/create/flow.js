@@ -167,7 +167,7 @@ export async function render(d, env0) {
     }
   }
   const content = S.paged ? pageRows(S.allRows(d, env), d, t) : S.rows(d, env);
-  const components = [...content];
+  const components = [...content].slice(0, 4);   // Discord caps a message at 5 rows; the nav row always takes one
   if (S.nav !== false) {
     const reason = S.ready(d, env);
     const empty = (d.screen === 'S2' && !(d.optouts ?? []).length) || (d.screen === 'S13' && !(d.survey ?? []).length);

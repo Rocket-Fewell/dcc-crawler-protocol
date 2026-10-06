@@ -1127,14 +1127,14 @@
     }
   ],
   "budget_file": {
-    "expected_sha256": "113dcdbedb3cbbcf92a666fcfd202fd27d61d1837aef09d8a5e463d41f781cd1",
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.1.17"
+    "version": "0.2.5",
+    "expected_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",
-    "version": "1.3.1",
-    "expected_sha256": "11ae2445df90e767512c7c5a40cd38d4d89a1e1252ca8f32ee2f2f6f79ec440e"
+    "version": "1.4",
+    "expected_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8"
   },
   "lore_drafts": {
     "collapse_notices": {

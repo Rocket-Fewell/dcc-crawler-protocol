@@ -1,10 +1,10 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.19 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.22 | Updated: 2026-10-05
 Summary: One line per file in the lore folder: path, description, owner, status.
 
 Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (repo-relative; on some boxes a symlink into this tree). Rules: campaign root `NAMING-CONVENTIONS.md` (sibling of `lore/` in a fresh checkout, or set `DCC_CAMPAIGN_ROOT`).
 
-**Start here:** `CANON-LEDGER.md` is the master record of canon findings (each with an exact quote, source tag, confidence and date). Add to it only by the procedure in `ledger-rules.md`. Race selection: see `catalog/race-selection-canon.md`. Class selection (F3/F6/F9): see `catalog/class-selection-canon.md`. Hunters/sponsors/Prize Carousel/Midnight Market: see `catalog/hunters-and-sponsors-canon.md`. Gods/Ascendency/Nothing/Faction Wars/T'Ghee: see `catalog/gods-faction-wars-canon.md`. Nothing in this folder was checked against the novels' text.
+**Start here:** `CANON-LEDGER.md` is the master record of canon findings (each with an exact quote, source tag, confidence and date). Add to it only by the procedure in `ledger-rules.md`. Race selection: see `catalog/race-selection-canon.md`. Class selection (F3/F6/F9): see `catalog/class-selection-canon.md`. Hunters/sponsors/Prize Carousel/Midnight Market: see `catalog/hunters-and-sponsors-canon.md`. Gods/Ascendency/Nothing/Faction Wars/T'Ghee: see `catalog/gods-faction-wars-canon.md`. Clubs and Personal Spaces: see `catalog/clubs-and-personal-spaces-canon.md`. Nothing in this folder was checked against the novels' text.
 
 ## Convention notes for this folder
 - New files use lowercase-hyphenated names. Exceptions: the special files INDEX.md and CANON-LEDGER.md, and the **data mirrors** named after wiki titles or video IDs (`raw/pages/*.txt`, `sources/**/*.txt`), plus code in `tools/` and `raw/`.
@@ -17,7 +17,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | Path | Description | Owner | Status |
 |---|---|---|---|
 | INDEX.md | This index: one line per file in the lore folder. | DCC Lore | review |
-| CANON-LEDGER.md | Master canon ledger v1.16 (Pass 32: F3–7 bestiary anchors M-734..M-765; X-081..X-084 house closers). | DCC Lore | review |
+| CANON-LEDGER.md | Master canon ledger v1.17 (Pass 33: clubs and Personal Spaces M-766..M-825, X-085; Pass 32: F3–7 bestiary anchors M-734..M-765, X-081..X-084). | DCC Lore | review |
 | ledger-rules.md | Rules for appending to the ledger (IDs, quote limit, confidence, dating). | DCC Lore | review |
 | status-and-todo.md | Pass history, coverage tables, source caveats and the running TODO list (the old INDEX body, plus Pass 4). | DCC Lore | review |
 | mechanics.md | 25-section mechanics reference (stats, XP, death, loot boxes, bosses, safe rooms, parties, AI behaviour). | DCC Lore | review |
@@ -49,6 +49,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | sources/nl/how-race-and-class-work.txt | dungeoncrawlercarl.nl explainer: how race and class work (saved 2026-10-03; NL source for ledger section 11). | DCC Lore | n/a (data/code) |
 | sources/web/revival-web-snippets.txt | Saved web excerpts (WEB: tags) used by the revival canon: chapter-summaries B4, Storiluna B4 ch13, Reddit snippets, Mana Toast B2, fan-wiki-2. Not ledger-quotable. | DCC Lore | review |
 | catalog/crafting-canon.md | Crafting canon, Books 1-8: tables/workstations, crafting skills and classes, ingredients, recipes, limits/failure rules, conflicts (187 rows + 12 conflict/gap rows; mirrors ledger section 10). | DCC Lore | review |
+| catalog/clubs-and-personal-spaces-canon.md | Desperado Club, Club Vanquisher and Personal Spaces canon (access, safety, floor unlocks, prices, Bopca haggling, RPG notes); mirrors ledger section 9.7 (M-766..M-825, X-085). | DCC Lore | review |
 | catalog/classes.md | How classes work plus the class list with notes. | DCC Lore | review |
 | catalog/floor-data.md | Per-floor data sheet for Floors 1-18 (crawler counts, level ranges, exits) from wiki infoboxes. | DCC Lore | review |
 | catalog/items.md | Items and potions catalog with one-line notes. | DCC Lore | review |
@@ -67,6 +68,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 |---|---|---|---|
 | tables/INDEX.md | Index of machine-readable tables. | DCC Lore | draft |
 | tables/loot-decks/f01-any-orientation-pit.json | Floor 1 floor-wide loot deck (schema loot-deck/0.1.2 because of the Enhanced Pet Biscuit story_value; 55 cards: 38 Bronze, 16 Silver, 1 Legendary hand-pick f01-any-0055): Bronze + Silver cards with reskin name, 2024 5e item, plain mechanics, snark, deed-named box_name, draw_weight, credit_value; includes needs_verify list. | DCC Lore | draft |
+| tables/loot-decks/f02-any-story-boxes.json | Floor 2 Soft Open Story Box deck (schema loot-deck/0.1.2): 13 Legendary one-offs f02-any-0001..0013, draw_weight 0, bound false, story_value 25k-50k, sale_value 100-500, GM hand-pick only (one per table per floor). sha256 cd3521385e9d… | DCC Lore | draft |
 | tables/loot-decks/f01-any-story-boxes.json | Floor 1 Story Box deck (schema loot-deck/0.1.2): 10 Legendary one-offs f01-any-0056..0065, draw_weight 0, bound false, story_value 20,000-80,000 (provenance), sale_value 100-500, GM hand-pick only (rules/40 section 2.8, rules/42 section 6.5-6.9). | DCC Lore | draft |
 | tables/loot-decks/f01-z03-vending-gore-arcade.json | Zone 3 loot deck (vending-machine pulls, Alchemist's Fire reskin sample id). | DCC Lore | draft |
 | tables/loot-decks/f01-z06-break-room.json | Zone 6 Break Room loot deck (alpha items: Complaint Card, Sports Drink, Kevin, Key, damp credits). | DCC Lore | draft |
@@ -247,3 +249,4 @@ Pass 19 (ledger) provenance: `work/pass19_rows.py` (appended M-327..M-524 and X-
 Pass 20 (ledger) provenance: `work/pass20_rows.py` (appended M-525..M-650 and X-066..X-075; do not re-run) and `work/pass20-row-map.json` (row key to id map; keep).
 Pass 21 (ledger) provenance: `work/pass21_rows.py` (appended M-651..M-706 and X-076..X-079, Floor 3 Over City; do not re-run), `work/pass21-row-map.json` (row key to id map; keep) and `work/ledger-pre-pass21.bak` (pre-append backup).
 Pass 22 (ledger) provenance: `work/pass22/rows.py` and `work/pass22/block.md` (appended M-707..M-733 and X-080, Floor 2 refinement; do not re-run), `work/pass22/fetch.py`, `titles.txt` and `live.json` (live-wiki revision check of 48 Floor 2 pages, 2026-10-05), `work/pass22/canon-floor2-build-pre-pass22.py.bak` (builder before edits) and `work/ledger-pre-pass22.bak` (pre-append backup).
+Pass 33 (ledger) provenance: `work/pass33/rows.py` and `work/pass33/block.md` (appended M-766..M-825 and X-085, clubs and Personal Spaces; do not re-run) and `work/ledger-pre-pass33.bak` (pre-append backup).

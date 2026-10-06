@@ -1,2 +1,5 @@
 {"ts":"2026-10-04T20:44:45.678Z","date":"2026-10-04","session":"20261004T191712-3da2","type":"backlog_dropped","messages":1,"chunks":10}
 {"ts":"2026-10-05T21:32:14.605Z","date":"2026-10-05","session":"20261005T202102-b8e5","dcc_session":"s1","type":"duplicate_dropped","kind":"exact","age_s":97,"chars":872}
+{"ts":"2026-10-05T23:36:00.681Z","date":"2026-10-05","session":"20261005T233515-9d6f","dcc_session":"s1","type":"flush","source":"shush","chunks":3}
+{"ts":"2026-10-05T23:37:59.483Z","date":"2026-10-05","session":"20261005T233634-9b24","dcc_session":"s1","type":"flush","source":"file:8a85b62e","chunks":1}
+{"ts":"2026-10-05T23:38:01.548Z","date":"2026-10-05","session":"20261005T233634-9b24","dcc_session":"s1","type":"flush","source":"shush","chunks":0}

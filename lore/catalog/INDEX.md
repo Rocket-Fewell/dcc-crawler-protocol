@@ -1,5 +1,5 @@
 # Catalog Index
-Owner: DCC Lore | Status: review | Version: 1.6 | Updated: 2026-10-04
+Owner: DCC Lore | Status: review | Version: 1.7 | Updated: 2026-10-05
 Summary: One line per catalog file (generated wiki tables and hand-written clarifications).
 
 | Path | Description | Owner | Status |
@@ -16,6 +16,7 @@ Summary: One line per catalog file (generated wiki tables and hand-written clari
 | gm-quirk-framework.md | (MOVED to dcc-campaign/gm-notes/secret/; stub only) GM-ONLY design doc: secret once-per-campaign fixation/quirks/tic/prior-installation roll, degeneration ladder (Floors 1-12+), Affinity Score, repair options, JSON schema README (HOUSE design on CANON M-033, M-210..M-227). | DCC Lore | draft |
 | gods-faction-wars-canon.md | Gods/worship/Soul Armor/deity sponsorship, Ascendency, Nothing, Faction Wars, T'Ghee; mirrors ledger section 14 (M-158..M-209). | DCC Lore | review |
 | classes.md | How classes work plus the class list with notes. | DCC Lore | review |
+| clubs-and-personal-spaces-canon.md | Desperado Club, Club Vanquisher and Personal Spaces canon: access, safety, floor unlocks, prices, Bopca haggling, RPG notes; mirrors ledger section 9.7 (M-766..M-825, X-085). | DCC Lore | review |
 | crafting-canon.md | Crafting canon, Books 1-8: tables/workstations, crafting skills and classes, ingredients, recipes, limits/failure rules, conflicts (mirrors ledger section 10). | DCC Lore | review |
 | floor-data.md | Per-floor data sheet for Floors 1-18 (crawler counts, level ranges, exits) from wiki infoboxes. | DCC Lore | review |
 | items.md | Items and potions catalog with one-line notes. | DCC Lore | review |

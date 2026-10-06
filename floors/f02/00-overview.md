@@ -17,7 +17,7 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 | Level | Arrive 2; F3 onboarding → 3 |
 | Clock | 10 days HOUSE (canon expected 10 / cut to 6) |
 | Regions | Soft Lobby z20, Rec-Hall Bazaar z21, Grub Alleys z22, Mind Drift z23, Storm Shelter A z24, Rev-Up z25–z26, Big Shot Chicken B z27, Dog Pound z28, Menagerie z29, Stair z30, Death Watch optional |
-| Bosses | **Planned:** Krakaren Clone Neighborhood Boss (cmm-047, CR 3 — **sole Silver Boss Box**); Ralph (cmm-050, Days 7–8 — normal Silver / non-Boss-Box). **Not a boss:** Rage Elemental (cmm-056, CR 5) = bathroom **trigger spawn** / out-of-budget |
+| Bosses | **Planned:** Krakaren Clone Neighborhood Boss (cmm-047, Challenge Rating 3 — **Soft Open's ONLY Silver Boss Box**, Syndicate 18:36); Ralph (cmm-050, Days 7–8 — **Bronze** per Crawler + boss-tier credits). **Not a boss:** Rage Elemental (cmm-056, Challenge Rating 5) = bathroom **trigger spawn** / out-of-budget |
 | Saferooms | Storm Shelter A (mailbox M-358); Big Shot Chicken B (Qwist M-506). May lie elsewhere (Core Ch1) |
 | Seeds | SEED-STATICSIGIL; SEED-GUIDECONTRACT; Benefactor echo optional |
 | Sources | lore/tables/canon-floor-2.json (RESERVE); lore/drafts/core-book-monster-table-v0.2.md; floors/04-floor-bible.md Soft Open |
@@ -33,11 +33,11 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 7. Grubs replace rats; pupa: timer→Vespas, early pop→half-formed (X-060 closed / Caleb).
 8. Rot Stickers Floor 1 only; F2 swarm = HOUSE Fizz Grub cmm-055 (X-080).
 9. Acid Impaler not on F2 — F3 (X-063).
-10. Krakaren Clone = Neighborhood Boss (Caleb; X-059). **Pays the floor's single Silver Boss Box** (Caleb 18:14 CT via Accountant). Ralph is a planned boss with normal Silver / non-Boss-Box reward.
+10. Krakaren Clone = Neighborhood Boss (Caleb; X-059). **Pays the floor's single Silver Boss Box** (Caleb 18:14 CT via Accountant). Ralph is a planned boss with normal Silver / non-Boss-Box reward. Krakaren chamber stair = **HOUSE Soft Open** (cite floor-wide M-364); do **not** cite Borough/City M-365 on the Krakaren stair row (Lore 18:08/18:10).
 11. Hedgehogs: do not field after relocate patch (M-382; cmm-053).
 12. Giant Blimp: rumor/STUB only (cmm-052); no invented kit.
 13. Saferooms can lie from F2 on (Core Ch1).
-14. Silver boxes; Story Box one/floor hand-picked.
+14. Soft Open boxes (Syndicate 18:36): **Krakaren Silver Boss Box is the only Silver**. All other Soft Open boxes are **Bronze** (ACH Bronze cap 2/Crawler/floor; framed proposed = R0 Title/snark). Story Boxes: hand-pick from `lore/tables/loot-decks/f02-any-story-boxes.json` (hold f02-any-0001 and f02-any-0011); one Legendary/table/floor.
 15. Missed collapse = death; no F1 Reprieve on F2.
 
 ## 2. Floor 1 carry-overs (branching)
@@ -65,7 +65,7 @@ Summary: Floor 2 Soft Open draft — 10-day HOUSE clock, Silver boxes, canon Flo
 | Brindled Vespa | giant-wasp | 1/2 | cmm-044 | CANON |
 | Unvaccinated Clurichaun Rev-Up Consultant | goblin-warrior | 1/4 | cmm-045 | CANON |
 | Laminak Rev-Up Consultant Elite | sprite | 1/4 | cmm-046 | CANON |
-| Krakaren Clone (Second Floor) | chuul (HOUSE CR 3) | 3 | cmm-047 | Neighborhood Boss; Caleb CR 3 |
+| Krakaren Clone (Second Floor) | chuul (HOUSE CR 3) | 3 | cmm-047 | Neighborhood Boss; sole Silver; OVER-CAP at 2–3 Crawlers (INTERIM scale to hard) |
 | Danger Dingo | dire-wolf | 1 | cmm-048 | CANON |
 | Kobold Rider | kobold | 1/8 | cmm-049 | CANON |
 | Ralph the Frenzied Gerbil | giant-hyena | 1 | cmm-050 | Planned boss (Days 7–8); normal Silver — not Boss Box |
@@ -107,3 +107,16 @@ X-059 Neighborhood Boss (closed); X-060 pupa dual-burst (closed); X-061 patronag
 ## 6. Open questions
 
 Accountant: floors.2.fixed_encounters pins. Lore: RESERVE release + A-056. Syndicate: achievement rewards. Architect: encounter_bot multi-floor overview/canon. Caleb (2026-10-05): Soft Open FINAL; Krakaren HOUSE CR 3; 18:14 CT via Accountant: Rage Elemental = CR 5 bathroom trigger spawn (off-boss/off-budget); Krakaren = sole Silver Boss Box; Ralph = normal Silver.
+
+## GM placed-loot check_text anchors
+- brochure
+- Hemolymph
+- tip
+- oil
+- convoy
+- Silver
+- credits
+- saferoom
+- stair
+- Soft Open
+- Story Box

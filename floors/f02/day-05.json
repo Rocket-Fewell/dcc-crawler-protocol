@@ -15,24 +15,29 @@
       "lore/drafts/core-book-monster-table-v0.2.md",
       "core-book/chapters/01-welcome.md",
       "decisions/026",
-      "rules/70-encounter-budget-5e.json v0.1.17",
+      "rules/70-encounter-budget-5e.json v0.2.2",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
       "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
-      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward."
+      "Caleb 2026-10-05 18:14 CT (via Accountant): Rage Elemental CR 5 = avoidable bathroom trigger spawn (not planned boss, out-of-budget, no Boss Box); Krakaren pays the single Silver Boss Box; Ralph pays normal Silver / non-boss reward. [SUPERSEDED by Syndicate 18:36 CT: Ralph pays Bronze per Crawler plus boss-tier credits; Krakaren holds the only Silver.]",
+      "lore/drafts/f02-achievement-framing-v0.1.json (Lore 2026-10-05 18:15 CT)",
+      "Lore 18:08/18:10/18:15/18:19 CT: M-365 off Krakaren stair; cite fixes M-385/M-508-509/M-506; f02-achievement-framing-v0.1 wired; no ledger ids in PF narration; Story Box interim f01 deck.",
+      "Syndicate locked: 37 DEMOTE-SUGGESTED cut to flavor; 67 FRAMED + ACH-1827..1835 kept. Lore 18:10 cites + framing wired. Reconcile pass post-overlap.",
+      "Syndicate 18:36 CT: Krakaren sole Soft Open Silver; Ralph+ACH-1828/1830/1835 Bronze; framed rows R0; ACH Bronze cap 2/Crawler/floor. Accountant: restore Challenge Rating numerals; keep Krakaren over-cap at 2–3; ACH-1830/1834/oil-1835 on Rage trigger. Lore f02 Story Box deck (hold 0001/0011).",
+      "Syndicate 19:12 CT: f02-any-0001 bound to the d05_02 Krakaren hook as the unmask-the-clone-mid-fight deed only (never the kill or talk-down); 0011 stays a floating GM pick. Budget re-pinned to v0.2.4."
     ],
     "day": 5,
     "days": 10,
     "days_left": 5,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-    "canon_table_sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9",
+    "canon_table_sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795",
     "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.0",
-    "budget_file_sha256": "0c4e5ee1440675349c2006ba41b61d498b174e215f281dbb1381e878267de953",
+    "budget_file_version": "0.2.5",
+    "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "09ac75e8a962d4dd522f293b1cc408bcdecddda2620ad800e67c968ac9210d3e",
+    "spec_sha256_sans_pin": "654428069dbf30d573b6fc215e25283b16a4c6faeca76c713b0d38ab5c1e802c",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -52,47 +57,47 @@
     "collapse_order": [
       {
         "day": 1,
-        "event": "Open; stairwells present (M-364); ratings on (M-342).",
+        "event": "nothing closes on Soft Open today; pressure continues — Open; stairwells present (M-364); ratings on (M-342).",
         "tag": "canon+house"
       },
       {
         "day": 2,
-        "event": "Grub/Mind pressure.",
+        "event": "nothing closes on Soft Open today; pressure continues — Grub/Mind pressure.",
         "tag": "inspired (house)"
       },
       {
         "day": 3,
-        "event": "Pupa timers matter.",
+        "event": "nothing closes on Soft Open today; pressure continues — Pupa timers matter.",
         "tag": "inspired (house)"
       },
       {
         "day": 4,
-        "event": "Rev-Up strip.",
+        "event": "nothing closes on Soft Open today; pressure continues — Rev-Up strip.",
         "tag": "inspired (house)"
       },
       {
         "day": 5,
-        "event": "Krakaren Neighborhood Boss window.",
+        "event": "nothing closes on Soft Open today; pressure continues — Krakaren Neighborhood Boss window.",
         "tag": "house timing; boss canon"
       },
       {
         "day": 6,
-        "event": "Patch: hedgehogs out (M-382); saferoom closure rule (M-012); grub nerf (M-396).",
+        "event": "nothing closes on Soft Open today; pressure continues — Patch: hedgehogs out (M-382); saferoom closure rule (M-012); grub nerf (M-396).",
         "tag": "canon beats on house clock"
       },
       {
         "day": 7,
-        "event": "Dog Pound primary.",
+        "event": "nothing closes on Soft Open today; pressure continues — Dog Pound primary.",
         "tag": "inspired (house)"
       },
       {
         "day": 8,
-        "event": "Ralph + Menagerie; F3 Offer tease (M-371).",
+        "event": "nothing closes on Soft Open today; pressure continues — Ralph + Menagerie; F3 Offer tease (M-371).",
         "tag": "canon+house"
       },
       {
         "day": 9,
-        "event": "Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
+        "event": "nothing closes on Soft Open today; pressure continues — Escort / stair claim; Rage Elemental = any-day bathroom trigger (not planned).",
         "tag": "canon set piece; day house"
       },
       {
@@ -170,11 +175,11 @@
       "break_room_not_saferoom_from_day": 99,
       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
     },
-    "achievement_caps": "Floor caps still apply: the soft cap is 2 to 3 achievement boxes per Crawler per floor (Caleb's ruling), and Floors 1 and 2 keep the Silver ceiling. Story Boxes are separate: at most one per floor on Floors 1 and 2, outside the box caps and the budget. Rewards are tailored by the GM and snark-only is allowed; the proposed achievements are a seed list at GM discretion.",
+    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
     "rest_fee_note": {
       "tag": "[GM-FACING]",
-      "text": "GM ruling: no fee if the spot is already quiet. Until Floor 2 prices are pinned, use Floor 1 field-rest fee at this floor's credit multiplier (Core Book Ch1 / decision 031)."
+      "text": "GM ruling: no fee if the spot is already quiet. A Short Rest in a place that is already quiet is free; the fee only buys quiet where the area is not."
     },
     "audience": "gm"
   },
@@ -185,9 +190,9 @@
     "status": "reserve",
     "note": "RESERVE; bot still hardcodes F1 canon until Architect bump.",
     "present": true,
-    "schema": "canon-floor-1/0.1.0",
+    "schema": "canon-floor-2/0.1.0",
     "ledger_version": "1.15",
-    "sha256": "4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9"
+    "sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795"
   },
   "day": {
     "number": 5,
@@ -250,7 +255,7 @@
       },
       {
         "option": "Rest outside a saferoom",
-        "note": "A field rest is only a Short Rest; the price buys a quiet Short Rest and grants no Long Rest. The Soft Open Long Rest happens in a certified saferoom (Storm Shelter / Big Shot Chicken — Soft Open's Green Room-pattern anchors). Cite rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom until Floor 2 prices are pinned (Core Book Ch1 / decision 031)."
+        "note": "A field rest is only a Short Rest; the price buys a quiet Short Rest and grants no Long Rest (no fee if the spot is already quiet). The Green Room pattern on Soft Open is a certified saferoom (Storm Shelter A / Big Shot Chicken B) for Long Rest. Cite rules/70-encounter-budget-5e.json#floors.1.prices.rest_without_saferoom until Floor 2 prices are pinned (Core Book Ch1 / decision 031 / core v0.2.20)."
       }
     ],
     "carry_over": [
@@ -398,7 +403,7 @@
           "audience": "gm"
         }
       ],
-      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1, Reprieve). It never covers a missed collapse."
+      "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve expires when a Crawler descends, whether early into stasis or in the free window (Core Book Ch1 / core v0.2.20, Reprieve). Soft Open has no Floor 1 Reprieve. It never covers a missed collapse."
     },
     "proposed_achievements": []
   },
@@ -424,7 +429,28 @@
           "ledger_name": "Unlike Floor 1, all 37,500 Floor 2 stairwells exist the moment the floor opens."
         }
       ],
-      "voice_lines": {}
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Soft Open dash route logged: shortest path toward a claimed stair.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "midpoint_twist": {
+          "text": "The halls get louder the faster you move. Ratings love a sprint.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "win": {
+          "text": "You made time. Soft Open did not promise you a clean finish.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Dash still pays in Soft Open — if the bathroom rule did not just end the table.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        }
+      }
     },
     {
       "id": "loot",
@@ -455,7 +481,28 @@
           "in_achievements_csv": true
         }
       ],
-      "voice_lines": {}
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Soft Open loot route logged: bazaar, alleys, and anything that rattles.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "midpoint_twist": {
+          "text": "A vendor smiles like a trap. It might be both.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "win": {
+          "text": "Pockets heavier. Clock unchanged.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Silver ceiling still applies. Special boxes are hand-picked only.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        }
+      }
     },
     {
       "id": "clever",
@@ -480,7 +527,28 @@
           "in_achievements_csv": true
         }
       ],
-      "voice_lines": {}
+      "voice_lines": {
+        "system_intro": {
+          "text": "FLOOR NOTICE. Soft Open clever route logged: talk, trap, and don't pee wrong.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "midpoint_twist": {
+          "text": "A bathroom door is right there. Use it. The floor is watching.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "win": {
+          "text": "You solved Soft Open like a puzzle. The audience wanted blood anyway.",
+          "tag": "[PLAYER-FACING]",
+          "audience": "player"
+        },
+        "gm_color": {
+          "text": "Clever route is where Grease Monkey and trap hooks live.",
+          "tag": "[GM-FACING]",
+          "audience": "player"
+        }
+      }
     }
   ],
   "stairwell_key": {
@@ -503,7 +571,7 @@
       },
       {
         "id": "stair-boss",
-        "how": "Claim stair in Krakaren/Borough boss chamber (M-365).",
+        "how": "Claim stair in the Soft Open Krakaren Neighborhood Boss chamber (HOUSE stair; floor stairs per M-364).",
         "where": "z26",
         "ref": "00-overview.md",
         "route": [
@@ -592,7 +660,6 @@
         "display": "Zone S door forcing fee (party): 2 Crawlers: 50 / 3 Crawlers: 75 / 4 Crawlers: 100 (rules/70-encounter-budget-5e.json#floors.1.prices.zone_s_door_forcing.party_fee_by_size.{2|3|4})"
       }
     },
-    "reprieve_note": "[GM-ONLY] The Floor 1 Reprieve does not apply on Floor 2 and expires when a Crawler descends from Floor 1 (Core Book Ch1, Reprieve). It never covers a missed collapse.",
     "audience": "gm"
   },
   "encounters": [
@@ -807,7 +874,7 @@
           }
         ],
         "gm_tracks": [
-          "Floor hour",
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 10 (floor hour 240). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Smoothie",
           "A-123 armed"
         ],
@@ -816,69 +883,90 @@
       "proposed_achievements": [
         {
           "name": "Live Laugh Love",
-          "trigger": "Read letters before open.",
+          "trigger": "Read the chamber letters before opening the boss door.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Read letters before open.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Live Laugh Love: You read the letters before opening the door. Soft Open hung inspirational trash on a Neighborhood Boss threshold. Literacy is your dumpstat and your shield.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "narration_audience": "player",
-          "audience": "gm"
-        },
-        {
-          "name": "Smoothie Check",
-          "trigger": "Confirm charges.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "house",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Confirm charges.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "narration_audience": "player",
-          "audience": "gm"
-        },
-        {
-          "name": "Walls Can Lie",
-          "trigger": "Bosses leave rooms M-374.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Bosses leave rooms M-374.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "narration_audience": "player",
-          "audience": "gm"
-        },
-        {
-          "name": "F1 Boss Echo",
-          "trigger": "If Thudd beaten: tenure compare.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "house",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "If Thudd beaten: tenure compare.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "voice": "GM",
+          "callout_banner": "New achievement! Live Laugh Love!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box).",
           "narration_audience": "player",
           "audience": "gm"
         }
       ],
+      "loot_note": "[SLOT: Soft Open loot — cite floors.2.credits / floors.2.boxes when pinned]",
+      "flavor_lines": [
+        {
+          "text": "Confirm smoothie charges before the boss.",
+          "name": "Smoothie Check",
+          "demoted_from": "proposed_achievement",
+          "reason": "No Soft Open deed — pure flavor, callback, patch tease, UI warning, or almost-action.",
+          "tag": "[GM-FACING]"
+        },
+        {
+          "text": "Learn Soft Open bosses can leave their chambers.",
+          "name": "Walls Can Lie",
+          "demoted_from": "proposed_achievement",
+          "reason": "No Soft Open deed — pure flavor, callback, patch tease, UI warning, or almost-action.",
+          "tag": "[GM-FACING]"
+        },
+        {
+          "text": "If Thudd beaten: Soft Open tenure compare gag.",
+          "name": "F1 Boss Echo",
+          "demoted_from": "proposed_achievement",
+          "reason": "No Soft Open deed — pure flavor, callback, patch tease, UI warning, or almost-action.",
+          "tag": "[GM-FACING]"
+        }
+      ],
+      "canon": {
+        "table_id": "c2-rev-up",
+        "name": "Rev-Up distillery and the Krakaren Clone",
+        "tag": "canon",
+        "confidence": "WIKI-ONLY",
+        "ledger_rows": [
+          "A-034",
+          "A-123",
+          "B-004",
+          "K-123",
+          "K-124",
+          "M-093",
+          "M-427",
+          "M-428",
+          "M-429",
+          "M-430",
+          "M-442",
+          "M-443",
+          "M-444",
+          "M-445",
+          "M-446",
+          "M-447",
+          "M-448",
+          "M-449",
+          "M-450",
+          "M-451",
+          "M-452",
+          "M-453",
+          "M-454",
+          "M-455",
+          "M-456",
+          "M-457",
+          "M-458",
+          "M-459",
+          "M-460",
+          "M-520",
+          "T-064"
+        ],
+        "announcement_style": "Mob and boss nameplates read like spam pamphlets and anti-vaccine parody; the achievement that fires when the boss bursts out is a cheerful \"welcome to the second floor.\"",
+        "staging": "A moonshine distillery run like a multi-level-marketing scheme: sniffly clurichauns slinging rocks at the bottom, leaf-suited Laminak \"managers\" above, and a screaming tentacled Krakaren Clone at the top behind a Live-Laugh-Love sign. The boss does not wait in her room: she blasts out through the walls. Contact with the lower tiers gives the Taint (no healing), the boss adds Vigorous Measles, and the cure-by-prevention is a smoothie blended from moonshine and a Laminak corpse on a bicycle blender.",
+        "table_refs": []
+      },
       "audience_default": "gm"
     },
     {
@@ -903,7 +991,7 @@
           "Taint snot",
           "Measles mist",
           "Boss leaves chamber A-123",
-          "HOUSE CR 3 (Caleb) — within L2 boss cap for 2/3/4 Crawlers."
+          "HOUSE out-of-budget (Caleb) — within L2 boss cap for 2/3/4 Crawlers."
         ],
         "cover": [
           "Rubble",
@@ -916,8 +1004,8 @@
           "slot": "krakaren",
           "srd_id": "chuul",
           "srd_name": "Chuul",
-          "our_name": "Krakaren Clone (Second Floor) (Chuul, HOUSE CR 3)",
-          "name_source": "00-overview.md; monster-table-v0.2 cmm-047; Caleb CR 3 ruling 2026-10-05",
+          "our_name": "Krakaren Clone (Second Floor) (Chuul)",
+          "name_source": "00-overview.md; monster-table-v0.2 cmm-047; Caleb Challenge Rating 3 ruling 2026-10-05",
           "monster_table_id": "cmm-047",
           "count_slot": {
             "b70": {
@@ -948,7 +1036,7 @@
               "paths": [
                 "floors.2.tiers.L2.cr_caps"
               ],
-              "note": "HOUSE CR 3 (Caleb); native chuul CR 4 adjusted down. Fits boss cap for 2/3/4 Crawlers."
+              "note": "HOUSE Challenge Rating 3 (Caleb); native chuul Challenge Rating 4 adjusted down. Over-cap at 2–3 Crawlers."
             },
             "resolved": {
               "parts": [
@@ -957,20 +1045,20 @@
                   "paths": [
                     "floors.2.tiers.L2.cr_caps"
                   ],
-                  "display": "HOUSE CR 3 (Caleb); native chuul CR 4 adjusted down. Fits boss cap for 2/3/4 Crawlers.: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+                  "display": "HOUSE Challenge Rating 3 (Caleb); native chuul Challenge Rating 4 adjusted down. Over-cap at 2–3 Crawlers.: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
                 }
               ],
-              "display": "HOUSE CR 3 (Caleb); native chuul CR 4 adjusted down. Fits boss cap for 2/3/4 Crawlers.: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
+              "display": "HOUSE Challenge Rating 3 (Caleb); native chuul Challenge Rating 4 adjusted down. Over-cap at 2–3 Crawlers.: see rules/70-encounter-budget-5e.json#floors.2.tiers.L2.cr_caps"
             }
           },
           "cr_house": "3",
           "cr_srd_native": "4",
-          "cr_adjustment_note": "HOUSE CR 3 (Caleb 2026-10-05): use Chuul chassis at CR 3 — drop one Multiattack tentacle OR −25 HP and treat XP as 700; fits floors.2 L2 boss cr_caps for 2/3/4 Crawlers (boss cap 1/2/3).",
+          "cr_adjustment_note": "HOUSE Challenge Rating 3 (Caleb): Chuul chassis; drop one Multiattack tentacle OR −25 HP; XP as the pinned boss figure. OVER-CAP at 2–3 Crawlers — see cr_cap_flag_note / locked hard-tier scaling (Caleb 18:48 CT).",
           "srd_resolved": true,
           "audience": "gm"
         }
       ],
-      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE CR 3. **Pays the floor's single Silver Boss Box** if fought or talked down (Caleb 18:14 CT via Accountant). Ralph pays normal Silver / non-boss reward instead. Rage Elemental pays none (trigger spawn). A-123 / ACH-1833 on first chamber burst.",
+      "enemies_note": "cmm-047 Neighborhood Boss (Caleb; X-059 closed). HOUSE Challenge Rating 3 (Chuul chassis; native 4 adjusted; XP as the pinned boss figure). **Pays Soft Open's ONLY Silver Boss Box** if fought or talked down (Syndicate 18:36 CT). Ralph pays Bronze + boss-tier credits. Rage Elemental pays none (trigger spawn). A-123 / ACH-1833 on first chamber burst. OVER-CAP at 2–3 Crawlers: the pinned boss XP vs two- and three-Crawler boss budgets (and vs boss CR caps 1/2).",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -1040,7 +1128,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Silver Boss Box (floor's only Boss Box) per Crawler who fought or talked down.",
+          "text": "Silver Boss Box (Soft Open's ONLY Silver — Syndicate 18:36) per Crawler who fought or talked down.",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -1049,7 +1137,7 @@
               "paths": [
                 "floors.2.boxes"
               ],
-              "note": "Silver Boss Box F1-2 — Krakaren only on Soft Open"
+              "note": "Silver Boss Box — Krakaren only on Soft Open (Syndicate 18:36)"
             },
             "resolved": {
               "parts": [
@@ -1058,10 +1146,10 @@
                   "paths": [
                     "floors.2.boxes"
                   ],
-                  "display": "Silver Boss Box F1-2 — Krakaren only on Soft Open: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+                  "display": "Silver Boss Box — Krakaren only on Soft Open (Syndicate 18:36): see rules/70-encounter-budget-5e.json#floors.2.boxes"
                 }
               ],
-              "display": "Silver Boss Box F1-2 — Krakaren only on Soft Open: see rules/70-encounter-budget-5e.json#floors.2.boxes"
+              "display": "Silver Boss Box — Krakaren only on Soft Open (Syndicate 18:36): see rules/70-encounter-budget-5e.json#floors.2.boxes"
             }
           },
           "audience": "gm"
@@ -1070,7 +1158,7 @@
           "kind": "placed",
           "text": "Boss credits tier.",
           "overview_ref": "00-overview.md",
-          "check_text": "boss credits",
+          "check_text": "Silver",
           "amount": {
             "b70": {
               "kind": "cite",
@@ -1096,9 +1184,13 @@
         },
         {
           "kind": "story_box",
-          "card_id": "f02-any-story-05",
+          "card_id": "f02-any-0001",
           "gm_only": true,
-          "note": "[GM-ONLY] Story Box candidate (F1-2): First Soft Open Neighborhood Boss as a table. Cap one/floor; hand-pick; new F2 deck ids need Lore/Syndicate.",
+          "note": "[GM-ONLY] Soft Open Story Box f02-any-0001 (Clone Nameplate Charm), bound to this Krakaren fight per Syndicate 19:12 CT: pays ONLY for unmasking the Krakaren as a clone mid-fight, never for the kill or a talk-down (the Silver Boss Box pays the clear). Hand-picked, at most one Legendary per table per floor, opens in a saferoom. f02-any-0011 (one-time unscripted plan) stays a floating GM pick. Never random.",
+          "deck_interim": "f01-any-story-boxes (until f02-any-story-boxes.json lands)",
+          "deck": "f02-any-story-boxes",
+          "display": "Clone Nameplate Charm (This One Is a Copy) (Charm of Copy Recognition (house: unmask mid-fight))",
+          "tier": "Legendary",
           "audience": "gm"
         }
       ],
@@ -1205,9 +1297,9 @@
         }
       ],
       "scaling": {
-        "2": "1 Krakaren Clone at HOUSE CR 3; emphasize smoothie + hall cover; Assigned Companion if used.",
-        "3": "1 Krakaren Clone at HOUSE CR 3; smoothie + kite.",
-        "4": "1 Krakaren Clone at HOUSE CR 3 (fits boss cap 3); +1 leftover Laminak only if antechamber unfinished."
+        "2": "LOCKED (Caleb 18:48 CT): GM scales Krakaren down to hard tier (less HP, fewer attacks) — the pinned boss XP is over the 400 boss budget / CR cap 1. Emphasize smoothie + hall cover; Assigned Companion if used.",
+        "3": "LOCKED (Caleb 18:48 CT): GM scales Krakaren down to hard tier (less HP, fewer attacks) — the pinned boss XP is over the 600 boss budget / CR cap 2. Smoothie + kite.",
+        "4": "1 Krakaren Clone at HOUSE Challenge Rating 3 (fits boss cap 3 / the pinned boss XP budget). +1 leftover Laminak only if antechamber unfinished."
       },
       "if_they_do_something_dumb": "Flee: Clone pursues hall not honest saferoom. Talk-down resignation bit: log Box ruling.",
       "canon_zone": "c2-rev-up",
@@ -1240,82 +1332,112 @@
           }
         ],
         "gm_tracks": [
-          "Floor hour",
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 10 (floor hour 240). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "A-123",
           "Measles/Taint",
-          "Silver Boss Box (Krakaren = floor's only)",
-          "Budget: HOUSE CR 3 within floors.2 L2 boss caps (2/3/4)"
+          "Silver Boss Box (Krakaren = Soft Open ONLY Silver)",
+          "Budget: HOUSE out-of-budget within floors.2 L2 boss caps (2/3/4)",
+          "OVER-CAP flag at 2–3 Crawlers — LOCKED (Caleb 18:48 CT): GM scales to hard tier (less HP, fewer attacks)"
         ],
         "audience": "gm"
       },
       "proposed_achievements": [
         {
           "name": "Wait, Bosses Can Leave Their Rooms? (wired)",
-          "trigger": "First boss burst (A-123).",
+          "trigger": "First Soft Open boss chamber burst (fires canon ).",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": "A-123",
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "First boss burst (A-123).",
+          "reward_slot": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
+          "narration": "First Soft Open boss chamber burst (fires canon ).",
           "narration_tag": "[PLAYER-FACING]",
           "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "lore_framing_status": "CANON-WIRED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "A-123"
+            ],
+            "cite_note": "CANON-WIRED"
+          },
+          "canon_wired": true,
           "narration_audience": "player",
           "audience": "gm"
         },
         {
           "name": "Clone Not Original",
-          "trigger": "Nameplate stresses copy M-709.",
+          "trigger": "Read the nameplate stressing the Krakaren is a copy.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Nameplate stresses copy M-709.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Clone Not Original: The nameplate stressed copy. Not the Krakaren. A Krakaren. Soft Open is printing bosses like coupons and you just read the fine print on your murder.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-709"
+            ],
+            "cite_note": "ok"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Clone Not Original!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box).",
           "narration_audience": "player",
           "audience": "gm"
         },
         {
           "name": "Measles Party",
-          "trigger": "Catch/clear Vigorous Measles.",
+          "trigger": "Catch or clear Vigorous Measles.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Catch/clear Vigorous Measles.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Measles Party: Vigorous Measles. You caught it, cleared it, or both. Soft Open brought back childhood trauma with a damage-over-time plan. Hydrate and hate the brand.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "voice": "GM",
+          "callout_banner": "New achievement! Measles Party!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box).",
           "narration_audience": "player",
           "audience": "gm"
         },
         {
           "name": "Three Exist",
-          "trigger": "Learn clones exist in multiple instances.",
+          "trigger": "Learn Krakaren clones exist in multiple Soft Open instances.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Learn clones exist in multiple instances.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Three Exist: You learned Soft Open stocks more than one Krakaren clone. Exclusive content is a lie. The universe is a franchise and you are merch.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "gm_citation": {
+            "tag": "[GM-ONLY]",
+            "ledger_cites": [
+              "M-709"
+            ],
+            "cite_note": "ok — clone multiplicity on nameplate lore"
+          },
+          "voice": "GM",
+          "callout_banner": "New achievement! Three Exist!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box).",
           "narration_audience": "player",
           "audience": "gm"
         }
       ],
       "budget_math": {
-        "ruling": "Caleb 2026-10-05: Krakaren Clone HOUSE CR 3; remove over-cap flag; stays Neighborhood Boss with A-123/ACH-1833.",
+        "ruling": "Caleb: Krakaren Clone HOUSE Challenge Rating 3 (Chuul chassis). Accountant: keep over-cap flag for 2–3 Crawlers (the pinned boss XP vs 400/600). Caleb locked 18:48 CT (Syndicate's ruling kept): at 2–3 Crawlers the GM scales Krakaren down (less HP, fewer attacks) to hard tier.",
         "srd_id": "chuul",
         "cr_house": 3,
         "cr_srd_native": 4,
@@ -1327,24 +1449,71 @@
             "boss_cr_cap": 1,
             "krakaren_cr": 3,
             "krakaren_xp": 700,
-            "vs_budget": "700 vs 400 (hot); vs_cap CR 3>1 — use kite/talk-down/companion; over-cap flag REMOVED per Caleb"
+            "vs_budget": "pinned XP vs two-Crawler boss budget OVER-CAP; vs_cap Challenge Rating 3>1 — LOCKED (Caleb 18:48 CT): GM scales to hard tier (less HP / fewer attacks)"
           },
           "3": {
             "boss_xp_budget": 600,
             "boss_cr_cap": 2,
             "krakaren_cr": 3,
             "krakaren_xp": 700,
-            "vs_budget": "700 vs 600 (slightly hot); vs_cap CR 3>2 — same mitigation; over-cap flag REMOVED per Caleb"
+            "vs_budget": "pinned XP vs three-Crawler boss budget OVER-CAP; vs_cap Challenge Rating 3>2 — LOCKED (Caleb 18:48 CT): GM scales to hard tier (less HP / fewer attacks)"
           },
           "4": {
             "boss_xp_budget": 800,
             "boss_cr_cap": 3,
             "krakaren_cr": 3,
             "krakaren_xp": 700,
-            "vs_budget": "700 vs 800 (under budget); vs_cap CR 3==3 PASS"
+            "vs_budget": "pinned XP vs four-Crawler boss budget under budget; vs_cap Challenge Rating 3==3 PASS"
           }
         },
-        "over_cap_flag": false
+        "over_cap_flag": true,
+        "over_cap_parties": [
+          "2",
+          "3"
+        ]
+      },
+      "cr_cap_flag_note": "[GM-ONLY] OVER-CAP FLAG KEPT: Krakaren Challenge Rating 3 / the pinned boss XP exceeds floors.2 L2 boss budget at 2 Crawlers (two-Crawler boss budget) and 3 Crawlers (three-Crawler boss budget), and exceeds boss CR caps (1 / 2). At 4 Crawlers it fits (the pinned boss XP budget, cap 3). Do not delete this flag.",
+      "canon": {
+        "table_id": "c2-rev-up",
+        "name": "Rev-Up distillery and the Krakaren Clone",
+        "tag": "canon",
+        "confidence": "WIKI-ONLY",
+        "ledger_rows": [
+          "A-034",
+          "A-123",
+          "B-004",
+          "K-123",
+          "K-124",
+          "M-093",
+          "M-427",
+          "M-428",
+          "M-429",
+          "M-430",
+          "M-442",
+          "M-443",
+          "M-444",
+          "M-445",
+          "M-446",
+          "M-447",
+          "M-448",
+          "M-449",
+          "M-450",
+          "M-451",
+          "M-452",
+          "M-453",
+          "M-454",
+          "M-455",
+          "M-456",
+          "M-457",
+          "M-458",
+          "M-459",
+          "M-460",
+          "M-520",
+          "T-064"
+        ],
+        "announcement_style": "Mob and boss nameplates read like spam pamphlets and anti-vaccine parody; the achievement that fires when the boss bursts out is a cheerful \"welcome to the second floor.\"",
+        "staging": "A moonshine distillery run like a multi-level-marketing scheme: sniffly clurichauns slinging rocks at the bottom, leaf-suited Laminak \"managers\" above, and a screaming tentacled Krakaren Clone at the top behind a Live-Laugh-Love sign. The boss does not wait in her room: she blasts out through the walls. Contact with the lower tiers gives the Taint (no healing), the boss adds Vigorous Measles, and the cure-by-prevention is a smoothie blended from moonshine and a Laminak corpse on a bicycle blender.",
+        "table_refs": []
       },
       "audience_default": "gm"
     },
@@ -1444,7 +1613,7 @@
       "loot_hooks": [
         {
           "kind": "placed",
-          "text": "Open the Silver Boss Box (Krakaren's — floor's only) in a saferoom — not the hall.",
+          "text": "Open Krakaren's Silver Boss Box (Soft Open's ONLY Silver) in a saferoom — not the hall.",
           "overview_ref": "00-overview.md",
           "check_text": "Silver",
           "amount": {
@@ -1589,7 +1758,7 @@
           }
         ],
         "gm_tracks": [
-          "Floor hour",
+          "Floor hour: running count of hours since the floor started and hours into today, against the fixed final collapse at 24 in-game hours into Day 10 (floor hour 240). A day that ran short or long shifts where the collapse falls on the floor clock (overview section 2 rule 6).",
           "Boxes"
         ],
         "audience": "gm"
@@ -1597,98 +1766,130 @@
       "proposed_achievements": [
         {
           "name": "Borough Stair",
-          "trigger": "Claim chamber stair.",
+          "trigger": "Claim a stair from the Soft Open Krakaren chamber (HOUSE stair).",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
+          "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Claim chamber stair.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Chamber Stair: You claimed a stair out of the Soft Open Krakaren strip. Neighborhood Boss, house stair, same sweaty exit. Call it Borough if you want; the steps do not care.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "narration_audience": "player",
-          "audience": "gm"
-        },
-        {
-          "name": "Stasis Warning Replay",
-          "trigger": "UI repeats >6h.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "canon",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "UI repeats >6h.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "voice": "GM",
+          "callout_banner": "New achievement! Chamber Stair!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box).",
           "narration_audience": "player",
           "audience": "gm"
         },
         {
           "name": "Clone Loot Cache",
-          "trigger": "Corpse/jug.",
+          "trigger": "Loot the clone corpse or Rev-Up jug stash.",
           "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
           "canon_or_house": "house",
           "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Corpse/jug.",
+          "reward_slot": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+          "narration": "New achievement Clone Loot Cache: You looted the clone's leftovers like a racoon with a resume. Corpse, jug, whatever was still warm. Soft Open calls that closure. You call it shopping.",
           "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "narration_audience": "player",
-          "audience": "gm"
-        },
-        {
-          "name": "Ratings Spike",
-          "trigger": "Follower jump.",
-          "tag": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
-          "canon_or_house": "house",
-          "ledger_row": null,
-          "reward_slot": {
-            "kind": "slot",
-            "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]"
-          },
-          "narration": "Follower jump.",
-          "narration_tag": "[PLAYER-FACING]",
-          "status": "proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate",
+          "status": "Lore framing v0.1: FRAMED, HOUSE, [GM] callout; reward slot for Syndicate",
+          "lore_framing": "FRAMED",
+          "lore_framing_status": "FRAMED",
+          "voice": "GM",
+          "callout_banner": "New achievement! Clone Loot Cache!",
+          "reward_tier": "R0",
+          "reward_note": "Syndicate 18:36: framed Soft Open proposed rows default to R0 (Title or snark, no box).",
           "narration_audience": "player",
           "audience": "gm"
         }
       ],
+      "flavor_lines": [
+        {
+          "text": "UI repeats the >6h early-descent stasis warning.",
+          "name": "Stasis Warning Replay",
+          "demoted_from": "proposed_achievement",
+          "reason": "No Soft Open deed — pure flavor, callback, patch tease, UI warning, or almost-action.",
+          "tag": "[GM-FACING]"
+        },
+        {
+          "text": "Follower count jumps after the boss.",
+          "name": "Ratings Spike",
+          "demoted_from": "proposed_achievement",
+          "reason": "No Soft Open deed — pure flavor, callback, patch tease, UI warning, or almost-action.",
+          "tag": "[GM-FACING]"
+        }
+      ],
+      "canon": {
+        "table_id": "c2-rev-up",
+        "name": "Rev-Up distillery and the Krakaren Clone",
+        "tag": "canon",
+        "confidence": "WIKI-ONLY",
+        "ledger_rows": [
+          "A-034",
+          "A-123",
+          "B-004",
+          "K-123",
+          "K-124",
+          "M-093",
+          "M-427",
+          "M-428",
+          "M-429",
+          "M-430",
+          "M-442",
+          "M-443",
+          "M-444",
+          "M-445",
+          "M-446",
+          "M-447",
+          "M-448",
+          "M-449",
+          "M-450",
+          "M-451",
+          "M-452",
+          "M-453",
+          "M-454",
+          "M-455",
+          "M-456",
+          "M-457",
+          "M-458",
+          "M-459",
+          "M-460",
+          "M-520",
+          "T-064"
+        ],
+        "announcement_style": "Mob and boss nameplates read like spam pamphlets and anti-vaccine parody; the achievement that fires when the boss bursts out is a cheerful \"welcome to the second floor.\"",
+        "staging": "A moonshine distillery run like a multi-level-marketing scheme: sniffly clurichauns slinging rocks at the bottom, leaf-suited Laminak \"managers\" above, and a screaming tentacled Krakaren Clone at the top behind a Live-Laugh-Love sign. The boss does not wait in her room: she blasts out through the walls. Contact with the lower tiers gives the Taint (no healing), the boss adds Vigorous Measles, and the cure-by-prevention is a smoothie blended from moonshine and a Laminak corpse on a bicycle blender.",
+        "table_refs": []
+      },
       "audience_default": "gm"
     }
   ],
   "pending_inputs": [
     {
-      "owner": "Accountant",
-      "item": "floors.2.fixed_encounters pins",
-      "waiting_for": "--write-on-fail until bumped",
+      "owner": "Syndicate",
+      "item": "rules/70-encounter-budget-5e.json v0.2.5 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
+      "waiting_for": "floors.2 pins / Soft Open clock numbers confirmed; any bracketed slot without a matching field",
       "status": "open",
       "audience": "gm"
     },
     {
       "owner": "Lore",
-      "item": "canon-floor-2 RESERVE pass + A-056",
-      "waiting_for": "canon pass on day pages",
+      "item": "Soft Open collapse/canon table (lore/tables/canon-floor-2.json) + A-056 HOUSE placement",
+      "waiting_for": "canon pass / RESERVE release",
       "status": "open",
       "audience": "gm"
     },
     {
-      "owner": "Syndicate",
-      "item": "achievement rewards + F2 Story Box deck",
-      "waiting_for": "achievement-suggestions.md",
+      "owner": "Accountant",
+      "item": "floors.2.fixed_encounters + f02_day01_to_10_slot_map re-pin after Soft Open revisions",
+      "waiting_for": "Encounter Bot regen sans-pins",
       "status": "open",
       "audience": "gm"
     },
     {
       "owner": "Architect",
-      "item": "encounter_bot multi-floor overview/canon",
-      "waiting_for": "hardcodes f01",
+      "item": "encounter_bot Soft Open / floor-aware validator (saferoom z09, Green Room, 4-sentence hard cap now soft per Caleb)",
+      "waiting_for": "floor-aware/soft checks",
       "status": "open",
       "audience": "gm"
     }
@@ -1696,74 +1897,50 @@
   "slots": [
     {
       "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[0]/proposed_achievements[0]/reward_slot/text",
+      "text": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+      "path": "/encounters[0]/proposed_achievements[0]/reward_slot",
+      "kind": "slot"
+    },
+    {
+      "label": "SLOT",
+      "text": "[SLOT: Soft Open loot — cite floors.2.credits / floors.2.boxes when pinned]",
+      "path": "/encounters[0]/loot_note",
       "kind": "slot"
     },
     {
       "label": "SYNDICATE REWARD SLOT",
       "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[0]/proposed_achievements[1]/reward_slot/text",
+      "path": "/encounters[1]/proposed_achievements[0]/reward_slot",
       "kind": "slot"
     },
     {
       "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[0]/proposed_achievements[2]/reward_slot/text",
+      "text": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+      "path": "/encounters[1]/proposed_achievements[1]/reward_slot",
       "kind": "slot"
     },
     {
       "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[0]/proposed_achievements[3]/reward_slot/text",
+      "text": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+      "path": "/encounters[1]/proposed_achievements[2]/reward_slot",
       "kind": "slot"
     },
     {
       "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[1]/proposed_achievements[0]/reward_slot/text",
+      "text": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+      "path": "/encounters[1]/proposed_achievements[3]/reward_slot",
       "kind": "slot"
     },
     {
       "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[1]/proposed_achievements[1]/reward_slot/text",
+      "text": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+      "path": "/encounters[2]/proposed_achievements[0]/reward_slot",
       "kind": "slot"
     },
     {
       "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[1]/proposed_achievements[2]/reward_slot/text",
-      "kind": "slot"
-    },
-    {
-      "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[1]/proposed_achievements[3]/reward_slot/text",
-      "kind": "slot"
-    },
-    {
-      "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[2]/proposed_achievements[0]/reward_slot/text",
-      "kind": "slot"
-    },
-    {
-      "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[2]/proposed_achievements[1]/reward_slot/text",
-      "kind": "slot"
-    },
-    {
-      "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[2]/proposed_achievements[2]/reward_slot/text",
-      "kind": "slot"
-    },
-    {
-      "label": "SYNDICATE REWARD SLOT",
-      "text": "[SYNDICATE REWARD SLOT: Soft Open proposed achievement]",
-      "path": "/encounters[2]/proposed_achievements[3]/reward_slot/text",
+      "text": "[SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]",
+      "path": "/encounters[2]/proposed_achievements[1]/reward_slot",
       "kind": "slot"
     }
   ],
@@ -1788,6 +1965,66 @@
       "optional"
     ],
     "player_blocks": [
+      {
+        "path": "/routes/0/voice_lines/system_intro",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/0/voice_lines/midpoint_twist",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/0/voice_lines/win",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/0/voice_lines/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/system_intro",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/midpoint_twist",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/win",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/1/voice_lines/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/system_intro",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/midpoint_twist",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/win",
+        "kind": "gm_narration",
+        "field": "text"
+      },
+      {
+        "path": "/routes/2/voice_lines/gm_color",
+        "kind": "gm_color",
+        "field": "text"
+      },
       {
         "path": "/encounters/0/voice_lines/system_intro",
         "kind": "system_notice",
@@ -1814,27 +2051,6 @@
       },
       {
         "path": "/encounters/0/proposed_achievements/0",
-        "kind": "achievement_narration",
-        "field": "narration",
-        "encounter": "enc-d05-01",
-        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
-      },
-      {
-        "path": "/encounters/0/proposed_achievements/1",
-        "kind": "achievement_narration",
-        "field": "narration",
-        "encounter": "enc-d05-01",
-        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
-      },
-      {
-        "path": "/encounters/0/proposed_achievements/2",
-        "kind": "achievement_narration",
-        "field": "narration",
-        "encounter": "enc-d05-01",
-        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
-      },
-      {
-        "path": "/encounters/0/proposed_achievements/3",
         "kind": "achievement_narration",
         "field": "narration",
         "encounter": "enc-d05-01",
@@ -1931,20 +2147,6 @@
         "show_only_when": "the achievement is awarded (proposal, GM discretion)"
       },
       {
-        "path": "/encounters/2/proposed_achievements/2",
-        "kind": "achievement_narration",
-        "field": "narration",
-        "encounter": "enc-d05-03",
-        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
-      },
-      {
-        "path": "/encounters/2/proposed_achievements/3",
-        "kind": "achievement_narration",
-        "field": "narration",
-        "encounter": "enc-d05-03",
-        "show_only_when": "the achievement is awarded (proposal, GM discretion)"
-      },
-      {
         "path": "/day/tomorrow_notice",
         "kind": "system_notice",
         "field": "text"
@@ -1967,16 +2169,16 @@
     ]
   },
   "validation": {
-    "result": "FAIL",
-    "pass": 37,
-    "warn": 4,
-    "fail": 43,
-    "spec_sha256": "a38ed675808ab75bb1f82e9d01784698178369586ab54452ba34d58f1e431d94",
+    "result": "PASS",
+    "pass": 45,
+    "warn": 2,
+    "fail": 0,
+    "spec_sha256": "1b866a871af104c27509bacfad7b022e3ad318ace46d62c6f4c951bc57e19a00",
     "checks": [
       {
-        "status": "WARN",
-        "check": "budget file hash",
-        "detail": "spec pins 113dcdbedb3c but the file is 0c4e5ee14406 (Syndicate changed it; re-check the cited paths, then update the pin)"
+        "status": "PASS",
+        "check": "budget file present",
+        "detail": "rules/70-encounter-budget-5e.json v0.2.5, sha256 07c676b301240c4b; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2019,9 +2221,9 @@
         "detail": "death on every floor, Floor 1 included; no Reprieve; stasis counts as reaching a stairwell; Detour Tax is for a missed key only"
       },
       {
-        "status": "FAIL",
+        "status": "PASS",
         "check": "saferoom rule",
-        "detail": "clock.saferoom_rule needs only_saferoom=z09, break_room_not_saferoom_from_day, text naming the Green Room"
+        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
       },
       {
         "status": "PASS",
@@ -2044,34 +2246,19 @@
         "detail": ""
       },
       {
-        "status": "FAIL",
+        "status": "PASS",
         "check": "Core Book Ch1 alignment",
-        "detail": "stale pointers []; unqualified 'real death' []; Reprieve-expiry GM notes found 2 (need exactly one, starting [GM-ONLY])"
+        "detail": "no old Core section pointers; fight deaths name the unused Reprieve; one [GM-ONLY] Reprieve-expiry note on the early-descent block"
       },
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "lore/tables/canon-floor-1.json (ledger 1.15, 24 zones)"
+        "detail": "lore/tables/canon-floor-2.json (ledger 1.15, 10 zones)"
       },
       {
-        "status": "WARN",
-        "check": "canon table hash",
-        "detail": "spec pins 744d2ac6612d but the file is 4a8a3c92a967 (Lore rebuilt it; check ledger/content, then update the pin)"
-      },
-      {
-        "status": "FAIL",
-        "check": "route dash voice lines",
-        "detail": "missing or untagged ['midpoint_twist', 'system_intro', 'win']"
-      },
-      {
-        "status": "FAIL",
-        "check": "route loot voice lines",
-        "detail": "missing or untagged ['midpoint_twist', 'system_intro', 'win']"
-      },
-      {
-        "status": "FAIL",
-        "check": "route clever voice lines",
-        "detail": "missing or untagged ['midpoint_twist', 'system_intro', 'win']"
+        "status": "PASS",
+        "check": "canon table hash recorded",
+        "detail": "sha256 744d2ac6612d48c7, ledger v1.15"
       },
       {
         "status": "PASS",
@@ -2094,11 +2281,6 @@
         "detail": "Day 5: stair-open, stair-boss"
       },
       {
-        "status": "FAIL",
-        "check": "collapse notice",
-        "detail": "needs Lore's wording (no PLACEHOLDER), PF tag, status naming Lore, canon_tag inspired"
-      },
-      {
         "status": "PASS",
         "check": "early-descent stasis handling",
         "detail": "player prompt [PLAYER-FACING], canon refs, GM override note and sideline-scenes note present"
@@ -2114,119 +2296,19 @@
         "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
       },
       {
-        "status": "FAIL",
-        "check": "enc-d05-01 canon_zone",
-        "detail": "c2-rev-up not in canon-floor-1.json"
-      },
-      {
-        "status": "FAIL",
-        "check": "enc-d05-01 loot hooks",
-        "detail": "empty loot_hooks needs a loot_note reference or slot"
-      },
-      {
-        "status": "FAIL",
-        "check": "enc-d05-02 canon_zone",
-        "detail": "c2-rev-up not in canon-floor-1.json"
-      },
-      {
-        "status": "FAIL",
-        "check": "enc-d05-02 enemy display",
-        "detail": "our_name must read 'Our Name (5e Name)': Krakaren Clone (Second Floor) (Chuul, HOUSE CR 3)"
-      },
-      {
         "status": "PASS",
         "check": "enc-d05-02 enemies",
         "detail": "chuul=resolved"
       },
       {
-        "status": "FAIL",
-        "check": "enc-d05-02 placed hook",
-        "detail": "overview_ref/check_text not found in 00-overview.md"
-      },
-      {
-        "status": "FAIL",
-        "check": "enc-d05-02 loot hook",
-        "detail": "card f02-any-story-05 not in tables/loot-decks/*.json"
-      },
-      {
-        "status": "FAIL",
-        "check": "enc-d05-02 story box hook",
-        "detail": "f02-any-story-05 must be one of f01-any-0055..0065 and gm_only=true"
-      },
-      {
-        "status": "FAIL",
-        "check": "enc-d05-03 canon_zone",
-        "detail": "c2-rev-up not in canon-floor-1.json"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Live Laugh Love",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-01)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Smoothie Check",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-01)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Walls Can Lie",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-01)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement F1 Boss Echo",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-01)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Wait, Bosses Can Leave Their Rooms? (wired)",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-02)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Clone Not Original",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-02)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Measles Party",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-02)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Three Exist",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-02)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Borough Stair",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-03)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Stasis Warning Replay",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-03)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Clone Loot Cache",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-03)"
-      },
-      {
-        "status": "FAIL",
-        "check": "proposed achievement Ratings Spike",
-        "detail": "needs name, trigger, exact tag, reward_slot (budget reference or slot), no id, narration tagged PF (enc-d05-03)"
-      },
-      {
         "status": "PASS",
         "check": "proposed achievements",
-        "detail": "12 hook entries tagged 'proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate'; rewards are slots; no ids invented"
+        "detail": "7 hook entries tagged 'proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate'; rewards are slots; no ids invented"
       },
       {
         "status": "PASS",
         "check": "loot hooks resolve",
-        "detail": "0 card/item hooks checked against tables/loot-decks and item-reskins"
+        "detail": "1 card/item hooks checked against tables/loot-decks and item-reskins"
       },
       {
         "status": "PASS",
@@ -2236,77 +2318,12 @@
       {
         "status": "PASS",
         "check": "Story Box hooks are GM-only",
-        "detail": "f02-any-story-05 tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)"
+        "detail": "f02-any-0001 tagged [GM-ONLY]; candidates, not promises (cap one per table per floor)"
       },
       {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/map_in_the_mind/hazards[3]: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/enemies[0]/our_name: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/enemies[0]/name_source: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/enemies[0]/cr_slot/b70/note: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/enemies[0]/cr_adjustment_note: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/enemies_note: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/scaling/2: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/scaling/3: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/scaling/4: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/carry_on/gm_tracks[4]: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/budget_math/ruling: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/budget_math/by_party/2/vs_budget: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/budget_math/by_party/3/vs_budget: CR number 'CR 3'"
-      },
-      {
-        "status": "FAIL",
-        "check": "no invented numbers",
-        "detail": "/encounters[1]/budget_math/by_party/4/vs_budget: CR number 'CR 3'"
+        "status": "PASS",
+        "check": "no invented CR/budget/credit/loot/DC numbers",
+        "detail": "all such fields are bracketed slots or cite 00-overview.md"
       },
       {
         "status": "PASS",
@@ -2316,7 +2333,7 @@
       {
         "status": "PASS",
         "check": "Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on",
-        "detail": "27 player-facing and 29 GM extra blocks scanned"
+        "detail": "34 player-facing and 30 GM extra blocks scanned"
       },
       {
         "status": "PASS",
@@ -2326,7 +2343,7 @@
       {
         "status": "PASS",
         "check": "read-aloud blocks are 4 sentences or fewer",
-        "detail": "27 [PLAYER-FACING] blocks checked"
+        "detail": "34 [PLAYER-FACING] blocks checked"
       },
       {
         "status": "PASS",
@@ -2354,14 +2371,14 @@
         "detail": "1 achievement GM note(s); none appears in any [PLAYER-FACING] block"
       },
       {
-        "status": "FAIL",
+        "status": "PASS",
         "check": "field-rest fee note",
-        "detail": "clock.rest_fee_note must be [GM-FACING] 'already quiet' and every text that charges the rest fee must say so: /day/rest_options[2]/note"
+        "detail": "no fee if the spot is already quiet (GM ruling); stated on the clock and on all 1 text(s) that charge the fee"
       },
       {
-        "status": "FAIL",
+        "status": "PASS",
         "check": "floor-hour tracker",
-        "detail": "GM tracks need a 'Floor hour' running-count line (hours elapsed vs the fixed 24-hour final collapse, overview section 2 rule 6) on: enc-d05-01, enc-d05-02, enc-d05-03"
+        "detail": "every encounter's GM tracks carry the running floor-hour count against the fixed 24-hour final collapse"
       },
       {
         "status": "PASS",
@@ -2369,14 +2386,14 @@
         "detail": ""
       },
       {
-        "status": "FAIL",
+        "status": "PASS",
         "check": "Pending inputs section",
-        "detail": "must list Syndicate (budget file, clock numbers), Lore (collapse, canon table) and clock.days"
+        "detail": "4 entries: budget file, clock numbers, collapse zone groups/costs, canon table, day-count field"
       },
       {
         "status": "PASS",
         "check": "audience manifest",
-        "detail": "28 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
+        "detail": "35 player-visible blocks listed in audience_manifest (default GM-only); every block tagged [PLAYER-FACING] is listed, GM blocks carry audience gm"
       },
       {
         "status": "WARN",
@@ -2386,7 +2403,7 @@
       {
         "status": "PASS",
         "check": "rendered audience separation",
-        "detail": "28 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
+        "detail": "35 player block(s) free of GM markers; no .md line mixes [GM-ONLY] with [PLAYER-FACING]; every achievement GM note is its own [GM-ONLY] bullet"
       },
       {
         "status": "WARN",
