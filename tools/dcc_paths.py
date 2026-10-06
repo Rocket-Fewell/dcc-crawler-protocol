@@ -14,7 +14,10 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-_TOOLS = Path(__file__).absolute().parent
+# abspath (not Path.absolute()) collapses a ".." segment. Tests insert tools/tests/..
+# on sys.path; Path.absolute() would then treat the campaign root as tools/tests.
+# abspath does not resolve symlinks, so a lore/ symlink still keeps the repo layout.
+_TOOLS = Path(os.path.abspath(__file__)).parent
 _CAMPAIGN_FROM_FILE = _TOOLS.parent
 
 
@@ -41,7 +44,11 @@ def campaign_root() -> Path:
 
 
 def lore_root() -> Path:
-    """Lore root (holds tables/, CANON-LEDGER.md). Prefer env, then campaign/lore."""
+    """Lore root (holds tables/, CANON-LEDGER.md). Prefer env, then campaign/lore.
+
+    A temp DCC_CAMPAIGN_DIR with no lore of its own falls back to the checkout
+    beside this file, so a sandboxed session still sees the public tables.
+    """
     env = _env_path("DCC_LORE_ROOT", "DCC_LORE_DIR")
     if env is not None:
         return env
@@ -52,6 +59,9 @@ def lore_root() -> Path:
     sibling = camp.parent / "dcc-lore"
     if _looks_like_lore(sibling):
         return sibling.absolute()
+    via_file = _CAMPAIGN_FROM_FILE / "lore"
+    if via_file != via_campaign and _looks_like_lore(via_file):
+        return via_file.absolute()
     return via_campaign.absolute()
 
 
