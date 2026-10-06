@@ -426,6 +426,6 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
 
 ---
 
-*Canon table: `lore/tables/canon-floor-2.json`, ledger v1.20, sha256 `42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-2.json`, ledger v1.21, sha256 `7347243f4be0fccc3bcdc365823e576fae3c8e01ce2215b00dcc5f7d91ce7b9d` (recorded at build time).*
 
-*Build note: validation PASS (45 PASS, 4 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 e3d66d3b0f77. Warnings: enc-d04-02 enemy display; read-aloud length (soft); read-aloud length (soft); doubled full stop*
+*Build note: validation PASS (45 PASS, 4 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 edc0cd8668f5. Warnings: enc-d04-02 enemy display; read-aloud length (soft); read-aloud length (soft); doubled full stop*

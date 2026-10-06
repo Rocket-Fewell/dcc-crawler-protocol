@@ -28,9 +28,9 @@
     "days": 5,
     "days_left": 0,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-    "canon_table_sha256": "aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e",
+    "canon_table_sha256": "ff8117a34a859da14ac42c7fde4fb48618029b4f39cf2bd280112b79a69167cf",
     "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
-    "canon_ledger_version": "1.20",
+    "canon_ledger_version": "1.21",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.7",
     "budget_file_sha256": "f239fe8035a3087f999d0496453980ef5b2c2d3a5e99cbc16d921d002c0be1a7",
@@ -169,11 +169,11 @@
     "path": "lore/tables/canon-floor-1.json",
     "floor_wide_id": "c-floor",
     "note": "Lore's Floor 1 canon table. Tags: canon / inspired / unverified. Each encounter cites its zone id, tag, confidence and ledger rows; the script copies them from the table at build time.",
-    "expected_sha256": "aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e",
+    "expected_sha256": "ff8117a34a859da14ac42c7fde4fb48618029b4f39cf2bd280112b79a69167cf",
     "present": true,
     "schema": "canon-floor-1/0.1.0",
-    "ledger_version": "1.20",
-    "sha256": "aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e"
+    "ledger_version": "1.21",
+    "sha256": "ff8117a34a859da14ac42c7fde4fb48618029b4f39cf2bd280112b79a69167cf"
   },
   "day": {
     "number": 5,
@@ -2563,7 +2563,7 @@
     "pass": 52,
     "warn": 2,
     "fail": 0,
-    "spec_sha256": "1e49ba5f671cada0c2aa85375acb722ee794f90e5dcd59578222809e8a780c1a",
+    "spec_sha256": "38cd1203c8a4ee800e4f494fc0ca15cf0875a917f7946667b7c60a94863ec6de",
     "checks": [
       {
         "status": "PASS",
@@ -2648,12 +2648,12 @@
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "lore/tables/canon-floor-1.json (ledger 1.20, 24 zones)"
+        "detail": "lore/tables/canon-floor-1.json (ledger 1.21, 24 zones)"
       },
       {
         "status": "PASS",
         "check": "canon table hash recorded",
-        "detail": "sha256 aaec1d16ad99eedb, ledger v1.20"
+        "detail": "sha256 ff8117a34a859da1, ledger v1.21"
       },
       {
         "status": "PASS",

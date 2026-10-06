@@ -502,6 +502,6 @@ If the party stalls, the Lights-Out hour arrives, the countdown ticks, and the S
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `aaec1d16ad99eedbf93045dcd9e775abf1114af8b613f7c027c84836846fe87e` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.21, sha256 `ff8117a34a859da14ac42c7fde4fb48618029b4f39cf2bd280112b79a69167cf` (recorded at build time).*
 
-*Build note: validation PASS (52 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 6f9561ad6427. Warnings: none*
+*Build note: validation PASS (52 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 fef5504e5309. Warnings: none*
