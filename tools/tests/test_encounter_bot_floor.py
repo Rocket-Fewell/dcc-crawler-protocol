@@ -5,6 +5,7 @@ import importlib.util
 import json
 import os
 import unittest
+import warnings
 
 
 TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -62,6 +63,60 @@ def scrub_doc(doc):
     return doc
 
 
+def ledger_version_key(version):
+    """'1.20' -> (1, 20). Used only to tell a later ledger pass from an older one."""
+    parts = []
+    for piece in str(version).split("."):
+        parts.append(int(piece) if piece.isdigit() else piece)
+    return tuple(parts)
+
+
+def restamp_rendered_canon(md, doc, sha, version):
+    """Record the spec pin on a render that was stamped from the live canon file.
+
+    Lore bumps ledger_version on a timer. That changes the file hash and the page footer
+    without changing encounter text. The committed page keeps the sha pinned in the spec.
+    """
+    doc = copy.deepcopy(doc)
+    meta = doc.setdefault("meta", {})
+    ct = doc.setdefault("canon_table", {})
+    old_sha = ct.get("sha256") or meta.get("canon_table_sha256")
+    old_version = ct.get("ledger_version")
+    if old_version is None:
+        old_version = meta.get("canon_ledger_version")
+    display = None
+    marker = "*Canon table: `"
+    for line in md.splitlines():
+        if line.startswith(marker) and "ledger v%s" % old_version in line and old_sha and old_sha in line:
+            display = line
+            break
+    if display is None:
+        raise AssertionError("rendered page has no canon footer for ledger v%s" % old_version)
+    stamped = "*Canon table: `%s`, ledger v%s, sha256 `%s` (recorded at build time).*" % (
+        display.split("`")[1], version, sha)
+    md = md.replace(display, stamped, 1)
+    meta["canon_table_sha256"] = sha
+    meta["canon_ledger_version"] = str(version)
+    ct["sha256"] = sha
+    ct["ledger_version"] = str(version)
+    return md, doc
+
+
+def stale_pin_or_fail(day, pin_sha, pin_version, live_sha, live_version):
+    """A spec pin older than the live table is a warning. A pin newer than the live table is a failure."""
+    if not pin_sha or pin_sha == live_sha:
+        return
+    if ledger_version_key(pin_version) <= ledger_version_key(live_version):
+        warnings.warn(
+            "stale canon pin on day %d: spec pins ledger v%s, live file is ledger v%s (not a failure)"
+            % (day, pin_version, live_version),
+            UserWarning, stacklevel=2)
+        return
+    raise AssertionError(
+        "day %d canon pin is newer than the live table (page ledger v%s, file ledger v%s)"
+        % (day, pin_version, live_version))
+
+
 class FloorAwareGeneratorTests(unittest.TestCase):
     def test_floor_paths(self):
         self.assertEqual(eb.floor_number(None), 1)
@@ -98,17 +153,52 @@ class FloorAwareGeneratorTests(unittest.TestCase):
 
     def test_floor1_output_matches_committed_pages(self):
         for n in range(1, 6):
-            spec = os.path.join(CAMPAIGN, "floors", "f01", "day-%02d.spec.json" % n)
-            md, doc, _data = render_like_main(spec)
+            spec_path = os.path.join(CAMPAIGN, "floors", "f01", "day-%02d.spec.json" % n)
+            with open(spec_path, encoding="utf-8") as fh:
+                spec = json.load(fh)
+            md, doc, data = render_like_main(spec_path)
             with open(os.path.join(CAMPAIGN, "floors", "f01", "day-%02d.md" % n), encoding="utf-8") as fh:
                 disk_md = fh.read()
             with open(os.path.join(CAMPAIGN, "floors", "f01", "day-%02d.json" % n), encoding="utf-8") as fh:
                 disk_doc = json.load(fh)
+            pin = (spec.get("canon_table") or {}).get("expected_sha256")
+            page_sha = (disk_doc.get("meta") or {}).get("canon_table_sha256")
+            page_version = (disk_doc.get("meta") or {}).get("canon_ledger_version")
+            self.assertEqual(page_sha, pin, "day %d page canon sha does not match the spec pin" % n)
+            stale_pin_or_fail(n, pin, page_version, data.canon_sha256, (data.canon or {}).get("ledger_version"))
+            if pin and pin != data.canon_sha256:
+                md, doc = restamp_rendered_canon(md, doc, pin, page_version)
             self.assertEqual(scrub_md(md), scrub_md(disk_md), "day %d markdown drifted" % n)
             self.assertEqual(scrub_doc(doc), scrub_doc(disk_doc), "day %d json drifted" % n)
             self.assertIn("from `floors/f01/day-%02d.spec.json`" % n, md)
             self.assertIn("*Canon table: `lore/tables/canon-floor-1.json`", md)
             self.assertIn("(Floor 1 seed list, GM discretion)", md)
+
+    def test_stale_canon_pin_warns_until_the_page_is_rebuilt(self):
+        with self.assertWarns(UserWarning) as caught:
+            stale_pin_or_fail(1, "a" * 64, "1.19", "b" * 64, "1.20")
+        self.assertIn("stale canon pin", str(caught.warning))
+        self.assertIn("not a failure", str(caught.warning))
+        with self.assertRaises(AssertionError):
+            stale_pin_or_fail(1, "a" * 64, "1.21", "b" * 64, "1.20")
+        # equal versions with a new hash are still a later file, not a failure
+        with self.assertWarns(UserWarning):
+            stale_pin_or_fail(3, "a" * 64, "1.20", "b" * 64, "1.20")
+
+    def test_restamp_uses_the_spec_pin(self):
+        footer = "*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.20, sha256 `%s` (recorded at build time).*\n" % ("b" * 64)
+        md = "Day body stays.\n\n" + footer
+        doc = {"meta": {"canon_table_sha256": "b" * 64, "canon_ledger_version": "1.20"},
+               "canon_table": {"sha256": "b" * 64, "ledger_version": "1.20", "path": "lore/tables/canon-floor-1.json"},
+               "encounters": [{"id": "enc-d01-01"}]}
+        md2, doc2 = restamp_rendered_canon(md, doc, "a" * 64, "1.19")
+        self.assertIn("ledger v1.19", md2)
+        self.assertIn("a" * 64, md2)
+        self.assertNotIn("b" * 64, md2)
+        self.assertIn("Day body stays.", md2)
+        self.assertEqual(doc2["meta"]["canon_ledger_version"], "1.19")
+        self.assertEqual(doc2["canon_table"]["sha256"], "a" * 64)
+        self.assertEqual(doc["meta"]["canon_ledger_version"], "1.20")
 
     def test_floor2_render_uses_its_own_table_and_dir(self):
         spec = os.path.join(CAMPAIGN, "floors", "f02", "day-01.spec.json")
