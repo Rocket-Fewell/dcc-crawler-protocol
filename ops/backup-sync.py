@@ -61,7 +61,7 @@ SOURCES = [
     (_src("core-book", "core-book"), "core-book"),
     (_src("discord-voice-bridge", "discord-voice-bridge"), "discord-voice-bridge"),
     (_src("crawler-protocol", "crawler-protocol"), "crawler-protocol"),
-    (_src("agent-tools", "agent-tools"), "agent-tools"),
+    # agent-tools/ dropped Oct 6 2026 (Caleb): raw tool dumps, incl. inbox listings - not campaign content.
     (_src("srd", "srd"), "srd"),
     (os.environ["DCC_BACKUP_DIR"] if _IN_REPO and os.environ.get("DCC_BACKUP_DIR") else _src("backups", "backups"), "backups"),
     # unique work found in scratch folders (everything else in the scratch folders is copies/throwaway):
