@@ -42,7 +42,7 @@ export function crawlersText(rows, floor) {
 const pyRun = (ctx) => ctx.create?.run ?? defaultRun;
 export function stateCmd(ctx, args, { publish = false } = {}) {
   const { config } = ctx;
-  const env = { ...process.env, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_SESSION: config.campaign.sessionId, DCC_AUTO_PUBLISH: publish ? '1' : '0' };
+  const env = { ...process.env, DCC_CAMPAIGN_ROOT: config.campaign.dir, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_SESSION: config.campaign.sessionId, DCC_AUTO_PUBLISH: publish ? '1' : '0' };
   return pyRun(ctx)(config.create.python, [join(config.campaign.dir, 'tools', 'state.py'), '--session', config.campaign.sessionId, ...args], { env, cwd: config.campaign.dir });
 }
 

@@ -1,7 +1,7 @@
 # Welcome to the Crawl
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (Silver/Gold/Platinum by floor; Legendary cap 2/Crawler), death, standard level track (arrive N / N+1 / N+2; F3 and F9 end-boss bumps; F18 at 20), session turn order (034), Ratings, table tone, glossary.
-Sources: decisions 018, 026-031, 033, 034; rules/10-core-rules-5e.md v0.2.21; rules/70-encounter-budget-5e.json v0.1.11; rules/40-loot-deck-spec-5e.md v0.1.8; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2.2 | Updated: 2026-10-06
+Summary: Chapter 1 reconciled. Season Zero premise, 18-floor Dungeon, floor clock and collapse death (028), Midterm Onboarding, Floor 1 Reprieve ON default, saferooms, whole credits, achievements, loot boxes (achievement boxes Bronze F1-2 (Silver only from the Boss Box or a stated GM override) / Gold F3-8 / Platinum F9+; Legendary cap 2/Crawler), death, standard level track (arrive N / N+1 / N+2; F3 and F9 end-boss bumps; F18 at 20), session turn order (034), Ratings, table tone, glossary.
+Sources: decisions 018, 026-031, 033, 034; rules/10-core-rules-5e.md v0.2.22; rules/70-encounter-budget-5e.json v0.2.6; rules/40-loot-deck-spec-5e.md v0.1.9; rules/20-crafting-5e.md v0.3.7+; characters/character-creation-5e.md v0.2.5; NAMING-CONVENTIONS.md.
 
 <!-- BEGIN -->
 
@@ -322,7 +322,7 @@ Loot boxes are the Crawl's treasure system. The System hands them out for achiev
 | Legendary | Legendary | 3 (one guaranteed Legendary) |
 | Celestial | Legendary, plus a reward designed for you | 3, plus the reward |
 
-**Achievement box tier by floor.** When an achievement pays a loot box, the System uses **Silver** on Floors 1–2, **Gold** on Floors 3–8, and **Platinum** on Floors 9+ (no Platinum awards on Floors 1–8). Boss and clear boxes still respect the floor's rarity ceiling. {{HOUSE}}
+**Achievement box tier by floor.** Achievement boxes on Floors 1–2 are **Bronze**. Silver there comes only from the Boss Box, or from a GM override with a stated reason. Expect about two or three achievement boxes per Crawler per floor there, as a soft guideline the System may exceed for a great moment. From Floor 3 the biggest achievements pay **Gold** (Floors 3–8) and then **Platinum** (Floors 9+); there are no Platinum awards on Floors 1–8. Boss and clear boxes still respect the floor's rarity ceiling. Chapter 5 has the full table. {{HOUSE}}
 
 **Legendary cap.** Across the whole campaign a Crawler may receive at most **two** Legendary boxes from the ordinary pacing track. Story Boxes (Floors 1–2) are a **separate track** outside that cap; the GM handles Story Box awards and never prints deed lists in this book. {{HOUSE}}
 

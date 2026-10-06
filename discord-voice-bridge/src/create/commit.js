@@ -107,7 +107,7 @@ export async function commitDraft(d, ctx, tables, { run = ctx.create?.run ?? def
   writeFileSync(specPath, JSON.stringify(spec, null, 1), { mode: 0o600 });
   const py = config.create.python;
   const tools = join(config.campaign.dir, 'tools');
-  const env = { ...process.env, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_SESSION: config.campaign.sessionId, DCC_AUTO_PUBLISH: '0' };
+  const env = { ...process.env, DCC_CAMPAIGN_ROOT: config.campaign.dir, DCC_CAMPAIGN_DIR: config.campaign.dir, DCC_SESSION: config.campaign.sessionId, DCC_AUTO_PUBLISH: '0' };
   const sid = config.campaign.sessionId;
   const py_ = (script, ...args) => run(py, [join(tools, script), '--session', sid, ...args], { env, cwd: config.campaign.dir });
 
@@ -142,6 +142,8 @@ export async function commitDraft(d, ctx, tables, { run = ctx.create?.run ?? def
     let posted = false;
     if (config.create.publish && process.env.GM_DISCORD_TOKEN) {
       const a = await py_('discord_gm.py', 'setup-channels');
+      // lock the new sheet channel to its owner's personal role BEFORE the first card goes up (src/roles.js; best effort)
+      if (a.ok && ctx.lockSheetChannels) await Promise.resolve().then(() => ctx.lockSheetChannels()).catch((err) => ctx.logger?.warn?.(`/create: sheet lock failed for ${d.name}: ${err.message}`));
       const b = a.ok ? await py_('discord_gm.py', 'publish', '--crawler', d.name, '--full') : a;
       posted = b.ok;
       if (!posted) ctx.logger?.warn?.(`/create: first-card publish failed for ${d.name}: ${b.stderr?.split('\n').pop()}`);

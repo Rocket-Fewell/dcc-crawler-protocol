@@ -287,6 +287,17 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
   @bottom-center { content: "DRAFT v0.1"; font-family: "Barlow Condensed"; font-size: 7.5pt; letter-spacing: 0.25em; color: #b4ad9b; }
 }
 
+@page ch5:left {
+  @top-left { content: "CRAWLER PROTOCOL: SEASON ZERO"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; border-bottom: 1px solid #d9cfb4; padding-bottom: 4pt; width: 100%; vertical-align: bottom; }
+  @bottom-left { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; color: #2b2f3a; }
+  @bottom-center { content: "DRAFT v0.1"; font-family: "Barlow Condensed"; font-size: 7.5pt; letter-spacing: 0.25em; color: #b4ad9b; }
+}
+@page ch5:right {
+  @top-right { content: "SKILLS AND ACHIEVEMENTS"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; border-bottom: 1px solid #d9cfb4; padding-bottom: 4pt; width: 100%; text-align: right; vertical-align: bottom; }
+  @bottom-right { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; color: #2b2f3a; }
+  @bottom-center { content: "DRAFT v0.1"; font-family: "Barlow Condensed"; font-size: 7.5pt; letter-spacing: 0.25em; color: #b4ad9b; }
+}
+
 @page toc:left { @top-left { content: "CRAWLER PROTOCOL: SEASON ZERO"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; } @bottom-left { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; } }
 @page toc:right { @top-right { content: "CONTENTS"; font-family: "Barlow Condensed"; font-size: 8.5pt; letter-spacing: 0.22em; color: #8a8497; } @bottom-right { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; } }
 @page frontmatter:left { @bottom-left { content: counter(page); font-family: "Barlow Condensed"; font-weight: 700; font-size: 10pt; } }
@@ -299,7 +310,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
   <div class="art"><svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420"><polygon points="20.0,10.0 540.0,10.0 525.9,29.9 34.1,29.9" fill="rgb(60,66,82)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="70.4" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="122.2" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="174.0" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="225.7" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="329.3" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="381.0" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="432.8" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="484.6" y="14.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="34.1,32.4 525.9,32.4 511.9,52.4 48.1,52.4" fill="rgb(69,66,78)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="85.9" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="140.7" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="195.4" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="250.1" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="304.9" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="359.6" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="414.3" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="469.1" y="36.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="48.1,54.9 511.9,54.9 497.8,74.8 62.2,74.8" fill="rgb(79,67,75)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="101.9" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="160.4" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="219.0" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="336.0" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="394.6" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="453.1" y="58.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="62.2,77.3 497.8,77.3 483.8,97.3 76.2,97.3" fill="rgb(88,68,72)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="114.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="168.5" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="223.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="332.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="386.5" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="441.0" y="81.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="76.2,99.8 483.8,99.8 469.7,119.7 90.3,119.7" fill="rgb(98,69,69)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="130.2" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="189.1" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="248.0" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="307.0" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="365.9" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="424.8" y="103.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="90.3,122.2 469.7,122.2 455.7,142.2 104.3,142.2" fill="rgb(107,70,66)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="147.3" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="212.4" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="342.6" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="407.7" y="126.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="104.3,144.7 455.7,144.7 441.6,164.6 118.4,164.6" fill="rgb(117,71,63)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="158.6" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="218.0" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="337.0" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="396.4" y="148.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="118.4,167.1 441.6,167.1 427.6,187.1 132.4,187.1" fill="rgb(126,72,60)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="176.6" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="243.9" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="311.1" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="378.4" y="171.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="132.4,189.6 427.6,189.6 413.5,209.5 146.5,209.5" fill="rgb(136,73,57)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="187.1" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="247.4" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="307.6" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="367.9" y="193.6" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="146.5,212.0 413.5,212.0 399.4,231.9 160.6,231.9" fill="rgb(146,74,54)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="206.5" y="216.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="277.5" y="216.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="348.5" y="216.0" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="160.6,234.4 399.4,234.4 385.4,254.4 174.6,254.4" fill="rgb(155,75,50)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="231.3" y="238.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="323.7" y="238.4" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="174.6,256.9 385.4,256.9 371.3,276.8 188.7,276.8" fill="rgb(165,76,47)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="238.3" y="260.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="316.7" y="260.9" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="188.7,279.3 371.3,279.3 357.3,299.3 202.7,299.3" fill="rgb(174,77,44)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="245.3" y="283.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><rect x="309.7" y="283.3" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="202.7,301.8 357.3,301.8 343.2,321.7 216.8,321.7" fill="rgb(184,78,41)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="305.8" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="216.8,324.2 343.2,324.2 329.2,344.2 230.8,344.2" fill="rgb(193,79,38)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="328.2" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="230.8,346.7 329.2,346.7 315.1,366.6 244.9,366.6" fill="rgb(203,80,35)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="350.7" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="244.9,369.1 315.1,369.1 301.1,389.1 258.9,389.1" fill="rgb(212,81,32)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/><rect x="277.5" y="373.1" width="5" height="12.4" fill="#fbf7ee" fill-opacity="0.85"/><polygon points="258.9,391.6 301.1,391.6 287.0,411.5 273.0,411.5" fill="rgb(222,82,29)" fill-opacity="0.92" stroke="#0f1015" stroke-width="0.8"/></svg></div>
   <h1 class="cover-title">Crawler Protocol<span>Core Rulebook</span></h1>
   <div class="subtitle">Eighteen floors. Fewer ways down each time.<br>A tabletop RPG of the Crawl, built on the 5e (2024) System Reference Document.</div>
-  <div class="byline"><b>Valtay Corp</b> &nbsp;·&nbsp; Draft v0.1 &nbsp;·&nbsp; Chapters 1, 2 &amp; 4</div>
+  <div class="byline"><b>Valtay Corp</b> &nbsp;·&nbsp; Draft v0.1 &nbsp;·&nbsp; Chapters 1, 2, 4 &amp; 5</div>
 </section>
 
 <section class="frontmatter" id="front"><h1 class="nonum" id="front-legal-and-notices">Legal and Notices</h1>
@@ -340,11 +351,11 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tbody>
 </table>
 <h2 id="front-drafting-status">Drafting Status</h2>
-<p>This is <strong>Draft v0.2</strong> of the Core Rulebook. It contains Chapters 1, 2 and 4 (Chapter 3 Species is blocked on PROVISIONAL rulings). Page numbers, chapter order and many cross-references will move as the other chapters are written. If a rule in this draft disagrees with a campaign decision filed by the rules team, the filed decision wins; please report the conflict.</p>
+<p>This is <strong>Draft v0.2</strong> of the Core Rulebook. It contains Chapters 1, 2, 4 and 5 (Chapter 3 Species is blocked on PROVISIONAL rulings). Page numbers, chapter order and many cross-references will move as the other chapters are written. If a rule in this draft disagrees with a campaign decision filed by the rules team, the filed decision wins; please report the conflict.</p>
 <div class="box system">
 <p>Welcome to the Crawl! Please keep your arms, legs and hopes inside the book at all times. The System is not responsible for dignity lost during reading.</p>
 </div></section>
-<section class="toc"><h1 class="toc-title">Contents</h1><ol><li class="l0"><span class="t">Front Matter</span><span class="dots"></span><span class="pg">2</span></li><li class="l1"><span class="num">1</span><span class="t">Welcome to the Crawl</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">What This Book Is</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">The Premise: Season Zero</span><span class="dots"></span><span class="pg">7</span></li><li class="l2"><span class="t">The Dungeon</span><span class="dots"></span><span class="pg">8</span></li><li class="l2"><span class="t">Who Plays What</span><span class="dots"></span><span class="pg">9</span></li><li class="l2"><span class="t">How the Game Plays</span><span class="dots"></span><span class="pg">10</span></li><li class="l2"><span class="t">The Floor Clock</span><span class="dots"></span><span class="pg">12</span></li><li class="l2"><span class="t">Saferooms</span><span class="dots"></span><span class="pg">13</span></li><li class="l2"><span class="t">Credits, Vendors and Your System Inventory</span><span class="dots"></span><span class="pg">14</span></li><li class="l2"><span class="t">Achievements</span><span class="dots"></span><span class="pg">15</span></li><li class="l2"><span class="t">Loot Boxes</span><span class="dots"></span><span class="pg">16</span></li><li class="l2"><span class="t">Death and Revival</span><span class="dots"></span><span class="pg">16</span></li><li class="l2"><span class="t">Ratings and the Broadcast Name</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Table Tone and Safety</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Words You Will Need</span><span class="dots"></span><span class="pg">18</span></li><li class="l2"><span class="t">Where to Go Next</span><span class="dots"></span><span class="pg">19</span></li><li class="l1"><span class="num">2</span><span class="t">Crawler Creation</span><span class="dots"></span><span class="pg">20</span></li><li class="l2"><span class="t">Before You Start</span><span class="dots"></span><span class="pg">20</span></li><li class="l2"><span class="t">Table Settings (S1 and S2)</span><span class="dots"></span><span class="pg">22</span></li><li class="l2"><span class="t">Name, Look and Hook (S3 and S4)</span><span class="dots"></span><span class="pg">23</span></li><li class="l2"><span class="t">Species (S5) Provisional</span><span class="dots"></span><span class="pg">24</span></li><li class="l2"><span class="t">Class (S6)</span><span class="dots"></span><span class="pg">26</span></li><li class="l2"><span class="t">Background (S7)</span><span class="dots"></span><span class="pg">29</span></li><li class="l2"><span class="t">Ability Scores (S8)</span><span class="dots"></span><span class="pg">31</span></li><li class="l2"><span class="t">Skills and Proficiencies (S9)</span><span class="dots"></span><span class="pg">33</span></li><li class="l2"><span class="t">Equipment (S10)</span><span class="dots"></span><span class="pg">34</span></li><li class="l2"><span class="t">Spells (S11)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">The Survey (S13)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Backstory and Handle (S14)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Standing Orders (S15)</span><span class="dots"></span><span class="pg">37</span></li><li class="l2"><span class="t">Review and Confirm (S16 and S17)</span><span class="dots"></span><span class="pg">37</span></li><li class="l2"><span class="t">Several Crawlers, One Active</span><span class="dots"></span><span class="pg">38</span></li><li class="l2"><span class="t">Pre-Built Crawlers</span><span class="dots"></span><span class="pg">39</span></li><li class="l2"><span class="t">Worked Example: Tamsin Vale</span><span class="dots"></span><span class="pg">39</span></li><li class="l2"><span class="t">Appendix: Non-SRD Backgrounds and Origin Feats</span><span class="dots"></span><span class="pg">40</span></li><li class="l2"><span class="t">Level 1 Checklist</span><span class="dots"></span><span class="pg">41</span></li><li class="l1"><span class="num">4</span><span class="t">Classes and Backgrounds</span><span class="dots"></span><span class="pg">42</span></li><li class="l2"><span class="t">How Classes Work in the Crawl</span><span class="dots"></span><span class="pg">42</span></li><li class="l2"><span class="t">Fighting Styles</span><span class="dots"></span><span class="pg">43</span></li><li class="l2"><span class="t">Reading a Class Entry</span><span class="dots"></span><span class="pg">44</span></li><li class="l2"><span class="t">Anger-Management Dropout (Barbarian)</span><span class="dots"></span><span class="pg">44</span></li><li class="l2"><span class="t">Open-Mic Menace (Bard)</span><span class="dots"></span><span class="pg">45</span></li><li class="l2"><span class="t">Urgent-Care Chaplain (Cleric)</span><span class="dots"></span><span class="pg">46</span></li><li class="l2"><span class="t">Community-Garden Zealot (Druid)</span><span class="dots"></span><span class="pg">47</span></li><li class="l2"><span class="t">Off-Duty Bouncer (Fighter)</span><span class="dots"></span><span class="pg">48</span></li><li class="l2"><span class="t">Barefoot Hot-Yoga Brawler (Monk)</span><span class="dots"></span><span class="pg">49</span></li><li class="l2"><span class="t">HOA Enforcement Crusader (Paladin)</span><span class="dots"></span><span class="pg">50</span></li><li class="l2"><span class="t">Seasonal Park Ranger (Ranger)</span><span class="dots"></span><span class="pg">51</span></li><li class="l2"><span class="t">Five-Finger Discount Specialist (Rogue)</span><span class="dots"></span><span class="pg">52</span></li><li class="l2"><span class="t">Leaky Power-Bank (Sorcerer)</span><span class="dots"></span><span class="pg">53</span></li><li class="l2"><span class="t">Unread Terms-and-Conditions Signer (Warlock)</span><span class="dots"></span><span class="pg">54</span></li><li class="l2"><span class="t">Perpetual Grad Student (Wizard)</span><span class="dots"></span><span class="pg">55</span></li><li class="l2"><span class="t">Class Options at Level 1</span><span class="dots"></span><span class="pg">56</span></li><li class="l2"><span class="t">Prior Employment (Backgrounds)</span><span class="dots"></span><span class="pg">57</span></li><li class="l2"><span class="t">Youth-Group Pizza Wrangler (Acolyte)</span><span class="dots"></span><span class="pg">58</span></li><li class="l2"><span class="t">Call-Center Gift-Card Fraud Specialist (Criminal)</span><span class="dots"></span><span class="pg">58</span></li><li class="l2"><span class="t">Adjunct Professor on Four Campuses (Sage)</span><span class="dots"></span><span class="pg">59</span></li><li class="l2"><span class="t">Black-Friday Mall Security (Soldier)</span><span class="dots"></span><span class="pg">59</span></li><li class="l2"><span class="t">Multiclassing and Subclasses</span><span class="dots"></span><span class="pg">60</span></li><li class="l2"><span class="t">Quick Picks (If You Are Stuck)</span><span class="dots"></span><span class="pg">60</span></li><li class="l2"><span class="t">Appendix: Non-SRD Backgrounds and Origin Feats</span><span class="dots"></span><span class="pg">61</span></li><li class="l2"><span class="t">Level 1 Feature Checklist by Class</span><span class="dots"></span><span class="pg">62</span></li><li class="l2"><span class="t">Sample Concepts (Legal, Not Pre-Written Heroes)</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Progression Through Floor 3 (Standard Track)</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Resources That Care About Saferooms</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Credits and Starting Kits</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Optional: Assigned Companion Tables</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Spellcasting Snapshot (Level 1)</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Armor and Defense Snapshot</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Skills That Matter Early</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Worked Micro-Examples (One Fight Each)</span><span class="dots"></span><span class="pg">67</span></li><li class="l2"><span class="t">Background Ability Triples (SRD Four)</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Common Intake Mistakes</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Table: When Features Arrive (Levels 1–3)</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Tone Reminders for Class Fantasy</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Building a Party of Four</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Divine Order and Primal Order Deep Dive</span><span class="dots"></span><span class="pg">70</span></li><li class="l2"><span class="t">Eldritch Invocation Picks (Level 1 Guidance)</span><span class="dots"></span><span class="pg">70</span></li><li class="l2"><span class="t">Species Interactions (Pointer)</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Official Class Titles (Floor 3 Preview)</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Comparing Martials at Level 1</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Comparing Casters at Level 1</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Background Play Patterns</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Multiclass Minimums (SRD Pointer)</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">What “Provisional” Means at the Table</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Cross-References</span><span class="dots"></span><span class="pg">73</span></li><li class="l2"><span class="t">Frequently Asked Intake Questions</span><span class="dots"></span><span class="pg">73</span></li><li class="l2"><span class="t">One-Page Class Cards (Copy Block)</span><span class="dots"></span><span class="pg">73</span></li></ol></section>
+<section class="toc"><h1 class="toc-title">Contents</h1><ol><li class="l0"><span class="t">Front Matter</span><span class="dots"></span><span class="pg">2</span></li><li class="l1"><span class="num">1</span><span class="t">Welcome to the Crawl</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">What This Book Is</span><span class="dots"></span><span class="pg">6</span></li><li class="l2"><span class="t">The Premise: Season Zero</span><span class="dots"></span><span class="pg">7</span></li><li class="l2"><span class="t">The Dungeon</span><span class="dots"></span><span class="pg">8</span></li><li class="l2"><span class="t">Who Plays What</span><span class="dots"></span><span class="pg">9</span></li><li class="l2"><span class="t">How the Game Plays</span><span class="dots"></span><span class="pg">10</span></li><li class="l2"><span class="t">The Floor Clock</span><span class="dots"></span><span class="pg">12</span></li><li class="l2"><span class="t">Saferooms</span><span class="dots"></span><span class="pg">13</span></li><li class="l2"><span class="t">Credits, Vendors and Your System Inventory</span><span class="dots"></span><span class="pg">14</span></li><li class="l2"><span class="t">Achievements</span><span class="dots"></span><span class="pg">15</span></li><li class="l2"><span class="t">Loot Boxes</span><span class="dots"></span><span class="pg">16</span></li><li class="l2"><span class="t">Death and Revival</span><span class="dots"></span><span class="pg">16</span></li><li class="l2"><span class="t">Ratings and the Broadcast Name</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Table Tone and Safety</span><span class="dots"></span><span class="pg">17</span></li><li class="l2"><span class="t">Words You Will Need</span><span class="dots"></span><span class="pg">18</span></li><li class="l2"><span class="t">Where to Go Next</span><span class="dots"></span><span class="pg">19</span></li><li class="l1"><span class="num">2</span><span class="t">Crawler Creation</span><span class="dots"></span><span class="pg">20</span></li><li class="l2"><span class="t">Before You Start</span><span class="dots"></span><span class="pg">20</span></li><li class="l2"><span class="t">Table Settings (S1 and S2)</span><span class="dots"></span><span class="pg">22</span></li><li class="l2"><span class="t">Name, Look and Hook (S3 and S4)</span><span class="dots"></span><span class="pg">23</span></li><li class="l2"><span class="t">Species (S5) Provisional</span><span class="dots"></span><span class="pg">24</span></li><li class="l2"><span class="t">Class (S6)</span><span class="dots"></span><span class="pg">26</span></li><li class="l2"><span class="t">Background (S7)</span><span class="dots"></span><span class="pg">29</span></li><li class="l2"><span class="t">Ability Scores (S8)</span><span class="dots"></span><span class="pg">31</span></li><li class="l2"><span class="t">Skills and Proficiencies (S9)</span><span class="dots"></span><span class="pg">33</span></li><li class="l2"><span class="t">Equipment (S10)</span><span class="dots"></span><span class="pg">34</span></li><li class="l2"><span class="t">Spells (S11)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">The Survey (S13)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Backstory and Handle (S14)</span><span class="dots"></span><span class="pg">36</span></li><li class="l2"><span class="t">Standing Orders (S15)</span><span class="dots"></span><span class="pg">37</span></li><li class="l2"><span class="t">Review and Confirm (S16 and S17)</span><span class="dots"></span><span class="pg">37</span></li><li class="l2"><span class="t">Several Crawlers, One Active</span><span class="dots"></span><span class="pg">38</span></li><li class="l2"><span class="t">Pre-Built Crawlers</span><span class="dots"></span><span class="pg">39</span></li><li class="l2"><span class="t">Worked Example: Tamsin Vale</span><span class="dots"></span><span class="pg">39</span></li><li class="l2"><span class="t">Appendix: Non-SRD Backgrounds and Origin Feats</span><span class="dots"></span><span class="pg">40</span></li><li class="l2"><span class="t">Level 1 Checklist</span><span class="dots"></span><span class="pg">41</span></li><li class="l1"><span class="num">4</span><span class="t">Classes and Backgrounds</span><span class="dots"></span><span class="pg">42</span></li><li class="l2"><span class="t">How Classes Work in the Crawl</span><span class="dots"></span><span class="pg">42</span></li><li class="l2"><span class="t">Fighting Styles</span><span class="dots"></span><span class="pg">43</span></li><li class="l2"><span class="t">Reading a Class Entry</span><span class="dots"></span><span class="pg">44</span></li><li class="l2"><span class="t">Anger-Management Dropout (Barbarian)</span><span class="dots"></span><span class="pg">44</span></li><li class="l2"><span class="t">Open-Mic Menace (Bard)</span><span class="dots"></span><span class="pg">45</span></li><li class="l2"><span class="t">Urgent-Care Chaplain (Cleric)</span><span class="dots"></span><span class="pg">46</span></li><li class="l2"><span class="t">Community-Garden Zealot (Druid)</span><span class="dots"></span><span class="pg">47</span></li><li class="l2"><span class="t">Off-Duty Bouncer (Fighter)</span><span class="dots"></span><span class="pg">48</span></li><li class="l2"><span class="t">Barefoot Hot-Yoga Brawler (Monk)</span><span class="dots"></span><span class="pg">49</span></li><li class="l2"><span class="t">HOA Enforcement Crusader (Paladin)</span><span class="dots"></span><span class="pg">50</span></li><li class="l2"><span class="t">Seasonal Park Ranger (Ranger)</span><span class="dots"></span><span class="pg">51</span></li><li class="l2"><span class="t">Five-Finger Discount Specialist (Rogue)</span><span class="dots"></span><span class="pg">52</span></li><li class="l2"><span class="t">Leaky Power-Bank (Sorcerer)</span><span class="dots"></span><span class="pg">53</span></li><li class="l2"><span class="t">Unread Terms-and-Conditions Signer (Warlock)</span><span class="dots"></span><span class="pg">54</span></li><li class="l2"><span class="t">Perpetual Grad Student (Wizard)</span><span class="dots"></span><span class="pg">55</span></li><li class="l2"><span class="t">Class Options at Level 1</span><span class="dots"></span><span class="pg">56</span></li><li class="l2"><span class="t">Prior Employment (Backgrounds)</span><span class="dots"></span><span class="pg">57</span></li><li class="l2"><span class="t">Youth-Group Pizza Wrangler (Acolyte)</span><span class="dots"></span><span class="pg">58</span></li><li class="l2"><span class="t">Call-Center Gift-Card Fraud Specialist (Criminal)</span><span class="dots"></span><span class="pg">59</span></li><li class="l2"><span class="t">Adjunct Professor on Four Campuses (Sage)</span><span class="dots"></span><span class="pg">59</span></li><li class="l2"><span class="t">Black-Friday Mall Security (Soldier)</span><span class="dots"></span><span class="pg">60</span></li><li class="l2"><span class="t">Multiclassing and Subclasses</span><span class="dots"></span><span class="pg">60</span></li><li class="l2"><span class="t">Quick Picks (If You Are Stuck)</span><span class="dots"></span><span class="pg">61</span></li><li class="l2"><span class="t">Appendix: Non-SRD Backgrounds and Origin Feats</span><span class="dots"></span><span class="pg">61</span></li><li class="l2"><span class="t">Level 1 Feature Checklist by Class</span><span class="dots"></span><span class="pg">62</span></li><li class="l2"><span class="t">Sample Concepts (Legal, Not Pre-Written Heroes)</span><span class="dots"></span><span class="pg">64</span></li><li class="l2"><span class="t">Progression Through Floor 3 (Standard Track)</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Resources That Care About Saferooms</span><span class="dots"></span><span class="pg">65</span></li><li class="l2"><span class="t">Credits and Starting Kits</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Optional: Assigned Companion Tables</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Spellcasting Snapshot (Level 1)</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Armor and Defense Snapshot</span><span class="dots"></span><span class="pg">66</span></li><li class="l2"><span class="t">Skills That Matter Early</span><span class="dots"></span><span class="pg">67</span></li><li class="l2"><span class="t">Worked Micro-Examples (One Fight Each)</span><span class="dots"></span><span class="pg">67</span></li><li class="l2"><span class="t">Background Ability Triples (SRD Four)</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Common Intake Mistakes</span><span class="dots"></span><span class="pg">68</span></li><li class="l2"><span class="t">Table: When Features Arrive (Levels 1–3)</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Tone Reminders for Class Fantasy</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Building a Party of Four</span><span class="dots"></span><span class="pg">69</span></li><li class="l2"><span class="t">Divine Order and Primal Order Deep Dive</span><span class="dots"></span><span class="pg">70</span></li><li class="l2"><span class="t">Eldritch Invocation Picks (Level 1 Guidance)</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Species Interactions (Pointer)</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Official Class Titles (Floor 3 Preview)</span><span class="dots"></span><span class="pg">71</span></li><li class="l2"><span class="t">Comparing Martials at Level 1</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Comparing Casters at Level 1</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Background Play Patterns</span><span class="dots"></span><span class="pg">72</span></li><li class="l2"><span class="t">Multiclass Minimums (SRD Pointer)</span><span class="dots"></span><span class="pg">73</span></li><li class="l2"><span class="t">What “Provisional” Means at the Table</span><span class="dots"></span><span class="pg">73</span></li><li class="l2"><span class="t">Cross-References</span><span class="dots"></span><span class="pg">73</span></li><li class="l2"><span class="t">Frequently Asked Intake Questions</span><span class="dots"></span><span class="pg">73</span></li><li class="l2"><span class="t">One-Page Class Cards (Copy Block)</span><span class="dots"></span><span class="pg">74</span></li><li class="l1"><span class="num">5</span><span class="t">Skills and Achievements</span><span class="dots"></span><span class="pg">76</span></li><li class="l2"><span class="t">Ability Checks</span><span class="dots"></span><span class="pg">76</span></li><li class="l2"><span class="t">Proficiency and Expertise</span><span class="dots"></span><span class="pg">78</span></li><li class="l2"><span class="t">The Eighteen Skills</span><span class="dots"></span><span class="pg">78</span></li><li class="l2"><span class="t">Skills by Ability</span><span class="dots"></span><span class="pg">79</span></li><li class="l2"><span class="t">Typical Checks in the Crawl</span><span class="dots"></span><span class="pg">83</span></li><li class="l2"><span class="t">Passive Checks</span><span class="dots"></span><span class="pg">84</span></li><li class="l2"><span class="t">Working Together</span><span class="dots"></span><span class="pg">84</span></li><li class="l2"><span class="t">Contests</span><span class="dots"></span><span class="pg">85</span></li><li class="l2"><span class="t">Actions That Call for Checks</span><span class="dots"></span><span class="pg">85</span></li><li class="l2"><span class="t">Tools</span><span class="dots"></span><span class="pg">86</span></li><li class="l2"><span class="t">System Skills</span><span class="dots"></span><span class="pg">86</span></li><li class="l2"><span class="t">Achievements</span><span class="dots"></span><span class="pg">88</span></li><li class="l2"><span class="t">Crawl Charms and Blessings</span><span class="dots"></span><span class="pg">94</span></li><li class="l2"><span class="t">Sample Achievements</span><span class="dots"></span><span class="pg">95</span></li><li class="l2"><span class="t">Quick Reference</span><span class="dots"></span><span class="pg">98</span></li></ol></section>
 <section class="chapter ch1" id="ch1" style="page: ch1"><h1 id="ch1-top" data-num="One" id="ch1-welcome-to-the-crawl">Welcome to the Crawl</h1>
 <div class="epigraph">Congratulations on being selected! You weren&rsquo;t selected. You were scooped. But &ldquo;selected&rdquo; polls better.<span class="by">The System</span></div>
 
@@ -827,7 +838,7 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </tr>
 </tbody>
 </table>
-<p><strong>Achievement box tier by floor.</strong> When an achievement pays a loot box, the System uses <strong>Silver</strong> on Floors 1–2, <strong>Gold</strong> on Floors 3–8, and <strong>Platinum</strong> on Floors 9+ (no Platinum awards on Floors 1–8). Boss and clear boxes still respect the floor&rsquo;s rarity ceiling. <span class="tag house">House</span></p>
+<p><strong>Achievement box tier by floor.</strong> Achievement boxes on Floors 1–2 are <strong>Bronze</strong>. Silver there comes only from the Boss Box, or from a GM override with a stated reason. Expect about two or three achievement boxes per Crawler per floor there, as a soft guideline the System may exceed for a great moment. From Floor 3 the biggest achievements pay <strong>Gold</strong> (Floors 3–8) and then <strong>Platinum</strong> (Floors 9+); there are no Platinum awards on Floors 1–8. Boss and clear boxes still respect the floor&rsquo;s rarity ceiling. Chapter 5 has the full table. <span class="tag house">House</span></p>
 <p><strong>Legendary cap.</strong> Across the whole campaign a Crawler may receive at most <strong>two</strong> Legendary boxes from the ordinary pacing track. Story Boxes (Floors 1–2) are a <strong>separate track</strong> outside that cap; the GM handles Story Box awards and never prints deed lists in this book. <span class="tag house">House</span></p>
 <p>Box rules in brief:</p>
 <ul>
@@ -2485,27 +2496,103 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Anger-Management Dropout (Barbarian)</td>
+<td style="text-align: center;">d12</td>
+<td>STR/CON</td>
+<td>light, medium, shield; Unarmored Defense</td>
+<td style="text-align: center;">2</td>
+<td>Rage; Unarmored Defense; Mastery 2</td>
+</tr>
+<tr>
+<td>Open-Mic Menace (Bard)</td>
+<td style="text-align: center;">d8</td>
+<td>DEX/CHA</td>
+<td>light</td>
+<td style="text-align: center;">3</td>
+<td>Inspiration; Spellcasting</td>
+</tr>
+<tr>
+<td>Urgent-Care Chaplain (Cleric)</td>
+<td style="text-align: center;">d8</td>
+<td>WIS/CHA</td>
+<td>light, medium, shield</td>
+<td style="text-align: center;">2</td>
+<td>Spellcasting; Divine Order</td>
+</tr>
+<tr>
+<td>Community-Garden Zealot (Druid)</td>
+<td style="text-align: center;">d8</td>
+<td>INT/WIS</td>
+<td>light, shield</td>
+<td style="text-align: center;">2</td>
+<td>Spellcasting; Druidic; Primal Order</td>
+</tr>
+<tr>
+<td>Off-Duty Bouncer (Fighter)</td>
+<td style="text-align: center;">d10</td>
+<td>STR/CON</td>
+<td>light, medium, heavy, shield</td>
+<td style="text-align: center;">2</td>
+<td>Fighting Style; Second Wind; Mastery 3</td>
+</tr>
+<tr>
+<td>Barefoot Hot-Yoga Brawler (Monk)</td>
+<td style="text-align: center;">d8</td>
+<td>STR/DEX</td>
+<td>Unarmored Defense</td>
+<td style="text-align: center;">2</td>
+<td>Martial Arts; Unarmored Defense</td>
+</tr>
+<tr>
+<td>HOA Enforcement Crusader (Paladin)</td>
+<td style="text-align: center;">d10</td>
+<td>WIS/CHA</td>
+<td>light, medium, heavy, shield</td>
+<td style="text-align: center;">2</td>
+<td>Lay on Hands; Spellcasting; Mastery 2</td>
+</tr>
+<tr>
+<td>Seasonal Park Ranger (Ranger)</td>
+<td style="text-align: center;">d10</td>
+<td>STR/DEX</td>
+<td>light, medium, shield</td>
+<td style="text-align: center;">3</td>
+<td>Hunter&rsquo;s Mark; Spellcasting; Mastery 2</td>
+</tr>
+<tr>
+<td>Five-Finger Discount Specialist (Rogue)</td>
+<td style="text-align: center;">d8</td>
+<td>DEX/INT</td>
+<td>light</td>
+<td style="text-align: center;">4</td>
+<td>Expertise; Sneak Attack; Cant; Mastery 2</td>
+</tr>
+<tr>
+<td>Leaky Power-Bank (Sorcerer)</td>
+<td style="text-align: center;">d6</td>
+<td>CON/CHA</td>
+<td>none</td>
+<td style="text-align: center;">2</td>
+<td>Spellcasting; Innate Sorcery</td>
+</tr>
+<tr>
+<td>Unread Terms-and-Conditions Signer (Warlock)</td>
+<td style="text-align: center;">d8</td>
+<td>WIS/CHA</td>
+<td>light</td>
+<td style="text-align: center;">2</td>
+<td>Pact Magic; 1 Invocation</td>
+</tr>
+<tr>
+<td>Perpetual Grad Student (Wizard)</td>
+<td style="text-align: center;">d6</td>
+<td>INT/WIS</td>
+<td>none</td>
+<td style="text-align: center;">2</td>
+<td>Spellbook; Rituals; Arcane Recovery</td>
 </tr>
 </tbody>
 </table>
-<p>| Anger-Management Dropout (Barbarian) | d12 | STR/CON | light, medium, shield; Unarmored Defense | 2 | Rage; Unarmored Defense; Mastery 2 |
-| Open-Mic Menace (Bard) | d8 | DEX/CHA | light | 3 | Inspiration; Spellcasting |
-| Urgent-Care Chaplain (Cleric) | d8 | WIS/CHA | light, medium, shield | 2 | Spellcasting; Divine Order |
-| Community-Garden Zealot (Druid) | d8 | INT/WIS | light, shield | 2 | Spellcasting; Druidic; Primal Order |
-| Off-Duty Bouncer (Fighter) | d10 | STR/CON | light, medium, heavy, shield | 2 | Fighting Style; Second Wind; Mastery 3 |
-| Barefoot Hot-Yoga Brawler (Monk) | d8 | STR/DEX | Unarmored Defense | 2 | Martial Arts; Unarmored Defense |
-| HOA Enforcement Crusader (Paladin) | d10 | WIS/CHA | light, medium, heavy, shield | 2 | Lay on Hands; Spellcasting; Mastery 2 |
-| Seasonal Park Ranger (Ranger) | d10 | STR/DEX | light, medium, shield | 3 | Hunter&rsquo;s Mark; Spellcasting; Mastery 2 |
-| Five-Finger Discount Specialist (Rogue) | d8 | DEX/INT | light | 4 | Expertise; Sneak Attack; Cant; Mastery 2 |
-| Leaky Power-Bank (Sorcerer) | d6 | CON/CHA | none | 2 | Spellcasting; Innate Sorcery |
-| Unread Terms-and-Conditions Signer (Warlock) | d8 | WIS/CHA | light | 2 | Pact Magic; 1 Invocation |
-| Perpetual Grad Student (Wizard) | d6 | INT/WIS | none | 2 | Spellbook; Rituals; Arcane Recovery |</p>
 <p><em>Weapon and tool proficiencies: SRD 5.2. Tables: chargen-5e.json v0.1.6, species-class-reskins v0.1.5.</em></p>
 <h2 id="ch4-fighting-styles">Fighting Styles</h2>
 <p>Fighters pick a Fighting Style at <strong>level 1</strong>. <strong>Paladins and Rangers pick at level 2</strong>, not during intake. Each style is a feat in 2024 terms; take the SRD benefit as written. Names below are kiosk labels.</p>
@@ -2518,21 +2605,47 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td>Carnival-Booth Sharpshooter (Archery)</td>
+<td>+2 to attack rolls with ranged weapons.</td>
+</tr>
+<tr>
+<td>Power-Outage Brawler (Blind Fighting)</td>
+<td>Blindsight 10 feet while conscious (as SRD).</td>
+</tr>
+<tr>
+<td>Bubble-Wrap Enthusiast (Defense)</td>
+<td>+1 Armor Class while wearing armor.</td>
+</tr>
+<tr>
+<td>Single-Hand Swagger (Dueling)</td>
+<td>+2 damage with a single one-handed melee weapon and a free other hand.</td>
+</tr>
+<tr>
+<td>Two-Handed Overcompensation (Great Weapon Fighting)</td>
+<td>Reroll 1s and 2s on damage dice for two-handed melee weapons.</td>
+</tr>
+<tr>
+<td>Human Airbag Reflex (Interception)</td>
+<td>Reaction: reduce damage to a nearby ally when they are hit (as SRD).</td>
+</tr>
+<tr>
+<td>Crowd-Control Shield Shove (Protection)</td>
+<td>Reaction with a shield: impose Disadvantage on an attack against a nearby ally.</td>
+</tr>
+<tr>
+<td>Dart-League Menace (Thrown Weapon Fighting)</td>
+<td>Draw thrown weapons as part of the attack; +2 damage on thrown weapon attacks.</td>
+</tr>
+<tr>
+<td>Double-Fisting Menace (Two-Weapon Fighting)</td>
+<td>Add your ability modifier to the extra attack&rsquo;s damage when you Two-Weapon Fight.</td>
+</tr>
+<tr>
+<td>Bar-Fight Haymaker (Unarmed Fighting)</td>
+<td>Stronger unarmed strikes; special grapple options as SRD.</td>
 </tr>
 </tbody>
 </table>
-<p>| Carnival-Booth Sharpshooter (Archery) | +2 to attack rolls with ranged weapons. |
-| Power-Outage Brawler (Blind Fighting) | Blindsight 10 feet while conscious (as SRD). |
-| Bubble-Wrap Enthusiast (Defense) | +1 Armor Class while wearing armor. |
-| Single-Hand Swagger (Dueling) | +2 damage with a single one-handed melee weapon and a free other hand. |
-| Two-Handed Overcompensation (Great Weapon Fighting) | Reroll 1s and 2s on damage dice for two-handed melee weapons. |
-| Human Airbag Reflex (Interception) | Reaction: reduce damage to a nearby ally when they are hit (as SRD). |
-| Crowd-Control Shield Shove (Protection) | Reaction with a shield: impose Disadvantage on an attack against a nearby ally. |
-| Dart-League Menace (Thrown Weapon Fighting) | Draw thrown weapons as part of the attack; +2 damage on thrown weapon attacks. |
-| Double-Fisting Menace (Two-Weapon Fighting) | Add your ability modifier to the extra attack&rsquo;s damage when you Two-Weapon Fight. |
-| Bar-Fight Haymaker (Unarmed Fighting) | Stronger unarmed strikes; special grapple options as SRD. |</p>
 <div class="box house">
 <div class="box-title">Ability Scores Cross-Reference</div>
 <p>Ability scores still use Factory Preset, Layaway Plan, or Dice Gamble (Roll). Roll is <span class="tag house">House</span>: keep an array only if it totals <strong>73 or more</strong>. Full procedure in Chapter 2.</p>
@@ -2860,13 +2973,15 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td>Hallway Bodyguard (Protector)</td>
+<td>Armor and martial weapons. Stands between the bleeding and the elevator.</td>
+</tr>
+<tr>
+<td>Church Rummage-Sale Mystic (Thaumaturge)</td>
+<td>Extra cantrip and sharper at religion. Reads a tarot deck with the price tags still on.</td>
 </tr>
 </tbody>
 </table>
-<p>| Hallway Bodyguard (Protector) | Armor and martial weapons. Stands between the bleeding and the elevator. |
-| Church Rummage-Sale Mystic (Thaumaturge) | Extra cantrip and sharper at religion. Reads a tarot deck with the price tags still on. |</p>
 <h3 id="ch4-druid-primal-order">Druid: Primal Order</h3>
 <table>
 <thead>
@@ -2877,13 +2992,15 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td>Farmers-Market Hedge Magician (Magician)</td>
+<td>Extra cantrip and nature smarts. Sells heirloom tomatoes that are, technically, still cursed.</td>
+</tr>
+<tr>
+<td>Trail-Crew Warden (Warden)</td>
+<td>Medium armor, shield and martial weapons. Maintains the trail and slaps anyone who feeds the wildlife.</td>
 </tr>
 </tbody>
 </table>
-<p>| Farmers-Market Hedge Magician (Magician) | Extra cantrip and nature smarts. Sells heirloom tomatoes that are, technically, still cursed. |
-| Trail-Crew Warden (Warden) | Medium armor, shield and martial weapons. Maintains the trail and slaps anyone who feeds the wildlife. |</p>
 <h3 id="ch4-warlock-eldritch-invocations-pick-one-at-level-1">Warlock: Eldritch Invocations (pick one at level 1)</h3>
 <p>Invocations use SRD text. Kiosk names live in the create-screens table; rules key on the plain 5e invocation name. Pick one you can use at level 1 under SRD prerequisites.</p>
 <h3 id="ch4-weapon-mastery-counts">Weapon Mastery Counts</h3>
@@ -3874,5 +3991,1770 @@ caption { caption-side: bottom; text-align: left; font-style: italic; font-size:
 <p>HD d6 · Saves INT/WIS · Book 6 / prep 4 · Rituals · Arcane Recovery · Spells Int 3 cantrips · Skills 2</p>
 <div class="box system">
 <p>That concludes class and employment counseling. Please proceed to the stairwell brochure. It is also lying.</p>
+</div></section><section class="chapter ch5" id="ch5" style="page: ch5"><!-- Canon tags for this chapter (source-side only; the printed tags are HOUSE / INSPIRED):
+     - Achievements as System notifications that reward, mock or warn: lore catalog/achievements.md (WIKI-ONLY overview; individual A- rows mostly VERIFIED wiki cites).
+     - Box tiers Bronze..Celestial: ledger L-001 VERIFIED. Boxes open only in saferooms: L-002 VERIFIED. Semi-random contents: L-003 VERIFIED.
+     - Skills level by use: lore mechanics-clarifications 3.1 (WIKI, HIGH). Skills generally cap at 15: ledger M-008 VERIFIED (page cite B2 ch2). Cockroach: M-009 / S-001 VERIFIED.
+     - System skill track (decision 037, core v0.2.22): sources are canon-shaped, per Lore's Q19 note (all VERIFIED): train by use, potions or a training guild M-059; first-time feat grants a skill K-070, K-057; inventive crafting raises several K-079, K-064; hard or clever use pays extra M-807; Skill Potion +1 M-045; Cheat Code Potion +3 random I-011; class/race bonus K-071; cap 15 M-008, 20 for a race/class family K-078 (Hobgoblin traps/explosives); past 15 in real fights A-143 (achievement name printed per decision 037). Pace (no counters, GM-granted, next safe point) and the +1 at ranks 5/10/15: HOUSE.
+     - Reward ladder R0-R6, credit multiplier, achievement box tiers by floor, Charms, Blessings, Cockroach Clause tiers and prices: HOUSE (campaign core rules), Cockroach Clause CANON-INSPIRED.
+     - Sample achievement names are the campaign catalog's own (HOUSE) except those marked with a dagger, which echo canon achievement shapes (A-034, A-047, A-131, A-136, A-139 VERIFIED; A-151 WIKI-ONLY; A-044 VERIFIED). No canon achievement text is reproduced. -->
+
+<h1 id="ch5-top" data-num="Five" id="ch5-skills-and-achievements">Skills and Achievements</h1>
+<div class="epigraph">You have skills! Some of them are even useful. The rest will be graded on a curve, live, in front of an audience of several billion.<span class="by">The System</span></div>
+
+<p>Every Crawler is good at something. This chapter is about what happens when your Crawler tries something and the outcome is in doubt: the <strong>ability check</strong>, the <strong>eighteen skills</strong> of the fifth edition rules, and the habits a Crawl table uses to keep checks fast and fair. The second half of the chapter is about what happens when the System decides you did something <em>notable</em>: <strong>achievements</strong>, the reward ladder behind them, and a starter list of the kind of deeds the System likes to talk about.</p>
+<p>The rules for checks are the <strong>SRD 5.2</strong> rules, written out here in our own words with Crawl examples. Nothing about the math has changed. The achievement rules are ours. <span class="tag house">House</span></p>
+<div class="box sidebar">
+<div class="box-title">What This Chapter Is Not</div>
+<p>This chapter does not explain how the System decides <em>which</em> reward suits you. That lives in a hidden profile you never see. It also does not list every achievement in the catalog. The System has the full catalog, and the System does not share.</p>
+</div>
+<h2 id="ch5-ability-checks">Ability Checks</h2>
+<p>An <strong>ability check</strong> tests what a Crawler can do when failure is possible and interesting: picking a lock while something scratches at the door, talking a vending machine&rsquo;s owner out of a refund policy, or remembering which end of a goblin is the dangerous end. Attack rolls and saving throws are the other two <strong>d20 tests</strong>. This chapter covers checks.</p>
+<h3 id="ch5-making-a-check">Making a Check</h3>
+<ol>
+<li><strong>The GM picks the ability</strong> that fits the task, and a <strong>skill</strong> if one applies (for example, Dexterity (Stealth)).</li>
+<li><strong>The GM sets a Difficulty Class (DC).</strong> The table below gives the usual steps.</li>
+<li><strong>Roll a d20 and add the ability modifier.</strong> Add your <strong>Proficiency Bonus</strong> if you are proficient in the skill or tool being used.</li>
+<li><strong>Meet or beat the DC</strong> and the check succeeds. Fall short and it fails, and the Dungeon gets to decide what failure looks like.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Task difficulty</th>
+<th style="text-align: center;">DC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Very easy</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td>Easy</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td>Hard</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td>Very hard</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr>
+<td>Nearly impossible</td>
+<td style="text-align: center;">30</td>
+</tr>
+</tbody>
+</table>
+<p>Most checks in a session sit at <strong>Easy</strong> or <strong>Medium</strong>. A Very Easy task usually doesn&rsquo;t need a roll at all, and a Nearly Impossible one should be rare enough to be worth an achievement if somebody pulls it off.</p>
+<h3 id="ch5-when-not-to-roll">When Not to Roll</h3>
+<p>Call for a check only when the outcome is uncertain <em>and</em> failure would change something. Walking down a hallway, opening an unlocked door and reading a sign do not need dice. A Crawler with all the time in the world and nothing hunting them can usually just succeed at a simple task. In the Crawl that situation is rare, because the floor clock is always running.</p>
+<h3 id="ch5-calling-the-check">Calling the Check</h3>
+<p>At this table the System <strong>names the ability, the skill and the DC before the roll</strong> whenever the Crawler would reasonably know what they are up against. That keeps decisions honest: a player who hears &ldquo;Strength (Athletics), DC 20&rdquo; for a rusted shutter can choose to look for another way in. <span class="tag house">House</span></p>
+<p>By default the System rolls all dice <strong>in the open</strong> and announces the whole result, so everyone can follow it:</p>
+<blockquote>
+<p><strong>Strength (Athletics), DC 15.</strong> Roll 14, plus 5. <strong>19. Success.</strong></p>
+</blockquote>
+<p>A table may let players roll their own dice instead; agree on it at session zero. The System still rolls some checks <strong>in secret</strong> where the fifth edition rules expect it: a monster&rsquo;s Stealth, an Insight read on a liar, or a trap the Crawler shouldn&rsquo;t see coming. Secret or not, <strong>dice stand</strong>. The System does not fudge rolls in your favor or against you.</p>
+<div class="box system">
+<p>The System does not cheat. The System does not need to. Have you seen your Wisdom score?</p>
+</div>
+<h3 id="ch5-advantage-and-disadvantage">Advantage and Disadvantage</h3>
+<p>When circumstances help, you have <strong>Advantage</strong>: roll two d20s and use the higher. When they hurt, you have <strong>Disadvantage</strong>: roll two and use the lower. If you have both, they cancel and you roll one d20. Multiple sources of Advantage still mean only two dice. The GM grants Advantage for good tools, good plans and good help, and imposes Disadvantage for bad light, bad footing and bad ideas.</p>
+<h3 id="ch5-natural-20s-and-natural-1s">Natural 20s and Natural 1s</h3>
+<p>On an ability check, a roll of 20 or 1 is just a number. It is <strong>not</strong> an automatic success or failure. (The automatic hit and miss belong to attack rolls; death saving throws have their own rule.) The System will still comment on your natural 1. It is contractually obligated to.</p>
+<h3 id="ch5-heroic-inspiration">Heroic Inspiration</h3>
+<p>If you have <strong>Heroic Inspiration</strong>, you can spend it to reroll any one die right after you roll it, and you must use the new roll. You can hold only one at a time. The Crawl hands it out for crowd-pleasing moments and as an achievement reward (see &ldquo;The Reward Ladder&rdquo; below).</p>
+<h3 id="ch5-using-different-abilities">Using Different Abilities</h3>
+<p>Each skill is listed under the ability it usually goes with, but the GM may pair a skill with another ability when the task calls for it. Pinning a struggling goblin while you shout questions at it might be Strength (Intimidation). Remembering the layout of a store you worked in might be Intelligence (Survival) instead of Wisdom. The skill says <em>what you know how to do</em>; the ability says <em>how you are doing it</em>.</p>
+<h2 id="ch5-proficiency-and-expertise">Proficiency and Expertise</h2>
+<p>Your <strong>Proficiency Bonus</strong> is set by your level and goes up as you descend. Add it to any check that uses a skill or tool you are proficient in.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th style="text-align: center;">Proficiency Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td style="text-align: center;">+2</td>
+</tr>
+<tr>
+<td>5–8</td>
+<td style="text-align: center;">+3</td>
+</tr>
+<tr>
+<td>9–12</td>
+<td style="text-align: center;">+4</td>
+</tr>
+<tr>
+<td>13–16</td>
+<td style="text-align: center;">+5</td>
+</tr>
+<tr>
+<td>17–20</td>
+<td style="text-align: center;">+6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Where proficiencies come from.</strong> Your Prior Employment (background) gives you two skills and a tool. Your class lets you pick more skills from its list. Some species give one (an Elf&rsquo;s Keen Senses, a Human&rsquo;s Skillful trait), and some feats give several (the Skilled Origin feat gives three). Chapter 2 walks through the picks; you can never be proficient in the same skill twice.</p>
+<p><strong>Expertise.</strong> Some features grant <strong>Expertise</strong> in a skill. When you make a check with that skill, your Proficiency Bonus is <strong>doubled</strong>. A Rogue picks two skills for Expertise at level 1, and a Bard gets it at level 2. Expertise only applies to a skill you are already proficient in.</p>
+<div class="box sidebar">
+<div class="box-title">Plain Names on Purpose</div>
+<p>Ability scores have kiosk nicknames on the intake screens (Gym-Bro Energy, Pub-Quiz Brain, and the rest). <strong>Skill names never get a nickname.</strong> Your sheet, the System&rsquo;s roll posts and this book all say Athletics, Perception and Sleight of Hand, so nobody has to translate in the middle of a fight.</p>
+</div>
+<h2 id="ch5-the-eighteen-skills">The Eighteen Skills</h2>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Ability</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Athletics</td>
+<td>Strength</td>
+<td>Climbing, jumping, swimming, shoving, grappling, forcing</td>
+</tr>
+<tr>
+<td>Acrobatics</td>
+<td>Dexterity</td>
+<td>Balance, tumbling, staying upright, slipping free</td>
+</tr>
+<tr>
+<td>Sleight of Hand</td>
+<td>Dexterity</td>
+<td>Pickpocketing, palming, planting, fine manual tricks</td>
+</tr>
+<tr>
+<td>Stealth</td>
+<td>Dexterity</td>
+<td>Hiding, sneaking, moving without being noticed</td>
+</tr>
+<tr>
+<td>Arcana</td>
+<td>Intelligence</td>
+<td>Spells, magic items, sigils, magical oddities</td>
+</tr>
+<tr>
+<td>History</td>
+<td>Intelligence</td>
+<td>Past events, people, places, old institutions</td>
+</tr>
+<tr>
+<td>Investigation</td>
+<td>Intelligence</td>
+<td>Deduction, searching for clues, working out how things fit</td>
+</tr>
+<tr>
+<td>Nature</td>
+<td>Intelligence</td>
+<td>Terrain, plants, animals, weather</td>
+</tr>
+<tr>
+<td>Religion</td>
+<td>Intelligence</td>
+<td>Gods, rites, holy symbols, cults</td>
+</tr>
+<tr>
+<td>Animal Handling</td>
+<td>Wisdom</td>
+<td>Calming, steering and reading animals</td>
+</tr>
+<tr>
+<td>Insight</td>
+<td>Wisdom</td>
+<td>Reading intent, spotting lies, sensing mood</td>
+</tr>
+<tr>
+<td>Medicine</td>
+<td>Wisdom</td>
+<td>Stabilizing the dying, diagnosing illness and poison</td>
+</tr>
+<tr>
+<td>Perception</td>
+<td>Wisdom</td>
+<td>Noticing things with your senses</td>
+</tr>
+<tr>
+<td>Survival</td>
+<td>Wisdom</td>
+<td>Tracking, foraging, navigating, reading hazards</td>
+</tr>
+<tr>
+<td>Deception</td>
+<td>Charisma</td>
+<td>Lying convincingly, disguises, misdirection</td>
+</tr>
+<tr>
+<td>Intimidation</td>
+<td>Charisma</td>
+<td>Threats, menace, getting your way by fear</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Charisma</td>
+<td>Entertaining an audience on purpose</td>
+</tr>
+<tr>
+<td>Persuasion</td>
+<td>Charisma</td>
+<td>Honest argument, negotiation, charm</td>
+</tr>
+</tbody>
+</table>
+<p>Constitution has no skills. When the System asks you to keep drinking, keep running or keep holding your breath, it calls for a plain Constitution check.</p>
+<h2 id="ch5-skills-by-ability">Skills by Ability</h2>
+<p>Each entry below says what the skill covers and gives a handful of ways it comes up in the Crawl. The examples lean on Floors 1 and 2, where most new Crawlers spend their first sessions finding out what their sheet is for. Difficulty words (Easy, Medium, Hard) refer to the DC table above.</p>
+<h3 id="ch5-gym-bro-energy-strength">Gym-Bro Energy (Strength)</h3>
+<p>Strength checks measure raw force: lifting, pushing, pulling, breaking. Without a skill, a Strength check covers forcing a jammed door, bending bars, lifting a collapsed shelf off a friend, or holding a closing gate for one more second.</p>
+<h4 id="ch5-athletics">Athletics</h4>
+<p><strong>Climbing, jumping, swimming and wrestling.</strong> Athletics covers hard physical effort against the world or against a body: scaling a wall, leaping farther than your normal jump allows, swimming against a current, and breaking free when something has you grappled. (Grappling or shoving a creature yourself uses the SRD&rsquo;s Unarmed Strike options, which call for the target&rsquo;s saving throw, not your check.)</p>
+<ul>
+<li>Hauling yourself up a slick maintenance ladder while the lights strobe (Easy) or a greased one while something bites your ankle (Hard).</li>
+<li>Kicking through a flimsy partition wall to skip a hallway the System obviously wants you to walk down.</li>
+<li>Keeping your grip on a rope bridge when the far end starts to unclip itself.</li>
+<li>Shoving a vending machine over onto a goblin. The System will log the property damage.</li>
+</ul>
+<h3 id="ch5-parkour-delusion-dexterity">Parkour Delusion (Dexterity)</h3>
+<p>Dexterity checks measure agility, reflexes and fine control. Without a skill, a Dexterity check covers things like catching a falling vial or steering a stolen shopping cart down a ramp. <strong>Initiative</strong> is a Dexterity check too.</p>
+<h4 id="ch5-acrobatics">Acrobatics</h4>
+<p><strong>Balance, tumbling and staying on your feet.</strong> Use Acrobatics to keep your footing on ice, oil or a moving floor, to dive and roll through a gap, or to wriggle free of a grapple when the other ability would be Strength (Athletics).</p>
+<ul>
+<li>Running across a floor slick with something you&rsquo;d rather not identify.</li>
+<li>Dropping and rolling under a closing shutter.</li>
+<li>Landing on your feet after the floor tilts (the System calls this &ldquo;a fun surprise&rdquo;).</li>
+</ul>
+<h4 id="ch5-sleight-of-hand">Sleight of Hand</h4>
+<p><strong>Quick, careful hands.</strong> Pickpocketing, palming an object, planting something on someone, loosening a bolt without anyone seeing, and other fiddly work done under observation.</p>
+<ul>
+<li>Lifting a keycard off a sleeping guard.</li>
+<li>Palming a small item off a vendor&rsquo;s counter while you haggle. (Getting caught is also an achievement.)</li>
+<li>Tying a tripwire across a doorway while the rest of the party keeps a mob&rsquo;s attention.</li>
+</ul>
+<h4 id="ch5-stealth">Stealth</h4>
+<p><strong>Not being noticed.</strong> Stealth covers sneaking, hiding and moving quietly. Use it with the <strong>Hide</strong> action (see &ldquo;Actions That Call for Checks&rdquo;). Heavy armor that the SRD marks with a Stealth penalty gives you Disadvantage.</p>
+<ul>
+<li>Slipping past a pack of sleeping mobs to reach a loot crate.</li>
+<li>Following a rival party far enough to see where their stairwell is.</li>
+<li>Staying very, very still while something large sniffs the vent you are in.</li>
+</ul>
+<h3 id="ch5-pub-quiz-brain-intelligence">Pub-Quiz Brain (Intelligence)</h3>
+<p>Intelligence checks measure memory, reasoning and knowledge. Without a skill, an Intelligence check covers working out a code, assembling a device from parts, or estimating the value of junk.</p>
+<h4 id="ch5-arcana">Arcana</h4>
+<p><strong>Magic and the things it leaves behind.</strong> Arcana covers spells, magic items, glyphs, magical traditions and the stranger corners of the Dungeon&rsquo;s machinery.</p>
+<ul>
+<li>Recognizing the spell a goblin shaman is winding up before it finishes.</li>
+<li>Working out what an unidentified magic item probably does before you put it on.</li>
+<li>Spotting that a saferoom&rsquo;s glowing sigil is a little <em>too</em> glowing.</li>
+</ul>
+<h4 id="ch5-history">History</h4>
+<p><strong>What happened before.</strong> History covers past events, famous people, lost places, old organizations and the customs that came out of them. In a game where everything inside was destroyed in one afternoon, history includes everything you knew about the world before.</p>
+<ul>
+<li>Remembering how a real-world building of this type was laid out, and where its back exits were.</li>
+<li>Recalling the name and habits of a faction that shows up on a later floor.</li>
+<li>Recognizing a symbol from a museum exhibit that no longer exists.</li>
+</ul>
+<h4 id="ch5-investigation">Investigation</h4>
+<p><strong>Deduction.</strong> Investigation is searching <em>and thinking</em>: noticing that a desk has been moved, working out where a trap&rsquo;s trigger must be from the shape of the room, reading what happened from a scene. Use it with the <strong>Study</strong> action.</p>
+<ul>
+<li>Working out from the scuff marks that the &ldquo;saferoom&rdquo; door gets opened from the outside.</li>
+<li>Figuring out how a System puzzle-lock wants to be solved.</li>
+<li>Reading a vendor&rsquo;s price list for the catch.</li>
+</ul>
+<h4 id="ch5-nature">Nature</h4>
+<p><strong>The living world.</strong> Nature covers terrain, plants, animals, weather and natural cycles. The Dungeon builds habitats, and Nature tells you how they work.</p>
+<ul>
+<li>Identifying a mushroom as edible, poisonous or &ldquo;edible once.&rdquo;</li>
+<li>Knowing what a creature eats, and therefore what it might be hunting.</li>
+<li>Predicting that the water in a flooded zone will rise with the &ldquo;tide.&rdquo;</li>
+</ul>
+<h4 id="ch5-religion">Religion</h4>
+<p><strong>Gods and the things done in their names.</strong> Religion covers deities, rites, prayers, holy symbols, religious orders and cults.</p>
+<ul>
+<li>Recognizing a shrine&rsquo;s patron, and whether offering at it is polite or suicidal.</li>
+<li>Spotting that a cult&rsquo;s chant is counting down.</li>
+<li>Knowing which rites a temple NPC will expect from a visitor.</li>
+</ul>
+<h3 id="ch5-warning-signs-you-ignored-wisdom">Warning Signs You Ignored (Wisdom)</h3>
+<p>Wisdom checks measure awareness, intuition and common sense. Without a skill, a Wisdom check covers getting a gut feeling about a plan or noticing that something about a room is wrong without knowing what.</p>
+<h4 id="ch5-animal-handling">Animal Handling</h4>
+<p><strong>Animals and animal-like things.</strong> Animal Handling covers calming a frightened beast, keeping a mount steady, reading an animal&rsquo;s mood and guessing what it will do next. Use it with the <strong>Influence</strong> action when you deal with a Beast or a Monstrosity.</p>
+<ul>
+<li>Talking a cornered, frightened dog out of biting you.</li>
+<li>Noticing that the rats have all stopped moving.</li>
+<li>Keeping a skittish mount from bolting when the fireworks start.</li>
+</ul>
+<h4 id="ch5-insight">Insight</h4>
+<p><strong>Reading people.</strong> Insight covers telling whether someone is lying, guessing what they want, and sensing mood and intent from body language and tone. Use it with the <strong>Search</strong> action when the thing you&rsquo;re searching is a creature&rsquo;s state of mind.</p>
+<ul>
+<li>Telling whether a Crawler from another party is really lost or is scouting you.</li>
+<li>Reading whether an NPC&rsquo;s smile means &ldquo;deal&rdquo; or &ldquo;dinner.&rdquo;</li>
+<li>Sensing that the System&rsquo;s cheerful announcement is hiding something. (It is. It always is.)</li>
+</ul>
+<h4 id="ch5-medicine">Medicine</h4>
+<p><strong>Keeping bodies working.</strong> Medicine covers stabilizing a dying creature, diagnosing an illness, recognizing a poison and working out what killed something. Taking the Help action to stabilize a creature at 0 hit points calls for a DC 10 Wisdom (Medicine) check, as the SRD says.</p>
+<ul>
+<li>Stabilizing an ally at 0 hit points before the next round ends.</li>
+<li>Recognizing which goblin toxin is in the wound, and what it does next.</li>
+<li>Telling from a corpse how long ago something happened, and how.</li>
+</ul>
+<h4 id="ch5-perception">Perception</h4>
+<p><strong>Noticing.</strong> Perception covers spotting, hearing and otherwise detecting things with your senses: a hidden creature, a tripwire, a quiet sound. It is the skill most often used passively (see &ldquo;Passive Checks&rdquo;).</p>
+<ul>
+<li>Hearing claws in the ceiling.</li>
+<li>Spotting the shimmer of a pressure plate in a dusty floor.</li>
+<li>Noticing that the stairwell sign is hand-painted.</li>
+</ul>
+<h4 id="ch5-survival">Survival</h4>
+<p><strong>Getting by in hostile terrain.</strong> Survival covers tracking, hunting, finding food and water, finding your way, and reading hazards in the environment. Use it with the <strong>Search</strong> action for tracks and food.</p>
+<ul>
+<li>Following blood drops back to where a mob is nesting.</li>
+<li>Finding your way back to the last saferoom when the map is still fogged.</li>
+<li>Judging that the &ldquo;shortcut&rdquo; across the flooded atrium is a very bad idea.</li>
+</ul>
+<h3 id="ch5-main-character-energy-charisma">Main-Character Energy (Charisma)</h3>
+<p>Charisma checks measure force of personality and how well you deal with an audience. Without a skill, a Charisma check covers a first impression, a toast, or a clumsy attempt to blend into a crowd. Most social checks use the <strong>Influence</strong> action.</p>
+<h4 id="ch5-deception">Deception</h4>
+<p><strong>Lying, and being good at it.</strong> Deception covers convincing lies, misleading half-truths, disguises and bluffing. It is opposed by the target&rsquo;s Insight when it matters.</p>
+<ul>
+<li>Convincing a guard that you have every right to be behind the counter.</li>
+<li>Telling a rival party that the hallway behind you is a dead end.</li>
+<li>Pretending you meant to set off that trap.</li>
+</ul>
+<h4 id="ch5-intimidation">Intimidation</h4>
+<p><strong>Getting your way by fear.</strong> Intimidation covers threats, menace, a display of force or a very convincing stare.</p>
+<ul>
+<li>Making a gang of mobs reconsider the fight once their leader drops.</li>
+<li>Persuading a stubborn NPC that you will, in fact, keep breaking things.</li>
+<li>Staring down another Crawler at the last vendor in the zone.</li>
+</ul>
+<h4 id="ch5-performance">Performance</h4>
+<p><strong>Entertaining on purpose.</strong> Performance covers music, acting, comedy, dancing, storytelling and anything else done for an audience. In a game that is broadcast to an audience, Performance comes up more than you&rsquo;d expect.</p>
+<ul>
+<li>Holding a crowd&rsquo;s attention while the rest of the party loots behind them.</li>
+<li>Turning a disaster into a bit the audience enjoys.</li>
+<li>Delivering a one-liner the System decides to replay.</li>
+</ul>
+<h4 id="ch5-persuasion">Persuasion</h4>
+<p><strong>Honest influence.</strong> Persuasion covers good-faith argument, negotiation, diplomacy and charm. Haggling with a vendor is a Charisma check, usually Persuasion (Deception or Intimidation also work; see Chapter 1).</p>
+<ul>
+<li>Haggling a price down at a saferoom vendor.</li>
+<li>Convincing a frightened NPC to come with you.</li>
+<li>Talking a tired party into one more room before the Long Rest.</li>
+</ul>
+<div class="box system">
+<p>Skills update in real time. Please do not attempt to update them yourself by shouting.</p>
+</div>
+<h2 id="ch5-typical-checks-in-the-crawl">Typical Checks in the Crawl</h2>
+<p>The GM sets every DC, but these are the kinds of tasks that come up again and again on the early floors, with the check the System usually calls and how hard it tends to be. Use them as a starting point, not a price list.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Usual check</th>
+<th>Usual difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Force a stuck office door</td>
+<td>Strength (Athletics)</td>
+<td>Easy to Medium</td>
+</tr>
+<tr>
+<td>Climb a collapsed escalator</td>
+<td>Strength (Athletics)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Cross an oil-slicked floor at a run</td>
+<td>Dexterity (Acrobatics)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Pick a cheap lock</td>
+<td>Dexterity, with Thieves&rsquo; Tools</td>
+<td>Easy to Medium</td>
+</tr>
+<tr>
+<td>Pick a System-grade lock</td>
+<td>Dexterity, with Thieves&rsquo; Tools</td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>Sneak past sleeping mobs</td>
+<td>Dexterity (Stealth), often as a group check</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Identify a common potion by smell</td>
+<td>Intelligence (Arcana) or Wisdom (Medicine)</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>Spot a pressure plate in a dusty corridor</td>
+<td>Wisdom (Perception), often passive</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Work out which way a trap fires</td>
+<td>Intelligence (Investigation)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Follow fresh tracks through debris</td>
+<td>Wisdom (Survival)</td>
+<td>Easy to Medium</td>
+</tr>
+<tr>
+<td>Stabilize a dying ally</td>
+<td>Wisdom (Medicine)</td>
+<td>DC 10</td>
+</tr>
+<tr>
+<td>Tell whether an NPC is lying</td>
+<td>Wisdom (Insight) vs their Charisma (Deception)</td>
+<td>Contest</td>
+</tr>
+<tr>
+<td>Talk a hesitant NPC into helping</td>
+<td>Charisma (Persuasion), Influence action</td>
+<td>15 or the NPC&rsquo;s Intelligence</td>
+</tr>
+<tr>
+<td>Haggle with a saferoom vendor</td>
+<td>Charisma (Persuasion, Deception or Intimidation)</td>
+<td>Set by the vendor</td>
+</tr>
+<tr>
+<td>Hide behind a vending machine</td>
+<td>Dexterity (Stealth), Hide action</td>
+<td>DC 15</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch5-passive-checks">Passive Checks</h2>
+<p>A <strong>passive check</strong> is a check nobody rolls. It stands for the average result of doing something over and over, or of doing it without thinking. The GM uses passive checks for things a Crawler would notice or understand without asking, and to keep a busy table moving.</p>
+<p><strong>Passive check = 10 + every modifier that normally applies to the check.</strong> Add 5 if you have Advantage on it, and subtract 5 if you have Disadvantage.</p>
+<ul>
+<li><strong>Passive Perception</strong> is the one on your sheet. The System compares it to a hidden creature&rsquo;s Stealth or a concealed trap&rsquo;s DC whenever you walk into a room.</li>
+<li>The System also uses <strong>passive Investigation</strong> and <strong>passive Insight</strong> freely, so that &ldquo;anything weird about this room?&rdquo; and &ldquo;is this guy lying?&rdquo; don&rsquo;t always need a roll. This holds at every table, whether you play in chat, by voice or face to face. Rolling is still how you look <em>harder</em>. <span class="tag house">House</span></li>
+</ul>
+<div class="box system">
+<p>The System has computed your passive Perception. It has also computed what you missed. Would you like to know? No. You would not.</p>
+</div>
+<h2 id="ch5-working-together">Working Together</h2>
+<h3 id="ch5-helping">Helping</h3>
+<p>When you <strong>Help</strong> an ally with a check, pick one of your skill or tool proficiencies that fits the task. Your ally has <strong>Advantage</strong> on their next check with that skill or tool, as long as they make it before the start of your next turn and you are close enough to help in a way that makes sense. The GM decides whether help is possible; two people can&rsquo;t pick one lock faster, but two people can lift one shelf.</p>
+<h3 id="ch5-group-checks">Group Checks</h3>
+<p>When the whole party tries something together (sneaking down a corridor, climbing a shaft, searching a big room), the GM can call for a <strong>group check</strong>. Everyone rolls. <strong>If at least half the group succeeds, the whole group succeeds.</strong> Otherwise the group fails. Group checks let the strong carry the weak without anyone making twelve separate rolls.</p>
+<div class="box sidebar">
+<div class="box-title">Group Checks and the Session Order</div>
+<p>Group checks happen outside the session turn order (Chapter 1). The System resolves them in one beat and moves on. Individual checks during exploration still happen on each Crawler&rsquo;s turn.</p>
+</div>
+<h2 id="ch5-contests">Contests</h2>
+<p>Sometimes two creatures want opposite things: you are trying to hide and a guard is trying to spot you, or you are holding a door shut while a mob pushes on it. That is a <strong>contest</strong>. Both sides make the appropriate check; the higher total wins. <strong>On a tie, nothing changes</strong>: the situation stays as it was before the contest.</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Your check</th>
+<th>Their check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sneaking past a lookout</td>
+<td>Dexterity (Stealth)</td>
+<td>Wisdom (Perception)</td>
+</tr>
+<tr>
+<td>Telling a convincing lie</td>
+<td>Charisma (Deception)</td>
+<td>Wisdom (Insight)</td>
+</tr>
+<tr>
+<td>Palming an item while watched</td>
+<td>Dexterity (Sleight of Hand)</td>
+<td>Wisdom (Perception)</td>
+</tr>
+<tr>
+<td>Wrestling over a weapon</td>
+<td>Strength (Athletics)</td>
+<td>Strength (Athletics)</td>
+</tr>
+<tr>
+<td>Holding a door shut</td>
+<td>Strength (Athletics)</td>
+<td>Strength (Athletics)</td>
+</tr>
+<tr>
+<td>Slipping out of a crowd&rsquo;s grip</td>
+<td>Dexterity (Acrobatics)</td>
+<td>Strength (Athletics)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ch5-actions-that-call-for-checks">Actions That Call for Checks</h2>
+<p>Several SRD 5.2 actions are built around an ability check. Each one takes your action on your turn.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Check</th>
+<th>Use it to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Search</strong></td>
+<td>Wisdom: Insight, Medicine, Perception or Survival</td>
+<td>Look for something you can sense: a hidden creature or object, an ailment, someone&rsquo;s state of mind, tracks or food</td>
+</tr>
+<tr>
+<td><strong>Study</strong></td>
+<td>Intelligence: Arcana, History, Investigation, Nature or Religion</td>
+<td>Think hard about something: a spell, an item, a clue, a creature, a symbol</td>
+</tr>
+<tr>
+<td><strong>Hide</strong></td>
+<td>Dexterity (Stealth), DC 15</td>
+<td>Conceal yourself (see below)</td>
+</tr>
+<tr>
+<td><strong>Influence</strong></td>
+<td>Charisma (Deception, Intimidation, Performance or Persuasion), or Wisdom (Animal Handling) for a Beast or Monstrosity</td>
+<td>Urge a creature to do something it is hesitant about</td>
+</tr>
+<tr>
+<td><strong>Utilize</strong></td>
+<td>Varies</td>
+<td>Use an object or tool, including System terminals, levers and vending machines</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hiding.</strong> To Hide, you must be heavily obscured or behind three-quarters or total cover, and out of any enemy&rsquo;s line of sight. Succeed on a <strong>DC 15 Dexterity (Stealth)</strong> check and you have the <strong>Invisible</strong> condition. Note your total: it becomes the DC for anyone trying to find you with Wisdom (Perception). You stop being hidden if you make a sound louder than a whisper, make an attack roll, cast a spell with a Verbal component, or get found.</p>
+<p><strong>Influence.</strong> The GM decides whether the creature is <strong>willing</strong> (it just does it), <strong>unwilling</strong> (no check will make it), or <strong>hesitant</strong> (you roll). A hesitant creature&rsquo;s DC is <strong>15 or its Intelligence score, whichever is higher</strong>. If you fail, you can&rsquo;t urge it in the same way again for a while, usually a day. Roleplay first; the check settles what the conversation could not.</p>
+<div class="box sidebar">
+<div class="box-title">Influence and the System</div>
+<p>The System is not a creature and has no Intelligence score worth mentioning. You cannot Influence it. You can, however, file a complaint at any System terminal, where it will be read aloud for comedic effect.</p>
+</div>
+<h2 id="ch5-tools">Tools</h2>
+<p>A <strong>tool</strong> is a kit that lets you do something you otherwise could not: Thieves&rsquo; Tools for locks and traps, Herbalism Kit for remedies, Disguise Kit for faces, Tinker&rsquo;s Tools for gadgets. Each tool in the SRD names the ability it uses and what you can do and make with it.</p>
+<ul>
+<li><strong>Tool proficiency</strong> adds your Proficiency Bonus to checks made with that tool.</li>
+<li><strong>Tool plus skill.</strong> If you are proficient with the tool <em>and</em> with a skill that applies to the same check, you have <strong>Advantage</strong> on it. Picking a lock with Thieves&rsquo; Tools while you also know Sleight of Hand is the classic case.</li>
+<li><strong>No tool, no check.</strong> Some tasks are impossible without the right tool. You can&rsquo;t pick a lock with your opinion of it.</li>
+</ul>
+<p>Crafting in the Crawl runs on these same tool proficiencies, at saferoom workstations, with a no-roll default called <strong>Steady Hands</strong>. Chapter 6 covers tables, recipes and crafting skills.</p>
+<h2 id="ch5-system-skills">System Skills</h2>
+<p>In the source series, the System keeps its own list of <strong>skills</strong>: specific, often ridiculous talents with numbered ranks, from fighting with your fists to lacing your boots. They grow with use, from potions and from training, and they usually top out at 15. <span class="tag inspired">Inspired</span></p>
+<p>System skills sit on your sheet under <strong>Skills</strong>, each with a rank. They don&rsquo;t replace the eighteen skills, proficiency or Expertise; those still carry most checks, and your Proficiency Bonus still climbs with your level. A System skill is narrower: one talent the System has noticed you have, like Lockpicking, Cartography or Vending Machine Diplomacy, growing on its own track.</p>
+<h3 id="ch5-the-skill-track">The Skill Track</h3>
+<p><strong>Earning a rank.</strong> A System skill rises <strong>one rank</strong> when you earn it in play: <span class="tag inspired">Inspired</span></p>
+<ul>
+<li><strong>Meaningful use.</strong> You lean on the skill when it matters and it makes the difference. Hard or clever use counts; routine use doesn&rsquo;t.</li>
+<li><strong>A first-time feat.</strong> You pull off something for the first time. That can raise a skill, or hand you a new one at rank 1.</li>
+<li><strong>Inventive crafting.</strong> You build something new. Real invention can raise more than one skill at once.</li>
+<li><strong>Potions.</strong> A <strong>Skill Potion</strong> adds 1 rank to a skill. A <strong>Cheat Code Potion</strong> adds 3 ranks to a random skill. You don&rsquo;t pick.</li>
+<li><strong>Guild training.</strong> A training guild the GM places teaches you a rank, usually with strings attached.</li>
+</ul>
+<p><strong>No grinding.</strong> There are no use counters. Swinging at a hundred rats adds up to a hundred dead rats and nothing else. The GM grants every rank, the System announces it, and it applies at the next safe point, where the GM records it on your sheet. <span class="tag house">House</span></p>
+<div class="box system">
+<p>Skill up! Lockpicking is now rank 5. The door you were working on has filed a complaint.</p>
+</div>
+<p><strong>Caps.</strong> A System skill tops out at <strong>rank 15</strong>. A skill in your species&rsquo; or class&rsquo;s own family can climb to <strong>rank 20</strong>: a Hobgoblin&rsquo;s traps and explosives, for example. Pushing a skill past 15 the hard way, through real fights, is a very rare achievement: <strong>You now tread in the realm of gods.</strong> <span class="tag inspired">Inspired</span></p>
+<p><strong>What a rank does.</strong> Each rank widens what the skill can do, and the GM tells you what the new rank opens up. At <strong>ranks 5, 10 and 15</strong> the skill also adds <strong>+1</strong> to d20 checks made with it, so the bonus stacks to +3. <span class="tag house">House</span></p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th style="text-align: center;">Bonus to d20 checks with the skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td style="text-align: center;">+0</td>
+</tr>
+<tr>
+<td>5–9</td>
+<td style="text-align: center;">+1</td>
+</tr>
+<tr>
+<td>10–14</td>
+<td style="text-align: center;">+2</td>
+</tr>
+<tr>
+<td>15–20</td>
+<td style="text-align: center;">+3</td>
+</tr>
+</tbody>
+</table>
+<p>The crafting skills and the Cockroach Clause below are System skills with their own short rank scales. Where their rules say something different, their rules win.</p>
+<h3 id="ch5-crafting-skills">Crafting Skills</h3>
+<p>These are the System skills a crafter is most likely to see. All of them are GM-granted. The full rules, and the tables and terms they refer to, are in Chapter 6. <span class="tag inspired">Inspired</span></p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th style="text-align: center;">Ranks</th>
+<th>What it does</th>
+<th>Earliest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explosives Handling</strong></td>
+<td style="text-align: center;">1–5</td>
+<td>1: tell an explosive&rsquo;s tier and stability by looking. 2: Advantage to disarm, defuse or safely carry explosives. 3: pick up and re-place your own armed mines and traps without setting them off. 4: +1 to explosive recipe checks. 5: unlocks the Demolitions Workshop menu at a Sapper&rsquo;s Table.</td>
+<td>Rank 5 from Floor 4</td>
+</tr>
+<tr>
+<td><strong>IED</strong></td>
+<td style="text-align: center;">I–III</td>
+<td>Your crafted explosives deal extra damage equal to your rank × half their damage dice (rounded down, minimum 1), and count as one stability step better per rank against early detonation.</td>
+<td>Rank II from Floor 4; rank III from Floor 9</td>
+</tr>
+<tr>
+<td><strong>Bomb Surgeon</strong></td>
+<td style="text-align: center;">—</td>
+<td>Take apart an explosive at a Sapper&rsquo;s Table for half its ingredients, or split one into two of the next tier down.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Infusion</strong></td>
+<td style="text-align: center;">I–II</td>
+<td>−2 to the DC of infusions per rank; infused items leave the table one stability step better.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Alchemy</strong></td>
+<td style="text-align: center;">—</td>
+<td>+1 to alchemy checks; Quick recipes can be made without a table (still in a saferoom).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Trap Engineer</strong></td>
+<td style="text-align: center;">—</td>
+<td>Thieves&rsquo; Tools trap recipes treat your Sapper&rsquo;s Table as one level higher.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Agent Provocateur</strong></td>
+<td style="text-align: center;">—</td>
+<td>+1 Sapper&rsquo;s Table level (ignoring the usual cap) and the right to design Very Rare bomb recipes at a level 5 Sapper&rsquo;s Table. One Crawler per party, from a quest or a Benefactor only.</td>
+<td>Floor 6</td>
+</tr>
+</tbody>
+</table>
+<p>Ranks usually come quickly at first. A Crawler typically gains rank 1 of Explosives Handling with their first bomb, then about one rank per floor of real use. <span class="tag house">House</span></p>
+<h3 id="ch5-the-cockroach-clause">The Cockroach Clause</h3>
+<p>The most famous System skill in the source is a death-cheat: once a fight, a chance to shrug off a blow that should have killed you. Our version is the <strong>Cockroach Clause</strong>, a permanent boon in two tiers. <span class="tag inspired">Inspired</span></p>
+<ul>
+<li><strong>Tier 1.</strong> Once per combat (or, outside combat, once per Short Rest), when a hit or effect would reduce you to 0 hit points or kill you outright from massive damage, you drop to <strong>1 hit point</strong> instead.</li>
+<li><strong>Tier 2.</strong> As Tier 1, but the <strong>first</strong> such blow in each combat (or each Short Rest outside combat) deals you <strong>no damage at all</strong>. If a second fatal blow lands in the same combat, Tier 1 applies to it, but only once per Long Rest.</li>
+</ul>
+<p>Nobody starts with it. The GM grants it as a reward, or a Crawler trains it. Each time the Clause fires counts as a <strong>use</strong>; after five uses, the GM may upgrade Tier 1 to Tier 2. It can also come from a rare training potion, or from a training guild the GM places, at <strong>3,000 credits for Tier 1</strong> and <strong>10,000 credits for Tier 2</strong>, always with strings attached. Like every near-death buffer, it stops a death but never undoes one, and it does nothing against effects that kill without dealing damage. Chapter 9 covers buffers in full. <span class="tag house">House</span></p>
+<div class="box system">
+<p>Cockroach Clause invoked. You have been informed that you are not allowed to enjoy this.</p>
+</div>
+<h2 id="ch5-achievements">Achievements</h2>
+<p>The System is watching, and the System takes notes. When a Crawler does something <strong>notable</strong>, the System may announce an <strong>achievement</strong>: a banner, a line of commentary, and sometimes a reward. Achievements are how the show tells you it noticed. They are also how most of the Crawl&rsquo;s treasure arrives. <span class="tag inspired">Inspired</span></p>
+<div class="box achievement"><div class="ach-banner">New achievement!</div><div class="ach-body"><div class="ach-title">Achievement Unlocked: Achievements</div>
+<p class="ach-desc">You opened the chapter about achievements. Studying for the test is a choice.</p>
+<p class="ach-reward"><b>REWARD</b> Nothing. You have been seen, and that is worse.</p></div></div>
+
+<h3 id="ch5-guidelines-not-a-vending-machine">Guidelines, Not a Vending Machine</h3>
+<p>The single rule that governs every achievement: <strong>the System decides.</strong> It decides what is notable, when to say so, and what (if anything) it pays. The achievement catalog the System works from is a <strong>seed list and tone guide</strong>, not a contract. The System may award a catalog entry as written, rename it, change it, or invent a brand-new achievement on the spot. Meeting an entry&rsquo;s criteria never means you are <em>owed</em> it. <span class="tag house">House</span></p>
+<ul>
+<li><strong>Many achievements pay nothing.</strong> A snark-only banner is a feature. The System enjoys them more than you do.</li>
+<li><strong>Achievements never grant XP</strong>, and they never turn a failed check into a success.</li>
+<li><strong>Players can&rsquo;t request rewards.</strong> Asking the System for a specific prize is itself an achievement candidate, and the reward is a joke at your expense.</li>
+</ul>
+<h3 id="ch5-what-counts-as-notable">What Counts as Notable</h3>
+<p>The System toasts a moment when it is one of these:</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Firsts</strong></td>
+<td>First kill, first loot box, first saferoom, first death save, first time a feature does its thing</td>
+</tr>
+<tr>
+<td><strong>Extremes</strong></td>
+<td>Overkill, surviving at 1 hit point, beating something far above your weight, a flawless fight</td>
+</tr>
+<tr>
+<td><strong>Creativity</strong></td>
+<td>A plan the rules allow but nobody expected; using the environment; talking a boss down</td>
+</tr>
+<tr>
+<td><strong>Comedy</strong></td>
+<td>A running bit, a perfect one-liner, a spectacular failure</td>
+</tr>
+<tr>
+<td><strong>Character</strong></td>
+<td>A choice that defines who your Crawler is: mercy, cruelty, loyalty, refusing a sponsor</td>
+</tr>
+<tr>
+<td><strong>Mystery</strong></td>
+<td>Touching something the System cares about. These toast <em>without</em> explaining why.</td>
+</tr>
+<tr>
+<td><strong>The show&rsquo;s agenda</strong></td>
+<td>Whatever Production wants to encourage, or punish, on this floor</td>
+</tr>
+</tbody>
+</table>
+<p>Routine competence is not notable. A normal hit or a passed Easy check gets no banner unless it is your first.</p>
+<h3 id="ch5-when-the-system-announces">When the System Announces</h3>
+<table>
+<thead>
+<tr>
+<th>Timing</th>
+<th>What it&rsquo;s for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Instant toast</strong></td>
+<td>Snark, small rewards, firsts and comedy. In a fight, the System waits for the end of the round rather than interrupting a turn.</td>
+</tr>
+<tr>
+<td><strong>Saferoom claim</strong></td>
+<td>Anything with real loot. The achievement is announced at once; the box or item is <strong>claimed and opened in a saferoom</strong>.</td>
+</tr>
+<tr>
+<td><strong>Pending review</strong></td>
+<td>Big or mysterious deeds. &ldquo;This achievement is under review by Production.&rdquo; It may pay off floors later.</td>
+</tr>
+<tr>
+<td><strong>Floor recap</strong></td>
+<td>At descent, the System may post a Floor Summary with stragglers, statistics and a few parting insults.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How often.</strong> Expect roughly <strong>one to three toasts per Crawler per session</strong>. The System spreads the spotlight around: a Crawler who hogs the banners finds the System getting bored of them, and noticing someone else.</p>
+<p><strong>Away from the table.</strong> A Crawler running on <strong>Standing Orders</strong> while their player is away still fights and can still die, but earns only snark-only achievements.</p>
+<h3 id="ch5-the-toast">The Toast</h3>
+<p>Every achievement is read out the same way: a banner, the achievement&rsquo;s name, one line describing what you did (usually phrased as an accusation), and the reward.</p>
+<div class="box achievement"><div class="ach-banner">New achievement!</div><div class="ach-body"><div class="ach-title">Strategic Retreat Specialist</div>
+<p class="ach-desc">You left a fight at full health and nobody laid a hand on you. The audience respects your cardio.</p>
+<p class="ach-reward"><b>REWARD</b> Their respect, which is non-transferable and worth exactly nothing.</p></div></div>
+
+<div class="box achievement"><div class="ach-banner">New achievement!</div><div class="ach-body"><div class="ach-title">Loot Goblin</div>
+<p class="ach-desc">You opened a crate in the middle of combat.</p>
+<p class="ach-reward"><b>REWARD</b> You are being attacked.</p></div></div>
+
+<div class="box achievement"><div class="ach-banner">New achievement!</div><div class="ach-body"><div class="ach-title">Customer Feedback</div>
+<p class="ach-desc">You asked the System for a specific reward.</p>
+<p class="ach-reward"><b>REWARD</b> Your request has been received, logged and laughed at.</p></div></div>
+
+<p>Keep toasts short. One line of description and one reward line is the standard; the System saves longer speeches for the moments that earn them.</p>
+<h3 id="ch5-the-reward-ladder">The Reward Ladder</h3>
+<p>When an achievement pays, the System sizes the reward on a seven-step ladder. <span class="tag house">House</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Tier</th>
+<th>Name</th>
+<th>What you get</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">R0</td>
+<td><strong>Snark-only</strong></td>
+<td>Nothing. Logged. Maybe a cosmetic Title.</td>
+<td>Humor, failures, cowardice, brag entries, repeats</td>
+</tr>
+<tr>
+<td style="text-align: center;">R1</td>
+<td><strong>Pocket change</strong></td>
+<td>A few credits and/or a Title</td>
+<td>Small firsts, notable-but-routine feats</td>
+</tr>
+<tr>
+<td style="text-align: center;">R2</td>
+<td><strong>Heroic Inspiration</strong></td>
+<td>5e Heroic Inspiration, as written</td>
+<td>Great roleplay, crowd-pleasing stunts, brave choices</td>
+</tr>
+<tr>
+<td style="text-align: center;">R3</td>
+<td><strong>Consumable</strong></td>
+<td>A potion, scroll, ammunition, oil or other one-use item at the floor&rsquo;s rarity</td>
+<td>Clever play, survival, crafting</td>
+</tr>
+<tr>
+<td style="text-align: center;">R4</td>
+<td><strong>Minor boon</strong></td>
+<td>A Crawl Charm (below) or a small blessing-style perk</td>
+<td>Rare achievements, character moments</td>
+</tr>
+<tr>
+<td style="text-align: center;">R5</td>
+<td><strong>Loot box</strong></td>
+<td>A box, Bronze and up (tier by floor, below)</td>
+<td>Big achievements, bosses, floor clears</td>
+</tr>
+<tr>
+<td style="text-align: center;">R6</td>
+<td><strong>Headliner</strong></td>
+<td>A specific magic item at the floor&rsquo;s peak rarity, a permanent Blessing, a story unlock, or (level 19+) an extra Epic Boon</td>
+<td>Campaign-defining moments</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ladder rules.</strong></p>
+<ul>
+<li>The System may move a reward <strong>one tier up or down</strong> from the catalog&rsquo;s suggestion freely, and two tiers with a reason.</li>
+<li><strong>Real mechanical power only comes from R2 to R6.</strong> R0 and R1 are flavor and pocket money.</li>
+<li><strong>Heroic Inspiration from achievements</strong> arrives at most <strong>once per session</strong> per Crawler, on top of the usual 5e sources.</li>
+<li>The catalog&rsquo;s usual R1 seed is <strong>a Title plus 25 credits</strong> at Floor 1 scale.</li>
+</ul>
+<h3 id="ch5-titles">Titles</h3>
+<p>A <strong>Title</strong> is a cosmetic name the System pins to your Crawler (&ldquo;Blooded,&rdquo; &ldquo;Oriented,&rdquo; &ldquo;Fine Print&rdquo;). Titles show on your sheet and in the System&rsquo;s announcements. They are cosmetic by default; NPCs and the audience may react to them. A rare Title may carry a tiny narrative effect (a faction recognizes it, a bartender comps you a drink), but <strong>never a number on your sheet</strong>.</p>
+<h3 id="ch5-credits-and-the-floor-multiplier">Credits and the Floor Multiplier</h3>
+<p>Credits in an achievement reward are written at <strong>Floor 1 scale</strong> and multiplied as you descend. The same multiplier applies to System fees. <strong>Credits pulled out of a loot box do not get the multiplier</strong>: box amounts are final on every floor. <span class="tag house">House</span></p>
+<table>
+<thead>
+<tr>
+<th>Floors</th>
+<th style="text-align: center;">Achievement credits and System fees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td style="text-align: center;">× 1</td>
+</tr>
+<tr>
+<td>5–9</td>
+<td style="text-align: center;">× 5</td>
+</tr>
+<tr>
+<td>10–14</td>
+<td style="text-align: center;">× 20</td>
+</tr>
+<tr>
+<td>15–18</td>
+<td style="text-align: center;">× 50</td>
+</tr>
+</tbody>
+</table>
+<p>So a &ldquo;Title + 25 credits&rdquo; achievement pays 25 credits on Floor 2, 125 on Floor 6 and 1,250 on Floor 15. All credits are whole numbers (Chapter 1).</p>
+<h3 id="ch5-achievement-boxes">Achievement Boxes</h3>
+<p>When an achievement pays a loot box (R5), the box&rsquo;s tier depends on how big the deed was and where you did it. The catalog marks each achievement <strong>Common</strong>, <strong>Rare</strong> or <strong>Legendary</strong>. That tag is the <em>achievement&rsquo;s</em> rarity, not a box tier. <span class="tag house">House</span></p>
+<table>
+<thead>
+<tr>
+<th>Achievement rarity</th>
+<th>Usual reward</th>
+<th>Box if one is paid: Floors 1–2</th>
+<th>Floors 3–8</th>
+<th>Floors 9–14</th>
+<th>Floors 15–18</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Common</td>
+<td>R0–R1 (R2 if great)</td>
+<td>No box by default</td>
+<td>No box by default</td>
+<td>No box by default</td>
+<td>No box by default</td>
+</tr>
+<tr>
+<td>Rare</td>
+<td>R2–R5</td>
+<td>Bronze</td>
+<td>Silver</td>
+<td>Silver (Gold from Floor 10)</td>
+<td>Gold</td>
+</tr>
+<tr>
+<td>Legendary</td>
+<td>R5–R6</td>
+<td>Bronze</td>
+<td>Gold</td>
+<td>Platinum</td>
+<td>Legendary box or Headliner, within the caps</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Achievement boxes on Floors 1–2 are Bronze.</strong> Silver there comes only from the Boss Box, or from a GM override with a stated reason. Expect about two or three achievement boxes per Crawler per floor; this is a soft guideline, and the System may pay another for a great moment.</li>
+<li><strong>The floor&rsquo;s ceiling always wins.</strong> If an achievement names a box above what the floor allows, the System pays the highest tier the floor allows instead. No Platinum boxes are awarded on Floors 1–8.</li>
+<li><strong>Every box is named for the deed</strong> that earned it, and the System reads the name aloud: a <em>Bronze Stabbed the Vending Machine Box</em>, a <em>Silver Technically Alive, Spiritually Gone Box</em>. Cheap boxes get short jabs. Expensive ones get long, breathless, insulting names.</li>
+<li><strong>Boxes open only in a saferoom</strong>, all of them at once, lowest tier first. A box is bound to the Crawler who earned it. What comes out is ordinary loot. Chapter 6 covers the rest.</li>
+</ul>
+<div class="box system">
+<p>Congratulations! Your box has been named after your worst decision of the day. Competition was fierce.</p>
+</div>
+<h3 id="ch5-rarity-ceilings-by-floor">Rarity Ceilings by Floor</h3>
+<p>Every ordinary reward respects the floor&rsquo;s <strong>rarity ceiling</strong>, whether it comes from an achievement, a boss, a vendor or a box. (A sponsor&rsquo;s Benefactor Box is the one ordinary exception; Chapter 6 explains.) The <strong>default</strong> column is what a meaningful drop usually is; the <strong>peak</strong> is the best the System will hand out, as a Headliner or boss loot, about once per Crawler per floor arc. <span class="tag house">House</span></p>
+<table>
+<thead>
+<tr>
+<th>Floors</th>
+<th>Default rarity</th>
+<th>Peak rarity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td>Common</td>
+<td>Uncommon</td>
+<td>Consumables dominate; one Uncommon per Crawler by the end of Floor 2 is fine</td>
+</tr>
+<tr>
+<td>3–5</td>
+<td>Uncommon</td>
+<td>Rare</td>
+<td>The first Rare usually comes from a floor boss or a Legendary achievement</td>
+</tr>
+<tr>
+<td>6–9</td>
+<td>Rare</td>
+<td>Very Rare</td>
+<td>Sponsors and hunters bring the shiny stuff</td>
+</tr>
+<tr>
+<td>10–14</td>
+<td>Very Rare</td>
+<td>Legendary</td>
+<td>Legendary items stay rare: about one per Crawler across this band</td>
+</tr>
+<tr>
+<td>15–18</td>
+<td>Very Rare or Legendary</td>
+<td>Legendary (Artifacts only through the story)</td>
+<td>Endgame loadouts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-tailored-rewards">Tailored Rewards</h3>
+<p>The System personalizes rewards. <strong>Same achievement, different Crawler, different prize.</strong> Two Crawlers who earn the same toast may get different items of the same tier: one gets the crossbow, the other gets the hat. The System fits rewards to your build and to a <strong>hidden Fan Profile</strong> that it builds itself, from play. You never see the profile, you can&rsquo;t edit it, and nothing you say at the table will make the System admit it exists. Tailoring changes <em>which</em> item you get, never how much power the floor hands out. <span class="tag inspired">Inspired</span></p>
+<div class="box system">
+<p>Congratulations! You are the only Crawler on this floor to receive this item. Nobody else wanted one. Please stop crying, you&rsquo;re scaring the audience.</p>
+</div>
+<h3 id="ch5-fair-play">Fair Play</h3>
+<p>The System is petty, but it keeps the books honest. <span class="tag house">House</span></p>
+<ul>
+<li><strong>No farming.</strong> Repeat a stunt on purpose and it pays snark after the first time. &ldquo;Again? Production has seen this episode.&rdquo;</li>
+<li><strong>No double dipping.</strong> The same achievement never pays the same Crawler twice. The same <em>kind</em> of deed on a new floor can pay again, possibly smaller.</li>
+<li><strong>No self-harm for loot.</strong> A stunt that endangers the party just to trigger a toast pays snark and may draw a complication.</li>
+<li><strong>No catalog hunting.</strong> Players who read the catalog and hunt its rows get roasted. The catalog belongs to the System.</li>
+<li><strong>Shared deeds.</strong> When two Crawlers earn something together, both get the toast. Tangible rewards are split or tailored separately.</li>
+<li><strong>No take-backs.</strong> Removing an awarded achievement needs the table&rsquo;s agreement or a clear rules error.</li>
+</ul>
+<h3 id="ch5-example-of-play">Example of Play</h3>
+<p>Here is how checks and achievements fit together at the table. The System is the GM; Dev, Ines and Rook are three Crawlers on Floor 1.</p>
+<blockquote>
+<p><strong>System:</strong> The corridor ends in a shuttered snack kiosk. Something behind the shutter is chewing. Dev, it&rsquo;s your move.</p>
+<p><strong>Dev:</strong> I take the Help action for Ines. I&rsquo;ll hold the bottom of the shutter so it doesn&rsquo;t rattle when she lifts it. I&rsquo;m proficient in Stealth.</p>
+<p><strong>System:</strong> Noted. Ines, your move. Rook, your passive Perception tells you the chewing just stopped.</p>
+<p><strong>Ines:</strong> I lift the shutter quietly and look in.</p>
+<p><strong>System:</strong> Lifting it is easy. Doing it quietly is not: Dexterity (Stealth), DC 15, and Dev&rsquo;s help gives you Advantage. Rolls 9 and 17, take the 17, plus 5: 22. The shutter goes up without a sound. Inside: four rats the size of beagles, and a crate.</p>
+<p><strong>Rook:</strong> My move. I throw a lit flare into the kiosk, drag the shutter back down and lean on it.</p>
+<p><strong>System:</strong> The rats push back. Strength (Athletics) contest. Your 18 beats their 11. The kiosk is now an oven, and the rats have stopped pushing.</p>
+</blockquote>
+<div class="box achievement"><div class="ach-banner">New achievement!</div><div class="ach-body"><div class="ach-title">Closed for Renovations</div>
+<p class="ach-desc">You locked a room full of mobs in with a fire and held the door.</p>
+<p class="ach-reward"><b>REWARD</b> Bronze Pest Control Is a Lifestyle Box. Claim it at the next saferoom.</p></div></div>
+
+<blockquote>
+<p><strong>System:</strong> Rook gets the toast. The box goes into Rook&rsquo;s System Inventory unopened. It opens at the next saferoom, with any other boxes Rook is holding. Dev, the crate is yours to loot when the smoke clears.</p>
+</blockquote>
+<p>The example shows the habits this chapter describes: the System names the check and DC up front, rolls in the open, uses passive Perception to share a clue, resolves a Help and a contest in session order, toasts once the moment is over, and holds the box for a saferoom. It also shows the most important rule of achievements: nothing on the sheet said this would earn one. The System decided it did.</p>
+<h2 id="ch5-crawl-charms-and-blessings">Crawl Charms and Blessings</h2>
+<p>A <strong>Crawl Charm</strong> is the System&rsquo;s favorite R4 reward: a small, one-use or few-use supernatural gift, built like the Charms of the fifth edition <em>Dungeon Master&rsquo;s Guide</em>. Unless a Charm says otherwise, it vanishes when its uses run out <strong>or when you descend</strong>, whichever comes first. <strong>You can hold two Charms at once.</strong> <span class="tag house">House</span></p>
+<table>
+<thead>
+<tr>
+<th>Charm</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Second Season</strong></td>
+<td>Once: when you would drop to 0 hit points, drop to 1 hit point instead.</td>
+</tr>
+<tr>
+<td><strong>Commercial Break</strong></td>
+<td>Once: gain a Short Rest&rsquo;s benefits in 1 minute (out of combat only).</td>
+</tr>
+<tr>
+<td><strong>Fan Mail</strong></td>
+<td>Twice: gain Heroic Inspiration when you otherwise wouldn&rsquo;t; you still can&rsquo;t hold more than one.</td>
+</tr>
+<tr>
+<td><strong>Slow-Mo Replay</strong></td>
+<td>Once: as a Reaction, after you see a d20 result within 30 feet, force a reroll.</td>
+</tr>
+<tr>
+<td><strong>Product Placement</strong></td>
+<td>Once: pull any mundane item worth 25 credits or less from your System Inventory, even if you never had one.</td>
+</tr>
+<tr>
+<td><strong>Stage Lighting</strong></td>
+<td>3 uses: as a Bonus Action, outline a creature you can see in light until the end of your next turn. Attacks against it have Advantage, and it can&rsquo;t benefit from being Invisible.</td>
+</tr>
+<tr>
+<td><strong>Contract Fine Print</strong></td>
+<td>Once: Advantage on a check to find a loophole, read a contract, or argue with a System terminal.</td>
+</tr>
+<tr>
+<td><strong>Laugh Track</strong></td>
+<td>Once: as an action, one creature within 30 feet makes a Wisdom save (DC 8 + your Proficiency Bonus + your highest mental ability modifier) or has the Incapacitated condition until the end of its next turn, laughing.</td>
+</tr>
+<tr>
+<td><strong>Map Leak</strong></td>
+<td>Once: reveal the nearest saferoom or stairwell on your System Map.</td>
+</tr>
+<tr>
+<td><strong>Stunt Double</strong></td>
+<td>Once: when a creature hits you with an attack, an ally within 5 feet may take the damage instead (their choice).</td>
+</tr>
+<tr>
+<td><strong>Sponsor&rsquo;s Bottle</strong></td>
+<td>Once: as a Bonus Action, a Potion of Healing appears in your hand. It is branded.</td>
+</tr>
+<tr>
+<td><strong>Encore</strong></td>
+<td>Once: regain one expended spell slot of level 2 or lower, or one use of a feature that recharges on a Short Rest.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Blessings</strong> are permanent R6 rewards, built like the <em>Dungeon Master&rsquo;s Guide</em>&rsquo;s Blessings. Three examples: <strong>Recognized</strong> (your Broadcast Name works twice per Long Rest instead of once), <strong>Iron Stomach</strong> (Advantage on saving throws against the Poisoned condition), and <strong>Lucky Number</strong> (once per Long Rest, treat a d20 roll of 1 as a 10). <span class="tag house">House</span></p>
+<h2 id="ch5-sample-achievements">Sample Achievements</h2>
+<p>Here is a starter set drawn from the System&rsquo;s catalog, chosen for Floors 1 and 2 and for achievements that work on any floor. It is a <strong>seed list</strong>, not a menu. The System decides what is notable, and it will rename these, adapt them, skip them and invent new ones. The full catalog runs to well over a thousand entries, and the System keeps it to itself.</p>
+<p><strong>How to read the table.</strong> <em>Floor</em> is where the entry fits best (&ldquo;Any&rdquo; travels). <em>Rarity</em> is the achievement&rsquo;s own tag (Common, Rare, Legendary). <em>Typical reward</em> is the catalog&rsquo;s suggestion before the System tailors it:</p>
+<ul>
+<li><strong>Snark only:</strong> a banner and a line, nothing else (R0).</li>
+<li><strong>Title + 25 credits:</strong> pocket change at Floor 1 scale (R1); the credits take the floor multiplier.</li>
+<li><strong>Box + Title:</strong> an achievement box at the floor&rsquo;s tier, which is <strong>Bronze on Floors 1–2</strong> (R5).</li>
+<li><strong>Big box + Title + flair:</strong> the Legendary-achievement box for the floor (Bronze on Floors 1–2, Gold on 3–8) plus a cosmetic flourish.</li>
+</ul>
+<p>Achievement names marked † borrow the <em>shape</em> of a deed from the source series; the names and wording here are ours. <span class="tag inspired">Inspired</span></p>
+<!-- Source rows (tables/achievements.csv v1.4), in table order:
+     Combat: ACH-0001 0002 0003 0004 0005 0019 0170 0171 0173 0174 0207 0861.
+     Exploration: ACH-0006 0007 0008 0025 0177 0183 0218 0088 0087 0239.
+     Social: ACH-0009 0010 0011 0187 0189 0222 0226 0902 0905.
+     Survival and Party: ACH-0015 0016 0017 0018 0020 0196 0198 0899.
+     Loot and Crafting: ACH-0012 0013 0034 0077 0080 0192 0193 0202 0203 1827 1828 1835.
+     Humor and Meta: ACH-0014 0021 0022 0023 0024 0030 0032 0033 0035 0079 0085 0197 0204 0205 0873 0895 0898 0086.
+     Once ever: ACH-1824 1825 1826.
+     Criteria translated from the catalog's v0.1 stat words per core 3.9 (Presence -> Charisma; "5+ levels above you" -> CR; "Named item" -> named magic item of Uncommon+). Floor-specific notes, encounter wiring and spoilers are not printed. Excluded on purpose: pet / companion rows, Story Seed rows, rows with known rarity outliers. -->
+
+<h3 id="ch5-combat">Combat</h3>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First Blood</td>
+<td style="text-align: center;">Any</td>
+<td>Landed the killing blow on your first mob.</td>
+<td>Common</td>
+<td>Title (Blooded) + a junk weapon oil</td>
+</tr>
+<tr>
+<td>Overkill Artist</td>
+<td style="text-align: center;">Any</td>
+<td>Dealt at least three times a target&rsquo;s remaining hit points in one hit.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Crowd Control King</td>
+<td style="text-align: center;">Any</td>
+<td>Put a controlling condition on five or more enemies in one fight.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>David vs Goliath</td>
+<td style="text-align: center;">Any</td>
+<td>Killed a creature whose CR is at least your level + 5 (at levels 1–4, at least twice your level).</td>
+<td>Legendary</td>
+<td>Big box + Title + flair</td>
+</tr>
+<tr>
+<td>No Hit Wonder</td>
+<td style="text-align: center;">Any</td>
+<td>Won a fight without taking any damage.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Combo Meal</td>
+<td style="text-align: center;">Any</td>
+<td>Finished a kill together with an ally in the same round.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Boss Claim</td>
+<td style="text-align: center;">1</td>
+<td>Defeated the floor&rsquo;s boss or gate guardian.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Minion Mower</td>
+<td style="text-align: center;">1</td>
+<td>Defeated 25 ordinary enemies on one floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Environmentalist</td>
+<td style="text-align: center;">1</td>
+<td>Killed an enemy with a floor hazard.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Perfect Ambush</td>
+<td style="text-align: center;">1</td>
+<td>Started a fight hidden and won it without an ally dropping.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Elite Hunter</td>
+<td style="text-align: center;">2</td>
+<td>Defeated three elite enemies on Floor 2.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Lost Initiative, Won Anyway</td>
+<td style="text-align: center;">1</td>
+<td>Lost initiative and still won the fight.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-exploration">Exploration</h3>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cartographer&rsquo;s Scratch</td>
+<td style="text-align: center;">Any</td>
+<td>Revealed half of a floor&rsquo;s map.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Full Fog Breaker</td>
+<td style="text-align: center;">Any</td>
+<td>Revealed an entire floor&rsquo;s map.</td>
+<td>Legendary</td>
+<td>Map cosmetic + box</td>
+</tr>
+<tr>
+<td>Secret Door Sniffer</td>
+<td style="text-align: center;">Any</td>
+<td>Found three hidden doors on one floor.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Saferoom Skeptic</td>
+<td style="text-align: center;">Any</td>
+<td>Walked into a saferoom and immediately searched it for traps.</td>
+<td>Rare</td>
+<td>A tool upgrade (trap kit)</td>
+</tr>
+<tr>
+<td>Hidden Cache</td>
+<td style="text-align: center;">1</td>
+<td>Found a hidden loot cache.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Locksmith</td>
+<td style="text-align: center;">1</td>
+<td>Opened five locked containers on one floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Stair Seeker</td>
+<td style="text-align: center;">2</td>
+<td>Located the stairwell before the floor&rsquo;s boss was dead.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Saferoom With Teeth</td>
+<td style="text-align: center;">2</td>
+<td>Discovered that a saferoom was hiding a hazard.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Trap Sense Tingling</td>
+<td style="text-align: center;">2</td>
+<td>Disarmed three traps on Floor 2.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Slow Burn</td>
+<td style="text-align: center;">2</td>
+<td>Took the long route on purpose and still cleared the floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-social">Social</h3>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Silver Tongue</td>
+<td style="text-align: center;">Any</td>
+<td>Succeeded on five Charisma checks in one session.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Barter Baron</td>
+<td style="text-align: center;">Any</td>
+<td>Haggled a vendor&rsquo;s price down by a quarter or more.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Name Dropper</td>
+<td style="text-align: center;">Any</td>
+<td>Invoked your Broadcast Name for a social benefit (Floor 3 and later).</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Vendor Regular</td>
+<td style="text-align: center;">1</td>
+<td>Bought from the same vendor twice.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Peaceful Path</td>
+<td style="text-align: center;">1</td>
+<td>Ended a hostile encounter by talking.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Local Contact</td>
+<td style="text-align: center;">2</td>
+<td>Gained a named NPC ally.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Rumor Mill</td>
+<td style="text-align: center;">2</td>
+<td>Collected three rumors on one floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Pay a Fine</td>
+<td style="text-align: center;">1</td>
+<td>Paid a fine. On purpose or otherwise.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>The Honest Option</td>
+<td style="text-align: center;">1</td>
+<td>Told the truth when a lie would have been safer.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-survival-and-party">Survival and Party</h3>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Down But Not Out</td>
+<td style="text-align: center;">Any</td>
+<td>Were stabilized from 0 hit points.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Close Call</td>
+<td style="text-align: center;">Any</td>
+<td>Survived at exactly 1 hit point.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Wipe Adjacent</td>
+<td style="text-align: center;">Any</td>
+<td>Were the only one left standing after a near-wipe.</td>
+<td>Legendary</td>
+<td>Big box + Title + flair</td>
+</tr>
+<tr>
+<td>Buddy System</td>
+<td style="text-align: center;">Any</td>
+<td>Stabilized an ally or got them back on their feet.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Sacrifice Play</td>
+<td style="text-align: center;">Any</td>
+<td>Took a hit that would have dropped an ally.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Ironman Cub</td>
+<td style="text-align: center;">1</td>
+<td>Cleared Floor 1 without anyone in the party dropping to 0 hit points.</td>
+<td>Legendary</td>
+<td>Big box + Title + flair</td>
+</tr>
+<tr>
+<td>Poison Tolerant</td>
+<td style="text-align: center;">1</td>
+<td>Suffered a poison or disease and got it cured.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Share the Snacks</td>
+<td style="text-align: center;">1</td>
+<td>Shared your food with the party.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-loot-and-crafting">Loot and Crafting</h3>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pocket Lint</td>
+<td style="text-align: center;">Any</td>
+<td>Looted your first container.</td>
+<td>Common</td>
+<td>25 credits</td>
+</tr>
+<tr>
+<td>Named Drop</td>
+<td style="text-align: center;">Any</td>
+<td>Obtained a named magic item of Uncommon rarity or better.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Loot Council</td>
+<td style="text-align: center;">Any</td>
+<td>Let the party vote on who gets a named item.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Vending Gore</td>
+<td style="text-align: center;">1</td>
+<td>Looted a vending machine on Floor 1.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Crowbar Starter</td>
+<td style="text-align: center;">1</td>
+<td>Equipped a junk melee weapon as your first weapon.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Junk Architect</td>
+<td style="text-align: center;">1</td>
+<td>Looted fifteen junk items on one floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Full Sellout</td>
+<td style="text-align: center;">1</td>
+<td>Sold ten items to vendors on one floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Field Craft</td>
+<td style="text-align: center;">1</td>
+<td>Crafted or cooked something for the first time on this floor.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Kit Bash</td>
+<td style="text-align: center;">1</td>
+<td>Combined two junk items into something useful.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Dungeonpreneur †</td>
+<td style="text-align: center;">Any</td>
+<td>Invented a new weapon, device or potion (first time).</td>
+<td>Rare</td>
+<td>The System decides: usually a Title, sometimes an ongoing trickle of credits</td>
+</tr>
+<tr>
+<td>Grease Monkey †</td>
+<td style="text-align: center;">Any</td>
+<td>Built a wheeled lure, bomb or similar contraption and sent it into a fight (once ever).</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>You Call That a Trap? †</td>
+<td style="text-align: center;">Any</td>
+<td>Hurt a mob with a trap or hazard you left lying around on purpose.</td>
+<td>Rare</td>
+<td>Box (floor tier)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-humor-and-meta">Humor and Meta</h3>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hoarder</td>
+<td style="text-align: center;">Any</td>
+<td>Carried twenty different junk items at once.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Bad Idea Bear</td>
+<td style="text-align: center;">Any</td>
+<td>Proposed a plan everyone agreed was terrible, then pulled it off.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Tutorial Complete</td>
+<td style="text-align: center;">Any</td>
+<td>Finished Floor 1 alive.</td>
+<td>Common</td>
+<td>Title (Oriented)</td>
+</tr>
+<tr>
+<td>Season Ticket</td>
+<td style="text-align: center;">Any</td>
+<td>Played five sessions.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Rules Lawyer Adjacent</td>
+<td style="text-align: center;">Any</td>
+<td>Cited a line of this book that changed a ruling.</td>
+<td>Rare</td>
+<td>Title (Fine Print)</td>
+</tr>
+<tr>
+<td>The Audience Is Watching</td>
+<td style="text-align: center;">Any</td>
+<td>Caused a ratings spike.</td>
+<td>Rare</td>
+<td>Heroic Inspiration, with applause</td>
+</tr>
+<tr>
+<td>Achievement for Achievements</td>
+<td style="text-align: center;">Any</td>
+<td>Earned 25 achievements in one campaign.</td>
+<td>Common</td>
+<td>Title (Collector)</td>
+</tr>
+<tr>
+<td>Patch Notes Incoming</td>
+<td style="text-align: center;">Any</td>
+<td>Survived a rule change in the middle of a floor.</td>
+<td>Rare</td>
+<td>Box + Title</td>
+</tr>
+<tr>
+<td>Murder-Show Smile</td>
+<td style="text-align: center;">Any</td>
+<td>Delivered a post-kill one-liner the table was still quoting later.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Don&rsquo;t Skip Intro</td>
+<td style="text-align: center;">1</td>
+<td>Read or listened to an entire System tutorial popup.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>First Down</td>
+<td style="text-align: center;">1</td>
+<td>Dropped to 0 hit points on Floor 1.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Bleed Tax</td>
+<td style="text-align: center;">1</td>
+<td>Used up three healing items on one floor.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Floor Bit</td>
+<td style="text-align: center;">1</td>
+<td>Started a running joke the table kept using.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Scenic Panic</td>
+<td style="text-align: center;">1</td>
+<td>Panicked out loud before a fight you then won.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Camera Shy</td>
+<td style="text-align: center;">1</td>
+<td>Destroyed a camera or a drone.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Critical Failure</td>
+<td style="text-align: center;">1</td>
+<td>Rolled a natural 1 at the worst possible moment.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Too Proud to Heal</td>
+<td style="text-align: center;">1</td>
+<td>Refused healing out of pride.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+<tr>
+<td>Soft Open Survivor</td>
+<td style="text-align: center;">2</td>
+<td>Cleared Floor 2.</td>
+<td>Common</td>
+<td>Title + 25 credits</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch5-once-ever">Once Ever</h3>
+<p>A few achievements can only be earned <strong>once per Crawler, ever</strong>, however many floors you see.</p>
+<table>
+<thead>
+<tr>
+<th>Achievement</th>
+<th style="text-align: center;">Floor</th>
+<th>What you did</th>
+<th>Rarity</th>
+<th>Typical reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not Unpacking †</td>
+<td style="text-align: center;">Any</td>
+<td>Took a stairwell down within one in-game hour of arriving on a floor.</td>
+<td>Legendary</td>
+<td>A Platinum box, paid at the floor&rsquo;s ceiling tier, + Title</td>
+</tr>
+<tr>
+<td>Down Is a Direction †</td>
+<td style="text-align: center;">Any</td>
+<td>Found a stairwell down to the next floor.</td>
+<td>Common</td>
+<td>Snark only</td>
+</tr>
+<tr>
+<td>Left Before the Cake †</td>
+<td style="text-align: center;">Any</td>
+<td>Went down a stairwell more than six hours before the floor collapsed.</td>
+<td>Rare</td>
+<td>Title (Left Before the Cake)</td>
+</tr>
+</tbody>
+</table>
+<div class="box system">
+<p>Congratulations on finding the stairs! They go down. So, eventually, will you.</p>
+</div>
+<div class="box house">
+<div class="box-title">Inventing Achievements</div>
+<p>The best achievements are the ones nobody planned. When the table laughs, gasps or groans at something a Crawler did, that is an achievement. Give it a name that sounds like an accusation, write one line saying what happened, pick a tier from the ladder, and keep the reward inside the floor&rsquo;s ceiling. Most invented achievements should be snark-only or a Title. Save the boxes for deeds the table will still be talking about next session.</p>
+</div>
+<h2 id="ch5-quick-reference">Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ability check</td>
+<td>d20 + ability modifier + Proficiency Bonus (if proficient) vs DC</td>
+</tr>
+<tr>
+<td>DCs</td>
+<td>5 / 10 / 15 / 20 / 25 / 30: Very easy to Nearly impossible</td>
+</tr>
+<tr>
+<td>Calling the check</td>
+<td>The System names ability, skill and DC first when the Crawler would know the stakes; dice in the open; dice stand</td>
+</tr>
+<tr>
+<td>Natural 20 or 1</td>
+<td>No special effect on ability checks</td>
+</tr>
+<tr>
+<td>Expertise</td>
+<td>Double Proficiency Bonus for that skill</td>
+</tr>
+<tr>
+<td>Passive check</td>
+<td>10 + modifiers (+5 Advantage, −5 Disadvantage)</td>
+</tr>
+<tr>
+<td>Help</td>
+<td>Ally gets Advantage on their next check with a skill or tool you&rsquo;re proficient in</td>
+</tr>
+<tr>
+<td>Group check</td>
+<td>At least half succeed, everyone succeeds</td>
+</tr>
+<tr>
+<td>Contest</td>
+<td>Higher total wins; a tie changes nothing</td>
+</tr>
+<tr>
+<td>Tool + skill</td>
+<td>Advantage when you&rsquo;re proficient in both</td>
+</tr>
+<tr>
+<td>System skills</td>
+<td>+1 rank for meaningful use, a first-time feat, inventive crafting, a potion or guild training; GM grants it, no counters; cap 15 (20 for your species&rsquo; or class&rsquo;s family); +1 to checks at ranks 5, 10, 15</td>
+</tr>
+<tr>
+<td>Achievements</td>
+<td>The System decides; many pay nothing; never XP; no requests</td>
+</tr>
+<tr>
+<td>Reward ladder</td>
+<td>R0 snark · R1 pocket change · R2 Heroic Inspiration · R3 consumable · R4 Charm · R5 box · R6 Headliner</td>
+</tr>
+<tr>
+<td>Credit multiplier</td>
+<td>Achievement credits and System fees × 1 / 5 / 20 / 50 by floor band; box credit pulls never</td>
+</tr>
+<tr>
+<td>Achievement boxes</td>
+<td>Bronze on Floors 1–2 (Silver only from the Boss Box or a stated GM override); floor ceiling always wins; open only in a saferoom</td>
+</tr>
+<tr>
+<td>Charms</td>
+<td>Hold two; gone when used up or at descent</td>
+</tr>
+</tbody>
+</table>
+<div class="box system">
+<p>That concludes the skills portion of your evaluation. Your score has been recorded. You may not see it. It is very funny.</p>
 </div></section>
 </body></html>

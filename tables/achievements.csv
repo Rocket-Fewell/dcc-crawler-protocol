@@ -859,7 +859,7 @@ ACH-0857,Orientation Pit: Use a consumable out of combat,[Floor 1] Use a consuma
 ACH-0858,Orientation Pit: Pick a lock successfully,[Floor 1] Pick a lock successfully (once on this floor).,1,Exploration,Legendary,Yes,Legendary loot roll + Title + cosmetic flair,No,generated variant
 ACH-0859,Orientation Pit: Fail a lockpick,[Floor 1] Fail a lockpick (once on this floor).,1,Exploration,Common,No,— (brag / title only),No,generated variant
 ACH-0860,Orientation Pit: Win initiative,[Floor 1] Win initiative (once on this floor).,1,Combat,Common,Yes,Title + 25 System Credits,No,generated variant
-ACH-0861,Orientation Pit: Lose initiative and still win the fight,[Floor 1] Lose initiative and still win the fight (once on this floor).,1,Combat,Common,Yes,Title + 25 System Credits,No,generated variant
+ACH-0861,"Orientation Pit: Lost Initiative, Won Anyway",[Floor 1] Lose initiative and still win the fight (once on this floor).,1,Combat,Common,Yes,Title + 25 System Credits,No,generated variant; old name: Orientation Pit: Lose initiative and still win the fight
 ACH-0862,Orientation Pit: Deal fire damage,[Floor 1] Deal fire damage (once on this floor).,1,Combat,Rare,Yes,Rare loot roll + Title,No,generated variant
 ACH-0863,Orientation Pit: Deal cold damage,[Floor 1] Deal cold damage (once on this floor).,1,Combat,Common,Yes,Title + 25 System Credits,No,generated variant
 ACH-0864,Orientation Pit: Deal lightning damage,[Floor 1] Deal lightning damage (once on this floor).,1,Combat,Rare,Yes,Rare loot roll + Title,No,generated variant
@@ -871,7 +871,7 @@ ACH-0869,Orientation Pit: Rescue a civilian NPC,[Floor 1] Rescue a civilian NPC 
 ACH-0870,Orientation Pit: Fail to rescue a civilian NPC,[Floor 1] Fail to rescue a civilian NPC (once on this floor).,1,Social,Common,Yes,Title + 25 System Credits,No,generated variant
 ACH-0871,Orientation Pit: Find a journal or lore scrap,[Floor 1] Find a journal or lore scrap (once on this floor).,1,Exploration,Rare,Yes,Rare loot roll + Title,No,generated variant
 ACH-0872,Orientation Pit: Read a lore scrap aloud,[Floor 1] Read a lore scrap aloud (once on this floor).,1,Social,Legendary,Yes,Legendary loot roll + Title + cosmetic flair,No,generated variant
-ACH-0873,Orientation Pit: Destroy a camera or drone,[Floor 1] Destroy a camera or drone (once on this floor).,1,Combat,Common,No,— (brag / title only),No,generated variant
+ACH-0873,Orientation Pit: Camera Shy,[Floor 1] Destroy a camera or drone (once on this floor).,1,Combat,Common,No,— (brag / title only),No,generated variant; old name: Orientation Pit: Destroy a camera or drone
 ACH-0874,Orientation Pit: Hack a terminal successfully,[Floor 1] Hack a terminal successfully (once on this floor).,1,Exploration,Common,Yes,Title + 25 System Credits,No,generated variant
 ACH-0875,Orientation Pit: Fail a hack,[Floor 1] Fail a hack (once on this floor).,1,Exploration,Common,Yes,Title + 25 System Credits,No,generated variant
 ACH-0876,Orientation Pit: Plant a bomb or trap,[Floor 1] Plant a bomb or trap (once on this floor).,1,Combat,Rare,Yes,Rare loot roll + Title,No,generated variant
@@ -893,17 +893,17 @@ ACH-0891,Orientation Pit: Fight bare-handed,[Floor 1] Fight bare-handed (once on
 ACH-0892,Orientation Pit: Dual wield in a fight,[Floor 1] Dual wield in a fight (once on this floor).,1,Combat,Rare,Yes,Rare loot roll + Title,No,generated variant
 ACH-0893,Orientation Pit: Use a two-handed weapon,[Floor 1] Use a two-handed weapon (once on this floor).,1,Combat,Legendary,Yes,Legendary loot roll + Title + cosmetic flair,No,generated variant
 ACH-0894,Orientation Pit: Land a critical hit,[Floor 1] Land a critical hit (once on this floor).,1,Combat,Common,No,— (brag / title only),No,generated variant
-ACH-0895,Orientation Pit: Suffer a critical failure,[Floor 1] Suffer a critical failure (once on this floor).,1,Humor,Common,Yes,Title + 25 System Credits,No,generated variant
+ACH-0895,Orientation Pit: Critical Failure,[Floor 1] Suffer a critical failure (once on this floor).,1,Humor,Common,Yes,Title + 25 System Credits,No,generated variant; old name: Orientation Pit: Suffer a critical failure
 ACH-0896,Orientation Pit: Stabilize two allies,[Floor 1] Stabilize two allies (once on this floor).,1,Party,Common,Yes,Title + 25 System Credits,No,generated variant
 ACH-0897,Orientation Pit: Be stabilized twice,[Floor 1] Be stabilized twice (once on this floor).,1,Survival,Rare,Yes,Rare loot roll + Title,No,generated variant
-ACH-0898,Orientation Pit: Refuse healing out of pride once,[Floor 1] Refuse healing out of pride once (once on this floor).,1,Humor,Common,Yes,Title + 25 System Credits,No,generated variant
-ACH-0899,Orientation Pit: Share food with the party,[Floor 1] Share food with the party (once on this floor).,1,Party,Rare,Yes,Rare loot roll + Title,No,generated variant
+ACH-0898,Orientation Pit: Too Proud to Heal,[Floor 1] Refuse healing out of pride once (once on this floor).,1,Humor,Common,Yes,Title + 25 System Credits,No,generated variant; old name: Orientation Pit: Refuse healing out of pride once
+ACH-0899,Orientation Pit: Share the Snacks,[Floor 1] Share food with the party (once on this floor).,1,Party,Rare,Yes,Rare loot roll + Title,No,generated variant; old name: Orientation Pit: Share food with the party
 ACH-0900,Orientation Pit: Steal from a vendor and get away,[Floor 1] Steal from a vendor and get away (once on this floor).,1,Loot,Legendary,Yes,Legendary loot roll + Title + cosmetic flair,No,generated variant
 ACH-0901,Orientation Pit: Get caught stealing,[Floor 1] Get caught stealing (once on this floor).,1,Social,Common,No,— (brag / title only),No,generated variant
-ACH-0902,Orientation Pit: Pay a fine,[Floor 1] Pay a fine (once on this floor).,1,Social,Common,Yes,Title + 25 System Credits,No,generated variant
+ACH-0902,Orientation Pit: Pay a Fine,[Floor 1] Pay a fine (once on this floor).,1,Social,Common,Yes,Title + 25 System Credits,No,generated variant; old name: Orientation Pit: Pay a fine
 ACH-0903,Orientation Pit: Bribe a guard,[Floor 1] Bribe a guard (once on this floor).,1,Social,Common,Yes,Title + 25 System Credits,No,generated variant
 ACH-0904,Orientation Pit: Tell a lie that becomes true later,[Floor 1] Tell a lie that becomes true later (once on this floor).,1,Story Seed,Rare,Yes,Rare loot roll + Title,No,generated variant
-ACH-0905,Orientation Pit: Tell the truth when a lie was safer,[Floor 1] Tell the truth when a lie was safer (once on this floor).,1,Social,Common,Yes,Title + 25 System Credits,No,generated variant
+ACH-0905,Orientation Pit: The Honest Option,[Floor 1] Tell the truth when a lie was safer (once on this floor).,1,Social,Common,Yes,Title + 25 System Credits,No,generated variant; old name: Orientation Pit: Tell the truth when a lie was safer
 ACH-0906,Soft Open: Open a marked red door,[Floor 2] Open a marked red door (once on this floor).,2,Exploration,Rare,Yes,Rare loot roll + Title,No,generated variant
 ACH-0907,Soft Open: Open a marked blue door,[Floor 2] Open a marked blue door (once on this floor).,2,Exploration,Legendary,Yes,Legendary loot roll + Title + cosmetic flair,No,generated variant
 ACH-0908,Soft Open: Survive a night cycle,[Floor 2] Survive a night cycle (once on this floor).,2,Survival,Common,Yes,Title + 25 System Credits,No,generated variant

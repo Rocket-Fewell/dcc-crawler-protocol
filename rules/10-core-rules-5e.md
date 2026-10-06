@@ -1,5 +1,5 @@
-# 02 — Core Rules (5e Overlay) v0.2.21
-Owner: Syndicate | Status: draft | Version: 0.2.21 | Updated: 2026-10-05
+# 02 — Core Rules (5e Overlay) v0.2.22
+Owner: Syndicate | Status: draft | Version: 0.2.22 | Updated: 2026-10-06
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -188,7 +188,7 @@ Players type moves in chat. The AI DM adjudicates and rolls.
   - The order sets whose turn it is, not who may talk: anyone can chat in character any time; the AI resolves *moves* in session order.
   - The AI hands the spotlight to the next Crawler in order at the end of each turn (`discord_gm.py spotlight set`).
 - The AI asks **one** clarifying question for a vague move, then proceeds.
-- Use **passive Perception / Investigation / Insight** liberally to keep chat moving.
+- **Passive checks at every table** (chat, voice or face to face): the GM uses **passive Perception, Investigation and Insight** liberally to keep play moving, and only calls for a roll when the outcome is uncertain and interesting.
 - Group checks (5e) for party-wide efforts: stealth through a hall, climbing, searching a room.
 
 #### 2.5.2 Combat mode: initiative
@@ -374,6 +374,7 @@ The CSV columns are: `ID, Name, Criteria, Floor, Category, Rarity, Has Reward, R
 | Rare | R2–R5 (Silver box) | Uncommon / Rare / Very Rare |
 | Legendary | R5–R6 (Gold+ box or Headliner) | Rare / Very Rare / Legendary |
 
+- **Floors 1–2:** an achievement box is **Bronze**, whatever the CSV rarity (§4.5).
 - **Has Reward = No** → R0, always (that's the point).
 - **Category = Humor** → default R0 unless the bit is genuinely legendary.
 - **Canon Flavor = Yes** → writer's flag only; no extra mechanical weight.
@@ -392,8 +393,8 @@ Six tiers. Five are ordinary play; the sixth is a story event.
 | Box | 5e rarity of its headline item | Pulls | Typical source |
 |-----|--------------------------------|:-----:|----------------|
 | **Bronze** | Common (consumables, trinkets, mundane gear) | 1–2 | Common achievements, minor mobs, tutorial |
-| **Silver** | Uncommon | 2 | Rare achievements, elites, floor clear F1–5 |
-| **Gold** | Rare | 2–3 (1 guaranteed Rare) | Legendary achievements F3–8 (Silver on F1–2, §4.5), bosses F3+, floor clear F6–9 |
+| **Silver** | Uncommon | 2 | Rare achievements (Bronze on F1–2, §4.5), elites, floor clear F1–5 |
+| **Gold** | Rare | 2–3 (1 guaranteed Rare) | Legendary achievements F3–8 (on F1–2 achievement boxes are Bronze; Silver there only as the Boss Box or a logged GM override, §4.5), bosses F3+, floor clear F6–9 |
 | **Platinum** | Very Rare | 3 (1 guaranteed Very Rare) | Bosses F9+, Legendary achievements F9+ (no Platinum on F1–8, §4.5) |
 | **Legendary** | Legendary | 3 (1 guaranteed Legendary) | Final bosses F13+, spine payoffs, Legendary achievements F10+ (rare as hell) |
 | **Celestial** | Legendary **plus** a campaign-defining reward (see below) | 3 + the reward | A finale, or a truly absurd feat at the DM's discretion |
@@ -468,6 +469,8 @@ For each pull, roll **d100** (the AI rolls publicly, then chooses the specific i
 | 6–9 | 1–2 | 1–2 | 1 | 0–1 (F9) | — |
 | 10–14 | 1 | 1–2 | 1–2 | 0–1 | 0–1 (F13–14, campaign total ≤ 2) |
 | 15–18 | 0–1 | 1 | 1–2 | 1 | 0–1 (campaign total ≤ 2) |
+
+**Floors 1–2 achievement boxes** (Caleb, 2026-10-05): achievement boxes on Floors 1–2 are **Bronze**. Soft guideline: about 2–3 achievement Bronze boxes per Crawler per floor. The 0–1 Silver on Floors 1–2 is the Boss Box (§4.7), or a GM override for a truly great moment, with the reason logged. The one Silver box a replacement Crawler gets as late-entry compensation (§6.3) is exempt: it is not an achievement box.
 
 **Celestial boxes are not on this table.** They are capped at **one per crawler for the whole campaign** and are DM-triggered (§4.1). Benefactor Boxes (§4.7) are extra and don't count against this table, but a sponsor shouldn't hand out more than ~1 per floor.
 
@@ -902,6 +905,18 @@ These are optional safety nets for tables that want a longer leash than death sa
 
 **Existing buffers.** The *Second Season* Charm (Appendix B; [**CANON-INSPIRED**]) is a one-shot Cockroach Tier 1 and follows the common rules above. The Benefactor Signal (§5.5; [**HOUSE**] when it saves a life) intervenes outside this system.
 
+#### 6.5.1 System skills level by use (decision 037)
+
+[**CANON-INSPIRED**; pace is **HOUSE**] System skills (the crafting skills in `rules/20-crafting-5e.md` §3, the Cockroach Clause, and any other System skill a Crawler gains) rise **one rank at a time**.
+
+- **Where ranks come from (canon, ledger v1.20):** meaningful use, especially hard or clever use (M-059, M-807). A first-time feat can grant a new skill at rank 1 or higher (K-070, K-057). Inventive crafting can raise several skills at once (K-079, K-064). A Skill Potion gives +1 (M-045); a Cheat Code Potion gives +3 to a random skill (I-011). Training guilds (M-059). Some classes and species give flat bonuses or faster progression (K-071).
+- **Cap:** rank **15** (M-008), or **20** for a species' or class's own skill family, e.g. Hobgoblin traps and explosives (K-078). Going past 15 through real fights is the very rare achievement A-143.
+- **House pace:** no use counters, no XP per skill, no grinding. The GM grants a rank when a use mattered, announces it in the System voice, applies it at the next safe point, and logs it.
+- **Effect:** a rank widens what the skill can do; the GM writes the scope, within the floor rarity ceiling (§3.6). It also adds **+1 to d20 checks** that use that skill at ranks **5, 10 and 15** (so +1, +2, +3), and **+4 at rank 20** for a family skill. Ranks never replace 5e proficiency.
+- **Own scales win:** crafting skills (`rules/20-crafting-5e.md` §3) and the Cockroach Clause (Tier 1 / Tier 2, above) keep their own rank scales, and those win wherever they differ from this general track.
+- Where older text counts uses (the "5 uses" Cockroach Clause route above), read the count as a rough pace guide, not a counter.
+- Caleb can veto.
+
 ### 6.6 Stairwell Checkpoint (descent restores you)
 
 Reconciling with §5.6 (**Long Rest only in saferooms**): the stairwell is *not* a saferoom and does not grant a Long Rest. It grants a smaller, descent-only restoration.
@@ -1210,6 +1225,7 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
 | **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
 | **v0.2.16** | 2026-10-04 | **Whole credits only (rules lead ruling, 2026-10-04):** §5.10 says balances are never fractional (matches `tools/state.py` and decision 028); sp/cp are list prices only (1 sp = 0.1, 1 cp = 0.01 credit, reference); the "0.5 credit, 0.05 credit" balance wording is removed; buying rounds UP per cart line (matches `bot/src/create/rules.js`), selling at half rounds DOWN per line (matches `tools/state.py` pet buyback). No price changed. |
+| **v0.2.22** | 2026-10-06 | **Book Author Q19, Q20, Q23 answered (Syndicate, 2026-10-06):** (1) Q19: new §6.5.1 System skills level by use (decision 037): one rank at a time from meaningful use, first-time feats, inventive crafting, Skill and Cheat Code Potions, training guilds, and class or species bonuses; cap 15, or 20 for a species' or class's own skill family; no use counters, the GM grants, announces and logs each rank; +1 to d20 checks at ranks 5, 10 and 15 (+4 at 20 for a family skill); never replaces proficiency; crafting skills (rules/20 §3) and the Cockroach Clause keep their own rank scales and win where they differ; Caleb can veto. (2) Q20: achievement boxes on Floors 1–2 are Bronze (soft guideline about 2–3 per Crawler per floor, Caleb 2026-10-05); Silver on F1–2 is the Boss Box or a logged GM override; the one late-entry Silver box for a replacement Crawler (§6.3) is exempt, as it is not an achievement box. Wording aligned in §3.9, the §4.1 Silver and Gold rows, §4.5 and Appendix A. (3) Q23: §2.5.1 passive Perception, Investigation and Insight apply at every table (chat, voice or face to face); roll only when the outcome is uncertain and interesting. No number or table value changed. |
 | **v0.2.21** | 2026-10-05 | **Session turn order (Caleb, 2026-10-05; decision 034):** §2.5.1 rolls one Crawler turn order at session start and keeps it for exploration all session (replaces free-form posting order); joiners go last, dead/benched/AFK slots are skipped, pet-Crawlers act right after their owner; §2.5.2 initiative overrides it for that fight only, then play returns to session order. No number or table changed. |
 | **v0.2.20** | 2026-10-05 | **§8.3 party levels aligned to decision 033** (Accountant follow-up after rules/70 v0.2.0): floor rows use arrive→leave bands (F4@5 … F18@20); CR bands follow party level (old N-row ranges). Floors 16–18 share the top CR band. |
 | **v0.2.19** | 2026-10-05 | **F3/F9 double level bumps (decision 033, Caleb executive):** §2.2 arrive bands N / N+1 / N+2; F3 and F9 end boss +1 then normal onboarding; arrive F4 at 5, F10 at 12, F18 at 20 (finale 19–20 levels removed). §2.3 one-level rule updated. §6.4.3 refund desk re-keyed to arrive levels (floors 4 / 8 / 11 / 15). Accountant re-cuts rules/70 + 75; Book Author Ch1/Ch2. |
@@ -1327,7 +1343,7 @@ Catalog snapshot (2026-10-02): **1,823 rows**: Common 1,039 / Rare 576 / Legenda
 | `Category` | Combat / Exploration / Social / Survival / Loot / Speed / Crafting / Party / Story Seed / Continuum → normal. **Humor / Meta** → default R0. **Canon Flavor** → writer flag. |
 | `Rarity` | Default tier: Common → R0–R1; Rare → R2–R5; Legendary → R5–R6. Item rarity floor-scaled per §3.9. |
 | `Has Reward` | No → **R0** always. Yes → suggestion only. |
-| `Reward` | Translate: "Title + 25 System Credits" → R1 (credits × floor multiplier) or R0 if dull; "Rare loot roll + Title" → **Silver box** (Bronze on F1–2; Gold on F10+); "Legendary loot roll + Title + cosmetic flair" → **Gold box** (F3–8; Silver on F1–2 per the §4.5 ceiling) / **Platinum** (F9–14; no Platinum on F1–8, §4.5) / **Legendary box or Headliner** (F15+, within caps; Celestial only by DM decision, §4.1); bespoke rewards ("Trap kit upgrade," "Companion slot perk," "Ratings buff (1 floor)") → nearest R-tier (tool upgrade = R3; companion = R5-equivalent; ratings buff = Crowd Pop / Heroic Inspiration); "Ending flag" / "Seed flagged" → story state, no loot. |
+| `Reward` | Translate: "Title + 25 System Credits" → R1 (credits × floor multiplier) or R0 if dull; "Rare loot roll + Title" → **Silver box** (Bronze on F1–2; Gold on F10+); "Legendary loot roll + Title + cosmetic flair" → **Gold box** (F3–8; on F1–2 **Bronze**, like every F1–2 achievement box; Silver on F1–2 only as the Boss Box or a logged GM override, §4.5) / **Platinum** (F9–14; no Platinum on F1–8, §4.5) / **Legendary box or Headliner** (F15+, within caps; Celestial only by DM decision, §4.1); bespoke rewards ("Trap kit upgrade," "Companion slot perk," "Ratings buff (1 floor)") → nearest R-tier (tool upgrade = R3; companion = R5-equivalent; ratings buff = Crowd Pop / Heroic Inspiration); "Ending flag" / "Seed flagged" → story state, no loot. |
 | `Canon Flavor` | No mechanical weight. |
 | `Notes` | Context for the AI (e.g., "continuum," "sponsor economy," "generated variant"). |
 

@@ -52,6 +52,100 @@ class PetTests(StateTestCase):
         self.assertNotIn("Pet", "\n".join(pub.render_card(self.crawler("Bo"), data, [])))   # no pet, no line
         self.assertNotIn("Pet", "\n".join(pub.render_card(self.crawler("Ann"), {"pets_enabled": False}, [])))
 
+    # ---- optional public pet fields (kind, hp_current/hp_max, unnamed) and the sheet pet block (Oct 6 2026)
+
+    def pet_block(self, owner="Ann", stats=None):
+        """(the pet block lines, the full rendered card); the species table is mocked so the test does not depend on its values."""
+        from unittest import mock
+        with mock.patch.object(pub, "_pet_stats", return_value=stats or {}):
+            card = "\n".join(pub.render_card(self.crawler(owner), {"pets_enabled": True}, []))
+            block = pub.pet_block(pub.pet_public(self.crawler(owner), {})).split("\n")
+        self.assertIn("\n".join(block), card)   # the block is on the card exactly as built
+        return block, card
+
+    def test_old_style_add_stores_exactly_the_old_fields(self):
+        self.add("Ann", "Pebbles", "dog")
+        pet = self.crawler("Ann")["pet"]
+        for k in ("kind", "hp_current", "hp_max", "unnamed"):
+            self.assertNotIn(k, pet)
+        self.run_cmd("validate")
+
+    def test_pet_block_without_stats_is_name_kind_cr_only(self):
+        self.add("Ann", "Rawlee", "cat", "--kind", "raccoon", "--description", "GM: secret backstory")
+        block, card = self.pet_block()
+        self.assertEqual(block, ["**Pet (GM-run): Rawlee** - raccoon, Cat stat block (CR 0)"])
+        self.assertNotIn("?", block[0])
+        self.assertNotIn("secret backstory", card)
+        self.assertIn("Pet (GM-run): Rawlee", card)   # the old marker text is still there
+
+    def test_pet_block_with_table_stats_and_record_hp(self):
+        self.add("Ann", "Rex", "wolf")
+        stats = {"ac": 12, "hp": 11, "attacks": [{"name": "Bite", "to_hit": 4, "damage": "5 (1d6+2) piercing"}, {"name": "Claw", "damage": "1 slashing"}, {"name": "Third", "to_hit": 1, "damage": "x"}]}
+        block, _ = self.pet_block(stats=stats)
+        self.assertEqual(block, ["**Pet (GM-run): Rex** - wolf (CR 1/4)", "HP 11/11  AC 12", "Bite: +4 to hit, 5 (1d6+2) piercing", "Claw: 1 slashing"])
+        self.run_cmd("pet", "set", "Ann", "--hp-max", "9", "--hp-current", "4")
+        block, _ = self.pet_block(stats=stats)
+        self.assertEqual(block[1], "HP 4/9  AC 12")                      # the record beats the table
+        view = pub.pet_public(self.crawler("Ann"), {})
+        self.assertNotIn("Third", json.dumps(view))                      # at most two attacks
+        for secret in ("description", "quote", "filed_by", "override"):
+            self.assertNotIn(secret, view)
+
+    def test_unnamed_pets_show_as_unnamed_kind(self):
+        self.add("Ann", "Wolf (unnamed)", "wolf")                         # the GM placeholder already on file (Mr. White's wolf)
+        self.assertEqual(self.pet_block()[0][0], "**Pet (GM-run): unnamed wolf** - wolf (CR 1/4)")
+        self.run_cmd("pet", "add", "Bo", "--species", "wolf", "--unnamed", "--kind", "husky")
+        pet = self.crawler("Bo")["pet"]
+        self.assertEqual((pet["name"], pet["unnamed"], pet["kind"]), ("Husky (unnamed)", True, "husky"))
+        self.assertEqual(self.pet_block("Bo")[0][0], "**Pet (GM-run): unnamed husky** - husky, Wolf stat block (CR 1/4)")
+        self.run_cmd("pet", "set", "Bo", "--named")
+        self.assertNotIn("unnamed", self.crawler("Bo")["pet"])
+        _, err = self.run_cmd("pet", "add", "Ann Two", "--species", "cat", expect=1)   # no --name and no --unnamed: refused as before
+        self.assertIn("usage", err)
+
+    def test_pet_set_fields_checks_and_log(self):
+        self.add("Ann", "Rawlee", "cat", "--description", "notes")
+        before = dict(self.crawler("Ann")["pet"])
+        out, _ = self.run_cmd("pet", "set", "Ann", "--kind", "raccoon", "--dry-run")
+        self.assertIn("DRY RUN", out)
+        self.assertNotIn("kind", self.crawler("Ann")["pet"])
+        self.run_cmd("pet", "set", "Ann", "--kind", "raccoon")
+        self.run_cmd("pet", "set", "Ann", "--hp-max", "2")
+        pet = self.crawler("Ann")["pet"]
+        self.assertEqual((pet["kind"], pet["hp_max"], pet["hp_current"]), ("raccoon", 2, 2))   # newly tracked: starts full
+        for k in ("name", "species", "species_srd_id", "cr", "description", "status"):
+            self.assertEqual(pet[k], before[k], k)                       # set never touches name/species/CR/notes
+        self.assertEqual([r["event"] for r in self.rows()][-2:], ["updated", "updated"])
+        self.assertEqual(self.rows()[-2]["changes"], {"kind": "raccoon"})
+        _, err = self.run_cmd("pet", "set", "Ann", "--hp-current", "5", expect=1)
+        self.assertIn("above its max", err)
+        _, err = self.run_cmd("pet", "set", "Ann", "--hp-max", "0", expect=1)
+        self.assertIn("at least 1", err)
+        _, err = self.run_cmd("pet", "set", "Ann", expect=1)
+        self.assertIn("at least one of", err)
+        _, err = self.run_cmd("pet", "set", "Bo", "--kind", "x", expect=1)
+        self.assertIn("no living plain pet", err)
+        _, err = self.run_cmd("pet", "set", "Ann", "--kind", "x" * 41, expect=1)
+        self.assertIn("--kind", err)
+        self.assertIn("kind raccoon", self.run_cmd("pet", "show", "Ann")[0])
+        self.run_cmd("validate")
+
+    def test_validate_rejects_bad_optional_fields(self):
+        self.add("Ann", "Rawlee", "cat")
+        c = self.crawler("Ann")
+        for bad in ({"hp_current": "x"}, {"hp_max": 0}, {"hp_max": 2, "hp_current": 3}, {"kind": ""}, {"unnamed": "yes"}):
+            pet = dict(c["pet"], **bad)
+            self.assertTrue(state._pet_extra_errors(pet), bad)
+        self.assertEqual(state._pet_extra_errors(dict(c["pet"], kind="raccoon", hp_max=2, hp_current=1, unnamed=False)), [])
+
+    def test_species_table_has_empty_stat_fields(self):
+        d = json.load(open(os.path.join(os.path.dirname(state.__file__), "..", "tables", "pet-species.json")))
+        for e in d["species"]:
+            self.assertIn("ac", e)
+            self.assertIn("hp", e)
+            self.assertIsInstance(e.get("attacks"), list)
+            self.assertTrue(e["ac"] is None or isinstance(e["ac"], int))
+
     def test_refusals_one_pet_cr_species_kind(self):
         self.add()
         _, err = self.add("Ann", "Rex", "wolf", expect=1)

@@ -2,7 +2,7 @@
   "version": 1,
   "crawlers": {
     "Eisenhorn": {
-      "published_at": "2026-10-06T08:57:43-05:00",
+      "published_at": "2026-10-06T09:44:50-05:00",
       "view": {
         "name": "Eisenhorn",
         "player": "Hornn",
@@ -200,12 +200,23 @@
         "pet": {
           "name": "Rawlee",
           "species": "Cat",
-          "cr": "0"
+          "kind": "raccoon",
+          "cr": "0",
+          "hp_current": 2,
+          "hp_max": 2,
+          "ac": 12,
+          "attacks": [
+            {
+              "name": "Scratch",
+              "damage": "1 slashing",
+              "to_hit": 4
+            }
+          ]
         }
       },
       "message_ids": [
-        "1557029088407851009",
-        "1557029090652065793"
+        "1557040947299090604",
+        "1557040949492973638"
       ]
     },
     "Shirayuki": {
@@ -404,7 +415,7 @@
       ]
     },
     "Mr. White": {
-      "published_at": "2026-10-05T20:50:32-05:00",
+      "published_at": "2026-10-06T09:44:51-05:00",
       "view": {
         "name": "Mr. White",
         "player": "Trailer Park Moses",
@@ -579,14 +590,25 @@
           "Languages: Common, Goblin, Orc"
         ],
         "pet": {
-          "name": "Wolf (unnamed)",
+          "name": "unnamed wolf",
           "species": "Wolf",
-          "cr": "1/4"
+          "kind": "wolf",
+          "cr": "1/4",
+          "hp_current": 11,
+          "hp_max": 11,
+          "ac": 12,
+          "attacks": [
+            {
+              "name": "Bite",
+              "damage": "5 (1d6+2) piercing; a Medium or smaller target is knocked Prone",
+              "to_hit": 4
+            }
+          ]
         }
       },
       "message_ids": [
-        "1556846088089243782",
-        "1556846089142018089"
+        "1557040951237681304",
+        "1557040952214814801"
       ]
     }
   }

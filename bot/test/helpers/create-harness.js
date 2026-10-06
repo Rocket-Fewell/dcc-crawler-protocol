@@ -3,10 +3,10 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, symlinkSync, readFileSync, 
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { resolveCampaignRoot } from '../../src/paths.js';
+import { REAL_CAMPAIGN, REAL_LORE } from './roots.js';
 import { handleInteraction } from '../../src/commands/index.js';
 
-export const REAL_CAMPAIGN = process.env.DCC_REAL_CAMPAIGN || resolveCampaignRoot();
+export { REAL_CAMPAIGN, REAL_LORE };
 
 const SANDBOXES = [];
 process.on('exit', () => {
@@ -14,15 +14,16 @@ process.on('exit', () => {
   for (const d of SANDBOXES) { try { rmSync(d, { recursive: true, force: true }); } catch { /* best effort */ } }
 });
 
-/** A sandbox campaign: real tools (symlink) + real tables (copy) + a fresh `beta` session made by tools/new-session.py. */
+/** A sandbox campaign: real tools + lore (symlinks) + real tables (copy) + a fresh `beta` session made by tools/new-session.py. */
 export function makeSandbox(sessionId = 'beta', extraArgs = []) {
   const dir = mkdtempSync(join(tmpdir(), 'dcc-create-'));
   SANDBOXES.push(dir);
   symlinkSync(join(REAL_CAMPAIGN, 'tools'), join(dir, 'tools'));
+  if (existsSync(REAL_LORE)) symlinkSync(REAL_LORE, join(dir, 'lore'));   // the Python tools read lore/ (e.g. new-session.py's gm-quirks roll needs lore/tables/gm-quirks.json)
   cpSync(join(REAL_CAMPAIGN, 'tables'), join(dir, 'tables'), { recursive: true });
   mkdirSync(join(dir, 'gm-notes'), { recursive: true });
   mkdirSync(join(dir, 'sessions'), { recursive: true });
-  const env = { ...process.env, DCC_CAMPAIGN_DIR: dir, DCC_AUTO_PUBLISH: '0' };
+  const env = { ...process.env, DCC_CAMPAIGN_ROOT: dir, DCC_CAMPAIGN_DIR: dir, DCC_AUTO_PUBLISH: '0' };   // ROOT wins over DIR: set both so an inherited DCC_CAMPAIGN_ROOT never points a sandbox at the real campaign
   delete env.DCC_SESSION;
   execFileSync('python3', [join(dir, 'tools', 'new-session.py'), sessionId, '--label', 'Test', ...extraArgs], { env, stdio: 'pipe' });
   return dir;

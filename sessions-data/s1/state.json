@@ -7,7 +7,7 @@
     "death_mode": "Costly Revives",
     "comfort": "Ludicrous",
     "created": "2026-10-05T13:21:00-05:00",
-    "updated": "2026-10-05T20:50:28-05:00",
+    "updated": "2026-10-06T09:38:32-05:00",
     "proctor_hints": {
       "zone_1": {
         "Eisenhorn": {
@@ -547,7 +547,8 @@
         "filed_on": "2026-10-05T20:50:28-05:00",
         "status": "alive",
         "floor": 1,
-        "renamed_from": "Rolly"
+        "renamed_from": "Rolly",
+        "kind": "raccoon"
       }
     },
     {
