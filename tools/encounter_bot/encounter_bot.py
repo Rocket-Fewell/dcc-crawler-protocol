@@ -36,29 +36,26 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(SCRIPT)))  # campaign roo
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import dcc_paths as _paths  # noqa: E402
 LORE = os.environ.get("DCC_LORE_ROOT") or str(_paths.lore_root())
+_srd_repo = os.path.join(ROOT, "srd", "raw.txt")
 _srd_cand = [
     os.environ.get("DCC_SRD_RAW"),
-    os.path.join(ROOT, "srd", "raw.txt"),
+    _srd_repo,
     os.path.join(os.path.dirname(ROOT), "srd", "raw.txt"),
-    "/workspace/srd/raw.txt",
 ]
-SRD_RAW = next((p for p in _srd_cand if p and os.path.isfile(p)), _srd_cand[-1])
+SRD_RAW = next((p for p in _srd_cand if p and os.path.isfile(p)), _srd_repo)
 LEDGER = os.path.join(LORE, "CANON-LEDGER.md")
-_BOX_LORE_PREFIX = "/workspace/dcc-lore/"  # legacy box-only spec prefix; mapped onto LORE, never written
 
 
 def resolve_spec_path(path):
     """Resolve a path cited in a spec (set piece / draft sources) so it works from a fresh checkout.
 
-    Absolute and existing -> unchanged; legacy /workspace/dcc-lore/... -> under LORE; relative
-    (e.g. lore/drafts/...) -> under the campaign ROOT; anything else -> unchanged.
+    Absolute and existing -> unchanged; relative (e.g. lore/drafts/...) -> under the campaign ROOT;
+    anything else -> unchanged.
     """
     if not path:
         return path
     if os.path.isabs(path) and os.path.exists(path):
         return path
-    if path.startswith(_BOX_LORE_PREFIX):
-        return os.path.join(LORE, path[len(_BOX_LORE_PREFIX):])
     if not os.path.isabs(path):
         return os.path.join(ROOT, path)
     return path
