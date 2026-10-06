@@ -33,10 +33,10 @@
     "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.5",
-    "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+    "budget_file_version": "0.2.6",
+    "budget_file_sha256": "08d4737b116f50eaa4eb0477b2b2fff64f9c45b14ee4ad7fb571425da03af022",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "cdfa9616a06283f6033537e4804d5218855d25c2e06f5f7da555b004f3674b0a",
+    "spec_sha256_sans_pin": "fc874c93d263c180a6e733b6f12df6586a1d21a106bfc2944d67651a532e5b5d",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -174,7 +174,7 @@
       "break_room_not_saferoom_from_day": 99,
       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
     },
-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
     "rest_fee_note": {
       "tag": "[GM-FACING]",
@@ -1415,7 +1415,7 @@
         },
         {
           "id": "ACH-1835",
-          "note": "You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; max 2 Bronze ACH boxes/Crawler/floor).",
+          "note": "You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; about 2-3 Bronze ACH boxes/Crawler/floor, soft).",
           "tag": "canon",
           "ledger_row": "A-136",
           "name": "You Call That a Trap?",
@@ -1879,7 +1879,7 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.2.5 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
+      "item": "rules/70-encounter-budget-5e.json v0.2.6 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
       "waiting_for": "floors.2 pins / Soft Open clock numbers confirmed; any bracketed slot without a matching field",
       "status": "open",
       "audience": "gm"
@@ -2153,12 +2153,12 @@
     "pass": 45,
     "warn": 3,
     "fail": 0,
-    "spec_sha256": "f4407d2c2c6c5a7bdb785f7fefecabfb0592c9691d6b6bc34f43e94b33375558",
+    "spec_sha256": "162fa3edb4132882116d6704209f9b55bd24b21c07382783af631d958630b0b3",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.2.5, sha256 07c676b301240c4b; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.2.6, sha256 08d4737b116f50ea; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2203,7 +2203,7 @@
       {
         "status": "PASS",
         "check": "saferoom rule",
-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
+        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
       },
       {
         "status": "PASS",
@@ -2273,7 +2273,7 @@
       {
         "status": "PASS",
         "check": "rest options",
-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
+        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
       },
       {
         "status": "PASS",
@@ -2327,7 +2327,7 @@
       },
       {
         "status": "PASS",
-        "check": "read-aloud blocks are 4 sentences or fewer",
+        "check": "read-aloud blocks within the 4-sentence soft guideline",
         "detail": "32 [PLAYER-FACING] blocks checked"
       },
       {

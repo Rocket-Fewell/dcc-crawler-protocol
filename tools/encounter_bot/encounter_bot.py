@@ -1323,7 +1323,7 @@ def build(spec, data, rep):
         else:
             rep.warn("read-aloud length (soft)", "%s (%d sentences): over the %d-sentence guideline; fine if the moment earns it" % (w_, n_, MAX_SENTENCES))
     if not too_long:
-        rep.ok("read-aloud blocks are %d sentences or fewer" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
+        rep.ok("read-aloud blocks within the %d-sentence soft guideline" % MAX_SENTENCES, "%d [PLAYER-FACING] blocks checked" % len(pfb))
     sps = [w for w, _, sp in pfb if sp]
     if len(sps) > 1:
         rep.fail("set pieces are rare", "%d on this page (%s); at most one per page" % (len(sps), "; ".join(sps)))
@@ -1493,7 +1493,7 @@ def render_md(doc):
     w("Budget file: `%s` v%s, sha256 `%s`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.\n" % (
         B70, m.get("budget_file_version"), m.get("budget_file_sha256")))
     w("> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. "
-      "Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.\n")
+      "Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.\n")
     # glance
     w("## Day at a glance\n")
     w("| Field | Value |\n|---|---|")

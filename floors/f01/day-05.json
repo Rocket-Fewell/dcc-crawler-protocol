@@ -18,7 +18,7 @@
       "lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
-      "rules/70-encounter-budget-5e.json v0.2.5 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.2.6 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
@@ -32,8 +32,8 @@
     "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.5",
-    "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+    "budget_file_version": "0.2.6",
+    "budget_file_sha256": "08d4737b116f50eaa4eb0477b2b2fff64f9c45b14ee4ad7fb571425da03af022",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
     "spec_sha256_sans_pin": "9749c2e77538259f34a65d94c1cf9c7e44ce74f5cc5c106ee2854d10f8438ca8",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
@@ -2244,8 +2244,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.2.5 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.2.5 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.2.6 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.2.6 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -2563,12 +2563,12 @@
     "pass": 52,
     "warn": 2,
     "fail": 0,
-    "spec_sha256": "2dca3169f3206e52263175b1e2388df7a91aa2c8aa4456af2550018ef1f5b856",
+    "spec_sha256": "32b15f1c9b9277c97dac65705af6e0cba4858030630e8385d728eb8aef5f08f8",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.2.5, sha256 07c676b301240c4b; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.2.6, sha256 08d4737b116f50ea; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -2613,7 +2613,7 @@
       {
         "status": "PASS",
         "check": "saferoom rule",
-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
+        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
       },
       {
         "status": "PASS",
@@ -2708,7 +2708,7 @@
       {
         "status": "PASS",
         "check": "rest options",
-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
       },
       {
         "status": "PASS",
@@ -2767,7 +2767,7 @@
       },
       {
         "status": "PASS",
-        "check": "read-aloud blocks are 4 sentences or fewer",
+        "check": "read-aloud blocks within the 4-sentence soft guideline",
         "detail": "41 [PLAYER-FACING] blocks checked"
       },
       {
