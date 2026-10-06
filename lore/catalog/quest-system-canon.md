@@ -1,6 +1,6 @@
 # Quest System Canon
-Owner: DCC Lore | Status: review | Version: 0.1 | Updated: 2026-10-06
-Summary: How quests work in canon (Books 2-8): announcement, who gets them, quest types, quest box tiers, failure, the show-production lore, and the Floor 3 quests. Mirrors ledger section 9.8 (M-826..M-897, X-086).
+Owner: DCC Lore | Status: review | Version: 0.2 | Updated: 2026-10-06
+Summary: How quests work in canon (Books 2-8): announcement, who gets them, quest types, quest box tiers, failure, the show-production lore, the Floor 3 quests and the Floor 4-5 quests. Mirrors ledger sections 9.8 (M-826..M-897, X-086) and 9.10 (M-916..M-950, X-089).
 
 Spoilers through Book 8. Sources are the local Fandom mirror (`raw/pages/Quest.txt`, `Quest Box.txt` and six quest pages); nothing here was checked against the novels. Ledger IDs in brackets. "HOUSE" lines are my suggestions for running it at the table, not canon.
 
@@ -73,3 +73,22 @@ Backdrop: the Vengeance of the Daughter show starts on Floor 3, with Signet raid
 ## 9. The two later quests named in TODO 55
 - **Vengeance of the Daughter (Floor 6).** Carl's Floor 3 deal came due as a two-part quest [M-892]. Part 1, storm Fort Freedom: survivors become 20% more willing to follow your orders [M-893]. Part 2, kill Queen Imogen: the High Elf Castle becomes lootable [M-894].
 - **Where the Sidewalk Ends (Floor 8).** This is a regional quest covering everyone in the Cuba area, with the receiving squad (the wiki files it under Carl's group) as host [M-895]. It is a three-option menu. Option 1, do nothing: a portal pulls the region up. Option 2, free Amayon: the quest resets into a world quest [M-896]. Option 3, kill him: he is invulnerable on that floor, and the reward is a Celestial Hell Boon [M-897].
+
+## 10. The Floor 4 and Floor 5 quests (Pass 36)
+| Quest | Floor | Given how | Objective | Reward / failure | IDs |
+|---|---|---|---|---|---|
+| Levi is On the Menu! | 4 | Boarding the Dismembered Unlimited (pass/fail, ~19 min, only while on the train) | Keep Levi the 7th from being eaten by Fleshers; War Mage Dismember waits in the last car | Silver box; failure turns everyone on the train into Fleshers. Killed six teams before Donut's party | M-916..M-924 |
+| Stay Out of City Hall | 5 | System AI, opening of Floor 5 | Find out what is in city hall (reverse-psychology title) | Silver box | M-925 |
+| Free Wynne from His Bondage | 5 | Finding Wynne chained in the basement | Free the Dirigible Gnome for easy Wasteland access | Silver box; failed when another crawler killed Wynne | M-926, M-927 |
+| Squeeze out the Juice Box | 5 | System AI | Save Hump Town from the bombardment before the timer hits zero | Platinum box plus a permanent 50% charisma bonus with Changelings for the whole quadrant; AI sulks on the technical win | M-928..M-930 |
+| The Gate of the Feral Gods | 5 | System AI to Donut's party | Take three artifact pieces (Henrik the Changeling, Commandant Kane, the Mad Dune Mage) and assemble them | Teased only ("Oh boy-oh-boy") | M-931 |
+| Where the Red God Glows | 5 | Group quest, everyone in bubble 543, Donut's party hosts, no opt-out | Keep the level 10 puppy Orthrus alive | Orthrus dying means Emberus turns the bubble into a kiln; reward is the next quest | M-932..M-935 |
+| The Dumber of the Flunkies | 5 | Group quest, survivors of the last one plus bubble 18 | Reunite Orthrus with Emberus | Platinum box; failure means Emberus smites each participant on any floor | M-936..M-938 |
+| Get Orthrus | 5 | World quest to every living crawler on Floor 5 (a counter-quest) | Kill Orthrus before the reunion | One million gold, five Level-Up Potions, pet monkey Jimbo; on failure safe rooms serve only monkey soup and saltines for the floor. Quan Ch tried | M-939..M-943 |
+| Find Out Who Killed My Son | 5 to 18 | Emberus god quest (golden glow, his voice) | Find Geyrun's killer and why | "Depends on who did it"; smite if you leave Floor 18 unsolved; seven Quest Updates through Book 7, one with a 66-minute world-burning clock | M-944..M-947 |
+| Kill Hellik | 5 to 11 | Emberus god quest | Kill Hellik before reaching Floor 12 | Celestial God Box; smite if he lives; the quest warns a god's death affects all crawlers; gods are invulnerable early | M-948..M-950 |
+
+Orthrus was the pet of Geyrun, Emberus's murdered son; three source families agree, which closes the old single-source flag [X-089, X-016].
+
+- HOUSE: the Floor 5 chain is a ready template for a set piece: protect-the-target group quest, then a counter-quest to every rival party, then a floor-wide joke penalty if nobody wins.
+- HOUSE: the reward-is-another-quest and the quadrant-wide side reward are cheap ways to make a quest feel big without adding loot.

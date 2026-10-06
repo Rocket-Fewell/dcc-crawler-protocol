@@ -537,16 +537,17 @@
       },
       "status": "active",
       "pet": {
-        "name": "Rolly",
+        "name": "Rawlee",
         "species": "Cat",
         "species_srd_id": "cat",
         "cr": 0.0,
-        "description": "Pet raccoon (Cat stat block reskin: climb 30, Stealth). Eisenhorn was holding him when the world ended. Player said 'Raleigh' at the table (likely STT for Rolly); confirm spelling.",
+        "description": "Pet raccoon (Cat stat block reskin: climb 30, Stealth). Eisenhorn was holding him when the world ended. Name confirmed by Hornn 2026-10-06 as 'Rawlee' (intake said 'Rolly').",
         "quote": "Q1: My Pet Raccoon: Rolly",
         "filed_by": "DCC AI GM",
         "filed_on": "2026-10-05T20:50:28-05:00",
         "status": "alive",
-        "floor": 1
+        "floor": 1,
+        "renamed_from": "Rolly"
       }
     },
     {

@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Pass 36 (2026-10-06): append ledger section 9.10 Floor 4-5 quests. Run once; do not re-run."""
+from pathlib import Path
+import sys
+ROOT = Path(__file__).absolute().parents[2]
+L = ROOT / 'CANON-LEDGER.md'
+D = '2026-10-06'
+W_LEVI='W:Levi is on the Menu Quest'; W_CH='W:Stay Out of City Hall Quest'; W_WY='W:Free Wynne from His Bondage Quest'
+W_JB='W:Squeeze out the Juice Box Quest'; W_GATE='W:Gate of the Feral Gods Quest'; W_RG='W:Where the Red God Glows Quest'
+W_DF='W:Dumber of the Flunkies Quest'; W_GO='W:Get Orthrus Quest'; W_FO='W:Find Out Who Killed My Son Quest'; W_KH='W:Kill Hellik Quest'
+YT3='YT:FHLzs9fjyU8'; YT4='YT:edNtE1movic'
+rows = [
+('M-916','Levi quest trigger','Floor 4: "Levi is On the Menu!" fires when crawlers board the Dismembered Unlimited train (a named line).','triggers when crawlers board the Dismembered Unlimited on the Fourth Floor',f'{W_LEVI}; {YT3}','VERIFIED (page cite B3 ch12; 2 sources: recap "as they enter the Dismemberment Limited train ... a quest triggers")'),
+('M-917','Pass/fail quest label','A pass/fail quest says so up front and warns that failure has consequences.','This is a pass or fail quest. Failure has consequences.',W_LEVI,'VERIFIED (page cite B3 ch12)'),
+('M-918','Levi failure penalty','Fail Levi (he gets devoured) and every crawler on the train is turned into a Flesher mob.','Every crawler on the train will be turned into a Flesher.',f'{W_LEVI}; {YT3}','VERIFIED (2 sources: recap "every crawler on the train will become a mob called a flesher")'),
+('M-919','Levi scope and reward','The quest stays active only while you remain on the train (about 19 minutes); reward Silver Quest Box.','This quest is active as long as you remain on the train.',W_LEVI,'VERIFIED (page cite B3 ch12)'),
+('M-920','Levi lethality','Six crawler teams died to this quest before Princess Donut\'s party beat Dismember (the scenario replays, M-876).','This quest killed six teams of crawlers before the Royal Court of Princess Donut defeated Dismember.',W_LEVI,'VERIFIED (cite B3 ch12)'),
+('M-921','Named-line silence','Nobody reports back about the named train lines because the crawlers who ride them die (GM hook: info vacuum = danger sign).','People died when they rode the named lines.',W_LEVI,'WIKI-ONLY (page quote box, no cite)'),
+('M-922','Dismembered Unlimited layout','Engine plus two cars; you can only get on or off through the engine; while stopped only Levi shows on the minimap.','consists of an engine and two train cars, but can only be entered and exited through the engine',W_LEVI,'WIKI-ONLY'),
+('M-923','Levi staging','Once the train moves, a countdown to the next stop appears in the HUD; when the inner doors open, hundreds of red dots appear at once.','a countdown timer to the next stop appears in the crawler\'s Heads-Up Display (HUD) and the quest triggers',W_LEVI,'WIKI-ONLY'),
+('M-924','Why Fleshers want Levi','Levi is a Symbiote (hobgoblin skeleton in a troll\'s flesh); other Fleshers want his bones to become Levi the 8th. War Mage Dismember waits in the last car.','he is targeted by other Fleshers who want to strip away his flesh and merge with his bones',W_LEVI,'WIKI-ONLY'),
+('M-925','Stay Out of City Hall','Floor 5 opener: a reverse-psychology title; the real objective is to find out what is in city hall. Reward Silver Quest Box. (Recap: the gnomes will not bomb Hump Town because of what is hidden there.)','Find out what\'s in city hall. It just might be important.',f'{W_CH}; {YT4}','VERIFIED (cite B4 ch1; 2 sources: recap "something the Dromedarians have hidden in city hall")'),
+('M-926','Free Wynne','Found in the basement: free the chained Dirigible Gnome Wynne and he gives easy access to the Wasteland. Reward Silver Quest Box.','Wynne the Dirigible Gnome is in chains. Free him, and he will provide easy access to the Wasteland.',W_WY,'VERIFIED (cite B4 ch6)'),
+('M-927','Quest fails if someone else kills the NPC','Free Wynne failed when another crawler (Low Thi) killed Wynne: a third party can fail your NPC quest.','Failed when Low Thi kills Wynne.',W_WY,'WIKI-ONLY'),
+('M-928','Squeeze out the Juice Box','Save Hump Town from the bombardment that lands when the timer hits zero. Reward Platinum Quest Box.','you must save Hump Town from the inevitable bombardment, which will occur when the timer reaches zero',W_JB,'VERIFIED (cite B4 ch10)'),
+('M-929','Quadrant-wide side reward','Juice Box also pays every crawler in the quadrant a permanent 50% charisma bonus with Changelings.','all crawlers in this quadrant will receive a permanent fifty percent charisma bonus during any future interactions with Changelings',W_JB,'VERIFIED (cite B4 ch10)'),
+('M-930','Grudging completion voice','When crawlers win on a technicality the AI pays the box but sulks and refuses any upgrade (voice model for GM completion notices).','If I was allowed to upgrade your prize, I would. Maybe.',W_JB,'VERIFIED (cite B4 ch12)'),
+('M-931','Gate of the Feral Gods quest','Collect three artifact pieces from Henrik the Changeling, Commandant Kane and the Mad Dune Mage and assemble them; the reward is only teased ("Oh boy-oh-boy"). Completed B4 ch27.','They all have pieces of the artifact. Take it from them. Collect all three. Put them together.',W_GATE,'VERIFIED (cite B4 ch15)'),
+('M-932','Where the Red God Glows','Group quest for every crawler in bubble 543 after Carl pulls Orthrus in; Princess Donut\'s party hosts; no opt-out; keep the puppy alive.','All Crawlers currently within bubble number 543 will receive this quest. Your party has been designated Host of this Group Quest.',f'{W_RG}; {YT4}','VERIFIED (page cite B4 ch28-29; 2 sources: recap)'),
+('M-933','Escort stake','If Orthrus dies, Emberus turns the whole bubble into a kiln (failure punishes the area, not just the party).','If Orthrus dies, the full-powered god Emberus will turn this bubble into a kiln.',W_RG,'VERIFIED (page cite B4 ch28-29)'),
+('M-934','AI names and shames','Quest text can single out named crawlers for blame or mockery (Carl for the bubble, Maggie My for a run-over puppy).','Especially Crawler Carl, who callously shoved the poor puppy into a bubble much too small and much too dangerous for him.',W_RG,'VERIFIED (page cite B4 ch28-29)'),
+('M-935','Reward is the next quest','A quest reward can be "It\'s a surprise" that pays out as a new quest; non-contributors get the same reward.','Reward: You get a new quest!',W_RG,'VERIFIED (page cite B4 ch30)'),
+('M-936','Chained group quest roster','The follow-up group quest carries over all survivors of the previous one and the AI adds a second bubble (18) on a whim.','All survivors of the previous group quest are now a party to this quest.',W_DF,'VERIFIED (cite B4 ch30)'),
+('M-937','Cross-floor failure smite','Fail Dumber of the Flunkies and Emberus smites each participant one by one on whatever floor they are on (another floor-spanning exception, see X-086).','If you fail this quest, you will each in turn be smote by Emberus one by one, no matter what floor you’re on.',W_DF,'VERIFIED (page cite B4 ch28,30)'),
+('M-938','Dumber completion','Reunite Orthrus with Emberus; Orthrus returns to the twelfth floor to resume training. Reward Platinum Quest Box.','He’s now frolicking on the twelfth floor where he will soon resume his training.',W_DF,'VERIFIED (page cite B4 ch30)'),
+('M-939','Counter-quest','The AI can issue a world quest that rewards killing the target another party must protect (Get Orthrus vs Dumber of the Flunkies).','The quest is intended to incentivize other crawlers to slay Orthrus',W_GO,'VERIFIED (cite B4 ch30)'),
+('M-940','Get Orthrus bounty','Kill Orthrus before the reunion: one million gold, five Level-Up Potions and a pet monkey named Jimbo; sent to every living crawler on Floor 5.','Any crawler who kills this cute puppy before he reunites with grandpa will receive the following',W_GO,'VERIFIED (page cite B4 ch30)'),
+('M-941','Rival participants may claim','The AI first bars the protecting party from the prize, then reverses itself.','They get the prize, too!',W_GO,'VERIFIED (page cite B4 ch30)'),
+('M-942','World-quest failure penalty','When nobody kills Orthrus the world quest fails for everyone: safe rooms serve only monkey soup and saltines for the rest of the floor.','all safe rooms will only serve monkey soup and saltine crackers for the remainder of this floor',W_GO,'VERIFIED (page cite B4 ch30)'),
+('M-943','Quan Ch chases the bounty','Quan Ch (named on the quest page) took the bounty and knocked Orthrus to 2% before Carl\'s Special Brew slingshot save (T-062).','Quan knocks Orthrus unconscious at 2% health',f'{YT4}; {W_GO}','VERIFIED (2 sources: Get Orthrus infobox "notably, Quan Ch" + recap)'),
+('M-944','God quest presentation','Emberus\'s two god quests glow with golden light and are read in his gravelly voice (deity-quest staging).','The quest notifications glow with golden light, and are narrated in Emberus\'s gravelly voice.',W_FO,'VERIFIED (cite B4 ch32)'),
+('M-945','Find Out Who Killed My Son','No time limit, but leaving the 18th floor before solving Geyrun\'s murder triggers a smite; reward "depends on who did it".','There is no time limit for this quest. However, you will receive a smite if you attempt to exit the 18th floor',f'{W_FO}; {YT4}','VERIFIED (cite B4 ch32; 2 sources: recap "two god quests")'),
+('M-946','Long quest via updates','The murder quest runs Books 4-7 through seven Quest Updates that act like side quests (memorial crystal, Nekhebit, Amayon, Issitoq truce, Psamathe).','The quest is occasionally updated with clues and leads that are best described as',W_FO,'VERIFIED (cite B4 ch32; updates cite B6 ch38, B7 ch2,64,78,84)'),
+('M-947','Update with a world-ending timer','A god quest update can carry a short hard clock with a world-level stake: deliver Psamathe in 66 minutes or the floor burns.','If she is not within my presence in 66 minutes, this world will be destroyed in fire and lava and wrath.',W_FO,'VERIFIED (cite B7 ch84)'),
+('M-948','Kill Hellik deadline','Kill Hellik before reaching the 12th floor or take a smite; bonus if his death is painful.','Hellik must die before you reach the 12th floor. If he still lives, you will receive a smite.',f'{W_KH}; {YT4}','VERIFIED (cite B4 ch32; 2 sources: recap "kill his brother ... before the 12th floor")'),
+('M-949','Kill Hellik reward and warning','Reward Celestial God Box; the quest itself warns that killing a god may have side effects for all crawlers.','Killing a god may have some unintended consequences for all crawlers.',W_KH,'VERIFIED (page cite B4 ch32)'),
+('M-950','Gods untouchable early','On earlier floors all gods are invulnerable and level 250, so a kill-a-god quest is a long-term goal (matches H-031).','All gods are invulnerable and level 250 on earlier levels.',W_KH,'WIKI-ONLY'),
+]
+x = ('X-089','Orthrus parentage (follow-up to X-016; X-016 left unedited)','"Orthrus was revealed to be the pet of Geyrun, Emberus\'s murdered son."','FW2:book4-events-orthrus-appearance','"seems to believe his son’s missing puppy is inside of bubble 18"',f'{W_DF}; {YT4}','RESOLVED: Orthrus was the pet of Geyrun, Emberus\'s murdered son. Three families agree (FW2, Fandom AI quest text, recap "Orthrus, his dead son\'s dog"); X-016 was single-source only.')
+def esc(s): return s.replace('|','\\|')
+out = ['### 9.10 Floor 4-5 quests (Pass 36, 2026-10-06; prefix M- continues; feeds catalog/quest-system-canon.md section 10; closes TODO 58)',
+'Per-quest rows for the Floor 4 train quest and the Floor 5 quest chain (Hump Town, the Gate, Orthrus, Emberus god quests). Builds on section 9.8 (quest types, box tiers, M-849 world quests, M-876 replays, X-086). Sources: local Fandom mirror quest pages plus the Book 3 and Book 4 recap transcripts (YT:FHLzs9fjyU8, YT:edNtE1movic) and FW2 Book 4 pages. Gold and potion counts are canon book rewards, not RPG prices. Nothing here was read against the novels. Script work/pass36/rows.py (do not re-run).',
+'',
+'| ID | Topic | Fact (paraphrase) | Source quote (<=25 words) | Source | Confidence | Date |','|---|---|---|---|---|---|---|']
+for i,t,f,q,s,c in rows: out.append(f'| {i} | {t} | {esc(f)} | "{esc(q)}" | {s} | {c} | {D} |')
+out += ['', '#### 9.10c Conflicts (X-089)', '', '| ID | Topic | Reading A (quote or note) | Source A | Reading B (quote or note) | Source B | Status | Date |','|---|---|---|---|---|---|---|---|',
+ f'| {x[0]} | {x[1]} | {x[2]} | {x[3]} | {x[4]} | {x[5]} | {x[6]} | {D} |', '', '']
+txt = L.read_text()
+marker = '## 10. Crafting'
+assert '### 9.10 ' not in txt and txt.count(marker)==1
+txt = txt.replace(marker, '\n'.join(out)+marker, 1)
+plog = '| 2026-10-06 | 36 | DCC Lore | Added section 9.10 Floor 4-5 quests (scheduled learning pass, closes TODO 58): M-916..M-950 (35 rows: Levi is On the Menu trigger, pass/fail label, Flesher failure, train layout and staging, six teams killed; Stay Out of City Hall, Free Wynne and third-party failure, Squeeze out the Juice Box timer and quadrant charisma bonus, grudging completion voice, Gate of the Feral Gods pieces, Where the Red God Glows and Dumber of the Flunkies group-quest chain, cross-floor smite, Get Orthrus counter-quest bounty and floor-wide failure penalty, Quan Ch, Emberus god quests with 18th/12th floor smite deadlines, seven quest updates, 66-minute update clock) and X-089 (resolves X-016: Orthrus was Geyrun\'s pet). ledger_check failures: 0. |'
+lines = txt.split('\n')
+idx = max(i for i,l in enumerate(lines) if l.startswith('| 2026-10-06 | 35 | DCC Lore |'))
+lines.insert(idx+1, plog)
+txt = '\n'.join(lines).replace('Version: 1.19 | Updated: 2026-10-06','Version: 1.20 | Updated: 2026-10-06',1)
+L.write_text(txt)
+print('ok', len(rows))

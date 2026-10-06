@@ -2,9 +2,9 @@
  "version": "0.1.2",
  "schema": "canon-floor-2/0.1.0",
  "status": "reserve",
- "sha256": "b08fb9a38b8632716594df9ab1258335bd9160320de73ef15cc1ef3d800fb765",
- "built_at": "2026-10-06T03:10:00-05:00",
- "ledger_version": "1.19",
+ "sha256": "42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737",
+ "built_at": "2026-10-06T06:40:00-05:00",
+ "ledger_version": "1.20",
  "zones": 10,
  "mobs": 22,
  "hazards": 18,
@@ -19,7 +19,7 @@
   "X-065",
   "X-080"
  ],
- "note": "Pass 35 scheduled refinement (reserve; not announced). New ledger rows M-898..M-915 and conflicts X-087 (Rage Elemental door-return time, minor) and X-088 (Wenatchee vs Seattle, resolved Wenatchee) wired in: orange lichen walls, elemental attacks, MOAB levers and bomb types, Meadow Lark counts (39 out, 36 through, recap 38 = Floor 1 camp), 14/13 dingo count, cage release with no control spell named. Backlog progress notes added to rb-05, rb-07, rb-10, rb-11, rb-13.",
+ "note": "Pass 35 scheduled refinement (reserve; not announced). New ledger rows M-898..M-915 and conflicts X-087 (Rage Elemental door-return time, minor) and X-088 (Wenatchee vs Seattle, resolved Wenatchee) wired in: orange lichen walls, elemental attacks, MOAB levers and bomb types, Meadow Lark counts (39 out, 36 through, recap 38 = Floor 1 camp), 14/13 dingo count, cage release with no control spell named. Backlog progress notes added to rb-05, rb-07, rb-10, rb-11, rb-13. Rebuilt 2026-10-06 (Pass 36) for ledger v1.20 only; no content change.",
  "diff": {
   "since_version": "0.1.1",
   "entries_added": [

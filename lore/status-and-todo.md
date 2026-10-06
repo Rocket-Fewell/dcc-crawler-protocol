@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.19 | Updated: 2026-10-06
+Owner: DCC Lore | Status: review | Version: 2.20 | Updated: 2026-10-06
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -484,4 +484,10 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - Table: feat2-moab added (MOAB levers, bomb babies, Oh Shit Baby at the stairwell); haz2-kobold-cage-release retagged canon (M-913).
 - New sources: `sources/fanwiki/book1-*.txt` (7 generated fan wiki pages; Li Jun, Zhang and System AI not yet mined). Live Fandom revisions checked: nothing newer than the mirror except Donut/Floor 2 (rb-15).
 - TODO 59: mine the new FW2 Li Jun, Zhang and System AI pages for rb-12. Still open: rb-01 (novel read), rb-02 (house clock), rb-03 blimp attack, rb-04 other clone instances, rb-09 auction floor (no new source).
+- Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
+
+## Pass 36 (2026-10-06, 6:2x AM CT, scheduled learning pass): Floor 4-5 quests
+- Closes TODO 58. New ledger section 9.10: M-916..M-950 (35 rows) and X-089. `catalog/quest-system-canon.md` v0.2 gains section 10 (per-quest table for Floors 4-5). Sources: W:Levi is on the Menu Quest, W:Stay Out of City Hall Quest, W:Free Wynne from His Bondage Quest, W:Squeeze out the Juice Box Quest, W:Gate of the Feral Gods Quest, W:Where the Red God Glows Quest, W:Dumber of the Flunkies Quest, W:Get Orthrus Quest, W:Find Out Who Killed My Son Quest, W:Kill Hellik Quest, YT:FHLzs9fjyU8 (Book 3 recap), YT:edNtE1movic (Book 4 recap), FW2:book4-events-orthrus-appearance. ledger_check failures: 0. Ledger v1.20, ledger-rules v1.17.
+- X-089 resolves the old single-source X-016: Orthrus was the pet of Geyrun, Emberus's murdered son (three families agree).
+- TODO 60: the Floor 6-10 quest pages (Recital, Chowder War, Hell Comes to Crawler Town, Pueblo de los Olvidados, Missing Piece, Spiders, Kill the Blasphemer, This is How the Gristle Grinds, Fuck my brother, I have dreamed thee too long, Bedlam Bride) are still unmined. TODO 59 still open.
 - Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
