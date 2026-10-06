@@ -1,0 +1,518 @@
+{
+ "schema": "npc-voices/0.1",
+ "owner": "Caleb (casting) / bridge (format)",
+ "version": "0.1.0",
+ "updated": "2026-10-06",
+ "imported_from": "npc-voice-casting-v1.xlsx",
+ "note": "One Fish Audio library voice per NPC for the [NPC: Name] tag (discord-voice-bridge src/npcvoices.js). Entry: {name, aliases[], floors[], fish_voice_id (32 hex or null = narrator voice), note}; optional npc_id, type, voice_cue, fish_voice_name. Written by `npm run npc-voices:import -- <sheet.xlsx|.csv>`; the bridge reloads it on change. GM Narrator and The System stay on FISH_VOICE_ID_NARRATOR / FISH_VOICE_ID_SYSTEM.",
+ "npcs": [
+  {
+   "name": "The Audience",
+   "aliases": [
+    "Audience"
+   ],
+   "floors": [
+    "all"
+   ],
+   "fish_voice_id": null,
+   "note": "The unseen viewers, heard as laugh tracks, gasps, boos and wolf-whistles.",
+   "npc_id": "NPC-002",
+   "type": "Crowd",
+   "voice_cue": "Crowd reactions only (laughs, gasps, boos); Silent/non-verbal - optional"
+  },
+  {
+   "name": "Benefactor",
+   "aliases": [],
+   "floors": [
+    1,
+    2,
+    3,
+    6,
+    9,
+    12,
+    18
+   ],
+   "fish_voice_id": null,
+   "note": "A mystery patron heard only as faint private static (\"...HOLD... NOT YET...\") by a dying Crawler; becomes a real offer later.",
+   "npc_id": "NPC-004",
+   "type": "Faction / Patron",
+   "voice_cue": "Very far away, very tired; whispery, broken by static"
+  },
+  {
+   "name": "Bruiser the Mascot",
+   "aliases": [
+    "Bruiser"
+   ],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": null,
+   "note": "An empty 8-ft pit-bull mascot costume that animates and fights in the Locker Room; nobody is inside.",
+   "npc_id": "NPC-005",
+   "type": "Elite (mob)",
+   "voice_cue": "Silent/non-verbal - optional"
+  },
+  {
+   "name": "Dale Pruitt",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": "ecc341b22a0844cfa67f9ab525d5559c",
+   "note": "Kind 50s HVAC tech caught in a trap net; rescue target and tag-along who knows buildings. F2 only mentions him (escort board / permanence scrap).",
+   "npc_id": "NPC-006",
+   "type": "Civilian (NPC crawler)",
+   "voice_cue": "Wheezy, friendly middle-aged everyman; nervous, chatty about ductwork"
+  },
+  {
+   "name": "Dean Thudd",
+   "aliases": [],
+   "floors": [
+    1,
+    2
+   ],
+   "fish_voice_id": "3d40669a01e045329ab4d6d7e25ce10e",
+   "note": "Head of Orientation, Floor 1 final boss: a huge ogre in a too-small mortarboard who counts down before his 'GROUP PHOTO' smash; can be talked into retiring. F2 only has callbacks (alumni ads).",
+   "npc_id": "NPC-007",
+   "type": "Boss",
+   "voice_cue": "Booming, dim, proud high-school principal; big jock energy, weepy when moved"
+  },
+  {
+   "name": "Dean Thudd (JV)",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": "2e19872b26c6479685257faa07af80da",
+   "note": "Smaller bugbear version of Dean Thudd used for level-1 or 2-Crawler parties; same gown, bigger chip on his shoulder.",
+   "npc_id": "NPC-008",
+   "type": "Boss (variant)",
+   "voice_cue": "Like Dean Thudd but smaller and whinier; insecure, trying too hard"
+  },
+  {
+   "name": "Exit Greeter",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": "86137f12396e497c80f37ab0332ee9ff",
+   "note": "Goblin Orientation staff in a green vest with a clipboard guarding the fake EXIT; 'has a quota'.",
+   "npc_id": "NPC-009",
+   "type": "Mob (leader)",
+   "voice_cue": "Overly polite goblin receptionist; nasal, clipped customer-service voice"
+  },
+  {
+   "name": "Exit Greeter (Trainee)",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": "6f806954174d4df18b2225e25fe0c97d",
+   "note": "The junior goblin greeters with the leader at the fake EXIT; 'has a quota and a dream'.",
+   "npc_id": "NPC-010",
+   "type": "Mob",
+   "voice_cue": "Squeaky, eager young goblin intern; overexcited"
+  },
+  {
+   "name": "Proctor Bell",
+   "aliases": [],
+   "floors": [
+    1,
+    2
+   ],
+   "fish_voice_id": "190fab3282be4b97bf07c272c86814e2",
+   "note": "Floor 1 trainer: a painted wooden fortune-teller automaton in a glass booth on ceiling rails; sells 1-credit hints. F2 is a GM callback / cracked booth only.",
+   "npc_id": "NPC-011",
+   "type": "Guide / Trainer",
+   "voice_cue": "Music box with a head cold; clacking jaw, creaky, faux-cheerful, slightly menacing (\"little lambs\")"
+  },
+  {
+   "name": "Pudding",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": null,
+   "note": "Optional Assigned Companion for 2-Crawler tables: a mastiff in a tiny mortarboard who belongs to nobody.",
+   "npc_id": "NPC-012",
+   "type": "Companion (optional)",
+   "voice_cue": "Silent/non-verbal - optional (barks only)"
+  },
+  {
+   "name": "Snakk-Matic",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": "4bf4ce10de7d4d66ad76b2892a1de311",
+   "note": "The cheerful vending terminal in the Break Room and Green Room; sells potions and an unlisted spare key; goes dark on Day 4.",
+   "npc_id": "NPC-013",
+   "type": "Vendor (terminal)",
+   "voice_cue": "Bright, upbeat commercial jingle voice; slightly shady salesman under it"
+  },
+  {
+   "name": "Tanya Ruiz",
+   "aliases": [],
+   "floors": [
+    1
+   ],
+   "fish_voice_id": "2a06753e3e974cdb885efa1516fc7473",
+   "note": "A crawler who died before the party arrived; her lore-scrap note is the only way she 'speaks'.",
+   "npc_id": "NPC-014",
+   "type": "Civilian (dead crawler)",
+   "voice_cue": "Tired, scared young woman in scrubs; shaky, trying to be brave (optional: only if her note is read aloud)"
+  },
+  {
+   "name": "Bazaar Vendor",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "7a9b1110fd7f4fa1887bdfa5079f0556",
+   "note": "Generic Rec-Hall Bazaar stall vendor with limited stock (the F2 'named district vendors' are not named yet); a static sigil hides behind one stall.",
+   "npc_id": "NPC-015",
+   "type": "Vendor",
+   "voice_cue": "Smiling street hawker; 'smiles like a trap'"
+  },
+  {
+   "name": "Cascadia",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "f87090c0a468403abaa2a45c9d038ff4",
+   "note": "The show's floor announcer on Floor 2; cheerful corporate notices padding bad news, stern only about bathrooms. Her notices currently play in the System voice.",
+   "npc_id": "NPC-016",
+   "type": "Showrunner / Announcer",
+   "voice_cue": "Falsely chipper store-manager woman; salesy, condescending, secretly burnt out"
+  },
+  {
+   "name": "Guide",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "b080dc966de544b99b3000c6fde1788e",
+   "note": "Cheerful Floor 2 guide offering a 'free route map' with unread fine print (Guide Contract); the debt bites on F4 and is called on F9.",
+   "npc_id": "NPC-017",
+   "type": "Guide",
+   "voice_cue": "Smiling, too-friendly timeshare salesman; smooth, fast talker"
+  },
+  {
+   "name": "Krakaren Clone",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "f4594f5451c048fe85841c94e879a940",
+   "note": "Floor 2 Neighborhood Boss: a screaming tentacled octopus copy (not the original) that bursts out of its chamber; the twist is unmasking it.",
+   "npc_id": "NPC-018",
+   "type": "Boss",
+   "voice_cue": "Many screaming human mouths at once; wet, layered, unhinged"
+  },
+  {
+   "name": "Laminak Rev-Up Consultant Elite",
+   "aliases": [
+    "Laminak Elite"
+   ],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "93f710d21a81401da8fd24bbab88494f",
+   "note": "Leaf-suited sprite 'managers' above the clurichauns in the Rev-Up scheme; scream for their manager Damien when dying.",
+   "npc_id": "NPC-019",
+   "type": "Mob (elite, salesy)",
+   "voice_cue": "Shrill tiny upper-management sprite; corporate buzzwords, panicky"
+  },
+  {
+   "name": "Meadow Lark Resident",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "62b231e6e8634ce79230250ae105ba9c",
+   "note": "Frail elderly residents in the Day 9 wheelchair convoy (individual names still to be written); one row for the group.",
+   "npc_id": "NPC-020",
+   "type": "Civilian (group)",
+   "voice_cue": "Elderly, frail, cranky-to-sweet grandparent voices"
+  },
+  {
+   "name": "Mexx-55",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "31b75b9706564dc0857f569dbe637936",
+   "note": "Frisbee-shaped greeter robot with one blue light in the optional Death Watch studio trailer.",
+   "npc_id": "NPC-021",
+   "type": "System robot",
+   "voice_cue": "Soothing, flat female robot voice; calm, polite"
+  },
+  {
+   "name": "Prince Maestro",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "120cda36aac04eb8bf93a815622aff6a",
+   "note": "Boar-like orc host of the optional Death Watch game show (pages call him 'the host'); cruel, egotistical, calls Crawlers meat.",
+   "npc_id": "NPC-022",
+   "type": "Showrunner / Host",
+   "voice_cue": "Loud, bullying alien talk-show host; grunting, thin-skinned, tantrums"
+  },
+  {
+   "name": "Qwist",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "a1a5a2ac57a5499c81bc610b082aadf9",
+   "note": "Bopca Protector who runs the Big Shot Chicken saferoom: cooks, fusses over guests, sells pet biscuits at markup. The most-talked-to F2 NPC.",
+   "npc_id": "NPC-023",
+   "type": "Saferoom host / Vendor",
+   "voice_cue": "Fussy, motherly, clucky little caretaker; warm, worried, 'have you eaten?'"
+  },
+  {
+   "name": "Rage Elemental",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": null,
+   "note": "Avoidable punishment spawn summoned if a Crawler relieves themselves outside a bathroom or saferoom; likely kills everyone.",
+   "npc_id": "NPC-024",
+   "type": "Trigger spawn (boss-level)",
+   "voice_cue": "Silent/non-verbal - optional (roars)"
+  },
+  {
+   "name": "Ralph the Frenzied Gerbil",
+   "aliases": [
+    "Ralph"
+   ],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": null,
+   "note": "Absurdly cute gerbil pit-fighter of the kobold dog pound whose mouth opens impossibly wide; survives being swallowed.",
+   "npc_id": "NPC-025",
+   "type": "Boss",
+   "voice_cue": "Non-verbal (squeaks, shrieks); Silent/non-verbal - optional"
+  },
+  {
+   "name": "Unvaccinated Clurichaun Rev-Up Consultant",
+   "aliases": [
+    "Clurichaun"
+   ],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "03397b4c4be74759b72533b663fbd001",
+   "note": "Sniffly goblin-like bottom-tier sellers in the Rev-Up moonshine pyramid scheme; their hits block healing.",
+   "npc_id": "NPC-026",
+   "type": "Mob (salesy)",
+   "voice_cue": "Congested, sniffly MLM hustler; pushy pitch, Irish-ish drunk lilt"
+  },
+  {
+   "name": "Zev",
+   "aliases": [],
+   "floors": [
+    2
+   ],
+   "fish_voice_id": "59c0430ad3384646bcdbb5fbf8f2e964",
+   "note": "Show liaison/producer in a bubbling water helmet who reports the elderly-escort storyline is playing well.",
+   "npc_id": "NPC-027",
+   "type": "Showrunner / Producer",
+   "voice_cue": "Nervous, friendly young producer; bubbly, slightly gurgly"
+  },
+  {
+   "name": "Hedge Appraiser",
+   "aliases": [],
+   "floors": [
+    3
+   ],
+   "fish_voice_id": null,
+   "note": "Village appraiser on Floor 3 who shrugs at the Odd Coin.",
+   "npc_id": "NPC-028",
+   "type": "Civilian (foreshadowed)",
+   "voice_cue": "Unimpressed rural old-timer; slow, dry"
+  },
+  {
+   "name": "Low Chapel Bishop",
+   "aliases": [],
+   "floors": [
+    3,
+    9
+   ],
+   "fish_voice_id": null,
+   "note": "The village chapel's bishop on Floor 3 who turns up at court on Floor 9.",
+   "npc_id": "NPC-029",
+   "type": "Faction (foreshadowed)",
+   "voice_cue": "Soft-spoken clergyman who grows grand and political"
+  },
+  {
+   "name": "Village Elder",
+   "aliases": [],
+   "floors": [
+    3
+   ],
+   "fish_voice_id": null,
+   "note": "Elder of the Floor 3 villages (Wellspring / Millroad / Low Chapel), the people Crawlers first meet.",
+   "npc_id": "NPC-030",
+   "type": "Civilian (foreshadowed)",
+   "voice_cue": "Weathered, careful village elder; warm but wary"
+  },
+  {
+   "name": "Village Saint",
+   "aliases": [],
+   "floors": [
+    3,
+    9,
+    12
+   ],
+   "fish_voice_id": null,
+   "note": "The harvest saint the Benefactor crest is mistaken for on F3; an icon on F9; sits on a throne of storms on F12.",
+   "npc_id": "NPC-031",
+   "type": "Faction / Deity (foreshadowed)",
+   "voice_cue": "Gentle folk-saint who becomes thunderous and divine"
+  },
+  {
+   "name": "Customs Officer",
+   "aliases": [],
+   "floors": [
+    6
+   ],
+   "fish_voice_id": null,
+   "note": "Collects customs fees at the Floor 6 dock saferooms and customs houses.",
+   "npc_id": "NPC-032",
+   "type": "Civilian (foreshadowed)",
+   "voice_cue": "Bored, stamp-happy bureaucrat"
+  },
+  {
+   "name": "Dock Appraiser",
+   "aliases": [],
+   "floors": [
+    6
+   ],
+   "fish_voice_id": null,
+   "note": "Floor 6 dock appraiser who offers a number for the Odd Coin that is wrong on purpose.",
+   "npc_id": "NPC-033",
+   "type": "Vendor (foreshadowed)",
+   "voice_cue": "Slick, sly harbor fence; low and smiling"
+  },
+  {
+   "name": "Licensed Hunter",
+   "aliases": [],
+   "floors": [
+    6,
+    9,
+    11
+   ],
+   "fish_voice_id": null,
+   "note": "Licensed outsiders who hunt Crawlers from Floor 6; knights or outlaws on F9; possible named duel on F11.",
+   "npc_id": "NPC-034",
+   "type": "Hunter (foreshadowed)",
+   "voice_cue": "Cocky professional hunter; calm, predatory"
+  },
+  {
+   "name": "Sponsor",
+   "aliases": [],
+   "floors": [
+    6,
+    9,
+    18
+   ],
+   "fish_voice_id": null,
+   "note": "Rich patrons in skyboxes who shop for Crawlers and pets on F6, hold court seats on F9 and paid for an ending on F18.",
+   "npc_id": "NPC-035",
+   "type": "Sponsor (foreshadowed)",
+   "voice_cue": "Oily, wealthy, bored aristocrat; condescending"
+  },
+  {
+   "name": "Echo Self",
+   "aliases": [],
+   "floors": [
+    8,
+    16
+   ],
+   "fish_voice_id": null,
+   "note": "Memory echoes wearing a Crawler's face on Floor 8; mirror versions may climax on Floor 16.",
+   "npc_id": "NPC-036",
+   "type": "Mob (foreshadowed)",
+   "voice_cue": "Distorted, slightly-off copy of a Crawler's own voice"
+  },
+  {
+   "name": "Chapel God",
+   "aliases": [],
+   "floors": [
+    12
+   ],
+   "fish_voice_id": null,
+   "note": "The Low Chapel's god, physically present on the Olympus floor.",
+   "npc_id": "NPC-037",
+   "type": "Deity (foreshadowed)",
+   "voice_cue": "Vast, resonant, ancient divine voice"
+  },
+  {
+   "name": "Auditor",
+   "aliases": [],
+   "floors": [
+    13
+   ],
+   "fish_voice_id": null,
+   "note": "Debt-vault auditors on Floor 13 'who smile with no mouth'.",
+   "npc_id": "NPC-038",
+   "type": "Mob (foreshadowed)",
+   "voice_cue": "Cold, polite, whispery accountant; no breath"
+  },
+  {
+   "name": "Auctioneer",
+   "aliases": [],
+   "floors": [
+    14
+   ],
+   "fish_voice_id": null,
+   "note": "Runs the Floor 14 reality-lot auction (implied by the lots and paddles; not named yet).",
+   "npc_id": "NPC-039",
+   "type": "Showrunner (foreshadowed)",
+   "voice_cue": "Rapid-fire auction chant; showman"
+  },
+  {
+   "name": "Choir Boss",
+   "aliases": [],
+   "floors": [
+    15
+   ],
+   "fish_voice_id": null,
+   "note": "Infernal choir bosses of Floor 15 who hold damned contracts.",
+   "npc_id": "NPC-040",
+   "type": "Boss (foreshadowed)",
+   "voice_cue": "Layered hymn-scream; choral, demonic"
+  },
+  {
+   "name": "Stagehand",
+   "aliases": [],
+   "floors": [
+    17
+   ],
+   "fish_voice_id": null,
+   "note": "Backstage crew under the broadcast grid on Floor 17 who know the exits Crawlers were never sold.",
+   "npc_id": "NPC-041",
+   "type": "Civilian (foreshadowed)",
+   "voice_cue": "Gruff, whispering union crew; tired, conspiratorial"
+  },
+  {
+   "name": "The Owners",
+   "aliases": [
+    "Owners"
+   ],
+   "floors": [
+    18
+   ],
+   "fish_voice_id": null,
+   "note": "The owner club at the Cage Bottom who run the Crawl, the final politics of Floor 18.",
+   "npc_id": "NPC-042",
+   "type": "Showrunner (foreshadowed)",
+   "voice_cue": "Smug, polished, ultra-rich; amused, quiet menace"
+  }
+ ]
+}

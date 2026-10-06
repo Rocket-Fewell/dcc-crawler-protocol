@@ -1,10 +1,10 @@
 # rules index
-Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
+Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-06
 
 
-- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.22.
-- rules/20-crafting-5e.md: crafting rules (tables, levels, ingredients, recipes, potion limits, explosives, failure, System snark, quick reference). Owner: Syndicate. Status: review v0.3.7 (all open questions answered by Caleb 2026-10-04 and applied; decision 013-crafting; workstation prices follow the F3-18 schedule in 9.1a, decision 030).
-- rules/30-species-supplement-5e.md: species supplement (Floor 3 Offer of starting species + two oddities, free optional rebuild, 12 DCC-style oddities tagged CANON / CANON-INSPIRED / HOUSE, balance table, open questions, source map). Owner: Syndicate. Status: draft v0.1.4.
+- rules/10-core-rules-5e.md: 5e (2024) overlay for the Crawl (achievements, loot boxes, death/revival, Floor 1 quickstart). Owner: Syndicate. Status: draft v0.2.24 (§4.1 floor-clear box on F1-2).
+- rules/20-crafting-5e.md: crafting rules (tables, levels, ingredients, recipes, potion limits, explosives, failure, System snark, quick reference). Owner: Syndicate. Status: review v0.3.8 (Hobgoblin Sapper Workshop Access pointer, decision 036; all open questions answered by Caleb 2026-10-04 and applied; decision 013-crafting; workstation prices follow the F3-18 schedule in 9.1a, decision 030).
+- rules/30-species-supplement-5e.md: species supplement (small tells on F1-2; Floor 3 Offer of starting species + two oddities, a background redo and two class options in one free optional rebuild; 17 DCC-style oddities tagged CANON / CANON-INSPIRED / HOUSE incl. Large Crawlers; Staying Human (Unbroken Original); balance table, open items, source map; decision 036). Owner: Syndicate. Status: draft v0.2.4 (class options approved).
 - rules/40-loot-deck-spec-5e.md: loot deck spec (JSON card + deck-file schema with credit_value and draw_weight, GM draw rules, Floor 1-2 starter 5e item reference, 5 sample cards, open questions). Owner: Syndicate. Status: draft v0.1.8.
 - rules/42-house-items-f01.md: final rules text, card JSON and Lore diff list for four house items not in SRD 5.2 (Cloak of Many Fashions, Pole of Collapsing, Mystery Key, Potion of Fire Breath) plus the Enhanced Pet Biscuit Story Box item. Owner: Syndicate. Status: draft v0.2.3.
 - rules/45-story-boxes-5e.md: Story Boxes (Legendary one-time-deed boxes on Floors 1-2): deed checklist, anti-farming, GM procedure, power ladder with 5 sample cards, spotlight guideline, looting/trading/death/resale rules, core amendment text, 1 open question, Changes for the room. Owner: Syndicate. Status: draft v0.2.4.

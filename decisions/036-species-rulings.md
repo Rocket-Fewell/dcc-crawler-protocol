@@ -33,6 +33,7 @@ Also: Felid forms, Caprid breeds and the Fairy subraces (Sprite, Wisteria) are c
 - Bloodbound Thirst: bottled blood doesn't count; Thirst Exhaustion caps at 3 and clears the moment the Crawler feeds.
 - Unbroken Original applies only to a starting Human who keeps Human, or a Crawler created as Human after Floor 3.
 - New species are numbered §4A until Lore's display-name table covers them (the checkers read `### 4.N` headings).
+- System skill caps (core §6.5.1, added 2026-10-06): the skill a Primal picks for its level 5 Blank Slate Expertise may train to 20 (canon R-075); Sasquatch gets no cap-20 family. Rules/10 v0.2.23 §6.5.1, rules/30 v0.2.1 §4A.1.
 
 ## Replaces
 Rules/30 v0.1.4 §6 questions 1-11, 13 and 14 (all closed); the v0.1 "species only" rebuild; the Blood Need drawback; the HOUSE reissue idea; character-creation §13 questions 3 and 11.
@@ -43,9 +44,9 @@ Rules/30 v0.1.4 §6 questions 1-11, 13 and 14 (all closed); the v0.1 "species on
 - decisions/INDEX.md (one line added).
 
 ## Open items
-- **Matching edits, not made here** (owners to apply): rules/10-core-rules-5e.md §7.1, §7.2, §7.3, §3 Heroic Inspiration row, §6.3, §6.5.1 (does Primal or Sasquatch get a cap-20 skill family?), §12 Q2-Q3; characters/character-creation-5e.md §7.1, §7.3, §10.3, §13 Q3 and Q11; rules/20-crafting-5e.md one-line pointer for the Hobgoblin workshop. Full list: rules/30 §1.4.
+- **Matching edits: done 2026-10-06** (Syndicate): rules/10-core-rules-5e.md v0.2.23 (§3.7, §6.3, §6.5.1, §7.1-7.3, §12 Q2-Q3), characters/character-creation-5e.md v0.2.6 (§3.5, §7.1, §7.3, §10.3, §13 Q3 and Q11), rules/20-crafting-5e.md v0.3.8 (§2.2 Hobgoblin workshop pointer), rules/30 v0.2.1 (§1.4 records them).
 - **Lore:** canon check on Primal, the four other new species, the 24 class-option names, and the "Bottom of the list" rule.
 - **Accountant:** balance check on Unbroken Original, Primal and the class-option Perks and Negatives.
-- **Lore and Caleb (decision 025):** display names for the five new species, the Fairy variants and the class options in tables/species-class-reskins.json; then renumber rules/30 §4A to 4.13-4.17, bump tools/tests/test_species_class_reskins.py counts (21→26 species, 61→66 with house) and fix the heading regex (it reads only the first word, so "Frost Maiden" would become "frost").
+- **Lore and Caleb (decision 025):** display names for the five new species and the Fairy variants: **done** 2026-10-06 (species-class-reskins v0.1.6, Caleb approved 10:06 AM CT). Syndicate ruling (rules/30 v0.2.3): §4A keeps its 4A.N numbering instead of moving to 4.13-4.17. Still to do: Cursor/Architect make tools/species_class_reskins.py read `### 4A.N Name` headings with multi-word names (as Lore's checker already does) and bump tools/tests/test_species_class_reskins.py counts (21→26 species, 61→66 with house); Lore names the class options once they settle.
 - **Architect:** fields for class options, background redo (base scores kept apart), Unbroken Original and Large size in the Offer Card, sheet and create flow; sync these live-file edits with tonight's nightly.
 - **Later decisions:** Floor 6 specialization for class options; canon Earth classes (Silver Earth Box, Hobby Potion); a gated Compensated Anarchist option; a Smush boon for the Sasquatch gate.

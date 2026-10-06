@@ -1,7 +1,7 @@
 # Crawler Creation
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species PROVISIONAL, Fan Profile hidden, Midterm Onboarding pointer; standard level track lives in Chapter 1 (core v0.2.21 / decision 033).
-Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–031, 033; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.21. Generated from: <<STAMP>>.
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2.1 | Updated: 2026-10-06
+Summary: Chapter 2 reconciled (assembled by drafts/gen-ch2-tables.py from drafts/02-crawler-creation.src.md; do not hand-edit the generated chapter file). Level 1 intake S1–S17 (S12 retired), Roll HOUSE 73+, SRD-only backgrounds and Origin feats in full, non-SRD appendix under reskin names, species final per decision 036 (small tells; Floor 3 rebuild covers species, background and a class option; details in Ch3), Fan Profile hidden, Midterm Onboarding pointer; standard level track lives in Chapter 1 (core v0.2.21 / decision 033).
+Sources (versions pinned): characters/character-creation-5e.md v0.2.5; characters/create-flow-spec-5e.md v0.1.13; tables/chargen-5e.json v0.1.6; decisions 018, 024, 026–031, 033, 036; rules/30-species-supplement-5e.md v0.2.1 (§2.0, §2.3, §3, §3.2a, §3.7); species-class-reskins v0.1.7; background-reskins v0.1.2; create-screens-reskins v0.1.3; rules/10-core-rules-5e.md v0.2.21 (§7 species re-checked against v0.2.23). Generated from: <<STAMP>>.
 
 <!-- BEGIN -->
 
@@ -21,7 +21,7 @@ This chapter builds a level 1 Crawler at that kiosk, one decision at a time. It 
 
 ## Before You Start
 
-**Creation is standard 5e (2024) character creation at level 1.** You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a private survey, and a story in which your species stays hidden until Floor 3. The System keeps a **Fan Profile** on every Crawler; players never see it and never set it (S12 is retired). Floor 1 later grants **Midterm Onboarding** (level 2 at the Green Room) — that is play, not creation. The rest of the standard level track (arrival bands, Floor 3 and Floor 9 end-boss bumps, Floor 18 at level 20) is in Chapter 1.
+**Creation is standard 5e (2024) character creation at level 1.** You choose a class, a background (which gives ability score increases and an Origin feat), a species, ability scores and equipment. Nothing is removed and nothing is simplified. The Crawl adds only paint and paperwork: a hostile customer-service tone, a few System names for things, a private survey, and a story in which your species barely shows until Floor 3. The System keeps a **Fan Profile** on every Crawler; players never see it and never set it (S12 is retired). Floor 1 later grants **Midterm Onboarding** (level 2 at the Green Room) — that is play, not creation. The rest of the standard level track (arrival bands, Floor 3 and Floor 9 end-boss bumps, Floor 18 at level 20) is in Chapter 1.
 
 **Time.** Plan on about 20 minutes per Crawler. A table of new players should plan on 45. Everyone can build at once, because each player works alone.
 
@@ -97,7 +97,7 @@ Your **pronouns** are optional: he/him, she/her, they/them, or something you typ
 
 Two lines, both required.
 
-- **Look:** what you look like *now*, in whatever you were wearing when the world ended. Everyone on Floors 1 and 2 looks baseline human. Species features (horns, tails, scales) stay out of the look, or you can keep them as a costume.
+- **Look:** what you look like *now*, in whatever you were wearing when the world ended. Everyone on Floors 1 and 2 looks human, give or take a small tell the GM describes. Species features (horns, tails, scales) stay out of the look, or you can keep them as a costume.
 - **Hook:** one sentence on why you are still funny or dangerous.
 
 Keep each to a line. Good hooks name a habit or a fear, not a power.
@@ -110,13 +110,9 @@ Keep each to a line. Good hooks name a habit or a fear, not a power.
 
 On confirmation the System assigns you a cosmetic **Intake Tag**, such as `CRAWLER #0417-K` (four digits and a letter), used on every Floor 1 popup. The tag has no mechanical effect. Until Floor 3, your sheet reads **Broadcast Name: PENDING**. We return to the handle in the Backstory section.
 
-## Species (S5) {{PROVISIONAL}}
+## Species (S5)
 
-::: provisional Species Rules Pending
-The species rules are waiting on rulings from the book's owner. The nine species and 24 lineages below are stable. The wording of the Floor 3 reveal and rebuild is not.
-:::
-
-Your species is your **Latent Biology**. You pick it at level 1 for balance. All of its traits work from your first session. The System files those traits as **quirks** with a mundane-sounding explanation, and everyone, including you, looks baseline human on Floors 1 and 2. {{HOUSE}} On Floor 3, the **Identity Market** opens: your body visibly becomes your species, with no change to the numbers.
+Your species is your **Latent Biology**. You pick it at level 1 for balance. All of its traits work from your first session. The System files those traits as **quirks** with a mundane-sounding explanation, and everyone, including you, looks human on Floors 1 and 2, apart from **small tells** the GM describes now and then: a too-sharp canine, ears that twitch at sounds, warm eyes in the dark. Tells have no mechanics. {{HOUSE}} On Floor 3, the **Identity Market** opens: your body visibly becomes your species, unless you take the System up on its offer to become something else. Chapter 3 covers tells, the Identity Market and what each species is like in the Crawl.
 
 You choose from the **nine SRD species** below. Each is shown the way the kiosk shows it: **Our Name (5e Name)**. The first word is the nationality the System has decided you are; the word in parentheses is the 5e species whose rules you use. All the real rules live under the parenthesized name.
 
@@ -145,11 +141,11 @@ Biology Anomaly (Logged). You can see in the dark. We've noted it. We've noted *
 
 ### Reflections and Rumors
 
-Mirrors in the Orientation Pit flicker for a frame (a horn, an ear, a tail-shaped shadow) and the camera always cuts away. If you ask why you have darkvision, the System says your file is under review. Quirks do not explain themselves; they just work.
+Mirrors in the Orientation Pit flicker for a frame (a horn, an ear, a tail-shaped shadow) and the camera always cuts away. Your small tells get a glance and nothing more. If you ask why you have darkvision, the System says your file is under review. Quirks do not explain themselves; they just work.
 
 ### The Floor 3 Offer (a Pointer)
 
-At the Identity Market on Floor 3, the System offers every Crawler a **one-time rebuild**: you may swap your species and/or your background, and redistribute your background increases. Class and level do not change. The Offer also puts a few extra species on the table. Those species do **not** appear in /create, and this chapter does not describe them. They belong to the Floor 3 Offer section of Chapter 3.
+At the Identity Market on Floor 3, the System offers every Crawler a **free, one-time rebuild** on a private card. You may keep your species or take one of **two oddities** the System picks for you; redo your **background** (its ability increases, skills, tool and Origin feat); and take a **class option** built on the class you already have. Your level, your base ability scores and your class itself never change, and nothing ever reopens the Offer. A Human who stays Human gains **Unbroken Original**. The oddities do **not** appear at intake. Chapter 3 describes the Offer, the rebuild and every oddity.
 
 ## Class (S6)
 

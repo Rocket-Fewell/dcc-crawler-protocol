@@ -99,7 +99,7 @@ FISH_MODEL=s2.1-pro                   # optional
 * **Models** (`FISH_MODEL`, sent as the `model` header): `s2.1-pro` (default; Fish's recommended production model), `s2.1-pro-free` ($0 for testing/small use, no latency guarantees), `s2-pro`, `s1`. Docs say an omitted/unknown model falls back to `s2.1-pro`.
 * **Streaming / latency:** the bot reads Fish's chunked HTTP response as a stream and hands it to ffmpeg while it is still arriving, so playback starts on the first audio bytes instead of after the whole chunk is generated. `FISH_LATENCY=balanced` (default) trades a little quality for speed; use `low` for fastest, `normal` for best quality. Default format is `mp3` (44.1 kHz, 128 kbps); `opus` (48 kHz) and `wav` are also accepted. ffmpeg is still required.
 * **Billing & limits (per Fish docs, 2026-10-03):** billed per **UTF-8 byte** of input text, $15 per million bytes on paid models (~12 hours of speech per million bytes); `s2.1-pro-free` is $0. Concurrency limits, not per-minute limits: 5 simultaneous requests (<$100 prepaid), 15 (>=$100), 50 (>=$1000). Over the limit the API returns HTTP 429 with no `Retry-After`; the bot retries with backoff (500 ms, 1 s, 2 s). HTTP 401 = bad key, 402 = no balance (not retried). `TTS_PREFETCH` (default 2) keeps the bot well inside the 5-request starter tier.
-* Expression tags: `s1` uses `(parenthesis)` emotion tags; the S2 family accepts natural-language expression control in text (see Fish's Emotion Control docs). The bot only strips Markdown, so such tags pass through to Fish. Tag syntax is model-specific: test before relying on it. Avoid `[...]` at the *start of a line* in GM output, because the bot reads those as `[SYSTEM]/[GM]/[ROLL]` tags.
+* Expression tags: `s1` uses `(parenthesis)` emotion tags; the S2 family accepts natural-language expression control in text (see Fish's Emotion Control docs). The bot only strips Markdown, so such tags pass through to Fish. Tag syntax is model-specific: test before relying on it. Avoid `[...]` at the *start of a line* in GM output, because the bot reads those as `[SYSTEM]/[GM]/[ROLL]/[NPC: Name]` tags.
 
 ## TTS usage log and credit tracking
 
@@ -199,6 +199,7 @@ Messages in `GM_OUTPUT_CHANNEL_ID` may tag lines to choose who speaks them. **De
 | `[GM] text` | Spoken in the **narrator** voice: **snarky** (achievement banner **and** mocking description, loot-box callouts/openings, all jokes and color) |
 | *(no tag)* | Narrator voice (same as `[GM]`) |
 | `[ROLL] text` | **Never spoken** (dice math, mechanics bookkeeping) |
+| `[NPC: Name] text` | Spoken in **that NPC's own Fish Audio library voice** from `<campaign>/tables/npc-voices.json` (see *NPC voices* below). Unknown NPC or no voice id: narrator voice. |
 
 Rules:
 * Tags are matched **per line**, case-insensitively, at the **start** of a line. Leading whitespace and markdown such as `**[SYSTEM]**` or `> [GM]` is tolerated; an optional `:` after the tag is stripped. A tag in the middle of a line (`He said [SYSTEM] aloud`) is plain text.
@@ -207,6 +208,7 @@ Rules:
 * The tag is **stripped** before speaking. Tag-looking lines inside ``` code fences are ignored (code is never spoken anyway).
 * Message text and each embed (if `TTS_READ_EMBEDS=true`) are parsed independently, so a `[ROLL]` in the body doesn't silence an embed.
 * Voice order is preserved: `[SYSTEM] a` / `[GM] b` / `[SYSTEM] c` plays a, b, c in that order, each in its own voice.
+* **`[NPC: Name]`** works like the other tags (start of line, carries over until the next tag). The name is matched case-insensitively with punctuation and extra spaces ignored (`[NPC: snakk matic]` = `Snakk-Matic`), against the entry's name or any alias. Go back to `[GM]` for narration after an NPC line. The rules-note safety net still applies inside an NPC segment (an untagged `Rules note: ...` line is System voice, then the NPC resumes). A stray `[NPC: ...]` in the middle of a line is removed before speaking, so Fish never bills the tag.
 
 Example message:
 ```
@@ -217,6 +219,35 @@ Reward: one (1) lukewarm box.
 [GM] Carl kicks the door open. The goblin inside looks up, deeply offended.
 ```
 speaks the clock line in the System voice, skips the roll, and speaks the achievement and narration as the narrator.
+
+### NPC voices (`[NPC: Name]`, Fish only)
+
+Every NPC can have its own Fish Audio **library** voice (library voices don't use account voice slots). The map lives at `<campaign>/tables/npc-voices.json` (campaign root from `DCC_CAMPAIGN_ROOT`/`DCC_CAMPAIGN_DIR` via `src/paths.js`; `NPC_VOICES_FILE` overrides). Entry: `{ "name", "aliases": [], "floors": [], "fish_voice_id": "<32 hex>" | null, "note" }` plus optional `npc_id`, `type`, `voice_cue`, `fish_voice_name`. The bridge loads it at startup (`npc-voices: N entries ...` in the log) and **re-reads it when it changes**, so no restart is needed after an import.
+
+* No entry, or `fish_voice_id` null: the line is spoken in the narrator voice (logged once per NPC).
+* Fish refuses an NPC id (deleted or made private): that line is spoken by the narrator, a warning is logged, and the id is not retried for 30 minutes. Nothing is posted to Discord. Fix or replace the id in the sheet and re-import. Key/credit errors (401/402) are not hidden.
+* With `TTS_PROVIDER=openai|elevenlabs`, NPC lines use the narrator voice.
+* The GM narrator and System voices stay on `FISH_VOICE_ID_NARRATOR` / `FISH_VOICE_ID_SYSTEM`; their rows in the casting sheet are skipped.
+
+**Import** Caleb's filled casting sheet (`.xlsx` or `.csv`; the input is only read, never changed):
+```
+npm run npc-voices:import -- <file.xlsx|file.csv> --dry-run   # report only
+npm run npc-voices:import -- <file.xlsx|file.csv> --check     # also GET https://api.fish.audio/model/<id> per id (FISH_API_KEY from env; never printed)
+npm run npc-voices:import -- <file.xlsx|file.csv>             # write tables/npc-voices.json (--out FILE to write elsewhere)
+```
+Headers are matched loosely (case/punctuation ignored); the first sheet that has a name and a Fish id column is used:
+
+| Column | Header examples | Use |
+|---|---|---|
+| Name (required) | `Name`, `NPC name` | canonical tag name: `[NPC: <Name>]` |
+| Fish voice id (required column, cells may be blank) | `Fish Voice ID`, `Voice id` | 32 hex chars, or a fish.audio URL containing it; blank = narrator |
+| Floors | `Floor(s)`, `Floors` | `F1, F2`, `F1-F3`, `All` |
+| Note | `Who/what`, `Notes`, `Description` | who the NPC is |
+| Aliases (optional) | `Aliases`, `AKA` | extra tag names, separated by `,` or `;` |
+| Voice cue (optional) | `Voice notes`, `Voice cue` | casting hint, kept for reference |
+| Type, NPC ID, Fish Voice Name (optional) | as named | kept for reference |
+
+Ignored: `Same floor as`, `Source`, anything else. Rows for the narrator and System (`GM Narrator`, `The System`, or Type containing "already assigned") are skipped. Short aliases are generated for long names when no other NPC owns them: a leading "The" is dropped (`The Owners` -> `Owners`), "X the Y" gives X (`Bruiser the Mascot` -> `Bruiser`), and job-title filler words (`Rev-Up`, `Consultant`, `Unvaccinated`) are dropped from names of 3+ words (`Laminak Rev-Up Consultant Elite` -> `Laminak Elite`, `Unvaccinated Clurichaun Rev-Up Consultant` -> `Clurichaun`). The report lists imported rows, blank ids, invalid ids (not 32 hex; imported without an id), duplicate names (later rows ignored), generated aliases and aliases dropped because another NPC owns the name. Exit code 2 if there are invalid ids, duplicates, or `--check` failures.
 
 **Length limits** (after tags and markdown are stripped): messages are split at sentence boundaries into chunks of at most `TTS_CHUNK_MAX_CHARS` (default **600**; a single sentence longer than that is split at commas/spaces). The total spoken text per message is hard-capped at `TTS_MAX_MESSAGE_CHARS` (default **1500**); anything beyond is dropped, cutting at the last complete sentence that fits (a warning is logged). Chunks stay sentence-sized for low latency rather than being packed up to the maximum.
 

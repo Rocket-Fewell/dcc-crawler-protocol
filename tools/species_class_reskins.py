@@ -55,12 +55,15 @@ def _load(path):
 
 
 def house_species(campaign=CAMPAIGN):
-    """The Floor 3 oddities: '### 4.N Name' headings of rules/30-species-supplement-5e.md (same rule as Lore's checker)."""
+    """The Floor 3 oddities: '### 4.N Name' headings of rules/30-species-supplement-5e.md, plus the decision 036 Offer
+    options under '### 4A.N Name' (names may have spaces, e.g. Frost Maiden). Same rule as Lore's checker."""
     try:
         text = open(os.path.join(campaign, "rules", "30-species-supplement-5e.md"), encoding="utf-8").read()
     except OSError:
         return []
-    return [s for s in re.findall(r"^### 4\.\d+ ([A-Za-z]+)", text, re.M) if s != "Common"]
+    out = [s for s in re.findall(r"^### 4\.\d+ ([A-Za-z]+)", text, re.M) if s != "Common"]
+    out += [s for s in re.findall(r"^### 4A\.\d+ ([A-Za-z][A-Za-z ]*?)\s*(?:\(|$)", text, re.M) if s not in out]
+    return out
 
 
 def required_ids(tables=TABLES, campaign=CAMPAIGN):

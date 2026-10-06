@@ -1,7 +1,7 @@
 # Skills and Achievements
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2 | Updated: 2026-10-06
-Summary: Chapter 5. Ability checks, the 18 SRD 5.2 skills with Crawl examples, proficiency and Expertise, passive checks, group checks, contests, check-calling actions, tools; System skills (general skill track per decision 037: rank-ups from meaningful use, first-time feats, inventive crafting, potions or guild training; GM-granted, no counters; cap 15, or 20 for a species or class family; +1 at ranks 5/10/15; crafting skills, Cockroach Clause); achievements (notability, timing, toast, R0-R6 ladder, Titles, credit multiplier, achievement box tiers by floor, rarity ceilings, hidden Fan Profile tailoring, fair play), Crawl Charms and Blessings, 72 sample achievements (Any / Floor 1 / Floor 2). No pets, no Story Box deeds or list, no Fan Profile fields, no survey, no GM quirk/affinity, no budget totals.
-Sources: decision 037 (general System skill track); rules/10-core-rules-5e.md v0.2.22 (§1.1, §2.5.1, §2.5.5, §2.5.6, §3.1-3.9, §4.1-4.2, §4.4, §4.8, §6.5, App. A-C); rules/40-loot-deck-spec-5e.md v0.1.9 (§2.2, §2.4, §2.9); rules/70-encounter-budget-5e.json v0.2.6 (floors.1.achievement_rewards, floors.2.boxes.f2_box_rulings); rules/20-crafting-5e.md v0.3.7 (§1, §3); tables/achievements.csv v1.4 (1,835 rows); create-screens-reskins v0.1.3 (ability display names; skill names stay plain); lore CANON-LEDGER v1.20 (M-008, M-009/S-001; skill track via Lore's Q19 note: M-059, K-070, K-057, K-079, K-064, M-807, M-045, I-011, K-071, K-078, A-143; A-034, A-044, A-047, A-131, A-136, A-139, A-151), lore catalog/skills.md v1.0, mechanics-clarifications §3; SRD 5.2 (CC-BY-4.0).
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2.1 | Updated: 2026-10-06
+Summary: Chapter 5. Ability checks, the 18 SRD 5.2 skills with Crawl examples, proficiency and Expertise, passive checks, group checks, contests, check-calling actions, tools; System skills (general skill track per decision 037: rank-ups from meaningful use, first-time feats, inventive crafting, potions or guild training; GM-granted, no counters; cap 15, or 20 for a species or class family (Hobgoblin traps and explosives; a Primal's Blank Slate skill); +1 at ranks 5/10/15 and +4 at rank 20 for a family skill; crafting skills, Cockroach Clause); achievements (notability, timing, toast, R0-R6 ladder, Titles, credit multiplier, achievement box tiers by floor (replacement Crawler's Silver late-entry box is compensation, exempt from the Floors 1-2 Bronze rule), rarity ceilings, hidden Fan Profile tailoring, fair play), Crawl Charms and Blessings, 72 sample achievements (Any / Floor 1 / Floor 2). No pets, no Story Box deeds or list, no Fan Profile fields, no survey, no GM quirk/affinity, no budget totals.
+Sources: decision 037 (general System skill track); decision 036 (Primal Blank Slate cap 20); rules/10-core-rules-5e.md v0.2.23 (§1.1, §2.5.1, §2.5.5, §2.5.6, §3.1-3.9, §4.1-4.2, §4.4, §4.8, §6.3, §6.5, §6.5.1, App. A-C); rules/40-loot-deck-spec-5e.md v0.1.9 (§2.2, §2.4, §2.9); rules/70-encounter-budget-5e.json v0.2.6 (floors.1.achievement_rewards, floors.2.boxes.f2_box_rulings); rules/20-crafting-5e.md v0.3.7 (§1, §3); tables/achievements.csv v1.4 (1,835 rows); create-screens-reskins v0.1.3 (ability display names; skill names stay plain); lore CANON-LEDGER v1.20 (M-008, M-009/S-001; skill track via Lore's Q19 note: M-059, K-070, K-057, K-079, K-064, M-807, M-045, I-011, K-071, K-078, A-143; A-034, A-044, A-047, A-131, A-136, A-139, A-151), lore catalog/skills.md v1.0, mechanics-clarifications §3; SRD 5.2 (CC-BY-4.0).
 
 <!-- BEGIN -->
 
@@ -9,7 +9,7 @@ Sources: decision 037 (general System skill track); rules/10-core-rules-5e.md v0
      - Achievements as System notifications that reward, mock or warn: lore catalog/achievements.md (WIKI-ONLY overview; individual A- rows mostly VERIFIED wiki cites).
      - Box tiers Bronze..Celestial: ledger L-001 VERIFIED. Boxes open only in saferooms: L-002 VERIFIED. Semi-random contents: L-003 VERIFIED.
      - Skills level by use: lore mechanics-clarifications 3.1 (WIKI, HIGH). Skills generally cap at 15: ledger M-008 VERIFIED (page cite B2 ch2). Cockroach: M-009 / S-001 VERIFIED.
-     - System skill track (decision 037, core v0.2.22): sources are canon-shaped, per Lore's Q19 note (all VERIFIED): train by use, potions or a training guild M-059; first-time feat grants a skill K-070, K-057; inventive crafting raises several K-079, K-064; hard or clever use pays extra M-807; Skill Potion +1 M-045; Cheat Code Potion +3 random I-011; class/race bonus K-071; cap 15 M-008, 20 for a race/class family K-078 (Hobgoblin traps/explosives); past 15 in real fights A-143 (achievement name printed per decision 037). Pace (no counters, GM-granted, next safe point) and the +1 at ranks 5/10/15: HOUSE.
+     - System skill track (decision 037, core v0.2.22): sources are canon-shaped, per Lore's Q19 note (all VERIFIED): train by use, potions or a training guild M-059; first-time feat grants a skill K-070, K-057; inventive crafting raises several K-079, K-064; hard or clever use pays extra M-807; Skill Potion +1 M-045; Cheat Code Potion +3 random I-011; class/race bonus K-071; cap 15 M-008, 20 for a race/class family K-078 (Hobgoblin traps/explosives); past 15 in real fights A-143 (achievement name printed per decision 037). Pace (no counters, GM-granted, next safe point) and the +1 at ranks 5/10/15: HOUSE. +4 at rank 20 for a family skill (core v0.2.23 6.5.1; Syndicate confirmed the bonus stacks +1/+2/+3/+4): HOUSE. Primal Blank Slate skill counts as a family skill (core v0.2.23 6.5.1, decision 036 Syndicate ruling). Late-entry Silver box is compensation (core 6.3), not an achievement box.
      - Reward ladder R0-R6, credit multiplier, achievement box tiers by floor, Charms, Blessings, Cockroach Clause tiers and prices: HOUSE (campaign core rules), Cockroach Clause CANON-INSPIRED.
      - Sample achievement names are the campaign catalog's own (HOUSE) except those marked with a dagger, which echo canon achievement shapes (A-034, A-047, A-131, A-136, A-139 VERIFIED; A-151 WIKI-ONLY; A-044 VERIFIED). No canon achievement text is reproduced. -->
 
@@ -415,16 +415,17 @@ System skills sit on your sheet under **Skills**, each with a rank. They don't r
 Skill up! Lockpicking is now rank 5. The door you were working on has filed a complaint.
 :::
 
-**Caps.** A System skill tops out at **rank 15**. A skill in your species' or class's own family can climb to **rank 20**: a Hobgoblin's traps and explosives, for example. Pushing a skill past 15 the hard way, through real fights, is a very rare achievement: **You now tread in the realm of gods.** {{INSPIRED}}
+**Caps.** A System skill tops out at **rank 15**. A skill in your species' or class's own family can climb to **rank 20**: a Hobgoblin's traps and explosives, for example, or the skill a Primal picks for Blank Slate (Chapter 3). Pushing a skill past 15 the hard way, through real fights, is a very rare achievement: **You now tread in the realm of gods.** {{INSPIRED}}
 
-**What a rank does.** Each rank widens what the skill can do, and the GM tells you what the new rank opens up. At **ranks 5, 10 and 15** the skill also adds **+1** to d20 checks made with it, so the bonus stacks to +3. {{HOUSE}}
+**What a rank does.** Each rank widens what the skill can do, and the GM tells you what the new rank opens up. At **ranks 5, 10 and 15** the skill also adds **+1** to d20 checks made with it, so the bonus stacks to +3. A family skill that reaches **rank 20** adds one more, for **+4**. {{HOUSE}}
 
 | Rank | Bonus to d20 checks with the skill |
 |---|:---:|
 | 1–4 | +0 |
 | 5–9 | +1 |
 | 10–14 | +2 |
-| 15–20 | +3 |
+| 15–19 | +3 |
+| 20 (family skill only) | +4 |
 
 The crafting skills and the Cockroach Clause below are System skills with their own short rank scales. Where their rules say something different, their rules win.
 
@@ -577,6 +578,7 @@ When an achievement pays a loot box (R5), the box's tier depends on how big the 
 | Legendary | R5–R6 | Bronze | Gold | Platinum | Legendary box or Headliner, within the caps |
 
 - **Achievement boxes on Floors 1–2 are Bronze.** Silver there comes only from the Boss Box, or from a GM override with a stated reason. Expect about two or three achievement boxes per Crawler per floor; this is a soft guideline, and the System may pay another for a great moment.
+- **Late-entry compensation isn't an achievement box.** The Silver loot box a replacement Crawler brings to the table (Chapter 1) is compensation for joining late, not an achievement reward, so the Floors 1–2 Bronze rule doesn't apply to it.
 - **The floor's ceiling always wins.** If an achievement names a box above what the floor allows, the System pays the highest tier the floor allows instead. No Platinum boxes are awarded on Floors 1–8.
 - **Every box is named for the deed** that earned it, and the System reads the name aloud: a *Bronze Stabbed the Vending Machine Box*, a *Silver Technically Alive, Spiritually Gone Box*. Cheap boxes get short jabs. Expensive ones get long, breathless, insulting names.
 - **Boxes open only in a saferoom**, all of them at once, lowest tier first. A box is bound to the Crawler who earned it. What comes out is ordinary loot. Chapter 6 covers the rest.
@@ -820,7 +822,7 @@ The best achievements are the ones nobody planned. When the table laughs, gasps 
 | Group check | At least half succeed, everyone succeeds |
 | Contest | Higher total wins; a tie changes nothing |
 | Tool + skill | Advantage when you're proficient in both |
-| System skills | +1 rank for meaningful use, a first-time feat, inventive crafting, a potion or guild training; GM grants it, no counters; cap 15 (20 for your species' or class's family); +1 to checks at ranks 5, 10, 15 |
+| System skills | +1 rank for meaningful use, a first-time feat, inventive crafting, a potion or guild training; GM grants it, no counters; cap 15 (20 for your species' or class's family); +1 to checks at ranks 5, 10, 15, and +4 at rank 20 for a family skill |
 | Achievements | The System decides; many pay nothing; never XP; no requests |
 | Reward ladder | R0 snark · R1 pocket change · R2 Heroic Inspiration · R3 consumable · R4 Charm · R5 box · R6 Headliner |
 | Credit multiplier | Achievement credits and System fees × 1 / 5 / 20 / 50 by floor band; box credit pulls never |

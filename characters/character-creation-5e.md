@@ -1,5 +1,5 @@
-# 03 — Character Creation (5e Intake) v0.2.5
-Owner: Syndicate | Status: draft | Version: 0.2.5 | Updated: 2026-10-04
+# 03 — Character Creation (5e Intake) v0.2.6
+Owner: Syndicate | Status: draft | Version: 0.2.6 | Updated: 2026-10-06
 Summary: How the System runs 5e 2024 character creation (intake) for crawlers, including table setup (Death Mode, comfort) and the crawler sheet template.
 Source: crawler-protocol/03-character-creation-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -172,7 +172,7 @@ The System asks three things, one line each:
 
 ### 3.5 Species = Latent Biology
 
-Covered fully in §7. Pick a species legally at level 1 for balance; the crawler looks baseline human on F1–2; traits work and are described as quirks.
+Covered fully in §7. Pick a species legally at level 1 for balance; the crawler looks human on F1–2 with small tells; traits work and are described as quirks.
 
 ### 3.6 Ability scores
 
@@ -338,9 +338,9 @@ Explain once: extradimensional inventory like a *Bag of Holding* (500 lb / 64 cu
 ### 7.1 Rules (from `02` §7.2–7.3)
 
 - Choose a species **mechanically at level 1** (2024 PHB / SRD 5.2, per `02` §7.1). All traits work from session 1.
-- **Everyone looks baseline human on Floors 1–2.** No horns, tails, scales, wings, or size change on camera. (Size is still mechanically the species' size; a halfling is Small and the System's chyron calls them "compact.")
+- **Everyone looks human on Floors 1–2, with small tells** of their species that the GM describes subtly (a too-sharp canine, ears that twitch at sounds, warm eyes in the dark). The tells have no mechanics (decision 036; `rules/30-species-supplement-5e.md` §2.0). No horns, tails, scales, wings, or size change on camera. (Size is still mechanically the species' size; a halfling is Small and the System's chyron calls them "compact.")
 - **Traits are "quirks"** with a mundane-ish explanation the System narrates and is visibly bored by.
-- **F3 identity market:** the species **manifests** (body visibly becomes the species; no mechanical change). **One free rebuild** (swap species and/or background, redistribute background increases; same level, same class). **Official Class Title** with the level-3 subclass.
+- **F3 Offer** (`rules/30-species-supplement-5e.md` §2, decision 036): a private Offer Card, result announced. **One free, optional rebuild** that covers the **species** (keep the starting species or take one of two oddities; the chosen species manifests and an oddity changes species traits; staying Human gains Unbroken Original, rules/30 §4B), a **background redo** (rules/30 §3.2a) and **one class option** on the same class (rules/30 §2.9). Same level; the class itself never changes; no reissue later. **Official Class Title** with the level-3 subclass, or the class option's name if one is taken.
 - **Later teases** (F8 Echo Self, F13 Ledger Name, F16 mirror splits) are reskin/story layers unless a floor doc says otherwise.
 
 ### 7.2 Quirk translations (examples; species from SRD 5.2)
@@ -362,6 +362,7 @@ If the 2024 PHB adds species beyond the SRD, use the same pattern.
 ### 7.3 The tease (how the System plays it on F1–2)
 
 - When a quirk fires the first time, toast it as a **"Biology Anomaly (Logged)"**, R0 by default. Never explain.
+- **Small tells (decision 036):** now and then, describe one subtle tell of the crawler's species (per-species list: `rules/30-species-supplement-5e.md` §2.0). Nobody on camera comments, and the tells have no mechanics. Humans have none; that is their tell.
 - Mirrors and reflective surfaces in the Orientation Pit **flicker** for a frame: a horn, an ear, a tail-shaped shadow. The System's camera always cuts away. No mechanics.
 - If a player asks why they have darkvision: "*Your file is under review.*"
 - If the table chose a species for a joke, the System knows, and will be insufferable about it on F3.
@@ -517,13 +518,13 @@ Two players, Costly Revives (campaign default, already logged), `COMFORT=Ludicro
 | Situation | Ruling |
 |-----------|--------|
 | Player wants a non-SRD species/class but the table doesn't own the 2024 PHB | SRD 5.2 only (`02` §7.1). Offer the closest SRD option as a reskin; the F3 identity market can revisit. |
-| Player wants to *look* like their species now | Default no (`02` §7.2, latent). Owner question in §13. The System may allow a *partial* tell ("weirdly pointy ears, nobody comments"). |
+| Player wants to *look* like their species now | No full look before F3 (`02` §7.2). Small tells only, no mechanics (decision 036; `rules/30-species-supplement-5e.md` §2.0): "weirdly pointy ears, nobody comments." |
 | Homebrew species/class | Owner approval only (`02` §7.1). |
 | Multiclassing at intake | Not possible at level 1 (5e). |
 | Feats | Origin feat from background (and Human's Versatile), per 5e 2024. |
 | Player wants starting magic items | No (§6.5). |
 | Player builds a crawler around the running gag | Allowed, but the System picks the gag. It may pick a *different* one out of spite. |
-| Replacement crawler mid-floor | Same intake, compressed (see the next paragraph for a player's other Crawlers). Level, gear, and late-entry Silver box per `02` §6.3. Fresh Fan Profile. Run the questionnaire. |
+| Replacement crawler mid-floor | Same intake, compressed (see the next paragraph for a player's other Crawlers). Level, gear, and late-entry Silver box per `02` §6.3. Fresh Fan Profile. Run the questionnaire. **After the Floor 3 Offer** (decision 036): the replacement picks **any Offer option at creation** (any SRD species, Human with Unbroken Original, or any oddity, gates apply; plus the Keep class or either class option for their class); no Offer runs later (`rules/30-species-supplement-5e.md` §2.8). |
 | Player answers questionnaire as their crawler vs as themselves | Either is fine; the System asks once which, and treats crawler answers as canon. |
 
 **Several Crawlers per player (v0.2.2 pointer).** A player may create more than one Crawler, but only one is **active**; the others are **benched** on file (no slot, credits, XP, loot or trades). The active Crawler is locked for the whole session and can change only at session zero or between sessions, never mid-session, not even in a safe room. A Crawler that dies is replaced from the player's benched Crawlers at the next between-session window, with level and gear per `02` §2.3 and §6.3. Each Crawler gets its own sheet channel `#<player>-<crawler>`, and a player can remove one of their own with `/delete` (the active Crawler not while a session is open). Full rules, tool requirements and checklists: `characters/create-flow-spec-5e.md` §8 and `decisions/020-multiple-crawlers-active-swap.md` (Syndicate defaults, Caleb may override; the session lock, layout and `/delete` are Caleb's). Intake itself is unchanged: each Crawler runs the same steps.
@@ -622,7 +623,7 @@ The **Fan Profile** and **opt-outs** are **not** on the player-visible sheet. Th
 
 1. **Questionnaire length:** six core questions plus up to two bonus OK, or trim to four for speed?
 2. **Questionnaire transparency:** players are never told answers feed loot. Keep it hidden, or tell them up front ("the System is listening") for the fun of paranoia?
-3. **Visible species:** keep everyone baseline human on F1–2 (`02` §7.2), or allow small tells (ears, eye color) from the start? (Mirrors `02` §12 Q3.)
+3. **Visible species:** RESOLVED (Caleb, 2026-10-06, decision 036): small tells on F1–2, human-looking overall, no mechanics; see §7.1 and §7.3. (Mirrors `02` §12 Q3, also closed.)
 4. **Rolling stats:** RESOLVED (Caleb, 2026-10-04, decision 024): Roll is a third method, on by default; see §3.6.
 5. **Pending Handle:** is a Requested Handle + audience nickname on F1 the right way to "plant" the Broadcast Name without breaking `02` §5.1's F3 unlock? Should the F3 choice (request vs audience vs mash-up) be the player's, or the System's?
 6. **Intake Tag format** (`CRAWLER #0417-K`): fine, or do you want a different ID style?
@@ -630,7 +631,7 @@ The **Fan Profile** and **opt-outs** are **not** on the player-visible sheet. Th
 8. **The foot bit:** audience segment only, or should it become a named F6 sponsor with a rider?
 9. **"Your mom" bonus question:** keep, or drop as too likely to hit a real nerve?
 10. **Pre-built concepts** for new players (§8.1): want me to write a set of 12 (one per class) as an appendix?
-11. **Rebuild on F3:** current rule is one free species/background swap. Should a class swap also be allowed for players who hated their Provisional Class?
+11. **Rebuild on F3:** RESOLVED (Caleb, 2026-10-06, decision 036): no swap to a different class; the free rebuild offers two **class options** on the crawler's current class (named DCC classes built on a subclass, with a Perk and a Negative), plus the species choice and a background redo. See §7.1 and `rules/30-species-supplement-5e.md` §2.9.
 12. **Late arrivals:** compressed intake while others start Lesson 0, OK?
 
 ---
@@ -643,6 +644,7 @@ The **Fan Profile** and **opt-outs** are **not** on the player-visible sheet. Th
 | v0.2.3 | 2026-10-04 | §3.6: **Roll** added as a third ability-score method (three arrays of 4d6 drop lowest, keep ONE array totalling 73+, reroll all three if none qualifies, every die logged, assign freely, switch `create.allow_roll` default ON; decision 024); step 6 name, `SCORES:` line, sheet template line, checklist and Open Q4 follow. Standard array and point buy unchanged. |
 | v0.2.4 | 2026-10-04 | Book Author stale-text fixes (rulings already made): "Credits = GP" reworded (credits is the display label for GP, 1 credit = 1 GP, copper per core §5.10); player-facing "gold" becomes "credits" (class and background options, step 7, sample dialogue); Floor 1 Reprieve is ON by default for Season Zero Floor 1 (tables may turn it off) and never covers a collapse death; Detour Tax is only for a missed Stairwell key; background packages named (Cardboard Carton From Your Desk (Package A), Severance Envelope, Unmarked (Package B)); rules base pointer updated; Roll threshold wording "73 or more" with its source (verified: decision 024, chargen-5e.json keep_min_total 73, bot ROLL_MIN_TOTAL 73). No number changed. |
 | v0.2.5 | 2026-10-04 | §6 credits line: whole credits only, sp/cp are list prices, buy rounds up and sell-at-half rounds down per line (core v0.2.16 §5.10). |
+| v0.2.6 | 2026-10-06 | Decision 036 follow-ons (core v0.2.23 §7, rules/30 v0.2.1): §3.5 and §7.1 Crawlers look human with small tells on F1–2 (no mechanics); §7.1 F3 rebuild covers species, a background redo and one class option on the same class (rules/30 §2.9), no reissue, class option name as Official Class Title; §7.3 new small-tells bullet; §10.3 "look like their species" row and replacement row (after Floor 3, pick any Offer option at creation); §13 Q3 and Q11 resolved. No intake step or number changed. |
 
 ---
 

@@ -25,6 +25,7 @@ import { GmOutputBridge, createTtsProvider } from './tts.js';
 import { GmWakeNotifier } from './wake.js';
 import { VoiceSession } from './voice.js';
 import { PlayerRoles, createVoiceGuard, detectMembersIntent, formatReport } from './roles.js';
+import { NpcVoiceMap, npcVoicesFile } from './npcvoices.js';
 
 let config;
 try {
@@ -76,8 +77,12 @@ const client = new Client({
 const roles = new PlayerRoles({ config, membersIntent: membersIntent.enabled, logger: log.child('roles') });
 
 const session = new VoiceSession({ logger: log.child('voice') });
-const provider = config.tts.enabled ? createTtsProvider(config) : null;
+// [NPC: Name] voices: <campaign>/tables/npc-voices.json, loaded now and re-read whenever it changes (no restart after an import).
+const npcVoices = new NpcVoiceMap({ file: npcVoicesFile(config.campaign.dir), logger: log.child('npc') }).load().watch();
+log.info(`npc-voices: ${npcVoices.summary()}`);
+const provider = config.tts.enabled ? createTtsProvider(config, { npcVoices, logger: log.child('tts') }) : null;
 if (provider) log.info(`TTS provider: ${provider.name}`);
+if (provider && config.tts.provider !== 'fish' && npcVoices.size) log.warn('npc-voices: NPC voices need TTS_PROVIDER=fish; NPC lines use the narrator voice');
 if (config.tts.enabled && config.tts.provider === 'elevenlabs' && config.tts.elevenlabs.systemVoiceFallback) {
   log.warn('ELEVENLABS_SYSTEM_VOICE_ID not set: [SYSTEM] lines will use the narrator voice');
 }
@@ -372,6 +377,7 @@ async function shutdown(signal) {
     stt.detach();
     wake.stop();
     voiceControl?.stop();
+    npcVoices.unwatch();
     fishBalance?.stop();
     session.leave();
     await client.destroy();

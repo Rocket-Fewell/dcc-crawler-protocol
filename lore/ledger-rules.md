@@ -1,5 +1,5 @@
 # Canon Ledger Rules
-Owner: DCC Lore | Status: review | Version: 1.17 | Updated: 2026-10-06
+Owner: DCC Lore | Status: review | Version: 1.18 | Updated: 2026-10-06
 Summary: How every future pass must append to CANON-LEDGER.md: one dated entry per finding, with an exact quote and a source tag.
 
 The ledger is `CANON-LEDGER.md` in this folder (reachable as `lore/CANON-LEDGER.md` from the campaign workspace). It is the master "hard memory" of DCC canon. This file is the full procedure; section 0 of the ledger is the short version.
@@ -22,18 +22,18 @@ The ledger is `CANON-LEDGER.md` in this folder (reachable as `lore/CANON-LEDGER.
 6. Run `python3 tools/ledger_check.py` from the lore folder. It must report `failures: 0`. Fix any quote it rejects.
 7. **Do not re-run `tools/ledger_build.py` over a ledger that has had manual appends.** It writes to `work/ledger-rebuild.md` by default. Only pass `CANON-LEDGER.md` as the output path for the initial build.
 
-## 2. ID prefixes and the next free ID (as of 2026-10-06, Pass 36)
+## 2. ID prefixes and the next free ID (as of 2026-10-06, Pass 37)
 | Prefix | Section | Last used | Next free |
 |---|---|---|---|
 | A- | 1 Achievements | A-190 | A-191 |
-| M- | 2 Mechanics rulings (also sec 13–17 process; sec 9.1 Floor 1 creatures/hazards; sec 9.2 Floor 2 rules/creatures/NPCs; sec 9.3 premise verification; sec 9.4 Floor 3; sec 9.5 Floor 2 refinement; sec 9.6 Floors 3–7 bestiary; sec 9.7 clubs and Personal Spaces; sec 9.8 quest system; sec 9.9 Floor 2 refinement II; sec 9.10 Floor 4-5 quests) | M-950 | M-951 |
+| M- | 2 Mechanics rulings (also sec 13–17 process; sec 9.1 Floor 1 creatures/hazards; sec 9.2 Floor 2 rules/creatures/NPCs; sec 9.3 premise verification; sec 9.4 Floor 3; sec 9.5 Floor 2 refinement; sec 9.6 Floors 3–7 bestiary; sec 9.7 clubs and Personal Spaces; sec 9.8 quest system; sec 9.9 Floor 2 refinement II; sec 9.10 Floor 4-5 quests; sec 9.11 Floor 6-10 quests) | M-995 | M-996 |
 | L- | 3 Loot box facts (also sec 13 examples) | L-023 (L-023 sits in sec 3 after L-020; L-021..L-022 are in sec 13) | L-024 |
 | L-B | 3b Loot box type index | (see table) | L-B76 (L-B01..L-B75 used) |
 | S- / P- / I- / C- / R- | 4a Skills / 4b Spells / 4c Items (I- also sec 13–14) / 4d Classes (C- also sec 12) / 4e Races (R- also sec 11) | S-018 / P-016 / I-035 / C-050 / R-081 | S-019 / P-017 / I-036 / C-051 / R-082 |
 | B- | 5 Bosses | B-030 | B-031 |
 | H- | 6 Characters (also sec 13–14 examples) | H-057 | H-058 |
 | T- | 7 Plot beats (also sec 13–14 examples) | T-073 | T-074 |
-| X- | 8 Conflicts / Unverified (X-054..X-056 live in sec 16.1, X-057..X-058 in sec 17.3, X-059..X-065 in sec 9.2c, X-066..X-075 in sec 9.3c, X-076..X-079 in sec 9.4c, X-080 in sec 9.5c, X-081..X-084 in sec 9.6b, X-085 in sec 9.7c, X-086 in sec 9.8c, X-087..X-088 in sec 9.9c, X-089 in sec 9.10c) | X-089 (X-A01..X-A21 are generated flags) | X-090 |
+| X- | 8 Conflicts / Unverified (X-054..X-056 live in sec 16.1, X-057..X-058 in sec 17.3, X-059..X-065 in sec 9.2c, X-066..X-075 in sec 9.3c, X-076..X-079 in sec 9.4c, X-080 in sec 9.5c, X-081..X-084 in sec 9.6b, X-085 in sec 9.7c, X-086 in sec 9.8c, X-087..X-088 in sec 9.9c, X-089 in sec 9.10c, X-090 in sec 9.11c) | X-090 (X-A01..X-A21 are generated flags) | X-091 |
 | K- (and X-C for crafting conflicts) | 10 Crafting | K-187 (X-C12) | K-188 (X-C13) |
 | R- (11.1 process, 11.2 per race) | 11 Races and Floor 3 race selection | R-081 | R-082 |
 | C- (12.1 process, 12.2 examples) | 12 Classes and Floor 3/6/9 class selection | C-050 | C-051 |

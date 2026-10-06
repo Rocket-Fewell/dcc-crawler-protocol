@@ -1,6 +1,6 @@
 # Quest System Canon
-Owner: DCC Lore | Status: review | Version: 0.2 | Updated: 2026-10-06
-Summary: How quests work in canon (Books 2-8): announcement, who gets them, quest types, quest box tiers, failure, the show-production lore, the Floor 3 quests and the Floor 4-5 quests. Mirrors ledger sections 9.8 (M-826..M-897, X-086) and 9.10 (M-916..M-950, X-089).
+Owner: DCC Lore | Status: review | Version: 0.3 | Updated: 2026-10-06
+Summary: How quests work in canon (Books 2-8): announcement, who gets them, quest types, quest box tiers, failure, the show-production lore, the Floor 3 quests, the Floor 4-5 quests and the Floor 6-10 quests. Mirrors ledger sections 9.8 (M-826..M-897, X-086), 9.10 (M-916..M-950, X-089) and 9.11 (M-951..M-995, X-090).
 
 Spoilers through Book 8. Sources are the local Fandom mirror (`raw/pages/Quest.txt`, `Quest Box.txt` and six quest pages); nothing here was checked against the novels. Ledger IDs in brackets. "HOUSE" lines are my suggestions for running it at the table, not canon.
 
@@ -92,3 +92,23 @@ Orthrus was the pet of Geyrun, Emberus's murdered son; three source families agr
 
 - HOUSE: the Floor 5 chain is a ready template for a set piece: protect-the-target group quest, then a counter-quest to every rival party, then a floor-wide joke penalty if nobody wins.
 - HOUSE: the reward-is-another-quest and the quadrant-wide side reward are cheap ways to make a quest feel big without adding loot.
+
+## 11. The Floor 6 to Floor 10 quests (Pass 37)
+| Quest | Floor | Given how | Objective | Reward / failure | IDs |
+|---|---|---|---|---|---|
+| The Recital | 6 | System AI, Point Mongo | Stop the dinosaur attacks: kill the threat, or find out what they want and give it to them | Gold box plus a free town upgrade. Performing the recital was not enough; it completed when Big Tina got her mother back (recap only) | M-951..M-953 |
+| (creeper world quest) | 6 | World quest | Kill 50 odious creepers before sunset | Failed; the punishment was the safe-room blood bar (recap only) | M-954 |
+| The Chowder War | 8 | Examining the monk seals; involuntary | Pick a side, seals or land crabs, and end the war | Platinum box. Updates escalate; Sister Ines moved it; ended "Quest Failed" and chained into the next quest | M-955..M-960, X-090 |
+| Hell Comes to Crawler Town | 8 | Replaces the Chowder War | Reach the stairs without being dragged into hell (demons ride zombie corpses) | Legendary box plus commemorative bagpipes | M-960..M-964 |
+| Pueblo de los Olvidados | 8 | Entering the Havana cemetery town; compulsory, locked in | Remove the Orisha behind the ghommid madness: repair his shrine, kill him, or kill everyone | Leave the town, settlement and shops reactivate, Silver box | M-965..M-969 |
+| Spiders | 8 | God quest from Eileithyia (not Carl's god) | Kill five spiders a day in her name until told to stop | Another boon, collected at her temple. Really a cover for messages from Huanxin Jinx | M-970..M-973 |
+| The Bedlam Bride | 8 to 9 | System AI after Carl meets Shi Maria; escort | Get Shi Maria to Larracos (and actually let her out) | "A simple prize"; ended Failed in Book 7 | M-974..M-976 |
+| The Missing Piece | 8 | Hybrid world quest, Cuba crawlers host | Part one (Cuba only, broadcast elsewhere): free and power up Amayon in ten minutes. Part two: survive the world-wide portal | Escape from the floor; failure means everyone without a key dies. Stand under a stairwell chamber to ride up | M-977..M-984 |
+| This is How the Gristle Grinds | 9 | Team quest, Princess Posse, no host, no opt-out | Win Faction Wars and get out before Emberus burns the floor (66 minutes or more) | One year off indenture at the first negotiation, "extra toasty" food boxes | M-985..M-988 |
+| Kill the Blasphemer | 9 | Emberus god quest | Kill a Hellik worshiper who insulted Emberus | Boon scales with how entertained he is; paid a Celestial Boon | M-989, M-990 |
+| Fuck my brother | 9 to 11 | Emberus god quest | Kill 100 Hellik worshipers before Floor 12 | Permanent Celestial-quality boon; finish it before Kill Hellik | M-991, M-992 |
+| I have dreamed thee too long | 10 | System AI to Carl and Donut; two parts | Reunite Dong Quixote with Corky, then find Porky and a fleshmancer | Two stand-ins of your choice sent to the Floor 11 Arena; NPCs will start dying in the races | M-993..M-995 |
+
+- HOUSE: Floor 8 shows the full range of quest shapes in one floor: a faction war that fails and turns into a survival quest, a lock-in dungeon with three solutions, a god quest that is secretly a message channel, an escort that outlives its target, and a world quest with regional timers.
+- HOUSE: "Find out what they want" quests can hide a wrong obvious answer (the Recital). Good for a GM twist that rewards players who ask questions.
+

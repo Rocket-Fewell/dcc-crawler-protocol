@@ -1,9 +1,9 @@
 # CR-by-Floor Encounter Difficulty Compendium (5e 2024)
-Owner: Syndicate | Status: **DRAFT** | Version: 0.2.0 | Updated: 2026-10-05
+Owner: Syndicate | Status: **DRAFT** | Version: 0.2.1 | Updated: 2026-10-06
 Summary: Per-floor expected party level, budgeted CR/XP bands and Continuum tone notes for Floors 1–18. A GM/Encounter Bot companion to `rules/70-encounter-budget-5e.json`. Numbers come from rules/70; Continuum tone from the floor bible and campaign narrative. No species invented here.
-Depends on: `rules/70-encounter-budget-5e.json` **v0.2.0** (XP budgets, CR caps, days, flag lines; the only source the Encounter Bot cites for those numbers), `rules/10-core-rules-5e.md` **v0.2.20** (§2.2 level track, §4.5 box pacing, §8.3 CR targets), `floors/04-floor-bible.md` **v0.4** (titles, Continuum ladder, seeds; creative draft), `floors/00-campaign-narrative.md` **v0.3** (spine; wins on Continuum structure), `floors/f01/` Day pages (Floor 1 only). Decisions 026, 028, Q-001 (clocks and missed-collapse death); decision 033 (F3/F9 double level bumps: arrive F4 at 5, F10 at 12, F18 at 20).
+Depends on: `rules/70-encounter-budget-5e.json` **v0.2.7** (XP budgets, CR caps, days, flag lines; the only source the Encounter Bot cites for those numbers), `rules/10-core-rules-5e.md` **v0.2.20** (§2.2 level track, §4.5 box pacing, §8.3 CR targets), `floors/04-floor-bible.md` **v0.4** (titles, Continuum ladder, seeds; creative draft), `floors/00-campaign-narrative.md` **v0.3** (spine; wins on Continuum structure), `floors/f01/` Day pages (Floor 1 only). Decisions 026, 028, Q-001 (clocks and missed-collapse death); decision 033 (F3/F9 double level bumps: arrive F4 at 5, F10 at 12, F18 at 20).
 
-> **Status:** DRAFT v0.2.0 (re-cut for decision 033). Budgets are **guidelines** (rules/70 authority note; Caleb 2026-10-04: the GM may adapt). Nothing here invents creatures, species Offers or Floor 2+ encounter lists.
+> **Status:** DRAFT v0.2.1 (re-cut for decision 033; v0.2.1 citation-only). Budgets are **guidelines** (rules/70 authority note; Caleb 2026-10-04: the GM may adapt). Nothing here invents creatures, species Offers or Floor 2+ encounter lists.
 > **Project:** *Crawler Protocol: Season Zero* — original fan RPG inspired by *Dungeon Crawler Carl*. Private play only.
 > **Address:** players are always **Crawlers**. Spelling: **saferoom**.
 > **Precedence:** core and decisions win on rules; campaign narrative wins on Continuum structure; rules/70 wins on XP/CR/credit numbers; this file only indexes and explains them.
@@ -347,6 +347,7 @@ When writing Continuum encounters, prefer **reskinned SRD** creatures and recurr
 
 | Version | Date | Notes |
 |---|---|---|
+| 0.2.1 | 2026-10-06 | Accountant, citation only: Depends-on now cites rules/70 v0.2.7. rules/70 v0.2.1–v0.2.7 changed only Floor 2 boxes, slot maps and provenance hashes, so no CR cap, XP budget, level or day count in this file moved. |
 | 0.2.0 | 2026-10-05 | Accountant re-cut for decision 033 / core v0.2.19: arrive levels F4–9 = N+1, F10–18 = N+2 (F4 at 5, F10 at 12, F18 at 20 cap, finale 19–20 removed). F4–F6 CR caps, XP and daily XP from rules/70 v0.2.0 (budget levels 5/6/7); F7–F18 core §8.3 ranges and per-Crawler XP shifted to the row/level matching the arrive level (levels 19–20 use row 18). F1–F3, days, flag lines, credits and boxes unchanged. |
 | 0.1.0 | 2026-10-05 | First DRAFT. Indexes rules/70 v0.1.11 CR/XP/days/flag lines for F1–18; Continuum tone from floor bible v0.4 and narrative v0.3; Floor 1 cites only filed SRD creatures. No species invented. Placeholders marked for F2+ modules and F7+ day counts. |
 

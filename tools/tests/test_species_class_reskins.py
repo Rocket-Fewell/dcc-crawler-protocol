@@ -63,7 +63,7 @@ class RequiredIds(unittest.TestCase):
         req = scr.required_ids()
         by = {r["id"]: r for r in req}
         kinds = [r["kind"] for r in req]
-        self.assertEqual((kinds.count("species"), kinds.count("species_lineage"), kinds.count("class"), kinds.count("class_option")), (21, 24, 12, 4))
+        self.assertEqual((kinds.count("species"), kinds.count("species_lineage"), kinds.count("class"), kinds.count("class_option")), (26, 24, 12, 4))
         self.assertEqual((by["elf-high"]["base_id"], by["elf-high"]["chargen_value"]), ("elf", "High Elf"))
         self.assertEqual(len([r for r in req if r["shown_in_create"]]), 49)
         for i in ("elf-high", "elf-drow", "gnome-rock", "dragonborn-black", "tiefling-infernal", "goliath-storm", "cleric-protector", "druid-warden", "wizard", "human", "raptorkin"):
@@ -119,7 +119,7 @@ class Check(Sandbox):
         self.assertEqual(rep["errors"], [])
         self.assertEqual(scr.main([]), 0)
         self.assertEqual(scr.main(["--strict"]), 1)
-        self.assertEqual(scr.check(tables=self.t, include_house=True)["required"], 61)
+        self.assertEqual(scr.check(tables=self.t, include_house=True)["required"], 66)
 
     def test_structure_errors_and_warnings(self):
         bad = {"schema": "nope", "entries": [ent("human", "species", "Human", "A"), ent("human", "species", "Human", "B"),

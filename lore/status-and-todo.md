@@ -491,3 +491,10 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - X-089 resolves the old single-source X-016: Orthrus was the pet of Geyrun, Emberus's murdered son (three families agree).
 - TODO 60: the Floor 6-10 quest pages (Recital, Chowder War, Hell Comes to Crawler Town, Pueblo de los Olvidados, Missing Piece, Spiders, Kill the Blasphemer, This is How the Gristle Grinds, Fuck my brother, I have dreamed thee too long, Bedlam Bride) are still unmined. TODO 59 still open.
 - Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
+
+## Pass 37 (2026-10-06, 12:3x PM CT, scheduled learning pass): Floor 6-10 quests
+- Closes TODO 60. New ledger section 9.11: M-951..M-995 (45 rows) and X-090. `catalog/quest-system-canon.md` v0.3 gains section 11 (per-quest table for Floors 6-10). Sources: the 11 Fandom quest pages named in TODO 60, YT:TKcMxF2dA3w and YT:QTk6BtBipPk (Book 5), YT:7Q49XeziMX0 (Book 6), YT:FurNY4o0uCo (Book 7), YT:kk6nspvVf_M (Book 8), FW2:book6-overview. ledger_check failures: 0. Ledger v1.21, ledger-rules v1.18.
+- X-090: the Chowder War's System status is "Quest Failed" (it chained into Hell Comes to Crawler Town); a recap calls it "completed". Preferred reading: failed, then chained.
+- TODO 61: M-953 (Recital completes on Big Tina's mother, not the recital) and M-954 (creeper world quest failure caused the blood bar) are recap-only; find a wiki page (Big Tina, Kiwi, Sixth Floor world quest) to lift them. TODO 59 still open.
+- Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
+

@@ -1,7 +1,7 @@
 # Classes and Backgrounds
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1 | Updated: 2026-10-05
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.1.1 | Updated: 2026-10-06
 Summary: Chapter 4. Twelve SRD classes under Crawl reskins with play guidance, Fighting Styles, four SRD backgrounds in full, non-SRD appendix under reskin names only. No pets, no Story Box deeds, no survey reprint.
-Sources: characters/character-creation-5e.md v0.2.5; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 026–031, 033; rules/10-core-rules-5e.md v0.2.21; SRD 5.2 (CC-BY-4.0).
+Sources: characters/character-creation-5e.md v0.2.5; tables/chargen-5e.json v0.1.6; species-class-reskins v0.1.5; background-reskins v0.1.2; create-screens-reskins v0.1.3; decisions 024, 026–031, 033, 036 (species pointers); rules/10-core-rules-5e.md v0.2.21; SRD 5.2 (CC-BY-4.0).
 
 <!-- BEGIN -->
 
@@ -1033,7 +1033,7 @@ Pick **+2 / +1** or **+1 / +1 / +1** among the three. Preview the final modifier
 3. **Preparing Ranger spells without noting Hunter's Mark is free.** It is always prepared.
 4. **Wizard preparing six spells instead of four.** Six live in the book; four are prepared.
 5. **Spending all credits at the Vending Wall and holding 0 with no ball bearings.** Legal, unwise.
-6. **Writing species tells into the Floor 1 Look.** Latent Biology stays quiet until Floor 3.
+6. **Writing species features into the Floor 1 Look.** You look human until Floor 3; the GM handles the small tells.
 7. **Asking for a Fan Profile reward.** Hidden. Survey notes are private. Customer Feedback is not a loot menu.
 8. **Planning to Long Rest in a hallway.** Saferoom only. Field fee does not equal rest.
 
@@ -1127,14 +1127,14 @@ Pick one. You get more later. Do not try to pick two at intake.
 
 ## Species Interactions (Pointer)
 
-Species rules are {{PROVISIONAL}} in Chapter 2. Class features do not change that. Notable mechanical nubs:
+Species rules are in Chapter 2 (picking one) and Chapter 3 (the Crawl, Floor 3 and the oddities). Class features do not change them. Notable mechanical nubs:
 
 - **Dwarven Toughness** adds +1 HP per level on top of class Hit Dice.
 - **Human Versatile** adds a second Origin feat from the **SRD four** only in this book.
 - **Elf Keen Senses** and **Human Skillful** add skills that may overlap class picks — the tool asks for a different skill if a duplicate appears.
 - Darkvision quirks are filed as mundane on Floors 1–2. They still work.
 
-Chapter 3 will expand species once Caleb's answers land. Until then, use Chapter 2's PROVISIONAL section.
+On Floor 3 the Identity Market can change your species and background and offer a class option on your current class; Chapter 3 has the details.
 
 ## Official Class Titles (Floor 3 Preview)
 
@@ -1192,7 +1192,7 @@ Until Floor 3, NPCs and the System treat your class as an accident. You still ge
 | Topic | Chapter |
 |---|---|
 | Intake screens S1–S17 | 2 |
-| Species (PROVISIONAL) | 2 / 3 |
+| Species | 2 / 3 |
 | Skills and achievements | 5 |
 | Gear, boxes, crafting prices | 6 |
 | Combat procedure | 8 |
