@@ -114,6 +114,11 @@ if os.path.exists(SUPP):
             for v_ in [x.strip() for x in par.split("/")]:
                 need.append((kid(sp_ + "-" + v_), "supplement %s variant %s" % (sp_, v_), v_))
     supp = [s for s in supp if s != "Common"]
+    # decision 036 Offer options: rules/30 section 4A ("### 4A.N Name", names may have spaces)
+    for nm in re.findall(r"^### 4A\.\d+ ([A-Za-z][A-Za-z ]*?)\s*(?:\(|$)", open(SUPP, encoding="utf-8").read(), re.M):
+        supp.append(nm.strip())
+    if "Fairy" in supp:
+        for v_ in ("Sprite", "Wisteria Fairy"): need.append((kid("fairy-" + v_.replace(" Fairy", "")), "decision 036 Fairy subrace " + v_, v_))
     for s in supp: need.append((kid(s), "supplement species " + s))
 else: W("species supplement not found: supplement coverage skipped")
 missing = 0
@@ -124,7 +129,7 @@ nsp = sum(1 for e in ents if e.get("kind") == "species")
 if os.path.exists(CHARGEN) and nsp != len(c["species"]) + len(supp): E("species count %d != chargen %d + supplement %d" % (nsp, len(c["species"]), len(supp)))
 for e in ents:
     if (e["id"], ) and e["id"] not in {n[0] for n in need} and need: I("entry %s is not in chargen/supplement (extra)" % e["id"])
-I("coverage: %d required ids, %d missing; species %d (expect 21), lineages %d, variants %d, classes %d, class options %d" % (len(need), missing, nsp, sum(e["kind"] == "species_lineage" for e in ents), sum(e["kind"] == "species_variant" for e in ents), sum(e["kind"] == "class" for e in ents), sum(e["kind"] == "class_option" for e in ents)))
+I("coverage: %d required ids, %d missing; species %d (expect 26), lineages %d, variants %d, classes %d, class options %d" % (len(need), missing, nsp, sum(e["kind"] == "species_lineage" for e in ents), sum(e["kind"] == "species_variant" for e in ents), sum(e["kind"] == "class" for e in ents), sum(e["kind"] == "class_option" for e in ents)))
 # ---- hash discipline (only on the live file)
 if len(sys.argv) == 1:
     if not os.path.exists(VER): E("species-class-reskins.version.json missing")

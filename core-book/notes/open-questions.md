@@ -1,9 +1,9 @@
 # Open Questions
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.4 | Updated: 2026-10-06
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.6 | Updated: 2026-10-06
 Summary: Open questions for Caleb / Syndicate arising from drafting. Each also appears as a [VERIFY] in the text where it matters.
 
 1. Final book title and cover. "Crawler Protocol: Season Zero - Core Rulebook" is a working title.
-2. Species rules (Ch2 S5 / Ch3, PROVISIONAL): Caleb answered on 2026-10-06, but no species decision (036+) was filed as of the Oct 6 session. Chapter 3 remains blocked until Syndicate files it.
+2. ~~Species rules (Ch2 S5 / Ch3, PROVISIONAL): no species decision filed.~~ **RESOLVED (decision 036, rules/30 v0.2.1):** species final. Ch2 PROVISIONAL box removed; Ch3 drafted (tells, Floor 3 Identity Market, Unbroken Original, rebuild covers species and background, 17 oddities). Class options locked (see Q24).
 3. Survivors who never entered, and Earth during the Crawl: unruled. The draft leaves it to the GM.
 4. Stairwell counts per floor: not fixed (Ch10). Only "fewer each floor" is printed.
 5. Day counts for Floors 7-18 unset (placeholders in budget). Not printed in Ch1 floor table.
@@ -25,6 +25,11 @@ Summary: Open questions for Caleb / Syndicate arising from drafting. Each also a
 21. **(Caleb)** Achievements appendix: PLAN lists an achievements appendix. Print the full catalog (1,835 rows) or only a curated player-safe list? Core §3.8 says players hunting catalog rows get snark, and many rows wire to floor encounters (spoilers). Ch5 prints 72 curated rows; recommendation is curated-only.
 22. ~~**(Syndicate, catalog owner)** Ch5 sample list renames seven generated-variant rows for print (ACH-0861 "Lost Initiative, Won Anyway", 0902 "Pay a Fine", 0905 "The Honest Option", 0899 "Share the Snacks", 0873 "Camera Shy", 0895 "Critical Failure", 0898 "Too Proud to Heal") and drops the "Orientation Pit:/Soft Open:" prefixes. OK, or should the catalog get these names? Generated variants with rarity outliers (catalog known gap) were left out.~~ **RESOLVED (core v0.2.22):** the seven print names are approved; left as printed.
 23. ~~**(Syndicate, rules)** Ch5 prints passive Investigation and passive Insight as a Crawl table convention (core §2.5.1, written for chat play) tagged HOUSE. Confirm it applies to face-to-face tables too.~~ **RESOLVED (core v0.2.22):** passive Perception, Investigation and Insight apply at every table (chat, voice or face to face). Ch5 Passive Checks now says so; no chat-only wording remains.
+24. ~~**(Lore + Accountant)** Floor 3 class options (Ch3, PROVISIONAL): the 24-option list is not printed.~~ **RESOLVED (rules/30 v0.2.2–0.2.3 O1/O2; species-class-reskins v0.1.7; Caleb approved all 24):** Ch3 prints all 24 as Our Name (5e Name); provisional tag dropped.
+25. ~~**(Lore)** Display names needed for Primal, Sasquatch, Frost Maiden, Fairy (and its Sprite / Wisteria Fairy variants) and Doppelganger; printed under plain names for now. Class options will need names too.~~ **RESOLVED (species-class-reskins v0.1.6, Caleb 2026-10-06 ~10:06 AM CT):** Tanzanian (Primal), American (Sasquatch), Greenlandic (Frost Maiden), English (Fairy), Danish (Sprite), Chinese (Wisteria Fairy), German (Doppelganger). Ch3 updated. Class options locked in v0.1.7 (Q24).
+26. **(Syndicate)** Hobgoblin gate (Explosives Handling 5) can't be met by the Floor 3 Offer under the skill track (rank 5 no earlier than Floor 4), so only the GM waiver works at the Offer. Intended? Lower the gate, or say so in the rule?
+27. **(Syndicate)** Sapper workshop "any honest saferoom" (rules/30, rules/20) vs "any saferoom" (036). Ch3 prints "any saferoom" with a false-saferoom note. Confirm.
+28. **(Syndicate)** Not printed pending a call: the "bottom of the list" Primal-on-request rule (Lore check O1), the GM oddity-selection procedure and party no-duplicates rule. Ch3 says only "the System picks offers it thinks suit you".
 
 
 Q19 canon input (Lore, 2026-10-06, ledger v1.20, all VERIFIED): skills train by use, potions or a training guild (M-059). A first-time feat can grant a new skill (K-070, K-057). Inventive crafting can raise several skills at once (K-079, K-064). Hard or clever use pays extra (M-807). Skill Potion +1 (M-045). Cheat Code Potion +3 to a random skill (I-011). Class/race bonuses or faster progression (K-071). Cap 15 (M-008), or 20 for a race/class skill family (K-078, Hobgoblin traps/explosives). Past 15 through real fights = A-143 (rare). No canon XP or uses-per-level table, so the pace is a house call for Syndicate. Forwarded to Syndicate. Ruled in decision 037 (see Q19).

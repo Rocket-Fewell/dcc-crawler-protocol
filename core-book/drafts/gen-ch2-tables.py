@@ -97,7 +97,7 @@ def t_species():
         traits = "; ".join(t.replace(" (", " (") for t in d["traits"])
         rows.append([lab(e), f'{d["size"]}, {d["speed"]} ft', traits, d["quirk"]])
     return table(["Our Name (5e Name)", "Size, Speed", "Traits (SRD 5.2)", "Floors 1-2 quirk"], rows,
-                 "Source: chargen-5e.json v0.1.6 and species-class-reskins v0.1.5. Dwarf, Elf and Orc darkvision as filed in the chargen table. Traits are named, not reprinted; use the SRD text.")
+                 f"Source: chargen-5e.json v{cg['meta']['version']} and species-class-reskins v{sc['meta']['version']}. Dwarf, Elf and Orc darkvision as filed in the chargen table. Traits are named, not reprinted; use the SRD text.")
 
 def t_species_flavor():
     out = []

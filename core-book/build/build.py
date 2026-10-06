@@ -143,7 +143,7 @@ def cover_html(version):
   <div class="art">{pyramid_svg()}</div>
   <h1 class="cover-title">Crawler Protocol<span>Core Rulebook</span></h1>
   <div class="subtitle">Eighteen floors. Fewer ways down each time.<br>A tabletop RPG of the Crawl, built on the 5e (2024) System Reference Document.</div>
-  <div class="byline"><b>Valtay Corp</b> &nbsp;·&nbsp; Draft v{version} &nbsp;·&nbsp; Chapters 1, 2, 4 &amp; 5</div>
+  <div class="byline"><b>Valtay Corp</b> &nbsp;·&nbsp; Draft v{version} &nbsp;·&nbsp; Chapters 1&ndash;5</div>
 </section>
 """
 

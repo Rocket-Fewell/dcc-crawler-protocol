@@ -1,5 +1,5 @@
 # Crawler Protocol: Season Zero — Core Rulebook
-Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2.1 | Updated: 2026-10-06
+Owner: Valtay Corp - Core Book Author | Status: draft | Version: 0.2.2 | Updated: 2026-10-06
 Summary: Copyright page, legal notice, SRD 5.2 attribution, tag legend and how-to-read page for the Core Rulebook.
 
 <!-- BEGIN -->
@@ -31,7 +31,7 @@ Three tags and one marker show up throughout this book. They tell you how much w
 
 ## Drafting Status
 
-This is **Draft v0.2** of the Core Rulebook. It contains Chapters 1, 2, 4 and 5 (Chapter 3 Species is blocked on PROVISIONAL rulings). Page numbers, chapter order and many cross-references will move as the other chapters are written. If a rule in this draft disagrees with a campaign decision filed by the rules team, the filed decision wins; please report the conflict.
+This is **Draft v0.2** of the Core Rulebook. It contains Chapters 1 to 5. Page numbers, chapter order and many cross-references will move as the other chapters are written. If a rule in this draft disagrees with a campaign decision filed by the rules team, the filed decision wins; please report the conflict.
 
 ::: system
 Welcome to the Crawl! Please keep your arms, legs and hopes inside the book at all times. The System is not responsible for dignity lost during reading.

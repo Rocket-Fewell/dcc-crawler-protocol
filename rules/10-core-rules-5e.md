@@ -1,5 +1,5 @@
-# 02 — Core Rules (5e Overlay) v0.2.22
-Owner: Syndicate | Status: draft | Version: 0.2.22 | Updated: 2026-10-06
+# 02 — Core Rules (5e Overlay) v0.2.24
+Owner: Syndicate | Status: draft | Version: 0.2.24 | Updated: 2026-10-06
 Summary: D&D 5e 2024 overlay for the Crawl: achievements, loot boxes, death/revival (Costly Revives default; every revive source labeled CANON / CANON-INSPIRED / HOUSE), saferooms, CR by floor, Floor 1 quickstart; pointer to the crafting module (`rules/20-crafting-5e.md`) with Personal Space, the 1-round potion cooldown, Table Tokens and the saferoom stash.
 Source: crawler-protocol/02-core-rules-5e.md (original kept; internal cross-references use the source file names, see rules/INDEX.md path map)
 
@@ -343,7 +343,7 @@ The **default** rarity of a meaningful drop, and the **peak** the System may han
 | Item | Budget | Notes |
 |------|--------|-------|
 | Achievement toasts | **6–12** | ~30–40% should be **R0 snark-only** |
-| Heroic Inspiration from achievements | ≤ 1 per session | Plus normal 5e sources (e.g., Human species) |
+| Heroic Inspiration from achievements | ≤ 1 per session | Plus normal 5e sources (e.g., Human species) and Unbroken Original (staying Human at the Floor 3 Offer: once per floor; `rules/30-species-supplement-5e.md` §4B) |
 | Consumables (R3) | 2–4 | Healing potions count |
 | Minor boons (R4) | 0–1 | Charms expire at descent unless noted |
 | Loot boxes (R5) | see §4.5 | Includes floor-clear and boss boxes |
@@ -393,7 +393,7 @@ Six tiers. Five are ordinary play; the sixth is a story event.
 | Box | 5e rarity of its headline item | Pulls | Typical source |
 |-----|--------------------------------|:-----:|----------------|
 | **Bronze** | Common (consumables, trinkets, mundane gear) | 1–2 | Common achievements, minor mobs, tutorial |
-| **Silver** | Uncommon | 2 | Rare achievements (Bronze on F1–2, §4.5), elites, floor clear F1–5 |
+| **Silver** | Uncommon | 2 | Rare achievements (Bronze on F1–2, §4.5), elites, floor clear F3–5 (on F1–2 the floor-clear reward is the Silver Boss Box; no separate floor-clear box) |
 | **Gold** | Rare | 2–3 (1 guaranteed Rare) | Legendary achievements F3–8 (on F1–2 achievement boxes are Bronze; Silver there only as the Boss Box or a logged GM override, §4.5), bosses F3+, floor clear F6–9 |
 | **Platinum** | Very Rare | 3 (1 guaranteed Very Rare) | Bosses F9+, Legendary achievements F9+ (no Platinum on F1–8, §4.5) |
 | **Legendary** | Legendary | 3 (1 guaranteed Legendary) | Final bosses F13+, spine payoffs, Legendary achievements F10+ (rare as hell) |
@@ -720,6 +720,7 @@ The base game is **5e 2024 as written**: **Death Saving Throws** (DC 10; three s
 - A new crawler joins at the **next saferoom** (or a natural fictional entry: late intake, Continuum recruit, sponsor-placed entrant, mirror-born duplicate on F16, etc.).
 - **Level:** the party's **lowest current level** (standard track: the floor band).
 - **Gear:** 5e starting equipment for their level per the 2024 DMG "starting at higher level" guidance, plus magic items: **one Common per prior floor** (max 4) and **one Uncommon per three floors** passed; nothing above the floor's *default* rarity. One **Silver box** as "late-entry compensation."
+- **Species and class options after Floor 3 (decision 036):** a replacement crawler created after the Floor 3 Offer **picks any Offer option at creation**: any SRD species, Human with Unbroken Original, or any oddity (gates apply; the DM may waive them as usual), plus the Keep class or either class option for their class. No Offer runs later. Details: `rules/30-species-supplement-5e.md` §2.8.
 - **No achievements carry over**; the new crawler gets a fresh Fan Profile.
 - The dead crawler's player keeps nothing mechanical, but the System **may** let a dead crawler's running gag haunt the party (the plushies keep showing up, addressed to a dead person).
 - **In Canon Hard, this is the only way back to the table.** In Costly Revives (the campaign default), revival is rare, so a replacement is the **expected** outcome; it is the fallback whenever the party has no Voucher or Rare Offer, hits a cap or cooldown (§6.4.1), or can't (or won't) pay. If the original crawler is revived later, the player picks which crawler to keep; the other becomes an NPC ally of the party, or retires with a toast.
@@ -911,6 +912,7 @@ These are optional safety nets for tables that want a longer leash than death sa
 
 - **Where ranks come from (canon, ledger v1.20):** meaningful use, especially hard or clever use (M-059, M-807). A first-time feat can grant a new skill at rank 1 or higher (K-070, K-057). Inventive crafting can raise several skills at once (K-079, K-064). A Skill Potion gives +1 (M-045); a Cheat Code Potion gives +3 to a random skill (I-011). Training guilds (M-059). Some classes and species give flat bonuses or faster progression (K-071).
 - **Cap:** rank **15** (M-008), or **20** for a species' or class's own skill family, e.g. Hobgoblin traps and explosives (K-078). Going past 15 through real fights is the very rare achievement A-143.
+- **Primal and Sasquatch (Syndicate ruling, decision 036):** the skill a Primal picks for its level 5 **Blank Slate** Expertise counts as its own skill family and may train to **20** (canon R-075: a Primal's higher-tier skills train to 20). Sasquatch gets **no** cap-20 family (its canon Smush and Bash bonuses are not ported). Species text: `rules/30-species-supplement-5e.md` §4A.1, §4A.2.
 - **House pace:** no use counters, no XP per skill, no grinding. The GM grants a rank when a use mattered, announces it in the System voice, applies it at the next safe point, and logs it.
 - **Effect:** a rank widens what the skill can do; the GM writes the scope, within the floor rarity ceiling (§3.6). It also adds **+1 to d20 checks** that use that skill at ranks **5, 10 and 15** (so +1, +2, +3), and **+4 at rank 20** for a family skill. Ranks never replace 5e proficiency.
 - **Own scales win:** crafting skills (`rules/20-crafting-5e.md` §3) and the Cockroach Clause (Tier 1 / Tier 2, above) keep their own rank scales, and those win wherever they differ from this general track.
@@ -1040,7 +1042,7 @@ When a crawler dies, the System may offer a collectible **Dead Crawler Card** wh
 ### 7.1 What's allowed
 
 - **2024 PHB species, classes, subclasses, backgrounds, and feats** are allowed if the table owns the book. Without the book, use **SRD 5.2** content only.
-- Other official 5e content: owner's call (§12). Homebrew species/classes: owner approval only.
+- Other official 5e content: owner's call (§12). Homebrew species/classes: owner approval only. The Floor 3 oddities, Staying Human (Unbroken Original) and the Floor 3 class options in `rules/30-species-supplement-5e.md` are approved as drafts for Caleb's markup (decisions 009 and 036).
 - Multiclassing and feats per 2024 rules.
 
 ### 7.2 Floor 1 intake = 5e character creation
@@ -1049,7 +1051,7 @@ The **Intake Kiosk** runs standard 2024 character creation (class, background, s
 
 - **Background** = who you were before the Crawl (Soldier → ex-military or security guard; Sage → grad student; Criminal → exactly what it sounds like; Acolyte → youth pastor; etc.). Mechanics unchanged.
 - **Class** = your **Provisional Class**: full 5e class features from level 1, but the System labels it "provisional" and it looks like improvised talent (a wizard's spellbook is a cracked phone app; a fighter's style is "fell into it").
-- **Species** = mechanically chosen at level 1 (for balance) but **latent**: everyone *looks* baseline human on Floors 1–2. Traits still work, explained as "quirks" (darkvision = "your pupils do a thing").
+- **Species** = mechanically chosen at level 1 (for balance) but **latent**: everyone looks human on Floors 1–2, with **small tells** of their species that the GM describes subtly (a too-sharp canine, ears that twitch at sounds, warm eyes in the dark). The tells have no mechanics (decision 036; `rules/30-species-supplement-5e.md` §2.0). Traits still work, explained as "quirks" (darkvision = "your pupils do a thing").
 - **Equipment** = 5e starting equipment, reskinned as junk and vending loot (a longsword is a sharpened sign post; it's still a longsword: 1d8 slashing, Sap mastery).
 - **Starting credits** = per 5e chargen choices.
 
@@ -1057,9 +1059,9 @@ The **Intake Kiosk** runs standard 2024 character creation (class, background, s
 
 At the rural Continuum (F3) the **identity market** opens:
 
-- **Species manifests**: the crawler's body visibly becomes their chosen species. No mechanical change.
-- **One free rebuild** (optional): each crawler may swap species and/or background (and redistribute background ability increases) once, at the F3 identity market. Same level, same class. Designed for players who now know what they want.
-- **Official Class Title**: the System "certifies" the class with a flashy DCC-style title (e.g., Fighter (Battle Master) → "Licensed Brawl Technician"). Pure flavor, but NPCs, sponsors, and Broadcast Name use it. This lines up with the level 3 subclass on the standard track.
+- **The Floor 3 Offer** (`rules/30-species-supplement-5e.md` §2): each crawler gets a private Offer Card, and the result is announced. It shows three species choices: keep the starting species, or take one of two oddities. The chosen species **manifests** (the body visibly becomes it), and an oddity changes the crawler's species traits. A crawler who stays Human gains **Unbroken Original** (rules/30 §4B).
+- **One free rebuild** (optional, once, at the Offer; decision 036): it covers the **species** (above), a **background redo** (a new background with its ability increases and Origin feat; rules/30 §3.2a) and **one class option** on the same class (a named DCC class built on a subclass of that class, with a Perk and a Negative; rules/30 §2.9). Same level; the class itself never changes. There is no reissue later (rules/30 §3.7). Designed for players who now know what they want.
+- **Official Class Title**: the System "certifies" the class with a flashy DCC-style title (e.g., Fighter (Battle Master) → "Licensed Brawl Technician"). Pure flavor, but NPCs, sponsors, and Broadcast Name use it. This lines up with the level 3 subclass on the standard track. A crawler who takes a class option uses that option's name as the title (rules/30 §2.9).
 - **Later identity teases** (F8 Echo Self, F13 Ledger Name, F16 mirror splits) are reskin and story layers unless a floor doc grants mechanics.
 
 ---
@@ -1225,6 +1227,8 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 | **v0.2.14** | 2026-10-04 | **Collapse clock (pointer only):** the §6.2 missed-collapse bullet now states the final collapse is at a fixed 24 in-game hours into the last day and that the GM keeps a running floor-hour count in the carry-on tracker (`floors/f01/00-overview.md` §2 rule 6, `gm-notes/40-floor1-run-sheet.md` §5). No other rule or number changed. |
 | **v0.2.15** | 2026-10-04 | **Book Author stale-text fixes (rulings already made):** (1) §5.8 rewritten to match decisions 026/028: a missed collapse is death on every floor, no Reprieve, no toll, credits and items destroyed with the floor, loot only while the floor stands, Detour Tax only for a missed Stairwell key; the old "dead or ejected per the floor doc" and "off by default on Floor 1" are gone. (2) Floor 1 Reprieve wording in §6.0, §6.2 and §6.8 now reads ON by default for Season Zero Floor 1, tables may turn it off, never applies to a collapse death (Caleb, 2026-10-04; `decisions/029-book-source-conflicts.md`). (3) §5.10 states that credits is the display label for GP and how copper (1 cp = 0.01 credit) is shown. No number or table changed. |
 | **v0.2.16** | 2026-10-04 | **Whole credits only (rules lead ruling, 2026-10-04):** §5.10 says balances are never fractional (matches `tools/state.py` and decision 028); sp/cp are list prices only (1 sp = 0.1, 1 cp = 0.01 credit, reference); the "0.5 credit, 0.05 credit" balance wording is removed; buying rounds UP per cart line (matches `bot/src/create/rules.js`), selling at half rounds DOWN per line (matches `tools/state.py` pet buyback). No price changed. |
+| **v0.2.24** | 2026-10-06 | **Floor-clear box on Floors 1–2 (Syndicate, with Accountant's rules/70 v0.2.7 check, 2026-10-06):** §4.1 Silver row now reads "floor clear F3–5"; on Floors 1–2 the floor-clear reward is the Silver Boss Box (one Silver per Crawler per floor, dropped only if the boss is fought or talked down), and there is no separate floor-clear box, Bronze or Silver. No budget number changed. |
+| **v0.2.23** | 2026-10-06 | **Species follow-ons (decision 036, Syndicate, 2026-10-06):** (1) §7.1: the Floor 3 oddities, Staying Human and class options in `rules/30-species-supplement-5e.md` are approved as drafts for markup (decisions 009 and 036). (2) §7.2: Crawlers look human with small tells on Floors 1–2; the tells have no mechanics. (3) §7.3: the Floor 3 Offer can change species traits; the one free rebuild covers species, a background redo and one class option on the same class (rules/30 §2.9); no reissue; a class option's name is the Official Class Title. (4) §3.7 pacing table Heroic Inspiration row: Unbroken Original added as a species source. (5) §6.3: a replacement created after Floor 3 picks any Offer option at creation. (6) §6.5.1: Syndicate ruling, Primal's level 5 Blank Slate Expertise skill may train to 20 (canon R-075); Sasquatch gets no cap-20 family. (7) §12 Q2 (homebrew species part) and Q3 closed. No number or table value changed beyond these. |
 | **v0.2.22** | 2026-10-06 | **Book Author Q19, Q20, Q23 answered (Syndicate, 2026-10-06):** (1) Q19: new §6.5.1 System skills level by use (decision 037): one rank at a time from meaningful use, first-time feats, inventive crafting, Skill and Cheat Code Potions, training guilds, and class or species bonuses; cap 15, or 20 for a species' or class's own skill family; no use counters, the GM grants, announces and logs each rank; +1 to d20 checks at ranks 5, 10 and 15 (+4 at 20 for a family skill); never replaces proficiency; crafting skills (rules/20 §3) and the Cockroach Clause keep their own rank scales and win where they differ; Caleb can veto. (2) Q20: achievement boxes on Floors 1–2 are Bronze (soft guideline about 2–3 per Crawler per floor, Caleb 2026-10-05); Silver on F1–2 is the Boss Box or a logged GM override; the one late-entry Silver box for a replacement Crawler (§6.3) is exempt, as it is not an achievement box. Wording aligned in §3.9, the §4.1 Silver and Gold rows, §4.5 and Appendix A. (3) Q23: §2.5.1 passive Perception, Investigation and Insight apply at every table (chat, voice or face to face); roll only when the outcome is uncertain and interesting. No number or table value changed. |
 | **v0.2.21** | 2026-10-05 | **Session turn order (Caleb, 2026-10-05; decision 034):** §2.5.1 rolls one Crawler turn order at session start and keeps it for exploration all session (replaces free-form posting order); joiners go last, dead/benched/AFK slots are skipped, pet-Crawlers act right after their owner; §2.5.2 initiative overrides it for that fight only, then play returns to session order. No number or table changed. |
 | **v0.2.20** | 2026-10-05 | **§8.3 party levels aligned to decision 033** (Accountant follow-up after rules/70 v0.2.0): floor rows use arrive→leave bands (F4@5 … F18@20); CR bands follow party level (old N-row ranges). Floors 16–18 share the top CR band. |
@@ -1310,8 +1314,8 @@ Floor Manager. Level 2. Boss. "Has not taken a break in 9 years."
 ## 12. Open for owner markup
 
 1. **Level track:** standard (ends ~L19–20) or slow-burn (ends ~L15)? Mid-floor milestones allowed on big floors?
-2. **Content scope:** 2024 PHB fully, SRD 5.2 only, or other books (Tasha's, Xanathar's, setting books) too? Homebrew species (DCC-style weird races) at the F3 identity market: yes/no, and does that replace the free rebuild?
-3. **Species latent on F1–2:** good, or let species show from the start?
+2. **Content scope:** 2024 PHB fully, SRD 5.2 only, or other books (Tasha's, Xanathar's, setting books) too? Homebrew species (DCC-style weird races) at the F3 identity market: yes/no, and does that replace the free rebuild? **Homebrew species part closed (decisions 009 and 036):** yes, oddities are offered at the Floor 3 Offer as part of the free rebuild, which now also covers a background redo and a class option (§7.3). Other books stay the owner's call (§7.1).
+3. **Species latent on F1–2:** good, or let species show from the start? **Closed (decision 036):** latent, with small tells and no mechanics (§7.2).
 4. **Permadeath default** is ON (canon, decided in v0.2.2). Still open: turn on Tutorial Mercy (Floor 1 Reprieve) for Floor 1? **Decided in v0.2.3:** this campaign runs Costly Revives (VERY COSTLY and RARE); other tables may still pick Canon Hard or Soft Open.
 5. **Fudging:** keep "no fudging, dice stand," or allow the System to fudge in the players' favor on F1?
 6. **Dice:** AI rolls everything (default), or players roll their own?

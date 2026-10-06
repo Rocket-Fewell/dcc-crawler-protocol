@@ -1,6 +1,6 @@
 import { PassThrough, Readable } from 'node:stream';
 import { fetchWithRetry } from './http.js';
-import { VOICE_GM } from './tags.js';
+import { VOICE_GM, isNpcVoice, npcNameOf } from './tags.js';
 import { prepareSpeechDetailed } from './text.js';
 
 /** OpenAI Text-to-Speech (/v1/audio/speech). Returns MP3 bytes. `voices` maps 'gm' / 'system' to settings. */
@@ -73,10 +73,16 @@ export class ElevenLabsTts {
  * The stream carries `.usage`, a promise of { ok, bytes, audioSeconds } for the usage log.
  *
  * `voices` maps 'gm' (narrator) / 'system' to { voiceId } - Fish "reference_id" model ids.
+ * NPC voices ('npc:<name>', from the [NPC: Name] tag) resolve through `npcVoices` (src/npcvoices.js): no entry or no id ->
+ * narrator; a Fish error on the NPC's id (deleted/private voice) -> that line is spoken by the narrator, a warning is logged
+ * (nothing is posted to Discord) and the id is skipped for BAD_NPC_TTL_MS so later lines go straight to the narrator.
  */
+const BAD_NPC_TTL_MS = 30 * 60_000;
 export class FishTts {
-  constructor({ apiKey, baseUrl = 'https://api.fish.audio', model = 's2.1-pro', voices, latency = 'balanced', format = 'mp3', mp3Bitrate = 128, speed = 1 }) {
-    Object.assign(this, { apiKey, baseUrl: baseUrl.replace(/\/+$/, ''), model, voices, latency, format, mp3Bitrate, speed });
+  constructor({ apiKey, baseUrl = 'https://api.fish.audio', model = 's2.1-pro', voices, latency = 'balanced', format = 'mp3', mp3Bitrate = 128, speed = 1, npcVoices = null, logger = null }) {
+    Object.assign(this, { apiKey, baseUrl: baseUrl.replace(/\/+$/, ''), model, voices, latency, format, mp3Bitrate, speed, npcVoices });
+    this.log = logger ?? { warn() {}, debug() {} };
+    this.badNpcIds = new Map();   // voice id -> failed at (ms)
     this.id = 'fish';
     this.name = `fish:${model}/gm=${voices.gm.voiceId},system=${voices.system.voiceId}`;
   }
@@ -90,11 +96,47 @@ export class FishTts {
     return this.apiKey ? String(message).split(this.apiKey).join('[redacted]') : String(message);
   }
 
+  /** NPC voice id for 'npc:<name>' or null (narrator). Skips ids that just failed. */
+  npcVoiceId(voice) {
+    if (!isNpcVoice(voice) || !this.npcVoices) return null;
+    const id = this.npcVoices.voiceIdFor(npcNameOf(voice));
+    if (!id) {
+      this.unknownNpcs ??= new Set();
+      const name = npcNameOf(voice);
+      if (!this.unknownNpcs.has(name)) {
+        this.unknownNpcs.add(name);
+        this.log.info?.(`NPC "${name}" has no Fish voice in tables/npc-voices.json${this.npcVoices.find(name) ? ' (entry without an id)' : ''}; using the narrator voice`);
+      }
+      return null;
+    }
+    const bad = this.badNpcIds.get(id);
+    if (bad && Date.now() - bad < BAD_NPC_TTL_MS) return null;
+    return id;
+  }
+
   async synthesize(text, voice = VOICE_GM) {
+    if (isNpcVoice(voice)) {
+      const id = this.npcVoiceId(voice);
+      if (!id) return this._synthesize(text, this.voices[VOICE_GM].voiceId);
+      try {
+        const out = await this._synthesize(text, id);
+        this.badNpcIds.delete(id);
+        return out;
+      } catch (err) {
+        if (err.status === 401 || err.status === 402) throw err;   // key/credit problem: the narrator would fail the same way
+        this.badNpcIds.set(id, Date.now());
+        this.log.warn(`Fish voice for NPC "${this.npcVoices.find(npcNameOf(voice))?.name ?? npcNameOf(voice)}" (${id}) failed (${err.status ? `HTTP ${err.status}` : err.message.slice(0, 120)}); this line uses the narrator. Fix or replace the id in tables/npc-voices.json.`);
+        return this._synthesize(text, this.voices[VOICE_GM].voiceId);
+      }
+    }
     const v = this.voices[voice] ?? this.voices[VOICE_GM];
+    return this._synthesize(text, v.voiceId);
+  }
+
+  async _synthesize(text, referenceId) {
     const body = {
       text,
-      reference_id: v.voiceId,
+      reference_id: referenceId,
       format: this.format,
       latency: this.latency,
       normalize: true,
@@ -147,12 +189,13 @@ export class FishTts {
 }
 
 /** Pluggable provider factory selected by TTS_PROVIDER. */
-export function createTtsProvider(config) {
+/** `extra` (Fish only): { npcVoices, logger } for the [NPC: Name] voices. */
+export function createTtsProvider(config, extra = {}) {
   switch (config.tts.provider) {
     case 'openai':
       return new OpenAiTts({ apiKey: config.openai.apiKey, baseUrl: config.openai.baseUrl, voices: config.tts.openai.voices });
     case 'fish':
-      return new FishTts(config.tts.fish);
+      return new FishTts({ ...config.tts.fish, ...extra });
     case 'elevenlabs':
       return new ElevenLabsTts({ apiKey: config.tts.elevenlabs.apiKey, voices: config.tts.elevenlabs.voices });
     default:

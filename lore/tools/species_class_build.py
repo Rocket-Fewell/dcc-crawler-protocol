@@ -26,6 +26,8 @@ VARIANT_NOTES = {
  "nodling-four-headed": "Canon head count (ledger R-050). Not ported in rules/30 4.10; base Nodling rules apply. Syndicate to decide. Name from the ledger.",
  "nodling-five-headed": "Canon head count (ledger R-050). Not ported in rules/30 4.10; base Nodling rules apply. Syndicate to decide. Name from the ledger.",
  "nodling-six-headed": "Canon head count (ledger R-050). Not ported in rules/30 4.10; base Nodling rules apply. Syndicate to decide. Name from the ledger.",
+ "fairy-sprite": "Same rules as Fairy (rules/30 4A.4 has one stat block). Cosmetic subrace (decision 036 and decision 025; canon R-074); no separate rules entry unless Syndicate's rules section says otherwise.",
+ "fairy-wisteria": "Same rules as Fairy (rules/30 4A.4 has one stat block). Cosmetic subrace (decision 036 and decision 025; canon R-074, Silfa is a Wisteria Fairy crawler); no separate rules entry unless Syndicate's rules section says otherwise.",
  "felid-were-cat": "Same rules as Felid (one stat block). Cosmetic variant; no separate rules entry (open question 14). Canon Were-Cat is a shifter form; no shifting rules are ported.",
 }
 entries = []
@@ -79,14 +81,14 @@ meta = {
    "lookup": "Look up by id. For a lineage or class option, parent_id names its species or class.",
    "fallback": "If an id is missing, fall back to srd_name (exact, case-insensitive)."},
  "display_rule": "Species and lineages: display_name is just the nationality (Caleb, 2026-10-04), e.g. 'Welsh (Dragonborn)', 'Icelandic (High Elf)'; the earlier joke name is kept as long_name (and long_label, long_spoken). Show combined_label = 'Display Name (5e Name)' (label_name, when present, is the short 5e name used in the label instead of srd_name; class options only). Names and flavor only: ability scores, traits, hit dice, proficiencies, spells and every other 5e rule are untouched.",
- "kinds": {"species": "9 SRD species (chargen-5e.json species) + 12 supplement species (rules/30 section 4) = 21",
-           "species_variant": "variants of a species: rules/30 4.2 Felid = Cat, Cat Girl, Tigran, Were-Cat; Lajabless phases Radiant and Skull (rules/30 4.7); Caprid Small and Large Dark breeds and Nodling Two to Six heads (ledger R-004 / R-050 and the wiki pages, since rules/30 names no entries for them). They have base_id = the species id, rules_entry false (no separate stat block), and a rules_note. Added at Caleb's request, 2026-10-04.",
+ "kinds": {"species": "9 SRD species (chargen-5e.json species) + 12 supplement species (rules/30 section 4) + 5 decision-036 Offer options (rules/30 section 4A: Primal, Sasquatch, Frost Maiden, Fairy, Doppelganger) = 26",
+           "species_variant": "variants of a species: rules/30 4.2 Felid = Cat, Cat Girl, Tigran, Were-Cat; Lajabless phases Radiant and Skull (rules/30 4.7); Fairy subraces Sprite and Wisteria Fairy (rules/30 4A.4, decision 036, cosmetic); Caprid Small and Large Dark breeds and Nodling Two to Six heads (ledger R-004 / R-050 and the wiki pages, since rules/30 names no entries for them). They have base_id = the species id, rules_entry false (no separate stat block), and a rules_note. Added at Caleb's request, 2026-10-04.",
            "species_lineage": "base_id = the species id; chargen_value = the exact option string in chargen-5e.json. The sub-choices /create shows: Dragonborn ancestry (10), Elf lineage (3), Gnome lineage (2), Goliath ancestry (6), Tiefling legacy (3)",
            "class": "the 12 classes in chargen-5e.json",
-           "class_option": "the level-1 class choices that rename a branch: Cleric Divine Order (2), Druid Primal Order (2). No level-3 subclasses are chosen in /create."},
+           "class_option": "level-1 Divine/Primal Order choices (4) plus 24 Floor 3 Offer Official Class Titles from rules/30 §2.9 (two per class; decision 036; Caleb approved 2026-10-06 1:10 PM CT). label_name is the base class so combined_label reads 'Football Hooligan (Barbarian)'."},
  "nation": "Real-world nationality the name plays on (null for classes). Caleb, 2026-10-04: every species, lineage and variant entry has its OWN unique nationality (no two share one), so a label never repeats a nationality; the check enforces it.",
  "tone": "DCC dungeon-crawl gallows humor, affectionate, adults-only table. Real nationalities played for comedy on food, weather, folklore, sports, quirks and absurdity. No slurs, no 'lazy/dirty/violent' stereotypes. Crawlers, never the other word. Caleb, 2026-10-04: real nationalities for ALL species including Orc; no archetype swaps; no tone_risk or alt_display_name fields.",
- "source": "Caleb's request of 2026-10-04 (Azerbaijani/Romanian Orc, Norwegian/Icelandic Elf, Vietnamese Dwarf named by him; rest made up by Lore).",
+ "source": "Caleb's request of 2026-10-04 (Azerbaijani/Romanian Orc, Norwegian/Icelandic Elf, Vietnamese Dwarf named by him; rest made up by Lore). Decision-036 species names approved by Caleb 2026-10-06 10:06 AM CT. Floor 3 class-option Official Class Titles approved by Caleb 2026-10-06 1:10 PM CT.",
  "counts": dict(counts), "total": len(entries),
  "consumers": ["/create (species, lineage, class, class option prompts)", "sheet cards", "System announcements"],
 }

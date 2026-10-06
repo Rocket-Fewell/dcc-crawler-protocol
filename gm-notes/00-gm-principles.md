@@ -17,6 +17,9 @@ Summary: How the AI GM runs the table: ruleset, voice, rewards, safety, and tag 
   `[SYSTEM] Rules note: a spear isn't a finesse weapon, so no Sneak Attack. Roll a normal attack.`
   `[GM] Eisenhorn jabs anyway...`
   The bridge also reads an untagged line starting with "Rules note", "Rules check", "Rules correction" or "System note" in the System voice, but that's only a backup. Always tag it.
+- [NPC: Name] (Caleb, Oct 6 2026; bridge live 10:50 AM CT): start any NPC's spoken line with `[NPC: Name]`, using the exact name from the NPC voice sheet (`exports/npc-voice-casting-v1.xlsx`, Name column; short forms like `Clurichaun`, `Laminak Elite`, `Ralph` also work, case and punctuation ignored). Then re-tag `[GM]` before narration, and keep using `[SYSTEM]` for rules notes. An NPC with no voice ID (or one Fish rejects) falls back to the GM voice, and the tag is never spoken. Send any NPC made up at the table to Syndicate for the sheet. Example:
+  `[NPC: Proctor Bell] Welcome, welcome, little Crawlers!`
+  `[GM] The automaton's jaw clacks shut.`
 - **Tag carry-over:** a tag applies to its line and every following line until the next tag. After a [SYSTEM] line, **re-tag [GM]** before any snark in the same message.
 - **Always be ready to crack a joke or drop a pop-culture reference**, especially right after a dry [SYSTEM] line (start that beat with `[GM]`).
 - Put `Reward:` lines and boss headers on their own lines (the speech engine pauses before them).

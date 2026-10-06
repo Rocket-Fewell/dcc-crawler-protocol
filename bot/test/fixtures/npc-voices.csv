@@ -1,0 +1,9 @@
+NPC name,Floors,Who / what,Fish voice id,Voice cue,Aliases
+GM Narrator,All,The narrator,fc21ac4846094f2ab0f574bc2697be25,raspy,
+Mordecai,"F1, F2","Game guide, ex-crawler",0123456789ABCDEF0123456789abcdef,"tired, ""sarcastic""","Mordy; The Guide"
+Proctor Bell,F1-F2,Trainer automaton,https://fish.audio/m/fedcba9876543210fedcba9876543210/,music box,
+Snakk-Matic,F1,Vending terminal,not-an-id,jingle,
+,,,,,
+Dale Pruitt,1,HVAC tech,,wheezy,
+mordecai,F3,duplicate row,,,
+Laminak Rev-Up Consultant Elite,F2,Sprite manager,,shrill,
