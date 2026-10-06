@@ -4465,7 +4465,7 @@
       {
         "status": "PASS",
         "check": "saferoom rule",
-        "detail": "Break Room not a saferoom from Day 4; the Green Room is the only saferoom to the end"
+        "detail": "Floor 1 saferooms (floors/f01/00-overview.md): The Break Room (z06), The Green Room (z09); The Green Room is the late-floor saferoom anchor; Break Room not a saferoom from Day 4"
       },
       {
         "status": "PASS",
@@ -4545,7 +4545,7 @@
       {
         "status": "PASS",
         "check": "rest options",
-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 4 on)"
+        "detail": "3 options listed; The Green Room is the only saferoom once the Break Room closes (Day 4 on)"
       },
       {
         "status": "PASS",
@@ -4614,7 +4614,7 @@
       },
       {
         "status": "PASS",
-        "check": "read-aloud blocks are 4 sentences or fewer",
+        "check": "read-aloud blocks within the 4-sentence soft guideline",
         "detail": "60 [PLAYER-FACING] blocks checked"
       },
       {

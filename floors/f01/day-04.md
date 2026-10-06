@@ -8,7 +8,7 @@ Source: decisions/026-timed-floor-clock-override.md (including the stairwell and
 
 Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
 
-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
 
 ## Day at a glance
 

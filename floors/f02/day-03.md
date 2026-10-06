@@ -8,7 +8,7 @@ Source: floors/04-floor-bible.md Soft Open; lore/tables/canon-floor-2.json RESER
 
 Budget file: `rules/70-encounter-budget-5e.json` v0.2.5, sha256 `07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1`. **Every figure taken from it is a GM-adaptable guideline, not a rule**; the page cites the field path instead of restating numbers.
 
-> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; every other read-aloud block is four sentences or fewer. Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
+> **Reading key.** `[PLAYER-FACING]` lines may be read aloud; `[GM-ONLY]` never. `PROPOSAL` = not confirmed. Bracketed `[LABEL: ...]` = an empty slot waiting on the named owner (see Pending inputs). `rules/70-encounter-budget-5e.json#path` = a field in the budget file (guideline, GM may adapt). `set piece` = a rare long read-aloud; keep every other read-aloud block punchy (about four sentences is the soft guideline; go longer when the moment earns it). Tags *canon* / *inspired* / *unverified* follow Lore's canon table. Players are always Crawlers.
 
 ## Day at a glance
 
@@ -283,7 +283,7 @@ cmm-043 immobile. If timer ends mid-scene add Vespas cmm-044.
 - **Achievement** ACH-0237 Soft Open: Timer Terror (Floor 2, Rare): Soft Open: Timer Terror: Soft Open catalog hook for enc-d03-02.
 - **Achievement** ACH-0238 Soft Open: Speed Clear (Floor 2, Rare): Soft Open: Speed Clear: Soft Open catalog hook for enc-d03-02.
 - **Achievement** ACH-0239 Soft Open: Slow Burn (Floor 2, Common): Soft Open: Slow Burn: Soft Open catalog hook for enc-d03-02.
-- **Achievement** ACH-1835 You Call That a Trap? (Floor 2, Rare): You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; max 2 Bronze ACH boxes/Crawler/floor).
+- **Achievement** ACH-1835 You Call That a Trap? (Floor 2, Rare): You Call That a Trap? (catalog ACH-1835; ledger A-136). Soft Open wire. Reward seed: Bronze achievement box (Syndicate 18:36; about 2-3 Bronze ACH boxes/Crawler/floor, soft).
 - **Proposed achievement** *You Call That a Trap? (wired)* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Injure a mob with a purposeful Soft Open trap (fires canon ). Narration [PLAYER-FACING]: "Injure a mob with a purposeful Soft Open trap (fires canon )." Reward (guideline, GM may adapt): [SYNDICATE REWARD SLOT: Soft Open proposed achievement]
 - **Proposed achievement** *Vespa Flyby* [proposed by Encounter Bot, framed by Lore, reward = slot for Syndicate]: trigger: Offscreen pupa hatch spit without a full Vespa fight. Narration [PLAYER-FACING]: "New achievement Vespa Flyby: Something half-hatched spit at you from offscreen and left. You got the trailer, not the feature. Acid still counts as a review." Reward (guideline, GM may adapt): [SYNDICATE REWARD SLOT: R0 Title/snark default — Soft Open framed row; no box unless Syndicate upgrades]
 
@@ -395,7 +395,7 @@ Vanishes at collapse/region abandon.
 - **Achievement** ACH-0086 Soft Open Survivor (Floor 2, Common): Soft Open Survivor
 - **Achievement** ACH-0218 Soft Open: Stair Seeker (Floor 2, Rare): Stair Seeker
 
-**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
+**Proposed achievements on this page** (Floor 2 seed list, GM discretion). Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.
 
 ## Short-rest slot map (cap, not a promise)
 
@@ -425,4 +425,4 @@ Ratings tick; Fizz Grubs latch; clock advances to Day 10 collapse. Stairs always
 
 *Canon table: `lore/tables/canon-floor-2.json`, ledger v1.15, sha256 `744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795` (recorded at build time).*
 
-*Build note: validation PASS (45 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 f4407d2c2c6c. Warnings: enc-d03-02 enemy display; slot-map provenance; doubled full stop*
+*Build note: validation PASS (45 PASS, 3 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 ae0aa6d12ed2. Warnings: enc-d03-02 enemy display; slot-map provenance; doubled full stop*

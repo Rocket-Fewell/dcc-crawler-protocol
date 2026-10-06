@@ -14,7 +14,7 @@ Soft Open is the **FINAL** district name (Caleb 2026-10-05). A-056 / ACH-1829 st
 - **Ralph:** Bronze per Crawler + boss-tier credits.
 - **ACH-1828, ACH-1830, ACH-1835:** Bronze achievement-box seeds.
 - Other Soft Open toast/ACH boxes that previously said Silver → **Bronze** (GM may log a Silver override).
-- Achievement boxes capped at **Bronze**, **max 2 achievement Bronze per Crawler per floor** (Story Boxes do not count).
+- Achievement boxes capped at **Bronze**, **about 2-3 achievement Bronze boxes per Crawler per floor** (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that.
 - **67 framed** proposed rows default to **R0** (Title or snark, no box).
 
 ## Canon Soft Open set — ACH-1827..1835

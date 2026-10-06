@@ -36,7 +36,7 @@
     "budget_file_version": "0.2.5",
     "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "141082bd904e045146d06b66e84155a3b79eb7201fb5e7b135f184499385cba1",
+    "spec_sha256_sans_pin": "4fda2e3f83144d8fcc65146f9cd9e9748cce7f7d848092ed9e06c98a161e514a",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -174,7 +174,7 @@
       "break_room_not_saferoom_from_day": 99,
       "text": "Soft Open: Storm Shelter A and Big Shot Chicken B are honest saferooms until T-1h eject (M-012). False stickers may lie (Core Ch1). Soft Open has no Floor 1 Green Room; Chicken B is the late-floor Long Rest anchor (Green Room-pattern)."
     },
-    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). Max 2 achievement Bronze boxes per Crawler per floor; Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
+    "achievement_caps": "Soft Open box ceiling (Syndicate 18:36 CT): the Krakaren Neighborhood Boss Box is the ONLY Silver on Floor 2. All other Soft Open achievement/toast boxes are Bronze (cap Bronze). About 2-3 achievement Bronze boxes per Crawler per floor (soft; GM may exceed for great moments and log it); Story Boxes do not count toward that. Ralph pays Bronze per Crawler + boss-tier credits (not Silver). ACH-1828 / ACH-1830 / ACH-1835 seed Bronze. The 67 Lore-framed proposed rows default to R0 (Title or snark, no box). Story Boxes: hand-pick from f02-any-story-boxes (f02-any-0001 and f02-any-0011 released 18:57 CT after Lore re-bind); at most one Legendary per table per floor. Rewards tailored by GM; snark-only OK.",
     "collapse_order_status": "Soft Open HOUSE day pressure on a 10-day clock (decision 026); steps remove hooks/services where noted; Detour Tax is for a missed Stairwell key only (rare on F2 because stairs exist from minute one, M-364)",
     "rest_fee_note": {
       "tag": "[GM-FACING]",
@@ -2204,7 +2204,7 @@
     "pass": 44,
     "warn": 5,
     "fail": 0,
-    "spec_sha256": "e9335601e36a42fd4349ab85cad3e1a31dcbf353fb4bd124f76e91a89e576f75",
+    "spec_sha256": "5abf45f363699c27ae96c1bd46c67d6aa3d36d499aeddc683473ca4be17b5fa2",
     "checks": [
       {
         "status": "PASS",
@@ -2254,7 +2254,7 @@
       {
         "status": "PASS",
         "check": "saferoom rule",
-        "detail": "Floor 2: late-floor saferoom anchor z27; rule text set"
+        "detail": "Floor 2 saferooms (floors/f02/00-overview.md): Storm Shelter A (z24), Big Shot Chicken B (z27); Big Shot Chicken B is the late-floor saferoom anchor"
       },
       {
         "status": "PASS",
@@ -2324,7 +2324,7 @@
       {
         "status": "PASS",
         "check": "rest options",
-        "detail": "3 options listed; Green Room is the only saferoom once the Break Room closes (Day 99 on)"
+        "detail": "3 options listed; the field rest points to Big Shot Chicken B for the Long Rest"
       },
       {
         "status": "PASS",
