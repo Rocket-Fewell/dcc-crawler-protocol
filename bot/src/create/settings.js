@@ -4,7 +4,7 @@ import { layerFlags } from './layers.js';
 
 export function createSettings(config) {
   const id = config.campaign.sessionId;
-  const c = readProfile(id, { ...process.env, DCC_CAMPAIGN_DIR: config.campaign.dir })?.create ?? {};
+  const c = readProfile(id, { ...process.env, DCC_CAMPAIGN_ROOT: config.campaign.dir, DCC_CAMPAIGN_DIR: config.campaign.dir })?.create ?? {};
   const mode = ['off', 'notify', 'hold'].includes(c.review_mode) ? c.review_mode : id === 'alpha' ? 'off' : 'hold';
   return {
     reviewMode: mode,

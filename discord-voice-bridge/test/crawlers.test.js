@@ -15,7 +15,7 @@ import { REAL_CAMPAIGN, Player, drive, finish, makeCtx, makeSandbox } from './he
 
 const stateOf = (dir) => JSON.parse(readFileSync(join(dir, 'sessions-data', 'beta', 'state.json'), 'utf8'));
 const py = (dir, ...a) => {
-  try { return { code: 0, out: execFileSync('python3', [join(dir, 'tools', 'state.py'), '--session', 'beta', ...a], { env: { ...process.env, DCC_CAMPAIGN_DIR: dir, DCC_AUTO_PUBLISH: '0' }, encoding: 'utf8', stdio: 'pipe' }) }; } catch (e) { return { code: e.status, out: `${e.stdout}${e.stderr}` }; }
+  try { return { code: 0, out: execFileSync('python3', [join(dir, 'tools', 'state.py'), '--session', 'beta', ...a], { env: { ...process.env, DCC_CAMPAIGN_ROOT: dir, DCC_CAMPAIGN_DIR: dir, DCC_AUTO_PUBLISH: '0' }, encoding: 'utf8', stdio: 'pipe' }) }; } catch (e) { return { code: e.status, out: `${e.stdout}${e.stderr}` }; }
 };
 const t = loadTables(REAL_CAMPAIGN);
 

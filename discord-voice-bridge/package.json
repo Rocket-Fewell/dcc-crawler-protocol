@@ -15,7 +15,8 @@
     "test": "node --test test/*.test.js",
     "doctor": "node scripts/doctor.js",
     "usage": "node scripts/tts-usage-summary.js",
-    "wake-test": "node scripts/wake-test.js"
+    "wake-test": "node scripts/wake-test.js",
+    "roles:sync": "node scripts/roles-sync.js"
   },
   "dependencies": {
     "@discordjs/voice": "^0.19.2",
