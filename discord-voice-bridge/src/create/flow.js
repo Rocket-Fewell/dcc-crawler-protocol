@@ -301,7 +301,11 @@ async function handleComponentLocked(i, ctx) {
   if (res.commit) return doCommit(i, d, env, ctx);
   writeDraft(config, d);
   await respond(i, await render(d, env));
-  if (res.followup) await i.followUp({ content: res.followup, flags: EPHEMERAL });
+  // followup is one ephemeral message, or a list of them (S10 Gouge Sheet: Weapons, Armor, Other gear)
+  if (res.followup) {
+    const parts = Array.isArray(res.followup) ? res.followup : [res.followup];
+    for (const content of parts) if (content) await i.followUp({ content, flags: EPHEMERAL });
+  }
 }
 
 async function handleNav(i, key, d, env, ctx) {

@@ -4,6 +4,7 @@
  *   describe(d, env)    -> plain-rule text under the System's prompt
  *   ready(d, env)       -> null when Next is allowed, else the reason
  *   onSelect / onButton / onModal(key, ..., d, env) mutate the draft and return {notice?, modal?, followup?}
+ *   followup is one ephemeral string, or an array of them (S10 price list: Weapons, Armor, Other gear)
  */
 import { ButtonStyle } from 'discord.js';
 import { ABILITIES, ABILITY_NAMES, backgroundNames, line } from './data.js';
@@ -133,6 +134,35 @@ const priceText = (t, cp) => {
   const credits = cp / 100, amount = fmtCredits(credits);
   return money(cp >= 100 ? tx(t, 'hint-money-gp', `${credits} GP`, { n: amount }) : tx(t, 'hint-money-cp', `${cp} cp`, { amount }));
 };
+
+const DISCORD_CONTENT_MAX = 2000;
+const priceBucket = (cat) => {
+  const c = String(cat ?? '').toLowerCase();
+  if (c === 'weapons') return 'Weapons';
+  if (c === 'armor') return 'Armor';
+  return 'Other gear';   // gear, magic, and anything else that is not a weapon or armor
+};
+
+/** One Gouge Sheet section as Discord messages of at most 2000 characters. Later parts repeat the header with (cont.). */
+function chunkPriceList(header, lines) {
+  const out = [];
+  if (!lines.length) return out;
+  const title = (cont) => (cont ? `**${header}** (cont.)` : `**${header}**`);
+  let cont = false;
+  let buf = title(false);
+  for (let line of lines) {
+    if (!line) continue;
+    const fits = () => buf.length + 1 + line.length <= DISCORD_CONTENT_MAX;
+    if (!fits()) {
+      if (buf !== title(cont)) { out.push(buf); cont = true; buf = title(true); }
+      if (!fits()) line = line.slice(0, Math.max(0, DISCORD_CONTENT_MAX - buf.length - 1));
+    }
+    if (line) buf += `\n${line}`;
+  }
+  if (buf.includes('\n')) out.push(buf);
+  return out;
+}
+
 const kitText = (d, t) => [
   ...R.inventoryRows(d, t).map((r) => `• ${r.name}${r.qty > 1 ? ` ×${r.qty}` : ''}`),
   ...R.pendingVariants(d, t).filter((v) => !v.chosen || !v.options.includes(v.chosen)).map((v) => `• *${t.chargen.items[v.id].name.replace(/ \(your choice\)/, '')}: pick the type in the menu below*`),
@@ -581,15 +611,16 @@ export const SCREENS = {
     onButton(key, d, env) {
       if (key === 'clear') { d.cart = []; return {}; }
       if (key === 'prices') {
-        const byCat = {};
+        const groups = { Weapons: [], Armor: [], 'Other gear': [] };
         // every price comes from the item's own srd_id (the variant's base_price_cp); a header is not listed - its variants are
         const mult = K.floorMultiplier(d.floor ?? 1);
         const shown = (id, srd) => `${K.labelFor(env.t, srd, env.t.chargen.items[id]?.name)} ${priceText(env.t, (K.priceCp(env.t, srd, id) ?? 0) * mult)}`;
         for (const [id, it] of Object.entries(env.t.chargen.items)) {
-          if (K.isHeaderKey(env.t, id)) { for (const v of K.variantIds(env.t, id)) if (K.priceCp(env.t, v, id) !== null) (byCat[it.category] ??= []).push(shown(id, v)); continue; }
-          if (K.priceCp(env.t, K.itemSrdId(env.t, id), id) !== null) (byCat[it.category] ??= []).push(shown(id, K.itemSrdId(env.t, id)));
+          const bucket = groups[priceBucket(it.category)];
+          if (K.isHeaderKey(env.t, id)) { for (const v of K.variantIds(env.t, id)) if (K.priceCp(env.t, v, id) !== null) bucket.push(shown(id, v)); continue; }
+          if (K.priceCp(env.t, K.itemSrdId(env.t, id), id) !== null) bucket.push(shown(id, K.itemSrdId(env.t, id)));
         }
-        return { followup: Object.entries(byCat).map(([k, v]) => `**${k}**: ${v.join('; ')}`).join('\n').slice(0, 1900) };
+        return { followup: ['Weapons', 'Armor', 'Other gear'].flatMap((header) => chunkPriceList(header, groups[header])) };
       }
       if (key === 'shop') {
         const cur = (d.cart ?? []).map((l) => `${K.plainName(env.t, R.lineSrdId(l, env.t), env.t.chargen.items[l.id].name)} ${l.qty}`).join('\n');
