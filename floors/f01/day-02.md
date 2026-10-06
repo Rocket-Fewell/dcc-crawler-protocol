@@ -445,6 +445,6 @@ Day 2 is the first day the clock bites. If the party stalls in the Green Room, t
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.15, sha256 `4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.19, sha256 `d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a` (recorded at build time).*
 
-*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 6c4d285ffa8f. Warnings: none*
+*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 4c2f5e55d0d9. Warnings: none*

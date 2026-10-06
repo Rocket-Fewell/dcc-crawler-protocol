@@ -437,6 +437,6 @@ If the party stalls, the System posts the next-collapse countdown (Break Room an
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.15, sha256 `4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.19, sha256 `d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a` (recorded at build time).*
 
-*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 832138e87c43. Warnings: none*
+*Build note: validation PASS (50 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 d9f8f253ea20. Warnings: none*

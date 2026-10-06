@@ -1000,6 +1000,6 @@ At the top of the stairs the one-hour entrance window does the work: the System 
 
 ---
 
-*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.15, sha256 `4a8a3c92a967b98075e9f0b3819f148b2162811097b95426e5abf9b819c32ee9` (recorded at build time).*
+*Canon table: `lore/tables/canon-floor-1.json`, ledger v1.19, sha256 `d3e3e463a7b10dff2bcdc1d1fb69dc01b1977f53836327bba45a7f7ab541027a` (recorded at build time).*
 
-*Build note: validation PASS (53 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 9ca0aed6b67c. Warnings: none*
+*Build note: validation PASS (53 PASS, 0 WARN, 0 FAIL) by `encounter_bot.py`; spec sha256 8a85941f8726. Warnings: none*

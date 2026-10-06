@@ -15,7 +15,7 @@
       "lore/drafts/core-book-monster-table-v0.2.md",
       "core-book/chapters/01-welcome.md",
       "decisions/026",
-      "rules/70-encounter-budget-5e.json v0.2.2",
+      "rules/70-encounter-budget-5e.json v0.2.6",
       "rules/45-story-boxes-5e.md",
       "floors/f01 carry-overs",
       "Caleb 2026-10-05: Soft Open is the FINAL district name; Krakaren Clone HOUSE CR 3; A-056 house; ACH-1827..1835 wired.",
@@ -23,20 +23,20 @@
       "lore/drafts/f02-achievement-framing-v0.1.json (Lore 2026-10-05 18:15 CT)",
       "Lore 18:08/18:10/18:15/18:19 CT: M-365 off Krakaren stair; cite fixes M-385/M-508-509/M-506; f02-achievement-framing-v0.1 wired; no ledger ids in PF narration; Story Box interim f01 deck.",
       "Syndicate locked: 37 DEMOTE-SUGGESTED cut to flavor; 67 FRAMED + ACH-1827..1835 kept. Lore 18:10 cites + framing wired. Reconcile pass post-overlap.",
-      "Syndicate 18:36 CT: Krakaren sole Soft Open Silver; Ralph+ACH-1828/1830/1835 Bronze; framed rows R0; ACH Bronze cap 2/Crawler/floor. Accountant: restore Challenge Rating numerals; keep Krakaren over-cap at 2–3; ACH-1830/1834/oil-1835 on Rage trigger. Lore f02 Story Box deck (hold 0001/0011)."
+      "Syndicate 18:36 CT: Krakaren sole Soft Open Silver; Ralph+ACH-1828/1830/1835 Bronze; framed rows R0; achievement Bronze is a soft guideline of about 2-3 per Crawler per floor (budget v0.2.6; was a hard cap of 2). Accountant: restore Challenge Rating numerals; keep Krakaren over-cap at 2–3; ACH-1830/1834/oil-1835 on Rage trigger. Lore f02 Story Box deck (hold 0001/0011)."
     ],
     "day": 9,
     "days": 10,
     "days_left": 1,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-    "canon_table_sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795",
+    "canon_table_sha256": "b08fb9a38b8632716594df9ab1258335bd9160320de73ef15cc1ef3d800fb765",
     "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
-    "canon_ledger_version": "1.15",
+    "canon_ledger_version": "1.19",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.6",
     "budget_file_sha256": "08d4737b116f50eaa4eb0477b2b2fff64f9c45b14ee4ad7fb571425da03af022",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "2404af3b53b7aa85a0ff2f83192ae5f9cb4d86f315d5f1a6e0956a90eea3e6d4",
+    "spec_sha256_sans_pin": "ef46a685d69dbbebc7d24ff592f3801b3c2fd2a7ac3dc5cb226ddfa1096aa372",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -185,13 +185,13 @@
   "canon_table": {
     "path": "lore/tables/canon-floor-2.json",
     "floor_wide_id": "c2-floor",
-    "expected_sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795",
+    "expected_sha256": "b08fb9a38b8632716594df9ab1258335bd9160320de73ef15cc1ef3d800fb765",
     "status": "reserve",
     "note": "RESERVE; bot still hardcodes F1 canon until Architect bump.",
     "present": true,
     "schema": "canon-floor-2/0.1.0",
-    "ledger_version": "1.15",
-    "sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795"
+    "ledger_version": "1.19",
+    "sha256": "b08fb9a38b8632716594df9ab1258335bd9160320de73ef15cc1ef3d800fb765"
   },
   "day": {
     "number": 9,
@@ -2382,7 +2382,7 @@
     "pass": 47,
     "warn": 7,
     "fail": 0,
-    "spec_sha256": "725d928c492c8fdc3ec4570eec7a7999694fa95ec4eb404bd01ff0f11b4fb56b",
+    "spec_sha256": "06bbf09438abea4e323802b6962a23abf5ead553b603b5536ba40b3ae1ca7728",
     "checks": [
       {
         "status": "PASS",
@@ -2462,12 +2462,12 @@
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "lore/tables/canon-floor-2.json (ledger 1.15, 10 zones)"
+        "detail": "lore/tables/canon-floor-2.json (ledger 1.19, 10 zones)"
       },
       {
         "status": "PASS",
         "check": "canon table hash recorded",
-        "detail": "sha256 744d2ac6612d48c7, ledger v1.15"
+        "detail": "sha256 b08fb9a38b863271, ledger v1.19"
       },
       {
         "status": "PASS",
