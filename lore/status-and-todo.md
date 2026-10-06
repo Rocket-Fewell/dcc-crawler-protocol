@@ -1,5 +1,5 @@
 # DCC Lore Status and TODO
-Owner: DCC Lore | Status: review | Version: 2.18 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 2.19 | Updated: 2026-10-06
 Summary: Pass history, coverage tables, source caveats and the running TODO list; formerly the body of INDEX.md.
 
 > Moved here from INDEX.md in Pass 4 (the file tables below are historical; the current file list is `INDEX.md`). `sources/SOURCE-LOG.md` is now `sources/source-log.md` and `catalog/reconciliation-pass3.md` is now `catalog/reconciliation.md`.
@@ -121,7 +121,7 @@ All coverage is via the Fandom wiki (summary level), not the books themselves.
 | `catalog/books-5-8-detail.md` | Chapter-level beats for **Book 5** (77 ch + epilogue = Floor 7) and **Book 8** (Floors 10-11, 7 heats + parade), numbers, conflict logs | wiki chapter summaries + Mana Toast; **UNVERIFIED vs books** |
 | `catalog/books-1-2-6-7-detail.md` | Chapter beats and gap-fills for Books 1, 2, 6, 7 + conflict log | same |
 | `catalog/reconciliation-pass3.md` | Section-25 gap table, `[UNVERIFIED]` resolution log, Gate custody chain, memorial crystals, achievement fills, **Book 9 status** | mixed, each cited |
-| `tools/voice_index.py`, `tools/yt_fetch.py` | index generator; transcript fetcher (venv `/workspace/yt`) | - |
+| `tools/voice_index.py`, `tools/yt_fetch.py` | index generator; transcript fetcher (local Python venv, not in the repo) | - |
 | `sources/youtube/*.txt` | now 15 transcripts (added B1, B2, B5, B6, B7, B8 Mana Toast + Bookborn 1-7) | auto-captions |
 | `work/` | scratch JSON/folded transcripts from Pass 3 (safe to delete) | not KB content |
 Appended sections: `mechanics.md` ("Pass 3 resolution of section 25"), `floors-and-plot-by-book.md` ("Pass 3 addenda"), `catalog/mechanics-clarifications.md` (P3.1-P3.9), `sources/SOURCE-LOG.md`.
@@ -303,7 +303,7 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 ---
 # Pass 20 (2026-10-04 CT): follow-on /create screens reskins
 
-- New `tables/create-screens-reskins.json` v0.1.1 (sha256 7a7562cbbdd546b97f8bb8e409cd670da91d520e08cdf417a7453e1c0d41409c, 192 entries: ALL 25, S3 11, S4 5, S6 25, S8 49, S9 16, S10 22, S11 13, S12 1, S13 4, S14 6, S15 4, S16 8, S17 3) with `.version.json`, `.CHANGELOG.md`, `.audit.md`; new `tables/create-flow-lines.proposed.json` (sha256 7f52e05baf189233619c176a3e7917e68a97b946b6cb021d721a61b8bb8d9f09, 11 of 38 keys rewritten). Tools `create_screens_data.py`, `_build.py`, `_check.py`. Display only; no /workspace/dcc-campaign file touched.
+- New `tables/create-screens-reskins.json` v0.1.1 (sha256 7a7562cbbdd546b97f8bb8e409cd670da91d520e08cdf417a7453e1c0d41409c, 192 entries: ALL 25, S3 11, S4 5, S6 25, S8 49, S9 16, S10 22, S11 13, S12 1, S13 4, S14 6, S15 4, S16 8, S17 3) with `.version.json`, `.CHANGELOG.md`, `.audit.md`; new `tables/create-flow-lines.proposed.json` (sha256 7f52e05baf189233619c176a3e7917e68a97b946b6cb021d721a61b8bb8d9f09, 11 of 38 keys rewritten). Tools `create_screens_data.py`, `_build.py`, `_check.py`. Display only; no campaign file outside lore/ touched.
 - Open for Caleb: approve the names and texts; Architect to hook each literal to a lookup by id (code_ref in each row), and to swap in the proposed lines file (no code change). Several S8 messages now use {budget}, {min}, {max}, {min_total} placeholders because the bridge reads those numbers from the tables.
 - Ambiguities: the bridge shows the raw method id (array, pointbuy) in the S8 'Method:' line (hint-s8-method-line fixes it); 43 rows are not_found in the bridge source because they come from chargen data or are paraphrases of dynamic strings; spec glossary terms and S1/S2 safety text left plain.
 
@@ -405,7 +405,7 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 
 - New `tools/paths.py`: `LORE_ROOT` (env `DCC_LORE_ROOT` else parent of tools/, via `absolute()`), `CAMPAIGN_ROOT` (env `DCC_CAMPAIGN_ROOT` else lore parent if it looks like the campaign repo, else sibling `dcc-campaign`), `VOICE_BRIDGE_SRC` (env `DCC_VOICE_BRIDGE_SRC`, optional).
 - All `tools/*.py` hardcoded `/workspace` / `/home/box` paths removed. INDEX / gen_index template use repo-relative wording.
-- Verified: fresh copy at `/tmp/fresh/lore` + campaign files at `/tmp/fresh/` (no env, no symlinks) — all check scripts 0 errors; box `/workspace/dcc-lore` same. `canon_floor_build` / `canon_floor2_build` outputs byte-identical (floor1 json `4a8a3c92…2ee9`, md `8e5d9716…7530`; floor2 json `744d2ac6…`).
+- Verified: fresh copy at `/tmp/fresh/lore` + campaign files at `/tmp/fresh/` (no env, no symlinks) — all check scripts 0 errors; the live working copy same. `canon_floor_build` / `canon_floor2_build` outputs byte-identical (floor1 json `4a8a3c92…2ee9`, md `8e5d9716…7530`; floor2 json `744d2ac6…`).
 - Remaining optional dependency: voice-bridge source for `create_screens_build` code_ref look-up; absent → WARN and skip, not a hard fail.
 
 ---
@@ -466,3 +466,22 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - f02-any-0001 → Clone Unmasked Box (expose clone mid-fight; no Boss Box double-pay).
 - f02-any-0011 → Not On The Call Sheet Box (unscripted player plan; distinct from A-136).
 - sha256 cd3521385e9d00e5634dd5095ab622a8c535ac151ca1d5545507fb5c5f5360c2. deck_check 0 errors.
+
+---
+# Learning pass, 2026-10-06 12:2x AM CT (Pass 37; ledger Pass 34): quest system and Floor 3 quests
+
+- Closes TODO 55. New ledger section 9.8: M-826..M-897 (72 rows) and X-086. New `catalog/quest-system-canon.md`. Sources: W:Quest, W:Quest Box, W:Show Must Go On Quest, W:Sex Workers Who Fell from the Heavens Quest, W:Fools Who Broke the Glass Quest, W:Vengeance of the Daughter, W:Vengeance of the Daughter Quest, W:Where the Sidewalk Ends Quest. ledger_check failures: 0. Ledger v1.18, ledger-rules v1.15.
+- Correction to TODO 55: Vengeance of the Daughter is a Floor 6 quest (its show starts on Floor 3) and Where the Sidewalk Ends is a Floor 8 quest. Both are logged under their real floors.
+- Headline for the RPG: quest box tier follows the job's difficulty, group quests pay every survivor a full box, and an event quest gives a short saferoom window (60 seconds in Fools Who Broke the Glass) before saferooms in the zone lock.
+- TODO 57: the two quest pages without chapter cites (Fools Who Broke the Glass, Vengeance of the Daughter Quest) stay WIKI-ONLY; a second source (recap transcript) could lift them. TODO 58: mine the Floor 4-5 quest pages (Levi Is on the Menu, Squeeze out the Juice Box, Dumber of the Flunkies, Find Out Who Killed My Son, Get Orthrus) for the per-floor quest table. TODO 56 still open.
+- Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
+
+---
+# Floor 2 canon refinement, 2026-10-06 2:5x AM CT (Pass 38; ledger Pass 35): reserve table v0.1.2
+
+- Scheduled reserve pass on `tables/canon-floor-2.json` (status "reserve", not announced). New ledger section 9.9: M-898..M-915 (18 rows) and X-087..X-088. Ledger v1.19, ledger_check failures 0; canon_floor2_check errors 0; canon-floor-1.json rebuilt only for the ledger version (check errors 0).
+- Backlog progress: rb-07 (recap has 14 dingoes fed and 13 scattering, consistent with the first-fed dingo dying when Ralph bursts out; no control spell in the Fandom or recap account), rb-10 (two attacks confirmed by a second family; 75-120 s vs 90-120 s door return logged as X-087), rb-13 (settled: about 39 set out, 36 go through, the recap 38 is the Floor 1 camp; facility in Wenatchee, X-088), rb-11 (fan wiki says the siege room was a restaurant with a sleeping chamber, UNVERIFIED), rb-05 (points at Caleb's 2026-10-05 house ruling, M-764/X-083).
+- Table: feat2-moab added (MOAB levers, bomb babies, Oh Shit Baby at the stairwell); haz2-kobold-cage-release retagged canon (M-913).
+- New sources: `sources/fanwiki/book1-*.txt` (7 generated fan wiki pages; Li Jun, Zhang and System AI not yet mined). Live Fandom revisions checked: nothing newer than the mirror except Donut/Floor 2 (rb-15).
+- TODO 59: mine the new FW2 Li Jun, Zhang and System AI pages for rb-12. Still open: rb-01 (novel read), rb-02 (house clock), rb-03 blimp attack, rb-04 other clone instances, rb-09 auction floor (no new source).
+- Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.

@@ -1,4 +1,4 @@
-# Full Audit of /workspace/dcc-lore (2026-10-04)
+# Full Audit of lore/ (2026-10-04)
 Owner: DCC Lore (audit run for Caleb) | Status: review | Version: 1.0 | Updated: 2026-10-04
 Summary: Checklist and results of the all-files audit: schema and ID integrity, "champ" hits, stale statements after today's decisions, credit/tier consistency, canon-accuracy flags, leftover drafts, copyright, lore vs campaign copies, sealed-roll leakage; plus the rules/45 power-ladder conflicts on Story Box cards 0056-0059 (report only, no edits). Lists what was fixed and what needs another agent or Caleb.
 Depends on: rules/40 v0.1.3, rules/42 v0.2, rules/45 v0.1, rules/50 v0.1.2 (all read-only in dcc-campaign).

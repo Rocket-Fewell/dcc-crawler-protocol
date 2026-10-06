@@ -1,5 +1,5 @@
 # Catalog Index
-Owner: DCC Lore | Status: review | Version: 1.7 | Updated: 2026-10-05
+Owner: DCC Lore | Status: review | Version: 1.8 | Updated: 2026-10-06
 Summary: One line per catalog file (generated wiki tables and hand-written clarifications).
 
 | Path | Description | Owner | Status |
@@ -17,6 +17,7 @@ Summary: One line per catalog file (generated wiki tables and hand-written clari
 | gods-faction-wars-canon.md | Gods/worship/Soul Armor/deity sponsorship, Ascendency, Nothing, Faction Wars, T'Ghee; mirrors ledger section 14 (M-158..M-209). | DCC Lore | review |
 | classes.md | How classes work plus the class list with notes. | DCC Lore | review |
 | clubs-and-personal-spaces-canon.md | Desperado Club, Club Vanquisher and Personal Spaces canon: access, safety, floor unlocks, prices, Bopca haggling, RPG notes; mirrors ledger section 9.7 (M-766..M-825, X-085). | DCC Lore | review |
+| quest-system-canon.md | Quest system canon: announcement, triggers, quest types, event quests, quest box tiers, vetoes, failure, quests-as-shows lore, Floor 3 quests plus Vengeance of the Daughter (F6) and Where the Sidewalk Ends (F8); mirrors ledger section 9.8 (M-826..M-897, X-086). | DCC Lore | review |
 | crafting-canon.md | Crafting canon, Books 1-8: tables/workstations, crafting skills and classes, ingredients, recipes, limits/failure rules, conflicts (mirrors ledger section 10). | DCC Lore | review |
 | floor-data.md | Per-floor data sheet for Floors 1-18 (crawler counts, level ranges, exits) from wiki infoboxes. | DCC Lore | review |
 | items.md | Items and potions catalog with one-line notes. | DCC Lore | review |

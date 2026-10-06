@@ -1,6 +1,6 @@
 # Floor 1 voice-split audit (Caleb 2026-10-05)
 Owner: DCC Lore | Status: draft | Version: 0.2 | Updated: 2026-10-05
-Summary: Part A applies the Discord [SYSTEM]/[GM] voice split to Floor 1 lore drafts. Part B is a read-only canon/voice slip list on campaign Floor 1 Day pages (Encounter Bot mid-rewrite). No /workspace/dcc-campaign edits. No sealed paths opened. Nothing posted.
+Summary: Part A applies the Discord [SYSTEM]/[GM] voice split to Floor 1 lore drafts. Part B is a read-only canon/voice slip list on campaign Floor 1 Day pages (Encounter Bot mid-rewrite). No campaign edits outside lore/. No sealed paths opened. Nothing posted.
 Voice split recalled: **[SYSTEM]** = dry corporate informative only (floor clock, fees, registration, collapse warnings, floor notices; no jokes). **[GM]** = snark, jokes, pop-culture hits, and FULL achievement/loot callouts (banner + mocking description). A tag carries until the next tag; a [GM] tag must follow every System block before any joke. No Death Mode / Easy Mode / Hardcore. Always Crawlers. Saferoom one word. Soft brevity.
 
 ---
@@ -23,7 +23,7 @@ Voice split recalled: **[SYSTEM]** = dry corporate informative only (floor clock
 
 ## Part B — Read-only Day page slips (campaign)
 
-Checked under `/workspace/dcc-campaign/floors/f01/` only. **Never edited.** Encounter Bot is mid-rewrite: `.spec.json` files (mtime ~13:48 CT) already split many collapse notices into dry `text` + `gm_color`; live `.json` / `.md` (mtime ~13:26 CT) still carry jokes inside System/collapse fields. `00-overview.md` is older (2026-10-04 22:14 CT).
+Checked under `floors/f01/` only. **Never edited.** Encounter Bot is mid-rewrite: `.spec.json` files (mtime ~13:48 CT) already split many collapse notices into dry `text` + `gm_color`; live `.json` / `.md` (mtime ~13:26 CT) still carry jokes inside System/collapse fields. `00-overview.md` is older (2026-10-04 22:14 CT).
 
 ### Inventory (mtime local America/Chicago; full sha256)
 

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 """Pass 21 (2026-10-05): Floor 3 (The Over City) rules, setting and creatures (M-651.. and X-076..). APPENDS section 9.4 to
 CANON-LEDGER.md just before '### Pass log'. Quotes located programmatically (exact substrings). Idempotent: refuses if M-651 exists.
 Writes work/pass21-row-map.json. Usage: python3 work/pass21_rows.py [--dry]"""
 import re, sys, json
-sys.path.insert(0, '/workspace/dcc-lore/tools')
+sys.path.insert(0, _os.path.join(_LORE, 'tools'))
 from ledger_lib import *
 LEDGER = ROOT + '/CANON-LEDGER.md'
 START = 651

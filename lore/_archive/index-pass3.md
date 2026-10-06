@@ -119,7 +119,7 @@ All coverage is via the Fandom wiki (summary level), not the books themselves.
 | `catalog/books-5-8-detail.md` | Chapter-level beats for **Book 5** (77 ch + epilogue = Floor 7) and **Book 8** (Floors 10-11, 7 heats + parade), numbers, conflict logs | wiki chapter summaries + Mana Toast; **UNVERIFIED vs books** |
 | `catalog/books-1-2-6-7-detail.md` | Chapter beats and gap-fills for Books 1, 2, 6, 7 + conflict log | same |
 | `catalog/reconciliation-pass3.md` | Section-25 gap table, `[UNVERIFIED]` resolution log, Gate custody chain, memorial crystals, achievement fills, **Book 9 status** | mixed, each cited |
-| `tools/voice_index.py`, `tools/yt_fetch.py` | index generator; transcript fetcher (venv `/workspace/yt`) | - |
+| `tools/voice_index.py`, `tools/yt_fetch.py` | index generator; transcript fetcher (local Python venv, not in the repo) | - |
 | `sources/youtube/*.txt` | now 15 transcripts (added B1, B2, B5, B6, B7, B8 Mana Toast + Bookborn 1-7) | auto-captions |
 | `work/` | scratch JSON/folded transcripts from Pass 3 (safe to delete) | not KB content |
 Appended sections: `mechanics.md` ("Pass 3 resolution of section 25"), `floors-and-plot-by-book.md` ("Pass 3 addenda"), `catalog/mechanics-clarifications.md` (P3.1-P3.9), `sources/SOURCE-LOG.md`.

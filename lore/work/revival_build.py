@@ -1,5 +1,7 @@
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 import sys,re
-sys.path.insert(0,'/workspace/dcc-lore/work')
+sys.path.insert(0,_os.path.join(_LORE, 'work'))
 import revival_rows as R
 D='2026-10-03'
 def c(s): return str(s).replace('|','\\|').replace('\n',' ').strip()
@@ -112,7 +114,7 @@ w('- Full-text search of `raw/pages/*.txt`, `sources/fan-wiki-2/`, and the trans
 w('- Web: chapter-summaries.com (B4), Storiluna (B4 ch13), Mana Toast B2 recap, a generated fan wiki (Yarilo/Geyrun/Donut), Book 9 pages; excerpts saved in `sources/web/revival-web-snippets.txt`. Reddit returned 403 and counts as snippets only.')
 w('- Quotes checked by `work/revival_check.py` and `tools/ledger_check.py`.')
 w('- Ledger-ready block: `catalog/revival-ledger-block.md` (NOT yet appended to `CANON-LEDGER.md`).')
-open('/workspace/dcc-lore/catalog/revival-canon.md','w').write('\n'.join(out)+'\n')
+open(_os.path.join(_LORE, 'catalog/revival-canon.md'),'w').write('\n'.join(out)+'\n')
 
 # ---------------- ledger block ----------------
 L=[];a=L.append
@@ -172,5 +174,5 @@ a('|---|---|---|---|')
 a(f'| {D} | 5 | DCC Lore | Revival/death-cheat research: M-046..M-{mlast:03d}, T-050..T-{tn+len(plot)-1:03d}, X-026..X-030 appended from catalog/revival-canon.md. Corrects Half Splat scope (falling damage only). |')
 a('')
 a(f'Also update the ledger header (Updated/Version) and the "next free ID" table in `ledger-rules.md`: M next M-{mlast+1:03d}, T next T-{tn+len(plot):03d}, X next X-031.')
-open('/workspace/dcc-lore/catalog/revival-ledger-block.md','w').write('\n'.join(L)+'\n')
+open(_os.path.join(_LORE, 'catalog/revival-ledger-block.md'),'w').write('\n'.join(L)+'\n')
 print(len(mech),len(plot),len(XC))

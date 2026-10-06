@@ -1,5 +1,5 @@
 # Loot Deck Spec (5e Overlay)
-Owner: Syndicate | Status: draft | Version: 0.1.8 | Updated: 2026-10-04
+Owner: Syndicate | Status: draft | Version: 0.1.9 | Updated: 2026-10-05
 Summary: JSON card and deck-file format for pre-built per-floor/zone loot decks (every card says exactly what the item is and does), GM draw rules, a starter 5e item stat reference for Floors 1-2, five sample cards, a Legendary Story Box rule (§2.8), box ceilings and caps (§2.2), achievement rewards (§2.9), death and collapse loot (§2.10), whole-credit rules, and open questions.
 Depends on: rules/42-house-items-f01.md v0.2.3 (final text for the four house items and the Enhanced Pet Biscuit), rules/10-core-rules-5e.md v0.2.17 (§3.5 tailoring, §3.6 ceilings, §4 loot boxes incl. the Story Box exception and the §4.5 pacing caps, §5.10 whole credits, §6.2 death; wins on any conflict), rules/45-story-boxes-5e.md v0.2.4 (Story Box design), rules/70-encounter-budget-5e.json v0.1.10 (box odds per encounter, F3+ flag lines; the only source the Encounter Bot cites for loot-box odds), tables/achievements.md v1.3 (catalog, 1,826 rows), decisions/015-story-boxes.md, decisions/018-story-box-answers.md, decisions/028-collapse-death-loot.md, decisions/QUESTIONABLE.md v0.1.7 (Q-003 `loot totals`), gm-notes/30-player-channel-card-format.md, gm-notes/00-gm-principles.md ("Loot box and item detail", "Achievement announcements"). Consumers: DCC Lore (writes decks), AI GM (draws and reads), Borent (`state.py loot draw <floor> <zone>`, Discord bridge), the Accountant (credit audit), Valtay Corp core book (formats item entries from these fields).
 
@@ -40,7 +40,7 @@ Depends on: rules/42-house-items-f01.md v0.2.3 (final text for the four house it
 | `category` | enum | Y | Inventory-card section: `Weapons` `Armor` `Consumables` `Keys` `Misc`; or `Credits` / `Stats` (not inventory lines; shown in the credits line / sheet) |
 | `plain_mechanics` | object | Y | See 1.2. Never dropped on announce. |
 | `spoken_line` | string | Y | **<= 25 words**, voice-safe, includes reskin name, real name and the one key effect. Numbers spelled for speech ("one d four"). |
-| `snark_line` | string | Y | One System-voice line. Text channel by default; spoken only if the Fish budget allows. Any longer flavor (banner patter, read-aloud) is **3-4 sentences max**. |
+| `snark_line` | string | Y | One System-voice line. Text channel by default; spoken only if the Fish budget allows. Any longer flavor (banner patter, read-aloud) stays punchy: about 3-4 sentences is a **soft guideline** (Caleb, 2026-10-05). Go longer only when the moment earns it, and never deliver a monologue. |
 | `reward` | string | Y | **Read-aloud and tone group** (with `spoken_line`, `snark_line`): the exact reward line the System reads on the achievement banner. May be snark-only (no item named). Also surfaces on the player's sheet card via `state.py achievement add --reward`. |
 | `canon_status` | enum | Y | `CANON` `CANON-INSPIRED` `HOUSE`. Describes the **flavor/concept**; mechanics are 5e unless `source_5e` is `HOUSE`. |
 | `credit_value` | number | Y | Estimated economy value in credits (1 credit = 1 GP, core §5.10). For `credits` cards: the actual amount (or expected value if rolled, see `grant`). For audit only; never a sale price promise. It may carry an SRD list price below 1 credit (Oil 0.1, Torch 0.01) because it is an estimate, not a balance; every real charge or payout is in **whole credits** (§1.6). |
@@ -475,6 +475,8 @@ Source: SRD 5.2.1 (Wizards of the Coast, CC-BY-4.0), official PDF; paraphrased, 
 
 
 **v0.1.4 (2026-10-04, audit):** Story Box exception marked approved in §2.8, Open question 9 resolved, header status and core pointer brought to v0.2.6; `tailor_tags` and the tailored-pull rule now say the Fan Profile is hidden (S12 dropped). No schema change.
+
+**v0.1.9 (2026-10-05, conflict sweep):** the `snark_line` flavor length is now a soft guideline, not "3-4 sentences max" (Caleb softened it 2026-10-05). No schema change, no card value changed.
 
 **v0.1.8 (2026-10-04, rules lead rulings):** §2.8 cap override is the GM's with a logged reason, Caleb can veto (Caleb's later 2026-10-04 ruling); pointers to core v0.2.17 and rules/45 v0.2.4. Platinum floors unchanged (already §4.5: none on F1-8).
 

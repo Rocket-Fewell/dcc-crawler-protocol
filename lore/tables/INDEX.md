@@ -1,5 +1,5 @@
 # Lore Tables Index
-Owner: DCC Lore | Status: draft | Version: 0.31 | Updated: 2026-10-05
+Owner: DCC Lore | Status: draft | Version: 0.32 | Updated: 2026-10-06
 Summary: Machine-readable tables for the campaign bots (JSON is exempt from headers; schema is documented in the catalog file).
 
 | Path | Description | Owner | Status |
@@ -89,3 +89,4 @@ Change note v0.28 (2026-10-05): `canon-floor-2.json` v0.1.1 (sha256 744d2ac6612d
 Change note v0.29 (2026-10-05): `canon-floor-1.json` rebuilt by tools/canon_floor_build.py because CANON-LEDGER.md moved to v1.15 (check had failed only on staleness). Only `ledger_version` (1.13 to 1.15) and the md generated-from line changed; counts unchanged (24 zones, 46 mobs, 23 hazards, 17 features). json sha256 c5d67e380ca3… to 4a8a3c92a967…, md 4b4916ad3088… to 8e5d97169e88…. canon_floor_check and canon_floor2_check 0 errors.
 Change note v0.30 (2026-10-05): added Soft Open Story Box deck `loot-decks/f02-any-story-boxes.json` (13 Legendary hand-pick cards f02-any-0001..0013; schema loot-deck/0.1.2; bound false; Rage Elemental called out as non-boss punishment spawn). deck_check: 0 errors. sha256 cd3521385e9d…
 Change note (2026-10-05, Syndicate review): f02-any-0001 re-bound to clone-unmask mid-fight (no Boss Box double-pay); f02-any-0011 re-bound to one-time unscripted player plan (distinct from A-136). deck_check 0 errors. sha256 cd3521385e9d…
+Change note (2026-10-06, Pass 35): `canon-floor-2.json` v0.1.2 (sha256 b08fb9a38b86…, reserve, not announced) rebuilt after the scheduled Floor 2 refinement: ledger section 9.9 (M-898..M-915, X-087..X-088) wired in, feat2-moab added, haz2-kobold-cage-release retagged canon, backlog progress on rb-05, rb-07, rb-10, rb-11, rb-13. `canon-floor-1.json` rebuilt only for the ledger move to v1.19 (ledger_version and the md generated-from line changed; sha256 d3e3e463a7b1…).

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))
 """Builds tables/canon-floor-2.json and tables/canon-floor-2.md (Floor 2 canon RESERVE source table).
 status "reserve": not announced to the group, not for live use. Data lives in this file; ledger ids are resolved from
 CANON-LEDGER.md and work/pass19-row-map.json (Floor 2 rows) / work/pass18-row-map.json (Floor 1 comparison rows);
@@ -6,7 +8,7 @@ confidence is COPIED from the ledger rows (weakest label wins).
 Run: python3 tools/canon_floor2_build.py   then   python3 tools/canon_floor2_check.py
 Owner: DCC Lore | Written 2026-10-04 (Pass 19)."""
 import json, re, os, sys, hashlib, copy
-ROOT = '/workspace/dcc-lore'
+ROOT = _LORE
 LEDGER = ROOT + '/CANON-LEDGER.md'
 RM = json.load(open(ROOT + '/work/pass19-row-map.json'))
 RM1 = json.load(open(ROOT + '/work/pass18-row-map.json'))

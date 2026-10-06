@@ -1,5 +1,5 @@
 # Pass 2 source log (what was actually read, and how)
-Owner: DCC Lore | Status: review | Version: 1.0 | Updated: 2026-10-03
+Owner: DCC Lore | Status: review | Version: 1.0 | Updated: 2026-10-06
 Summary: Log of what sources were actually read in Pass 2 and how.
 
 Written Oct 3, 2026 (CT). Rule used: notes are my own paraphrase; only very short quotes; every external claim carries a reliability tag.
@@ -8,7 +8,7 @@ Reliability tags: **[W]** Fandom wiki (mirror in `raw/`), **[R]** Reddit thread 
 
 ## Access notes (important for future passes)
 - **Reddit**: direct fetch (curl or WebFetch) of reddit.com / old.reddit.com / `.json` is **blocked (HTTP 403, or timeouts)** from the box. Reddit content below was read through the web-search index, which returns the post text and top comments as snippets. That means: threads are partial (top comments only), dates are as reported by the index, and I could not read full comment trees or r/dungeoncrawlercarl wiki/megathreads. **The sub's wiki/FAQ pages and the 245-entry stat-block table on r/DungeonCrawlerCarlRPG were NOT read.**
-- **YouTube**: transcripts fetched with `youtube-transcript-api` (venv at `/workspace/yt`), raw files in `sources/youtube/<id>.txt` (local working copies; do not quote at length). Auto-captions mangle proper names (e.g. "Amani" = Imani, "Heckla" = Hekla, "Impropotente" = Prepotente, "Embrus/Embers" = Emberus, "Gruul/Grull" = Gruul).
+- **YouTube**: transcripts fetched with `youtube-transcript-api` (local Python venv, not in the repo), raw files in `sources/youtube/<id>.txt` (local working copies; do not quote at length). Auto-captions mangle proper names (e.g. "Amani" = Imani, "Heckla" = Hekla, "Impropotente" = Prepotente, "Embrus/Embers" = Emberus, "Gruul/Grull" = Gruul).
 - **dungeoncrawlercarl.nl** and **crawlerscookbook.com** pages fetched with curl (public); **dungeon-crawler-carl.wiki** (fan site) scraped for per-book overviews and bestiaries into `sources/fanwiki/`.
 - No book text consulted directly.
 
@@ -59,3 +59,11 @@ Reliability tags: **[W]** Fandom wiki (mirror in `raw/`), **[R]** Reddit thread 
 | WEB | afterword.to chapter summaries (B1 ch30, 37, 39, 45, 46), manatoastmedia B1 recap, Fandom Meadow Lark, dungeon-crawler-carl.wiki bestiary, one Reddit snippet | search snippets, saved in sources/web/f02-web-snippets.txt | Floor 2 canon gaps; web-only rows M-521..M-524 (UNVERIFIED); conflicts X-061, X-064 |
 | WEB | Nerdist overview, Wikipedia plot summary, simulacra.ink World Dungeon page, manatoastmedia B1 recap, crawlerscookbook Floor 1 page, Fandom Transformation/Dungeon/Stairwells/First Floor snippets | search snippets, saved in sources/web/premise-web-snippets.txt | Premise verification (ledger 9.3); web-only rows M-645..M-650 (UNVERIFIED); Fandom snippets matched the local mirror |
 | W-live | Fandom Second Floor page | HTTP 403 on direct fetch; search snippet matched the local mirror | local mirror used |
+
+## Pass 35 (2026-10-06): Floor 2 refinement, second pass
+| Type | Source | Access | Used for / limits |
+|---|---|---|---|
+| FW2 | dungeon-crawler-carl.wiki Book 1 pages: locations/dungeon-floor-2, events/rage-elemental-encounter, characters/brandon-and-crew, mongo, li-jun, zhang, the-system-ai | curl with sources/fanwiki/fetch.py helpers, saved as sources/fanwiki/book1-*.txt | second family for the lichen walls, elemental attacks, MOAB bola and bomb types; single-family claims (lichen light, 90-120 s return, Imani's idea, restaurant siege room, Mongo and the Vespa) kept UNVERIFIED; Seattle vs Wenatchee logged as X-088 |
+| W-live | Fandom API revision timestamps for Second Floor, Rage Elemental, Danger Dingo, Meadow Lark, Ralph, Imani, MOAB, Sponsors, Shambling Acid Impaler, Donut/Floor 2 | HTTP 200 | all older than the 2026-10-03 mirror except Donut/Floor 2 (2026-10-04, not mined) |
+| YT | Book 1 recap j6jRXuCgsAA | local transcript | 39 residents in linked cars, the Floor 1 camp of about 38, 14 dingoes fed and 13 scattering, the cage release |
+

@@ -1,5 +1,7 @@
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 import json
-D=json.load(open('/workspace/dcc-lore/tables/gm-quirks.json'))
+D=json.load(open(_os.path.join(_LORE, 'tables/gm-quirks.json')))
 def esc(s): return str(s).replace('|','\\|')
 def rr(e): return str(e['roll_range'][0]) if e['roll_range'][0]==e['roll_range'][1] else f"{e['roll_range'][0]}-{e['roll_range'][1]}"
 def fixtab():
@@ -72,5 +74,5 @@ def bands():
         o+=f"| **{b['name']}** | {b['min']:+d}..{b['max']:+d} | {esc(' '.join(b['effects']))} |\n"
     return o
 exec(open('gmq_prose.py').read())
-open('/workspace/dcc-lore/catalog/gm-quirk-framework.md','w').write(MD)
+open(_os.path.join(_LORE, 'catalog/gm-quirk-framework.md'),'w').write(MD)
 print(len(MD))

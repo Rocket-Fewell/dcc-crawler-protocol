@@ -1,7 +1,7 @@
 # SRD 5.2.1 vs Game Lists: Backgrounds and Origin Feats Audit
 Owner: DCC Lore | Status: draft | Version: 0.1 | Updated: 2026-10-04
 Summary: Which of the 16 backgrounds and 12 origin-feat entries the game lists are in the CC-BY SRD 5.2.1 and which are not, with a one-line action for each non-SRD item under the rule "print SRD only; non-SRD content lives in a table appendix using our own reskin names and mechanics summaries, no copied non-SRD text". Names only; no non-SRD text is copied here.
-Depends on: /workspace/dcc-campaign/tables/chargen-5e.json v0.1.6, characters/create-flow-spec-5e.md (lines 115, 117, 472), tables/background-reskins.json v0.1.2 (32 entries).
+Depends on: tables/chargen-5e.json v0.1.6, characters/create-flow-spec-5e.md (lines 115, 117, 472), tables/background-reskins.json v0.1.2 (32 entries).
 
 ## 1. Source and version
 - **Document:** System Reference Document 5.2.1 ("SRD 5.2.1"), Wizards of the Coast, licensed CC-BY-4.0. Official download page: https://www.dndbeyond.com/srd (English SRD v5.2.1, listed as published May 01, 2025).
@@ -83,4 +83,4 @@ Rule applied: **print SRD only; non-SRD content lives in a table appendix using 
 2. **Mechanics summaries:** the chargen-5e.json lines for the non-SRD rows are written by us ("names, numbers and one-line plain effects; no book text", per its meta). Keep them our own wording in the appendix; do not paste from the 2024 PHB.
 3. **Dependencies:** 7 of the 12 non-SRD backgrounds hang on a non-SRD feat (Artisan, Entertainer, Farmer, Hermit, Merchant, Sailor, Wayfarer; Merchant and Wayfarer share Lucky). The other 5 (Charlatan, Guard, Guide, Noble, Scribe) use an SRD feat.
 4. **Attribution:** printing any SRD 5.2.1 content needs the CC-BY attribution statement quoted on p. 1 of the SRD (Core Appendix D already covers this).
-5. **Nothing in this audit changes a file in /workspace/dcc-campaign or tables.** background-reskins.json is unchanged.
+5. **Nothing in this audit changes a campaign file outside lore/ or tables.** background-reskins.json is unchanged.

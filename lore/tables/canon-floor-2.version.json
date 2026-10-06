@@ -1,14 +1,14 @@
 {
- "version": "0.1.1",
+ "version": "0.1.2",
  "schema": "canon-floor-2/0.1.0",
  "status": "reserve",
- "sha256": "744d2ac6612d48c7c2fc6399c31387da8b70afab08b90aa3e6f8ed6b7582f795",
- "built_at": "2026-10-05T03:20:00-05:00",
- "ledger_version": "1.15",
+ "sha256": "b08fb9a38b8632716594df9ab1258335bd9160320de73ef15cc1ef3d800fb765",
+ "built_at": "2026-10-06T03:10:00-05:00",
+ "ledger_version": "1.19",
  "zones": 10,
  "mobs": 22,
  "hazards": 18,
- "features": 30,
+ "features": 31,
  "open_conflicts": [
   "X-059",
   "X-060",
@@ -19,17 +19,14 @@
   "X-065",
   "X-080"
  ],
- "note": "Pass 22 scheduled refinement (reserve; not announced). New ledger rows M-707..M-733 and conflict X-080 wired in: blimp boss lair, clone nameplate, pet reward room (ten cages, one key, pet list), Mind Horror notes, no quests before Floor 3, Team Li Na and Death Watch details, Mexx, Kobold-quadrant kitchen saferoom, Rot Stickers conflict. Backlog progress notes added to rb-03, rb-04, rb-06, rb-08, rb-11, rb-12, rb-14, rb-15, rb-16.",
+ "note": "Pass 35 scheduled refinement (reserve; not announced). New ledger rows M-898..M-915 and conflicts X-087 (Rage Elemental door-return time, minor) and X-088 (Wenatchee vs Seattle, resolved Wenatchee) wired in: orange lichen walls, elemental attacks, MOAB levers and bomb types, Meadow Lark counts (39 out, 36 through, recap 38 = Floor 1 camp), 14/13 dingo count, cage release with no control spell named. Backlog progress notes added to rb-05, rb-07, rb-10, rb-11, rb-13.",
  "diff": {
-  "since_version": "0.1.0",
+  "since_version": "0.1.1",
   "entries_added": [
-   "feat2-team-li-na-safe-room",
-   "feat2-ceramic-dalmatian",
-   "mob2-rot-stickers-f2",
-   "npc2-team-li-na"
+   "feat2-moab"
   ],
   "entries_retagged": {
-   "feat2-reward-room-cages": "unverified -> canon"
+   "haz2-kobold-cage-release": "unverified -> canon"
   },
   "entries_removed": []
  }

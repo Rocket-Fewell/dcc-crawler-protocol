@@ -1,3 +1,5 @@
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))
 D='2026-10-05'
 rows=[
 ('M-707','The blimp boss lurked in an abandoned warehouse; Yolanda shot it from range before it could leave its lair (rb-03; extends M-477, M-478).','"Their boss, a giant blimp lurking in an abandoned warehouse, is dispatched easily by Yolanda from a distance before it can leave its lair."','W:Chris Andrews','VERIFIED (cite B1 ch37)'),
@@ -36,5 +38,5 @@ for r in rows: out.append('| '+' | '.join(r)+' | '+D+' |')
 out+=['','#### 9.5c Floor 2 refinement conflicts (X-080)','','| ID | Topic | Reading A (quote or note) | Source A | Reading B (quote or note) | Source B | Status | Date |','|---|---|---|---|---|---|---|---|']
 for x in X: out.append('| '+' | '.join(x)+' | '+D+' |')
 out.append('')
-open('/workspace/dcc-lore/work/pass22/block.md','w').write('\n'.join(out)+'\n')
+open(_os.path.join(_LORE, 'work/pass22/block.md'),'w').write('\n'.join(out)+'\n')
 print(len(rows))

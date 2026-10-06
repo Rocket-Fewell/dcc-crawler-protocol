@@ -10,6 +10,8 @@ Caleb no longer has to approve every commit or push. Once Architect approves Cur
 3. Voters are Syndicate, Lore, GM, Accountant, Book Author and Encounter Bot. The bot whose content is in the PR abstains (Encounter Bot's addition).
 4. The test for every vote: does it make the game better and the end product better? A no has to give a reason.
 5. A simple majority of the votes cast within 1 hour merges it. Architect merges and posts the result.
+   - **Early close (Caleb, 2026-10-05 ~9:10 PM CT, "automate all that, it shouldn't hold up the project"):** once the yes votes make a majority of the eligible voters (one that can't be outvoted), Architect closes the vote immediately and tells Cursor in #agents to merge. Nobody waits for the window or for Caleb.
+   - Every voter's #agents check picks up VOTE calls on its own and votes in that same run. No human prompting needed.
 6. Caleb can veto at any time.
 
 ## Still goes to Caleb first

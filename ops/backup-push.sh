@@ -223,7 +223,9 @@ SECRETY = re.compile(r"(^|/)\.env($|\.)|secret|credential|passw|token|api[_-]?ke
 show = lambda r: "gm-notes/secret/<file>" if r.startswith("gm-notes/secret/") else r
 sec = [r for r in add + mod + dele if SECRETY.search(r)]
 foreign = os.environ["FOREIGN"] == "yes"
-need = bool(dele or sec or foreign)
+ROTATING = re.compile(r"^(dcc-campaign/)?sessions(-data/[^/]+)?/backups/")  # auto-rotated state snapshots, not content deletions
+real_dele = [r for r in dele if not ROTATING.search(r)]
+need = bool(real_dele or sec or foreign)
 e = os.environ
 print("=== BACKUP SUMMARY ===")
 print("target: branch")
@@ -234,7 +236,8 @@ print("origin_main_sha: " + e["UP"])
 print("added: %d" % len(add))
 print("modified: %d" % len(mod))
 print("deleted: %d" % len(dele))
-for r in dele: print("deleted_path: " + show(r))
+for r in dele: print("deleted_path: " + show(r) + ("  (rotating snapshot)" if r not in real_dele else ""))
+print("deleted_content_files: %d" % len(real_dele))
 print("secret_related_paths: %d" % len(sec))
 for r in sec: print("secret_related_path: " + show(r))
 print("foreign_commits_on_branch: " + ("yes" if foreign else "no"))

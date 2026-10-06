@@ -1,6 +1,6 @@
 # Floor Bible v0.4: Canon and House-Ruling Check
 Owner: DCC Lore | Status: draft (read-only review; nothing in dcc-campaign was edited) | Version: 0.1 | Updated: 2026-10-05
-Summary: Cross-check of Syndicate's `/workspace/dcc-campaign/floors/04-floor-bible.md` v0.4 (sha256 98246302…a277) against CANON-LEDGER.md v1.15 and the current house rulings: (a) hard conflicts to fix, (b) departures from canon, (c) canon facts relevant to the eight section-10 questions.
+Summary: Cross-check of Syndicate's `floors/04-floor-bible.md` v0.4 (sha256 98246302…a277) against CANON-LEDGER.md v1.15 and the current house rulings: (a) hard conflicts to fix, (b) departures from canon, (c) canon facts relevant to the eight section-10 questions.
 Depends on: CANON-LEDGER.md v1.15; house rulings as briefed 2026-10-05 (plus decisions 009, 026, 028, 030 and rules/70 read-only). Ledger "VERIFIED" = wiki cite, not checked against the novels.
 
 ## (a) Hard conflicts with house rulings (must fix): 6

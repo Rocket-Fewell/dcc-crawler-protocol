@@ -1,4 +1,6 @@
-import sys,re; sys.path.insert(0,'/workspace/dcc-lore/work')
+import os as _os
+_LORE = _os.environ.get('DCC_LORE_ROOT') or _os.path.abspath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+import sys,re; sys.path.insert(0,_os.path.join(_LORE, 'work'))
 from crafting_lib import *
 import crafting_rows as cr
 DATE='2026-10-03'
@@ -83,7 +85,7 @@ tail="""## Coverage notes and gaps
 - Page-level wiki cites are not chapter-by-chapter confirmations; cross-check against the novels before using a figure at the table.
 """
 doc=head+quick+'\n'+body+tail
-open('/workspace/dcc-lore/catalog/crafting-canon.md','w').write(doc)
+open(_os.path.join(_LORE, 'catalog/crafting-canon.md'),'w').write(doc)
 # ledger block
 lead=f"""
 
@@ -95,5 +97,5 @@ Source: `catalog/crafting-canon.md` (same rows). IDs `K-001`..`K-{n:03d}` (next 
 led=lead
 for k in secs:
     led+=f"### 10.{list(secs).index(k)+1} {secs[k]}\n\n"+HDR+"\n"+'\n'.join(r[3] for r in rows[k])+"\n\n"
-open('/workspace/dcc-lore/work/crafting-ledger-block.md','w').write(led)
+open(_os.path.join(_LORE, 'work/crafting-ledger-block.md'),'w').write(led)
 print(tot,xt,n,xn)

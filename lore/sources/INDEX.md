@@ -1,11 +1,18 @@
 # Sources Index
-Owner: DCC Lore | Status: review | Version: 1.2 | Updated: 2026-10-03
+Owner: DCC Lore | Status: review | Version: 1.2 | Updated: 2026-10-06
 Summary: One line per source file; transcripts and scrapes are working copies, not quotable at length.
 
 | Path | Description | Owner | Status |
 |---|---|---|---|
 | fanwiki/book1-bestiary.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 bestiary | DCC Lore | n/a (data/code) |
 | fanwiki/book1-overview.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 overview | DCC Lore | n/a (data/code) |
+| fanwiki/book1-characters-brandon-and-crew.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 characters brandon and crew (Meadow Lark) (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
+| fanwiki/book1-characters-li-jun.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 characters li jun (not yet mined) (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
+| fanwiki/book1-characters-mongo.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 characters mongo (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
+| fanwiki/book1-characters-the-system-ai.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 characters the system ai (not yet mined) (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
+| fanwiki/book1-characters-zhang.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 characters zhang (not yet mined) (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
+| fanwiki/book1-events-rage-elemental-encounter.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 events rage elemental encounter (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
+| fanwiki/book1-locations-dungeon-floor-2.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book1 locations dungeon floor 2 (2026-10-06, Pass 35) | DCC Lore | n/a (data/code) |
 | fanwiki/book2-bestiary.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book2 bestiary | DCC Lore | n/a (data/code) |
 | fanwiki/book2-overview.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book2 overview | DCC Lore | n/a (data/code) |
 | fanwiki/book3-achievements.txt | Fan-wiki (dungeon-crawler-carl.wiki) page scrape: book3 achievements | DCC Lore | n/a (data/code) |
