@@ -29,9 +29,9 @@
     "days": 10,
     "days_left": 9,
     "generated_by": "tools/encounter_bot/encounter_bot.py (pure local Python 3, no model/API calls)",
-    "canon_table_sha256": "42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737",
+    "canon_table_sha256": "7347243f4be0fccc3bcdc365823e576fae3c8e01ce2215b00dcc5f7d91ce7b9d",
     "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
-    "canon_ledger_version": "1.20",
+    "canon_ledger_version": "1.21",
     "budget_file": "rules/70-encounter-budget-5e.json",
     "budget_file_version": "0.2.7",
     "budget_file_sha256": "f239fe8035a3087f999d0496453980ef5b2c2d3a5e99cbc16d921d002c0be1a7",
@@ -185,13 +185,13 @@
   "canon_table": {
     "path": "lore/tables/canon-floor-2.json",
     "floor_wide_id": "c2-floor",
-    "expected_sha256": "42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737",
+    "expected_sha256": "7347243f4be0fccc3bcdc365823e576fae3c8e01ce2215b00dcc5f7d91ce7b9d",
     "status": "reserve",
     "note": "RESERVE; bot still hardcodes F1 canon until Architect bump.",
     "present": true,
     "schema": "canon-floor-2/0.1.0",
-    "ledger_version": "1.20",
-    "sha256": "42aa20e689181ff42746cf2b26cddb3f3db9c41828276a05b302c9c5eb27a737"
+    "ledger_version": "1.21",
+    "sha256": "7347243f4be0fccc3bcdc365823e576fae3c8e01ce2215b00dcc5f7d91ce7b9d"
   },
   "day": {
     "number": 1,
@@ -2271,7 +2271,7 @@
     "pass": 49,
     "warn": 3,
     "fail": 0,
-    "spec_sha256": "34dab387c67b48cd74fe7b59d92d6e258a3b1c7fb2c109db6821331b2e67e82b",
+    "spec_sha256": "e161e44c53db02a0cdd492a01755e03ae5392f09134c6daeaec50776bb2561a0",
     "checks": [
       {
         "status": "PASS",
@@ -2351,12 +2351,12 @@
       {
         "status": "PASS",
         "check": "Lore canon table present",
-        "detail": "lore/tables/canon-floor-2.json (ledger 1.20, 10 zones)"
+        "detail": "lore/tables/canon-floor-2.json (ledger 1.21, 10 zones)"
       },
       {
         "status": "PASS",
         "check": "canon table hash recorded",
-        "detail": "sha256 42aa20e689181ff4, ledger v1.20"
+        "detail": "sha256 7347243f4be0fccc, ledger v1.21"
       },
       {
         "status": "PASS",
