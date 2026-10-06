@@ -1176,8 +1176,8 @@
   ],
   "budget_file": {
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.2.5",
-    "expected_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1"
+    "version": "0.2.6",
+    "expected_sha256": "08d4737b116f50eaa4eb0477b2b2fff64f9c45b14ee4ad7fb571425da03af022"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

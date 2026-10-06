@@ -33,8 +33,8 @@
     "achievements_csv_sha256": "e0e444a53b76bdf2d12851c33eefe3d5523115d0f7c4aaa98cfbab715971afc8",
     "canon_ledger_version": "1.15",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.5",
-    "budget_file_sha256": "07c676b301240c4b5831e2fbbc5e771eda34b4104a79a0f8bb11f889ad9864e1",
+    "budget_file_version": "0.2.6",
+    "budget_file_sha256": "08d4737b116f50eaa4eb0477b2b2fff64f9c45b14ee4ad7fb571425da03af022",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
     "spec_sha256_sans_pin": "2404af3b53b7aa85a0ff2f83192ae5f9cb4d86f315d5f1a6e0956a90eea3e6d4",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
@@ -2084,7 +2084,7 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.2.5 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
+      "item": "rules/70-encounter-budget-5e.json v0.2.6 (filed) + Soft Open clock.days=10 HOUSE (decision 026 / Core Ch1)",
       "waiting_for": "floors.2 pins / Soft Open clock numbers confirmed; any bracketed slot without a matching field",
       "status": "open",
       "audience": "gm"
@@ -2382,12 +2382,12 @@
     "pass": 47,
     "warn": 7,
     "fail": 0,
-    "spec_sha256": "c0bdaf06c1494bcaf0df82b4557379db7e35bd0be52d45dc381cf811c6d9f11f",
+    "spec_sha256": "725d928c492c8fdc3ec4570eec7a7999694fa95ec4eb404bd01ff0f11b4fb56b",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.2.5, sha256 07c676b301240c4b; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.2.6, sha256 08d4737b116f50ea; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
