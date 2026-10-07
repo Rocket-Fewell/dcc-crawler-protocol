@@ -4,7 +4,10 @@
 Caleb authorized a full backup on 2026-10-04: "i want all files on the github.... everything".
 Everything is mirrored EXCEPT: live credentials (.env/.env.*, files matching a credential pattern, listed by name in
 CREDENTIAL_EXCLUDES), dependency/cache folders (node_modules, __pycache__, *.pyc, .venv, .git), per-machine agents-channel poll cursors/lastseen (RUNTIME_EXCLUDES), and files over 50 MB.
-Delete-sync: anything in the repo that is no longer in a source is removed (except STAGING_OWNED paths).
+Delete-sync: anything in the repo that is no longer in a source is removed (except STAGING_OWNED paths, and except
+tracked files under PRESERVE_IF_SOURCE_MISSING). Caleb, 2026-10-07 5:43 PM CT: keep core-book/build/. When every live
+source lacks one of those tracked files, the git blob stays (HEAD if that commit still has the path, otherwise
+origin/main). When a live source has the file, the mirror copies the live file.
 
 ETIQUETTE: gm-notes/secret/ under the campaign root is copied byte-for-byte and NEVER content-scanned or printed
 (it holds GM roll/affinity data, not credentials). Name-based exclusions still apply there.
@@ -86,6 +89,11 @@ PULL_BAK = os.environ.get("DCC_PULL_BAK_DIR") or os.path.join(BOX, "backup-pull-
 # Files that live only in the staging repo (never deleted by delete-sync, never overwritten by a source file).
 STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md",
                  "secrets/cursor-gm-secrets.env"}  # Caleb order 2026-10-07: plain-text bot tokens for the Cursor GM (private repo)
+
+# Prefixes whose tracked files survive a gap in the live sources (Caleb, 2026-10-07 5:43 PM CT).
+# The live core-book tree dropped build/ (build.py, book.html, pages.json, INDEX.md, the rulebook PDF).
+# Delete-sync was about to publish that gap. A live file under the prefix is still copied from the source.
+PRESERVE_IF_SOURCE_MISSING = ("core-book/build/",)
 
 # Repo paths kept as git SYMLINKS (repo-relative path -> relative link target) instead of copies of the real file.
 # Remote commit 12df0bc (2026-10-05, Cursor cloud agent, co-authored by Caleb) turned these two into symlinks into the
@@ -281,6 +289,95 @@ def ensure_gitignore_block():
     print("restored .gitignore alias lines (12df0bc)")
 
 
+def _preserve_rel(rel):
+    return any(rel.startswith(p) for p in PRESERVE_IF_SOURCE_MISSING)
+
+
+def _preserve_entries(ref):
+    """Blob entries under the preserve prefixes at ref. Empty when the ref or the tree is missing."""
+    items = []
+    seen = set()
+    for prefix in PRESERVE_IF_SOURCE_MISSING:
+        spec = prefix.rstrip("/")
+        if not spec:
+            continue
+        r = _git("ls-tree", "-r", "-z", ref, "--", spec, check=False)
+        if r.returncode:
+            continue
+        for e in r.stdout.decode("utf-8", "surrogateescape").split("\0"):
+            if "\t" not in e:
+                continue
+            meta, rel = e.split("\t", 1)
+            mode, typ, sha = meta.split()
+            if typ != "blob" or mode not in ("100644", "100755") or rel in seen or not _preserve_rel(rel):
+                continue
+            seen.add(rel)
+            items.append((rel, mode, sha))
+    return items
+
+
+def source_has_file(rel):
+    """True when any mirror source contains rel as a real file. Excludes are applied separately."""
+    for s0, d0 in SOURCES:
+        if d0 == "":
+            sub = rel
+        elif rel.startswith(d0 + "/"):
+            sub = rel[len(d0) + 1:]
+        else:
+            continue
+        if os.path.isfile(os.path.join(s0, *sub.split("/"))):
+            return True
+    for s, r in SINGLE_FILES:
+        if r == rel and os.path.isfile(s):
+            return True
+    return False
+
+
+def preserve_missing_tracked():
+    """Put tracked preserve-prefix files the live sources lack back on disk.
+
+    Fill from origin/main first, then let HEAD overwrite a path that commit still has, so a
+    branch update of build.py is kept and a deletion on the branch falls back to main.
+    Credential and other mirror excludes are left out. Returns the repo-relative paths kept.
+    """
+    chosen = {}
+    for ref in ("refs/remotes/origin/main", "HEAD"):
+        if _git("rev-parse", "--verify", "-q", ref + "^{commit}", check=False).returncode:
+            continue
+        for rel, mode, sha in _preserve_entries(ref):
+            if excluded_reason(rel) or source_has_file(rel):
+                continue
+            chosen[rel] = (mode, sha, ref)
+    kept = set()
+    for rel, (mode, sha, ref) in sorted(chosen.items()):
+        data = _blob(sha)
+        dest = os.path.join(REPO, *rel.split("/"))
+        if os.path.lexists(dest) and (os.path.islink(dest) or os.path.isdir(dest)):
+            shutil.rmtree(dest) if os.path.isdir(dest) and not os.path.islink(dest) else os.remove(dest)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        same = False
+        if os.path.isfile(dest):
+            with open(dest, "rb") as fh:
+                same = fh.read() == data
+        if not same:
+            tmp = dest + ".preserve-tmp"
+            try:
+                with open(tmp, "wb") as fh:
+                    fh.write(data)
+                os.replace(tmp, dest)
+            finally:
+                if os.path.exists(tmp):
+                    os.remove(tmp)
+            print("preserved (missing from live source, kept %s): %s" % (ref, rel))
+        else:
+            print("preserved (missing from live source, already %s): %s" % (ref, rel))
+        _set_mode(dest, mode == "100755", True)
+        kept.add(rel)
+    if kept:
+        print("preserved: %d tracked file(s) under core-book/build/ (live source missing them)" % len(kept))
+    return kept
+
+
 def mirror_main():
     bad = [n for n in sorted(FORBIDDEN_ROOT_NAMES) if os.path.lexists(os.path.join(REPO, n))]
     if bad:
@@ -297,20 +394,22 @@ def mirror_main():
     changed = sum(copy_if_changed(s, os.path.join(REPO, rel)) for rel, s in want.items())
     changed += sum(ensure_symlink(os.path.join(REPO, rel), t) for rel, t in links.items())
     ensure_gitignore_block()
+    preserved = preserve_missing_tracked()
     deleted = 0
     for root, dirs, files in os.walk(REPO, topdown=True):
         if root == REPO:
             dirs[:] = [d for d in dirs if d != ".git" and d not in FORBIDDEN_ROOT_NAMES]
         for f in files:
             rel = os.path.relpath(os.path.join(root, f), REPO)
-            if rel not in want and rel not in STAGING_OWNED and rel not in links:
+            if rel not in want and rel not in STAGING_OWNED and rel not in links and rel not in preserved:
                 os.remove(os.path.join(root, f)); deleted += 1
                 if not rel.startswith("gm-notes/secret/"): print("deleted", rel)
     for root, dirs, files in os.walk(REPO, topdown=False):
         if ".git" in os.path.relpath(root, REPO).split(os.sep): continue
         if root != REPO and not os.listdir(root): os.rmdir(root)
     total = sum(os.path.getsize(s) for s in want.values())
-    print("mirror: %d files wanted (%.1f MB), %d copied/updated, %d deleted" % (len(want), total / 1e6, changed, deleted))
+    print("mirror: %d files wanted (%.1f MB), %d copied/updated, %d deleted, %d preserved" % (
+        len(want), total / 1e6, changed, deleted, len(preserved)))
     for rel, t in links.items(): print("symlink kept (KEEP_SYMLINKS, 12df0bc): %s -> %s" % (rel, t))
     for rel in report["name"]: print("EXCLUDED (.env name rule):", rel)
     for rel in report["runtime"]: print("EXCLUDED (runtime poll state):", rel)
