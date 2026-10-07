@@ -71,6 +71,8 @@ For Cursor agents on Caleb’s own computer and for Cursor cloud agents:
 
 ## Cursor Cloud specific instructions
 
+**Running the Discord game as GM:** follow `gm-notes/50-cursor-gm-runbook.md` (setup: `python3 discord-voice-bridge/scripts/setup-env.py`, reads `secrets/cursor-gm-secrets.env`).
+
 Cloud setup installs Node.js 22.22+ into `/usr/local` (the bridge requires `>= 22.12`), keeps `ffmpeg` and Python 3 on `PATH`, and runs `npm ci` in `bot/` and `discord-voice-bridge/`. Python campaign tools use the stdlib only. The Discord bot is not started here: `npm start` needs tokens that stay out of the repo.
 
 Checks from the repo root:

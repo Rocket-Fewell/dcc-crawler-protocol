@@ -134,7 +134,9 @@ main() {
   python3 ops/check_repo_safe.py --staged
   # Secret grep. gm-notes/secret/ is skipped by design (GM etiquette: roll/affinity data, never read; copied byte-for-byte).
   # -- ends options so a tracked file named like --help cannot make grep print usage (and trip this check).
-  if git ls-files -z -- . ':(exclude)gm-notes/secret' | xargs -0 -r sh -c 'grep -IlE \
+  # Allowlist (Caleb order 2026-10-07): secrets/cursor-gm-secrets.env holds plain-text bot tokens for the Cursor GM
+  # in this private repo on purpose. Exactly that one path is skipped here; every other file is still grepped.
+  if git ls-files -z -- . ':(exclude)gm-notes/secret' ':(exclude,literal)secrets/cursor-gm-secrets.env' | xargs -0 -r sh -c 'grep -IlE \
      -e "github_pat_[A-Za-z0-9_]{20,}" -e "gh[pousr]_[A-Za-z0-9]{30,}" -e "sk-[A-Za-z0-9_-]{20,}" -e "sk_[0-9a-f]{40,}" \
      -e "discord(app)?\.com/api/(v[0-9]+/)?webhooks/[0-9]+" -e "[MNO][A-Za-z0-9_-]{23,27}\.[A-Za-z0-9_-]{6,7}\.[A-Za-z0-9_-]{27,}" \
      -- "$@"' sh ; then

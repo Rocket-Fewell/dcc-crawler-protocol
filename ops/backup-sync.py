@@ -84,7 +84,8 @@ MARKER = os.environ.get("DCC_BACKUP_MARKER") or os.path.join(BOX, ".backup-last-
 BRANCH_MARKER = os.environ.get("DCC_BACKUP_BRANCH_MARKER") or os.path.join(BOX, ".backup-last-branch-sha")
 PULL_BAK = os.environ.get("DCC_PULL_BAK_DIR") or os.path.join(BOX, "backup-pull-bak")
 # Files that live only in the staging repo (never deleted by delete-sync, never overwritten by a source file).
-STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md"}
+STAGING_OWNED = {".gitignore", "README.md", "ops/check_repo_safe.py", "ops/hooks/pre-commit", "ops/README.md",
+                 "secrets/cursor-gm-secrets.env"}  # Caleb order 2026-10-07: plain-text bot tokens for the Cursor GM (private repo)
 
 # Repo paths kept as git SYMLINKS (repo-relative path -> relative link target) instead of copies of the real file.
 # Remote commit 12df0bc (2026-10-05, Cursor cloud agent, co-authored by Caleb) turned these two into symlinks into the
