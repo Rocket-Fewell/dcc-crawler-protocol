@@ -563,6 +563,8 @@ def add_audience(doc, rep):
                     q["audience"] = "gm"
         if isinstance(e.get("zone_color"), dict) and e["zone_color"].get("gm_note"):
             e["zone_color"]["gm_note_audience"] = "gm"
+        if isinstance(e.get("gm_notes"), dict):
+            e["gm_notes"]["audience"] = "gm"
         e["audience_default"] = "gm"
     d = doc["day"]
     def add_nested_gm_color(parent_path, parent_blk, **kw):
@@ -1184,6 +1186,16 @@ def build(spec, data, rep):
                 ch.append(dict(c, display=ent["combined_label"]))
         if ch:
             out["crawler_hooks"] = ch
+        gn = e.get("gm_notes")
+        if gn is not None:
+            flavors = gn.get("flavor")
+            ok_gn = (gn.get("tag") == "[GM-FACING]" and gn.get("audience") == "gm"
+                     and isinstance(flavors, list) and flavors
+                     and all(isinstance(x, str) and x.strip() for x in flavors))
+            if ok_gn:
+                rep.ok("%s gm notes" % eid, "%d [GM-FACING] flavor line(s)" % len(flavors))
+            else:
+                rep.fail("%s gm notes" % eid, "gm_notes needs tag [GM-FACING], audience gm, and a non-empty flavor list")
         encs.append(out)
 
     def check_proposed(lst, where):
@@ -1719,6 +1731,14 @@ def render_md(doc):
         for pa in e.get("proposed_achievements", []):
             for l_ in render_proposed_lines(pa):
                 w(l_)
+        gn = e.get("gm_notes") or {}
+        flavors = gn.get("flavor") or []
+        if flavors:
+            tag = gn.get("tag") or "[GM-FACING]"
+            w("")
+            w("#### Item hooks (GM-facing)\n")
+            for line in flavors:
+                w("- %s %s" % (tag, line))
         w("")
         w("#### Scaling note (2, 3, 4 Crawlers)\n")
         for n in ("2", "3", "4"):

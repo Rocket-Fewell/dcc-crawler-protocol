@@ -28,8 +28,8 @@
   },
   "budget_file": {
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.2.7",
-    "expected_sha256": "f239fe8035a3087f999d0496453980ef5b2c2d3a5e99cbc16d921d002c0be1a7"
+    "version": "0.2.8",
+    "expected_sha256": "09e26988550ca29aa27c07dc63869008a1110a0efbe34c540a10b69ce12124cb"
   },
   "canon_table": {
     "path": "lore/tables/canon-floor-2.json",
@@ -1072,6 +1072,14 @@
         "minutes": 20,
         "tag": "pacing guide",
         "cut_short": "Skip; corkboard says another team went."
+      },
+      "gm_notes": {
+        "tag": "[GM-FACING]",
+        "audience": "gm",
+        "flavor": [
+          "Dale's HVAC License: Advantage on duct and vent checks.",
+          "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check only."
+        ]
       },
       "carry_on": {
         "changes": [
