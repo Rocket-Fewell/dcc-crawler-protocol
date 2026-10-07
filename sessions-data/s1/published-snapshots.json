@@ -2,7 +2,7 @@
   "version": 1,
   "crawlers": {
     "Eisenhorn": {
-      "published_at": "2026-10-06T09:44:50-05:00",
+      "published_at": "2026-10-06T20:04:10-05:00",
       "view": {
         "name": "Eisenhorn",
         "player": "Hornn",
@@ -29,7 +29,7 @@
           "wis": 11,
           "cha": 12
         },
-        "credits": 10,
+        "credits": 54,
         "conditions": [],
         "boxes": {},
         "death_saves": {
@@ -42,150 +42,273 @@
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "armor",
-            "mechanics": "AC 11 + Dex. Light armor."
+            "mechanics": "AC 11 + Dex. Light armor.",
+            "notes_sig": ""
           },
           {
             "name": "Box Cutter (Dagger)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick."
+            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick.",
+            "notes_sig": ""
           },
           {
             "name": "Pawnshop Shortsword (Shortsword)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d6 piercing, Finesse, Light. Mastery: Vex."
+            "mechanics": "1d6 piercing, Finesse, Light. Mastery: Vex.",
+            "notes_sig": ""
           },
           {
             "name": "Compound Bow From a Sporting-Goods Display (Shortbow)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex."
+            "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex.",
+            "notes_sig": ""
           },
           {
             "name": "Prop Arrows, Foam Tips Removed (Arrows)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "Ammunition for bows; 20 arrows."
+            "mechanics": "Ammunition for bows; 20 arrows.",
+            "notes_sig": ""
           },
           {
             "name": "Quiver Made From a Cut-Up Backpack (Quiver)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "Holds 20 arrows or 20 bolts."
+            "mechanics": "Holds 20 arrows or 20 bolts.",
+            "notes_sig": ""
           },
           {
             "name": "Bobby Pins and a Gift Card (Thieves' Tools)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Pick locks and disarm traps; proficiency applies."
+            "mechanics": "Pick locks and disarm traps; proficiency applies.",
+            "notes_sig": ""
           },
           {
             "name": "Gym Bag of Suspicious Hardware (Burglar's Pack)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Backpack, 1,000 ball bearings, 10 ft string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 oil flasks, 5 days rations, tinderbox, waterskin, 50 ft rope."
+            "mechanics": "Backpack, 1,000 ball bearings, 10 ft string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 oil flasks, 5 days rations, tinderbox, waterskin, 50 ft rope.",
+            "notes_sig": ""
           },
           {
             "name": "Broom Handle With a Kitchen Knife Taped On (Spear)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap."
+            "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap.",
+            "notes_sig": ""
           },
           {
             "name": "Bag of Mismatched Casino Dice (Dice)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it."
+            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+            "notes_sig": ""
           },
           {
             "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check."
+            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+            "notes_sig": ""
           },
           {
             "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "armor",
-            "mechanics": "Clothing; no mechanics."
+            "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
+            "notes_sig": ""
           },
           {
             "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
             "qty": 5,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "1 day of food, 2 lb."
+            "mechanics": "1 day of food, 2 lb.",
+            "notes_sig": ""
           },
           {
             "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "2 HP, DC 17 Strength to burst."
+            "mechanics": "2 HP, DC 17 Strength to burst.",
+            "notes_sig": ""
           },
           {
             "name": "Tiki Torch, Unlicensed (Torch)",
             "qty": 3,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour."
+            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+            "notes_sig": ""
           },
           {
             "name": "Squeeze Water Bottle (Waterskin)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Holds 4 pints."
+            "mechanics": "Holds 4 pints.",
+            "notes_sig": ""
           },
           {
             "name": "Intake Bag",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Cosmetic. Holds nothing special."
+            "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
+            "notes_sig": ""
           },
           {
             "name": "Paint-Can Pry Bar (Crowbar)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Crowbar: advantage on Strength checks where leverage helps."
+            "mechanics": "Advantage on Strength checks where leverage applies. Improvised weapon: 1d4 bludgeoning. 5 lb.",
+            "notes_sig": "548638997e9c"
+          },
+          {
+            "name": "Mop-Handle Staff (Quarterstaff)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "weapons",
+            "mechanics": "1d6 bludgeoning, Versatile (1d8). Mastery: Topple.",
+            "notes_sig": ""
+          },
+          {
+            "name": "Sports Drink, Red Flavor (Potion of Healing)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "consumables",
+            "mechanics": "Bonus Action to drink (Action to feed to another): regain 2d4+2 HP.",
+            "notes_sig": ""
+          },
+          {
+            "name": "Lore Scrap: Tanya Ruiz's Note",
+            "qty": 1,
+            "uses": 1,
+            "uses_max": 1,
+            "uses_reset": "never",
+            "category": "gear",
+            "mechanics": "Consult the note and ask the GM about one Floor 1 hazard; the GM truthfully gives its trigger or its tell. Then a keepsake. Can't be sold.",
+            "notes_sig": ""
+          },
+          {
+            "name": "Flaming Hot Nacho Cheese Pouch (Alchemist's Fire)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "gear",
+            "mechanics": "Alchemist's Fire, Common consumable. Action: throw at a creature or object within 20 ft. Target makes a DC 13 Dexterity save or takes 1d4 fire damage and starts Burning (1d4 fire at the start of each of its turns until it or someone within 5 ft uses an action to put it out). One use.",
+            "notes_sig": "01e520b3a81a"
+          },
+          {
+            "name": "WET FLOOR Sign (Improvised Weapon, 1d4 bludgeoning)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "weapons",
+            "mechanics": "Improvised weapon: 1d4 bludgeoning, no proficiency bonus.",
+            "notes_sig": ""
+          },
+          {
+            "name": "Half Roll of Foil HVAC Tape (Junk)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "gear",
+            "mechanics": "Junk. Can wedge a Welcome Mat plate (Sleight of Hand DC 13 with junk).",
+            "notes_sig": "6556949b8a3b"
+          },
+          {
+            "name": "Dale Pruitt's Laminated HVAC License",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "gear",
+            "mechanics": "Advantage on checks to find your way through, search, or identify ductwork, vents and HVAC machinery. Keepsake; can't be sold. Dale, smiling.",
+            "notes_sig": "a64baf9c47a4"
+          },
+          {
+            "name": "Turnstile Needle Residue (1 dose)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "uses_reset": null,
+            "category": "consumables",
+            "mechanics": "As Basic Poison: Bonus Action to coat one weapon or up to 3 ammo. For 1 minute, a hit deals +1d4 poison damage.",
+            "notes_sig": ""
           }
         ],
         "achievements": [
-          "Paperwork Survivor"
+          "Paperwork Survivor",
+          "Corpse Lesson",
+          "Unofficial Next of Kin",
+          "Fail to Rescue a Civilian"
         ],
-        "achievement_text": {},
+        "achievement_text": {
+          "Corpse Lesson": "Snark only: she's not using it. Probably.",
+          "Unofficial Next of Kin": "Title: Unofficial Next of Kin, plus 20 credits",
+          "Fail to Rescue a Civilian": "Nothing. Even the System won't pay out for this one."
+        },
         "standing_orders": "Gets to the nearest saferoom that has no mobs enroute, otherwise gets behind the highest strength conscious party member and auto attacks",
         "standing_reaction": "Opportunity Attacks: on",
         "signature": "Fuggem: slide behind enemy and shank.",
@@ -215,12 +338,13 @@
         }
       },
       "message_ids": [
-        "1557040947299090604",
-        "1557040949492973638"
+        "1557196804645331088",
+        "1557196805996019735",
+        "1557196807614890067"
       ]
     },
     "Shirayuki": {
-      "published_at": "2026-10-05T19:13:08-05:00",
+      "published_at": "2026-10-06T20:04:11-05:00",
       "view": {
         "name": "Shirayuki",
         "player": "Grimmtrouble",
@@ -230,7 +354,7 @@
         "level": 1,
         "xp": 0,
         "hp": {
-          "current": 12,
+          "current": 9,
           "max": 12,
           "temp": 0
         },
@@ -247,7 +371,7 @@
           "wis": 13,
           "cha": 11
         },
-        "credits": 9,
+        "credits": 34,
         "conditions": [],
         "boxes": {},
         "death_saves": {
@@ -260,142 +384,193 @@
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "armor",
-            "mechanics": "AC 16. Needs Str 13. Stealth disadvantage. Heavy armor."
+            "mechanics": "AC 16. Needs Str 13. Stealth disadvantage. Heavy armor.",
+            "notes_sig": ""
           },
           {
             "name": "Sheet-Metal Slab on a Pipe Handle (Greatsword)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "2d6 slashing, Heavy, Two-Handed. Mastery: Graze."
+            "mechanics": "2d6 slashing, Heavy, Two-Handed. Mastery: Graze.",
+            "notes_sig": ""
           },
           {
             "name": "Chain With a Padlock On It (Flail)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d8 bludgeoning. Mastery: Sap."
+            "mechanics": "1d8 bludgeoning. Mastery: Sap.",
+            "notes_sig": ""
           },
           {
             "name": "Curtain-Rod Javelin (Javelin)",
             "qty": 8,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d6 piercing, Thrown (30/120). Mastery: Slow."
+            "mechanics": "1d6 piercing, Thrown (30/120). Mastery: Slow.",
+            "notes_sig": ""
           },
           {
             "name": "Maintenance-Closet Duffel (Dungeoneer's Pack)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Backpack, crowbar, hammer, 10 pitons, 10 torches, tinderbox, 10 days rations, waterskin, 50 ft rope."
+            "mechanics": "Backpack, crowbar, hammer, 10 pitons, 10 torches, tinderbox, 10 days rations, waterskin, 50 ft rope.",
+            "notes_sig": ""
           },
           {
             "name": "Box Cutter (Dagger)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "weapons",
-            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick."
+            "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick.",
+            "notes_sig": ""
           },
           {
             "name": "Bobby Pins and a Gift Card (Thieves' Tools)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Pick locks and disarm traps; proficiency applies."
+            "mechanics": "Pick locks and disarm traps; proficiency applies.",
+            "notes_sig": ""
           },
           {
             "name": "Bag of Mismatched Casino Dice (Dice)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it."
+            "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+            "notes_sig": ""
           },
           {
             "name": "Gym-Locker Sleeping Bag (Bedroll)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Sleeping gear."
+            "mechanics": "Sleeping gear.",
+            "notes_sig": ""
           },
           {
             "name": "Ziplock Pouch (Pouch)",
             "qty": 2,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Holds 6 lb of small items."
+            "mechanics": "Holds 6 lb of small items.",
+            "notes_sig": ""
           },
           {
             "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "armor",
-            "mechanics": "Clothing; no mechanics."
+            "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
+            "notes_sig": ""
           },
           {
             "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
             "qty": 5,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "1 day of food, 2 lb."
+            "mechanics": "1 day of food, 2 lb.",
+            "notes_sig": ""
           },
           {
             "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "2 HP, DC 17 Strength to burst."
+            "mechanics": "2 HP, DC 17 Strength to burst.",
+            "notes_sig": ""
           },
           {
             "name": "Tiki Torch, Unlicensed (Torch)",
             "qty": 3,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour."
+            "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+            "notes_sig": ""
           },
           {
             "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check."
+            "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+            "notes_sig": ""
           },
           {
             "name": "Squeeze Water Bottle (Waterskin)",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Holds 4 pints."
+            "mechanics": "Holds 4 pints.",
+            "notes_sig": ""
           },
           {
             "name": "Intake Bag",
             "qty": 1,
             "uses": null,
             "uses_max": null,
+            "uses_reset": null,
             "category": "gear",
-            "mechanics": "Cosmetic. Holds nothing special."
+            "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
+            "notes_sig": ""
+          },
+          {
+            "name": "Snow Ghost Maid Headdress, Collector's Capsule (cosmetic, tailored pull)",
+            "qty": 1,
+            "uses": 1,
+            "uses_max": 1,
+            "uses_reset": "session",
+            "category": "gear",
+            "mechanics": "While worn or shown off, add 1d4 to one Charisma (Performance or Persuasion) check made to play to the audience or someone watching. Check bonus only. Sells for 1 credit.",
+            "notes_sig": ""
           }
         ],
         "achievements": [
-          "Paperwork Survivor"
+          "Paperwork Survivor",
+          "Fed the Machine",
+          "Vending Gore",
+          "Literacy Optional"
         ],
-        "achievement_text": {},
+        "achievement_text": {
+          "Fed the Machine": "The machine says thank you. That's the reward.",
+          "Vending Gore": "Title: Valued Customer + 25 credits",
+          "Literacy Optional": "Nothing. The signs were the reward, and you skipped them."
+        },
         "standing_orders": "White Requiem: The Snow Ghost summons a storm of spectral white bones that erupts around her target. The bones lock the target in place and deal heavy necrotic damage. If the target is already severel",
         "standing_reaction": "Opportunity Attacks: on",
         "signature": "",
@@ -410,12 +585,13 @@
         "pet": null
       },
       "message_ids": [
-        "1556821574563274755",
-        "1556821576026951752"
+        "1557196808743292999",
+        "1557196810282602569",
+        "1557196811955994656"
       ]
     },
     "Mr. White": {
-      "published_at": "2026-10-06T09:44:51-05:00",
+      "published_at": "2026-10-06T19:55:52-05:00",
       "view": {
         "name": "Mr. White",
         "player": "Trailer Park Moses",
@@ -442,7 +618,7 @@
           "wis": 13,
           "cha": 12
         },
-        "credits": 20,
+        "credits": 109,
         "conditions": [],
         "boxes": {},
         "death_saves": {
@@ -528,7 +704,7 @@
             "uses": null,
             "uses_max": null,
             "category": "armor",
-            "mechanics": "Clothing; no mechanics."
+            "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit."
           },
           {
             "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
@@ -568,17 +744,47 @@
             "uses": null,
             "uses_max": null,
             "category": "gear",
-            "mechanics": "Cosmetic. Holds nothing special."
+            "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold."
+          },
+          {
+            "name": "Vendor Oddity (Unappraised)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "A coin. Probably. Value: ???. Cannot be sold."
+          },
+          {
+            "name": "Riot Shield, PROPERTY OF ORIENTATION (Shield)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "armor",
+            "mechanics": "+2 AC. A Monk wielding a shield loses Unarmored Defense and Martial Arts (Mr. White: AC 16 with it, no Martial Arts)."
+          },
+          {
+            "name": "Scrawled Map (Zone S Service Corridor)",
+            "qty": 1,
+            "uses": null,
+            "uses_max": null,
+            "category": "gear",
+            "mechanics": "Reveals Zone S on the System Map: a service hall behind the big stage with a locked door marked STAIRS."
           }
         ],
         "achievements": [
           "Paperwork Survivor",
           "Don't Skip Intro",
-          "Win Initiative"
+          "Win Initiative",
+          "Oddity Logged",
+          "Hidden Cache",
+          "Side Path"
         ],
         "achievement_text": {
           "Don't Skip Intro": "Absolutely nothing, Mr. White. Patience is its own reward, and it's a crappy one.",
-          "Win Initiative": "None. Bragging rights only."
+          "Win Initiative": "None. Bragging rights only.",
+          "Oddity Logged": "None. Oddity logged.",
+          "Hidden Cache": "Title: Looks Behind Things, plus 25 credits",
+          "Side Path": "Zone S is on your map. That's the reward. You're welcome."
         },
         "standing_orders": "SMASH",
         "standing_reaction": "Opportunity Attacks: on",
@@ -590,7 +796,7 @@
           "Languages: Common, Goblin, Orc"
         ],
         "pet": {
-          "name": "unnamed wolf",
+          "name": "Turbo",
           "species": "Wolf",
           "kind": "wolf",
           "cr": "1/4",
@@ -607,8 +813,8 @@
         }
       },
       "message_ids": [
-        "1557040951237681304",
-        "1557040952214814801"
+        "1557194716934705316",
+        "1557194718872346676"
       ]
     }
   }

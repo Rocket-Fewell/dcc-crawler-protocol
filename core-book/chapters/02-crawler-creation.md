@@ -581,7 +581,7 @@ The tool works out your Armor Class from what you wear: worn armor plus whatever
 
 ### The Intake Bag and Your Inventory
 
-You also receive a clear **Intake Bag**: a lanyard printed with your Intake Tag, a packet of System-brand electrolyte powder that tastes like a battery, and a laminated card that reads **YOU ARE ON CAMERA**. The bag has no value, cannot be sold, and gives you nothing mechanical. If you named an object in your survey that is plausibly on you, you may keep one mundane personal item too.
+You also receive a clear **Intake Bag**: a lanyard printed with your Intake Tag, a packet of System-brand electrolyte powder that tastes like a battery, and a laminated card that reads **YOU ARE ON CAMERA**. The bag has no value and cannot be sold, but the System has tuned it to your Inventory: **once per turn, you can store or retrieve one System Inventory item without using your object interaction.** Your Inventory's normal limits still apply. If you named an object in your survey that is plausibly on you, you may keep one mundane personal item too.
 
 Everything else goes into your **System Inventory**, which Chapter 1 describes.
 

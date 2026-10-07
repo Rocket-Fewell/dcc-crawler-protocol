@@ -7,3 +7,6 @@
 {"ts":"2026-10-06T00:19:47.969Z","event":"build_cancelled","uid":"1177041830337056828","screen":"S3","status":"draft","had_rolls":false}
 {"ts":"2026-10-06T00:27:54.975Z","event":"build_cancelled","uid":"783884998230278164","screen":"S10","status":"draft","had_rolls":true}
 {"ts":"2026-10-06T00:46:25.761Z","event":"registered","crawler":"Mr.Whaite","uid":"783884998230278164","tag":"CRAWLER #4496-B","session":"s1","card_posted":true,"via":"create-flow"}
+{"ts":"2026-10-06T19:03:01.297Z","event":"build_cancelled","uid":"376517850724040714","screen":"S3","status":"draft","had_rolls":false}
+{"ts":"2026-10-06T21:52:25.497Z","event":"build_cancelled","uid":"376517850724040714","screen":"S10","status":"draft","had_rolls":true}
+{"ts":"2026-10-06T21:58:27.941Z","event":"build_cancelled","uid":"376517850724040714","screen":"S10","status":"draft","had_rolls":true}

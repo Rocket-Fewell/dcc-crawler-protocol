@@ -300,6 +300,41 @@ class InventoryEtcTests(StateTestCase):
         self.run_cmd("inventory", "remove", "Grimsby", "Healing Potion", expect=1)
         self.run_cmd("inventory", "add", "Grimsby", "Rope", "--qty", "0", expect=1)
 
+    def test_item_uses_optional_fields_validate_and_track(self):
+        self.run_cmd("inventory", "add", "Grimsby", "Snow Ghost Headdress", "--mechanics", "Once per session: +1d4 Performance.")
+        self.run_cmd("inventory", "add", "Donut", "Tanya's Note")
+        self.assertNotIn("uses", self.crawler("Grimsby")["inventory"][0])   # items without the fields are unchanged
+        # uses/uses_max first, then uses_reset (validation checks the three together once uses_reset is set)
+        self.run_cmd("set", "crawlers.grimsby.inventory.0.uses", "1")
+        self.run_cmd("set", "crawlers.grimsby.inventory.0.uses_max", "1")
+        self.run_cmd("set", "crawlers.grimsby.inventory.0.uses_reset", "session")
+        self.run_cmd("set", "crawlers.donut.inventory.0.uses_max", "1")
+        self.run_cmd("set", "crawlers.donut.inventory.0.uses", "1")
+        self.run_cmd("set", "crawlers.donut.inventory.0.uses_reset", "never")
+        _, err = self.run_cmd("set", "crawlers.grimsby.inventory.0.uses", "2", expect=1)   # above uses_max
+        self.assertIn("uses must be an integer between 0 and uses_max", err)
+        self.run_cmd("set", "crawlers.grimsby.inventory.0.uses_max", "0", expect=1)
+        out, _ = self.run_cmd("uses", "spend", "Grimsby", "headdress")
+        self.assertIn("uses 0/1", out)
+        self.run_cmd("uses", "spend", "Grimsby", "headdress", expect=1)   # none left
+        self.run_cmd("uses", "spend", "Donut", "note")
+        self.run_cmd("uses", "spend", "Grimsby", "nothing-like-this", expect=1)
+        self.run_cmd("uses", "spend", "Carl", "anything", expect=1)
+        out, _ = self.run_cmd("uses", "reset")   # default --per session: refills Grimsby's headdress, never Donut's one-time note
+        self.assertIn("refilled 1 item(s)", out)
+        self.assertEqual(self.crawler("Grimsby")["inventory"][0]["uses"], 1)
+        self.assertEqual(self.crawler("Donut")["inventory"][0]["uses"], 0)
+        self.run_cmd("uses", "set", "Donut", "note", "--to", "1")
+        self.assertEqual(self.crawler("Donut")["inventory"][0]["uses"], 1)
+        self.run_cmd("uses", "reset", "--per", "never", expect=1)
+        errs, warns = state.validate_state(self.load())
+        self.assertEqual(errs, [])
+        st = self.load()
+        st["crawlers"][0]["inventory"][0]["uses_reset"] = "full moon"
+        errs, warns = state.validate_state(st)
+        self.assertEqual(errs, [])
+        self.assertTrue(any("unknown uses_reset" in w for w in warns))
+
     def test_credits(self):
         self.run_cmd("credits", "Grimsby", "+500")
         self.run_cmd("credits", "Grimsby", "-200")

@@ -3,11 +3,11 @@
   "campaign": {
     "name": "Dungeon Crawler Carl 5e (2024)",
     "current_floor": 1,
-    "zone": "",
+    "zone": "Z5 Shooting Gallery",
     "death_mode": "Costly Revives",
     "comfort": "Ludicrous",
     "created": "2026-10-05T13:21:00-05:00",
-    "updated": "2026-10-06T09:38:32-05:00",
+    "updated": "2026-10-06T20:04:09-05:00",
     "proctor_hints": {
       "zone_1": {
         "Eisenhorn": {
@@ -19,23 +19,24 @@
       }
     },
     "combat": {
-      "encounter": "enc-d01-08 Vent Row",
-      "round": 2,
+      "encounter": "enc-d01-11 Shooting Gallery (Z5)",
+      "round": 1,
       "order": [
-        "Mr. White 17",
-        "Eisenhorn 14",
-        "Vent Rats 13",
-        "Shirayuki 4"
+        "Shirayuki 20",
+        "Mannequin Staff 12",
+        "Eisenhorn 12",
+        "Mr. White 8"
       ],
-      "turn": "Mr. White",
-      "rats": {
-        "VR1": 0,
-        "VR2": 0,
-        "VR3": 0,
-        "VR4": 7
+      "turn": "Shirayuki",
+      "mannequins": {
+        "MS1": 13,
+        "MS2": 13,
+        "MS3": 13
       },
-      "positions": "PAUSED 2026-10-05 ~8:33 PM CT by Caleb, resume here tomorrow. VR1, VR2, VR3 dead (Shirayuki greatsword 9 to VR3 at the vent, R1). Shirayuki at the vent 20 ft down the hall, next to VR4 (7/7), which has the jerky. Round 2 starts with Mr. White; VR4 acts this round at 13.",
-      "pending_toasts": []
+      "enemy_stats": "Skeleton reskin: AC 14 (+2 half cover behind far counter), HP 13, Shortbow +5 80/320 1d6+3 piercing, Shortsword +5 1d6+3; vulnerable bludgeoning, immune poison; shoot from far counter, close to melee only if Crawlers do",
+      "positions": "Shirayuki just inside Z5 door, open floor; mannequins behind far counter ~55 ft; Mr. White + Turbo at Z4/Z5 doorway; Eisenhorn + Rawlee at T2 turnstile in Z4. Tie Eisenhorn/Mannequins 12 broken by Dex (mannequins 16 > 15). Pets act on owner turn. Cover popup on first use. Register SoH DC 10 or smash: 2d6x3 cr + raffle ticket. Seeds ACH-0867 shield block, ACH-0861, ACH-0894 crit.",
+      "pending_toasts": [],
+      "status": "active"
     }
   },
   "party": {
@@ -186,7 +187,7 @@
           "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
           "qty": 1,
           "notes": "",
-          "mechanics": "Clothing; no mechanics.",
+          "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
           "category": "armor",
           "srd_id": "travelers-clothes",
           "chargen_key": "travelers_clothes"
@@ -230,18 +231,78 @@
         {
           "name": "Intake Bag",
           "qty": 1,
-          "notes": "cosmetic, zero value",
-          "mechanics": "Cosmetic. Holds nothing special.",
+          "notes": "",
+          "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
           "category": "gear"
         },
         {
           "name": "Paint-Can Pry Bar (Crowbar)",
           "qty": 1,
           "notes": "Surface street scavenge before descent (Perception 15). 5e Crowbar, mundane: Advantage on Strength checks where the crowbar's leverage can be applied. 5 lb.",
+          "category": "gear",
+          "mechanics": "Advantage on Strength checks where leverage applies. Improvised weapon: 1d4 bludgeoning. 5 lb."
+        },
+        {
+          "name": "Mop-Handle Staff (Quarterstaff)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d6 bludgeoning, Versatile (1d8). Mastery: Topple.",
+          "category": "weapons"
+        },
+        {
+          "name": "Sports Drink, Red Flavor (Potion of Healing)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Bonus Action to drink (Action to feed to another): regain 2d4+2 HP.",
+          "category": "consumables"
+        },
+        {
+          "name": "Lore Scrap: Tanya Ruiz's Note",
+          "qty": 1,
+          "notes": "",
+          "category": "gear",
+          "mechanics": "Consult the note and ask the GM about one Floor 1 hazard; the GM truthfully gives its trigger or its tell. Then a keepsake. Can't be sold.",
+          "uses": 1,
+          "uses_max": 1,
+          "uses_reset": "never"
+        },
+        {
+          "name": "Flaming Hot Nacho Cheese Pouch (Alchemist's Fire)",
+          "qty": 1,
+          "notes": "Found in the dead change machine's coin vault, Vending Gore Arcade (Thieves' Tools 12 vs DC 12, vending table d6=5).",
+          "mechanics": "Alchemist's Fire, Common consumable. Action: throw at a creature or object within 20 ft. Target makes a DC 13 Dexterity save or takes 1d4 fire damage and starts Burning (1d4 fire at the start of each of its turns until it or someone within 5 ft uses an action to put it out). One use.",
           "category": "gear"
+        },
+        {
+          "name": "WET FLOOR Sign (Improvised Weapon, 1d4 bludgeoning)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Improvised weapon: 1d4 bludgeoning, no proficiency bonus.",
+          "category": "weapons"
+        },
+        {
+          "name": "Half Roll of Foil HVAC Tape (Junk)",
+          "qty": 1,
+          "notes": "From Dale Pruitt's cargo shorts",
+          "mechanics": "Junk. Can wedge a Welcome Mat plate (Sleight of Hand DC 13 with junk).",
+          "category": "gear"
+        },
+        {
+          "name": "Dale Pruitt's Laminated HVAC License",
+          "qty": 1,
+          "notes": "Keepsake from Dale's body, Z4",
+          "mechanics": "Advantage on checks to find your way through, search, or identify ductwork, vents and HVAC machinery. Keepsake; can't be sold. Dale, smiling.",
+          "category": "gear"
+        },
+        {
+          "name": "Turnstile Needle Residue (1 dose)",
+          "qty": 1,
+          "notes": "",
+          "category": "consumables",
+          "mechanics": "As Basic Poison: Bonus Action to coat one weapon or up to 3 ammo. For 1 minute, a hit deals +1d4 poison damage."
         }
       ],
-      "credits": 10,
+      "credits": 54,
       "conditions": [],
       "vows": [],
       "boons": [],
@@ -251,6 +312,27 @@
           "floor": 1,
           "note": "create-flow intake toast, pays nothing",
           "at": "2026-10-05T19:00:37-05:00"
+        },
+        {
+          "name": "Corpse Lesson",
+          "floor": 1,
+          "note": "ACH-0083, R0, looted Tanya Ruiz",
+          "at": "2026-10-06T18:31:11-05:00",
+          "reward": "Snark only: she's not using it. Probably."
+        },
+        {
+          "name": "Unofficial Next of Kin",
+          "floor": 1,
+          "note": "ACH-0871 find a lore scrap (Tanya's note), R1 on F1",
+          "at": "2026-10-06T18:31:12-05:00",
+          "reward": "Title: Unofficial Next of Kin, plus 20 credits"
+        },
+        {
+          "name": "Fail to Rescue a Civilian",
+          "floor": 1,
+          "note": "ACH-0870 (R0). Killed Dale Pruitt in the Z4 snare net with a thrown Box Cutter, 2026-10-06 s1. 4th s1 toast, snark-only.",
+          "at": "2026-10-06T19:11:31-05:00",
+          "reward": "Nothing. Even the System won't pay out for this one."
         }
       ],
       "boxes": {
@@ -559,7 +641,7 @@
       "level": 1,
       "xp": 0,
       "hp": {
-        "current": 12,
+        "current": 9,
         "max": 12,
         "temp": 0
       },
@@ -671,7 +753,7 @@
           "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
           "qty": 1,
           "notes": "",
-          "mechanics": "Clothing; no mechanics.",
+          "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
           "category": "armor",
           "srd_id": "travelers-clothes",
           "chargen_key": "travelers_clothes"
@@ -724,12 +806,22 @@
         {
           "name": "Intake Bag",
           "qty": 1,
-          "notes": "cosmetic, zero value",
-          "mechanics": "Cosmetic. Holds nothing special.",
+          "notes": "",
+          "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
           "category": "gear"
+        },
+        {
+          "name": "Snow Ghost Maid Headdress, Collector's Capsule (cosmetic, tailored pull)",
+          "qty": 1,
+          "notes": "",
+          "category": "gear",
+          "mechanics": "While worn or shown off, add 1d4 to one Charisma (Performance or Persuasion) check made to play to the audience or someone watching. Check bonus only. Sells for 1 credit.",
+          "uses": 1,
+          "uses_max": 1,
+          "uses_reset": "session"
         }
       ],
-      "credits": 9,
+      "credits": 34,
       "conditions": [],
       "vows": [],
       "boons": [],
@@ -739,6 +831,27 @@
           "floor": 1,
           "note": "create-flow intake toast, pays nothing",
           "at": "2026-10-05T19:13:06-05:00"
+        },
+        {
+          "name": "Fed the Machine",
+          "floor": 1,
+          "note": "s1 Vending Gore Arcade: failed Dex save reaching into a hungry vendor, bitten for 2, arm stuck (Restrained). Snark-only (R0).",
+          "at": "2026-10-06T18:21:16-05:00",
+          "reward": "The machine says thank you. That's the reward."
+        },
+        {
+          "name": "Vending Gore",
+          "floor": 1,
+          "note": "s1 ACH-0077: paid a hungry vendor with coins instead of reaching in; pull 6 = tailored cosmetic (maid headdress)",
+          "at": "2026-10-06T18:34:46-05:00",
+          "reward": "Title: Valued Customer + 25 credits"
+        },
+        {
+          "name": "Literacy Optional",
+          "floor": 1,
+          "note": "R0 snark-only; stepped on signed T1 plate 3 under Dale to cut the net (Z4)",
+          "at": "2026-10-06T19:14:49-05:00",
+          "reward": "Nothing. The signs were the reward, and you skipped them."
         }
       ],
       "boxes": {
@@ -959,7 +1072,7 @@
           "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
           "qty": 1,
           "notes": "",
-          "mechanics": "Clothing; no mechanics.",
+          "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
           "category": "armor",
           "srd_id": "travelers-clothes",
           "chargen_key": "travelers_clothes"
@@ -1003,12 +1116,33 @@
         {
           "name": "Intake Bag",
           "qty": 1,
-          "notes": "cosmetic, zero value",
-          "mechanics": "Cosmetic. Holds nothing special.",
+          "notes": "",
+          "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
+          "category": "gear"
+        },
+        {
+          "name": "Vendor Oddity (Unappraised)",
+          "qty": 1,
+          "notes": "Found in the UNCLAIMED crate, Lost & Found cage, Vending Gore Arcade (F1 Day 1).",
+          "mechanics": "A coin. Probably. Value: ???. Cannot be sold.",
+          "category": "gear"
+        },
+        {
+          "name": "Riot Shield, PROPERTY OF ORIENTATION (Shield)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "+2 AC. A Monk wielding a shield loses Unarmored Defense and Martial Arts (Mr. White: AC 16 with it, no Martial Arts).",
+          "category": "armor"
+        },
+        {
+          "name": "Scrawled Map (Zone S Service Corridor)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Reveals Zone S on the System Map: a service hall behind the big stage with a locked door marked STAIRS.",
           "category": "gear"
         }
       ],
-      "credits": 20,
+      "credits": 109,
       "conditions": [],
       "vows": [],
       "boons": [],
@@ -1032,6 +1166,27 @@
           "note": "snark-only, Vent Row R1",
           "at": "2026-10-05T20:29:16-05:00",
           "reward": "None. Bragging rights only."
+        },
+        {
+          "name": "Oddity Logged",
+          "floor": 1,
+          "note": "ACH-0081 Odd Coin Pocketed, hidden toast, no reward; SEED-ODDCOIN holder = Mr. White",
+          "at": "2026-10-06T18:39:18-05:00",
+          "reward": "None. Oddity logged."
+        },
+        {
+          "name": "Hidden Cache",
+          "floor": 1,
+          "note": "ACH-0177 Orientation Pit: Hidden Cache, R1 on F1; opened 3b back cage. Overage: 4th s1 toast for Mr. White (floor's one DC 15 secret, great moment).",
+          "at": "2026-10-06T18:49:07-05:00",
+          "reward": "Title: Looks Behind Things, plus 25 credits"
+        },
+        {
+          "name": "Side Path",
+          "floor": 1,
+          "note": "ACH-0179, seeded R1 downgraded to snark-only: Mr. White's 5th s1 toast, spotlight balance (core 3.3/3.7). Map reveal is the payoff.",
+          "at": "2026-10-06T19:00:04-05:00",
+          "reward": "Zone S is on your map. That's the reward. You're welcome."
         }
       ],
       "boxes": {
@@ -1311,16 +1466,17 @@
       },
       "status": "active",
       "pet": {
-        "name": "Wolf (unnamed)",
+        "name": "Turbo",
         "species": "Wolf",
         "species_srd_id": "wolf",
         "cr": 0.25,
-        "description": "Adolescent wolf (Wolf stat block, CR 1/4). Mr. White had it with him when the world ended. Not yet named by the player; introduce in fiction at resume.",
+        "description": "Adolescent wolf (Wolf stat block, CR 1/4). Mr. White had it with him when the world ended. Named Turbo by Trailer Park Moses at the table 2026-10-06.",
         "quote": "Q1: i am carrying a spiked gauntlet on each hand, i also had my adolescent wolf",
         "filed_by": "DCC AI GM",
         "filed_on": "2026-10-05T20:50:28-05:00",
         "status": "alive",
-        "floor": 1
+        "floor": 1,
+        "renamed_from": "Wolf (unnamed)"
       }
     }
   ]

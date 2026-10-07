@@ -1,7 +1,7 @@
 {
-  "status": "open",
-  "since": "2026-10-06T12:41:50-05:00",
-  "by": "bridge",
-  "opens": 4,
-  "note": "bridge /join"
+  "status": "closed",
+  "since": "2026-10-06T19:52:08-05:00",
+  "by": "gm",
+  "opens": 5,
+  "closed_at_epoch": 1791334328.1386635
 }

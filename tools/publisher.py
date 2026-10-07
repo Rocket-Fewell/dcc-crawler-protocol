@@ -15,6 +15,7 @@ register-channel|channels` and (best-effort, in the background) by state.py afte
 """
 import datetime as dt
 import fcntl
+import hashlib
 import json
 import os
 import re
@@ -304,6 +305,12 @@ def item_info(item, data):
     return {"category": item.get("category") or meta.get("category") or "gear", "mechanics": mech}
 
 
+def _notes_sig(notes):
+    """Short fingerprint of an item's GM notes: lets a notes-only edit count as a change without copying the note text into the view/snapshot."""
+    text = str(notes or "").strip()
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:12] if text else ""
+
+
 def _status(c):
     """active|benched for player Crawlers and pet-Crawlers; None for plain pets and companions (state.py crawler_status)."""
     if (c.get("kind") or "player") not in ("player", "pet-crawler"):
@@ -323,7 +330,8 @@ def make_view(c, data):
             continue
         info = item_info(it, data)
         inv.append({"name": it["name"], "qty": it.get("qty", 1), "uses": it.get("uses"), "uses_max": it.get("uses_max"),
-                    "category": info["category"], "mechanics": info["mechanics"]})
+                    "uses_reset": it.get("uses_reset"), "category": info["category"], "mechanics": info["mechanics"],
+                    "notes_sig": _notes_sig(it.get("notes"))})
     extras = (data.get("crawlers") or {}).get(c["name"], {})
     return {
         "name": c["name"], "player": c.get("player", ""), "status": _status(c), "class": c.get("class", ""), "species": c.get("species", ""),
@@ -477,27 +485,88 @@ def diff_views(old, new):
     for cond in old["conditions"]:
         if cond not in new["conditions"]:
             ch.append(f"Condition: -{cond}")
-    if old.get("death_saves") != new.get("death_saves") and new.get("death_saves"):
-        d = new["death_saves"]
+    if old.get("death_saves") != new.get("death_saves"):
+        d = new.get("death_saves") or {}
         ch.append(f"Death saves {d.get('successes', 0)} successes / {d.get('fails', 0)} fails")
     if old["boxes"] != new["boxes"]:
         ch.append("Boxes: " + (", ".join(f"{t} {n}" for t, n in new["boxes"].items()) or "none"))
-    oi = {i["name"]: i for i in old["inventory"]}
-    ni = {i["name"]: i for i in new["inventory"]}
-    for n, i in ni.items():
-        if n not in oi:
-            ch.append(f"+ {n}" + (f" x{i['qty']}" if i["qty"] > 1 else ""))
-        elif oi[n]["qty"] != i["qty"]:
-            ch.append(f"{n}: x{oi[n]['qty']} -> x{i['qty']}")
-        elif oi[n].get("uses") != i.get("uses"):
-            ch.append(f"{n}: uses {oi[n].get('uses')} -> {i.get('uses')}")
-    for n in oi:
-        if n not in ni:
-            ch.append(f"- {n}")
+    oi, ni = _keyed_items(old["inventory"]), _keyed_items(new["inventory"])
+    for k, i in ni.items():
+        label = _item_label(k)
+        if k not in oi:
+            ch.append(f"+ {label}" + (f" x{i['qty']}" if i["qty"] > 1 else ""))
+            continue
+        parts = _item_changes(oi[k], i)
+        if parts:
+            ch.append(f"{label}: " + ", ".join(parts))
+    for k in oi:
+        if k not in ni:
+            ch.append(f"- {_item_label(k)}")
     for a in new["achievements"]:
         if a not in old["achievements"]:
             ch.append(f"Achievement: {a}")
+    if not ch and views_differ(old, new):
+        ch.append("Sheet details updated")   # safety net: a visible field changed that has no line of its own above
     return ch
+
+
+def _keyed_items(items):
+    """(name, n) -> item, so two stacks with the same name are compared one-to-one instead of collapsing into one."""
+    out, seen = {}, {}
+    for i in items:
+        n = seen.get(i["name"], 0)
+        seen[i["name"]] = n + 1
+        out[(i["name"], n)] = i
+    return out
+
+
+def _item_label(key):
+    name, n = key
+    return name if n == 0 else f"{name} #{n + 1}"
+
+
+def _differs(a, b, k):
+    """A field counts as changed only when both views carry it: a snapshot written before the field existed never forces a repost."""
+    return k in a and k in b and a[k] != b[k]
+
+
+def _item_changes(o, i):
+    """Every visible change to one inventory row: qty, uses (count, max, reset), mechanics text, notes, sheet section."""
+    parts = []
+    if _differs(o, i, "qty"):
+        parts.append(f"x{o['qty']} -> x{i['qty']}")
+    if any(_differs(o, i, k) for k in ("uses_max", "uses_reset")):
+        parts.append(f"uses {uses_text(o) or 'none'} -> {uses_text(i) or 'none'}")
+    elif _differs(o, i, "uses"):
+        parts.append(f"uses {o.get('uses')} -> {i.get('uses')}")
+    if _differs(o, i, "mechanics"):
+        parts.append("mechanics updated")
+    if _differs(o, i, "notes_sig"):
+        parts.append("notes updated")
+    if _differs(o, i, "category"):
+        parts.append(f"moved to {i['category']}")
+    return parts
+
+
+def views_differ(old, new):
+    """True when any player-visible field differs. Keys missing from the older view (written before the key existed) are skipped,
+    including per-item keys, so adding a view field never reposts every card by itself."""
+    if old is None:
+        return True
+    for k in set(old) & set(new):
+        if k == "inventory":
+            oi, ni = _keyed_items(old[k]), _keyed_items(new[k])
+            if set(oi) != set(ni) or any(_differs(oi[x], ni[x], f) for x in ni for f in set(oi[x]) | set(ni[x])):
+                return True
+        elif k == "status":
+            if (old[k] or "active") != (new[k] or "active"):   # a snapshot from before status existed reads as active
+                return True
+        elif k == "conditions":
+            if sorted(map(str, old[k] or [])) != sorted(map(str, new[k] or [])):
+                return True
+        elif old[k] != new[k]:
+            return True
+    return False
 
 
 # --------------------------------------------------------------------------- rendering
@@ -522,9 +591,32 @@ def achievement_rewards(v, ledger):
     return out
 
 
+USES_RESET_LABELS = {"session": "per session", "short_rest": "per short rest", "long_rest": "per long rest", "day": "per day",
+                     "floor": "per floor", "never": "one-time, does not reset"}
+
+
+def _reset_key(r):
+    return re.sub(r"[\s-]+", "_", str(r or "").strip().lower())
+
+
+def uses_text(i):
+    """'1/1 per session' when the item tracks resetting uses (uses_reset set), '9/10' for plain uses/uses_max, '' when it tracks none."""
+    if i.get("uses") is None or not i.get("uses_max"):
+        return ""
+    base = f"{i['uses']}/{i['uses_max']}"
+    r = i.get("uses_reset")
+    if not r:
+        return base
+    label = USES_RESET_LABELS.get(_reset_key(r)) or f"resets: {r}"
+    return f"{base} {label}" if label.startswith("per ") else f"{base}, {label}"
+
+
 def item_line(i):
     qty = f" x{i['qty']}" if i["qty"] > 1 else ""
-    uses = f" [{i['uses']}/{i['uses_max']} uses]" if i.get("uses") is not None and i.get("uses_max") else ""
+    if i.get("uses_reset") and uses_text(i):
+        uses = f" [Uses: {uses_text(i)}]"   # optional per-session/rest tracking (uses_reset); items without it render exactly as before
+    else:
+        uses = f" [{i['uses']}/{i['uses_max']} uses]" if i.get("uses") is not None and i.get("uses_max") else ""
     mech = f": {i['mechanics']}" if i["mechanics"] else ": (no mechanics on file - ask the GM)"
     return f"- **{i['name']}**{qty}{uses}{mech}"
 
@@ -658,7 +750,7 @@ def publish(client, crawler_names=None, full=False, dry_run=False, log=print):
                 continue
             old = (snaps["crawlers"].get(c["name"]) or {}).get("view")
             new = make_view(c, data)
-            changes = diff_views(old, new)
+            changes = diff_views(old, new)   # also non-empty whenever views_differ(old, new): any visible field change reposts
             if old is not None and not changes and not full:
                 res["status"] = "unchanged"
                 log(f"{c['name']}: no visible changes since the last card")

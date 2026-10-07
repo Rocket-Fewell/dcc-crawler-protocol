@@ -2,3 +2,5 @@
 {"ts":"2026-10-05T20:50:28-05:00","session":"s1","event":"added","owner":"Mr. White","pet":"Wolf (unnamed)","species":"Wolf","cr":0.25,"description":"Adolescent wolf (Wolf stat block, CR 1/4). Mr. White had it with him when the world ended. Not yet named by the player; introduce in fiction at resume.","quote":"Q1: i am carrying a spiked gauntlet on each hand, i also had my adolescent wolf","override":"","by":"DCC AI GM"}
 {"ts": "2026-10-06T08:57:38-05:00", "session": "s1", "event": "renamed", "owner": "Eisenhorn", "pet": "Rawlee", "renamed_from": "Rolly", "by": "DCC AI GM", "reason": "Hornn confirmed spelling in DCC MAIN"}
 {"ts":"2026-10-06T09:38:32-05:00","session":"s1","event":"updated","owner":"Eisenhorn","pet":"Rawlee","before":{"kind":null},"changes":{"kind":"raccoon"},"by":"Architect"}
+{"ts":"2026-10-06T17:51:12-05:00","session":"s1","event":"updated","owner":"Mr. White","pet":"Wolf (unnamed)","before":{},"changes":{},"by":"gm"}
+{"ts":"2026-10-06T17:51:35-05:00","session":"s1","event":"renamed","owner":"Mr. White","pet":"Turbo","renamed_from":"Wolf (unnamed)","by":"DCC AI GM","reason":"Trailer Park Moses named the wolf at the table"}

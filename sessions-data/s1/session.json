@@ -13,5 +13,6 @@
   "guild_id": "1556163673469222942",
   "ears_channel_id": "1556163778788462602",
   "mouth_channel_id": "1556163836879568946",
-  "voice_channel_id": "1556163675000279043"
+  "voice_channel_id": "1556163675000279043",
+  "fish_session_cap_minutes": 0
 }

@@ -473,6 +473,27 @@ def _is_int(v):
     return isinstance(v, int) and not isinstance(v, bool)
 
 
+USES_RESETS = ("session", "short_rest", "long_rest", "day", "floor", "never")   # publisher.USES_RESET_LABELS renders these
+
+
+def _reset_key(r):
+    return re.sub(r"[\s-]+", "_", str(r or "").strip().lower())
+
+
+def _uses_problems(it):
+    """(errors, warnings) for an item with tracked uses: uses_reset text, uses_max int >= 1, uses int 0..uses_max."""
+    errs, warns, nm = [], [], it.get("name")
+    if not isinstance(it.get("uses_reset"), str) or not it["uses_reset"].strip():
+        errs.append(f"item {nm!r}: uses_reset must be one of {', '.join(USES_RESETS)}")
+    elif _reset_key(it["uses_reset"]) not in USES_RESETS:
+        warns.append(f"item {nm!r}: unknown uses_reset {it['uses_reset']!r} (known: {', '.join(USES_RESETS)}); `uses reset` will not refill it")
+    if not (_is_int(it.get("uses_max")) and it["uses_max"] >= 1):
+        errs.append(f"item {nm!r}: uses_max must be an integer >= 1 when uses_reset is set")
+    elif not (_is_int(it.get("uses")) and 0 <= it["uses"] <= it["uses_max"]):
+        errs.append(f"item {nm!r}: uses must be an integer between 0 and uses_max ({it['uses_max']})")
+    return errs, warns
+
+
 def validate_state(state):
     """Return (errors, warnings)."""
     errs, warns = [], []
@@ -573,6 +594,10 @@ def validate_state(state):
         for it in c.get("inventory", []) if isinstance(c.get("inventory"), list) else []:
             if not (isinstance(it, dict) and isinstance(it.get("name"), str) and _is_int(it.get("qty")) and it["qty"] >= 1):
                 errs.append(f"{where}: inventory items must be {{name, qty>=1}} (got {json.dumps(it)[:60]})")
+            elif it.get("uses_reset") is not None:   # optional tracked uses (uses/uses_max/uses_reset); items without uses_reset are not checked (as before)
+                e, w = _uses_problems(it)
+                errs.extend(f"{where}: {m}" for m in e)
+                warns.extend(f"{where}: {m}" for m in w)
         for it in c.get("conditions", []) if isinstance(c.get("conditions"), list) else []:
             if not isinstance(it, str):
                 errs.append(f"{where}: conditions must be strings")
@@ -978,6 +1003,57 @@ def cmd_inventory(a):
         if existing["qty"] == 0:
             inv.remove(existing)
         return state, f"{c['name']} -{qty} {existing['name']}"
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+def _find_uses_item(c, item):
+    """Exact name, else a unique partial name (the older exact-only _find_item below is used by sell/transfer)."""
+    low = item.strip().lower()
+    inv = c.get("inventory", [])
+    exact = [i for i in inv if i["name"].lower() == low]
+    if exact:
+        return exact[0]
+    part = [i for i in inv if low in i["name"].lower()]
+    if len(part) == 1:
+        return part[0]
+    raise StateError(f"{c['name']} has {'several items matching' if part else 'no item matching'} '{item}'" + (f": {', '.join(i['name'] for i in part)}" if part else ""))
+
+
+def cmd_uses(a):
+    """uses spend|restore|set CRAWLER ITEM, uses reset [CRAWLER] [--per session]: tracked item uses (uses/uses_max/uses_reset)."""
+    def fn(state):
+        if a.action == "reset":
+            per = _reset_key(a.per)
+            if per not in USES_RESETS or per == "never":
+                raise StateError(f"--per must be one of {', '.join(r for r in USES_RESETS if r != 'never')}")
+            done = []
+            for c in ([find_crawler(state, a.crawler)] if a.crawler else state["crawlers"]):
+                for it in c.get("inventory", []):
+                    if it.get("uses_reset") is not None and _reset_key(it["uses_reset"]) == per and _is_int(it.get("uses_max")) and it.get("uses") != it["uses_max"]:
+                        it["uses"] = it["uses_max"]
+                        done.append(f"{c['name']}: {it['name']} {it['uses']}/{it['uses_max']}")
+            return state, (f"refilled {len(done)} item(s) that reset per {per.replace('_', ' ')}" + "".join(f"\n  {d}" for d in done)) if done else f"nothing to refill (no item with uses_reset {per!r} is below its max)"
+        if not a.crawler or not a.item:
+            raise StateError(f"uses {a.action} needs CRAWLER and ITEM")
+        c = find_crawler(state, a.crawler)
+        it = _find_uses_item(c, a.item)
+        if not _is_int(it.get("uses_max")) or not _is_int(it.get("uses")):
+            raise StateError(f"{it['name']} does not track uses: give it uses, uses_max and uses_reset first (see tools/README.md)")
+        if a.action == "spend":
+            require_active(c, "spend item uses (a benched Crawler is not in play)", a)
+            if a.n < 1 or a.n > it["uses"]:
+                raise StateError(f"REFUSED: {it['name']} has {it['uses']}/{it['uses_max']} uses left")
+            it["uses"] -= a.n
+        elif a.action == "restore":
+            if a.n < 1:
+                raise StateError("--n must be >= 1")
+            it["uses"] = min(it["uses_max"], it["uses"] + a.n)
+        else:  # set
+            if a.to is None or not 0 <= a.to <= it["uses_max"]:
+                raise StateError(f"uses set needs --to N between 0 and {it['uses_max']}")
+            it["uses"] = a.to
+        return state, f"{c['name']}: {it['name']} uses {it['uses']}/{it['uses_max']}"
     text = mutate(fn)
     return {"ok": True, "message": text}, text
 
@@ -3150,6 +3226,14 @@ def build_parser():
     sp.add_argument("--notes")
     sp.add_argument("--mechanics", help="add: short player-facing effect text shown on the sheet card")
     sp.add_argument("--category", choices=["weapons", "armor", "magic", "gear"], help="add: sheet card section")
+
+    sp = add("uses", cmd_uses, "uses spend|restore|set CRAWLER ITEM, or uses reset [CRAWLER] [--per session]: tracked item uses")
+    sp.add_argument("action", choices=["spend", "restore", "set", "reset"])
+    sp.add_argument("crawler", nargs="?")
+    sp.add_argument("item", nargs="?")
+    sp.add_argument("--n", type=_cli_int, default=1, help="spend/restore: how many uses (default 1)")
+    sp.add_argument("--to", type=_cli_int, help="set: the new uses count (0..uses_max)")
+    sp.add_argument("--per", default="session", help="reset: refill every item whose uses_reset is this (session, short_rest, long_rest, day, floor)")
 
     sp = add("hp", cmd_hp, "hp damage|heal|set|temp CRAWLER N")
     sp.add_argument("action", choices=["damage", "heal", "set", "temp"])

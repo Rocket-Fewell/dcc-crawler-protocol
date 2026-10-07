@@ -498,3 +498,11 @@ Caleb's rulings of 2026-10-04, recorded as RESOLVED in `audits/gm-principles-aud
 - TODO 61: M-953 (Recital completes on Big Tina's mother, not the recital) and M-954 (creeper world quest failure caused the blood bar) are recap-only; find a wiki page (Big Tina, Kiwi, Sixth Floor world quest) to lift them. TODO 59 still open.
 - Nothing was read against the novels. Nothing was posted to any room. Reaches GitHub through the nightly lore/ backup.
 
+
+## s1 item sweep: later-floor ties (2026-10-06, Lore)
+Caleb asked (via GM, DCC MAIN, Oct 6 ~7:50 PM CT) for every s1 no-mechanics item to get a mechanic, and for anything that reaches later floors to be known by every bot. Final lines are Syndicate's; values are Accountant's.
+- Vendor Oddity (Mr. White) = SEED-ODDCOIN. No mechanic, can't be sold, never explained on F1. F2: "Odd Coin Shrug" (vendor flags it unappraised) and "Carry Manifest" on exit (drafts/f02-achievement-framing-v0.1). Arc beats live in the floor bible (GM-only). Keep it unexplained in player-facing text.
+- Dale's HVAC License (Eisenhorn): Advantage on ductwork checks. House item (Dale is house-only). Canon has vents and crawlspaces on many floors, so it stays useful, but no canon payoff is promised. Don't build a Dale storyline unless the GM or Caleb asks.
+- Tanya Ruiz's Note (Eisenhorn): one F1 hazard hint. She's an inspired house fallen Crawler (A-185). Her thread ends on F1 unless someone deliberately reopens it.
+- Snow Ghost capsule (Shirayuki): once-per-session audience check boost, a check bonus only (Accountant guardrail). Canon tie: viewers lead to sponsors. Early bids open on F3 (M-661), the program starts on F4 (M-662), and Crawlers get at most 3 patrons (M-017). If the boost ever feeds sponsor attention, it starts on F3/F4 and Accountant has to count it.
+- Intake Bag and Road-Trip Outfit: no later-floor tie.
