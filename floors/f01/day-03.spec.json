@@ -906,6 +906,14 @@
         "tag": "pacing guide",
         "cut_short": "Run one combat round and one hazard check; skip the second mob group."
       },
+      "gm_notes": {
+        "tag": "[GM-FACING]",
+        "audience": "gm",
+        "flavor": [
+          "Dale's HVAC License: Advantage on duct and vent checks.",
+          "Tanya's Note: one use. Name the true trigger or tell of one Floor 1 hazard in this encounter. The GM picks which hazard."
+        ]
+      },
       "carry_on": {
         "changes": [
           {
@@ -1060,6 +1068,13 @@
         "tag": "pacing guide",
         "cut_short": "Give the three scouting facts (pit, spotlight, watch pattern) and roll one stealth check."
       },
+      "gm_notes": {
+        "tag": "[GM-FACING]",
+        "audience": "gm",
+        "flavor": [
+          "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check only."
+        ]
+      },
       "carry_on": {
         "changes": [
           {
@@ -1128,8 +1143,8 @@
   ],
   "budget_file": {
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.2.7",
-    "expected_sha256": "f239fe8035a3087f999d0496453980ef5b2c2d3a5e99cbc16d921d002c0be1a7"
+    "version": "0.2.8",
+    "expected_sha256": "b8563f54983f290e4d7334a4b0e0d39885c4bdf4c89b09c3ee59e3f17454ad1a"
   },
   "achievements_catalog": {
     "path": "tables/achievements.csv",

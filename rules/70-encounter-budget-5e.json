@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "changelog": [
+    "0.2.8 (2026-10-07, provenance only, no values changed): sans-pin hashes re-synced after GM-facing item-hook lines (decision 038) on F1 day-01, day-03 and day-05, and F2 day-04, day-06 and day-10. Every price, slot path and other value unchanged.",
     "0.2.7 (2026-10-06 ~9:10 AM CT, Accountant): provenance only, no values changed: all ten f02_day01_to_10_slot_map sans-pin hashes re-synced to PR #15 (F2 Source lines now cite the budget via {budget_version} and the soft about 2-3 achievement Bronze wording; canon pin to ledger v1.19 is excluded from the hash). Recomputed independently from the PR #15 patch on main 85a4f08. Floor 1 sans-pins unchanged. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
     "0.2.6 (2026-10-05 ~9:40 PM CT, Accountant): F2 achievement Bronze is a SOFT guideline of about 2-3 per Crawler per floor (Caleb ~9:15 PM CT; GM may exceed for great moments and logs it). f2_box_rulings.achievement_bronze_cap_per_crawler_per_floor keeps its path, value 2 becomes the text about 2-3 (soft); past_the_cap and the F2 watch reworded. All ten F2 sans-pins re-synced to PR #13. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
     "0.2.5 (2026-10-05 ~7:35 PM CT, Accountant): provenance only, no values changed: f02_day01_to_10_slot_map day-05 sans-pin hash re-synced to Encounter Bot's 19:15 CT pass (Story Box f02-any-0001 Clone Nameplate Charm bound to d05_02 per Syndicate 19:12 as the unmask-the-clone-mid-fight deed only, hand-picked, opens in a saferoom; Story Boxes sit outside this budget and the Legendary cap, core 4.1/4.5/4.7). Day-05 slots (3) re-checked: they resolve, encounter ids and names match, creature key chuul matches d05_02. Days 1-4 and 6-10 sans-pins and all Floor 1 sans-pins unchanged; every count, CR, XP, box, credit, Silver Boss Box and decision 031 rest fee unchanged; no caps raised.",
@@ -6129,7 +6130,7 @@
   ],
   "day01_slot_map": {
     "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
-    "spec_sha256_sans_pin_when_mapped": "4891297f4f26a4b67867b643a99ba410c6c5e8ec3ec6113b3a7f002cb49b59fd",
+    "spec_sha256_sans_pin_when_mapped": "917b41819e2713e8f4e969389e922667cc42f6178c31f22b560092147f29dd9d",
     "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version and achievements_catalog.expected_sha256 deleted if present (method updated by the Encounter Bot to also skip the achievements catalog version and sha; the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pins on this file and on the canon table and achievements catalog, so a budget or catalog bump no longer breaks this provenance; real slot content changes still do.",
     "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
     "count": 32,
@@ -6484,7 +6485,7 @@
     "status": "v0.1.2 addition (Encounter Bot request). The CR slots of these encounters already resolve (floors.1.fixed_encounters.z10.creatures key skeleton, z02.creatures key giant-rat, wandering.creatures key stirge) and are unchanged.",
     "spec_sha256_sans_pin_when_mapped": {
       "day-02": "eccae98f3affff88a8aa65958ec6c13f6daf86d1b45844f50d162a7e048a1759",
-      "day-03": "c2d1fd81915db2bd8d70f3dc3fab105e5c29f895e1af01391c7b16405bd717d9",
+      "day-03": "0885368bc4a8104498a0269e55cb58223c95cd069d80b4c8781f8212955c0aa9",
       "day-04": "87aa8d6335dd1d4088e6a1cc9fe757229aef77de210fbfd6b6969e5cd8b0fda0"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
@@ -6634,7 +6635,7 @@
   },
   "day05_slot_map": {
     "status": "PROVENANCE ONLY (v0.1.9): no slots are mapped for Day 5; its spec cites this file by field path (b70 cites) and needs no fills. Recorded so all five Day specs carry a provenance hash.",
-    "spec_sha256_sans_pin_when_mapped": "9749c2e77538259f34a65d94c1cf9c7e44ce74f5cc5c106ee2854d10f8438ca8",
+    "spec_sha256_sans_pin_when_mapped": "01ac1a86d3cf3a22e43f1c5e18da4c1defbe40708de7c2af6b82a11c400a2ac2",
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 0,
     "slots": []
@@ -6646,13 +6647,13 @@
       "day-01": "a2f1e1966f7ded72819ce48595ca313b2b41b85ba0eb7a4fb7be5e5438915644",
       "day-02": "f1e0bae2cef2aa6c4b9a5c07c4e9231b81fe2167a61dc161b8938dfceb66295a",
       "day-03": "4ce971e58ba0e865a6efa2157ae3052116b244ba643ae2c69438f630e2032172",
-      "day-04": "67fa2dc3aeba4287f87bf9bce58eb570f71891ab8c03071c9ec5a21962744286",
+      "day-04": "b5b22209c46c5b9049e14a57a2695d9fd2c5551d25404b7745a4edd62c87aee7",
       "day-05": "c21eb66a7a544f7b742ee98950da8f4adedf696999a3a552afbe43945c3d619d",
-      "day-06": "c4713112dc35baf2e86a044321a3d81c48b147d3b964f7ad1ea2117f6acd8cbb",
+      "day-06": "3fc91a8835784e0553cf512a31bb05984d7772a641034f900d97cb26a4eba3fa",
       "day-07": "62011eaaf87719bd2406ad97008574a6f613d25ea42c4258e7c8827ad0a10510",
       "day-08": "60b7e8b0131a8439d6da4bd803d961bf5af5e010422264e29da174ed69dedc87",
       "day-09": "ef46a685d69dbbebc7d24ff592f3801b3c2fd2a7ac3dc5cb226ddfa1096aa372",
-      "day-10": "2a947d4a5f009c003f93552942b95eed7dca26958575e6c1dcc3de2a94e4d5ec"
+      "day-10": "6fe98827effa68b40f9b1f083a12c4500c42045f7b3db164b4e2283165c491fc"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 53,
