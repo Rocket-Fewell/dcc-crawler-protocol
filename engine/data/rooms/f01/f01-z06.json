@@ -10,8 +10,8 @@
     4,
     5
   ],
-  "narrator_line": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours.",
-  "read_aloud": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours. Find the stairwell before the floor ends.",
+  "narrator_line": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have 5 days. A day ends at Long Rest or at twenty-four in-game hours.",
+  "read_aloud": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have 5 days. A day ends at Long Rest or at twenty-four in-game hours. Find the stairwell before the floor ends.",
   "positions": [
     {
       "id": "entry",
@@ -19,7 +19,7 @@
     },
     {
       "id": "cover-1",
-      "name": "Couch and fridge (half cover if it ever"
+      "name": "Couch and fridge (half cover if it ever matters)."
     }
   ],
   "map": {
@@ -79,13 +79,16 @@
     }
   ],
   "voice_lines": {
-    "intro": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours.",
+    "intro": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have 5 days. A day ends at Long Rest or at twenty-four in-game hours.",
     "twist": "The terminal's screen flickers and a smaller, shadier menu appears: 'Spare keys. Unlisted. Pay exactly.' Somebody in accounting just fainted.",
     "win": "You got the briefing, the gossip and a choice, and also the coffee, which was a mistake. Pick a route and go."
   },
   "item_hooks": [],
   "rest": {
-    "kind": "short",
+    "kind": "long",
+    "also": [
+      "short"
+    ],
     "saferoom": true,
     "fee": null
   },

@@ -5,7 +5,7 @@
   "hp": 5,
   "attacks": [
     {
-      "name": "Blood Drain",
+      "name": "Proboscis",
       "to_hit": 5,
       "damage": "1d6+3",
       "type": "piercing"

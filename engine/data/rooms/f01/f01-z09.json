@@ -72,9 +72,10 @@
   },
   "item_hooks": [],
   "rest": {
-    "kind": "short",
+    "kind": "long",
     "saferoom": true,
-    "fee": null
+    "fee": null,
+    "boxes": "open"
   },
   "gm_notes": {
     "tag": "[GM-FACING]",

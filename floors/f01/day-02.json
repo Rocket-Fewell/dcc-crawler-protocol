@@ -18,7 +18,7 @@
       "lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
-      "rules/70-encounter-budget-5e.json v0.2.9 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.2.10 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
@@ -32,8 +32,8 @@
     "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
     "canon_ledger_version": "1.21",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.9",
-    "budget_file_sha256": "b2a700dec84a5b5c7d2956fa5138c19c5262ea5f42492d658fb0fd3547d919e5",
+    "budget_file_version": "0.2.10",
+    "budget_file_sha256": "6c3591c9372af017d20bf73fbbbcec61012b3772c651fd32365c212b41b71822",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
     "spec_sha256_sans_pin": "eccae98f3affff88a8aa65958ec6c13f6daf86d1b45844f50d162a7e048a1759",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
@@ -1865,8 +1865,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.2.9 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.2.9 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.2.10 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.2.10 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -2152,12 +2152,12 @@
     "pass": 50,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "52a124bdcc1d7ee9c71bd78128bb42877158a31f97c1c673c3d7caf1b239f6e5",
+    "spec_sha256": "12f638382099ef031a618381aead4f3831e808741ff12bd94da76328b4f074a6",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.2.9, sha256 b2a700dec84a5b5c; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.2.10, sha256 6c3591c9372af017; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",

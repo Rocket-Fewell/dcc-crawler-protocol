@@ -33,11 +33,11 @@ def budget_ok(ref, budget, party_size=3):
         if ref.get("key") and "creatures" in ref.get("path", ""):
             resolve_cr(budget, ref)
         else:
-            resolve_count(budget, ref, party_size)
+            resolve_count(budget, ref, party_size)[0]
             if "creatures" not in ref.get("path", ""):
                 walk(budget, ref["path"])
         return True
-    except (KeyError, TypeError):
+    except (KeyError, TypeError, ValueError):
         return False
 
 
@@ -59,8 +59,13 @@ def validate_tree(root: Path):
                 if ref and not budget_ok(ref, budget):
                     errs.append("%s %s does not resolve: %s" % (room.get("id"), ref_name, ref.get("path")))
         for loot in room.get("loot") or []:
-            ref = loot.get("dice_ref")
-            if ref:
+            refs = []
+            if loot.get("dice_ref"):
+                refs.append(loot.get("dice_ref"))
+            for held in loot.get("holds") or []:
+                if isinstance(held, dict) and held.get("dice_ref"):
+                    refs.append(held.get("dice_ref"))
+            for ref in refs:
                 try:
                     walk(budget, ref)
                 except KeyError:

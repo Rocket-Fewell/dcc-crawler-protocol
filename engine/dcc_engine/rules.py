@@ -85,7 +85,7 @@ def attack(attacker, target, rng, attack_name=None):
         rolled = _roll_expr(expr, rng)
         damage = max(0, int(rolled["total"]))
         damage_total = rolled["total"]
-        apply_damage(target, damage)
+        apply_damage(target, damage, chosen.get("type"), crit=nat20)
     return {
         "attacker": attacker.get("name"),
         "target": target.get("name"),
@@ -103,8 +103,131 @@ def attack(attacker, target, rng, attack_name=None):
     }
 
 
-def apply_damage(combatant, amount):
-    combatant["hp"] = max(0, int(combatant.get("hp", 0)) - int(amount))
+def _names(combatant, *keys):
+    found = []
+    for key in keys:
+        for name in combatant.get(key) or []:
+            found.append(str(name).lower())
+    return found
+
+
+def _is_crawler(combatant):
+    """Crawlers have death saves. Monsters at 0 hit points just die."""
+    if combatant.get("monster") or combatant.get("srd_id"):
+        return False
+    return bool(combatant.get("class") or combatant.get("crawler"))
+
+
+def apply_damage(combatant, amount, damage_type=None, crit=False):
+    """Apply damage after immunity, resistance, vulnerability, and temporary hit points.
+
+    Resistance halves the damage (round down), then vulnerability doubles what remains.
+    Both together are not a cancel: 7 fire becomes 6. Temporary hit points are spent
+    before hit points. A Crawler at 0 is Unconscious. Damage that lands while already
+    at 0 adds one failed death save, or two on a critical hit. Damage at 0 that meets
+    the hit point maximum kills. Overflow past 0 that meets the hit point maximum
+    is instant death. A monster at 0 is dead and does not make death saves.
+    """
+    amount = int(amount)
+    dtype = (damage_type or "").lower()
+    if dtype:
+        immune = _names(combatant, "immunities", "immune")
+        resist = _names(combatant, "resistances", "resistant")
+        vuln = _names(combatant, "vulnerable", "vulnerabilities")
+        if dtype in immune:
+            amount = 0
+        else:
+            if dtype in resist:
+                amount = amount // 2
+            if dtype in vuln:
+                amount = amount * 2
+    before = int(combatant.get("hp") or 0)
+    temp = int(combatant.get("temp_hp") or 0)
+    if temp and amount > 0:
+        spent = min(temp, amount)
+        combatant["temp_hp"] = temp - spent
+        amount -= spent
+    combatant["hp"] = max(0, before - max(0, amount))
+    if combatant["hp"] == 0 and amount > 0:
+        if not _is_crawler(combatant):
+            combatant["dead"] = True
+            combatant.pop("death_saves", None)
+            return combatant["hp"]
+        max_hp = combatant.get("max_hp")
+        overflow = amount - before if before > 0 else 0
+        if before > 0 and max_hp is not None and overflow >= int(max_hp):
+            combatant["dead"] = True
+            combatant["death_saves"] = {"successes": 0, "failures": 3}
+            return combatant["hp"]
+        add_condition(combatant, "Unconscious")
+        saves = combatant.setdefault("death_saves", {"successes": 0, "failures": 0})
+        if before <= 0:
+            max_hp = combatant.get("max_hp")
+            if max_hp is not None and amount >= int(max_hp):
+                combatant["dead"] = True
+                saves["failures"] = 3
+                return combatant["hp"]
+            saves["failures"] = int(saves.get("failures") or 0) + (2 if crit else 1)
+            if saves["failures"] >= 3:
+                combatant["dead"] = True
+    return combatant["hp"]
+
+
+# 2024 conditions, plus the house Burning condition named in the engine scope.
+CONDITIONS = (
+    "Blinded", "Charmed", "Deafened", "Exhaustion", "Frightened", "Grappled",
+    "Incapacitated", "Invisible", "Paralyzed", "Petrified", "Poisoned", "Prone",
+    "Restrained", "Stunned", "Unconscious", "Burning",
+)
+
+
+def canonical_condition(name):
+    text = " ".join(str(name or "").split())
+    for cond in CONDITIONS:
+        if text.lower() == cond.lower():
+            return cond
+    return None
+
+
+def add_condition(combatant, name):
+    """Add a condition once. Exhaustion gains a level instead of stacking. Free text is refused."""
+    canon = canonical_condition(name)
+    if not canon:
+        return None
+    if canon == "Exhaustion":
+        level = int(combatant.get("exhaustion_level") or 0)
+        if level == 0 and canon in (combatant.get("conditions") or []):
+            level = 1
+        level += 1
+        combatant["exhaustion_level"] = level
+        if level >= 6:
+            combatant["dead"] = True
+    conds = combatant.setdefault("conditions", [])
+    if canon not in conds:
+        conds.append(canon)
+    return canon
+
+
+def clear_condition(combatant, name):
+    canon = canonical_condition(name)
+    if not canon:
+        return None
+    combatant["conditions"] = [
+        cond for cond in (combatant.get("conditions") or []) if cond != canon
+    ]
+    return canon
+
+
+def apply_healing(combatant, amount):
+    """Heal, capped at max_hp. Rising from 0 clears Unconscious and death saves (2024)."""
+    was = int(combatant.get("hp") or 0)
+    healed = was + int(amount)
+    if combatant.get("max_hp") is not None:
+        healed = min(int(combatant["max_hp"]), healed)
+    combatant["hp"] = max(0, healed)
+    if was <= 0 and combatant["hp"] > 0:
+        clear_condition(combatant, "Unconscious")
+        combatant["death_saves"] = {"successes": 0, "failures": 0}
     return combatant["hp"]
 
 

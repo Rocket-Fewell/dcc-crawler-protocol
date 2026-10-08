@@ -42,7 +42,17 @@
         "trigger": "on_enter"
       }
     ],
-    "hooks": "gone"
+    "hooks": "gone",
+    "npcs": [],
+    "key": null,
+    "loot": [],
+    "narrator_line": "Zone-close traffic. Hostile units are exiting offline zones into this hall. Clear the corridor.",
+    "read_aloud": "Zone-close traffic. Hostile units are exiting offline zones into this hall. Clear the corridor.",
+    "voice_lines": {
+      "intro": "Zone-close traffic. Hostile units are exiting offline zones into this hall. Clear the corridor.",
+      "twist": "A shutter slams down between you and the door you came through. The audience gasps, then shrugs. The other door is open.",
+      "win": "Hall cleared, shutters stopped. The zone behind you is gone for good. Keep moving."
+    }
   },
   "f01-z10": {
     "day_encounters": [
@@ -62,10 +72,268 @@
       }
     ]
   },
+  "f01-z00": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z01": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z02": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z03": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z03b": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z04": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
   "f01-z05": {
-    "hooks": "gone"
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "voice_lines": {
+      "intro": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
+      ]
+    }
   },
   "f01-z07": {
-    "hooks": "gone"
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "voice_lines": {
+      "intro": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+      "twist": "",
+      "win": ""
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
+      ]
+    }
   }
 }

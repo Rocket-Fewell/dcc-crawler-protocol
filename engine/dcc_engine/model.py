@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import json
 import os
+import urllib.error
 import urllib.request
+
+# A hung call must not stall the table for half a minute.
+MODEL_TIMEOUT_SECONDS = 8
 
 
 def strong_model_name():
@@ -66,17 +70,30 @@ def fake_sentences(snapshot):
 
 
 class ModelClient:
-    def __init__(self, fake=None, fake_ruling=None):
+    def __init__(self, fake=None, fake_ruling=None, fake_class=None):
         if fake is None:
             fake = os.environ.get("ENGINE_FAKE_MODEL", "1") != "0"
         self.fake = fake
         self.fake_ruling = fake_ruling
+        self.fake_class = fake_class
+
+    def classify(self, text):
+        """Fast model. Returns chatter, engine, or ruling. None means use the word fallback."""
+        if self.fake:
+            return self.fake_class
+        try:
+            return self._fast_class(text)
+        except Exception:
+            return None
 
     def stream(self, snapshot):
         if self.fake:
             yield from fake_sentences(snapshot)
             return
-        yield from iter_sentences(self._raw_chunks(snapshot))
+        try:
+            yield from iter_sentences(self._raw_chunks(snapshot))
+        except (urllib.error.URLError, TimeoutError, OSError):
+            yield from fake_sentences(snapshot)
 
     def rule(self, snapshot):
         """Strong model. Fake mode returns a ruling JSON and does not call a network."""
@@ -89,7 +106,15 @@ class ModelClient:
                 "params": {},
                 "log": "fake strong model",
             }
-        return self._strong_rule(snapshot)
+        try:
+            return self._strong_rule(snapshot)
+        except (urllib.error.URLError, TimeoutError, OSError):
+            return {
+                "ruling": "Nothing on the card covers that.",
+                "resolve_as": "none",
+                "params": {},
+                "log": "model unavailable",
+            }
 
     def _api_key(self):
         key = os.environ.get("ENGINE_MODEL_API_KEY") or os.environ.get("OPENAI_API_KEY")
@@ -104,7 +129,7 @@ class ModelClient:
             data=json.dumps(body).encode(),
             headers={"Authorization": "Bearer " + self._api_key(), "Content-Type": "application/json"},
         )
-        return urllib.request.urlopen(req, timeout=30)
+        return urllib.request.urlopen(req, timeout=MODEL_TIMEOUT_SECONDS)
 
     def _raw_chunks(self, snapshot):
         model = os.environ.get("ENGINE_FAST_MODEL", "gpt-4o-mini")
@@ -129,6 +154,44 @@ class ModelClient:
                 delta = (((chunk.get("choices") or [{}])[0].get("delta") or {}).get("content"))
                 if delta:
                     yield delta
+
+    def _fast_class(self, text):
+        try:
+            self._api_key()
+        except RuntimeError:
+            return None
+        body = {
+            "model": os.environ.get("ENGINE_FAST_MODEL", "gpt-4o-mini"),
+            "stream": False,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": (
+                        "Classify the player line. Return one JSON object only: "
+                        "{\"class\": \"chatter\"|\"engine\"|\"ruling\"}. "
+                        "engine is an attack or Cunning Action. "
+                        "ruling is any other attempted action. "
+                        "chatter is talk, scene questions, and negated actions."
+                    ),
+                },
+                {"role": "user", "content": text or ""},
+            ],
+        }
+        resp = self._post(body)
+        with resp:
+            payload = json.loads(resp.read().decode())
+        content = (((payload.get("choices") or [{}])[0].get("message") or {}).get("content")) or ""
+        content = content.strip()
+        if content.startswith("```"):
+            content = content.strip("`")
+            content = content.split("\n", 1)[-1]
+        try:
+            label = (json.loads(content) or {}).get("class")
+        except json.JSONDecodeError:
+            return None
+        if label in ("chatter", "engine", "ruling"):
+            return label
+        return None
 
     def _strong_rule(self, snapshot):
         body = {
