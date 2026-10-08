@@ -19,16 +19,26 @@ _ACTION_VERBS = frozenset((
     "drink", "pick", "unlock", "sneak", "read", "wish", "lock", "run", "kick",
     "steal", "give", "bribe", "eat", "talk", "attack", "swing", "shoot",
     "stab", "hit", "strike", "grab", "pry", "hack", "break", "barricade", "lean", "sprint",
+    "lie", "tie", "try", "duck", "pour", "punch", "slash",
 ))
 _NEGATION = frozenset((
     "don't", "dont", "won't", "wont", "not", "never", "no", "can't", "cant",
     "cannot", "wouldn't", "wouldnt", "shouldn't", "shouldnt",
 ))
 _CHATTER_PHRASES = (
-    "wish i had", "wish we had", "look at that", "check this out",
-    "pick a favorite", "is it open",
+    "wish i had", "wish we had", "look at that", "look at this",
+    "check this out", "check it out", "pick a favorite", "is it open",
+    "we should probably", "i think we should",
 )
-_ATTACK_VERBS = frozenset(("attack", "swing", "shoot", "stab", "hit", "strike"))
+_ATTACK_VERBS = frozenset((
+    "attack", "swing", "shoot", "stab", "hit", "strike", "punch", "slash",
+))
+_PRONOUNS = frozenset(("it", "him", "her", "them", "he", "she"))
+_WEAPONS = frozenset((
+    "crowbar", "sword", "dagger", "knife", "axe", "bow", "club", "mace",
+    "spear", "hammer", "crossbow", "sling", "weapon", "blade", "bat", "pipe", "gun",
+))
+_NAME_STOP = frozenset(("staff", "the", "with", "from", "that", "this"))
 
 
 def _words(text):
@@ -48,8 +58,65 @@ def _stem(word):
     return word
 
 
-def classify_line(text):
-    """Word fallback when the fast model is offline. Negation is not an action."""
+def _creature_tokens(creatures):
+    """Names a line can hit. With no room, tests still know the mannequin."""
+    if creatures is None:
+        creatures = ("mannequin",)
+    tokens = []
+    for item in creatures:
+        if isinstance(item, str):
+            text = item
+        elif isinstance(item, dict):
+            text = " ".join(str(item.get(key) or "") for key in ("name", "our_name", "id"))
+        else:
+            continue
+        for part in _words(text):
+            if len(part) >= 4 and part not in _NAME_STOP:
+                tokens.append(part)
+    return tokens
+
+
+def attack_lands(text, creatures=None):
+    """True when an attack line names a creature, or a weapon is used on one."""
+    words = _words(text)
+    raw = set(words)
+    if any(token in raw for token in _creature_tokens(creatures)):
+        return True
+    return any(word in _PRONOUNS for word in words) and any(word in _WEAPONS for word in words)
+
+
+def _state_creatures(state):
+    names = []
+    for key, body in (state.get("combatants") or {}).items():
+        if key == "crawler":
+            continue
+        names.append(key.replace("-", " "))
+        if isinstance(body, dict) and body.get("name"):
+            names.append(body["name"])
+    return names
+
+
+def _target_id(text, state):
+    raw = set(_words(text))
+    joined = " ".join(_words(text))
+    for key, body in (state.get("combatants") or {}).items():
+        if key == "crawler":
+            continue
+        if key in raw or key.replace("-", " ") in joined:
+            return key
+        name = str((body or {}).get("name") or "")
+        for part in _words(name):
+            if len(part) >= 4 and part not in _NAME_STOP and part in raw:
+                return key
+    return state.get("target_id") or "mannequin"
+
+
+def classify_line(text, creatures=None):
+    """Word fallback when the fast model is offline. Negation is not an action.
+
+    An attack verb rolls damage only when the line names a creature (or a weapon
+    is used on one). Anything else with a verb is a ruling.
+    """
     raw = " ".join(_words(text))
     if not raw:
         return "chatter"
@@ -59,8 +126,6 @@ def classify_line(text):
         return "chatter"
     words = _words(text)
     request = bool(re.search(r"\b(can|may|could|should)\s+(i|we)\b", raw))
-    if (text or "").strip().endswith("?") and not request:
-        return "chatter"
     negated = False
     positive = []
     cunning_open = False
@@ -78,9 +143,13 @@ def classify_line(text):
     if cunning_open:
         return "engine"
     if any(verb in _ATTACK_VERBS for verb in positive):
-        return "engine"
+        if attack_lands(text, creatures):
+            return "engine"
+        return "ruling"
     if positive:
         return "ruling"
+    if (text or "").strip().endswith("?") and not request:
+        return "chatter"
     return "chatter"
 
 
@@ -89,14 +158,14 @@ def needs_ruling(text):
     return classify_line(text) == "ruling"
 
 
-def line_class(text, model):
+def line_class(text, model, creatures=None):
     """Fast model first. The word list runs only when that call does not answer."""
     label = None
     classify = getattr(model, "classify", None)
     if classify is not None:
         label = classify(text)
     if label not in ("chatter", "engine", "ruling"):
-        label = classify_line(text)
+        label = classify_line(text, creatures)
     return label
 
 
@@ -104,12 +173,19 @@ def handle(msg, state, model, store):
     kind = msg.get("type")
     if kind == "line":
         text = msg.get("text") or ""
-        label = line_class(text, model)
+        creatures = _state_creatures(state)
+        label = line_class(text, model, creatures)
         words = _words(text)
         if label == "engine" and "cunning" in words:
             return handle({"type": "cunning_action", "crawler": state["crawler"], "kind": "dash"}, state, model, store)
+        if label == "engine" and not attack_lands(text, creatures):
+            label = "ruling"
         if label == "engine":
-            return handle({"type": "attack", "attacker": "crawler", "target": state.get("target_id", "mannequin")}, state, model, store)
+            return handle({
+                "type": "attack",
+                "attacker": "crawler",
+                "target": _target_id(text, state),
+            }, state, model, store)
         snap = {"line": text, "narrator_line": state.get("narrator_line"), "result": {}}
         if label != "ruling":
             outs = [{"type": "say", "voice": "GM", "text": sentence} for sentence in model.stream(snap)]

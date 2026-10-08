@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import json
 import os
+import urllib.error
 import urllib.request
+
+# A hung call must not stall the table for half a minute.
+MODEL_TIMEOUT_SECONDS = 8
 
 
 def strong_model_name():
@@ -86,7 +90,10 @@ class ModelClient:
         if self.fake:
             yield from fake_sentences(snapshot)
             return
-        yield from iter_sentences(self._raw_chunks(snapshot))
+        try:
+            yield from iter_sentences(self._raw_chunks(snapshot))
+        except (urllib.error.URLError, TimeoutError, OSError):
+            yield from fake_sentences(snapshot)
 
     def rule(self, snapshot):
         """Strong model. Fake mode returns a ruling JSON and does not call a network."""
@@ -99,7 +106,15 @@ class ModelClient:
                 "params": {},
                 "log": "fake strong model",
             }
-        return self._strong_rule(snapshot)
+        try:
+            return self._strong_rule(snapshot)
+        except (urllib.error.URLError, TimeoutError, OSError):
+            return {
+                "ruling": "Nothing on the card covers that.",
+                "resolve_as": "none",
+                "params": {},
+                "log": "model unavailable",
+            }
 
     def _api_key(self):
         key = os.environ.get("ENGINE_MODEL_API_KEY") or os.environ.get("OPENAI_API_KEY")
@@ -114,7 +129,7 @@ class ModelClient:
             data=json.dumps(body).encode(),
             headers={"Authorization": "Bearer " + self._api_key(), "Content-Type": "application/json"},
         )
-        return urllib.request.urlopen(req, timeout=30)
+        return urllib.request.urlopen(req, timeout=MODEL_TIMEOUT_SECONDS)
 
     def _raw_chunks(self, snapshot):
         model = os.environ.get("ENGINE_FAST_MODEL", "gpt-4o-mini")

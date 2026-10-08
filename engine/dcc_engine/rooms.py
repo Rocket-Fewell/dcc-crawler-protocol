@@ -99,25 +99,33 @@ def room_path(room_id, root=None):
     return root / "rooms" / "f01" / ("%s.json" % room_id)
 
 
+def _layer_patch(root, room_id, day):
+    layer_path = root / "layers" / "f01" / ("day-%02d.json" % int(day))
+    if not layer_path.is_file():
+        return None
+    return load_json(layer_path).get(room_id)
+
+
 def load_room(room_id, day=None, root=None, budget=None):
+    """Load a room card. A missing later-day entry inherits the previous card.
+
+    An explicit patch on that day (a new fight, or a closed overlay) is the only
+    thing that changes the card. Cleared fights are game state: see apply_room_state.
+    """
     root = Path(root or DATA)
     room = load_json(room_path(room_id, root))
-    if day is not None:
-        layer_path = root / "layers" / "f01" / ("day-%02d.json" % int(day))
-        patch = None
-        if layer_path.is_file():
-            layer = load_json(layer_path)
-            patch = layer.get(room_id)
-        if patch:
-            room = apply_patch(room, patch)
-        elif int(day) > 1:
-            # Nothing new this day. Keep the room, and do not replay the Day 1 scene.
-            room = apply_patch(room, {
-                "day_encounters": [],
-                "narrator_line": "",
-                "read_aloud": "",
-                "voice_lines": {"intro": "", "twist": "", "win": ""},
-            })
+    if day is None:
+        return room
+    day = int(day)
+    if day <= 1:
+        return room
+    patch = _layer_patch(root, room_id, day)
+    if patch:
+        return apply_patch(room, patch)
+    for earlier in range(day - 1, 1, -1):
+        prev = _layer_patch(root, room_id, earlier)
+        if prev:
+            return apply_patch(room, prev)
     return room
 
 
@@ -130,6 +138,73 @@ def apply_patch(room, patch):
             out[key] = merged
         else:
             out[key] = val
+    return out
+
+
+# Scene names that fire once per campaign. The card keeps them until state says seen.
+_ONE_TIME_SCENES = (
+    ("cold open", "cold-open"),
+    ("intake", "intake"),
+    ("meet-and-greet", "atrium"),
+    ("atrium", "atrium"),
+)
+
+
+def apply_room_state(room, state=None):
+    """Apply cleared, claimed, and already-seen markers. Does not read a session file.
+
+    A cleared or claimed room skips its fight, drops its loot, and marks NPCs dead.
+    One-time scenes and tutorial popups stay until state lists them as seen.
+    """
+    out = json.loads(json.dumps(room))
+    state = state or {}
+    room_id = out.get("id")
+    cleared = set(state.get("cleared") or [])
+    claimed = set(state.get("claimed") or [])
+    done = room_id in cleared or room_id in claimed
+    if done:
+        out["encounters"] = []
+        out["day_encounters"] = []
+        out["loot"] = []
+        npcs = []
+        for npc in out.get("npcs") or []:
+            row = dict(npc)
+            row["dead"] = True
+            npcs.append(row)
+        out["npcs"] = npcs
+        flags = dict(out.get("flags") or {})
+        if room_id in cleared:
+            flags["cleared"] = True
+        flags["looted"] = True
+        out["flags"] = flags
+    seen_popups = set(state.get("seen_popups") or [])
+    if seen_popups and out.get("popups"):
+        out["popups"] = [row for row in out["popups"] if row.get("id") not in seen_popups]
+    seen_scenes = set(state.get("seen_scenes") or [])
+    if seen_scenes and not done:
+        kept = []
+        for enc in out.get("encounters") or []:
+            if enc.get("srd_id"):
+                kept.append(enc)
+                continue
+            name = (enc.get("our_name") or "").lower()
+            keys = [key for needle, key in _ONE_TIME_SCENES if needle in name]
+            if keys and any(key in seen_scenes for key in keys):
+                continue
+            kept.append(enc)
+        out["encounters"] = kept
+        if "day_encounters" in out:
+            kept_days = []
+            for enc in out.get("day_encounters") or []:
+                if enc.get("srd_id"):
+                    kept_days.append(enc)
+                    continue
+                name = (enc.get("our_name") or "").lower()
+                keys = [key for needle, key in _ONE_TIME_SCENES if needle in name]
+                if keys and any(key in seen_scenes for key in keys):
+                    continue
+                kept_days.append(enc)
+            out["day_encounters"] = kept_days
     return out
 
 
