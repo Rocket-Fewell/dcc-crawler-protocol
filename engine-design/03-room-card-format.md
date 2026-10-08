@@ -1,0 +1,91 @@
+# Room card format v1
+Owner: Architect (format), Encounter (rooms, fights), Lore (secrets, loot, NPCs, achievements), Accountant (counts) | Version: 0.1.0 | Updated: 2026-10-07
+
+One JSON file per room: `content/f01/rooms/<room-id>.json`. Stat blocks are shared: `content/stat-blocks/<stat-id>.json`. The engine loads the current room and its neighbours. The fast narrator only ever sees `name`, `narrator_line`, visible `features`, revealed secrets and live combat state. Everything else is for code and the strong model.
+
+## Room
+```json
+{
+  "id": "f01-d01-shooting-gallery",
+  "floor": 1, "day": 1, "zone": 5,
+  "name": "Shooting Gallery",
+  "source": "floors/f01/day-01.md#enc-d01-11",
+  "read_aloud": "Exact text read on first entry.",
+  "narrator_line": "One line the fast model may use every turn.",
+  "positions": [
+    {"id": "door", "name": "Doorway"},
+    {"id": "turnstile", "name": "Turnstile", "distance_ft": {"door": 15}},
+    {"id": "counter", "name": "Far counter", "distance_ft": {"door": 55}, "cover": "half"}
+  ],
+  "features": [
+    {"id": "prize-shelf", "name": "Prize shelf", "visible": true, "notes": "Can be toppled: DC 13 Athletics, 2d6 bludgeoning in a 10 ft line."}
+  ],
+  "exits": [
+    {"to": "f01-d01-break-room", "from_position": "door", "locked": false, "hidden": false, "unlock_trigger": null}
+  ],
+  "encounter": {
+    "id": "enc-d01-11",
+    "by_party_size": {
+      "1": [{"stat": "mannequin-staff", "count": 1, "position": "counter"}],
+      "2": [{"stat": "mannequin-staff", "count": 2, "position": "counter"}],
+      "3": [{"stat": "mannequin-staff", "count": 2, "position": "counter"}]
+    },
+    "tactics": "Stay behind the counter; focus the nearest standing Crawler.",
+    "quick_run": "Short version if the table stalls.",
+    "xp": {"3": 100},
+    "budget_ref": "rules/70-encounter-budget-5e.json#f01-d01-z05"
+  },
+  "loot": [
+    {"id": "register", "when": "on_clear", "roll": "1d4*2", "per": "crawler", "unit": "credits"}
+  ],
+  "secrets": [],
+  "npcs": [],
+  "achievements": [],
+  "rest": null,
+  "gm_notes": "Strong-model and post-session notes only. Never sent to the narrator."
+}
+```
+
+## Stat block
+```json
+{"id": "mannequin-staff", "name": "Mannequin Staff", "ac": 12, "hp": 13, "speed_ft": 30,
+ "abilities": {"str": 12, "dex": 12, "con": 12, "int": 3, "wis": 8, "cha": 3},
+ "saves": {}, "resist": [], "immune": ["poisoned"], "vulnerable": [],
+ "attacks": [{"name": "Pricing gun", "kind": "ranged", "to_hit": 4, "range_ft": [30, 120], "damage": "1d6+2", "type": "piercing"}],
+ "traits": [], "xp": 50, "source": "rules/70-encounter-budget-5e.json"}
+```
+Numbers above are examples of shape only. The real values come from Encounter's pages and Accountant's budget, and each stat block has exactly one to-hit per attack.
+
+## Secret (also used for achievements, with "kind": "achievement")
+```json
+{"id": "odd-coin-identify", "kind": "secret",
+ "trigger": {"type": "item_use", "item": "Odd Coin", "action": ["identify", "appraise"]},
+ "reveal": "ITEM NOT RECOGNIZED.", "voice": "SYSTEM",
+ "private": false, "once": false, "requires": [], "sets_flags": []}
+```
+`private: true` sends the reveal only to the triggering Crawler's sheet channel (bridge whisper), never to voice.
+
+## Trigger types (code checks these; anything else is a strong-model call)
+- `enter`, `leave`: party or a Crawler enters or leaves the room. Optional `first_time`.
+- `clear`: every hostile in the encounter is down.
+- `check`: a check of `skill` or `ability` at or above `dc`, optional `target` feature.
+- `action`: a parsed action `verb` (search, open, talk, push, break) on `target`.
+- `item_use`: `item` used with `action`.
+- `say`: a spoken keyword or phrase list (`any_of`), optional `to_npc`.
+- `hp`: a Crawler drops to 0 (`at_zero`), or below a fraction.
+- `death_save`: first death save of the session, optional `result`.
+- `round`: combat round number reached.
+- `clock`: floor day or tick reached.
+- `flag`: another secret's flag is set (chains).
+Each trigger can carry `who: "any|first|each"` and `requires: [flags]`.
+
+## NPC
+```json
+{"name": "Proctor Bell", "voice": "NPC: Proctor Bell", "position": "booth",
+ "disposition": "faux-cheerful", "knows": ["hint-vent-row"], "sells": [{"item": "Hint", "credits": 1}],
+ "lines": {"greet": "Little lambs!", "refuse": "Rules are rules, lambs."}}
+```
+`voice` must match a name in `tables/npc-voices.json`.
+
+## Validation
+The engine ships a JSON Schema for these files (Cursor job C1). `python -m dcc_engine.validate content/` must report 0 errors before a content PR goes to the vote. Pilot room: Shooting Gallery, written by Encounter (layout, fight) and Lore (secrets, loot), then the format is frozen at 1.0.
