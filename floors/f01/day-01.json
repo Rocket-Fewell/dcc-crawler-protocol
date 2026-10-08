@@ -18,7 +18,7 @@
       "lore/CANON-LEDGER.md (M-016 and other canon rows; A-044, A-139 and A-151 now resolve to catalog rows ACH-1824, ACH-1825 and ACH-1826)",
       "lore/tables/canon-floor-1.json (Lore canon table; ledger version and sha256 recorded at build time): tags and ledger rows per zone",
       "lore/drafts/floor1-collapse-notices.draft.md (Lore draft v0.2, sha256 d23a39b90cbeea4690868e7ef4ee27d13b9294b4d841ef94506e3381399d627c: collapse notices, six-hours warning, missed-floor line, achievement frames; [SYSTEM] dry / [GM] color)",
-      "rules/70-encounter-budget-5e.json v0.2.8 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
+      "rules/70-encounter-budget-5e.json v0.2.9 and decisions/027-encounter-budget-v0-1-0.md (every figure cited by field path; guideline)",
       "decisions/026 Caleb rulings of ~10:00 PM and ~10:02 PM CT (Floor 3 = 20 days; a missed collapse is death)",
       "lore/drafts/floor1-zone-color.draft.md (Lore draft v0.2, sha256 a1ef4c1cedbd5d295495d0b6e389cb16161b7579de5062bb37385546ec8ba5f4: optional read-aloud zone color; [SYSTEM] Zone closing only)",
       "decisions/028-collapse-death-loot.md (death on a missed collapse: credits and items destroyed, looting only while the floor stands)",
@@ -34,10 +34,10 @@
     "achievements_csv_sha256": "9a79c6d50a49fe59e6f3ba05966f49334c4ec3b54bc6b6bf07c13148edcc05fc",
     "canon_ledger_version": "1.21",
     "budget_file": "rules/70-encounter-budget-5e.json",
-    "budget_file_version": "0.2.8",
-    "budget_file_sha256": "09e26988550ca29aa27c07dc63869008a1110a0efbe34c540a10b69ce12124cb",
+    "budget_file_version": "0.2.9",
+    "budget_file_sha256": "b2a700dec84a5b5c7d2956fa5138c19c5262ea5f42492d658fb0fd3547d919e5",
     "budget_file_label": "every figure from the budget file is a GM-adaptable guideline (its authority_note)",
-    "spec_sha256_sans_pin": "917b41819e2713e8f4e969389e922667cc42f6178c31f22b560092147f29dd9d",
+    "spec_sha256_sans_pin": "e93cb977c8ca9f2463593b2b58ee6059330e998b35c71c2a6d036f8986a6b06a",
     "spec_sha256_sans_pin_method": "sha256 (lowercase hex) of the UTF-8 bytes of json.dumps(spec, sort_keys=True, separators=(',', ':'), ensure_ascii=False), where spec is the parsed day-NN.spec.json with these keys deleted if present: budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version, achievements_catalog.expected_sha256. Nothing else is removed: spec prose carries the budget version only as the token {budget_version} (filled at build time), and the spec holds no other build stamp. Helper: tools/encounter_bot/spec_hash_sans_pin.py <spec>."
   },
   "clock": {
@@ -1799,7 +1799,7 @@
         "3": "As written.",
         "4": "As written."
       },
-      "if_they_do_something_dumb": "If someone tries to sell the Odd Coin to a machine, it refuses (ITEM NOT RECOGNIZED) or offers a suspicious sum and cancels mid-animation (00-overview.md section 5.3). If someone keeps reaching after SOLD OUT FOREVER, the machine bites anyway and the System posts a toast. Each loud pry is a Ceiling Ticks roll (enc-d01-04). Never a wipe.",
+      "if_they_do_something_dumb": "If someone tries to sell the Odd Coin to a machine, it refuses (ITEM NOT RECOGNIZED) or offers a suspicious sum and cancels mid-animation (00-overview.md section 5.3). Identify or appraise by any means (Snakk-Matic, spell, check, NPC): ITEM NOT RECOGNIZED; never name a floor or time. If someone keeps reaching after SOLD OUT FOREVER, the machine bites anyway and the System posts a toast. Each loud pry is a Ceiling Ticks roll (enc-d01-04). Never a wipe.",
       "spine_plant_gm_only": "[GM-ONLY] The Odd Coin must be planted on Floor 1 (00-overview.md section 8.4): the Lost & Found crate here; fallbacks are a Green Room box Weird pull or Dale's pocket. Never explain it.",
       "canon_zone": "z03",
       "quick_run": {
@@ -2111,7 +2111,7 @@
                   "kind": "count",
                   "values": {
                     "2": 2,
-                    "3": 3,
+                    "3": 2,
                     "4": 4
                   },
                   "paths": {
@@ -2119,10 +2119,10 @@
                     "3": "floors.1.fixed_encounters.z05.counts_by_party_size.3.skeleton",
                     "4": "floors.1.fixed_encounters.z05.counts_by_party_size.4.skeleton"
                   },
-                  "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.counts_by_party_size.{2|3|4}.skeleton)"
+                  "display": "2 Crawlers: 2 / 3 Crawlers: 2 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.counts_by_party_size.{2|3|4}.skeleton)"
                 }
               ],
-              "display": "2 Crawlers: 2 / 3 Crawlers: 3 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.counts_by_party_size.{2|3|4}.skeleton)"
+              "display": "2 Crawlers: 2 / 3 Crawlers: 2 / 4 Crawlers: 4 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.counts_by_party_size.{2|3|4}.skeleton)"
             }
           },
           "cr_slot": {
@@ -2165,7 +2165,7 @@
                   "within_tier": true
                 },
                 "3": {
-                  "xp_used": 150,
+                  "xp_used": 100,
                   "tier_budget": 150,
                   "over_by": 0,
                   "within_tier": true
@@ -2184,10 +2184,10 @@
                 "3": "floors.1.fixed_encounters.z05.fit.3",
                 "4": "floors.1.fixed_encounters.z05.fit.4"
               },
-              "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.budget_level); 2: 100 XP used of 100 tier budget; 3: 150 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.fit.{2|3|4})"
+              "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.budget_level); 2: 100 XP used of 100 tier budget; 3: 100 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.fit.{2|3|4})"
             }
           ],
-          "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.budget_level); 2: 100 XP used of 100 tier budget; 3: 150 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.fit.{2|3|4})"
+          "display": "standard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.budget_level); 2: 100 XP used of 100 tier budget; 3: 100 XP used of 150 tier budget; 4: 200 XP used of 200 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z05.fit.{2|3|4})"
         }
       },
       "voice_lines": {
@@ -2268,7 +2268,7 @@
       ],
       "scaling": {
         "2": "Two-Crawler count from the budget file; lean on the cover so the lesson lands without a wipe.",
-        "3": "Three-Crawler count from the budget file.",
+        "3": "Three-Crawler count from the budget file (v0.2.9: two Mannequins).",
         "4": "Four-Crawler count (00-overview.md sections 9.2 and 9.3): top of the Low band, and the cover makes it bite."
       },
       "if_they_do_something_dumb": "If the Crawlers charge across open floor, the mannequins get every shot; the cost is HP. If someone rides a conveyor on purpose, let them (no save) and let the System narrate it like a prize. If a Crawler drops, a death here is real unless that Crawler's Floor 1 Reprieve is unused (Core Book Ch1, Reprieve). Never a wipe by design.",
@@ -2353,7 +2353,7 @@
         "audience": "gm"
       },
       "enemies": [],
-      "enemies_note": "No enemies. If a Lights-Out Ceiling Tick shows up it cannot enter a saferoom.",
+      "enemies_note": "No enemies. If a Lights-Out Ceiling Tick shows up it cannot enter a saferoom. [GM-FACING] On Day 1 the Break Room is a guaranteed Short Rest stop before the Locker Room (free, already quiet, no fee). Lights-Out timing does not change.",
       "cr_slot": {
         "b70": {
           "kind": "cite",
@@ -2556,7 +2556,7 @@
         "3": "Same as the full room; no change.",
         "4": "Full room, as written; the corkboard rumors all appear."
       },
-      "if_they_do_something_dumb": "If someone bribes the terminal with the Odd Coin or tries to sell it, follow 00-overview.md section 5.3: ITEM NOT RECOGNIZED or the cancelled offer. If someone steals from the terminal or fights in the saferoom, the System's three-strikes freeze applies (canon saferoom rule); it is a cost, never a wipe. If they just argue, the speaker repeats the day count and Lights-Out arrives on schedule.",
+      "if_they_do_something_dumb": "If someone bribes the terminal with the Odd Coin or tries to sell it, follow 00-overview.md section 5.3: ITEM NOT RECOGNIZED or the cancelled offer. Identify or appraise by any means (Snakk-Matic, spell, check, NPC): ITEM NOT RECOGNIZED; never name a floor or time. If someone steals from the terminal or fights in the saferoom, the System's three-strikes freeze applies (canon saferoom rule); it is a cost, never a wipe. If they just argue, the speaker repeats the day count and Lights-Out arrives on schedule.",
       "canon_zone": "z06",
       "proposed_achievements": [
         {
@@ -2631,7 +2631,8 @@
           "Key way chosen so far: bruiser, terminal, mystery or none",
           "Terminal key bought, and by whom (price in Budget at a glance)",
           "Which corkboard rumors were read",
-          "Welcome Boxes opened, and for which Crawlers"
+          "Welcome Boxes opened, and for which Crawlers",
+          "Day 1 Short Rest: guaranteed here before the Locker Room (free, already quiet, no fee). Lights-Out timing does not change."
         ],
         "audience": "gm"
       },
@@ -3137,7 +3138,7 @@
                   "kind": "count",
                   "values": {
                     "2": 0,
-                    "3": 1,
+                    "3": 0,
                     "4": 2
                   },
                   "paths": {
@@ -3145,10 +3146,10 @@
                     "3": "floors.1.fixed_encounters.z08.counts_by_party_size.3.animated-flying-sword",
                     "4": "floors.1.fixed_encounters.z08.counts_by_party_size.4.animated-flying-sword"
                   },
-                  "display": "2 Crawlers: 0 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-flying-sword)"
+                  "display": "2 Crawlers: 0 / 3 Crawlers: 0 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-flying-sword)"
                 }
               ],
-              "display": "2 Crawlers: 0 / 3 Crawlers: 1 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-flying-sword)"
+              "display": "2 Crawlers: 0 / 3 Crawlers: 0 / 4 Crawlers: 2 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.counts_by_party_size.{2|3|4}.animated-flying-sword)"
             }
           },
           "cr_slot": {
@@ -3191,10 +3192,10 @@
                   "within_tier": false
                 },
                 "3": {
-                  "xp_used": 250,
+                  "xp_used": 200,
                   "tier_budget": 225,
-                  "over_by": 25,
-                  "within_tier": false
+                  "over_by": 0,
+                  "within_tier": true
                 },
                 "4": {
                   "xp_used": 300,
@@ -3210,10 +3211,10 @@
                 "3": "floors.1.fixed_encounters.z08.fit.3",
                 "4": "floors.1.fixed_encounters.z08.fit.4"
               },
-              "display": "hard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.budget_level); 2: 200 XP used of 150 tier budget, over by 50 (kept per overview; GM may tighten); 3: 250 XP used of 225 tier budget, over by 25 (kept per overview; GM may tighten); 4: 300 XP used of 300 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.fit.{2|3|4})"
+              "display": "hard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.budget_level); 2: 200 XP used of 150 tier budget, over by 50 (kept per overview; GM may tighten); 3: 200 XP used of 225 tier budget; 4: 300 XP used of 300 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.fit.{2|3|4})"
             }
           ],
-          "display": "hard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.budget_level); 2: 200 XP used of 150 tier budget, over by 50 (kept per overview; GM may tighten); 3: 250 XP used of 225 tier budget, over by 25 (kept per overview; GM may tighten); 4: 300 XP used of 300 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.fit.{2|3|4})"
+          "display": "hard tier at level 1 (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.tier, rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.budget_level); 2: 200 XP used of 150 tier budget, over by 50 (kept per overview; GM may tighten); 3: 200 XP used of 225 tier budget; 4: 300 XP used of 300 tier budget (rules/70-encounter-budget-5e.json#floors.1.fixed_encounters.z08.fit.{2|3|4})"
         }
       },
       "voice_lines": {
@@ -3434,7 +3435,7 @@
       ],
       "scaling": {
         "2": "Remove a Lanyard Blade slot; the armor alone is enough pressure. Offer the clever route more room hazards to use.",
-        "3": "Armor plus a single Lanyard Blade; hazards unchanged.",
+        "3": "Bruiser alone, no Lanyard Blade; hazards unchanged. The count comes from the budget file (v0.2.9).",
         "4": "Armor plus both blades, as in 00-overview.md section 9.3; the death-save lesson is most likely here."
       },
       "if_they_do_something_dumb": "If they refuse to fight and keep stalling, Bruiser focuses one Crawler and the blades harass the healer (tactics only, no fudged dice, per 00-overview.md section 11.2). If someone searches every locker bank, the Ceiling Ticks roll triggers (enc-d01-04). If someone attacks Proctor Bell, it self-heals and withholds hints (overview section 11.2). Nobody gets a free escape from a down Crawler: the cost is HP, a spent short-rest slot, or a lost key, never an instant wipe.",
@@ -4018,8 +4019,8 @@
   "pending_inputs": [
     {
       "owner": "Syndicate",
-      "item": "rules/70-encounter-budget-5e.json v0.2.8 (filed): slots with no matching field",
-      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.2.8 unless listed in the build report).",
+      "item": "rules/70-encounter-budget-5e.json v0.2.9 (filed): slots with no matching field",
+      "waiting_for": "Every figure slot on this page now cites the budget file by field path. Any slot still bracketed would have no matching field there (none left at v0.2.9 unless listed in the build report).",
       "status": "filled",
       "audience": "gm"
     },
@@ -4422,12 +4423,12 @@
     "pass": 54,
     "warn": 0,
     "fail": 0,
-    "spec_sha256": "8ae7cde959029227002f32e47936b52c1d472873507423825683474f141dbbe2",
+    "spec_sha256": "8843130ead65ebad16632f6a520e739a2563f9d7bf85ff27394dee239bf8e9e6",
     "checks": [
       {
         "status": "PASS",
         "check": "budget file present",
-        "detail": "rules/70-encounter-budget-5e.json v0.2.8, sha256 09e26988550ca29a; every figure from it is a GM-adaptable guideline (authority_note)"
+        "detail": "rules/70-encounter-budget-5e.json v0.2.9, sha256 b2a700dec84a5b5c; every figure from it is a GM-adaptable guideline (authority_note)"
       },
       {
         "status": "PASS",
@@ -4617,7 +4618,7 @@
       {
         "status": "PASS",
         "check": "Story Boxes/pets/spine seeds kept out of [PLAYER-FACING] text, quick runs and carry-on",
-        "detail": "60 player-facing and 134 GM extra blocks scanned"
+        "detail": "60 player-facing and 135 GM extra blocks scanned"
       },
       {
         "status": "PASS",
@@ -4682,7 +4683,7 @@
       {
         "status": "PASS",
         "check": "slot-map provenance",
-        "detail": "meta.spec_sha256_sans_pin 917b41819e2713e8 matches rules/70-encounter-budget-5e.json#day01_slot_map.spec_sha256_sans_pin_when_mapped"
+        "detail": "meta.spec_sha256_sans_pin e93cb977c8ca9f24 matches rules/70-encounter-budget-5e.json#day01_slot_map.spec_sha256_sans_pin_when_mapped"
       },
       {
         "status": "PASS",

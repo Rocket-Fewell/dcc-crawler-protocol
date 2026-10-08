@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "changelog": [
+    "0.2.9 (2026-10-08, Accountant): VALUE CHANGE, 3-Crawler Day 1 counts lowered after s1 (Z5 3->2 Mannequins, Z8 Bruiser alone, Day 4 Ushers 3->2); credits, box odds and every other value unchanged. Sans-pin hashes re-synced for Floor 1 day-01 and day-04.",
     "0.2.8 (2026-10-07, Accountant, provenance only, no values changed): sans-pin hashes re-synced after GM-facing item-hook lines (decision 038) on F1 day-01, day-03 and day-05, and F2 day-04, day-06 and day-10. Every price, slot path and other value unchanged.",
     "0.2.7 (2026-10-06 ~9:10 AM CT, Accountant): provenance only, no values changed: all ten f02_day01_to_10_slot_map sans-pin hashes re-synced to PR #15 (F2 Source lines now cite the budget via {budget_version} and the soft about 2-3 achievement Bronze wording; canon pin to ledger v1.19 is excluded from the hash). Recomputed independently from the PR #15 patch on main 85a4f08. Floor 1 sans-pins unchanged. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
     "0.2.6 (2026-10-05 ~9:40 PM CT, Accountant): F2 achievement Bronze is a SOFT guideline of about 2-3 per Crawler per floor (Caleb ~9:15 PM CT; GM may exceed for great moments and logs it). f2_box_rulings.achievement_bronze_cap_per_crawler_per_floor keeps its path, value 2 becomes the text about 2-3 (soft); past_the_cap and the F2 watch reworded. All ten F2 sans-pins re-synced to PR #13. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
@@ -1054,7 +1055,7 @@
               "skeleton": 2
             },
             "3": {
-              "skeleton": 3
+              "skeleton": 2
             },
             "4": {
               "skeleton": 4
@@ -1062,7 +1063,7 @@
           },
           "xp_by_party_size": {
             "2": 100,
-            "3": 150,
+            "3": 100,
             "4": 200
           },
           "fit": {
@@ -1073,7 +1074,7 @@
               "within_tier": true
             },
             "3": {
-              "xp_used": 150,
+              "xp_used": 100,
               "tier_budget": 150,
               "over_by": 0,
               "within_tier": true
@@ -1165,7 +1166,7 @@
             },
             "3": {
               "animated-armor": 1,
-              "animated-flying-sword": 1
+              "animated-flying-sword": 0
             },
             "4": {
               "animated-armor": 1,
@@ -1174,7 +1175,7 @@
           },
           "xp_by_party_size": {
             "2": 200,
-            "3": 250,
+            "3": 200,
             "4": 300
           },
           "fit": {
@@ -1185,10 +1186,10 @@
               "within_tier": false
             },
             "3": {
-              "xp_used": 250,
+              "xp_used": 200,
               "tier_budget": 225,
-              "over_by": 25,
-              "within_tier": false
+              "over_by": 0,
+              "within_tier": true
             },
             "4": {
               "xp_used": 300,
@@ -1519,7 +1520,7 @@
               "skeleton": 2
             },
             "3": {
-              "skeleton": 3
+              "skeleton": 2
             },
             "4": {
               "skeleton": 4
@@ -1527,7 +1528,7 @@
           },
           "xp_by_party_size": {
             "2": 100,
-            "3": 150,
+            "3": 100,
             "4": 200
           },
           "fit": {
@@ -1538,7 +1539,7 @@
               "within_tier": true
             },
             "3": {
-              "xp_used": 150,
+              "xp_used": 100,
               "tier_budget": 150,
               "over_by": 0,
               "within_tier": true
@@ -1559,7 +1560,7 @@
           "cash_per_crawler": 5.0,
           "cash_dice_per_crawler": "1d4 x 2",
           "boxes": "none: these conditional extras carry no box odds; the Boss Box and the planned fight/deed boxes in floors.1.boxes are unchanged",
-          "reasoning": "An active patrol on the way to the boss: standard tier, one Usher per Crawler, same counts as the Z5 Mannequin Staff (4 Crawlers: 4 Skeletons, 200 XP)."
+          "reasoning": "An active patrol on the way to the boss: standard tier, one Usher per Crawler, except 2 for three Crawlers (v0.2.9, matches Z5)."
         },
         "_day_encounter_index": {
           "enc-d02-02": "d02_02",
@@ -1579,7 +1580,7 @@
           },
           "compare": "floors.1.xp.by_party_size.4.daily_xp_budget_typical (360) and daily_xp_cap_normal_day (800)"
         },
-        "_status": "counts mirror floors/f01/00-overview.md 9.2/9.3 verbatim (authoritative for Floor 1 until Caleb says otherwise); fit flags show where the overview runs above the tier budget"
+        "_status": "counts mirror floors/f01/00-overview.md 9.2/9.3 except the v0.2.9 3-Crawler cuts (Z5 2 Mannequins, Z8 Bruiser alone, d04_03 2 Ushers); fit flags show where the overview still runs above the tier budget"
       },
       "boss_variant_b_level1": {
         "budget_level": 1,
@@ -6123,14 +6124,14 @@
   },
   "open_questions": [
     "Q2 (RESOLVED in v0.1.4 by room vote, Q-001 as revised, 6 of 6): Floor 4 = 20, Floor 5 = 25, Floor 6 = 30 days, house rule; Caleb can veto or change; GM-adaptable. Canon timers 10/15/17 (M-603..M-608) are reference only. Remaining: F7+ has no day counts (held at 30 in the growth curve only; ASSUMED); the Accountant must re-audit the recomputed per-floor lines.",
-    "Q3 (Caleb): Keep the overview's Z8 counts for 2-3 Crawlers (over the hard-tier budget by 50 and 25 XP) or tighten them?",
+    "Q3 (Caleb, partial in v0.2.9): 3-Crawler Z8 now fits (200 vs 225). 2 Crawlers are still over the hard-tier budget by 50 XP (Animated Armor alone). Keep that overage or tighten it?",
     "Q4 (Accountant): The F3-F18 flag lines follow one rule (2.165 x expected counted income, rounded to the nearest 500, not a fixed multiple of 1,500; v0.1.5) and are published in flag_line_by_floor; confirm or adjust (PLACEHOLDER). At Floor-1 scale, income is about 670-720 credits per Crawler per floor all-in against crafting prices of 5,000 / 12,000 / 30,000. (Q1, the line basis, is resolved: per Crawler per floor. Q1b is withdrawn: a missed collapse is death, no toll.)",
     "Q5 (RESOLVED in v0.1.5): the tool change exists. Q-003 passed 7 of 7; `state.py loot totals --include-credits` (optional --credit-sources, --assume-floor N; `credits ... --floor N`) gives the all-in view the optional valve (A12) needs; default output unchanged. Remaining for the Architect: load flag_line_by_floor instead of the fixed 1500.",
     "Q6 (RESOLVED in v0.1.6): crafting prices get their own smoothed schedule for Floors 3-18 (q6_crafting_price_proposal, adopted via room vote Q-004; rules/20 current section 9.1a); Floors 1-2 keep 5,000 / 12,000 / 30,000. Still open: level upgrades (5,000 x target level), bench supplies and other prices still take the credit multiplier; the rules/20 benchmark of one coupon plus 15,000 credits on Floor 4 is far above modeled income; the coupon cap 25,000 now sits under the basic table price from F9."
   ],
   "day01_slot_map": {
     "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
-    "spec_sha256_sans_pin_when_mapped": "917b41819e2713e8f4e969389e922667cc42f6178c31f22b560092147f29dd9d",
+    "spec_sha256_sans_pin_when_mapped": "e93cb977c8ca9f2463593b2b58ee6059330e998b35c71c2a6d036f8986a6b06a",
     "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version and achievements_catalog.expected_sha256 deleted if present (method updated by the Encounter Bot to also skip the achievements catalog version and sha; the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pins on this file and on the canon table and achievements catalog, so a budget or catalog bump no longer breaks this provenance; real slot content changes still do.",
     "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
     "count": 32,
@@ -6359,7 +6360,7 @@
         "mode": "number",
         "value_by_party_size": {
           "2": 0,
-          "3": 1,
+          "3": 0,
           "4": 2
         }
       },
@@ -6379,7 +6380,7 @@
         "mode": "text",
         "value_by_party_size": {
           "2": "hard tier, Moderate band: budget 150 XP for 2 Crawlers (level 1); used 200 XP (over by 50, overview 9.3 count kept)",
-          "3": "hard tier, Moderate band: budget 225 XP for 3 Crawlers (level 1); used 250 XP (over by 25, overview 9.3 count kept)",
+          "3": "hard tier, Moderate band: budget 225 XP for 3 Crawlers (level 1); used 200 XP",
           "4": "hard tier, Moderate band: budget 300 XP for 4 Crawlers (level 1); used 300 XP"
         }
       },
@@ -6486,7 +6487,7 @@
     "spec_sha256_sans_pin_when_mapped": {
       "day-02": "eccae98f3affff88a8aa65958ec6c13f6daf86d1b45844f50d162a7e048a1759",
       "day-03": "0885368bc4a8104498a0269e55cb58223c95cd069d80b4c8781f8212955c0aa9",
-      "day-04": "87aa8d6335dd1d4088e6a1cc9fe757229aef77de210fbfd6b6969e5cd8b0fda0"
+      "day-04": "0e7ea0e7c932d2cae7905ba98f4952503f00796970dd34d77cb2969767fc08b5"
     },
     "spec_hash_method": "see day01_slot_map.spec_hash_method",
     "count": 9,
@@ -6612,7 +6613,7 @@
         },
         "value_by_party_size": {
           "2": 2,
-          "3": 3,
+          "3": 2,
           "4": 4
         }
       },
@@ -6627,7 +6628,7 @@
         },
         "value_by_party_size": {
           "2": "standard tier, Low-band rule at level 1: budget 100 XP for 2 Crawlers; used 100 XP",
-          "3": "standard tier, Low-band rule at level 1: budget 150 XP for 3 Crawlers; used 150 XP",
+          "3": "standard tier, Low-band rule at level 1: budget 150 XP for 3 Crawlers; used 100 XP",
           "4": "standard tier, Low-band rule at level 1: budget 200 XP for 4 Crawlers; used 200 XP"
         }
       }

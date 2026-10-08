@@ -28,8 +28,8 @@
   },
   "budget_file": {
     "path": "rules/70-encounter-budget-5e.json",
-    "version": "0.2.8",
-    "expected_sha256": "09e26988550ca29aa27c07dc63869008a1110a0efbe34c540a10b69ce12124cb"
+    "version": "0.2.9",
+    "expected_sha256": "b2a700dec84a5b5c7d2956fa5138c19c5262ea5f42492d658fb0fd3547d919e5"
   },
   "canon_table": {
     "path": "lore/tables/canon-floor-2.json",
