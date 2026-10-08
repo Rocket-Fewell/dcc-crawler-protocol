@@ -28,6 +28,8 @@ import urllib.request
 API = "https://discord.com/api/v10"
 MSG_LIMIT = 1900          # Discord's hard limit is 2000; keep headroom
 import dcc_paths as _paths  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import card_rules  # noqa: E402  (Attacks / Spellcasting / Features / Rests blocks, computed from the build)
 DEFAULT_CAMPAIGN_DIR = _paths.CAMPAIGN_ROOT
 
 # Permission bits
@@ -321,6 +323,16 @@ def _status(c):
 PET_ITEM_IDS = ("heal-critter-potion", "pet-carrier")
 
 
+def party_rests_of(state):
+    """{short_used, short_max} for the card's Rests block (state.party.rests; cap limits.short_rests_per_day, default 4)."""
+    r = ((state or {}).get("party") or {}).get("rests")
+    r = r if isinstance(r, dict) else {}
+    cap = ((state or {}).get("limits") or {}).get("short_rests_per_day")
+    used = r.get("short_used", 0)
+    return {"short_used": used if isinstance(used, int) and not isinstance(used, bool) else 0,
+            "short_max": cap if isinstance(cap, int) and not isinstance(cap, bool) else (card_rules.rules().get("rests") or {}).get("short_rests_per_day", 4)}
+
+
 def make_view(c, data):
     """The player-visible slice of a crawler. Nothing else (fan_profile, notes, ...) can ever reach Discord."""
     inv = []
@@ -333,6 +345,9 @@ def make_view(c, data):
                     "uses_reset": it.get("uses_reset"), "category": info["category"], "mechanics": info["mechanics"],
                     "notes_sig": _notes_sig(it.get("notes"))})
     extras = (data.get("crawlers") or {}).get(c["name"], {})
+    build = build_public(c.get("build"))
+    if isinstance(c.get("proficiencies"), list):   # tracked proficiencies replace the creation build's Skills/Expertise lines (no two answers on one card)
+        build = [ln for ln in build if not ln.startswith(("Skills:", "Expertise:"))]
     return {
         "name": c["name"], "player": c.get("player", ""), "status": _status(c), "class": c.get("class", ""), "species": c.get("species", ""),
         "level": c.get("level"), "xp": c.get("xp"), "hp": dict(c["hp"]), "ac": c.get("ac"), "hit_dice": dict(c.get("hit_dice", {})),
@@ -346,8 +361,16 @@ def make_view(c, data):
         "standing_orders": c.get("standing_orders") or extras.get("standing_orders") or "",
         "standing_reaction": c.get("standing_reaction") or extras.get("standing_reaction") or "",
         "signature": c.get("signature") or extras.get("signature") or "",
-        "build": build_public(c.get("build")),
+        "build": build,
         "pet": pet_public(c, data),
+        # Oct 7 2026 trackers (crawler-facing). Enemy stat blocks (state.encounter) are GM-only and never enter a view.
+        "resources": [{"name": str(r.get("name", "")), "uses": r.get("uses"), "uses_max": r.get("uses_max"), "uses_reset": r.get("uses_reset"),
+                       **({"short_rest_regain": r["short_rest_regain"]} if r.get("short_rest_regain") else {})}
+                      for r in (c.get("resources") or []) if isinstance(r, dict) and r.get("name")],
+        "proficiencies": [str(x) for x in (c.get("proficiencies") or []) if isinstance(c.get("proficiencies"), list)],
+        "expertise": [str(x) for x in (c.get("expertise") or []) if isinstance(c.get("expertise"), list)],
+        # Oct 7 2026: the party's Short Rests used today (shown in the Rests block; a snapshot without it never forces a repost)
+        **({"party_rests": dict(data["party_rests"])} if _status(c) is not None and isinstance((data or {}).get("party_rests"), dict) else {}),
     }
 
 
@@ -440,14 +463,18 @@ def build_public(b):
     if not isinstance(b, dict):
         return []
     out = []
-    feats = [f for f in (b.get("origin_feat"), b.get("extra_origin_feat")) if f]
+    lessons = b.get("lessons_feat") if isinstance(b.get("lessons_feat"), list) else [b.get("lessons_feat")]
+    feats = [f for f in [b.get("origin_feat"), b.get("extra_origin_feat"), *lessons] if f]
     cc = b.get("class_choices") if isinstance(b.get("class_choices"), dict) else {}
+    pending = card_rules.lessons_pending({"build": b})
     pairs = [("Origin feat", feats), ("Class picks", [v for k, v in cc.items() if k not in ("masteries", "expertise") and v]),
              ("Skills", b.get("skills")), ("Expertise", b.get("expertise") or cc.get("expertise")), ("Tools", b.get("tools")),
              ("Weapon mastery", b.get("weapon_masteries")), ("Languages", b.get("languages"))]
     for label, val in pairs:
         if val:
             out.append(f"{label}: {_join(val)}")
+        if label == "Origin feat" and pending:   # Lessons of the First Ones grants an Origin feat the player has not picked yet
+            out.append(f"Origin feat (Lessons of the First Ones): not chosen yet, pick one{'' if pending == 1 else f' (x{pending})'}")
     sp = b.get("spells") if isinstance(b.get("spells"), dict) else {}
     for label, key in (("Cantrips", "cantrips"), ("Prepared", "prepared"), ("Spellbook", "spellbook")):
         if sp.get(key):
@@ -460,37 +487,78 @@ def _hp(v):
     return f"{v['hp']['current']}/{v['hp']['max']}{t}"
 
 
+def _hp_key(hp):
+    """HP as compared for change detection: a missing temp counts as 0 (older snapshots), anything else as written."""
+    hp = hp if isinstance(hp, dict) else {}
+    return (hp.get("current"), hp.get("max"), hp.get("temp") or 0)
+
+
+def _cond_key(conds):
+    return sorted({str(x).strip().lower() for x in (conds or []) if str(x).strip()})
+
+
+def _res_line(r):
+    return f"{r['name']} {uses_text(r) or (str(r.get('uses')) + '/' + str(r.get('uses_max')))}"
+
+
 def diff_views(old, new):
-    """Short human-readable list of what changed since the last published view ([] = nothing visible changed)."""
+    """Short human-readable list of what changed since the last published view ([] = nothing visible changed).
+    Oct 7 2026: HP (incl. temp) and conditions are compared tolerantly (an older snapshot missing a key never crashes the publish),
+    pet HP, death saves, class resources and proficiencies each get their own line."""
     if old is None:
         return []
     ch = []
-    if old["hp"] != new["hp"]:
-        ch.append(f"HP {_hp(old)} -> {_hp(new)}")
+    if "hp" in old and _hp_key(old.get("hp")) != _hp_key(new.get("hp")):
+        oh = old["hp"] if isinstance(old.get("hp"), dict) else {}
+        ch.append(f"HP {_hp({'hp': {'temp': 0, **oh}})} -> {_hp(new)}")
     if (old.get("status") or "active") != (new.get("status") or "active"):
         ch.append(f"Status: {(new.get('status') or 'active').upper()}")
     for key, label in (("credits", "Credits"), ("ac", "AC"), ("level", "Level"), ("xp", "XP")):
         if old.get(key) != new.get(key):
             ch.append(f"{label} {old.get(key)} -> {new.get(key)}")
-    if old.get("pet") != new.get("pet"):
-        ch.append(f"Pet: {new['pet']['name']}" if new.get("pet") else f"Pet: -{(old.get('pet') or {}).get('name', '')}")
-    if old.get("hit_dice") != new.get("hit_dice"):
-        ch.append(f"Hit Dice {old['hit_dice'].get('current')}/{old['hit_dice'].get('max')} -> {new['hit_dice'].get('current')}/{new['hit_dice'].get('max')}")
-    for a, v in new["abilities"].items():
-        if old["abilities"].get(a) != v:
-            ch.append(f"{a.upper()} {old['abilities'].get(a)} -> {v}")
-    for cond in new["conditions"]:
-        if cond not in old["conditions"]:
-            ch.append(f"Condition: +{cond}")
-    for cond in old["conditions"]:
-        if cond not in new["conditions"]:
-            ch.append(f"Condition: -{cond}")
-    if old.get("death_saves") != new.get("death_saves"):
+    if "pet" in old and old.get("pet") != new.get("pet"):
+        op, np_ = old.get("pet") or {}, new.get("pet") or {}
+        if op and np_ and op.get("name") == np_.get("name") and {k: v for k, v in op.items() if k != "hp_current"} == {k: v for k, v in np_.items() if k != "hp_current"}:
+            ch.append(f"Pet {np_['name']} HP {op.get('hp_current')} -> {np_.get('hp_current')}" + (f"/{np_['hp_max']}" if np_.get("hp_max") is not None else ""))
+        else:
+            ch.append(f"Pet: {np_['name']}" if np_ else f"Pet: -{op.get('name', '')}")
+    if "hit_dice" in old and old.get("hit_dice") != new.get("hit_dice"):
+        ohd, nhd = old.get("hit_dice") or {}, new.get("hit_dice") or {}
+        ch.append(f"Hit Dice {ohd.get('current')}/{ohd.get('max')} -> {nhd.get('current')}/{nhd.get('max')}")
+    for a, v in (new.get("abilities") or {}).items():
+        if "abilities" in old and (old.get("abilities") or {}).get(a) != v:
+            ch.append(f"{a.upper()} {(old.get('abilities') or {}).get(a)} -> {v}")
+    if "conditions" in old:
+        olow, nlow = {str(x).strip().lower() for x in old.get("conditions") or []}, {str(x).strip().lower() for x in new.get("conditions") or []}
+        for cond in new.get("conditions") or []:
+            if str(cond).strip().lower() not in olow:
+                ch.append(f"Condition: +{cond}")
+        for cond in old.get("conditions") or []:
+            if str(cond).strip().lower() not in nlow:
+                ch.append(f"Condition: -{cond}")
+    if "death_saves" in old and (old.get("death_saves") or {"successes": 0, "fails": 0}) != (new.get("death_saves") or {"successes": 0, "fails": 0}):
         d = new.get("death_saves") or {}
         ch.append(f"Death saves {d.get('successes', 0)} successes / {d.get('fails', 0)} fails")
-    if old["boxes"] != new["boxes"]:
+    if "boxes" in old and old.get("boxes") != new.get("boxes"):
         ch.append("Boxes: " + (", ".join(f"{t} {n}" for t, n in new["boxes"].items()) or "none"))
-    oi, ni = _keyed_items(old["inventory"]), _keyed_items(new["inventory"])
+    if "resources" in old:
+        orr, nrr = {r["name"]: r for r in old.get("resources") or []}, {r["name"]: r for r in new.get("resources") or []}
+        for k, r in nrr.items():
+            if k not in orr:
+                ch.append(f"+ Resource {_res_line(r)}")
+            elif any(orr[k].get(f) != r.get(f) for f in ("uses", "uses_max", "uses_reset")):
+                ch.append(f"{k}: {uses_text(orr[k]) or orr[k].get('uses')} -> {uses_text(r) or r.get('uses')}")
+        for k in orr:
+            if k not in nrr:
+                ch.append(f"- Resource {k}")
+    if "party_rests" in old and "party_rests" in new and old.get("party_rests") != new.get("party_rests"):
+        pr = new.get("party_rests") or {}
+        ch.append(f"Party Short Rests {pr.get('short_used', 0)}/{pr.get('short_max', 4)}")
+    for key, label in (("proficiencies", "Proficiency"), ("expertise", "Expertise")):
+        if key in old:
+            o, n = list(old.get(key) or []), list(new.get(key) or [])
+            ch += [f"{label}: +{x}" for x in n if x not in o] + [f"{label}: -{x}" for x in o if x not in n]
+    oi, ni = _keyed_items(old.get("inventory") or []), _keyed_items(new.get("inventory") or [])
     for k, i in ni.items():
         label = _item_label(k)
         if k not in oi:
@@ -502,8 +570,8 @@ def diff_views(old, new):
     for k in oi:
         if k not in ni:
             ch.append(f"- {_item_label(k)}")
-    for a in new["achievements"]:
-        if a not in old["achievements"]:
+    for a in new.get("achievements") or []:
+        if a not in (old.get("achievements") or []):
             ch.append(f"Achievement: {a}")
     if not ch and views_differ(old, new):
         ch.append("Sheet details updated")   # safety net: a visible field changed that has no line of its own above
@@ -563,6 +631,12 @@ def views_differ(old, new):
                 return True
         elif k == "conditions":
             if sorted(map(str, old[k] or [])) != sorted(map(str, new[k] or [])):
+                return True
+        elif k == "hp":
+            if _hp_key(old[k]) != _hp_key(new[k]):   # an older snapshot without hp.temp reads as temp 0
+                return True
+        elif k == "death_saves":
+            if (old[k] or {"successes": 0, "fails": 0}) != (new[k] or {"successes": 0, "fails": 0}):
                 return True
         elif old[k] != new[k]:
             return True
@@ -637,6 +711,24 @@ def _species_class_label(v):
         return plain
 
 
+def _shown_item(c, i):
+    """The card's copy of an inventory row on a player card: a weapon's Mastery tag only when that mastery was chosen (card_rules).
+    Render only; the view/snapshot keeps the stored text, so this never counts as a change."""
+    try:
+        row = next((r for r in c.get("inventory") or [] if isinstance(r, dict) and r.get("name") == i["name"]), None)
+        mech = card_rules.item_mechanics_text(c, row, i.get("mechanics") or "")
+        return dict(i, mechanics=mech) if mech != i.get("mechanics") else i
+    except Exception:  # noqa: BLE001 - a card must still post
+        return i
+
+
+def _class_item_note(v, i):
+    """A class-only item on the wrong class (core book Ch2: only the Wizard gets a spellbook) gets a short flag; text only, the item stays."""
+    if re.search(r"\bspellbook\b", i.get("name", ""), re.I) and v.get("class") != "Wizard":
+        return f" *(only Wizards use a spellbook; a {v.get('class') or 'non-Wizard'} can't cast from it: ask the GM)*"
+    return ""
+
+
 def render_card(c, data, ledger=None, old_view=None, changes=None):
     """Return the list of Discord message strings (each < 2000 chars) for one crawler's full card."""
     ledger = ledger or []
@@ -651,25 +743,43 @@ def render_card(c, data, ledger=None, old_view=None, changes=None):
     head.append("```\n" + f"HP {_hp(v)}  AC {v['ac']}  XP {v['xp']}  Hit Dice {hd.get('current')}/{hd.get('max')}\n"
                 + "  ".join(f"{a.upper()} {s}" for a, s in v["abilities"].items()) + "\n```")
     head.append(f"Conditions: {', '.join(v['conditions']) or 'none'} | Loot boxes: {boxes}")
+    ds = v.get("death_saves") or {}
+    low_conds = {str(x).lower() for x in v["conditions"]}
+    if ds.get("successes") or ds.get("fails") or (v["hp"].get("current") == 0 and not low_conds & {"stable", "dead", "deceased"}):
+        head.append(f"Death saves: {ds.get('successes', 0)} successes / {ds.get('fails', 0)} fails")
+    # Oct 7 2026 (Caleb, gm-notes/30 combat block): right under the HP/AC block, everything a player needs on their turn,
+    # computed from class, level, scores, build and inventory (tools/card_rules.py); current uses from crawler.resources.
+    combat = card_rules.combat_blocks(c, (data or {}).get("party_rests")) if _status(c) is not None else []
+    try:
+        shown_res = card_rules.tracked_names(c) if combat else set()
+    except Exception:
+        shown_res = set()
+    tail = []
     if v.get("pet"):
-        head.append(pet_block(v["pet"]))
-    if v["death_saves"] and (v["death_saves"].get("successes") or v["death_saves"].get("fails")):
-        head.append(f"Death saves: {v['death_saves'].get('successes', 0)} successes / {v['death_saves'].get('fails', 0)} fails")
+        tail.append(pet_block(v["pet"]))
+    other_res = [r for r in v.get("resources") or [] if r["name"].lower() not in shown_res]
+    if other_res:
+        tail.append("Resources: " + "; ".join(_res_line(r) for r in other_res))
+    if v.get("proficiencies") or v.get("expertise"):
+        tail.append("Skill proficiencies: " + (", ".join(v.get("proficiencies") or []) or "none") + (f" (expertise: {', '.join(v['expertise'])})" if v.get("expertise") else ""))
     for label, key in (("Standing Orders", "standing_orders"), ("Signature attack", "signature"), ("Standing Reaction", "standing_reaction")):
         if v[key]:
-            head.append(f"{label}: {v[key]}")
+            tail.append(f"{label}: {v[key]}")
     shown = [x for x in (changes or []) if not x.startswith("Credits ")]  # the first line already says it
     if shown:
         text = "; ".join(shown)
-        head.append("**Changed:** " + (text if len(text) < 700 else text[:697] + "..."))
-    blocks = ["\n".join(head)]
+        tail.append("**Changed:** " + (text if len(text) < 700 else text[:697] + "..."))
+    if combat:
+        blocks = ["\n".join(head)] + combat + (["\n".join(tail)] if tail else [])
+    else:   # plain pets / companions: no turn blocks, the card reads as before
+        blocks = ["\n".join(head + tail)]
 
     cats = data.get("categories") or [["weapons", "Weapons & focus"], ["armor", "Armor & clothing"], ["magic", "Magic & special"], ["gear", "Gear"]]
     known = {k for k, _ in cats}
     for key, title in cats + [["other", "Other"]]:
         its = [i for i in v["inventory"] if (i["category"] if i["category"] in known else "other") == key]
         if its:
-            blocks.append(f"**{title}**\n" + "\n".join(item_line(i) for i in its))
+            blocks.append(f"**{title}**\n" + "\n".join(item_line(_shown_item(c, i) if combat else i) + _class_item_note(v, i) for i in its))
     if not v["inventory"]:
         blocks.append("**Inventory**\n(empty)")
     if v.get("build"):
@@ -723,8 +833,9 @@ def pack_messages(blocks, label, limit=MSG_LIMIT):
 
 # --------------------------------------------------------------------------- publish
 
-def publish(client, crawler_names=None, full=False, dry_run=False, log=print):
+def publish(client, crawler_names=None, full=False, dry_run=False, log=print, note=None):
     """Post a new full card for every crawler whose visible state changed since its last published snapshot.
+    note: optional GM text put first on the card's Changed line for this post only (never stored; e.g. a refund or a correction).
     Returns a list of result dicts. Updates the snapshot only after ALL parts of a card were posted."""
     results = []
     with PublishLock():
@@ -732,7 +843,7 @@ def publish(client, crawler_names=None, full=False, dry_run=False, log=print):
         if not isinstance(state, dict):
             raise PublishError(f"no readable state at {state_path()}")
         cfg = load_config()
-        data = {**load_card_data(), "pets_enabled": (state.get("limits") or {}).get("pets_enabled", True)}
+        data = {**load_card_data(), "pets_enabled": (state.get("limits") or {}).get("pets_enabled", True), "party_rests": party_rests_of(state)}
         ledger = read_ledger()
         snaps = read_json(snapshots_path(), {"version": 1, "crawlers": {}}) or {"version": 1, "crawlers": {}}
         snaps.setdefault("crawlers", {})
@@ -758,6 +869,8 @@ def publish(client, crawler_names=None, full=False, dry_run=False, log=print):
             if old is None:
                 changes = []
                 res["first"] = True
+            elif note and str(note).strip():
+                changes = [str(note).strip()[:300]] + list(changes)
             msgs = render_card(c, data, ledger, old, changes)
             res.update(parts=len(msgs), changes=changes)
             if dry_run:

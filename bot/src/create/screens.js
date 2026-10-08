@@ -42,7 +42,8 @@ export function revalidate(d, t) {
   if (d.featSkills?.length && (R.featSkillCount(d, t) !== d.featSkills.length || d.featSkills.some((s) => !R.featSkillOptions(d, t).includes(s)))) { d.featSkills = []; dropped.push('feat skills'); }
   if (d.expertise?.length && d.expertise.some((s) => !R.expertiseOptions(d, t).includes(s))) { d.expertise = []; dropped.push('expertise'); }
   const mc = R.masteryChoice(d, t);
-  if (d.masteries?.length && (!mc || d.masteries.length !== mc.count || d.masteries.some((m) => !mc.options.includes(m)))) { d.masteries = []; dropped.push('weapon masteries'); }
+  if (d.masteries?.length && (!mc || d.masteries.length !== mc.count || d.masteries.some((m) => !mc.options.includes(m)))) { d.masteries = []; if (!d.masteriesAuto) dropped.push('weapon masteries'); }
+  if (d.masteriesAuto) R.fillDefaultMasteries(d, t);   // defaults follow the carried weapons; the player's own picks are kept
   if (d.kitClass && !cl?.packages?.some((p) => p.id === d.kitClass)) { d.kitClass = null; dropped.push('class equipment'); }
   if (d.kitBg && !bg?.packages?.some((p) => p.id === d.kitBg)) { d.kitBg = null; dropped.push('background equipment'); }
   if (d.spells && (!cl?.spells || (d.spells.cantrips ?? []).some((n) => !cl.spells.cantrip_list.includes(n)) || (d.spells.level1 ?? []).some((n) => !cl.spells.level1_list.includes(n)))) { d.spells = null; dropped.push('spells'); }
@@ -53,6 +54,12 @@ export function revalidate(d, t) {
     if (lost) dropped.push('equipment type picks');
   }
   if (d.cart?.some((l) => !t.chargen.items[l.id] || (K.isHeaderKey(t, l.id) && !K.variantIds(t, l.id).includes(l.variant)))) { d.cart = d.cart.filter((l) => t.chargen.items[l.id] && (!K.isHeaderKey(t, l.id) || K.variantIds(t, l.id).includes(l.variant))); dropped.push('Vending Wall lines that could not be priced'); }
+  if (R.disallowedCart(d, t).length) { d.cart = d.cart.filter((l) => R.itemAllowed(d, t, l.id)); dropped.push('class-only Vending Wall items (Spellbook: Wizards only)'); }
+  if (d.mi) {
+    const keep = R.miFeats(d, t);
+    for (const f of Object.keys(d.mi)) if (!keep.includes(f) || R.miProblem(f, d.mi[f], t)) { delete d.mi[f]; dropped.push(`${f} spell picks`); }
+  }
+  if (d.lessonsFeat && (!R.lessonsFeatOffered(d, t) || !R.lessonsFeatOptions(d, t).includes(d.lessonsFeat))) { d.lessonsFeat = null; dropped.push('Lessons of the First Ones feat'); }
   if (R.creditsLeft(d, t) < 0 && d.cart?.length) { d.cart = []; dropped.push('Vending Wall purchases'); }
   return dropped;
 }
@@ -421,7 +428,7 @@ export const SCREENS = {
       const b = R.asiBonus(d, env.t);
       const asi = d.asi ? ABILITIES.filter((a) => b[a]).map((a) => `${A(a)} +${b[a]}`).join(', ') : '(choose below)';
       const fl = backgroundFlavor(env.t, d.background);
-      return `**${backgroundLabel(env.t, d.background)}** - ${fl ? `${fl}\n` : ''}scores ${bg.asi.map(A).join('/')}; Origin feat **${featLabel(env.t, bg.feat)}**; skills ${bg.skills.join(', ')}; tool ${bg.tool}.\n**Bonus:** ${asi}  |  no score above 20${R.extraFeatNeeded(d, env.t) ? `\n**Human Versatile feat:** ${d.extraFeat ? featLabel(env.t, d.extraFeat) : '(pick below)'}` : ''}`;
+      return `**${backgroundLabel(env.t, d.background)}** - ${fl ? `${fl}\n` : ''}scores ${bg.asi.map(A).join('/')}; Origin feat **${featLabel(env.t, bg.feat)}**; skills ${bg.skills.join(', ')}; tool ${bg.tool}.\n**Bonus:** ${asi}  |  no score above 20${R.extraFeatNeeded(d, env.t) ? `\n**Human Versatile feat:** ${d.extraFeat ? featLabel(env.t, d.extraFeat) : '(pick below)'}` : ''}${R.lessonsFeatOffered(d, env.t) ? `\n**Lessons of the First Ones feat:** ${d.lessonsFeat ? featLabel(env.t, d.lessonsFeat) : 'not chosen yet (pick below, or leave it and the card will say pick one)'}` : ''}`;
     },
     rows(d, env) {
       const r = [select(cid(d.uid, 'S7', 'bg'), 'Pick your Prior Employment', backgroundNames(env.t, env.settings.contentSource).map((n) => { const b = env.t.chargen.backgrounds[n]; return { label: backgroundLabel(env.t, n), value: n, description: `${b.asi.map(A).join('/')} · ${b.feat} · ${b.skills.join(', ')}` }; }), { selected: [d.background] })];
@@ -433,6 +440,7 @@ export const SCREENS = {
         const cur = d.asi ? (d.asi.type === '1-1-1' ? '1-1-1' : `2-1:${d.asi.plus2}:${d.asi.plus1}`) : null;
         r.push(select(cid(d.uid, 'S7', 'asi'), 'How the background raises your scores', o, { selected: [cur] }));
         if (R.extraFeatNeeded(d, env.t)) r.push(select(cid(d.uid, 'S7', 'feat'), 'Human Versatile: pick an extra Origin feat', env.t.chargen.origin_feats.filter((f) => f !== bg.feat).map((f) => ({ label: featLabel(env.t, f), value: f, description: featFlavor(env.t, f, 100) })), { selected: [d.extraFeat] }));
+        if (R.lessonsFeatOffered(d, env.t)) r.push(select(cid(d.uid, 'S7', 'lessons'), 'Lessons of the First Ones: pick an Origin feat (optional)', R.lessonsFeatOptions(d, env.t).map((f) => ({ label: featLabel(env.t, f), value: f, description: featFlavor(env.t, f, 100) })), { selected: [d.lessonsFeat] }));
       }
       return r;
     },
@@ -442,6 +450,7 @@ export const SCREENS = {
     onSelect(key, v, d, env) {
       if (key === 'bg') { d.background = v[0]; return { notice: revalNotice(d, env.t) }; }
       if (key === 'asi') { const [t_, p2, p1] = v[0].split(':'); d.asi = t_ === '1-1-1' ? { type: '1-1-1' } : { type: '2-1', plus2: p2, plus1: p1 }; return {}; }
+      if (key === 'lessons') { d.lessonsFeat = v[0] ?? null; return { notice: revalNotice(d, env.t) }; }
       d.extraFeat = v[0];
       return {};
     },
@@ -549,7 +558,7 @@ export const SCREENS = {
       const ex = c.choices.find((x) => x.key === 'expertise');
       if (ex) ms('exp', `${tx(env.t, 'choice-expertise', 'Expertise')}: pick ${ex.count}`, R.expertiseOptions(d, env.t), ex.count, d.expertise);
       const mc = R.masteryChoice(d, env.t);
-      if (mc) ms('mast', `${tx(env.t, 'choice-weapon-masteries', 'Weapon Mastery')}: pick ${mc.count}`, mc.options.map((id) => ({ label: R.itemLabel(id, env.t), value: id, description: env.t.chargen.items[id].weapon.mastery ? `Mastery: ${env.t.chargen.items[id].weapon.mastery}` : '' })), mc.count, d.masteries);
+      if (mc) ms('mast', `${tx(env.t, 'choice-weapon-masteries', 'Weapon Mastery')}: pick ${mc.count}${d.masteriesAuto ? ' (preset: weapons you carry)' : ''}`, mc.options.map((id) => ({ label: R.itemLabel(id, env.t), value: id, description: env.t.chargen.items[id].weapon.mastery ? `Mastery: ${env.t.chargen.items[id].weapon.mastery}` : '' })), mc.count, d.masteries);
       return r;
     },
     ready(d, env) {
@@ -560,6 +569,7 @@ export const SCREENS = {
       const map = { cskills: 'classSkills', sskill: null, fskills: 'featSkills', langs: 'languages', exp: 'expertise', mast: 'masteries' };
       if (key === 'sskill') d.speciesSkill = v[0];
       else d[map[key]] = v;
+      if (key === 'mast') d.masteriesAuto = false;   // the player's own picks: never re-defaulted
       if (['cskills', 'sskill', 'fskills'].includes(key)) {
         const dr = revalidate(d, env.t).filter((x) => x !== 'class skills' || key !== 'cskills');
         return { notice: dr.length ? `${tx(env.t, 'notice-s9-dropped', `Dropped picks that stopped being legal: ${dr.join(', ')}`, { list: dr.join(', ') })}.` : '' };
@@ -633,6 +643,7 @@ export const SCREENS = {
       const text = String(f.get('list') ?? '');
       const errs = [];
       const heads = [];
+      const classOnly = [];
       const cart = new Map();
       for (const raw of text.split('\n').map((x) => x.trim()).filter(Boolean)) {
         const m = raw.match(/^(.*?)(?:\s*[x×]?\s*(\d+))?$/i);
@@ -640,6 +651,7 @@ export const SCREENS = {
         const q = m[2] ? Number(m[2]) : 1;
         if (hit?.header) { heads.push(env.t.chargen.items[hit.header].name.replace(/ \(your choice\)/, '')); continue; }
         if (!hit || q < 1 || q > 99) { errs.push(`"${cut(raw, 30)}"`); continue; }
+        if (!R.itemAllowed(d, env.t, hit.id)) { classOnly.push(`${env.t.chargen.items[hit.id].name} (${R.itemClasses(hit.id, env.t).join('/')} only)`); continue; }
         const k = `${hit.id}|${hit.variant ?? ''}`;
         cart.set(k, { id: hit.id, qty: (cart.get(k)?.qty ?? 0) + q, ...(hit.variant ? { variant: hit.variant } : {}) });
       }
@@ -648,6 +660,7 @@ export const SCREENS = {
       d.cart = next.cart;
       const bits = [];
       if (errs.length) bits.push(`${tx(env.t, 'notice-s10-not-on-wall', `Not on the Wall: ${errs.join(', ')}`, { names: errs.join(', ') })}.`);
+      if (classOnly.length) bits.push(`Not for your class: ${classOnly.join(', ')}. Nothing of that was bought.`);
       if (heads.length) bits.push(tx(env.t, 'notice-s10-say-type', `Say which type: ${heads.map((h) => `${h} (see the price list)`).join(', ')}. A generic is never sold.`, { names: heads.map((h) => `${h} (see the price list)`).join(', ') }));
       return { notice: bits.join(' ') };
     },
@@ -660,29 +673,56 @@ export const SCREENS = {
     paged: true,
     describe(d, env) {
       const sp = R.spellInfo(d, env.t);
-      if (!sp) return tx(env.t, 'notice-s11-none', 'No spells for this class.');
+      const mi = miText(d, env.t);
+      if (!sp) return mi || tx(env.t, 'notice-s11-none', 'No spells for this class.');
       const s = d.spells ?? {};
-      return `**${classLabel(env.t, d.class)}** (${A(sp.ability)}): ${sp.cantrips} cantrips${sp.spellbook ? `, ${sp.spellbook} spellbook spells, prepare ${sp.prepared}` : sp.level1_known ? `, ${sp.level1_known} level 1 spells` : ''}; ${sp.slots_l1} level 1 slot(s).\n**Cantrips:** ${list(s.cantrips)}\n**Level 1:** ${list(s.level1)}${sp.spellbook ? `\n**Prepared:** ${list(s.prepared)}` : ''}\n*Pick (effect lines are in the menus).*`;
+      return `**${classLabel(env.t, d.class)}** (${A(sp.ability)}): ${R.cantripCount(d, env.t)} cantrips${sp.spellbook ? `, ${sp.spellbook} spellbook spells, prepare ${sp.prepared}` : sp.level1_known ? `, ${sp.level1_known} level 1 spells` : ''}; ${sp.slots_l1} level 1 slot(s).\n**Cantrips:** ${list(s.cantrips)}\n**Level 1:** ${list(s.level1)}${sp.spellbook ? `\n**Prepared:** ${list(s.prepared)}` : ''}\n*Pick (effect lines are in the menus).*${mi ? `\n${mi}` : ''}`;
     },
     allRows(d, env) {
       const sp = R.spellInfo(d, env.t);
-      if (!sp) return [];
-      const s = d.spells ?? {};
       const opt = (n) => ({ label: n, value: n, description: `${env.t.chargen.spells[n].school}: ${env.t.chargen.spells[n].effect}` });
+      const miRows = R.miFeats(d, env.t).flatMap((f, i) => {
+        const L = R.miLists(f, env.t);
+        if (!L) return [];
+        const m = d.mi?.[f] ?? {};
+        const cls = R.miClass(f);
+        return [
+          select(cid(d.uid, 'S11', 'mic', i), `${f}: pick 2 ${cls} cantrips (optional)`, L.cantrips.slice(0, 25).map(opt), { min: 0, max: Math.min(2, L.cantrips.length), selected: m.cantrips ?? [] }),
+          ...[L.level1.slice(0, 25), L.level1.slice(25)].filter((c) => c.length).map((c, j, all) => select(cid(d.uid, 'S11', 'mil', `${i}~${j}`), `${f}: pick 1 level 1 ${cls} spell (optional)${all.length > 1 ? ` (list ${j + 1}/${all.length})` : ''}`, c.map(opt), { min: 0, max: 1, selected: (m.level1 ?? []).filter((x) => c.includes(x)) })),
+          select(cid(d.uid, 'S11', 'mia', i), `${f}: spellcasting ability (optional)`, R.MI_ABILITIES.map((a) => ({ label: A(a), value: a })), { min: 0, max: 1, selected: m.ability ? [m.ability] : [] }),
+        ];
+      });
+      if (!sp) return miRows;
+      const s = d.spells ?? {};
       const r = [];
-      if (sp.cantrips) r.push(select(cid(d.uid, 'S11', 'can'), tx(env.t, 'select-s11-cantrips', `Cantrips: pick ${sp.cantrips}`, { n: sp.cantrips }), sp.cantrip_list.map(opt), { min: sp.cantrips, max: sp.cantrips, selected: s.cantrips ?? [] }));
+      const nc = R.cantripCount(d, env.t);
+      if (nc) r.push(select(cid(d.uid, 'S11', 'can'), tx(env.t, 'select-s11-cantrips', `Cantrips: pick ${nc}`, { n: nc }), sp.cantrip_list.map(opt), { min: nc, max: nc, selected: s.cantrips ?? [] }));
       const n1 = sp.spellbook ?? sp.level1_known;
       const chunks = [sp.level1_list.slice(0, 25), sp.level1_list.slice(25)].filter((c) => c.length);
       const picked = s.level1 ?? [];
       chunks.forEach((c, i) => r.push(select(cid(d.uid, 'S11', 'l1', i), `${tx(env.t, sp.spellbook ? 'select-s11-spellbook' : 'select-s11-level1', `Level 1 ${sp.spellbook ? 'spellbook' : 'spells'}: pick ${n1} in total`, { n: n1 })}${chunks.length > 1 ? ` (list ${i + 1}/${chunks.length})` : ''}`, c.map(opt), { min: 0, max: Math.min(n1, c.length), selected: picked.filter((x) => c.includes(x)) })));
       if (sp.spellbook) r.push(select(cid(d.uid, 'S11', 'prep'), tx(env.t, 'select-s11-prepare', `Prepare ${sp.prepared} from your spellbook`, { n: sp.prepared }), (s.level1 ?? []).length ? s.level1.map(opt) : [{ label: tx(env.t, 'hint-s11-pick-book-first', 'Pick spellbook spells first'), value: '-' }], { min: (s.level1 ?? []).length ? sp.prepared : 1, max: (s.level1 ?? []).length ? sp.prepared : 1, selected: s.prepared ?? [] }));
-      return r;
+      return [...r, ...miRows];   // Magic Initiate picks last (paged)
     },
     ready(d, env) {
       const e = R.validateDraft({ ...d, name: 'x', look: 'x', hook: 'x', backstory: 'x', orders: 'x' }, env.t).filter((x) => x.screen === 'S11');
       return e.length ? e[0].msg : null;
     },
     onSelect(key, v, d, env, arg) {
+      if (['mic', 'mil', 'mia'].includes(key)) {   // Magic Initiate picks (optional; never auto-picked)
+        const [fi, chunk] = String(arg).split('~').map(Number);
+        const f = R.miFeats(d, env.t)[fi];
+        const L = f ? R.miLists(f, env.t) : null;
+        if (!L) return {};
+        const m = ((d.mi ??= {})[f] ??= { ability: null, cantrips: [], level1: [] });
+        if (key === 'mic') m.cantrips = v.filter((x) => L.cantrips.includes(x)).slice(0, 2);
+        else if (key === 'mia') m.ability = R.MI_ABILITIES.includes(v[0]) ? v[0] : null;
+        else {
+          const part = (chunk || 0) === 0 ? L.level1.slice(0, 25) : L.level1.slice(25);
+          m.level1 = [...(m.level1 ?? []).filter((x) => !part.includes(x)), ...v.filter((x) => part.includes(x))].slice(-1);
+        }
+        return {};
+      }
       d.spells = d.spells ?? { cantrips: [], level1: [], prepared: [] };
       if (key === 'can') d.spells.cantrips = v;
       else if (key === 'prep') d.spells.prepared = v.filter((x) => x !== '-');
@@ -825,6 +865,14 @@ export function surveyQuestions(d, t) {
   const h = [...String(d.uid)].reduce((s, ch) => (s * 31 + ch.charCodeAt(0)) >>> 0, 7);
   const picks = pool.length ? [pool[h % pool.length], pool[(h + 3) % pool.length]].filter((x, i, a) => a.indexOf(x) === i) : [];
   return [...core, ...picks.map((p, i) => ({ q: p.q, bonus: i + 1 }))];
+}
+
+/** S11 summary of each Magic Initiate's picks ("not chosen yet" until the player picks; nothing is ever picked for them). */
+function miText(d, t) {
+  return R.miFeats(d, t).map((f) => {
+    const m = d.mi?.[f] ?? {};
+    return `**${f}:** cantrips ${list(m.cantrips)}; level 1 ${list(m.level1)}; ability ${m.ability ? A(m.ability) : 'not chosen yet'} (optional here; the card says "not chosen yet" until picked)`;
+  }).join('\n');
 }
 
 const revalNotice = (d, t) => {

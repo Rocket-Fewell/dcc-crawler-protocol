@@ -28,7 +28,7 @@ const HELP = {
   S8: 'Standard array: 15 14 13 12 10 8, each once. Point buy: 27 points, scores 8-15.\nEnter six numbers in the order STR DEX CON INT WIS CHA; the background bonus is added after.\nHP, AC and the rest are computed for you.',
   S9: 'Fixed proficiencies came with your background and species.\nPick the rest; skills you already own are hidden.\nClasses with masteries or expertise ask for those here.',
   S10: 'Each of class and background gives a package or a gold amount (1 gold = 1 credit).\nSpend leftover credits at the Vending Wall by typing names; everything is a real 5e item.\nEvery item shows the System\'s own name with the real 5e name in brackets (from the item-reskins table); stats never change. Holy symbols, gaming sets, instruments and tools ask you to pick a type.',
-  S11: 'Casters pick cantrips and level 1 spells; Wizards also prepare a subset.\nEach menu entry says what the spell does in one line.\nOther classes skip this screen.',
+  S11: 'Casters pick cantrips and level 1 spells; Wizards also prepare a subset.\nMagic Initiate: pick its 2 cantrips, 1 level 1 spell and ability here (optional; the card says "not chosen yet" until you do).\nEach menu entry says what the spell does in one line.',
   S13: 'Private notes the System uses to tailor your story. Never read aloud.\nBlank = pass, and that is fine.\nSkip the whole screen if you like.',
   S14: 'Backstory is public: the System reads it at your introduction.\nRequested Handle is what you would like the audience to call you.\nBroadcast Name stays PENDING until Floor 3.',
   S15: 'Orders tell your body what to do when you are away; reactions say how to use your reaction.\nA signature attack name is optional.\nNo orders means Dodge on timeout.',
@@ -81,7 +81,7 @@ export const newDraft = (config, user, keep = null) => ({
 const MECH = new Set(['S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S15']);
 function skip(screen, d, t) {
   if (screen === 'S12') return true; // retired: tags come from the survey only
-  if (screen === 'S11' && !R.isCaster(d, t)) return true;
+  if (screen === 'S11' && !R.hasSpellScreen(d, t)) return true;   // casters, or Magic Initiate spell picks
   if (d.prebuilt && !d.editing && MECH.has(screen)) return true;
   return false;
 }
@@ -160,7 +160,9 @@ export async function render(d, env0) {
       const run = ctx.create?.run ?? defaultRun;
       const card = await cardText((script, ...a) => run(env.config.create.python, [join(env.config.campaign.dir, 'tools', script), '--session', env.config.campaign.sessionId, ...a], { env: { ...process.env, DCC_CAMPAIGN_ROOT: env.config.campaign.dir, DCC_CAMPAIGN_DIR: env.config.campaign.dir }, cwd: env.config.campaign.dir }), specPath);
       embeds[0].setDescription(cut(`${d.notice ? `> ${d.notice}\n\n` : ''}*${prompt}*\n\n**BUILD**\n${buildBlock(d, t)}`, 4000));
-      embeds.push(new EmbedBuilder().setColor(0x57f287).setTitle(tx(t, 'hint-s16-card', 'Player-channel card (as it will be posted)')).setDescription(cut(card ?? tx(t, 'hint-s16-card-missing', '(card preview unavailable)'), 3000)));
+      // Discord: 6000 characters across all embeds of one message. The card now carries Attacks/Spellcasting/Features/Rests, so it gets whatever room the BUILD embed leaves (max 4000).
+      const room = Math.max(1000, Math.min(4000, 5600 - (embeds[0].data.description ?? '').length - (embeds[0].data.title ?? '').length - (embeds[0].data.footer?.text ?? '').length));
+      embeds.push(new EmbedBuilder().setColor(0x57f287).setTitle(tx(t, 'hint-s16-card', 'Player-channel card (as it will be posted)')).setDescription(cut(card ?? tx(t, 'hint-s16-card-missing', '(card preview unavailable)'), room)));
       try { (await import('node:fs')).unlinkSync(specPath); } catch { /* ignore */ }
     } else {
       embeds[0].setDescription(cut(`${d.notice ? `> ${d.notice}\n\n` : ''}**${tx(t, 'hint-s16-not-ready', 'Not ready to confirm:')}**\n${errs.map((e) => `• ${e.screen}: ${e.msg}`).join('\n')}\n\n**BUILD (so far)**\n${safeBuild(d, t)}`, 4000));
@@ -296,6 +298,7 @@ async function handleComponentLocked(i, ctx) {
   if (res.modal) return i.showModal(res.modal);
   if (res.done) return res.done;
   if (res.go) { d.screen = res.go === 'S12' ? 'S13' : res.go; d.page = 0; if (res.edit) { d.returnTo = 'S16'; d.editing = true; } }
+  if (d.screen === 'S9' || d.screen === 'S10') R.fillDefaultMasteries(d, env.t);   // Weapon Mastery defaults = weapons carried (the player can change them)
   if (res.restart) d.confirmRestart = true;
   d.notice = res.notice || null;
   if (res.commit) return doCommit(i, d, env, ctx);

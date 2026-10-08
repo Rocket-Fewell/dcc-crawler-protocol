@@ -45,7 +45,7 @@ Every lane change requires a **`[<Owner> -> Cursor]`** handoff in Discord `#agen
 - **Architect:** Discord bridge (`bot/`), `tools/` portable paths, TTS, GitHub backup plumbing.
 - **Book Author (Valtay):** `core-book/`, the player-facing manuscript and PDF, stays with Book Author. Cursor may only do bulk assembly, table generation and build plumbing, and only from a `[Book Author -> Cursor]` handoff. No agent-ops content in the player book. Always say "Crawlers" and "saferoom". Never invent species, and never print UNVERIFIED or needs_verify markers.
 - **Accountant:** budget JSON/MD, credit-ledger verification and live spend reads stay with Accountant. Cursor may only make mechanical tooling edits, and only from an `[Accountant -> Cursor]` handoff. Never invent resource caps or budgets without Caleb and Accountant. Fee numbers (decision 031) and voice-economy provenance bumps stay with Accountant.
-- **GM:** table voice, Discord play, run sheets (`gm-notes/`) and live session state stay with GM. Cursor may only do mechanical file/git work, and only from a `[GM -> Cursor]` handoff. Never invent Crawler names into campaign `s1`. Never post to player channels. Never change voice tags (decision 032) without Encounter and GM.
+- **GM:** table voice, Discord play, run sheets (`gm-notes/`) and live session state stay with GM. Cursor may only do mechanical file/git work, and only from a `[GM -> Cursor]` handoff. Never invent Crawler names into the live campaign (`s2` since 2026-10-08; `s1` is the archive). Never post to player channels. Never change voice tags (decision 032) without Encounter and GM.
 
 ## Discord External Agent role
 
