@@ -80,7 +80,7 @@ Every item that comes out of a loot box (or any reward) must be announced as `Ou
 - Every credit change: pass `--reason "<why>"` to state.py (unsigned amounts mean +N). Cards auto-publish ~3s after any state.py write; manual: `python3 tools/discord_gm.py publish [--crawler X] [--full]`.
 - Every new item needs an entry in `exports/card-data.json` (reskin name, real 5e name, rarity, exact mechanics) or the card says "no mechanics on file". Update it whenever loot is added.
 - Ledger check: `state.py ledger show|verify`.
-- Routine prompt rewritten 2026-10-05 ~8:38 PM CT: runs on the active session (`s1`, never alpha), hands the turn on with `discord_gm.py spotlight set` at the end of every turn, never writes focus.json.
+- Routine prompt rewritten 2026-10-05 ~8:38 PM CT: runs on the active session (`s2` since 2026-10-08, was `s1`; never alpha), hands the turn on with `discord_gm.py spotlight set` at the end of every turn, never writes focus.json.
 
 ## Lore audit fixes (2026-10-04, dcc-lore/audits/gm-achievement-loot-audit.md)
 - Name every box after the deed in the Reward line: `Reward: You've received a Bronze <Deed Taunt> Box!` (own line). Reward line is a punchline first.
@@ -92,7 +92,7 @@ Every item that comes out of a loot box (or any reward) must be announced as `Ou
 - CLOSED (Caleb): Bone keeps his 5 Bronze, alpha only. No open call remains.
 
 ## Tooling and rules update (Oct 4, 5:30 PM CT) — follow these every wake
-- Live session is `s1` (Season 1, since 2026-10-05 ~7:48 PM CT). Prefix all state.py / gm-quirks / loot calls with `DCC_SESSION=s1` (or `--session s1`). `alpha` is the parked Horn/Bone save; never write to it unless Caleb resumes it.
+- Live session is `s2` (Season 2, from 2026-10-08; set up 2026-10-07 ~11:20 PM CT after the s1 party wipe). Prefix all state.py / gm-quirks / loot calls with `DCC_SESSION=s2` (or `--session s2`). `s1` (Season 1, 2026-10-05 to 2026-10-07, ended in a party wipe) is the read-only archive: never write to it. `alpha` is the parked Horn/Bone save; never write to it unless Caleb resumes it.
 - Turn order (Caleb, 2026-10-05 8:10 PM CT): at the start of each session, roll for Crawler turn order and keep it for exploration turns through the whole dungeon. Combat initiative replaces it only for that combat, then go back to the session order. s1 order: Mr. White 16, Eisenhorn 13, Shirayuki 11. Filed as decision 034 (decisions/034-session-turn-order.md, rules/10 v0.2.21 §2.5.1-2.5.2). Defaults: late joiners go last; dead, benched, or Autopilot slots are skipped, not re-rolled; a pet Crawler's slot sits right after its owner; hand the spotlight on with discord_gm.py spotlight set (never focus.json).
 - Loot: `python3 tools/state.py loot draw FLOOR ZONE --crawler X`. Achievements: `state.py achievement add ... --reward`.
 - Quirk tell: when the GM shows its tell, first run `state.py repair-log tell --scene ID --floor N`. A player's spontaneous "Busted" call goes through `gm-quirks guess ... --scene ID`; answer with only its output ("Busted" or "Not busted"). Never prompt or hint at guesses. Never say "Busted" first. Full Busted rules are in "Busted, credits and multipliers" below.

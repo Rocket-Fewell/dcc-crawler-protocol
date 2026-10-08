@@ -1,12 +1,12 @@
 {
   "schema": "loot-deck/0.1.1",
   "deck_id": "f01-z09-green-room",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "floor": 1,
   "zone": "z09",
   "zone_name": "Zone 9: The Green Room (Saferoom B)",
   "owner": "DCC Lore",
-  "updated": "2026-10-04",
+  "updated": "2026-10-07",
   "cards": [
     {
       "id": "f01-z09-0001",
@@ -32,7 +32,7 @@
         "save_dc": null,
         "duration": "permanent",
         "uses": null,
-        "limits": "Cannot be sold; do not explain it. Sell attempt: terminal says ITEM NOT RECOGNIZED or offers 500 credits and cancels.",
+        "limits": "Cannot be sold; do not explain it. Sell attempt: terminal says ITEM NOT RECOGNIZED or offers 500 credits and cancels. Identify/appraise attempt (any terminal, vendor or the System, any fee): same response as a sell attempt, ITEM NOT RECOGNIZED (or the 500-credit offer that cancels mid-animation); any fee is not taken. Never name a floor, a fee, a clearance level or a future appraisal.",
         "weight_lb": 0
       },
       "spoken_line": "Vendor Oddity, Unappraised. A coin, probably. It cannot be sold.",
@@ -51,7 +51,7 @@
       },
       "box_name": "Opened Something Nobody Opens Box",
       "deed": "Opened a box in the Green Room",
-      "notes": "SEED-ODDCOIN FALLBACK ONLY (draw_weight 0, hand-pick only): if the Lost & Found crate (Zone 3) was never opened, the coin shows up here as a Weird pull in the first Green Room box. Must be planted on F1; never explain it. credit_value 0 because it cannot be sold."
+      "notes": "SEED-ODDCOIN FALLBACK ONLY (draw_weight 0, hand-pick only): if the Lost & Found crate (Zone 3) was never opened, the coin shows up here as a Weird pull in the first Green Room box. Must be planted on F1; never explain it. credit_value 0 because it cannot be sold. Identify rule added 2026-10-07 (Lore, after s1 review): the GM improvised a floor-gated appraisal reply in s1; use only ITEM NOT RECOGNIZED or the cancelled 500-credit offer."
     },
     {
       "id": "f01-z09-0002",

@@ -22,8 +22,8 @@ def M(text, action, rng=None, dmg=None, save=None, dur=None, uses=None, limits="
             "duration": dur, "uses": uses, "limits": limits, "weight_lb": wt}
 
 class Deck:
-    def __init__(self, zone, slug, zone_name, version="0.1.0"):
-        self.zone, self.slug, self.zone_name, self.version = zone, slug, zone_name, version
+    def __init__(self, zone, slug, zone_name, version="0.1.0", updated="2026-10-04"):
+        self.zone, self.slug, self.zone_name, self.version, self.updated = zone, slug, zone_name, version, updated
         self.cards, self.n = [], 0
     def add(self, tier, pull, kind, reskin, real, src, rarity, cat, mech, spoken, snark, status, value, weight,
             box, deed, notes, attune=None, tags=None, unique=False, excl=None, grant=None, boxtypes=None, num=None, ledger_ids="", story=None, bound=None, ledger_text=None, sale=None):
@@ -48,7 +48,7 @@ class Deck:
     def dump(self, extra=None):
         sch = "loot-deck/0.1.2" if any("story_value" in c for c in self.cards) else "loot-deck/0.1.1"
         d = {"schema": sch, "deck_id": "f01-%s-%s" % (self.zone, self.slug), "version": self.version,
-             "floor": 1, "zone": self.zone, "zone_name": self.zone_name, "owner": "DCC Lore", "updated": "2026-10-04",
+             "floor": 1, "zone": self.zone, "zone_name": self.zone_name, "owner": "DCC Lore", "updated": self.updated,
              "cards": self.cards}
         if extra: d.update(extra)
         p = os.path.join(OUT, "f01-%s-%s.json" % (self.zone, self.slug))
@@ -368,12 +368,12 @@ Z3.add("Bronze","credits","credits","Snack-Machine Change Slot, Jammed Open","Cr
  "credit_value = expected value. Roll at draw.",grant=credits_grant("3d6x5"),ledger_ids="L-001")
 
 # ------------------------------------------------------------------ Z06 Break Room
-Z6 = Deck("z06", "break-room", "Zone 6: The Break Room (Saferoom A)")
+Z6 = Deck("z06", "break-room", "Zone 6: The Break Room (Saferoom A)", version="0.1.1", updated="2026-10-07")
 Z6.add("Bronze","weird","consumable","Laminated Complaint Card","Laminated Complaint Card (house: single-use oracle)","HOUSE","Common","Consumables",
- M("Utilize action, once: ask the System one yes/no question about the current floor; it answers truthfully, yes or no. The card is then spent.","Utilize action",None,None,None,"instant",U1,"Must be a yes/no question about the floor you are on. A question that is not yes/no is refused and the card is not spent.",0),
+ M("Utilize action, once: ask the System one yes/no question about the current floor; it answers truthfully, yes or no. The card is then spent.","Utilize action",None,None,None,"instant",U1,"Must be a yes/no question about the floor you are on. A question that is not yes/no is refused and the card is not spent. Never reveals spine secrets or GM-only information: a question about them gets bureaucratic runaround (a form number, 'your complaint has been escalated', 'please allow 6-8 floors for processing') and the card is spent.",0),
  "Laminated Complaint Card. One use: ask the System one yes-or-no question about this floor. It must answer truthfully.",
  "The System has never lost a complaint; it files them under Funny.",H,25,10,"Filed a Formal Complaint Box","Filed a formal complaint with the System",
- "Alpha-test item (2026-10-04, Bone). Open: are spine secrets exempt from 'truthfully'? (spec §5 Q3).")
+ "Alpha-test item (2026-10-04, Bone). Lore ruling 2026-10-07 (resolves spec §5 Q3 on the Lore side; Syndicate/Caleb may still overrule in rules/40): the card never reveals spine secrets (Odd Coin, Benefactor, Black Box, etc.) or GM-only information; such questions get bureaucratic runaround instead of yes/no, the card is still spent, and it never confirms or denies that a secret exists.")
 Z6.add("Bronze","consumable","consumable","Sports Drink, Blue Flavor","Potion of Healing","SRD 5.2","Common","Consumables",
  M("Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 2d4+2 HP. One use.","Bonus Action","5 ft (to give)",None,None,"instant",U1,"Consumed on use.",0.5),
  "Sports Drink, Blue Flavor, Potion of Healing. Bonus Action: regain two d four plus two hit points.",
@@ -404,12 +404,12 @@ Z6.add("Bronze","weird","junk","Fridge Sandwich Labeled DALE'S. DO NOT.","Joke i
  "Pairs with NEW achievement Lunch Thief. Mechanically a ration.")
 
 # ------------------------------------------------------------------ Z09 Green Room (spine fallback + drawable set, v0.1.1)
-Z9 = Deck("z09", "green-room", "Zone 9: The Green Room (Saferoom B)", version="0.1.2")
+Z9 = Deck("z09", "green-room", "Zone 9: The Green Room (Saferoom B)", version="0.1.3", updated="2026-10-07")
 Z9.add("Bronze","weird","clue","Vendor Oddity (Unappraised)","Spine object: Odd Coin (house; no mechanics on Floor 1)","HOUSE","n/a","Misc",
- M("A coin, probably. Value: ???. This item cannot be sold. It has no mechanical effect on Floor 1.","none",None,None,None,"permanent",None,"Cannot be sold; do not explain it. Sell attempt: terminal says ITEM NOT RECOGNIZED or offers 500 credits and cancels.",0),
+ M("A coin, probably. Value: ???. This item cannot be sold. It has no mechanical effect on Floor 1.","none",None,None,None,"permanent",None,"Cannot be sold; do not explain it. Sell attempt: terminal says ITEM NOT RECOGNIZED or offers 500 credits and cancels. Identify/appraise attempt (any terminal, vendor or the System, any fee): same response as a sell attempt, ITEM NOT RECOGNIZED (or the 500-credit offer that cancels mid-animation); any fee is not taken. Never name a floor, a fee, a clearance level or a future appraisal.",0),
  "Vendor Oddity, Unappraised. A coin, probably. It cannot be sold.",
  "Value unknown, and trying to sell it is embarrassing for everyone.",H,0,0,"Opened Something Nobody Opens Box","Opened a box in the Green Room",
- "SEED-ODDCOIN FALLBACK ONLY (draw_weight 0, hand-pick only): if the Lost & Found crate (Zone 3) was never opened, the coin shows up here as a Weird pull in the first Green Room box. Must be planted on F1; never explain it. credit_value 0 because it cannot be sold.",unique=True)
+ "SEED-ODDCOIN FALLBACK ONLY (draw_weight 0, hand-pick only): if the Lost & Found crate (Zone 3) was never opened, the coin shows up here as a Weird pull in the first Green Room box. Must be planted on F1; never explain it. credit_value 0 because it cannot be sold. Identify rule added 2026-10-07 (Lore, after s1 review): the GM improvised a floor-gated appraisal reply in s1; use only ITEM NOT RECOGNIZED or the cancelled 500-credit offer.",unique=True)
 Z9.add("Bronze","weird","junk","Fruit Plate That Has Become Something Else","Joke item (house: no effect)","HOUSE","n/a","Misc",
  M("Joke item. No mechanical effect. It is looking at you.","none",None,None,None,"permanent",None,"Do not eat.",1),
  "Fruit Plate That Has Become Something Else. Joke item. No mechanical effect.",

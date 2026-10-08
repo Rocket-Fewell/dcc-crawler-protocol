@@ -43,11 +43,18 @@ cd discord-voice-bridge && npm start      # joins VOICE_CHANNEL_ID if AUTO_JOIN=
 - **Wake.** If `GM_WEBHOOK_URL` is set, `src/wake.js` batches new transcript lines (`GM_WAKE_DEBOUNCE_MS`,
   `GM_WAKE_MAX_WAIT_MS`, `GM_WAKE_MIN_INTERVAL_MS`, `GM_WAKE_IDLE_MAX_WAIT_MS`, `WAKE_MAX_PER_HOUR`) and POSTs a
   small JSON payload with `GM_WEBHOOK_KEY` as the auth header. The payload hint says: *run `discord_gm.py new`, then
-  reply with `discord_gm.py say`*. The payload never carries the transcript itself. A spotlight
+  reply with `discord_gm.py say`*; run it as `new --lock --wait 90` (see Read). The payload never carries the transcript itself. A spotlight
   (`sessions/spotlight.json`) limits which player's speech wakes the GM (fails open). `/gm pause|resume` gates wakes.
   **A Cursor cloud agent has no inbound wake URL.** Leave `GM_WEBHOOK_URL` unset and **poll** instead (loop below).
-- **Read.** `python3 tools/discord_gm.py new` prints only transcript lines not seen yet (cursor in
-  `sessions/.discord-cursor`). Use `read --limit 30` for context. Typed player text in the same channel shows up too.
+- **Read (take the turn lock first).** `python3 tools/discord_gm.py new --lock --wait 90` takes the GM turn lock
+  (same lock as `tools/gm_lock.sh`, `<session data>/.gm-lock`, stale after 120 s) and then prints only transcript lines
+  not seen yet (cursor in `<session data>/.discord-cursor`). If another GM run holds the lock it waits up to 90 s; if
+  still busy it prints `busy`, reads nothing, marks nothing and exits 1: stop, that run answers. When you have replied,
+  release with `python3 tools/discord_gm.py unlock` (or `bash tools/gm_lock.sh release`). Plain `new` still works but
+  only marks lines read when this run holds the lock or no run does; while another run holds it, it prints
+  `PEEK ONLY` lines (do not answer them). `new --peek` never marks anything. Overlapping wakes therefore no longer
+  lose lines (Oct 7 fix). Ownership = `DCC_GM_LOCK_TOKEN` if you export one before locking, else the same shell.
+  Use `read --limit 30` for context. Typed player text in the same channel shows up too.
 - **Reply.** `python3 tools/discord_gm.py say "[GM] ..."` (or `say --file reply.txt`) posts as the GM bot
   (`GM_DISCORD_TOKEN`) to the GM output channel (`DCC_MOUTH_CHANNEL_ID` in the tool, default the live
   `GM_OUTPUT_CHANNEL_ID`). The bridge speaks every new message there whose author is in `GM_ALLOWED_AUTHOR_IDS`, in the
@@ -57,15 +64,24 @@ cd discord-voice-bridge && npm start      # joins VOICE_CHANNEL_ID if AUTO_JOIN=
 - **State.** `python3 tools/state.py <cmd>`: `hp`, `credits`, `inventory`, `condition`, `achievement`, `box`,
   `loot`, `scene`, `crawler`, `party`, `show`, `session-status`,
   `uses spend|restore|set CRAWLER ITEM [n]`, `uses reset [CRAWLER] --per session|...` (decision 038 items),
+  `death-save success|fail|nat20|stabilize CRAWLER [--n 2] [--kit HOLDER]` (0 HP; healing resets it),
+  `resource add|spend CRAWLER "Second Wind" ...` (class resources, refilled by `uses reset --per short_rest|long_rest`),
+  Healer's Kit = item with uses (`inventory add X "Healer's Kit" --uses 10`), `proficiency mod CRAWLER SKILL` (one number),
+  `pet hp OWNER --damage N|--heal N|--to N`, `enemy add|damage|list|clear` (GM-only enemy blocks: read AC/HP/to-hit there),
   `validate`, `snapshot`. Never hand-edit `sessions/state.json`.
 - **Cards.** After state changes: `python3 tools/discord_gm.py publish` (changed Crawlers only; `--crawler X`, `--full`, `--dry-run`).
+- **Private messages (whisper).** `python3 tools/discord_gm.py whisper <Crawler> "text"` (or `--file f.txt`, `--dry-run`
+  to preview) posts `[PRIVATE - System] text` only to that Crawler's own sheet channel (same map as `publish` /
+  `channels`). Use it for secret triggers such as the Benefactor Signal. It refuses a Crawler with no mapped channel
+  and never posts to #gm-voice, #table-transcript or the voice channel, so the bridge never speaks it. Do not repeat
+  the secret out loud with `say`.
 
 ### GM loop
 ```
 start: roll turn order (034), print it, `spotlight set <first player>`
-loop:  discord_gm.py new  -> nothing new? wait ~5-10 s and poll again
+loop:  discord_gm.py new --lock --wait 90   -> busy? stop (another run has the turn). nothing new? unlock, wait ~5-10 s, poll again
        resolve the active Crawler's action: roll.py, state.py, then the reply via discord_gm.py say ([SYSTEM]/[GM] tags)
-       publish if sheets changed; spotlight set <next Crawler>
+       publish if sheets changed; spotlight set <next Crawler>; discord_gm.py unlock
 ```
 **Unclear rulings:** make a fair call at the table, then log it in `gm-notes/10-open-threads.md` (date, CT time,
 question, what you ruled) for **Syndicate's batch review**. Do not ask other bots live. Never post to `#agents` or player channels outside play.

@@ -180,6 +180,109 @@ class PublishTests(Base):
         self.assertTrue(all(len(m) < 2000 for m in out) and len(out) > 2)
 
 
+class ChangeDetectionTests(Base):
+    """`publish` (no --full) must repost after any HP, inventory, item mechanics, uses or notes edit (GM bug report, Oct 6 2026)."""
+
+    def setUp(self):
+        super().setUp()
+        self.state["crawlers"][0]["inventory"] = [
+            {"name": "Rope", "qty": 1, "notes": ""},
+            {"name": "Headdress", "qty": 1, "notes": "", "mechanics": "Cosmetic."},
+            {"name": "Tanya's Note", "qty": 1, "notes": "found in Z4"},
+        ]
+        self.write_state()
+        self.map_channels()
+        pub.publish(FakeDiscord(), log=lambda m: None)
+
+    def edit_and_publish(self, fn):
+        fn(self.state["crawlers"][0])
+        self.write_state()
+        fd = FakeDiscord()
+        res = pub.publish(fd, ["Horn"], log=lambda m: None)
+        return res[0], "\n".join(c[2]["content"] for c in fd.posts())
+
+    def item(self, c, name):
+        return next(i for i in c["inventory"] if i["name"] == name)
+
+    def test_mechanics_text_edit_is_a_visible_change(self):
+        res, text = self.edit_and_publish(lambda c: self.item(c, "Headdress").update(mechanics="Once per session: +1d4 to Performance."))
+        self.assertEqual(res["status"], "posted")
+        self.assertIn("Headdress: mechanics updated", res["changes"])
+        self.assertIn("Once per session: +1d4 to Performance.", text)
+
+    def test_mechanics_added_to_item_with_notes_fallback_is_a_visible_change(self):
+        res, _ = self.edit_and_publish(lambda c: self.item(c, "Tanya's Note").update(mechanics="Once: one Floor 1 hazard hint."))
+        self.assertEqual(res["status"], "posted")
+
+    def test_notes_only_edit_is_a_change_but_note_text_stays_off_the_snapshot(self):
+        res, _ = self.edit_and_publish(lambda c: self.item(c, "Headdress").update(notes="GM-ONLY provenance"))
+        self.assertEqual(res["status"], "posted")
+        self.assertIn("Headdress: notes updated", res["changes"])
+        self.assertNotIn("GM-ONLY provenance", open(pub.snapshots_path()).read())
+
+    def test_uses_fields_are_visible_changes(self):
+        res, text = self.edit_and_publish(lambda c: self.item(c, "Headdress").update(uses=1, uses_max=1, uses_reset="session"))
+        self.assertEqual(res["status"], "posted")
+        self.assertIn("**Headdress** [Uses: 1/1 per session]: Cosmetic.", text)
+        res, text = self.edit_and_publish(lambda c: self.item(c, "Headdress").update(uses=0))
+        self.assertEqual(res["status"], "posted")
+        self.assertIn("Headdress: uses 1 -> 0", res["changes"])
+        self.assertIn("[Uses: 0/1 per session]", text)
+
+    def test_qty_and_uses_changing_together_both_reported(self):
+        self.edit_and_publish(lambda c: self.item(c, "Rope").update(uses=3, uses_max=3))
+        res, _ = self.edit_and_publish(lambda c: self.item(c, "Rope").update(qty=2, uses=1))
+        self.assertEqual(res["changes"], ["Rope: x1 -> x2, uses 3 -> 1"])
+
+    def test_hp_and_inventory_edits_still_detected(self):
+        res, _ = self.edit_and_publish(lambda c: c["hp"].update(current=5))
+        self.assertEqual(res["changes"], ["HP 8/8 -> 5/8"])
+        res, _ = self.edit_and_publish(lambda c: c["inventory"].append({"name": "Rope", "qty": 1}))   # a second stack with the same name
+        self.assertEqual(res["changes"], ["+ Rope #2"])
+        res, _ = self.edit_and_publish(lambda c: c["inventory"][-1].update(mechanics="Frayed."))
+        self.assertEqual(res["changes"], ["Rope #2: mechanics updated"])
+
+    def test_any_other_visible_field_falls_back_to_a_generic_change(self):
+        res, _ = self.edit_and_publish(lambda c: c.update(standing_orders="Guard the healer."))
+        self.assertEqual(res["status"], "posted")
+        self.assertEqual(res["changes"], ["Sheet details updated"])
+
+    def test_gm_only_fields_are_still_not_changes(self):
+        res, _ = self.edit_and_publish(lambda c: c.update(notes="GM-ONLY changed", fan_profile="other"))
+        self.assertEqual(res["status"], "unchanged")
+
+    def test_snapshot_from_before_the_new_item_keys_does_not_force_a_repost(self):
+        snaps = json.load(open(pub.snapshots_path()))
+        for i in snaps["crawlers"]["Horn"]["view"]["inventory"]:
+            i.pop("uses_reset"), i.pop("notes_sig")
+        jdump(snaps, pub.snapshots_path())
+        res = pub.publish(FakeDiscord(), ["Horn"], log=lambda m: None)
+        self.assertEqual(res[0]["status"], "unchanged")
+
+
+class UsesRenderTests(unittest.TestCase):
+    def line(self, **kw):
+        return pub.item_line({"name": "X", "qty": 1, "mechanics": "Does a thing.", **kw})
+
+    def test_items_without_uses_reset_render_exactly_as_before(self):
+        self.assertEqual(self.line(), "- **X**: Does a thing.")
+        self.assertEqual(self.line(uses=None, uses_max=None, uses_reset=None), "- **X**: Does a thing.")
+        self.assertEqual(self.line(uses=9, uses_max=10), "- **X** [9/10 uses]: Does a thing.")
+        self.assertEqual(pub.item_line({"name": "Y", "qty": 2, "mechanics": ""}), "- **Y** x2: (no mechanics on file - ask the GM)")
+
+    def test_uses_reset_renders_uses_line(self):
+        self.assertEqual(self.line(uses=1, uses_max=1, uses_reset="session"), "- **X** [Uses: 1/1 per session]: Does a thing.")
+        self.assertEqual(self.line(uses=0, uses_max=2, uses_reset="long rest"), "- **X** [Uses: 0/2 per long rest]: Does a thing.")
+        self.assertEqual(self.line(uses=1, uses_max=1, uses_reset="never"), "- **X** [Uses: 1/1, one-time, does not reset]: Does a thing.")
+        self.assertEqual(self.line(uses=1, uses_max=1, uses_reset="full moon"), "- **X** [Uses: 1/1, resets: full moon]: Does a thing.")
+
+    def test_make_view_carries_uses_reset(self):
+        c = crawler("Horn", "Hornn", 1, inv=[{"name": "Cap", "qty": 1, "uses": 1, "uses_max": 1, "uses_reset": "session", "mechanics": "m"}])
+        v = pub.make_view(c, {})
+        self.assertEqual(v["inventory"][0]["uses_reset"], "session")
+        self.assertIn("[Uses: 1/1 per session]", "\n".join(pub.render_card(c, {})))
+
+
 class ChannelSetupTests(Base):
     def test_setup_creates_category_and_channels_with_locked_down_permissions(self):
         fd = FakeDiscord()

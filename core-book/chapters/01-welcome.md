@@ -279,7 +279,7 @@ Crafting tables are saferoom workstations bought with credits or coupons. Floors
 
 ### The System Inventory
 
-Every Crawler has a **System Inventory**: an extradimensional space that acts like a *Bag of Holding*. It holds 500 pounds and 64 cubic feet, and its contents weigh nothing. Putting an item in or taking one out takes your free object interaction, or the Utilize action if you have already used it. It will not hold a living creature. Unopened loot boxes take up no space.
+Every Crawler has a **System Inventory**: an extradimensional space that acts like a *Bag of Holding*. It holds 500 pounds and 64 cubic feet, and its contents weigh nothing. Putting an item in or taking one out takes your free object interaction, or the Utilize action if you have already used it. Your Intake Bag (Chapter 2) lets you do this once per turn without spending your object interaction. It will not hold a living creature. Unopened loot boxes take up no space.
 
 If you die, your inventory spills as a **corpse cache** that anyone can loot, including whatever killed you. The exception is a missed collapse, where the floor takes the cache with it (see above).
 

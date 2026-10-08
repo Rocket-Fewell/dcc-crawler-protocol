@@ -1,0 +1,1987 @@
+{
+  "schema_version": 1,
+  "campaign": {
+    "name": "Dungeon Crawler Carl 5e (2024)",
+    "current_floor": 1,
+    "zone": "Floor 1 Z8 Mascot Locker Room: BRUISER FIGHT R1. All three Crawlers at the Break Room-side doorway; Bruiser (Burning) + Lanyard Blade at the center hook ~20 ft away.",
+    "death_mode": "Costly Revives",
+    "comfort": "Ludicrous",
+    "created": "2026-10-05T13:21:00-05:00",
+    "updated": "2026-10-07T22:35:22-05:00",
+    "proctor_hints": {
+      "zone_1": {
+        "Eisenhorn": {
+          "paid_by": "Eisenhorn",
+          "cost": 1,
+          "hint": "Whatever lives past that shutter hates light and loves ankles.",
+          "at": "2026-10-05T20:12-05:00"
+        }
+      }
+    },
+    "combat": null,
+    "status": "ended: party wipe, called by Caleb 2026-10-07 9:21 PM CT (Z8 Mascot Locker Room, Bruiser fight)"
+  },
+  "party": {
+    "revives_used": 0,
+    "last_revive_floor": null,
+    "revive_log": [],
+    "bypasses_used": 1,
+    "bypass_log": [
+      {
+        "crawler": "Mr. White",
+        "kind": "f1-reprieve",
+        "floor": 1,
+        "at": "2026-10-07T19:32:23-05:00"
+      }
+    ]
+  },
+  "limits": {
+    "revive_party_cooldown_floors": 3,
+    "revive_campaign_cap": 3,
+    "revive_per_crawler_cap": 1,
+    "bypass_per_crawler_cap": null,
+    "max_crawlers": 4,
+    "legendary_enabled": true,
+    "story_box_rota": "warn",
+    "pets_enabled": true,
+    "legendary_cap_per_floor": 1
+  },
+  "crawlers": [
+    {
+      "name": "Eisenhorn",
+      "player": "Hornn",
+      "class": "Rogue",
+      "species": "Orc",
+      "level": 1,
+      "xp": 0,
+      "hp": {
+        "current": 1,
+        "max": 10,
+        "temp": 0
+      },
+      "hit_dice": {
+        "current": 0,
+        "max": 1
+      },
+      "ac": 13,
+      "abilities": {
+        "str": 18,
+        "dex": 15,
+        "con": 14,
+        "int": 7,
+        "wis": 11,
+        "cha": 12
+      },
+      "inventory": [
+        {
+          "name": "Motorcycle Jacket (Leather Armor)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "AC 11 + Dex. Light armor.",
+          "category": "armor",
+          "srd_id": "leather-armor",
+          "chargen_key": "leather"
+        },
+        {
+          "name": "Box Cutter (Dagger)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick.",
+          "category": "weapons",
+          "srd_id": "dagger",
+          "chargen_key": "dagger"
+        },
+        {
+          "name": "Pawnshop Shortsword (Shortsword)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d6 piercing, Finesse, Light. Mastery: Vex.",
+          "category": "weapons",
+          "srd_id": "shortsword",
+          "chargen_key": "shortsword"
+        },
+        {
+          "name": "Compound Bow From a Sporting-Goods Display (Shortbow)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex.",
+          "category": "weapons",
+          "srd_id": "shortbow",
+          "chargen_key": "shortbow"
+        },
+        {
+          "name": "Prop Arrows, Foam Tips Removed (Arrows)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "Ammunition for bows; 20 arrows.",
+          "category": "weapons",
+          "srd_id": "arrows",
+          "chargen_key": "arrows"
+        },
+        {
+          "name": "Quiver Made From a Cut-Up Backpack (Quiver)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "Holds 20 arrows or 20 bolts.",
+          "category": "weapons",
+          "srd_id": "quiver",
+          "chargen_key": "quiver"
+        },
+        {
+          "name": "Bobby Pins and a Gift Card (Thieves' Tools)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Pick locks and disarm traps; proficiency applies.",
+          "category": "gear",
+          "srd_id": "thieves-tools",
+          "chargen_key": "thieves_tools"
+        },
+        {
+          "name": "Gym Bag of Suspicious Hardware (Burglar's Pack)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Backpack, 1,000 ball bearings, 10 ft string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 oil flasks, 5 days rations, tinderbox, waterskin, 50 ft rope.",
+          "category": "gear",
+          "srd_id": "burglars-pack",
+          "chargen_key": "burglars_pack"
+        },
+        {
+          "name": "Broom Handle With a Kitchen Knife Taped On (Spear)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap.",
+          "category": "weapons",
+          "srd_id": "spear",
+          "chargen_key": "spear"
+        },
+        {
+          "name": "Bag of Mismatched Casino Dice (Dice)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+          "category": "gear",
+          "srd_id": "dice",
+          "chargen_key": "gaming_set"
+        },
+        {
+          "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+          "category": "gear",
+          "srd_id": "healers-kit",
+          "chargen_key": "healers_kit"
+        },
+        {
+          "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
+          "category": "armor",
+          "srd_id": "travelers-clothes",
+          "chargen_key": "travelers_clothes"
+        },
+        {
+          "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
+          "qty": 5,
+          "notes": "",
+          "mechanics": "1 day of food, 2 lb.",
+          "category": "gear",
+          "srd_id": "rations",
+          "chargen_key": "rations"
+        },
+        {
+          "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "2 HP, DC 17 Strength to burst.",
+          "category": "gear",
+          "srd_id": "rope",
+          "chargen_key": "rope"
+        },
+        {
+          "name": "Tiki Torch, Unlicensed (Torch)",
+          "qty": 3,
+          "notes": "",
+          "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+          "category": "gear",
+          "srd_id": "torch",
+          "chargen_key": "torch"
+        },
+        {
+          "name": "Squeeze Water Bottle (Waterskin)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Holds 4 pints.",
+          "category": "gear",
+          "srd_id": "waterskin",
+          "chargen_key": "waterskin"
+        },
+        {
+          "name": "Intake Bag",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
+          "category": "gear"
+        },
+        {
+          "name": "Paint-Can Pry Bar (Crowbar)",
+          "qty": 1,
+          "notes": "Surface street scavenge before descent (Perception 15). 5e Crowbar, mundane: Advantage on Strength checks where the crowbar's leverage can be applied. 5 lb.",
+          "category": "gear",
+          "mechanics": "Advantage on Strength checks where leverage applies. Improvised weapon: 1d4 bludgeoning. 5 lb."
+        },
+        {
+          "name": "Mop-Handle Staff (Quarterstaff)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d6 bludgeoning, Versatile (1d8). Mastery: Topple.",
+          "category": "weapons"
+        },
+        {
+          "name": "Lore Scrap: Tanya Ruiz's Note",
+          "qty": 1,
+          "notes": "",
+          "category": "gear",
+          "mechanics": "Consult the note and ask the GM about one Floor 1 hazard; the GM truthfully gives its trigger or its tell. Then a keepsake. Can't be sold.",
+          "uses": 1,
+          "uses_max": 1,
+          "uses_reset": "never"
+        },
+        {
+          "name": "WET FLOOR Sign (Improvised Weapon, 1d4 bludgeoning)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Improvised weapon: 1d4 bludgeoning, no proficiency bonus.",
+          "category": "weapons"
+        },
+        {
+          "name": "Half Roll of Foil HVAC Tape (Junk)",
+          "qty": 1,
+          "notes": "From Dale Pruitt's cargo shorts",
+          "mechanics": "Junk. Can wedge a Welcome Mat plate (Sleight of Hand DC 13 with junk).",
+          "category": "gear"
+        },
+        {
+          "name": "Dale Pruitt's Laminated HVAC License",
+          "qty": 1,
+          "notes": "Keepsake from Dale's body, Z4",
+          "mechanics": "Advantage on checks to find your way through, search, or identify ductwork, vents and HVAC machinery. Keepsake; can't be sold. Dale, smiling.",
+          "category": "gear"
+        },
+        {
+          "name": "Raffle Ticket (Does Nothing. Probably.)",
+          "qty": 1,
+          "notes": "From the Z5 register. The System refuses to explain it.",
+          "category": "gear"
+        },
+        {
+          "name": "STAFF Name Tag: Ask Me About Graduation! (Junk)",
+          "qty": 3,
+          "notes": "Off the Z5 mannequins",
+          "category": "gear"
+        },
+        {
+          "name": "Dean's List Magnifying Glass",
+          "qty": 1,
+          "notes": "Magnifying Glass",
+          "mechanics": "Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with it needs sunlight-bright light, tinder and about 5 minutes.",
+          "category": "magic"
+        },
+        {
+          "name": "Laminated Complaint Card",
+          "qty": 1,
+          "notes": "Laminated Complaint Card (house: single-use oracle)",
+          "mechanics": "Utilize action, once: ask the System one yes/no question about the current floor; it answers truthfully, yes or no. The card is then spent.",
+          "category": "gear",
+          "uses": 1,
+          "uses_max": 1
+        }
+      ],
+      "credits": 127,
+      "conditions": [
+        "Prone"
+      ],
+      "vows": [],
+      "boons": [],
+      "achievements": [
+        {
+          "name": "Paperwork Survivor",
+          "floor": 1,
+          "note": "create-flow intake toast, pays nothing",
+          "at": "2026-10-05T19:00:37-05:00"
+        },
+        {
+          "name": "Corpse Lesson",
+          "floor": 1,
+          "note": "ACH-0083, R0, looted Tanya Ruiz",
+          "at": "2026-10-06T18:31:11-05:00",
+          "reward": "Snark only: she's not using it. Probably."
+        },
+        {
+          "name": "Unofficial Next of Kin",
+          "floor": 1,
+          "note": "ACH-0871 find a lore scrap (Tanya's note), R1 on F1",
+          "at": "2026-10-06T18:31:12-05:00",
+          "reward": "Title: Unofficial Next of Kin, plus 20 credits"
+        },
+        {
+          "name": "Fail to Rescue a Civilian",
+          "floor": 1,
+          "note": "ACH-0870 (R0). Killed Dale Pruitt in the Z4 snare net with a thrown Box Cutter, 2026-10-06 s1. 4th s1 toast, snark-only.",
+          "at": "2026-10-06T19:11:31-05:00",
+          "reward": "Nothing. Even the System won't pay out for this one."
+        },
+        {
+          "name": "Static in the Ear",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-07T21:19:37-05:00"
+        }
+      ],
+      "boxes": {
+        "bronze": 0,
+        "silver": 0,
+        "gold": 0,
+        "platinum": 0,
+        "legendary": 0,
+        "celestial": 0
+      },
+      "revives_used": 0,
+      "bypasses_used": 0,
+      "fan_profile": {
+        "quirks": [],
+        "notes": "Q1: My Pet Raccoon: Rolly | Q2: Bottles of Sulfuric Acid | Q3: Bills and Social Events | Q4: For not having any friends | Q5: the smell of Rain. | Q6: Go for a major Artery, or the ears, nose, eyes or genitals | Bonus1: My ex-wife | Bonus2: Whatever hill my kids are on.",
+        "opt_outs": []
+      },
+      "death_saves": {
+        "successes": 0,
+        "fails": 0
+      },
+      "notes": "",
+      "standing_orders": "Gets to the nearest saferoom that has no mobs enroute, otherwise gets behind the highest strength conscious party member and auto attacks",
+      "standing_reaction": "Opportunity Attacks: on",
+      "signature": "Fuggem: slide behind enemy and shank.",
+      "background": "Soldier",
+      "intake_tag": "CRAWLER #0982-X",
+      "build": {
+        "pronouns": "he/him",
+        "look": "Cowboy boots, Sweatpants, Long hair, Bathrobe",
+        "hook": "Massive depression makes him funny or dangerous, not sure which.",
+        "backstory": "Sleeping as much as possible, taking care of my family and working when I wasnt sleeping.",
+        "species_choice": null,
+        "quirk": "You refuse to fall down. It's rude, honestly.",
+        "hit_die": "d8",
+        "class_choices": {},
+        "background_asi": {
+          "mode": "+1/+1/+1",
+          "applied": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          }
+        },
+        "origin_feat": "Savage Attacker",
+        "extra_origin_feat": null,
+        "score_method": "roll",
+        "score_base": {
+          "str": 17,
+          "dex": 14,
+          "con": 13,
+          "int": 7,
+          "wis": 11,
+          "cha": 12
+        },
+        "score_rolls": {
+          "rounds": [
+            {
+              "round": 1,
+              "qualified": true,
+              "arrays": [
+                {
+                  "id": "A",
+                  "dice": [
+                    [
+                      4,
+                      4,
+                      1,
+                      6
+                    ],
+                    [
+                      1,
+                      5,
+                      6,
+                      6
+                    ],
+                    [
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    [
+                      4,
+                      1,
+                      2,
+                      5
+                    ],
+                    [
+                      4,
+                      6,
+                      3,
+                      3
+                    ],
+                    [
+                      2,
+                      2,
+                      2,
+                      3
+                    ]
+                  ],
+                  "scores": [
+                    14,
+                    17,
+                    12,
+                    11,
+                    13,
+                    7
+                  ],
+                  "total": 74,
+                  "keepable": true
+                },
+                {
+                  "id": "B",
+                  "dice": [
+                    [
+                      3,
+                      1,
+                      5,
+                      2
+                    ],
+                    [
+                      4,
+                      1,
+                      3,
+                      1
+                    ],
+                    [
+                      3,
+                      2,
+                      4,
+                      2
+                    ],
+                    [
+                      2,
+                      2,
+                      5,
+                      2
+                    ],
+                    [
+                      1,
+                      3,
+                      5,
+                      6
+                    ],
+                    [
+                      5,
+                      3,
+                      2,
+                      2
+                    ]
+                  ],
+                  "scores": [
+                    10,
+                    8,
+                    9,
+                    9,
+                    14,
+                    10
+                  ],
+                  "total": 60,
+                  "keepable": false
+                },
+                {
+                  "id": "C",
+                  "dice": [
+                    [
+                      3,
+                      5,
+                      5,
+                      3
+                    ],
+                    [
+                      5,
+                      4,
+                      1,
+                      6
+                    ],
+                    [
+                      4,
+                      1,
+                      4,
+                      6
+                    ],
+                    [
+                      1,
+                      3,
+                      1,
+                      2
+                    ],
+                    [
+                      1,
+                      3,
+                      2,
+                      1
+                    ],
+                    [
+                      5,
+                      6,
+                      6,
+                      5
+                    ]
+                  ],
+                  "scores": [
+                    13,
+                    15,
+                    14,
+                    6,
+                    6,
+                    17
+                  ],
+                  "total": 71,
+                  "keepable": false
+                }
+              ]
+            }
+          ],
+          "kept": {
+            "round": 1,
+            "array": "A"
+          },
+          "who": "Eisenhorn"
+        },
+        "initiative": 2,
+        "passives": {
+          "perception": 10
+        },
+        "proficiency_bonus": 2,
+        "skills": [
+          "Athletics",
+          "Intimidation",
+          "Stealth",
+          "Sleight of Hand",
+          "Deception",
+          "Acrobatics"
+        ],
+        "expertise": [
+          "Thieves' Tools",
+          "Stealth"
+        ],
+        "tools": [
+          "One Gaming Set",
+          "Thieves' Tools"
+        ],
+        "saves": [
+          "dex",
+          "int"
+        ],
+        "weapon_masteries": [
+          "Duct-Taped Mop (Quarterstaff)",
+          "Hatchet From a Camping Display (Handaxe)"
+        ],
+        "languages": [
+          "Common",
+          "Common Sign Language",
+          "Giant"
+        ],
+        "kit": {
+          "class_option": "A",
+          "background_option": "A"
+        },
+        "handle_request": null,
+        "broadcast_name": "PENDING",
+        "survey": {
+          "q1": "My Pet Raccoon: Rolly",
+          "q2": "Bottles of Sulfuric Acid",
+          "q3": "Bills and Social Events",
+          "q4": "For not having any friends",
+          "q5": "the smell of Rain.",
+          "q6": "Go for a major Artery, or the ears, nose, eyes or genitals",
+          "bonus1": "My ex-wife",
+          "bonus2": "Whatever hill my kids are on."
+        },
+        "discord_user_id": "376517850724040714",
+        "created_via": "create-flow",
+        "flow_version": "0.1.2",
+        "chargen_table_version": "0.1.6",
+        "todo": [
+          "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
+        ]
+      },
+      "status": "active",
+      "pet": {
+        "name": "Rawlee",
+        "species": "Cat",
+        "species_srd_id": "cat",
+        "cr": 0.0,
+        "description": "Pet raccoon (Cat stat block reskin: climb 30, Stealth). Eisenhorn was holding him when the world ended. Name confirmed by Hornn 2026-10-06 as 'Rawlee' (intake said 'Rolly').",
+        "quote": "Q1: My Pet Raccoon: Rolly",
+        "filed_by": "DCC AI GM",
+        "filed_on": "2026-10-05T20:50:28-05:00",
+        "status": "dead",
+        "floor": 1,
+        "renamed_from": "Rolly",
+        "kind": "raccoon",
+        "died": "2026-10-07T21:16:31-05:00",
+        "death_reason": "Lanyard Blade Slash 9 dmg, Z8 Bruiser fight R7, while clinging to the blade's lanyard to Help Eisenhorn"
+      }
+    },
+    {
+      "name": "Shirayuki",
+      "player": "Grimmtrouble",
+      "class": "Fighter",
+      "species": "Human",
+      "level": 1,
+      "xp": 0,
+      "hp": {
+        "current": 0,
+        "max": 12,
+        "temp": 0
+      },
+      "hit_dice": {
+        "current": 1,
+        "max": 1
+      },
+      "ac": 16,
+      "abilities": {
+        "str": 15,
+        "dex": 14,
+        "con": 14,
+        "int": 8,
+        "wis": 13,
+        "cha": 11
+      },
+      "inventory": [
+        {
+          "name": "Chain-Link Fencing Laced Over a Work Coverall (Chain Mail)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "AC 16. Needs Str 13. Stealth disadvantage. Heavy armor.",
+          "category": "armor",
+          "srd_id": "chain-mail",
+          "chargen_key": "chain_mail"
+        },
+        {
+          "name": "Sheet-Metal Slab on a Pipe Handle (Greatsword)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "2d6 slashing, Heavy, Two-Handed. Mastery: Graze.",
+          "category": "weapons",
+          "srd_id": "greatsword",
+          "chargen_key": "greatsword"
+        },
+        {
+          "name": "Chain With a Padlock On It (Flail)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d8 bludgeoning. Mastery: Sap.",
+          "category": "weapons",
+          "srd_id": "flail",
+          "chargen_key": "flail"
+        },
+        {
+          "name": "Curtain-Rod Javelin (Javelin)",
+          "qty": 8,
+          "notes": "",
+          "mechanics": "1d6 piercing, Thrown (30/120). Mastery: Slow.",
+          "category": "weapons",
+          "srd_id": "javelin",
+          "chargen_key": "javelin"
+        },
+        {
+          "name": "Maintenance-Closet Duffel (Dungeoneer's Pack)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Backpack, crowbar, hammer, 10 pitons, 10 torches, tinderbox, 10 days rations, waterskin, 50 ft rope.",
+          "category": "gear",
+          "srd_id": "dungeoneers-pack",
+          "chargen_key": "dungeoneers_pack"
+        },
+        {
+          "name": "Box Cutter (Dagger)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick.",
+          "category": "weapons",
+          "srd_id": "dagger",
+          "chargen_key": "dagger"
+        },
+        {
+          "name": "Bobby Pins and a Gift Card (Thieves' Tools)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Pick locks and disarm traps; proficiency applies.",
+          "category": "gear",
+          "srd_id": "thieves-tools",
+          "chargen_key": "thieves_tools"
+        },
+        {
+          "name": "Bag of Mismatched Casino Dice (Dice)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+          "category": "gear",
+          "srd_id": "dice",
+          "chargen_key": "gaming_set"
+        },
+        {
+          "name": "Gym-Locker Sleeping Bag (Bedroll)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Sleeping gear.",
+          "category": "gear",
+          "srd_id": "bedroll",
+          "chargen_key": "bedroll"
+        },
+        {
+          "name": "Ziplock Pouch (Pouch)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "Holds 6 lb of small items.",
+          "category": "gear",
+          "srd_id": "pouch",
+          "chargen_key": "pouch"
+        },
+        {
+          "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
+          "category": "armor",
+          "srd_id": "travelers-clothes",
+          "chargen_key": "travelers_clothes"
+        },
+        {
+          "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
+          "qty": 5,
+          "notes": "",
+          "mechanics": "1 day of food, 2 lb.",
+          "category": "gear",
+          "srd_id": "rations",
+          "chargen_key": "rations"
+        },
+        {
+          "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "2 HP, DC 17 Strength to burst.",
+          "category": "gear",
+          "srd_id": "rope",
+          "chargen_key": "rope"
+        },
+        {
+          "name": "Tiki Torch, Unlicensed (Torch)",
+          "qty": 3,
+          "notes": "",
+          "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+          "category": "gear",
+          "srd_id": "torch",
+          "chargen_key": "torch"
+        },
+        {
+          "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+          "category": "gear",
+          "srd_id": "healers-kit",
+          "chargen_key": "healers_kit"
+        },
+        {
+          "name": "Squeeze Water Bottle (Waterskin)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Holds 4 pints.",
+          "category": "gear",
+          "srd_id": "waterskin",
+          "chargen_key": "waterskin"
+        },
+        {
+          "name": "Intake Bag",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
+          "category": "gear"
+        },
+        {
+          "name": "Snow Ghost Maid Headdress, Collector's Capsule (cosmetic, tailored pull)",
+          "qty": 1,
+          "notes": "",
+          "category": "gear",
+          "mechanics": "While worn or shown off, add 1d4 to one Charisma (Performance or Persuasion) check made to play to the audience or someone watching. Check bonus only. Sells for 1 credit.",
+          "uses": 1,
+          "uses_max": 1,
+          "uses_reset": "session"
+        }
+      ],
+      "credits": 34,
+      "conditions": [
+        "Unconscious",
+        "Stable"
+      ],
+      "vows": [],
+      "boons": [],
+      "achievements": [
+        {
+          "name": "Paperwork Survivor",
+          "floor": 1,
+          "note": "create-flow intake toast, pays nothing",
+          "at": "2026-10-05T19:13:06-05:00"
+        },
+        {
+          "name": "Fed the Machine",
+          "floor": 1,
+          "note": "s1 Vending Gore Arcade: failed Dex save reaching into a hungry vendor, bitten for 2, arm stuck (Restrained). Snark-only (R0).",
+          "at": "2026-10-06T18:21:16-05:00",
+          "reward": "The machine says thank you. That's the reward."
+        },
+        {
+          "name": "Vending Gore",
+          "floor": 1,
+          "note": "s1 ACH-0077: paid a hungry vendor with coins instead of reaching in; pull 6 = tailored cosmetic (maid headdress)",
+          "at": "2026-10-06T18:34:46-05:00",
+          "reward": "Title: Valued Customer + 25 credits"
+        },
+        {
+          "name": "Literacy Optional",
+          "floor": 1,
+          "note": "R0 snark-only; stepped on signed T1 plate 3 under Dale to cut the net (Z4)",
+          "at": "2026-10-06T19:14:49-05:00",
+          "reward": "Nothing. The signs were the reward, and you skipped them."
+        },
+        {
+          "name": "Orientation Pit: Land a critical hit",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-07T18:57:12-05:00"
+        }
+      ],
+      "boxes": {
+        "bronze": 1,
+        "silver": 0,
+        "gold": 0,
+        "platinum": 0,
+        "legendary": 0,
+        "celestial": 0
+      },
+      "revives_used": 0,
+      "bypasses_used": 0,
+      "fan_profile": {
+        "quirks": [],
+        "notes": "",
+        "opt_outs": []
+      },
+      "death_saves": {
+        "successes": 0,
+        "fails": 1
+      },
+      "notes": "",
+      "standing_orders": "White Requiem: The Snow Ghost summons a storm of spectral white bones that erupts around her target. The bones lock the target in place and deal heavy necrotic damage. If the target is already severel",
+      "standing_reaction": "Opportunity Attacks: on",
+      "background": "Wayfarer",
+      "intake_tag": "CRAWLER #4731-M",
+      "build": {
+        "pronouns": "she/her",
+        "look": "has long white hair and usually wears a simple white dress instead of her old maid outfit. She's petite with different colored eyes and a calm, almost emotionle",
+        "hook": "I'd say the danger in a character like Yuki is quiet, not loud. It's the steadiness, like someone who doesn't flinch under pressure. And the funny part is usual",
+        "backstory": "Background: The Snow Ghost She was once an ordinary girl, but years of surviving dangerous trials changed her into someone almost impossible to read. Her long white hair, mismatched eyes, and unusually pale appearance have earned her the nickname “The Snow Ghost.” People often mistake her quietness",
+        "species_choice": null,
+        "quirk": "Baseline. Congratulations on being the control group.",
+        "hit_die": "d10",
+        "class_choices": {
+          "fighting_style": "Dueling"
+        },
+        "background_asi": {
+          "mode": "+1/+1/+1",
+          "applied": {
+            "str": 0,
+            "dex": 1,
+            "con": 0,
+            "int": 0,
+            "wis": 1,
+            "cha": 1
+          }
+        },
+        "origin_feat": "Lucky",
+        "extra_origin_feat": "Skilled",
+        "score_method": "array",
+        "score_base": {
+          "str": 15,
+          "con": 14,
+          "dex": 13,
+          "wis": 12,
+          "cha": 10,
+          "int": 8
+        },
+        "initiative": 2,
+        "passives": {
+          "perception": 11
+        },
+        "proficiency_bonus": 2,
+        "skills": [
+          "Insight",
+          "Stealth",
+          "Animal Handling",
+          "Athletics",
+          "Acrobatics",
+          "Religion",
+          "Sleight of Hand",
+          "Survival"
+        ],
+        "expertise": [],
+        "tools": [
+          "Thieves' Tools"
+        ],
+        "saves": [
+          "str",
+          "con"
+        ],
+        "weapon_masteries": [
+          "Box Cutter (Dagger)",
+          "Hatchet From a Camping Display (Handaxe)",
+          "Fire Axe, BREAK GLASS Sticker Intact (Greataxe)"
+        ],
+        "languages": [
+          "Common",
+          "Common Sign Language",
+          "Draconic"
+        ],
+        "kit": {
+          "class_option": "A",
+          "background_option": "A"
+        },
+        "handle_request": "Ghost",
+        "broadcast_name": "PENDING",
+        "survey": {},
+        "discord_user_id": "1177041830337056828",
+        "created_via": "create-flow",
+        "flow_version": "0.1.2",
+        "chargen_table_version": "0.1.6",
+        "todo": [
+          "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
+        ]
+      },
+      "status": "active"
+    },
+    {
+      "name": "Mr. White",
+      "player": "Trailer Park Moses",
+      "class": "Monk",
+      "species": "Goliath",
+      "level": 1,
+      "xp": 0,
+      "hp": {
+        "current": 0,
+        "max": 11,
+        "temp": 0
+      },
+      "hit_dice": {
+        "current": 0,
+        "max": 1
+      },
+      "ac": 15,
+      "abilities": {
+        "str": 15,
+        "dex": 18,
+        "con": 16,
+        "int": 11,
+        "wis": 13,
+        "cha": 12
+      },
+      "inventory": [
+        {
+          "name": "Broom Handle With a Kitchen Knife Taped On (Spear)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "1d6 piercing, Thrown (20/60), Versatile (1d8). Mastery: Sap.",
+          "category": "weapons",
+          "srd_id": "spear",
+          "chargen_key": "spear"
+        },
+        {
+          "name": "Box Cutter (Dagger)",
+          "qty": 5,
+          "notes": "",
+          "mechanics": "1d4 piercing, Finesse, Light, Thrown (20/60). Mastery: Nick.",
+          "category": "weapons",
+          "srd_id": "dagger",
+          "chargen_key": "dagger"
+        },
+        {
+          "name": "Confiscated Chemistry Set (Alchemist's Supplies)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "A set of artisan's tools; proficiency applies to checks with it.",
+          "category": "gear",
+          "srd_id": "alchemists-supplies",
+          "chargen_key": "artisans_tools"
+        },
+        {
+          "name": "Lost-and-Found Duffel, Someone Else's Gym Clothes (Explorer's Pack)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days rations, waterskin, 50 ft rope.",
+          "category": "gear",
+          "srd_id": "explorers-pack",
+          "chargen_key": "explorers_pack"
+        },
+        {
+          "name": "Compound Bow From a Sporting-Goods Display (Shortbow)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d6 piercing, Ammunition (80/320), Two-Handed. Mastery: Vex.",
+          "category": "weapons",
+          "srd_id": "shortbow",
+          "chargen_key": "shortbow"
+        },
+        {
+          "name": "Prop Arrows, Foam Tips Removed (Arrows)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Ammunition for bows; 20 arrows.",
+          "category": "weapons",
+          "srd_id": "arrows",
+          "chargen_key": "arrows"
+        },
+        {
+          "name": "Bag of Mismatched Casino Dice (Dice)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+          "category": "gear",
+          "srd_id": "dice",
+          "chargen_key": "gaming_set"
+        },
+        {
+          "name": "Break-Room First-Aid Kit, Lightly Bitten (Healer's Kit)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+          "category": "gear",
+          "srd_id": "healers-kit",
+          "chargen_key": "healers_kit"
+        },
+        {
+          "name": "Quiver Made From a Cut-Up Backpack (Quiver)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Holds 20 arrows or 20 bolts.",
+          "category": "weapons",
+          "srd_id": "quiver",
+          "chargen_key": "quiver"
+        },
+        {
+          "name": "Thrift-Store Road-Trip Outfit (Clothes, Traveler's)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Advantage on saving throws against Exhaustion from a forced march or other long travel. No armor value. Sells for 1 credit.",
+          "category": "armor",
+          "srd_id": "travelers-clothes",
+          "chargen_key": "travelers_clothes"
+        },
+        {
+          "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) (Rations)",
+          "qty": 4,
+          "notes": "",
+          "mechanics": "1 day of food, 2 lb.",
+          "category": "gear",
+          "srd_id": "rations",
+          "chargen_key": "rations"
+        },
+        {
+          "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "2 HP, DC 17 Strength to burst.",
+          "category": "gear",
+          "srd_id": "rope",
+          "chargen_key": "rope"
+        },
+        {
+          "name": "Tiki Torch, Unlicensed (Torch)",
+          "qty": 3,
+          "notes": "",
+          "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+          "category": "gear",
+          "srd_id": "torch",
+          "chargen_key": "torch"
+        },
+        {
+          "name": "Squeeze Water Bottle (Waterskin)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Holds 4 pints.",
+          "category": "gear",
+          "srd_id": "waterskin",
+          "chargen_key": "waterskin"
+        },
+        {
+          "name": "Intake Bag",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Once on each of your turns, store or retrieve one System Inventory item without using your free object interaction or the Utilize action. Inventory cap still applies. Can't be sold.",
+          "category": "gear"
+        },
+        {
+          "name": "Vendor Oddity (Unappraised)",
+          "qty": 1,
+          "notes": "Found in the UNCLAIMED crate, Lost & Found cage, Vending Gore Arcade (F1 Day 1).",
+          "mechanics": "A coin. Probably. Value: ???. Cannot be sold.",
+          "category": "gear"
+        },
+        {
+          "name": "Riot Shield, PROPERTY OF ORIENTATION (Shield)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "+2 AC. A Monk wielding a shield loses Unarmored Defense and Martial Arts (Mr. White: AC 16 with it, no Martial Arts).",
+          "category": "armor"
+        },
+        {
+          "name": "Scrawled Map (Zone S Service Corridor)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Reveals Zone S on the System Map: a service hall behind the big stage with a locked door marked STAIRS.",
+          "category": "gear"
+        },
+        {
+          "name": "Hotel Desk Bell, Ding Ding",
+          "qty": 1,
+          "notes": "Signal Whistle",
+          "mechanics": "Utilize action: blow it; the sound can be heard up to 600 ft away.",
+          "category": "magic"
+        },
+        {
+          "name": "Sports Drink, Mystery Flavor (Potion of Healing)",
+          "qty": 1,
+          "notes": ""
+        }
+      ],
+      "credits": 11,
+      "conditions": [
+        "Unconscious",
+        "Stable"
+      ],
+      "vows": [],
+      "boons": [],
+      "achievements": [
+        {
+          "name": "Paperwork Survivor",
+          "floor": 1,
+          "note": "create-flow intake toast, pays nothing",
+          "at": "2026-10-05T19:46:24-05:00"
+        },
+        {
+          "name": "Don't Skip Intro",
+          "floor": 1,
+          "note": "ACH-0079 R0, sat through Proctor Bell's spiel, enc-d01-07",
+          "at": "2026-10-05T20:00:38-05:00",
+          "reward": "Absolutely nothing, Mr. White. Patience is its own reward, and it's a crappy one."
+        },
+        {
+          "name": "Win Initiative",
+          "floor": 1,
+          "note": "snark-only, Vent Row R1",
+          "at": "2026-10-05T20:29:16-05:00",
+          "reward": "None. Bragging rights only."
+        },
+        {
+          "name": "Oddity Logged",
+          "floor": 1,
+          "note": "ACH-0081 Odd Coin Pocketed, hidden toast, no reward; SEED-ODDCOIN holder = Mr. White",
+          "at": "2026-10-06T18:39:18-05:00",
+          "reward": "None. Oddity logged."
+        },
+        {
+          "name": "Hidden Cache",
+          "floor": 1,
+          "note": "ACH-0177 Orientation Pit: Hidden Cache, R1 on F1; opened 3b back cage. Overage: 4th s1 toast for Mr. White (floor's one DC 15 secret, great moment).",
+          "at": "2026-10-06T18:49:07-05:00",
+          "reward": "Title: Looks Behind Things, plus 25 credits"
+        },
+        {
+          "name": "Side Path",
+          "floor": 1,
+          "note": "ACH-0179, seeded R1 downgraded to snark-only: Mr. White's 5th s1 toast, spotlight balance (core 3.3/3.7). Map reveal is the payoff.",
+          "at": "2026-10-06T19:00:04-05:00",
+          "reward": "Zone S is on your map. That's the reward. You're welcome."
+        },
+        {
+          "name": "Rescued by Paperwork",
+          "floor": 1,
+          "note": "Floor 1 Reprieve; 3rd failed death save behind the Shooting Gallery counter (R8); ejected to Break Room Z6 at 1 HP",
+          "at": "2026-10-07T19:32:30-05:00"
+        },
+        {
+          "name": "First Box",
+          "floor": 1,
+          "note": "",
+          "at": "2026-10-07T19:39:56-05:00"
+        }
+      ],
+      "boxes": {
+        "bronze": 0,
+        "silver": 0,
+        "gold": 0,
+        "platinum": 0,
+        "legendary": 0,
+        "celestial": 0
+      },
+      "revives_used": 0,
+      "bypasses_used": 1,
+      "fan_profile": {
+        "quirks": [],
+        "notes": "Q1: i am carrying a spiked gauntlet on each hand, i also had my adolescent wolf | Q2: a log of grizzly wintergreen longcut | Q3: staypuff marshmellow man | Q4: i am big | Q5: the smell of roast pig | Q6: smash the enemys in a awesome monk fashion | Bonus1: i have left my wife and kid | Bonus2: that i will do anything for my family",
+        "opt_outs": []
+      },
+      "death_saves": {
+        "successes": 0,
+        "fails": 0
+      },
+      "notes": "",
+      "standing_orders": "SMASH",
+      "standing_reaction": "Opportunity Attacks: on",
+      "signature": "LETS FUCK THEM UP!!!",
+      "background": "Soldier",
+      "intake_tag": "CRAWLER #4496-B",
+      "build": {
+        "pronouns": "he/him",
+        "look": "Muscle, body builder. blue collar jean wearing, boot wearing, long luscious viking hair. with a manly beard",
+        "hook": "big,punchy, keep hitting till dead and then rip head off and drink from skull",
+        "backstory": "worked at a factory when the crawl happened i was at the gym leaving after i got my pump on",
+        "species_choice": "Frost",
+        "quirk": "Big-boned, and the bones have opinions.",
+        "hit_die": "d8",
+        "class_choices": {},
+        "background_asi": {
+          "mode": "+2/+1",
+          "plus2": "dex",
+          "plus1": "str",
+          "applied": {
+            "str": 1,
+            "dex": 2,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          }
+        },
+        "origin_feat": "Savage Attacker",
+        "extra_origin_feat": null,
+        "score_method": "roll",
+        "score_base": {
+          "str": 14,
+          "dex": 16,
+          "con": 16,
+          "int": 11,
+          "wis": 13,
+          "cha": 12
+        },
+        "score_rolls": {
+          "rounds": [
+            {
+              "round": 1,
+              "qualified": true,
+              "arrays": [
+                {
+                  "id": "A",
+                  "dice": [
+                    [
+                      3,
+                      1,
+                      3,
+                      2
+                    ],
+                    [
+                      6,
+                      5,
+                      1,
+                      6
+                    ],
+                    [
+                      5,
+                      1,
+                      6,
+                      3
+                    ],
+                    [
+                      3,
+                      3,
+                      6,
+                      2
+                    ],
+                    [
+                      1,
+                      2,
+                      5,
+                      2
+                    ],
+                    [
+                      5,
+                      3,
+                      1,
+                      6
+                    ]
+                  ],
+                  "scores": [
+                    8,
+                    17,
+                    14,
+                    12,
+                    9,
+                    14
+                  ],
+                  "total": 74,
+                  "keepable": true
+                },
+                {
+                  "id": "B",
+                  "dice": [
+                    [
+                      3,
+                      2,
+                      5,
+                      4
+                    ],
+                    [
+                      1,
+                      1,
+                      4,
+                      6
+                    ],
+                    [
+                      1,
+                      6,
+                      4,
+                      6
+                    ],
+                    [
+                      2,
+                      5,
+                      6,
+                      2
+                    ],
+                    [
+                      4,
+                      3,
+                      5,
+                      5
+                    ],
+                    [
+                      6,
+                      4,
+                      6,
+                      2
+                    ]
+                  ],
+                  "scores": [
+                    12,
+                    11,
+                    16,
+                    13,
+                    14,
+                    16
+                  ],
+                  "total": 82,
+                  "keepable": true
+                },
+                {
+                  "id": "C",
+                  "dice": [
+                    [
+                      2,
+                      3,
+                      1,
+                      3
+                    ],
+                    [
+                      6,
+                      4,
+                      2,
+                      1
+                    ],
+                    [
+                      2,
+                      3,
+                      3,
+                      1
+                    ],
+                    [
+                      6,
+                      3,
+                      3,
+                      1
+                    ],
+                    [
+                      3,
+                      2,
+                      5,
+                      4
+                    ],
+                    [
+                      2,
+                      4,
+                      3,
+                      2
+                    ]
+                  ],
+                  "scores": [
+                    8,
+                    12,
+                    8,
+                    12,
+                    12,
+                    9
+                  ],
+                  "total": 61,
+                  "keepable": false
+                }
+              ]
+            }
+          ],
+          "kept": {
+            "round": 1,
+            "array": "B"
+          },
+          "who": "Mr. White"
+        },
+        "initiative": 4,
+        "passives": {
+          "perception": 11
+        },
+        "proficiency_bonus": 2,
+        "skills": [
+          "Athletics",
+          "Intimidation",
+          "Stealth",
+          "Insight"
+        ],
+        "expertise": [],
+        "tools": [
+          "One Gaming Set"
+        ],
+        "saves": [
+          "str",
+          "dex"
+        ],
+        "weapon_masteries": [],
+        "languages": [
+          "Common",
+          "Goblin",
+          "Orc"
+        ],
+        "kit": {
+          "class_option": "A",
+          "background_option": "A"
+        },
+        "handle_request": "Mr.White",
+        "broadcast_name": "PENDING",
+        "survey": {
+          "q1": "i am carrying a spiked gauntlet on each hand, i also had my adolescent wolf",
+          "q2": "a log of grizzly wintergreen longcut",
+          "q3": "staypuff marshmellow man",
+          "q4": "i am big",
+          "q5": "the smell of roast pig",
+          "q6": "smash the enemys in a awesome monk fashion",
+          "bonus1": "i have left my wife and kid",
+          "bonus2": "that i will do anything for my family"
+        },
+        "discord_user_id": "783884998230278164",
+        "created_via": "create-flow",
+        "flow_version": "0.1.2",
+        "chargen_table_version": "0.1.6",
+        "todo": [
+          "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
+        ]
+      },
+      "status": "active",
+      "pet": {
+        "name": "Turbo",
+        "species": "Wolf",
+        "species_srd_id": "wolf",
+        "cr": 0.25,
+        "description": "Adolescent wolf (Wolf stat block, CR 1/4). Mr. White had it with him when the world ended. Named Turbo by Trailer Park Moses at the table 2026-10-06.",
+        "quote": "Q1: i am carrying a spiked gauntlet on each hand, i also had my adolescent wolf",
+        "filed_by": "DCC AI GM",
+        "filed_on": "2026-10-05T20:50:28-05:00",
+        "status": "dead",
+        "floor": 1,
+        "renamed_from": "Wolf (unnamed)",
+        "died": "2026-10-07T21:10:02-05:00",
+        "death_reason": "Lanyard Blade Slash, 10 slashing (max roll), Z8 Mascot Locker Room R5, s1 2026-10-07, while pinning the blade to the floor"
+      }
+    },
+    {
+      "name": "Raithen",
+      "player": "Hornn",
+      "class": "Warlock",
+      "species": "Dwarf",
+      "level": 1,
+      "xp": 0,
+      "hp": {
+        "current": 12,
+        "max": 12,
+        "temp": 0
+      },
+      "hit_dice": {
+        "current": 1,
+        "max": 1
+      },
+      "ac": 15,
+      "abilities": {
+        "str": 7,
+        "dex": 18,
+        "con": 17,
+        "int": 17,
+        "wis": 12,
+        "cha": 19
+      },
+      "inventory": [
+        {
+          "name": "Cracked Phone App (Spellbook)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Holds your wizard spells; ritual-cast from it.",
+          "category": "magic",
+          "srd_id": "spellbook",
+          "chargen_key": "spellbook"
+        },
+        {
+          "name": "Extension Cord, Fifty Feet, Unplugged (Rope)",
+          "qty": 3,
+          "notes": "",
+          "mechanics": "2 HP, DC 17 Strength to burst.",
+          "category": "gear",
+          "srd_id": "rope",
+          "chargen_key": "rope"
+        },
+        {
+          "name": "Tiki Torch, Unlicensed (Torch)",
+          "qty": 5,
+          "notes": "",
+          "mechanics": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+          "category": "gear",
+          "srd_id": "torch",
+          "chargen_key": "torch"
+        },
+        {
+          "name": "Paint-Can Pry Bar (Crowbar)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Advantage on Strength checks where leverage helps.",
+          "category": "gear",
+          "srd_id": "crowbar",
+          "chargen_key": "crowbar"
+        },
+        {
+          "name": "Coat-Hanger Grapple (Grappling Hook)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Attach to a rope; throw to anchor on a ledge.",
+          "category": "gear",
+          "srd_id": "grappling-hook",
+          "chargen_key": "grappling_hook"
+        },
+        {
+          "name": "Bag of Lost Marbles (Not Yours) (Ball Bearings)",
+          "qty": 3,
+          "notes": "",
+          "mechanics": "Spill on a 10 ft square: DC 10 Dex save or fall prone.",
+          "category": "gear",
+          "srd_id": "ball-bearings",
+          "chargen_key": "ball_bearings"
+        },
+        {
+          "name": "Vanity Mirror, Half the Bulbs Dead (Mirror)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Look around corners; signal flash.",
+          "category": "gear",
+          "srd_id": "mirror",
+          "chargen_key": "steel_mirror"
+        },
+        {
+          "name": "Bike-Lock Chain Missing the Lock (Chain)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "10 HP, DC 20 Strength to burst.",
+          "category": "gear",
+          "srd_id": "chain",
+          "chargen_key": "chain"
+        },
+        {
+          "name": "Cooking Spray, Industrial Drum Size (Oil)",
+          "qty": 10,
+          "notes": "",
+          "mechanics": "Fuel a lamp for 6 hours, or throw: 5 fire damage on a hit (ignited).",
+          "category": "gear",
+          "srd_id": "oil",
+          "chargen_key": "oil"
+        },
+        {
+          "name": "Plastic Zip-Cuffs (Manacles)",
+          "qty": 2,
+          "notes": "",
+          "mechanics": "Bind a Small/Medium creature: DC 20 Dex to escape, DC 20 Str to break.",
+          "category": "gear",
+          "srd_id": "manacles",
+          "chargen_key": "manacles"
+        },
+        {
+          "name": "Bag of LEGO, Barefoot Edition (Caltrops)",
+          "qty": 3,
+          "notes": "",
+          "mechanics": "Cover a 5 ft square: DC 15 Dex save or take 1 piercing and stop moving.",
+          "category": "gear",
+          "srd_id": "caltrops",
+          "chargen_key": "caltrops"
+        },
+        {
+          "name": "Duct-Taped Mop (Quarterstaff)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "1d6 bludgeoning, Versatile (1d8). Mastery: Topple.",
+          "category": "weapons",
+          "srd_id": "quarterstaff",
+          "chargen_key": "quarterstaff"
+        },
+        {
+          "name": "Glitter-Glued Mop Handle (Arcane Focus (Staff))",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "Quarterstaff (1d6 bludgeoning, Versatile 1d8, Topple) that is also your spellcasting focus.",
+          "category": "magic",
+          "srd_id": "arcane-focus-staff",
+          "chargen_key": "arcane_focus_staff"
+        },
+        {
+          "name": "Motorcycle Jacket (Leather Armor)",
+          "qty": 1,
+          "notes": "",
+          "mechanics": "AC 11 + Dex. Light armor.",
+          "category": "armor",
+          "srd_id": "leather-armor",
+          "chargen_key": "leather"
+        },
+        {
+          "name": "Intake Bag",
+          "qty": 1,
+          "notes": "cosmetic, zero value",
+          "mechanics": "Cosmetic. Holds nothing special.",
+          "category": "gear"
+        }
+      ],
+      "credits": 94,
+      "conditions": [],
+      "vows": [],
+      "boons": [],
+      "achievements": [],
+      "boxes": {
+        "bronze": 0,
+        "silver": 0,
+        "gold": 0,
+        "platinum": 0,
+        "legendary": 0,
+        "celestial": 0
+      },
+      "revives_used": 0,
+      "bypasses_used": 0,
+      "fan_profile": {
+        "quirks": [],
+        "notes": "Q1: The leash to my Circus Bear : Bongo | Q2: A Party hat for Bongo | Q3: Being Rewarded | Q4: Always rolling bad rolls | Q5: Ducky Curry on Rice makes me happy | Q6: Eldritch Blast and win the Game | Bonus1: The circus and my clowns | Bonus2: Hamburger Hill in Vietnam most likely",
+        "opt_outs": []
+      },
+      "death_saves": {
+        "successes": 0,
+        "fails": 0
+      },
+      "notes": "",
+      "standing_orders": "Hide behind high constitution party members, keep myself healed, and cast eldritch blast every chance.",
+      "standing_reaction": "Opportunity Attacks: on",
+      "signature": "Get in the Flask! - Steal Targets Soul",
+      "background": "Charlatan",
+      "intake_tag": "CRAWLER #9604-V",
+      "build": {
+        "pronouns": "he/him",
+        "look": "Orange Jail Slippers, stained Boxers, and a smelly Bathrobe",
+        "hook": "It is dangerous how not funny I am.",
+        "backstory": "I was an alcoholic , heroin addicted circus performer. Me and my bear Bongo would (unintentionally) scare children. I went outside for a smoke with Bongo, and everything just went poof. Now Im here.",
+        "species_choice": null,
+        "quirk": "Your pupils do a thing.",
+        "hit_die": "d8",
+        "class_choices": {
+          "invocation": "Lessons of the First Ones"
+        },
+        "background_asi": {
+          "mode": "+1/+1/+1",
+          "applied": {
+            "str": 0,
+            "dex": 1,
+            "con": 1,
+            "int": 0,
+            "wis": 0,
+            "cha": 1
+          }
+        },
+        "origin_feat": "Skilled",
+        "extra_origin_feat": null,
+        "score_method": "roll",
+        "score_base": {
+          "str": 7,
+          "dex": 17,
+          "con": 16,
+          "int": 17,
+          "wis": 12,
+          "cha": 18
+        },
+        "score_rolls": {
+          "rounds": [
+            {
+              "round": 1,
+              "qualified": true,
+              "arrays": [
+                {
+                  "id": "A",
+                  "dice": [
+                    [
+                      1,
+                      1,
+                      4,
+                      1
+                    ],
+                    [
+                      3,
+                      6,
+                      1,
+                      4
+                    ],
+                    [
+                      6,
+                      2,
+                      5,
+                      4
+                    ],
+                    [
+                      1,
+                      5,
+                      6,
+                      1
+                    ],
+                    [
+                      6,
+                      2,
+                      6,
+                      5
+                    ],
+                    [
+                      5,
+                      1,
+                      3,
+                      5
+                    ]
+                  ],
+                  "scores": [
+                    6,
+                    13,
+                    15,
+                    12,
+                    17,
+                    13
+                  ],
+                  "total": 76,
+                  "keepable": true
+                },
+                {
+                  "id": "B",
+                  "dice": [
+                    [
+                      3,
+                      5,
+                      1,
+                      1
+                    ],
+                    [
+                      6,
+                      2,
+                      5,
+                      5
+                    ],
+                    [
+                      6,
+                      1,
+                      3,
+                      4
+                    ],
+                    [
+                      1,
+                      4,
+                      3,
+                      6
+                    ],
+                    [
+                      5,
+                      3,
+                      2,
+                      4
+                    ],
+                    [
+                      5,
+                      6,
+                      3,
+                      5
+                    ]
+                  ],
+                  "scores": [
+                    9,
+                    16,
+                    13,
+                    13,
+                    12,
+                    16
+                  ],
+                  "total": 79,
+                  "keepable": true
+                },
+                {
+                  "id": "C",
+                  "dice": [
+                    [
+                      4,
+                      6,
+                      6,
+                      4
+                    ],
+                    [
+                      6,
+                      6,
+                      6,
+                      6
+                    ],
+                    [
+                      1,
+                      1,
+                      5,
+                      6
+                    ],
+                    [
+                      6,
+                      4,
+                      6,
+                      5
+                    ],
+                    [
+                      3,
+                      1,
+                      3,
+                      1
+                    ],
+                    [
+                      5,
+                      6,
+                      5,
+                      6
+                    ]
+                  ],
+                  "scores": [
+                    16,
+                    18,
+                    12,
+                    17,
+                    7,
+                    17
+                  ],
+                  "total": 87,
+                  "keepable": true
+                }
+              ]
+            }
+          ],
+          "kept": {
+            "round": 1,
+            "array": "C"
+          },
+          "who": "Raithen"
+        },
+        "initiative": 4,
+        "passives": {
+          "perception": 13
+        },
+        "proficiency_bonus": 2,
+        "skills": [
+          "Deception",
+          "Sleight of Hand",
+          "Investigation",
+          "Arcana",
+          "Perception",
+          "Insight",
+          "Persuasion"
+        ],
+        "expertise": [],
+        "tools": [
+          "Forgery Kit"
+        ],
+        "saves": [
+          "wis",
+          "cha"
+        ],
+        "weapon_masteries": [],
+        "languages": [
+          "Common",
+          "Common Sign Language",
+          "Draconic"
+        ],
+        "kit": {
+          "class_option": "B",
+          "background_option": "B"
+        },
+        "handle_request": "Raithen",
+        "broadcast_name": "PENDING",
+        "survey": {
+          "q1": "The leash to my Circus Bear : Bongo",
+          "q2": "A Party hat for Bongo",
+          "q3": "Being Rewarded",
+          "q4": "Always rolling bad rolls",
+          "q5": "Ducky Curry on Rice makes me happy",
+          "q6": "Eldritch Blast and win the Game",
+          "bonus1": "The circus and my clowns",
+          "bonus2": "Hamburger Hill in Vietnam most likely"
+        },
+        "discord_user_id": "376517850724040714",
+        "created_via": "create-flow",
+        "flow_version": "0.1.2",
+        "chargen_table_version": "0.1.6",
+        "todo": [
+          "Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1"
+        ],
+        "spells": {
+          "cantrips": [
+            "Eldritch Blast",
+            "Chill Touch"
+          ],
+          "prepared": [
+            "Armor of Agathys",
+            "Witch Bolt"
+          ],
+          "spellbook": null
+        },
+        "spell_slots": {
+          "1": 1
+        },
+        "spellcasting_ability": "cha"
+      },
+      "status": "benched"
+    }
+  ]
+}

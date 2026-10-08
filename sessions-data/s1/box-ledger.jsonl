@@ -1,0 +1,5 @@
+{"ts":"2026-10-07T19:39:46-05:00","session":"s1","event":"earned","crawler":"Mr. White","tier":"bronze","count":1,"floor":1,"deed":"Welcome Box (every Crawler, Break Room)","box_name":"Bronze Welcome Box"}
+{"ts":"2026-10-07T19:39:56-05:00","session":"s1","event":"opened","crawler":"Mr. White","tier":"bronze","count":1,"floor":1,"safe_room":"flag","box_name":"Bronze Welcome Box","contents":"Hotel Desk Bell, Ding Ding; Cooking Spray, Industrial Drum Size"}
+{"ts":"2026-10-07T19:56:49-05:00","session":"s1","event":"earned","crawler":"Eisenhorn","tier":"bronze","count":1,"floor":1,"deed":"Reached the Break Room (Floor 1 Welcome Box)","box_name":"Bronze Welcome Box"}
+{"ts":"2026-10-07T19:56:49-05:00","session":"s1","event":"earned","crawler":"Shirayuki","tier":"bronze","count":1,"floor":1,"deed":"Reached the Break Room (Floor 1 Welcome Box)","box_name":"Bronze Welcome Box"}
+{"ts":"2026-10-07T20:10:04-05:00","session":"s1","event":"opened","crawler":"Eisenhorn","tier":"bronze","count":1,"floor":1,"safe_room":"scene","reason":"Bronze Welcome Box opened","contents":"Dean's List Magnifying Glass (tailored), Laminated Complaint Card (random)"}

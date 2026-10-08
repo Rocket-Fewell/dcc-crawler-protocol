@@ -148,8 +148,12 @@ export function loadConfig(env = process.env, { mode = 'bot' } = {}) {
       provider: str(env, 'TTS_PROVIDER', 'openai').toLowerCase(),
       // Max characters per synthesized chunk (sentences are never merged beyond this).
       chunkMaxChars: num(env, 'TTS_CHUNK_MAX_CHARS', 600, { min: 40, max: 4000 }),
-      // Hard cap on total spoken characters per GM message; anything beyond is dropped.
+      // Part size: a GM message longer than this is split at sentence/paragraph boundaries and spoken as several parts
+      // in order (Oct 7 2026; it used to be truncated here). Each chunk keeps its [GM]/[SYSTEM]/[NPC: Name] voice.
       maxMessageChars: num(env, 'TTS_MAX_MESSAGE_CHARS', 1500, { min: 100 }),
+      // Safety ceiling on total spoken characters per GM message (runaway-cost guard); beyond it the rest is dropped and logged.
+      // Never below TTS_MAX_MESSAGE_CHARS.
+      maxTotalChars: Math.max(num(env, 'TTS_MAX_TOTAL_CHARS', 6000, { min: 100 }), num(env, 'TTS_MAX_MESSAGE_CHARS', 1500, { min: 100 })),
       readEmbeds: bool(env, 'TTS_READ_EMBEDS', true),
       prefetch: num(env, 'TTS_PREFETCH', 2, { min: 1, max: 6 }),
       fish: {

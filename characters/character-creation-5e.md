@@ -312,9 +312,9 @@ Everything is reskinned to look like it came from a strip mall, a hardware store
 | Arcane focus | A crystal from a gift shop, a laser pointer, a vape pen |
 | Explorer's / Dungeoneer's Pack | Backpack from the lost-and-found with someone else's gym clothes |
 
-### 6.3 Intake Bag (cosmetic, zero value)
+### 6.3 Intake Bag (zero value; one free inventory swap per turn)
 
-Every crawler also gets a **clear plastic Intake Bag** with: a lanyard printed with their Intake Tag, one packet of System-brand electrolyte powder (tastes like a battery; no mechanical effect), and a laminated card reading *YOU ARE ON CAMERA*. These are flavor only and can't be sold (vendors "aren't accepting returns on dignity").
+Every crawler also gets a **clear plastic Intake Bag** with: a lanyard printed with their Intake Tag, one packet of System-brand electrolyte powder (tastes like a battery; no mechanical effect), and a laminated card reading *YOU ARE ON CAMERA*. The contents are flavor and can't be sold (vendors "aren't accepting returns on dignity"). The bag itself has one mechanic (decision 038, core §5.9): once on each of your turns, store or retrieve one System Inventory item without using your free object interaction.
 
 Plus **one personal item** from Q1 (§5.2) if it's plausibly on them: a phone (dead, or alive with zero signal and one app the System installed), keys, a vape, a dog leash with no dog. **Mundane, trivial, no mechanics** unless 5e already prices it as gear the crawler bought.
 

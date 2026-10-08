@@ -249,7 +249,7 @@ Headers are matched loosely (case/punctuation ignored); the first sheet that has
 
 Ignored: `Same floor as`, `Source`, anything else. Rows for the narrator and System (`GM Narrator`, `The System`, or Type containing "already assigned") are skipped. Short aliases are generated for long names when no other NPC owns them: a leading "The" is dropped (`The Owners` -> `Owners`), "X the Y" gives X (`Bruiser the Mascot` -> `Bruiser`), and job-title filler words (`Rev-Up`, `Consultant`, `Unvaccinated`) are dropped from names of 3+ words (`Laminak Rev-Up Consultant Elite` -> `Laminak Elite`, `Unvaccinated Clurichaun Rev-Up Consultant` -> `Clurichaun`). The report lists imported rows, blank ids, invalid ids (not 32 hex; imported without an id), duplicate names (later rows ignored), generated aliases and aliases dropped because another NPC owns the name. Exit code 2 if there are invalid ids, duplicates, or `--check` failures.
 
-**Length limits** (after tags and markdown are stripped): messages are split at sentence boundaries into chunks of at most `TTS_CHUNK_MAX_CHARS` (default **600**; a single sentence longer than that is split at commas/spaces). The total spoken text per message is hard-capped at `TTS_MAX_MESSAGE_CHARS` (default **1500**); anything beyond is dropped, cutting at the last complete sentence that fits (a warning is logged). Chunks stay sentence-sized for low latency rather than being packed up to the maximum.
+**Length limits** (after tags and markdown are stripped): messages are split at sentence boundaries into chunks of at most `TTS_CHUNK_MAX_CHARS` (default **600**; a single sentence longer than that is split at commas/spaces). A message longer than `TTS_MAX_MESSAGE_CHARS` (default **1500**) is no longer truncated (Oct 7 2026): it is split at sentence/paragraph boundaries into parts of at most that size and **every part is spoken in order**, each chunk in its own `[GM]`/`[SYSTEM]`/`[NPC: Name]` voice (an info line `split into N parts` is logged). A separate safety ceiling `TTS_MAX_TOTAL_CHARS` (default **6000**, never below `TTS_MAX_MESSAGE_CHARS`) caps runaway cost: beyond it the rest is dropped at the last complete sentence that fits and a warning `exceeded TTS_MAX_TOTAL_CHARS` is logged. Chunks stay sentence-sized for low latency rather than being packed up to the maximum.
 
 **Voices:** the System voice has its own settings: `OPENAI_TTS_SYSTEM_MODEL/VOICE/INSTRUCTIONS/SPEED` (defaults: narrator's model, `coral`, dry corporate instructions per decision 032) or, for ElevenLabs, `ELEVENLABS_SYSTEM_VOICE_ID/MODEL_ID/STABILITY/SIMILARITY` (if `ELEVENLABS_SYSTEM_VOICE_ID` is empty, System lines use the narrator voice and a warning is logged). `/say` takes an optional `voice` (`gm` default, or `system`) used for untagged text; tags inside the `/say` text still apply.
 
@@ -289,7 +289,8 @@ See `.env.example` — every variable is documented there. Highlights:
 | `ELEVENLABS_VOICE_ID` / `_MODEL_ID` | – / `eleven_flash_v2_5` | Narrator voice (needed for ElevenLabs) |
 | `ELEVENLABS_SYSTEM_VOICE_ID` / `_MODEL_ID` / `_STABILITY` / `_SIMILARITY` | narrator's / narrator's / `0.35` / narrator's | `[SYSTEM]` voice |
 | `TTS_CHUNK_MAX_CHARS` | `600` | Max characters per synthesized chunk (split at sentence boundaries) |
-| `TTS_MAX_MESSAGE_CHARS` | `1500` | Hard cap on spoken characters per message; the rest is dropped |
+| `TTS_MAX_MESSAGE_CHARS` | `1500` | Part size: longer messages are split at sentence/paragraph boundaries and all parts are spoken in order |
+| `TTS_MAX_TOTAL_CHARS` | `6000` | Safety ceiling on spoken characters per message; the rest is dropped (warning logged) |
 
 Tuning tips: if quiet players get ignored, lower `STT_MIN_RMS` (try `120`); if keyboard/breath noise gets transcribed, raise it. Set `LOG_LEVEL=debug` to see every skipped clip and why.
 
@@ -347,7 +348,7 @@ WantedBy=multi-user.target
 ```
 
 ## Costs (rough)
-STT is billed per audio minute of *speech clips only* (silence is never sent). TTS is billed per character spoken; use `GM_ALLOWED_AUTHOR_IDS`, `[ROLL]` tags and `TTS_MAX_MESSAGE_CHARS` to cap runaway output.
+STT is billed per audio minute of *speech clips only* (silence is never sent). TTS is billed per character spoken; use `GM_ALLOWED_AUTHOR_IDS`, `[ROLL]` tags and `TTS_MAX_TOTAL_CHARS` to cap runaway output.
 
 ## Development
 ```bash

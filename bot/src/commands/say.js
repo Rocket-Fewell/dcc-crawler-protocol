@@ -30,6 +30,7 @@ export async function execute(interaction, ctx) {
     defaultVoice: voice,
     chunkMaxChars: config.tts.chunkMaxChars,
     maxMessageChars: config.tts.maxMessageChars,
+    maxTotalChars: config.tts.maxTotalChars,
   });
   if (!chunks.length) {
     return interaction.reply({ content: 'Nothing speakable in that text (note: [ROLL] lines are never spoken).', flags: MessageFlags.Ephemeral });
