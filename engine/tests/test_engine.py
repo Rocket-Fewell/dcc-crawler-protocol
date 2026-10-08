@@ -239,7 +239,9 @@ class RoomTests(unittest.TestCase):
         self.assertEqual(gallery["popups"][0]["id"], "COVER")
         register = next(row for row in gallery["loot"] if row.get("item") == "cash register")
         cash = "floors.1.fixed_encounters.z05.cash_dice_per_crawler"
-        self.assertIn(cash, [row.get("dice_ref") for row in gallery["loot"]])
+        cash_hits = json.dumps(gallery["loot"]).count(cash)
+        self.assertEqual(cash_hits, 1)
+        self.assertFalse(any(list(row.keys()) == ["dice_ref"] and row.get("dice_ref") == cash for row in gallery["loot"]))
         self.assertTrue(any(isinstance(held, dict) and held.get("dice_ref") == cash for held in register["holds"]))
         self.assertNotIn("2d6", json.dumps(register["holds"]))
         self.assertTrue(any(isinstance(held, dict) and held.get("name") == "Raffle Ticket No. 0000" and held.get("id") == "f01-any-0031" for held in register["holds"]))

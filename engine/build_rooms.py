@@ -388,6 +388,18 @@ def apply_override(room, overrides):
             room["voice_lines"] = merged
         elif key == "loot_add" and isinstance(val, list):
             room["loot"] = list(room.get("loot") or []) + val
+            # A hold that already points at a budget dice_ref is the one payout.
+            # Drop the bare spec row with the same path so the register does not pay twice.
+            held_refs = set()
+            for row in val:
+                for held in row.get("holds") or []:
+                    if isinstance(held, dict) and held.get("dice_ref"):
+                        held_refs.add(held["dice_ref"])
+            if held_refs:
+                room["loot"] = [
+                    row for row in room["loot"]
+                    if not (list(row.keys()) == ["dice_ref"] and row.get("dice_ref") in held_refs)
+                ]
         elif key == "npc_lines" and isinstance(val, dict):
             for npc in room.get("npcs") or []:
                 line = val.get(npc.get("name"))

@@ -53,9 +53,6 @@
   "secrets": [],
   "loot": [
     {
-      "dice_ref": "floors.1.fixed_encounters.z05.cash_dice_per_crawler"
-    },
-    {
       "item": "cash register",
       "check": {
         "ability": "Dexterity",
