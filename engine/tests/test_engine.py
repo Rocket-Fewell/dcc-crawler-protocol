@@ -16,7 +16,7 @@ sys.path.insert(0, str(ENGINE))
 sys.path.insert(0, str(ROOT / "tools"))
 
 from dcc_engine.model import ModelClient, iter_sentences, strong_model_name  # noqa: E402
-from dcc_engine.rules import ScriptedRng, apply_damage, attack, cunning_action  # noqa: E402
+from dcc_engine.rules import ScriptedRng, add_condition, apply_damage, attack, cunning_action  # noqa: E402
 from dcc_engine.rooms import load_room, resolve_room  # noqa: E402
 from dcc_engine.ruling import apply_ruling, resolve_effect  # noqa: E402
 from dcc_engine.schema import check_room, label_cut_off, narration_tokens  # noqa: E402
@@ -61,6 +61,40 @@ class RulesTests(unittest.TestCase):
         self.assertEqual(reply["damage"], 7)
         self.assertEqual(crawler["hp"], 3)
         self.assertEqual(rng.rolls, [])
+
+    def test_damage_resistance_vulnerability_and_zero(self):
+        both = {"hp": 20, "max_hp": 20, "class": "rogue", "resistances": ["fire"], "vulnerable": ["fire"]}
+        apply_damage(both, 7, "fire")
+        self.assertEqual(both["hp"], 14)
+        vuln = {"hp": 20, "max_hp": 20, "class": "rogue", "vulnerable": ["fire"]}
+        apply_damage(vuln, 7, "fire")
+        self.assertEqual(vuln["hp"], 6)
+        immune = {"hp": 20, "max_hp": 20, "class": "rogue", "immunities": ["poison"]}
+        apply_damage(immune, 7, "poison")
+        self.assertEqual(immune["hp"], 20)
+        down = {"hp": 4, "max_hp": 10, "class": "rogue"}
+        apply_damage(down, 4, "slashing")
+        self.assertEqual(down["hp"], 0)
+        self.assertIn("Unconscious", down["conditions"])
+        self.assertEqual(down["death_saves"], {"successes": 0, "failures": 0})
+        self.assertFalse(down.get("dead"))
+        apply_damage(down, 1, "slashing")
+        self.assertEqual(down["death_saves"]["failures"], 1)
+        massive = {"hp": 4, "max_hp": 10, "class": "rogue"}
+        apply_damage(massive, 14, "slashing")
+        self.assertTrue(massive.get("dead"))
+        self.assertEqual(massive["death_saves"]["failures"], 3)
+        monster = {"hp": 5, "max_hp": 5, "srd_id": "skeleton"}
+        apply_damage(monster, 5, "piercing")
+        self.assertEqual(monster["hp"], 0)
+        self.assertTrue(monster.get("dead"))
+        self.assertNotIn("death_saves", monster)
+        self.assertNotIn("Unconscious", monster.get("conditions") or [])
+        tired = {"hp": 10, "class": "rogue"}
+        add_condition(tired, "Exhaustion")
+        add_condition(tired, "exhaustion")
+        self.assertEqual(tired["exhaustion_level"], 2)
+        self.assertEqual(tired["conditions"].count("Exhaustion"), 1)
 
 
 class RoomTests(unittest.TestCase):
@@ -227,10 +261,37 @@ class RoomTests(unittest.TestCase):
         gallery = load_room("f01-z05", day=4)
         self.assertNotIn("turn their heads", gallery.get("narrator_line") or "")
         self.assertNotIn("turn their heads", gallery.get("read_aloud") or "")
-        self.assertIn("closed", (gallery.get("narrator_line") or "").lower())
+        self.assertIn("mid-floor", (gallery.get("narrator_line") or "").lower())
+        self.assertNotIn("Break Room", gallery.get("narrator_line") or "")
+        self.assertFalse(gallery.get("nameplate"))
+        self.assertEqual(gallery.get("popups") or [], [])
+        self.assertNotEqual(gallery["voice_lines"]["intro"], gallery["voice_lines"]["win"])
         locker = load_room("f01-z08", day=4)
         self.assertNotIn("key swinging", locker["voice_lines"]["win"])
-        self.assertIn("closed", locker["voice_lines"]["win"].lower())
+        self.assertNotIn("Break Room", locker.get("narrator_line") or "")
+        self.assertIn("mid-floor", (locker.get("narrator_line") or "").lower())
+        day3_locker = load_room("f01-z08", day=3)
+        self.assertNotIn("key swinging", day3_locker["voice_lines"]["win"])
+        self.assertNotIn("Bruiser", day3_locker.get("narrator_line") or "")
+        self.assertIn("Zone-close", day3_locker.get("read_aloud") or "")
+        day5 = load_room("f01-z05", day=5)
+        self.assertIn("24 hours", day5.get("narrator_line") or "")
+        self.assertNotIn("{hours}", day5.get("narrator_line") or "")
+
+    def test_outer_zones_stay_closed_after_day_2(self):
+        self.assertTrue(load_room("f01-z02")["encounters"])
+        self.assertTrue(load_room("f01-z03")["secrets"])
+        self.assertTrue(load_room("f01-z03b")["achievements"])
+        for day in (2, 3, 4, 5):
+            for room_id in ("f01-z00", "f01-z01", "f01-z02", "f01-z03", "f01-z03b", "f01-z04"):
+                room = load_room(room_id, day=day)
+                self.assertTrue(room.get("closed"), (room_id, day))
+                self.assertEqual(resolve_room(room, 3)["encounters"], [], (room_id, day))
+                self.assertEqual(room.get("loot") or [], [], (room_id, day))
+                self.assertEqual(room.get("achievements") or [], [], (room_id, day))
+                self.assertEqual(room.get("secrets") or [], [], (room_id, day))
+            vent = load_room("f01-z02", day=day)
+            self.assertIn("outer zones", (vent.get("narrator_line") or "").lower())
 
 
 class ServerTests(unittest.TestCase):
@@ -371,6 +432,36 @@ class ModelTests(unittest.TestCase):
             finally:
                 os.environ.pop("ENGINE_DATA_DIR", None)
 
+    def test_negated_attack_does_not_roll(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.environ["ENGINE_DATA_DIR"] = tmp
+            try:
+                state = {
+                    "narrator_line": "The room waits.",
+                    "crawler": load("crawler-rogue.json"),
+                    "rng": ScriptedRng([18, 6]),
+                    "combatants": {
+                        "crawler": load("crawler-rogue.json"),
+                        "mannequin": load("mannequin-staff.json"),
+                    },
+                }
+                model = ModelClient(fake=True, fake_ruling={
+                    "ruling": "That is an attack.",
+                    "resolve_as": "attack",
+                    "params": {"attacker": "crawler", "target": "mannequin"},
+                    "log": "should not run",
+                })
+                store = Store(campaign="test")
+                for line in ("Don't attack", "I won't attack yet"):
+                    mannequin = state["combatants"]["mannequin"]
+                    mannequin["hp"] = 13
+                    outs = handle({"type": "line", "text": line}, state, model, store)
+                    self.assertEqual(mannequin["hp"], 13, line)
+                    self.assertNotIn("Hit:", outs[0]["text"])
+                store.close()
+            finally:
+                os.environ.pop("ENGINE_DATA_DIR", None)
+
     def test_heal_ruling_changes_hit_points(self):
         with tempfile.TemporaryDirectory() as tmp:
             os.environ["ENGINE_DATA_DIR"] = tmp
@@ -399,19 +490,41 @@ class ModelTests(unittest.TestCase):
                 os.environ.pop("ENGINE_DATA_DIR", None)
 
     def test_chatter_does_not_match_inside_other_words(self):
-        self.assertFalse(needs_ruling("slightly"))
-        self.assertFalse(needs_ruling("is it open?"))
-        self.assertFalse(needs_ruling("broadcast"))
-        self.assertFalse(needs_ruling("hello"))
-        for line in (
-            "I drink the potion",
-            "I pick the lock",
-            "I unlock the cash register",
-            "I sneak past",
-            "I read the sign",
-            "I wish the floor away",
-        ):
-            self.assertTrue(needs_ruling(line), line)
+        from dcc_engine.server import classify_line
+        table = {
+            "slightly": "chatter",
+            "is it open?": "chatter",
+            "broadcast": "chatter",
+            "hello": "chatter",
+            "I wish I had a sandwich": "chatter",
+            "Look at that!": "chatter",
+            "Check this out, guys": "chatter",
+            "I can't pick a favorite": "chatter",
+            "Don't attack": "chatter",
+            "I won't attack yet": "chatter",
+            "I drink the potion": "ruling",
+            "I pick the lock": "ruling",
+            "I unlock the cash register": "ruling",
+            "I sneak past": "ruling",
+            "I read the sign": "ruling",
+            "I wish the floor away": "ruling",
+            "I run": "ruling",
+            "kick the door open": "ruling",
+            "steal": "ruling",
+            "give": "ruling",
+            "bribe": "ruling",
+            "eat": "ruling",
+            "talk to the greeter": "ruling",
+            "I'll open the door": "ruling",
+            "Can I open the crate?": "ruling",
+            "Okay, I open the door": "ruling",
+            "Grimsby searches the lockers": "ruling",
+            "I use Cunning Action to dash": "engine",
+            "I attack the mannequin": "engine",
+        }
+        for line, label in table.items():
+            self.assertEqual(classify_line(line), label, line)
+            self.assertEqual(needs_ruling(line), label == "ruling", line)
 
 
 class RulingTests(unittest.TestCase):
@@ -478,6 +591,46 @@ class RulingTests(unittest.TestCase):
         self.assertNotIn("DC", no_dice["reason"])
         no_dc = resolve_effect(apply_ruling(self._ruling("check", {"target": "crawler"}), state), state)
         self.assertIn("DC", no_dc["reason"])
+
+    def test_missing_item_does_not_heal(self):
+        crawler = load("crawler-rogue.json")
+        crawler["hp"] = 7
+        crawler["max_hp"] = 10
+        crawler["inventory"] = []
+        state = {"combatants": {"crawler": crawler}, "crawler": crawler}
+        used = resolve_effect(apply_ruling(self._ruling("item", {
+            "target": "crawler", "item": "Potion of Healing", "action": "drink", "amount": 3,
+        }), state), state)
+        self.assertFalse(used["ok"])
+        self.assertIn("not in hand", used["reason"])
+        self.assertEqual(crawler["hp"], 7)
+        self.assertEqual(crawler["inventory"], [])
+
+    def test_fast_model_class_overrides_the_word_list(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.environ["ENGINE_DATA_DIR"] = tmp
+            try:
+                state = {
+                    "narrator_line": "The room waits.",
+                    "rng": ScriptedRng([18, 6]),
+                    "combatants": {
+                        "crawler": load("crawler-rogue.json"),
+                        "mannequin": load("mannequin-staff.json"),
+                    },
+                }
+                model = ModelClient(fake=True, fake_class="chatter", fake_ruling={
+                    "ruling": "Throwing the mannequin is an attack.",
+                    "resolve_as": "attack",
+                    "params": {"attacker": "crawler", "target": "mannequin"},
+                    "log": "should not run",
+                })
+                store = Store(campaign="test")
+                outs = handle({"type": "line", "text": "I open the door"}, state, model, store)
+                self.assertIn("open the door", outs[0]["text"])
+                self.assertEqual(state["combatants"]["mannequin"]["hp"], 13)
+                store.close()
+            finally:
+                os.environ.pop("ENGINE_DATA_DIR", None)
 
 
 if __name__ == "__main__":

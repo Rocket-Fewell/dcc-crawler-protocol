@@ -14,8 +14,11 @@
     "passable": true,
     "loot": [],
     "achievements": [],
+    "secrets": [],
     "item_hooks": [],
     "npcs": [],
+    "popups": [],
+    "nameplate": "",
     "key": null,
     "rest": null,
     "saferoom": false,
@@ -88,23 +91,26 @@
       }
     ]
   },
-  "f01-z05": {
+  "f01-z00": {
     "closed": true,
     "passable": true,
     "day_encounters": [],
     "loot": [],
     "achievements": [],
+    "secrets": [],
     "item_hooks": [],
     "npcs": [],
+    "popups": [],
+    "nameplate": "",
     "key": null,
     "rest": null,
     "hooks": "gone",
-    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-    "read_aloud": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-      "twist": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-      "win": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -114,7 +120,205 @@
     "gm_notes": {
       "tag": "[GM-FACING]",
       "flavor": [
-        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z01": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z02": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z03": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z03b": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z04": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+    "voice_lines": {
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "By \"renovation\" we mean \"gone.\" Anything you left back there is now a lesson. You're welcome."
+      ]
+    }
+  },
+  "f01-z05": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
+    "hooks": "gone",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "voice_lines": {
+      "intro": "Update: the mid-floor zones are now closed.",
+      "twist": "Loot and services in those zones have ended.",
+      "win": "Your remaining route is unchanged."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
       ]
     }
   },
@@ -124,17 +328,20 @@
     "day_encounters": [],
     "loot": [],
     "achievements": [],
+    "secrets": [],
     "item_hooks": [],
     "npcs": [],
+    "popups": [],
+    "nameplate": "",
     "key": null,
     "rest": null,
     "hooks": "gone",
-    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-    "read_aloud": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
     "voice_lines": {
-      "intro": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-      "twist": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-      "win": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available."
+      "intro": "Update: the mid-floor zones are now closed.",
+      "twist": "Loot and services in those zones have ended.",
+      "win": "Your remaining route is unchanged."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -144,7 +351,7 @@
     "gm_notes": {
       "tag": "[GM-FACING]",
       "flavor": [
-        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
       ]
     }
   },
@@ -154,17 +361,20 @@
     "day_encounters": [],
     "loot": [],
     "achievements": [],
+    "secrets": [],
     "item_hooks": [],
     "npcs": [],
+    "popups": [],
+    "nameplate": "",
     "key": null,
     "rest": null,
     "hooks": "gone",
-    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-    "read_aloud": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
     "voice_lines": {
-      "intro": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-      "twist": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
-      "win": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available."
+      "intro": "Update: the mid-floor zones are now closed.",
+      "twist": "Loot and services in those zones have ended.",
+      "win": "Your remaining route is unchanged."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -174,7 +384,7 @@
     "gm_notes": {
       "tag": "[GM-FACING]",
       "flavor": [
-        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
       ]
     }
   }

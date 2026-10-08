@@ -11,40 +11,106 @@ from dcc_engine.rules import ScriptedRng, attack, cunning_action
 from dcc_engine.ruling import apply_ruling, resolve_effect
 from dcc_engine.store import Store
 
-# Whole words only. The engine resolves cunning and attack first.
-# Any other action-shaped line goes to the strong model. Chatter does not.
+# Offline fallback. The fast model classifies when it is live.
+# engine: attack or Cunning Action. ruling: any other attempt. chatter: the rest.
 _ACTION_VERBS = frozenset((
     "throw", "light", "open", "push", "pull", "cast", "hide", "search", "smash",
     "climb", "jump", "shove", "grapple", "improvise", "use", "check", "look",
-    "drink", "pick", "unlock", "sneak", "read", "wish", "lock",
+    "drink", "pick", "unlock", "sneak", "read", "wish", "lock", "run", "kick",
+    "steal", "give", "bribe", "eat", "talk", "attack", "swing", "shoot",
 ))
+_NEGATION = frozenset((
+    "don't", "dont", "won't", "wont", "not", "never", "no", "can't", "cant",
+    "cannot", "wouldn't", "wouldnt", "shouldn't", "shouldnt",
+))
+_CHATTER_PHRASES = (
+    "wish i had", "wish we had", "look at that", "check this out",
+    "pick a favorite", "is it open",
+)
+_ATTACK_VERBS = frozenset(("attack", "swing", "shoot"))
 
 
 def _words(text):
     return re.findall(r"[a-z']+", (text or "").lower())
 
 
+def _stem(word):
+    if word in _ACTION_VERBS:
+        return word
+    for suf in ("ing", "ed", "es", "s"):
+        if word.endswith(suf) and len(word) - len(suf) >= 3:
+            base = word[: -len(suf)]
+            if base in _ACTION_VERBS:
+                return base
+            if suf in ("ing", "ed") and (base + "e") in _ACTION_VERBS:
+                return base + "e"
+    return word
+
+
+def classify_line(text):
+    """Word fallback when the fast model is offline. Negation is not an action."""
+    raw = " ".join(_words(text))
+    if not raw:
+        return "chatter"
+    if any(phrase in raw for phrase in _CHATTER_PHRASES):
+        return "chatter"
+    if raw in ("hello", "slightly", "broadcast"):
+        return "chatter"
+    words = _words(text)
+    request = bool(re.search(r"\b(can|may|could|should)\s+(i|we)\b", raw))
+    if (text or "").strip().endswith("?") and not request:
+        return "chatter"
+    negated = False
+    positive = []
+    cunning_open = False
+    for word in words:
+        if word in _NEGATION or word.endswith("n't"):
+            negated = True
+            continue
+        if word == "cunning" and not negated:
+            cunning_open = True
+        stem = _stem(word)
+        if stem in _ACTION_VERBS:
+            if not negated:
+                positive.append(stem)
+            negated = False
+    if cunning_open:
+        return "engine"
+    if any(verb in _ATTACK_VERBS for verb in positive):
+        return "engine"
+    if positive:
+        return "ruling"
+    return "chatter"
+
+
 def needs_ruling(text):
     """True when the line is an action the engine did not already resolve."""
-    words = _words(text)
-    if not words:
-        return False
-    if words[0] in ("i", "we") and any(word in _ACTION_VERBS for word in words[1:4]):
-        return True
-    return words[0] in _ACTION_VERBS
+    return classify_line(text) == "ruling"
+
+
+def line_class(text, model):
+    """Fast model first. The word list runs only when that call does not answer."""
+    label = None
+    classify = getattr(model, "classify", None)
+    if classify is not None:
+        label = classify(text)
+    if label not in ("chatter", "engine", "ruling"):
+        label = classify_line(text)
+    return label
 
 
 def handle(msg, state, model, store):
     kind = msg.get("type")
     if kind == "line":
-        text = (msg.get("text") or "").lower()
+        text = msg.get("text") or ""
+        label = line_class(text, model)
         words = _words(text)
-        if "cunning" in words:
+        if label == "engine" and "cunning" in words:
             return handle({"type": "cunning_action", "crawler": state["crawler"], "kind": "dash"}, state, model, store)
-        if "attack" in words or text.startswith("i swing") or text.startswith("i shoot"):
+        if label == "engine":
             return handle({"type": "attack", "attacker": "crawler", "target": state.get("target_id", "mannequin")}, state, model, store)
-        snap = {"line": msg.get("text"), "narrator_line": state.get("narrator_line"), "result": {}}
-        if not needs_ruling(text):
+        snap = {"line": text, "narrator_line": state.get("narrator_line"), "result": {}}
+        if label != "ruling":
             outs = [{"type": "say", "voice": "GM", "text": sentence} for sentence in model.stream(snap)]
             store.save_action("line", {"in": msg, "out": outs})
             return outs

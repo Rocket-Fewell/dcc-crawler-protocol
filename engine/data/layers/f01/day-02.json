@@ -43,13 +43,24 @@
   },
   "f01-z00": {
     "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
     "hooks": "gone",
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "twist": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "win": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -65,13 +76,24 @@
   },
   "f01-z01": {
     "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
     "hooks": "gone",
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "twist": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "win": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -87,13 +109,24 @@
   },
   "f01-z02": {
     "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
     "hooks": "gone",
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "twist": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "win": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -109,13 +142,24 @@
   },
   "f01-z03": {
     "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
     "hooks": "gone",
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "twist": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "win": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -131,13 +175,24 @@
   },
   "f01-z03b": {
     "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
     "hooks": "gone",
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "twist": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "win": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",
@@ -153,13 +208,24 @@
   },
   "f01-z04": {
     "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "secrets": [],
+    "item_hooks": [],
+    "npcs": [],
+    "popups": [],
+    "nameplate": "",
+    "key": null,
+    "rest": null,
     "hooks": "gone",
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "twist": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
-      "win": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open."
+      "intro": "Attention, Crawlers.",
+      "twist": "The outer zones are now closed.",
+      "win": "The remaining route stays open."
     },
     "map": {
       "layout": "This zone is closed.",

@@ -457,12 +457,15 @@ def clock_for(path, day):
 
 
 def collapse_notice(specs, day):
-    """The day's dry floor notice. A sentence with an unfilled blank is dropped."""
+    """The day's dry floor notice. {hours} is the last day's collapse hour. Other blanks drop."""
     for number, _path, spec in specs:
         if number != day:
             continue
         notice = ((spec.get("day") or {}).get("collapse_notice") or {})
         text = " ".join((notice.get("text") or "").split())
+        hours = ((spec.get("clock") or {}).get("final_collapse") or {}).get("hour_of_last_day")
+        if hours is not None:
+            text = text.replace("{hours}", str(hours))
         kept = [sentence for sentence in complete_sentences(text) if "{" not in sentence]
         gm = " ".join((((notice.get("gm_color") or {}).get("text")) or "").split())
         return " ".join(kept), gm
@@ -478,9 +481,18 @@ def scene_voice(specs, enc_id):
     return None
 
 
-def stamp_closed_text(cur, specs, day):
-    """Replace a closed zone's old read-aloud with that day's dry floor notice."""
-    notice, gm = collapse_notice(specs, day)
+def notice_voices(notice):
+    """Split a notice so intro, twist, and win are not the same sentence."""
+    parts = complete_sentences(notice) or [notice]
+    intro = parts[0]
+    twist = parts[1] if len(parts) > 1 else parts[0]
+    win = parts[-1] if len(parts) > 2 else twist
+    return intro, twist, win
+
+
+def stamp_closed_text(cur, specs, day, notice_day=None):
+    """Replace a closed zone's old read-aloud with the notice from the day it closed."""
+    notice, gm = collapse_notice(specs, notice_day or day)
     if not notice:
         return
     scene = None
@@ -488,14 +500,14 @@ def stamp_closed_text(cur, specs, day):
         if not row.get("srd_id") and row.get("enc_id"):
             scene = scene_voice(specs, row["enc_id"])
             break
-    intro = (scene or {}).get("intro") or notice
+    intro, twist, win = notice_voices(notice)
+    if scene:
+        intro = scene.get("intro") or intro
+        twist = scene.get("twist") or twist
+        win = scene.get("win") or win
     cur["narrator_line"] = notice
     cur["read_aloud"] = intro if scene else notice
-    cur["voice_lines"] = {
-        "intro": intro,
-        "twist": (scene or {}).get("twist") or notice,
-        "win": (scene or {}).get("win") or notice,
-    }
+    cur["voice_lines"] = {"intro": intro, "twist": twist, "win": win}
     cur["map"] = {
         "layout": "This zone is closed.",
         "cover": "No listed cover.",
@@ -505,8 +517,8 @@ def stamp_closed_text(cur, specs, day):
         cur["gm_notes"] = {"tag": "[GM-FACING]", "flavor": [gm]}
 
 
-def close_room(layer, room_id, specs, day, extra=None):
-    """Drop the day's fights. A non-combat scene stays. The room stays passable."""
+def close_room(layer, room_id, specs, day, extra=None, notice_day=None):
+    """Drop fights, loot, and achievements. A non-combat scene stays. Later days stay closed."""
     cur = layer.get(room_id)
     if not isinstance(cur, dict):
         cur = {}
@@ -517,16 +529,33 @@ def close_room(layer, room_id, specs, day, extra=None):
         "day_encounters": scenes,
         "loot": [],
         "achievements": [],
+        "secrets": [],
         "item_hooks": [],
         "npcs": [],
+        "popups": [],
+        "nameplate": "",
         "key": None,
         "rest": None,
     }
     if extra:
         patch.update(extra)
     cur.update(patch)
-    stamp_closed_text(cur, specs, day)
+    stamp_closed_text(cur, specs, day, notice_day)
     layer[room_id] = cur
+
+
+def stamp_encounter_text(cur, specs, enc_id):
+    """Replace leftover Day 1 prose with the encounter that is actually in the room."""
+    scene = scene_voice(specs, enc_id)
+    if not scene:
+        return
+    cur["narrator_line"] = scene["intro"]
+    cur["read_aloud"] = scene["intro"]
+    cur["voice_lines"] = {
+        "intro": scene["intro"],
+        "twist": scene["twist"],
+        "win": scene["win"],
+    }
 
 
 def main():
@@ -604,17 +633,20 @@ def main():
             name, voice = NPCS[zone]
             by_zone[zone]["npcs"] = [{"name": name, "voice": voice}]
 
-    for zone in ("z00", "z01", "z02", "z03", "z03b", "z04"):
-        room_id = "f01-%s" % zone
-        merge_layer(later[2], room_id, {"closed": True, "hooks": "gone"})
-        stamp_closed_text(later[2][room_id], specs, 2)
-    for zone in ("z05", "z07"):
-        close_room(later[3], "f01-%s" % zone, specs, 3, {"hooks": "gone"})
+    outer = ("z00", "z01", "z02", "z03", "z03b", "z04")
+    for day in (2, 3, 4, 5):
+        for zone in outer:
+            close_room(later[day], "f01-%s" % zone, specs, day, {"hooks": "gone"}, notice_day=2)
+    for day in (3, 4):
+        for zone in ("z05", "z07"):
+            close_room(later[day], "f01-%s" % zone, specs, day, {"hooks": "gone"}, notice_day=3)
     merge_layer(later[3], "f01-z08", {"hooks": "gone", "npcs": [], "key": None, "loot": []})
-    for day in (4, 5):
-        for zone in ("z05", "z07", "z08"):
-            close_room(later[day], "f01-%s" % zone, specs, day, {"hooks": "gone"})
-        close_room(later[day], "f01-z06", specs, day, {"saferoom": False, "vendors": "closed", "hooks": "gone"})
+    stamp_encounter_text(later[3]["f01-z08"], specs, "enc-d03-02")
+    close_room(later[4], "f01-z08", specs, 4, {"hooks": "gone"}, notice_day=3)
+    close_room(later[4], "f01-z06", specs, 4, {"saferoom": False, "vendors": "closed", "hooks": "gone"}, notice_day=4)
+    for zone in ("z05", "z07", "z08"):
+        close_room(later[5], "f01-%s" % zone, specs, 5, {"hooks": "gone"}, notice_day=5)
+    close_room(later[5], "f01-z06", specs, 5, {"saferoom": False, "vendors": "closed", "hooks": "gone"}, notice_day=5)
     merge_layer(later[5], "f01-z09", {"open": True})
 
     for zone, room in by_zone.items():

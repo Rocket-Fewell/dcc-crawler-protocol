@@ -182,6 +182,15 @@ def resolve_effect(applied, state):
             return {"ok": False, "reason": "That item ruling names no item."}
         who = _actor(state, params.get("target"))
         spent = _spend_item(who, item)
+        if not spent:
+            return {
+                "ok": False,
+                "reason": "That item is not in hand.",
+                "resolve_as": kind,
+                "item": item,
+                "spent": False,
+                "hp_changed": False,
+            }
         state["last_item"] = {"item": item, "action": action, "spent": spent}
         before = int(who.get("hp") or 0) if isinstance(who, dict) else None
         if isinstance(who, dict) and "amount" in params and action in ("use", "drink"):
