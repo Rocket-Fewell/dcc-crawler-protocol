@@ -359,7 +359,7 @@ Each successful loot, roll d6:
 ╚════════════════════════════════════════════════════╝
 ```
 
-Log `SEED-ODDCOIN` (holder). Toast `ACH-0081` Odd Coin Pocketed as a **hidden** line: *"Oddity logged."* No reward; story flag (`02` §3.2 item 6). **Never explain it.** If someone tries to sell it to the Snakk-Matic terminal, it either refuses ("ITEM NOT RECOGNIZED") or offers a suspicious **500 credits** and cancels mid-animation (`02` §5.5).
+Log `SEED-ODDCOIN` (holder). Toast `ACH-0081` Odd Coin Pocketed as a **hidden** line: *"Oddity logged."* No reward; story flag (`02` §3.2 item 6). **Never explain it.** If someone tries to sell it to the Snakk-Matic terminal, it either refuses ("ITEM NOT RECOGNIZED") or offers a suspicious **500 credits** and cancels mid-animation (`02` §5.5). If anyone tries to **identify or appraise** it (Snakk-Matic service, a spell, a check, or asking an NPC), the answer is the same **"ITEM NOT RECOGNIZED"**, and nobody ever names a floor or a time it can be appraised (Lore, 2026-10-07).
 **Fallback:** if nobody opens the crate, the coin shows up as a "Weird" pull in the first box opened in the Green Room, or in Dale's pocket if he dies. It **must** be planted on F1.
 
 **4. Secret: back cage (3b).** A false panel behind the change machine: **Wisdom (Perception) DC 15** (passive counts) or **Intelligence (Investigation) DC 13** if someone says they're checking behind machines. This is the floor's **one DC 15 secret** (`02` §10.3). Inside, the **hidden cache**: a **Potion of Healing** ("Sports Drink, Blue Flavor, Do Not Ask"), a **Shield** (riot shield stenciled PROPERTY OF ORIENTATION), 3d6 × 5 credits, and a scrawled map that reveals Zone S on the System Map.
@@ -406,7 +406,7 @@ Nameplate: `Mannequin Staff. Level 1. "Smiling through it. Contractually."`
 
 **Proctor Bell:** "Cover. Get behind things. Things are your friends. People are not your friends."
 
-**DM:** Popup COVER the first time someone uses it. Skeletons are vulnerable to bludgeoning (as written); let the crowbars shine. The cash register (**Dexterity (Sleight of Hand) DC 10**, or smash it) holds **2d6 × 3 credits** and a raffle ticket that does nothing. The System never explains the raffle ticket. It's a joke. Probably.
+**DM:** Popup COVER the first time someone uses it. Skeletons are vulnerable to bludgeoning (as written); let the crowbars shine. The cash register (**Dexterity (Sleight of Hand) DC 10**, or smash it) holds **1d4 × 2 credits per Crawler** (matches `rules/70-encounter-budget-5e.json` and `day-01.md`; Syndicate, 2026-10-07) and a raffle ticket that does nothing. The System never explains the raffle ticket. It's a joke. Probably.
 
 **Seeds:** `ACH-0867` Block a Hit with a Shield (R1); `ACH-0861` Lose Initiative and Still Win (R1); `NEW: Hit the Cutout` (R0).
 
@@ -421,6 +421,21 @@ Nameplate: `Mannequin Staff. Level 1. "Smiling through it. Contractually."`
 - **Rest:** Short Rest guaranteed uninterrupted; **Long Rest available** (one per 24 hours, 5e). Popups: SHORT REST, LOOT BOXES.
 - **Welcome Box:** every crawler receives a **Bronze Welcome Box** here and opens it during the rest (`02` §10.2; §8.1). **It must include one tailored pull** (`03` §5.3).
 - **Snakk-Matic terminal (vendor):** 5e prices ± mood. *Potion of Healing* 50 credits (**2 in stock for the whole floor**, shared with the Green Room), ammunition, rations, torches, rope, healer's kit, caltrops. Buys at half. Haggling: Charisma (Persuasion, Deception, or Intimidation) **DC 13**; success = 15% off (`02` §5.10). Identify an item: 10 credits.
+  - **Snakk-Matic price list (2024 PHB prices, 1 credit = 1 GP; anything under 1 GP rounds up to 1 credit, because the machine does not make change):**
+
+    | Item | Price | Note |
+    |---|---|---|
+    | *Potion of Healing* ("Sports Drink") | 50 | 2 in stock for the whole floor, shared with the Green Room |
+    | Arrows or bolts (20) | 1 | |
+    | Rations (1 day) | 1 | |
+    | Torch | 1 | |
+    | Oil flask ("Cooking Spray") | 1 | |
+    | Rope, hempen (50 ft) | 1 | |
+    | Caltrops (bag) | 1 | |
+    | Healer's Kit (10 uses) | 5 | |
+    | Identify an item | 10 | Service |
+
+    Not on the list: ask the price of the 2024 PHB item and round up. Selling to it pays half, rounded down. The unlisted stairwell key spare is priced only in the budget file.
 - **Corkboard (rumors; `ACH-0188` Rumor Mill at 3):**
   1. "THE GREEN EXIT IS NOT THE EXIT. — management" (true)
   2. "Thudd can't do stairs." (false; he just hates them)

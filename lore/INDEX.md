@@ -1,5 +1,5 @@
 # DCC Lore Index
-Owner: DCC Lore | Status: review | Version: 2.25 | Updated: 2026-10-06
+Owner: DCC Lore | Status: review | Version: 2.26 | Updated: 2026-10-07
 Summary: One line per file in the lore folder: path, description, owner, status.
 
 Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part of the campaign workspace as `lore/` (repo-relative; on some boxes a symlink into this tree). Rules: campaign root `NAMING-CONVENTIONS.md` (sibling of `lore/` in a fresh checkout, or set `DCC_CAMPAIGN_ROOT`).
@@ -84,7 +84,7 @@ Canon knowledge base for *Dungeon Crawler Carl* (spoilers through Book 8). Part 
 | tables/item-reskins.version.json | Version, sha256, built_at, entry_count and diff of the latest reskin build (auto-written by tools/reskin_build.py). | DCC Lore | draft |
 | tables/item-reskins.CHANGELOG.md | One line per reskin build (auto-written). | DCC Lore | draft |
 | tables/loot-decks/f01-z10-graduation-stage.json | Zone 10 Silver Boss Box deck for Dean Thudd (box_types Boss). | DCC Lore | draft |
-| tables/loot-decks/ach-f01-orientation-pit.json | Floor 1 achievement deck (schema achievement-deck/0.1): 62 entries (15 alpha-earned), deed-named boxes, reward lines, credits/Titles. Deliberately not named f01-* so `loot draw` does not load it. | DCC Lore | draft |
+| tables/loot-decks/ach-f01-orientation-pit.json | Floor 1 achievement deck (schema achievement-deck/0.1, v0.1.1): 65 entries (15 alpha-earned; 0063-0065 added 2026-10-07), deed-named boxes, reward lines, credits/Titles. Deliberately not named f01-* so `loot draw` does not load it. | DCC Lore | draft |
 | tables/gm-quirks.json | GM quirk framework tables (prior installation, 20 fixations with affinity triggers, 12 quirks, 10 tics, 8 tells, 6-level ladder, spite moves, repair options). GM-ONLY data; schema in catalog/gm-quirk-framework.md section 10. | DCC Lore | draft |
 | tables/canon-floor-1.json | Floor 1 canon source table for the Encounter Bot (10 canon zones/set-pieces + 14 house zones; mobs, hazards, staging, announcement style, tag, ledger row ids; no CR/loot). Build: tools/canon_floor_build.py; check: tools/canon_floor_check.py. | DCC Lore | draft |
 | tables/canon-floor-1.md | Readable view of tables/canon-floor-1.json (generated). | DCC Lore | draft |

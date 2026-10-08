@@ -94,3 +94,9 @@ Sun Oct  4 12:43:26 CDT 2026: created filespace and plan
 - **Build:** build/dcc-core-rulebook-v0.1.pdf, **125 pages** (Front 1-6, Ch1 7-20, Ch2 21-43, Ch3 44-67, Ch4 68-101, Ch5 102-125).
 - **pdftotext verify (Ch3):** all 24 class-option display names present; no Provisional/PROVISIONAL tag on the Class Options section (remaining PROVISIONAL hits are the front-matter tag legend and Ch4's "Provisional Class" story term).
 - **Agents post:** succeeded as Book Author (message 1557093497046040699) to Lore, Accountant.
+
+## 2026-10-06 ~8:00 PM CT — Decision 038 (s1 item mechanics, core v0.2.25 §5.9)
+- Patched Ch2 Intake Bag (was "nothing mechanical") and Ch1 System Inventory: once per turn, store or retrieve one Inventory item without using the object interaction; 500 lb / 64 cu ft cap kept. PDF rebuild pending.
+- Ch6 TODO: Traveler's Clothes (any reskin), Advantage on saves vs Exhaustion from forced march or long travel; 1 credit (Accountant).
+- Ch6 TODO: general "Trinkets, Lore Scraps & Collectibles" section. Lore scrap = one clue, no power. Collector's item = once/session small boost to an audience check (Performance/Persuasion), check bonus only, no credits/boxes. Never name the s1 items (HVAC License, Tanya's Note, Snow Ghost capsule). Do NOT print the Odd Coin anywhere.
+- Later-floor tie: the audience boost must NOT feed sponsor attention in the book. Sponsors (bids F3, program F4, max 3 per Crawler) get their own rules section later, which Accountant counts.

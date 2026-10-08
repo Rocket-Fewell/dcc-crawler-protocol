@@ -29,6 +29,7 @@ import repair_log  # sealed, hash-chained repair log (gm-notes/secret/repair-log
 import gm_quirks  # GM-only secret traits + affinity (gm-notes/secret/); see tools/README.md
 import ledgers
 import loot
+import card_rules  # turn blocks of the player card: default class/species resources (slots, Rage, Second Wind...), rests
 
 DEFAULT_CAMPAIGN_DIR = csession.DEFAULT_CAMPAIGN_DIR  # via dcc_paths; ROOT/DIR env honored live
 SCHEMA_VERSION = 1
@@ -51,6 +52,25 @@ DEFAULT_LIMITS = {
     "pets_enabled": True,                # GM-run plain pets (decision 022): false = `pet add` and `pet shop` are refused and cards/party hide pets (data is kept)
     "legendary_cap_per_floor": 1,        # Story Boxes per table per FLOOR (unopened boxes count; loot story-box --override-cap "reason" to exceed)
 }
+
+
+# Decision 038 (core rules 5.9 v0.2.25): the Intake Bag's real mechanic (replaces the old "Cosmetic. Holds nothing special.").
+INTAKE_BAG_MECHANICS = ("Once on each of your turns, you can store or retrieve one item in your System Inventory without using your free object "
+                        "interaction or the Utilize action. The System Inventory cap and every other 5.9 rule still apply. Can't be sold; value 0.")
+INTAKE_BAG_NOTES = "decision 038; value 0, can't be sold"
+
+
+def fix_intake_bag(row):
+    """Intake Bag rows written with the pre-038 'Cosmetic' text get the decision 038 mechanic. True when the row changed."""
+    if str(row.get("name", "")).strip().lower() != "intake bag":
+        return False
+    mech = str(row.get("mechanics") or "").strip()
+    if mech and not mech.lower().startswith("cosmetic"):
+        return False
+    row["mechanics"] = INTAKE_BAG_MECHANICS
+    if str(row.get("notes") or "").strip().lower() in ("", "cosmetic, zero value"):
+        row["notes"] = INTAKE_BAG_NOTES
+    return True
 
 
 class StateError(Exception):
@@ -473,6 +493,27 @@ def _is_int(v):
     return isinstance(v, int) and not isinstance(v, bool)
 
 
+USES_RESETS = ("session", "short_rest", "long_rest", "day", "floor", "never")   # publisher.USES_RESET_LABELS renders these
+
+
+def _reset_key(r):
+    return re.sub(r"[\s-]+", "_", str(r or "").strip().lower())
+
+
+def _uses_problems(it):
+    """(errors, warnings) for an item with tracked uses: uses_reset text, uses_max int >= 1, uses int 0..uses_max."""
+    errs, warns, nm = [], [], it.get("name")
+    if not isinstance(it.get("uses_reset"), str) or not it["uses_reset"].strip():
+        errs.append(f"item {nm!r}: uses_reset must be one of {', '.join(USES_RESETS)}")
+    elif _reset_key(it["uses_reset"]) not in USES_RESETS:
+        warns.append(f"item {nm!r}: unknown uses_reset {it['uses_reset']!r} (known: {', '.join(USES_RESETS)}); `uses reset` will not refill it")
+    if not (_is_int(it.get("uses_max")) and it["uses_max"] >= 1):
+        errs.append(f"item {nm!r}: uses_max must be an integer >= 1 when uses_reset is set")
+    elif not (_is_int(it.get("uses")) and 0 <= it["uses"] <= it["uses_max"]):
+        errs.append(f"item {nm!r}: uses must be an integer between 0 and uses_max ({it['uses_max']})")
+    return errs, warns
+
+
 def validate_state(state):
     """Return (errors, warnings)."""
     errs, warns = [], []
@@ -503,7 +544,7 @@ def validate_state(state):
             errs.append("limits.pets_enabled must be true or false")
         if limits.get("story_box_rota", "warn") != "warn":
             errs.append("limits.story_box_rota must be \"warn\" (the rota never blocks)")
-        for k in ("max_crawlers", "legendary_cap_per_floor"):
+        for k in ("max_crawlers", "legendary_cap_per_floor", "short_rests_per_day"):
             if k in limits and (not _is_int(limits[k]) or limits[k] < 0):
                 errs.append(f"limits.{k} must be an integer >= 0")
         b = limits.get("bypass_per_crawler_cap")
@@ -521,6 +562,9 @@ def validate_state(state):
         lrf = party.get("last_revive_floor")
         if lrf is not None and (not _is_int(lrf) or lrf < 1):
             errs.append("party.last_revive_floor must be null or an integer >= 1")
+        rr = party.get("rests")
+        if rr is not None and not (isinstance(rr, dict) and _is_int(rr.get("short_used", 0)) and rr.get("short_used", 0) >= 0):
+            errs.append("party.rests must be {short_used: integer >= 0, last_short, last_long}")
     crawlers = state.get("crawlers")
     if not isinstance(crawlers, list):
         errs.append("crawlers must be an array")
@@ -573,6 +617,10 @@ def validate_state(state):
         for it in c.get("inventory", []) if isinstance(c.get("inventory"), list) else []:
             if not (isinstance(it, dict) and isinstance(it.get("name"), str) and _is_int(it.get("qty")) and it["qty"] >= 1):
                 errs.append(f"{where}: inventory items must be {{name, qty>=1}} (got {json.dumps(it)[:60]})")
+            elif it.get("uses_reset") is not None:   # optional tracked uses (uses/uses_max/uses_reset); items without uses_reset are not checked (as before)
+                e, w = _uses_problems(it)
+                errs.extend(f"{where}: {m}" for m in e)
+                warns.extend(f"{where}: {m}" for m in w)
         for it in c.get("conditions", []) if isinstance(c.get("conditions"), list) else []:
             if not isinstance(it, str):
                 errs.append(f"{where}: conditions must be strings")
@@ -602,8 +650,30 @@ def validate_state(state):
             errs.append(f"{where}: build must be an object")
         if "death_saves" in c and not (isinstance(c["death_saves"], dict) and _is_int(c["death_saves"].get("successes")) and _is_int(c["death_saves"].get("fails"))):
             errs.append(f"{where}: death_saves must be {{successes, fails}} integers")
+        elif "death_saves" in c and not all(0 <= c["death_saves"][k] <= 3 for k in ("successes", "fails")):
+            warns.append(f"{where}: death_saves counts should be 0..3")
+        if "resources" in c:   # optional class resources (Oct 7 2026): [{name, uses, uses_max, uses_reset}]
+            if not isinstance(c["resources"], list):
+                errs.append(f"{where}: resources must be an array")
+            else:
+                rn = set()
+                for r in c["resources"]:
+                    if not (isinstance(r, dict) and isinstance(r.get("name"), str) and r["name"].strip()):
+                        errs.append(f"{where}: resources items need a name")
+                        continue
+                    if r["name"].lower() in rn:
+                        errs.append(f"{where}: duplicate resource {r['name']!r}")
+                    rn.add(r["name"].lower())
+                    e, w = _uses_problems(r)
+                    errs.extend(f"{where}: resource{m[4:]}" if m.startswith("item") else f"{where}: {m}" for m in e)
+                    warns.extend(f"{where}: {m}" for m in w)
+        for k in ("proficiencies", "expertise"):
+            if k in c and not (isinstance(c[k], list) and all(isinstance(x, str) and x.strip() for x in c[k])):
+                errs.append(f"{where}: {k} must be an array of names")
         if _is_int(c.get("revives_used")) and _is_int(limits.get("revive_per_crawler_cap")) and c["revives_used"] > limits["revive_per_crawler_cap"]:
             errs.append(f"{where}: revives_used ({c['revives_used']}) exceeds per-crawler cap ({limits['revive_per_crawler_cap']})")
+    if state.get("encounter") is not None:   # optional GM-only enemy stat blocks (Oct 7 2026)
+        errs.extend(_enemy_problems(state["encounter"]))
     live = [c for c in crawlers if isinstance(c, dict) and isinstance(c.get("name"), str) and c.get("kind", "player") == "player" and c.get("status") != "benched"]
     for i, c in enumerate(live):
         for o in live[i + 1:]:
@@ -749,6 +819,7 @@ def _spec_inventory(spec):
         for k in ("mechanics", "category", "srd_id", "chargen_key"):
             if it.get(k):
                 row[k] = it[k]
+        fix_intake_bag(row)
         inv.append(row)
     return inv
 
@@ -772,6 +843,15 @@ def crawler_from_spec(spec, inv=None, with_credits=False):
         c["fan_profile"] = {"quirks": list(fp.get("quirks", [])), "notes": str(fp.get("notes", "")), "opt_outs": list(fp.get("opt_outs", []))}
     if isinstance(spec.get("build"), dict):
         c["build"] = spec["build"]
+    if isinstance(spec.get("resources"), list):
+        c["resources"] = [dict(r) for r in spec["resources"] if isinstance(r, dict)]
+    elif crawler_kind(c) in ("player", "pet-crawler"):
+        try:   # spell slots, Rage, Second Wind, Bardic Inspiration, species uses... all full, from the class/level/build (card_rules)
+            res = card_rules.default_resources(c)
+        except Exception:   # a broken rules table never blocks a new Crawler
+            res = []
+        if res:
+            c["resources"] = res
     return c
 
 
@@ -879,6 +959,16 @@ def cmd_show(a):
             "Achievements: " + (", ".join(x["name"] for x in c["achievements"]) or "none"),
             f"Vows: {len(c['vows'])} | Boons: {len(c['boons'])} | Revives used {c['revives_used']} | Bypasses used {c['bypasses_used']}",
         ]
+        ds = c.get("death_saves") or {}
+        if ds.get("successes") or ds.get("fails") or hp["current"] == 0:
+            lines.append(f"Death saves: {ds.get('successes', 0)} successes / {ds.get('fails', 0)} fails")
+        if c.get("resources"):
+            lines.append("Resources: " + "; ".join(_res_text(r) for r in c["resources"]))
+        profs, exp, src = _prof_lists(c)
+        if profs or exp:
+            lines.append("Proficiencies: " + (", ".join(profs) or "none") + (f" | expertise: {', '.join(exp)}" if exp else "") + (" (from build)" if src == "build" else ""))
+        if isinstance(c.get("pet"), dict) and c["pet"].get("status") == "alive" and "hp_current" in c["pet"]:
+            lines.append(f"Pet {c['pet']['name']}: HP {c['pet']['hp_current']}" + (f"/{c['pet']['hp_max']}" if "hp_max" in c["pet"] else ""))
         if c["fan_profile"]["quirks"] or c["fan_profile"]["opt_outs"]:
             lines.append(f"Fan profile: quirks {c['fan_profile']['quirks']}, opt-outs {[o.get('topic') if isinstance(o, dict) else o for o in c['fan_profile']['opt_outs']]}")
         return c, "\n".join(lines)
@@ -893,6 +983,10 @@ def cmd_show(a):
                      + (f" | {', '.join(c['conditions'])}" if c["conditions"] else ""))
     if not state["crawlers"]:
         lines.append("(no crawlers yet)")
+    enc = state.get("encounter")
+    if enc:
+        lines.append(f"Encounter (GM only): {enc.get('name') or '(unnamed)'}")
+        lines.extend(f"  {_enemy_line(e)}" for e in enc.get("enemies") or [])
     return state, "\n".join(lines)
 
 
@@ -967,6 +1061,13 @@ def cmd_inventory(a):
                     it["mechanics"] = a.mechanics
                 if getattr(a, "category", None):
                     it["category"] = a.category
+                if getattr(a, "uses", None) is not None:   # tracked uses (e.g. Healer's Kit: --uses 10 --uses-reset never)
+                    if a.uses < 1:
+                        raise StateError("--uses must be >= 1")
+                    per = _reset_key(getattr(a, "uses_reset", None) or "never")
+                    if per not in USES_RESETS:
+                        raise StateError(f"--uses-reset must be one of {', '.join(USES_RESETS)}")
+                    it.update(uses=a.uses, uses_max=a.uses, uses_reset=per)
                 inv.append(it)
             return state, f"{c['name']} +{a.qty} {a.item}"
         if not existing:
@@ -982,12 +1083,618 @@ def cmd_inventory(a):
     return {"ok": True, "message": text}, text
 
 
+def _find_uses_item(c, item):
+    """Exact name, else a unique partial name (the older exact-only _find_item below is used by sell/transfer)."""
+    low = item.strip().lower()
+    inv = c.get("inventory", [])
+    exact = [i for i in inv if i["name"].lower() == low]
+    if exact:
+        return exact[0]
+    part = [i for i in inv if low in i["name"].lower()]
+    if len(part) == 1:
+        return part[0]
+    raise StateError(f"{c['name']} has {'several items matching' if part else 'no item matching'} '{item}'" + (f": {', '.join(i['name'] for i in part)}" if part else ""))
+
+
+def cmd_uses(a):
+    """uses spend|restore|set CRAWLER ITEM, uses reset [CRAWLER] [--per session]: tracked item uses (uses/uses_max/uses_reset)."""
+    def fn(state):
+        if a.action == "reset":
+            per = _reset_key(a.per)
+            if per not in USES_RESETS or per == "never":
+                raise StateError(f"--per must be one of {', '.join(r for r in USES_RESETS if r != 'never')}")
+            done, rdone = [], []
+            for c in ([find_crawler(state, a.crawler)] if a.crawler else state["crawlers"]):
+                for it in c.get("inventory", []):
+                    if it.get("uses_reset") is not None and _reset_key(it["uses_reset"]) == per and _is_int(it.get("uses_max")) and it.get("uses") != it["uses_max"]:
+                        it["uses"] = it["uses_max"]
+                        done.append(f"{c['name']}: {it['name']} {it['uses']}/{it['uses_max']}")
+                for r in c.get("resources") or []:   # class resources (Second Wind ...) share the reset periods
+                    if _reset_key(r.get("uses_reset")) == per and _is_int(r.get("uses_max")) and r.get("uses") != r["uses_max"]:
+                        r["uses"] = r["uses_max"]
+                        rdone.append(f"{c['name']}: {r['name']} {r['uses']}/{r['uses_max']} (resource)")
+                    elif per == "short_rest" and _is_int(r.get("short_rest_regain")) and _is_int(r.get("uses_max")) and _is_int(r.get("uses")) and r["uses"] < r["uses_max"]:
+                        r["uses"] = min(r["uses_max"], r["uses"] + r["short_rest_regain"])   # 2024: Rage, Second Wind, Channel Divinity regain one on a Short Rest
+                        rdone.append(f"{c['name']}: {r['name']} {r['uses']}/{r['uses_max']} (resource, +{r['short_rest_regain']} on a Short Rest)")
+            if not done and not rdone:
+                return state, f"nothing to refill (no item with uses_reset {per!r} is below its max)"
+            head = f"refilled {len(done)} item(s)" + (f" and {len(rdone)} class resource(s)" if rdone else "") + f" that reset per {per.replace('_', ' ')}"
+            return state, head + "".join(f"\n  {d}" for d in done + rdone)
+        if not a.crawler or not a.item:
+            raise StateError(f"uses {a.action} needs CRAWLER and ITEM")
+        c = find_crawler(state, a.crawler)
+        it = _find_uses_item(c, a.item)
+        if not _is_int(it.get("uses_max")) or not _is_int(it.get("uses")):
+            raise StateError(f"{it['name']} does not track uses: give it uses, uses_max and uses_reset first (see tools/README.md)")
+        if a.action == "spend":
+            require_active(c, "spend item uses (a benched Crawler is not in play)", a)
+            if a.n < 1 or a.n > it["uses"]:
+                raise StateError(f"REFUSED: {it['name']} has {it['uses']}/{it['uses_max']} uses left")
+            it["uses"] -= a.n
+        elif a.action == "restore":
+            if a.n < 1:
+                raise StateError("--n must be >= 1")
+            it["uses"] = min(it["uses_max"], it["uses"] + a.n)
+        else:  # set
+            if a.to is None or not 0 <= a.to <= it["uses_max"]:
+                raise StateError(f"uses set needs --to N between 0 and {it['uses_max']}")
+            it["uses"] = a.to
+        return state, f"{c['name']}: {it['name']} uses {it['uses']}/{it['uses_max']}"
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+# --------------------------------------------------------------------------- trackers (Oct 7 2026, s1 post-session): death saves, class resources,
+# skill proficiencies, enemy stat blocks. Every field is OPTIONAL on the record, so saves written before it load unchanged.
+#   crawler.death_saves  {successes, fails}         `death-save success|fail|nat20|stabilize|reset|show CRAWLER [--n 2] [--kit HOLDER]`
+#   crawler.resources    [{name, uses, uses_max, uses_reset}]   `resource add|spend|restore|set|remove|show` (Second Wind, Rage, Channel Divinity...)
+#   crawler.proficiencies [skill, ...] (+ crawler.expertise [skill, ...])   `proficiency add|remove|list|mod`
+#   state.encounter      {name, started, enemies: [{name, ac, hp{current,max}, to_hit, damage, notes}]}   `enemy ...` (GM-only, never on a card)
+# Pet HP lives on the pet record (pet.hp_current / pet.hp_max): `pet hp OWNER --damage N | --heal N | --to N`.
+# Healer's kit = an inventory item with uses: `inventory add X "Healer's Kit" --uses 10 --uses-reset never`; `death-save stabilize Y --kit X` spends one.
+
+SKILLS = {"acrobatics": "dex", "animal handling": "wis", "arcana": "int", "athletics": "str", "deception": "cha", "history": "int",
+          "insight": "wis", "intimidation": "cha", "investigation": "int", "medicine": "wis", "nature": "int", "perception": "wis",
+          "performance": "cha", "persuasion": "cha", "religion": "int", "sleight of hand": "dex", "stealth": "dex", "survival": "wis"}
+DEATH_STABLE = "Stable"
+
+
+def _skill_name(text):
+    """Canonical 5e skill name ('sleight-of-hand' -> 'Sleight of Hand'), or None when it is not one of the 18 skills."""
+    k = re.sub(r"[\s_-]+", " ", str(text or "").strip().lower())
+    return " ".join(w if w == "of" else w.capitalize() for w in k.split()) if k in SKILLS else None
+
+
+def prof_bonus(level):
+    return 2 + (max(1, int(level or 1)) - 1) // 4
+
+
+def _has_cond(c, name):
+    return next((x for x in c.get("conditions", []) if x.lower() == name.lower()), None)
+
+
+def _ds(c):
+    ds = c.get("death_saves")
+    if not isinstance(ds, dict):
+        ds = c["death_saves"] = {"successes": 0, "fails": 0}
+    return ds
+
+
+def _ds_text(c):
+    ds = c.get("death_saves") or {}
+    return f"death saves {ds.get('successes', 0)} successes / {ds.get('fails', 0)} fails"
+
+
+def reset_death_saves(c):
+    """Zero the counters (regaining HP or becoming stable). True when anything changed. Leaves records without the field alone."""
+    ds = c.get("death_saves")
+    if isinstance(ds, dict) and (ds.get("successes") or ds.get("fails")):
+        ds["successes"] = ds["fails"] = 0
+        return True
+    return False
+
+
+def _spend_kit(state, holder_name):
+    h = find_crawler(state, holder_name)
+    kits = [i for i in h.get("inventory", []) if "healer" in i["name"].lower()]
+    if not kits:
+        raise StateError(f"{h['name']} has no Healer's Kit (add one with `inventory add {h['name']} \"Healer's Kit\" --uses 10 --uses-reset never`)")
+    kit = next((i for i in kits if _is_int(i.get("uses")) and i["uses"] > 0), None)
+    if kit is None:
+        if all(not _is_int(i.get("uses")) for i in kits):
+            raise StateError(f"{kits[0]['name']} does not track uses yet: `uses` needs uses/uses_max (re-add with --uses 10 or `set`)")
+        raise StateError(f"REFUSED: {h['name']}'s {kits[0]['name']} is out of uses")
+    kit["uses"] -= 1
+    return f"{h['name']}'s {kit['name']} {kit['uses']}/{kit['uses_max']} uses left"
+
+
+def cmd_death_save(a):
+    """death-save success|fail|nat20|stabilize|reset|show CRAWLER [--n N] [--kit HOLDER]: 5e death saving throws at 0 HP.
+    3 successes = Stable (counters reset, Stable condition added). 3 fails = dead (the GM confirms with `condition add X Dead`).
+    nat20 = back to 1 HP (counters reset; Unconscious/Stable removed). A fail while Stable (damage at 0 HP) removes Stable.
+    Healing above 0 HP (`hp heal|set`) resets the counters automatically."""
+    if a.action == "show":
+        c = find_crawler(read_state_file(), a.crawler)
+        ds = c.get("death_saves") or {"successes": 0, "fails": 0}
+        return {"ok": True, "crawler": c["name"], "death_saves": ds, "hp": c["hp"]["current"], "stable": bool(_has_cond(c, DEATH_STABLE))}, f"{c['name']}: {_ds_text(c)} (HP {c['hp']['current']}/{c['hp']['max']}{', Stable' if _has_cond(c, DEATH_STABLE) else ''})"
+    n = a.n if a.n is not None else 1
+    if a.action in ("success", "fail") and not 1 <= n <= 3:
+        raise StateError("--n must be 1, 2 or 3 (a crit hit at 0 HP or a natural 1 is --n 2)")
+
+    def fn(state):
+        c = find_crawler(state, a.crawler)
+        require_active(c, "make death saves (a benched Crawler is not in play)", a)
+        hp, ds, extra = c["hp"], _ds(c), ""
+        if a.action in ("success", "fail", "nat20") and hp["current"] > 0:
+            raise StateError(f"REFUSED: {c['name']} is at {hp['current']} HP; death saves are only rolled at 0 HP (set HP first: `hp set {c['name']} 0`)")
+        if a.action == "success":
+            if _has_cond(c, DEATH_STABLE):
+                raise StateError(f"{c['name']} is already Stable: no death saves until they take damage")
+            ds["successes"] = min(3, ds["successes"] + n)
+            if ds["successes"] >= 3:
+                reset_death_saves(c)
+                c["conditions"].append(DEATH_STABLE)
+                extra = " - 3 successes: STABLE (still unconscious at 0 HP; counters reset)"
+        elif a.action == "fail":
+            st = _has_cond(c, DEATH_STABLE)
+            if st:
+                c["conditions"].remove(st)
+                extra = " - no longer Stable"
+            ds["fails"] = min(3, ds["fails"] + n)
+            if ds["fails"] >= 3:
+                extra += f" - 3 FAILS: {c['name']} DIES. Confirm with `state.py condition add {c['name']} Dead` (Story Box reclaim, floor-lost rules apply)"
+        elif a.action == "nat20":
+            hp["current"] = max(hp["current"], 1)
+            ds["successes"] = ds["fails"] = 0
+            gone = [x for x in list(c["conditions"]) if x.lower() in ("unconscious", DEATH_STABLE.lower())]
+            for x in gone:
+                c["conditions"].remove(x)
+            extra = " - natural 20: back up at 1 HP" + (f" ({', '.join(gone)} removed)" if gone else "")
+        elif a.action == "stabilize":
+            if hp["current"] > 0:
+                raise StateError(f"{c['name']} is at {hp['current']} HP; only a Crawler at 0 HP can be stabilized")
+            if a.kit:
+                extra = f" ({_spend_kit(state, a.kit)})"
+            ds["successes"] = ds["fails"] = 0
+            if not _has_cond(c, DEATH_STABLE):
+                c["conditions"].append(DEATH_STABLE)
+            extra = " - STABLE (counters reset)" + extra
+        elif a.action == "reset":
+            ds["successes"] = ds["fails"] = 0
+        return state, f"{c['name']}: {_ds_text(c)}{extra}"
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+# ---- class resources (Second Wind, Rage, Channel Divinity, Ki ...): same uses/uses_max/uses_reset fields as tracked items
+
+def _find_resource(c, name, required=True):
+    low = name.strip().lower()
+    res = c.get("resources") or []
+    exact = [r for r in res if r["name"].lower() == low]
+    if exact:
+        return exact[0]
+    part = [r for r in res if low in r["name"].lower()]
+    if len(part) == 1:
+        return part[0]
+    if not required:
+        return None
+    raise StateError(f"{c['name']} has {'several resources matching' if part else 'no resource matching'} '{name}'" + (f": {', '.join(r['name'] for r in part)}" if part else f" (have: {', '.join(r['name'] for r in res) or 'none'}; add one with `resource add`)"))
+
+
+def _res_text(r):
+    return f"{r['name']} {r['uses']}/{r['uses_max']} ({str(r.get('uses_reset', '')).replace('_', ' ')})"
+
+
+def cmd_resource(a):
+    """resource add CRAWLER NAME --max N [--per short_rest] [--uses N] | spend|restore CRAWLER NAME [--n N] | set CRAWLER NAME --to N [--max N] [--per R]
+    | remove CRAWLER NAME | show [CRAWLER]. Refill at rests with `uses reset --per short_rest|long_rest|...` (items and resources together)."""
+    if a.action == "show":
+        state = read_state_file()
+        rows = [find_crawler(state, a.crawler)] if a.crawler else state["crawlers"]
+        data = {"ok": True, "resources": {c["name"]: c.get("resources") or [] for c in rows}}
+        lines = [f"{c['name']}: " + ("; ".join(_res_text(r) for r in c.get("resources") or []) or "none") for c in rows]
+        return data, "\n".join(lines) or "(no crawlers)"
+    if a.action == "sync":
+        if not a.crawler:
+            raise StateError("resource sync needs CRAWLER (one Crawler at a time, so no other sheet changes)")
+
+        def sync(state):
+            c = find_crawler(state, a.crawler)
+            ch = card_rules.sync_resources(c)
+            if not ch:
+                return state, f"{c['name']}: resources already match the class, level and build (nothing changed)"
+            return state, f"{c['name']}: resources synced from the class, level and build" + "".join(f"\n  {x}" for x in ch)
+        text = mutate(sync)
+        return {"ok": True, "message": text}, text
+    if not a.crawler or not a.name:
+        raise StateError(f"resource {a.action} needs CRAWLER and NAME")
+
+    def fn(state):
+        c = find_crawler(state, a.crawler)
+        if a.action == "add":
+            if any(r["name"].lower() == a.name.strip().lower() for r in c.get("resources") or []):
+                raise StateError(f"{c['name']} already tracks '{a.name}' (use `resource set`)")
+            if a.max is None or a.max < 1:
+                raise StateError("resource add needs --max N (N >= 1)")
+            per = _reset_key(a.per or "long_rest")
+            if per not in USES_RESETS:
+                raise StateError(f"--per must be one of {', '.join(USES_RESETS)}")
+            uses = a.max if a.uses is None else a.uses
+            if not 0 <= uses <= a.max:
+                raise StateError(f"--uses must be between 0 and {a.max}")
+            r = {"name": a.name.strip(), "uses": uses, "uses_max": a.max, "uses_reset": per}
+            c.setdefault("resources", []).append(r)
+            return state, f"{c['name']}: now tracking {_res_text(r)}"
+        r = _find_resource(c, a.name)
+        if a.action == "remove":
+            c["resources"].remove(r)
+            return state, f"{c['name']}: stopped tracking {r['name']}"
+        if a.action == "spend":
+            require_active(c, "spend class resources (a benched Crawler is not in play)", a)
+            n = a.n if a.n is not None else 1
+            if n < 1 or n > r["uses"]:
+                raise StateError(f"REFUSED: {r['name']} has {r['uses']}/{r['uses_max']} left")
+            r["uses"] -= n
+        elif a.action == "restore":
+            n = a.n if a.n is not None else 1
+            if n < 1:
+                raise StateError("--n must be >= 1")
+            r["uses"] = min(r["uses_max"], r["uses"] + n)
+        else:  # set
+            if a.max is not None:
+                if a.max < 1:
+                    raise StateError("--max must be >= 1")
+                r["uses_max"] = a.max
+            if a.per:
+                per = _reset_key(a.per)
+                if per not in USES_RESETS:
+                    raise StateError(f"--per must be one of {', '.join(USES_RESETS)}")
+                r["uses_reset"] = per
+            if a.to is not None:
+                if not 0 <= a.to <= r["uses_max"]:
+                    raise StateError(f"--to must be between 0 and {r['uses_max']}")
+                r["uses"] = a.to
+            elif a.max is None and not a.per:
+                raise StateError("resource set needs --to N, --max N or --per R")
+            r["uses"] = min(r["uses"], r["uses_max"])
+        return state, f"{c['name']}: {_res_text(r)}"
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+# ---- rests and Hit Dice (Oct 7 2026: card "Rests" block). state.party.rests = {short_used, last_short, last_long}; the daily cap is
+# limits.short_rests_per_day (default 4, Caleb 2026-10-07). A Long Rest (saferoom only, core 5.6) resets the count.
+
+def short_rest_cap(state):
+    v = (state.get("limits") or {}).get("short_rests_per_day")
+    return v if _is_int(v) and v >= 0 else (card_rules.rules().get("rests") or {}).get("short_rests_per_day", 4)
+
+
+def party_rests(state):
+    r = (state.get("party") or {}).get("rests")
+    r = r if isinstance(r, dict) else {}
+    return {"short_used": r.get("short_used", 0) if _is_int(r.get("short_used")) else 0, "short_max": short_rest_cap(state),
+            "last_short": r.get("last_short"), "last_long": r.get("last_long")}
+
+
+def _rest_targets(state, a):
+    if a.crawler:
+        return [find_crawler(state, n) for n in a.crawler]
+    return [c for c in state["crawlers"] if crawler_kind(c) in ("player", "pet-crawler") and is_active(c) and not _is_dead(c)]
+
+
+def _refill(c, pers, regain=False):
+    done = []
+    for it in c.get("inventory", []):
+        if it.get("uses_reset") is not None and _reset_key(it["uses_reset"]) in pers and _is_int(it.get("uses_max")) and it.get("uses") != it["uses_max"]:
+            it["uses"] = it["uses_max"]
+            done.append(f"{it['name']} {it['uses']}/{it['uses_max']}")
+    for r in c.get("resources") or []:
+        if not (_is_int(r.get("uses_max")) and _is_int(r.get("uses"))):
+            continue
+        if _reset_key(r.get("uses_reset")) in pers and r["uses"] != r["uses_max"]:
+            r["uses"] = r["uses_max"]
+            done.append(f"{r['name']} {r['uses']}/{r['uses_max']}")
+        elif regain and _is_int(r.get("short_rest_regain")) and r["uses"] < r["uses_max"]:
+            r["uses"] = min(r["uses_max"], r["uses"] + r["short_rest_regain"])
+            done.append(f"{r['name']} {r['uses']}/{r['uses_max']} (+{r['short_rest_regain']})")
+    return done
+
+
+def cmd_rest(a):
+    """rest short: count one party Short Rest (refused past the daily cap unless --force) and refill short-rest uses (2024: Rage,
+    Second Wind, Channel Divinity, Wild Shape regain one); Hit Dice are spent with `hit-dice spend`. rest long: saferoom Long Rest:
+    all HP (temp HP ends), all Hit Dice, every short- and long-rest use, death saves cleared, Short Rest count back to 0."""
+    if a.action == "show":
+        st = read_state_file()
+        pr = party_rests(st)
+        return {"ok": True, **pr}, f"Party Short Rests today: {pr['short_used']}/{pr['short_max']} used" + (f" (last Long Rest {pr['last_long']})" if pr.get("last_long") else "")
+
+    def fn(state):
+        party = state.setdefault("party", {})
+        r = party.get("rests") if isinstance(party.get("rests"), dict) else {}
+        party["rests"] = r
+        used = r.get("short_used", 0) if _is_int(r.get("short_used")) else 0
+        cap = short_rest_cap(state)
+        if a.action == "set":
+            if a.short_used is None or a.short_used < 0:
+                raise StateError("rest set needs --short-used N (N >= 0)")
+            r["short_used"] = a.short_used
+            return state, f"Party Short Rests today: {a.short_used}/{cap} used"
+        lines = []
+        if a.action == "short":
+            if used >= cap and not (a.force or "").strip():
+                raise StateError(f"REFUSED: the party already took {used}/{cap} Short Rests today; a Long Rest (saferoom) resets it. GM ruling: --force \"reason\"")
+            r["short_used"] = used + 1
+            r["last_short"] = now_iso()
+            for c in _rest_targets(state, a):
+                done = _refill(c, {"short_rest"}, regain=True)
+                lines.append(f"  {c['name']}: " + (", ".join(done) if done else "nothing to refill") + f"; Hit Dice {c['hit_dice']['current']}/{c['hit_dice']['max']} (spend with `hit-dice spend {c['name']}`)")
+            head = f"Short Rest {r['short_used']}/{cap} today" + (f" (over the cap: {a.force})" if used >= cap else "")
+        else:
+            r["short_used"] = 0
+            r["last_long"] = now_iso()
+            for c in _rest_targets(state, a):
+                hp = c["hp"]
+                if hp["current"] <= 0:   # 2024: a Long Rest needs at least 1 HP at its start
+                    lines.append(f"  {c['name']}: at 0 HP, no Long Rest benefits (heal or stabilize first)")
+                    continue
+                hp["current"], hp["temp"] = hp["max"], 0
+                c["hit_dice"]["current"] = c["hit_dice"]["max"]
+                reset_death_saves(c)
+                done = _refill(c, {"short_rest", "long_rest"})
+                lines.append(f"  {c['name']}: HP {hp['current']}/{hp['max']}, Hit Dice {c['hit_dice']['current']}/{c['hit_dice']['max']}" + (f", {', '.join(done)}" if done else ""))
+            head = f"Long Rest: Short Rests reset to 0/{cap}"
+        return state, head + ("\n" + "\n".join(lines) if lines else "")
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+def cmd_hit_dice(a):
+    """hit-dice spend CRAWLER [--n N] [--roll | --heal HP]: spend Hit Point Dice (Short Rest: die + CON each); restore CRAWLER [--n N | --all]."""
+    if a.n is None or a.n < 1:
+        raise StateError("--n must be >= 1")
+
+    def fn(state):
+        c = find_crawler(state, a.crawler)
+        hd = c["hit_dice"]
+        if a.action == "restore":
+            hd["current"] = hd["max"] if a.all else min(hd["max"], hd["current"] + a.n)
+            return state, f"{c['name']}: Hit Dice {hd['current']}/{hd['max']}"
+        require_active(c, "spend Hit Dice (a benched Crawler is not in play)", a)
+        if a.n > hd["current"]:
+            raise StateError(f"REFUSED: {c['name']} has {hd['current']}/{hd['max']} Hit Dice left")
+        die = str((c.get("build") or {}).get("hit_die") or "")
+        m = re.fullmatch(r"d(\d+)", die)
+        size = int(m.group(1)) if m else int((((card_rules.chargen().get("classes") or {}).get(c.get("class")) or {}).get("hit_die")) or 8)
+        con = card_rules.mod((c.get("abilities") or {}).get("con", 10))
+        hd["current"] -= a.n
+        heal, rolled = a.heal, ""
+        if a.roll:
+            rng = random.SystemRandom()
+            dice = [rng.randint(1, size) for _ in range(a.n)]
+            heal = sum(max(0, d + con) for d in dice)
+            rolled = f" (rolled {'+'.join(map(str, dice))}, {card_rules.signed(con)} CON each)"
+        hp = c["hp"]
+        if heal:
+            if heal < 0:
+                raise StateError("--heal must be >= 0")
+            before = hp["current"]
+            hp["current"] = min(hp["max"], hp["current"] + heal)
+            if before == 0 and hp["current"] > 0:
+                reset_death_saves(c)
+        return state, f"{c['name']}: spent {a.n} Hit Die (d{size}){rolled}" + (f", healed {heal}: HP {hp['current']}/{hp['max']}" if heal else "") + f"; Hit Dice {hd['current']}/{hd['max']}"
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+# ---- skill proficiencies
+
+def _prof_lists(c):
+    """(proficiencies, expertise, source). Tracked lists first; else the creation build's skills/expertise (read-only fallback)."""
+    if isinstance(c.get("proficiencies"), list):
+        return list(c["proficiencies"]), list(c.get("expertise") or []), "tracked"
+    b = c.get("build") if isinstance(c.get("build"), dict) else {}
+    cc = b.get("class_choices") if isinstance(b.get("class_choices"), dict) else {}
+    as_list = lambda v: [x for x in (v if isinstance(v, list) else [v] if v else []) if isinstance(x, str)]   # noqa: E731
+    return as_list(b.get("skills")), as_list(b.get("expertise") or cc.get("expertise")), "build"
+
+
+def skill_mod(c, skill):
+    """-> (total, ability, ability_score, proficiency 'expertise'|'proficient'|None)."""
+    name = _skill_name(skill)
+    if not name:
+        raise StateError(f"'{skill}' is not a 5e skill ({', '.join(_skill_name(s) for s in SKILLS)})")
+    ab = SKILLS[name.lower()]
+    score = (c.get("abilities") or {}).get(ab, 10)
+    profs, exp, _src = _prof_lists(c)
+    low = {str(x).lower() for x in profs}
+    lowe = {str(x).lower() for x in exp}
+    pb = prof_bonus(c.get("level"))
+    kind = "expertise" if name.lower() in lowe else "proficient" if name.lower() in low else None
+    return (score - 10) // 2 + (2 * pb if kind == "expertise" else pb if kind else 0), ab, score, kind
+
+
+def cmd_proficiency(a):
+    """proficiency add|remove CRAWLER SKILL [--expertise] [--other] | list [CRAWLER] | mod CRAWLER SKILL (the one number to add to the d20)."""
+    if a.action in ("list", "mod"):
+        state = read_state_file()
+        if a.action == "mod":
+            if not a.crawler or not a.skill:
+                raise StateError("proficiency mod needs CRAWLER and SKILL")
+            c = find_crawler(state, a.crawler)
+            total, ab, score, kind = skill_mod(c, a.skill)
+            why = f"{ab.upper()} {score} ({(score - 10) // 2:+d})" + (f" + {'2x ' if kind == 'expertise' else ''}prof {prof_bonus(c.get('level')):+d}" if kind else ", not proficient")
+            return {"ok": True, "crawler": c["name"], "skill": _skill_name(a.skill), "mod": total, "proficiency": kind}, f"{c['name']} {_skill_name(a.skill)} {total:+d} ({why})"
+        rows = [find_crawler(state, a.crawler)] if a.crawler else state["crawlers"]
+        out, lines = {}, []
+        for c in rows:
+            p, e, src = _prof_lists(c)
+            out[c["name"]] = {"proficiencies": p, "expertise": e, "source": src}
+            lines.append(f"{c['name']}: " + (", ".join(p) or "none") + (f" | expertise: {', '.join(e)}" if e else "") + (" (from the creation build; not tracked yet)" if src == "build" and p else ""))
+        return {"ok": True, "crawlers": out}, "\n".join(lines) or "(no crawlers)"
+    if not a.crawler or not a.skill:
+        raise StateError(f"proficiency {a.action} needs CRAWLER and SKILL")
+    name = _skill_name(a.skill)
+    if not name and not a.other:
+        raise StateError(f"'{a.skill}' is not one of the 18 5e skills; add --other to track it anyway (tools, saves, weapons)")
+    name = name or a.skill.strip()
+
+    def fn(state):
+        c = find_crawler(state, a.crawler)
+        if not isinstance(c.get("proficiencies"), list):   # first tracked edit: start from the creation build's skills so nothing is lost
+            p, e, _src = _prof_lists(c)
+            c["proficiencies"] = [(_skill_name(x) or x) for x in p]
+            if e:
+                c["expertise"] = [(_skill_name(x) or x) for x in e]
+        target = "expertise" if a.expertise else "proficiencies"
+        lst = c.setdefault(target, [])
+        have = next((x for x in lst if x.lower() == name.lower()), None)
+        if a.action == "add":
+            if have:
+                raise StateError(f"{c['name']} already has {target} in {have}")
+            lst.append(name)
+            if a.expertise and not any(x.lower() == name.lower() for x in c["proficiencies"]):
+                c["proficiencies"].append(name)   # expertise implies proficiency
+        else:
+            if not have:
+                raise StateError(f"{c['name']} has no {target} entry '{name}'")
+            lst.remove(have)
+            if not a.expertise:
+                ex = next((x for x in c.get("expertise") or [] if x.lower() == name.lower()), None)
+                if ex:
+                    c["expertise"].remove(ex)
+        return state, f"{c['name']}: proficiencies " + (", ".join(c["proficiencies"]) or "none") + (f" | expertise {', '.join(c['expertise'])}" if c.get("expertise") else "")
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
+# ---- enemy stat blocks for the active encounter (GM-only: state.encounter is never part of a crawler view or card)
+
+def _enemy_line(e):
+    hp = e["hp"]
+    bits = [f"AC {e['ac']}" if e.get("ac") is not None else None, f"HP {hp['current']}/{hp['max']}" + (" DOWN" if hp["current"] == 0 else ""),
+            f"{e['to_hit']:+d} to hit" if _is_int(e.get("to_hit")) else None, e.get("damage") or None, e.get("notes") or None]
+    return f"{e['name']}: " + " | ".join(b for b in bits if b)
+
+
+def _find_enemy(enc, name):
+    low = name.strip().lower()
+    es = enc.get("enemies") or []
+    exact = [e for e in es if e["name"].lower() == low]
+    if exact:
+        return exact[0]
+    part = [e for e in es if low in e["name"].lower()]
+    if len(part) == 1:
+        return part[0]
+    raise StateError(f"{'several enemies match' if part else 'no enemy matches'} '{name}'" + (f": {', '.join(e['name'] for e in part)}" if part else f" (have: {', '.join(e['name'] for e in es) or 'none'})"))
+
+
+def _enemy_problems(enc):
+    errs = []
+    if not isinstance(enc, dict):
+        return ["encounter must be an object"]
+    if not isinstance(enc.get("name", ""), str):
+        errs.append("encounter.name must be a string")
+    es = enc.get("enemies", [])
+    if not isinstance(es, list):
+        return errs + ["encounter.enemies must be an array"]
+    seen = set()
+    for e in es:
+        if not (isinstance(e, dict) and isinstance(e.get("name"), str) and e["name"].strip()):
+            errs.append("encounter.enemies items need a name")
+            continue
+        w = f"enemy '{e['name']}'"
+        if e["name"].lower() in seen:
+            errs.append(f"duplicate {w}")
+        seen.add(e["name"].lower())
+        hp = e.get("hp")
+        if not (isinstance(hp, dict) and _is_int(hp.get("current")) and _is_int(hp.get("max")) and hp["max"] >= 1 and 0 <= hp["current"] <= hp["max"]):
+            errs.append(f"{w}: hp must be {{current 0..max, max >= 1}} integers")
+        for k in ("ac", "to_hit"):
+            if e.get(k) is not None and not _is_int(e[k]):
+                errs.append(f"{w}: {k} must be an integer or null")
+        for k in ("damage", "notes"):
+            if e.get(k) is not None and not isinstance(e[k], str):
+                errs.append(f"{w}: {k} must be a string")
+    return errs
+
+
+def cmd_enemy(a):
+    """enemy start NAME [--replace] | add NAME --hp N [--ac N] [--to-hit N] [--damage T] [--notes T] [--count K] | damage|heal NAME N
+    | set NAME [--ac N] [--hp-max N] [--hp-current N] [--to-hit N] [--damage T] [--notes T] | remove NAME | list | clear.
+    The active encounter's stat blocks so the GM reads one number. GM-only: never on a player card."""
+    if a.action == "list":
+        enc = read_state_file().get("encounter")
+        if not enc:
+            return {"ok": True, "encounter": None}, "(no active encounter; `enemy start NAME` or `enemy add`)"
+        return {"ok": True, "encounter": enc}, f"Encounter: {enc.get('name') or '(unnamed)'}\n" + ("\n".join(_enemy_line(e) for e in enc.get("enemies") or []) or "(no enemies)")
+    if a.action != "clear" and not a.name:
+        raise StateError(f"enemy {a.action} needs NAME")
+
+    def fn(state):
+        enc = state.get("encounter")
+        if a.action == "start":
+            if enc and enc.get("enemies") and not a.replace:
+                raise StateError(f"an encounter is active ({enc.get('name')}, {len(enc['enemies'])} enemies); `enemy clear` first or add --replace")
+            state["encounter"] = {"name": a.name.strip(), "started": now_iso(), "enemies": []}
+            return state, f"encounter started: {a.name.strip()}"
+        if a.action == "clear":
+            if not enc:
+                raise StateError("no active encounter")
+            del state["encounter"]
+            return state, f"encounter cleared: {enc.get('name') or '(unnamed)'} ({len(enc.get('enemies') or [])} enemy blocks removed)"
+        if a.action == "add":
+            if a.hp is None or a.hp < 1:
+                raise StateError("enemy add needs --hp N (max HP, >= 1)")
+            enc = state.setdefault("encounter", {"name": "", "started": now_iso(), "enemies": []})
+            count = a.count if a.count is not None else 1
+            if not 1 <= count <= 30:
+                raise StateError("--count must be 1..30")
+            names = [a.name.strip()] if count == 1 else [f"{a.name.strip()} {i}" for i in range(1, count + 1)]
+            taken = {e["name"].lower() for e in enc["enemies"]}
+            clash = [n for n in names if n.lower() in taken]
+            if clash:
+                raise StateError(f"already in the encounter: {', '.join(clash)}")
+            for n in names:
+                enc["enemies"].append({"name": n, "ac": a.ac, "hp": {"current": a.hp, "max": a.hp}, "to_hit": a.to_hit, "damage": a.damage or "", "notes": a.notes or ""})
+            return state, "\n".join(_enemy_line(e) for e in enc["enemies"] if e["name"] in names)
+        if not enc:
+            raise StateError("no active encounter (`enemy start NAME` or `enemy add`)")
+        e = _find_enemy(enc, a.name)
+        if a.action in ("damage", "heal"):
+            if a.amount is None or a.amount < 1:
+                raise StateError(f"enemy {a.action} needs an amount >= 1")
+            hp = e["hp"]
+            hp["current"] = max(0, hp["current"] - a.amount) if a.action == "damage" else min(hp["max"], hp["current"] + a.amount)
+        elif a.action == "set":
+            if a.hp_max is not None:
+                if a.hp_max < 1:
+                    raise StateError("--hp-max must be >= 1")
+                e["hp"]["max"] = a.hp_max
+                e["hp"]["current"] = min(e["hp"]["current"], a.hp_max)
+            if a.hp_current is not None:
+                e["hp"]["current"] = min(e["hp"]["max"], max(0, a.hp_current))
+            for k in ("ac", "to_hit", "damage", "notes"):
+                v = getattr(a, k, None)
+                if v is not None:
+                    e[k] = v
+        elif a.action == "remove":
+            enc["enemies"].remove(e)
+            return state, f"removed {e['name']} from the encounter"
+        return state, _enemy_line(e)
+    text = mutate(fn)
+    return {"ok": True, "message": text}, text
+
+
 def cmd_hp(a):
     def fn(state):
         c = find_crawler(state, a.crawler)
         require_active(c, "take damage or healing (a benched Crawler is not in play)", a)
         hp = c["hp"]
         extra = ""
+        was_down = hp["current"] == 0
         if a.action == "damage":
             amount = _positive(a.amount)
             absorbed = min(hp["temp"], amount)
@@ -1017,6 +1724,12 @@ def cmd_hp(a):
             amount = _positive(a.amount)
             # 5e: temp HP don't stack - keep the higher unless --replace
             hp["temp"] = amount if a.replace else max(hp["temp"], amount)
+        if was_down and hp["current"] > 0:   # regaining HP ends the dying state: death save counters reset (Oct 7 2026)
+            if reset_death_saves(c):
+                extra += " (death saves reset)"
+            left = [x for x in c.get("conditions", []) if x.lower() in ("unconscious", "stable")]
+            if left:
+                extra += f" - back above 0 HP; remove {'/'.join(left)} if healing ended it (`condition remove`)"
         return state, _hp_line(c) + extra
     text = mutate(fn)
     return {"ok": True, "message": text}, text
@@ -1272,9 +1985,9 @@ def cmd_pet(a):
         return data, head + ("\n".join(_pet_line(c) for c in rows) if rows else "(no pets on file)")
     if not a.owner:
         raise StateError(f"usage: pet {a.action} OWNER ...")
-    fn = {"add": _pet_add, "set": _pet_set, "kill": _pet_mark_dead, "mark-dead": _pet_mark_dead, "remove": _pet_remove, "convert": _pet_convert, "shop": _pet_shop, "heal": _pet_heal}.get(a.action)
+    fn = {"add": _pet_add, "set": _pet_set, "kill": _pet_mark_dead, "mark-dead": _pet_mark_dead, "remove": _pet_remove, "convert": _pet_convert, "shop": _pet_shop, "heal": _pet_heal, "hp": _pet_hp}.get(a.action)
     if not fn:
-        raise StateError("pet add|set|show|mark-dead|remove|convert|shop|heal")
+        raise StateError("pet add|set|show|mark-dead|remove|convert|shop|heal|hp")
     if getattr(a, "dry_run", False) and a.action not in ("add", "shop", "set"):
         raise StateError(f"REFUSED: pet {a.action} has no --dry-run preview; nothing was saved. Run it without --dry-run to apply it")
     return fn(a)
@@ -1360,6 +2073,43 @@ def _pet_set(a):
     mutate(fn)
     ledgers.append("pet", {"event": "updated", "owner": box["owner"], "pet": box["pet"], "before": box["before"], "changes": box["changes"], "by": a.by or "gm"})
     return {"ok": True, "owner": box["owner"], "pet": box["pet"], "changes": box["changes"]}, f"{box['owner']}'s pet {box['pet']} updated: " + ", ".join(f"{k} {v}" for k, v in box["changes"].items())
+
+
+def _pet_hp(a):
+    """pet hp OWNER --damage N | --heal N | --to N: track a LIVING plain pet's current HP (0..max; logged). Max HP comes from the record
+    (pet set --hp-max), else the species table. --heal is the GM applying healing that works on a pet (Good Boy Gulp, a GM ruling)."""
+    given = [x for x in ("damage", "heal", "to") if getattr(a, x, None) is not None]
+    if len(given) != 1:
+        raise StateError("pet hp needs exactly one of --damage N, --heal N, --to N")
+    box = {}
+
+    def fn(state):
+        _off(state)
+        c = _owner_for_pet(state, a.owner)
+        pet = living_pet(c)
+        if not pet:
+            raise StateError(f"{c['name']} has no living plain pet (a pet-Crawler uses `hp` like any Crawler)")
+        if not _is_int(pet.get("hp_max")):
+            sp = next((e for e in _pet_species().get("species", []) if e.get("id") == pet.get("species_srd_id")), {})
+            if not _is_int(sp.get("hp")):
+                raise StateError(f"{pet['name']} has no max HP on file: set it first with `pet set {c['name']} --hp-max N`")
+            pet["hp_max"] = sp["hp"]
+        cur = pet["hp_current"] if _is_int(pet.get("hp_current")) else pet["hp_max"]
+        before = cur
+        if a.damage is not None:
+            cur = max(0, cur - _positive(a.damage))
+        elif a.heal is not None:
+            cur = min(pet["hp_max"], cur + _positive(a.heal))
+        else:
+            cur = min(pet["hp_max"], max(0, a.to))
+        pet["hp_current"] = cur
+        box.update(owner=c["name"], pet=pet["name"], before=before, after=cur, max=pet["hp_max"])
+        return state, c
+    _RUN.update(reason=f"pet hp: {a.owner}", source="pet")
+    mutate(fn)
+    ledgers.append("pet", {"event": "hp", "owner": box["owner"], "pet": box["pet"], "before": box["before"], "after": box["after"], "by": a.by or "gm"})
+    tail = f" - AT 0 HP: if it died, `state.py pet mark-dead {box['owner']} --reason \"...\"` (pets are never revived)" if box["after"] == 0 else ""
+    return {"ok": True, "owner": box["owner"], "pet": box["pet"], "hp_current": box["after"], "hp_max": box["max"]}, f"{box['owner']}'s pet {box['pet']}: HP {box['before']} -> {box['after']}/{box['max']}{tail}"
 
 
 def _pet_mark_dead(a):
@@ -3150,6 +3900,67 @@ def build_parser():
     sp.add_argument("--notes")
     sp.add_argument("--mechanics", help="add: short player-facing effect text shown on the sheet card")
     sp.add_argument("--category", choices=["weapons", "armor", "magic", "gear"], help="add: sheet card section")
+    sp.add_argument("--uses", type=_cli_int, help="add: track uses (uses = uses_max = N), e.g. Healer's Kit --uses 10")
+    sp.add_argument("--uses-reset", dest="uses_reset", help="add with --uses: session, short_rest, long_rest, day, floor or never (default never)")
+
+    sp = add("uses", cmd_uses, "uses spend|restore|set CRAWLER ITEM, or uses reset [CRAWLER] [--per session]: tracked item uses")
+    sp.add_argument("action", choices=["spend", "restore", "set", "reset"])
+    sp.add_argument("crawler", nargs="?")
+    sp.add_argument("item", nargs="?")
+    sp.add_argument("--n", type=_cli_int, default=1, help="spend/restore: how many uses (default 1)")
+    sp.add_argument("--to", type=_cli_int, help="set: the new uses count (0..uses_max)")
+    sp.add_argument("--per", default="session", help="reset: refill every item whose uses_reset is this (session, short_rest, long_rest, day, floor)")
+
+    sp = add("death-save", cmd_death_save, "death-save success|fail|nat20|stabilize|reset|show CRAWLER [--n 2] [--kit HOLDER]: 5e death saves at 0 HP")
+    sp.add_argument("action", choices=["success", "fail", "nat20", "stabilize", "reset", "show"])
+    sp.add_argument("crawler")
+    sp.add_argument("--n", type=_cli_int, help="success/fail: how many (a natural 1 or a crit at 0 HP = --n 2)")
+    sp.add_argument("--kit", help="stabilize: spend one use of this Crawler's Healer's Kit")
+
+    sp = add("resource", cmd_resource, "resource add|spend|restore|set|remove|show CRAWLER NAME | sync CRAWLER: class resources (slots, Second Wind, Rage...) with a reset period; sync adds the class/level/build defaults; refill with `rest short|long` or `uses reset --per R`")
+    sp.add_argument("action", choices=["add", "spend", "restore", "set", "remove", "show", "sync"])
+    sp.add_argument("crawler", nargs="?")
+    sp.add_argument("name", nargs="?")
+    sp.add_argument("--max", type=_cli_int, help="add/set: uses per reset")
+    sp.add_argument("--per", help="add/set: session, short_rest, long_rest (add default), day, floor, never")
+    sp.add_argument("--uses", type=_cli_int, help="add: current uses (default = max)")
+    sp.add_argument("--n", type=_cli_int, help="spend/restore: how many (default 1)")
+    sp.add_argument("--to", type=_cli_int, help="set: the new current uses")
+
+    sp = add("rest", cmd_rest, "rest short|long|show|set: party rests (Short Rests used today out of limits.short_rests_per_day, default 4); refills short/long-rest uses of ACTIVE Crawlers")
+    sp.add_argument("action", choices=["short", "long", "show", "set"])
+    sp.add_argument("--crawler", action="append", help="short/long: only these Crawlers (repeatable; default every active, living Crawler)")
+    sp.add_argument("--force", metavar="REASON", help="short: allow a Short Rest past the daily limit (GM ruling)")
+    sp.add_argument("--short-used", dest="short_used", type=_cli_int, help="set: Short Rests used today")
+
+    sp = add("hit-dice", cmd_hit_dice, "hit-dice spend|restore CRAWLER [--n N] [--roll | --heal HP] [--all]: Hit Point Dice (spent on a Short Rest: roll + CON each)")
+    sp.add_argument("action", choices=["spend", "restore"])
+    sp.add_argument("crawler")
+    sp.add_argument("--n", type=_cli_int, default=1, help="how many dice (default 1)")
+    sp.add_argument("--roll", action="store_true", help="spend: roll the dice here (die + CON each) and heal that much")
+    sp.add_argument("--heal", type=_cli_int, help="spend: HP the player rolled (healed, capped at max HP)")
+    sp.add_argument("--all", action="store_true", help="restore: back to max")
+
+    sp = add("proficiency", cmd_proficiency, "proficiency add|remove CRAWLER SKILL [--expertise] | list [CRAWLER] | mod CRAWLER SKILL: skill proficiencies and the total modifier")
+    sp.add_argument("action", choices=["add", "remove", "list", "mod"])
+    sp.add_argument("crawler", nargs="?")
+    sp.add_argument("skill", nargs="?")
+    sp.add_argument("--expertise", action="store_true", help="add/remove: expertise (double proficiency) instead")
+    sp.add_argument("--other", action="store_true", help="add: allow a name that is not one of the 18 skills (tools, saves)")
+
+    sp = add("enemy", cmd_enemy, "enemy start|add|damage|heal|set|remove|list|clear: GM-only stat blocks for the active encounter (never on cards)")
+    sp.add_argument("action", choices=["start", "add", "damage", "heal", "set", "remove", "list", "clear"])
+    sp.add_argument("name", nargs="?")
+    sp.add_argument("amount", nargs="?", type=_cli_int)
+    sp.add_argument("--ac", type=_cli_int)
+    sp.add_argument("--hp", type=_cli_int, help="add: max HP (starts full)")
+    sp.add_argument("--hp-max", dest="hp_max", type=_cli_int)
+    sp.add_argument("--hp-current", dest="hp_current", type=_cli_int)
+    sp.add_argument("--to-hit", dest="to_hit", type=_cli_int, help="attack bonus, e.g. 5 for +5")
+    sp.add_argument("--damage", help="e.g. '1d6+3 piercing' or '2x Slam 1d6+2'")
+    sp.add_argument("--notes")
+    sp.add_argument("--count", type=_cli_int, help="add: K copies named NAME 1..K")
+    sp.add_argument("--replace", action="store_true", help="start: replace an active encounter")
 
     sp = add("hp", cmd_hp, "hp damage|heal|set|temp CRAWLER N")
     sp.add_argument("action", choices=["damage", "heal", "set", "temp"])
@@ -3286,7 +4097,7 @@ def build_parser():
     sp.add_argument("--dry-run", dest="dry_run", action="store_true")
 
     sp = add("pet", cmd_pet, "GM-run plain pet (decision 022): pet add OWNER --species S --name N [--cr 1/4] | set OWNER [--kind K] [--hp-max N] [--hp-current N] [--unnamed|--named] | show [OWNER] | kill OWNER --reason T | shop OWNER ITEM --reason T [--sell]")
-    sp.add_argument("action", choices=["add", "set", "show", "kill", "mark-dead", "remove", "convert", "shop", "heal"])
+    sp.add_argument("action", choices=["add", "set", "show", "kill", "mark-dead", "remove", "convert", "shop", "heal", "hp"])
     sp.add_argument("owner", nargs="?")
     sp.add_argument("item", nargs="?", help="shop: heal-critter-potion | pet-carrier (omit for the price list)")
     sp.add_argument("--species", help="add: an SRD Beast of CR 1/4 or lower (tables/pet-species.json; dog/rottweiler = mastiff)")
@@ -3305,6 +4116,9 @@ def build_parser():
     sp.add_argument("--qty", type=_cli_int)
     sp.add_argument("--floor", type=_cli_int, help="shop: floor of the sale (default: current floor); sets the multiplier")
     sp.add_argument("--sell", action="store_true", help="shop: half-price buyback")
+    sp.add_argument("--damage", type=_cli_int, help="hp: damage the pet takes")
+    sp.add_argument("--heal", type=_cli_int, help="hp: HP the pet regains (Good Boy Gulp result, GM ruling)")
+    sp.add_argument("--to", type=_cli_int, help="hp: set the pet's current HP")
     sp.add_argument("--by", help="who filed it (default gm)")
     sp.add_argument("--dry-run", dest="dry_run", action="store_true")
 

@@ -96,7 +96,7 @@ add("Read a Lore Scrap Aloud","z03","Read Tanya's note out loud to the party",
  "You read a dead woman's last words to a room full of cameras. Beautiful. Or content. It's content.","inspiration",
  reward_line="Reward: Heroic Inspiration, if you meant it. A shrug, if you didn't.",cat="ACH-0872",src=H,inspiration=True,notes="R2 if heartfelt; R0 if mocking. Heroic Inspiration max 1 per session (core §3.7). Catalog rarity outlier stepped down.")
 add("Odd Coin Pocketed","z03","Open the UNCLAIMED crate in the Lost & Found",
- "Oddity logged.","hidden",hidden=True,reward_line="Reward: (none)",cat="ACH-0081",src=H,notes="HIDDEN, no reward. Spine plant SEED-ODDCOIN. Never explain.")
+ "Oddity logged.","hidden",hidden=True,reward_line="Reward: (none)",cat="ACH-0081",src=H,notes="HIDDEN, no reward. Spine plant SEED-ODDCOIN. Never explain. GM (2026-10-07): an identify/appraise request to any terminal, vendor or the System gets ITEM NOT RECOGNIZED (or the cancelled 500-credit offer); never name a floor, fee, clearance level or future appraisal.")
 add("Rescue a Civilian","z04","Get Dale Pruitt out of the net",
  "You saved Dale. Dale will now talk to you about ductwork. Forever. You did this.",TC,credits=25,title_aw="Lifeguard",
  reward_line=tc("Lifeguard","Dale says thanks. Dale says it again."),cat="ACH-0869",src=H,notes="R1.")
@@ -196,9 +196,23 @@ add("Trailblazing Vending Gore","z03","First crawler in the campaign to smash a 
  cat="NEW",src=CI,ledger=["A-024","A-114","A-165"],trail=True,
  notes="Trailblazing pattern (audit R8; canon Crazy Cat Lady -> Trailblazing Crazy Cat Lady A-024/A-114, WIKI-ONLY for A-114): same theme, one tier up, Silver max on F1. DESIGN ONLY: in the alpha Bone was first and was paid only base Vending Gore; do not backfill. Counts as the crawler's 0-1 Silver, so do not also pay a Boss Box Silver unless the table agrees.")
 
+# ================= Added 2026-10-07 (Lore, s1 review): toasts used at the table, from the floor docs =================
+add("Paperwork Survivor","z00","Complete intake",
+ "You completed intake without dying, crying, or reading the Terms of Service. Two out of three ain't bad.","snark",
+ reward_line="Reward: ...No. It's paperwork. Nobody gets a prize for paperwork.",cat="NEW",src=H,status="toast text from character creation guide §9; floor doc §10.2 NEW R0",
+ notes="R0 snark-only, pays nothing. Intake toast (create flow step 7); fires once per Crawler at intake. Given to all three s1 Crawlers.")
+add("Win Initiative","z02","Win initiative on the floor's first roll",
+ "You went first. Enjoy it. It is the last time anything down here waits for you.","snark",
+ reward_line="Reward: None. Bragging rights only.",cat="ACH-0860",src=H,status="trigger from floor doc day-01 Z2 hooks; description proposed; reward line as played in s1",
+ notes="Catalog R1 downgraded to R0 on F1 (floor doc §5.2 seeds: too routine to pay). Catalog name 'Orientation Pit: Win initiative'. s1: Mr. White, Vent Row.")
+add("Rescued by Paperwork","any","Floor 1 Reprieve used: ejected to the nearest saferoom at 1 HP",
+ "You were, for legal reasons, not dead. Please do not take this as a precedent.","title",title_aw="Rescued by Paperwork",
+ reward_line='Reward: Title "Rescued by Paperwork". No credits. No precedent.',cat="NEW",src=H,status="Title and toast from floor doc §1.3 (Reprieve)",
+ notes="Title only, no credits (same as Mostly Dead Intern / Participation Corpse). Third suggested Reprieve Title in floor doc §1.3; pick one Reprieve Title per Reprieve. s1: Mr. White, 2026-10-07.")
+
 # canon pacing check: how many Bronze box achievements per crawler
-deck = {"schema": "achievement-deck/0.1", "deck_id": "ach-f01-orientation-pit", "version": "0.1.0", "floor": 1,
- "zone": "any", "floor_name": "The Orientation Pit", "owner": "DCC Lore", "updated": "2026-10-04",
+deck = {"schema": "achievement-deck/0.1", "deck_id": "ach-f01-orientation-pit", "version": "0.1.1", "floor": 1,
+ "zone": "any", "floor_name": "The Orientation Pit", "owner": "DCC Lore", "updated": "2026-10-07",
  "banner_format": "[SYSTEM] New achievement! <title>.  /  <description>  /  <reward_line>",
  "reward_kinds": {"box": "named Bronze/Silver box (box_name has no tier prefix)", "title_credits": "Title + 25 credits (R1, x1 on F1)",
    "title": "Title only", "snark": "snark-only reward (R0, canon pattern A-007/A-025)", "item": "specific item or mixed reward",

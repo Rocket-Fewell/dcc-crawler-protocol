@@ -1,7 +1,7 @@
 {
  "meta": {
-  "version": "0.1.6",
-  "stamp": "2026-10-04",
+  "version": "0.1.7",
+  "stamp": "2026-10-07",
   "source": "Written from memory of the 2024 PHB / SRD 5.2 by the Borent build. Tables only list names, numbers and one-line plain effects; no book text.",
   "verify_todo": [
    {
@@ -58,7 +58,10 @@
    }
   ],
   "srd_id_note": "0.1.3: the four header items no longer carry cost_cp (no flat placeholder; price keys off the chosen variant srd_id; needs_variant_choice stays). 0.1.2: every items.* entry now has srd_id (stable kebab-case SRD id from DCC Lore tables/item-reskins.json, schema item-reskins/0.1.0; built from each entry's chargen_keys). Existing item keys (snake_case) are unchanged and still used by packages/choices; srd_id is what the sheet stores and what prices/mechanics key off, never a display name. Four items are choice slots whose srd_id is a generic HEADER id (holy-symbol, gaming-set, musical-instrument, artisans-tools): they carry srd_id_kind='header', needs_variant_choice=true and srd_variant_ids; /create must make the player pick a variant and the sheet must store the variant srd_id (headers are never priced). Price fixes: arcane_focus_staff and druidic_focus_staff 20 cp -> 500 cp (SRD 5.2.1 Arcane Focus Staff / Druidic Focus Wooden staff 5 gp). Spellbook 50 gp kept (SRD 5.1 gear table; not in SRD 5.2.1 tables).",
-  "roll_method_note": "Current 0.1.6 (ability_methods added in 0.1.4; text unchanged since): Roll = three arrays of 4d6dl1, keep ONE with total above 72 (keep_min_total 73), no upper limit, reroll all three if none qualifies, every die logged; decision 024). No other table changed."
+  "roll_method_note": "Current 0.1.6 (ability_methods added in 0.1.4; text unchanged since): Roll = three arrays of 4d6dl1, keep ONE with total above 72 (keep_min_total 73), no upper limit, reroll all three if none qualifies, every die logged; decision 024). No other table changed.",
+  "changelog": [
+   "0.1.7 (2026-10-07): mastery options = every weapon the class may master (2024); Druid Magician / Cleric Thaumaturge +1 cantrip (spells.bonus_cantrips); Ranger Hunter's Mark always prepared (not a pick); Explorer's, Dungeoneer's, Entertainer's, Burglar's Pack contents = SRD 5.2."
+  ]
  },
  "point_buy": {
   "budget": 27,
@@ -261,7 +264,8 @@
       "maul"
      ],
      "kind": "weapons",
-     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons.",
+     "note": "2024: any weapon the class may master (Barbarian: Simple/Martial Melee; Rogue: Simple, or Martial with Finesse or Light). Default picks = weapons the Crawler carries."
     }
    ]
   },
@@ -500,7 +504,10 @@
     "spellbook": null,
     "prepared": 4,
     "ability": "wis",
-    "slots_l1": 2
+    "slots_l1": 2,
+    "bonus_cantrips": {
+     "divine_order:Thaumaturge": 1
+    }
    }
   },
   "Druid": {
@@ -629,7 +636,10 @@
     "spellbook": null,
     "prepared": 4,
     "ability": "wis",
-    "slots_l1": 2
+    "slots_l1": 2,
+    "bonus_cantrips": {
+     "primal_order:Magician": 1
+    }
    }
   },
   "Fighter": {
@@ -789,7 +799,8 @@
       "longbow"
      ],
      "kind": "weapons",
-     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons.",
+     "note": "2024: any weapon the class may master (Barbarian: Simple/Martial Melee; Rogue: Simple, or Martial with Finesse or Light). Default picks = weapons the Crawler carries."
     }
    ]
   },
@@ -962,7 +973,8 @@
       "longbow"
      ],
      "kind": "weapons",
-     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons.",
+     "note": "2024: any weapon the class may master (Barbarian: Simple/Martial Melee; Rogue: Simple, or Martial with Finesse or Light). Default picks = weapons the Crawler carries."
     }
    ],
    "spells": {
@@ -1106,7 +1118,8 @@
       "longbow"
      ],
      "kind": "weapons",
-     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons.",
+     "note": "2024: any weapon the class may master (Barbarian: Simple/Martial Melee; Rogue: Simple, or Martial with Finesse or Light). Default picks = weapons the Crawler carries."
     }
    ],
    "spells": {
@@ -1121,7 +1134,6 @@
      "Fog Cloud",
      "Goodberry",
      "Hail of Thorns",
-     "Hunter's Mark",
      "Jump",
      "Longstrider",
      "Speak with Animals"
@@ -1131,7 +1143,10 @@
     "spellbook": null,
     "prepared": 2,
     "ability": "wis",
-    "slots_l1": 2
+    "slots_l1": 2,
+    "always_prepared": [
+     "Hunter's Mark"
+    ]
    }
   },
   "Rogue": {
@@ -1248,7 +1263,8 @@
       "shortbow"
      ],
      "kind": "weapons",
-     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons."
+     "help": "Unlock the special trick on this many weapons. Names are the real 5e weapons.",
+     "note": "2024: any weapon the class may master (Barbarian: Simple/Martial Melee; Rogue: Simple, or Martial with Finesse or Light). Default picks = weapons the Crawler carries."
     }
    ]
   },
@@ -3947,7 +3963,7 @@
    "name": "Explorer's Pack",
    "category": "gear",
    "cost_cp": 1000,
-   "mechanics": "Backpack, bedroll, mess kit, tinderbox, 10 torches, 10 days rations, waterskin, 50 ft rope.",
+   "mechanics": "Backpack, bedroll, 2 oil flasks, 10 days rations, 50 ft rope, tinderbox, 10 torches, waterskin.",
    "junk": "Lost-and-Found Backpack (someone else's gym clothes)",
    "srd_id": "explorers-pack"
   },
@@ -3955,7 +3971,7 @@
    "name": "Dungeoneer's Pack",
    "category": "gear",
    "cost_cp": 1200,
-   "mechanics": "Backpack, crowbar, hammer, 10 pitons, 10 torches, tinderbox, 10 days rations, waterskin, 50 ft rope.",
+   "mechanics": "Backpack, caltrops, crowbar, 2 oil flasks, 10 days rations, 50 ft rope, tinderbox, 10 torches, waterskin.",
    "junk": "Maintenance-Closet Duffel",
    "srd_id": "dungeoneers-pack"
   },
@@ -3979,7 +3995,7 @@
    "name": "Entertainer's Pack",
    "category": "gear",
    "cost_cp": 4000,
-   "mechanics": "Backpack, bedroll, 3 costumes, 5 candles, 5 days rations, waterskin, disguise kit.",
+   "mechanics": "Backpack, bedroll, bell, bullseye lantern, 3 costumes, mirror, 8 oil flasks, 9 days rations, tinderbox, waterskin.",
    "junk": "Backstage Roller Bag",
    "srd_id": "entertainers-pack"
   },
@@ -3987,7 +4003,7 @@
    "name": "Burglar's Pack",
    "category": "gear",
    "cost_cp": 1600,
-   "mechanics": "Backpack, 1,000 ball bearings, 10 ft string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 oil flasks, 5 days rations, tinderbox, waterskin, 50 ft rope.",
+   "mechanics": "Backpack, ball bearings, bell, 10 candles, crowbar, hooded lantern, 7 oil flasks, 5 days rations, 50 ft rope, tinderbox, waterskin.",
    "junk": "Gym Bag of Suspicious Hardware",
    "srd_id": "burglars-pack"
   }

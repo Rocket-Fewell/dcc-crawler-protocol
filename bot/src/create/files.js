@@ -45,6 +45,8 @@ export function buildObject(d, t, tag) {
     background_asi: d.asi?.type === '2-1' ? { mode: '+2/+1', plus2: d.asi.plus2, plus1: d.asi.plus1, applied: bonus } : { mode: '+1/+1/+1', applied: bonus },
     origin_feat: R.bgInfo(d, t).feat,
     extra_origin_feat: R.extraFeatNeeded(d, t) ? d.extraFeat : null,
+    ...(R.lessonsFeatOffered(d, t) ? { lessons_feat: d.lessonsFeat || null } : {}),   // null = not chosen yet: the card says "pick one"
+    ...(R.miFeats(d, t).length ? { magic_initiate: Object.fromEntries(R.miFeats(d, t).map((f) => [f, { ability: d.mi?.[f]?.ability ?? null, cantrips: d.mi?.[f]?.cantrips ?? [], level1: d.mi?.[f]?.level1 ?? [] }])) } : {}),   // empty = not chosen yet (the card says so)
     score_method: d.method,
     score_base: d.base,
     score_rolls: d.method === 'roll' ? d.scoreRolls : undefined,
@@ -65,7 +67,7 @@ export function buildObject(d, t, tag) {
     created_via: d.prebuilt ? 'create-flow-prebuilt' : 'create-flow',
     flow_version: d.flow_version,
     chargen_table_version: t.version,
-    todo: ['Origin feat sub-picks (Magic Initiate spells, Musician instruments, Crafter tools) are not asked by the flow v0.1'],
+    todo: ['Origin feat sub-picks (Musician instruments, Crafter tools) are not asked by the flow v0.1; Magic Initiate spells are asked on S11 (optional)'],
   };
   if (sp) {
     b.spells = { cantrips: d.spells.cantrips, prepared: sp.spellbook ? d.spells.prepared : d.spells.level1, spellbook: sp.spellbook ? d.spells.level1 : null };
@@ -119,13 +121,18 @@ export function buildBlock(d, t) {
   const picks = Object.entries(d.classChoices ?? {}).map(([k, v]) => (BRANCH_CHOICES.has(k) ? classOptionLabel(t, d.class, v) : `${v}`)).join(', ');
   L.push(`Class (Provisional): ${classLabel(t, d.class)} 1 (d${c.hit_die})${picks ? ` - ${picks}` : ''}`);
   const asi = d.asi?.type === '2-1' ? `+2 ${d.asi.plus2.toUpperCase()}, +1 ${d.asi.plus1.toUpperCase()}` : '+1 to each of ' + R.bgInfo(d, t).asi.map((a) => a.toUpperCase()).join('/');
-  L.push(`Background (Prior Employment): ${d.background} (${asi}); Origin feat ${R.originFeats(d, t).join(' + ')}`);
+  L.push(`Background (Prior Employment): ${d.background} (${asi}); Origin feat ${R.originFeats(d, t).join(' + ')}${R.lessonsFeatOffered(d, t) && !d.lessonsFeat ? ' + Lessons of the First Ones feat: not chosen yet, pick one' : ''}`);
   L.push(`Scores (${d.method}): ` + ABILITIES.map((a) => `${a.toUpperCase()} ${fa[a]}`).join(' '));
   L.push(`HP ${dv.hp}, AC ${dv.ac}, Proficiency Bonus +${R.PB}, Initiative ${R.signed(dv.initiative)}, Passive Perception ${dv.passives.perception}`);
   L.push(`Saves: ${c.saves.map((s) => s.toUpperCase()).join(', ')}`);
   L.push(`Skills: ${R.profSkills(d, t).join(', ')}${d.expertise?.length ? ` (Expertise: ${d.expertise.join(', ')})` : ''}`);
   L.push(`Tools: ${R.toolsList(d, t).join(', ') || 'none'}; Languages: Common, ${(d.languages ?? []).join(', ')}`);
   if (d.masteries?.length) L.push(`Weapon Mastery: ${d.masteries.map((m) => R.itemLabel(m, t)).join(', ')}`);
+  for (const f of R.miFeats(d, t)) {
+    const m = d.mi?.[f] ?? {};
+    const miss = [!(m.cantrips ?? []).length && '2 cantrips', !(m.level1 ?? []).length && 'one level 1 spell', !m.ability && 'ability'].filter(Boolean);
+    L.push(`${f}: cantrips ${(m.cantrips ?? []).join(', ') || '-'}; level 1 ${(m.level1 ?? []).join(', ') || '-'}; ability ${m.ability ? m.ability.toUpperCase() : '-'}${miss.length ? ` (not chosen yet: ${miss.join(', ')}; pick them)` : ''}`);
+  }
   if (sp) {
     L.push(`Spells (${sp.ability.toUpperCase()}): cantrips ${d.spells.cantrips.join(', ')}; ${sp.spellbook ? `spellbook ${d.spells.level1.join(', ')}; prepared ${d.spells.prepared.join(', ')}` : `level 1 ${d.spells.level1.join(', ')}`}; ${sp.slots_l1} slot(s)`);
   }

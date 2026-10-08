@@ -25,3 +25,12 @@ ACHIEVEMENTS: name - reward
 - Secrets never appear: GM quirks, affinity, the hidden Fan Profile, survey answers and opt-outs.
 - Benched Crawlers' cards carry a BENCHED header (see 00-gm-principles.md, Multiple Crawlers).
 - Needs per-item `notes` in state.json inventory (already supported) and a per-change `reason` field.
+
+## Combat block (Caleb, 2026-10-07 10:39 PM CT: cards must show this)
+Every card shows, right under the HP/AC line, computed from the build (never hand-typed):
+- **Attacks:** one line per weapon and attack cantrip: name, to-hit, damage and type, range, key property. Example: `Eldritch Blast: +6 to hit, 1d10 force, 120 ft`.
+- **Spellcasting:** save DC, spell attack bonus, and slots as used/max with when they come back. Example: `Pact Magic slots 1/1 (level 1), back on a Short Rest | Save DC 14 | Spell attack +6`. Every known spell with one-line mechanics.
+- **Features and traits:** class features, species traits and feats, each with uses as used/max and its reset (Second Wind 1/2 per Short Rest, Rage 2/2 per Long Rest, and so on).
+- **Rests:** Hit Dice used/max with the die size, and the party's Short Rests used today out of 4.
+- **Death saves:** shown only when at 0 HP, as successes and failures.
+Uses and slots update on the card the moment they're spent.

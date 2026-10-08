@@ -211,16 +211,41 @@ function cutAtBoundary(text, max, allowWordCut) {
 }
 
 /**
+ * Group voiced chunks (already sentence/paragraph-bounded, one voice each) into consecutive parts of at most
+ * `maxChars` spoken characters. Order and voices are kept; a part never splits a chunk.
+ * @returns {{ voice: string, text: string }[][]}
+ */
+export function groupIntoParts(chunks, maxChars) {
+  const parts = [];
+  let cur = [];
+  let used = 0;
+  for (const c of chunks) {
+    if (cur.length && used + c.text.length > maxChars) {
+      parts.push(cur);
+      cur = [];
+      used = 0;
+    }
+    cur.push(c);
+    used += c.text.length;
+  }
+  if (cur.length) parts.push(cur);
+  return parts;
+}
+
+/**
  * Full pipeline: raw GM text -> voiced, speakable chunks.
- *   1. parse [SYSTEM]/[GM]/[ROLL] tags per line (tag stripped, [ROLL] dropped)
- *   2. strip markdown/emoji/code, split into sentence-size chunks (each <= chunkMaxChars)
- *   3. hard-cap the total spoken text at maxMessageChars (cutting at a sentence/word boundary)
+ *   1. parse [SYSTEM]/[GM]/[NPC: Name]/[ROLL] tags per line (tag stripped, [ROLL] dropped)
+ *   2. strip markdown/emoji/code, split into sentence-size chunks (each <= chunkMaxChars), per paragraph and per voice
+ *   3. cap the total spoken text (cutting at a sentence/word boundary):
+ *      - legacy (no maxTotalChars): the cap is maxMessageChars and the rest is dropped;
+ *      - with maxTotalChars (the bridge, Oct 7 2026): text over maxMessageChars is NOT dropped; it is spoken in order as
+ *        `parts` of <= maxMessageChars each (every chunk keeps its own voice), up to the safety ceiling maxTotalChars.
  *
  * @param {string | string[]} raw  one text, or several independent sources (message body, embeds…);
  *                                 tag state resets for each source.
- * @returns {{ chunks: { voice: 'gm' | 'system', text: string }[], truncated: boolean }}
+ * @returns {{ chunks: { voice: string, text: string }[], truncated: boolean, split: boolean, parts: number, totalChars: number, droppedChars: number }}
  */
-export function prepareSpeechDetailed(raw, { chunkMaxChars = 600, maxMessageChars = 1500, defaultVoice = VOICE_GM } = {}) {
+export function prepareSpeechDetailed(raw, { chunkMaxChars = 600, maxMessageChars = 1500, maxTotalChars = null, defaultVoice = VOICE_GM } = {}) {
   const chunks = [];
   for (const source of Array.isArray(raw) ? raw : [raw]) {
     for (const seg of parseTaggedLines(source, { defaultVoice })) {
@@ -231,11 +256,13 @@ export function prepareSpeechDetailed(raw, { chunkMaxChars = 600, maxMessageChar
       }
     }
   }
+  const fullChars = chunks.reduce((n, c) => n + c.text.length, 0);
+  const cap = Number.isFinite(maxTotalChars) && maxTotalChars > 0 ? Math.max(maxTotalChars, maxMessageChars) : maxMessageChars;
   const out = [];
   let used = 0;
   let truncated = false;
   for (const chunk of chunks) {
-    const remaining = maxMessageChars - used;
+    const remaining = cap - used;
     if (chunk.text.length <= remaining) {
       out.push(chunk);
       used += chunk.text.length;
@@ -246,7 +273,9 @@ export function prepareSpeechDetailed(raw, { chunkMaxChars = 600, maxMessageChar
     if (hasSpeakableContent(cut)) out.push({ voice: chunk.voice, text: cut });
     break;
   }
-  return { chunks: out, truncated };
+  const totalChars = out.reduce((n, c) => n + c.text.length, 0);
+  const parts = groupIntoParts(out, maxMessageChars).length;
+  return { chunks: out, truncated, split: parts > 1, parts, totalChars, droppedChars: Math.max(0, fullChars - totalChars) };
 }
 
 /** Convenience wrapper returning just the chunks. */

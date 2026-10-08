@@ -3,11 +3,11 @@ Owner: DCC AI GM | Status: draft | Version: 0.2 | Updated: 2026-10-05
 Summary: At-the-table cheat sheet for Floor 1 (5 days): opener and death warning, clock, per-day table, pacing, carry-on tracker, ledger commands. Cites only numbers from the files named in each section. [SLOT] = missing, fill in or ask Caleb. Players are Crawlers, always. One live campaign at a time (`sessions/active-session.json`); tools take `--session` / `DCC_SESSION`.
 
 ## 0. Campaign
-- **Live default (2026-10-05):** `s1` (Season 1) — cold open, empty ledger, max 4 Crawlers. Confirm with Architect before spending.
+- **Live default (2026-10-08):** `s2` (Season 2) — cold open, fresh Floor 1 Day 1 world, max 4 Crawlers; Raithen (Hornn) carried over from s1 with 100 credits. `s1` (2026-10-05 to 2026-10-07, party wipe) is the archive. Confirm with Architect before spending.
 - **Parked save:** `alpha` — Horn (Wizard / Hornn) and Bone Wifebeater (Barbarian / Trailer Park Moses) in Z6 Break Room; Reprieves spent; credits Bone 127 / Horn 75. Resume only if Caleb switches the live campaign back.
 
 ## 1. Opening
-### A. New campaign / cold open (`s1`) — enc-d01-06
+### A. New campaign / cold open (`s2`; was `s1`) — enc-d01-06
 - **Where:** surface glowing stairwell → Floor 1 Intake (Z0) → atrium (Z1) → tutorial zones → Z6 Break Room.
 - **Clock:** floor hour 0 when surface entrances open (horn / beams). One-hour Native window is hours 0–1.
 - **Run first:** `python3 tools/encounter_text.py --day 1 --encounter enc-d01-06` (pipe player text to `discord_gm.py say`). Hand-tag if a wink still lands as System until Architect narrows SYSTEM_KINDS.
