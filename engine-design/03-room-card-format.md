@@ -47,7 +47,7 @@ Counts are never copied into the card. `count_ref` and `cr_ref` are field paths 
 }
 ```
 
-`map` is at most four lines (layout, cover, hazards, and one optional extra). Exit `kind` is `door`, `vent`, or `stairs`. Optional exit fields: `locked_by`, `hidden_by_secret`. Encounter `trigger` is `on_enter`, `on_search`, `clock`, or `noise`. Secret `trigger.type` is `check`, `item`, `action`, or `clock`. `voice` on an NPC is a name in `tables/npc-voices.json`. Lore owns `reveal_text`.
+`map` is at most four lines (layout, cover, hazards, and one optional extra). Exit `kind` is `door`, `vent`, or `stairs`. Optional exit fields: `locked_by`, `hidden_by_secret`. Encounter `trigger` is `on_enter`, `on_search`, `clock`, or `noise`. A secret has `trigger` or `triggers`. Each `type` is `check`, `item`, `action`, or `clock`. `reveal_text` is the read-aloud line. `gm_note` stays off that line. `voice` on an NPC is a name in `tables/npc-voices.json`. Lore owns `reveal_text`.
 
 ## Stat block
 ```json

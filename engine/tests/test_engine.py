@@ -72,6 +72,28 @@ class RoomTests(unittest.TestCase):
         self.assertEqual(enc["count"], 2)
         self.assertLessEqual(narration_tokens(room), 150)
 
+    def test_lore_z03_and_back_cage(self):
+        arcade = load_room("f01-z03")
+        ids = [s["id"] for s in arcade["secrets"]]
+        self.assertEqual(ids, ["unclaimed-crate", "odd-coin-identify", "back-cage"])
+        identify = arcade["secrets"][1]
+        self.assertEqual(identify["reveal_text"], "ITEM NOT RECOGNIZED.")
+        self.assertEqual(identify["trigger"]["item"], "Vendor Oddity (Unappraised)")
+        self.assertIn("Never explain it.", identify["gm_note"])
+        plant = arcade["secrets"][0]
+        self.assertEqual(plant["grants"]["item"], "Vendor Oddity (Unappraised)")
+        self.assertIn("A coin. Probably.", plant["grants"]["box_text"])
+        self.assertEqual(plant["achievement"]["id"], "ACH-0081")
+        cage = arcade["secrets"][2]
+        skills = [t["skill"] for t in cage["triggers"]]
+        self.assertEqual(skills, ["Perception", "Investigation"])
+        back = load_room("f01-z03b")
+        self.assertEqual(back["voice_lines"]["win"], "The map is scrawled in a hurry, and it shows a door that isn't on yours.")
+        labels = [row.get("label") or row.get("item") or row.get("roll") for row in back["loot"]]
+        self.assertIn("Sports Drink, Blue Flavor, Do Not Ask", labels)
+        self.assertIn("3d6 x 5", labels)
+        self.assertEqual([a["id"] for a in back["achievements"]], ["ACH-0177", "ACH-0179"])
+
     def test_day_4_break_room_layer_closes_vendors(self):
         room = load_room("f01-z06", day=4)
         self.assertEqual(room.get("vendors"), "closed")

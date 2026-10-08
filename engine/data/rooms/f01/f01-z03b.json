@@ -6,7 +6,7 @@
   "days_open": [
     1
   ],
-  "narrator_line": "Lost & Found, back cage. The floor keeps its own clock.",
+  "narrator_line": "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for.",
   "map": {
     "layout": "Lost & Found, back cage.",
     "cover": "No listed cover.",
@@ -19,24 +19,30 @@
     }
   ],
   "encounters": [],
-  "secrets": [
+  "secrets": [],
+  "loot": [
     {
-      "id": "back-cage",
-      "trigger": {
-        "type": "check",
-        "skill": "Perception",
-        "dc": 15
-      },
-      "reveal_text": "A false panel behind the change machine opens the back cage.",
-      "gm_only": true
+      "item": "Potion of Healing",
+      "label": "Sports Drink, Blue Flavor, Do Not Ask"
+    },
+    {
+      "item": "Shield",
+      "label": "riot shield stenciled PROPERTY OF ORIENTATION"
+    },
+    {
+      "roll": "3d6 x 5",
+      "unit": "credits"
+    },
+    {
+      "item": "scrawled map",
+      "reveals": "f01-zS"
     }
   ],
-  "loot": [],
   "npcs": [],
   "voice_lines": {
-    "intro": "Lost & Found, back cage is ahead.",
-    "twist": "The room does not stay still.",
-    "win": "You can leave when you are ready."
+    "intro": "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for.",
+    "twist": "Something in here is stenciled PROPERTY OF ORIENTATION. Orientation is not coming back for it.",
+    "win": "The map is scrawled in a hurry, and it shows a door that isn't on yours."
   },
   "item_hooks": [],
   "flags": {
@@ -47,5 +53,17 @@
   "source": {
     "spec": "floors/f01/00-overview.md",
     "enc_id": "overview-5.3"
-  }
+  },
+  "achievements": [
+    {
+      "id": "ACH-0177",
+      "name": "Hidden Cache",
+      "when": "on_loot"
+    },
+    {
+      "id": "ACH-0179",
+      "name": "Side Path",
+      "when": "zone_s_revealed"
+    }
+  ]
 }

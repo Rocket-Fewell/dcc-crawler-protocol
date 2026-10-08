@@ -39,13 +39,63 @@
   ],
   "secrets": [
     {
+      "id": "unclaimed-crate",
+      "trigger": {
+        "type": "action",
+        "verb": "open",
+        "target": "UNCLAIMED crate"
+      },
+      "reveal_text": "Oddity logged.",
+      "gm_only": false,
+      "grants": {
+        "item": "Vendor Oddity (Unappraised)",
+        "box_text": "╔══ ITEM ════════════════════════════════════════════╗\n  Vendor Oddity (Unappraised)\n  A coin. Probably. Value: ???\n  This item cannot be sold. Please don't try. It's\n  embarrassing for everyone.\n╚════════════════════════════════════════════════════╝"
+      },
+      "sets_flag": "SEED-ODDCOIN",
+      "flag_holder": "opener",
+      "achievement": {
+        "id": "ACH-0081",
+        "name": "Odd Coin Pocketed",
+        "hidden": true,
+        "toast": "Oddity logged.",
+        "reward": null
+      },
+      "gm_note": "No check. If the crate is never opened, the coin comes as a Weird pull in the first Green Room box (lore card f01-z09-0001), or from Dale's pocket if he dies. Must be planted on Floor 1."
+    },
+    {
       "id": "odd-coin-identify",
       "trigger": {
         "type": "item",
-        "item": "Odd Coin"
+        "item": "Vendor Oddity (Unappraised)",
+        "actions": [
+          "sell",
+          "identify",
+          "appraise"
+        ]
       },
-      "reveal_text": "ITEM NOT RECOGNIZED. Never name a floor or time.",
-      "gm_only": true
+      "reveal_text": "ITEM NOT RECOGNIZED.",
+      "gm_only": false,
+      "gm_note": "Same reply for sell, identify or appraise (Snakk-Matic, spell, check, or asking an NPC). Selling can instead get a 500-credit offer that cancels mid-animation. Never name a floor, fee or time. Never explain it."
+    },
+    {
+      "id": "back-cage",
+      "triggers": [
+        {
+          "type": "check",
+          "skill": "Perception",
+          "dc": 15,
+          "passive": true
+        },
+        {
+          "type": "check",
+          "skill": "Investigation",
+          "dc": 13,
+          "when": "someone says they are checking behind the machines"
+        }
+      ],
+      "reveal_text": "A false panel behind the change machine opens the back cage.",
+      "opens_exit": "f01-z03b",
+      "gm_only": false
     }
   ],
   "loot": [

@@ -56,9 +56,14 @@ def check_room(room, where):
         if not enc.get("enc_id"):
             errs.append("%s encounter %d missing enc_id" % (where, i))
     for i, sec in enumerate(room.get("secrets") or []):
-        trig = sec.get("trigger") or {}
-        if trig.get("type") not in SECRET_TYPES:
-            errs.append("%s secret %d trigger type invalid" % (where, i))
+        trigs = sec.get("triggers") if isinstance(sec.get("triggers"), list) else []
+        if sec.get("trigger"):
+            trigs = [sec["trigger"]] + [t for t in trigs if t is not sec.get("trigger")]
+        if not trigs:
+            errs.append("%s secret %d missing trigger" % (where, i))
+        for trig in trigs:
+            if not isinstance(trig, dict) or trig.get("type") not in SECRET_TYPES:
+                errs.append("%s secret %d trigger type invalid" % (where, i))
         if not sec.get("reveal_text"):
             errs.append("%s secret %d missing reveal_text" % (where, i))
     flags = room.get("flags") or {}

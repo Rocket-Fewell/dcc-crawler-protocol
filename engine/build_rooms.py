@@ -238,23 +238,78 @@ def from_encounter(zone, enc, spec_path):
         name, voice = NPCS[zone]
         room["npcs"] = [{"name": name, "voice": voice}]
     if zone == "z03":
-        room["secrets"] = [{
-            "id": "odd-coin-identify",
-            "trigger": {"type": "item", "item": "Odd Coin"},
-            "reveal_text": "ITEM NOT RECOGNIZED. Never name a floor or time.",
-            "gm_only": True,
-        }]
+        room["secrets"] = z03_secrets()
     return room
+
+
+VENDOR_ODDITY_BOX = (
+    "╔══ ITEM ════════════════════════════════════════════╗\n"
+    "  Vendor Oddity (Unappraised)\n"
+    "  A coin. Probably. Value: ???\n"
+    "  This item cannot be sold. Please don't try. It's\n"
+    "  embarrassing for everyone.\n"
+    "╚════════════════════════════════════════════════════╝"
+)
+
+
+def z03_secrets():
+    return [
+        {
+            "id": "unclaimed-crate",
+            "trigger": {"type": "action", "verb": "open", "target": "UNCLAIMED crate"},
+            "reveal_text": "Oddity logged.",
+            "gm_only": False,
+            "grants": {
+                "item": "Vendor Oddity (Unappraised)",
+                "box_text": VENDOR_ODDITY_BOX,
+            },
+            "sets_flag": "SEED-ODDCOIN",
+            "flag_holder": "opener",
+            "achievement": {"id": "ACH-0081", "name": "Odd Coin Pocketed", "hidden": True, "toast": "Oddity logged.", "reward": None},
+            "gm_note": "No check. If the crate is never opened, the coin comes as a Weird pull in the first Green Room box (lore card f01-z09-0001), or from Dale's pocket if he dies. Must be planted on Floor 1.",
+        },
+        {
+            "id": "odd-coin-identify",
+            "trigger": {
+                "type": "item",
+                "item": "Vendor Oddity (Unappraised)",
+                "actions": ["sell", "identify", "appraise"],
+            },
+            "reveal_text": "ITEM NOT RECOGNIZED.",
+            "gm_only": False,
+            "gm_note": "Same reply for sell, identify or appraise (Snakk-Matic, spell, check, or asking an NPC). Selling can instead get a 500-credit offer that cancels mid-animation. Never name a floor, fee or time. Never explain it.",
+        },
+        {
+            "id": "back-cage",
+            "triggers": [
+                {"type": "check", "skill": "Perception", "dc": 15, "passive": True},
+                {"type": "check", "skill": "Investigation", "dc": 13, "when": "someone says they are checking behind the machines"},
+            ],
+            "reveal_text": "A false panel behind the change machine opens the back cage.",
+            "opens_exit": "f01-z03b",
+            "gm_only": False,
+        },
+    ]
 
 
 def back_cage():
     room = blank_room("z03b")
-    room["secrets"] = [{
-        "id": "back-cage",
-        "trigger": {"type": "check", "skill": "Perception", "dc": 15},
-        "reveal_text": "A false panel behind the change machine opens the back cage.",
-        "gm_only": True,
-    }]
+    room["narrator_line"] = "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for."
+    room["voice_lines"] = {
+        "intro": "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for.",
+        "twist": "Something in here is stenciled PROPERTY OF ORIENTATION. Orientation is not coming back for it.",
+        "win": "The map is scrawled in a hurry, and it shows a door that isn't on yours.",
+    }
+    room["loot"] = [
+        {"item": "Potion of Healing", "label": "Sports Drink, Blue Flavor, Do Not Ask"},
+        {"item": "Shield", "label": "riot shield stenciled PROPERTY OF ORIENTATION"},
+        {"roll": "3d6 x 5", "unit": "credits"},
+        {"item": "scrawled map", "reveals": "f01-zS"},
+    ]
+    room["achievements"] = [
+        {"id": "ACH-0177", "name": "Hidden Cache", "when": "on_loot"},
+        {"id": "ACH-0179", "name": "Side Path", "when": "zone_s_revealed"},
+    ]
     room["source"] = {"spec": "floors/f01/00-overview.md", "enc_id": "overview-5.3"}
     return room
 
