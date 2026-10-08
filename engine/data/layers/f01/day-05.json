@@ -1,18 +1,16 @@
 {
   "f01-z09": {
-    "open": true
-  },
-  "f01-zS": {
     "day_encounters": [
       {
-        "enc_id": "enc-d05-02",
+        "enc_id": "enc-d05-01",
         "srd_id": null,
-        "our_name": "Zone S: The Toll Turnstile",
+        "our_name": "Final Morning: Only the Corridor Stays",
         "count_ref": null,
         "cr_ref": null,
         "trigger": "on_search"
       }
-    ]
+    ],
+    "open": true
   },
   "f01-z10": {
     "day_encounters": [
@@ -28,7 +26,7 @@
           "path": "floors.1.fixed_encounters.z10.creatures",
           "key": "ogre"
         },
-        "trigger": "on_search"
+        "trigger": "on_enter"
       },
       {
         "enc_id": "enc-d05-03",
@@ -42,7 +40,7 @@
           "path": "floors.1.fixed_encounters.z10.creatures",
           "key": "skeleton"
         },
-        "trigger": "on_search"
+        "trigger": "on_enter"
       },
       {
         "enc_id": "enc-d05-03",
@@ -56,7 +54,7 @@
           "path": "floors.1.fixed_encounters.z10.creatures",
           "key": "bugbear-warrior"
         },
-        "trigger": "on_search"
+        "trigger": "on_enter"
       }
     ]
   },
@@ -66,6 +64,18 @@
         "enc_id": "enc-d05-04",
         "srd_id": null,
         "our_name": "The Stairwell: The Last Six Hours",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  },
+  "f01-zS": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d05-02",
+        "srd_id": null,
+        "our_name": "Zone S: The Toll Turnstile",
         "count_ref": null,
         "cr_ref": null,
         "trigger": "on_search"

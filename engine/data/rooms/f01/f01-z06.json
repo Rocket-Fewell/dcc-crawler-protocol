@@ -11,10 +11,21 @@
     5
   ],
   "narrator_line": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours.",
+  "read_aloud": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours. Find the stairwell before the floor ends.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Couch and fridge (half cover if it ever"
+    }
+  ],
   "map": {
     "layout": "One carpeted saferoom: couch and fridge along one wall, the vending terminal and corkboard on the other, a crackling ceiling speaker.",
     "cover": "Couch and fridge (half cover if it ever matters).",
-    "hazards": "None; honest saferoom on Floor 1 (00-overview.md section 2 rule 5).; The coffee (flavor only)."
+    "hazards": "None; honest saferoom on Floor 1 (00-overview.md section 2 rule 5). The coffee (flavor only)."
   },
   "exits": [
     {
@@ -70,9 +81,18 @@
   "voice_lines": {
     "intro": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours.",
     "twist": "The terminal's screen flickers and a smaller, shadier menu appears: 'Spare keys. Unlisted. Pay exactly.' Somebody in accounting just fainted.",
-    "win": "You got the briefing, the gossip and a choice, and also the coffee, which was a mistake. Pick a route and go. The clock"
+    "win": "You got the briefing, the gossip and a choice, and also the coffee, which was a mistake. Pick a route and go."
   },
   "item_hooks": [],
+  "rest": {
+    "kind": "short",
+    "saferoom": true,
+    "fee": null
+  },
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

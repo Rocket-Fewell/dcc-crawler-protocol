@@ -11,6 +11,36 @@
       }
     ]
   },
+  "f01-z11": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d02-03",
+        "srd_id": null,
+        "our_name": "The Stairwell Threshold: Descend Now or Wait",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  },
+  "f01-zS": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d02-02",
+        "srd_id": "skeleton",
+        "our_name": "Usher (Skeleton)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.d02_02.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z10.creatures",
+          "key": "skeleton"
+        },
+        "trigger": "on_enter"
+      }
+    ]
+  },
   "f01-z00": {
     "closed": true,
     "hooks": "gone"

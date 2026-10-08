@@ -7,6 +7,47 @@ import os
 import urllib.request
 
 
+def strong_model_name():
+    return os.environ.get("ENGINE_STRONG_MODEL") or "gpt-4o"
+
+
+def _take_sentences(buf, final):
+    """Pull finished sentences out of a stream buffer. Leave a partial tail."""
+    ready = []
+    start = 0
+    i = 0
+    while i < len(buf):
+        ch = buf[i]
+        if ch in ".!?":
+            prev = buf[i - 1] if i else ""
+            nxt = buf[i + 1] if i + 1 < len(buf) else ""
+            boundary = (nxt == "" and final) or nxt.isspace()
+            if prev not in ".!?" and boundary:
+                sentence = buf[start:i + 1].strip()
+                if sentence:
+                    ready.append(sentence)
+                start = i + 1
+        i += 1
+    return ready, buf[start:]
+
+
+def iter_sentences(chunks):
+    """Yield whole sentences as chunks arrive. The bridge speaks one sentence at a time."""
+    buf = ""
+    for chunk in chunks:
+        if not chunk:
+            continue
+        buf += chunk
+        ready, buf = _take_sentences(buf, final=False)
+        for sentence in ready:
+            yield sentence
+    ready, buf = _take_sentences(buf, final=True)
+    for sentence in ready:
+        yield sentence
+    if buf.strip():
+        yield buf.strip()
+
+
 def fake_sentences(snapshot):
     """Echo the resolved result. The model does not roll or change hit points."""
     result = snapshot.get("result") or {}
@@ -25,20 +66,47 @@ def fake_sentences(snapshot):
 
 
 class ModelClient:
-    def __init__(self, fake=None):
+    def __init__(self, fake=None, fake_ruling=None):
         if fake is None:
             fake = os.environ.get("ENGINE_FAKE_MODEL", "1") != "0"
         self.fake = fake
+        self.fake_ruling = fake_ruling
 
     def stream(self, snapshot):
         if self.fake:
             yield from fake_sentences(snapshot)
             return
-        yield from self._openai_stream(snapshot)
+        yield from iter_sentences(self._raw_chunks(snapshot))
 
-    def _openai_stream(self, snapshot):
-        base = os.environ.get("ENGINE_MODEL_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+    def rule(self, snapshot):
+        """Strong model. Fake mode returns a ruling JSON and does not call a network."""
+        if self.fake:
+            if self.fake_ruling:
+                return self.fake_ruling
+            return {
+                "ruling": "Nothing on the card covers that.",
+                "resolve_as": "none",
+                "params": {},
+                "log": "fake strong model",
+            }
+        return self._strong_rule(snapshot)
+
+    def _api_key(self):
         key = os.environ.get("ENGINE_MODEL_API_KEY") or os.environ.get("OPENAI_API_KEY")
+        if not key:
+            raise RuntimeError("ENGINE_MODEL_API_KEY or OPENAI_API_KEY is required for a live model call")
+        return key
+
+    def _post(self, body):
+        base = os.environ.get("ENGINE_MODEL_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+        req = urllib.request.Request(
+            base + "/chat/completions",
+            data=json.dumps(body).encode(),
+            headers={"Authorization": "Bearer " + self._api_key(), "Content-Type": "application/json"},
+        )
+        return urllib.request.urlopen(req, timeout=30)
+
+    def _raw_chunks(self, snapshot):
         model = os.environ.get("ENGINE_FAST_MODEL", "gpt-4o-mini")
         body = {
             "model": model,
@@ -48,12 +116,8 @@ class ModelClient:
                 {"role": "user", "content": json.dumps(snapshot, ensure_ascii=False)},
             ],
         }
-        req = urllib.request.Request(
-            base + "/chat/completions",
-            data=json.dumps(body).encode(),
-            headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"},
-        )
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        resp = self._post(body)
+        with resp:
             for raw in resp:
                 line = raw.decode().strip()
                 if not line.startswith("data:"):
@@ -65,3 +129,18 @@ class ModelClient:
                 delta = (((chunk.get("choices") or [{}])[0].get("delta") or {}).get("content"))
                 if delta:
                     yield delta
+
+    def _strong_rule(self, snapshot):
+        body = {
+            "model": strong_model_name(),
+            "stream": False,
+            "messages": [
+                {"role": "system", "content": "Return one JSON object only: {\"ruling\": \"one sentence\", \"resolve_as\": \"attack|save|check|damage|heal|condition|move|item|none\", \"params\": {}, \"log\": \"why\"}. Do not set hit points or credits."},
+                {"role": "user", "content": json.dumps(snapshot, ensure_ascii=False)},
+            ],
+        }
+        resp = self._post(body)
+        with resp:
+            payload = json.loads(resp.read().decode())
+        content = (((payload.get("choices") or [{}])[0].get("message") or {}).get("content")) or ""
+        return json.loads(content)

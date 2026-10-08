@@ -89,11 +89,18 @@ def apply_patch(room, patch):
     return out
 
 
+def active_encounters(room):
+    """A day layer's day_encounters replace the base list for that day."""
+    if room.get("day_encounters"):
+        return room["day_encounters"]
+    return room.get("encounters") or []
+
+
 def resolve_room(room, party_size, budget=None):
     budget = budget if budget is not None else load_budget()
     out = json.loads(json.dumps(room))
     resolved = []
-    for enc in out.get("encounters") or []:
+    for enc in active_encounters(out):
         row = dict(enc)
         if enc.get("count_ref"):
             row["count"] = resolve_count(budget, enc["count_ref"], party_size)

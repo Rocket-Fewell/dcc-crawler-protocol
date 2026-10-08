@@ -6,11 +6,22 @@
   "days_open": [
     1
   ],
-  "narrator_line": "Three cheerful signs line the corridor, and each one says TRAP louder than the last. Halfway along, a man in a net turns slowly",
+  "narrator_line": "Three cheerful signs line the corridor, and each one says TRAP louder than the last.",
+  "read_aloud": "Three cheerful signs line the corridor, and each one says TRAP louder than the last. Halfway along, a man in a net turns slowly upside down and waves, which only makes him spin. He calls out that his name is Dale and that you should avoid the square tiles.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "None worth naming; the hazard is the floor."
+    }
+  ],
   "map": {
-    "layout": "A clean, well-lit corridor about 100 feet long, caution tape on both walls and a row of ever-louder TRAP signs; Dale Pruitt",
+    "layout": "A clean, well-lit corridor about 100 feet long, caution tape on both walls and a row of ever-louder TRAP signs; Dale Pruitt hangs upside down in a snare net halfway along.",
     "cover": "None worth naming; the hazard is the floor.",
-    "hazards": "Welcome Mat pressure plates and a swinging WET FLOOR sign (check values in 00-overview.md section 5.4).; Ticket, Please"
+    "hazards": "Welcome Mat pressure plates and a swinging WET FLOOR sign (check values in 00-overview.md section 5.4)."
   },
   "exits": [
     {
@@ -41,11 +52,16 @@
     }
   ],
   "voice_lines": {
-    "intro": "Three cheerful signs line the corridor, and each one says TRAP louder than the last. Halfway along, a man in a net turns slowly",
-    "twist": "A plate clicks under somebody's shoe and a WET FLOOR sign swings out of the wall like it has been waiting all day. Dale",
-    "win": "Dale is down, upright and very grateful, and he has already offered to carry things. The third sign was begging, and somebody still stepped"
+    "intro": "Three cheerful signs line the corridor, and each one says TRAP louder than the last.",
+    "twist": "A plate clicks under somebody's shoe and a WET FLOOR sign swings out of the wall like it has been waiting all day.",
+    "win": "Dale is down, upright and very grateful, and he has already offered to carry things."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

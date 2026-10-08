@@ -2,15 +2,15 @@
   "id": "animated-flying-sword",
   "name": "animated-flying-sword",
   "ac": 17,
-  "hp": 17,
+  "hp": 14,
   "attacks": [
     {
       "name": "Slash",
-      "to_hit": 5,
-      "damage": "1d8+3",
+      "to_hit": 4,
+      "damage": "1d8+2",
       "type": "slashing"
     }
   ],
   "vulnerable": [],
-  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
 }

@@ -7,11 +7,22 @@
     1,
     2
   ],
-  "narrator_line": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware. Each",
+  "narrator_line": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware.",
+  "read_aloud": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware. Each one raises a pink plastic bow that is very clearly not a toy. Somewhere above, Proctor Bell suggests getting behind things.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Counters and sandbags (half cover); the brick prize"
+    }
+  ],
   "map": {
-    "layout": "A carnival shooting gallery scaled up to a big room: plywood cutouts on squeaking conveyors, overturned counters, sandbags, a cash register on",
+    "layout": "A carnival shooting gallery scaled up to a big room: plywood cutouts on squeaking conveyors, overturned counters, sandbags, a cash register on a stool, and mannequins in staff polos behind the far counter.",
     "cover": "Counters and sandbags (half cover); the brick prize booth (three-quarters cover).",
-    "hazards": "Conveyors carry a standing Crawler 10 ft at the end of each round (00-overview.md section 5.5).; The mannequins"
+    "hazards": "Conveyors carry a standing Crawler 10 ft at the end of each round (00-overview.md section 5.5)."
   },
   "exits": [
     {
@@ -52,11 +63,16 @@
     }
   ],
   "voice_lines": {
-    "intro": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware. Each",
+    "intro": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware.",
     "twist": "Someone steps onto a conveyor and glides ten feet sideways like a carnival prize. The mannequins keep smiling. It's in their contract.",
-    "win": "The last mannequin drops its bow and keeps smiling anyway. The register on the stool is still full, plus a raffle ticket the System"
+    "win": "The last mannequin drops its bow and keeps smiling anyway."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

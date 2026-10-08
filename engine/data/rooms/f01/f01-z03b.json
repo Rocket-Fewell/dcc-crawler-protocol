@@ -7,6 +7,17 @@
     1
   ],
   "narrator_line": "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for.",
+  "read_aloud": "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for.",
+  "positions": [
+    {
+      "id": "panel",
+      "name": "False panel"
+    },
+    {
+      "id": "stash",
+      "name": "Stash"
+    }
+  ],
   "map": {
     "layout": "Lost & Found, back cage.",
     "cover": "No listed cover.",
@@ -45,6 +56,13 @@
     "win": "The map is scrawled in a hurry, and it shows a door that isn't on yours."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": [
+      "Hidden cache. Orientation is not coming back for it."
+    ]
+  },
   "flags": {
     "cleared": false,
     "looted": false,

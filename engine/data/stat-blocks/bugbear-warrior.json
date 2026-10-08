@@ -2,15 +2,15 @@
   "id": "bugbear-warrior",
   "name": "bugbear-warrior",
   "ac": 14,
-  "hp": 27,
+  "hp": 33,
   "attacks": [
     {
-      "name": "Morningstar",
+      "name": "Grab",
       "to_hit": 4,
-      "damage": "1d8+2",
-      "type": "piercing"
+      "damage": "2d6+2",
+      "type": "bludgeoning"
     }
   ],
   "vulnerable": [],
-  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
 }

@@ -6,8 +6,11 @@ import json
 import sys
 from pathlib import Path
 
+if __package__ is None:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from dcc_engine.rooms import load_budget, resolve_cr, resolve_count, walk
-from dcc_engine.schema import check_room, check_stat
+from dcc_engine.schema import check_encounter, check_room, check_stat
 
 ROOT = Path(__file__).resolve().parents[2]
 VOICES = ROOT / "tables" / "npc-voices.json"
@@ -87,9 +90,26 @@ def validate_tree(root: Path):
                 if dest in ids and dest not in seen:
                     stack.append(dest)
         for missing in sorted(ids - seen):
+            if rooms[missing].get("zone") == "wandering":
+                continue
             errs.append("%s is not reachable from the Intake Hall" % missing)
         if "f01-z11" not in seen:
             errs.append("the stairwell f01-z11 is not reachable from the Intake Hall")
+    layers = root / "layers" / "f01"
+    if layers.is_dir():
+        for path in sorted(layers.glob("day-*.json")):
+            layer = json.loads(path.read_text(encoding="utf-8"))
+            rel = str(path.relative_to(ROOT))
+            for room_id, patch in layer.items():
+                if not isinstance(patch, dict):
+                    errs.append("%s %s patch is not an object" % (rel, room_id))
+                    continue
+                for i, enc in enumerate(patch.get("day_encounters") or []):
+                    errs.extend(check_encounter(enc, "%s %s day_encounter %d" % (rel, room_id, i)))
+                    for ref_name in ("count_ref", "cr_ref"):
+                        ref = enc.get(ref_name)
+                        if ref and not budget_ok(ref, budget):
+                            errs.append("%s %s %s does not resolve: %s" % (rel, room_id, ref_name, ref.get("path")))
     stats = root / "stat-blocks"
     if stats.is_dir():
         for path in sorted(stats.glob("*.json")):

@@ -11,10 +11,21 @@
     5
   ],
   "narrator_line": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
+  "read_aloud": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Trophy table and podium (half cover)."
+    }
+  ],
   "map": {
-    "layout": "The wings of the vast auditorium: rolled diplomas, a trophy table, camera lights in the dark, the orchestra pit at the front",
+    "layout": "The wings of the vast auditorium: rolled diplomas, a trophy table, camera lights in the dark, the orchestra pit at the front edge.",
     "cover": "Trophy table and podium (half cover).",
-    "hazards": "Camera drones watching.; The orchestra pit edge (a usable hazard).; Ushers on watch if the party is spotted."
+    "hazards": "Camera drones watching. The orchestra pit edge (a usable hazard). Ushers on watch if the party is spotted."
   },
   "exits": [
     {
@@ -30,34 +41,9 @@
       "kind": "door"
     }
   ],
-  "encounters": [
-    {
-      "enc_id": "enc-d03-03",
-      "srd_id": "skeleton",
-      "our_name": "Usher (Skeleton)",
-      "count_ref": {
-        "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
-        "key": "skeleton"
-      },
-      "cr_ref": {
-        "path": "floors.1.fixed_encounters.z10.creatures",
-        "key": "skeleton"
-      },
-      "trigger": "on_search"
-    }
-  ],
+  "encounters": [],
   "secrets": [],
-  "loot": [
-    {
-      "deck": "f01-any-0046"
-    },
-    {
-      "deck": "f01-any-0048"
-    },
-    {
-      "deck": "f01-any-0064"
-    }
-  ],
+  "loot": [],
   "npcs": [
     {
       "name": "Dean Thudd",
@@ -66,12 +52,20 @@
   ],
   "voice_lines": {
     "intro": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
-    "twist": "A drone swings your way, its little red light blinking like a nervous bird. The audience would love for you to break it. So",
+    "twist": "A drone swings your way, its little red light blinking like a nervous bird. The audience would love for you to break it.",
     "win": "You've seen enough. The stage is a plan, now, and not a surprise."
   },
   "item_hooks": [
     "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check"
   ],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "audience": "gm",
+    "flavor": [
+      "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check only."
+    ]
+  },
   "flags": {
     "cleared": false,
     "looted": false,

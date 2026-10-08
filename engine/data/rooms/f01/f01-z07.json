@@ -8,10 +8,21 @@
     2
   ],
   "narrator_line": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
+  "read_aloud": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Alcove frames and clipboard stands (half cover)."
+    }
+  ],
   "map": {
-    "layout": "A short stair down from a side passage ends at a landing with alcoves on both sides and a floor that is",
+    "layout": "A short stair down from a side passage ends at a landing with alcoves on both sides and a floor that is not a floor.",
     "cover": "Alcove frames and clipboard stands (half cover).",
-    "hazards": "Trapdoor over a pit with broken glass (T4, check values in 00-overview.md section 5.7).; Birdsong speaker and fan"
+    "hazards": "Trapdoor over a pit with broken glass (T4, check values in 00-overview.md section 5.7)."
   },
   "exits": [
     {
@@ -32,7 +43,7 @@
         "path": "floors.1.fixed_encounters.z07.creatures",
         "key": "goblin-warrior"
       },
-      "trigger": "on_search"
+      "trigger": "on_enter"
     },
     {
       "enc_id": "enc-d01-02",
@@ -46,7 +57,7 @@
         "path": "floors.1.fixed_encounters.z07.creatures",
         "key": "goblin-minion"
       },
-      "trigger": "on_search"
+      "trigger": "on_enter"
     }
   ],
   "secrets": [],
@@ -72,10 +83,15 @@
   ],
   "voice_lines": {
     "intro": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
-    "twist": "The floor drops out, the clipboards come out, and a very polite goblin in a green vest asks if you have an appointment. You",
-    "win": "The greeters are down and the back office is open: a workshop full of unapproved inventory. Management is furious and also taking notes. The"
+    "twist": "The floor drops out, the clipboards come out, and a very polite goblin in a green vest asks if you have an appointment.",
+    "win": "The greeters are down and the back office is open: a workshop full of unapproved inventory. Management is furious and also taking notes."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

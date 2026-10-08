@@ -1,0 +1,67 @@
+{
+  "id": "f01-wandering",
+  "floor": 1,
+  "zone": "wandering",
+  "name": "Wandering (any non-saferoom area during Lights-Out)",
+  "days_open": [
+    1,
+    4
+  ],
+  "narrator_line": "LIGHTS OUT. Red emergency lighting only. Remain in place until the cycle ends.",
+  "read_aloud": "LIGHTS OUT. Red emergency lighting only. Remain in place until the cycle ends.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Whatever the room provides; furniture and doorways."
+    }
+  ],
+  "map": {
+    "layout": "Whatever room the party is in when the Pit goes dark for the hour; red emergency light only, everything reads as dim.",
+    "cover": "Whatever the room provides; furniture and doorways.",
+    "hazards": "Red dim light for the hour. Ceiling Ticks drop from vents and light fixtures."
+  },
+  "exits": [],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-04",
+      "srd_id": "stirge",
+      "our_name": "Ceiling Tick (Stirge)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.wandering.counts_by_party_size",
+        "key": "stirge"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.wandering.creatures",
+        "key": "stirge"
+      },
+      "trigger": "on_enter"
+    }
+  ],
+  "secrets": [],
+  "loot": [],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "LIGHTS OUT. Red emergency lighting only. Remain in place until the cycle ends.",
+    "twist": "Something small and persistent just found a warm neck. The audience would like to remind you that a mosquito is not a personality.",
+    "win": "Pests cleared. The lights come back in their own time. You are now an experienced bug person. Put it on your resume."
+  },
+  "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-04"
+  }
+}

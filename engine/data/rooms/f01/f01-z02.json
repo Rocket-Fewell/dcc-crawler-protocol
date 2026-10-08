@@ -7,10 +7,21 @@
     1
   ],
   "narrator_line": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
+  "read_aloud": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Bent grates and wall pipes (half cover)."
+    }
+  ],
   "map": {
     "layout": "A service hallway lined with floor vents, every grate bent outward, with red UI brackets over the openings.",
     "cover": "Bent grates and wall pipes (half cover).",
-    "hazards": "Two vents 20 ft apart spill the rats in two groups (00-overview.md section 5.2).; Backing away from a"
+    "hazards": "Two vents 20 ft apart spill the rats in two groups (00-overview.md section 5.2)."
   },
   "exits": [
     {
@@ -47,12 +58,20 @@
   "npcs": [],
   "voice_lines": {
     "intro": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
-    "twist": "The second wave climbs out of a vent twenty feet down the hall, right where nobody was looking. Somebody just learned about flanking the",
-    "win": "Rats down. You are now qualified to work the night shift at a children's pizza arcade. The vents rattle with dropped change, if you're"
+    "twist": "The second wave climbs out of a vent twenty feet down the hall, right where nobody was looking.",
+    "win": "Rats down. You are now qualified to work the night shift at a children's pizza arcade."
   },
   "item_hooks": [
     "Dale's HVAC License: Advantage on duct and vent checks."
   ],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "audience": "gm",
+    "flavor": [
+      "Dale's HVAC License: Advantage on duct and vent checks."
+    ]
+  },
   "flags": {
     "cleared": false,
     "looted": false,

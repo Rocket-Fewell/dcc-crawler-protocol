@@ -11,10 +11,21 @@
     5
   ],
   "narrator_line": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
+  "read_aloud": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Benches and locker banks (half cover); the mirror"
+    }
+  ],
   "map": {
-    "layout": "A foam-smelling locker room: rows of lockers, benches, a cracked mirror wall, a giant mascot costume hanging from a hook in the",
+    "layout": "A foam-smelling locker room: rows of lockers, benches, a cracked mirror wall, a giant mascot costume hanging from a hook in the middle.",
     "cover": "Benches and locker banks (half cover); the mirror wall gives no cover.",
-    "hazards": "Searching lockers is loud: a Ceiling Ticks roll after a few banks (00-overview.md section 5.8).; Reflections in the"
+    "hazards": "Searching lockers is loud: a Ceiling Ticks roll after a few banks (00-overview.md section 5.8)."
   },
   "exits": [
     {
@@ -79,10 +90,15 @@
   ],
   "voice_lines": {
     "intro": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
-    "twist": "The costume stands up, the lanyards unfold, and one of you just became the most popular Crawler in the room. That's the worst kind",
-    "win": "Costume down, locker bank open, and a key swinging from a place no key should be. Take it. Don't ask where it was. The"
+    "twist": "The costume stands up, the lanyards unfold, and one of you just became the most popular Crawler in the room.",
+    "win": "Costume down, locker bank open, and a key swinging from a place no key should be. Take it. Don't ask where it was."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

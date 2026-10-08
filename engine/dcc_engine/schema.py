@@ -7,17 +7,23 @@ TRIGGERS = ("on_enter", "on_search", "clock", "noise")
 SECRET_TYPES = ("check", "item", "action", "clock")
 
 
-def narration_tokens(room):
-    """Whitespace tokens in the narrator snapshot (narrator line plus map lines)."""
+def snapshot_text(room):
     parts = [room.get("narrator_line") or ""]
-    mapping = room.get("map") or {}
-    for key in ("layout", "cover", "hazards", "extra"):
-        val = mapping.get(key)
-        if isinstance(val, list):
-            parts.extend(str(x) for x in val)
-        elif val:
-            parts.append(str(val))
-    return len(" ".join(parts).split())
+    parts.extend(map_lines(room))
+    return " ".join(part for part in parts if part)
+
+
+def narration_tokens(room):
+    """Rough tokens for the narrator snapshot: characters divided by 4."""
+    text = snapshot_text(room)
+    if not text.strip():
+        return 0
+    return (len(text) + 3) // 4
+
+
+def ends_sentence(text):
+    stripped = (text or "").strip()
+    return bool(stripped) and stripped[-1] in ".!?"
 
 
 def map_lines(room):
@@ -32,17 +38,42 @@ def map_lines(room):
     return lines
 
 
+def check_encounter(enc, where):
+    errs = []
+    if enc.get("trigger") not in TRIGGERS:
+        errs.append("%s trigger invalid" % where)
+    if not enc.get("enc_id"):
+        errs.append("%s missing enc_id" % where)
+    return errs
+
+
 def check_room(room, where):
     errs = []
-    for key in ("id", "floor", "zone", "name", "days_open", "narrator_line", "map", "exits",
-                "encounters", "secrets", "loot", "npcs", "voice_lines", "flags", "source"):
+    for key in ("id", "floor", "zone", "name", "days_open", "narrator_line", "read_aloud",
+                "positions", "map", "exits", "encounters", "secrets", "loot", "npcs",
+                "voice_lines", "rest", "gm_notes", "flags", "source"):
         if key not in room:
             errs.append("%s missing %s" % (where, key))
     if not isinstance(room.get("days_open"), list) or not room.get("days_open"):
         errs.append("%s days_open must be a non-empty list" % where)
+    if room.get("narrator_line") and not ends_sentence(room.get("narrator_line")):
+        errs.append("%s narrator_line does not end a sentence" % where)
+    if room.get("read_aloud") and not ends_sentence(room.get("read_aloud")):
+        errs.append("%s read_aloud does not end a sentence" % where)
+    if not isinstance(room.get("positions"), list):
+        errs.append("%s positions must be a list" % where)
+    else:
+        for i, pos in enumerate(room.get("positions") or []):
+            if not isinstance(pos, dict) or not pos.get("id") or not pos.get("name"):
+                errs.append("%s position %d needs id and name" % (where, i))
+    if room.get("rest") is not None and not isinstance(room.get("rest"), dict):
+        errs.append("%s rest must be null or an object" % where)
     lines = map_lines(room)
     if len(lines) > 4:
         errs.append("%s map has %d lines (max 4)" % (where, len(lines)))
+    for i, line in enumerate(lines):
+        if not ends_sentence(line):
+            errs.append("%s map line %d does not end a sentence" % (where, i))
     if narration_tokens(room) > 150:
         errs.append("%s narration snapshot is over 150 tokens" % where)
     for i, ex in enumerate(room.get("exits") or []):
@@ -51,10 +82,9 @@ def check_room(room, where):
         if not ex.get("to"):
             errs.append("%s exit %d missing to" % (where, i))
     for i, enc in enumerate(room.get("encounters") or []):
-        if enc.get("trigger") not in TRIGGERS:
-            errs.append("%s encounter %d trigger invalid" % (where, i))
-        if not enc.get("enc_id"):
-            errs.append("%s encounter %d missing enc_id" % (where, i))
+        errs.extend(check_encounter(enc, "%s encounter %d" % (where, i)))
+    for i, enc in enumerate(room.get("day_encounters") or []):
+        errs.extend(check_encounter(enc, "%s day_encounter %d" % (where, i)))
     for i, sec in enumerate(room.get("secrets") or []):
         trigs = sec.get("triggers") if isinstance(sec.get("triggers"), list) else []
         if sec.get("trigger"):
@@ -66,14 +96,18 @@ def check_room(room, where):
                 errs.append("%s secret %d trigger type invalid" % (where, i))
         if not sec.get("reveal_text"):
             errs.append("%s secret %d missing reveal_text" % (where, i))
-    flags = room.get("flags") or {}
-    for key in ("cleared", "looted", "rested"):
-        if key not in flags:
-            errs.append("%s flags missing %s" % (where, key))
+        if "gm_note" in sec and not isinstance(sec.get("gm_note"), str):
+            errs.append("%s secret %d gm_note must be a string" % (where, i))
     voices = room.get("voice_lines") or {}
     for key in ("intro", "twist", "win"):
         if key not in voices:
             errs.append("%s voice_lines missing %s" % (where, key))
+        elif isinstance(voices.get(key), str) and voices.get(key) and not ends_sentence(voices.get(key)):
+            errs.append("%s voice_lines.%s does not end a sentence" % (where, key))
+    flags = room.get("flags") or {}
+    for key in ("cleared", "looted", "rested"):
+        if key not in flags:
+            errs.append("%s flags missing %s" % (where, key))
     src = room.get("source") or {}
     if not src.get("spec") or not src.get("enc_id"):
         errs.append("%s source needs spec and enc_id" % where)

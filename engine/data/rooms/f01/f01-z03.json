@@ -6,11 +6,22 @@
   "days_open": [
     1
   ],
-  "narrator_line": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman",
+  "narrator_line": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this.",
+  "read_aloud": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman in scrubs lies face-down in the wrappers, one arm still reaching for it. This is the loot lesson, and she is the first page.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Machines (half cover; the breathing ones are a"
+    }
+  ],
   "map": {
-    "layout": "A long hall of vending machines, half smashed and half glowing and faintly breathing, with a body in scrubs face-down in the",
+    "layout": "A long hall of vending machines, half smashed and half glowing and faintly breathing, with a body in scrubs face-down in the middle of the floor.",
     "cover": "Machines (half cover; the breathing ones are a bad idea).",
-    "hazards": "Hungry vendors bite a reaching arm (a Dexterity save, then Strength (Athletics) to pull free; section 5.3).; Prying"
+    "hazards": "Hungry vendors bite a reaching arm (a Dexterity save, then Strength (Athletics) to pull free; section 5.3)."
   },
   "exits": [
     {
@@ -111,11 +122,16 @@
   ],
   "npcs": [],
   "voice_lines": {
-    "intro": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman",
-    "twist": "A machine closes on someone's arm with a satisfied little click. The screen thanks you for your patronage. Pull, or wait for the next",
-    "win": "Pockets full, one arm slightly chewed, and a stamped coin that feels heavier than it should. The machines go dark one by one and"
+    "intro": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this.",
+    "twist": "A machine closes on someone's arm with a satisfied little click. The screen thanks you for your patronage.",
+    "win": "Pockets full, one arm slightly chewed, and a stamped coin that feels heavier than it should."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

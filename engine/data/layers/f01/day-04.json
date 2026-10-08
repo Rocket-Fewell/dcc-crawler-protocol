@@ -1,7 +1,30 @@
 {
   "f01-z06": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d04-01",
+        "srd_id": null,
+        "our_name": "Service Outage: The Break Room Goes Dark",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ],
     "saferoom": false,
-    "vendors": "closed"
+    "vendors": "closed",
+    "rest": null
+  },
+  "f01-z09": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d04-04",
+        "srd_id": null,
+        "our_name": "Green Room Night Shift",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
   },
   "f01-z10": {
     "day_encounters": [
@@ -21,15 +44,21 @@
       }
     ]
   },
-  "f01-z09": {
+  "f01-wandering": {
     "day_encounters": [
       {
-        "enc_id": "enc-d04-04",
-        "srd_id": null,
-        "our_name": "Green Room Night Shift",
-        "count_ref": null,
-        "cr_ref": null,
-        "trigger": "on_search"
+        "enc_id": "enc-d04-02",
+        "srd_id": "stirge",
+        "our_name": "Ceiling Tick (Stirge)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.wandering.counts_by_party_size",
+          "key": "stirge"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.wandering.creatures",
+          "key": "stirge"
+        },
+        "trigger": "on_enter"
       }
     ]
   }

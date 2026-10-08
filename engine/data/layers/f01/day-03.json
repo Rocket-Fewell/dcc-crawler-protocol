@@ -12,7 +12,55 @@
     ]
   },
   "f01-z08": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d03-02",
+        "srd_id": "giant-rat",
+        "our_name": "Vent Rat (Giant Rat)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+          "key": "giant-rat"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z02.creatures",
+          "key": "giant-rat"
+        },
+        "trigger": "on_enter"
+      },
+      {
+        "enc_id": "enc-d03-02",
+        "srd_id": "stirge",
+        "our_name": "Ceiling Tick (Stirge)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.d03_02.counts_by_party_size",
+          "key": "stirge"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.wandering.creatures",
+          "key": "stirge"
+        },
+        "trigger": "on_enter"
+      }
+    ],
     "hooks": "gone"
+  },
+  "f01-z10": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d03-03",
+        "srd_id": "skeleton",
+        "our_name": "Usher (Skeleton)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.d03_03.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z10.creatures",
+          "key": "skeleton"
+        },
+        "trigger": "on_enter"
+      }
+    ]
   },
   "f01-z05": {
     "hooks": "gone"

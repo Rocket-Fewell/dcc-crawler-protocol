@@ -11,6 +11,17 @@
     5
   ],
   "narrator_line": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
+  "read_aloud": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Rail and landing."
+    }
+  ],
   "map": {
     "layout": "A plain concrete stairwell behind the stage, spiral steps down into the dark, a handwritten card taped to the rail.",
     "cover": "Rail and landing.",
@@ -26,22 +37,9 @@
       "kind": "stairs"
     }
   ],
-  "encounters": [
-    {
-      "enc_id": "enc-d02-03",
-      "srd_id": null,
-      "our_name": "The Stairwell Threshold: Descend Now or Wait",
-      "count_ref": null,
-      "cr_ref": null,
-      "trigger": "on_search"
-    }
-  ],
+  "encounters": [],
   "secrets": [],
-  "loot": [
-    {
-      "deck": "f01-any-0058"
-    }
-  ],
+  "loot": [],
   "npcs": [],
   "voice_lines": {
     "intro": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
@@ -49,6 +47,11 @@
     "win": "Descent recorded for departing Crawlers. Remaining Crawlers continue on-floor. Status updated."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,

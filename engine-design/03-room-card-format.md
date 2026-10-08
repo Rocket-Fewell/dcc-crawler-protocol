@@ -1,7 +1,9 @@
 # Room card format v1
-Owner: Architect (format), Encounter (rooms, fights), Lore (secrets, loot, NPCs, achievements), Accountant (counts) | Version: 0.1.1 | Updated: 2026-10-08
+Owner: Architect (format), Encounter (rooms, fights), Lore (secrets, loot, NPCs, achievements), Accountant (counts) | Version: 0.1.2 | Updated: 2026-10-08
 
-One JSON file per room: `engine/data/rooms/f01/<room-id>.json` (id style `f01-z05`). Stat blocks are shared: `engine/data/stat-blocks/<stat-id>.json`. Day overlays: `engine/data/layers/f01/day-NN.json`. There is no second schema file. The check is `PYTHONPATH=engine python -m dcc_engine.validate engine/data`.
+One JSON file per room: `engine/data/rooms/f01/<room-id>.json` (id style `f01-z05`). Stat blocks are shared: `engine/data/stat-blocks/<stat-id>.json`. Day overlays: `engine/data/layers/f01/day-NN.json`. There is no second schema file.
+
+From the repo root, `python3 engine/dcc_engine/validate.py engine/data` runs the check with no `PYTHONPATH`. `PYTHONPATH=engine python3 -m dcc_engine.validate engine/data` is the same check. There is no package install.
 
 The fast narrator only ever sees `name`, `narrator_line`, the map lines, revealed secrets and live combat state. That snapshot stays at or under 150 tokens. Everything else is for code and the strong model.
 
@@ -16,6 +18,11 @@ Counts are never copied into the card. `count_ref` and `cr_ref` are field paths 
   "name": "Shooting Gallery",
   "days_open": [1, 2],
   "narrator_line": "Mannequins in staff polos raise pink bows from behind the counter.",
+  "read_aloud": "Exact text read on first entry.",
+  "positions": [
+    {"id": "door", "name": "Doorway"},
+    {"id": "counter", "name": "Far counter", "cover": "half"}
+  ],
   "map": {
     "layout": "Carnival gallery, counters, sandbags, mannequins at the far counter.",
     "cover": "Counters and sandbags are half cover. The prize booth is three-quarters.",
@@ -42,12 +49,14 @@ Counts are never copied into the card. `count_ref` and `cr_ref` are field paths 
   "npcs": [{"name": "Proctor Bell", "voice": "Proctor Bell"}],
   "voice_lines": {"intro": "...", "twist": "...", "win": "..."},
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": "Strong-model and post-session notes only. Never sent to the narrator.",
   "flags": {"cleared": false, "looted": false, "rested": false},
   "source": {"spec": "floors/f01/day-01.spec.json", "enc_id": "enc-d01-11"}
 }
 ```
 
-`map` is at most four lines (layout, cover, hazards, and one optional extra). Exit `kind` is `door`, `vent`, or `stairs`. Optional exit fields: `locked_by`, `hidden_by_secret`. Encounter `trigger` is `on_enter`, `on_search`, `clock`, or `noise`. A secret has `trigger` or `triggers`. Each `type` is `check`, `item`, `action`, or `clock`. `reveal_text` is the read-aloud line. `gm_note` stays off that line. `voice` on an NPC is a name in `tables/npc-voices.json`. Lore owns `reveal_text`.
+`map` is at most four lines (layout, cover, hazards, and one optional extra). Each of those lines, plus `narrator_line`, `read_aloud`, and the voice lines, ends a sentence. The narrator snapshot (`narrator_line` plus the map lines) is counted as characters divided by 4, and it stays at or under 150. Exit `kind` is `door`, `vent`, or `stairs`. Optional exit fields: `locked_by`, `hidden_by_secret`. Encounter `trigger` is `on_enter`, `on_search`, `clock`, or `noise`. A secret has `trigger` or `triggers`. Each `type` is `check`, `item`, `action`, or `clock`. `reveal_text` is the read-aloud line. `gm_note` stays off that line. `positions` is a list of `{id, name}`. `read_aloud` is the entry text. `rest` is null or an object. `gm_notes` stays off the narrator snapshot. `voice` on an NPC is a name in `tables/npc-voices.json`. Lore owns `reveal_text`.
 
 ## Stat block
 ```json
@@ -93,8 +102,10 @@ Each trigger can carry `who: "any|first|each"` and `requires: [flags]`.
 ## Day layers and generation (Encounter's additions)
 - `engine/build_rooms.py` reads `floors/f01/day-0*.spec.json` and the zone graph in `floors/f01/00-overview.md` section 4.2. Hand edits go in the spec, then the script is run again.
 - Counts stay as `count_ref` / `cr_ref`. The loader resolves them for the party size.
-- Day changes are layers: `engine/data/layers/f01/day-NN.json` holds `{"room_id": {patch}}` overrides (collapses, Lights-Out, vendors closed on Day 4), applied on top of the base room. A collapse is not a new room.
+- Day changes are layers: `engine/data/layers/f01/day-NN.json` holds `{"room_id": {patch}}` overrides (collapses, Lights-Out, vendors closed on Day 4), applied on top of the base room. A collapse is not a new room. Patches merge. A later clock note does not wipe `day_encounters`.
+- `day_encounters` on a layer is the fight for that day. The loader uses it instead of the base `encounters` list. A fight that is not on the room's first open day lives only on its day layer. Wandering ticks live on `f01-wandering`, which is not a room in the zone graph.
+- `positions`, `read_aloud`, `rest`, and `gm_notes` stay on the card. The loader keeps them when it applies a layer. The validator requires them.
 - Tests (`engine/tests/`): every exit target exists; every room is reachable from the Intake Hall (`f01-z00`); the stairwell (`f01-z11`) is reachable; every budget ref resolves; every NPC voice key exists; each room's narration snapshot is 150 tokens or less.
 
 ## Validation
-`PYTHONPATH=engine python -m dcc_engine.validate engine/data` must report 0 errors before a content PR goes to the vote. The schema lives in `engine/dcc_engine/schema.py` and matches this file. Pilot fight: Shooting Gallery, replayed from `engine/tests/fixtures` with a hand-written dice script until the session roll log is on main.
+`python3 engine/dcc_engine/validate.py engine/data` must report 0 errors before a content PR goes to the vote. The schema lives in `engine/dcc_engine/schema.py` and matches this file. Pilot fight: Shooting Gallery, replayed from `engine/tests/fixtures` with a hand-written dice script until the session roll log is on main.

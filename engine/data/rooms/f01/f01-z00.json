@@ -6,11 +6,22 @@
   "days_open": [
     1
   ],
-  "narrator_line": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay",
+  "narrator_line": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay open for one hour.",
+  "read_aloud": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay open for one hour. Anyone still on the surface when they close remains a Native. Walk down: you become a Crawler the moment your foot touches Floor 1, not one stair sooner.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "None that matters."
+    }
+  ],
   "map": {
-    "layout": "Street level: a stairwell has opened in the pavement with a beam of light shooting straight up out of it, and concrete",
+    "layout": "Street level: a stairwell has opened in the pavement with a beam of light shooting straight up out of it, and concrete steps lead down into the light.",
     "cover": "None that matters.",
-    "hazards": "The one-hour entrance window: the System counts it down (canon M-539, M-545).; Standing on the stairs is not"
+    "hazards": "The one-hour entrance window: the System counts it down (canon M-539, M-545)."
   },
   "exits": [
     {
@@ -32,11 +43,16 @@
   "loot": [],
   "npcs": [],
   "voice_lines": {
-    "intro": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay",
+    "intro": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay open for one hour.",
     "twist": "That chime was your foot touching Floor 1. A booth door swings open and waits.",
     "win": "Paperwork filed. Nameplates printed, at least one misspelled. Welcome to the Orientation Pit. The booths open onto an atrium."
   },
   "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
   "flags": {
     "cleared": false,
     "looted": false,
