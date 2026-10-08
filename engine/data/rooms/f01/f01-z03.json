@@ -15,7 +15,7 @@
     },
     {
       "id": "cover-1",
-      "name": "Machines (half cover; the breathing ones are a"
+      "name": "Machines (half cover; the breathing ones are a bad idea)."
     }
   ],
   "map": {
@@ -124,7 +124,7 @@
   "voice_lines": {
     "intro": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this.",
     "twist": "A machine closes on someone's arm with a satisfied little click. The screen thanks you for your patronage.",
-    "win": "Pockets full, one arm slightly chewed, and a stamped coin that feels heavier than it should."
+    "win": "Pockets full, one arm slightly chewed, and the machines already restocking like nothing happened."
   },
   "item_hooks": [],
   "rest": null,

@@ -7,8 +7,18 @@ import sys
 
 from dcc_engine.model import ModelClient
 from dcc_engine.rules import ScriptedRng, attack, cunning_action
-from dcc_engine.ruling import apply_ruling
+from dcc_engine.ruling import apply_ruling, resolve_effect
 from dcc_engine.store import Store
+
+# Verbs the rules engine does not already resolve. Chatter never reaches the strong model.
+_UNRESOLVED_ACTIONS = (
+    "throw", "light", "open", "push", "pull", "cast", "hide", "search", "smash",
+    "climb", "jump", "shove", "grapple", "improvise", "i use", "i check", "i look",
+)
+
+
+def needs_ruling(text):
+    return any(word in text for word in _UNRESOLVED_ACTIONS)
 
 
 def handle(msg, state, model, store):
@@ -20,8 +30,12 @@ def handle(msg, state, model, store):
         if "attack" in text or text.startswith("i swing") or text.startswith("i shoot"):
             return handle({"type": "attack", "attacker": "crawler", "target": state.get("target_id", "mannequin")}, state, model, store)
         snap = {"line": msg.get("text"), "narrator_line": state.get("narrator_line"), "result": {}}
+        if not needs_ruling(text):
+            outs = [{"type": "say", "voice": "GM", "text": sentence} for sentence in model.stream(snap)]
+            store.save_action("line", {"in": msg, "out": outs})
+            return outs
         ruling = model.rule(snap)
-        applied = apply_ruling(ruling, state)
+        applied = resolve_effect(apply_ruling(ruling, state), state)
         store.save_action("ruling", applied)
         if not applied.get("ok"):
             return [{"type": "say", "voice": "SYSTEM", "text": "The System says no, try something else."}]
@@ -32,8 +46,8 @@ def handle(msg, state, model, store):
                 "attacker": params.get("attacker") or "crawler",
                 "target": params.get("target") or state.get("target_id", "mannequin"),
             }, state, model, store)
+        snap = {"line": applied.get("ruling") or msg.get("text"), "narrator_line": state.get("narrator_line"), "result": applied}
         outs = [{"type": "say", "voice": "GM", "text": sentence} for sentence in model.stream(snap)]
-        store.save_action("line", {"in": msg, "out": outs, "ruling": applied})
         return outs
     if kind == "cunning_action":
         result = cunning_action(msg.get("crawler") or state["crawler"], msg.get("kind") or "dash")

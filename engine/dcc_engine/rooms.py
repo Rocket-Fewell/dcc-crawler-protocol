@@ -90,10 +90,10 @@ def apply_patch(room, patch):
 
 
 def active_encounters(room):
-    """A day layer's day_encounters replace the base list for that day."""
-    if room.get("day_encounters"):
-        return room["day_encounters"]
-    return room.get("encounters") or []
+    """A day layer's day_encounters replace the base list, even when the list is empty."""
+    if "day_encounters" in room:
+        return list(room.get("day_encounters") or [])
+    return list(room.get("encounters") or [])
 
 
 def resolve_room(room, party_size, budget=None):

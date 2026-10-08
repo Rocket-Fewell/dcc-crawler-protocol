@@ -42,7 +42,9 @@
         "trigger": "on_enter"
       }
     ],
-    "hooks": "gone"
+    "hooks": "gone",
+    "npcs": [],
+    "key": null
   },
   "f01-z10": {
     "day_encounters": [
@@ -63,9 +65,27 @@
     ]
   },
   "f01-z05": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "item_hooks": [],
+    "npcs": [],
+    "key": null,
+    "rest": null,
     "hooks": "gone"
   },
   "f01-z07": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "item_hooks": [],
+    "npcs": [],
+    "key": null,
+    "rest": null,
     "hooks": "gone"
   }
 }

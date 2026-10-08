@@ -56,7 +56,7 @@
     "win": "You've seen enough. The stage is a plan, now, and not a surprise."
   },
   "item_hooks": [
-    "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check"
+    "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check only."
   ],
   "rest": null,
   "gm_notes": {

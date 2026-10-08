@@ -16,7 +16,7 @@
     },
     {
       "id": "cover-1",
-      "name": "Counters and sandbags (half cover); the brick prize"
+      "name": "Counters and sandbags (half cover); the brick prize booth (three-quarters cover)."
     }
   ],
   "map": {
@@ -54,12 +54,27 @@
   "loot": [
     {
       "dice_ref": "floors.1.fixed_encounters.z05.cash_dice_per_crawler"
+    },
+    {
+      "item": "cash register",
+      "check": {
+        "ability": "Dexterity",
+        "skill": "Sleight of Hand",
+        "dc": 10
+      },
+      "alt": "smash",
+      "holds": [
+        "2d6 x 3 credits",
+        "raffle ticket"
+      ],
+      "gm_note": "The raffle ticket does nothing. The System never explains it and it never pays out."
     }
   ],
   "npcs": [
     {
       "name": "Proctor Bell",
-      "voice": "Proctor Bell"
+      "voice": "Proctor Bell",
+      "line": "Cover. Get behind things. Things are your friends. People are not your friends."
     }
   ],
   "voice_lines": {
@@ -81,5 +96,33 @@
   "source": {
     "spec": "floors/f01/day-01.spec.json",
     "enc_id": "enc-d01-11"
-  }
+  },
+  "nameplate": "Mannequin Staff. Level 1. \"Smiling through it. Contractually.\"",
+  "popups": [
+    {
+      "id": "COVER",
+      "when": "first_use",
+      "text": "Half cover: +2 AC and Dex saves. Three-quarters: +5. Total: they can't target you at all. Hide behind things. Things love you. People don't."
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ACH-0867",
+      "deck_id": "ach-f01-0031",
+      "name": "Block a Hit with a Shield",
+      "when": "block_a_hit"
+    },
+    {
+      "id": "ACH-0861",
+      "deck_id": "ach-f01-0032",
+      "name": "Lose Initiative and Still Win",
+      "when": "lose_initiative_and_win"
+    },
+    {
+      "id": "ach-f01-0033",
+      "name": "Hit the Cutout",
+      "when": "attack_a_plywood_crawler",
+      "note": "Overview 5.5 marks this NEW. No catalog ACH number yet."
+    }
+  ]
 }

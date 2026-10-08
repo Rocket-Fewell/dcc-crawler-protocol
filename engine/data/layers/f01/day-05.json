@@ -81,5 +81,55 @@
         "trigger": "on_search"
       }
     ]
+  },
+  "f01-z05": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "item_hooks": [],
+    "npcs": [],
+    "key": null,
+    "rest": null,
+    "hooks": "gone"
+  },
+  "f01-z07": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "item_hooks": [],
+    "npcs": [],
+    "key": null,
+    "rest": null,
+    "hooks": "gone"
+  },
+  "f01-z08": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "item_hooks": [],
+    "npcs": [],
+    "key": null,
+    "rest": null,
+    "hooks": "gone"
+  },
+  "f01-z06": {
+    "closed": true,
+    "passable": true,
+    "day_encounters": [],
+    "loot": [],
+    "achievements": [],
+    "item_hooks": [],
+    "npcs": [],
+    "key": null,
+    "rest": null,
+    "saferoom": false,
+    "vendors": "closed",
+    "hooks": "gone"
   }
 }

@@ -79,7 +79,7 @@ STATS = {
     "animated-armor": {"ac": 18, "hp": 33, "to_hit": 4, "damage": "1d6+2", "attack": "Slam", "type": "bludgeoning", "vulnerable": []},
     "animated-flying-sword": {"ac": 17, "hp": 14, "to_hit": 4, "damage": "1d8+2", "attack": "Slash", "type": "slashing", "vulnerable": []},
     "giant-rat": {"ac": 13, "hp": 7, "to_hit": 5, "damage": "1d4+3", "attack": "Bite", "type": "piercing", "vulnerable": []},
-    "stirge": {"ac": 13, "hp": 5, "to_hit": 5, "damage": "1d6+3", "attack": "Blood Drain", "type": "piercing", "vulnerable": []},
+    "stirge": {"ac": 13, "hp": 5, "to_hit": 5, "damage": "1d6+3", "attack": "Proboscis", "type": "piercing", "vulnerable": []},
     "goblin-warrior": {"ac": 15, "hp": 10, "to_hit": 4, "damage": "1d6+2", "attack": "Scimitar", "type": "slashing", "vulnerable": []},
     "goblin-minion": {"ac": 12, "hp": 7, "to_hit": 4, "damage": "1d4+2", "attack": "Dagger", "type": "piercing", "vulnerable": []},
     "bugbear-warrior": {"ac": 14, "hp": 33, "to_hit": 4, "damage": "2d6+2", "attack": "Grab", "type": "bludgeoning", "vulnerable": []},
@@ -191,23 +191,36 @@ def loot_rows(enc):
     return out[:6]
 
 
-def voice_text(enc, key):
+def fill_clock(text, clock):
+    """Fill spec placeholders from the day spec. {days} is clock.days, never a guess."""
+    clock = clock or {}
+    out = text or ""
+    if clock.get("days") is not None:
+        out = out.replace("{days}", str(clock["days"]))
+    if clock.get("day") is not None:
+        out = out.replace("{day}", str(clock["day"]))
+    return out
+
+
+def voice_text(enc, key, clock=None):
     lines = enc.get("voice_lines") or {}
     node = lines.get(key) or {}
     if isinstance(node, dict):
-        return node.get("text") or ""
-    return str(node or "")
+        raw = node.get("text") or ""
+    else:
+        raw = str(node or "")
+    return fill_clock(raw, clock)
 
 
-def voice_of(enc, fallback_name):
-    intro = clip_sentences(voice_text(enc, "system_intro"), 28, fallback_name + " is ahead.")
-    twist = clip_sentences(voice_text(enc, "midpoint_twist"), 24, "Something in the room changes.")
-    win = clip_sentences(voice_text(enc, "win"), 24, "The room is clear.")
+def voice_of(enc, fallback_name, clock=None):
+    intro = clip_sentences(voice_text(enc, "system_intro", clock), 28, fallback_name + " is ahead.")
+    twist = clip_sentences(voice_text(enc, "midpoint_twist", clock), 24, "Something in the room changes.")
+    win = clip_sentences(voice_text(enc, "win", clock), 24, "The room is clear.")
     return {"intro": intro, "twist": twist, "win": win}
 
 
-def read_aloud_of(enc, fallback):
-    sentences = complete_sentences(voice_text(enc, "system_intro"))
+def read_aloud_of(enc, fallback, clock=None):
+    sentences = complete_sentences(voice_text(enc, "system_intro", clock))
     if sentences:
         return " ".join(sentences)
     return fallback
@@ -230,6 +243,14 @@ def map_of(enc, zone):
     }
 
 
+def position_name(line):
+    """Keep a whole sentence. Never stop on a word count."""
+    sentences = complete_sentences(line)
+    if sentences:
+        return sentences[0]
+    return " ".join(str(line).split()) or "Cover"
+
+
 def positions_of(enc):
     mind = enc.get("map_in_the_mind") or {}
     rows = [{"id": "entry", "name": "Entry"}]
@@ -237,9 +258,7 @@ def positions_of(enc):
     if isinstance(cover, str):
         cover = [cover]
     for i, line in enumerate(list(cover)[:3]):
-        words = str(line).split()
-        name = " ".join(words[:8]) or "Cover"
-        rows.append({"id": "cover-%d" % (i + 1), "name": name})
+        rows.append({"id": "cover-%d" % (i + 1), "name": position_name(line)})
     return rows
 
 
@@ -251,11 +270,12 @@ def gm_notes_of(enc):
 
 
 def rest_of(zone, enc):
+    """Day 1 offers a Long Rest at both saferooms. The Green Room also opens boxes."""
     kind = (enc.get("kind") or "").lower() if enc else ""
+    if zone == "z09" or "rest" in kind:
+        return {"kind": "long", "saferoom": True, "fee": None, "boxes": "open"}
     if zone == "z06" and "hazard" not in kind:
-        return {"kind": "short", "saferoom": True, "fee": None}
-    if "rest" in kind:
-        return {"kind": "short", "saferoom": True, "fee": None}
+        return {"kind": "long", "also": ["short"], "saferoom": True, "fee": None}
     return None
 
 
@@ -309,114 +329,72 @@ def blank_room(zone):
     }
 
 
-def apply_prose(room, enc, spec_path):
+def apply_prose(room, enc, spec_path, clock=None):
     zone = room["zone"]
     fallback = NAMES.get(zone, zone) + " is ahead."
     room["name"] = enc.get("zone_name") or enc.get("name") or room["name"]
-    voices = voice_of(enc, NAMES.get(zone, zone))
+    voices = voice_of(enc, NAMES.get(zone, zone), clock)
     room["narrator_line"] = voices["intro"]
-    room["read_aloud"] = read_aloud_of(enc, fallback)
+    room["read_aloud"] = read_aloud_of(enc, fallback, clock)
     room["map"] = map_of(enc, zone)
     room["positions"] = positions_of(enc)
     room["voice_lines"] = voices
     flavors = ((enc.get("gm_notes") or {}).get("flavor")) or []
-    room["item_hooks"] = [" ".join(str(line).split()[:20]) for line in flavors[:4]]
+    hooks = []
+    for line in flavors[:4]:
+        kept = clip_sentences(str(line), 40, fallback="")
+        if kept:
+            hooks.append(kept)
+    room["item_hooks"] = hooks
     room["gm_notes"] = gm_notes_of(enc)
     room["rest"] = rest_of(zone, enc)
     room["source"] = {"spec": str(spec_path.relative_to(ROOT)), "enc_id": enc["id"]}
     return room
 
 
-def from_encounter(zone, enc, spec_path):
+def from_encounter(zone, enc, spec_path, clock=None):
     room = blank_room(zone)
-    apply_prose(room, enc, spec_path)
+    apply_prose(room, enc, spec_path, clock)
     room["encounters"] = encounter_rows(enc)
     room["loot"] = loot_rows(enc)
     if zone in NPCS:
         name, voice = NPCS[zone]
         room["npcs"] = [{"name": name, "voice": voice}]
-    if zone == "z03":
-        room["secrets"] = z03_secrets()
     return room
 
 
-VENDOR_ODDITY_BOX = (
-    "╔══ ITEM ════════════════════════════════════════════╗\n"
-    "  Vendor Oddity (Unappraised)\n"
-    "  A coin. Probably. Value: ???\n"
-    "  This item cannot be sold. Please don't try. It's\n"
-    "  embarrassing for everyone.\n"
-    "╚════════════════════════════════════════════════════╝"
-)
-
-
-def z03_secrets():
-    return [
-        {
-            "id": "unclaimed-crate",
-            "trigger": {"type": "action", "verb": "open", "target": "UNCLAIMED crate"},
-            "reveal_text": "Oddity logged.",
-            "gm_only": False,
-            "grants": {
-                "item": "Vendor Oddity (Unappraised)",
-                "box_text": VENDOR_ODDITY_BOX,
-            },
-            "sets_flag": "SEED-ODDCOIN",
-            "flag_holder": "opener",
-            "achievement": {"id": "ACH-0081", "name": "Odd Coin Pocketed", "hidden": True, "toast": "Oddity logged.", "reward": None},
-            "gm_note": "No check. If the crate is never opened, the coin comes as a Weird pull in the first Green Room box (lore card f01-z09-0001), or from Dale's pocket if he dies. Must be planted on Floor 1.",
-        },
-        {
-            "id": "odd-coin-identify",
-            "trigger": {
-                "type": "item",
-                "item": "Vendor Oddity (Unappraised)",
-                "actions": ["sell", "identify", "appraise"],
-            },
-            "reveal_text": "ITEM NOT RECOGNIZED.",
-            "gm_only": False,
-            "gm_note": "Same reply for sell, identify or appraise (Snakk-Matic, spell, check, or asking an NPC). Selling can instead get a 500-credit offer that cancels mid-animation. Never name a floor, fee or time. Never explain it.",
-        },
-        {
-            "id": "back-cage",
-            "triggers": [
-                {"type": "check", "skill": "Perception", "dc": 15, "passive": True},
-                {"type": "check", "skill": "Investigation", "dc": 13, "when": "someone says they are checking behind the machines"},
-            ],
-            "reveal_text": "A false panel behind the change machine opens the back cage.",
-            "opens_exit": "f01-z03b",
-            "gm_only": False,
-        },
-    ]
-
-
 def back_cage():
+    """Shell only. Lore's lines live in engine/overrides/f01.json."""
     room = blank_room("z03b")
-    line = "Behind the panel, a wire cage nobody was meant to find, and a stash somebody meant to come back for."
-    room["narrator_line"] = line
-    room["read_aloud"] = line
-    room["positions"] = [
-        {"id": "panel", "name": "False panel"},
-        {"id": "stash", "name": "Stash"},
-    ]
-    room["voice_lines"] = {
-        "intro": line,
-        "twist": "Something in here is stenciled PROPERTY OF ORIENTATION. Orientation is not coming back for it.",
-        "win": "The map is scrawled in a hurry, and it shows a door that isn't on yours.",
-    }
-    room["loot"] = [
-        {"item": "Potion of Healing", "label": "Sports Drink, Blue Flavor, Do Not Ask"},
-        {"item": "Shield", "label": "riot shield stenciled PROPERTY OF ORIENTATION"},
-        {"roll": "3d6 x 5", "unit": "credits"},
-        {"item": "scrawled map", "reveals": "f01-zS"},
-    ]
-    room["achievements"] = [
-        {"id": "ACH-0177", "name": "Hidden Cache", "when": "on_loot"},
-        {"id": "ACH-0179", "name": "Side Path", "when": "zone_s_revealed"},
-    ]
-    room["rest"] = None
-    room["gm_notes"] = {"tag": "[GM-FACING]", "flavor": ["Hidden cache. Orientation is not coming back for it."]}
     room["source"] = {"spec": "floors/f01/00-overview.md", "enc_id": "overview-5.3"}
+    return room
+
+
+def load_overrides():
+    path = ROOT / "engine" / "overrides" / "f01.json"
+    if not path.is_file():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def apply_override(room, overrides):
+    patch = ((overrides or {}).get("rooms") or {}).get(room["id"])
+    if not isinstance(patch, dict):
+        return room
+    for key, val in patch.items():
+        if key == "voice_lines" and isinstance(val, dict):
+            merged = dict(room.get("voice_lines") or {})
+            merged.update(val)
+            room["voice_lines"] = merged
+        elif key == "loot_add" and isinstance(val, list):
+            room["loot"] = list(room.get("loot") or []) + val
+        elif key == "npc_lines" and isinstance(val, dict):
+            for npc in room.get("npcs") or []:
+                line = val.get(npc.get("name"))
+                if line:
+                    npc["line"] = line
+        else:
+            room[key] = val
     return room
 
 
@@ -473,8 +451,36 @@ def group_specs(specs):
     return grouped
 
 
+def clock_for(path, day):
+    spec = json.loads(Path(path).read_text(encoding="utf-8"))
+    return {"days": (spec.get("clock") or {}).get("days"), "day": day}
+
+
+def close_room(layer, room_id, extra=None):
+    """Replace the day's fight list. A closed room stays passable."""
+    patch = {
+        "closed": True,
+        "passable": True,
+        "day_encounters": [],
+        "loot": [],
+        "achievements": [],
+        "item_hooks": [],
+        "npcs": [],
+        "key": None,
+        "rest": None,
+    }
+    if extra:
+        patch.update(extra)
+    cur = layer.get(room_id)
+    if not isinstance(cur, dict):
+        cur = {}
+    cur.update(patch)
+    layer[room_id] = cur
+
+
 def main():
     specs = load_specs()
+    overrides = load_overrides()
     grouped = group_specs(specs)
     by_zone = {}
     later = {2: {}, 3: {}, 4: {}, 5: {}}
@@ -496,7 +502,7 @@ def main():
         first_open = min(days)
         if first_open in found:
             enc, path = found[first_open][0]
-            room = from_encounter(zone, enc, path)
+            room = from_encounter(zone, enc, path, clock_for(path, first_open))
             for extra, _path in found[first_open][1:]:
                 room["encounters"].extend(encounter_rows(extra))
                 room["loot"].extend(loot_rows(extra))
@@ -508,7 +514,7 @@ def main():
             if found:
                 earliest = min(found)
                 enc, path = found[earliest][0]
-                apply_prose(room, enc, path)
+                apply_prose(room, enc, path, clock_for(path, earliest))
                 room["encounters"] = []
                 room["loot"] = []
         by_zone[zone] = room
@@ -524,7 +530,7 @@ def main():
         found = grouped["wandering"]
         first = min(found)
         enc, path = found[first][0]
-        room = from_encounter("wandering", enc, path)
+        room = from_encounter("wandering", enc, path, clock_for(path, first))
         room["days_open"] = sorted(found)
         room["exits"] = []
         for extra, _path in found[first][1:]:
@@ -549,12 +555,17 @@ def main():
 
     for zone in ("z00", "z01", "z02", "z03", "z03b", "z04"):
         merge_layer(later[2], "f01-%s" % zone, {"closed": True, "hooks": "gone"})
-    for zone in ("z05", "z07", "z08"):
-        merge_layer(later[3], "f01-%s" % zone, {"hooks": "gone"})
-    merge_layer(later[4], "f01-z06", {"saferoom": False, "vendors": "closed", "rest": None})
+    for zone in ("z05", "z07"):
+        close_room(later[3], "f01-%s" % zone, {"hooks": "gone"})
+    merge_layer(later[3], "f01-z08", {"hooks": "gone", "npcs": [], "key": None})
+    for day in (4, 5):
+        for zone in ("z05", "z07", "z08"):
+            close_room(later[day], "f01-%s" % zone, {"hooks": "gone"})
+        close_room(later[day], "f01-z06", {"saferoom": False, "vendors": "closed", "hooks": "gone"})
     merge_layer(later[5], "f01-z09", {"open": True})
 
     for zone, room in by_zone.items():
+        apply_override(room, overrides)
         write(OUT_ROOMS / ("%s.json" % room["id"]), room)
     for srd_id in sorted(srd_ids):
         write(OUT_STATS / ("%s.json" % srd_id), stat_block(srd_id))

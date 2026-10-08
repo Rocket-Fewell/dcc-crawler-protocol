@@ -26,6 +26,24 @@ def ends_sentence(text):
     return bool(stripped) and stripped[-1] in ".!?"
 
 
+_DANGLING = ("a", "an", "the", "of", "and", "or", "to", "for", "with", "are")
+
+
+def label_cut_off(text):
+    """A label cut on a word count ends on a dangling word, a comma, or an open paren."""
+    stripped = (text or "").strip()
+    if not stripped:
+        return False
+    if stripped.count("(") != stripped.count(")"):
+        return True
+    if stripped[-1] in ",;:":
+        return True
+    if ";" in stripped and stripped[-1] not in ".!?)":
+        return True
+    last = stripped.rstrip(".!?").split()[-1].lower().strip(".,;:()\"'")
+    return last in _DANGLING
+
+
 def map_lines(room):
     mapping = room.get("map") or {}
     lines = []
@@ -66,6 +84,11 @@ def check_room(room, where):
         for i, pos in enumerate(room.get("positions") or []):
             if not isinstance(pos, dict) or not pos.get("id") or not pos.get("name"):
                 errs.append("%s position %d needs id and name" % (where, i))
+            elif label_cut_off(pos.get("name")):
+                errs.append("%s position %d name is cut off" % (where, i))
+    for i, hook in enumerate(room.get("item_hooks") or []):
+        if isinstance(hook, str) and label_cut_off(hook):
+            errs.append("%s item hook %d is cut off" % (where, i))
     if room.get("rest") is not None and not isinstance(room.get("rest"), dict):
         errs.append("%s rest must be null or an object" % where)
     lines = map_lines(room)
