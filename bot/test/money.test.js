@@ -117,7 +117,8 @@ for (const flag of [false, true]) {
       const text = [r.lastText, ...r.components().flatMap((c) => [c.label, c.placeholder, ...(c.options ?? []).flatMap((o) => [o.label, o.description])])].filter(Boolean).join('\n');
       seen = { text, kc: r.byKey('S10:kc').options, kb: r.byKey('S10:kb').options };
       await r.click('prices');
-      seen.prices = r.followups.map((f) => f.content ?? '').join('\n');
+      seen.priceMsgs = r.followups.map((f) => f.content ?? '');
+      seen.prices = seen.priceMsgs.join('\n');
       throw new Error('STOP-AT-S10');
     } }), /STOP-AT-S10/);
     assert.ok(seen);
@@ -132,7 +133,16 @@ for (const flag of [false, true]) {
     assert.ok(seen.kc.some((o) => /credits/i.test(o.label)) && seen.kb.some((o) => /credits/i.test(o.label)));
     assert.ok(!MONEY_WORDS.test(seen.prices), seen.prices.match(MONEY_WORDS)?.[0]);
     assert.match(seen.prices, /\d(\.\d+)? credits?/);
-    assert.ok(!/ GP| cp\b/.test(seen.prices));
+    // "Gas-Station GPS Kit" contains " GP" once gear is listed; a price is a number then GP or cp
+    assert.ok(!/\d\s*GP\b|\d\s*cp\b/.test(seen.prices));
+    assert.ok(seen.priceMsgs.length >= 3, `expected Weapons, Armor, and Other gear messages, got ${seen.priceMsgs.length}`);
+    assert.ok(seen.priceMsgs.every((m) => m.length > 0 && m.length <= 2000), seen.priceMsgs.map((m) => m.length).join(','));
+    const titles = seen.priceMsgs.map((m) => (m.match(/^\*\*(Weapons|Armor|Other gear)\*\*/) || [])[1]);
+    assert.ok(titles.every(Boolean), 'every price message starts with Weapons, Armor, or Other gear');
+    assert.deepEqual([...new Set(titles)], ['Weapons', 'Armor', 'Other gear']);
+    assert.match(seen.prices, /Rations|Torch|Rope/);
+    assert.match(seen.prices, /Spellbook|Component Pouch|Arcane Focus/);   // magic/misc stays on the Other gear list
+    assert.match(seen.prices, /Gas-Station GPS Kit/);   // late gear item: the list was not sliced off at armor
   });
 }
 

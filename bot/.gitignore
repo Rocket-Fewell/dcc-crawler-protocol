@@ -5,3 +5,6 @@ debug-audio/
 logs/
 
 *.mp3
+.env.agents
+.env.*
+!.env.example

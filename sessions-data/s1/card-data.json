@@ -1,0 +1,20 @@
+{
+  "items": {
+    "hotel desk bell, ding ding": {
+      "category": "magic",
+      "mechanics": "Utilize action: blow it; the sound can be heard up to 600 ft away."
+    },
+    "cooking spray, industrial drum size": {
+      "category": "gear",
+      "mechanics": "Attack action (replace one attack): throw at a creature or object within 20 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is covered in oil for 1 minute; if it takes Fire damage in that time, +5 Fire damage. OR Utilize action: pour on level ground in a 5-ft square within 5 ft; if lit it burns until the end of the turn 2 rounds later, 5 Fire damage to any creature entering or ending its turn there (once per turn). Also fuels a Lamp or Lantern for 6 hours."
+    },
+    "dean's list magnifying glass": {
+      "category": "magic",
+      "mechanics": "Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with it needs sunlight-bright light, tinder and about 5 minutes."
+    },
+    "laminated complaint card": {
+      "category": "gear",
+      "mechanics": "Utilize action, once: ask the System one yes/no question about the current floor; it answers truthfully, yes or no. The card is then spent."
+    }
+  }
+}

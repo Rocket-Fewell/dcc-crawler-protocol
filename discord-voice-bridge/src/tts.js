@@ -246,9 +246,10 @@ export class GmOutputBridge {
       this.log.debug('GM message received but bot is not in a voice channel; not speaking it');
       return;
     }
-    const { chunks, truncated } = prepareSpeechDetailed(this.extractSources(message), {
+    const { chunks, truncated, split, parts, totalChars, droppedChars } = prepareSpeechDetailed(this.extractSources(message), {
       chunkMaxChars: tts.chunkMaxChars,
       maxMessageChars: tts.maxMessageChars,
+      maxTotalChars: tts.maxTotalChars,
     });
     if (!chunks.length) return;
     if (this.sessionCap?.isReached()) {
@@ -264,7 +265,8 @@ export class GmOutputBridge {
       this.events?.record('duplicate_dropped', { kind: dup.kind, age_s: dup.ageSeconds, chars: speakable.length });
       return;
     }
-    if (truncated) this.log.warn(`GM message ${message.id} exceeded TTS_MAX_MESSAGE_CHARS (${tts.maxMessageChars}); truncated`);
+    if (split) this.log.info(`GM message ${message.id} is ${totalChars} chars (over TTS_MAX_MESSAGE_CHARS ${tts.maxMessageChars}): split into ${parts} parts, speaking all in order`);
+    if (truncated) this.log.warn(`GM message ${message.id} exceeded TTS_MAX_TOTAL_CHARS (${tts.maxTotalChars}); truncated (${droppedChars} chars not spoken)`);
     const voices = [...new Set(chunks.map((c) => c.voice))].join('+');
     this.log.info(`Speaking GM message from ${message.author.tag ?? message.author.id} (${chunks.length} chunk(s), voice: ${voices})`);
     const groupId = this.queue.enqueue(chunks, { label: `msg:${message.id}` });

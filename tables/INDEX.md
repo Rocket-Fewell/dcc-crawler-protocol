@@ -3,8 +3,9 @@ Owner: see NAMING-CONVENTIONS.md | Updated: 2026-10-04
 
 
 - tables/achievements.csv and tables/achievements.xlsx: achievement catalog, 1,826 rows (data files). Owner: Syndicate. Status: draft. Header card: tables/achievements.md.
-- tables/chargen-5e.json: /create data (2024 PHB, written from memory; see meta.verify_todo, must be checked against the book; v0.1.5: Find Familiar line reworded, no pet hint; ability_methods.roll added in v0.1.4, decision 024; v0.1.6: its notes cite the current version). Status: draft v0.1.6.
+- tables/chargen-5e.json: /create data (2024 PHB, written from memory; see meta.verify_todo, must be checked against the book; v0.1.5: Find Familiar line reworded, no pet hint; ability_methods.roll added in v0.1.4, decision 024; v0.1.6: its notes cite the current version). Status: draft v0.1.7 (2026-10-07: 2024 mastery option lists, Magician/Thaumaturge bonus cantrip, Ranger Hunter's Mark always prepared, SRD 5.2 pack contents).
 - tables/create-flow-lines.json: placeholder System lines + survey pool for /create. Status: draft.
+- tables/card-rules-5e.json: player-card turn data for tools/card_rules.py (2024 rules / SRD 5.2, written from memory, see meta.verify_todo): weapon proficiency by class, spellcasting kind and slot tables (Pact Magic on a Short Rest), class features levels 1-2 with uses and recharge, invocations, Origin feats, species traits, and a one-line mechanic for every /create spell. Status: draft v0.2.0 (2026-10-07: spell counts by level, always-prepared spells, invocations by level, Monk 2024 wording, Magic Initiate).
 - tables/prebuilt-crawlers.json: 12 legal pre-builts (scripts/gen-prebuilt.js in the bridge). Status: draft.
 - tables/loot-decks/: loot decks (`loot-deck/*` wrappers drawn by `state.py loot draw`).
 - tables/item-reskins.json and tables/item-reskins.version.json: SYMLINKS to lore/tables/ (Lore owns them; never edit or copy here). `/create` reads names and prices by srd_id; the sha256 must match the version file (`tools/reskin_check.py`, bridge startup warning). Owner: Lore. Status: draft.

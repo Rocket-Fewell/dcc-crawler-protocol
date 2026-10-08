@@ -1,12 +1,12 @@
 {
   "schema": "loot-deck/0.1.1",
   "deck_id": "f01-z06-break-room",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "floor": 1,
   "zone": "z06",
   "zone_name": "Zone 6: The Break Room (Saferoom A)",
   "owner": "DCC Lore",
-  "updated": "2026-10-04",
+  "updated": "2026-10-07",
   "cards": [
     {
       "id": "f01-z06-0001",
@@ -35,7 +35,7 @@
           "max": 1,
           "recharge": "none"
         },
-        "limits": "Must be a yes/no question about the floor you are on. A question that is not yes/no is refused and the card is not spent.",
+        "limits": "Must be a yes/no question about the floor you are on. A question that is not yes/no is refused and the card is not spent. Never reveals spine secrets or GM-only information: a question about them gets bureaucratic runaround (a form number, 'your complaint has been escalated', 'please allow 6-8 floors for processing') and the card is spent.",
         "weight_lb": 0
       },
       "spoken_line": "Laminated Complaint Card. One use: ask the System one yes-or-no question about this floor. It must answer truthfully.",
@@ -54,7 +54,7 @@
       },
       "box_name": "Filed a Formal Complaint Box",
       "deed": "Filed a formal complaint with the System",
-      "notes": "Alpha-test item (2026-10-04, Bone). Open: are spine secrets exempt from 'truthfully'? (spec §5 Q3)."
+      "notes": "Alpha-test item (2026-10-04, Bone). Lore ruling 2026-10-07 (resolves spec §5 Q3 on the Lore side; Syndicate/Caleb may still overrule in rules/40): the card never reveals spine secrets (Odd Coin, Benefactor, Black Box, etc.) or GM-only information; such questions get bureaucratic runaround instead of yes/no, the card is still spent, and it never confirms or denies that a secret exists."
     },
     {
       "id": "f01-z06-0002",

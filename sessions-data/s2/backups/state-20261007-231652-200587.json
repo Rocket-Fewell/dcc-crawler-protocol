@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "campaign": {
+    "name": "Dungeon Crawler Carl 5e (2024)",
+    "current_floor": 1,
+    "zone": "",
+    "death_mode": "Costly Revives",
+    "comfort": "Ludicrous",
+    "created": "2026-10-07T23:15:52-05:00",
+    "updated": "2026-10-07T23:15:52-05:00"
+  },
+  "party": {
+    "revives_used": 0,
+    "last_revive_floor": null,
+    "revive_log": [],
+    "bypasses_used": 0,
+    "bypass_log": []
+  },
+  "limits": {
+    "revive_party_cooldown_floors": 3,
+    "revive_campaign_cap": 3,
+    "revive_per_crawler_cap": 1,
+    "bypass_per_crawler_cap": null,
+    "max_crawlers": 4,
+    "legendary_enabled": true,
+    "story_box_rota": "warn",
+    "pets_enabled": true,
+    "legendary_cap_per_floor": 1
+  },
+  "crawlers": []
+}

@@ -1,0 +1,1747 @@
+{
+ "meta": {
+  "version": "0.2.0",
+  "updated": "2026-10-07",
+  "owner": "AI GM tools (card publisher)",
+  "source": "2024 rules (SRD 5.2) as filed for the player-channel card: weapon proficiencies, spell slots, level 1-2 class features with uses and recharge, species traits, origin feats, invocations, one-line spell mechanics. Read by tools/card_rules.py; numbers on the card are computed from each Crawler's class, level, scores, build and inventory, never typed. Syndicate/Book Author: check against the book like chargen-5e.json (verify list).",
+  "verify_todo": [
+   "spells.* one-line mechanics vs SRD 5.2.1",
+   "class_features.* uses/recharge vs 2024 PHB",
+   "species_traits.* vs core-book Ch3"
+  ],
+  "changelog": [
+   "0.2.0 (2026-10-07, Syndicate review): spellcasting.*.cantrips_by_level / prepared_by_level / always_prepared (Hunter's Mark, Divine Smite at 2, Speak with Animals), Wizard spellbook size, Warlock invocations_by_level; Monk Martial Arts 2024 wording; Magic Initiate picks shown."
+  ]
+ },
+ "rests": {
+  "short_rests_per_day": 4,
+  "short_rest_note": "spend Hit Dice: roll each + CON modifier, regain that many HP",
+  "long_rest_note": "saferoom only (core 5.6): all HP, all spent Hit Dice, long-rest uses"
+ },
+ "weapon_proficiency": {
+  "Barbarian": [
+   "simple",
+   "martial"
+  ],
+  "Fighter": [
+   "simple",
+   "martial"
+  ],
+  "Paladin": [
+   "simple",
+   "martial"
+  ],
+  "Ranger": [
+   "simple",
+   "martial"
+  ],
+  "Bard": [
+   "simple"
+  ],
+  "Cleric": [
+   "simple"
+  ],
+  "Druid": [
+   "simple"
+  ],
+  "Sorcerer": [
+   "simple"
+  ],
+  "Warlock": [
+   "simple"
+  ],
+  "Wizard": [
+   "simple"
+  ],
+  "Monk": [
+   "simple",
+   "martial:light"
+  ],
+  "Rogue": [
+   "simple",
+   "martial:finesse",
+   "martial:light"
+  ]
+ },
+ "choice_weapon_proficiency": {
+  "divine_order:Protector": [
+   "martial"
+  ],
+  "primal_order:Warden": [
+   "martial"
+  ]
+ },
+ "spellcasting": {
+  "Bard": {
+   "progression": "full",
+   "cantrips_by_level": {
+    "1": 2,
+    "4": 3,
+    "10": 4
+   },
+   "prepared_by_level": {
+    "1": 4,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 9,
+    "6": 10,
+    "7": 11,
+    "8": 12,
+    "9": 14,
+    "10": 15,
+    "11": 16,
+    "12": 16,
+    "13": 17,
+    "14": 17,
+    "15": 18,
+    "16": 18,
+    "17": 19,
+    "18": 20,
+    "19": 21,
+    "20": 22
+   }
+  },
+  "Cleric": {
+   "progression": "full",
+   "cantrips_by_level": {
+    "1": 3,
+    "4": 4,
+    "10": 5
+   },
+   "prepared_by_level": {
+    "1": 4,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 9,
+    "6": 10,
+    "7": 11,
+    "8": 12,
+    "9": 14,
+    "10": 15,
+    "11": 16,
+    "12": 16,
+    "13": 17,
+    "14": 17,
+    "15": 18,
+    "16": 18,
+    "17": 19,
+    "18": 20,
+    "19": 21,
+    "20": 22
+   }
+  },
+  "Druid": {
+   "progression": "full",
+   "cantrips_by_level": {
+    "1": 2,
+    "4": 3,
+    "10": 4
+   },
+   "prepared_by_level": {
+    "1": 4,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 9,
+    "6": 10,
+    "7": 11,
+    "8": 12,
+    "9": 14,
+    "10": 15,
+    "11": 16,
+    "12": 16,
+    "13": 17,
+    "14": 17,
+    "15": 18,
+    "16": 18,
+    "17": 19,
+    "18": 20,
+    "19": 21,
+    "20": 22
+   },
+   "always_prepared": [
+    {
+     "spell": "Speak with Animals",
+     "level": 1,
+     "from": "Druidic"
+    }
+   ]
+  },
+  "Sorcerer": {
+   "progression": "full",
+   "cantrips_by_level": {
+    "1": 4,
+    "4": 5,
+    "10": 6
+   },
+   "prepared_by_level": {
+    "1": 2,
+    "2": 4,
+    "3": 6,
+    "4": 7,
+    "5": 9,
+    "6": 10,
+    "7": 11,
+    "8": 12,
+    "9": 14,
+    "10": 15,
+    "11": 16,
+    "12": 16,
+    "13": 17,
+    "14": 17,
+    "15": 18,
+    "16": 18,
+    "17": 19,
+    "18": 20,
+    "19": 21,
+    "20": 22
+   }
+  },
+  "Wizard": {
+   "progression": "full",
+   "cantrips_by_level": {
+    "1": 3,
+    "4": 4,
+    "10": 5
+   },
+   "prepared_by_level": {
+    "1": 4,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 9,
+    "6": 10,
+    "7": 11,
+    "8": 12,
+    "9": 14,
+    "10": 15,
+    "11": 16,
+    "12": 16,
+    "13": 17,
+    "14": 18,
+    "15": 19,
+    "16": 21,
+    "17": 22,
+    "18": 23,
+    "19": 24,
+    "20": 25
+   },
+   "spellbook_base": 6,
+   "spellbook_per_level": 2
+  },
+  "Paladin": {
+   "progression": "half",
+   "cantrips_by_level": {
+    "1": 0
+   },
+   "prepared_by_level": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 6,
+    "7": 7,
+    "8": 7,
+    "9": 9,
+    "10": 9,
+    "11": 10,
+    "12": 10,
+    "13": 11,
+    "14": 11,
+    "15": 12,
+    "16": 12,
+    "17": 14,
+    "18": 14,
+    "19": 15,
+    "20": 15
+   },
+   "always_prepared": [
+    {
+     "spell": "Divine Smite",
+     "level": 2,
+     "from": "Paladin's Smite"
+    }
+   ]
+  },
+  "Ranger": {
+   "progression": "half",
+   "cantrips_by_level": {
+    "1": 0
+   },
+   "prepared_by_level": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 6,
+    "7": 7,
+    "8": 7,
+    "9": 9,
+    "10": 9,
+    "11": 10,
+    "12": 10,
+    "13": 11,
+    "14": 11,
+    "15": 12,
+    "16": 12,
+    "17": 14,
+    "18": 14,
+    "19": 15,
+    "20": 15
+   },
+   "always_prepared": [
+    {
+     "spell": "Hunter's Mark",
+     "level": 1,
+     "from": "Favored Enemy"
+    }
+   ]
+  },
+  "Warlock": {
+   "progression": "pact",
+   "label": "Pact Magic",
+   "cantrips_by_level": {
+    "1": 2,
+    "4": 3,
+    "10": 4
+   },
+   "prepared_by_level": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 8,
+    "8": 9,
+    "9": 10,
+    "10": 10,
+    "11": 11,
+    "12": 11,
+    "13": 12,
+    "14": 12,
+    "15": 13,
+    "16": 13,
+    "17": 14,
+    "18": 14,
+    "19": 15,
+    "20": 15
+   },
+   "invocations_by_level": {
+    "1": 1,
+    "2": 3,
+    "5": 5,
+    "7": 6,
+    "9": 7,
+    "12": 8,
+    "15": 9,
+    "18": 10
+   }
+  }
+ },
+ "slot_tables": {
+  "full": {
+   "1": [
+    2
+   ],
+   "2": [
+    3
+   ],
+   "3": [
+    4,
+    2
+   ],
+   "4": [
+    4,
+    3
+   ],
+   "5": [
+    4,
+    3,
+    2
+   ],
+   "6": [
+    4,
+    3,
+    3
+   ],
+   "7": [
+    4,
+    3,
+    3,
+    1
+   ],
+   "8": [
+    4,
+    3,
+    3,
+    2
+   ],
+   "9": [
+    4,
+    3,
+    3,
+    3,
+    1
+   ],
+   "10": [
+    4,
+    3,
+    3,
+    3,
+    2
+   ],
+   "11": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1
+   ],
+   "12": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1
+   ],
+   "13": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1
+   ],
+   "14": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1
+   ],
+   "15": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1,
+    1
+   ],
+   "16": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1,
+    1
+   ],
+   "17": [
+    4,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "18": [
+    4,
+    3,
+    3,
+    3,
+    3,
+    1,
+    1,
+    1,
+    1
+   ],
+   "19": [
+    4,
+    3,
+    3,
+    3,
+    3,
+    2,
+    1,
+    1,
+    1
+   ],
+   "20": [
+    4,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1,
+    1
+   ]
+  },
+  "half": {
+   "1": [
+    2
+   ],
+   "2": [
+    2
+   ],
+   "3": [
+    3
+   ],
+   "4": [
+    3
+   ],
+   "5": [
+    4,
+    2
+   ],
+   "6": [
+    4,
+    2
+   ],
+   "7": [
+    4,
+    3
+   ],
+   "8": [
+    4,
+    3
+   ],
+   "9": [
+    4,
+    3,
+    2
+   ],
+   "10": [
+    4,
+    3,
+    2
+   ],
+   "11": [
+    4,
+    3,
+    3
+   ],
+   "12": [
+    4,
+    3,
+    3
+   ],
+   "13": [
+    4,
+    3,
+    3,
+    1
+   ],
+   "14": [
+    4,
+    3,
+    3,
+    1
+   ],
+   "15": [
+    4,
+    3,
+    3,
+    2
+   ],
+   "16": [
+    4,
+    3,
+    3,
+    2
+   ],
+   "17": [
+    4,
+    3,
+    3,
+    3,
+    1
+   ],
+   "18": [
+    4,
+    3,
+    3,
+    3,
+    1
+   ],
+   "19": [
+    4,
+    3,
+    3,
+    3,
+    2
+   ],
+   "20": [
+    4,
+    3,
+    3,
+    3,
+    2
+   ]
+  },
+  "pact": {
+   "1": [
+    1,
+    1
+   ],
+   "2": [
+    2,
+    1
+   ],
+   "3": [
+    2,
+    2
+   ],
+   "4": [
+    2,
+    2
+   ],
+   "5": [
+    2,
+    3
+   ],
+   "6": [
+    2,
+    3
+   ],
+   "7": [
+    2,
+    4
+   ],
+   "8": [
+    2,
+    4
+   ],
+   "9": [
+    2,
+    5
+   ],
+   "10": [
+    2,
+    5
+   ],
+   "11": [
+    3,
+    5
+   ],
+   "12": [
+    3,
+    5
+   ],
+   "13": [
+    3,
+    5
+   ],
+   "14": [
+    3,
+    5
+   ],
+   "15": [
+    3,
+    5
+   ],
+   "16": [
+    3,
+    5
+   ],
+   "17": [
+    4,
+    5
+   ],
+   "18": [
+    4,
+    5
+   ],
+   "19": [
+    4,
+    5
+   ],
+   "20": [
+    4,
+    5
+   ]
+  }
+ },
+ "class_features": {
+  "Barbarian": [
+   {
+    "name": "Rage",
+    "level": 1,
+    "uses": {
+     "by_level": {
+      "1": 2,
+      "3": 3,
+      "6": 4,
+      "12": 5,
+      "17": 6
+     }
+    },
+    "reset": "long_rest",
+    "short_rest_regain": 1,
+    "text": "Bonus Action, lasts 10 min (extend each turn by attacking, forcing a save, or a Bonus Action): Resistance to Bludgeoning, Piercing and Slashing; +{rage} damage on Strength attacks; Advantage on Strength checks and saves. No spells or Concentration; no Heavy armor."
+   },
+   {
+    "name": "Unarmored Defense",
+    "level": 1,
+    "text": "No armor: AC 10 + Dex + Con (shield allowed)."
+   },
+   {
+    "name": "Weapon Mastery",
+    "level": 1,
+    "text": "Use the mastery property of {masteries}."
+   },
+   {
+    "name": "Danger Sense",
+    "level": 2,
+    "text": "Advantage on Dexterity saves unless Incapacitated."
+   },
+   {
+    "name": "Reckless Attack",
+    "level": 2,
+    "text": "On your first attack of a turn: Advantage on Strength attacks this turn; attacks against you have Advantage until your next turn."
+   }
+  ],
+  "Bard": [
+   {
+    "name": "Bardic Inspiration",
+    "level": 1,
+    "uses": "mod:cha",
+    "reset": "long_rest",
+    "reset_by_level": {
+     "5": "short_rest"
+    },
+    "text": "Bonus Action, 60 ft: a creature gets a {bardic_die} to add to one failed d20 Test within the next hour."
+   },
+   {
+    "name": "Expertise",
+    "level": 2,
+    "text": "Double proficiency in two skills you are proficient in."
+   },
+   {
+    "name": "Jack of All Trades",
+    "level": 2,
+    "text": "Add half your Proficiency Bonus (+{half_pb}) to ability checks you are not proficient in."
+   }
+  ],
+  "Cleric": [
+   {
+    "name": "Divine Order",
+    "level": 1,
+    "choice": "divine_order",
+    "options": {
+     "Protector": "Protector: Martial weapons and Heavy armor training.",
+     "Thaumaturge": "Thaumaturge: one extra Cleric cantrip; add your Wis modifier (min +1) to Int (Arcana or Religion) checks."
+    }
+   },
+   {
+    "name": "Channel Divinity",
+    "level": 2,
+    "uses": {
+     "by_level": {
+      "2": 2,
+      "6": 3,
+      "18": 4
+     }
+    },
+    "reset": "long_rest",
+    "short_rest_regain": 1,
+    "text": "Divine Spark (Magic action, 30 ft: heal or deal necrotic/radiant {cd_dice} + Wis, Con save for half) or Turn Undead (Wis save, Frightened and Incapacitated 1 min)."
+   }
+  ],
+  "Druid": [
+   {
+    "name": "Druidic",
+    "level": 1,
+    "text": "You know the secret language of druids; Speak with Animals always prepared."
+   },
+   {
+    "name": "Primal Order",
+    "level": 1,
+    "choice": "primal_order",
+    "options": {
+     "Magician": "Magician: one extra Druid cantrip; add your Wis modifier (min +1) to Int (Arcana or Nature) checks.",
+     "Warden": "Warden: Martial weapons and Medium armor training."
+    }
+   },
+   {
+    "name": "Wild Shape",
+    "level": 2,
+    "uses": {
+     "by_level": {
+      "2": 2,
+      "6": 3,
+      "17": 4
+     }
+    },
+    "reset": "long_rest",
+    "short_rest_regain": 1,
+    "text": "Bonus Action: take a known Beast form for hours equal to half your Druid level; temp HP equal to your Druid level."
+   },
+   {
+    "name": "Wild Companion",
+    "level": 2,
+    "text": "Magic action: spend a spell slot or a Wild Shape use to cast Find Familiar without material components."
+   }
+  ],
+  "Fighter": [
+   {
+    "name": "Fighting Style",
+    "level": 1,
+    "choice": "fighting_style",
+    "options": {
+     "Archery": "Archery: +2 to attack rolls with Ranged weapons (already in Attacks).",
+     "Blind Fighting": "Blind Fighting: Blindsight 10 ft.",
+     "Defense": "Defense: +1 AC while wearing armor (already in AC).",
+     "Dueling": "Dueling: +2 damage with a one-handed melee weapon and no other weapon (already in Attacks).",
+     "Great Weapon Fighting": "Great Weapon Fighting: treat a 1 or 2 on a damage die as a 3 with Two-Handed or Versatile melee weapons held in two hands.",
+     "Interception": "Interception: Reaction, reduce damage to an ally within 5 ft by 1d10 + PB (needs a shield or weapon).",
+     "Protection": "Protection: Reaction, impose Disadvantage on an attack against an ally within 5 ft (needs a shield).",
+     "Thrown Weapon Fighting": "Thrown Weapon Fighting: +2 damage with thrown weapons (already in Attacks); draw as part of the attack.",
+     "Two-Weapon Fighting": "Two-Weapon Fighting: add your ability modifier to the damage of the extra Light-weapon attack.",
+     "Unarmed Fighting": "Unarmed Fighting: Unarmed Strike 1d6 + Str (1d8 with both hands free); 1d4 to a creature you grapple at the start of your turn."
+    }
+   },
+   {
+    "name": "Second Wind",
+    "level": 1,
+    "uses": {
+     "by_level": {
+      "1": 2,
+      "4": 3,
+      "10": 4
+     }
+    },
+    "reset": "long_rest",
+    "short_rest_regain": 1,
+    "text": "Bonus Action: regain 1d10 + {level} HP."
+   },
+   {
+    "name": "Weapon Mastery",
+    "level": 1,
+    "text": "Use the mastery property of {masteries}."
+   },
+   {
+    "name": "Action Surge",
+    "level": 2,
+    "uses": {
+     "by_level": {
+      "2": 1,
+      "17": 2
+     }
+    },
+    "reset": "short_rest",
+    "text": "On your turn: take one extra action (not the Magic action)."
+   },
+   {
+    "name": "Tactical Mind",
+    "level": 2,
+    "text": "When you fail an ability check, spend a Second Wind use to add 1d10 (kept if it still fails)."
+   }
+  ],
+  "Monk": [
+   {
+    "name": "Martial Arts",
+    "level": 1,
+    "text": "Unarmed Strikes and Monk weapons (Simple melee, Martial melee with Light) can use Dex instead of Str and deal at least {ma_die}; one Unarmed Strike as a Bonus Action each turn (no Attack action needed); Grapple/Shove DC can use Dex (numbers in Attacks)."
+   },
+   {
+    "name": "Unarmored Defense",
+    "level": 1,
+    "text": "No armor or shield: AC 10 + Dex + Wis."
+   },
+   {
+    "name": "Focus Points",
+    "level": 2,
+    "uses": "level",
+    "reset": "short_rest",
+    "text": "Flurry of Blows (1 FP: two Bonus Action Unarmed Strikes), Patient Defense (Disengage free; 1 FP: also Dodge), Step of the Wind (Dash free; 1 FP: also Disengage, jump x2). Save DC {ki_dc}."
+   },
+   {
+    "name": "Unarmored Movement",
+    "level": 2,
+    "text": "+10 ft Speed while unarmored and without a shield."
+   },
+   {
+    "name": "Uncanny Metabolism",
+    "level": 2,
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "When you roll Initiative: regain all Focus Points and heal {ma_die} + {level}."
+   }
+  ],
+  "Paladin": [
+   {
+    "name": "Lay on Hands",
+    "level": 1,
+    "uses": "level*5",
+    "reset": "long_rest",
+    "unit": "HP",
+    "text": "Bonus Action, touch: restore HP from the pool, or spend 5 to remove the Poisoned condition."
+   },
+   {
+    "name": "Weapon Mastery",
+    "level": 1,
+    "text": "Use the mastery property of {masteries}."
+   },
+   {
+    "name": "Fighting Style",
+    "level": 2,
+    "text": "One Fighting Style feat (or Blessed Warrior: two Cleric cantrips)."
+   },
+   {
+    "name": "Paladin's Smite",
+    "level": 2,
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "Divine Smite is always prepared; cast it once without a slot. Bonus Action after a melee hit: +2d8 radiant (+1d8 per slot level, +1d8 vs Fiends/Undead)."
+   }
+  ],
+  "Ranger": [
+   {
+    "name": "Favored Enemy",
+    "level": 1,
+    "uses": {
+     "by_level": {
+      "1": 2,
+      "5": 3,
+      "9": 4,
+      "13": 5,
+      "17": 6
+     }
+    },
+    "reset": "long_rest",
+    "text": "Hunter's Mark is always prepared; cast it this many times without a spell slot."
+   },
+   {
+    "name": "Weapon Mastery",
+    "level": 1,
+    "text": "Use the mastery property of {masteries}."
+   },
+   {
+    "name": "Deft Explorer",
+    "level": 2,
+    "text": "Expertise in one skill; two extra languages."
+   },
+   {
+    "name": "Fighting Style",
+    "level": 2,
+    "text": "One Fighting Style feat (or Druidic Warrior: two Druid cantrips)."
+   }
+  ],
+  "Rogue": [
+   {
+    "name": "Sneak Attack",
+    "level": 1,
+    "text": "Once per turn: +{sneak} with a Finesse or Ranged weapon if you have Advantage, or an ally is within 5 ft of the target and you lack Disadvantage."
+   },
+   {
+    "name": "Expertise",
+    "level": 1,
+    "text": "Double proficiency in two skills."
+   },
+   {
+    "name": "Thieves' Cant",
+    "level": 1,
+    "text": "Secret rogue language; one extra language."
+   },
+   {
+    "name": "Weapon Mastery",
+    "level": 1,
+    "text": "Use the mastery property of {masteries}."
+   },
+   {
+    "name": "Cunning Action",
+    "level": 2,
+    "text": "Bonus Action: Dash, Disengage or Hide."
+   }
+  ],
+  "Sorcerer": [
+   {
+    "name": "Innate Sorcery",
+    "level": 1,
+    "uses": 2,
+    "reset": "long_rest",
+    "text": "Bonus Action, 1 min: +1 to your spell save DC and Advantage on Sorcerer spell attack rolls."
+   },
+   {
+    "name": "Font of Magic",
+    "level": 2,
+    "uses": "level",
+    "reset": "long_rest",
+    "resource_name": "Sorcery Points",
+    "text": "Sorcery Points: turn them into spell slots (Bonus Action) or spell slots into points."
+   },
+   {
+    "name": "Metamagic",
+    "level": 2,
+    "text": "Two Metamagic options to twist spells with Sorcery Points."
+   }
+  ],
+  "Warlock": [
+   {
+    "name": "Eldritch Invocations",
+    "level": 1,
+    "choice": "invocation",
+    "invocations": true,
+    "count_by_level": {
+     "1": 1,
+     "2": 3,
+     "5": 5,
+     "7": 6,
+     "9": 7,
+     "12": 8,
+     "15": 9,
+     "18": 10
+    }
+   },
+   {
+    "name": "Magical Cunning",
+    "level": 2,
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "1-minute rite: regain half your Pact Magic slots (round up)."
+   }
+  ],
+  "Wizard": [
+   {
+    "name": "Ritual Adept",
+    "level": 1,
+    "text": "Cast any Ritual spell in your spellbook as a Ritual without preparing it."
+   },
+   {
+    "name": "Arcane Recovery",
+    "level": 1,
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "After a Short Rest: recover spent spell slots with combined level up to {arcane_recovery}."
+   },
+   {
+    "name": "Scholar",
+    "level": 2,
+    "text": "Expertise in one of Arcana, History, Investigation, Medicine, Nature or Religion."
+   }
+  ]
+ },
+ "invocations": {
+  "Armor of Shadows": "Cast Mage Armor on yourself at will without a spell slot.",
+  "Eldritch Mind": "Advantage on Constitution saves to keep Concentration.",
+  "Fiendish Vigor": "Cast False Life on yourself without a slot; take the maximum temp HP (12).",
+  "Gaze of Two Minds": "Bonus Action, touch a willing creature: perceive through its senses until the end of your next turn.",
+  "Lessons of the First Ones": "Gain one Origin feat of your choice.",
+  "Misty Visions": "Cast Silent Image at will without a spell slot.",
+  "Pact of the Blade": "Bonus Action: conjure or bond a pact weapon; attack with Cha, deal necrotic, psychic or radiant if you like (in Attacks).",
+  "Pact of the Chain": "Cast Find Familiar as a Magic action without a slot (special forms); it can attack with its Reaction when you Attack.",
+  "Pact of the Tome": "Book of Shadows: three cantrips and two 1st-level Rituals, always prepared; it is your focus.",
+  "Devil's Sight": "See normally in Dim Light and Darkness, magical or not, within 120 ft.",
+  "Mask of Many Faces": "Cast Disguise Self at will without a spell slot."
+ },
+ "origin_feats": {
+  "Alert": {
+   "text": "Add your Proficiency Bonus to Initiative (already in Initiative); swap Initiative with a willing ally."
+  },
+  "Crafter": {
+   "text": "Three Artisan's Tools; 20% off nonmagical gear; craft faster."
+  },
+  "Healer": {
+   "text": "Battle Medic: Utilize a Healer's Kit use, the creature spends a Hit Die and heals the roll + {pb}; reroll 1s on healing dice."
+  },
+  "Lucky": {
+   "uses": "pb",
+   "reset": "long_rest",
+   "resource_name": "Luck Points",
+   "text": "Spend 1: Advantage on your d20 Test, or Disadvantage on an attack roll against you."
+  },
+  "Magic Initiate (Cleric)": {
+   "uses": 1,
+   "reset": "long_rest",
+   "resource_name": "Magic Initiate spell",
+   "text": "Two Cleric cantrips and one level 1 Cleric spell; cast that spell once per Long Rest without a slot (or with slots). Ability: {mi_ability}. {mi_spells}"
+  },
+  "Magic Initiate (Druid)": {
+   "uses": 1,
+   "reset": "long_rest",
+   "resource_name": "Magic Initiate spell",
+   "text": "Two Druid cantrips and one level 1 Druid spell; cast that spell once per Long Rest without a slot (or with slots). Ability: {mi_ability}. {mi_spells}"
+  },
+  "Magic Initiate (Wizard)": {
+   "uses": 1,
+   "reset": "long_rest",
+   "resource_name": "Magic Initiate spell",
+   "text": "Two Wizard cantrips and one level 1 Wizard spell; cast that spell once per Long Rest without a slot (or with slots). Ability: {mi_ability}. {mi_spells}"
+  },
+  "Musician": {
+   "text": "Three instruments; after a Short or Long Rest, give Heroic Inspiration to up to {pb} allies who hear you play."
+  },
+  "Savage Attacker": {
+   "text": "Once per turn on a weapon hit: roll the damage dice twice and use either roll."
+  },
+  "Skilled": {
+   "text": "Proficiency in three skills or tools (already in your skills)."
+  },
+  "Tavern Brawler": {
+   "text": "Unarmed Strike 1d4 + Str (in Attacks), reroll 1s; improvised weapon proficiency; push 5 ft once per turn on an Unarmed Strike hit."
+  },
+  "Tough": {
+   "text": "+2 HP per level (already in your HP)."
+  }
+ },
+ "species_traits": {
+  "Dragonborn": [
+   {
+    "name": "Breath Weapon",
+    "uses": "pb",
+    "reset": "long_rest",
+    "text": "Replaces one attack: 15-ft cone or 30-ft line (in Attacks)."
+   },
+   {
+    "name": "Damage Resistance",
+    "text": "Resistance to {ancestry_type} damage."
+   },
+   {
+    "name": "Darkvision",
+    "text": "60 ft."
+   },
+   {
+    "name": "Draconic Flight",
+    "min_level": 5,
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "Bonus Action: fly speed equal to your Speed for 10 min."
+   }
+  ],
+  "Dwarf": [
+   {
+    "name": "Darkvision",
+    "text": "120 ft."
+   },
+   {
+    "name": "Dwarven Resilience",
+    "text": "Resistance to Poison damage; Advantage on saves to avoid or end Poisoned."
+   },
+   {
+    "name": "Dwarven Toughness",
+    "text": "+1 HP per level (already in your HP)."
+   },
+   {
+    "name": "Stonecunning",
+    "uses": "pb",
+    "reset": "long_rest",
+    "text": "Bonus Action: Tremorsense 60 ft for 10 min while on or touching stone."
+   }
+  ],
+  "Elf": [
+   {
+    "name": "Darkvision",
+    "text": "{elf_darkvision}."
+   },
+   {
+    "name": "Elven Lineage",
+    "text": "{elf_lineage}"
+   },
+   {
+    "name": "Fey Ancestry",
+    "text": "Advantage on saves to avoid or end Charmed."
+   },
+   {
+    "name": "Keen Senses",
+    "text": "Proficiency in Insight, Perception or Survival (already in your skills)."
+   },
+   {
+    "name": "Trance",
+    "text": "Finish a Long Rest in 4 hours; magic can't put you to sleep."
+   }
+  ],
+  "Gnome": [
+   {
+    "name": "Darkvision",
+    "text": "60 ft."
+   },
+   {
+    "name": "Gnomish Cunning",
+    "text": "Advantage on Intelligence, Wisdom and Charisma saves."
+   },
+   {
+    "name": "Gnomish Lineage",
+    "text": "{gnome_lineage}",
+    "uses_by_choice": {
+     "Forest Gnome": {
+      "uses": "pb",
+      "reset": "long_rest",
+      "resource_name": "Speak with Animals (free)"
+     }
+    }
+   }
+  ],
+  "Goliath": [
+   {
+    "name": "Giant Ancestry",
+    "uses": "pb",
+    "reset": "long_rest",
+    "text": "{giant_ancestry}"
+   },
+   {
+    "name": "Large Form",
+    "min_level": 5,
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "Bonus Action: become Large for 10 min, Advantage on Strength checks, +10 ft Speed."
+   },
+   {
+    "name": "Powerful Build",
+    "text": "Advantage on checks to end Grappled; count as one size larger for carrying."
+   }
+  ],
+  "Halfling": [
+   {
+    "name": "Brave",
+    "text": "Advantage on saves to avoid or end Frightened."
+   },
+   {
+    "name": "Halfling Nimbleness",
+    "text": "Move through the space of any creature a size larger than you."
+   },
+   {
+    "name": "Luck",
+    "text": "Reroll a 1 on a d20 Test (must use the new roll)."
+   },
+   {
+    "name": "Naturally Stealthy",
+    "text": "You can Hide when obscured only by a creature at least one size larger."
+   }
+  ],
+  "Human": [
+   {
+    "name": "Resourceful",
+    "uses": 1,
+    "reset": "long_rest",
+    "resource_name": "Heroic Inspiration",
+    "text": "Gain Heroic Inspiration when you finish a Long Rest (reroll any die once)."
+   },
+   {
+    "name": "Skillful",
+    "text": "One extra skill proficiency (already in your skills)."
+   },
+   {
+    "name": "Versatile",
+    "text": "One extra Origin feat (listed below)."
+   }
+  ],
+  "Orc": [
+   {
+    "name": "Adrenaline Rush",
+    "uses": "pb",
+    "reset": "short_rest",
+    "text": "Bonus Action: Dash and gain {pb} temp HP."
+   },
+   {
+    "name": "Darkvision",
+    "text": "120 ft."
+   },
+   {
+    "name": "Relentless Endurance",
+    "uses": 1,
+    "reset": "long_rest",
+    "text": "When reduced to 0 HP but not killed outright, drop to 1 HP instead."
+   }
+  ],
+  "Tiefling": [
+   {
+    "name": "Darkvision",
+    "text": "60 ft."
+   },
+   {
+    "name": "Fiendish Legacy",
+    "text": "{tiefling_legacy}"
+   },
+   {
+    "name": "Otherworldly Presence",
+    "text": "You know Thaumaturgy.",
+    "cantrips": [
+     "Thaumaturgy"
+    ]
+   }
+  ]
+ },
+ "species_choices": {
+  "Dragonborn": {
+   "Black": "acid",
+   "Blue": "lightning",
+   "Brass": "fire",
+   "Bronze": "lightning",
+   "Copper": "acid",
+   "Gold": "fire",
+   "Green": "poison",
+   "Red": "fire",
+   "Silver": "cold",
+   "White": "cold"
+  },
+  "Elf": {
+   "Drow": {
+    "darkvision": "120 ft",
+    "text": "Drow: Darkvision 120 ft; you know Dancing Lights (Faerie Fire at 3, Darkness at 5).",
+    "cantrips": [
+     "Dancing Lights"
+    ]
+   },
+   "High Elf": {
+    "darkvision": "60 ft",
+    "text": "High Elf: you know Prestidigitation (swap it on a Long Rest; Detect Magic at 3, Misty Step at 5).",
+    "cantrips": [
+     "Prestidigitation"
+    ]
+   },
+   "Wood Elf": {
+    "darkvision": "60 ft",
+    "text": "Wood Elf: Speed 35 ft; you know Druidcraft (Longstrider at 3, Pass without Trace at 5).",
+    "cantrips": [
+     "Druidcraft"
+    ],
+    "speed": 35
+   }
+  },
+  "Gnome": {
+   "Forest Gnome": {
+    "text": "Forest Gnome: you know Minor Illusion; Speak with Animals always prepared, cast it free {pb} times per Long Rest.",
+    "cantrips": [
+     "Minor Illusion"
+    ]
+   },
+   "Rock Gnome": {
+    "text": "Rock Gnome: you know Mending and Prestidigitation; build tiny clockwork devices (10 min).",
+    "cantrips": [
+     "Mending",
+     "Prestidigitation"
+    ]
+   }
+  },
+  "Goliath": {
+   "Cloud": "Cloud's Jaunt: Bonus Action, teleport 30 ft.",
+   "Fire": "Fire's Burn: on a hit, +1d10 fire.",
+   "Frost": "Frost's Chill: on a hit, +1d6 cold and Speed -10 ft.",
+   "Hill": "Hill's Tumble: on a hit, knock a Large or smaller target Prone.",
+   "Stone": "Stone's Endurance: Reaction, reduce damage taken by 1d12 + Con.",
+   "Storm": "Storm's Thunder: Reaction when damaged, 1d8 thunder to a creature within 60 ft."
+  },
+  "Tiefling": {
+   "Abyssal": {
+    "text": "Abyssal: Resistance to Poison; you know Poison Spray (Ray of Sickness at 3, Hold Person at 5).",
+    "cantrips": [
+     "Poison Spray"
+    ]
+   },
+   "Chthonic": {
+    "text": "Chthonic: Resistance to Necrotic; you know Chill Touch (False Life at 3, Ray of Enfeeblement at 5).",
+    "cantrips": [
+     "Chill Touch"
+    ]
+   },
+   "Infernal": {
+    "text": "Infernal: Resistance to Fire; you know Fire Bolt (Hellish Rebuke at 3, Darkness at 5).",
+    "cantrips": [
+     "Fire Bolt"
+    ]
+   }
+  }
+ },
+ "spells": {
+  "Acid Splash": {
+   "line": "Action, 60 ft: 5-ft sphere, DC {dc} Dex save or {cd}d6 acid.",
+   "attack": {
+    "roll": "save",
+    "save": "dex",
+    "dice": "1d6",
+    "type": "acid",
+    "range": "60 ft (5-ft sphere)",
+    "scale": "dice"
+   }
+  },
+  "Blade Ward": {
+   "line": "Action, Concentration 1 min: attackers subtract 1d4 from attack rolls against you."
+  },
+  "Chill Touch": {
+   "line": "Action, touch: {atk} to hit, {cd}d10 necrotic; the target can't regain HP until the end of your next turn.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d10",
+    "type": "necrotic",
+    "range": "touch",
+    "scale": "dice",
+    "rider": "target can't regain HP until the end of your next turn"
+   }
+  },
+  "Dancing Lights": {
+   "line": "Action, 120 ft, Concentration 1 min: up to four torch-like lights (dim 10 ft); Bonus Action to move them 60 ft."
+  },
+  "Druidcraft": {
+   "line": "Action, 30 ft: tiny nature effects (predict weather, bloom a flower, a harmless sensory effect, light or snuff a small flame)."
+  },
+  "Eldritch Blast": {
+   "line": "Action, 120 ft: {atk} to hit per beam, 1d10 force each ({beams}).",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d10",
+    "type": "force",
+    "range": "120 ft",
+    "scale": "beams"
+   }
+  },
+  "Fire Bolt": {
+   "line": "Action, 120 ft: {atk} to hit, {cd}d10 fire; ignites unattended flammable objects.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d10",
+    "type": "fire",
+    "range": "120 ft",
+    "scale": "dice",
+    "rider": "ignites unattended flammable objects"
+   }
+  },
+  "Friends": {
+   "line": "Action, 10 ft, Concentration 1 min: DC {dc} Wis save or a creature is Charmed by you; it knows afterward."
+  },
+  "Guidance": {
+   "line": "Action, touch, Concentration 1 min: a willing creature adds 1d4 to ability checks with one skill you choose."
+  },
+  "Light": {
+   "line": "Action, touch, 1 hour: an object sheds bright light 20 ft and dim light 20 ft more."
+  },
+  "Mage Hand": {
+   "line": "Action, 30 ft, 1 min: a spectral hand manipulates objects and carries up to 10 lb (Magic action to steer)."
+  },
+  "Mending": {
+   "line": "1 minute, touch: repair one break or tear in an object."
+  },
+  "Message": {
+   "line": "Action, 120 ft: whisper to a creature; only it hears and it can whisper back."
+  },
+  "Minor Illusion": {
+   "line": "Action, 30 ft, 1 min: a sound or an image of an object (5-ft cube); Study vs DC {dc} sees through it."
+  },
+  "Poison Spray": {
+   "line": "Action, 30 ft: {atk} to hit, {cd}d12 poison.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d12",
+    "type": "poison",
+    "range": "30 ft",
+    "scale": "dice"
+   }
+  },
+  "Prestidigitation": {
+   "line": "Action, 10 ft, up to 1 hour: small harmless tricks (clean, chill, warm, flavor, a sensory effect, a tiny trinket)."
+  },
+  "Produce Flame": {
+   "line": "Bonus Action, 10 min: a flame in your hand (light 20 ft); Magic action to hurl it: {atk} to hit, 60 ft, {cd}d8 fire.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d8",
+    "type": "fire",
+    "range": "60 ft (hurl the flame, Magic action)",
+    "scale": "dice"
+   }
+  },
+  "Ray of Frost": {
+   "line": "Action, 60 ft: {atk} to hit, {cd}d8 cold; the target's Speed drops 10 ft until your next turn.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d8",
+    "type": "cold",
+    "range": "60 ft",
+    "scale": "dice",
+    "rider": "Speed -10 ft until the start of your next turn"
+   }
+  },
+  "Resistance": {
+   "line": "Action, touch, Concentration 1 min: pick a damage type; once per turn the creature reduces that damage by 1d4."
+  },
+  "Sacred Flame": {
+   "line": "Action, 60 ft: DC {dc} Dex save or {cd}d8 radiant; cover doesn't help.",
+   "attack": {
+    "roll": "save",
+    "save": "dex",
+    "dice": "1d8",
+    "type": "radiant",
+    "range": "60 ft",
+    "scale": "dice",
+    "rider": "no benefit from cover"
+   }
+  },
+  "Shillelagh": {
+   "line": "Bonus Action, 1 min: your club or quarterstaff attacks with your spellcasting ability ({atk} to hit), d8 damage die (d10 at 5, d12 at 11), Force if you like."
+  },
+  "Shocking Grasp": {
+   "line": "Action, touch: {atk} to hit, {cd}d8 lightning; the target can't make Opportunity Attacks until the start of its next turn.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d8",
+    "type": "lightning",
+    "range": "touch",
+    "scale": "dice",
+    "rider": "target can't make Opportunity Attacks until the start of its next turn"
+   }
+  },
+  "Spare the Dying": {
+   "line": "Action, 15 ft: a creature at 0 HP becomes Stable."
+  },
+  "Starry Wisp": {
+   "line": "Action, 60 ft: {atk} to hit, {cd}d8 radiant; the target sheds dim light and can't be Invisible until your next turn ends.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d8",
+    "type": "radiant",
+    "range": "60 ft",
+    "scale": "dice",
+    "rider": "target glows and can't benefit from Invisible until the end of your next turn"
+   }
+  },
+  "Thaumaturgy": {
+   "line": "Action, 30 ft, up to 1 min: minor wonders (booming voice, flickering flames, tremors, a slammed door, eye color)."
+  },
+  "Thorn Whip": {
+   "line": "Action, 30 ft: {atk} to hit, {cd}d6 piercing; pull a Large or smaller target 10 ft toward you.",
+   "attack": {
+    "roll": "attack",
+    "dice": "1d6",
+    "type": "piercing",
+    "range": "30 ft",
+    "scale": "dice",
+    "rider": "pull a Large or smaller target 10 ft toward you"
+   }
+  },
+  "Thunderclap": {
+   "line": "Action: every creature within 5 ft of you makes a DC {dc} Con save or takes {cd}d6 thunder.",
+   "attack": {
+    "roll": "save",
+    "save": "con",
+    "dice": "1d6",
+    "type": "thunder",
+    "range": "5 ft around you",
+    "scale": "dice"
+   }
+  },
+  "True Strike": {
+   "line": "Action: one weapon attack using your spellcasting ability ({atk} to hit, weapon damage + {mod}), radiant if you like (+1d6 radiant at level 5)."
+  },
+  "Vicious Mockery": {
+   "line": "Action, 60 ft: DC {dc} Wis save or {cd}d6 psychic and Disadvantage on its next attack roll.",
+   "attack": {
+    "roll": "save",
+    "save": "wis",
+    "dice": "1d6",
+    "type": "psychic",
+    "range": "60 ft",
+    "scale": "dice",
+    "rider": "Disadvantage on its next attack roll"
+   }
+  },
+  "Alarm": {
+   "line": "Ritual, 30 ft, 8 hours: ward a door, window or 20-ft cube; you get an audible or mental alarm when a creature enters."
+  },
+  "Animal Friendship": {
+   "line": "Action, 30 ft, 24 hours: DC {dc} Wis save or a Beast is Charmed by you."
+  },
+  "Armor of Agathys": {
+   "line": "Bonus Action, self, 1 hour: 5 temp HP; while they last, a creature that hits you with a melee attack takes 5 cold damage (+5 each per slot level)."
+  },
+  "Arms of Hadar": {
+   "line": "Action, 10 ft around you: DC {dc} Str save or 2d6 necrotic and no Reactions until its next turn (half on a success)."
+  },
+  "Bane": {
+   "line": "Action, 30 ft, Concentration 1 min: up to 3 creatures make DC {dc} Cha saves or subtract 1d4 from attack rolls and saves."
+  },
+  "Bless": {
+   "line": "Action, 30 ft, Concentration 1 min: up to 3 creatures add 1d4 to attack rolls and saves."
+  },
+  "Burning Hands": {
+   "line": "Action, 15-ft cone: DC {dc} Dex save, 3d6 fire (half on a success)."
+  },
+  "Charm Person": {
+   "line": "Action, 30 ft, 1 hour: DC {dc} Wis save (Advantage if you're fighting it) or a Humanoid is Charmed by you."
+  },
+  "Chromatic Orb": {
+   "line": "Action, 90 ft: {atk} to hit, 3d8 acid, cold, fire, lightning, poison or thunder; doubles on the d8s leap to another target."
+  },
+  "Color Spray": {
+   "line": "Action, 15-ft cone: DC {dc} Con save or Blinded until the end of your next turn."
+  },
+  "Command": {
+   "line": "Action, 60 ft: DC {dc} Wis save or the target obeys a one-word command (Approach, Drop, Flee, Grovel, Halt) on its next turn."
+  },
+  "Compelled Duel": {
+   "line": "Bonus Action, 30 ft, Concentration 1 min: DC {dc} Wis save or Disadvantage attacking anyone but you and can't willingly move more than 30 ft away."
+  },
+  "Comprehend Languages": {
+   "line": "Ritual, 1 hour: understand any spoken or written language."
+  },
+  "Create or Destroy Water": {
+   "line": "Action, 30 ft: create or destroy up to 10 gallons of water (or a rain that puts out flames)."
+  },
+  "Cure Wounds": {
+   "line": "Action, touch: heal 2d8 + {mod} HP."
+  },
+  "Detect Evil and Good": {
+   "line": "Action, Concentration 10 min: sense Aberrations, Celestials, Elementals, Fey, Fiends and Undead within 30 ft."
+  },
+  "Detect Magic": {
+   "line": "Ritual, Concentration 10 min: sense magic within 30 ft and see its aura."
+  },
+  "Detect Poison and Disease": {
+   "line": "Ritual, Concentration 10 min: sense poisons, poisonous creatures and magical diseases within 30 ft."
+  },
+  "Disguise Self": {
+   "line": "Action, 1 hour: change how you look; Study vs DC {dc} sees through it."
+  },
+  "Dissonant Whispers": {
+   "line": "Action, 60 ft: DC {dc} Wis save or 3d6 psychic and it must use its Reaction to move away (half, no move, on a success)."
+  },
+  "Divine Favor": {
+   "line": "Bonus Action, 1 min: your weapon hits deal +1d4 radiant."
+  },
+  "Ensnaring Strike": {
+   "line": "Bonus Action after a weapon hit, Concentration 1 min: DC {dc} Str save or Restrained and 1d6 piercing each turn."
+  },
+  "Entangle": {
+   "line": "Action, 90 ft, Concentration 1 min: 20-ft square of Difficult Terrain; DC {dc} Str save or Restrained."
+  },
+  "Expeditious Retreat": {
+   "line": "Bonus Action, Concentration 10 min: Dash now and as a Bonus Action each turn."
+  },
+  "Faerie Fire": {
+   "line": "Action, 60 ft, 20-ft cube, Concentration 1 min: DC {dc} Dex save or outlined: attacks against it have Advantage, it can't be Invisible."
+  },
+  "False Life": {
+   "line": "Action, self: gain 2d4 + 4 temp HP."
+  },
+  "Feather Fall": {
+   "line": "Reaction when you or a creature within 60 ft falls: up to 5 creatures fall slowly and take no fall damage."
+  },
+  "Find Familiar": {
+   "line": "Ritual, 1 hour: a spirit familiar; telepathic link within 100 ft; it can deliver your touch spells."
+  },
+  "Fog Cloud": {
+   "line": "Action, 120 ft, Concentration 1 hour: a 20-ft-radius sphere of fog (Heavily Obscured)."
+  },
+  "Goodberry": {
+   "line": "Action: ten berries for 24 hours; each heals 1 HP and feeds a creature for a day."
+  },
+  "Grease": {
+   "line": "Action, 60 ft, 10-ft square, 1 min: Difficult Terrain; DC {dc} Dex save or Prone."
+  },
+  "Guiding Bolt": {
+   "line": "Action, 120 ft: {atk} to hit, 4d6 radiant; the next attack roll against the target before your next turn ends has Advantage."
+  },
+  "Hail of Thorns": {
+   "line": "Bonus Action after a Ranged weapon hit: the target and creatures within 5 ft make DC {dc} Dex saves, 1d10 piercing (half on a success)."
+  },
+  "Healing Word": {
+   "line": "Bonus Action, 60 ft: heal 2d4 + {mod} HP."
+  },
+  "Hellish Rebuke": {
+   "line": "Reaction when a creature within 60 ft damages you: DC {dc} Dex save, 2d10 fire (half on a success)."
+  },
+  "Heroism": {
+   "line": "Action, touch, Concentration 1 min: immune to Frightened; gains {mod} temp HP at the start of each of its turns."
+  },
+  "Hex": {
+   "line": "Bonus Action, 90 ft, Concentration 1 hour: +1d6 necrotic when you hit the target; Disadvantage on checks with one ability you pick."
+  },
+  "Hunter's Mark": {
+   "line": "Bonus Action, 90 ft, Concentration 1 hour: +1d6 force when you hit the target; Advantage on Perception/Survival checks to find it."
+  },
+  "Ice Knife": {
+   "line": "Action, 60 ft: {atk} to hit, 1d10 piercing; hit or miss, it bursts: DC {dc} Dex save or 2d6 cold to the target and creatures within 5 ft."
+  },
+  "Identify": {
+   "line": "Ritual, touch: learn a magic item's properties and how to use it."
+  },
+  "Illusory Script": {
+   "line": "Ritual, 10 days: writing only creatures you choose can read."
+  },
+  "Inflict Wounds": {
+   "line": "Action, touch: DC {dc} Con save, 2d10 necrotic (half on a success)."
+  },
+  "Jump": {
+   "line": "Bonus Action, touch, 1 min: once per turn the creature can jump 30 ft for 10 ft of movement."
+  },
+  "Longstrider": {
+   "line": "Action, touch, 1 hour: +10 ft Speed."
+  },
+  "Mage Armor": {
+   "line": "Action, touch, 8 hours: a creature without armor has base AC 13 + Dex."
+  },
+  "Magic Missile": {
+   "line": "Action, 120 ft: three darts, each hits automatically for 1d4 + 1 force (+1 dart per slot level)."
+  },
+  "Protection from Evil and Good": {
+   "line": "Action, touch, Concentration 10 min: Aberrations, Celestials, Elementals, Fey, Fiends and Undead have Disadvantage against it and can't Charm, Frighten or possess it."
+  },
+  "Purify Food and Drink": {
+   "line": "Ritual, 10 ft: food and drink in a 5-ft sphere is safe from poison and rot."
+  },
+  "Ray of Sickness": {
+   "line": "Action, 60 ft: {atk} to hit, 2d8 poison and Poisoned until the end of your next turn."
+  },
+  "Sanctuary": {
+   "line": "Bonus Action, 30 ft, 1 min: an attacker must pass a DC {dc} Wis save or pick another target; ends if the warded creature attacks or harms."
+  },
+  "Searing Smite": {
+   "line": "Bonus Action after a melee hit, 1 min: +1d6 fire, then 1d6 fire at the start of each of its turns until a Con save (DC {dc})."
+  },
+  "Shield": {
+   "line": "Reaction when hit by an attack or targeted by Magic Missile: +5 AC until the start of your next turn (including against the trigger); no damage from Magic Missile."
+  },
+  "Shield of Faith": {
+   "line": "Bonus Action, 60 ft, Concentration 10 min: +2 AC."
+  },
+  "Silent Image": {
+   "line": "Action, 60 ft, Concentration 10 min: a silent visual illusion up to a 15-ft cube; Study vs DC {dc}."
+  },
+  "Sleep": {
+   "line": "Action, 60 ft, 5-ft sphere, Concentration 1 min: DC {dc} Wis save or Incapacitated, then a second failed save means Unconscious."
+  },
+  "Speak with Animals": {
+   "line": "Ritual, 10 min: talk with Beasts."
+  },
+  "Tasha's Hideous Laughter": {
+   "line": "Action, 30 ft, Concentration 1 min: DC {dc} Wis save or Prone and Incapacitated, laughing (saves again each turn and when damaged)."
+  },
+  "Tenser's Floating Disk": {
+   "line": "Ritual, 30 ft, 1 hour: a floating disk carries up to 500 lb and follows you."
+  },
+  "Thunderous Smite": {
+   "line": "Bonus Action after a melee hit: +2d6 thunder; DC {dc} Str save or pushed 10 ft and Prone."
+  },
+  "Thunderwave": {
+   "line": "Action, 15-ft cube from you: DC {dc} Con save, 2d8 thunder and pushed 10 ft (half, no push, on a success)."
+  },
+  "Unseen Servant": {
+   "line": "Ritual, 60 ft, 1 hour: an invisible force does simple chores."
+  },
+  "Witch Bolt": {
+   "line": "Action, 60 ft, Concentration 1 min: {atk} to hit, 2d12 lightning; on later turns a Bonus Action deals 1d12 lightning to it automatically."
+  },
+  "Wrathful Smite": {
+   "line": "Bonus Action after a melee hit: +1d6 necrotic; DC {dc} Wis save or Frightened for 1 min (save each turn)."
+  },
+  "Divine Smite": {
+   "line": "Bonus Action after a melee hit: +2d8 radiant (+1d8 per slot level, +1d8 vs Fiends and Undead)."
+  }
+ }
+}

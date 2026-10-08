@@ -10,6 +10,8 @@ export const PB = 2;
 export const SCREENS = Array.from({ length: 17 }, (_, i) => `S${i + 1}`);
 
 export const isCaster = (d, t) => !!t.chargen.classes[d.class]?.spells;
+/** S11 is shown to casters and to anyone with Magic Initiate (its spell picks). */
+export const hasSpellScreen = (d, t) => isCaster(d, t) || miFeats(d, t).length > 0;
 export const speciesInfo = (d, t) => t.chargen.species[d.species];
 export const classInfo = (d, t) => t.chargen.classes[d.class];
 export const bgInfo = (d, t) => t.chargen.backgrounds[d.background];
@@ -209,9 +211,24 @@ export function inventoryRows(d, t) {
     const it = t.chargen.items[line.id];
     rows.push({ name: itemLabel(line, t), qty: line.qty, notes: '', mechanics: it.mechanics || `${K.plainName(t, srd, it.name)}: standard 5e item.`, category: it.category, srd_id: srd, chargen_key: line.id });
   }
-  rows.push({ name: 'Intake Bag', qty: 1, notes: 'cosmetic, zero value', mechanics: 'Cosmetic. Holds nothing special.', category: 'gear' });
+  rows.push({ name: 'Intake Bag', qty: 1, notes: INTAKE_BAG_NOTES, mechanics: INTAKE_BAG_MECHANICS, category: 'gear' });
   return rows;
 }
+
+/** Decision 038 (core 5.9 v0.2.25; core book Ch2 "The Intake Bag and Your Inventory"): the bag's real mechanic, replacing "Cosmetic. Holds nothing special." */
+export const INTAKE_BAG_MECHANICS = "Once on each of your turns, you can store or retrieve one item in your System Inventory without using your free object interaction or the Utilize action. The System Inventory cap and every other 5.9 rule still apply. Can't be sold; value 0.";
+export const INTAKE_BAG_NOTES = "decision 038; value 0, can't be sold";
+
+/** Classes that may hold a class-only item, from the rules data: a Spellbook only for classes whose spells use a spellbook (the Wizard; core book Ch2). null = anyone. */
+export function itemClasses(id, t) {
+  const it = t.chargen.items[id];
+  if (!it) return null;
+  if (id === 'spellbook' || it.srd_id === 'spellbook') return Object.entries(t.chargen.classes).filter(([, c]) => c.spells?.spellbook).map(([n]) => n);
+  return Array.isArray(it.classes) ? it.classes : null;
+}
+export const itemAllowed = (d, t, id) => { const cls = itemClasses(id, t); return !cls || (!!d.class && cls.includes(d.class)); };
+/** Vending Wall lines the draft's class may not buy (a Warlock's Spellbook). */
+export const disallowedCart = (d, t) => (d.cart ?? []).filter((l) => !itemAllowed(d, t, l.id));
 
 export function creditBreakdown(d, t) {
   const rows = [];
@@ -308,6 +325,64 @@ export function masteryChoice(d, t) {
   return classInfo(d, t)?.choices?.find((c) => c.key === 'weapon_masteries') ?? null;
 }
 
+const STAFF_FOCUS = new Set(['arcane_focus_staff', 'druidic_focus_staff']);
+/** Weapon keys the Crawler carries: the chosen kits (class package A until one is picked, as Pick for me takes it) plus the Vending Wall cart. A staff focus is a Quarterstaff. */
+export function carriedWeapons(d, t) {
+  const c = classInfo(d, t);
+  const lines = d.kitClass ? kitItems(d, t) : [...(c?.packages?.[0]?.items ?? []).map(([id]) => ({ id })), ...kitItems(d, t)];
+  const out = [];
+  for (const l of lines) {
+    const id = STAFF_FOCUS.has(l.id) ? 'quarterstaff' : l.id;
+    if (t.chargen.items[id]?.weapon && !out.includes(id)) out.push(id);
+  }
+  return out;
+}
+
+/** Default Weapon Mastery picks (2024): weapons the Crawler actually carries, up to the class's count; only if fewer are carried, the rest from the class list in order (the player can change them on S9). */
+export function defaultMasteries(d, t) {
+  const mc = masteryChoice(d, t);
+  if (!mc) return [];
+  const carried = carriedWeapons(d, t).filter((id) => mc.options.includes(id)).slice(0, mc.count);
+  return [...carried, ...mc.options.filter((id) => !carried.includes(id))].slice(0, mc.count);
+}
+
+/** Keep auto-defaulted masteries following the kit: fills empty picks, and re-defaults picks the player never set (d.masteriesAuto). A player's own picks are never touched. */
+export function fillDefaultMasteries(d, t) {
+  const mc = masteryChoice(d, t);
+  if (!mc || !d.class) return false;
+  if (d.masteries?.length && !d.masteriesAuto) return false;
+  const want = defaultMasteries(d, t);
+  const same = (d.masteries ?? []).length === want.length && want.every((x, i) => d.masteries[i] === x);
+  d.masteries = want;
+  d.masteriesAuto = true;
+  return !same;
+}
+
+/** Cantrips the class knows at level 1, plus a class choice that adds one (2024 Druid Magician, Cleric Thaumaturge: spells.bonus_cantrips). */
+export function cantripCount(d, t) {
+  const sp = spellInfo(d, t);
+  if (!sp) return 0;
+  const bonus = Object.entries(sp.bonus_cantrips ?? {}).reduce((n, [k, v]) => { const [key, opt] = k.split(':'); return n + ([d.classChoices?.[key]].flat().includes(opt) ? v : 0); }, 0);
+  return (sp.cantrips ?? 0) + bonus;
+}
+
+/** Magic Initiate (2024 Origin feat): two cantrips and one level 1 spell from the feat's class list, plus Int, Wis or Cha. Asked on S11, optional, never auto-picked (the card says "not chosen yet"). */
+export const MI_PREFIX = 'Magic Initiate';
+export const MI_ABILITIES = ['int', 'wis', 'cha'];
+export const miFeats = (d, t) => [...new Set(originFeats(d, t).filter((f) => f.startsWith(MI_PREFIX)))];
+export const miClass = (feat) => (String(feat).match(/\(([^)]+)\)/) ?? [])[1] ?? null;
+export function miLists(feat, t) {
+  const s = t.chargen.classes[miClass(feat)]?.spells;
+  return s ? { cantrips: s.cantrip_list, level1: [...s.level1_list, ...(s.always_prepared ?? [])] } : null;
+}
+export function miProblem(feat, m, t) {
+  const L = miLists(feat, t);
+  if (!L) return `${feat}: no spell list on file.`;
+  const c = m?.cantrips ?? [], l = m?.level1 ?? [];
+  if (c.length > 2 || new Set(c).size !== c.length || !c.every((n) => L.cantrips.includes(n)) || l.length > 1 || !l.every((n) => L.level1.includes(n)) || (m?.ability && !MI_ABILITIES.includes(m.ability))) return `${feat}: up to 2 ${miClass(feat)} cantrips and 1 level 1 ${miClass(feat)} spell, ability Int, Wis or Cha.`;
+  return null;
+}
+
 export function languageOptions(d, t) {
   return t.chargen.languages.standard.filter((l) => l !== 'Common');
 }
@@ -317,10 +392,16 @@ export function spellInfo(d, t) {
   return c?.spells ?? null;
 }
 
-export const originFeats = (d, t) => [bgInfo(d, t)?.feat, extraFeatNeeded(d, t) ? d.extraFeat : null].filter(Boolean);
-export const featSkillCount = (d, t) => (originFeats(d, t).includes('Skilled') ? 3 : 0);
+export const originFeats = (d, t) => [bgInfo(d, t)?.feat, extraFeatNeeded(d, t) ? d.extraFeat : null, lessonsFeatOffered(d, t) ? d.lessonsFeat : null].filter(Boolean);
+export const featSkillCount = (d, t) => 3 * originFeats(d, t).filter((f) => f === 'Skilled').length;   // Skilled is repeatable (2024)
 
 export const extraFeatNeeded = (d, t) => !!speciesInfo(d, t)?.extra_feat;
+
+/** Warlock invocation Lessons of the First Ones grants one Origin feat. Offered on S7, never required and never auto-picked:
+ * left empty, the card says "Origin feat: not chosen yet, pick one". */
+export const LESSONS = 'Lessons of the First Ones';
+export const lessonsFeatOffered = (d, t) => [d.classChoices?.invocation].flat().includes(LESSONS) && !!classInfo(d, t)?.choices?.some((c) => c.key === 'invocation');
+export const lessonsFeatOptions = (d, t) => t.chargen.origin_feats.filter((f) => f === 'Skilled' || ![bgInfo(d, t)?.feat, extraFeatNeeded(d, t) ? d.extraFeat : null].includes(f));
 
 // ---------------------------------------------------------------- validation
 /** Whole-draft legality check -> [{screen, msg}] (empty = ready to Confirm). */
@@ -343,6 +424,7 @@ export function validateDraft(d, t, env = {}) {
     if (!d.asi) add('S7', 'Choose how the background raises your scores.');
     if (extraFeatNeeded(d, t) && !t.chargen.origin_feats.includes(d.extraFeat)) add('S7', 'Humans pick one extra Origin feat.');
     if (extraFeatNeeded(d, t) && d.extraFeat === bgInfo(d, t).feat) add('S7', 'Pick an Origin feat different from your background\'s.');
+    if (lessonsFeatOffered(d, t) && d.lessonsFeat && !lessonsFeatOptions(d, t).includes(d.lessonsFeat)) add('S7', 'Lessons of the First Ones: pick an Origin feat you do not already have.');
   }
   const be = validateBase(d, t);
   if (be) add('S8', be);
@@ -372,6 +454,7 @@ export function validateDraft(d, t, env = {}) {
       const open = pendingVariants(d, t).filter((v) => !v.chosen || !v.options.includes(v.chosen));
       if (open.length) add('S10', tx(t, 'error-s10-which-one', `Pick which one you get: ${open.map((v) => t.chargen.items[v.id].name.replace(/ \(your choice\)/, '')).join(', ')}.`, { list: open.map((v) => t.chargen.items[v.id].name.replace(/ \(your choice\)/, '')).join(', ') }));
       else if ((d.cart ?? []).some((l) => K.isHeaderKey(t, l.id) && !K.variantIds(t, l.id).includes(l.variant))) add('S10', tx(t, 'error-s10-wall-no-type', 'A Vending Wall line is missing its type.'));
+      else if (disallowedCart(d, t).length) add('S10', `Class-only item on your Vending Wall list: ${disallowedCart(d, t).map((l) => `${t.chargen.items[l.id].name} (${itemClasses(l.id, t).join('/')} only)`).join(', ')}. Remove it.`);   // core book Ch2: a Spellbook is Wizard gear
       else if (creditsLeft(d, t) < 0) add('S10', tx(t, 'error-s10-overspent', 'You spent more credits than you have.'));
     }
   }
@@ -379,11 +462,16 @@ export function validateDraft(d, t, env = {}) {
   if (sp) {
     const s = d.spells ?? {};
     const inList = (arr, list) => (arr ?? []).every((n) => list.includes(n)) && new Set(arr).size === (arr ?? []).length;
-    if ((s.cantrips ?? []).length !== sp.cantrips || !inList(s.cantrips, sp.cantrip_list)) add('S11', tx(t, 'error-s11-cantrips', `Pick ${sp.cantrips} cantrips from the class list.`, { n: sp.cantrips }));
+    const nc = cantripCount(d, t);
+    if ((s.cantrips ?? []).length !== nc || !inList(s.cantrips, sp.cantrip_list)) add('S11', tx(t, 'error-s11-cantrips', `Pick ${nc} cantrips from the class list.`, { n: nc }));
     if (sp.spellbook) {
       if ((s.level1 ?? []).length !== sp.spellbook || !inList(s.level1, sp.level1_list)) add('S11', tx(t, 'error-s11-spellbook', `Pick ${sp.spellbook} spellbook spells.`, { n: sp.spellbook }));
       if ((s.prepared ?? []).length !== sp.prepared || !(s.prepared ?? []).every((n) => (s.level1 ?? []).includes(n))) add('S11', tx(t, 'error-s11-prepare', `Prepare ${sp.prepared} spells from your spellbook.`, { n: sp.prepared }));
     } else if ((s.level1 ?? []).length !== sp.level1_known || !inList(s.level1, sp.level1_list)) add('S11', tx(t, 'error-s11-level1', `Pick ${sp.level1_known} level 1 spells.`, { n: sp.level1_known }));
+  }
+  for (const f of d.class ? miFeats(d, t) : []) {
+    const pr = d.mi?.[f] ? miProblem(f, d.mi[f], t) : null;
+    if (pr) add('S11', pr);
   }
   if (!d.backstory) add('S14', tx(t, 'error-s14-required', 'Backstory is required.'));
   if (!d.orders) add('S15', tx(t, 'error-s15-required', 'Standing Orders are required.'));
@@ -431,7 +519,7 @@ export function autoPick(screen, d, t) {
       const ex = c.choices.find((x) => x.key === 'expertise');
       if (ex) d.expertise = expertiseOptions(d, t).slice(0, ex.count);
       const mc = masteryChoice(d, t);
-      if (mc) d.masteries = mc.options.slice(0, mc.count);
+      if (mc) { d.masteries = defaultMasteries(d, t); d.masteriesAuto = true; }
       return 'skills, languages and picks';
     }
     case 'S10': {
@@ -453,11 +541,11 @@ export function autoPick(screen, d, t) {
     }
     case 'S11': {
       const sp = spellInfo(d, t);
-      if (!sp) return null;
+      if (!sp) return null;   // Magic Initiate alone: nothing is picked for the player
       const pickN = (list, n, from = 0) => list.slice(from, from + n);
-      d.spells = { cantrips: pickN(sp.cantrip_list, sp.cantrips), level1: pickN(sp.level1_list, sp.spellbook ?? sp.level1_known), prepared: [] };
+      d.spells = { cantrips: pickN(sp.cantrip_list, cantripCount(d, t)), level1: pickN(sp.level1_list, sp.spellbook ?? sp.level1_known), prepared: [] };
       if (sp.spellbook) d.spells.prepared = d.spells.level1.slice(0, sp.prepared);
-      return `${sp.cantrips} cantrips and level 1 spells`;
+      return `${cantripCount(d, t)} cantrips and level 1 spells`;   // Magic Initiate picks stay the player's (never auto-picked)
     }
     default:
       return null;
