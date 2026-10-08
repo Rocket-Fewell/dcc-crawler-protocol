@@ -124,7 +124,9 @@ def resolve_effect(applied, state):
         before = int(who.get("hp") or 0)
         amount = int(params["amount"])
         if kind == "damage":
-            apply_damage(who, amount, params.get("type") or params.get("damage_type"))
+            apply_damage(
+                who, amount, params.get("type") or params.get("damage_type"), crit=bool(params.get("crit"))
+            )
         else:
             apply_healing(who, amount)
         return {

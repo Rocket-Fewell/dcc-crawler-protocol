@@ -104,11 +104,20 @@ def load_room(room_id, day=None, root=None, budget=None):
     room = load_json(room_path(room_id, root))
     if day is not None:
         layer_path = root / "layers" / "f01" / ("day-%02d.json" % int(day))
+        patch = None
         if layer_path.is_file():
             layer = load_json(layer_path)
             patch = layer.get(room_id)
-            if patch:
-                room = apply_patch(room, patch)
+        if patch:
+            room = apply_patch(room, patch)
+        elif int(day) > 1:
+            # Nothing new this day. Keep the room, and do not replay the Day 1 scene.
+            room = apply_patch(room, {
+                "day_encounters": [],
+                "narrator_line": "",
+                "read_aloud": "",
+                "voice_lines": {"intro": "", "twist": "", "win": ""},
+            })
     return room
 
 

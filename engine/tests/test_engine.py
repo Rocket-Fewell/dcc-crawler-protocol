@@ -80,6 +80,14 @@ class RulesTests(unittest.TestCase):
         self.assertFalse(down.get("dead"))
         apply_damage(down, 1, "slashing")
         self.assertEqual(down["death_saves"]["failures"], 1)
+        crit = {"hp": 0, "max_hp": 10, "class": "rogue", "death_saves": {"successes": 0, "failures": 0}}
+        apply_damage(crit, 1, "slashing", crit=True)
+        self.assertEqual(crit["death_saves"]["failures"], 2)
+        self.assertFalse(crit.get("dead"))
+        killed = {"hp": 0, "max_hp": 10, "class": "rogue", "death_saves": {"successes": 0, "failures": 0}}
+        apply_damage(killed, 10, "slashing")
+        self.assertTrue(killed.get("dead"))
+        self.assertEqual(killed["death_saves"]["failures"], 3)
         massive = {"hp": 4, "max_hp": 10, "class": "rogue"}
         apply_damage(massive, 14, "slashing")
         self.assertTrue(massive.get("dead"))
@@ -181,6 +189,14 @@ class RoomTests(unittest.TestCase):
         self.assertTrue(all(e["trigger"] == "on_enter" for e in boss_rows))
         vermin = resolve_room(load_room("f01-z08", day=3), 3)
         self.assertIn("enc-d03-02", [e["enc_id"] for e in vermin["encounters"]])
+        quiet_break = load_room("f01-z06", day=2)
+        self.assertEqual(quiet_break.get("day_encounters"), [])
+        self.assertEqual(quiet_break["voice_lines"]["intro"], "")
+        self.assertEqual(quiet_break.get("rest", {}).get("kind"), "long")
+        quiet_green = load_room("f01-z09", day=3)
+        self.assertEqual(quiet_green.get("day_encounters"), [])
+        self.assertEqual(quiet_green["voice_lines"]["intro"], "")
+        self.assertNotIn("SAFEROOM CERTIFIED", quiet_green.get("narrator_line") or "")
         green = load_room("f01-z09", day=5)
         self.assertTrue(green.get("open"))
         self.assertIn("enc-d05-01", [e["enc_id"] for e in green.get("day_encounters") or []])
@@ -431,6 +447,21 @@ class ModelTests(unittest.TestCase):
             finally:
                 os.environ.pop("ENGINE_DATA_DIR", None)
 
+    def test_classifier_falls_back_when_the_request_fails(self):
+        from dcc_engine.server import line_class
+        os.environ["ENGINE_MODEL_API_KEY"] = "test-key"
+        try:
+            client = ModelClient(fake=False)
+
+            def boom(_body):
+                raise TimeoutError("timed out")
+
+            client._post = boom
+            self.assertIsNone(client.classify("I open the door"))
+            self.assertEqual(line_class("I open the door", client), "ruling")
+        finally:
+            os.environ.pop("ENGINE_MODEL_API_KEY", None)
+
     def test_chatter_does_not_call_the_strong_model(self):
         with tempfile.TemporaryDirectory() as tmp:
             os.environ["ENGINE_DATA_DIR"] = tmp
@@ -546,6 +577,12 @@ class ModelTests(unittest.TestCase):
             "Grimsby searches the lockers": "ruling",
             "I use Cunning Action to dash": "engine",
             "I attack the mannequin": "engine",
+            "I stab the mannequin": "engine",
+            "I hit it with my crowbar": "engine",
+            "I grab the register": "ruling",
+            "pry the vent": "ruling",
+            "break the lock": "ruling",
+            "sprint to the door": "ruling",
         }
         for line, label in table.items():
             self.assertEqual(classify_line(line), label, line)

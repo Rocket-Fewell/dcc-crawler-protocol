@@ -1,7 +1,8 @@
 {
   "schema": "encounter-budget/0.1",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "changelog": [
+    "0.2.10 (2026-10-08, Cursor, provenance only, no values changed): day01_slot_map.spec_sha256_sans_pin_when_mapped re-synced after the Day 1 three-Crawler scaling line dropped the hardcoded mannequin count. Every count, price, slot path and other sans-pin unchanged. Syndicate: re-pin budget_file.expected_sha256 on the other Day specs.",
     "0.2.9 (2026-10-08, Accountant): VALUE CHANGE, 3-Crawler Day 1 counts lowered after s1 (Z5 3->2 Mannequins, Z8 Bruiser alone, Day 4 Ushers 3->2); credits, box odds and every other value unchanged. Sans-pin hashes re-synced for Floor 1 day-01 and day-04.",
     "0.2.8 (2026-10-07, Accountant, provenance only, no values changed): sans-pin hashes re-synced after GM-facing item-hook lines (decision 038) on F1 day-01, day-03 and day-05, and F2 day-04, day-06 and day-10. Every price, slot path and other value unchanged.",
     "0.2.7 (2026-10-06 ~9:10 AM CT, Accountant): provenance only, no values changed: all ten f02_day01_to_10_slot_map sans-pin hashes re-synced to PR #15 (F2 Source lines now cite the budget via {budget_version} and the soft about 2-3 achievement Bronze wording; canon pin to ledger v1.19 is excluded from the hash). Recomputed independently from the PR #15 patch on main 85a4f08. Floor 1 sans-pins unchanged. No counts, odds, prices or expected values changed (Bronze 3.16, Silver 1, all-in 793.4).",
@@ -35,7 +36,7 @@
     "title": "Encounter budget, credits and loot (5e 2024)",
     "owner": "Syndicate",
     "status": "draft",
-    "updated": "2026-10-05",
+    "updated": "2026-10-08",
     "file": "rules/70-encounter-budget-5e.json",
     "companion": "rules/70-encounter-budget-5e.md",
     "consumer": "Encounter Bot (tools/encounter_bot, local script, no model calls) cites this file for difficulty, credits and loot; it is the only source of those numbers",
@@ -6131,7 +6132,7 @@
   ],
   "day01_slot_map": {
     "source_spec": "floors/f01/day-01.spec.json (schema encounter-bot-day-spec/0.1); order = the 'slots' array of floors/f01/day-01.json",
-    "spec_sha256_sans_pin_when_mapped": "e93cb977c8ca9f2463593b2b58ee6059330e998b35c71c2a6d036f8986a6b06a",
+    "spec_sha256_sans_pin_when_mapped": "37339f2d71641a870cb2f82614e9652c2400432f90bdf7c25843ee0ccfa84ce3",
     "spec_hash_method": "sha256 of UTF-8 json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) with budget_file.version, budget_file.expected_sha256, canon_table.expected_sha256, achievements_catalog.version and achievements_catalog.expected_sha256 deleted if present (method updated by the Encounter Bot to also skip the achievements catalog version and sha; the spec's own meta.spec_sha256_sans_pin_method; helper: python3 tools/encounter_bot/spec_hash_sans_pin.py floors/f01/day-NN.spec.json). It ignores the spec's pins on this file and on the canon table and achievements catalog, so a budget or catalog bump no longer breaks this provenance; real slot content changes still do.",
     "spec_note": "The Encounter Bot regenerated the Day 1 spec at 9:47 PM CT while this file was being written. The map below is for the regenerated spec (34 slots, labels DETOUR TAX x4, REST-WITHOUT-SAFEROOM COST x3, REWARD x2, CR x7, BUDGET x5, COUNT x5, LOOT AMOUNT x6, CREDITS x1, plus none else). Five slots of the earlier version (zone groups, collapse order, stairwell opens, early-descent rule, detour cost) are now answered in the spec itself from decision 026; their numbers stay in authoritative.clock. If the spec changes again, re-map by label using label_guide. v0.1.2: the Encounter Bot regenerated the spec at 10:08 PM CT (sha above) and now cites this file by field path (b70 cites). Caleb's ruling (decision 026, ~10:02 PM CT; decision 028) makes a missed collapse death with no toll, so old slots 3 and 4 (collapse_miss) were removed; slot 1 keeps the missed-key Detour Tax. The fills below are kept as a cross-reference of which field each slot cites.",
     "count": 32,

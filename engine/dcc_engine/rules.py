@@ -85,7 +85,7 @@ def attack(attacker, target, rng, attack_name=None):
         rolled = _roll_expr(expr, rng)
         damage = max(0, int(rolled["total"]))
         damage_total = rolled["total"]
-        apply_damage(target, damage, chosen.get("type"))
+        apply_damage(target, damage, chosen.get("type"), crit=nat20)
     return {
         "attacker": attacker.get("name"),
         "target": target.get("name"),
@@ -118,13 +118,14 @@ def _is_crawler(combatant):
     return bool(combatant.get("class") or combatant.get("crawler"))
 
 
-def apply_damage(combatant, amount, damage_type=None):
+def apply_damage(combatant, amount, damage_type=None, crit=False):
     """Apply damage after immunity, resistance, vulnerability, and temporary hit points.
 
     Resistance halves the damage (round down), then vulnerability doubles what remains.
     Both together are not a cancel: 7 fire becomes 6. Temporary hit points are spent
     before hit points. A Crawler at 0 is Unconscious. Damage that lands while already
-    at 0 adds a failed death save. Overflow past 0 that meets the hit point maximum
+    at 0 adds one failed death save, or two on a critical hit. Damage at 0 that meets
+    the hit point maximum kills. Overflow past 0 that meets the hit point maximum
     is instant death. A monster at 0 is dead and does not make death saves.
     """
     amount = int(amount)
@@ -161,7 +162,12 @@ def apply_damage(combatant, amount, damage_type=None):
         add_condition(combatant, "Unconscious")
         saves = combatant.setdefault("death_saves", {"successes": 0, "failures": 0})
         if before <= 0:
-            saves["failures"] = int(saves.get("failures") or 0) + 1
+            max_hp = combatant.get("max_hp")
+            if max_hp is not None and amount >= int(max_hp):
+                combatant["dead"] = True
+                saves["failures"] = 3
+                return combatant["hp"]
+            saves["failures"] = int(saves.get("failures") or 0) + (2 if crit else 1)
             if saves["failures"] >= 3:
                 combatant["dead"] = True
     return combatant["hp"]

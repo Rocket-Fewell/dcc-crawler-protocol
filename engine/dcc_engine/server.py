@@ -18,6 +18,7 @@ _ACTION_VERBS = frozenset((
     "climb", "jump", "shove", "grapple", "improvise", "use", "check", "look",
     "drink", "pick", "unlock", "sneak", "read", "wish", "lock", "run", "kick",
     "steal", "give", "bribe", "eat", "talk", "attack", "swing", "shoot",
+    "stab", "hit", "strike", "grab", "pry", "hack", "break", "barricade", "lean", "sprint",
 ))
 _NEGATION = frozenset((
     "don't", "dont", "won't", "wont", "not", "never", "no", "can't", "cant",
@@ -27,7 +28,7 @@ _CHATTER_PHRASES = (
     "wish i had", "wish we had", "look at that", "check this out",
     "pick a favorite", "is it open",
 )
-_ATTACK_VERBS = frozenset(("attack", "swing", "shoot"))
+_ATTACK_VERBS = frozenset(("attack", "swing", "shoot", "stab", "hit", "strike"))
 
 
 def _words(text):

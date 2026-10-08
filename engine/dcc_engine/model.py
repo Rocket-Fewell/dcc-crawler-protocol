@@ -77,7 +77,10 @@ class ModelClient:
         """Fast model. Returns chatter, engine, or ruling. None means use the word fallback."""
         if self.fake:
             return self.fake_class
-        return self._fast_class(text)
+        try:
+            return self._fast_class(text)
+        except Exception:
+            return None
 
     def stream(self, snapshot):
         if self.fake:
