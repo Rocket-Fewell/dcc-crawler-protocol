@@ -33,11 +33,11 @@ def budget_ok(ref, budget, party_size=3):
         if ref.get("key") and "creatures" in ref.get("path", ""):
             resolve_cr(budget, ref)
         else:
-            resolve_count(budget, ref, party_size)
+            resolve_count(budget, ref, party_size)[0]
             if "creatures" not in ref.get("path", ""):
                 walk(budget, ref["path"])
         return True
-    except (KeyError, TypeError):
+    except (KeyError, TypeError, ValueError):
         return False
 
 

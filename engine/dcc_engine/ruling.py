@@ -6,7 +6,7 @@ This module does not write gm-notes/.
 
 from __future__ import annotations
 
-from dcc_engine.rules import apply_damage, rolltool
+from dcc_engine.rules import add_condition, apply_damage, apply_healing, clear_condition, rolltool
 
 RESOLVE_AS = ("attack", "save", "check", "damage", "heal", "condition", "move", "item", "none")
 
@@ -45,6 +45,36 @@ def _combatant(state, key):
     return combatants[key]
 
 
+def _actor(state, key):
+    who = _combatant(state, key) if key else None
+    if who is not None:
+        return who
+    who = _combatant(state, "crawler")
+    if who is not None:
+        return who
+    crawler = (state or {}).get("crawler")
+    return crawler if isinstance(crawler, dict) else None
+
+
+def _spend_item(who, item):
+    """Remove one matching inventory entry. Returns whether one was spent."""
+    if not isinstance(who, dict):
+        return False
+    inventory = who.get("inventory")
+    if not isinstance(inventory, list):
+        return False
+    for i, row in enumerate(inventory):
+        name = row if isinstance(row, str) else (row.get("name") or row.get("item"))
+        if name != item:
+            continue
+        if isinstance(row, dict) and int(row.get("uses") or 0) > 1:
+            row["uses"] = int(row["uses"]) - 1
+        else:
+            del inventory[i]
+        return True
+    return False
+
+
 def resolve_effect(applied, state):
     """Apply a non-attack ruling. Attack stays with the attack resolver."""
     if not applied.get("ok"):
@@ -56,19 +86,34 @@ def resolve_effect(applied, state):
     state = state or {}
     if kind in ("save", "check"):
         rng = state.get("rng")
-        if rng is None or "dc" not in params:
+        if rng is None:
+            return {"ok": False, "reason": "That check has no dice roller."}
+        if "dc" not in params:
             return {"ok": False, "reason": "That check needs a DC the card does not have."}
         mod = int(params.get("mod") or 0)
         d20 = int(rolltool.evaluate(rolltool.parse_expression("1d20"), rng)["total"])
         total = d20 + mod
         dc = int(params["dc"])
+        success = total >= dc
+        who = _actor(state, params.get("target"))
+        roll = {"kind": kind, "d20": d20, "total": total, "dc": dc, "success": success}
+        if who is not None:
+            who["last_roll"] = roll
+        condition = params.get("condition")
+        if who is not None and condition:
+            if success:
+                clear_condition(who, condition)
+            else:
+                add_condition(who, condition)
         return {
             "ok": True,
             "resolve_as": kind,
             "d20": d20,
             "total": total,
             "dc": dc,
-            "success": total >= dc,
+            "success": success,
+            "target": None if who is None else who.get("name"),
+            "condition": condition,
             "ruling": applied.get("ruling"),
             "tag": "POST-SESSION REVIEW",
         }
@@ -76,19 +121,19 @@ def resolve_effect(applied, state):
         who = _combatant(state, params.get("target"))
         if who is None or "amount" not in params:
             return {"ok": False, "reason": "That ruling names no target."}
+        before = int(who.get("hp") or 0)
         amount = int(params["amount"])
         if kind == "damage":
-            apply_damage(who, amount)
+            apply_damage(who, amount, params.get("type") or params.get("damage_type"))
         else:
-            who["hp"] = int(who.get("hp") or 0) + amount
-            if who.get("max_hp") is not None:
-                who["hp"] = min(int(who["max_hp"]), who["hp"])
+            apply_healing(who, amount)
         return {
             "ok": True,
             "resolve_as": kind,
             "target": who.get("name"),
             "target_hp": who["hp"],
             "amount": amount,
+            "hp_changed": who["hp"] != before,
             "ruling": applied.get("ruling"),
             "tag": "POST-SESSION REVIEW",
         }
@@ -97,32 +142,58 @@ def resolve_effect(applied, state):
         name = params.get("condition")
         if who is None or not name:
             return {"ok": False, "reason": "That ruling names no condition."}
-        who.setdefault("conditions", []).append(name)
+        canon = add_condition(who, name)
+        if not canon:
+            return {"ok": False, "reason": "That is not a condition."}
         return {
             "ok": True,
             "resolve_as": kind,
-            "condition": name,
+            "condition": canon,
             "target": who.get("name"),
             "ruling": applied.get("ruling"),
             "tag": "POST-SESSION REVIEW",
         }
     if kind == "move":
+        dest = params.get("to")
+        if not dest and params.get("distance_ft") is None:
+            return {"ok": False, "reason": "That move names no destination."}
+        who = _actor(state, params.get("target"))
+        if isinstance(who, dict) and dest:
+            who["position"] = dest
+        if dest:
+            state["position"] = dest
+        if params.get("distance_ft") is not None:
+            state["distance_ft"] = params.get("distance_ft")
         return {
             "ok": True,
             "resolve_as": kind,
-            "to": params.get("to"),
+            "to": dest,
+            "position": state.get("position"),
             "distance_ft": params.get("distance_ft"),
             "hp_changed": False,
+            "applied": True,
             "ruling": applied.get("ruling"),
             "tag": "POST-SESSION REVIEW",
         }
     if kind == "item":
+        item = params.get("item")
+        action = params.get("action") or "use"
+        if not item:
+            return {"ok": False, "reason": "That item ruling names no item."}
+        who = _actor(state, params.get("target"))
+        spent = _spend_item(who, item)
+        state["last_item"] = {"item": item, "action": action, "spent": spent}
+        before = int(who.get("hp") or 0) if isinstance(who, dict) else None
+        if isinstance(who, dict) and "amount" in params and action in ("use", "drink"):
+            apply_healing(who, int(params["amount"]))
         return {
             "ok": True,
             "resolve_as": kind,
-            "item": params.get("item"),
-            "action": params.get("action"),
-            "hp_changed": False,
+            "item": item,
+            "action": action,
+            "spent": spent,
+            "hp_changed": isinstance(who, dict) and who.get("hp") != before,
+            "applied": True,
             "ruling": applied.get("ruling"),
             "tag": "POST-SESSION REVIEW",
         }

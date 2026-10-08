@@ -31,17 +31,52 @@ def load_budget(path=None):
     return load_json(path or BUDGET)
 
 
+# The budget file publishes counts for 2, 3, and 4 Crawlers only.
+SUPPORTED_PARTY_SIZES = ("2", "3", "4")
+
+
+def party_key_for(node, party_size):
+    """Pick a budget party-size key. Sizes outside 2, 3, and 4 use the nearest one."""
+    key = str(party_size)
+    if isinstance(node, dict) and key in node:
+        return key, None
+    if not isinstance(node, dict):
+        raise ValueError("Party size %s is not in the budget." % party_size)
+    choices = [k for k in SUPPORTED_PARTY_SIZES if k in node]
+    if not choices:
+        raise ValueError(
+            "Party size %s is not in the budget. Supported sizes are 2, 3, and 4 Crawlers."
+            % party_size
+        )
+    try:
+        wanted = int(party_size)
+    except (TypeError, ValueError):
+        raise ValueError(
+            "Party size %s is not in the budget. Supported sizes are 2, 3, and 4 Crawlers."
+            % party_size
+        )
+    nearest = min(choices, key=lambda k: (abs(int(k) - wanted), int(k)))
+    note = "Party size %s is not in the budget. Using the %s-Crawler count." % (party_size, nearest)
+    return nearest, note
+
+
 def resolve_count(budget, ref, party_size):
+    """Return (count, note). note is set when the party size is not in the budget."""
     if not ref:
-        return None
+        return None, None
     node = walk(budget, ref["path"])
-    party = node[str(party_size)]
-    key = ref.get("key")
-    if key is None:
-        return party
+    key, note = party_key_for(node, party_size)
+    party = node[key]
+    field = ref.get("key")
+    if field is None:
+        return party, note
     if isinstance(party, dict):
-        return party[key]
-    return party
+        if field not in party:
+            raise ValueError(
+                "Party size %s has no %s count in the budget." % (key, field)
+            )
+        return party[field], note
+    return party, note
 
 
 def resolve_cr(budget, ref):
@@ -103,7 +138,11 @@ def resolve_room(room, party_size, budget=None):
     for enc in active_encounters(out):
         row = dict(enc)
         if enc.get("count_ref"):
-            row["count"] = resolve_count(budget, enc["count_ref"], party_size)
+            count, note = resolve_count(budget, enc["count_ref"], party_size)
+            row["count"] = count
+            if note:
+                row["party_size_note"] = note
+                out["party_size_note"] = note
         if enc.get("cr_ref"):
             row["cr"] = resolve_cr(budget, enc["cr_ref"])
         resolved.append(row)

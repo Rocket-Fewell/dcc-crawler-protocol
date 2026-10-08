@@ -456,12 +456,65 @@ def clock_for(path, day):
     return {"days": (spec.get("clock") or {}).get("days"), "day": day}
 
 
-def close_room(layer, room_id, extra=None):
-    """Replace the day's fight list. A closed room stays passable."""
+def collapse_notice(specs, day):
+    """The day's dry floor notice. A sentence with an unfilled blank is dropped."""
+    for number, _path, spec in specs:
+        if number != day:
+            continue
+        notice = ((spec.get("day") or {}).get("collapse_notice") or {})
+        text = " ".join((notice.get("text") or "").split())
+        kept = [sentence for sentence in complete_sentences(text) if "{" not in sentence]
+        gm = " ".join((((notice.get("gm_color") or {}).get("text")) or "").split())
+        return " ".join(kept), gm
+    return "", ""
+
+
+def scene_voice(specs, enc_id):
+    for _number, _path, spec in specs:
+        clock = {"days": (spec.get("clock") or {}).get("days"), "day": (spec.get("day") or {}).get("number")}
+        for enc in spec.get("encounters") or []:
+            if enc.get("id") == enc_id:
+                return voice_of(enc, enc.get("name") or "The room", clock)
+    return None
+
+
+def stamp_closed_text(cur, specs, day):
+    """Replace a closed zone's old read-aloud with that day's dry floor notice."""
+    notice, gm = collapse_notice(specs, day)
+    if not notice:
+        return
+    scene = None
+    for row in cur.get("day_encounters") or []:
+        if not row.get("srd_id") and row.get("enc_id"):
+            scene = scene_voice(specs, row["enc_id"])
+            break
+    intro = (scene or {}).get("intro") or notice
+    cur["narrator_line"] = notice
+    cur["read_aloud"] = intro if scene else notice
+    cur["voice_lines"] = {
+        "intro": intro,
+        "twist": (scene or {}).get("twist") or notice,
+        "win": (scene or {}).get("win") or notice,
+    }
+    cur["map"] = {
+        "layout": "This zone is closed.",
+        "cover": "No listed cover.",
+        "hazards": "No listed hazard.",
+    }
+    if gm:
+        cur["gm_notes"] = {"tag": "[GM-FACING]", "flavor": [gm]}
+
+
+def close_room(layer, room_id, specs, day, extra=None):
+    """Drop the day's fights. A non-combat scene stays. The room stays passable."""
+    cur = layer.get(room_id)
+    if not isinstance(cur, dict):
+        cur = {}
+    scenes = [row for row in (cur.get("day_encounters") or []) if not row.get("srd_id")]
     patch = {
         "closed": True,
         "passable": True,
-        "day_encounters": [],
+        "day_encounters": scenes,
         "loot": [],
         "achievements": [],
         "item_hooks": [],
@@ -471,10 +524,8 @@ def close_room(layer, room_id, extra=None):
     }
     if extra:
         patch.update(extra)
-    cur = layer.get(room_id)
-    if not isinstance(cur, dict):
-        cur = {}
     cur.update(patch)
+    stamp_closed_text(cur, specs, day)
     layer[room_id] = cur
 
 
@@ -554,14 +605,16 @@ def main():
             by_zone[zone]["npcs"] = [{"name": name, "voice": voice}]
 
     for zone in ("z00", "z01", "z02", "z03", "z03b", "z04"):
-        merge_layer(later[2], "f01-%s" % zone, {"closed": True, "hooks": "gone"})
+        room_id = "f01-%s" % zone
+        merge_layer(later[2], room_id, {"closed": True, "hooks": "gone"})
+        stamp_closed_text(later[2][room_id], specs, 2)
     for zone in ("z05", "z07"):
-        close_room(later[3], "f01-%s" % zone, {"hooks": "gone"})
-    merge_layer(later[3], "f01-z08", {"hooks": "gone", "npcs": [], "key": None})
+        close_room(later[3], "f01-%s" % zone, specs, 3, {"hooks": "gone"})
+    merge_layer(later[3], "f01-z08", {"hooks": "gone", "npcs": [], "key": None, "loot": []})
     for day in (4, 5):
         for zone in ("z05", "z07", "z08"):
-            close_room(later[day], "f01-%s" % zone, {"hooks": "gone"})
-        close_room(later[day], "f01-z06", {"saferoom": False, "vendors": "closed", "hooks": "gone"})
+            close_room(later[day], "f01-%s" % zone, specs, day, {"hooks": "gone"})
+        close_room(later[day], "f01-z06", specs, day, {"saferoom": False, "vendors": "closed", "hooks": "gone"})
     merge_layer(later[5], "f01-z09", {"open": True})
 
     for zone, room in by_zone.items():

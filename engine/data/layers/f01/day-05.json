@@ -92,7 +92,25 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "read_aloud": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "voice_lines": {
+      "intro": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "twist": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "win": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "Please do not make us say it twice."
+      ]
+    }
   },
   "f01-z07": {
     "closed": true,
@@ -104,7 +122,25 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "read_aloud": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "voice_lines": {
+      "intro": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "twist": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "win": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "Please do not make us say it twice."
+      ]
+    }
   },
   "f01-z08": {
     "closed": true,
@@ -116,7 +152,25 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "read_aloud": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "voice_lines": {
+      "intro": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "twist": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "win": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "Please do not make us say it twice."
+      ]
+    }
   },
   "f01-z06": {
     "closed": true,
@@ -130,6 +184,24 @@
     "rest": null,
     "saferoom": false,
     "vendors": "closed",
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "read_aloud": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+    "voice_lines": {
+      "intro": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "twist": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall.",
+      "win": "Final-morning reminder. Only the corridor remains open. The stairwell is down the hall."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "Please do not make us say it twice."
+      ]
+    }
   }
 }

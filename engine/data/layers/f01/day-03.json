@@ -44,7 +44,8 @@
     ],
     "hooks": "gone",
     "npcs": [],
-    "key": null
+    "key": null,
+    "loot": []
   },
   "f01-z10": {
     "day_encounters": [
@@ -74,7 +75,25 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "voice_lines": {
+      "intro": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+      "twist": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+      "win": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
+      ]
+    }
   },
   "f01-z07": {
     "closed": true,
@@ -86,6 +105,24 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "read_aloud": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+    "voice_lines": {
+      "intro": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+      "twist": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged.",
+      "win": "Update: the mid-floor zones are now closed. Loot and services in those zones have ended. Your remaining route is unchanged."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The middle of the floor is joining the outer parts in the afterlife. We left your path open because we want you to see what's next. Sadly."
+      ]
+    }
   }
 }

@@ -1,6 +1,15 @@
 {
   "f01-z06": {
-    "day_encounters": [],
+    "day_encounters": [
+      {
+        "enc_id": "enc-d04-01",
+        "srd_id": null,
+        "our_name": "Service Outage: The Break Room Goes Dark",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ],
     "closed": true,
     "passable": true,
     "loot": [],
@@ -11,7 +20,25 @@
     "rest": null,
     "saferoom": false,
     "vendors": "closed",
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "read_aloud": "SERVICE OUTAGE. Terminal offline. Vendors offline. Break Room rest unsupported.",
+    "voice_lines": {
+      "intro": "SERVICE OUTAGE. Terminal offline. Vendors offline. Break Room rest unsupported.",
+      "twist": "The fridge light clicks off. In the dark, a lone sandwich sits with a name taped to it. Nobody dares.",
+      "win": "Last meal eaten, last crumb shared, last credit spent. Go on. The building isn't going to hold your hand."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+      ]
+    }
   },
   "f01-z09": {
     "day_encounters": [
@@ -71,7 +98,25 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "read_aloud": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "voice_lines": {
+      "intro": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+      "twist": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+      "win": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+      ]
+    }
   },
   "f01-z07": {
     "closed": true,
@@ -83,7 +128,25 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "read_aloud": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "voice_lines": {
+      "intro": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+      "twist": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+      "win": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+      ]
+    }
   },
   "f01-z08": {
     "closed": true,
@@ -95,6 +158,24 @@
     "npcs": [],
     "key": null,
     "rest": null,
-    "hooks": "gone"
+    "hooks": "gone",
+    "narrator_line": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "read_aloud": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+    "voice_lines": {
+      "intro": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+      "twist": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available.",
+      "win": "Notice: the Break Room is offline. The vending terminal is closed. Resting there is no longer supported. The Green Room remains available."
+    },
+    "map": {
+      "layout": "This zone is closed.",
+      "cover": "No listed cover.",
+      "hazards": "No listed hazard."
+    },
+    "gm_notes": {
+      "tag": "[GM-FACING]",
+      "flavor": [
+        "The Break Room has gone to lunch and will not return. The Green Room stays open, for reasons of mercy and liability."
+      ]
+    }
   }
 }
