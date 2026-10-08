@@ -58,9 +58,9 @@
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers.",
-      "twist": "The outer zones are now closed.",
-      "win": "The remaining route stays open."
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
     },
     "map": {
       "layout": "This zone is closed.",
@@ -91,9 +91,9 @@
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers.",
-      "twist": "The outer zones are now closed.",
-      "win": "The remaining route stays open."
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
     },
     "map": {
       "layout": "This zone is closed.",
@@ -124,9 +124,9 @@
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers.",
-      "twist": "The outer zones are now closed.",
-      "win": "The remaining route stays open."
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
     },
     "map": {
       "layout": "This zone is closed.",
@@ -157,9 +157,9 @@
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers.",
-      "twist": "The outer zones are now closed.",
-      "win": "The remaining route stays open."
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
     },
     "map": {
       "layout": "This zone is closed.",
@@ -190,9 +190,9 @@
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers.",
-      "twist": "The outer zones are now closed.",
-      "win": "The remaining route stays open."
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
     },
     "map": {
       "layout": "This zone is closed.",
@@ -223,9 +223,9 @@
     "narrator_line": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "read_aloud": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
     "voice_lines": {
-      "intro": "Attention, Crawlers.",
-      "twist": "The outer zones are now closed.",
-      "win": "The remaining route stays open."
+      "intro": "Attention, Crawlers. The outer zones are now closed. Contents left in those zones are inaccessible. The remaining route stays open.",
+      "twist": "",
+      "win": ""
     },
     "map": {
       "layout": "This zone is closed.",

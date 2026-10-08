@@ -59,8 +59,13 @@ def validate_tree(root: Path):
                 if ref and not budget_ok(ref, budget):
                     errs.append("%s %s does not resolve: %s" % (room.get("id"), ref_name, ref.get("path")))
         for loot in room.get("loot") or []:
-            ref = loot.get("dice_ref")
-            if ref:
+            refs = []
+            if loot.get("dice_ref"):
+                refs.append(loot.get("dice_ref"))
+            for held in loot.get("holds") or []:
+                if isinstance(held, dict) and held.get("dice_ref"):
+                    refs.append(held.get("dice_ref"))
+            for ref in refs:
                 try:
                     walk(budget, ref)
                 except KeyError:

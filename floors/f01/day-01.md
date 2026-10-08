@@ -547,7 +547,7 @@ Skeletons are vulnerable to bludgeoning as written; let the crowbars shine (00-o
 #### Scaling note (2, 3, 4 Crawlers)
 
 - **2 Crawlers:** Two-Crawler count from the budget file; lean on the cover so the lesson lands without a wipe.
-- **3 Crawlers:** Three-Crawler count from the budget file (v0.2.9: two Mannequins).
+- **3 Crawlers:** Three-Crawler count from the budget file.
 - **4 Crawlers:** Four-Crawler count (00-overview.md sections 9.2 and 9.3): top of the Low band, and the cover makes it bite.
 
 #### If they do something dumb

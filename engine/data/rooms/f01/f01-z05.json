@@ -64,8 +64,14 @@
       },
       "alt": "smash",
       "holds": [
-        "2d6 x 3 credits",
-        "raffle ticket"
+        {
+          "dice_ref": "floors.1.fixed_encounters.z05.cash_dice_per_crawler"
+        },
+        {
+          "id": "f01-any-0031",
+          "deck": "f01-any-orientation-pit",
+          "name": "Raffle Ticket No. 0000"
+        }
       ],
       "gm_note": "The raffle ticket does nothing. The System never explains it and it never pays out."
     }

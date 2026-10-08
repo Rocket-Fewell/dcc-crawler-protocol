@@ -481,33 +481,14 @@ def scene_voice(specs, enc_id):
     return None
 
 
-def notice_voices(notice):
-    """Split a notice so intro, twist, and win are not the same sentence."""
-    parts = complete_sentences(notice) or [notice]
-    intro = parts[0]
-    twist = parts[1] if len(parts) > 1 else parts[0]
-    win = parts[-1] if len(parts) > 2 else twist
-    return intro, twist, win
-
-
 def stamp_closed_text(cur, specs, day, notice_day=None):
-    """Replace a closed zone's old read-aloud with the notice from the day it closed."""
+    """A closed room has no encounter voice. Intro is the full notice. Twist and win stay empty."""
     notice, gm = collapse_notice(specs, notice_day or day)
     if not notice:
         return
-    scene = None
-    for row in cur.get("day_encounters") or []:
-        if not row.get("srd_id") and row.get("enc_id"):
-            scene = scene_voice(specs, row["enc_id"])
-            break
-    intro, twist, win = notice_voices(notice)
-    if scene:
-        intro = scene.get("intro") or intro
-        twist = scene.get("twist") or twist
-        win = scene.get("win") or win
     cur["narrator_line"] = notice
-    cur["read_aloud"] = intro if scene else notice
-    cur["voice_lines"] = {"intro": intro, "twist": twist, "win": win}
+    cur["read_aloud"] = notice
+    cur["voice_lines"] = {"intro": notice, "twist": "", "win": ""}
     cur["map"] = {
         "layout": "This zone is closed.",
         "cover": "No listed cover.",
