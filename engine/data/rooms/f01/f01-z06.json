@@ -1,0 +1,85 @@
+{
+  "id": "f01-z06",
+  "floor": 1,
+  "zone": "z06",
+  "name": "The Break Room (Saferoom A)",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours.",
+  "map": {
+    "layout": "One carpeted saferoom: couch and fridge along one wall, the vending terminal and corkboard on the other, a crackling ceiling speaker.",
+    "cover": "Couch and fridge (half cover if it ever matters).",
+    "hazards": "None; honest saferoom on Floor 1 (00-overview.md section 2 rule 5).; The coffee (flavor only)."
+  },
+  "exits": [
+    {
+      "to": "f01-z05",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z07",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z08",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-01",
+      "srd_id": null,
+      "our_name": "The Break Room: First Saferoom and Briefing",
+      "count_ref": null,
+      "cr_ref": null,
+      "trigger": "on_search"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "deck": "f01-z06-0001"
+    },
+    {
+      "deck": "f01-z06-0004"
+    },
+    {
+      "deck": "f01-z06-0007"
+    },
+    {
+      "dice_ref": "floors.1.prices.potion_of_healing_vendor.price"
+    },
+    {
+      "deck": "f01-any-0034"
+    },
+    {
+      "deck": "f01-any-0058"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Proctor Bell",
+      "voice": "Proctor Bell"
+    }
+  ],
+  "voice_lines": {
+    "intro": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have {days} days. A day ends at Long Rest or at twenty-four in-game hours.",
+    "twist": "The terminal's screen flickers and a smaller, shadier menu appears: 'Spare keys. Unlisted. Pay exactly.' Somebody in accounting just fainted.",
+    "win": "You got the briefing, the gossip and a choice, and also the coffee, which was a mistake. Pick a route and go. The clock"
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-01"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "f01-z03",
+  "floor": 1,
+  "zone": "z03",
+  "name": "Vending Gore Arcade",
+  "days_open": [
+    1
+  ],
+  "narrator_line": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman",
+  "map": {
+    "layout": "A long hall of vending machines, half smashed and half glowing and faintly breathing, with a body in scrubs face-down in the",
+    "cover": "Machines (half cover; the breathing ones are a bad idea).",
+    "hazards": "Hungry vendors bite a reaching arm (a Dexterity save, then Strength (Athletics) to pull free; section 5.3).; Prying"
+  },
+  "exits": [
+    {
+      "to": "f01-z02",
+      "kind": "vent"
+    },
+    {
+      "to": "f01-z03b",
+      "kind": "door",
+      "hidden_by_secret": "back-cage"
+    },
+    {
+      "to": "f01-z04",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-09",
+      "srd_id": null,
+      "our_name": "Vending Gore Arcade: The Loot Lesson",
+      "count_ref": null,
+      "cr_ref": null,
+      "trigger": "on_search"
+    }
+  ],
+  "secrets": [
+    {
+      "id": "odd-coin-identify",
+      "trigger": {
+        "type": "item",
+        "item": "Odd Coin"
+      },
+      "reveal_text": "ITEM NOT RECOGNIZED. Never name a floor or time.",
+      "gm_only": true
+    }
+  ],
+  "loot": [
+    {
+      "deck": "f01-z03-0004"
+    },
+    {
+      "deck": "f01-z03-0005"
+    },
+    {
+      "deck": "f01-z03-0008"
+    }
+  ],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman",
+    "twist": "A machine closes on someone's arm with a satisfied little click. The screen thanks you for your patronage. Pull, or wait for the next",
+    "win": "Pockets full, one arm slightly chewed, and a stamped coin that feels heavier than it should. The machines go dark one by one and"
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-09"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "f01-zS",
+  "floor": 1,
+  "zone": "zS",
+  "name": "Zone S: Service Corridor (side path)",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
+  "map": {
+    "layout": "A narrow utility hall behind the stage: pipes, junction boxes, a single locked service door at the end that leads to a",
+    "cover": "Pipe runs and junction boxes (half cover).",
+    "hazards": "Locked service door (inspired): key, tools or force; force is loud and the noise draws the boss and"
+  },
+  "exits": [
+    {
+      "to": "f01-z10",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z11",
+      "kind": "stairs",
+      "locked_by": "service-key"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d02-02",
+      "srd_id": "skeleton",
+      "our_name": "Usher (Skeleton)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.d02_02.counts_by_party_size",
+        "key": "skeleton"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z10.creatures",
+        "key": "skeleton"
+      },
+      "trigger": "on_search"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "deck": "f01-z06-0004"
+    },
+    {
+      "deck": "f01-any-0014"
+    },
+    {
+      "deck": "f01-any-0044"
+    },
+    {
+      "deck": "f01-any-0034"
+    },
+    {
+      "deck": "f01-any-0065"
+    },
+    {
+      "deck": "f01-any-0058"
+    }
+  ],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
+    "twist": "The lock gives, or the door does; either way the hall echoes. Somewhere on the stage, something big stops humming.",
+    "win": "Door open, stairs below. You went around the final exam through the janitor's entrance. The audience is calling you a raccoon. Fondly."
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-02.spec.json",
+    "enc_id": "enc-d02-02"
+  }
+}

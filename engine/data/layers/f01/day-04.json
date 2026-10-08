@@ -1,0 +1,36 @@
+{
+  "f01-z06": {
+    "saferoom": false,
+    "vendors": "closed"
+  },
+  "f01-z10": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d04-03",
+        "srd_id": "skeleton",
+        "our_name": "Usher (Skeleton)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.d04_03.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z10.creatures",
+          "key": "skeleton"
+        },
+        "trigger": "on_enter"
+      }
+    ]
+  },
+  "f01-z09": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d04-04",
+        "srd_id": null,
+        "our_name": "Green Room Night Shift",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  }
+}

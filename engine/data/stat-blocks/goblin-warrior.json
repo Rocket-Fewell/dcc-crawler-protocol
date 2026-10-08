@@ -1,0 +1,16 @@
+{
+  "id": "goblin-warrior",
+  "name": "goblin-warrior",
+  "ac": 15,
+  "hp": 10,
+  "attacks": [
+    {
+      "name": "Scimitar",
+      "to_hit": 4,
+      "damage": "1d6+2",
+      "type": "slashing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}

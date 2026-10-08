@@ -1,0 +1,16 @@
+{
+  "id": "bugbear-warrior",
+  "name": "bugbear-warrior",
+  "ac": 14,
+  "hp": 27,
+  "attacks": [
+    {
+      "name": "Morningstar",
+      "to_hit": 4,
+      "damage": "1d8+2",
+      "type": "piercing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}

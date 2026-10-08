@@ -1,0 +1,16 @@
+{
+  "id": "goblin-minion",
+  "name": "goblin-minion",
+  "ac": 12,
+  "hp": 3,
+  "attacks": [
+    {
+      "name": "Dagger",
+      "to_hit": 4,
+      "damage": "1d4+2",
+      "type": "piercing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}

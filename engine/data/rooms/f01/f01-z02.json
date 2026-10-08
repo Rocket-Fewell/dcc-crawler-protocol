@@ -1,0 +1,65 @@
+{
+  "id": "f01-z02",
+  "floor": 1,
+  "zone": "z02",
+  "name": "Vent Row",
+  "days_open": [
+    1
+  ],
+  "narrator_line": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
+  "map": {
+    "layout": "A service hallway lined with floor vents, every grate bent outward, with red UI brackets over the openings.",
+    "cover": "Bent grates and wall pipes (half cover).",
+    "hazards": "Two vents 20 ft apart spill the rats in two groups (00-overview.md section 5.2).; Backing away from a"
+  },
+  "exits": [
+    {
+      "to": "f01-z01",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z03",
+      "kind": "vent"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-08",
+      "srd_id": "giant-rat",
+      "our_name": "Vent Rat (Giant Rat)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.z02.counts_by_party_size",
+        "key": "giant-rat"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z02.creatures",
+        "key": "giant-rat"
+      },
+      "trigger": "on_enter"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "dice_ref": "floors.1.fixed_encounters.z02.cash_dice_per_crawler"
+    }
+  ],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
+    "twist": "The second wave climbs out of a vent twenty feet down the hall, right where nobody was looking. Somebody just learned about flanking the",
+    "win": "Rats down. You are now qualified to work the night shift at a children's pizza arcade. The vents rattle with dropped change, if you're"
+  },
+  "item_hooks": [
+    "Dale's HVAC License: Advantage on duct and vent checks."
+  ],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-08"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "f01-z09": {
+    "open": true
+  },
+  "f01-zS": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d05-02",
+        "srd_id": null,
+        "our_name": "Zone S: The Toll Turnstile",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  },
+  "f01-z10": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d05-03",
+        "srd_id": "ogre",
+        "our_name": "Dean Thudd, Head of Orientation (Ogre)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.z10.counts_by_party_size",
+          "key": "ogre"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z10.creatures",
+          "key": "ogre"
+        },
+        "trigger": "on_search"
+      },
+      {
+        "enc_id": "enc-d05-03",
+        "srd_id": "skeleton",
+        "our_name": "Usher (Skeleton)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.z10.counts_by_party_size",
+          "key": "skeleton"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z10.creatures",
+          "key": "skeleton"
+        },
+        "trigger": "on_search"
+      },
+      {
+        "enc_id": "enc-d05-03",
+        "srd_id": "bugbear-warrior",
+        "our_name": "Dean Thudd (JV) (Bugbear Warrior)",
+        "count_ref": {
+          "path": "floors.1.fixed_encounters.z10.counts_by_party_size",
+          "key": "bugbear-warrior"
+        },
+        "cr_ref": {
+          "path": "floors.1.fixed_encounters.z10.creatures",
+          "key": "bugbear-warrior"
+        },
+        "trigger": "on_search"
+      }
+    ]
+  },
+  "f01-z11": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d05-04",
+        "srd_id": null,
+        "our_name": "The Stairwell: The Last Six Hours",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  }
+}

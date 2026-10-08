@@ -1,0 +1,72 @@
+{
+  "id": "f01-z09",
+  "floor": 1,
+  "zone": "z09",
+  "name": "The Green Room (Saferoom B)",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "SAFEROOM CERTIFIED. Midterm Onboarding is complete. Level granted; fruit plate issued. Mandatory briefing follows.",
+  "map": {
+    "layout": "A backstage green room: a mirror ringed with half-dead bulbs, folding chairs, a fruit plate that has become something else, a framed",
+    "cover": "Chairs and the dressing table.",
+    "hazards": "None; honest saferoom on Floor 1.; Stays open to the end of the floor (house exception, inspired)."
+  },
+  "exits": [
+    {
+      "to": "f01-z08",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z10",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-05",
+      "srd_id": null,
+      "our_name": "Day Close: The Green Room",
+      "count_ref": null,
+      "cr_ref": null,
+      "trigger": "on_search"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "deck": "f01-z09-0004"
+    },
+    {
+      "deck": "f01-z09-0010"
+    },
+    {
+      "deck": "f01-z09-0001"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Proctor Bell",
+      "voice": "Proctor Bell"
+    }
+  ],
+  "voice_lines": {
+    "intro": "SAFEROOM CERTIFIED. Midterm Onboarding is complete. Level granted; fruit plate issued. Mandatory briefing follows.",
+    "twist": "The boxes all open at once, the way the System likes it: loud, public and a little embarrassing. Don't lose any of it. The",
+    "win": "Day closed. Zone schedule updates overnight. Long Rest recorded. Morning notice will list what remains open."
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-05"
+  }
+}

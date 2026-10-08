@@ -1,0 +1,16 @@
+{
+  "id": "ogre",
+  "name": "ogre",
+  "ac": 11,
+  "hp": 68,
+  "attacks": [
+    {
+      "name": "Greatclub",
+      "to_hit": 6,
+      "damage": "2d8+4",
+      "type": "bludgeoning"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}

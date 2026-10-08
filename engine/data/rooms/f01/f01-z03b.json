@@ -1,0 +1,51 @@
+{
+  "id": "f01-z03b",
+  "floor": 1,
+  "zone": "z03b",
+  "name": "Lost & Found, back cage",
+  "days_open": [
+    1
+  ],
+  "narrator_line": "Lost & Found, back cage. The floor keeps its own clock.",
+  "map": {
+    "layout": "Lost & Found, back cage.",
+    "cover": "No listed cover.",
+    "hazards": "No listed hazard."
+  },
+  "exits": [
+    {
+      "to": "f01-z03",
+      "kind": "door"
+    }
+  ],
+  "encounters": [],
+  "secrets": [
+    {
+      "id": "back-cage",
+      "trigger": {
+        "type": "check",
+        "skill": "Perception",
+        "dc": 15
+      },
+      "reveal_text": "A false panel behind the change machine opens the back cage.",
+      "gm_only": true
+    }
+  ],
+  "loot": [],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "Lost & Found, back cage is ahead.",
+    "twist": "The room does not stay still.",
+    "win": "You can leave when you are ready."
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/00-overview.md",
+    "enc_id": "overview-5.3"
+  }
+}

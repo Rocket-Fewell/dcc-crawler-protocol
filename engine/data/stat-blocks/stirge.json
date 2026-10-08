@@ -1,0 +1,16 @@
+{
+  "id": "stirge",
+  "name": "stirge",
+  "ac": 13,
+  "hp": 5,
+  "attacks": [
+    {
+      "name": "Blood Drain",
+      "to_hit": 5,
+      "damage": "1d4+3",
+      "type": "piercing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}

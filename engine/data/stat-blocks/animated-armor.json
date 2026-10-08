@@ -1,0 +1,16 @@
+{
+  "id": "animated-armor",
+  "name": "animated-armor",
+  "ac": 18,
+  "hp": 33,
+  "attacks": [
+    {
+      "name": "Slam",
+      "to_hit": 4,
+      "damage": "1d6+2",
+      "type": "bludgeoning"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}

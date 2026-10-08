@@ -1,0 +1,95 @@
+{
+  "id": "f01-z08",
+  "floor": 1,
+  "zone": "z08",
+  "name": "Mascot Locker Room (Elite)",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
+  "map": {
+    "layout": "A foam-smelling locker room: rows of lockers, benches, a cracked mirror wall, a giant mascot costume hanging from a hook in the",
+    "cover": "Benches and locker banks (half cover); the mirror wall gives no cover.",
+    "hazards": "Searching lockers is loud: a Ceiling Ticks roll after a few banks (00-overview.md section 5.8).; Reflections in the"
+  },
+  "exits": [
+    {
+      "to": "f01-z06",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z09",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-03",
+      "srd_id": "animated-armor",
+      "our_name": "Bruiser the Mascot (Unoccupied) (Animated Armor)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.z08.counts_by_party_size",
+        "key": "animated-armor"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z08.creatures",
+        "key": "animated-armor"
+      },
+      "trigger": "on_enter"
+    },
+    {
+      "enc_id": "enc-d01-03",
+      "srd_id": "animated-flying-sword",
+      "our_name": "Lanyard Blade (Animated Flying Sword)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.z08.counts_by_party_size",
+        "key": "animated-flying-sword"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z08.creatures",
+        "key": "animated-flying-sword"
+      },
+      "trigger": "on_enter"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "dice_ref": "floors.1.prices.potion_of_healing_vendor.price"
+    },
+    {
+      "deck": "f01-any-0015"
+    },
+    {
+      "deck": "f01-any-0064"
+    },
+    {
+      "deck": "f01-any-0063"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Bruiser the Mascot",
+      "voice": "Bruiser the Mascot"
+    }
+  ],
+  "voice_lines": {
+    "intro": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
+    "twist": "The costume stands up, the lanyards unfold, and one of you just became the most popular Crawler in the room. That's the worst kind",
+    "win": "Costume down, locker bank open, and a key swinging from a place no key should be. Take it. Don't ask where it was. The"
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-03"
+  }
+}

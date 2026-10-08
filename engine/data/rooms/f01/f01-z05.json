@@ -1,0 +1,69 @@
+{
+  "id": "f01-z05",
+  "floor": 1,
+  "zone": "z05",
+  "name": "Shooting Gallery",
+  "days_open": [
+    1,
+    2
+  ],
+  "narrator_line": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware. Each",
+  "map": {
+    "layout": "A carnival shooting gallery scaled up to a big room: plywood cutouts on squeaking conveyors, overturned counters, sandbags, a cash register on",
+    "cover": "Counters and sandbags (half cover); the brick prize booth (three-quarters cover).",
+    "hazards": "Conveyors carry a standing Crawler 10 ft at the end of each round (00-overview.md section 5.5).; The mannequins"
+  },
+  "exits": [
+    {
+      "to": "f01-z04",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z06",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-11",
+      "srd_id": "skeleton",
+      "our_name": "Mannequin Staff (Skeleton)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.z05.counts_by_party_size",
+        "key": "skeleton"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z05.creatures",
+        "key": "skeleton"
+      },
+      "trigger": "on_enter"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "dice_ref": "floors.1.fixed_encounters.z05.cash_dice_per_crawler"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Proctor Bell",
+      "voice": "Proctor Bell"
+    }
+  ],
+  "voice_lines": {
+    "intro": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware. Each",
+    "twist": "Someone steps onto a conveyor and glides ten feet sideways like a carnival prize. The mannequins keep smiling. It's in their contract.",
+    "win": "The last mannequin drops its bow and keeps smiling anyway. The register on the stool is still full, plus a raffle ticket the System"
+  },
+  "item_hooks": [],
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-11"
+  }
+}

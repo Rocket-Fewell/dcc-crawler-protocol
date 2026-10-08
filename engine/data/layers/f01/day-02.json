@@ -1,0 +1,38 @@
+{
+  "f01-z09": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d02-01",
+        "srd_id": null,
+        "our_name": "Morning Notice: Outer Zones Close, Stairwell Opens",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  },
+  "f01-z00": {
+    "closed": true,
+    "hooks": "gone"
+  },
+  "f01-z01": {
+    "closed": true,
+    "hooks": "gone"
+  },
+  "f01-z02": {
+    "closed": true,
+    "hooks": "gone"
+  },
+  "f01-z03": {
+    "closed": true,
+    "hooks": "gone"
+  },
+  "f01-z03b": {
+    "closed": true,
+    "hooks": "gone"
+  },
+  "f01-z04": {
+    "closed": true,
+    "hooks": "gone"
+  }
+}

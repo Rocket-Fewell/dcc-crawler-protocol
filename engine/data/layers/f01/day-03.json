@@ -1,0 +1,23 @@
+{
+  "f01-z06": {
+    "day_encounters": [
+      {
+        "enc_id": "enc-d03-01",
+        "srd_id": null,
+        "our_name": "Last Call at the Break Room",
+        "count_ref": null,
+        "cr_ref": null,
+        "trigger": "on_search"
+      }
+    ]
+  },
+  "f01-z08": {
+    "hooks": "gone"
+  },
+  "f01-z05": {
+    "hooks": "gone"
+  },
+  "f01-z07": {
+    "hooks": "gone"
+  }
+}

@@ -10,6 +10,9 @@
 *.p12
 *.pfx
 
+# engine session database (live state; not content)
+engine-data/
+
 # dependencies / caches
 node_modules/
 __pycache__/

@@ -1,0 +1,16 @@
+{
+  "id": "animated-flying-sword",
+  "name": "animated-flying-sword",
+  "ac": 17,
+  "hp": 17,
+  "attacks": [
+    {
+      "name": "Slash",
+      "to_hit": 5,
+      "damage": "1d8+3",
+      "type": "slashing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "engine/build_rooms.py one to-hit; Encounter owns the final block"
+}
