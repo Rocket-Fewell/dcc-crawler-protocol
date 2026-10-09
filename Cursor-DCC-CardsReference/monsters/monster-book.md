@@ -1,8 +1,10 @@
 # Monster book (Floors 1–3)
-Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
+Owner: Cursor (R&D) | Status: draft | Version: 0.3.0 | Updated: 2026-10-09
 Summary: 72 house reskins of SRD 5.2.1 stat blocks for random encounters. Numbers are the open SRD. Flavor is house. Limited spells and recharge tricks have counters. Not a live floor.
 
 Live Day pages and `rules/70-encounter-budget-5e.json` win on any fight that is already filed. This book is a draw pile for grok bots. Lore and Encounter Bot own stories later.
+
+Names are pictures. A Crawler should know what they are looking at without a Monster Manual. The SRD name stays in the table for the math.
 
 Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss. XP is `xp_by_cr` in rules/70, checked against the SRD line.
 
@@ -20,86 +22,90 @@ A leveled spell or a 1/Day trick spends a counter. At-will cantrips do not. When
 
 | ID | Floor | Role | Name | SRD | CR | XP |
 |---|---:|---|---|---|---:|---:|
-| `f01-m-01` | 1 | mob | Duct Rat | Giant Rat | 1/8 | 25 |
-| `f01-m-02` | 1 | mob | Badge Moth | Stirge | 1/8 | 25 |
-| `f01-m-03` | 1 | mob | Intern with a Lanyard | Goblin Minion | 1/8 | 25 |
-| `f01-m-04` | 1 | mob | Pamphlet Cultist | Cultist | 1/8 | 25 |
-| `f01-m-05` | 1 | mob | Lobby Crab | Giant Crab | 1/8 | 25 |
-| `f01-m-06` | 1 | mob | Lost Mascot Dog | Mastiff | 1/8 | 25 |
-| `f01-m-07` | 1 | mob | Name-Tag Bandit | Bandit | 1/8 | 25 |
-| `f01-m-08` | 1 | mob | Turnstile Guard | Guard | 1/8 | 25 |
-| `f01-m-09` | 1 | mob | Kiosk Bones | Skeleton | 1/4 | 50 |
-| `f01-m-10` | 1 | mob | Clipboard Goblin | Goblin Warrior | 1/4 | 50 |
-| `f01-m-11` | 1 | mob | Mop Zombie | Zombie | 1/4 | 50 |
-| `f01-m-12` | 1 | mob | Speaker Fungus | Shrieker Fungus | 0 | 0 |
-| `f01-u-01` | 1 | unit | Pike Intern | Warrior Infantry | 1/8 | 25 |
-| `f01-u-02` | 1 | unit | Lanyard Blade | Animated Flying Sword | 1/4 | 50 |
-| `f01-u-03` | 1 | unit | Snack-Cart Kobold | Kobold Warrior | 1/8 | 25 |
-| `f01-u-04` | 1 | unit | Concession Steam | Steam Mephit | 1/4 | 50 |
-| `f01-u-05` | 1 | unit | Acolyte of the PA | Priest Acolyte | 1/4 | 50 |
-| `f01-u-06` | 1 | unit | Hall Centipede | Giant Centipede | 1/4 | 50 |
-| `f01-e-01` | 1 | elite | Empty Mascot Suit | Animated Armor | 1 | 200 |
-| `f01-e-02` | 1 | elite | Breakroom Bugbear | Bugbear Warrior | 1 | 200 |
-| `f01-e-03` | 1 | elite | Greenroom Ghoul | Ghoul | 1 | 200 |
-| `f01-e-04` | 1 | elite | Night-Shift Specter | Specter | 1 | 200 |
-| `f01-b-01` | 1 | boss | Concession Spider | Giant Spider | 1 | 200 |
-| `f01-b-02` | 1 | boss | Podium Ogre | Ogre | 2 | 450 |
-| `f02-m-01` | 2 | mob | Soft-Open Hobgoblin | Hobgoblin Warrior | 1/2 | 100 |
-| `f02-m-02` | 2 | mob | Gray Mop Ooze | Gray Ooze | 1/2 | 100 |
-| `f02-m-03` | 2 | mob | Clipboard Scout | Scout | 1/2 | 100 |
-| `f02-m-04` | 2 | mob | Ratings Gnoll | Gnoll Warrior | 1/2 | 100 |
-| `f02-m-05` | 2 | mob | Loading-Dock Worg | Worg | 1/2 | 100 |
-| `f02-m-06` | 2 | mob | Rusted Prop | Rust Monster | 1/2 | 100 |
-| `f02-m-07` | 2 | mob | Dimmer Shadow | Shadow | 1/2 | 100 |
-| `f02-m-08` | 2 | mob | Warmup Satyr | Satyr | 1/2 | 100 |
-| `f02-m-09` | 2 | mob | Magma Concession | Magmin | 1/2 | 100 |
-| `f02-m-10` | 2 | mob | Dust in the Lights | Dust Mephit | 1/2 | 100 |
-| `f02-u-01` | 2 | unit | Pool Unit | Sahuagin Warrior | 1/2 | 100 |
-| `f02-u-02` | 2 | unit | Cockatrice Extra | Cockatrice | 1/2 | 100 |
-| `f02-u-03` | 2 | unit | Wasp Usher | Giant Wasp | 1/2 | 100 |
-| `f02-u-04` | 2 | unit | Ape Grip | Ape | 1/2 | 100 |
-| `f02-u-05` | 2 | unit | Bear Bouncer | Black Bear | 1/2 | 100 |
-| `f02-u-06` | 2 | unit | Tank Shark | Reef Shark | 1/2 | 100 |
-| `f02-e-01` | 2 | elite | Imp Producer | Imp | 1 | 200 |
-| `f02-e-02` | 2 | elite | Dire Wolf Security | Dire Wolf | 1 | 200 |
-| `f02-e-03` | 2 | elite | Harpy Headliner | Harpy | 1 | 200 |
-| `f02-e-04` | 2 | elite | Gargoyle Camera | Gargoyle | 2 | 450 |
-| `f02-e-05` | 2 | elite | Gelatinous Janitor | Gelatinous Cube | 2 | 450 |
-| `f02-b-01` | 2 | boss | Ratings Hound | Hell Hound | 3 | 700 |
-| `f02-b-02` | 2 | boss | Live Mascot | Owlbear | 3 | 700 |
-| `f02-b-03` | 2 | boss | Knight of the Soft Open | Knight | 3 | 700 |
-| `f03-m-01` | 3 | mob | Road Grimlock | Grimlock | 1/4 | 50 |
-| `f03-m-02` | 3 | mob | Fieldhand Dretch | Dretch | 1/4 | 50 |
-| `f03-m-03` | 3 | mob | Fence Blink Dog | Blink Dog | 1/4 | 50 |
-| `f03-m-04` | 3 | mob | Critic Pseudodragon | Pseudodragon | 1/4 | 50 |
-| `f03-m-05` | 3 | mob | Violet Crop | Violet Fungus | 1/4 | 50 |
-| `f03-m-06` | 3 | mob | Axe Beak Livestock | Axe Beak | 1/4 | 50 |
-| `f03-m-07` | 3 | mob | Pteranodon Post | Pteranodon | 1/4 | 50 |
-| `f03-m-08` | 3 | mob | Death Dog | Death Dog | 1 | 200 |
-| `f03-m-09` | 3 | mob | Quasit Auditor | Quasit | 1 | 200 |
-| `f03-m-10` | 3 | mob | Boundary Dryad | Dryad | 1 | 200 |
-| `f03-u-01` | 3 | unit | Press-Gang Pirate | Pirate | 1 | 200 |
-| `f03-u-02` | 3 | unit | Hyena Pack | Giant Hyena | 1 | 200 |
-| `f03-u-03` | 3 | unit | Lion of the Green | Lion | 1 | 200 |
-| `f03-u-04` | 3 | unit | Bear Warden | Brown Bear | 1 | 200 |
-| `f03-u-05` | 3 | unit | Hippogriff Courier | Hippogriff | 1 | 200 |
-| `f03-u-06` | 3 | unit | Mill Toad | Giant Toad | 1 | 200 |
-| `f03-e-01` | 3 | elite | Road Ankheg | Ankheg | 2 | 450 |
-| `f03-e-02` | 3 | elite | Barn Ettercap | Ettercap | 2 | 450 |
-| `f03-e-03` | 3 | elite | Wayside Priest | Priest | 2 | 450 |
-| `f03-e-04` | 3 | elite | Gate Spider | Phase Spider | 3 | 700 |
-| `f03-e-05` | 3 | elite | Billboard Manticore | Manticore | 3 | 700 |
-| `f03-b-01` | 3 | boss | Toll Ettin | Ettin | 4 | 1100 |
-| `f03-b-02` | 3 | boss | Grant Ghost | Ghost | 4 | 1100 |
-| `f03-b-03` | 3 | boss | Silo Pudding | Black Pudding | 4 | 1100 |
+| `f01-m-01` | 1 | mob | Ankle-Biting Vent Rat | Giant Rat | 1/8 | 25 |
+| `f01-m-02` | 1 | mob | Latch-On Ceiling Mosquito | Stirge | 1/8 | 25 |
+| `f01-m-03` | 1 | mob | Probation Goblin, Plastic Badge | Goblin Minion | 1/8 | 25 |
+| `f01-m-04` | 1 | mob | Hoodie Pamphleteer | Cultist | 1/8 | 25 |
+| `f01-m-05` | 1 | mob | Suitcase Lobby Crab | Giant Crab | 1/8 | 25 |
+| `f01-m-06` | 1 | mob | Foam-Head Mascot Dog | Mastiff | 1/8 | 25 |
+| `f01-m-07` | 1 | mob | Name-Tag Thief | Bandit | 1/8 | 25 |
+| `f01-m-08` | 1 | mob | Flashlight Turnstile Guard | Guard | 1/8 | 25 |
+| `f01-m-09` | 1 | mob | Smiling Polo Mannequin | Skeleton | 1/4 | 50 |
+| `f01-m-10` | 1 | mob | Pineapple-Club Goblin | Goblin Warrior | 1/4 | 50 |
+| `f01-m-11` | 1 | mob | Mop-Dragging Janitor Zombie | Zombie | 1/4 | 50 |
+| `f01-m-12` | 1 | mob | Screaming PA Mushroom | Shrieker Fungus | 0 | 0 |
+| `f01-u-01` | 1 | unit | Safety-Vest Pike Intern | Warrior Infantry | 1/8 | 25 |
+| `f01-u-02` | 1 | unit | Flying Razor Lanyard | Animated Flying Sword | 1/4 | 50 |
+| `f01-u-03` | 1 | unit | Paper-Hat Snack Dog | Kobold Warrior | 1/8 | 25 |
+| `f01-u-04` | 1 | unit | Nacho-Cheese Steam Cloud | Steam Mephit | 1/4 | 50 |
+| `f01-u-05` | 1 | unit | Hold-Music Choir Intern | Priest Acolyte | 1/4 | 50 |
+| `f01-u-06` | 1 | unit | Mop-Length Hall Centipede | Giant Centipede | 1/4 | 50 |
+| `f01-e-01` | 1 | elite | Walking Empty Pit-Bull Suit | Animated Armor | 1 | 200 |
+| `f01-e-02` | 1 | elite | Seven-Foot Hairy Break-Room Bully | Bugbear Warrior | 1 | 200 |
+| `f01-e-03` | 1 | elite | Craft-Services Corpse | Ghoul | 1 | 200 |
+| `f01-e-04` | 1 | elite | Janitor-Vest Night Ghost | Specter | 1 | 200 |
+| `f01-b-01` | 1 | boss | Golf-Cart Concession Spider | Giant Spider | 1 | 200 |
+| `f01-b-02` | 1 | boss | Adjunct Smash, Podium Giant | Ogre | 2 | 450 |
+| `f02-m-01` | 2 | mob | Sash-Wearing Tall Goblin Sergeant | Hobgoblin Warrior | 1/2 | 100 |
+| `f02-m-02` | 2 | mob | Boot-Eating Mop Water | Gray Ooze | 1/2 | 100 |
+| `f02-m-03` | 2 | mob | Route-Knowing Clipboard Scout | Scout | 1/2 | 100 |
+| `f02-m-04` | 2 | mob | Laughing Hyena Person | Gnoll Warrior | 1/2 | 100 |
+| `f02-m-05` | 2 | mob | Couch-Sized Saddle Wolf | Worg | 1/2 | 100 |
+| `f02-m-06` | 2 | mob | Sword-Eating Antenna Bug | Rust Monster | 1/2 | 100 |
+| `f02-m-07` | 2 | mob | Your Shadow, On Payroll | Shadow | 1/2 | 100 |
+| `f02-m-08` | 2 | mob | Goat-Legged Warmup Comic | Satyr | 1/2 | 100 |
+| `f02-m-09` | 2 | mob | Walking Charcoal Briquette | Magmin | 1/2 | 100 |
+| `f02-m-10` | 2 | mob | Coughing Dust Cloud | Dust Mephit | 1/2 | 100 |
+| `f02-u-01` | 2 | unit | Trident Lifeguard Fish-Person | Sahuagin Warrior | 1/2 | 100 |
+| `f02-u-02` | 2 | unit | Petrifying Chicken-Lizard | Cockatrice | 1/2 | 100 |
+| `f02-u-03` | 2 | unit | Motorcycle-Sized Usher Wasp | Giant Wasp | 1/2 | 100 |
+| `f02-u-04` | 2 | unit | Bouncer Ape Named Grip | Ape | 1/2 | 100 |
+| `f02-u-05` | 2 | unit | Bow-Tie Black Bear | Black Bear | 1/2 | 100 |
+| `f02-u-06` | 2 | unit | Decorative Tank Shark | Reef Shark | 1/2 | 100 |
+| `f02-e-01` | 2 | elite | Headset Shoulder Devil | Imp | 1 | 200 |
+| `f02-e-02` | 2 | elite | Golf-Cart Security Wolf | Dire Wolf | 1 | 200 |
+| `f02-e-03` | 2 | elite | Marquee Bird-Woman | Harpy | 1 | 200 |
+| `f02-e-04` | 2 | elite | Swooping Stone Security Camera | Gargoyle | 2 | 450 |
+| `f02-e-05` | 2 | elite | Ten-Foot Cube of Floor Cleaner | Gelatinous Cube | 2 | 450 |
+| `f02-b-01` | 2 | boss | Fire-Breathing Exit Dog | Hell Hound | 3 | 700 |
+| `f02-b-02` | 2 | boss | Occupied Owl-Bear Mascot | Owlbear | 3 | 700 |
+| `f02-b-03` | 2 | boss | Rental-Plate Sponsor Knight | Knight | 3 | 700 |
+| `f03-m-01` | 3 | mob | Eyeless Cave Person | Grimlock | 1/4 | 50 |
+| `f03-m-02` | 3 | mob | Stinking Demon Intern | Dretch | 1/4 | 50 |
+| `f03-m-03` | 3 | mob | Fence-Hopping Teleport Dog | Blink Dog | 1/4 | 50 |
+| `f03-m-04` | 3 | mob | Cat-Sized Shoulder Dragon | Pseudodragon | 1/4 | 50 |
+| `f03-m-05` | 3 | mob | Purple Whip-Crop Fungus | Violet Fungus | 1/4 | 50 |
+| `f03-m-06` | 3 | mob | Hatchet-Faced Ostrich | Axe Beak | 1/4 | 50 |
+| `f03-m-07` | 3 | mob | Hang-Glider Mail Lizard | Pteranodon | 1/4 | 50 |
+| `f03-m-08` | 3 | mob | Two-Headed Junkyard Dog | Two-Headed Junkyard Dog | 1 | 200 |
+| `f03-m-09` | 3 | mob | Invisible Clipboard Gremlin | Quasit | 1 | 200 |
+| `f03-m-10` | 3 | mob | Property-Line Tree Woman | Dryad | 1 | 200 |
+| `f03-u-01` | 3 | unit | Cutlass Pirate Who Drafts You | Pirate | 1 | 200 |
+| `f03-u-02` | 3 | unit | Pony-Sized Laughing Hyena | Giant Hyena | 1 | 200 |
+| `f03-u-03` | 3 | unit | Lawn Lion | Lion | 1 | 200 |
+| `f03-u-04` | 3 | unit | Patch-Wearing Brown Bear | Brown Bear | 1 | 200 |
+| `f03-u-05` | 3 | unit | Horse-Bodied Eagle Courier | Hippogriff | 1 | 200 |
+| `f03-u-06` | 3 | unit | Swallow-You Mill Toad | Giant Toad | 1 | 200 |
+| `f03-e-01` | 3 | elite | Tunneling Acid Ant-Lion | Ankheg | 2 | 450 |
+| `f03-e-02` | 3 | elite | Barn-Rafter Spider Person | Ettercap | 2 | 450 |
+| `f03-e-03` | 3 | elite | Roadside Priest, Mace Blessed | Priest | 2 | 450 |
+| `f03-e-04` | 3 | elite | Blink-Past-the-Gate Spider | Phase Spider | 3 | 700 |
+| `f03-e-05` | 3 | elite | Lion-Bat with a Spike Tail | Manticore | 3 | 700 |
+| `f03-b-01` | 3 | boss | Two-Headed Toll Giant | Ettin | 4 | 1100 |
+| `f03-b-02` | 3 | boss | Grant-Denied Ghost | Ghost | 4 | 1100 |
+| `f03-b-03` | 3 | boss | Hungry Black Silo Slime | Black Pudding | 4 | 1100 |
 
 # Floor 1 — Orientation Pit
 
 Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.
 
-## Duct Rat
+## Ankle-Biting Vent Rat
 
-`f01-m-01` · mob · Duct Rat. Level 1. "Union member of the vents."
+`f01-m-01` · mob · Ankle-Biting Vent Rat. Level 1. "Union member of the vents."
+
+**Picture.** A cat-sized rat in the ductwork, going for ankles, and it brought friends.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 1d4+3 piercing
 
 | | |
 |---|---|
@@ -127,7 +133,7 @@ Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the m
 
 **House check.** Vent Row rats on the floor page carry nothing. Do not hang credits on this corpse. Pack Tactics is the combat lesson.
 
-**[SYSTEM]** Duct Rat. Level 1. Hostile.
+**[SYSTEM]** Ankle-Biting Vent Rat. Level 1. Hostile.
 
 **[GM]** Something in the vent just filed a grievance with your ankle.
 
@@ -143,9 +149,13 @@ Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the m
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Badge Moth
+## Latch-On Ceiling Mosquito
 
-`f01-m-02` · mob · Badge Moth. Level 1. "It clocks in through your neck."
+`f01-m-02` · mob · Latch-On Ceiling Mosquito. Level 1. "It clocks in through your neck."
+
+**Picture.** A fist-sized mosquito with a drinking-straw nose. It drops off the ceiling, sticks to you, and sips.
+
+**Engine.** Proboscis, melee, +5, reach 5 ft, 1d6+3 piercing
 
 | | |
 |---|---|
@@ -172,7 +182,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Badge Moth. Level 1. Attaches.
+**[SYSTEM]** Latch-On Ceiling Mosquito. Level 1. Attaches.
 
 **[GM]** Congratulations. You are the open bar.
 
@@ -184,9 +194,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Intern with a Lanyard
+## Probation Goblin, Plastic Badge
 
-`f01-m-03` · mob · Intern with a Lanyard. Level 1. "Still on probation."
+`f01-m-03` · mob · Probation Goblin, Plastic Badge. Level 1. "Still on probation."
+
+**Picture.** A small green intern. The badge is real. The job is to get hit first.
+
+**Engine.** Dagger, 1d4+2 piercing; Nimble Escape
 
 | | |
 |---|---|
@@ -215,7 +229,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Intern with a Lanyard. Level 1. Probationary.
+**[SYSTEM]** Probation Goblin, Plastic Badge. Level 1. Probationary.
 
 **[GM]** Kill the intern and the show still finds another intern.
 
@@ -231,9 +245,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Pamphlet Cultist
+## Hoodie Pamphleteer
 
-`f01-m-04` · mob · Pamphlet Cultist. Level 1. "Faith, but the pamphlet is the weapon."
+`f01-m-04` · mob · Hoodie Pamphleteer. Level 1. "Faith, but the pamphlet is the weapon."
+
+**Picture.** A person in a hoodie pressing a pamphlet into your chest. The pamphlet is not the weapon. The knife is.
+
+**Engine.** Ritual Sickle, melee, +3, reach 5 ft, 1d4+1 slashing
 
 | | |
 |---|---|
@@ -262,7 +280,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Pamphlet Cultist. Level 1. Unregistered faith.
+**[SYSTEM]** Hoodie Pamphleteer. Level 1. Unregistered faith.
 
 **[GM]** They will explain the end of the world after they stab you. Priorities.
 
@@ -274,9 +292,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Lobby Crab
+## Suitcase Lobby Crab
 
-`f01-m-05` · mob · Lobby Crab. Level 1. "The floor hired a crustacean."
+`f01-m-05` · mob · Suitcase Lobby Crab. Level 1. "The floor hired a crustacean."
+
+**Picture.** A crab the size of a carry-on, clicking across the lobby tile like it pays rent.
+
+**Engine.** Claw, melee, +3, reach 5 ft, 1d6+1 bludgeoning
 
 | | |
 |---|---|
@@ -304,7 +326,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Lobby Crab. Level 1. Amphibious.
+**[SYSTEM]** Suitcase Lobby Crab. Level 1. Amphibious.
 
 **[GM]** Guest services sent a crab. Guest services is not your friend.
 
@@ -320,9 +342,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Lost Mascot Dog
+## Foam-Head Mascot Dog
 
-`f01-m-06` · mob · Lost Mascot Dog. Level 1. "Somebody's prop that learned teeth."
+`f01-m-06` · mob · Foam-Head Mascot Dog. Level 1. "Somebody's prop that learned teeth."
+
+**Picture.** A real mastiff wearing a mascot head it will not take off. The head is the bit. The teeth are not.
+
+**Engine.** Bite, melee, +3, reach 5 ft, 1d6+1 piercing
 
 | | |
 |---|---|
@@ -350,7 +376,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Lost Mascot Dog. Level 1. Unleashed.
+**[SYSTEM]** Foam-Head Mascot Dog. Level 1. Unleashed.
 
 **[GM]** The costume came off. The dog did not get nicer.
 
@@ -362,9 +388,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Name-Tag Bandit
+## Name-Tag Thief
 
-`f01-m-07` · mob · Name-Tag Bandit. Level 1. "Robbery with a hello sticker."
+`f01-m-07` · mob · Name-Tag Thief. Level 1. "Robbery with a hello sticker."
+
+**Picture.** A person wearing a stolen staff badge, with your wallet already in the other hand.
+
+**Engine.** Scimitar, melee, +3, reach 5 ft, 1d6+1 slashing; Light Crossbow, ranged, +3, range 80/320 ft, 1d8+1 piercing
 
 | | |
 |---|---|
@@ -392,7 +422,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Name-Tag Bandit. Level 1. Armed.
+**[SYSTEM]** Name-Tag Thief. Level 1. Armed.
 
 **[GM]** Hi, my name is Hands Off. It is not a joke. It is a threat.
 
@@ -405,9 +435,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Turnstile Guard
+## Flashlight Turnstile Guard
 
-`f01-m-08` · mob · Turnstile Guard. Level 1. "The gate is a personality."
+`f01-m-08` · mob · Flashlight Turnstile Guard. Level 1. "The gate is a personality."
+
+**Picture.** A bored guard at a waist-high turnstile, flashlight in your eyes, spear not for show.
+
+**Engine.** Spear, 1d6+1 piercing
 
 | | |
 |---|---|
@@ -436,7 +470,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Turnstile Guard. Level 1. On post.
+**[SYSTEM]** Flashlight Turnstile Guard. Level 1. On post.
 
 **[GM]** The gate has a spear and a opinion about your ticket.
 
@@ -448,9 +482,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Kiosk Bones
+## Smiling Polo Mannequin
 
-`f01-m-09` · mob · Kiosk Bones. Level 1. "Customer service after the employee left."
+`f01-m-09` · mob · Smiling Polo Mannequin. Level 1. "Customer service after the employee left."
+
+**Picture.** A department-store dummy in a staff polo. The smile is painted on. The bow is not a toy. There is nobody inside.
+
+**Engine.** Shortsword, melee, +5, reach 5 ft, 1d6+3 piercing; Shortbow, ranged, +5, range 80/320 ft, 1d6+3 piercing
 
 | | |
 |---|---|
@@ -480,7 +518,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Kiosk Bones. Level 1. Undead.
+**[SYSTEM]** Smiling Polo Mannequin. Level 1. Undead.
 
 **[GM]** Ask it for a refund. It answers with arrows.
 
@@ -493,9 +531,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Clipboard Goblin
+## Pineapple-Club Goblin
 
-`f01-m-10` · mob · Clipboard Goblin. Level 1. "Armed middle management."
+`f01-m-10` · mob · Pineapple-Club Goblin. Level 1. "Armed middle management."
+
+**Picture.** A small green goblin with a clipboard and a club topped like a pineapple. Kill one and the rest take it personally.
+
+**Engine.** Scimitar, melee, +4, reach 5 ft, 1d6+2 slashing, plus 1d4 slashing; Shortbow, ranged, +4, range 80/320 ft, 1d6+2 piercing, plus 1d4 piercing; Nimble Escape
 
 | | |
 |---|---|
@@ -524,7 +566,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Clipboard Goblin. Level 1. On the clock.
+**[SYSTEM]** Pineapple-Club Goblin. Level 1. On the clock.
 
 **[GM]** It has a clipboard. You are the incident report.
 
@@ -541,9 +583,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Mop Zombie
+## Mop-Dragging Janitor Zombie
 
-`f01-m-11` · mob · Mop Zombie. Level 1. "Janitorial, posthumous."
+`f01-m-11` · mob · Mop-Dragging Janitor Zombie. Level 1. "Janitorial, posthumous."
+
+**Picture.** A corpse in a janitor shirt, still pushing the mop, still biting whoever steps in the bucket.
+
+**Engine.** Slam, melee, +3, reach 5 ft, 1d8+1 bludgeoning
 
 | | |
 |---|---|
@@ -571,7 +617,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** The mop is set dressing. Tanya Ruiz's corpse cache on the Day page is a separate loot pile, not this zombie.
 
-**[SYSTEM]** Mop Zombie. Level 1. Undead.
+**[SYSTEM]** Mop-Dragging Janitor Zombie. Level 1. Undead.
 
 **[GM]** It mops. You are the spill.
 
@@ -587,9 +633,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Speaker Fungus
+## Screaming PA Mushroom
 
-`f01-m-12` · mob · Speaker Fungus. Level 1. "The intercom grew legs. Sort of."
+`f01-m-12` · mob · Screaming PA Mushroom. Level 1. "The intercom grew legs. Sort of."
+
+**Picture.** A mushroom wired into the ceiling speakers. Get close and it shrieks the whole hallway awake.
+
+**Engine.** Shriek
 
 | | |
 |---|---|
@@ -617,7 +667,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Shriek is a reaction, not a spell and not a slot. CR 0, XP 0, matching rules/70.
 
-**[SYSTEM]** Speaker Fungus. Level 1. Alarm.
+**[SYSTEM]** Screaming PA Mushroom. Level 1. Alarm.
 
 **[GM]** Turn that down. You cannot. That is the encounter.
 
@@ -629,9 +679,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Pike Intern
+## Safety-Vest Pike Intern
 
-`f01-u-01` · unit · Pike Intern. Level 1. "Front rank of orientation."
+`f01-u-01` · unit · Safety-Vest Pike Intern. Level 1. "Front rank of orientation."
+
+**Picture.** A trainee in a neon vest holding a pole with a spearhead zip-tied to the end.
+
+**Engine.** Spear, 1d6+1 piercing
 
 | | |
 |---|---|
@@ -659,7 +713,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Pike Intern. Level 1. Unit.
+**[SYSTEM]** Safety-Vest Pike Intern. Level 1. Unit.
 
 **[GM]** A hallway full of unpaid spears. Classic onboarding.
 
@@ -675,9 +729,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Lanyard Blade
+## Flying Razor Lanyard
 
-`f01-u-02` · unit · Lanyard Blade. Level 1. "HR found a use for compliance."
+`f01-u-02` · unit · Flying Razor Lanyard. Level 1. "HR found a use for compliance."
+
+**Picture.** An ID badge on a cord that flies by itself and tries to file itself in your neck.
+
+**Engine.** Slash, melee, +4, reach 5 ft, 1d8+2 slashing
 
 | | |
 |---|---|
@@ -705,7 +763,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Lanyard Blade. Level 1. Construct.
+**[SYSTEM]** Flying Razor Lanyard. Level 1. Construct.
 
 **[GM]** Your ID badge just tried to promote itself into your throat.
 
@@ -717,9 +775,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Snack-Cart Kobold
+## Paper-Hat Snack Dog
 
-`f01-u-03` · unit · Snack-Cart Kobold. Level 1. "Catering with a spear."
+`f01-u-03` · unit · Paper-Hat Snack Dog. Level 1. "Catering with a spear."
+
+**Picture.** A small dog-person in a paper hat at the nacho cart. The cart is a prop. The knife is not.
+
+**Engine.** Dagger, 1d4+2 piercing
 
 | | |
 |---|---|
@@ -747,7 +809,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Snack-Cart Kobold. Level 1. Unit.
+**[SYSTEM]** Paper-Hat Snack Dog. Level 1. Unit.
 
 **[GM]** Today's special is stabbing. Sides are also stabbing.
 
@@ -764,9 +826,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Concession Steam
+## Nacho-Cheese Steam Cloud
 
-`f01-u-04` · unit · Concession Steam. Level 1. "The popcorn machine unionized."
+`f01-u-04` · unit · Nacho-Cheese Steam Cloud. Level 1. "The popcorn machine unionized."
+
+**Picture.** A little cloud of hot concession steam with a face, claws, and a bad attitude about the heat lamp.
+
+**Engine.** Claw, melee, +2, reach 5 ft, 1d4 slashing, plus 1d4 fire; Steam Breath (Recharge 6), Constitution DC 10, 2d4 fire, recharge 6
 
 | | |
 |---|---|
@@ -795,7 +861,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Steam Breath is recharge 6, one pending use. Death Burst happens when it dies. Neither is a spell slot.
 
-**[SYSTEM]** Concession Steam. Level 1. Elemental.
+**[SYSTEM]** Nacho-Cheese Steam Cloud. Level 1. Elemental.
 
 **[GM]** It smells like a county fair and it will end you.
 
@@ -815,9 +881,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Steam Breath** (recharge, max 1). Starts ready. After Steam Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 
-## Acolyte of the PA
+## Hold-Music Choir Intern
 
-`f01-u-05` · unit · Acolyte of the PA. Level 1. "The announcement voice has a congregation."
+`f01-u-05` · unit · Hold-Music Choir Intern. Level 1. "The announcement voice has a congregation."
+
+**Picture.** A junior priest chanting the hold music, holy symbol in one hand and a mace in the other.
+
+**Engine.** Mace, melee, +4, reach 5 ft, 1d6+2 bludgeoning, plus 1d4 radiant; Radiant Flame, ranged, +4, range 60/60 ft, 2d6 radiant; Spellcasting: spend tracked_uses. At-will does not spend.; Spellcasting: spend tracked_uses. At-will does not spend.
 
 | | |
 |---|---|
@@ -840,13 +910,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **Cheese.** Drop the acolyte first. The pikes get brave when someone is praying.
 
-**Tactics.** Stays behind the Pike Interns. Heals the front.
+**Tactics.** Stays behind the Safety-Vest Pike Interns. Heals the front.
 
 **Reskin.** Spells as printed. The microphone is a holy symbol.
 
 **House check.** Cantrips are at will. Divine Aid is one cast of Bless, Healing Word, or Sanctuary, not one of each. At 0, Mace and Radiant Flame only.
 
-**[SYSTEM]** Acolyte of the PA. Level 1. Unit support.
+**[SYSTEM]** Hold-Music Choir Intern. Level 1. Unit support.
 
 **[GM]** Please hold. Your death is important to us.
 
@@ -868,9 +938,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 - **Light** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
 - **Thaumaturgy** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
 
-## Hall Centipede
+## Mop-Length Hall Centipede
 
-`f01-u-06` · unit · Hall Centipede. Level 1. "The baseboard's night shift."
+`f01-u-06` · unit · Mop-Length Hall Centipede. Level 1. "The baseboard's night shift."
+
+**Picture.** A centipede as long as a mop handle, in the hallway, with a bite that makes you sick.
+
+**Engine.** Bite, melee, +4, reach 5 ft, 1d4+2 piercing
 
 | | |
 |---|---|
@@ -897,7 +971,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Hall Centipede. Level 1. Unit.
+**[SYSTEM]** Mop-Length Hall Centipede. Level 1. Unit.
 
 **[GM]** Hundreds of legs, one bad idea, all of them aimed at you.
 
@@ -909,9 +983,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Empty Mascot Suit
+## Walking Empty Pit-Bull Suit
 
-`f01-e-01` · elite · Empty Mascot Suit. Level 1. "Foam outside. Felony inside."
+`f01-e-01` · elite · Walking Empty Pit-Bull Suit. Level 1. "Foam outside. Felony inside."
+
+**Picture.** An empty pit-bull mascot costume walking around. Foam outside. Nobody inside. It still swings.
+
+**Engine.** Multiattack: 2 x Slam; Slam, melee, +4, reach 5 ft, 1d6+2 bludgeoning
 
 | | |
 |---|---|
@@ -939,7 +1017,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Empty Mascot Suit. Level 1. Elite. Construct.
+**[SYSTEM]** Walking Empty Pit-Bull Suit. Level 1. Elite. Construct.
 
 **[GM]** The mascot is empty, which is the worst kind of mascot.
 
@@ -952,9 +1030,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Breakroom Bugbear
+## Seven-Foot Hairy Break-Room Bully
 
-`f01-e-02` · elite · Breakroom Bugbear. Level 1. "Took the last chair and the reach."
+`f01-e-02` · elite · Seven-Foot Hairy Break-Room Bully. Level 1. "Took the last chair and the reach."
+
+**Picture.** A huge hairy goblin-cousin who reaches you from a step farther away than your eyes agreed to.
+
+**Engine.** Grab, melee, +4, reach 10 ft, 2d6+2 bludgeoning; Light Hammer, 3d4+2 bludgeoning
 
 | | |
 |---|---|
@@ -983,7 +1065,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** The Break Room is a saferoom through Day 3 and goes offline on Day 4. A bugbear here is a fight. It does not grant a rest.
 
-**[SYSTEM]** Breakroom Bugbear. Level 1. Elite.
+**[SYSTEM]** Seven-Foot Hairy Break-Room Bully. Level 1. Elite.
 
 **[GM]** Break room means it breaks you. The sign was accurate.
 
@@ -1000,9 +1082,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Greenroom Ghoul
+## Craft-Services Corpse
 
-`f01-e-03` · elite · Greenroom Ghoul. Level 1. "Talent relations, after the talent died."
+`f01-e-03` · elite · Craft-Services Corpse. Level 1. "Talent relations, after the talent died."
+
+**Picture.** A hungry corpse in the green room, eating whoever stopped moving, including the sandwich tray.
+
+**Engine.** Multiattack: 2 x Bite; Bite, melee, +4, reach 5 ft, 1d6+2 piercing, plus 1d6 necrotic; Claw, melee, +4, reach 5 ft, 1d4+2 slashing
 
 | | |
 |---|---|
@@ -1030,7 +1116,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** The Green Room stays open and is where level 2 is granted. This ghoul is not the saferoom.
 
-**[SYSTEM]** Greenroom Ghoul. Level 1. Elite. Undead.
+**[SYSTEM]** Craft-Services Corpse. Level 1. Elite. Undead.
 
 **[GM]** The green room is not saferoom. Learn the difference or get eaten in it.
 
@@ -1044,9 +1130,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Night-Shift Specter
+## Janitor-Vest Night Ghost
 
-`f01-e-04` · elite · Night-Shift Specter. Level 1. "What the lights do when they go out."
+`f01-e-04` · elite · Janitor-Vest Night Ghost. Level 1. "What the lights do when they go out."
+
+**Picture.** A see-through night-shift janitor. The mop passes through the floor. The cold does not pass through you.
+
+**Engine.** Life Drain, melee, +4, reach 5 ft, 2d6 necrotic
 
 | | |
 |---|---|
@@ -1075,7 +1165,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Lights-Out and Ceiling Ticks are floor hazards. They are not attacks on this stat block. Do not add them.
 
-**[SYSTEM]** Night-Shift Specter. Level 1. Elite. Undead.
+**[SYSTEM]** Janitor-Vest Night Ghost. Level 1. Elite. Undead.
 
 **[GM]** The lights did not go out. They got up and swung.
 
@@ -1092,9 +1182,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Concession Spider
+## Golf-Cart Concession Spider
 
-`f01-b-01` · boss · Concession Spider. Level 1. Boss. "The snack ceiling."
+`f01-b-01` · boss · Golf-Cart Concession Spider. Level 1. Boss. "The snack ceiling."
+
+**Picture.** A spider the size of a golf cart, webbing the gap between the nacho warmers.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 1d8+3 piercing, plus 2d6 poison; Web (Recharge 5–6), Dexterity DC 13, recharge 5-6
 
 | | |
 |---|---|
@@ -1122,7 +1216,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Legal Level 1 boss cap for four Crawlers (CR 1). Web is recharge 5–6, not every turn.
 
-**[SYSTEM]** Concession Spider. Level 1. Boss.
+**[SYSTEM]** Golf-Cart Concession Spider. Level 1. Boss.
 
 **[GM]** The concession stand has a manager. The manager has eight legs.
 
@@ -1142,9 +1236,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Web** (recharge, max 1). Starts ready. After Web is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.
 
-## Podium Ogre
+## Adjunct Smash, Podium Giant
 
-`f01-b-02` · boss · Podium Ogre. Level 2. Boss. "Has not taken a break in nine years."
+`f01-b-02` · boss · Adjunct Smash, Podium Giant. Level 2. Boss. "Has not taken a break in nine years."
+
+**Picture.** A ten-foot teacher with a podium for a club. This is not Dean Thudd. The live floor still has the Dean.
+
+**Engine.** Greatclub, melee, +6, reach 5 ft, 2d8+4 bludgeoning; Javelin, 2d6+4 piercing
 
 | | |
 |---|---|
@@ -1172,7 +1270,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** Legal on the Floor 1 Level 2 boss budget only. The live floor boss is Dean Thudd on the Day pages. Do not field this card as a second dean.
 
-**[SYSTEM]** Podium Ogre. Level 2. Boss.
+**[SYSTEM]** Adjunct Smash, Podium Giant. Level 2. Boss.
 
 **[GM]** Orientation is over. The dean is the size of a mistake.
 
@@ -1190,9 +1288,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).
 
-## Soft-Open Hobgoblin
+## Sash-Wearing Tall Goblin Sergeant
 
-`f02-m-01` · mob · Soft-Open Hobgoblin. Level 1. "They rehearsed."
+`f02-m-01` · mob · Sash-Wearing Tall Goblin Sergeant. Level 1. "They rehearsed."
+
+**Picture.** A tall, drilled goblin in a soft-open sash. Meaner than the interns and better at standing in a line.
+
+**Engine.** Longsword, melee, +3, reach 5 ft, 2d10+1 slashing; Longbow, ranged, +3, range 150/600 ft, 1d8+1 piercing, plus 3d4 poison
 
 | | |
 |---|---|
@@ -1220,7 +1322,7 @@ Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not cop
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Soft-Open Hobgoblin. Level 1. Formation.
+**[SYSTEM]** Sash-Wearing Tall Goblin Sergeant. Level 1. Formation.
 
 **[GM]** Opening night. The ushers brought discipline and a longsword.
 
@@ -1237,9 +1339,13 @@ Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not cop
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Gray Mop Ooze
+## Boot-Eating Mop Water
 
-`f02-m-02` · mob · Gray Mop Ooze. Level 1. "It eats the cleaning budget."
+`f02-m-02` · mob · Boot-Eating Mop Water. Level 1. "It eats the cleaning budget."
+
+**Picture.** A puddle of gray mop water that climbs your boots and digests the metal while you are still wearing them.
+
+**Engine.** Pseudopod, melee, +3, reach 5 ft, 2d8+1 acid
 
 | | |
 |---|---|
@@ -1269,7 +1375,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Gray Mop Ooze. Level 1. Ooze.
+**[SYSTEM]** Boot-Eating Mop Water. Level 1. Ooze.
 
 **[GM]** You just stepped in management. Management is acidic.
 
@@ -1286,9 +1392,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Clipboard Scout
+## Route-Knowing Clipboard Scout
 
-`f02-m-03` · mob · Clipboard Scout. Level 1. "Maps you while you talk."
+`f02-m-03` · mob · Route-Knowing Clipboard Scout. Level 1. "Maps you while you talk."
+
+**Picture.** A scout who already highlighted your path on a clipboard. The bow is for when the highlight is not enough.
+
+**Engine.** Multiattack: Shortsword; Shortsword, melee, +4, reach 5 ft, 1d6+2 piercing; Longbow, ranged, +4, range 150/600 ft, 1d8+2 piercing
 
 | | |
 |---|---|
@@ -1317,7 +1427,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Clipboard Scout. Level 1. Skirmisher.
+**[SYSTEM]** Route-Knowing Clipboard Scout. Level 1. Skirmisher.
 
 **[GM]** It is taking notes. The notes are arrows.
 
@@ -1331,9 +1441,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Ratings Gnoll
+## Laughing Hyena Person
 
-`f02-m-04` · mob · Ratings Gnoll. Level 1. "The laugh track learned hunger."
+`f02-m-04` · mob · Laughing Hyena Person. Level 1. "The laugh track learned hunger."
+
+**Picture.** A hyena-headed person with a spear. The laugh is the warning. The spear is the sentence.
+
+**Engine.** Rend, melee, +4, reach 5 ft, 1d6+2 piercing; Bone Bow, ranged, +3, range 150/600 ft, 1d10+1 piercing; Rampage (1/Day)
 
 | | |
 |---|---|
@@ -1360,7 +1474,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Ratings Gnoll. Level 1. Hostile.
+**[SYSTEM]** Laughing Hyena Person. Level 1. Hostile.
 
 **[GM]** The audience laughs when something falls over. You are the something.
 
@@ -1379,9 +1493,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Rampage** (daily, max 1). 1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.
 
-## Loading-Dock Worg
+## Couch-Sized Saddle Wolf
 
-`f02-m-05` · mob · Loading-Dock Worg. Level 1. "Freight with opinions."
+`f02-m-05` · mob · Couch-Sized Saddle Wolf. Level 1. "Freight with opinions."
+
+**Picture.** A wolf the size of a couch, saddle worn shiny, looking for a rider or a meal.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 1d8+3 piercing
 
 | | |
 |---|---|
@@ -1409,7 +1527,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Loading-Dock Worg. Level 1.
+**[SYSTEM]** Couch-Sized Saddle Wolf. Level 1.
 
 **[GM]** The dock accepts deliveries. You are a delivery.
 
@@ -1421,9 +1539,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Rusted Prop
+## Sword-Eating Antenna Bug
 
-`f02-m-06` · mob · Rusted Prop. Level 1. "Props are food."
+`f02-m-06` · mob · Sword-Eating Antenna Bug. Level 1. "Props are food."
+
+**Picture.** A bug with long feelers that rusts the sword in your hand down to orange flakes.
+
+**Engine.** Multiattack: The rust monster makes one Bite attack and uses Antennae twice; Bite, melee, +3, reach 5 ft, 1d8+1 piercing; Antennae, Dexterity DC 11; Destroy Metal; Reflexive Antennae
 
 | | |
 |---|---|
@@ -1450,7 +1572,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Rusted Prop. Level 1. Monstrosity.
+**[SYSTEM]** Sword-Eating Antenna Bug. Level 1. Monstrosity.
 
 **[GM]** Your sword just became a suggestion.
 
@@ -1473,9 +1595,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Dimmer Shadow
+## Your Shadow, On Payroll
 
-`f02-m-07` · mob · Dimmer Shadow. Level 1. "The lighting board got jealous."
+`f02-m-07` · mob · Your Shadow, On Payroll. Level 1. "The lighting board got jealous."
+
+**Picture.** Your own shadow, peeled off the floor, wearing nothing, hungry for the strength in your arms.
+
+**Engine.** Draining Swipe, melee, +4, reach 5 ft, 1d6+2 necrotic; Shadow Stealth
 
 | | |
 |---|---|
@@ -1506,7 +1632,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Dimmer Shadow. Level 1. Undead.
+**[SYSTEM]** Your Shadow, On Payroll. Level 1. Undead.
 
 **[GM]** The lights are not your friend. The dark applied for the job.
 
@@ -1527,9 +1653,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Warmup Satyr
+## Goat-Legged Warmup Comic
 
-`f02-m-08` · mob · Warmup Satyr. Level 1. "Opens for the real monster."
+`f02-m-08` · mob · Goat-Legged Warmup Comic. Level 1. "Opens for the real monster."
+
+**Picture.** Goat legs, little horns, pan pipes, and a tight five about your hit points.
+
+**Engine.** Hooves, melee, +5, reach 5 ft, 1d4+3 bludgeoning; Mockery, Wisdom DC 12, 1d6+2 psychic
 
 | | |
 |---|---|
@@ -1557,7 +1687,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Warmup Satyr. Level 1. Fey.
+**[SYSTEM]** Goat-Legged Warmup Comic. Level 1. Fey.
 
 **[GM]** The opening act is a goat with a work visa and a flute.
 
@@ -1574,9 +1704,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Magma Concession
+## Walking Charcoal Briquette
 
-`f02-m-09` · mob · Magma Concession. Level 1. "The fryer walked out."
+`f02-m-09` · mob · Walking Charcoal Briquette. Level 1. "The fryer walked out."
+
+**Picture.** A little person made of hot coals. Touching it is the whole mistake.
+
+**Engine.** Touch, melee, +4, reach 5 ft, 2d4+2 fire; Ignited Illumination
 
 | | |
 |---|---|
@@ -1604,7 +1738,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Magma Concession. Level 1. Elemental.
+**[SYSTEM]** Walking Charcoal Briquette. Level 1. Elemental.
 
 **[GM]** Fresh fried Crawler. Limited time.
 
@@ -1624,9 +1758,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Dust in the Lights
+## Coughing Dust Cloud
 
-`f02-m-10` · mob · Dust in the Lights. Level 1. "A blinding bit."
+`f02-m-10` · mob · Coughing Dust Cloud. Level 1. "A blinding bit."
+
+**Picture.** A dust cloud with a face. It makes you cough, then it claws you for coughing.
+
+**Engine.** Claw, melee, +4, reach 5 ft, 1d4+2 slashing; Blinding Breath (Recharge 6), Dexterity DC 10, recharge 6; Sleep (1/Day)
 
 | | |
 |---|---|
@@ -1656,7 +1794,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Sleep is once per day, spell save DC 10, Charisma. Blinding Breath is recharge 6. At 0 Sleep, Claw only.
 
-**[SYSTEM]** Dust in the Lights. Level 1. Elemental.
+**[SYSTEM]** Coughing Dust Cloud. Level 1. Elemental.
 
 **[GM]** Cough, then apologize, then get clawed. That is the act.
 
@@ -1677,9 +1815,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 - **Blinding Breath** (recharge, max 1). Starts ready. After Blinding Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 - **Sleep** (daily_spell, max 1, spell level 1). Once per day. Level 1 Sleep, Charisma, spell save DC 10. Not a slot that refills. At 0, do not cast Sleep.
 
-## Pool Unit
+## Trident Lifeguard Fish-Person
 
-`f02-u-01` · unit · Pool Unit. Level 1. "The decorative tank is staffed."
+`f02-u-01` · unit · Trident Lifeguard Fish-Person. Level 1. "The decorative tank is staffed."
+
+**Picture.** A fish-person with a whistle and a trident. The pool is decorative until it is not.
+
+**Engine.** Multiattack: 2 x Claw; Claw, melee, +3, reach 5 ft, 1d6+1 slashing; Aquatic Charge
 
 | | |
 |---|---|
@@ -1708,7 +1850,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Pool Unit. Level 1. Unit.
+**[SYSTEM]** Trident Lifeguard Fish-Person. Level 1. Unit.
 
 **[GM]** No diving. The sign means the fish have spears.
 
@@ -1731,9 +1873,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Cockatrice Extra
+## Petrifying Chicken-Lizard
 
-`f02-u-02` · unit · Cockatrice Extra. Level 1. "Wardrobe sent a bird."
+`f02-u-02` · unit · Petrifying Chicken-Lizard. Level 1. "Wardrobe sent a bird."
+
+**Picture.** A chicken with a lizard tail and a mean beak. One peck and you are a lawn statue.
+
+**Engine.** Petrifying Bite, melee, +3, reach 5 ft, 1d4+1 piercing
 
 | | |
 |---|---|
@@ -1761,7 +1907,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Cockatrice Extra. Level 1. Unit.
+**[SYSTEM]** Petrifying Chicken-Lizard. Level 1. Unit.
 
 **[GM]** It is not a chicken. The chicken did not petrify your friend.
 
@@ -1773,9 +1919,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Wasp Usher
+## Motorcycle-Sized Usher Wasp
 
-`f02-u-03` · unit · Wasp Usher. Level 1. "Seating, but airborne."
+`f02-u-03` · unit · Motorcycle-Sized Usher Wasp. Level 1. "Seating, but airborne."
+
+**Picture.** A wasp the size of a motorcycle, stuffed into an usher vest, stinger first.
+
+**Engine.** Sting, melee, +4, reach 5 ft, 1d6+2 piercing, plus 2d4 poison
 
 | | |
 |---|---|
@@ -1802,7 +1952,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Wasp Usher. Level 1. Unit.
+**[SYSTEM]** Motorcycle-Sized Usher Wasp. Level 1. Unit.
 
 **[GM]** Your seat is wherever it stings you.
 
@@ -1818,9 +1968,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Ape Grip
+## Bouncer Ape Named Grip
 
-`f02-u-04` · unit · Ape Grip. Level 1. "Stagehand. Literal."
+`f02-u-04` · unit · Bouncer Ape Named Grip. Level 1. "Stagehand. Literal."
+
+**Picture.** An ape at the velvet rope. The name tag says GRIP. The fists already agreed.
+
+**Engine.** Multiattack: 2 x Fist; Fist, melee, +5, reach 5 ft, 1d4+3 bludgeoning; Rock (Recharge 6), ranged, +5, range 25/50 ft, 2d6+3 bludgeoning, recharge 6
 
 | | |
 |---|---|
@@ -1848,7 +2002,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Ape Grip. Level 1. Unit.
+**[SYSTEM]** Bouncer Ape Named Grip. Level 1. Unit.
 
 **[GM]** The stagehand is union, furry, and holding a rock with your name on it.
 
@@ -1864,9 +2018,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Rock** (recharge, max 1). Starts ready. After Rock is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 
-## Bear Bouncer
+## Bow-Tie Black Bear
 
-`f02-u-05` · unit · Bear Bouncer. Level 1. "The door has a policy."
+`f02-u-05` · unit · Bow-Tie Black Bear. Level 1. "The door has a policy."
+
+**Picture.** A black bear in a bow tie, checking a list you are not on.
+
+**Engine.** Multiattack: 2 x Rend; Rend, melee, +4, reach 5 ft, 1d6+2 slashing
 
 | | |
 |---|---|
@@ -1894,7 +2052,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Bear Bouncer. Level 1. Unit.
+**[SYSTEM]** Bow-Tie Black Bear. Level 1. Unit.
 
 **[GM]** No shoes, no shirt, no surviving the door.
 
@@ -1907,9 +2065,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Tank Shark
+## Decorative Tank Shark
 
-`f02-u-06` · unit · Tank Shark. Level 1. "Sponsored by the aquarium."
+`f02-u-06` · unit · Decorative Tank Shark. Level 1. "Sponsored by the aquarium."
+
+**Picture.** A reef shark in the lobby aquarium. The glass is a suggestion it has not accepted.
+
+**Engine.** Bite, melee, +4, reach 5 ft, 2d4+2 piercing
 
 | | |
 |---|---|
@@ -1937,7 +2099,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Tank Shark. Level 1. Unit.
+**[SYSTEM]** Decorative Tank Shark. Level 1. Unit.
 
 **[GM]** The exhibit is closed. The exhibit disagrees.
 
@@ -1954,9 +2116,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Imp Producer
+## Headset Shoulder Devil
 
-`f02-e-01` · elite · Imp Producer. Level 1. "Notes from the booth."
+`f02-e-01` · elite · Headset Shoulder Devil. Level 1. "Notes from the booth."
+
+**Picture.** A tiny red devil on a shoulder, wearing a producer headset, offering a deal that is already bad.
+
+**Engine.** Sting, melee, +5, reach 5 ft, 1d6+3 piercing, plus 2d6 poison; Invisibility; Shape-Shift
 
 | | |
 |---|---|
@@ -1986,7 +2152,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Invisibility is an at-will action printed with no daily cap. It is not a spell slot. Do not add slots.
 
-**[SYSTEM]** Imp Producer. Level 1. Elite. Fiend.
+**[SYSTEM]** Headset Shoulder Devil. Level 1. Elite. Fiend.
 
 **[GM]** A little red executive with a stinger and a note about your lighting.
 
@@ -2006,9 +2172,13 @@ These are at-will. They are not spell slots. Do not add a daily cap the block do
 
 - **Invisibility** (at_will_innate, no cap (at will), spell level 2). Printed as an action with no daily cap. Not a spell slot. Do not add slots.
 
-## Dire Wolf Security
+## Golf-Cart Security Wolf
 
-`f02-e-02` · elite · Dire Wolf Security. Level 1. "The good boy left."
+`f02-e-02` · elite · Golf-Cart Security Wolf. Level 1. "The good boy left."
+
+**Picture.** A wolf bigger than the couch wolf, on a security contract, with the night shift's attitude.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 1d10+3 piercing
 
 | | |
 |---|---|
@@ -2036,7 +2206,7 @@ These are at-will. They are not spell slots. Do not add a daily cap the block do
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Dire Wolf Security. Level 1. Elite.
+**[SYSTEM]** Golf-Cart Security Wolf. Level 1. Elite.
 
 **[GM]** Security is a wolf the size of a couch. Pet at your own funeral.
 
@@ -2052,9 +2222,13 @@ These are at-will. They are not spell slots. Do not add a daily cap the block do
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Harpy Headliner
+## Marquee Bird-Woman
 
-`f02-e-03` · elite · Harpy Headliner. Level 1. "Song, then the drop."
+`f02-e-03` · elite · Marquee Bird-Woman. Level 1. "Song, then the drop."
+
+**Picture.** A woman with vulture wings on the marquee. Her song walks your feet off the catwalk.
+
+**Engine.** Claw, melee, +3, reach 5 ft, 2d4+1 slashing; Luring Song, Wisdom DC 11
 
 | | |
 |---|---|
@@ -2081,7 +2255,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Harpy Headliner. Level 1. Elite.
+**[SYSTEM]** Marquee Bird-Woman. Level 1. Elite.
 
 **[GM]** She hits the high note. You hit the floor.
 
@@ -2094,9 +2268,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Gargoyle Camera
+## Swooping Stone Security Camera
 
-`f02-e-04` · elite · Gargoyle Camera. Level 2. "The statue was the shot."
+`f02-e-04` · elite · Swooping Stone Security Camera. Level 2. "The statue was the shot."
+
+**Picture.** A stone statue carved like a security camera. It sits still, then it dives.
+
+**Engine.** Multiattack: 2 x Claw; Claw, melee, +4, reach 5 ft, 2d4+2 slashing
 
 | | |
 |---|---|
@@ -2125,7 +2303,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Gargoyle Camera. Level 2. Elite.
+**[SYSTEM]** Swooping Stone Security Camera. Level 2. Elite.
 
 **[GM]** Smile. The architecture is filming, and it has claws.
 
@@ -2142,9 +2320,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Gelatinous Janitor
+## Ten-Foot Cube of Floor Cleaner
 
-`f02-e-05` · elite · Gelatinous Janitor. Level 2. "It cleans by deletion."
+`f02-e-05` · elite · Ten-Foot Cube of Floor Cleaner. Level 2. "It cleans by deletion."
+
+**Picture.** A transparent cube of janitor jelly, ten feet on a side, with old mops floating in it. It moves. You do not want to be inside.
+
+**Engine.** Pseudopod, melee, +4, reach 5 ft, 3d6+2 acid; Engulf, Dexterity DC 12, 3d6 acid
 
 | | |
 |---|---|
@@ -2172,7 +2354,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Gelatinous Janitor. Level 2. Elite. Ooze.
+**[SYSTEM]** Ten-Foot Cube of Floor Cleaner. Level 2. Elite. Ooze.
 
 **[GM]** The hallway looks clean because the hallway ate the mess. You are mess.
 
@@ -2190,9 +2372,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Ratings Hound
+## Fire-Breathing Exit Dog
 
-`f02-b-01` · boss · Ratings Hound. Level 3. Boss. "The focus group is on fire."
+`f02-b-01` · boss · Fire-Breathing Exit Dog. Level 3. Boss. "The focus group is on fire."
+
+**Picture.** A big black dog. Its bark is a cone of fire down the hallway. The exit sign is not a suggestion.
+
+**Engine.** Multiattack: 2 x Bite; Bite, melee, +5, reach 5 ft, 1d8+3 piercing, plus 1d6 fire; Fire Breath (Recharge 5–6), Dexterity DC 12, 5d6 fire, recharge 5-6
 
 | | |
 |---|---|
@@ -2221,7 +2407,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Fire Breath is recharge 5–6. One breath, then it is down until the die hits. Bite still works.
 
-**[SYSTEM]** Ratings Hound. Level 3. Boss. Fiend.
+**[SYSTEM]** Fire-Breathing Exit Dog. Level 3. Boss. Fiend.
 
 **[GM]** The audience wanted heat. The hound took that personally.
 
@@ -2241,9 +2427,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Fire Breath** (recharge, max 1). Starts ready. After Fire Breath is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.
 
-## Live Mascot
+## Occupied Owl-Bear Mascot
 
-`f02-b-02` · boss · Live Mascot. Level 3. Boss. "The costume filled in."
+`f02-b-02` · boss · Occupied Owl-Bear Mascot. Level 3. Boss. "The costume filled in."
+
+**Picture.** An owl's head on a bear's body, and it is not a costume. The beak and the hug both count.
+
+**Engine.** Multiattack: 2 x Rend; Rend, melee, +7, reach 5 ft, 2d8+5 slashing
 
 | | |
 |---|---|
@@ -2271,7 +2461,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Live Mascot. Level 3. Boss.
+**[SYSTEM]** Occupied Owl-Bear Mascot. Level 3. Boss.
 
 **[GM]** Hug the mascot, the poster said. The poster is evidence.
 
@@ -2284,9 +2474,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Knight of the Soft Open
+## Rental-Plate Sponsor Knight
 
-`f02-b-03` · boss · Knight of the Soft Open. Level 3. Boss. "Ribbon-cutting with a real sword."
+`f02-b-03` · boss · Rental-Plate Sponsor Knight. Level 3. Boss. "Ribbon-cutting with a real sword."
+
+**Picture.** A knight in full plate with a sponsor logo on the breastplate and a renaissance-faire lance.
+
+**Engine.** Multiattack: The knight makes two attacks, using Greatsword or Heavy Crossbow in any combination; Greatsword, melee, +5, reach 5 ft, 2d6+3 slashing, plus 1d8 radiant; Heavy Crossbow, ranged, +2, range 100/400 ft, 2d10 piercing, plus 1d8 radiant; Parry
 
 | | |
 |---|---|
@@ -2315,7 +2509,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
-**[SYSTEM]** Knight of the Soft Open. Level 3. Boss.
+**[SYSTEM]** Rental-Plate Sponsor Knight. Level 3. Boss.
 
 **[GM]** They sent a knight to cut a ribbon. The ribbon is you.
 
@@ -2338,9 +2532,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.
 
-## Road Grimlock
+## Eyeless Cave Person
 
-`f03-m-01` · mob · Road Grimlock. Level 1. "The rural road does not need eyes."
+`f03-m-01` · mob · Eyeless Cave Person. Level 1. "The rural road does not need eyes."
+
+**Picture.** A pale person with no eyes, a stone club, and ears that already know where you stepped.
+
+**Engine.** Bone Cudgel, melee, +5, reach 5 ft, 1d6+3 bludgeoning, plus 1d4 psychic
 
 | | |
 |---|---|
@@ -2368,7 +2566,7 @@ Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum 
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Road Grimlock. Level 1. Blind and armed.
+**[SYSTEM]** Eyeless Cave Person. Level 1. Blind and armed.
 
 **[GM]** No eyes. Plenty of axe. The countryside is not quaint.
 
@@ -2380,9 +2578,13 @@ Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum 
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Fieldhand Dretch
+## Stinking Demon Intern
 
-`f03-m-02` · mob · Fieldhand Dretch. Level 1. "Harvest help from a worse place."
+`f03-m-02` · mob · Stinking Demon Intern. Level 1. "Harvest help from a worse place."
+
+**Picture.** A small, soggy, awful-smelling demon. Bottom of the org chart. The smell arrives first.
+
+**Engine.** Rend, melee, +3, reach 5 ft, 1d6+1 slashing; Fetid Cloud (1/Day), Constitution DC 11
 
 | | |
 |---|---|
@@ -2411,7 +2613,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Fetid Cloud is once per day. It is not a slot that refills when the cloud ends.
 
-**[SYSTEM]** Fieldhand Dretch. Level 1. Fiend.
+**[SYSTEM]** Stinking Demon Intern. Level 1. Fiend.
 
 **[GM]** Farm labor, imported. The import smell arrives first.
 
@@ -2426,9 +2628,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Fetid Cloud** (daily, max 1). 1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.
 
-## Fence Blink Dog
+## Fence-Hopping Teleport Dog
 
-`f03-m-03` · mob · Fence Blink Dog. Level 1. "The property line moves."
+`f03-m-03` · mob · Fence-Hopping Teleport Dog. Level 1. "The property line moves."
+
+**Picture.** A dog that vanishes on one side of the fence and bites you on the other.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 1d4+3 piercing; Teleport (Recharge 4–6), recharge 4-6
 
 | | |
 |---|---|
@@ -2456,7 +2662,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** Teleport is recharge 4–6. It is not a spell slot.
 
-**[SYSTEM]** Fence Blink Dog. Level 1. Fey.
+**[SYSTEM]** Fence-Hopping Teleport Dog. Level 1. Fey.
 
 **[GM]** Good dog. Bad jurisdiction.
 
@@ -2474,9 +2680,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Teleport** (recharge, max 1). Starts ready. After Teleport is used, it is down until a d6 at the start of this creature's turn shows 4–6. It cannot be used every turn.
 
-## Critic Pseudodragon
+## Cat-Sized Shoulder Dragon
 
-`f03-m-04` · mob · Critic Pseudodragon. Level 1. "A tiny dragon with notes."
+`f03-m-04` · mob · Cat-Sized Shoulder Dragon. Level 1. "A tiny dragon with notes."
+
+**Picture.** A dragon the size of a cat, usually on someone's shoulder, judging your build out loud.
+
+**Engine.** Multiattack: 2 x Bite; Bite, melee, +4, reach 5 ft, 1d4+2 piercing; Sting, Constitution DC 12, 2d4 poison
 
 | | |
 |---|---|
@@ -2504,7 +2714,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Critic Pseudodragon. Level 1. Dragon.
+**[SYSTEM]** Cat-Sized Shoulder Dragon. Level 1. Dragon.
 
 **[GM]** Two stars. Would sting again.
 
@@ -2522,9 +2732,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Violet Crop
+## Purple Whip-Crop Fungus
 
-`f03-m-05` · mob · Violet Crop. Level 1. "The field planted back."
+`f03-m-05` · mob · Purple Whip-Crop Fungus. Level 1. "The field planted back."
+
+**Picture.** A violet fungus planted in a crop row. The stalks are whips. Do not harvest it.
+
+**Engine.** Multiattack: 2 x Rotting Touch; Rotting Touch, melee, +2, reach 10 ft, 1d8 necrotic
 
 | | |
 |---|---|
@@ -2552,7 +2766,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Violet Crop. Level 1. Plant.
+**[SYSTEM]** Purple Whip-Crop Fungus. Level 1. Plant.
 
 **[GM]** Do not eat the pretty ones. The pretty ones eat.
 
@@ -2565,9 +2779,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Axe Beak Livestock
+## Hatchet-Faced Ostrich
 
-`f03-m-06` · mob · Axe Beak Livestock. Level 1. "The poultry is a weapon."
+`f03-m-06` · mob · Hatchet-Faced Ostrich. Level 1. "The poultry is a weapon."
+
+**Picture.** A bird the size of an ostrich. The beak is an axe. It runs you down like you are the lawn.
+
+**Engine.** Beak, melee, +4, reach 5 ft, 1d8+2 slashing
 
 | | |
 |---|---|
@@ -2594,7 +2812,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Axe Beak Livestock. Level 1.
+**[SYSTEM]** Hatchet-Faced Ostrich. Level 1.
 
 **[GM]** Free range. The range includes your ribs.
 
@@ -2606,9 +2824,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Pteranodon Post
+## Hang-Glider Mail Lizard
 
-`f03-m-07` · mob · Pteranodon Post. Level 1. "Mail, delivered downward."
+`f03-m-07` · mob · Hang-Glider Mail Lizard. Level 1. "Mail, delivered downward."
+
+**Picture.** A flying lizard with a mail satchel, dive-bombing the road like the package is you.
+
+**Engine.** Bite, melee, +4, reach 5 ft, 1d8+2 piercing
 
 | | |
 |---|---|
@@ -2636,7 +2858,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Pteranodon Post. Level 1.
+**[SYSTEM]** Hang-Glider Mail Lizard. Level 1.
 
 **[GM]** The mail is late because the mail is a mouth.
 
@@ -2652,13 +2874,17 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Death Dog
+## Two-Headed Junkyard Dog
 
-`f03-m-08` · mob · Death Dog. Level 1. "Two heads, one opinion."
+`f03-m-08` · mob · Two-Headed Junkyard Dog. Level 1. "Two heads, one opinion."
+
+**Picture.** One body, two heads, both of them mad, both of them biting.
+
+**Engine.** Multiattack: 2 x Bite; Bite, melee, +4, reach 5 ft, 1d4+2 piercing
 
 | | |
 |---|---|
-| SRD block | Death Dog |
+| SRD block | Two-Headed Junkyard Dog |
 | Type | Medium Monstrosity, Neutral Evil |
 | AC | 12 |
 | Initiative | +2 |
@@ -2683,7 +2909,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Death Dog. Level 1.
+**[SYSTEM]** Two-Headed Junkyard Dog. Level 1.
 
 **[GM]** Pet one head. The other head files a complaint in your blood.
 
@@ -2696,9 +2922,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Quasit Auditor
+## Invisible Clipboard Gremlin
 
-`f03-m-09` · mob · Quasit Auditor. Level 1. "Here about the books."
+`f03-m-09` · mob · Invisible Clipboard Gremlin. Level 1. "Here about the books."
+
+**Picture.** A tiny demon you cannot see, holding a clipboard, poisoning whatever you were about to drink.
+
+**Engine.** Rend, melee, +5, reach 5 ft, 1d4+3 slashing; Invisibility; Scare (1/Day), Wisdom DC 10; Shape-Shift
 
 | | |
 |---|---|
@@ -2728,7 +2958,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Invisibility is an at-will action, not a slot. Scare is once per day, Wisdom DC 10. At 0 Scare, claws and Invisibility remain.
 
-**[SYSTEM]** Quasit Auditor. Level 1. Fiend.
+**[SYSTEM]** Invisible Clipboard Gremlin. Level 1. Fiend.
 
 **[GM]** It has a clipboard and a tail. Only one of those is standard.
 
@@ -2750,9 +2980,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 - **Scare** (daily_spell, max 1). Once per day. Wisdom save DC 10. At 0, do not use Scare.
 - **Invisibility** (at_will_innate, no cap (at will), spell level 2). Printed as an action with no daily cap. Not a spell slot. Do not add slots.
 
-## Boundary Dryad
+## Property-Line Tree Woman
 
-`f03-m-10` · mob · Boundary Dryad. Level 1. "The tree line is staffed."
+`f03-m-10` · mob · Property-Line Tree Woman. Level 1. "The tree line is staffed."
+
+**Picture.** A woman who is also the tree on the property line. She can step into the trunk. She does not share the yard.
+
+**Engine.** Multiattack: The dryad makes one Vine Lash or Thorn Burst attack, and it can use Spellcasting to cast Charm Monster; Vine Lash, melee, +6, reach 10 ft, 1d8+4 slashing; Thorn Burst, ranged, +6, range 60/60 ft, 1d6+4 piercing; Spellcasting: spend tracked_uses. At-will does not spend.; Tree Stride
 
 | | |
 |---|---|
@@ -2780,7 +3014,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** Entangle and Pass without Trace are once each per day. Charm Monster is at will but only one charm stays active; casting it again ends the previous one. At 0 on the daily spells, use the vine, the thorns, or the single charm.
 
-**[SYSTEM]** Boundary Dryad. Level 1. Fey.
+**[SYSTEM]** Property-Line Tree Woman. Level 1. Fey.
 
 **[GM]** She offers a shortcut. The shortcut is a stomach.
 
@@ -2809,9 +3043,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 - **Entangle** (daily_spell, max 1, spell level 1). Once per day for this spell alone (1/Day Each). Not a level-1 slot that refills in the fight. At 0, do not cast it again.
 - **Pass without Trace** (daily_spell, max 1, spell level 2). Once per day for this spell alone (1/Day Each). Not a level-2 slot that refills in the fight. At 0, do not cast it again.
 
-## Press-Gang Pirate
+## Cutlass Pirate Who Drafts You
 
-`f03-u-01` · unit · Press-Gang Pirate. Level 1. "Rural river, urban morals."
+`f03-u-01` · unit · Cutlass Pirate Who Drafts You. Level 1. "Rural river, urban morals."
+
+**Picture.** A pirate with a cutlass who is not asking you to join. The press gang already decided.
+
+**Engine.** Multiattack: 2 x Dagger; Dagger, 1d4+3 piercing; Enthralling Panache, Wisdom DC 12
 
 | | |
 |---|---|
@@ -2839,7 +3077,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Press-Gang Pirate. Level 1. Unit.
+**[SYSTEM]** Cutlass Pirate Who Drafts You. Level 1. Unit.
 
 **[GM]** The river tax is a person. Decline.
 
@@ -2853,9 +3091,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Hyena Pack
+## Pony-Sized Laughing Hyena
 
-`f03-u-02` · unit · Hyena Pack. Level 1. "They laugh on the ridge."
+`f03-u-02` · unit · Pony-Sized Laughing Hyena. Level 1. "They laugh on the ridge."
+
+**Picture.** A hyena as big as a pony. One animal. The laugh still sounds like a pack.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 2d6+3 piercing; Rampage (1/Day)
 
 | | |
 |---|---|
@@ -2883,7 +3125,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Hyena Pack. Level 1. Unit.
+**[SYSTEM]** Pony-Sized Laughing Hyena. Level 1. Unit.
 
 **[GM]** The laugh is not joy. It is a headcount.
 
@@ -2901,9 +3143,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Rampage** (daily, max 1). 1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.
 
-## Lion of the Green
+## Lawn Lion
 
-`f03-u-03` · unit · Lion of the Green. Level 1. "The green is not a lawn."
+`f03-u-03` · unit · Lawn Lion. Level 1. "The green is not a lawn."
+
+**Picture.** A lion on the green, treating the party like slow gazelles who paid for the tour.
+
+**Engine.** Multiattack: 2 x Rend; Rend, melee, +5, reach 5 ft, 1d8+3 slashing; Roar, Wisdom DC 11
 
 | | |
 |---|---|
@@ -2931,7 +3177,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Lion of the Green. Level 1. Unit.
+**[SYSTEM]** Lawn Lion. Level 1. Unit.
 
 **[GM]** Royal symbol. Actual lion. The symbol bites.
 
@@ -2950,9 +3196,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Bear Warden
+## Patch-Wearing Brown Bear
 
-`f03-u-04` · unit · Bear Warden. Level 1. "The woods have a warden and it is hungry."
+`f03-u-04` · unit · Patch-Wearing Brown Bear. Level 1. "The woods have a warden and it is hungry."
+
+**Picture.** A brown bear with a warden patch sewn on. The patch is not a joke. The claws are the fine.
+
+**Engine.** Multiattack: The bear makes one Bite attack and one Claw attack; Bite, melee, +5, reach 5 ft, 1d8+3 piercing; Claw, melee, +5, reach 5 ft, 1d4+3 slashing
 
 | | |
 |---|---|
@@ -2980,7 +3230,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Bear Warden. Level 1. Unit.
+**[SYSTEM]** Patch-Wearing Brown Bear. Level 1. Unit.
 
 **[GM]** The warden does not check permits. The warden checks bones.
 
@@ -2994,9 +3244,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Hippogriff Courier
+## Horse-Bodied Eagle Courier
 
-`f03-u-05` · unit · Hippogriff Courier. Level 1. "Airmail with talons."
+`f03-u-05` · unit · Horse-Bodied Eagle Courier. Level 1. "Airmail with talons."
+
+**Picture.** Eagle in front, horse in back, wings in the middle, and it is carrying mail you did not order.
+
+**Engine.** Multiattack: 2 x Rend; Rend, melee, +5, reach 5 ft, 1d8+3 slashing
 
 | | |
 |---|---|
@@ -3024,7 +3278,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Hippogriff Courier. Level 1. Unit.
+**[SYSTEM]** Horse-Bodied Eagle Courier. Level 1. Unit.
 
 **[GM]** Sign here. The pen is a talon.
 
@@ -3041,9 +3295,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Mill Toad
+## Swallow-You Mill Toad
 
-`f03-u-06` · unit · Mill Toad. Level 1. "The millpond staff."
+`f03-u-06` · unit · Swallow-You Mill Toad. Level 1. "The millpond staff."
+
+**Picture.** A toad the size of a millstone. The tongue is the first problem. The mouth is the second.
+
+**Engine.** Bite, melee, +4, reach 5 ft, 1d6+2 piercing, plus 2d4 poison; Swallow, 3d6 acid
 
 | | |
 |---|---|
@@ -3070,7 +3328,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Mill Toad. Level 1. Unit.
+**[SYSTEM]** Swallow-You Mill Toad. Level 1. Unit.
 
 **[GM]** The pond is not scenic. The pond is pre-digesting.
 
@@ -3088,9 +3346,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Road Ankheg
+## Tunneling Acid Ant-Lion
 
-`f03-e-01` · elite · Road Ankheg. Level 2. "The road has a basement."
+`f03-e-01` · elite · Tunneling Acid Ant-Lion. Level 2. "The road has a basement."
+
+**Picture.** A huge insect that bursts out of the road under your feet and spits a line of acid.
+
+**Engine.** Bite, melee, +5, reach 5 ft, 2d6+3 slashing, plus 1d6 acid; Acid Spray (Recharge 6), Dexterity DC 12, 4d6 acid, recharge 6
 
 | | |
 |---|---|
@@ -3117,7 +3379,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Road Ankheg. Level 2. Elite.
+**[SYSTEM]** Tunneling Acid Ant-Lion. Level 2. Elite.
 
 **[GM]** The dirt moved. That is not weather.
 
@@ -3136,9 +3398,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Acid Spray** (recharge, max 1). Starts ready. After Acid Spray is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 
-## Barn Ettercap
+## Barn-Rafter Spider Person
 
-`f03-e-02` · elite · Barn Ettercap. Level 2. "The hayloft is a web."
+`f03-e-02` · elite · Barn-Rafter Spider Person. Level 2. "The hayloft is a web."
+
+**Picture.** A person with extra spider arms in the barn rafters, wrapping whatever used to be livestock.
+
+**Engine.** Multiattack: The ettercap makes one Bite attack and one Claw attack; Bite, melee, +4, reach 5 ft, 1d6+2 piercing, plus 1d4 poison; Claw, melee, +4, reach 5 ft, 2d4+2 slashing; Web Strand (Recharge 5–6), Dexterity DC 12, recharge 5-6; Reel
 
 | | |
 |---|---|
@@ -3166,7 +3432,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Barn Ettercap. Level 2. Elite.
+**[SYSTEM]** Barn-Rafter Spider Person. Level 2. Elite.
 
 **[GM]** Fresh hay. Older guests.
 
@@ -3192,9 +3458,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 - **Web Strand** (recharge, max 1). Starts ready. After Web Strand is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.
 
-## Wayside Priest
+## Roadside Priest, Mace Blessed
 
-`f03-e-03` · elite · Wayside Priest. Level 2. "The shrine on the road is occupied."
+`f03-e-03` · elite · Roadside Priest, Mace Blessed. Level 2. "The shrine on the road is occupied."
+
+**Picture.** A priest at a roadside shrine. The blessing is optional. The mace is not.
+
+**Engine.** Multiattack: The priest makes two attacks, using Mace or Radiant Flame in any combination; Mace, melee, +5, reach 5 ft, 1d6+3 bludgeoning, plus 2d4 radiant; Radiant Flame, ranged, +5, range 60/60 ft, 2d10 radiant; Spellcasting: spend tracked_uses. At-will does not spend.; Spellcasting: spend tracked_uses. At-will does not spend.
 
 | | |
 |---|---|
@@ -3223,7 +3493,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** Spirit Guardians is once per day, not a 3rd-level slot that refills. Divine Aid is three casts total, any mix of Bless, Dispel Magic, Healing Word, or Lesser Restoration, not three of each. At 0, Mace and Radiant Flame only.
 
-**[SYSTEM]** Wayside Priest. Level 2. Elite.
+**[SYSTEM]** Roadside Priest, Mace Blessed. Level 2. Elite.
 
 **[GM]** Pilgrims welcome. The welcome is a damage aura.
 
@@ -3247,9 +3517,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 - **Thaumaturgy** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
 - **Spirit Guardians** (daily_spell, max 1, spell level 3). 1 per day. Not a slot of spell level 3 that comes back each turn. At 0, do not cast it.
 
-## Gate Spider
+## Blink-Past-the-Gate Spider
 
-`f03-e-04` · elite · Gate Spider. Level 3. "The gate is not where it was."
+`f03-e-04` · elite · Blink-Past-the-Gate Spider. Level 3. "The gate is not where it was."
+
+**Picture.** A big spider that steps out of sight on one side of the gate and back in behind you.
+
+**Engine.** Multiattack: 2 x Bite; Bite, melee, +5, reach 5 ft, 1d10+3 piercing, plus 2d8 poison; Ethereal Jaunt
 
 | | |
 |---|---|
@@ -3277,7 +3551,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Gate Spider. Level 3. Elite.
+**[SYSTEM]** Blink-Past-the-Gate Spider. Level 3. Elite.
 
 **[GM]** The door blinked. So did the thing on your back.
 
@@ -3300,9 +3574,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Billboard Manticore
+## Lion-Bat with a Spike Tail
 
-`f03-e-05` · elite · Billboard Manticore. Level 3. "Advertising, then the spikes."
+`f03-e-05` · elite · Lion-Bat with a Spike Tail. Level 3. "Advertising, then the spikes."
+
+**Picture.** A lion's body, bat wings, a person's face, and a tail that throws spikes like darts.
+
+**Engine.** Multiattack: The manticore makes three attacks, using Rend or Tail Spike in any combination; Rend, melee, +5, reach 5 ft, 1d8+3 slashing; Tail Spike, ranged, +5, range 100/200 ft, 1d8+3 piercing
 
 | | |
 |---|---|
@@ -3329,7 +3607,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
 
-**[SYSTEM]** Billboard Manticore. Level 3. Elite.
+**[SYSTEM]** Lion-Bat with a Spike Tail. Level 3. Elite.
 
 **[GM]** The billboard has a face. The face has a magazine.
 
@@ -3343,9 +3621,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Toll Ettin
+## Two-Headed Toll Giant
 
-`f03-b-01` · boss · Toll Ettin. Level 4. Boss. "Two heads, two prices."
+`f03-b-01` · boss · Two-Headed Toll Giant. Level 4. Boss. "Two heads, two prices."
+
+**Picture.** One giant body, two heads, both of them charging a toll and both of them swinging.
+
+**Engine.** Multiattack: The ettin makes one Battleaxe attack and one Morningstar attack; Battleaxe, melee, +7, reach 5 ft, 2d8+5 slashing; Morningstar, melee, +7, reach 5 ft, 2d8+5 piercing
 
 | | |
 |---|---|
@@ -3375,7 +3657,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Boss card for a random draw that fits the rules/70 cap. It does not replace a boss already printed on a Day page. A dead boss does not auto-clear other encounters.
 
-**[SYSTEM]** Toll Ettin. Level 4. Boss.
+**[SYSTEM]** Two-Headed Toll Giant. Level 4. Boss.
 
 **[GM]** The toll is a fight. Both cashiers agree, which is rare.
 
@@ -3389,9 +3671,13 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
-## Grant Ghost
+## Grant-Denied Ghost
 
-`f03-b-02` · boss · Grant Ghost. Level 4. Boss. "The land grant never died."
+`f03-b-02` · boss · Grant-Denied Ghost. Level 4. Boss. "The land grant never died."
+
+**Picture.** A ghost in a blazer who can walk into your body and hate your application from the inside.
+
+**Engine.** Multiattack: 2 x Withering Touch; Withering Touch, melee, +5, reach 5 ft, 3d10+3 necrotic; Etherealness; Horrific Visage, Wisdom DC 13, 2d6+3 psychic; Possession (Recharge 6), Charisma DC 13, recharge 6
 
 | | |
 |---|---|
@@ -3420,7 +3706,7 @@ No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 **House check.** Etherealness is printed as an at-will plane step, not a damage spell and not a slot. Do not add a slot table. Possession is recharge 6. Horrific Visage is not a slot; a success makes that creature immune for 24 hours, as printed.
 
-**[SYSTEM]** Grant Ghost. Level 4. Boss. Undead.
+**[SYSTEM]** Grant-Denied Ghost. Level 4. Boss. Undead.
 
 **[GM]** The deed is haunted. So is the deed-holder. That is you if you stand still.
 
@@ -3444,9 +3730,13 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 - **Possession** (recharge, max 1). Starts ready. After Possession is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 - **Etherealness** (at_will_innate, no cap (at will), spell level 7). Printed without a daily cap. It is not a spell slot. Do not add slots, and do not treat it as a repeating damage spell unless the action itself deals damage.
 
-## Silo Pudding
+## Hungry Black Silo Slime
 
-`f03-b-03` · boss · Silo Pudding. Level 4. Boss. "The grain went wrong."
+`f03-b-03` · boss · Hungry Black Silo Slime. Level 4. Boss. "The grain went wrong."
+
+**Picture.** A silo full of black slime. Cut it and it splits. It eats metal, wood, and whoever brought the metal.
+
+**Engine.** Dissolving Pseudopod, melee, +5, reach 10 ft, 4d6+3 acid; Split
 
 | | |
 |---|---|
@@ -3474,7 +3764,7 @@ A numbered pool at 0 does not fire again until it recovers. The creature uses it
 
 **House check.** Split is a printed reaction with a trigger. It is not a spell. Do not add a daily cap the block does not have.
 
-**[SYSTEM]** Silo Pudding. Level 4. Boss. Ooze.
+**[SYSTEM]** Hungry Black Silo Slime. Level 4. Boss. Ooze.
 
 **[GM]** Do not open the silo. You opened the silo.
 

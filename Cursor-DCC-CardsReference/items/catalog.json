@@ -1,5 +1,5 @@
 {
- "schema": "cursor-dcc-cards/items/0.2.0",
+ "schema": "cursor-dcc-cards/items/0.3.0",
  "status": "R&D",
  "authoritative": false,
  "updated": "2026-10-09",
@@ -8,7 +8,7 @@
  "cards": [
   {
    "id": "cdr-gear-club",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "club",
@@ -51,12 +51,28 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Table-Leg Club"
+   },
+   "lore_display_name": "Table-Leg Club",
+   "picture": "In your hand: Table-Leg Club. Furniture, but angrier.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "light"
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Table-Leg Club",
+    "display_name": "Table-Leg Club"
    }
   },
   {
    "id": "cdr-gear-dagger",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "dagger",
@@ -99,12 +115,34 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Box Cutter"
+   },
+   "lore_display_name": "Box Cutter",
+   "picture": "In your hand: Box Cutter. Safety first. Not yours, though.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "piercing",
+    "properties": [
+     "finesse",
+     "light",
+     "thrown"
+    ],
+    "thrown_ft": [
+     20,
+     60
+    ],
+    "mastery": "Nick",
+    "lore_display_name": "Box Cutter",
+    "display_name": "Box Cutter"
    }
   },
   {
    "id": "cdr-gear-greatclub",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "greatclub",
@@ -147,12 +185,28 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fence Post With Opinions"
+   },
+   "lore_display_name": "Fence Post With Opinions",
+   "picture": "In your hand: Fence Post With Opinions. Still has concrete on one end. Nobody asked where the other end has been.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "two_handed"
+    ],
+    "mastery": "Push",
+    "lore_display_name": "Fence Post With Opinions",
+    "display_name": "Fence Post With Opinions"
    }
   },
   {
    "id": "cdr-gear-handaxe",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "handaxe",
@@ -195,12 +249,33 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hatchet From a Camping Display"
+   },
+   "lore_display_name": "Hatchet From a Camping Display",
+   "picture": "In your hand: Hatchet From a Camping Display. The tag says 'Not For Use'. The floor disagrees.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "slashing",
+    "properties": [
+     "light",
+     "thrown"
+    ],
+    "thrown_ft": [
+     20,
+     60
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Hatchet From a Camping Display",
+    "display_name": "Hatchet From a Camping Display"
    }
   },
   {
    "id": "cdr-gear-javelin",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "javelin",
@@ -243,12 +318,32 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Curtain-Rod Javelin"
+   },
+   "lore_display_name": "Curtain-Rod Javelin",
+   "picture": "In your hand: Curtain-Rod Javelin. Pointed end goes toward the problem.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "properties": [
+     "thrown"
+    ],
+    "thrown_ft": [
+     30,
+     120
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Curtain-Rod Javelin",
+    "display_name": "Curtain-Rod Javelin"
    }
   },
   {
    "id": "cdr-gear-light-hammer",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "light-hammer",
@@ -291,12 +386,33 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Claw Hammer, Borrowed Indefinitely"
+   },
+   "lore_display_name": "Claw Hammer, Borrowed Indefinitely",
+   "picture": "In your hand: Claw Hammer, Borrowed Indefinitely. The neighbor wants it back. The neighbor is not on this floor.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "light",
+     "thrown"
+    ],
+    "thrown_ft": [
+     20,
+     60
+    ],
+    "mastery": "Nick",
+    "lore_display_name": "Claw Hammer, Borrowed Indefinitely",
+    "display_name": "Claw Hammer, Borrowed Indefinitely"
    }
   },
   {
    "id": "cdr-gear-mace",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "mace",
@@ -339,12 +455,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Crowbar-Headed Mace"
+   },
+   "lore_display_name": "Crowbar-Headed Mace",
+   "picture": "In your hand: Crowbar-Headed Mace. Half tool, half apology.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "bludgeoning",
+    "properties": [],
+    "mastery": "Sap",
+    "lore_display_name": "Crowbar-Headed Mace",
+    "display_name": "Crowbar-Headed Mace"
    }
   },
   {
    "id": "cdr-gear-quarterstaff",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "quarterstaff",
@@ -387,18 +517,35 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Duct-Taped Mop"
+   },
+   "lore_display_name": "Duct-Taped Mop",
+   "picture": "In your hand: Duct-Taped Mop. Cleans up after you, one way or another.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "versatile"
+    ],
+    "versatile": "1d8",
+    "mastery": "Topple",
+    "lore_display_name": "Duct-Taped Mop",
+    "display_name": "Duct-Taped Mop"
    }
   },
   {
    "id": "cdr-gear-sickle",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "sickle",
    "srd_name": "Sickle",
-   "display_name": "Garden Sickle",
-   "combined_label": "Garden Sickle (Sickle)",
+   "display_name": "Orange Weed-Whacker Sickle",
+   "combined_label": "Orange Weed-Whacker Sickle (Sickle)",
    "category": "weapon",
    "subcategory": "simple melee",
    "snark": "Please do not harvest the party.",
@@ -428,19 +575,35 @@
    },
    "state_hooks": {
     "inventory_srd_id": "sickle",
-    "display": "Garden Sickle (Sickle)",
+    "display": "Orange Weed-Whacker Sickle (Sickle)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Garden Sickle"
+   },
+   "lore_display_name": "Garden Sickle",
+   "picture": "In your hand: Orange Weed-Whacker Sickle. Please do not harvest the party.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "slashing",
+    "properties": [
+     "light"
+    ],
+    "mastery": "Nick",
+    "lore_display_name": "Garden Sickle",
+    "display_name": "Orange Weed-Whacker Sickle"
    }
   },
   {
    "id": "cdr-gear-spear",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "spear",
@@ -483,18 +646,40 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Broom Handle With a Kitchen Knife Taped On"
+   },
+   "lore_display_name": "Broom Handle With a Kitchen Knife Taped On",
+   "picture": "In your hand: Broom Handle With a Kitchen Knife Taped On. Reach, courtesy of a junk drawer.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "properties": [
+     "thrown",
+     "versatile"
+    ],
+    "thrown_ft": [
+     20,
+     60
+    ],
+    "versatile": "1d8",
+    "mastery": "Sap",
+    "lore_display_name": "Broom Handle With a Kitchen Knife Taped On",
+    "display_name": "Broom Handle With a Kitchen Knife Taped On"
    }
   },
   {
    "id": "cdr-gear-dart",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "dart",
    "srd_name": "Dart",
-   "display_name": "Bar-Room Dart",
-   "combined_label": "Bar-Room Dart (Dart)",
+   "display_name": "Sticky Bar Dart, Two Short of a Set",
+   "combined_label": "Sticky Bar Dart, Two Short of a Set (Dart)",
    "category": "weapon",
    "subcategory": "simple ranged",
    "snark": "Sharp, cheap, and always one short in the set.",
@@ -524,19 +709,40 @@
    },
    "state_hooks": {
     "inventory_srd_id": "dart",
-    "display": "Bar-Room Dart (Dart)",
+    "display": "Sticky Bar Dart, Two Short of a Set (Dart)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bar-Room Dart"
+   },
+   "lore_display_name": "Bar-Room Dart",
+   "picture": "In your hand: Sticky Bar Dart, Two Short of a Set. Sharp, cheap, and always one short in the set.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "piercing",
+    "properties": [
+     "finesse",
+     "thrown"
+    ],
+    "thrown_ft": [
+     20,
+     60
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Bar-Room Dart",
+    "display_name": "Sticky Bar Dart, Two Short of a Set"
    }
   },
   {
    "id": "cdr-gear-light-crossbow",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "light-crossbow",
@@ -579,12 +785,34 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Nail Gun With a Homemade Stock"
+   },
+   "lore_display_name": "Nail Gun With a Homemade Stock",
+   "picture": "In your hand: Nail Gun With a Homemade Stock. Workplace safety training not included.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "loading",
+     "two_handed"
+    ],
+    "range_ft": [
+     80,
+     320
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Nail Gun With a Homemade Stock",
+    "display_name": "Nail Gun With a Homemade Stock"
    }
   },
   {
    "id": "cdr-gear-shortbow",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "shortbow",
@@ -627,12 +855,33 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Compound Bow From a Sporting-Goods Display"
+   },
+   "lore_display_name": "Compound Bow From a Sporting-Goods Display",
+   "picture": "In your hand: Compound Bow From a Sporting-Goods Display. Floor model. Sold as-is. All sales final.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "two_handed"
+    ],
+    "range_ft": [
+     80,
+     320
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Compound Bow From a Sporting-Goods Display",
+    "display_name": "Compound Bow From a Sporting-Goods Display"
    }
   },
   {
    "id": "cdr-gear-sling",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "sling",
@@ -675,18 +924,38 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Slingshot Confiscated From a Kid"
+   },
+   "lore_display_name": "Slingshot Confiscated From a Kid",
+   "picture": "In your hand: Slingshot Confiscated From a Kid. Returned to nobody. He's fine. Probably.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "ammunition"
+    ],
+    "range_ft": [
+     30,
+     120
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Slingshot Confiscated From a Kid",
+    "display_name": "Slingshot Confiscated From a Kid"
    }
   },
   {
    "id": "cdr-gear-battleaxe",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "battleaxe",
    "srd_name": "Battleaxe",
-   "display_name": "Wood-Splitting Axe",
-   "combined_label": "Wood-Splitting Axe (Battleaxe)",
+   "display_name": "Firewood Axe, People Count as Wood",
+   "combined_label": "Firewood Axe, People Count as Wood (Battleaxe)",
    "category": "weapon",
    "subcategory": "martial melee",
    "snark": "Firewood is a state of mind.",
@@ -716,19 +985,36 @@
    },
    "state_hooks": {
     "inventory_srd_id": "battleaxe",
-    "display": "Wood-Splitting Axe (Battleaxe)",
+    "display": "Firewood Axe, People Count as Wood (Battleaxe)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Wood-Splitting Axe"
+   },
+   "lore_display_name": "Wood-Splitting Axe",
+   "picture": "In your hand: Firewood Axe, People Count as Wood. Firewood is a state of mind.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "slashing",
+    "properties": [
+     "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "Topple",
+    "lore_display_name": "Wood-Splitting Axe",
+    "display_name": "Firewood Axe, People Count as Wood"
    }
   },
   {
    "id": "cdr-gear-flail",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "flail",
@@ -771,12 +1057,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Chain With a Padlock On It"
+   },
+   "lore_display_name": "Chain With a Padlock On It",
+   "picture": "In your hand: Chain With a Padlock On It. The lock is the weapon. The chain is moral support.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "bludgeoning",
+    "properties": [],
+    "mastery": "Sap",
+    "lore_display_name": "Chain With a Padlock On It",
+    "display_name": "Chain With a Padlock On It"
    }
   },
   {
    "id": "cdr-gear-glaive",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "glaive",
@@ -819,12 +1119,30 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Lawn Edger on a Pole"
+   },
+   "lore_display_name": "Lawn Edger on a Pole",
+   "picture": "In your hand: Lawn Edger on a Pole. Edges everything. Including your enemies.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d10",
+    "damage_type": "slashing",
+    "properties": [
+     "heavy",
+     "reach",
+     "two_handed"
+    ],
+    "mastery": "Graze",
+    "lore_display_name": "Lawn Edger on a Pole",
+    "display_name": "Lawn Edger on a Pole"
    }
   },
   {
    "id": "cdr-gear-greataxe",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "greataxe",
@@ -867,12 +1185,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fire Axe, BREAK GLASS Sticker Intact"
+   },
+   "lore_display_name": "Fire Axe, BREAK GLASS Sticker Intact",
+   "picture": "In your hand: Fire Axe, BREAK GLASS Sticker Intact. In case of emergency, this is the emergency.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d12",
+    "damage_type": "slashing",
+    "properties": [
+     "heavy",
+     "two_handed"
+    ],
+    "mastery": "Cleave",
+    "lore_display_name": "Fire Axe, BREAK GLASS Sticker Intact",
+    "display_name": "Fire Axe, BREAK GLASS Sticker Intact"
    }
   },
   {
    "id": "cdr-gear-greatsword",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "greatsword",
@@ -915,12 +1250,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sheet-Metal Slab on a Pipe Handle"
+   },
+   "lore_display_name": "Sheet-Metal Slab on a Pipe Handle",
+   "picture": "In your hand: Sheet-Metal Slab on a Pipe Handle. Subtle, like a car door slamming.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "2d6",
+    "damage_type": "slashing",
+    "properties": [
+     "heavy",
+     "two_handed"
+    ],
+    "mastery": "Graze",
+    "lore_display_name": "Sheet-Metal Slab on a Pipe Handle",
+    "display_name": "Sheet-Metal Slab on a Pipe Handle"
    }
   },
   {
    "id": "cdr-gear-halberd",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "halberd",
@@ -963,12 +1315,30 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Snow-Plow Blade on a Flagpole"
+   },
+   "lore_display_name": "Snow-Plow Blade on a Flagpole",
+   "picture": "In your hand: Snow-Plow Blade on a Flagpole. Municipal property. Nobody will check.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d10",
+    "damage_type": "slashing",
+    "properties": [
+     "heavy",
+     "reach",
+     "two_handed"
+    ],
+    "mastery": "Cleave",
+    "lore_display_name": "Snow-Plow Blade on a Flagpole",
+    "display_name": "Snow-Plow Blade on a Flagpole"
    }
   },
   {
    "id": "cdr-gear-lance",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "lance",
@@ -1011,12 +1381,30 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Jousting Pole From a Renaissance Faire"
+   },
+   "lore_display_name": "Jousting Pole From a Renaissance Faire",
+   "picture": "In your hand: Jousting Pole From a Renaissance Faire. Best used by someone who has recently regretted something.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d10",
+    "damage_type": "piercing",
+    "properties": [
+     "heavy",
+     "reach",
+     "two_handed"
+    ],
+    "mastery": "Topple",
+    "lore_display_name": "Jousting Pole From a Renaissance Faire",
+    "display_name": "Jousting Pole From a Renaissance Faire"
    }
   },
   {
    "id": "cdr-gear-longsword",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "longsword",
@@ -1059,12 +1447,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sharpened Stop Sign"
+   },
+   "lore_display_name": "Sharpened Stop Sign",
+   "picture": "In your hand: Sharpened Stop Sign. It said STOP. Nobody listened.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "slashing",
+    "properties": [
+     "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "Sap",
+    "lore_display_name": "Sharpened Stop Sign",
+    "display_name": "Sharpened Stop Sign"
    }
   },
   {
    "id": "cdr-gear-maul",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "maul",
@@ -1107,12 +1512,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Spiked Sledgehammer"
+   },
+   "lore_display_name": "Spiked Sledgehammer",
+   "picture": "In your hand: Spiked Sledgehammer. For problems that cannot be talked down, only knocked down.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "2d6",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "heavy",
+     "two_handed"
+    ],
+    "mastery": "Topple",
+    "lore_display_name": "Spiked Sledgehammer",
+    "display_name": "Spiked Sledgehammer"
    }
   },
   {
    "id": "cdr-gear-morningstar",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "morningstar",
@@ -1155,12 +1577,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Spiked Rebar Club"
+   },
+   "lore_display_name": "Spiked Rebar Club",
+   "picture": "In your hand: Spiked Rebar Club. Building codes weep.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "properties": [],
+    "mastery": "Sap",
+    "lore_display_name": "Spiked Rebar Club",
+    "display_name": "Spiked Rebar Club"
    }
   },
   {
    "id": "cdr-gear-pike",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "pike",
@@ -1203,12 +1639,30 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Flagpole With a Spearhead Zip-Tied On"
+   },
+   "lore_display_name": "Flagpole With a Spearhead Zip-Tied On",
+   "picture": "In your hand: Flagpole With a Spearhead Zip-Tied On. Patriotic and extremely poorly secured.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d10",
+    "damage_type": "piercing",
+    "properties": [
+     "heavy",
+     "reach",
+     "two_handed"
+    ],
+    "mastery": "Push",
+    "lore_display_name": "Flagpole With a Spearhead Zip-Tied On",
+    "display_name": "Flagpole With a Spearhead Zip-Tied On"
    }
   },
   {
    "id": "cdr-gear-rapier",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "rapier",
@@ -1251,12 +1705,28 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sharpened Curtain Rod"
+   },
+   "lore_display_name": "Sharpened Curtain Rod",
+   "picture": "In your hand: Sharpened Curtain Rod. Fancy drapes optional.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "properties": [
+     "finesse"
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Sharpened Curtain Rod",
+    "display_name": "Sharpened Curtain Rod"
    }
   },
   {
    "id": "cdr-gear-scimitar",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "scimitar",
@@ -1299,12 +1769,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Curved Souvenir Machete"
+   },
+   "lore_display_name": "Curved Souvenir Machete",
+   "picture": "In your hand: Curved Souvenir Machete. Bought at a gift shop. Used at a dungeon.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "slashing",
+    "properties": [
+     "finesse",
+     "light"
+    ],
+    "mastery": "Nick",
+    "lore_display_name": "Curved Souvenir Machete",
+    "display_name": "Curved Souvenir Machete"
    }
   },
   {
    "id": "cdr-gear-shortsword",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "shortsword",
@@ -1347,12 +1834,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pawnshop Shortsword"
+   },
+   "lore_display_name": "Pawnshop Shortsword",
+   "picture": "In your hand: Pawnshop Shortsword. Previous owner's initials still on the grip.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "properties": [
+     "finesse",
+     "light"
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Pawnshop Shortsword",
+    "display_name": "Pawnshop Shortsword"
    }
   },
   {
    "id": "cdr-gear-trident",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "trident",
@@ -1395,18 +1899,40 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pitchfork From a Haunted Hayride"
+   },
+   "lore_display_name": "Pitchfork From a Haunted Hayride",
+   "picture": "In your hand: Pitchfork From a Haunted Hayride. Three tines, zero customer reviews.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "properties": [
+     "thrown",
+     "versatile"
+    ],
+    "thrown_ft": [
+     20,
+     60
+    ],
+    "versatile": "1d10",
+    "mastery": "Topple",
+    "lore_display_name": "Pitchfork From a Haunted Hayride",
+    "display_name": "Pitchfork From a Haunted Hayride"
    }
   },
   {
    "id": "cdr-gear-warhammer",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "warhammer",
    "srd_name": "Warhammer",
-   "display_name": "Framing Hammer",
-   "combined_label": "Framing Hammer (Warhammer)",
+   "display_name": "Stud-Finder Framing Hammer",
+   "combined_label": "Stud-Finder Framing Hammer (Warhammer)",
    "category": "weapon",
    "subcategory": "martial melee",
    "snark": "Builds things. Also unbuilds them.",
@@ -1436,19 +1962,36 @@
    },
    "state_hooks": {
     "inventory_srd_id": "warhammer",
-    "display": "Framing Hammer (Warhammer)",
+    "display": "Stud-Finder Framing Hammer (Warhammer)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Framing Hammer"
+   },
+   "lore_display_name": "Framing Hammer",
+   "picture": "In your hand: Stud-Finder Framing Hammer. Builds things. Also unbuilds them.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "bludgeoning",
+    "properties": [
+     "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "Push",
+    "lore_display_name": "Framing Hammer",
+    "display_name": "Stud-Finder Framing Hammer"
    }
   },
   {
    "id": "cdr-gear-war-pick",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "war-pick",
@@ -1491,12 +2034,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Roofing Pick, Gently Used"
+   },
+   "lore_display_name": "Roofing Pick, Gently Used",
+   "picture": "In your hand: Roofing Pick, Gently Used. The roof was not the only thing it opened.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "properties": [
+     "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "Sap",
+    "lore_display_name": "Roofing Pick, Gently Used",
+    "display_name": "Roofing Pick, Gently Used"
    }
   },
   {
    "id": "cdr-gear-whip",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "whip",
@@ -1539,12 +2099,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bullwhip From a Costume Shop"
+   },
+   "lore_display_name": "Bullwhip From a Costume Shop",
+   "picture": "In your hand: Bullwhip From a Costume Shop. Comes with a hat nobody is allowed to wear.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d4",
+    "damage_type": "slashing",
+    "properties": [
+     "finesse",
+     "reach"
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Bullwhip From a Costume Shop",
+    "display_name": "Bullwhip From a Costume Shop"
    }
   },
   {
    "id": "cdr-gear-blowgun",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "blowgun",
@@ -1587,12 +2164,33 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pea Shooter, Industrial Strength"
+   },
+   "lore_display_name": "Pea Shooter, Industrial Strength",
+   "picture": "In your hand: Pea Shooter, Industrial Strength. Surprisingly rude for a drinking straw.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "loading"
+    ],
+    "range_ft": [
+     25,
+     100
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Pea Shooter, Industrial Strength",
+    "display_name": "Pea Shooter, Industrial Strength"
    }
   },
   {
    "id": "cdr-gear-hand-crossbow",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "hand-crossbow",
@@ -1635,12 +2233,34 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Staple Gun on a Pistol Grip"
+   },
+   "lore_display_name": "Staple Gun on a Pistol Grip",
+   "picture": "In your hand: Staple Gun on a Pistol Grip. Binds paperwork. Binds enemies to paperwork.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d6",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "light",
+     "loading"
+    ],
+    "range_ft": [
+     30,
+     120
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Staple Gun on a Pistol Grip",
+    "display_name": "Staple Gun on a Pistol Grip"
    }
   },
   {
    "id": "cdr-gear-heavy-crossbow",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "heavy-crossbow",
@@ -1683,12 +2303,35 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Rebar Launcher, Shop-Class Edition"
+   },
+   "lore_display_name": "Rebar Launcher, Shop-Class Edition",
+   "picture": "In your hand: Rebar Launcher, Shop-Class Edition. The teacher gave it a C-minus and a restraining order.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d10",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "heavy",
+     "loading",
+     "two_handed"
+    ],
+    "range_ft": [
+     100,
+     400
+    ],
+    "mastery": "Push",
+    "lore_display_name": "Rebar Launcher, Shop-Class Edition",
+    "display_name": "Rebar Launcher, Shop-Class Edition"
    }
   },
   {
    "id": "cdr-gear-longbow",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "longbow",
@@ -1731,12 +2374,34 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Big Compound Bow, Price Tag Still On"
+   },
+   "lore_display_name": "Big Compound Bow, Price Tag Still On",
+   "picture": "In your hand: Big Compound Bow, Price Tag Still On. Retail value remains a mystery to everyone but the tag.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d8",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "heavy",
+     "two_handed"
+    ],
+    "range_ft": [
+     150,
+     600
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Big Compound Bow, Price Tag Still On",
+    "display_name": "Big Compound Bow, Price Tag Still On"
    }
   },
   {
    "id": "cdr-gear-musket",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "musket",
@@ -1779,12 +2444,34 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Reenactor's Musket, Surprisingly Loaded"
+   },
+   "lore_display_name": "Reenactor's Musket, Surprisingly Loaded",
+   "picture": "In your hand: Reenactor's Musket, Surprisingly Loaded. Historically accurate until it wasn't.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d12",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "loading",
+     "two_handed"
+    ],
+    "range_ft": [
+     40,
+     120
+    ],
+    "mastery": "Slow",
+    "lore_display_name": "Reenactor's Musket, Surprisingly Loaded",
+    "display_name": "Reenactor's Musket, Surprisingly Loaded"
    }
   },
   {
    "id": "cdr-gear-pistol",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "pistol",
@@ -1827,12 +2514,33 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Starter Pistol, Illegally Upgraded"
+   },
+   "lore_display_name": "Starter Pistol, Illegally Upgraded",
+   "picture": "In your hand: Starter Pistol, Illegally Upgraded. Meant to start races. Now ends arguments.",
+   "local": {
+    "playable": true,
+    "kind": "weapon",
+    "source": "srd/srd.txt#Weapons",
+    "damage": "1d10",
+    "damage_type": "piercing",
+    "properties": [
+     "ammunition",
+     "loading"
+    ],
+    "range_ft": [
+     30,
+     90
+    ],
+    "mastery": "Vex",
+    "lore_display_name": "Starter Pistol, Illegally Upgraded",
+    "display_name": "Starter Pistol, Illegally Upgraded"
    }
   },
   {
    "id": "cdr-gear-padded-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "padded-armor",
@@ -1875,12 +2583,27 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Quilted Moving Blanket Coat"
+   },
+   "lore_display_name": "Quilted Moving Blanket Coat",
+   "picture": "In your hand: Quilted Moving Blanket Coat. Smells like a stranger's apartment.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 11 + Dex. Stealth disadvantage. Light armor.",
+    "ac_base": 11,
+    "dex": "full",
+    "stealth": "disadvantage",
+    "weight_class": "light",
+    "lore_display_name": "Quilted Moving Blanket Coat",
+    "display_name": "Quilted Moving Blanket Coat"
    }
   },
   {
    "id": "cdr-gear-leather-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "leather-armor",
@@ -1923,12 +2646,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Motorcycle Jacket"
+   },
+   "lore_display_name": "Motorcycle Jacket",
+   "picture": "In your hand: Motorcycle Jacket. Looks great. Will not save you from asphalt, or from a goblin.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 11 + Dex. Light armor.",
+    "ac_base": 11,
+    "dex": "full",
+    "weight_class": "light",
+    "lore_display_name": "Motorcycle Jacket",
+    "display_name": "Motorcycle Jacket"
    }
   },
   {
    "id": "cdr-gear-studded-leather-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "studded-leather-armor",
@@ -1971,12 +2708,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Studded Biker Vest"
+   },
+   "lore_display_name": "Studded Biker Vest",
+   "picture": "In your hand: Studded Biker Vest. Rivets for personality.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 12 + Dex. Light armor.",
+    "ac_base": 12,
+    "dex": "full",
+    "weight_class": "light",
+    "lore_display_name": "Studded Biker Vest",
+    "display_name": "Studded Biker Vest"
    }
   },
   {
    "id": "cdr-gear-hide-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "hide-armor",
@@ -2019,12 +2770,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Taxidermy Rug Poncho"
+   },
+   "lore_display_name": "Taxidermy Rug Poncho",
+   "picture": "In your hand: Taxidermy Rug Poncho. The bear is not consenting but is not objecting either.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 12 + Dex (max 2). Medium armor.",
+    "ac_base": 12,
+    "dex": "max 2",
+    "weight_class": "medium",
+    "lore_display_name": "Taxidermy Rug Poncho",
+    "display_name": "Taxidermy Rug Poncho"
    }
   },
   {
    "id": "cdr-gear-chain-shirt",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "chain-shirt",
@@ -2067,12 +2832,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Chain-Link Vest"
+   },
+   "lore_display_name": "Chain-Link Vest",
+   "picture": "In your hand: Chain-Link Vest. Fence by day, armor by Floor 1.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 13 + Dex (max 2). Medium armor.",
+    "ac_base": 13,
+    "dex": "max 2",
+    "weight_class": "medium",
+    "lore_display_name": "Chain-Link Vest",
+    "display_name": "Chain-Link Vest"
    }
   },
   {
    "id": "cdr-gear-scale-mail",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "scale-mail",
@@ -2115,12 +2894,27 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Scale Mail From a Cosplay Booth"
+   },
+   "lore_display_name": "Scale Mail From a Cosplay Booth",
+   "picture": "In your hand: Scale Mail From a Cosplay Booth. Convention-grade. Bring a friend to help you sit.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 14 + Dex (max 2). Stealth disadvantage. Medium armor.",
+    "ac_base": 14,
+    "dex": "max 2",
+    "stealth": "disadvantage",
+    "weight_class": "medium",
+    "lore_display_name": "Scale Mail From a Cosplay Booth",
+    "display_name": "Scale Mail From a Cosplay Booth"
    }
   },
   {
    "id": "cdr-gear-breastplate",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "breastplate",
@@ -2163,12 +2957,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sheet-Metal Breastplate"
+   },
+   "lore_display_name": "Sheet-Metal Breastplate",
+   "picture": "In your hand: Sheet-Metal Breastplate. Hammered flat by someone with strong feelings.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 14 + Dex (max 2). Medium armor.",
+    "ac_base": 14,
+    "dex": "max 2",
+    "weight_class": "medium",
+    "lore_display_name": "Sheet-Metal Breastplate",
+    "display_name": "Sheet-Metal Breastplate"
    }
   },
   {
    "id": "cdr-gear-half-plate-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "half-plate-armor",
@@ -2211,12 +3019,27 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hammered Hood-Panel Half Plate"
+   },
+   "lore_display_name": "Hammered Hood-Panel Half Plate",
+   "picture": "In your hand: Hammered Hood-Panel Half Plate. Still faintly says 'Ford'.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 15 + Dex (max 2). Stealth disadvantage. Medium armor.",
+    "ac_base": 15,
+    "dex": "max 2",
+    "stealth": "disadvantage",
+    "weight_class": "medium",
+    "lore_display_name": "Hammered Hood-Panel Half Plate",
+    "display_name": "Hammered Hood-Panel Half Plate"
    }
   },
   {
    "id": "cdr-gear-ring-mail",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "ring-mail",
@@ -2259,12 +3082,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Washer-Ring Coverall"
+   },
+   "lore_display_name": "Washer-Ring Coverall",
+   "picture": "In your hand: Washer-Ring Coverall. Hardware aisle couture.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 14. Stealth disadvantage. Heavy armor.",
+    "ac_base": 14,
+    "stealth": "disadvantage",
+    "weight_class": "heavy",
+    "lore_display_name": "Washer-Ring Coverall",
+    "display_name": "Washer-Ring Coverall"
    }
   },
   {
    "id": "cdr-gear-chain-mail",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "chain-mail",
@@ -2307,12 +3144,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Chain-Link Fencing Laced Over a Work Coverall"
+   },
+   "lore_display_name": "Chain-Link Fencing Laced Over a Work Coverall",
+   "picture": "In your hand: Chain-Link Fencing Laced Over a Work Coverall. Stops attacks. Also stops you from sitting.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 16. Needs Str 13. Stealth disadvantage. Heavy armor.",
+    "ac_base": 16,
+    "stealth": "disadvantage",
+    "weight_class": "heavy",
+    "lore_display_name": "Chain-Link Fencing Laced Over a Work Coverall",
+    "display_name": "Chain-Link Fencing Laced Over a Work Coverall"
    }
   },
   {
    "id": "cdr-gear-splint-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "splint-armor",
@@ -2355,12 +3206,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Strapped-On Venetian-Blind Plates"
+   },
+   "lore_display_name": "Strapped-On Venetian-Blind Plates",
+   "picture": "In your hand: Strapped-On Venetian-Blind Plates. Open, close, survive.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 17. Needs Str 15. Stealth disadvantage. Heavy armor.",
+    "ac_base": 17,
+    "stealth": "disadvantage",
+    "weight_class": "heavy",
+    "lore_display_name": "Strapped-On Venetian-Blind Plates",
+    "display_name": "Strapped-On Venetian-Blind Plates"
    }
   },
   {
    "id": "cdr-gear-plate-armor",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "plate-armor",
@@ -2403,12 +3268,26 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Welded Car-Door Plate"
+   },
+   "lore_display_name": "Welded Car-Door Plate",
+   "picture": "In your hand: Welded Car-Door Plate. The window still rolls down. Do not roll it down.",
+   "local": {
+    "playable": true,
+    "kind": "armor",
+    "source": "tables/chargen-5e.json",
+    "text": "AC 18. Needs Str 15. Stealth disadvantage. Heavy armor.",
+    "ac_base": 18,
+    "stealth": "disadvantage",
+    "weight_class": "heavy",
+    "lore_display_name": "Welded Car-Door Plate",
+    "display_name": "Welded Car-Door Plate"
    }
   },
   {
    "id": "cdr-gear-shield",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "shield",
@@ -2451,12 +3330,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Stop Sign Shield"
+   },
+   "lore_display_name": "Stop Sign Shield",
+   "picture": "In your hand: Stop Sign Shield. Traffic law says STOP. Combat law says maybe.",
+   "local": {
+    "playable": true,
+    "kind": "shield",
+    "ac_bonus": 2,
+    "text": "+2 AC while wielded.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Stop Sign Shield",
+    "display_name": "Stop Sign Shield"
    }
   },
   {
    "id": "cdr-gear-arrows",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arrows",
@@ -2499,12 +3390,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Prop Arrows, Foam Tips Removed"
+   },
+   "lore_display_name": "Prop Arrows, Foam Tips Removed",
+   "picture": "In your hand: Prop Arrows, Foam Tips Removed. Props department did not authorize this.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Ammunition for bows; 20 arrows.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Prop Arrows, Foam Tips Removed",
+    "display_name": "Prop Arrows, Foam Tips Removed"
    }
   },
   {
    "id": "cdr-gear-bolts",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "bolts",
@@ -2547,12 +3450,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Box of Nail-Gun Bolts"
+   },
+   "lore_display_name": "Box of Nail-Gun Bolts",
+   "picture": "In your hand: Box of Nail-Gun Bolts. Still has the store sticker. Still a hazard.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Ammunition for crossbows; 20 bolts.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Box of Nail-Gun Bolts",
+    "display_name": "Box of Nail-Gun Bolts"
    }
   },
   {
    "id": "cdr-gear-firearm-bullets",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "firearm-bullets",
@@ -2595,12 +3510,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Loose Rounds, Pocket Lint Included"
+   },
+   "lore_display_name": "Loose Rounds, Pocket Lint Included",
+   "picture": "In your hand: Loose Rounds, Pocket Lint Included. Counted twice, still wrong.",
+   "local": {
+    "playable": false,
+    "kind": "ammunition",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Loose Rounds, Pocket Lint Included",
+    "display_name": "Loose Rounds, Pocket Lint Included"
    }
   },
   {
    "id": "cdr-gear-sling-bullets",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "sling-bullets",
@@ -2643,12 +3569,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bag of Smooth River Rocks"
+   },
+   "lore_display_name": "Bag of Smooth River Rocks",
+   "picture": "In your hand: Bag of Smooth River Rocks. Free from nature. Priced by the dungeon anyway.",
+   "local": {
+    "playable": false,
+    "kind": "ammunition",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Bag of Smooth River Rocks",
+    "display_name": "Bag of Smooth River Rocks"
    }
   },
   {
    "id": "cdr-gear-needles",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "needles",
@@ -2691,12 +3628,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sewing Needles, Bulk Craft Pack"
+   },
+   "lore_display_name": "Sewing Needles, Bulk Craft Pack",
+   "picture": "In your hand: Sewing Needles, Bulk Craft Pack. Fifty tiny reasons to avoid the sewing aisle.",
+   "local": {
+    "playable": false,
+    "kind": "ammunition",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Sewing Needles, Bulk Craft Pack",
+    "display_name": "Sewing Needles, Bulk Craft Pack"
    }
   },
   {
    "id": "cdr-gear-arcane-focus",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arcane-focus",
@@ -2741,12 +3689,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gift-Shop Crystal Assortment"
+   },
+   "lore_display_name": "Gift-Shop Crystal Assortment",
+   "picture": "In your hand: Gift-Shop Crystal Assortment. Pick one. The shop will try to sell you three.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Gift-Shop Crystal Assortment",
+    "display_name": "Gift-Shop Crystal Assortment"
    }
   },
   {
    "id": "cdr-gear-arcane-focus-crystal",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arcane-focus-crystal",
@@ -2789,12 +3748,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gift-Shop Crystal"
+   },
+   "lore_display_name": "Gift-Shop Crystal",
+   "picture": "In your hand: Gift-Shop Crystal. Bought for the vibes. Kept for the spellcasting.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Spellcasting focus for Sorcerers, Warlocks, Wizards.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Gift-Shop Crystal",
+    "display_name": "Gift-Shop Crystal"
    }
   },
   {
    "id": "cdr-gear-arcane-focus-orb",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arcane-focus-orb",
@@ -2837,12 +3808,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Snow Globe, Gift-Shop Grade"
+   },
+   "lore_display_name": "Snow Globe, Gift-Shop Grade",
+   "picture": "In your hand: Snow Globe, Gift-Shop Grade. Shake it. Something small and sad happens.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Spellcasting focus for Sorcerers, Warlocks, Wizards.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Snow Globe, Gift-Shop Grade",
+    "display_name": "Snow Globe, Gift-Shop Grade"
    }
   },
   {
    "id": "cdr-gear-arcane-focus-rod",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arcane-focus-rod",
@@ -2885,12 +3868,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Telescoping Car Antenna"
+   },
+   "lore_display_name": "Telescoping Car Antenna",
+   "picture": "In your hand: Telescoping Car Antenna. Tunes in to the fundamental frequencies of nonsense.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Telescoping Car Antenna",
+    "display_name": "Telescoping Car Antenna"
    }
   },
   {
    "id": "cdr-gear-arcane-focus-staff",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arcane-focus-staff",
@@ -2933,12 +3927,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Glitter-Glued Mop Handle"
+   },
+   "lore_display_name": "Glitter-Glued Mop Handle",
+   "picture": "In your hand: Glitter-Glued Mop Handle. A craft project with real consequences.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Quarterstaff (1d6 bludgeoning, Versatile 1d8, Topple) that is also your spellcasting focus.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Glitter-Glued Mop Handle",
+    "display_name": "Glitter-Glued Mop Handle"
    }
   },
   {
    "id": "cdr-gear-arcane-focus-wand",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "arcane-focus-wand",
@@ -2981,12 +3987,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Chopstick With Ambition"
+   },
+   "lore_display_name": "Chopstick With Ambition",
+   "picture": "In your hand: Chopstick With Ambition. Takeout never felt so magical.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Chopstick With Ambition",
+    "display_name": "Chopstick With Ambition"
    }
   },
   {
    "id": "cdr-gear-druidic-focus",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "druidic-focus",
@@ -3029,12 +4046,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Garden-Center Odds and Ends"
+   },
+   "lore_display_name": "Garden-Center Odds and Ends",
+   "picture": "In your hand: Garden-Center Odds and Ends. Everything in it is technically alive.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Garden-Center Odds and Ends",
+    "display_name": "Garden-Center Odds and Ends"
    }
   },
   {
    "id": "cdr-gear-druidic-focus-sprig-of-mistletoe",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "druidic-focus-sprig-of-mistletoe",
@@ -3077,12 +4105,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Plastic Mistletoe Sprig"
+   },
+   "lore_display_name": "Plastic Mistletoe Sprig",
+   "picture": "In your hand: Plastic Mistletoe Sprig. Nature, but the Dollar-Store cut.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Spellcasting focus for Druids and Rangers.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Plastic Mistletoe Sprig",
+    "display_name": "Plastic Mistletoe Sprig"
    }
   },
   {
    "id": "cdr-gear-druidic-focus-wooden-staff",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "druidic-focus-wooden-staff",
@@ -3125,12 +4165,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Houseplant-Wrapped Broom Handle"
+   },
+   "lore_display_name": "Houseplant-Wrapped Broom Handle",
+   "picture": "In your hand: Houseplant-Wrapped Broom Handle. The ficus is the senior druid here.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Quarterstaff that is also your Druid spellcasting focus.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Houseplant-Wrapped Broom Handle",
+    "display_name": "Houseplant-Wrapped Broom Handle"
    }
   },
   {
    "id": "cdr-gear-druidic-focus-yew-wand",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "druidic-focus-yew-wand",
@@ -3173,12 +4225,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Branch Snapped Off the Neighbor's Hedge"
+   },
+   "lore_display_name": "Branch Snapped Off the Neighbor's Hedge",
+   "picture": "In your hand: Branch Snapped Off the Neighbor's Hedge. Pruned by a trespasser with intentions.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Branch Snapped Off the Neighbor's Hedge",
+    "display_name": "Branch Snapped Off the Neighbor's Hedge"
    }
   },
   {
    "id": "cdr-gear-holy-symbol",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "holy-symbol",
@@ -3221,12 +4284,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Dashboard Saint on a Lanyard"
+   },
+   "lore_display_name": "Dashboard Saint on a Lanyard",
+   "picture": "In your hand: Dashboard Saint on a Lanyard. Protects drivers, travelers, and the occasional Crawler.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Spellcasting focus for Clerics and Paladins.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Dashboard Saint on a Lanyard",
+    "display_name": "Dashboard Saint on a Lanyard"
    }
   },
   {
    "id": "cdr-gear-holy-symbol-amulet",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "holy-symbol-amulet",
@@ -3269,12 +4344,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gas-Station Saint Medal"
+   },
+   "lore_display_name": "Gas-Station Saint Medal",
+   "picture": "In your hand: Gas-Station Saint Medal. Blessed by a clerk who took a coffee break.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Gas-Station Saint Medal",
+    "display_name": "Gas-Station Saint Medal"
    }
   },
   {
    "id": "cdr-gear-holy-symbol-emblem",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "holy-symbol-emblem",
@@ -3317,12 +4403,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Iron-On Emblem Patch"
+   },
+   "lore_display_name": "Iron-On Emblem Patch",
+   "picture": "In your hand: Iron-On Emblem Patch. Faith, sold in packs of two.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Iron-On Emblem Patch",
+    "display_name": "Iron-On Emblem Patch"
    }
   },
   {
    "id": "cdr-gear-holy-symbol-reliquary",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "holy-symbol-reliquary",
@@ -3365,12 +4462,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pill-Case Reliquary"
+   },
+   "lore_display_name": "Pill-Case Reliquary",
+   "picture": "In your hand: Pill-Case Reliquary. Contains what the label says. Probably.",
+   "local": {
+    "playable": false,
+    "kind": "focus",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Pill-Case Reliquary",
+    "display_name": "Pill-Case Reliquary"
    }
   },
   {
    "id": "cdr-gear-acid",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "acid",
@@ -3413,12 +4521,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Battery-Acid Slushie"
+   },
+   "lore_display_name": "Battery-Acid Slushie",
+   "picture": "In your hand: Battery-Acid Slushie. Brain freeze is the least of your concerns.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Battery-Acid Slushie",
+    "display_name": "Battery-Acid Slushie"
    }
   },
   {
    "id": "cdr-gear-alchemists-fire",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "alchemists-fire",
@@ -3461,12 +4580,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Flaming Hot Nacho Cheese Pouch"
+   },
+   "lore_display_name": "Flaming Hot Nacho Cheese Pouch",
+   "picture": "In your hand: Flaming Hot Nacho Cheese Pouch. Extra hot. Extra cheese. Extra problem.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Flaming Hot Nacho Cheese Pouch",
+    "display_name": "Flaming Hot Nacho Cheese Pouch"
    }
   },
   {
    "id": "cdr-gear-antitoxin",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "antitoxin",
@@ -3509,12 +4639,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gas-Station Pepto, Chewable"
+   },
+   "lore_display_name": "Gas-Station Pepto, Chewable",
+   "picture": "In your hand: Gas-Station Pepto, Chewable. Chalky cure for dubious meals.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Gas-Station Pepto, Chewable",
+    "display_name": "Gas-Station Pepto, Chewable"
    }
   },
   {
    "id": "cdr-gear-backpack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "backpack",
@@ -3557,12 +4698,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Lost-and-Found Backpack"
+   },
+   "lore_display_name": "Lost-and-Found Backpack",
+   "picture": "In your hand: Lost-and-Found Backpack. Someone is missing this. They have bigger problems now.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds 30 lb.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Lost-and-Found Backpack",
+    "display_name": "Lost-and-Found Backpack"
    }
   },
   {
    "id": "cdr-gear-ball-bearings",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "ball-bearings",
@@ -3605,12 +4758,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bag of Lost Marbles (Not Yours)"
+   },
+   "lore_display_name": "Bag of Lost Marbles (Not Yours)",
+   "picture": "In your hand: Bag of Lost Marbles (Not Yours). Sorry, kid. The dungeon needs them.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Spill on a 10 ft square: DC 10 Dex save or fall prone.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Bag of Lost Marbles (Not Yours)",
+    "display_name": "Bag of Lost Marbles (Not Yours)"
    }
   },
   {
    "id": "cdr-gear-barrel",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "barrel",
@@ -3653,12 +4818,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pickle Barrel, Previous Tenant Unknown"
+   },
+   "lore_display_name": "Pickle Barrel, Previous Tenant Unknown",
+   "picture": "In your hand: Pickle Barrel, Previous Tenant Unknown. Smells like a decision made years ago.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Pickle Barrel, Previous Tenant Unknown",
+    "display_name": "Pickle Barrel, Previous Tenant Unknown"
    }
   },
   {
    "id": "cdr-gear-basket",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "basket",
@@ -3701,12 +4877,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Easter Basket, Post-Easter"
+   },
+   "lore_display_name": "Easter Basket, Post-Easter",
+   "picture": "In your hand: Easter Basket, Post-Easter. Plastic grass still in the corners.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Easter Basket, Post-Easter",
+    "display_name": "Easter Basket, Post-Easter"
    }
   },
   {
    "id": "cdr-gear-bedroll",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "bedroll",
@@ -3749,12 +4936,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gym-Locker Sleeping Bag"
+   },
+   "lore_display_name": "Gym-Locker Sleeping Bag",
+   "picture": "In your hand: Gym-Locker Sleeping Bag. Faint hint of old sneaker. Surprisingly comfortable.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Sleeping gear.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Gym-Locker Sleeping Bag",
+    "display_name": "Gym-Locker Sleeping Bag"
    }
   },
   {
    "id": "cdr-gear-bell",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "bell",
@@ -3797,12 +4996,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Staff-Lounge Hand Bell"
+   },
+   "lore_display_name": "Staff-Lounge Hand Bell",
+   "picture": "In your hand: Staff-Lounge Hand Bell. Rings for attention. Receives none.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Staff-Lounge Hand Bell",
+    "display_name": "Staff-Lounge Hand Bell"
    }
   },
   {
    "id": "cdr-gear-blanket",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "blanket",
@@ -3845,12 +5055,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Waiting-Room Blanket"
+   },
+   "lore_display_name": "Waiting-Room Blanket",
+   "picture": "In your hand: Waiting-Room Blanket. Warm. Damp. Do not ask.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Waiting-Room Blanket",
+    "display_name": "Waiting-Room Blanket"
    }
   },
   {
    "id": "cdr-gear-block-and-tackle",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "block-and-tackle",
@@ -3893,12 +5114,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Curtain Rigging Pulley, Stage Left"
+   },
+   "lore_display_name": "Curtain Rigging Pulley, Stage Left",
+   "picture": "In your hand: Curtain Rigging Pulley, Stage Left. Lifts heavy things. Drops heavier ones.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Curtain Rigging Pulley, Stage Left",
+    "display_name": "Curtain Rigging Pulley, Stage Left"
    }
   },
   {
    "id": "cdr-gear-book",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "book",
@@ -3941,12 +5173,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Paperback Someone Else Annotated"
+   },
+   "lore_display_name": "Paperback Someone Else Annotated",
+   "picture": "In your hand: Paperback Someone Else Annotated. The margin notes are better than the plot.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "A bound book of lore or prayers.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Paperback Someone Else Annotated",
+    "display_name": "Paperback Someone Else Annotated"
    }
   },
   {
    "id": "cdr-gear-glass-bottle",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "glass-bottle",
@@ -3989,12 +5233,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Empty Bottle, Deposit Pending"
+   },
+   "lore_display_name": "Empty Bottle, Deposit Pending",
+   "picture": "In your hand: Empty Bottle, Deposit Pending. Worth five cents somewhere nicer.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Empty Bottle, Deposit Pending",
+    "display_name": "Empty Bottle, Deposit Pending"
    }
   },
   {
    "id": "cdr-gear-bucket",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "bucket",
@@ -4037,12 +5292,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Janitor's Bucket, Contents Unknown"
+   },
+   "lore_display_name": "Janitor's Bucket, Contents Unknown",
+   "picture": "In your hand: Janitor's Bucket, Contents Unknown. Do not look. Do not smell.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Janitor's Bucket, Contents Unknown",
+    "display_name": "Janitor's Bucket, Contents Unknown"
    }
   },
   {
    "id": "cdr-gear-caltrops",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "caltrops",
@@ -4085,12 +5351,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bag of LEGO, Barefoot Edition"
+   },
+   "lore_display_name": "Bag of LEGO, Barefoot Edition",
+   "picture": "In your hand: Bag of LEGO, Barefoot Edition. Every parent's nightmare, now weaponized.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Cover a 5 ft square: DC 15 Dex save or take 1 piercing and stop moving.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Bag of LEGO, Barefoot Edition",
+    "display_name": "Bag of LEGO, Barefoot Edition"
    }
   },
   {
    "id": "cdr-gear-candle",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "candle",
@@ -4133,12 +5411,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Dressing-Room Candle, Scented Like a Funeral"
+   },
+   "lore_display_name": "Dressing-Room Candle, Scented Like a Funeral",
+   "picture": "In your hand: Dressing-Room Candle, Scented Like a Funeral. Mood lighting for the end times.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Dressing-Room Candle, Scented Like a Funeral",
+    "display_name": "Dressing-Room Candle, Scented Like a Funeral"
    }
   },
   {
    "id": "cdr-gear-crossbow-bolt-case",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "crossbow-bolt-case",
@@ -4181,12 +5470,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fishing-Tackle Box, Bolts Only"
+   },
+   "lore_display_name": "Fishing-Tackle Box, Bolts Only",
+   "picture": "In your hand: Fishing-Tackle Box, Bolts Only. No fish. Many regrets.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Fishing-Tackle Box, Bolts Only",
+    "display_name": "Fishing-Tackle Box, Bolts Only"
    }
   },
   {
    "id": "cdr-gear-map-or-scroll-case",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "map-or-scroll-case",
@@ -4229,12 +5529,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Poster Tube, Slightly Dented"
+   },
+   "lore_display_name": "Poster Tube, Slightly Dented",
+   "picture": "In your hand: Poster Tube, Slightly Dented. Home to many maps and one confused spider.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Poster Tube, Slightly Dented",
+    "display_name": "Poster Tube, Slightly Dented"
    }
   },
   {
    "id": "cdr-gear-chain",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "chain",
@@ -4277,12 +5588,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bike-Lock Chain Missing the Lock"
+   },
+   "lore_display_name": "Bike-Lock Chain Missing the Lock",
+   "picture": "In your hand: Bike-Lock Chain Missing the Lock. Missing the lock, long on attitude.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "10 HP, DC 20 Strength to burst.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Bike-Lock Chain Missing the Lock",
+    "display_name": "Bike-Lock Chain Missing the Lock"
    }
   },
   {
    "id": "cdr-gear-chest",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "chest",
@@ -4325,12 +5648,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Footlocker With a Name Scratched Off"
+   },
+   "lore_display_name": "Footlocker With a Name Scratched Off",
+   "picture": "In your hand: Footlocker With a Name Scratched Off. Whoever owned it left in a hurry.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Footlocker With a Name Scratched Off",
+    "display_name": "Footlocker With a Name Scratched Off"
    }
   },
   {
    "id": "cdr-gear-climbers-kit",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "climbers-kit",
@@ -4373,12 +5707,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hardware-Store Harness (Pitons Included, Regrettably)"
+   },
+   "lore_display_name": "Hardware-Store Harness (Pitons Included, Regrettably)",
+   "picture": "In your hand: Hardware-Store Harness (Pitons Included, Regrettably). Assembly required. Instructions in a language of screaming.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Hardware-Store Harness (Pitons Included, Regrettably)",
+    "display_name": "Hardware-Store Harness (Pitons Included, Regrettably)"
    }
   },
   {
    "id": "cdr-gear-fine-clothes",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "fine-clothes",
@@ -4421,12 +5766,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Midterm Blazer, Embroidered STAFF"
+   },
+   "lore_display_name": "Midterm Blazer, Embroidered STAFF",
+   "picture": "In your hand: Midterm Blazer, Embroidered STAFF. Wear it to look important. Do not get caught.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Clothing; shows wealth and rank.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Midterm Blazer, Embroidered STAFF",
+    "display_name": "Midterm Blazer, Embroidered STAFF"
    }
   },
   {
    "id": "cdr-gear-travelers-clothes",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "travelers-clothes",
@@ -4469,12 +5826,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Thrift-Store Road-Trip Outfit"
+   },
+   "lore_display_name": "Thrift-Store Road-Trip Outfit",
+   "picture": "In your hand: Thrift-Store Road-Trip Outfit. Slightly stained. Fully committed.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Clothing; no mechanics.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Thrift-Store Road-Trip Outfit",
+    "display_name": "Thrift-Store Road-Trip Outfit"
    }
   },
   {
    "id": "cdr-gear-component-pouch",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "component-pouch",
@@ -4517,12 +5886,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fanny Pack of Random Junk"
+   },
+   "lore_display_name": "Fanny Pack of Random Junk",
+   "picture": "In your hand: Fanny Pack of Random Junk. Contains everything and nothing, depending on the spell.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds spell material components; usable as a focus where allowed.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Fanny Pack of Random Junk",
+    "display_name": "Fanny Pack of Random Junk"
    }
   },
   {
    "id": "cdr-gear-costume",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "costume",
@@ -4565,12 +5946,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Mascot Head, Sweaty (Not That One)"
+   },
+   "lore_display_name": "Mascot Head, Sweaty (Not That One)",
+   "picture": "In your hand: Mascot Head, Sweaty (Not That One). The head stays on. The questions stay unanswered.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Clothing for performing or disguise.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Mascot Head, Sweaty (Not That One)",
+    "display_name": "Mascot Head, Sweaty (Not That One)"
    }
   },
   {
    "id": "cdr-gear-crowbar",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "crowbar",
@@ -4613,12 +6006,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Paint-Can Pry Bar"
+   },
+   "lore_display_name": "Paint-Can Pry Bar",
+   "picture": "In your hand: Paint-Can Pry Bar. Opens cans. Opens crates. Opens opportunities.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Advantage on Strength checks where leverage helps.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Paint-Can Pry Bar",
+    "display_name": "Paint-Can Pry Bar"
    }
   },
   {
    "id": "cdr-gear-flask",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "flask",
@@ -4661,12 +6066,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hip Flask, Engraved To Someone Else"
+   },
+   "lore_display_name": "Hip Flask, Engraved To Someone Else",
+   "picture": "In your hand: Hip Flask, Engraved To Someone Else. Never ask who Dave was.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Hip Flask, Engraved To Someone Else",
+    "display_name": "Hip Flask, Engraved To Someone Else"
    }
   },
   {
    "id": "cdr-gear-grappling-hook",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "grappling-hook",
@@ -4709,12 +6125,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Coat-Hanger Grapple"
+   },
+   "lore_display_name": "Coat-Hanger Grapple",
+   "picture": "In your hand: Coat-Hanger Grapple. Bent into hope.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Attach to a rope; throw to anchor on a ledge.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Coat-Hanger Grapple",
+    "display_name": "Coat-Hanger Grapple"
    }
   },
   {
    "id": "cdr-gear-healers-kit",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "healers-kit",
@@ -4757,12 +6185,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Break-Room First-Aid Kit, Lightly Bitten"
+   },
+   "lore_display_name": "Break-Room First-Aid Kit, Lightly Bitten",
+   "picture": "In your hand: Break-Room First-Aid Kit, Lightly Bitten. One bandage left and it has teeth marks.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "10 uses. Utilize action: stabilize a creature at 0 HP without a check.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Break-Room First-Aid Kit, Lightly Bitten",
+    "display_name": "Break-Room First-Aid Kit, Lightly Bitten"
    }
   },
   {
    "id": "cdr-gear-holy-water",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "holy-water",
@@ -4805,12 +6245,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Communion Cup, Chilled"
+   },
+   "lore_display_name": "Communion Cup, Chilled",
+   "picture": "In your hand: Communion Cup, Chilled. Served cold. Banishes things warm.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Communion Cup, Chilled",
+    "display_name": "Communion Cup, Chilled"
    }
   },
   {
    "id": "cdr-gear-hunting-trap",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "hunting-trap",
@@ -4853,12 +6304,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Raccoon Trap, Industrial"
+   },
+   "lore_display_name": "Raccoon Trap, Industrial",
+   "picture": "In your hand: Raccoon Trap, Industrial. Catches raccoons, Crawlers, and bad ideas.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Raccoon Trap, Industrial",
+    "display_name": "Raccoon Trap, Industrial"
    }
   },
   {
    "id": "cdr-gear-ink",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "ink",
@@ -4901,12 +6363,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Printer Cartridge, Leaking"
+   },
+   "lore_display_name": "Printer Cartridge, Leaking",
+   "picture": "In your hand: Printer Cartridge, Leaking. Ink is expensive; leaks are free.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Printer Cartridge, Leaking",
+    "display_name": "Printer Cartridge, Leaking"
    }
   },
   {
    "id": "cdr-gear-ink-pen",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "ink-pen",
@@ -4949,12 +6422,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hotel Pen, Chewed"
+   },
+   "lore_display_name": "Hotel Pen, Chewed",
+   "picture": "In your hand: Hotel Pen, Chewed. Property of a better establishment.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Hotel Pen, Chewed",
+    "display_name": "Hotel Pen, Chewed"
    }
   },
   {
    "id": "cdr-gear-jug",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "jug",
@@ -4997,12 +6481,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Milk Jug, Rinsed Once"
+   },
+   "lore_display_name": "Milk Jug, Rinsed Once",
+   "picture": "In your hand: Milk Jug, Rinsed Once. Once is optimistic.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Milk Jug, Rinsed Once",
+    "display_name": "Milk Jug, Rinsed Once"
    }
   },
   {
    "id": "cdr-gear-ladder",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "ladder",
@@ -5045,12 +6540,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Step Stool Optimistically Called a Ladder"
+   },
+   "lore_display_name": "Step Stool Optimistically Called a Ladder",
+   "picture": "In your hand: Step Stool Optimistically Called a Ladder. Rated for exactly one hopeful Crawler.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Step Stool Optimistically Called a Ladder",
+    "display_name": "Step Stool Optimistically Called a Ladder"
    }
   },
   {
    "id": "cdr-gear-lamp",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "lamp",
@@ -5093,12 +6599,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Desk Lamp With a Cord Cut Off"
+   },
+   "lore_display_name": "Desk Lamp With a Cord Cut Off",
+   "picture": "In your hand: Desk Lamp With a Cord Cut Off. Unplugged and unbothered.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Bright light 15 ft + dim 15 ft; oil lasts 6 hours.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Desk Lamp With a Cord Cut Off",
+    "display_name": "Desk Lamp With a Cord Cut Off"
    }
   },
   {
    "id": "cdr-gear-bullseye-lantern",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "bullseye-lantern",
@@ -5141,12 +6659,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Spotlight Borrowed From the Drama Club"
+   },
+   "lore_display_name": "Spotlight Borrowed From the Drama Club",
+   "picture": "In your hand: Spotlight Borrowed From the Drama Club. Everyone gets their moment. Aim it where you want.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Spotlight Borrowed From the Drama Club",
+    "display_name": "Spotlight Borrowed From the Drama Club"
    }
   },
   {
    "id": "cdr-gear-hooded-lantern",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "hooded-lantern",
@@ -5189,12 +6718,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Big Honking Flashlight"
+   },
+   "lore_display_name": "Big Honking Flashlight",
+   "picture": "In your hand: Big Honking Flashlight. Batteries sold separately. The dungeon doesn't sell batteries.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Bright light 30 ft + dim 30 ft (or dim only when hooded); 1 flask of oil lasts 6 hours.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Big Honking Flashlight",
+    "display_name": "Big Honking Flashlight"
    }
   },
   {
    "id": "cdr-gear-lock",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "lock",
@@ -5237,12 +6778,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Padlock for a Locker Nobody Owns"
+   },
+   "lore_display_name": "Padlock for a Locker Nobody Owns",
+   "picture": "In your hand: Padlock for a Locker Nobody Owns. Keeps out the problem you do not have yet.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Padlock for a Locker Nobody Owns",
+    "display_name": "Padlock for a Locker Nobody Owns"
    }
   },
   {
    "id": "cdr-gear-magnifying-glass",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "magnifying-glass",
@@ -5285,12 +6837,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Dean's List Magnifying Glass"
+   },
+   "lore_display_name": "Dean's List Magnifying Glass",
+   "picture": "In your hand: Dean's List Magnifying Glass. Finds clues, spiders, and your own mistakes.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Dean's List Magnifying Glass",
+    "display_name": "Dean's List Magnifying Glass"
    }
   },
   {
    "id": "cdr-gear-manacles",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "manacles",
@@ -5333,12 +6896,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Plastic Zip-Cuffs"
+   },
+   "lore_display_name": "Plastic Zip-Cuffs",
+   "picture": "In your hand: Plastic Zip-Cuffs. Great for detaining. Terrible at being a long-term solution.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Bind a Small/Medium creature: DC 20 Dex to escape, DC 20 Str to break.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Plastic Zip-Cuffs",
+    "display_name": "Plastic Zip-Cuffs"
    }
   },
   {
    "id": "cdr-gear-map",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "map",
@@ -5381,12 +6956,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Staff Map, Coffee-Stained"
+   },
+   "lore_display_name": "Staff Map, Coffee-Stained",
+   "picture": "In your hand: Staff Map, Coffee-Stained. You are here. Probably. Under the stain.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Staff Map, Coffee-Stained",
+    "display_name": "Staff Map, Coffee-Stained"
    }
   },
   {
    "id": "cdr-gear-mirror",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "mirror",
@@ -5429,12 +7015,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Vanity Mirror, Half the Bulbs Dead"
+   },
+   "lore_display_name": "Vanity Mirror, Half the Bulbs Dead",
+   "picture": "In your hand: Vanity Mirror, Half the Bulbs Dead. Reflects poorly on everyone.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "A small handheld mirror.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Vanity Mirror, Half the Bulbs Dead",
+    "display_name": "Vanity Mirror, Half the Bulbs Dead"
    }
   },
   {
    "id": "cdr-gear-net",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "net",
@@ -5477,12 +7075,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Volleyball Net, Reclaimed"
+   },
+   "lore_display_name": "Volleyball Net, Reclaimed",
+   "picture": "In your hand: Volleyball Net, Reclaimed. Match point. For the enemy.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Volleyball Net, Reclaimed",
+    "display_name": "Volleyball Net, Reclaimed"
    }
   },
   {
    "id": "cdr-gear-oil",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "oil",
@@ -5525,12 +7134,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Cooking Spray, Industrial Drum Size"
+   },
+   "lore_display_name": "Cooking Spray, Industrial Drum Size",
+   "picture": "In your hand: Cooking Spray, Industrial Drum Size. Slips, burns, and ruins pans.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Fuel a lamp for 6 hours, or throw: 5 fire damage on a hit (ignited).",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Cooking Spray, Industrial Drum Size",
+    "display_name": "Cooking Spray, Industrial Drum Size"
    }
   },
   {
    "id": "cdr-gear-paper",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "paper",
@@ -5573,18 +7194,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sticky-Note Pad, Neon"
+   },
+   "lore_display_name": "Sticky-Note Pad, Neon",
+   "picture": "In your hand: Sticky-Note Pad, Neon. Reminders. Bright ones. Unwelcome ones.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Sticky-Note Pad, Neon",
+    "display_name": "Sticky-Note Pad, Neon"
    }
   },
   {
    "id": "cdr-gear-parchment",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "parchment",
    "srd_name": "Parchment",
-   "display_name": "Printer Paper",
-   "combined_label": "Printer Paper (Parchment)",
+   "display_name": "Shrink-Wrapped Ream of Printer Paper",
+   "combined_label": "Shrink-Wrapped Ream of Printer Paper (Parchment)",
    "category": "gear",
    "subcategory": "misc",
    "snark": "Jam not included. Jam guaranteed.",
@@ -5614,19 +7246,31 @@
    },
    "state_hooks": {
     "inventory_srd_id": "parchment",
-    "display": "Printer Paper (Parchment)",
+    "display": "Shrink-Wrapped Ream of Printer Paper (Parchment)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Printer Paper"
+   },
+   "lore_display_name": "Printer Paper",
+   "picture": "In your hand: Shrink-Wrapped Ream of Printer Paper. Jam not included. Jam guaranteed.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "One sheet for writing.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Printer Paper",
+    "display_name": "Shrink-Wrapped Ream of Printer Paper"
    }
   },
   {
    "id": "cdr-gear-perfume",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "perfume",
@@ -5669,12 +7313,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Dressing-Room Body Spray, Industrial Lilac"
+   },
+   "lore_display_name": "Dressing-Room Body Spray, Industrial Lilac",
+   "picture": "In your hand: Dressing-Room Body Spray, Industrial Lilac. Fragrant enough to qualify as a weapon.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "A vial of scent.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Dressing-Room Body Spray, Industrial Lilac",
+    "display_name": "Dressing-Room Body Spray, Industrial Lilac"
    }
   },
   {
    "id": "cdr-gear-basic-poison",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "basic-poison",
@@ -5717,12 +7373,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Unlabeled Bottle From Under the Sink"
+   },
+   "lore_display_name": "Unlabeled Bottle From Under the Sink",
+   "picture": "In your hand: Unlabeled Bottle From Under the Sink. Do not mix with bleach. Do mix with enemies.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Unlabeled Bottle From Under the Sink",
+    "display_name": "Unlabeled Bottle From Under the Sink"
    }
   },
   {
    "id": "cdr-gear-pole",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "pole",
@@ -5765,18 +7432,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Telescoping Light-Bulb Pole"
+   },
+   "lore_display_name": "Telescoping Light-Bulb Pole",
+   "picture": "In your hand: Telescoping Light-Bulb Pole. Ten feet of poking reach, with a socket on the end.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Telescoping Light-Bulb Pole",
+    "display_name": "Telescoping Light-Bulb Pole"
    }
   },
   {
    "id": "cdr-gear-iron-pot",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "iron-pot",
    "srd_name": "Pot, Iron",
-   "display_name": "Cast-Iron Pot",
-   "combined_label": "Cast-Iron Pot (Pot, Iron)",
+   "display_name": "Cast-Iron Pot, Still Has Chili",
+   "combined_label": "Cast-Iron Pot, Still Has Chili (Pot, Iron)",
    "category": "gear",
    "subcategory": "camping",
    "snark": "Heavy, durable, and judgmental.",
@@ -5806,19 +7484,31 @@
    },
    "state_hooks": {
     "inventory_srd_id": "iron-pot",
-    "display": "Cast-Iron Pot (Pot, Iron)",
+    "display": "Cast-Iron Pot, Still Has Chili (Pot, Iron)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Cast-Iron Pot"
+   },
+   "lore_display_name": "Cast-Iron Pot",
+   "picture": "In your hand: Cast-Iron Pot, Still Has Chili. Heavy, durable, and judgmental.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds 1 gallon.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Cast-Iron Pot",
+    "display_name": "Cast-Iron Pot, Still Has Chili"
    }
   },
   {
    "id": "cdr-gear-potion-of-healing",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "potion-of-healing",
@@ -5861,18 +7551,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sports Drink, Mystery Flavor"
+   },
+   "lore_display_name": "Sports Drink, Mystery Flavor",
+   "picture": "In your hand: Sports Drink, Mystery Flavor. Tastes like the color blue and a minor miracle.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Sports Drink, Mystery Flavor",
+    "display_name": "Sports Drink, Mystery Flavor"
    }
   },
   {
    "id": "cdr-gear-pouch",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "pouch",
    "srd_name": "Pouch",
-   "display_name": "Ziplock Pouch",
-   "combined_label": "Ziplock Pouch (Pouch)",
+   "display_name": "Suspicious Ziplock Pouch",
+   "combined_label": "Suspicious Ziplock Pouch (Pouch)",
    "category": "gear",
    "subcategory": "container",
    "snark": "Zip slightly cracked. Shows its age.",
@@ -5902,19 +7603,31 @@
    },
    "state_hooks": {
     "inventory_srd_id": "pouch",
-    "display": "Ziplock Pouch (Pouch)",
+    "display": "Suspicious Ziplock Pouch (Pouch)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Ziplock Pouch"
+   },
+   "lore_display_name": "Ziplock Pouch",
+   "picture": "In your hand: Suspicious Ziplock Pouch. Zip slightly cracked. Shows its age.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds 6 lb of small items.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Ziplock Pouch",
+    "display_name": "Suspicious Ziplock Pouch"
    }
   },
   {
    "id": "cdr-gear-quiver",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "quiver",
@@ -5957,12 +7670,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Quiver Made From a Cut-Up Backpack"
+   },
+   "lore_display_name": "Quiver Made From a Cut-Up Backpack",
+   "picture": "In your hand: Quiver Made From a Cut-Up Backpack. Upcycling is a coping strategy.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds 20 arrows or 20 bolts.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Quiver Made From a Cut-Up Backpack",
+    "display_name": "Quiver Made From a Cut-Up Backpack"
    }
   },
   {
    "id": "cdr-gear-portable-ram",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "portable-ram",
@@ -6005,12 +7730,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fire-Department Door Ram, Surplus"
+   },
+   "lore_display_name": "Fire-Department Door Ram, Surplus",
+   "picture": "In your hand: Fire-Department Door Ram, Surplus. Knocks. Then really knocks.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Fire-Department Door Ram, Surplus",
+    "display_name": "Fire-Department Door Ram, Surplus"
    }
   },
   {
    "id": "cdr-gear-rations",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "rations",
@@ -6053,12 +7789,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)"
+   },
+   "lore_display_name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)",
+   "picture": "In your hand: Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019). Chewy, salty, and nobody asks what animal.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "1 day of food, 2 lb.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)",
+    "display_name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)"
    }
   },
   {
    "id": "cdr-gear-robe",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "robe",
@@ -6101,12 +7849,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sad Hotel Robe"
+   },
+   "lore_display_name": "Sad Hotel Robe",
+   "picture": "In your hand: Sad Hotel Robe. Monogrammed. Stolen. Fits nobody.",
+   "local": {
+    "playable": true,
+    "kind": "clothing",
+    "ac_bonus": 0,
+    "text": "Clothing; no AC.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Sad Hotel Robe",
+    "display_name": "Sad Hotel Robe"
    }
   },
   {
    "id": "cdr-gear-rope",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "rope",
@@ -6149,12 +7909,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Extension Cord, Fifty Feet, Unplugged"
+   },
+   "lore_display_name": "Extension Cord, Fifty Feet, Unplugged",
+   "picture": "In your hand: Extension Cord, Fifty Feet, Unplugged. Strong enough to climb. Weak enough to disappoint.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "2 HP, DC 17 Strength to burst.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Extension Cord, Fifty Feet, Unplugged",
+    "display_name": "Extension Cord, Fifty Feet, Unplugged"
    }
   },
   {
    "id": "cdr-gear-sack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "sack",
@@ -6197,18 +7969,29 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Plastic Grocery Bag, Reused 40 Times"
+   },
+   "lore_display_name": "Plastic Grocery Bag, Reused 40 Times",
+   "picture": "In your hand: Plastic Grocery Bag, Reused 40 Times. Holds the world, barely.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Plastic Grocery Bag, Reused 40 Times",
+    "display_name": "Plastic Grocery Bag, Reused 40 Times"
    }
   },
   {
    "id": "cdr-gear-shovel",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "shovel",
    "srd_name": "Shovel",
-   "display_name": "Snow Shovel",
-   "combined_label": "Snow Shovel (Shovel)",
+   "display_name": "Off-Season Snow Shovel",
+   "combined_label": "Off-Season Snow Shovel (Shovel)",
    "category": "gear",
    "subcategory": "misc",
    "snark": "Out of season. Out of options.",
@@ -6238,19 +8021,31 @@
    },
    "state_hooks": {
     "inventory_srd_id": "shovel",
-    "display": "Snow Shovel (Shovel)",
+    "display": "Off-Season Snow Shovel (Shovel)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Snow Shovel"
+   },
+   "lore_display_name": "Snow Shovel",
+   "picture": "In your hand: Off-Season Snow Shovel. Out of season. Out of options.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Dig.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Snow Shovel",
+    "display_name": "Off-Season Snow Shovel"
    }
   },
   {
    "id": "cdr-gear-signal-whistle",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "signal-whistle",
@@ -6293,12 +8088,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hotel Desk Bell, Ding Ding"
+   },
+   "lore_display_name": "Hotel Desk Bell, Ding Ding",
+   "picture": "In your hand: Hotel Desk Bell, Ding Ding. Ring for service. Service is a crawler horde.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Hotel Desk Bell, Ding Ding",
+    "display_name": "Hotel Desk Bell, Ding Ding"
    }
   },
   {
    "id": "cdr-gear-spell-scroll-cantrip",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "spell-scroll-cantrip",
@@ -6341,12 +8147,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Cantrip Sticky Note"
+   },
+   "lore_display_name": "Cantrip Sticky Note",
+   "picture": "In your hand: Cantrip Sticky Note. Say it quick before the glue gives out.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Cantrip Sticky Note",
+    "display_name": "Cantrip Sticky Note"
    }
   },
   {
    "id": "cdr-gear-spell-scroll-level-1",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "spell-scroll-level-1",
@@ -6389,12 +8206,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Level 1 Index Card"
+   },
+   "lore_display_name": "Level 1 Index Card",
+   "picture": "In your hand: Level 1 Index Card. One use only. Laminate at your own risk.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Level 1 Index Card",
+    "display_name": "Level 1 Index Card"
    }
   },
   {
    "id": "cdr-gear-iron-spikes",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "iron-spikes",
@@ -6437,12 +8265,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bag of Railroad Spikes"
+   },
+   "lore_display_name": "Bag of Railroad Spikes",
+   "picture": "In your hand: Bag of Railroad Spikes. Holds doors shut. Holds grudges tighter.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Bag of Railroad Spikes",
+    "display_name": "Bag of Railroad Spikes"
    }
   },
   {
    "id": "cdr-gear-spyglass",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "spyglass",
@@ -6485,12 +8324,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Souvenir Telescope From a Scenic Overlook"
+   },
+   "lore_display_name": "Souvenir Telescope From a Scenic Overlook",
+   "picture": "In your hand: Souvenir Telescope From a Scenic Overlook. Costs a quarter at the overlook. Costs far more here.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Souvenir Telescope From a Scenic Overlook",
+    "display_name": "Souvenir Telescope From a Scenic Overlook"
    }
   },
   {
    "id": "cdr-gear-string",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "string",
@@ -6533,12 +8383,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Ball of Twine, Kitten-Tested"
+   },
+   "lore_display_name": "Ball of Twine, Kitten-Tested",
+   "picture": "In your hand: Ball of Twine, Kitten-Tested. Frayed on one end, claimed by a cat.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Ball of Twine, Kitten-Tested",
+    "display_name": "Ball of Twine, Kitten-Tested"
    }
   },
   {
    "id": "cdr-gear-tent",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "tent",
@@ -6581,18 +8442,30 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Dorm-Room Pup Tent"
+   },
+   "lore_display_name": "Dorm-Room Pup Tent",
+   "picture": "In your hand: Dorm-Room Pup Tent. Fits two, if they are very good friends.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Sleeps two.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Dorm-Room Pup Tent",
+    "display_name": "Dorm-Room Pup Tent"
    }
   },
   {
    "id": "cdr-gear-tinderbox",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "tinderbox",
    "srd_name": "Tinderbox",
-   "display_name": "Matchbook",
-   "combined_label": "Matchbook (Tinderbox)",
+   "display_name": "Matchbook from a Bar That Burned",
+   "combined_label": "Matchbook from a Bar That Burned (Tinderbox)",
    "category": "gear",
    "subcategory": "camping",
    "snark": "Last match lit. Please do not ask who lit the others.",
@@ -6622,19 +8495,31 @@
    },
    "state_hooks": {
     "inventory_srd_id": "tinderbox",
-    "display": "Matchbook (Tinderbox)",
+    "display": "Matchbook from a Bar That Burned (Tinderbox)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Matchbook"
+   },
+   "lore_display_name": "Matchbook",
+   "picture": "In your hand: Matchbook from a Bar That Burned. Last match lit. Please do not ask who lit the others.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Light a fire (1 minute, or 1 action for a torch).",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Matchbook",
+    "display_name": "Matchbook from a Bar That Burned"
    }
   },
   {
    "id": "cdr-gear-torch",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "torch",
@@ -6677,12 +8562,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Tiki Torch, Unlicensed"
+   },
+   "lore_display_name": "Tiki Torch, Unlicensed",
+   "picture": "In your hand: Tiki Torch, Unlicensed. Backyard luau energy in a very dark room.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Bright light 20 ft + dim 20 ft, burns 1 hour.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Tiki Torch, Unlicensed",
+    "display_name": "Tiki Torch, Unlicensed"
    }
   },
   {
    "id": "cdr-gear-vial",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "vial",
@@ -6725,12 +8622,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Sample Vial From the Clinic"
+   },
+   "lore_display_name": "Sample Vial From the Clinic",
+   "picture": "In your hand: Sample Vial From the Clinic. Previously contained something. Previously.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Sample Vial From the Clinic",
+    "display_name": "Sample Vial From the Clinic"
    }
   },
   {
    "id": "cdr-gear-waterskin",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "waterskin",
@@ -6773,12 +8681,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Squeeze Water Bottle"
+   },
+   "lore_display_name": "Squeeze Water Bottle",
+   "picture": "In your hand: Squeeze Water Bottle. BPA status unknown. Dungeon doesn't care.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds 4 pints.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Squeeze Water Bottle",
+    "display_name": "Squeeze Water Bottle"
    }
   },
   {
    "id": "cdr-gear-spellbook",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "spellbook",
@@ -6821,12 +8741,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Cracked Phone App"
+   },
+   "lore_display_name": "Cracked Phone App",
+   "picture": "In your hand: Cracked Phone App. Spells autosave. Rarely sync.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Holds your wizard spells; ritual-cast from it.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Cracked Phone App",
+    "display_name": "Cracked Phone App"
    }
   },
   {
    "id": "cdr-gear-heal-critter-potion",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "heal-critter-potion",
@@ -6865,12 +8797,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Good Boy Gulp, Shaken Until Brown"
+   },
+   "lore_display_name": "Good Boy Gulp, Shaken Until Brown",
+   "picture": "In your hand: Good Boy Gulp, Shaken Until Brown. Only works if the pet drinks it. Ordinary healing does nothing for pets. Do not drink it yourself.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Restores hit points of a pet-class creature only; ordinary healing potions and scrolls do nothing on pets (M-090). The pet must drink it (K-121). Suggested dice, mirroring Potion of Healing (2d4 + 2 HP): Syndicate to set.",
+    "note": "The card already has rules text. It does not include a confirmed damage or heal number, so the engine will not invent one.",
+    "source": "card.mechanics",
+    "lore_display_name": "Good Boy Gulp, Shaken Until Brown",
+    "display_name": "Good Boy Gulp, Shaken Until Brown"
    }
   },
   {
    "id": "cdr-gear-pet-carrier",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "pet-carrier",
@@ -6909,12 +8853,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fold-Flat Kennel With an Impossible Interior"
+   },
+   "lore_display_name": "Fold-Flat Kennel With an Impossible Interior",
+   "picture": "In your hand: Fold-Flat Kennel With an Impossible Interior. Fits one bonded pet in your inventory, safely. Where the pet goes while inside is not our department.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Magical carrier: lets a bonded pet ride in the owner's inventory without harm (I-012, canon: 'the dungeon's equivalent of a pokeball'). Slot and weight rules: Syndicate to set in the pets rule.",
+    "note": "The card already has rules text. It does not include a confirmed damage or heal number, so the engine will not invent one.",
+    "source": "card.mechanics",
+    "lore_display_name": "Fold-Flat Kennel With an Impossible Interior",
+    "display_name": "Fold-Flat Kennel With an Impossible Interior"
    }
   },
   {
    "id": "cdr-gear-burglars-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "burglars-pack",
@@ -6957,12 +8913,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gym Bag of Suspicious Hardware"
+   },
+   "lore_display_name": "Gym Bag of Suspicious Hardware",
+   "picture": "In your hand: Gym Bag of Suspicious Hardware. The zipper never quite closes. Neither does the explanation.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Backpack, ball bearings, bell, 10 candles, crowbar, hooded lantern, 7 oil flasks, 5 days rations, 50 ft rope, tinderbox, waterskin.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Gym Bag of Suspicious Hardware",
+    "display_name": "Gym Bag of Suspicious Hardware"
    }
   },
   {
    "id": "cdr-gear-diplomats-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "diplomats-pack",
@@ -7005,12 +8973,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Conference Tote Bag, Lanyards Included"
+   },
+   "lore_display_name": "Conference Tote Bag, Lanyards Included",
+   "picture": "In your hand: Conference Tote Bag, Lanyards Included. Network or die. Possibly both.",
+   "local": {
+    "playable": false,
+    "kind": "pack",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Conference Tote Bag, Lanyards Included",
+    "display_name": "Conference Tote Bag, Lanyards Included"
    }
   },
   {
    "id": "cdr-gear-dungeoneers-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "dungeoneers-pack",
@@ -7053,12 +9032,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Maintenance-Closet Duffel"
+   },
+   "lore_display_name": "Maintenance-Closet Duffel",
+   "picture": "In your hand: Maintenance-Closet Duffel. Everything you need to maintain a dungeon you'll never leave.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Backpack, caltrops, crowbar, 2 oil flasks, 10 days rations, 50 ft rope, tinderbox, 10 torches, waterskin.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Maintenance-Closet Duffel",
+    "display_name": "Maintenance-Closet Duffel"
    }
   },
   {
    "id": "cdr-gear-entertainers-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "entertainers-pack",
@@ -7101,12 +9092,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Backstage Roller Bag"
+   },
+   "lore_display_name": "Backstage Roller Bag",
+   "picture": "In your hand: Backstage Roller Bag. One wheel squeaks, as foretold.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Backpack, bedroll, bell, bullseye lantern, 3 costumes, mirror, 8 oil flasks, 9 days rations, tinderbox, waterskin.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Backstage Roller Bag",
+    "display_name": "Backstage Roller Bag"
    }
   },
   {
    "id": "cdr-gear-explorers-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "explorers-pack",
@@ -7149,12 +9152,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Lost-and-Found Duffel, Someone Else's Gym Clothes"
+   },
+   "lore_display_name": "Lost-and-Found Duffel, Someone Else's Gym Clothes",
+   "picture": "In your hand: Lost-and-Found Duffel, Someone Else's Gym Clothes. Pack light, smell heavy.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Backpack, bedroll, 2 oil flasks, 10 days rations, 50 ft rope, tinderbox, 10 torches, waterskin.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Lost-and-Found Duffel, Someone Else's Gym Clothes",
+    "display_name": "Lost-and-Found Duffel, Someone Else's Gym Clothes"
    }
   },
   {
    "id": "cdr-gear-priests-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "priests-pack",
@@ -7197,12 +9212,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Church-Basement Donation Bag"
+   },
+   "lore_display_name": "Church-Basement Donation Bag",
+   "picture": "In your hand: Church-Basement Donation Bag. Folding chairs sold separately. Guilt included.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Backpack, blanket, holy water, lamp, 7 days rations, robe, tinderbox.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Church-Basement Donation Bag",
+    "display_name": "Church-Basement Donation Bag"
    }
   },
   {
    "id": "cdr-gear-scholars-pack",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "scholars-pack",
@@ -7245,12 +9272,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Library Tote With Highlighters"
+   },
+   "lore_display_name": "Library Tote With Highlighters",
+   "picture": "In your hand: Library Tote With Highlighters. Everything is highlighted. Nothing is understood.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Backpack, book, ink and pen, lamp, 10 oil flasks, parchment, tinderbox.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Library Tote With Highlighters",
+    "display_name": "Library Tote With Highlighters"
    }
   },
   {
    "id": "cdr-gear-artisans-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "artisans-tools",
@@ -7307,12 +9346,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Hardware-Store Tool Roll"
+   },
+   "lore_display_name": "Hardware-Store Tool Roll",
+   "picture": "In your hand: Hardware-Store Tool Roll. Pick a trade. The roll covers it. Mostly.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "A set of artisan's tools; proficiency applies to checks with it.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Hardware-Store Tool Roll",
+    "display_name": "Hardware-Store Tool Roll"
    }
   },
   {
    "id": "cdr-gear-alchemists-supplies",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "alchemists-supplies",
@@ -7355,12 +9406,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Confiscated Chemistry Set"
+   },
+   "lore_display_name": "Confiscated Chemistry Set",
+   "picture": "In your hand: Confiscated Chemistry Set. Half the vials say DO NOT.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Confiscated Chemistry Set",
+    "display_name": "Confiscated Chemistry Set"
    }
   },
   {
    "id": "cdr-gear-brewers-supplies",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "brewers-supplies",
@@ -7403,12 +9465,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Home-Brew Kit, Bubbling Ominously"
+   },
+   "lore_display_name": "Home-Brew Kit, Bubbling Ominously",
+   "picture": "In your hand: Home-Brew Kit, Bubbling Ominously. Smells like bread. Hits like a Tuesday.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Home-Brew Kit, Bubbling Ominously",
+    "display_name": "Home-Brew Kit, Bubbling Ominously"
    }
   },
   {
    "id": "cdr-gear-calligraphers-supplies",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "calligraphers-supplies",
@@ -7451,12 +9524,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gel Pens and a Highlighter"
+   },
+   "lore_display_name": "Gel Pens and a Highlighter",
+   "picture": "In your hand: Gel Pens and a Highlighter. Elegant penmanship at a 2-for-1.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Fine writing kit; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Gel Pens and a Highlighter",
+    "display_name": "Gel Pens and a Highlighter"
    }
   },
   {
    "id": "cdr-gear-carpenters-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "carpenters-tools",
@@ -7499,12 +9584,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Dollar-Store Tool Roll"
+   },
+   "lore_display_name": "Dollar-Store Tool Roll",
+   "picture": "In your hand: Dollar-Store Tool Roll. The tape measure is a suggestion.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Build wood structures; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Dollar-Store Tool Roll",
+    "display_name": "Dollar-Store Tool Roll"
    }
   },
   {
    "id": "cdr-gear-cartographers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "cartographers-tools",
@@ -7547,12 +9644,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Road Atlas and Sharpies"
+   },
+   "lore_display_name": "Road Atlas and Sharpies",
+   "picture": "In your hand: Road Atlas and Sharpies. Draw the dungeon. Hope it holds still.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Draw maps; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Road Atlas and Sharpies",
+    "display_name": "Road Atlas and Sharpies"
    }
   },
   {
    "id": "cdr-gear-cobblers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "cobblers-tools",
@@ -7595,12 +9704,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Shoe-Repair Kit, Glue Dried Out"
+   },
+   "lore_display_name": "Shoe-Repair Kit, Glue Dried Out",
+   "picture": "In your hand: Shoe-Repair Kit, Glue Dried Out. Fixes soles. Not souls.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Shoe-Repair Kit, Glue Dried Out",
+    "display_name": "Shoe-Repair Kit, Glue Dried Out"
    }
   },
   {
    "id": "cdr-gear-cooks-utensils",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "cooks-utensils",
@@ -7643,12 +9763,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Spatula and Tongs From a Food Truck"
+   },
+   "lore_display_name": "Spatula and Tongs From a Food Truck",
+   "picture": "In your hand: Spatula and Tongs From a Food Truck. The truck is gone. The seasoning remains.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Spatula and Tongs From a Food Truck",
+    "display_name": "Spatula and Tongs From a Food Truck"
    }
   },
   {
    "id": "cdr-gear-glassblowers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "glassblowers-tools",
@@ -7691,12 +9822,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Blowpipe From a Craft Fair"
+   },
+   "lore_display_name": "Blowpipe From a Craft Fair",
+   "picture": "In your hand: Blowpipe From a Craft Fair. Hot, delicate, and poorly insured.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Blowpipe From a Craft Fair",
+    "display_name": "Blowpipe From a Craft Fair"
    }
   },
   {
    "id": "cdr-gear-jewelers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "jewelers-tools",
@@ -7739,12 +9881,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Loupe and Pliers From a Pawnshop"
+   },
+   "lore_display_name": "Loupe and Pliers From a Pawnshop",
+   "picture": "In your hand: Loupe and Pliers From a Pawnshop. Appraises everything. Values nothing.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Loupe and Pliers From a Pawnshop",
+    "display_name": "Loupe and Pliers From a Pawnshop"
    }
   },
   {
    "id": "cdr-gear-leatherworkers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "leatherworkers-tools",
@@ -7787,12 +9940,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Belt-Punch and Awl Kit"
+   },
+   "lore_display_name": "Belt-Punch and Awl Kit",
+   "picture": "In your hand: Belt-Punch and Awl Kit. Holes in everything, including the plan.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Belt-Punch and Awl Kit",
+    "display_name": "Belt-Punch and Awl Kit"
    }
   },
   {
    "id": "cdr-gear-masons-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "masons-tools",
@@ -7835,12 +9999,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Trowel and Level, Tile-Shop Surplus"
+   },
+   "lore_display_name": "Trowel and Level, Tile-Shop Surplus",
+   "picture": "In your hand: Trowel and Level, Tile-Shop Surplus. Level is crooked. Wall is crooked. Life is crooked.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Trowel and Level, Tile-Shop Surplus",
+    "display_name": "Trowel and Level, Tile-Shop Surplus"
    }
   },
   {
    "id": "cdr-gear-painters-supplies",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "painters-supplies",
@@ -7883,12 +10058,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Paint-by-Numbers Kit, Half Used"
+   },
+   "lore_display_name": "Paint-by-Numbers Kit, Half Used",
+   "picture": "In your hand: Paint-by-Numbers Kit, Half Used. Every number is a lie. Color anyway.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Paint-by-Numbers Kit, Half Used",
+    "display_name": "Paint-by-Numbers Kit, Half Used"
    }
   },
   {
    "id": "cdr-gear-potters-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "potters-tools",
@@ -7931,12 +10117,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Clay Block and a Spinning Office Chair"
+   },
+   "lore_display_name": "Clay Block and a Spinning Office Chair",
+   "picture": "In your hand: Clay Block and a Spinning Office Chair. Throws pots. Throws up. Same chair.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Clay Block and a Spinning Office Chair",
+    "display_name": "Clay Block and a Spinning Office Chair"
    }
   },
   {
    "id": "cdr-gear-smiths-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "smiths-tools",
@@ -7979,12 +10176,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Tongs and a Hammer From a Welding Shop"
+   },
+   "lore_display_name": "Tongs and a Hammer From a Welding Shop",
+   "picture": "In your hand: Tongs and a Hammer From a Welding Shop. Heats things up. Smacks things down.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Tongs and a Hammer From a Welding Shop",
+    "display_name": "Tongs and a Hammer From a Welding Shop"
    }
   },
   {
    "id": "cdr-gear-tinkers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "tinkers-tools",
@@ -8027,12 +10235,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Junk Drawer of Screws and Gears"
+   },
+   "lore_display_name": "Junk Drawer of Screws and Gears",
+   "picture": "In your hand: Junk Drawer of Screws and Gears. Somewhere in here is the one spare part you need.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Junk Drawer of Screws and Gears",
+    "display_name": "Junk Drawer of Screws and Gears"
    }
   },
   {
    "id": "cdr-gear-weavers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "weavers-tools",
@@ -8075,12 +10294,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Friendship-Bracelet Loom"
+   },
+   "lore_display_name": "Friendship-Bracelet Loom",
+   "picture": "In your hand: Friendship-Bracelet Loom. Binds friends. Binds enemies when finished.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Friendship-Bracelet Loom",
+    "display_name": "Friendship-Bracelet Loom"
    }
   },
   {
    "id": "cdr-gear-woodcarvers-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "woodcarvers-tools",
@@ -8123,12 +10353,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Whittling Knife and Popsicle Sticks"
+   },
+   "lore_display_name": "Whittling Knife and Popsicle Sticks",
+   "picture": "In your hand: Whittling Knife and Popsicle Sticks. Carves anything you do not need.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Whittling Knife and Popsicle Sticks",
+    "display_name": "Whittling Knife and Popsicle Sticks"
    }
   },
   {
    "id": "cdr-gear-disguise-kit",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "disguise-kit",
@@ -8171,12 +10412,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Stage Makeup Kit, Half-Dried"
+   },
+   "lore_display_name": "Stage Makeup Kit, Half-Dried",
+   "picture": "In your hand: Stage Makeup Kit, Half-Dried. Transforms you into someone else, badly.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Stage Makeup Kit, Half-Dried",
+    "display_name": "Stage Makeup Kit, Half-Dried"
    }
   },
   {
    "id": "cdr-gear-forgery-kit",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "forgery-kit",
@@ -8219,12 +10471,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Office Supply Drawer"
+   },
+   "lore_display_name": "Office Supply Drawer",
+   "picture": "In your hand: Office Supply Drawer. Stamps, pens, tape. The raw materials of fraud.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Forge documents; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Office Supply Drawer",
+    "display_name": "Office Supply Drawer"
    }
   },
   {
    "id": "cdr-gear-herbalism-kit",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "herbalism-kit",
@@ -8267,12 +10531,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Tea-Bag Tin"
+   },
+   "lore_display_name": "Tea-Bag Tin",
+   "picture": "In your hand: Tea-Bag Tin. Chamomile fixes almost nothing. The bottom layer fixes the rest.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Identify plants, make antitoxin and potions of healing (crafting); proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Tea-Bag Tin",
+    "display_name": "Tea-Bag Tin"
    }
   },
   {
    "id": "cdr-gear-navigators-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "navigators-tools",
@@ -8315,12 +10591,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Gas-Station GPS Kit"
+   },
+   "lore_display_name": "Gas-Station GPS Kit",
+   "picture": "In your hand: Gas-Station GPS Kit. Recalculating. Recalculating. Recalculating.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Plot a course and navigate; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Gas-Station GPS Kit",
+    "display_name": "Gas-Station GPS Kit"
    }
   },
   {
    "id": "cdr-gear-poisoners-kit",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "poisoners-kit",
@@ -8363,12 +10651,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pest-Control Tech's Toolkit"
+   },
+   "lore_display_name": "Pest-Control Tech's Toolkit",
+   "picture": "In your hand: Pest-Control Tech's Toolkit. Rats not included. Rats are the first victims.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Pest-Control Tech's Toolkit",
+    "display_name": "Pest-Control Tech's Toolkit"
    }
   },
   {
    "id": "cdr-gear-thieves-tools",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "thieves-tools",
@@ -8411,18 +10710,30 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bobby Pins and a Gift Card"
+   },
+   "lore_display_name": "Bobby Pins and a Gift Card",
+   "picture": "In your hand: Bobby Pins and a Gift Card. Opens locks. Closes accounts.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Pick locks and disarm traps; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Bobby Pins and a Gift Card",
+    "display_name": "Bobby Pins and a Gift Card"
    }
   },
   {
    "id": "cdr-gear-gaming-set",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "gaming-set",
    "srd_name": "Gaming Set",
-   "display_name": "Deck of Cards",
-   "combined_label": "Deck of Cards (Gaming Set)",
+   "display_name": "Deck of Cards, Ace Already Missing",
+   "combined_label": "Deck of Cards, Ace Already Missing (Gaming Set)",
    "category": "tool",
    "subcategory": "gaming set",
    "snark": "Stacked, marked, or just sticky.",
@@ -8453,19 +10764,31 @@
    },
    "state_hooks": {
     "inventory_srd_id": "gaming-set",
-    "display": "Deck of Cards (Gaming Set)",
+    "display": "Deck of Cards, Ace Already Missing (Gaming Set)",
     "reskin_lookup": "tables/item-reskins.json",
     "do_not_write": [
      "sessions/",
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Deck of Cards"
+   },
+   "lore_display_name": "Deck of Cards",
+   "picture": "In your hand: Deck of Cards, Ace Already Missing. Stacked, marked, or just sticky.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Tool kit for a game of your choice; proficiency applies to checks with it.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Deck of Cards",
+    "display_name": "Deck of Cards, Ace Already Missing"
    }
   },
   {
    "id": "cdr-gear-dice",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "dice",
@@ -8508,12 +10831,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bag of Mismatched Casino Dice"
+   },
+   "lore_display_name": "Bag of Mismatched Casino Dice",
+   "picture": "In your hand: Bag of Mismatched Casino Dice. Some are loaded. Some are just heavy.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Bag of Mismatched Casino Dice",
+    "display_name": "Bag of Mismatched Casino Dice"
    }
   },
   {
    "id": "cdr-gear-dragonchess",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "dragonchess",
@@ -8556,12 +10890,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Chess Set, Several Kings Missing"
+   },
+   "lore_display_name": "Chess Set, Several Kings Missing",
+   "picture": "In your hand: Chess Set, Several Kings Missing. Replaced with salt shakers. Kings are lucky to be missing.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Chess Set, Several Kings Missing",
+    "display_name": "Chess Set, Several Kings Missing"
    }
   },
   {
    "id": "cdr-gear-playing-cards",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "playing-cards",
@@ -8604,12 +10949,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pinochle Deck, Sticky"
+   },
+   "lore_display_name": "Pinochle Deck, Sticky",
+   "picture": "In your hand: Pinochle Deck, Sticky. Do not ask about the stickiness.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Pinochle Deck, Sticky",
+    "display_name": "Pinochle Deck, Sticky"
    }
   },
   {
    "id": "cdr-gear-three-dragon-ante",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "three-dragon-ante",
@@ -8652,12 +11008,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Trading-Card Binder, Mostly Bulk"
+   },
+   "lore_display_name": "Trading-Card Binder, Mostly Bulk",
+   "picture": "In your hand: Trading-Card Binder, Mostly Bulk. Three dragons, one rare, many regrets.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Trading-Card Binder, Mostly Bulk",
+    "display_name": "Trading-Card Binder, Mostly Bulk"
    }
   },
   {
    "id": "cdr-gear-musical-instrument",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "musical-instrument",
@@ -8707,12 +11074,24 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Karaoke Mic With One Working Song"
+   },
+   "lore_display_name": "Karaoke Mic With One Working Song",
+   "picture": "In your hand: Karaoke Mic With One Working Song. The song is always the same. The audience is always doomed.",
+   "local": {
+    "playable": false,
+    "kind": "gear",
+    "text": "Tool for performing music; proficiency applies.",
+    "source": "tables/chargen-5e.json",
+    "note": "Filed text has no attack or AC line. The engine does not invent one.",
+    "lore_display_name": "Karaoke Mic With One Working Song",
+    "display_name": "Karaoke Mic With One Working Song"
    }
   },
   {
    "id": "cdr-gear-bagpipes",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "bagpipes",
@@ -8755,12 +11134,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Bagpipes From a Funeral Home Closet"
+   },
+   "lore_display_name": "Bagpipes From a Funeral Home Closet",
+   "picture": "In your hand: Bagpipes From a Funeral Home Closet. Sounds like a dirge. Is a dirge.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Bagpipes From a Funeral Home Closet",
+    "display_name": "Bagpipes From a Funeral Home Closet"
    }
   },
   {
    "id": "cdr-gear-drum",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "drum",
@@ -8803,12 +11193,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Plastic Bucket Drum"
+   },
+   "lore_display_name": "Plastic Bucket Drum",
+   "picture": "In your hand: Plastic Bucket Drum. Street-corner percussion with a side of gravity.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Plastic Bucket Drum",
+    "display_name": "Plastic Bucket Drum"
    }
   },
   {
    "id": "cdr-gear-dulcimer",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "dulcimer",
@@ -8851,12 +11252,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Garage-Sale Dulcimer"
+   },
+   "lore_display_name": "Garage-Sale Dulcimer",
+   "picture": "In your hand: Garage-Sale Dulcimer. Three strings, one story, no refunds.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Garage-Sale Dulcimer",
+    "display_name": "Garage-Sale Dulcimer"
    }
   },
   {
    "id": "cdr-gear-flute",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "flute",
@@ -8899,12 +11311,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Fourth-Grade Recorder"
+   },
+   "lore_display_name": "Fourth-Grade Recorder",
+   "picture": "In your hand: Fourth-Grade Recorder. Still has someone's teeth marks.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Fourth-Grade Recorder",
+    "display_name": "Fourth-Grade Recorder"
    }
   },
   {
    "id": "cdr-gear-horn",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "horn",
@@ -8947,12 +11370,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Vuvuzela, Sports-Bar Surplus"
+   },
+   "lore_display_name": "Vuvuzela, Sports-Bar Surplus",
+   "picture": "In your hand: Vuvuzela, Sports-Bar Surplus. Announces you from three rooms away.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Vuvuzela, Sports-Bar Surplus",
+    "display_name": "Vuvuzela, Sports-Bar Surplus"
    }
   },
   {
    "id": "cdr-gear-lute",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "lute",
@@ -8995,12 +11429,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Ukulele With Pretensions"
+   },
+   "lore_display_name": "Ukulele With Pretensions",
+   "picture": "In your hand: Ukulele With Pretensions. Thinks it is a lute. Is fooled by the lighting.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Ukulele With Pretensions",
+    "display_name": "Ukulele With Pretensions"
    }
   },
   {
    "id": "cdr-gear-lyre",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "lyre",
@@ -9043,12 +11488,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Harp-Shaped Wall Decor"
+   },
+   "lore_display_name": "Harp-Shaped Wall Decor",
+   "picture": "In your hand: Harp-Shaped Wall Decor. Plucked from a spa's lobby.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Harp-Shaped Wall Decor",
+    "display_name": "Harp-Shaped Wall Decor"
    }
   },
   {
    "id": "cdr-gear-pan-flute",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "pan-flute",
@@ -9091,12 +11547,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Pan Flute From a Gift Shop"
+   },
+   "lore_display_name": "Pan Flute From a Gift Shop",
+   "picture": "In your hand: Pan Flute From a Gift Shop. Comes with a tiny plastic Pan. Nobody knows why.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Pan Flute From a Gift Shop",
+    "display_name": "Pan Flute From a Gift Shop"
    }
   },
   {
    "id": "cdr-gear-shawm",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "shawm",
@@ -9139,12 +11606,23 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Kazoo, Extended Edition"
+   },
+   "lore_display_name": "Kazoo, Extended Edition",
+   "picture": "In your hand: Kazoo, Extended Edition. The extension does nothing. The kazoo knows.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Kazoo, Extended Edition",
+    "display_name": "Kazoo, Extended Edition"
    }
   },
   {
    "id": "cdr-gear-viol",
-   "schema": "cursor-dcc-cards/item/0.2.0",
+   "schema": "cursor-dcc-cards/item/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "srd_id": "viol",
@@ -9187,8 +11665,20 @@
      "sessions-data/",
      "characters/",
      "credit ledgers"
-    ]
+    ],
+    "live_reskin_name": "Cello Case With Three Strings Left"
+   },
+   "lore_display_name": "Cello Case With Three Strings Left",
+   "picture": "In your hand: Cello Case With Three Strings Left. The fourth string wanted a better life.",
+   "local": {
+    "playable": false,
+    "kind": "tool",
+    "note": "No mechanic string is filed in tables/chargen-5e.json for this srd_id. The engine will not invent damage, AC, or weight.",
+    "source": "tables/chargen-5e.json",
+    "lore_display_name": "Cello Case With Three Strings Left",
+    "display_name": "Cello Case With Three Strings Left"
    }
   }
- ]
+ ],
+ "naming": "Lore's reskin is lore_display_name. display_name is the local-engine name. Flat names were punched up in local/item-name-punches.json. Prices are still the filed list prices."
 }

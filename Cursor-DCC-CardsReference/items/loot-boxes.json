@@ -1,5 +1,5 @@
 {
- "schema": "cursor-dcc-cards/loot-boxes/0.2.0",
+ "schema": "cursor-dcc-cards/loot-boxes/0.3.0",
  "status": "R&D",
  "authoritative": false,
  "updated": "2026-10-09",
@@ -60,7 +60,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Sports Drink, Mystery Flavor",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 2d4+2 HP. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0001",
+      "name": "Sports Drink, Mystery Flavor",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0002",
@@ -115,7 +133,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Rope-Swing Energy Drink",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink; for 1 hour you gain a Climb Speed equal to your Speed and have Advantage on Strength (Athletics) checks to climb. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0002",
+      "name": "Rope-Swing Energy Drink",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0003",
@@ -170,7 +206,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Cease-and-Desist Letter (Addressed To Your Enemies)",
+    "action_cost": "Magic action",
+    "effect": "Magic action: if Magic Missile is on your class's spell list (Sorcerer, Wizard), read the scroll to cast it at level 1: three darts, each 1d4+1 Force, auto-hit, up to 120 ft. The scroll then disintegrates.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0003",
+      "name": "Cease-and-Desist Letter (Addressed To Your Enemies)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0004",
@@ -225,7 +279,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Get-Well-Soon Card (Singing, Unsolicited)",
+    "action_cost": "Magic action",
+    "effect": "Magic action: if Cure Wounds is on your class's spell list (Bard, Cleric, Druid, Paladin, Ranger), read the scroll to cast it at level 1: touch a creature, it regains 2d8 + your spellcasting ability modifier HP. The scroll then disintegrates.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0004",
+      "name": "Get-Well-Soon Card (Singing, Unsolicited)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0005",
@@ -280,7 +352,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Birthday Candle (Lit, Somehow)",
+    "action_cost": "Magic action",
+    "effect": "Magic action: if Fire Bolt is on your class's spell list (Sorcerer, Wizard), read the scroll to cast it: ranged spell attack (+5), up to 120 ft, 1d10 Fire. A flammable object not worn or carried ignites. The scroll then disintegrates.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0005",
+      "name": "Birthday Candle (Lit, Somehow)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0006",
@@ -335,7 +425,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Battery-Acid Slushie",
+    "action_cost": "Action",
+    "effect": "Attack action (replace one attack): throw at a creature or object you can see within 20 ft. It makes a Dex save (DC 8 + thrower's Dex modifier + proficiency bonus) or takes 2d6 Acid damage. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0006",
+      "name": "Battery-Acid Slushie",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0007",
@@ -390,7 +498,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Communion Cup, Chilled",
+    "action_cost": "Action",
+    "effect": "Attack action (replace one attack): throw at a creature you can see within 20 ft. A Fiend or Undead must make a Dex save (DC 8 + thrower's Dex modifier + proficiency bonus) or take 2d8 Radiant damage. No effect on other creature types. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0007",
+      "name": "Communion Cup, Chilled",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0008",
@@ -445,7 +571,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Gas-Station Pepto, Chewable",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink; for 1 hour you have Advantage on saving throws to avoid or end the Poisoned condition. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0008",
+      "name": "Gas-Station Pepto, Chewable",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0009",
@@ -500,7 +644,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Cooking Spray, Industrial Drum Size",
+    "action_cost": "Action",
+    "effect": "Attack action (replace one attack): throw at a creature or object within 20 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is covered in oil for 1 minute; if it takes Fire damage in that time, +5 Fire damage. OR Utilize action: pour on level ground in a 5-ft square within 5 ft; if lit it burns until the end of the turn 2 rounds later, 5 Fire damage to any creature entering or ending its turn there (once per turn). Also fuels a Lamp or Lantern for 6 hours.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0009",
+      "name": "Cooking Spray, Industrial Drum Size",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0010",
@@ -543,7 +705,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Bag of Lost Marbles (Not Yours)",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: spill the pouch over a level 10-ft square within 10 ft. A creature entering the area for the first time on a turn makes a DC 10 Dex save or falls Prone. Takes 10 minutes to pick up again.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0011",
@@ -586,7 +757,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Bag of LEGO, Barefoot Edition",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: spread over a 5-ft square within 5 ft. A creature entering for the first time on a turn makes a DC 15 Dex save or takes 1 Piercing damage and its Speed drops to 0 until the start of its next turn. Takes 10 minutes to recover.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0012",
@@ -641,7 +821,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Break-Room First-Aid Kit, Lightly Bitten",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: expend 1 of 10 uses to stabilize an Unconscious creature at 0 HP without a Wisdom (Medicine) check.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0012",
+      "name": "Break-Room First-Aid Kit, Lightly Bitten",
+      "max": 10,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0013",
@@ -696,7 +894,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Tiki Torch, Unlicensed",
+    "action_cost": "Action",
+    "effect": "Burns for 1 hour: bright light 20 ft, dim light another 20 ft. Attack action: use as a Simple melee weapon; on a hit, 1 Fire damage.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0013",
+      "name": "Tiki Torch, Unlicensed",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0014",
@@ -739,7 +955,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Paint-Can Pry Bar",
+    "action_cost": "None (passive)",
+    "effect": "Passive: Advantage on Strength checks where the crowbar's leverage can be applied.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0015",
@@ -782,7 +1007,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Big Honking Flashlight",
+    "action_cost": "Bonus Action",
+    "effect": "Burns Oil: bright light 30 ft, dim light another 30 ft; one oil flask lasts 6 hours. Bonus Action: lower the hood (dim light 5 ft radius only) or raise it again.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0016",
@@ -825,7 +1059,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Hardware-Store Harness (Pitons Included, Regrettably)",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: anchor yourself; you can't fall more than 25 ft from the anchor point and can't move more than 25 ft from it without undoing the anchor as a Bonus Action.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0017",
@@ -868,7 +1111,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Volleyball Net, Reclaimed",
+    "action_cost": "Action",
+    "effect": "Attack action (replace one attack): throw at a creature you can see within 15 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is Restrained until it escapes. Huge or larger succeed automatically. Escape: the target or a creature within 5 ft uses an action for a DC 10 Strength (Athletics) check, or the net is destroyed (AC 10, 5 HP, immune to Bludgeoning, Poison, Psychic).",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0018",
@@ -911,7 +1163,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Raccoon Trap, Industrial",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: set it. A creature stepping on the plate makes a DC 13 Dex save or takes 1d4 Piercing damage and its Speed drops to 0 until the start of its next turn; thereafter movement is limited by the chain (about 3 ft) until it breaks free. Freeing: a creature uses its action for a DC 13 Strength (Athletics) check. Each failed check deals 1 Piercing.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0019",
@@ -954,7 +1215,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Padlock for a Locker Nobody Owns",
+    "action_cost": "none",
+    "effect": "Comes with a key. Without the key, Thieves' Tools pick it with a successful DC 15 Dexterity (Sleight of Hand) check.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0020",
@@ -997,7 +1267,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Extension Cord, Fifty Feet, Unplugged",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: tie a knot (DC 10 Dex (Sleight of Hand)). Bursts on a DC 20 Strength (Athletics) check. Binds an unwilling creature only if it is Grappled, Incapacitated or Restrained; escape: DC 15 Dex (Acrobatics) as an action.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0021",
@@ -1040,7 +1319,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Staff-Lounge Hand Bell",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: ring it; the sound can be heard up to 60 ft away.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0022",
@@ -1083,7 +1371,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Mascot Head, Sweaty (Not That One)",
+    "action_cost": "None (passive)",
+    "effect": "While worn, Advantage on any ability check to impersonate the type of person the costume represents. 4 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0023",
@@ -1126,7 +1423,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dean's List Magnifying Glass",
+    "action_cost": "None (passive)",
+    "effect": "Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with it needs sunlight-bright light, tinder and about 5 minutes.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0024",
@@ -1181,7 +1487,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)",
+    "action_cost": "none",
+    "effect": "Travel food for one day. 2 lb.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0024",
+      "name": "Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0025",
@@ -1224,7 +1548,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Hotel Desk Bell, Ding Ding",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: blow it; the sound can be heard up to 600 ft away.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0026",
@@ -1267,7 +1600,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dog Whistle, Silent Except To Pebbles",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: blow it; the sound can be heard up to 600 ft away. No special effect on any creature.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0027",
@@ -1322,7 +1664,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Pebbles Snow Globe",
+    "action_cost": "Magic action",
+    "effect": "Within 60 ft, a command word makes it shed light as the Light spell (20 ft bright + 20 ft dim) or the Daylight spell (60 ft bright + 60 ft dim); Daylight once, then not again until next dawn. A second command word (Magic action) floats it up to 5 ft in the air; if you move more than 60 ft away it follows you; if blocked it sinks and goes dark. 1 lb.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0027",
+      "name": "Pebbles Snow Globe",
+      "max": 1,
+      "spent": 0,
+      "recover": "dawn",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0028",
@@ -1365,7 +1725,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Eternally Stained Wifebeater",
+    "action_cost": "Bonus Action",
+    "effect": "Worn as your outer garment (no attunement). Bonus Action: change its style, color and apparent quality to any cloak, hoodie, cape or vest you have seen. Looks only: no AC, no powers, no bonus to any check. Weight does not change.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0029",
@@ -1408,7 +1777,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Collapsible Tent-Pole",
+    "action_cost": "Magic action",
+    "effect": "Works as a 10 ft Pole. Magic action while holding it: collapse it to a 1 ft rod (weight unchanged) or extend it back to 10 ft; it stops growing where something blocks it. As a Pole you can touch something up to 10 ft away, and you have Advantage on a Strength (Athletics) check to vault in a High or Long Jump. Not a weapon: extending it pushes and damages nothing.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0030",
@@ -1451,7 +1829,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Kevin the Sentient Rubber Duck",
+    "action_cost": "none",
+    "effect": "Joke item. No mechanical effect. Kevin gives terrible advice; the GM treats it as flavor only.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0031",
@@ -1494,7 +1881,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Raffle Ticket No. 0000",
+    "action_cost": "none",
+    "effect": "Joke item. No mechanical effect. The System never explains the raffle ticket.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0032",
@@ -1537,7 +1933,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Apology Voucher, Valid Nowhere",
+    "action_cost": "none",
+    "effect": "Joke item. No mechanical effect. Compensates for System error in sentiment only.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0033",
@@ -1592,7 +1997,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Maintenance Note, Greasy",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action, once: read it; the GM gives you one true, useful sentence about the next zone (like one Proctor Bell hint). The note is then spent.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0033",
+      "name": "Maintenance Note, Greasy",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0034",
@@ -1635,7 +2058,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Staff Map, Coffee-Stained",
+    "action_cost": "None (passive)",
+    "effect": "While consulting this accurate Map of Floor 1, +5 bonus to Wisdom (Survival) checks to find your way in the place it shows. House: it marks one hidden room (GM-only note).",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0035",
@@ -1690,7 +2122,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Gas-Station Bathroom Key on a Hubcap",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: opens one specific lock on this floor, picked by the GM when the key is drawn (the GM does not say which). On that lock it unlocks it and the key is spent. On any other lock nothing happens and it is not spent. If you leave the floor with it unused, it becomes a plain hubcap key.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0035",
+      "name": "Gas-Station Bathroom Key on a Hubcap",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0036",
@@ -1733,7 +2183,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Loose Change From Under the Couch Cushion",
+    "action_cost": "none",
+    "effect": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0037",
@@ -1776,7 +2235,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Employee-of-the-Month Bonus (Withheld, Then Un-Withheld)",
+    "action_cost": "none",
+    "effect": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0038",
@@ -1819,7 +2287,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Credits, Slightly Damp",
+    "action_cost": "none",
+    "effect": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0039",
@@ -1874,7 +2351,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Sports Drink, Extra Strength Flavor",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 4d4+4 HP. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0039",
+      "name": "Sports Drink, Extra Strength Flavor",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0040",
@@ -1929,7 +2424,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Hazmat Slushie, Color of the Day",
+    "action_cost": "Bonus Action",
+    "effect": "Drink (Bonus Action): you have Resistance to one damage type for 1 hour. The GM chooses the type or rolls 1d10: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, Thunder.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0040",
+      "name": "Hazmat Slushie, Color of the Day",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0041",
@@ -1984,7 +2497,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Pocket Dragon Breath Mints (Extra Strong)",
+    "action_cost": "Bonus Action",
+    "effect": "Drink (Bonus Action). For 1 hour, as a Bonus Action you can exhale fire at one creature you can see within 30 ft: Dex save DC 13, 4d6 Fire on a failure, half on a success. Ends after three exhalations or after 1 hour, whichever comes first.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0041",
+      "name": "Pocket Dragon Breath Mints (Extra Strong)",
+      "max": 3,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0042",
@@ -2039,7 +2570,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Pre-Owned Laser Pointer (Cat Not Included)",
+    "action_cost": "Magic action",
+    "effect": "7 charges. Magic action while holding it: expend 1-3 charges to cast Magic Missile (1 charge = level 1: three darts, 1d4+1 Force each, auto-hit, 120 ft; each extra charge raises the spell level by 1, adding a dart). Regains 1d6+1 charges at dawn. If you expend the last charge, roll d20: on a 1 the wand crumbles to ash. 1 lb.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0042",
+      "name": "Pre-Owned Laser Pointer (Cat Not Included)",
+      "max": 7,
+      "spent": 0,
+      "recover": "1d6+1 at dawn",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0043",
@@ -2082,7 +2631,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Bungee Cord of Questionable Intent",
+    "action_cost": "Magic action",
+    "effect": "60-ft rope, holds up to 3,000 lb. Magic action: command the free end to move toward a destination within 60 ft (10 ft now, 10 ft at the start of each of your turns), or to fasten, unfasten, knot, unknot or coil. Knotted: shortens to 50 ft and grants Advantage on ability checks to climb it. AC 20, HP 20, immune to Poison and Psychic, regains 1 HP every 5 min; destroyed at 0 HP.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0044",
@@ -2125,7 +2683,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Stuck Door Wedge, Industrial",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: press the button; the rod becomes fixed in place (even in midair) and holds up to 8,000 lb. Utilize again to release. A creature can Utilize to move a fixed rod up to 10 ft with a DC 30 Strength (Athletics) check. More weight deactivates it. 2 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0045",
@@ -2168,7 +2735,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Welding Goggles, Night Shift",
+    "action_cost": "None (passive)",
+    "effect": "While worn: Darkvision out to 60 ft; if you already have Darkvision, its range increases by 60 ft.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0046",
@@ -2211,7 +2787,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Library Sneakers (Silent Edition)",
+    "action_cost": "None (passive)",
+    "effect": "While worn: your steps make no sound on any surface; Advantage on Dexterity (Stealth) checks.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0047",
@@ -2254,7 +2839,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Oven Mitts, Sticky-Fingered",
+    "action_cost": "None (passive)",
+    "effect": "While worn, the gloves are imperceptible and you gain a +5 bonus to Dexterity (Sleight of Hand) checks. No attunement.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0048",
@@ -2297,7 +2891,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Hi-Vis Safety Vest, Reflective",
+    "action_cost": "None (passive)",
+    "effect": "Requires attunement. While worn: +1 bonus to Armor Class and +1 bonus to all saving throws.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0049",
@@ -2352,7 +2955,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Pearl From a Very Expensive Necklace (Allegedly)",
+    "action_cost": "Magic action",
+    "effect": "Requires attunement by a spellcaster. While on your person, Magic action: regain one expended spell slot of level 3 or lower. Once used, not again until next dawn.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0049",
+      "name": "Pearl From a Very Expensive Necklace (Allegedly)",
+      "max": 1,
+      "spent": 0,
+      "recover": "dawn",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0050",
@@ -2395,7 +3016,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Mop Handle of Mild Menace",
+    "action_cost": "Action",
+    "effect": "A magic quarterstaff: +1 bonus to attack and damage rolls made with it. Quarterstaff: 1d6 Bludgeoning, Versatile (1d8), Topple mastery (if you have it). 4 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0051",
@@ -2450,7 +3080,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Aquarium Cocktail, Do Not Swallow Fish",
+    "action_cost": "Bonus Action",
+    "effect": "Drink (Bonus Action): you can breathe underwater for 24 hours. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0051",
+      "name": "Aquarium Cocktail, Do Not Swallow Fish",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0052",
@@ -2493,7 +3141,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Duffel Bag, Roomier Inside",
+    "action_cost": "Utilize action",
+    "effect": "Holds up to 500 lb, not exceeding 64 cubic feet; the bag weighs 5 lb regardless of contents. Utilize action to retrieve an item. Overloading, piercing or tearing destroys it and scatters the contents in the Astral Plane. Never place it inside another extradimensional space.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0053",
@@ -2536,7 +3193,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Sponsor-Adjacent Gift Envelope",
+    "action_cost": "none",
+    "effect": "Adds 2d6 x 25 credits (50-300) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0054",
@@ -2579,7 +3245,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Severance Package (Partial)",
+    "action_cost": "none",
+    "effect": "Adds 2d6 x 25 credits (50-300) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0055",
@@ -2634,7 +3309,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Enhanced Pet Biscuit",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: feed it to your willing pet (a Beast, CR 1/4 or lower). The pet becomes a Crawler: it gets the System interface (inventory, map, achievements, boxes), speech, Int/Wis/Cha of at least 10, and a class at the next saferoom (level = party level). One conversion per living pet-Crawler: a deleted pet-Crawler frees its conversion, but a new conversion needs a new Enhanced Pet Biscuit (which uses a Story Box slot). No effect on a creature that is already a Crawler.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0055",
+      "name": "Enhanced Pet Biscuit",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0056",
@@ -2689,7 +3382,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Tiara of Bloody Succession (Fits Any Head, Fits Any Paws)",
+    "action_cost": "None (passive)",
+    "effect": "Worn on the head by one creature (no attunement); it resizes to fit any quadruped or biped. Once per long rest, the wearer may make one Intelligence check, or one Charisma (Persuasion) check against a creature that has not met the wearer, with Advantage; say so before rolling. Dormant until the wearer reaches level 3: the Sepsis rider. Once per long rest, right after you hit with an attack, the target makes a DC 12 Constitution saving throw or has the Poisoned condition until the end of its next turn.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0056",
+      "name": "Tiara of Bloody Succession (Fits Any Head, Fits Any Paws)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0057",
@@ -2744,7 +3455,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Grudge Ring (Green Glass, Red Stone)",
+    "action_cost": "Action: 30 seconds of focus (outside combat)",
+    "effect": "Once per long rest, spend 30 seconds of focus (outside combat) to mark one hostile non-Crawler creature you can see within 60 ft that the GM agrees is a real threat (a fictional rival fits; no vermin, no noncombatants). The mark lasts up to 1 hour. You have Advantage on the first attack roll you make against the marked creature, and the mark ends when you make it. Marking never requires or rewards a kill.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0057",
+      "name": "Grudge Ring (Green Glass, Red Stone)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0058",
@@ -2799,7 +3528,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Olive Branch Lanyard (Laminated, Nobody Got Hurt)",
+    "action_cost": "Reaction",
+    "effect": "Reaction, once per Long Rest: when a creature you can see, and have not damaged, is about to make an attack roll against you, it makes a DC 12 Wisdom save. On a failure it must pick a different target within its reach or range, or lose the attack.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0058",
+      "name": "Olive Branch Lanyard (Laminated, Nobody Got Hurt)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0059",
@@ -2854,7 +3601,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Porkchop Express Wheel-Hub Maul",
+    "action_cost": "Action",
+    "effect": "A Maul (2d6 Bludgeoning, Heavy, Two-Handed, Topple, 10 lb). Once per long rest, when you hit with it, the target makes a DC 12 Strength saving throw or is pushed 10 ft and has the Prone condition. Dormant until the party reaches Floor 3: it becomes a +1 maul (+1 bonus to attack and damage rolls).",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0059",
+      "name": "Porkchop Express Wheel-Hub Maul",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0060",
@@ -2909,7 +3674,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Pet Biscuit Crate, Industrial (500)",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action, within 5 ft: feed one plain Pet Biscuit to a willing pet or companion Beast; it regains 1d4 hit points and is calm for 1 minute (it does not flee in panic, and you succeed on any Wisdom (Animal Handling) check to settle it). A pet gets this benefit from at most 3 biscuits per Long Rest. The crate holds 500 biscuits.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0060",
+      "name": "Pet Biscuit Crate, Industrial (500)",
+      "max": 500,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0061",
@@ -2964,7 +3747,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Little Crown, Four-Paw Fit",
+    "action_cost": "none",
+    "effect": "Worn by one quadruped companion (resizes to fit; no attunement). Once per long rest, when the wearer or its owner meets a creature that has not met either of them, one of the two may make one Charisma (Persuasion or Performance) check with Advantage; say so before rolling. Dormant part: at owner level 3 it gains a second use per long rest. No effect on attacks, saves, AC or damage.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0061",
+      "name": "Little Crown, Four-Paw Fit",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0062",
@@ -3019,7 +3820,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Grudge Pin, Enamel (Family Reunion 2019)",
+    "action_cost": "none",
+    "effect": "Pin worn on clothing (no attunement). When you earn it, name one fictional rival or estranged relative from your backstory (never a real person, never a child; the GM approves the name). Once per long rest, when you must make a saving throw against being Frightened by that rival or anyone acting for them, you have Advantage on that save. The first time the table plays out that rival being beaten, spared or forgiven (never killed), you gain Heroic Inspiration, once ever; after that the pin has no Inspiration left.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0062",
+      "name": "Grudge Pin, Enamel (Family Reunion 2019)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0063",
@@ -3074,7 +3893,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Laminated Truce Chit (Do Not Fold)",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action, once: hold it up to one named hostile creature you can see within 30 ft that has Intelligence 6 or higher and has not yet attacked this scene. It makes a DC 12 Wisdom saving throw. On a failure it must hear you out: for 1 minute it will not attack you or your allies and will talk if it can. On a success nothing happens (no truce). This ends at once if you or an ally hurts or threatens it. The chit is spent either way.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0063",
+      "name": "Laminated Truce Chit (Do Not Fold)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0064",
@@ -3129,7 +3966,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Annotated Floor Plan (Coffee Ring Included)",
+    "action_cost": "None (passive)",
+    "effect": "Folded plan carried in your System Inventory (no attunement). Once per long rest, when you use a Utilize action on part of the room (a trap, door, shelf, light, vending machine) against a creature, that creature has Disadvantage on the first saving throw it makes against that effect. The effect must be something the room already offers; the plan adds no damage and no new effect.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0064",
+      "name": "Annotated Floor Plan (Coffee Ring Included)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-any-0065",
@@ -3184,7 +4039,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Group Photo, Mid-Handshake (Framed)",
+    "action_cost": "none",
+    "effect": "Framed photo held by one Crawler (the table picks the holder; the GM default is a Crawler without a Story Box yet). The pictured Crawlers are the Crawlers present when the deed is recorded. While every Crawler pictured is alive and within 1 mile of the others, each of them always knows the compass direction to the others. Once per floor, the holder may ask the System to replay the moment in the photo: a free recap of who stood where when the plan began. No combat effect.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-any-0065",
+      "name": "Group Photo, Mid-Handshake (Framed)",
+      "max": 1,
+      "spent": 0,
+      "recover": "floor",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0001",
@@ -3239,7 +4112,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Snack Cake, Expiration Date: Yes",
+    "action_cost": "none",
+    "effect": "Travel food for one day. 2 lb.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z03-0001",
+      "name": "Snack Cake, Expiration Date: Yes",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0002",
@@ -3282,7 +4173,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Big Honking Flashlight (Vending Edition)",
+    "action_cost": "Bonus Action",
+    "effect": "Burns Oil: bright light 30 ft, dim light another 30 ft; one oil flask lasts 6 hours. Bonus Action: lower the hood (dim 5 ft) or raise it again.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0003",
@@ -3325,7 +4225,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Extension Cord, Fifty Feet (Vending Edition)",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: tie a knot (DC 10 Dex (Sleight of Hand)). Bursts on a DC 20 Strength (Athletics) check. Binds an unwilling creature only if it is Grappled, Incapacitated or Restrained; escape DC 15 Dex (Acrobatics). 5 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0004",
@@ -3380,7 +4289,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Flaming Hot Nacho Cheese Pouch",
+    "action_cost": "Action",
+    "effect": "Attack action (replace one attack): throw at a creature or object you can see within 20 ft. Dex save (DC 8 + thrower's Dex modifier + proficiency bonus) or it takes 1d4 Fire damage and starts burning (1d4 Fire at the start of each of its turns until the flames are put out; see Burning in the Rules Glossary). One use. 1 lb.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z03-0004",
+      "name": "Flaming Hot Nacho Cheese Pouch",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0005",
@@ -3423,7 +4350,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Bag of LEGO (Vending Edition)",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: spread over a 5-ft square within 5 ft. A creature entering for the first time on a turn makes a DC 15 Dex save or takes 1 Piercing and its Speed drops to 0 until the start of its next turn. 10 minutes to recover.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0006",
@@ -3478,7 +4414,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Fryer Grease, Reclaimed",
+    "action_cost": "Action",
+    "effect": "Attack action (replace one attack): throw at a creature or object within 20 ft; Dex save (DC 8 + Dex mod + proficiency bonus) or it is coated for 1 minute; Fire damage in that time adds 5 Fire. OR Utilize: pour on a 5-ft square within 5 ft; if lit, 5 Fire to any creature entering or ending its turn there (once per turn) for 2 rounds. Fuel for a lantern, 6 hours.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z03-0006",
+      "name": "Fryer Grease, Reclaimed",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0007",
@@ -3521,7 +4475,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "SOLD OUT FOREVER Sticker",
+    "action_cost": "none",
+    "effect": "Joke item. No mechanical effect. A sticker the vending machine peels off and hands you.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z03-0008",
@@ -3564,7 +4527,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Snack-Machine Change Slot, Jammed Open",
+    "action_cost": "none",
+    "effect": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0001",
@@ -3619,7 +4591,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Laminated Complaint Card",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action, once: ask the System one yes/no question about the current floor; it answers truthfully, yes or no. The card is then spent.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z06-0001",
+      "name": "Laminated Complaint Card",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0002",
@@ -3674,7 +4664,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Sports Drink, Blue Flavor",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 2d4+2 HP. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z06-0002",
+      "name": "Sports Drink, Blue Flavor",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0003",
@@ -3717,7 +4725,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Kevin the Sentient Rubber Duck",
+    "action_cost": "none",
+    "effect": "Joke item. No mechanical effect. Kevin gives terrible advice; the GM treats it as flavor only.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0004",
@@ -3772,7 +4789,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Gas-Station Bathroom Key on a Hubcap",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: opens one specific lock on this floor, picked by the GM when the key is drawn (the GM does not say which). On that lock it unlocks it and the key is spent. On any other lock nothing happens and it is not spent. If you leave the floor with it unused, it becomes a plain hubcap key.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z06-0004",
+      "name": "Gas-Station Bathroom Key on a Hubcap",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0005",
@@ -3815,7 +4850,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Credits, Slightly Damp",
+    "action_cost": "none",
+    "effect": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0006",
@@ -3870,7 +4914,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Break-Room First-Aid Kit, Lightly Bitten",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: expend 1 of 10 uses to stabilize an Unconscious creature at 0 HP without a Wisdom (Medicine) check.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z06-0006",
+      "name": "Break-Room First-Aid Kit, Lightly Bitten",
+      "max": 10,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z06-0007",
@@ -3925,7 +4987,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Fridge Sandwich Labeled DALE'S. DO NOT.",
+    "action_cost": "none",
+    "effect": "Joke item. Eating it counts as food for one day (rations) but the label says no. Eating it in front of Dale triggers Lunch Thief.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z06-0007",
+      "name": "Fridge Sandwich Labeled DALE'S. DO NOT.",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0001",
@@ -3968,7 +5048,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Vendor Oddity (Unappraised)",
+    "action_cost": "none",
+    "effect": "A coin, probably. Value: ???. This item cannot be sold. It has no mechanical effect on Floor 1.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0002",
@@ -4011,7 +5100,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Fruit Plate That Has Become Something Else",
+    "action_cost": "none",
+    "effect": "Joke item. No mechanical effect. It is looking at you.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0003",
@@ -4066,7 +5164,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dead Mirror Bulb, Briefly Alive",
+    "action_cost": "Magic action",
+    "effect": "Magic action: if Light is on your class's spell list (Bard, Cleric, Sorcerer, Wizard), read the scroll to cast it: touch one Large or smaller object not worn or carried by someone else; it sheds bright light in a 20-ft radius and dim light 20 ft more for 1 hour. Covering it with something opaque blocks the light. The scroll then disintegrates.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z09-0003",
+      "name": "Dead Mirror Bulb, Briefly Alive",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0004",
@@ -4121,7 +5237,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Stage Whisper Cue Card",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: if Healing Word is on your class's spell list (Bard, Cleric, Druid), read the scroll to cast it at level 1: one creature you can see within 60 ft regains 2d4 + your spellcasting ability modifier HP. The scroll then disintegrates.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z09-0004",
+      "name": "Stage Whisper Cue Card",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0005",
@@ -4176,7 +5310,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dressing-Room Body Spray, Industrial Lilac",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: apply it to yourself. For 1 hour you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 ft of you. One 4-oz vial, one application.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z09-0005",
+      "name": "Dressing-Room Body Spray, Industrial Lilac",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0006",
@@ -4231,7 +5383,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dressing-Room Candle, Scented Like a Funeral",
+    "action_cost": "none",
+    "effect": "Once lit, it sheds bright light in a 5-ft radius and dim light for 5 ft more for 1 hour. Lighting it takes a Bonus Action with a Tinderbox or any open flame.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z09-0006",
+      "name": "Dressing-Room Candle, Scented Like a Funeral",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0007",
@@ -4274,7 +5444,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Stage Makeup Kit, Half-Dried",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: apply makeup to create a visual disguise; Charisma check, DC 10, using the kit (add your proficiency bonus if proficient). It can also be used to craft a Costume. 3 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0008",
@@ -4317,7 +5496,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Vanity Mirror, Half the Bulbs Dead",
+    "action_cost": "none",
+    "effect": "A handheld steel mirror: use it to peek around corners without exposing yourself, to signal by reflecting light, or for cosmetics. No other effect. 1/2 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0009",
@@ -4360,7 +5548,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Curtain Rigging Pulley, Stage Left",
+    "action_cost": "None (passive)",
+    "effect": "Passive while rigged: you can hoist up to four times the weight you can normally lift. 5 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0010",
@@ -4403,7 +5600,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Midterm Blazer, Embroidered STAFF",
+    "action_cost": "none",
+    "effect": "Expensive-looking clothes: some events and locations admit only people wearing Fine Clothes (GM decides which). No AC, no other effect. 6 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0011",
@@ -4458,7 +5664,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Prop Arrows, Foam Tips Removed",
+    "action_cost": "none",
+    "effect": "Twenty arrows: ammunition for a Shortbow or Longbow; each shot uses one arrow. After a fight you can spend 1 minute to recover half the arrows you used (rounded down); the rest are lost. A Quiver (1 gp) holds them; this bundle does not include one. 1 lb.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z09-0011",
+      "name": "Prop Arrows, Foam Tips Removed",
+      "max": 20,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0012",
@@ -4501,7 +5725,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Backstage Per Diem Envelope, Water-Stained",
+    "action_cost": "none",
+    "effect": "Adds 3d6 x 5 credits (15-90) to your balance when the box is opened. Roll at draw time with tools/roll.py. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0013",
@@ -4556,7 +5789,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Green-Room Smoothie, Pre-Show Strength",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 4d4+4 HP. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z09-0013",
+      "name": "Green-Room Smoothie, Pre-Show Strength",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0014",
@@ -4599,7 +5850,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Stage-Crew Gaffer Wristbands, Pointing Hand",
+    "action_cost": "None (passive)",
+    "effect": "Requires attunement. While worn: proficiency with the Longbow and Shortbow, and +2 bonus to damage rolls made with them.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z09-0015",
@@ -4642,7 +5902,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Wardrobe-Rack Hoodie, Many Moods",
+    "action_cost": "Bonus Action",
+    "effect": "Worn as your outer garment (no attunement). Bonus Action: change its style, color and apparent quality to any cloak, hoodie, cape or vest you have seen. Looks only: no AC, no powers, no bonus to any check. Weight does not change.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z10-0001",
@@ -4685,7 +5954,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dean Thudd's Valedictorian Cord (Gold)",
+    "action_cost": "Magic action",
+    "effect": "60-ft rope, holds up to 3,000 lb. Magic action: command the free end to move toward a destination within 60 ft (10 ft now, 10 ft at the start of each of your turns), or to fasten, unfasten, knot, unknot or coil. Knotted: shortens to 50 ft, Advantage on climb checks. AC 20, HP 20, immune to Poison and Psychic, regains 1 HP per 5 min.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z10-0002",
@@ -4728,7 +6006,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Podium Leg, Bolted Once, Now Stuck Forever",
+    "action_cost": "Utilize action",
+    "effect": "Utilize action: press the button; the rod becomes fixed in place and holds up to 8,000 lb. Utilize again to release. Moving a fixed rod up to 10 ft needs a DC 30 Strength (Athletics) check. 2 lb.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z10-0003",
@@ -4783,7 +6070,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Dean's Emergency Flask (Courtesy of the Faculty)",
+    "action_cost": "Bonus Action",
+    "effect": "Bonus Action: drink it, or give it to a creature within 5 ft; the drinker regains 4d4+4 HP. One use.",
+    "uses": [
+     {
+      "key": "cdr-box-f01-z10-0003",
+      "name": "Dean's Emergency Flask (Courtesy of the Faculty)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f01-z10-0004",
@@ -4826,7 +6131,16 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "as filed on the deck card",
    "payable": false,
-   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger."
+   "credits_note": "The deck already states this credit amount. This folder does not pay it and does not write a ledger.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Alumni Fund Check (Cleared, Unfortunately)",
+    "action_cost": "none",
+    "effect": "Adds 2d6 x 25 credits (50-300) to your balance when the box is opened. Roll at draw time. No weight.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0001",
@@ -4881,7 +6195,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Clone Nameplate Charm (This One Is a Copy)",
+    "action_cost": "None (passive)",
+    "effect": "Worn as a pin (no attunement). Once per long rest, when you start a fight against a named Soft Open boss or Elite, you may learn whether it is a clone, duplicate, or original (GM yes/no) and gain Advantage on your first attack roll against it this fight.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0001",
+      "name": "Clone Nameplate Charm (This One Is a Copy)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0002",
@@ -4936,7 +6268,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Pupa Timing Whistle (Do Not Blow Early)",
+    "action_cost": "Bonus Action",
+    "effect": "Once per long rest, as a Bonus Action, blow the whistle while within 30 ft of a Soft Open pupa sac or similar timed hatch. You learn whether the timer will pop this round, next round, or later (GM three-way call) and creatures you choose within 10 ft of you have Advantage on Dexterity saving throws against the hatch until the end of your next turn.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0002",
+      "name": "Pupa Timing Whistle (Do Not Blow Early)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0003",
@@ -4991,7 +6341,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Psionic Earplug Pair (One Size Fits Guilt)",
+    "action_cost": "None (passive)",
+    "effect": "Worn in the ears (no attunement). Once per long rest, when you would make a saving throw against a Soft Open psionic or psychic effect, you may make it with Advantage. If your Intelligence is 16 or higher, you may instead grant that Advantage to one ally within 30 ft who can hear you.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0003",
+      "name": "Psionic Earplug Pair (One Size Fits Guilt)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0004",
@@ -5046,7 +6414,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "One-Cage Ribbon (Figure It Out, Einstein)",
+    "action_cost": "Action",
+    "effect": "A faded ribbon tied to a spent Soft Open cage key. Once per floor, when you choose which cage, lock, or pet door to open under a one-use key rule, you may ask the GM one yes/no question about which choice is safest for the party (no loot spoilers). Story only afterward.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0004",
+      "name": "One-Cage Ribbon (Figure It Out, Einstein)",
+      "max": 1,
+      "spent": 0,
+      "recover": "floor",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0005",
@@ -5101,7 +6487,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Steve's Ghost Smile Pin (Do Not Ask How)",
+    "action_cost": "Action",
+    "effect": "Once per long rest, as an Action, offer food or a calm gesture to one Soft Open Beast within 30 ft that is hostile only from hunger or territory (GM call: Danger Dingoes fit). It makes a DC 12 Wisdom saving throw. On a failure it becomes Indifferent to you and your allies for 10 minutes and will not join a fight against you unless attacked.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0005",
+      "name": "Steve's Ghost Smile Pin (Do Not Ask How)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0006",
@@ -5156,7 +6560,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Recipe Laminate (Rev-Up Adjacent, Taxes Pending)",
+    "action_cost": "Action: part of a Short Rest",
+    "effect": "Once per long rest, during a Short Rest with access to Soft Open blender gear or an Alchemy Table, you may recreate one Immunity Smoothie dose (Buzzed; advantage on saves vs Soft Open Taint and Vigorous Measles until your next Long Rest). Requires the Soft Open ingredients the GM agrees you still have. Dormant until Floor 3: a second dose per long rest.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0006",
+      "name": "Recipe Laminate (Rev-Up Adjacent, Taxes Pending)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0007",
@@ -5211,7 +6633,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Door Barricade Charm (Do Not Open, Do Not Pee)",
+    "action_cost": "Action",
+    "effect": "Once per long rest, as an Action while inside a Soft Open saferoom or certified bathroom, brace one door or hatch. For 10 minutes that portal has +2 AC against smash attempts and creatures outside have Disadvantage on Strength checks to force it. Does nothing if anyone in the room relieving themselves outside a saferoom or bathroom summoned a Rage Elemental this floor (the charm sulks).",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0007",
+      "name": "Door Barricade Charm (Do Not Open, Do Not Pee)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0008",
@@ -5266,7 +6706,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Wheeled Lure Axle Cap (Not the Whole Bomb)",
+    "action_cost": "Action",
+    "effect": "Once per long rest, as an Action, deploy a wheeled noise lure within 30 ft. Until the end of your next turn, one Soft Open creature of the GM's choice that can hear it has Disadvantage on Perception checks and must move at least 10 ft toward the lure if it starts its turn within 30 ft and can move (no opportunity attacks from this forced step).",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0008",
+      "name": "Wheeled Lure Axle Cap (Not the Whole Bomb)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0009",
@@ -5321,7 +6779,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Ejection Tag (T-Minus Manners)",
+    "action_cost": "Bonus Action",
+    "effect": "Once per Soft Open floor, when saferooms are within 1 hour of closure, you may Activate the tag as a Bonus Action. You and up to three willing Crawlers within 10 ft learn the exact remaining minutes to eject (GM) and may each stow or retrieve one item as part of this Bonus Action without provoking opportunity attacks.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0009",
+      "name": "Ejection Tag (T-Minus Manners)",
+      "max": 1,
+      "spent": 0,
+      "recover": "floor",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0010",
@@ -5376,7 +6852,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Studio Guest Pass (Mexx-55 Approved, Maybe)",
+    "action_cost": "Action",
+    "effect": "Consumable. As an Action, tear the pass: you and one willing ally within 5 ft teleport to the nearest honest Soft Open saferoom you have already visited (GM picks if several). You arrive standing, no attack. Single use; then scrap paper.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0010",
+      "name": "Studio Guest Pass (Mexx-55 Approved, Maybe)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0011",
@@ -5431,7 +6925,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Improviser's Grease Pencil (Not On The Call Sheet)",
+    "action_cost": "Action",
+    "effect": "Once per long rest, as an Action, mark an unoccupied space within 10 ft as the landing zone for a plan you describe at the table (improvised wire, bait, wedge, whatever). The first Soft Open enemy that enters that space this combat makes a DC 12 Dexterity saving throw or takes 1d6 bludgeoning, slashing, or fire damage (your choice when marking) and has the Prone condition. Then the mark is spent until you rest.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0011",
+      "name": "Improviser's Grease Pencil (Not On The Call Sheet)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0012",
@@ -5486,7 +6998,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Qwist's Favor Feather (Clucks of Concern)",
+    "action_cost": "Action",
+    "effect": "Once per long rest, while inside a Soft Open staffed saferoom, present the feather. One Short Rest there costs no field-rest fee even if the hall outside is noisy (decision 031 quiet-rest buy). Once per Soft Open floor, Qwist (or peer Bopca) will answer one yes/no question about whether a nearby sticker is honest today.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0012",
+      "name": "Qwist's Favor Feather (Clucks of Concern)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-box-f02-any-0013",
@@ -5541,7 +7071,25 @@
    "price_source": "Copied from the filed loot deck. This card does not set a new price.",
    "ceiling_note": "Story Box or other hand-pick. Not a random Bronze pull. story_value is provenance, not a sale price.",
    "payable": true,
-   "credits_note": null
+   "credits_note": null,
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": "Parade Handle Ribbon (Push, Don't Panic)",
+    "action_cost": "Action",
+    "effect": "Once per long rest, as an Action while escorting one or more Soft Open noncombatant NPCs, choose up to three willing noncombatants within 10 ft. Until the end of your next turn they ignore Difficult Terrain from Soft Open grubs or debris and you have Advantage on the next Strength (Athletics) or Wisdom (Insight) check made to keep them moving.",
+    "uses": [
+     {
+      "key": "cdr-box-f02-any-0013",
+      "name": "Parade Handle Ribbon (Push, Don't Panic)",
+      "max": 1,
+      "spent": 0,
+      "recover": "long rest",
+      "rule": "Spend this counter. At 0 the item does not fire until it recovers. Do not add charges."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   }
  ],
  "rules_40": [
@@ -5576,7 +7124,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-z06-0001"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Utilize, once: the System truthfully answers one yes/no question about the current floor.",
+    "uses": [
+     {
+      "key": "cdr-r40-laminated-complaint-card",
+      "name": "Laminated Complaint Card",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-02-cloak-of-many-fashions",
@@ -5601,7 +7167,16 @@
     "cdr-box-f01-any-0028",
     "cdr-box-f01-z09-0015"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action: change the outfit's look. No AC, no check bonus.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-03-pole-of-collapsing",
@@ -5625,7 +7200,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0029"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Magic action: collapse to 1 ft or extend to 10 ft. Not a weapon.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-04-sentient-rubber-duck",
@@ -5650,7 +7234,16 @@
     "cdr-box-f01-any-0030",
     "cdr-box-f01-z06-0003"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "No mechanics. Terrible advice only.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-05-mystery-key-house-analog",
@@ -5684,7 +7277,25 @@
     "cdr-box-f01-any-0035",
     "cdr-box-f01-z06-0004"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Utilize: opens one GM-chosen lock on the current floor, then it is a plain key.",
+    "uses": [
+     {
+      "key": "cdr-r40-mystery-key-house-analog",
+      "name": "Mystery Key (house analog)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-06-potion-of-healing",
@@ -5718,7 +7329,25 @@
     "cdr-box-f01-any-0001",
     "cdr-box-f01-z06-0002"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action drink: regain 2d4+2 HP.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-healing",
+      "name": "Potion of Healing",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-07-potion-of-healing-greater",
@@ -5753,7 +7382,25 @@
     "cdr-box-f01-z09-0013",
     "cdr-box-f01-z10-0003"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action: regain 4d4+4 HP. Credit value is the rules/40 HOUSE estimate.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-healing-greater",
+      "name": "Potion of Healing (greater)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-08-potion-of-healing-superior",
@@ -5782,7 +7429,25 @@
     }
    ],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action: regain 8d4+8 HP. Gold starts at Floor 3.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-healing-superior",
+      "name": "Potion of Healing (superior)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-09-potion-of-climbing",
@@ -5815,7 +7480,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0002"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action, 1 hour: Climb Speed equal to Speed, Advantage on Athletics to climb.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-climbing",
+      "name": "Potion of Climbing",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-10-potion-of-water-breathing",
@@ -5848,7 +7531,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0051"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Drink: breathe underwater for 24 hours.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-water-breathing",
+      "name": "Potion of Water Breathing",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-11-potion-of-resistance",
@@ -5881,7 +7582,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0040"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action: Resistance to one damage type for 1 hour. GM picks the type or rolls the d10 in rules/40.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-resistance",
+      "name": "Potion of Resistance",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-12-potion-of-giant-strength-hill",
@@ -5912,7 +7631,25 @@
     }
    ],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Drink: Strength becomes 21 for 1 hour if it was lower.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-giant-strength-hill",
+      "name": "Potion of Giant Strength (hill)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-13-potion-of-animal-friendship",
@@ -5943,7 +7680,25 @@
     }
    ],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action: cast Animal Friendship once at level 3, Wisdom save DC 13.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-animal-friendship",
+      "name": "Potion of Animal Friendship",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-14-potion-of-fire-breath",
@@ -5976,7 +7731,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0041"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action drink. Within 1 hour, up to 3 Bonus Action exhales: one creature within 30 ft, Dexterity DC 13, 4d6 Fire, half on a save.",
+    "uses": [
+     {
+      "key": "cdr-r40-potion-of-fire-breath",
+      "name": "Potion of Fire Breath",
+      "max": 3,
+      "spent": 0,
+      "recover": "three exhales within 1 hour, then done",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-15-spell-scroll-cantrip-or-1st",
@@ -6013,7 +7786,25 @@
     "cdr-box-f01-z09-0003",
     "cdr-box-f01-z09-0004"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Cast once if the spell is on your class list. Scroll save DC 13, attack bonus +5. Cantrip or 1st level only. 75 credits is the rules/40 HOUSE estimate.",
+    "uses": [
+     {
+      "key": "cdr-r40-spell-scroll-cantrip-or-1st",
+      "name": "Spell Scroll (cantrip or 1st)",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (crumbles)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-16-alchemist-s-fire",
@@ -6046,7 +7837,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-z03-0004"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Thrown attack-replacement, Dexterity save, 1d4 Fire and burning. Filed deck cards already reskin this.",
+    "uses": [
+     {
+      "key": "cdr-r40-alchemist-s-fire",
+      "name": "Alchemist's Fire",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-17-acid",
@@ -6079,7 +7888,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0006"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Utilize: throw 20 ft, ranged attack, 2d6 Acid.",
+    "uses": [
+     {
+      "key": "cdr-r40-acid",
+      "name": "Acid",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-18-holy-water",
@@ -6112,7 +7939,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0007"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Utilize: throw 20 ft, ranged attack, 2d8 Radiant on a Fiend or Undead.",
+    "uses": [
+     {
+      "key": "cdr-r40-holy-water",
+      "name": "Holy Water",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-19-antitoxin",
@@ -6145,7 +7990,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0008"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bonus Action drink: Advantage on saves to avoid or end Poisoned for 1 hour.",
+    "uses": [
+     {
+      "key": "cdr-r40-antitoxin",
+      "name": "Antitoxin",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-20-oil",
@@ -6179,7 +8042,25 @@
     "cdr-box-f01-any-0009",
     "cdr-box-f01-z03-0006"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Thrown or poured, as rules/40. 0.1 is the filed list figure. A purchase rounds up to 1 credit.",
+    "uses": [
+     {
+      "key": "cdr-r40-oil",
+      "name": "Oil",
+      "max": 1,
+      "spent": 0,
+      "recover": "none (consumed)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-21-ball-bearings",
@@ -6212,7 +8093,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0010"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Spill a 10-ft square. DC 10 Dexterity or Prone.",
+    "uses": [
+     {
+      "key": "cdr-r40-ball-bearings",
+      "name": "Ball Bearings",
+      "max": 1,
+      "spent": 0,
+      "recover": "none until gathered",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-22-caltrops",
@@ -6246,7 +8145,25 @@
     "cdr-box-f01-any-0011",
     "cdr-box-f01-z03-0005"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Cover a 5-ft square. DC 15 Dexterity or stop, 1 piercing, Speed -10.",
+    "uses": [
+     {
+      "key": "cdr-r40-caltrops",
+      "name": "Caltrops",
+      "max": 1,
+      "spent": 0,
+      "recover": "none until gathered",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-23-healer-s-kit",
@@ -6280,7 +8197,25 @@
     "cdr-box-f01-any-0012",
     "cdr-box-f01-z06-0006"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Utilize, 1 use: stabilize a creature at 0 HP. Ten uses. Do not stabilize for free after 0.",
+    "uses": [
+     {
+      "key": "cdr-r40-healer-s-kit",
+      "name": "Healer's Kit",
+      "max": 10,
+      "spent": 0,
+      "recover": "none (10 uses, then empty)",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-24-torch",
@@ -6313,7 +8248,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0013"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bright 20 ft, dim 20 ft, 1 hour. 0.01 is the filed list figure. A purchase rounds up to 1 credit.",
+    "uses": [
+     {
+      "key": "cdr-r40-torch",
+      "name": "Torch",
+      "max": 1,
+      "spent": 0,
+      "recover": "burns 1 hour",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-25-rope-hempen",
@@ -6338,7 +8291,16 @@
     "cdr-box-f01-any-0020",
     "cdr-box-f01-z03-0003"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "50 ft. Knot, burst, and bind numbers are the rules/40 row.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-26-crowbar",
@@ -6362,7 +8324,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0014"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Advantage on Strength checks where leverage helps.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-27-lock",
@@ -6386,7 +8357,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0019"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Comes with a key. Picking it is Thieves' Tools, DC 15.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-28-net",
@@ -6410,7 +8390,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0017"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Thrown attack-replacement. Dexterity save or Restrained.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-29-hunting-trap",
@@ -6443,7 +8432,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0018"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "DC 13 Dexterity or 1d4 piercing and caught on the chain.",
+    "uses": [
+     {
+      "key": "cdr-r40-hunting-trap",
+      "name": "Hunting Trap",
+      "max": 1,
+      "spent": 0,
+      "recover": "reset with Utilize",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-30-lantern-hooded",
@@ -6468,7 +8475,16 @@
     "cdr-box-f01-any-0015",
     "cdr-box-f01-z03-0002"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Bright 30 ft. Bonus Action to hood it.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-31-climber-s-kit",
@@ -6492,7 +8508,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0016"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Anchor so you cannot fall more than 25 ft from the point.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-32-bag-of-holding",
@@ -6516,7 +8541,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0052"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "500 lb / 64 cu ft. Redundant with System Inventory. Physical stash or gag.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-33-handy-haversack",
@@ -6536,7 +8570,16 @@
    "mechanics": "Three extradimensional pouches. SRD name has no Heward. Gold starts at Floor 3.",
    "tracked_uses": [],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Three extradimensional pouches. SRD name has no Heward. Gold starts at Floor 3.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-34-portable-hole",
@@ -6556,7 +8599,16 @@
    "mechanics": "Magic action to unfold a 6-ft hole, 10 ft deep. Gold starts at Floor 3.",
    "tracked_uses": [],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Magic action to unfold a 6-ft hole, 10 ft deep. Gold starts at Floor 3.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-35-rope-of-climbing",
@@ -6581,7 +8633,16 @@
     "cdr-box-f01-any-0043",
     "cdr-box-f01-z10-0001"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "60 ft rope that moves, knots, and coils on a Magic action.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-36-immovable-rod",
@@ -6606,7 +8667,16 @@
     "cdr-box-f01-any-0044",
     "cdr-box-f01-z10-0002"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Action: the button fixes it. DC 30 Strength to move it.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-37-boots-of-elvenkind",
@@ -6630,7 +8700,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0046"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Advantage on Dexterity (Stealth) checks. No attunement.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-38-goggles-of-night",
@@ -6654,7 +8733,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0045"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Darkvision 60 ft, or 60 ft more if you already have it.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-39-gloves-of-thievery",
@@ -6678,7 +8766,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0047"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "+5 Dexterity (Sleight of Hand). No attunement.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-40-cloak-of-protection",
@@ -6702,7 +8799,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0048"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Attunement: +1 AC and +1 to saving throws.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-41-bracers-of-archery",
@@ -6726,7 +8832,16 @@
    "filed_deck_cards": [
     "cdr-box-f01-z09-0014"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Attunement: longbow and shortbow proficiency, +2 damage with them.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-42-pearl-of-power",
@@ -6759,7 +8874,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0049"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Attunement (spellcaster). Action: regain one expended spell slot of 3rd level or lower. Once per dawn, not once per fight.",
+    "uses": [
+     {
+      "key": "cdr-r40-pearl-of-power",
+      "name": "Pearl of Power",
+      "max": 1,
+      "spent": 0,
+      "recover": "once per dawn",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-43-weapon-1",
@@ -6781,7 +8914,16 @@
    "mechanics": "+1 to attack and damage rolls.",
    "tracked_uses": [],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "+1 to attack and damage rolls.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-44-shield-1",
@@ -6803,7 +8945,16 @@
    "mechanics": "+1 AC on top of the shield bonus.",
    "tracked_uses": [],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "+1 AC on top of the shield bonus.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-45-ring-of-protection",
@@ -6823,7 +8974,16 @@
    "mechanics": "Attunement: +1 AC and +1 to saving throws. Gold starts at Floor 3. On Floors 1–2 this is Benefactor or a logged hand-pick only.",
    "tracked_uses": [],
    "filed_deck_cards": [],
-   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0."
+   "note": "Not in a filed deck yet. A bot may propose it to Lore. It does not draw until a deck owns it. draw_weight stays 0.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Attunement: +1 AC and +1 to saving throws. Gold starts at Floor 3. On Floors 1–2 this is Benefactor or a logged hand-pick only.",
+    "uses": null,
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   },
   {
    "id": "cdr-r40-46-wand-of-magic-missiles",
@@ -6856,7 +9016,25 @@
    "filed_deck_cards": [
     "cdr-box-f01-any-0042"
    ],
-   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk."
+   "note": "A filed deck already has this item. Draw that card. This row is the rules/40 crosswalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-loot/0.3.0",
+    "playable": true,
+    "display_name": null,
+    "action_cost": null,
+    "effect": "Spend 1–3 charges to cast Magic Missile. 1 charge is 3 darts. Each extra charge adds one dart. If the last charge is spent, roll d20: on a 1 the wand crumbles. Do not fire it with 0 charges.",
+    "uses": [
+     {
+      "key": "cdr-r40-wand-of-magic-missiles",
+      "name": "Wand of Magic Missiles",
+      "max": 7,
+      "spent": 0,
+      "recover": "1d6+1 charges at dawn",
+      "rule": "Spend this counter. At 0 it does not fire. The max is the rules/40 row, not a new charge pool."
+     }
+    ],
+    "note": "Copied from the filed deck or the rules/40 row already on this card. Not a new credit, not a new effect."
+   }
   }
  ]
 }

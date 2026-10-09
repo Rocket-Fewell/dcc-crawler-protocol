@@ -1,0 +1,304 @@
+{
+  "schema": "cursor-dcc-cards/name-pass/0.3.0",
+  "rule": "The name has to be a picture. A player who has never opened a Monster Manual should know what they are looking at and why it is funny. D&D dictionary words stay on srd_name. Krakaren Clone is the style (a specific thing you can see and laugh at). Skeleton is not. This file does not add book-proper bosses and it does not rename Dean Thudd.",
+  "names": {
+    "f01-m-01": {
+      "display_name": "Ankle-Biting Vent Rat",
+      "picture": "A cat-sized rat in the ductwork, going for ankles, and it brought friends.",
+      "lore_floor_name": "Vent Rat"
+    },
+    "f01-m-02": {
+      "display_name": "Latch-On Ceiling Mosquito",
+      "picture": "A fist-sized mosquito with a drinking-straw nose. It drops off the ceiling, sticks to you, and sips.",
+      "lore_floor_name": "Ceiling Tick",
+      "tagline": "It files your blood under samples."
+    },
+    "f01-m-03": {
+      "display_name": "Probation Goblin, Plastic Badge",
+      "picture": "A small green intern. The badge is real. The job is to get hit first.",
+      "lore_floor_name": "Exit Greeter (Trainee)"
+    },
+    "f01-m-04": {
+      "display_name": "Hoodie Pamphleteer",
+      "picture": "A person in a hoodie pressing a pamphlet into your chest. The pamphlet is not the weapon. The knife is."
+    },
+    "f01-m-05": {
+      "display_name": "Suitcase Lobby Crab",
+      "picture": "A crab the size of a carry-on, clicking across the lobby tile like it pays rent."
+    },
+    "f01-m-06": {
+      "display_name": "Foam-Head Mascot Dog",
+      "picture": "A real mastiff wearing a mascot head it will not take off. The head is the bit. The teeth are not."
+    },
+    "f01-m-07": {
+      "display_name": "Name-Tag Thief",
+      "picture": "A person wearing a stolen staff badge, with your wallet already in the other hand."
+    },
+    "f01-m-08": {
+      "display_name": "Flashlight Turnstile Guard",
+      "picture": "A bored guard at a waist-high turnstile, flashlight in your eyes, spear not for show."
+    },
+    "f01-m-09": {
+      "display_name": "Smiling Polo Mannequin",
+      "picture": "A department-store dummy in a staff polo. The smile is painted on. The bow is not a toy. There is nobody inside.",
+      "lore_floor_name": "Mannequin Staff",
+      "tagline": "Customer service, wrong number of bones."
+    },
+    "f01-m-10": {
+      "display_name": "Pineapple-Club Goblin",
+      "picture": "A small green goblin with a clipboard and a club topped like a pineapple. Kill one and the rest take it personally.",
+      "lore_floor_name": "Exit Greeter"
+    },
+    "f01-m-11": {
+      "display_name": "Mop-Dragging Janitor Zombie",
+      "picture": "A corpse in a janitor shirt, still pushing the mop, still biting whoever steps in the bucket."
+    },
+    "f01-m-12": {
+      "display_name": "Screaming PA Mushroom",
+      "picture": "A mushroom wired into the ceiling speakers. Get close and it shrieks the whole hallway awake."
+    },
+    "f01-u-01": {
+      "display_name": "Safety-Vest Pike Intern",
+      "picture": "A trainee in a neon vest holding a pole with a spearhead zip-tied to the end."
+    },
+    "f01-u-02": {
+      "display_name": "Flying Razor Lanyard",
+      "picture": "An ID badge on a cord that flies by itself and tries to file itself in your neck.",
+      "lore_floor_name": "Lanyard Blade"
+    },
+    "f01-u-03": {
+      "display_name": "Paper-Hat Snack Dog",
+      "picture": "A small dog-person in a paper hat at the nacho cart. The cart is a prop. The knife is not."
+    },
+    "f01-u-04": {
+      "display_name": "Nacho-Cheese Steam Cloud",
+      "picture": "A little cloud of hot concession steam with a face, claws, and a bad attitude about the heat lamp."
+    },
+    "f01-u-05": {
+      "display_name": "Hold-Music Choir Intern",
+      "picture": "A junior priest chanting the hold music, holy symbol in one hand and a mace in the other."
+    },
+    "f01-u-06": {
+      "display_name": "Mop-Length Hall Centipede",
+      "picture": "A centipede as long as a mop handle, in the hallway, with a bite that makes you sick."
+    },
+    "f01-e-01": {
+      "display_name": "Walking Empty Pit-Bull Suit",
+      "picture": "An empty pit-bull mascot costume walking around. Foam outside. Nobody inside. It still swings.",
+      "lore_floor_name": "Bruiser the Mascot (Unoccupied)"
+    },
+    "f01-e-02": {
+      "display_name": "Seven-Foot Hairy Break-Room Bully",
+      "picture": "A huge hairy goblin-cousin who reaches you from a step farther away than your eyes agreed to."
+    },
+    "f01-e-03": {
+      "display_name": "Craft-Services Corpse",
+      "picture": "A hungry corpse in the green room, eating whoever stopped moving, including the sandwich tray."
+    },
+    "f01-e-04": {
+      "display_name": "Janitor-Vest Night Ghost",
+      "picture": "A see-through night-shift janitor. The mop passes through the floor. The cold does not pass through you."
+    },
+    "f01-b-01": {
+      "display_name": "Golf-Cart Concession Spider",
+      "picture": "A spider the size of a golf cart, webbing the gap between the nacho warmers."
+    },
+    "f01-b-02": {
+      "display_name": "Adjunct Smash, Podium Giant",
+      "picture": "A ten-foot teacher with a podium for a club. This is not Dean Thudd. The live floor still has the Dean.",
+      "tagline": "Tenure denied. Podium granted."
+    },
+    "f02-m-01": {
+      "display_name": "Sash-Wearing Tall Goblin Sergeant",
+      "picture": "A tall, drilled goblin in a soft-open sash. Meaner than the interns and better at standing in a line."
+    },
+    "f02-m-02": {
+      "display_name": "Boot-Eating Mop Water",
+      "picture": "A puddle of gray mop water that climbs your boots and digests the metal while you are still wearing them."
+    },
+    "f02-m-03": {
+      "display_name": "Route-Knowing Clipboard Scout",
+      "picture": "A scout who already highlighted your path on a clipboard. The bow is for when the highlight is not enough."
+    },
+    "f02-m-04": {
+      "display_name": "Laughing Hyena Person",
+      "picture": "A hyena-headed person with a spear. The laugh is the warning. The spear is the sentence."
+    },
+    "f02-m-05": {
+      "display_name": "Couch-Sized Saddle Wolf",
+      "picture": "A wolf the size of a couch, saddle worn shiny, looking for a rider or a meal."
+    },
+    "f02-m-06": {
+      "display_name": "Sword-Eating Antenna Bug",
+      "picture": "A bug with long feelers that rusts the sword in your hand down to orange flakes."
+    },
+    "f02-m-07": {
+      "display_name": "Your Shadow, On Payroll",
+      "picture": "Your own shadow, peeled off the floor, wearing nothing, hungry for the strength in your arms."
+    },
+    "f02-m-08": {
+      "display_name": "Goat-Legged Warmup Comic",
+      "picture": "Goat legs, little horns, pan pipes, and a tight five about your hit points."
+    },
+    "f02-m-09": {
+      "display_name": "Walking Charcoal Briquette",
+      "picture": "A little person made of hot coals. Touching it is the whole mistake."
+    },
+    "f02-m-10": {
+      "display_name": "Coughing Dust Cloud",
+      "picture": "A dust cloud with a face. It makes you cough, then it claws you for coughing."
+    },
+    "f02-u-01": {
+      "display_name": "Trident Lifeguard Fish-Person",
+      "picture": "A fish-person with a whistle and a trident. The pool is decorative until it is not."
+    },
+    "f02-u-02": {
+      "display_name": "Petrifying Chicken-Lizard",
+      "picture": "A chicken with a lizard tail and a mean beak. One peck and you are a lawn statue."
+    },
+    "f02-u-03": {
+      "display_name": "Motorcycle-Sized Usher Wasp",
+      "picture": "A wasp the size of a motorcycle, stuffed into an usher vest, stinger first."
+    },
+    "f02-u-04": {
+      "display_name": "Bouncer Ape Named Grip",
+      "picture": "An ape at the velvet rope. The name tag says GRIP. The fists already agreed."
+    },
+    "f02-u-05": {
+      "display_name": "Bow-Tie Black Bear",
+      "picture": "A black bear in a bow tie, checking a list you are not on."
+    },
+    "f02-u-06": {
+      "display_name": "Decorative Tank Shark",
+      "picture": "A reef shark in the lobby aquarium. The glass is a suggestion it has not accepted."
+    },
+    "f02-e-01": {
+      "display_name": "Headset Shoulder Devil",
+      "picture": "A tiny red devil on a shoulder, wearing a producer headset, offering a deal that is already bad."
+    },
+    "f02-e-02": {
+      "display_name": "Golf-Cart Security Wolf",
+      "picture": "A wolf bigger than the couch wolf, on a security contract, with the night shift's attitude."
+    },
+    "f02-e-03": {
+      "display_name": "Marquee Bird-Woman",
+      "picture": "A woman with vulture wings on the marquee. Her song walks your feet off the catwalk."
+    },
+    "f02-e-04": {
+      "display_name": "Swooping Stone Security Camera",
+      "picture": "A stone statue carved like a security camera. It sits still, then it dives."
+    },
+    "f02-e-05": {
+      "display_name": "Ten-Foot Cube of Floor Cleaner",
+      "picture": "A transparent cube of janitor jelly, ten feet on a side, with old mops floating in it. It moves. You do not want to be inside."
+    },
+    "f02-b-01": {
+      "display_name": "Fire-Breathing Exit Dog",
+      "picture": "A big black dog. Its bark is a cone of fire down the hallway. The exit sign is not a suggestion."
+    },
+    "f02-b-02": {
+      "display_name": "Occupied Owl-Bear Mascot",
+      "picture": "An owl's head on a bear's body, and it is not a costume. The beak and the hug both count."
+    },
+    "f02-b-03": {
+      "display_name": "Rental-Plate Sponsor Knight",
+      "picture": "A knight in full plate with a sponsor logo on the breastplate and a renaissance-faire lance."
+    },
+    "f03-m-01": {
+      "display_name": "Eyeless Cave Person",
+      "picture": "A pale person with no eyes, a stone club, and ears that already know where you stepped."
+    },
+    "f03-m-02": {
+      "display_name": "Stinking Demon Intern",
+      "picture": "A small, soggy, awful-smelling demon. Bottom of the org chart. The smell arrives first."
+    },
+    "f03-m-03": {
+      "display_name": "Fence-Hopping Teleport Dog",
+      "picture": "A dog that vanishes on one side of the fence and bites you on the other."
+    },
+    "f03-m-04": {
+      "display_name": "Cat-Sized Shoulder Dragon",
+      "picture": "A dragon the size of a cat, usually on someone's shoulder, judging your build out loud."
+    },
+    "f03-m-05": {
+      "display_name": "Purple Whip-Crop Fungus",
+      "picture": "A violet fungus planted in a crop row. The stalks are whips. Do not harvest it."
+    },
+    "f03-m-06": {
+      "display_name": "Hatchet-Faced Ostrich",
+      "picture": "A bird the size of an ostrich. The beak is an axe. It runs you down like you are the lawn."
+    },
+    "f03-m-07": {
+      "display_name": "Hang-Glider Mail Lizard",
+      "picture": "A flying lizard with a mail satchel, dive-bombing the road like the package is you."
+    },
+    "f03-m-08": {
+      "display_name": "Two-Headed Junkyard Dog",
+      "picture": "One body, two heads, both of them mad, both of them biting."
+    },
+    "f03-m-09": {
+      "display_name": "Invisible Clipboard Gremlin",
+      "picture": "A tiny demon you cannot see, holding a clipboard, poisoning whatever you were about to drink."
+    },
+    "f03-m-10": {
+      "display_name": "Property-Line Tree Woman",
+      "picture": "A woman who is also the tree on the property line. She can step into the trunk. She does not share the yard."
+    },
+    "f03-u-01": {
+      "display_name": "Cutlass Pirate Who Drafts You",
+      "picture": "A pirate with a cutlass who is not asking you to join. The press gang already decided."
+    },
+    "f03-u-02": {
+      "display_name": "Pony-Sized Laughing Hyena",
+      "picture": "A hyena as big as a pony. One animal. The laugh still sounds like a pack."
+    },
+    "f03-u-03": {
+      "display_name": "Lawn Lion",
+      "picture": "A lion on the green, treating the party like slow gazelles who paid for the tour."
+    },
+    "f03-u-04": {
+      "display_name": "Patch-Wearing Brown Bear",
+      "picture": "A brown bear with a warden patch sewn on. The patch is not a joke. The claws are the fine."
+    },
+    "f03-u-05": {
+      "display_name": "Horse-Bodied Eagle Courier",
+      "picture": "Eagle in front, horse in back, wings in the middle, and it is carrying mail you did not order."
+    },
+    "f03-u-06": {
+      "display_name": "Swallow-You Mill Toad",
+      "picture": "A toad the size of a millstone. The tongue is the first problem. The mouth is the second."
+    },
+    "f03-e-01": {
+      "display_name": "Tunneling Acid Ant-Lion",
+      "picture": "A huge insect that bursts out of the road under your feet and spits a line of acid."
+    },
+    "f03-e-02": {
+      "display_name": "Barn-Rafter Spider Person",
+      "picture": "A person with extra spider arms in the barn rafters, wrapping whatever used to be livestock."
+    },
+    "f03-e-03": {
+      "display_name": "Roadside Priest, Mace Blessed",
+      "picture": "A priest at a roadside shrine. The blessing is optional. The mace is not."
+    },
+    "f03-e-04": {
+      "display_name": "Blink-Past-the-Gate Spider",
+      "picture": "A big spider that steps out of sight on one side of the gate and back in behind you."
+    },
+    "f03-e-05": {
+      "display_name": "Lion-Bat with a Spike Tail",
+      "picture": "A lion's body, bat wings, a person's face, and a tail that throws spikes like darts."
+    },
+    "f03-b-01": {
+      "display_name": "Two-Headed Toll Giant",
+      "picture": "One giant body, two heads, both of them charging a toll and both of them swinging."
+    },
+    "f03-b-02": {
+      "display_name": "Grant-Denied Ghost",
+      "picture": "A ghost in a blazer who can walk into your body and hate your application from the inside."
+    },
+    "f03-b-03": {
+      "display_name": "Hungry Black Silo Slime",
+      "picture": "A silo full of black slime. Cut it and it splits. It eats metal, wood, and whoever brought the metal."
+    }
+  }
+}

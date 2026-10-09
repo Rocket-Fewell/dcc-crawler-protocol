@@ -1,17 +1,17 @@
 {
  "floor": 3,
  "count": 24,
- "schema": "cursor-dcc-cards/0.2.0",
+ "schema": "cursor-dcc-cards/0.3.0",
  "cards": [
   {
    "id": "f03-m-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Road Grimlock",
-   "nameplate": "Road Grimlock. Level 1. \"The rural road does not need eyes.\"",
+   "display_name": "Eyeless Cave Person",
+   "nameplate": "Eyeless Cave Person. Level 1. \"The rural road does not need eyes.\"",
    "nameplate_level": 1,
    "srd_name": "Grimlock",
    "srd_id": "grimlock",
@@ -25,7 +25,7 @@
    "what_it_wants": "It wants the blind corner.",
    "how_to_cheese": "Light and noise. They hunt by hearing.",
    "tactics": "Ambush from the ditch.",
-   "system_line": "Road Grimlock. Level 1. Blind and armed.",
+   "system_line": "Eyeless Cave Person. Level 1. Blind and armed.",
    "gm_line": "No eyes. Plenty of axe. The countryside is not quaint.",
    "stat_block": {
     "srd_name": "Grimlock",
@@ -123,7 +123,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Eyeless Cave Person"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -135,17 +136,50 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Road Grimlock",
+   "picture": "A pale person with no eyes, a stone club, and ears that already know where you stepped.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A pale person with no eyes, a stone club, and ears that already know where you stepped.",
+    "attacks": [
+     {
+      "name": "Bone Cudgel",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+3",
+       "type": "bludgeoning",
+       "average": 6
+      },
+      "extra_damage": [
+       {
+        "dice": "1d4",
+        "type": "psychic",
+        "average": 2
+       }
+      ]
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Fieldhand Dretch",
-   "nameplate": "Fieldhand Dretch. Level 1. \"Harvest help from a worse place.\"",
+   "display_name": "Stinking Demon Intern",
+   "nameplate": "Stinking Demon Intern. Level 1. \"Harvest help from a worse place.\"",
    "nameplate_level": 1,
    "srd_name": "Dretch",
    "srd_id": "dretch",
@@ -159,7 +193,7 @@
    "what_it_wants": "It wants a crowd.",
    "how_to_cheese": "They are weak alone. Don't let the cloud gather.",
    "tactics": "Fetch and claw. They stink as a group.",
-   "system_line": "Fieldhand Dretch. Level 1. Fiend.",
+   "system_line": "Stinking Demon Intern. Level 1. Fiend.",
    "gm_line": "Farm labor, imported. The import smell arrives first.",
    "stat_block": {
     "srd_name": "Dretch",
@@ -262,7 +296,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Stinking Demon Intern"
    },
    "tracked_uses": [
     {
@@ -286,17 +321,67 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Fetid Cloud is once per day. It is not a slot that refills when the cloud ends.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Fieldhand Dretch",
+   "picture": "A small, soggy, awful-smelling demon. Bottom of the org chart. The smell arrives first.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A small, soggy, awful-smelling demon. Bottom of the org chart. The smell arrives first.",
+    "attacks": [
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+1",
+       "type": "slashing",
+       "average": 4
+      }
+     },
+     {
+      "name": "Fetid Cloud (1/Day)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Constitution Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can’t take Reactions",
+      "save": {
+       "ability": "Constitution",
+       "dc": 11
+      },
+      "per_day": 1
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Fetid Cloud",
+      "name": "Fetid Cloud",
+      "kind": "daily",
+      "spell_level": null,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.",
+      "key": "f03-m-02.fetid-cloud"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Fence Blink Dog",
-   "nameplate": "Fence Blink Dog. Level 1. \"The property line moves.\"",
+   "display_name": "Fence-Hopping Teleport Dog",
+   "nameplate": "Fence-Hopping Teleport Dog. Level 1. \"The property line moves.\"",
    "nameplate_level": 1,
    "srd_name": "Blink Dog",
    "srd_id": "blink-dog",
@@ -310,7 +395,7 @@
    "what_it_wants": "It wants you on the wrong side of the fence.",
    "how_to_cheese": "Ready an attack for when it blinks back.",
    "tactics": "Bite, blink, bite.",
-   "system_line": "Fence Blink Dog. Level 1. Fey.",
+   "system_line": "Fence-Hopping Teleport Dog. Level 1. Fey.",
    "gm_line": "Good dog. Bad jurisdiction.",
    "stat_block": {
     "srd_name": "Blink Dog",
@@ -413,7 +498,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Fence-Hopping Teleport Dog"
    },
    "tracked_uses": [
     {
@@ -443,17 +529,70 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Teleport is recharge 4–6. It is not a spell slot.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Fence Blink Dog",
+   "picture": "A dog that vanishes on one side of the fence and bites you on the other.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A dog that vanishes on one side of the fence and bites you on the other.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Piercing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+3",
+       "type": "piercing",
+       "average": 5
+      }
+     },
+     {
+      "name": "Teleport (Recharge 4–6)",
+      "slot": "bonus_actions",
+      "kind": "teleport",
+      "parsed": true,
+      "raw": "The dog teleports up to 40 feet to an unoccupied space it can see.",
+      "recharge": "4-6",
+      "distance_ft": 40
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Teleport",
+      "name": "Teleport",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       4,
+       5,
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [4, 5, 6]",
+      "rule": "Starts ready. After Teleport is used, it is down until a d6 at the start of this creature's turn shows 4–6. It cannot be used every turn.",
+      "key": "f03-m-03.teleport"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Critic Pseudodragon",
-   "nameplate": "Critic Pseudodragon. Level 1. \"A tiny dragon with notes.\"",
+   "display_name": "Cat-Sized Shoulder Dragon",
+   "nameplate": "Cat-Sized Shoulder Dragon. Level 1. \"A tiny dragon with notes.\"",
    "nameplate_level": 1,
    "srd_name": "Pseudodragon",
    "srd_id": "pseudodragon",
@@ -467,7 +606,7 @@
    "what_it_wants": "It wants you stung and embarrassed.",
    "how_to_cheese": "It is small. Don't chase it into the loft alone.",
    "tactics": "Sting from the rafters, then hide.",
-   "system_line": "Critic Pseudodragon. Level 1. Dragon.",
+   "system_line": "Cat-Sized Shoulder Dragon. Level 1. Dragon.",
    "gm_line": "Two stars. Would sting again.",
    "stat_block": {
     "srd_name": "Pseudodragon",
@@ -578,7 +717,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Cat-Sized Shoulder Dragon"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -590,17 +730,79 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Critic Pseudodragon",
+   "picture": "A dragon the size of a cat, usually on someone's shoulder, judging your build out loud.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A dragon the size of a cat, usually on someone's shoulder, judging your build out loud.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The pseudodragon makes two Bite attacks",
+      "count": 2,
+      "uses": [
+       "Bite"
+      ]
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+2",
+       "type": "piercing",
+       "average": 4
+      }
+     },
+     {
+      "name": "Sting",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Constitution Saving Throw: DC 12, one creature the pseudodragon can see within 5 feet. Failure: 5 (2d4) Poison damage, and the target has the Poisoned condition for 1 hour. Failure by 5 or More: While Poisoned, the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it",
+      "save": {
+       "ability": "Constitution",
+       "dc": 12
+      },
+      "damage": {
+       "dice": "2d4",
+       "type": "poison",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [
+     {
+      "name": "Magic Resistance",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "The pseudodragon has Advantage on saving throws against spells and other magical effects",
+      "effect": "advantage_on_spell_saves"
+     }
+    ],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Violet Crop",
-   "nameplate": "Violet Crop. Level 1. \"The field planted back.\"",
+   "display_name": "Purple Whip-Crop Fungus",
+   "nameplate": "Purple Whip-Crop Fungus. Level 1. \"The field planted back.\"",
    "nameplate_level": 1,
    "srd_name": "Violet Fungus",
    "srd_id": "violet-fungus",
@@ -614,7 +816,7 @@
    "what_it_wants": "It wants you in the patch.",
    "how_to_cheese": "Don't walk the purple rows. Ranged, or burn the patch.",
    "tactics": "It does not chase past the crop.",
-   "system_line": "Violet Crop. Level 1. Plant.",
+   "system_line": "Purple Whip-Crop Fungus. Level 1. Plant.",
    "gm_line": "Do not eat the pretty ones. The pretty ones eat.",
    "stat_block": {
     "srd_name": "Violet Fungus",
@@ -716,7 +918,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Purple Whip-Crop Fungus"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -728,17 +931,54 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Violet Crop",
+   "picture": "A violet fungus planted in a crop row. The stalks are whips. Do not harvest it.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A violet fungus planted in a crop row. The stalks are whips. Do not harvest it.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The fungus makes two Rotting Touch attacks",
+      "count": 2,
+      "uses": [
+       "Rotting Touch"
+      ]
+     },
+     {
+      "name": "Rotting Touch",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +2, reach 10 ft. Hit: 4 (1d8) Necrotic damage",
+      "to_hit": 2,
+      "reach_ft": 10,
+      "damage": {
+       "dice": "1d8",
+       "type": "necrotic",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-06",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Axe Beak Livestock",
-   "nameplate": "Axe Beak Livestock. Level 1. \"The poultry is a weapon.\"",
+   "display_name": "Hatchet-Faced Ostrich",
+   "nameplate": "Hatchet-Faced Ostrich. Level 1. \"The poultry is a weapon.\"",
    "nameplate_level": 1,
    "srd_name": "Axe Beak",
    "srd_id": "axe-beak",
@@ -752,7 +992,7 @@
    "what_it_wants": "It wants a sprint.",
    "how_to_cheese": "A fence. They are fast and stupid.",
    "tactics": "Charge in a straight line.",
-   "system_line": "Axe Beak Livestock. Level 1.",
+   "system_line": "Hatchet-Faced Ostrich. Level 1.",
    "gm_line": "Free range. The range includes your ribs.",
    "stat_block": {
     "srd_name": "Axe Beak",
@@ -849,7 +1089,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Hatchet-Faced Ostrich"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -861,17 +1102,43 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Axe Beak Livestock",
+   "picture": "A bird the size of an ostrich. The beak is an axe. It runs you down like you are the lawn.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A bird the size of an ostrich. The beak is an axe. It runs you down like you are the lawn.",
+    "attacks": [
+     {
+      "name": "Beak",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage.",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+2",
+       "type": "slashing",
+       "average": 6
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-07",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Pteranodon Post",
-   "nameplate": "Pteranodon Post. Level 1. \"Mail, delivered downward.\"",
+   "display_name": "Hang-Glider Mail Lizard",
+   "nameplate": "Hang-Glider Mail Lizard. Level 1. \"Mail, delivered downward.\"",
    "nameplate_level": 1,
    "srd_name": "Pteranodon",
    "srd_id": "pteranodon",
@@ -885,7 +1152,7 @@
    "what_it_wants": "It wants a grab from above.",
    "how_to_cheese": "Get under the eaves. Don't cross the open yard.",
    "tactics": "Dive, snatch, climb.",
-   "system_line": "Pteranodon Post. Level 1.",
+   "system_line": "Hang-Glider Mail Lizard. Level 1.",
    "gm_line": "The mail is late because the mail is a mouth.",
    "stat_block": {
     "srd_name": "Pteranodon",
@@ -988,7 +1255,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Hang-Glider Mail Lizard"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1000,17 +1268,43 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Pteranodon Post",
+   "picture": "A flying lizard with a mail satchel, dive-bombing the road like the package is you.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A flying lizard with a mail satchel, dive-bombing the road like the package is you.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+2",
+       "type": "piercing",
+       "average": 6
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-08",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Death Dog",
-   "nameplate": "Death Dog. Level 1. \"Two heads, one opinion.\"",
+   "display_name": "Two-Headed Junkyard Dog",
+   "nameplate": "Two-Headed Junkyard Dog. Level 1. \"Two heads, one opinion.\"",
    "nameplate_level": 1,
    "srd_name": "Death Dog",
    "srd_id": "death-dog",
@@ -1024,7 +1318,7 @@
    "what_it_wants": "It wants a bite that rots.",
    "how_to_cheese": "Don't let both heads get a turn on the same Crawler if you can drop it fast.",
    "tactics": "Two bites. Disease is the leftover.",
-   "system_line": "Death Dog. Level 1.",
+   "system_line": "Two-Headed Junkyard Dog. Level 1.",
    "gm_line": "Pet one head. The other head files a complaint in your blood.",
    "stat_block": {
     "srd_name": "Death Dog",
@@ -1127,7 +1421,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Two-Headed Junkyard Dog"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1139,17 +1434,58 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Death Dog",
+   "picture": "One body, two heads, both of them mad, both of them biting.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "One body, two heads, both of them mad, both of them biting.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The death dog makes two Bite attacks",
+      "count": 2,
+      "uses": [
+       "Bite"
+      ]
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 12. First Failure: The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures: The Poisoned target’s Hit Point maximum decreases by 5 (1d10)",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+2",
+       "type": "piercing",
+       "average": 4
+      },
+      "on_hit_save": {
+       "ability": "Constitution",
+       "dc": 12
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-09",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Quasit Auditor",
-   "nameplate": "Quasit Auditor. Level 1. \"Here about the books.\"",
+   "display_name": "Invisible Clipboard Gremlin",
+   "nameplate": "Invisible Clipboard Gremlin. Level 1. \"Here about the books.\"",
    "nameplate_level": 1,
    "srd_name": "Quasit",
    "srd_id": "quasit",
@@ -1163,7 +1499,7 @@
    "what_it_wants": "It wants fear and a ruined scare.",
    "how_to_cheese": "See invisibility or just hold the doorway. It is fragile.",
    "tactics": "Scare, turn invisible, claw the frightened.",
-   "system_line": "Quasit Auditor. Level 1. Fiend.",
+   "system_line": "Invisible Clipboard Gremlin. Level 1. Fiend.",
    "gm_line": "It has a clipboard and a tail. Only one of those is standard.",
    "stat_block": {
     "srd_name": "Quasit",
@@ -1280,7 +1616,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Invisible Clipboard Gremlin"
    },
    "tracked_uses": [
     {
@@ -1317,17 +1654,105 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Invisibility is an at-will action, not a slot. Scare is once per day, Wisdom DC 10. At 0 Scare, claws and Invisibility remain.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Quasit Auditor",
+   "picture": "A tiny demon you cannot see, holding a clipboard, poisoning whatever you were about to drink.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A tiny demon you cannot see, holding a clipboard, poisoning whatever you were about to drink.",
+    "attacks": [
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+3",
+       "type": "slashing",
+       "average": 5
+      }
+     },
+     {
+      "name": "Invisibility",
+      "slot": "actions",
+      "kind": "spell",
+      "parsed": true,
+      "raw": "The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+      "spell": "Invisibility on itself",
+      "ability": "charisma"
+     },
+     {
+      "name": "Scare (1/Day)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Wisdom Saving Throw: DC 10, one creature within 20 feet. Failure: The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically",
+      "save": {
+       "ability": "Wisdom",
+       "dc": 10
+      },
+      "per_day": 1
+     },
+     {
+      "name": "Shape-Shift",
+      "slot": "actions",
+      "kind": "shapechange",
+      "parsed": true,
+      "raw": "The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed"
+     }
+    ],
+    "riders": [
+     {
+      "name": "Magic Resistance",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "The quasit has Advantage on saving throws against spells and other magical effects",
+      "effect": "advantage_on_spell_saves"
+     }
+    ],
+    "tracked_uses": [
+     {
+      "key_name": "Scare",
+      "name": "Scare",
+      "kind": "daily_spell",
+      "spell_level": null,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "Once per day. Wisdom save DC 10. At 0, do not use Scare.",
+      "key": "f03-m-09.scare",
+      "ability": "Wisdom",
+      "save_dc": 10
+     },
+     {
+      "key_name": "Invisibility",
+      "name": "Invisibility",
+      "kind": "at_will_innate",
+      "spell_level": 2,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (printed without a daily cap)",
+      "rule": "Printed as an action with no daily cap. Not a spell slot. Do not add slots.",
+      "key": "f03-m-09.invisibility"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-m-10",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "mob",
-   "display_name": "Boundary Dryad",
-   "nameplate": "Boundary Dryad. Level 1. \"The tree line is staffed.\"",
+   "display_name": "Property-Line Tree Woman",
+   "nameplate": "Property-Line Tree Woman. Level 1. \"The tree line is staffed.\"",
    "nameplate_level": 1,
    "srd_name": "Dryad",
    "srd_id": "dryad",
@@ -1341,7 +1766,7 @@
    "what_it_wants": "It wants you charmed into the wood.",
    "how_to_cheese": "Don't follow the voice off the road. Kill the tree bond if you must fight.",
    "tactics": "Charm, then the forest does the work.",
-   "system_line": "Boundary Dryad. Level 1. Fey.",
+   "system_line": "Property-Line Tree Woman. Level 1. Fey.",
    "gm_line": "She offers a shortcut. The shortcut is a stomach.",
    "stat_block": {
     "srd_name": "Dryad",
@@ -1461,7 +1886,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Property-Line Tree Woman"
    },
    "tracked_uses": [
     {
@@ -1540,17 +1966,173 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Entangle and Pass without Trace are once each per day. Charm Monster is at will but only one charm stays active; casting it again ends the previous one. At 0 on the daily spells, use the vine, the thorns, or the single charm.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Boundary Dryad",
+   "picture": "A woman who is also the tree on the property line. She can step into the trunk. She does not share the yard.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A woman who is also the tree on the property line. She can step into the trunk. She does not share the yard.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The dryad makes one Vine Lash or Thorn Burst attack, and it can use Spellcasting to cast Charm Monster"
+     },
+     {
+      "name": "Vine Lash",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +6, reach 10 ft. Hit: 8 (1d8 + 4) Slashing damage",
+      "to_hit": 6,
+      "reach_ft": 10,
+      "damage": {
+       "dice": "1d8+4",
+       "type": "slashing",
+       "average": 8
+      }
+     },
+     {
+      "name": "Thorn Burst",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +6, range 60 ft. Hit: 7 (1d6 + 4) Piercing damage",
+      "to_hit": 6,
+      "range_ft": [
+       60,
+       60
+      ],
+      "damage": {
+       "dice": "1d6+4",
+       "type": "piercing",
+       "average": 7
+      }
+     },
+     {
+      "name": "Spellcasting",
+      "slot": "actions",
+      "kind": "spellcasting",
+      "parsed": true,
+      "raw": "The dryad casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 14): At Will: Animal Friendship, Charm Monster (lasts 24 hours; ends early if the dryad casts the spell again), Druidcraft 1/Day Each: Entangle, Pass without Trace",
+      "at_will": [
+       "Animal Friendship",
+       "Charm Monster (lasts 24 hours; ends early if the dryad casts the spell again)",
+       "Druidcraft 1/Day Each: Entangle",
+       "Pass without Trace"
+      ],
+      "per_day_spells": [
+       {
+        "uses": 1,
+        "spells": [
+         "Entangle",
+         "Pass without Trace"
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Tree Stride",
+      "slot": "bonus_actions",
+      "kind": "teleport",
+      "parsed": true,
+      "raw": "If within 5 feet of a Large or bigger tree, the dryad teleports to an unoccupied space within 5 feet of a second Large or bigger tree that is within 60 feet of the previous tree",
+      "distance_ft": 5
+     }
+    ],
+    "riders": [
+     {
+      "name": "Magic Resistance",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "The dryad has Advantage on saving throws against spells and other magical effects. Speak with Beasts and Plants. The dryad can communicate with Beasts and Plants as if they shared a language",
+      "effect": "advantage_on_spell_saves"
+     }
+    ],
+    "tracked_uses": [
+     {
+      "key_name": "Animal Friendship",
+      "name": "Animal Friendship",
+      "kind": "at_will",
+      "spell_level": 1,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+      "ability": "Charisma",
+      "save_dc": 14,
+      "key": "f03-m-10.animal-friendship"
+     },
+     {
+      "key_name": "Charm Monster",
+      "name": "Charm Monster",
+      "kind": "at_will_single",
+      "spell_level": 4,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "Printed at will, and only one charm stays active. Casting it again ends the previous one. Not a slot. Do not stack charms.",
+      "ability": "Charisma",
+      "save_dc": 14,
+      "max_active": 1,
+      "key": "f03-m-10.charm-monster"
+     },
+     {
+      "key_name": "Druidcraft",
+      "name": "Druidcraft",
+      "kind": "at_will",
+      "spell_level": 0,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+      "ability": "Charisma",
+      "save_dc": 14,
+      "key": "f03-m-10.druidcraft"
+     },
+     {
+      "key_name": "Entangle",
+      "name": "Entangle",
+      "kind": "daily_spell",
+      "spell_level": 1,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "Once per day for this spell alone (1/Day Each). Not a level-1 slot that refills in the fight. At 0, do not cast it again.",
+      "ability": "Charisma",
+      "save_dc": 14,
+      "key": "f03-m-10.entangle"
+     },
+     {
+      "key_name": "Pass without Trace",
+      "name": "Pass without Trace",
+      "kind": "daily_spell",
+      "spell_level": 2,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "Once per day for this spell alone (1/Day Each). Not a level-2 slot that refills in the fight. At 0, do not cast it again.",
+      "ability": "Charisma",
+      "save_dc": 14,
+      "key": "f03-m-10.pass-without-trace"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-u-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "unit",
-   "display_name": "Press-Gang Pirate",
-   "nameplate": "Press-Gang Pirate. Level 1. \"Rural river, urban morals.\"",
+   "display_name": "Cutlass Pirate Who Drafts You",
+   "nameplate": "Cutlass Pirate Who Drafts You. Level 1. \"Rural river, urban morals.\"",
    "nameplate_level": 1,
    "srd_name": "Pirate",
    "srd_id": "pirate",
@@ -1564,7 +2146,7 @@
    "what_it_wants": "It wants bodies for the boat.",
    "how_to_cheese": "Sink the boat problem by not boarding. Fight them on the bank.",
    "tactics": "They volley, then board.",
-   "system_line": "Press-Gang Pirate. Level 1. Unit.",
+   "system_line": "Cutlass Pirate Who Drafts You. Level 1. Unit.",
    "gm_line": "The river tax is a person. Decline.",
    "stat_block": {
     "srd_name": "Pirate",
@@ -1670,7 +2252,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Cutlass Pirate Who Drafts You"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1682,17 +2265,69 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Press-Gang Pirate",
+   "picture": "A pirate with a cutlass who is not asking you to join. The press gang already decided.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A pirate with a cutlass who is not asking you to join. The press gang already decided.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The pirate makes two Dagger attacks. It can replace one attack with a use of Enthralling Panache",
+      "count": 2,
+      "uses": [
+       "Dagger"
+      ]
+     },
+     {
+      "name": "Dagger",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +5, reach 5 ft. or range 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "range_ft": [
+       20,
+       60
+      ],
+      "damage": {
+       "dice": "1d4+3",
+       "type": "piercing",
+       "average": 5
+      }
+     },
+     {
+      "name": "Enthralling Panache",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Wisdom Saving Throw: DC 12, one creature the pirate can see within 30 feet. Failure: The target has the Charmed condition until the start of the pirate’s next turn",
+      "save": {
+       "ability": "Wisdom",
+       "dc": 12
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-u-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "unit",
-   "display_name": "Hyena Pack",
-   "nameplate": "Hyena Pack. Level 1. \"They laugh on the ridge.\"",
+   "display_name": "Pony-Sized Laughing Hyena",
+   "nameplate": "Pony-Sized Laughing Hyena. Level 1. \"They laugh on the ridge.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Hyena",
    "srd_id": "giant-hyena",
@@ -1706,7 +2341,7 @@
    "what_it_wants": "It wants a runner.",
    "how_to_cheese": "Don't flee in pieces. A lone Crawler is the meal.",
    "tactics": "Rampage the wounded.",
-   "system_line": "Hyena Pack. Level 1. Unit.",
+   "system_line": "Pony-Sized Laughing Hyena. Level 1. Unit.",
    "gm_line": "The laugh is not joy. It is a headcount.",
    "stat_block": {
     "srd_name": "Giant Hyena",
@@ -1809,7 +2444,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Pony-Sized Laughing Hyena"
    },
    "tracked_uses": [
     {
@@ -1833,17 +2469,64 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Hyena Pack",
+   "picture": "A hyena as big as a pony. One animal. The laugh still sounds like a pack.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A hyena as big as a pony. One animal. The laugh still sounds like a pack.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 10 (2d6 + 3) Piercing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d6+3",
+       "type": "piercing",
+       "average": 10
+      }
+     },
+     {
+      "name": "Rampage (1/Day)",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "Immediately after dealing damage to a creature that was already Bloodied, the hyena can move up to half its Speed, and it makes one Bite attack.",
+      "per_day": 1,
+      "effect": "rampage"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Rampage",
+      "name": "Rampage",
+      "kind": "daily",
+      "spell_level": null,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.",
+      "key": "f03-u-02.rampage"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-u-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "unit",
-   "display_name": "Lion of the Green",
-   "nameplate": "Lion of the Green. Level 1. \"The green is not a lawn.\"",
+   "display_name": "Lawn Lion",
+   "nameplate": "Lawn Lion. Level 1. \"The green is not a lawn.\"",
    "nameplate_level": 1,
    "srd_name": "Lion",
    "srd_id": "lion",
@@ -1857,7 +2540,7 @@
    "what_it_wants": "It wants a pounce.",
    "how_to_cheese": "Spears. Don't let the pounce prone the cleric.",
    "tactics": "Pounce the back rank if the front opens.",
-   "system_line": "Lion of the Green. Level 1. Unit.",
+   "system_line": "Lawn Lion. Level 1. Unit.",
    "gm_line": "Royal symbol. Actual lion. The symbol bites.",
    "stat_block": {
     "srd_name": "Lion",
@@ -1972,7 +2655,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Lawn Lion"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1984,17 +2668,65 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Lion of the Green",
+   "picture": "A lion on the green, treating the party like slow gazelles who paid for the tour.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A lion on the green, treating the party like slow gazelles who paid for the tour.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The lion makes two Rend attacks. It can replace one attack with a use of Roar",
+      "count": 2,
+      "uses": [
+       "Rend"
+      ]
+     },
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "slashing",
+       "average": 7
+      }
+     },
+     {
+      "name": "Roar",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Wisdom Saving Throw: DC 11, one creature within 15 feet. Failure: The target has the Frightened condition until the start of the lion’s next turn",
+      "save": {
+       "ability": "Wisdom",
+       "dc": 11
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-u-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "unit",
-   "display_name": "Bear Warden",
-   "nameplate": "Bear Warden. Level 1. \"The woods have a warden and it is hungry.\"",
+   "display_name": "Patch-Wearing Brown Bear",
+   "nameplate": "Patch-Wearing Brown Bear. Level 1. \"The woods have a warden and it is hungry.\"",
    "nameplate_level": 1,
    "srd_name": "Brown Bear",
    "srd_id": "brown-bear",
@@ -2008,7 +2740,7 @@
    "what_it_wants": "It wants the trail.",
    "how_to_cheese": "Climb only if you can climb faster than a bear, which you cannot.",
    "tactics": "Two of them hold a trail choke.",
-   "system_line": "Bear Warden. Level 1. Unit.",
+   "system_line": "Patch-Wearing Brown Bear. Level 1. Unit.",
    "gm_line": "The warden does not check permits. The warden checks bones.",
    "stat_block": {
     "srd_name": "Brown Bear",
@@ -2114,7 +2846,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Patch-Wearing Brown Bear"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2126,17 +2859,64 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Bear Warden",
+   "picture": "A brown bear with a warden patch sewn on. The patch is not a joke. The claws are the fine.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A brown bear with a warden patch sewn on. The patch is not a joke. The claws are the fine.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The bear makes one Bite attack and one Claw attack"
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "piercing",
+       "average": 7
+      }
+     },
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+3",
+       "type": "slashing",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-u-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "unit",
-   "display_name": "Hippogriff Courier",
-   "nameplate": "Hippogriff Courier. Level 1. \"Airmail with talons.\"",
+   "display_name": "Horse-Bodied Eagle Courier",
+   "nameplate": "Horse-Bodied Eagle Courier. Level 1. \"Airmail with talons.\"",
    "nameplate_level": 1,
    "srd_name": "Hippogriff",
    "srd_id": "hippogriff",
@@ -2150,7 +2930,7 @@
    "what_it_wants": "It wants the message and your shoulder.",
    "how_to_cheese": "Stay indoors. The courier is the sky.",
    "tactics": "Dive, grab, fly off with one.",
-   "system_line": "Hippogriff Courier. Level 1. Unit.",
+   "system_line": "Horse-Bodied Eagle Courier. Level 1. Unit.",
    "gm_line": "Sign here. The pen is a talon.",
    "stat_block": {
     "srd_name": "Hippogriff",
@@ -2257,7 +3037,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Horse-Bodied Eagle Courier"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2269,17 +3050,54 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Hippogriff Courier",
+   "picture": "Eagle in front, horse in back, wings in the middle, and it is carrying mail you did not order.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "Eagle in front, horse in back, wings in the middle, and it is carrying mail you did not order.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The hippogriff makes two Rend attacks",
+      "count": 2,
+      "uses": [
+       "Rend"
+      ]
+     },
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage.",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "slashing",
+       "average": 7
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-u-06",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "unit",
-   "display_name": "Mill Toad",
-   "nameplate": "Mill Toad. Level 1. \"The millpond staff.\"",
+   "display_name": "Swallow-You Mill Toad",
+   "nameplate": "Swallow-You Mill Toad. Level 1. \"The millpond staff.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Toad",
    "srd_id": "giant-toad",
@@ -2293,7 +3111,7 @@
    "what_it_wants": "It wants a swallow.",
    "how_to_cheese": "Don't stand on the dock. A swallowed Crawler is a puzzle with a timer.",
    "tactics": "Tongue, bite, swallow.",
-   "system_line": "Mill Toad. Level 1. Unit.",
+   "system_line": "Swallow-You Mill Toad. Level 1. Unit.",
    "gm_line": "The pond is not scenic. The pond is pre-digesting.",
    "stat_block": {
     "srd_name": "Giant Toad",
@@ -2403,7 +3221,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Swallow-You Mill Toad"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2415,17 +3234,62 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Mill Toad",
+   "picture": "A toad the size of a millstone. The tongue is the first problem. The mouth is the second.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A toad the size of a millstone. The tongue is the first problem. The mouth is the second.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 5 (2d4) Poison damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12)",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "2d4",
+        "type": "poison",
+        "average": 5
+       }
+      ]
+     },
+     {
+      "name": "Swallow",
+      "slot": "actions",
+      "kind": "swallow",
+      "parsed": true,
+      "raw": "The toad swallows a Medium or smaller target it is grappling. While swallowed, the target isn’t Grappled but has the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the toad. In addition, the target takes 10 (3d6) Acid damage at the end of each of the toad’s turns. The toad can have only one target swallowed at a time, and it can’t use Bite while it has a swallowed target. If the toad dies, a swallowed creature is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the Prone condition",
+      "damage": {
+       "dice": "3d6",
+       "type": "acid",
+       "average": 10
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-e-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "elite",
-   "display_name": "Road Ankheg",
-   "nameplate": "Road Ankheg. Level 2. \"The road has a basement.\"",
+   "display_name": "Tunneling Acid Ant-Lion",
+   "nameplate": "Tunneling Acid Ant-Lion. Level 2. \"The road has a basement.\"",
    "nameplate_level": 2,
    "srd_name": "Ankheg",
    "srd_id": "ankheg",
@@ -2439,7 +3303,7 @@
    "what_it_wants": "It wants a line of you in the acid cone.",
    "how_to_cheese": "Don't march single file on the fresh dirt.",
    "tactics": "Burst up, acid the file, drag one down.",
-   "system_line": "Road Ankheg. Level 2. Elite.",
+   "system_line": "Tunneling Acid Ant-Lion. Level 2. Elite.",
    "gm_line": "The dirt moved. That is not weather.",
    "stat_block": {
     "srd_name": "Ankheg",
@@ -2545,7 +3409,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Tunneling Acid Ant-Lion"
    },
    "tracked_uses": [
     {
@@ -2573,17 +3438,85 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Road Ankheg",
+   "picture": "A huge insect that bursts out of the road under your feet and spits a line of acid.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A huge insect that bursts out of the road under your feet and spits a line of acid.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5 (with Advantage if the target is Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 3 (1d6) Acid damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13).",
+      "to_hit": 5,
+      "attack_note": "with Advantage if the target is Grappled by the ankheg",
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d6+3",
+       "type": "slashing",
+       "average": 10
+      },
+      "extra_damage": [
+       {
+        "dice": "1d6",
+        "type": "acid",
+        "average": 3
+       }
+      ]
+     },
+     {
+      "name": "Acid Spray (Recharge 6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Dexterity Saving Throw: DC 12, each creature in a 30-foot-long, 5-foot-wide Line. Failure: 14 (4d6) Acid damage. Success: Half damage",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 12,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "4d6",
+       "type": "acid",
+       "average": 14
+      },
+      "recharge": "6"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Acid Spray",
+      "name": "Acid Spray",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [6]",
+      "rule": "Starts ready. After Acid Spray is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+      "key": "f03-e-01.acid-spray"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-e-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "elite",
-   "display_name": "Barn Ettercap",
-   "nameplate": "Barn Ettercap. Level 2. \"The hayloft is a web.\"",
+   "display_name": "Barn-Rafter Spider Person",
+   "nameplate": "Barn-Rafter Spider Person. Level 2. \"The hayloft is a web.\"",
    "nameplate_level": 2,
    "srd_name": "Ettercap",
    "srd_id": "ettercap",
@@ -2597,7 +3530,7 @@
    "what_it_wants": "It wants you stuck and quiet.",
    "how_to_cheese": "Burn the loft webs before you climb.",
    "tactics": "Web, then the spiders it already owns.",
-   "system_line": "Barn Ettercap. Level 2. Elite.",
+   "system_line": "Barn-Rafter Spider Person. Level 2. Elite.",
    "gm_line": "Fresh hay. Older guests.",
    "stat_block": {
     "srd_name": "Ettercap",
@@ -2721,7 +3654,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Barn-Rafter Spider Person"
    },
    "tracked_uses": [
     {
@@ -2750,17 +3684,108 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Barn Ettercap",
+   "picture": "A person with extra spider arms in the barn rafters, wrapping whatever used to be livestock.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A person with extra spider arms in the barn rafters, wrapping whatever used to be livestock.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The ettercap makes one Bite attack and one Claw attack"
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 2 (1d4) Poison damage, and the target has the Poisoned condition until the start of the ettercap’s next turn",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "1d4",
+        "type": "poison",
+        "average": 2
+       }
+      ]
+     },
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage.",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d4+2",
+       "type": "slashing",
+       "average": 7
+      }
+     },
+     {
+      "name": "Web Strand (Recharge 5–6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Dexterity Saving Throw: DC 12, one Large or smaller creature the ettercap can see within 30 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage)",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 12
+      },
+      "recharge": "5-6"
+     },
+     {
+      "name": "Reel",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "The ettercap pulls one creature within 30 feet of itself that is Restrained by its Web Strand up to 25 feet straight toward itself",
+      "effect": "pull_restrained"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Web Strand",
+      "name": "Web Strand",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       5,
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [5, 6]",
+      "rule": "Starts ready. After Web Strand is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.",
+      "key": "f03-e-02.web-strand"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-e-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "elite",
-   "display_name": "Wayside Priest",
-   "nameplate": "Wayside Priest. Level 2. \"The shrine on the road is occupied.\"",
+   "display_name": "Roadside Priest, Mace Blessed",
+   "nameplate": "Roadside Priest, Mace Blessed. Level 2. \"The shrine on the road is occupied.\"",
    "nameplate_level": 2,
    "srd_name": "Priest",
    "srd_id": "priest",
@@ -2774,7 +3799,7 @@
    "what_it_wants": "It wants the party cursed and then converted.",
    "how_to_cheese": "Drop the caster. The spirit guardians are the room.",
    "tactics": "Spirit guardians in the door, then the mace.",
-   "system_line": "Wayside Priest. Level 2. Elite.",
+   "system_line": "Roadside Priest, Mace Blessed. Level 2. Elite.",
    "gm_line": "Pilgrims welcome. The welcome is a damage aura.",
    "stat_block": {
     "srd_name": "Priest",
@@ -2890,7 +3915,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Roadside Priest, Mace Blessed"
    },
    "tracked_uses": [
     {
@@ -2972,17 +3998,172 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Spirit Guardians is once per day, not a 3rd-level slot that refills. Divine Aid is three casts total, any mix of Bless, Dispel Magic, Healing Word, or Lesser Restoration, not three of each. At 0, Mace and Radiant Flame only.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Wayside Priest",
+   "picture": "A priest at a roadside shrine. The blessing is optional. The mace is not.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A priest at a roadside shrine. The blessing is optional. The mace is not.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The priest makes two attacks, using Mace or Radiant Flame in any combination",
+      "uses": []
+     },
+     {
+      "name": "Mace",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Bludgeoning damage plus 5 (2d4) Radiant damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+3",
+       "type": "bludgeoning",
+       "average": 6
+      },
+      "extra_damage": [
+       {
+        "dice": "2d4",
+        "type": "radiant",
+        "average": 5
+       }
+      ]
+     },
+     {
+      "name": "Radiant Flame",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +5, range 60 ft. Hit: 11 (2d10) Radiant damage",
+      "to_hit": 5,
+      "range_ft": [
+       60,
+       60
+      ],
+      "damage": {
+       "dice": "2d10",
+       "type": "radiant",
+       "average": 11
+      }
+     },
+     {
+      "name": "Spellcasting",
+      "slot": "actions",
+      "kind": "spellcasting",
+      "parsed": true,
+      "raw": "The priest casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13): At Will: Light, Thaumaturgy 1/Day: Spirit Guardians",
+      "at_will": [
+       "Light",
+       "Thaumaturgy 1/Day: Spirit Guardians"
+      ],
+      "per_day_spells": [
+       {
+        "uses": 1,
+        "spells": [
+         "Spirit Guardians"
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Divine Aid (3/Day)",
+      "slot": "bonus_actions",
+      "kind": "spellcasting",
+      "parsed": true,
+      "raw": "The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting.",
+      "per_day": 3
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Divine Aid",
+      "name": "Divine Aid",
+      "kind": "shared_spell_pool",
+      "spell_level": null,
+      "max": 3,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "3 cast(s) total, any mix of Bless, Dispel Magic, Healing Word, Lesser Restoration. Not that many of each spell. At 0, weapon attacks and at-will cantrips only.",
+      "key": "f03-e-03.divine-aid",
+      "choices": [
+       {
+        "name": "Bless",
+        "spell_level": 1
+       },
+       {
+        "name": "Dispel Magic",
+        "spell_level": 3
+       },
+       {
+        "name": "Healing Word",
+        "spell_level": 1
+       },
+       {
+        "name": "Lesser Restoration",
+        "spell_level": 2
+       }
+      ],
+      "ability": "Wisdom"
+     },
+     {
+      "key_name": "Light",
+      "name": "Light",
+      "kind": "at_will",
+      "spell_level": 0,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+      "ability": "Wisdom",
+      "save_dc": 13,
+      "key": "f03-e-03.light"
+     },
+     {
+      "key_name": "Thaumaturgy",
+      "name": "Thaumaturgy",
+      "kind": "at_will",
+      "spell_level": 0,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+      "ability": "Wisdom",
+      "save_dc": 13,
+      "key": "f03-e-03.thaumaturgy"
+     },
+     {
+      "key_name": "Spirit Guardians",
+      "name": "Spirit Guardians",
+      "kind": "daily_spell",
+      "spell_level": 3,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "1 per day. Not a slot of spell level 3 that comes back each turn. At 0, do not cast it.",
+      "ability": "Wisdom",
+      "save_dc": 13,
+      "key": "f03-e-03.spirit-guardians"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-e-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "elite",
-   "display_name": "Gate Spider",
-   "nameplate": "Gate Spider. Level 3. \"The gate is not where it was.\"",
+   "display_name": "Blink-Past-the-Gate Spider",
+   "nameplate": "Blink-Past-the-Gate Spider. Level 3. \"The gate is not where it was.\"",
    "nameplate_level": 3,
    "srd_name": "Phase Spider",
    "srd_id": "phase-spider",
@@ -2996,7 +4177,7 @@
    "what_it_wants": "It wants a bite from the Ethereal.",
    "how_to_cheese": "Ready attacks. Don't chase it through the gate alone.",
    "tactics": "Phase, bite, phase.",
-   "system_line": "Gate Spider. Level 3. Elite.",
+   "system_line": "Blink-Past-the-Gate Spider. Level 3. Elite.",
    "gm_line": "The door blinked. So did the thing on your back.",
    "stat_block": {
     "srd_name": "Phase Spider",
@@ -3116,7 +4297,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Blink-Past-the-Gate Spider"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3128,17 +4310,68 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Gate Spider",
+   "picture": "A big spider that steps out of sight on one side of the gate and back in behind you.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A big spider that steps out of sight on one side of the gate and back in behind you.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The spider makes two Bite attacks",
+      "count": 2,
+      "uses": [
+       "Bite"
+      ]
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 + 3) Piercing damage plus 9 (2d8) Poison damage. If this damage reduces the target to 0 Hit Points, the target becomes Stable, and it has the Poisoned condition for 1 hour. While Poisoned, the target also has the Paralyzed condition",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d10+3",
+       "type": "piercing",
+       "average": 8
+      },
+      "extra_damage": [
+       {
+        "dice": "2d8",
+        "type": "poison",
+        "average": 9
+       }
+      ]
+     },
+     {
+      "name": "Ethereal Jaunt",
+      "slot": "bonus_actions",
+      "kind": "teleport",
+      "parsed": true,
+      "raw": "The spider teleports from the Material Plane to the Ethereal Plane or vice versa."
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-e-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "elite",
-   "display_name": "Billboard Manticore",
-   "nameplate": "Billboard Manticore. Level 3. \"Advertising, then the spikes.\"",
+   "display_name": "Lion-Bat with a Spike Tail",
+   "nameplate": "Lion-Bat with a Spike Tail. Level 3. \"Advertising, then the spikes.\"",
    "nameplate_level": 3,
    "srd_name": "Manticore",
    "srd_id": "manticore",
@@ -3152,7 +4385,7 @@
    "what_it_wants": "It wants range.",
    "how_to_cheese": "Get under it or inside. The tail is the artillery.",
    "tactics": "Tail spikes until someone closes, then claws.",
-   "system_line": "Billboard Manticore. Level 3. Elite.",
+   "system_line": "Lion-Bat with a Spike Tail. Level 3. Elite.",
    "gm_line": "The billboard has a face. The face has a magazine.",
    "stat_block": {
     "srd_name": "Manticore",
@@ -3257,7 +4490,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Lion-Bat with a Spike Tail"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3269,17 +4503,68 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Billboard Manticore",
+   "picture": "A lion's body, bat wings, a person's face, and a tail that throws spikes like darts.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A lion's body, bat wings, a person's face, and a tail that throws spikes like darts.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The manticore makes three attacks, using Rend or Tail Spike in any combination",
+      "uses": []
+     },
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "slashing",
+       "average": 7
+      }
+     },
+     {
+      "name": "Tail Spike",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +5, range 100/200 ft. Hit: 7 (1d8 + 3) Piercing damage",
+      "to_hit": 5,
+      "range_ft": [
+       100,
+       200
+      ],
+      "damage": {
+       "dice": "1d8+3",
+       "type": "piercing",
+       "average": 7
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-b-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "boss",
-   "display_name": "Toll Ettin",
-   "nameplate": "Toll Ettin. Level 4. Boss. \"Two heads, two prices.\"",
+   "display_name": "Two-Headed Toll Giant",
+   "nameplate": "Two-Headed Toll Giant. Level 4. Boss. \"Two heads, two prices.\"",
    "nameplate_level": 4,
    "srd_name": "Ettin",
    "srd_id": "ettin",
@@ -3293,7 +4578,7 @@
    "what_it_wants": "It wants both lanes paid.",
    "how_to_cheese": "Blind one head. They argue. Use the argument.",
    "tactics": "Each head picks a different Crawler.",
-   "system_line": "Toll Ettin. Level 4. Boss.",
+   "system_line": "Two-Headed Toll Giant. Level 4. Boss.",
    "gm_line": "The toll is a fight. Both cashiers agree, which is rare.",
    "stat_block": {
     "srd_name": "Ettin",
@@ -3401,7 +4686,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Two-Headed Toll Giant"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3413,17 +4699,64 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Boss card for a random draw that fits the rules/70 cap. It does not replace a boss already printed on a Day page. A dead boss does not auto-clear other encounters.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Toll Ettin",
+   "picture": "One giant body, two heads, both of them charging a toll and both of them swinging.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "One giant body, two heads, both of them charging a toll and both of them swinging.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The ettin makes one Battleaxe attack and one Morningstar attack"
+     },
+     {
+      "name": "Battleaxe",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +7 , reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition",
+      "to_hit": 7,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d8+5",
+       "type": "slashing",
+       "average": 14
+      }
+     },
+     {
+      "name": "Morningstar",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +7 , reach 5 ft. Hit: 14 (2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end of its next turn",
+      "to_hit": 7,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d8+5",
+       "type": "piercing",
+       "average": 14
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-b-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "boss",
-   "display_name": "Grant Ghost",
-   "nameplate": "Grant Ghost. Level 4. Boss. \"The land grant never died.\"",
+   "display_name": "Grant-Denied Ghost",
+   "nameplate": "Grant-Denied Ghost. Level 4. Boss. \"The land grant never died.\"",
    "nameplate_level": 4,
    "srd_name": "Ghost",
    "srd_id": "ghost",
@@ -3437,7 +4770,7 @@
    "what_it_wants": "It wants possession of a Crawler and the deed.",
    "how_to_cheese": "Don't let it start in the walls. Turn undead or finish the possession fast.",
    "tactics": "Horrify, possess the isolated, age the stubborn.",
-   "system_line": "Grant Ghost. Level 4. Boss. Undead.",
+   "system_line": "Grant-Denied Ghost. Level 4. Boss. Undead.",
    "gm_line": "The deed is haunted. So is the deed-holder. That is you if you stand still.",
    "stat_block": {
     "srd_name": "Ghost",
@@ -3561,7 +4894,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Grant-Denied Ghost"
    },
    "tracked_uses": [
     {
@@ -3600,17 +4934,118 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Etherealness is printed as an at-will plane step, not a damage spell and not a slot. Do not add a slot table. Possession is recharge 6. Horrific Visage is not a slot; a success makes that creature immune for 24 hours, as printed.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Grant Ghost",
+   "picture": "A ghost in a blazer who can walk into your body and hate your application from the inside.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A ghost in a blazer who can walk into your body and hate your application from the inside.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The ghost makes two Withering Touch attacks",
+      "count": 2,
+      "uses": [
+       "Withering Touch"
+      ]
+     },
+     {
+      "name": "Withering Touch",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 19 (3d10 + 3) Necrotic damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "3d10+3",
+       "type": "necrotic",
+       "average": 19
+      }
+     },
+     {
+      "name": "Etherealness",
+      "slot": "actions",
+      "kind": "spell",
+      "parsed": true,
+      "raw": "The ghost casts the Etherealness spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can’t affect or be affected by anything on the other plane",
+      "spell": "Etherealness",
+      "ability": "charisma"
+     },
+     {
+      "name": "Horrific Visage",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Wisdom Saving Throw: DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. Failure: 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. Success: The target is immune to this ghost’s Horrific Visage for 24 hours.",
+      "save": {
+       "ability": "Wisdom",
+       "dc": 13
+      },
+      "damage": {
+       "dice": "2d6+3",
+       "type": "psychic",
+       "average": 10
+      }
+     },
+     {
+      "name": "Possession (Recharge 6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Charisma Saving Throw: DC 13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. The possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. Success: The target is immune to this ghost’s Possession for 24 hours",
+      "save": {
+       "ability": "Charisma",
+       "dc": 13
+      },
+      "recharge": "6"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Possession",
+      "name": "Possession",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [6]",
+      "rule": "Starts ready. After Possession is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+      "key": "f03-b-02.possession"
+     },
+     {
+      "key_name": "Etherealness",
+      "name": "Etherealness",
+      "kind": "at_will_innate",
+      "spell_level": 7,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (printed without a daily cap)",
+      "rule": "Printed without a daily cap. It is not a spell slot. Do not add slots, and do not treat it as a repeating damage spell unless the action itself deals damage.",
+      "key": "f03-b-02.etherealness"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f03-b-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
    "role": "boss",
-   "display_name": "Silo Pudding",
-   "nameplate": "Silo Pudding. Level 4. Boss. \"The grain went wrong.\"",
+   "display_name": "Hungry Black Silo Slime",
+   "nameplate": "Hungry Black Silo Slime. Level 4. Boss. \"The grain went wrong.\"",
    "nameplate_level": 4,
    "srd_name": "Black Pudding",
    "srd_id": "black-pudding",
@@ -3624,7 +5059,7 @@
    "what_it_wants": "It wants to split and fill the silo.",
    "how_to_cheese": "Don't split it with lightning or slashing if you can burn it. Read the resistances.",
    "tactics": "Engulf in the chute. Split if cut.",
-   "system_line": "Silo Pudding. Level 4. Boss. Ooze.",
+   "system_line": "Hungry Black Silo Slime. Level 4. Boss. Ooze.",
    "gm_line": "Do not open the silo. You opened the silo.",
    "stat_block": {
     "srd_name": "Black Pudding",
@@ -3740,7 +5175,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Hungry Black Silo Slime"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3752,6 +5188,41 @@
     "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
     "card_note": "Split is a printed reaction with a trigger. It is not a spell. Do not add a daily cap the block does not have.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Silo Pudding",
+   "picture": "A silo full of black slime. Cut it and it splits. It eats metal, wood, and whoever brought the metal.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A silo full of black slime. Cut it and it splits. It eats metal, wood, and whoever brought the metal.",
+    "attacks": [
+     {
+      "name": "Dissolving Pseudopod",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 10 ft. Hit: 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor",
+      "to_hit": 5,
+      "reach_ft": 10,
+      "damage": {
+       "dice": "4d6+3",
+       "type": "acid",
+       "average": 17
+      }
+     },
+     {
+      "name": "Split",
+      "slot": "reactions",
+      "kind": "reaction",
+      "parsed": true,
+      "raw": "Trigger: While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down)",
+      "trigger": "While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage",
+      "response": "The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down)"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   }
  ]
