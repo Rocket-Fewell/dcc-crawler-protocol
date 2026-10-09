@@ -1,0 +1,199 @@
+{
+  "floor": 3,
+  "floor_name": "Kingdom Continuum",
+  "note": "Local table script only. Floor 3 has no day pages yet. Rural visit from the campaign narrative. Not a live floor file.",
+  "scenes": [
+    {
+      "id": "f03-01",
+      "day": 1,
+      "title": "Millroad Gate",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "FLOOR NOTICE. Floor 3. Kingdom Continuum, rural. The identity window is open. The list is the one already filed. Late picks get the worse options. Stay what you walked in as, or take that offer. This table does not invent a species."},
+        {"when": "open", "voice": "GM", "text": "Dirt in your teeth, a wall with opinions, and a gate that has seen better centuries. You graduated from the pit into zoning. Try to look like you meant to."},
+        {"when": "win", "voice": "GM", "text": "The gate creaks, which is the village's idea of applause. Don't bow. The wall is not a fan."}
+      ]
+    },
+    {
+      "id": "f03-02",
+      "day": 1,
+      "title": "The Village Elder at the well",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "GM", "text": "The well is the town square, the rumor mill, and the only thing here that has never asked you for a resume."},
+        {"when": "open", "voice": "NPC", "npc": "Village Elder", "text": "You walk in like the road owes you a room. It doesn't. The well does, if you ask without waving a weapon at it."},
+        {"when": "open", "voice": "GM", "text": "He means the well. He also means the weapon. Mostly the weapon."},
+        {"when": "win", "voice": "GM", "text": "You asked nicely, or you didn't. The bucket still works. The elder files you under 'possible trouble' and goes back to winning the argument he was already in."}
+      ]
+    },
+    {
+      "id": "f03-03",
+      "day": 1,
+      "title": "The lane of hatchet-faced ostriches",
+      "kind": "combat",
+      "enemies": [
+        {"stat_card": "f03-m-06", "spoken_name": "Hatchet-Faced Ostrich", "counts_by_party_size": {"2": 2, "3": 2, "4": 3}}
+      ],
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "Nameplate: Hatchet-Faced Ostrich. Level 1. It runs you down like you are the lawn."},
+        {"when": "open", "voice": "GM", "text": "Livestock, they said. The beak is an axe, and the livestock has decided you are the feed bill."},
+        {"when": "mid", "voice": "GM", "text": "One of them is still upright and personally offended. The audience is making lawn jokes. The lawn is not laughing."},
+        {"when": "win", "voice": "GM", "text": "The lane is feathers and bad decisions. You may now tell people you fought a farm and won. Do not expect them to clap."}
+      ]
+    },
+    {
+      "id": "f03-04",
+      "day": 2,
+      "title": "The hedge appraiser",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "GM", "text": "A table, a glass, and a man who has already decided your pockets are lying to him."},
+        {"when": "open", "voice": "NPC", "npc": "Hedge Appraiser", "text": "I know the mint. I am not saying the floor it came from. That sentence costs more than you are carrying."},
+        {"when": "open", "voice": "GM", "text": "The Odd Coin sits there looking innocent, which is how coins get you killed two floors from now. He slides it back. He does not smile. That is the expensive part."},
+        {"when": "win", "voice": "GM", "text": "Appraised, unnamed, and still yours. He writes nothing down. The nothing is the receipt."}
+      ]
+    },
+    {
+      "id": "f03-05",
+      "day": 2,
+      "title": "Low Chapel",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "Marked ground. Assault in a marked zone is a bounty, not a hobby. The chapel counts."},
+        {"when": "open", "voice": "NPC", "npc": "Low Chapel Bishop", "text": "The chapel is low because the pride is not. Leave the blood outside. The saint is particular, and I am tired."},
+        {"when": "open", "voice": "GM", "text": "He says it like a welcome and means it like a fine. The candles are judging your shoes."},
+        {"when": "win", "voice": "GM", "text": "You left the chapel with the same number of holes you walked in with. The bishop marks that down as personal growth."}
+      ]
+    },
+    {
+      "id": "f03-06",
+      "day": 2,
+      "title": "The village saint",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "NPC", "npc": "Village Saint", "text": "I bless the harvest and the people who did not start the fire. You are still in the second group. Barely."},
+        {"when": "open", "voice": "GM", "text": "The blessing is real enough to feel like a hand on the back of your neck, and rude enough to be useful. Take it. Sainthood here comes with a sense of humor and a very short fuse."},
+        {"when": "win", "voice": "GM", "text": "Blessed, roasted, and pointed at the property line. She is done with you. That is the kindest thing she did all day."}
+      ]
+    },
+    {
+      "id": "f03-07",
+      "day": 3,
+      "title": "The property line",
+      "kind": "combat",
+      "enemies": [
+        {"stat_card": "f03-m-10", "spoken_name": "Property-Line Tree Woman", "counts_by_party_size": {"2": 1, "3": 1, "4": 1}}
+      ],
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "Nameplate: Property-Line Tree Woman. She is the tree. The yard is not a shortcut."},
+        {"when": "open", "voice": "GM", "text": "You stepped on a root that pays taxes. She steps out of the trunk like the trunk was a door she owns, because it is."},
+        {"when": "mid", "voice": "GM", "text": "She has not offered you a peach. This is not that kind of story. This is the kind where the fence has knuckles."},
+        {"when": "win", "voice": "GM", "text": "The line holds. You are on the legal side of it, which is a sentence you do not get to say often. Keep walking before the tree changes its mind."}
+      ]
+    },
+    {
+      "id": "f03-08",
+      "day": 3,
+      "title": "Two-headed junkyard",
+      "kind": "combat",
+      "enemies": [
+        {"stat_card": "f03-m-08", "spoken_name": "Two-Headed Junkyard Dog", "counts_by_party_size": {"2": 2, "3": 2, "4": 2}}
+      ],
+      "lines": [
+        {"when": "open", "voice": "GM", "text": "One body, two heads, both of them convinced you stole something. You probably didn't. They do not do probably."},
+        {"when": "mid", "voice": "GM", "text": "The laugh is still two laughs. The bite is still one problem with a spare opinion."},
+        {"when": "win", "voice": "GM", "text": "The junkyard goes quiet in that embarrassed way a junkyard does after it loses. Take nothing that barks."}
+      ]
+    },
+    {
+      "id": "f03-09",
+      "day": 4,
+      "title": "A voice in the static",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "GM", "text": "No one in the lane is talking. The air is, and it is tired."},
+        {"when": "open", "voice": "NPC", "npc": "Benefactor", "text": "Hold. Not yet. The village can still see you."},
+        {"when": "open", "voice": "GM", "text": "That is the whole message. A patron with a budget for three words and a talent for ruining a nice walk. You are being watched by more than the audience. You already knew. Now you have it in writing, if static counts as writing."},
+        {"when": "win", "voice": "GM", "text": "The static dies. The saint's blessing does not comment. Rude of both of them."}
+      ]
+    },
+    {
+      "id": "f03-10",
+      "day": 5,
+      "title": "The guide's fine print",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "NPC", "npc": "Guide", "text": "The map is free. The fine print is not. Read it, or pay me to sigh at you while you pretend you did."},
+        {"when": "open", "voice": "GM", "text": "The map shows the toll, the silo, and a stair that is not a rumor. The fine print shows a signature line with your name already guessed, badly. Do not sign anything that guesses."},
+        {"when": "win", "voice": "GM", "text": "You read it, or you paid for the sigh. Either way the stair is real and the guide is already gone, which is how guides stay alive."}
+      ]
+    },
+    {
+      "id": "f03-11",
+      "day": 6,
+      "title": "The mail lizard",
+      "kind": "combat",
+      "enemies": [
+        {"stat_card": "f03-m-07", "spoken_name": "Hang-Glider Mail Lizard", "counts_by_party_size": {"2": 1, "3": 2, "4": 2}}
+      ],
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "Nameplate: Hang-Glider Mail Lizard. The package is you."},
+        {"when": "open", "voice": "GM", "text": "It dives out of a polite blue sky with a satchel and no intention of delivering anything you want. The stamp is a talon."},
+        {"when": "win", "voice": "GM", "text": "Mail refused. The sky goes back to being scenery, which is all you ever asked of it."}
+      ]
+    },
+    {
+      "id": "f03-12",
+      "day": 8,
+      "title": "The two-headed toll",
+      "kind": "boss",
+      "enemies": [
+        {"stat_card": "f03-b-01", "spoken_name": "Two-Headed Toll Giant", "counts_by_party_size": {"2": 1, "3": 1, "4": 1}}
+      ],
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "TOLL. Two heads. One fee. Both of them are the clerk."},
+        {"when": "open", "voice": "GM", "text": "One giant, two arguments, and a club that has heard both sides and picked violence. Pay, talk, or get out of the way of the conversation. The conversation is the size of a shed."},
+        {"when": "mid", "voice": "GM", "text": "The left head thinks the right head undercharged. The right head thinks the left head is bad at math. You are the math."},
+        {"when": "win", "voice": "GM", "text": "The toll is behind you, one way or another. Both heads will tell it differently. Only one of those stories ends with you still walking."}
+      ]
+    },
+    {
+      "id": "f03-13",
+      "day": 10,
+      "title": "The sponsor's cloak",
+      "kind": "non-combat",
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "Offer logged. A cloak, legendary-looking, for one future favor. Refusal is also an answer. The floor records either."},
+        {"when": "open", "voice": "GM", "text": "It shines like a prize and reads like a loan shark in a better tailor. The favor is blank on purpose. Blank favors get filled in by people who own stairs."},
+        {"when": "open", "voice": "GM", "text": "The audience is already voting. Wear it and they cheer. Walk past it and they boo like you insulted the show, which is how this show says it cares."},
+        {"when": "win", "voice": "GM", "text": "Signed or unsigned, you are still you. The cloak stays on the dummy if you left it. The dummy looks better in it. Do not tell the dummy."}
+      ]
+    },
+    {
+      "id": "f03-14",
+      "day": 12,
+      "title": "The silo",
+      "kind": "combat",
+      "enemies": [
+        {"stat_card": "f03-b-03", "spoken_name": "Hungry Black Silo Slime", "counts_by_party_size": {"2": 1, "3": 1, "4": 1}}
+      ],
+      "lines": [
+        {"when": "open", "voice": "GM", "text": "The silo is full of something that used to be grain and has unionized into a pudding with ambition. Cutting it is how you get two of them. Try not to be clever in a way the slime enjoys."},
+        {"when": "mid", "voice": "GM", "text": "It splits, or it doesn't. Either way your weapon is having a worse day than you are."},
+        {"when": "win", "voice": "GM", "text": "The silo is a silo again. Congratulations. You fought breakfast and breakfast lost."}
+      ]
+    },
+    {
+      "id": "f03-15",
+      "day": 20,
+      "title": "The county stair",
+      "kind": "non-combat (descent)",
+      "lines": [
+        {"when": "open", "voice": "SYSTEM", "text": "FLOOR NOTICE. Stairwell open. Early descent is stasis if the clock still has hours on it. A missed collapse is death. Floor 3 does not follow you down. What you chose here does."},
+        {"when": "open", "voice": "GM", "text": "Millroad will remember the invoice. The elder will remember the weapon. The saint will remember the fire you did not start. That is as close as this county gets to missing you."},
+        {"when": "open", "voice": "NPC", "npc": "Guide", "text": "Don't look back at the gate. Gates take it personally, and the next floor is a train with opinions. That part is not this script. Walk."},
+        {"when": "win", "voice": "GM", "text": "Floor 3 ends under your boots. The narrator is still delighted, which you should take as a threat and a compliment. Down you go."}
+      ]
+    }
+  ]
+}

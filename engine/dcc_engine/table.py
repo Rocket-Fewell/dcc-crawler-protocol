@@ -23,6 +23,28 @@ COVER_FT = 15
 CLOSE_FT = 30
 
 
+def enemies_from_slots(room, party_size):
+    """Filed counts. A spoken_name from the day page replaces the picture name."""
+    made = []
+    key = str(party_size) if str(party_size) in {"2", "3", "4"} else "2"
+    number = 1
+    for slot in (room.get("encounter") or {}).get("enemies") or []:
+        counts = slot.get("counts_by_party_size") or {"2": 1, "3": 1, "4": 1}
+        count = int(counts.get(key, counts.get("2", 0)) or 0)
+        if count <= 0 or not slot.get("stat_card"):
+            continue
+        monster = load_monster(slot["stat_card"])
+        spoken = slot.get("spoken_name") or ""
+        for index in range(1, count + 1):
+            enemy = monster_combatant(monster, number)
+            if spoken:
+                enemy["spoken_name"] = spoken
+                enemy["name"] = spoken if count == 1 else f"{spoken} {index}"
+            made.append(enemy)
+            number += 1
+    return made
+
+
 class ScriptedRng:
     """Test die. Production passes nothing and roll.py uses SystemRandom."""
 
@@ -39,20 +61,29 @@ class ScriptedRng:
 
 
 class Table:
-    def __init__(self, party_size=2, crawler=None):
-        room = load_room("enc-d01-11")
-        count, stat_id = gallery_count(room, party_size)
-        monster = load_monster(stat_id)
+    def __init__(self, party_size=2, crawler=None, room=None, use_slot_names=False, quiet=False, seated=None):
+        if room is None:
+            room = load_room("enc-d01-11")
         self.room_id = room["id"]
         self.room_name = room["name"]
-        self.narrator_line = room["narrator_line"]
+        self.narrator_line = room.get("narrator_line") or room.get("name") or ""
         self.gm_note = room.get("gm_notes") or ""
         self.room_card = _room_card(room)
         quick = (room.get("encounter") or {}).get("quick_run") or {}
         self.room_gm = quick if quick.get("audience") == "gm" else {}
         self.party_size = party_size if str(party_size) in {"2", "3", "4"} else 2
-        self.enemies = [monster_combatant(monster, index) for index in range(1, count + 1)]
-        self.crawler = crawler_from_card(crawler) if crawler else seat_raithen()
+        if use_slot_names:
+            self.enemies = enemies_from_slots(room, self.party_size)
+        else:
+            count, stat_id = gallery_count(room, party_size)
+            monster = load_monster(stat_id)
+            self.enemies = [monster_combatant(monster, index) for index in range(1, count + 1)]
+        if seated is not None:
+            self.crawler = seated
+        elif crawler:
+            self.crawler = crawler_from_card(crawler)
+        else:
+            self.crawler = seat_raithen()
         self.round = 1
         self.in_melee = False
         self.held = None
@@ -61,19 +92,20 @@ class Table:
         self.raw = []
         self._undo = []
         self.resolutions = 0
-        self.log.append({
-            "voice": "GM",
-            "speak": True,
-            "text": "[GM] " + self.narrator_line,
-        })
-        self.log.append({
-            "voice": "SYSTEM",
-            "speak": True,
-            "text": (
-                "[SYSTEM] Your turn. One action, one bonus action, one reaction, "
-                "one free object interaction, and your movement."
-            ),
-        })
+        if not quiet:
+            self.log.append({
+                "voice": "GM",
+                "speak": True,
+                "text": "[GM] " + self.narrator_line,
+            })
+            self.log.append({
+                "voice": "SYSTEM",
+                "speak": True,
+                "text": (
+                    "[SYSTEM] Your turn. One action, one bonus action, one reaction, "
+                    "one free object interaction, and your movement."
+                ),
+            })
 
     def player_view(self):
         crawler = self.crawler

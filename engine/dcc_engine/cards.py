@@ -12,12 +12,23 @@ def _read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+_MONSTERS = None
+
+
+def monster_catalog():
+    """One read of the R&D catalog. The live day pages still win on names."""
+    global _MONSTERS
+    if _MONSTERS is None:
+        cards = _read(CARDS_DIR / "monsters" / "catalog.json")["cards"]
+        _MONSTERS = {card["id"]: card for card in cards}
+    return _MONSTERS
+
+
 def load_monster(card_id):
-    catalog = _read(CARDS_DIR / "monsters" / "catalog.json")
-    for card in catalog["cards"]:
-        if card["id"] == card_id:
-            return card
-    raise KeyError(card_id)
+    try:
+        return monster_catalog()[card_id]
+    except KeyError as exc:
+        raise KeyError(card_id) from exc
 
 
 def load_room(room_id):
@@ -98,8 +109,14 @@ def monster_combatant(monster, number):
     if not found:
         raise ValueError(f"{monster['id']} has no Passive Perception on the stat card")
     attacks = [attack_record(raw) for raw in monster["local"]["attacks"]]
-    ranged = next(item for item in attacks if item["kind"] == "ranged")
-    melee = next(item for item in attacks if item["kind"] == "melee")
+    ranged = next((item for item in attacks if item["kind"] == "ranged"), None)
+    melee = next((item for item in attacks if item["kind"] == "melee"), None)
+    if ranged is None and melee is None:
+        raise ValueError(f"{monster['id']} has no local attack")
+    if ranged is None:
+        ranged = melee
+    if melee is None:
+        melee = ranged
     return {
         "id": f"ms-{number}",
         "name": f"{monster['display_name']} {number}",

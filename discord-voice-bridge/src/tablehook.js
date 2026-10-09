@@ -3,7 +3,7 @@
  *
  * OFF unless DCC_TABLE_URL is set. Only http(s) to localhost, 127.0.0.1, or [::1], with no
  * username or password in the URL. POST {text} to {origin}/api/line. Lines with speak true and
- * voice SYSTEM or GM are handed to onSay. [ROLL] stays on the page and is not spoken.
+ * voice SYSTEM, GM, or NPC are handed to onSay. [ROLL] stays on the page and is not spoken.
  * Failures never throw and never log the line text.
  */
 
@@ -44,7 +44,7 @@ export function speakable(say) {
   if (!Array.isArray(say)) return [];
   return say.filter((item) => {
     if (!item || item.speak !== true) return false;
-    if (item.voice !== 'SYSTEM' && item.voice !== 'GM') return false;
+    if (item.voice !== 'SYSTEM' && item.voice !== 'GM' && item.voice !== 'NPC') return false;
     return typeof item.text === 'string' && item.text.trim() !== '';
   });
 }

@@ -1,4 +1,4 @@
-# Table (Shooting Gallery slice)
+# Table (Shooting Gallery slice, and a local Floors 1–3 walk)
 
 Owner: Cursor | Status: draft | Version: 0.1.0 | Updated: 2026-10-09
 
@@ -15,6 +15,12 @@ On the player page, Listen is on only during that Crawler's turn. The browser tr
 `[ROLL]` lines are on the page and marked `speak: false`. `[GM]` and `[SYSTEM]` are marked `speak: true`. The bridge can say those when `DCC_TABLE_URL` points at this process. That hook is off until the variable is set, so the live game keeps waking the agent GM.
 
 The GM page can undo the last resolution or set one combatant's hit points. The player page does not show the room's GM note.
+
+## Floors 1–3
+
+`http://127.0.0.1:8765/` is a separate walk from the live game. It reads the Floor 1 and Floor 2 day pages and speaks those `[PLAYER-FACING]` and `[GM-FACING]` lines: dry lines as `[SYSTEM]`, the snark and the set pieces as `[GM]`. It does not rewrite `floors/`. Dean Thudd stays Dean Thudd. A party of 2 meets Dean Thudd (JV), which is the filed count. Floor 3 has no day pages, so `engine/campaign/floor3.json` is only this table's rural script, using NPC names already in `tables/npc-voices.json`. Say `next` to move on. In a fight, the dice still come off the card. `[NPC: Name]` is spoken when the bridge hook is on. `[ROLL]` stays on the page.
+
+The Shooting Gallery player page is still `/player`. The hook `DCC_TABLE_URL` still posts to `/api/line` on that slice.
 
 ## Run
 
