@@ -239,6 +239,23 @@ class GalleryTests(unittest.TestCase):
         self.assertIn("script", gm_enemy["what_it_wants"].lower())
         self.assertEqual(self.table.gm_view()["room_gm"]["audience"], "gm")
 
+    def test_listen_is_only_on_during_this_crawlers_turn(self):
+        self.assertTrue(self.table.player_view()["your_turn"])
+        for enemy in self.table.enemies:
+            enemy["hp"] = 0
+        self.assertFalse(self.table.player_view()["your_turn"])
+        self.table.enemies[0]["hp"] = 13
+        self.assertTrue(self.table.player_view()["your_turn"])
+        self.table.crawler["hp"] = 0
+        self.table.crawler["death_fail"] = 3
+        self.assertFalse(self.table.player_view()["your_turn"])
+        self.table.crawler["death_fail"] = 0
+        self.table.crawler["death_success"] = 3
+        self.assertFalse(self.table.player_view()["your_turn"])
+        self.table.crawler["death_success"] = 1
+        self.table.crawler["hp"] = 0
+        self.assertTrue(self.table.player_view()["your_turn"])
+
 
 class HttpTests(unittest.TestCase):
     def test_player_page_and_gm_undo(self):
@@ -251,6 +268,8 @@ class HttpTests(unittest.TestCase):
         page = urllib.request.urlopen(base + "/player").read().decode("utf-8")
         self.assertIn("Shooting Gallery", page)
         self.assertIn("What you do", page)
+        self.assertIn('id="listen"', page)
+        self.assertIn("SpeechRecognition", page)
         self.assertNotIn("max-height: 380px", page)
         self.assertIn("overflow: hidden", page)
         self.assertIn('id="sheet"', page)
@@ -269,6 +288,7 @@ class HttpTests(unittest.TestCase):
         self.assertNotIn("gm_note", before)
         self.assertNotIn("how_to_cheese", before["enemies"][0])
         self.assertIn("Gear", [section["title"] for section in before["crawler"]["card_sections"]])
+        self.assertTrue(before["your_turn"])
 
         httpd.scripts.append([15, 4])
         request = urllib.request.Request(

@@ -89,7 +89,19 @@ class Table:
             "enemies": [_public_enemy(enemy, self.in_melee) for enemy in self.enemies],
             "log": list(self.log),
             "gallery_clear": all(enemy["hp"] <= 0 for enemy in self.enemies),
+            "your_turn": self.your_turn(),
         }
+
+    def your_turn(self):
+        """True while this Crawler is the one the table is waiting on."""
+        if all(enemy["hp"] <= 0 for enemy in self.enemies):
+            return False
+        crawler = self.crawler
+        if int(crawler.get("death_fail") or 0) >= 3:
+            return False
+        if crawler["hp"] <= 0 and int(crawler.get("death_success") or 0) >= 3:
+            return False
+        return True
 
     def gm_view(self):
         view = self.player_view()

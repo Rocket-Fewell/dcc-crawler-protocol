@@ -209,6 +209,9 @@ PLAYER_HTML = """<!DOCTYPE html>
   input, button, select { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid #6b4a2a; background: #1a120c; color: inherit; }
   button { background: #c4542c; color: #1a120c; border: 0; cursor: pointer; }
   button.quiet { background: #3a2a1c; color: #f3e6d0; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  #listen.listening { background: #f0d78c; color: #1a120c; }
+  #listen-note { flex-basis: 100%; }
   details.seat { grid-column: 1 / -1; max-height: 22vh; overflow: auto; }
   summary { cursor: pointer; }
   @media (max-width: 800px) {
@@ -233,7 +236,9 @@ PLAYER_HTML = """<!DOCTYPE html>
     <form id="line-form">
       <label for="line">What you do</label>
       <input id="line" name="line" size="42" autocomplete="off" placeholder="I get behind the sandbags, then I cast eldritch blast at the first mannequin">
+      <button type="button" id="listen" disabled>Listen</button>
       <button type="submit">Send</button>
+      <span id="listen-note" class="muted"></span>
     </form>
     <p class="row" id="actions"></p>
   </section>
@@ -287,6 +292,9 @@ function render(data) {
   for (const enemy of data.enemies) foes.appendChild(enemySeen(enemy));
   document.getElementById("sheet").replaceChildren(sheetSections(data.crawler));
   document.getElementById("turn").replaceChildren(turnStrip(data.crawler));
+  yourTurn = Boolean(data.your_turn);
+  if (!yourTurn && listening) stopListen();
+  else paintListen();
   logEl.replaceChildren();
   for (const entry of data.log) {
     const p = document.createElement("div");
@@ -338,12 +346,97 @@ async function send(text) {
   last = JSON.stringify(data.view);
   render(data.view);
 }
+const listenBtn = document.getElementById("listen");
+const lineInput = document.getElementById("line");
+const listenNote = document.getElementById("listen-note");
+let recognition = null;
+let listening = false;
+let yourTurn = false;
+let noSpeech = false;
+let listenSession = 0;
+let spokenPrefix = "";
+function paintListen() {
+  listenBtn.classList.toggle("listening", listening);
+  listenBtn.setAttribute("aria-pressed", listening ? "true" : "false");
+  if (listening) {
+    listenBtn.disabled = false;
+    listenBtn.textContent = "Stop";
+    listenNote.textContent = "Listening. The words land in the line. Stop, then send, or keep typing.";
+    return;
+  }
+  listenBtn.textContent = "Listen";
+  listenBtn.disabled = !yourTurn;
+  if (!yourTurn) {
+    listenNote.textContent = "Listen turns on when it is your turn. You can still type.";
+    return;
+  }
+  listenNote.textContent = noSpeech ? "This browser cannot listen. Type the line." : "";
+}
+function stopListen() {
+  listenSession += 1;
+  listening = false;
+  const rec = recognition;
+  recognition = null;
+  paintListen();
+  if (!rec) return;
+  rec.onresult = null;
+  try { rec.stop(); } catch (err) { /* already stopped */ }
+}
+function startListen() {
+  if (!yourTurn || listening) return;
+  const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Ctor) {
+    noSpeech = true;
+    paintListen();
+    return;
+  }
+  const mine = ++listenSession;
+  spokenPrefix = lineInput.value.trim();
+  recognition = new Ctor();
+  recognition.lang = "en-US";
+  recognition.interimResults = true;
+  recognition.continuous = true;
+  recognition.onresult = (event) => {
+    if (mine !== listenSession) return;
+    let spoken = "";
+    for (let i = 0; i < event.results.length; i++) spoken += event.results[i][0].transcript;
+    spoken = spoken.trim();
+    lineInput.value = spokenPrefix ? (spokenPrefix + " " + spoken).trim() : spoken;
+  };
+  recognition.onerror = () => {
+    if (mine !== listenSession) return;
+    listening = false;
+    recognition = null;
+    paintListen();
+  };
+  recognition.onend = () => {
+    if (mine !== listenSession) return;
+    listening = false;
+    recognition = null;
+    paintListen();
+  };
+  listening = true;
+  paintListen();
+  try {
+    recognition.start();
+  } catch (err) {
+    listening = false;
+    recognition = null;
+    noSpeech = true;
+    paintListen();
+  }
+}
+listenBtn.addEventListener("click", () => {
+  if (listening) stopListen();
+  else startListen();
+});
 document.getElementById("line-form").addEventListener("submit", (event) => {
   event.preventDefault();
-  const input = document.getElementById("line");
-  const text = input.value.trim();
+  const text = lineInput.value.trim();
+  if (listening) stopListen();
   if (!text) return;
-  input.value = "";
+  lineInput.value = "";
+  spokenPrefix = "";
   send(text);
 });
 document.getElementById("seat-form").addEventListener("submit", async (event) => {
