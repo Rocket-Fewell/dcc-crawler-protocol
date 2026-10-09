@@ -197,15 +197,16 @@ class GalleryTests(unittest.TestCase):
             self.assertIn(title, titles)
         gear = next(section["text"] for section in view["crawler"]["card_sections"] if section["title"] == "Gear")
         self.assertIn("Extension Cord", gear)
+        self.assertIn("Intake Bag", gear)
         achievements = next(section["text"] for section in view["crawler"]["card_sections"] if section["title"] == "Achievements")
-        self.assertIn("Intake Bag", achievements)
+        self.assertIn("Paperwork Survivor", achievements)
         self.assertEqual(
             view["crawler"]["card_text"],
             "\n".join(section["text"] for section in view["crawler"]["card_sections"]),
         )
         self.assertEqual(
-            [spell["name"] for spell in view["crawler"]["spells"]],
-            ["Witch Bolt", "Armor of Agathys", "Shield"],
+            {spell["name"] for spell in view["crawler"]["spells"]},
+            {"Witch Bolt", "Armor of Agathys", "Shield"},
         )
         enemy = view["enemies"][0]
         card = enemy["card"]

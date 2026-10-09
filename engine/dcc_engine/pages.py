@@ -121,8 +121,12 @@ function enemyCard(enemy) {
   namedList(article, "Actions", card.actions);
   namedList(article, "Bonus actions", card.bonus_actions);
   namedList(article, "Reactions", card.reactions);
-  const rolls = (enemy.attacks || []).map((atk) => atk.name + " +" + atk.to_hit + ", " + atk.damage + " " + atk.type + ", " + atk.kind);
-  if (rolls.length) article.appendChild(el("p", "rolls", "Rolls this fight: " + rolls.join("; ")));
+  if ((enemy.attacks || []).length) {
+    article.appendChild(el("h3", "", "Rolls this fight"));
+    for (const atk of enemy.attacks) {
+      article.appendChild(el("p", "rolls", atk.name + " +" + atk.to_hit + ", " + atk.damage + " " + atk.type + ", " + atk.kind));
+    }
+  }
   if ((enemy.conditions || []).length) article.appendChild(el("p", "", "Conditions: " + enemy.conditions.join(", ")));
   if (card.tactics) article.appendChild(el("p", "", "Tactics: " + card.tactics));
   return article;
