@@ -68,6 +68,9 @@ def monster_combatant(monster, number):
         "passive_perception": int(found.group(1)),
         "ranged": ranged,
         "melee": melee,
+        "system_line": monster.get("system_line") or "",
+        "gm_line": monster.get("gm_line") or "",
+        "how_to_cheese": monster.get("how_to_cheese") or "",
         "conditions": [],
     }
 

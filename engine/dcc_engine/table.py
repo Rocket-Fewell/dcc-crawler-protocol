@@ -8,10 +8,10 @@ from dcc_engine.cards import (
     gallery_count,
     has_cunning,
     load_monster,
-    load_pilot,
     load_room,
     monster_combatant,
 )
+from dcc_engine.player_card import pick_attack, seat_raithen, spell_named, sync_card
 from dcc_engine.clauses import classify, is_question, split_clauses
 from dcc_engine.dice import double_dice, roll_expr
 from dcc_engine.narrate import attack_gm, enemy_gm, pack
@@ -49,7 +49,7 @@ class Table:
         self.gm_note = room.get("gm_notes") or ""
         self.party_size = party_size if str(party_size) in {"2", "3", "4"} else 2
         self.enemies = [monster_combatant(monster, index) for index in range(1, count + 1)]
-        self.crawler = crawler_from_card(crawler or load_pilot())
+        self.crawler = crawler_from_card(crawler) if crawler else seat_raithen()
         self.round = 1
         self.in_melee = False
         self.held = None
@@ -74,13 +74,15 @@ class Table:
 
     def player_view(self):
         crawler = self.crawler
+        if crawler.get("sheet"):
+            sync_card(crawler)
         return {
             "room": self.room_name,
             "round": self.round,
             "narrator_line": self.narrator_line,
             "in_melee": self.in_melee,
             "crawler": _public_crawler(crawler),
-            "enemies": [_public_enemy(enemy) for enemy in self.enemies],
+            "enemies": [_public_enemy(enemy, self.in_melee) for enemy in self.enemies],
             "log": list(self.log),
             "gallery_clear": all(enemy["hp"] <= 0 for enemy in self.enemies),
         }
@@ -91,6 +93,9 @@ class Table:
         view["gm_note"] = self.gm_note
         view["undo_depth"] = len(self._undo)
         view["resolutions"] = self.resolutions
+        for shown, enemy in zip(view["enemies"], self.enemies):
+            shown["gm_line"] = enemy.get("gm_line") or ""
+            shown["how_to_cheese"] = enemy.get("how_to_cheese") or ""
         return view
 
     def seat(self, card):
@@ -211,9 +216,15 @@ class Table:
             return self._move(clause)
         if kind == "object":
             return self._object(clause)
+        if kind in {"attack", "ruling"}:
+            named = spell_named(self.crawler, clause["text"])
+            if named:
+                return self._cast(named, clause, rng)
         if kind == "attack":
             return self._player_attack(clause, rng, improvised=False)
         if kind == "ruling":
+            if pick_attack(self.crawler, clause["text"]) and _lists_attack(self.crawler, clause["text"]):
+                return self._player_attack(clause, rng, improvised=False)
             return self._ruling(clause, rng)
         if kind in {"hide", "dash", "disengage", "dodge"}:
             return self._action_or_bonus(clause, rng)
@@ -402,13 +413,13 @@ class Table:
                 "type": params["damage_type"],
             }
         else:
-            if not crawler["attacks"]:
+            attack = pick_attack(crawler, clause["text"])
+            if not attack:
                 return {
                     "stop": False,
                     "reason": "",
                     "events": [{"channel": "system", "text": "No attack is listed on your card."}],
                 }
-            attack = dict(crawler["attacks"][0])
         crawler["action"] = False
         crawler["spent_action"] = attack["name"]
         advantage = crawler["hidden"]
@@ -424,6 +435,88 @@ class Table:
             advantage=advantage,
             disadvantage=False,
             who_phrase="you",
+        ))
+        self.last_target = target["id"]
+        return {"stop": False, "reason": "", "events": events}
+
+    def _cast(self, key, clause, rng):
+        """A spell printed on the card. The slot and the dice come from that text."""
+        crawler = self.crawler
+        spell = crawler["spells"][key]
+        if spell["cost"] == "action" and not crawler["action"]:
+            return {
+                "stop": True,
+                "reason": f"You already used your action on {crawler['spent_action']}.",
+                "events": [],
+            }
+        if spell["cost"] == "bonus" and not crawler["bonus"]:
+            return {
+                "stop": False,
+                "reason": "",
+                "events": [{"channel": "system", "text": "You already used your bonus action. That spell does not happen."}],
+            }
+        if spell["cost"] == "reaction" and not crawler["reaction"]:
+            return {
+                "stop": False,
+                "reason": "",
+                "events": [{"channel": "system", "text": "You already used your reaction. That spell does not happen."}],
+            }
+        if key == "shield":
+            paid = _spend_resource(crawler, "Shield free cast") or _spend_resource(crawler, "Pact Magic slots")
+            if not paid:
+                return {
+                    "stop": False,
+                    "reason": "",
+                    "events": [{"channel": "system", "text": "Shield has no free cast left and the Pact Magic slot is empty."}],
+                }
+            crawler["reaction"] = False
+            crawler["ac_bonus"] = spell["ac"]
+            return {
+                "stop": False,
+                "reason": "",
+                "events": [{
+                    "channel": "system",
+                    "text": f"Shield spends your reaction. +{spell['ac']} AC until your next turn.",
+                }],
+            }
+        if spell.get("slot") and not _spend_resource(crawler, "Pact Magic slots"):
+            return {
+                "stop": False,
+                "reason": "",
+                "events": [{"channel": "system", "text": "The Pact Magic slot is empty. That spell does not happen."}],
+            }
+        if key == "agathys":
+            crawler["bonus"] = False
+            crawler["temp_hp"] = spell["temp"]
+            return {
+                "stop": False,
+                "reason": "",
+                "events": [
+                    {"channel": "system", "text": "Armor of Agathys spends your bonus action and your Pact Magic slot."},
+                    {"channel": "gm", "text": f"You have {spell['temp']} temporary hit points."},
+                ],
+            }
+        target = _pick_target(self.enemies, clause["text"], self.last_target)
+        if target is None:
+            _refund_resource(crawler, "Pact Magic slots")
+            return {
+                "stop": False,
+                "reason": "",
+                "events": [{"channel": "system", "text": "Nothing is left standing."}],
+            }
+        crawler["action"] = False
+        crawler["spent_action"] = spell["name"]
+        ac = target["ac"] + (0 if self.in_melee else 2)
+        attack = {
+            "name": spell["name"],
+            "to_hit": spell["to_hit"],
+            "damage": spell["damage"],
+            "type": spell["type"],
+        }
+        events = [{"channel": "system", "text": f"Action spent: {spell['name']} against {target['name']}. Pact Magic slot spent."}]
+        events.extend(_strike(
+            rng, crawler["name"], attack, target, ac,
+            advantage=False, disadvantage=False, who_phrase="you",
         ))
         self.last_target = target["id"]
         return {"stop": False, "reason": "", "events": events}
@@ -445,7 +538,7 @@ class Table:
             if enemy["hp"] <= 0:
                 continue
             attack = dict(enemy["melee"] if self.in_melee else enemy["ranged"])
-            ac = self.crawler["ac"]
+            ac = self.crawler["ac"] + (self.crawler.get("ac_bonus") or 0)
             if self.crawler["cover"] == "half":
                 ac += 2
             elif self.crawler["cover"] == "three-quarters":
@@ -509,6 +602,7 @@ class Table:
         crawler["dodging"] = False
         crawler["disengaged"] = False
         crawler["spent_action"] = ""
+        crawler["ac_bonus"] = 0
         self.round += 1
 
     def _find(self, target_id):
@@ -575,7 +669,13 @@ def _strike(rng, actor, attack, target, ac, advantage, disadvantage, who_phrase)
         elif dtype in target.get("resistances", []):
             damage //= 2
             events.append({"channel": "system", "text": f"Resistant to {dtype}. Damage is halved to {damage}."})
-        target["hp"] = max(0, target["hp"] - damage)
+        soaked = 0
+        temp = target.get("temp_hp") or 0
+        if temp and damage:
+            soaked = min(temp, damage)
+            target["temp_hp"] = temp - soaked
+            events.append({"channel": "system", "text": f"Temporary hit points take {soaked}."})
+        target["hp"] = max(0, target["hp"] - (damage - soaked))
         if target["hp"] == 0 and "down" not in target["conditions"]:
             target["conditions"].append("down")
     killed = target["hp"] == 0 and hit
@@ -651,21 +751,63 @@ def _public_crawler(crawler):
         "bonus": crawler["bonus"],
         "reaction": crawler["reaction"],
         "object": crawler["object"],
-        "attacks": list(crawler["attacks"]),
+        "attacks": [
+            {"name": attack["name"], "to_hit": attack["to_hit"], "damage": attack["damage"], "type": attack["type"]}
+            for attack in crawler.get("attacks") or []
+        ],
+        "temp_hp": crawler.get("temp_hp") or 0,
+        "ac_bonus": crawler.get("ac_bonus") or 0,
+        "card_text": crawler.get("card_text") or "",
     }
 
 
-def _public_enemy(enemy):
+def _public_enemy(enemy, in_melee):
+    attacks = [enemy["ranged"], enemy["melee"]]
     return {
         "id": enemy["id"],
         "name": enemy["name"],
         "picture": enemy["picture"],
         "spoken_name": enemy["spoken_name"],
+        "system_line": enemy.get("system_line") or "",
         "hp": enemy["hp"],
         "hp_max": enemy["hp_max"],
         "ac": enemy["ac"],
+        "cover": None if in_melee else "half",
         "conditions": list(enemy["conditions"]),
+        "attacks": [
+            {"name": attack["name"], "to_hit": attack["to_hit"], "damage": attack["damage"], "type": attack["type"], "kind": attack["kind"]}
+            for attack in attacks
+        ],
     }
+
+
+def _lists_attack(crawler, text):
+    low = (text or "").lower()
+    for attack in crawler.get("attacks") or []:
+        if any(alias in low for alias in attack.get("aliases") or []):
+            return True
+    return False
+
+
+def _resource(crawler, name):
+    for row in (crawler.get("sheet") or {}).get("resources") or []:
+        if str(row.get("name", "")).lower() == name.lower():
+            return row
+    return None
+
+
+def _spend_resource(crawler, name):
+    row = _resource(crawler, name)
+    if not row or not isinstance(row.get("uses"), int) or row["uses"] < 1:
+        return False
+    row["uses"] -= 1
+    return True
+
+
+def _refund_resource(crawler, name):
+    row = _resource(crawler, name)
+    if row and isinstance(row.get("uses"), int):
+        row["uses"] += 1
 
 
 def _validate_seat(card):

@@ -12,7 +12,8 @@ PLAYER_HTML = """<!DOCTYPE html>
   header { background: #2a1c12; border-bottom: 1px solid #6b4a2a; }
   h1 { margin: 0 0 4px; font-size: 22px; }
   .muted { color: #c8b497; }
-  .grid { display: grid; grid-template-columns: 280px 1fr; gap: 16px; }
+  .grid { display: grid; grid-template-columns: 320px 1fr; gap: 16px; }
+  .sheet { max-height: 380px; overflow: auto; white-space: pre-wrap; font: 14px/1.35 ui-monospace, monospace; }
   .card { background: #2c2118; border: 1px solid #6b4a2a; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
   .hp { height: 8px; background: #3a2a1c; border-radius: 4px; overflow: hidden; }
   .hp span { display: block; height: 100%; background: #c4542c; }
@@ -34,6 +35,7 @@ PLAYER_HTML = """<!DOCTYPE html>
   <p class="muted" id="round"></p>
 </header>
 <main>
+  <pre id="sheet" class="card sheet"></pre>
   <div class="grid">
     <section>
       <div class="card" id="self"></div>
@@ -43,17 +45,18 @@ PLAYER_HTML = """<!DOCTYPE html>
       <div class="card log" id="log" aria-live="polite"></div>
       <form id="line-form">
         <label for="line">What you do</label>
-        <input id="line" name="line" size="50" autocomplete="off" placeholder="I get behind the sandbags, then I shoot the first mannequin">
+        <input id="line" name="line" size="50" autocomplete="off" placeholder="I get behind the sandbags, then I cast eldritch blast at the first mannequin">
         <button type="submit">Send</button>
       </form>
       <p class="row">
-        <button type="button" class="quiet" data-line="I get behind the sandbags, then I shoot the first mannequin">Cover, then shoot</button>
-        <button type="button" class="quiet" data-line="I cunning action hide, then I shoot the first mannequin">Cunning hide, then shoot</button>
+        <button type="button" class="quiet" data-line="I get behind the sandbags, then I cast eldritch blast at the first mannequin">Cover, then Eldritch Blast</button>
+        <button type="button" class="quiet" data-line="I swing the mop at the first mannequin">Swing the mop</button>
+        <button type="button" class="quiet" data-line="I cast witch bolt at the first mannequin">Witch Bolt</button>
         <button type="button" class="quiet" data-line="I pick up the body and swing it at the other mannequin">Swing the body</button>
         <button type="button" class="quiet" data-line="I end turn">End turn</button>
       </p>
       <form id="seat-form" class="card">
-        <strong>Seat a Crawler from this client</strong>
+        <strong>Or seat a different Crawler</strong>
         <label>Name <input name="name" required maxlength="40"></label>
         <label>Class <input name="class_name" value="Rogue"></label>
         <label>Level <input name="level" type="number" min="1" max="20" value="1"></label>
@@ -105,9 +108,10 @@ function render(data) {
   document.getElementById("room").textContent = data.room;
   document.getElementById("round").textContent = "Round " + data.round + (data.gallery_clear ? " · gallery clear" : "");
   const c = data.crawler;
+  document.getElementById("sheet").textContent = (c.card_text || "").replaceAll("**", "");
   const self = document.getElementById("self");
   self.replaceChildren(card(c.name + " · " + c.class_name + " " + c.level, [
-    "HP " + c.hp + "/" + c.hp_max + "  AC " + c.ac + (c.cover ? "  cover " + c.cover : ""),
+    "HP " + c.hp + "/" + c.hp_max + (c.temp_hp ? " +" + c.temp_hp + " temp" : "") + "  AC " + c.ac + (c.ac_bonus ? "+" + c.ac_bonus : "") + (c.cover ? "  cover " + c.cover : ""),
     pip(c.action, "action") + " · " + pip(c.bonus, "bonus") + " · " + pip(c.object, "object"),
     "Movement " + c.movement_left + " ft" + (c.hidden ? " · hidden" : ""),
     (c.attacks[0] ? c.attacks[0].name + " " + c.attacks[0].damage : "")
@@ -115,11 +119,13 @@ function render(data) {
   const foes = document.getElementById("enemies");
   foes.replaceChildren();
   for (const enemy of data.enemies) {
+    const attacks = (enemy.attacks || []).map((atk) => atk.name + ": +" + atk.to_hit + ", " + atk.damage + " " + atk.type + ", " + atk.kind);
     foes.appendChild(card(enemy.name, [
       enemy.spoken_name,
-      "HP " + enemy.hp + "/" + enemy.hp_max + "  AC " + enemy.ac,
+      enemy.system_line || "",
+      "HP " + enemy.hp + "/" + enemy.hp_max + "  AC " + enemy.ac + (enemy.cover ? "  cover " + enemy.cover : ""),
       enemy.picture
-    ], [enemy.hp, enemy.hp_max]));
+    ].concat(attacks), [enemy.hp, enemy.hp_max]));
   }
   logEl.replaceChildren();
   for (const entry of data.log) {

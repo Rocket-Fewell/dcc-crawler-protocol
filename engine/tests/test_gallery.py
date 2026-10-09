@@ -67,46 +67,48 @@ class GalleryTests(unittest.TestCase):
             [15, 4],
         )
         text = " ".join(line["text"] for line in result["say"])
-        self.assertIn("1d20+5", text)
-        self.assertIn("1d6+3", text)
-        self.assertEqual(self.table.enemies[0]["hp"], 6)
+        self.assertIn("Eldritch Blast", text)
+        self.assertIn("1d20+6", text)
+        self.assertIn("1d10", text)
+        self.assertEqual(self.table.enemies[0]["hp"], 9)
         self.assertIn("Did not happen", text)
         self.assertIn("yell", text.lower())
         self.assertFalse(self.table.crawler["action"])
         self.assertEqual(self.calls, [])
 
     def test_cunning_action_refused_at_rogue_1_and_the_shot_still_happens(self):
-        self.assertEqual(self.table.crawler["class_name"], "Rogue")
+        self.assertEqual(self.table.crawler["name"], "Raithen")
+        self.assertEqual(self.table.crawler["class_name"], "Warlock")
         self.assertEqual(self.table.crawler["level"], 1)
-        _say(self.table, "I cunning action hide, then I shoot the first mannequin", [15, 4])
+        _say(self.table, "I cunning action hide, then I cast eldritch blast at the first mannequin", [15, 4])
         system = " ".join(line["text"] for line in self.table.log)
         self.assertIn("Cunning Action starts at Rogue 2", system)
-        self.assertEqual(self.table.enemies[0]["hp"], 6)
+        self.assertEqual(self.table.enemies[0]["hp"], 9)
         self.assertFalse(self.table.crawler["hidden"])
 
     def test_cover_then_attack_spends_movement_and_the_action(self):
-        _say(self.table, "I get behind the sandbags, then I shoot the first mannequin", [15, 4])
+        _say(self.table, "I get behind the sandbags, then I cast eldritch blast at the first mannequin", [15, 4])
         self.assertEqual(self.table.crawler["cover"], "half")
         self.assertEqual(self.table.crawler["movement_left"], 15)
-        self.assertEqual(self.table.enemies[0]["hp"], 6)
+        self.assertEqual(self.table.enemies[0]["hp"], 9)
         self.assertIn("costs nothing", " ".join(
             line["text"] for line in _say(self.table, "I yell", [])["say"]
         ).lower())
 
     def test_swinging_the_body_is_a_ruling_then_a_bludgeoning_roll(self):
-        _say(self.table, "I pick up the body and swing it at the other mannequin", [16, 2])
+        _say(self.table, "I pick up the body and swing it at the other mannequin", [18, 2])
         self.assertEqual(self.table.held, "body")
         self.assertFalse(self.table.crawler["object"])
         other = self.table.enemies[1]
         self.assertEqual(other["hp"], 9)
         spoken = " ".join(line["text"] for line in self.table.log)
-        self.assertIn("1d20+0", spoken)
+        self.assertIn("1d20-2", spoken)
         self.assertIn("Vulnerable to bludgeoning", spoken)
         self.assertEqual(self.table.enemies[0]["hp"], 13)
 
     def test_undo_restores_hit_points(self):
         _say(self.table, "I shoot the first mannequin", [15, 4])
-        self.assertEqual(self.table.enemies[0]["hp"], 6)
+        self.assertEqual(self.table.enemies[0]["hp"], 9)
         self.table.undo()
         self.assertEqual(self.table.enemies[0]["hp"], 13)
         self.assertTrue(self.table.crawler["action"])
@@ -128,7 +130,7 @@ class GalleryTests(unittest.TestCase):
         _say(self.table, "I end turn", [10, 3, 1])
         spoken = " ".join(line["text"] for line in self.table.log)
         self.assertIn("1d20+5", spoken)
-        self.assertEqual(self.table.crawler["hp"], 5)
+        self.assertEqual(self.table.crawler["hp"], 6)
         self.assertEqual(self.table.round, 2)
         self.assertTrue(self.table.crawler["action"])
 
@@ -137,6 +139,7 @@ class GalleryTests(unittest.TestCase):
         self.assertIn("gm_note", self.table.gm_view())
 
     def test_rogue_2_hide_is_a_bonus_and_the_shot_is_the_action(self):
+        self.table.crawler["class_name"] = "Rogue"
         self.table.crawler["level"] = 2
         _say(
             self.table,
@@ -146,7 +149,38 @@ class GalleryTests(unittest.TestCase):
         self.assertIn("Stealth", " ".join(line["text"] for line in self.table.log))
         self.assertFalse(self.table.crawler["bonus"])
         self.assertFalse(self.table.crawler["action"])
-        self.assertEqual(self.table.enemies[0]["hp"], 6)
+        self.assertEqual(self.table.enemies[0]["hp"], 9)
+
+    def test_card_copy_is_raithen_and_hides_secrets(self):
+        view = self.table.player_view()
+        text = view["crawler"]["card_text"]
+        self.assertIn("**RAITHEN**", text)
+        self.assertIn("Eldritch Blast**: +6 to hit, 1d10 force", text)
+        self.assertIn("Pact Magic slots: 1/1", text)
+        self.assertIn("Credits: 100", text)
+        self.assertIn("Duct-Taped Mop", text)
+        self.assertNotIn("pupils", text.lower())
+        self.assertNotIn("ducky", text.lower())
+        enemy = view["enemies"][0]
+        self.assertEqual(enemy["attacks"][0]["name"], "Shortbow")
+        self.assertEqual(enemy["attacks"][0]["to_hit"], 5)
+        self.assertNotIn("how_to_cheese", enemy)
+        self.assertIn("how_to_cheese", self.table.gm_view()["enemies"][0])
+
+    def test_mop_is_bludgeoning_and_the_mannequin_card_doubles_it(self):
+        _say(self.table, "I swing the mop at the first mannequin", [16, 6])
+        self.assertEqual(self.table.enemies[0]["hp"], 5)
+        spoken = " ".join(line["text"] for line in self.table.log)
+        self.assertIn("1d20+0", spoken)
+        self.assertIn("Vulnerable to bludgeoning", spoken)
+        self.assertIn("doubled to 8", spoken)
+
+    def test_witch_bolt_spends_the_pact_slot_on_the_card(self):
+        _say(self.table, "I cast witch bolt at the first mannequin", [16, 6, 6])
+        self.assertEqual(self.table.enemies[0]["hp"], 1)
+        text = self.table.player_view()["crawler"]["card_text"]
+        self.assertIn("Pact Magic slots: 0/1", text)
+        self.assertIn("2d12", " ".join(line["text"] for line in self.table.log))
 
 
 class HttpTests(unittest.TestCase):
@@ -162,8 +196,13 @@ class HttpTests(unittest.TestCase):
         self.assertIn("What you do", page)
 
         before = json.load(urllib.request.urlopen(base + "/api/player"))
+        self.assertEqual(before["crawler"]["name"], "Raithen")
+        self.assertIn("Eldritch Blast", before["crawler"]["card_text"])
+        self.assertEqual(before["enemies"][0]["name"], "Smiling Polo Mannequin 1")
+        self.assertEqual(before["enemies"][0]["attacks"][0]["to_hit"], 5)
         self.assertEqual(before["enemies"][0]["hp"], 13)
         self.assertNotIn("gm_note", before)
+        self.assertNotIn("how_to_cheese", before["enemies"][0])
 
         httpd.scripts.append([15, 4])
         request = urllib.request.Request(
@@ -172,7 +211,7 @@ class HttpTests(unittest.TestCase):
             headers={"Content-Type": "application/json"},
         )
         after = json.load(urllib.request.urlopen(request))
-        self.assertEqual(after["view"]["enemies"][0]["hp"], 6)
+        self.assertEqual(after["view"]["enemies"][0]["hp"], 9)
         self.assertTrue(any(line["voice"] == "ROLL" and line["speak"] is False for line in after["say"]))
         self.assertTrue(any(line["voice"] == "GM" and line["speak"] is True for line in after["say"]))
 
