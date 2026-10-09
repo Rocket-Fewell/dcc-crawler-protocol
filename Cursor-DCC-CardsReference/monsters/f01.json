@@ -1,10 +1,11 @@
 {
  "floor": 1,
  "count": 24,
+ "schema": "cursor-dcc-cards/0.2.0",
  "cards": [
   {
    "id": "f01-m-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -72,7 +73,7 @@
     "traits": [
      {
       "name": "Pack Tactics",
-      "text": "The rat has Advantage on an attack roll against a creature if at least one of the rat\u2019s allies is within 5 feet of the creature and the ally doesn\u2019t have the Incapacitated condition"
+      "text": "The rat has Advantage on an attack roll against a creature if at least one of the rat’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition"
      }
     ],
     "actions": [
@@ -89,7 +90,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 12",
      "Languages": "None"
     },
-    "stat_block_text": "Giant Rat\nSmall Beast, Unaligned\nAC 13   Initiative +3 (13)\nHP 7 (2d6)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 7 \u22122 \u22122 Dex 16 +3 +5 Con 11 +0 +0\nInt 2 \u22124 \u22124 WIS 10 +0 +0 Cha 4 \u22123 \u22123\nSkills Perception +2\nSenses Darkvision 60 ft.; Passive Perception 12\nLanguages None\nCR 1/8 (XP 25; PB +2)\nTraits\nPack Tactics. The rat has Advantage on an attack roll\nagainst a creature if at least one of the rat\u2019s allies is\nwithin 5 feet of the creature and the ally doesn\u2019t have\nthe Incapacitated condition.\nActions\nBite. Melee Attack Roll: +5, reach 5 feet. Hit: 5 (1d4\n+ 3) Piercing damage."
+    "stat_block_text": "Giant Rat\nSmall Beast, Unaligned\nAC 13   Initiative +3 (13)\nHP 7 (2d6)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 7 −2 −2 Dex 16 +3 +5 Con 11 +0 +0\nInt 2 −4 −4 WIS 10 +0 +0 Cha 4 −3 −3\nSkills Perception +2\nSenses Darkvision 60 ft.; Passive Perception 12\nLanguages None\nCR 1/8 (XP 25; PB +2)\nTraits\nPack Tactics. The rat has Advantage on an attack roll\nagainst a creature if at least one of the rat’s allies is\nwithin 5 feet of the creature and the ally doesn’t have\nthe Incapacitated condition.\nActions\nBite. Melee Attack Roll: +5, reach 5 feet. Hit: 5 (1d4\n+ 3) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -145,12 +146,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Vent Row rats on the floor page carry nothing. Do not hang credits on this corpse. Pack Tactics is the combat lesson.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -219,7 +235,7 @@
     "actions": [
      {
       "name": "Proboscis",
-      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage, and the stirge attaches to the target. While attached, the stirge can\u2019t make Proboscis attacks, and the target takes 5 (2d4) Necrotic damage at the start of each of the stirge\u2019s turns. The stirge can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the stirge as an action"
+      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage, and the stirge attaches to the target. While attached, the stirge can’t make Proboscis attacks, and the target takes 5 (2d4) Necrotic damage at the start of each of the stirge’s turns. The stirge can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the stirge as an action"
      }
     ],
     "bonus_actions": [],
@@ -229,7 +245,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 9",
      "Languages": "None"
     },
-    "stat_block_text": "Stirge\nTiny Monstrosity, Unaligned\nAC 13  Initiative +3 (13)\nHP 5 (2d4)\nSpeed 10 ft., Fly 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 4 \u22123 \u22123 Dex 16 +3 +3 Con 11 +0 +0\nInt 2 \u22124 \u22124 WIS 8 \u22121 \u22121 Cha 6 \u22122 \u22122\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages None\nCR 1/8 (XP 25; PB +2)\nActions\nProboscis. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6\n+ 3) Piercing damage, and the stirge attaches to the\ntarget. While attached, the stirge can\u2019t make Proboscis\nattacks, and the target takes 5 (2d4) Necrotic damage at\nthe start of each of the stirge\u2019s turns.\nThe stirge can detach itself by spending 5 feet of its\nmovement. The target or a creature within 5 feet of it\ncan detach the stirge as an action."
+    "stat_block_text": "Stirge\nTiny Monstrosity, Unaligned\nAC 13  Initiative +3 (13)\nHP 5 (2d4)\nSpeed 10 ft., Fly 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 4 −3 −3 Dex 16 +3 +3 Con 11 +0 +0\nInt 2 −4 −4 WIS 8 −1 −1 Cha 6 −2 −2\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages None\nCR 1/8 (XP 25; PB +2)\nActions\nProboscis. Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6\n+ 3) Piercing damage, and the stirge attaches to the\ntarget. While attached, the stirge can’t make Proboscis\nattacks, and the target takes 5 (2d4) Necrotic damage at\nthe start of each of the stirge’s turns.\nThe stirge can detach itself by spending 5 feet of its\nmovement. The target or a creature within 5 feet of it\ncan detach the stirge as an action."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -285,12 +301,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -376,7 +407,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 9",
      "Languages": "Common, Goblin"
     },
-    "stat_block_text": "Goblin Minion\nSmall Fey (Goblinoid), Chaotic Neutral\nAC 12  Initiative +2 (12)\nHP 7 (2d6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 8 \u22121 \u22121 Dex 15 +2 +2 Con 10 +0 +0\nInt 10 +0 +0 WIS 8 \u22121 \u22121 Cha 8 \u22121 \u22121\nSkills Stealth +6\nGear Daggers (3)\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Common, Goblin\nCR 1/8 (XP 25; PB +2)\nActions\nDagger. Melee or Ranged Attack Roll: +4, reach 5 ft. or\nrange 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage.\nBonus Actions\nNimble Escape. The goblin takes the Disengage or\nHide action."
+    "stat_block_text": "Goblin Minion\nSmall Fey (Goblinoid), Chaotic Neutral\nAC 12  Initiative +2 (12)\nHP 7 (2d6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 8 −1 −1 Dex 15 +2 +2 Con 10 +0 +0\nInt 10 +0 +0 WIS 8 −1 −1 Cha 8 −1 −1\nSkills Stealth +6\nGear Daggers (3)\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Common, Goblin\nCR 1/8 (XP 25; PB +2)\nActions\nDagger. Melee or Ranged Attack Roll: +4, reach 5 ft. or\nrange 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage.\nBonus Actions\nNimble Escape. The goblin takes the Disengage or\nHide action."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -432,12 +463,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-04",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -574,12 +620,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-05",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -664,7 +725,7 @@
      "Senses": "Blindsight 30 ft.; Passive Perception 9",
      "Languages": "None"
     },
-    "stat_block_text": "Giant Crab\nMedium Beast, Unaligned\nAC 15   Initiative +1 (11)\nHP 13 (3d8)\nSpeed 30 ft., Swim 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 13 +1 +1 Con 11 +0 +0\nInt 1 \u22125 \u22125 WIS 9 \u22121 \u22121 Cha 3 \u22124 \u22124\nSkills Stealth +3\nSenses Blindsight 30 ft.; Passive Perception 9\nLanguages None\nCR 1/8 (XP 25; PB +2)\nTraits\nAmphibious. The crab can breathe air and water.\nActions\nClaw. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1)\nBludgeoning damage. If the target is a Medium or\nsmaller creature, it has the Grappled condition (escape\nDC 11) from one of two claws."
+    "stat_block_text": "Giant Crab\nMedium Beast, Unaligned\nAC 15   Initiative +1 (11)\nHP 13 (3d8)\nSpeed 30 ft., Swim 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 13 +1 +1 Con 11 +0 +0\nInt 1 −5 −5 WIS 9 −1 −1 Cha 3 −4 −4\nSkills Stealth +3\nSenses Blindsight 30 ft.; Passive Perception 9\nLanguages None\nCR 1/8 (XP 25; PB +2)\nTraits\nAmphibious. The crab can breathe air and water.\nActions\nClaw. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1)\nBludgeoning damage. If the target is a Medium or\nsmaller creature, it has the Grappled condition (escape\nDC 11) from one of two claws."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -720,12 +781,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-06",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -805,7 +881,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 15",
      "Languages": "None"
     },
-    "stat_block_text": "Mastiff\nMedium Beast, Unaligned\nAC 12   Initiative +2 (12)\nHP 5 (1d8 + 1)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex\t14 +2 +2 Con 12 +1 +1\nInt 3 \u22124 \u22124 WIS 12 +1 +3 Cha 7 \u22122 \u22122\nSkills Perception +5\nSenses Darkvision 60 ft.; Passive Perception 15\nLanguages None\nCR 1/8 (XP 25; PB +2)\nActions\nBite. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1)\nPiercing damage. If the target is a Medium or smaller\ncreature, it has the Prone condition."
+    "stat_block_text": "Mastiff\nMedium Beast, Unaligned\nAC 12   Initiative +2 (12)\nHP 5 (1d8 + 1)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex\t14 +2 +2 Con 12 +1 +1\nInt 3 −4 −4 WIS 12 +1 +3 Cha 7 −2 −2\nSkills Perception +5\nSenses Darkvision 60 ft.; Passive Perception 15\nLanguages None\nCR 1/8 (XP 25; PB +2)\nActions\nBite. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1)\nPiercing damage. If the target is a Medium or smaller\ncreature, it has the Prone condition."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -861,12 +937,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-07",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -948,9 +1039,9 @@
     "labels": {
      "Gear": "Leather Armor, Light Crossbow, Scimitar",
      "Senses": "Passive Perception 10",
-     "Languages": "Common, Thieves\u2019 Cant"
+     "Languages": "Common, Thieves’ Cant"
     },
-    "stat_block_text": "Bandit\nMedium or Small Humanoid, Neutral\nAC 12  Initiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 11 +0 +0 Dex 12 +1 +1 Con 12 +1 +1\nInt 10 +0 +0 WIS 10 +0 +0 Cha 10 +0 +0\nGear Leather Armor, Light Crossbow, Scimitar\nSenses Passive Perception 10\nLanguages Common, Thieves\u2019 Cant\nCR 1/8 (XP 25; PB +2)\nActions\nScimitar. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6\n+ 1) Slashing damage.\nLight Crossbow. Ranged Attack Roll: +3, range 80/320\nft. Hit: 5 (1d8 + 1) Piercing damage."
+    "stat_block_text": "Bandit\nMedium or Small Humanoid, Neutral\nAC 12  Initiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 11 +0 +0 Dex 12 +1 +1 Con 12 +1 +1\nInt 10 +0 +0 WIS 10 +0 +0 Cha 10 +0 +0\nGear Leather Armor, Light Crossbow, Scimitar\nSenses Passive Perception 10\nLanguages Common, Thieves’ Cant\nCR 1/8 (XP 25; PB +2)\nActions\nScimitar. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6\n+ 1) Slashing damage.\nLight Crossbow. Ranged Attack Roll: +3, range 80/320\nft. Hit: 5 (1d8 + 1) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -1006,12 +1097,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-08",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1148,12 +1254,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-09",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1237,9 +1358,9 @@
      "Immunities": "Poison; Exhaustion, Poisoned",
      "Gear": "Shortbow, Shortsword",
      "Senses": "Darkvision 60 ft.; Passive Perception 9",
-     "Languages": "Understands Common plus one other language but can\u2019t speak"
+     "Languages": "Understands Common plus one other language but can’t speak"
     },
-    "stat_block_text": "Skeleton\nMedium Undead, Lawful Evil\nAC 14   Initiative +3 (13)\nHP 13 (2d8 + 4)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 10 +0 +0 Dex 16 +3 +3 Con 15 +2 +2\nInt 6 \u22122 \u22122 WIS 8 \u22121 \u22121 Cha 5 \u22123 \u22123\nVulnerabilities Bludgeoning\nImmunities Poison; Exhaustion, Poisoned\nGear Shortbow, Shortsword\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Understands Common plus one other language\nbut can\u2019t speak\nCR 1/4 (XP 50; PB +2)\nActions\nShortsword. Melee Attack Roll: +5, reach 5 ft. Hit: 6\n(1d6 + 3) Piercing damage.\nShortbow. Ranged Attack Roll: +5, range 80/320 ft. Hit:\n6 (1d6 + 3) Piercing damage."
+    "stat_block_text": "Skeleton\nMedium Undead, Lawful Evil\nAC 14   Initiative +3 (13)\nHP 13 (2d8 + 4)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 10 +0 +0 Dex 16 +3 +3 Con 15 +2 +2\nInt 6 −2 −2 WIS 8 −1 −1 Cha 5 −3 −3\nVulnerabilities Bludgeoning\nImmunities Poison; Exhaustion, Poisoned\nGear Shortbow, Shortsword\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Understands Common plus one other language\nbut can’t speak\nCR 1/4 (XP 50; PB +2)\nActions\nShortsword. Melee Attack Roll: +5, reach 5 ft. Hit: 6\n(1d6 + 3) Piercing damage.\nShortbow. Ranged Attack Roll: +5, range 80/320 ft. Hit:\n6 (1d6 + 3) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -1295,12 +1416,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-10",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1390,7 +1526,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 9",
      "Languages": "Common, Goblin"
     },
-    "stat_block_text": "Goblin Warrior\nSmall Fey (Goblinoid), Chaotic Neutral\nAC 15  Initiative +2 (12)\nHP 10 (3d6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 8 \u22121 \u22121 Dex 15 +2 +2 Con 10 +0 +0\nInt 10 +0 +0 WIS 8 \u22121 \u22121 Cha 8 \u22121 \u22121\nSkills Stealth +6\nGear Leather Armor, Scimitar, Shield, Shortbow\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Common, Goblin\nCR 1/4 (XP 50; PB +2)\nActions\nScimitar. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6\n+ 2) Slashing damage, plus 2 (1d4) Slashing damage if\nthe attack roll had Advantage.\nShortbow. Ranged Attack Roll: +4, range 80/320 ft.\nHit: 5 (1d6 + 2) Piercing damage, plus 2 (1d4) Piercing\ndamage if the attack roll had Advantage.\nBonus Actions\nNimble Escape. The goblin takes the Disengage or\nHide action."
+    "stat_block_text": "Goblin Warrior\nSmall Fey (Goblinoid), Chaotic Neutral\nAC 15  Initiative +2 (12)\nHP 10 (3d6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 8 −1 −1 Dex 15 +2 +2 Con 10 +0 +0\nInt 10 +0 +0 WIS 8 −1 −1 Cha 8 −1 −1\nSkills Stealth +6\nGear Leather Armor, Scimitar, Shield, Shortbow\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Common, Goblin\nCR 1/4 (XP 50; PB +2)\nActions\nScimitar. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6\n+ 2) Slashing damage, plus 2 (1d4) Slashing damage if\nthe attack roll had Advantage.\nShortbow. Ranged Attack Roll: +4, range 80/320 ft.\nHit: 5 (1d6 + 2) Piercing damage, plus 2 (1d4) Piercing\ndamage if the attack roll had Advantage.\nBonus Actions\nNimble Escape. The goblin takes the Disengage or\nHide action."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -1446,12 +1582,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-11",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1534,9 +1685,9 @@
     "labels": {
      "Immunities": "Poison; Exhaustion, Poisoned",
      "Senses": "Darkvision 60 ft.; Passive Perception 8",
-     "Languages": "Understands Common plus one other language but can\u2019t speak"
+     "Languages": "Understands Common plus one other language but can’t speak"
     },
-    "stat_block_text": "Zombie\nMedium Undead, Neutral Evil\nAC 8    Initiative \u22122 (8)\nHP 15 (2d8 + 6)\nSpeed 20 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 6 \u22122 \u22122 Con 16 +3 +3\nInt 3 \u22124 \u22124 WIS 6 \u22122 +0 Cha 5 \u22123 \u22123\nImmunities Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 8\nLanguages Understands Common plus one other language\nbut can\u2019t speak\nCR 1/4 (XP 50; PB +2)\nTraits\nUndead Fortitude. If damage reduces the zombie to 0\nHit Points, it makes a Constitution saving throw (DC 5\nplus the damage taken) unless the damage is Radiant or\nfrom a Critical Hit. On a successful save, the zombie\ndrops to 1 Hit Point instead.\nActions\nSlam. Melee Attack Roll: +3, reach 5 ft. Hit: 5 (1d8 + 1)\nBludgeoning damage."
+    "stat_block_text": "Zombie\nMedium Undead, Neutral Evil\nAC 8    Initiative −2 (8)\nHP 15 (2d8 + 6)\nSpeed 20 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 6 −2 −2 Con 16 +3 +3\nInt 3 −4 −4 WIS 6 −2 +0 Cha 5 −3 −3\nImmunities Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 8\nLanguages Understands Common plus one other language\nbut can’t speak\nCR 1/4 (XP 50; PB +2)\nTraits\nUndead Fortitude. If damage reduces the zombie to 0\nHit Points, it makes a Constitution saving throw (DC 5\nplus the damage taken) unless the damage is Radiant or\nfrom a Critical Hit. On a successful save, the zombie\ndrops to 1 Hit Point instead.\nActions\nSlam. Melee Attack Roll: +3, reach 5 ft. Hit: 5 (1d8 + 1)\nBludgeoning damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -1592,12 +1743,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "The mop is set dressing. Tanya Ruiz's corpse cache on the Day page is a separate loot pile, not this zombie.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-m-12",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1677,7 +1843,7 @@
      "Senses": "Blindsight 30 ft.; Passive Perception 6",
      "Languages": "None"
     },
-    "stat_block_text": "Shrieker Fungus\nMedium Plant, Unaligned\nAC 5  Initiative \u22125 (5)\nHP 13 (3d8)\nSpeed 5 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 1 \u22125 \u22125 Dex 1 \u22125 \u22125 Con 10 +0 +0\nInt 1 \u22125 \u22125 WIS 3 \u22124 \u22124 Cha 1 \u22125 \u22125\nImmunities Blinded, Charmed, Deafened, Frightened\nSenses Blindsight 30 ft.; Passive Perception 6\nLanguages None\nCR 0 (XP 0; PB +2)\nReactions\nShriek. Trigger: A creature or a source of Bright Light\nmoves within 30 feet of the shrieker. Response: The\nshrieker emits a shriek audible within 300 feet of itself\nfor 1 minute or until the shrieker dies."
+    "stat_block_text": "Shrieker Fungus\nMedium Plant, Unaligned\nAC 5  Initiative −5 (5)\nHP 13 (3d8)\nSpeed 5 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 1 −5 −5 Dex 1 −5 −5 Con 10 +0 +0\nInt 1 −5 −5 WIS 3 −4 −4 Cha 1 −5 −5\nImmunities Blinded, Charmed, Deafened, Frightened\nSenses Blindsight 30 ft.; Passive Perception 6\nLanguages None\nCR 0 (XP 0; PB +2)\nReactions\nShriek. Trigger: A creature or a source of Bright Light\nmoves within 30 feet of the shrieker. Response: The\nshrieker emits a shriek audible within 300 feet of itself\nfor 1 minute or until the shrieker dies."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -1733,12 +1899,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Shriek is a reaction, not a spell and not a slot. CR 0, XP 0, matching rules/70.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-u-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1806,7 +1987,7 @@
     "traits": [
      {
       "name": "Pack Tactics",
-      "text": "The warrior has Advantage on an attack roll against a creature if at least one of the warrior\u2019s allies is within 5 feet of the creature and the ally doesn\u2019t have the Incapacitated condition"
+      "text": "The warrior has Advantage on an attack roll against a creature if at least one of the warrior’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition"
      }
     ],
     "actions": [
@@ -1823,7 +2004,7 @@
      "Senses": "Passive Perception 10",
      "Languages": "Common"
     },
-    "stat_block_text": "Warrior Infantry\nMedium or Small Humanoid, Neutral\nAC 13  Initiative +0 (10)\nHP 9 (2d8)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 11 +0 +0 Con 11 +0 +0\nInt 8 \u22121 \u22121 WIS 11 +0 +0 Cha 8 \u22121 \u22121\nGear Chain Shirt, Spear\nSenses Passive Perception 10\nLanguages Common\nCR 1/8 (XP 25; PB +2)\nTraits\nPack Tactics. The warrior has Advantage on an attack\nroll against a creature if at least one of the warrior\u2019s allies is within 5 feet of the creature and the ally doesn\u2019t\nhave the Incapacitated condition.\nActions\nSpear. Melee or Ranged Attack Roll: +3, reach 5 ft. or\nrange 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage."
+    "stat_block_text": "Warrior Infantry\nMedium or Small Humanoid, Neutral\nAC 13  Initiative +0 (10)\nHP 9 (2d8)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 11 +0 +0 Con 11 +0 +0\nInt 8 −1 −1 WIS 11 +0 +0 Cha 8 −1 −1\nGear Chain Shirt, Spear\nSenses Passive Perception 10\nLanguages Common\nCR 1/8 (XP 25; PB +2)\nTraits\nPack Tactics. The warrior has Advantage on an attack\nroll against a creature if at least one of the warrior’s allies is within 5 feet of the creature and the ally doesn’t\nhave the Incapacitated condition.\nActions\nSpear. Melee or Ranged Attack Roll: +3, reach 5 ft. or\nrange 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -1879,12 +2060,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-u-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -1964,7 +2160,7 @@
      "Senses": "Blindsight 60 ft.; Passive Perception 7",
      "Languages": "None"
     },
-    "stat_block_text": "Animated Flying Sword\nSmall Construct, Unaligned\nAC 17  Initiative +4 (14)\nHP 14 (4d6)\nSpeed 5 ft., Fly 50 ft. (hover)\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex 15 +2 +4 Con 11 +0 +0\nInt 1 \u22125 \u22125 WIS 5 \u22123 \u22123 Cha 1 \u22125 \u22125\nImmunities Poison, Psychic; Charmed, Deafened,\nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 7\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nSlash. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2)\nSlashing damage."
+    "stat_block_text": "Animated Flying Sword\nSmall Construct, Unaligned\nAC 17  Initiative +4 (14)\nHP 14 (4d6)\nSpeed 5 ft., Fly 50 ft. (hover)\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex 15 +2 +4 Con 11 +0 +0\nInt 1 −5 −5 WIS 5 −3 −3 Cha 1 −5 −5\nImmunities Poison, Psychic; Charmed, Deafened,\nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 7\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nSlash. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2)\nSlashing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -2020,12 +2216,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-u-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2053,7 +2264,7 @@
     "ac": 14,
     "initiative": 2,
     "hp_max": 7,
-    "hp_formula": "3d6 \u2212 3",
+    "hp_formula": "3d6 − 3",
     "speed": "30 ft.",
     "abilities": {
      "str": {
@@ -2093,7 +2304,7 @@
     "traits": [
      {
       "name": "Pack Tactics",
-      "text": "The kobold has Advantage on an attack roll against a creature if at least one of the kobold\u2019s allies is within 5 feet of the creature and the ally doesn\u2019t have the Incapacitated condition"
+      "text": "The kobold has Advantage on an attack roll against a creature if at least one of the kobold’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition"
      },
      {
       "name": "Sunlight Sensitivity",
@@ -2114,7 +2325,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 8",
      "Languages": "Common, Draconic"
     },
-    "stat_block_text": "Kobold Warrior\nSmall Dragon, Neutral\nAC 14  Initiative +2 (12)\nHP 7 (3d6 \u2212 3)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 7 \u22122 \u22122 Dex\t15 +2 +2 Con 9 \u22121 \u22121\nInt 8 \u22121 \u22121 WIS 7 \u22122 \u22122 Cha 8 \u22121 \u22121\nGear Daggers (3)\nSenses Darkvision 60 ft.; Passive Perception 8\nLanguages Common, Draconic\nCR 1/8 (XP 25; PB +2)\nTraits\nPack Tactics. The kobold has Advantage on an attack\nroll against a creature if at least one of the kobold\u2019s allies is within 5 feet of the creature and the ally doesn\u2019t\nhave the Incapacitated condition.\nSunlight Sensitivity. While in sunlight, the kobold has\nDisadvantage on ability checks and attack rolls.\nActions\nDagger. Melee or Ranged Attack Roll: +4, reach 5 ft. or\nrange 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage."
+    "stat_block_text": "Kobold Warrior\nSmall Dragon, Neutral\nAC 14  Initiative +2 (12)\nHP 7 (3d6 − 3)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 7 −2 −2 Dex\t15 +2 +2 Con 9 −1 −1\nInt 8 −1 −1 WIS 7 −2 −2 Cha 8 −1 −1\nGear Daggers (3)\nSenses Darkvision 60 ft.; Passive Perception 8\nLanguages Common, Draconic\nCR 1/8 (XP 25; PB +2)\nTraits\nPack Tactics. The kobold has Advantage on an attack\nroll against a creature if at least one of the kobold’s allies is within 5 feet of the creature and the ally doesn’t\nhave the Incapacitated condition.\nSunlight Sensitivity. While in sunlight, the kobold has\nDisadvantage on ability checks and attack rolls.\nActions\nDagger. Melee or Ranged Attack Roll: +4, reach 5 ft. or\nrange 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -2170,12 +2381,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-u-04",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2253,7 +2479,11 @@
     "actions": [
      {
       "name": "Claw",
-      "text": "Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Slashing damage plus 2 (1d4) Fire damage. Steam Breath (Recharge 6). Constitution Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) Fire damage, and the target\u2019s Speed decreases by 10 feet until the end of the mephit\u2019s next turn. Success: Half damage only. Failure or Success: Being underwater doesn\u2019t grant Resistance to this Fire damage. Merfolk"
+      "text": "Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Slashing damage plus 2 (1d4) Fire damage."
+     },
+     {
+      "name": "Steam Breath (Recharge 6)",
+      "text": "Constitution Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) Fire damage, and the target’s Speed decreases by 10 feet until the end of the mephit’s next turn. Success: Half damage only. Failure or Success: Being underwater doesn’t grant Resistance to this Fire damage."
      }
     ],
     "bonus_actions": [],
@@ -2265,7 +2495,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 10",
      "Languages": "Primordial (Aquan, Ignan)"
     },
-    "stat_block_text": "Steam Mephit\nSmall Elemental, Neutral Evil\nAC 10  Initiative +0 (10)\nHP 17 (5d6)\nSpeed 30 ft., Fly 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 5 \u22123 \u22123 Dex 11 +0 +0 Con 10 +0 +0\nInt 11 +0 +0 WIS 10 +0 +0 Cha 12 +1 +1\nSkills Stealth +2\nImmunities Fire, Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Aquan, Ignan)\nCR 1/4 (XP 50; PB +2)\nTraits\nBlurred Form. Attack rolls against the mephit are made\nwith Disadvantage unless the mephit has the Incapacitated condition.\nDeath Burst. The mephit explodes when it dies. Dexterity Saving Throw: DC 10, each creature in a 5-foot\nEmanation originating from the mephit. Failure: 5 (2d4)\nFire damage. Success: Half damage.\nActions\nClaw. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4)\nSlashing damage plus 2 (1d4) Fire damage.\nSteam Breath (Recharge 6). Constitution Saving Throw:\nDC 10, each creature in a 15-foot Cone. Failure: 5 (2d4)\nFire damage, and the target\u2019s Speed decreases by 10\nfeet until the end of the mephit\u2019s next turn. Success:\nHalf damage only. Failure or Success: Being underwater\ndoesn\u2019t grant Resistance to this Fire damage.\nMerfolk"
+    "stat_block_text": "Steam Mephit\nSmall Elemental, Neutral Evil\nAC 10  Initiative +0 (10)\nHP 17 (5d6)\nSpeed 30 ft., Fly 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 5 −3 −3 Dex 11 +0 +0 Con 10 +0 +0\nInt 11 +0 +0 WIS 10 +0 +0 Cha 12 +1 +1\nSkills Stealth +2\nImmunities Fire, Poison; Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Primordial (Aquan, Ignan)\nCR 1/4 (XP 50; PB +2)\nTraits\nBlurred Form. Attack rolls against the mephit are made\nwith Disadvantage unless the mephit has the Incapacitated condition.\nDeath Burst. The mephit explodes when it dies. Dexterity Saving Throw: DC 10, each creature in a 5-foot\nEmanation originating from the mephit. Failure: 5 (2d4)\nFire damage. Success: Half damage.\nActions\nClaw. Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4)\nSlashing damage plus 2 (1d4) Fire damage.\nSteam Breath (Recharge 6). Constitution Saving Throw:\nDC 10, each creature in a 15-foot Cone. Failure: 5 (2d4)\nFire damage, and the target’s Speed decreases by 10\nfeet until the end of the mephit’s next turn. Success:\nHalf damage only. Failure or Success: Being underwater\ndoesn’t grant Resistance to this Fire damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -2321,12 +2551,43 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Steam Breath",
+     "name": "Steam Breath",
+     "kind": "recharge",
+     "spell_level": null,
+     "max": 1,
+     "available": true,
+     "die": "d6",
+     "recharge_on": [
+      6
+     ],
+     "recover": "start of this creature's turn, d6 in [6]",
+     "rule": "Starts ready. After Steam Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+     "key": "f01-u-04.steam-breath"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Steam Breath is recharge 6, one pending use. Death Burst happens when it dies. Neither is a spell slot.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-u-05",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2408,8 +2669,8 @@
     ],
     "bonus_actions": [
      {
-      "name": "Effect",
-      "text": "Divine Aid (1/Day). The priest casts Bless, Healing Word, or Sanctuary, using the same spellcasting ability as Spellcasting."
+      "name": "Divine Aid (1/Day)",
+      "text": "The priest casts Bless, Healing Word, or Sanctuary, using the same spellcasting ability as Spellcasting."
      }
     ],
     "reactions": [],
@@ -2476,12 +2737,80 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Divine Aid",
+     "name": "Divine Aid",
+     "kind": "shared_spell_pool",
+     "spell_level": null,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "1 cast(s) total, any mix of Bless, Healing Word, Sanctuary. Not that many of each spell. At 0, weapon attacks and at-will cantrips only.",
+     "key": "f01-u-05.divine-aid",
+     "choices": [
+      {
+       "name": "Bless",
+       "spell_level": 1
+      },
+      {
+       "name": "Healing Word",
+       "spell_level": 1
+      },
+      {
+       "name": "Sanctuary",
+       "spell_level": 1
+      }
+     ],
+     "ability": "Wisdom"
+    },
+    {
+     "key_name": "Light",
+     "name": "Light",
+     "kind": "at_will",
+     "spell_level": 0,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+     "ability": "Wisdom",
+     "save_dc": null,
+     "key": "f01-u-05.light"
+    },
+    {
+     "key_name": "Thaumaturgy",
+     "name": "Thaumaturgy",
+     "kind": "at_will",
+     "spell_level": 0,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+     "ability": "Wisdom",
+     "save_dc": null,
+     "key": "f01-u-05.thaumaturgy"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Cantrips are at will. Divine Aid is one cast of Bless, Healing Word, or Sanctuary, not one of each. At 0, Mace and Radiant Flame only.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-u-06",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2550,7 +2879,7 @@
     "actions": [
      {
       "name": "Bite",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage, and the target has the Poisoned condition until the start of the centipede\u2019s next turn"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage, and the target has the Poisoned condition until the start of the centipede’s next turn"
      }
     ],
     "bonus_actions": [],
@@ -2560,7 +2889,7 @@
      "Senses": "Blindsight 30 ft.; Passive Perception 8",
      "Languages": "None"
     },
-    "stat_block_text": "Giant Centipede\nSmall Beast, Unaligned\nAC 14   Initiative +2 (12)\nHP 9 (2d6 + 2)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 5 \u22123 \u22123 Dex 14 +2 +2 Con 12 +1 +1\nInt 1 \u22125 \u22125 WIS 7 \u22122 \u22122 Cha 3 \u22124 \u22124\nSenses Blindsight 30 ft.; Passive Perception 8\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2)\nPiercing damage, and the target has the Poisoned condition until the start of the centipede\u2019s next turn."
+    "stat_block_text": "Giant Centipede\nSmall Beast, Unaligned\nAC 14   Initiative +2 (12)\nHP 9 (2d6 + 2)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 5 −3 −3 Dex 14 +2 +2 Con 12 +1 +1\nInt 1 −5 −5 WIS 7 −2 −2 Cha 3 −4 −4\nSenses Blindsight 30 ft.; Passive Perception 8\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2)\nPiercing damage, and the target has the Poisoned condition until the start of the centipede’s next turn."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -2616,12 +2945,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-e-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2705,7 +3049,7 @@
      "Senses": "Blindsight 60 ft.; Passive Perception 6",
      "Languages": "None"
     },
-    "stat_block_text": "Animated Armor\nMedium Construct, Unaligned\nAC 18  Initiative +2 (12)\nHP 33 (6d8 + 6)\nSpeed 25 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 11 +0 +0 Con 13 +1 +1\nInt 1 \u22125 \u22125 WIS 3 \u22124 \u22124 Cha 1 \u22125 \u22125\nImmunities Poison, Psychic; Charmed, Deafened,\nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 6\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The armor makes two Slam attacks.\nSlam. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nBludgeoning damage."
+    "stat_block_text": "Animated Armor\nMedium Construct, Unaligned\nAC 18  Initiative +2 (12)\nHP 33 (6d8 + 6)\nSpeed 25 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 11 +0 +0 Con 13 +1 +1\nInt 1 −5 −5 WIS 3 −4 −4 Cha 1 −5 −5\nImmunities Poison, Psychic; Charmed, Deafened,\nExhaustion, Frightened, Paralyzed, Petrified, Poisoned\nSenses Blindsight 60 ft.; Passive Perception 6\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The armor makes two Slam attacks.\nSlam. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nBludgeoning damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -2761,12 +3105,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-e-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2834,7 +3193,7 @@
     "traits": [
      {
       "name": "Abduct",
-      "text": "The bugbear needn\u2019t spend extra movement to move a creature it is grappling"
+      "text": "The bugbear needn’t spend extra movement to move a creature it is grappling"
      }
     ],
     "actions": [
@@ -2856,7 +3215,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 10",
      "Languages": "Common, Goblin"
     },
-    "stat_block_text": "Bugbear Warrior\nMedium Fey (Goblinoid), Chaotic Evil\nAC 14  Initiative +2 (12)\nHP 33 (6d8 + 6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 14 +2 +2 Con 13 +1 +1\nInt 8 \u22121 \u22121 WIS 11 +0 +0 Cha 9 \u22121 \u22121\nSkills Stealth +6, Survival +2\nGear Hide Armor, Light Hammers (3)\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Common, Goblin\nCR 1 (XP 200; PB +2)\nTraits\nAbduct. The bugbear needn\u2019t spend extra movement to\nmove a creature it is grappling.\nActions\nGrab. Melee Attack Roll: +4, reach 10 ft. Hit: 9 (2d6\n+ 2) Bludgeoning damage. If the target is a Medium\nor smaller creature, it has the Grappled condition (escape DC 12).\nLight Hammer. Melee or Ranged Attack Roll: +4 (with\nAdvantage if the target is Grappled by the bugbear),\nreach 10 ft. or range 20/60 ft. Hit: 9 (3d4 + 2) Bludgeoning damage."
+    "stat_block_text": "Bugbear Warrior\nMedium Fey (Goblinoid), Chaotic Evil\nAC 14  Initiative +2 (12)\nHP 33 (6d8 + 6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 14 +2 +2 Con 13 +1 +1\nInt 8 −1 −1 WIS 11 +0 +0 Cha 9 −1 −1\nSkills Stealth +6, Survival +2\nGear Hide Armor, Light Hammers (3)\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Common, Goblin\nCR 1 (XP 200; PB +2)\nTraits\nAbduct. The bugbear needn’t spend extra movement to\nmove a creature it is grappling.\nActions\nGrab. Melee Attack Roll: +4, reach 10 ft. Hit: 9 (2d6\n+ 2) Bludgeoning damage. If the target is a Medium\nor smaller creature, it has the Grappled condition (escape DC 12).\nLight Hammer. Melee or Ranged Attack Roll: +4 (with\nAdvantage if the target is Grappled by the bugbear),\nreach 10 ft. or range 20/60 ft. Hit: 9 (3d4 + 2) Bludgeoning damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -2912,12 +3271,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "The Break Room is a saferoom through Day 3 and goes offline on Day 4. A bugbear here is a fight. It does not grant a rest.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-e-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -2994,7 +3368,7 @@
      },
      {
       "name": "Claw",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage. If the target is a creature that isn\u2019t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn"
      }
     ],
     "bonus_actions": [],
@@ -3005,7 +3379,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 10",
      "Languages": "Common"
     },
-    "stat_block_text": "Ghoul\nMedium Undead, Chaotic Evil\nAC 12  Initiative +2 (12)\nHP 22 (5d8)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 15 +2 +2 Con 10 +0 +0\nInt 7 \u22122 \u22122 WIS 10 +0 +0 Cha 6 \u22122 \u22122\nImmunities Poison; Charmed, Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Common\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The ghoul makes two Bite attacks.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nPiercing damage plus 3 (1d6) Necrotic damage.\nClaw. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4\n+ 2) Slashing damage. If the target is a creature that\nisn\u2019t an Undead or elf, it is subjected to the following\neffect. Constitution Saving Throw: DC 10. Failure: The\ntarget has the Paralyzed condition until the end of its\nnext turn."
+    "stat_block_text": "Ghoul\nMedium Undead, Chaotic Evil\nAC 12  Initiative +2 (12)\nHP 22 (5d8)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 13 +1 +1 Dex 15 +2 +2 Con 10 +0 +0\nInt 7 −2 −2 WIS 10 +0 +0 Cha 6 −2 −2\nImmunities Poison; Charmed, Exhaustion, Poisoned\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Common\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The ghoul makes two Bite attacks.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nPiercing damage plus 3 (1d6) Necrotic damage.\nClaw. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4\n+ 2) Slashing damage. If the target is a creature that\nisn’t an Undead or elf, it is subjected to the following\neffect. Constitution Saving Throw: DC 10. Failure: The\ntarget has the Paralyzed condition until the end of its\nnext turn."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -3061,12 +3435,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "The Green Room stays open and is where level 2 is granted. This ghoul is not the saferoom.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-e-04",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -3144,7 +3533,7 @@
     "actions": [
      {
       "name": "Life Drain",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken. Sphinxes"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken."
      }
     ],
     "bonus_actions": [],
@@ -3154,9 +3543,9 @@
      "Resistances": "Acid, Bludgeoning, Cold, Fire, Lightning, Piercing, Slashing, Thunder",
      "Immunities": "Necrotic, Poison; Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
      "Senses": "Darkvision 60 ft.; Passive Perception 10",
-     "Languages": "Understands Common plus one other language but can\u2019t speak"
+     "Languages": "Understands Common plus one other language but can’t speak"
     },
-    "stat_block_text": "Specter\nMedium Undead, Chaotic Evil\nAC 12  Initiative +2 (12)\nHP 22 (5d8)\nSpeed 30 ft., Fly 50 ft. (hover)\nMOD SAVE MOD SAVE MOD SAVE\nStr 1 \u22125 \u22125 Dex 14 +2 +2 Con 11 +0 +0\nInt 10 +0 +0 WIS 10 +0 +0 Cha 11 +0 +0\nResistances Acid, Bludgeoning, Cold, Fire, Lightning,\nPiercing, Slashing, Thunder\nImmunities Necrotic, Poison; Charmed, Exhaustion,\nGrappled, Paralyzed, Petrified, Poisoned, Prone,\nRestrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Understands Common plus one other language\nbut can\u2019t speak\nCR 1 (XP 200; PB +2)\nTraits\nIncorporeal Movement. The specter can move through\nother creatures and objects as if they were Difficult\nTerrain. It takes 5 (1d10) Force damage if it ends its turn\ninside an object.\nSunlight Sensitivity. While in sunlight, the specter has\nDisadvantage on ability checks and attack rolls.\nActions\nLife Drain. Melee Attack Roll: +4, reach 5 ft. Hit: 7\n(2d6) Necrotic damage. If the target is a creature, its Hit\nPoint maximum decreases by an amount equal to the\ndamage taken.\nSphinxes"
+    "stat_block_text": "Specter\nMedium Undead, Chaotic Evil\nAC 12  Initiative +2 (12)\nHP 22 (5d8)\nSpeed 30 ft., Fly 50 ft. (hover)\nMOD SAVE MOD SAVE MOD SAVE\nStr 1 −5 −5 Dex 14 +2 +2 Con 11 +0 +0\nInt 10 +0 +0 WIS 10 +0 +0 Cha 11 +0 +0\nResistances Acid, Bludgeoning, Cold, Fire, Lightning,\nPiercing, Slashing, Thunder\nImmunities Necrotic, Poison; Charmed, Exhaustion,\nGrappled, Paralyzed, Petrified, Poisoned, Prone,\nRestrained, Unconscious\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages Understands Common plus one other language\nbut can’t speak\nCR 1 (XP 200; PB +2)\nTraits\nIncorporeal Movement. The specter can move through\nother creatures and objects as if they were Difficult\nTerrain. It takes 5 (1d10) Force damage if it ends its turn\ninside an object.\nSunlight Sensitivity. While in sunlight, the specter has\nDisadvantage on ability checks and attack rolls.\nActions\nLife Drain. Melee Attack Roll: +4, reach 5 ft. Hit: 7\n(2d6) Necrotic damage. If the target is a creature, its Hit\nPoint maximum decreases by an amount equal to the\ndamage taken."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -3212,12 +3601,27 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Lights-Out and Ceiling Ticks are floor hazards. They are not attacks on this stat block. Do not add them.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-b-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -3295,7 +3699,11 @@
     "actions": [
      {
       "name": "Bite",
-      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage. Web (Recharge 5\u20136). Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage)"
+      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage."
+     },
+     {
+      "name": "Web (Recharge 5–6)",
+      "text": "Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage)"
      }
     ],
     "bonus_actions": [],
@@ -3306,7 +3714,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 14",
      "Languages": "None"
     },
-    "stat_block_text": "Giant Spider\nLarge Beast, Unaligned\nAC 14   Initiative +3 (13)\nHP 26 (4d10 + 4)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 16 +3 +3 Con 12 +1 +1\nInt 2 \u22124 \u22124 WIS 11 +0 +0 Cha 4 \u22123 \u22123\nSkills Perception +4, Stealth +7\nSenses Darkvision 60 ft.; Passive Perception 14\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nSpider Climb. The spider can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nWeb Walker. The spider ignores movement restrictions\ncaused by webs, and it knows the location of any other\ncreature in contact with the same web.\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nPiercing damage plus 7 (2d6) Poison damage.\nWeb (Recharge 5\u20136). Dexterity Saving Throw: DC 13,\none creature the spider can see within 60 feet. Failure:\nThe target has the Restrained condition until the web is\ndestroyed (AC 10; HP 5; Vulnerability to Fire damage;\nImmunity to Poison and Psychic damage)."
+    "stat_block_text": "Giant Spider\nLarge Beast, Unaligned\nAC 14   Initiative +3 (13)\nHP 26 (4d10 + 4)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 16 +3 +3 Con 12 +1 +1\nInt 2 −4 −4 WIS 11 +0 +0 Cha 4 −3 −3\nSkills Perception +4, Stealth +7\nSenses Darkvision 60 ft.; Passive Perception 14\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nSpider Climb. The spider can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nWeb Walker. The spider ignores movement restrictions\ncaused by webs, and it knows the location of any other\ncreature in contact with the same web.\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nPiercing damage plus 7 (2d6) Poison damage.\nWeb (Recharge 5–6). Dexterity Saving Throw: DC 13,\none creature the spider can see within 60 feet. Failure:\nThe target has the Restrained condition until the web is\ndestroyed (AC 10; HP 5; Vulnerability to Fire damage;\nImmunity to Poison and Psychic damage)."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -3362,12 +3770,44 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Web",
+     "name": "Web",
+     "kind": "recharge",
+     "spell_level": null,
+     "max": 1,
+     "available": true,
+     "die": "d6",
+     "recharge_on": [
+      5,
+      6
+     ],
+     "recover": "start of this creature's turn, d6 in [5, 6]",
+     "rule": "Starts ready. After Web is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.",
+     "key": "f01-b-01.web"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Legal Level 1 boss cap for four Crawlers (CR 1). Web is recharge 5–6, not every turn.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f01-b-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
@@ -3451,7 +3891,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 8",
      "Languages": "Common, Giant"
     },
-    "stat_block_text": "Ogre\nLarge Giant, Chaotic Evil\nAC 11  Initiative \u22121 (9)\nHP 68 (8d10 + 24)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 19 +4 +4 Dex 8 \u22121 \u22121 Con 16 +3 +3\nInt 5 \u22123 \u22123 WIS 7 \u22122 \u22122 Cha 7 \u22122 \u22122\nGear Greatclub, Javelins (3)\nSenses Darkvision 60 ft.; Passive Perception 8\nLanguages Common, Giant\nCR 2 (XP 450; PB +2)\nActions\nGreatclub. Melee Attack Roll: +6, reach 5 ft. Hit: 13\n(2d8 + 4) Bludgeoning damage.\nJavelin. Melee or Ranged Attack Roll: +6, reach 5 ft. or\nrange 30/120 ft. Hit: 11 (2d6 + 4) Piercing damage."
+    "stat_block_text": "Ogre\nLarge Giant, Chaotic Evil\nAC 11  Initiative −1 (9)\nHP 68 (8d10 + 24)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 19 +4 +4 Dex 8 −1 −1 Con 16 +3 +3\nInt 5 −3 −3 WIS 7 −2 −2 Cha 7 −2 −2\nGear Greatclub, Javelins (3)\nSenses Darkvision 60 ft.; Passive Perception 8\nLanguages Common, Giant\nCR 2 (XP 450; PB +2)\nActions\nGreatclub. Melee Attack Roll: +6, reach 5 ft. Hit: 13\n(2d8 + 4) Bludgeoning damage.\nJavelin. Melee or Ranged Attack Roll: +6, reach 5 ft. or\nrange 30/120 ft. Hit: 11 (2d6 + 4) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L1": {
@@ -3507,7 +3947,22 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json",
+     "floors/f01/00-overview.md",
+     "lore/tables/canon-floor-1.md"
+    ],
+    "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
+    "card_note": "Legal on the Floor 1 Level 2 boss budget only. The live floor boss is Dean Thudd on the Day pages. Do not field this card as a second dean.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   }
  ]

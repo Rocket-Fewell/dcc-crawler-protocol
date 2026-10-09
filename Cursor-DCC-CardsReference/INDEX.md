@@ -1,5 +1,5 @@
 # Cursor DCC cards reference index
-Owner: Cursor (R&D) | Status: draft | Version: 0.1.0 | Updated: 2026-10-09
+Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
 Summary: Files in this R&D folder.
 
 | Path | Description | Owner | Status |
@@ -13,5 +13,8 @@ Summary: Files in this R&D folder.
 | Cursor-DCC-CardsReference/monsters/f02.json | Floor 2 monster cards | Cursor | draft |
 | Cursor-DCC-CardsReference/monsters/f03.json | Floor 3 monster cards | Cursor | draft |
 | Cursor-DCC-CardsReference/encounters/sample-recipes.json | Example lineups that fit rules/70 for 4 Crawlers | Cursor | draft |
-| Cursor-DCC-CardsReference/items/catalog.json | 24 gear cards pointing at filed reskins | Cursor | draft |
+| Cursor-DCC-CardsReference/items/catalog.json | 191 gear cards, one per filed reskin | Cursor | draft |
+| Cursor-DCC-CardsReference/items/gear-book.md | Readable gear cards | Cursor | draft |
+| Cursor-DCC-CardsReference/items/loot-boxes.json | 112 filed loot-deck cards plus 46 rules/40 rows, with charge counters | Cursor | draft |
+| Cursor-DCC-CardsReference/items/loot-box-book.md | Readable loot-box cards | Cursor | draft |
 | Cursor-DCC-CardsReference/achievements/catalog.json | 24 house toasts, no new credits | Cursor | draft |

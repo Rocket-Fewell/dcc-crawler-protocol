@@ -1,10 +1,12 @@
 # Monster book (Floors 1–3)
-Owner: Cursor (R&D) | Status: draft | Version: 0.1.0 | Updated: 2026-10-09
-Summary: 72 house reskins of SRD 5.2.1 stat blocks for random encounters. Numbers are the open SRD. Flavor is house. Not a live floor.
+Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
+Summary: 72 house reskins of SRD 5.2.1 stat blocks for random encounters. Numbers are the open SRD. Flavor is house. Limited spells and recharge tricks have counters. Not a live floor.
 
 Live Day pages and `rules/70-encounter-budget-5e.json` win on any fight that is already filed. This book is a draw pile for grok bots. Lore and Encounter Bot own stories later.
 
 Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss. XP is `xp_by_cr` in rules/70, checked against the SRD line.
+
+A leveled spell or a 1/Day trick spends a counter. At-will cantrips do not. When the counter hits 0, that spell is done until a Long Rest in a saferoom. A recharge trick stays down until the d6 hits. Do not give a boss an endless 2nd-level slot.
 
 ## Counts
 
@@ -93,6 +95,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 # Floor 1 — Orientation Pit
 
+Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.
+
 ## Duct Rat
 
 `f01-m-01` · mob · Duct Rat. Level 1. "Union member of the vents."
@@ -102,7 +106,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Rat |
 | Type | Small Beast, Unaligned |
 | AC | 13 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 7 (2d6) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 7 (-2), DEX 16 (+3), CON 11 (+0), INT 2 (-4), WIS 10 (+0), CHA 4 (-3) |
@@ -121,6 +125,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Bite stays piercing. The ducts are set dressing.
 
+**House check.** Vent Row rats on the floor page carry nothing. Do not hang credits on this corpse. Pack Tactics is the combat lesson.
+
 **[SYSTEM]** Duct Rat. Level 1. Hostile.
 
 **[GM]** Something in the vent just filed a grievance with your ankle.
@@ -133,6 +139,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Bite.** Melee Attack Roll: +5, reach 5 feet. Hit: 5 (1d4 + 3) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Badge Moth
 
 `f01-m-02` · mob · Badge Moth. Level 1. "It clocks in through your neck."
@@ -142,7 +152,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Stirge |
 | Type | Tiny Monstrosity, Unaligned |
 | AC | 13 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 5 (2d4) |
 | Speed | 10 ft., Fly 40 ft. |
 | Abilities | STR 4 (-3), DEX 16 (+3), CON 11 (+0), INT 2 (-4), WIS 8 (-1), CHA 6 (-2) |
@@ -160,6 +170,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Blood Drain is unchanged. Call the needle a badge clip.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Badge Moth. Level 1. Attaches.
 
 **[GM]** Congratulations. You are the open bar.
@@ -167,6 +179,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Proboscis.** Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage, and the stirge attaches to the target. While attached, the stirge can’t make Proboscis attacks, and the target takes 5 (2d4) Necrotic damage at the start of each of the stirge’s turns. The stirge can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the stirge as an action
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Intern with a Lanyard
 
@@ -177,7 +193,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Goblin Minion |
 | Type | Small Fey (Goblinoid), Chaotic Neutral |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 7 (2d6) |
 | Speed | 30 ft. |
 | Abilities | STR 8 (-1), DEX 15 (+2), CON 10 (+0), INT 10 (+0), WIS 8 (-1), CHA 8 (-1) |
@@ -197,6 +213,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Same dagger.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Intern with a Lanyard. Level 1. Probationary.
 
 **[GM]** Kill the intern and the show still finds another intern.
@@ -209,6 +227,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Nimble Escape.** The goblin takes the Disengage or Hide action
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Pamphlet Cultist
 
 `f01-m-04` · mob · Pamphlet Cultist. Level 1. "Faith, but the pamphlet is the weapon."
@@ -218,7 +240,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Cultist |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 12 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 9 (2d8) |
 | Speed | 30 ft. |
 | Abilities | STR 11 (+0), DEX 12 (+1), CON 10 (+0), INT 10 (+0), WIS 11 (+0), CHA 10 (+0) |
@@ -238,6 +260,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Scimitar or dagger as printed. The pamphlet is paper.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Pamphlet Cultist. Level 1. Unregistered faith.
 
 **[GM]** They will explain the end of the world after they stab you. Priorities.
@@ -245,6 +269,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Ritual Sickle.** Melee Attack Roll: +3, reach 5 ft. Hit: 3 (1d4 + 1) Slashing damage plus 1 Necrotic damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Lobby Crab
 
@@ -255,7 +283,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Crab |
 | Type | Medium Beast, Unaligned |
 | AC | 15 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 13 (3d8) |
 | Speed | 30 ft., Swim 30 ft. |
 | Abilities | STR 13 (+1), DEX 13 (+1), CON 11 (+0), INT 1 (-5), WIS 9 (-1), CHA 3 (-4) |
@@ -274,6 +302,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Lobby Crab. Level 1. Amphibious.
 
 **[GM]** Guest services sent a crab. Guest services is not your friend.
@@ -286,6 +316,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Claw.** Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 11) from one of two claws
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Lost Mascot Dog
 
 `f01-m-06` · mob · Lost Mascot Dog. Level 1. "Somebody's prop that learned teeth."
@@ -295,7 +329,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Mastiff |
 | Type | Medium Beast, Unaligned |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 5 (1d8 + 1) |
 | Speed | 40 ft. |
 | Abilities | STR 13 (+1), DEX 14 (+2), CON 12 (+1), INT 3 (-4), WIS 12 (+1), CHA 7 (-2) |
@@ -314,6 +348,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Keen smell stays.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Lost Mascot Dog. Level 1. Unleashed.
 
 **[GM]** The costume came off. The dog did not get nicer.
@@ -321,6 +357,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Bite.** Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Name-Tag Bandit
 
@@ -331,7 +371,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Bandit |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 12 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 11 (2d8 + 2) |
 | Speed | 30 ft. |
 | Abilities | STR 11 (+0), DEX 12 (+1), CON 12 (+1), INT 10 (+0), WIS 10 (+0), CHA 10 (+0) |
@@ -350,6 +390,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Name-Tag Bandit. Level 1. Armed.
 
 **[GM]** Hi, my name is Hands Off. It is not a joke. It is a threat.
@@ -358,6 +400,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Scimitar.** Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage
 - **Light Crossbow.** Ranged Attack Roll: +3, range 80/320 ft. Hit: 5 (1d8 + 1) Piercing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Turnstile Guard
 
@@ -368,7 +414,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Guard |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 16 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 11 (2d8 + 2) |
 | Speed | 30 ft. |
 | Abilities | STR 13 (+1), DEX 12 (+1), CON 12 (+1), INT 10 (+0), WIS 11 (+0), CHA 10 (+0) |
@@ -388,6 +434,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. The turnstile is difficult terrain, not a new attack.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Turnstile Guard. Level 1. On post.
 
 **[GM]** The gate has a spear and a opinion about your ticket.
@@ -395,6 +443,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Spear.** Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Kiosk Bones
 
@@ -405,7 +457,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Skeleton |
 | Type | Medium Undead, Lawful Evil |
 | AC | 14 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 13 (2d8 + 4) |
 | Speed | 30 ft. |
 | Abilities | STR 10 (+0), DEX 16 (+3), CON 15 (+2), INT 6 (-2), WIS 8 (-1), CHA 5 (-3) |
@@ -413,8 +465,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | XP | 50 |
 | PB | +2 |
 | Gear | Shortbow, Shortsword |
-| Immunities | Poison; Exhaustion, Poisoned |
 | Vulnerabilities | Bludgeoning |
+| Immunities | Poison; Exhaustion, Poisoned |
 | Senses | Darkvision 60 ft.; Passive Perception 9 |
 | Languages | Understands Common plus one other language but can’t speak |
 
@@ -426,6 +478,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Vulnerable to bludgeoning, as printed.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Kiosk Bones. Level 1. Undead.
 
 **[GM]** Ask it for a refund. It answers with arrows.
@@ -434,6 +488,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Shortsword.** Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage
 - **Shortbow.** Ranged Attack Roll: +5, range 80/320 ft. Hit: 6 (1d6 + 3) Piercing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Clipboard Goblin
 
@@ -444,7 +502,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Goblin Warrior |
 | Type | Small Fey (Goblinoid), Chaotic Neutral |
 | AC | 15 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 10 (3d6) |
 | Speed | 30 ft. |
 | Abilities | STR 8 (-1), DEX 15 (+2), CON 10 (+0), INT 10 (+0), WIS 8 (-1), CHA 8 (-1) |
@@ -464,6 +522,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Advantage extra damage stays. The clipboard is not a shield beyond the printed shield.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Clipboard Goblin. Level 1. On the clock.
 
 **[GM]** It has a clipboard. You are the incident report.
@@ -476,6 +536,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Bonus actions
 
 - **Nimble Escape.** The goblin takes the Disengage or Hide action
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Mop Zombie
 
@@ -505,6 +569,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Slam stays bludgeoning. The mop is the fist.
 
+**House check.** The mop is set dressing. Tanya Ruiz's corpse cache on the Day page is a separate loot pile, not this zombie.
+
 **[SYSTEM]** Mop Zombie. Level 1. Undead.
 
 **[GM]** It mops. You are the spill.
@@ -516,6 +582,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Slam.** Melee Attack Roll: +3, reach 5 ft. Hit: 5 (1d8 + 1) Bludgeoning damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Speaker Fungus
 
@@ -545,6 +615,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Shriek is unchanged. Treat the scream as the floor alarm.
 
+**House check.** Shriek is a reaction, not a spell and not a slot. CR 0, XP 0, matching rules/70.
+
 **[SYSTEM]** Speaker Fungus. Level 1. Alarm.
 
 **[GM]** Turn that down. You cannot. That is the encounter.
@@ -552,6 +624,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Reactions
 
 - **Shriek.** Trigger: A creature or a source of Bright Light moves within 30 feet of the shrieker. Response: The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Pike Intern
 
@@ -562,7 +638,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Warrior Infantry |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 13 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 9 (2d8) |
 | Speed | 30 ft. |
 | Abilities | STR 13 (+1), DEX 11 (+0), CON 11 (+0), INT 8 (-1), WIS 11 (+0), CHA 8 (-1) |
@@ -581,6 +657,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Pike Intern. Level 1. Unit.
 
 **[GM]** A hallway full of unpaid spears. Classic onboarding.
@@ -593,6 +671,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Spear.** Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Lanyard Blade
 
 `f01-u-02` · unit · Lanyard Blade. Level 1. "HR found a use for compliance."
@@ -602,7 +684,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Animated Flying Sword |
 | Type | Small Construct, Unaligned |
 | AC | 17 |
-| Initiative | 4 |
+| Initiative | +4 |
 | HP | 14 (4d6) |
 | Speed | 5 ft., Fly 50 ft. (hover) |
 | Abilities | STR 12 (+1), DEX 15 (+2), CON 11 (+0), INT 1 (-5), WIS 5 (-3), CHA 1 (-5) |
@@ -621,6 +703,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Cosmetic: plastic badge on the ricasso. Damage unchanged.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Lanyard Blade. Level 1. Construct.
 
 **[GM]** Your ID badge just tried to promote itself into your throat.
@@ -628,6 +712,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Slash.** Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Snack-Cart Kobold
 
@@ -638,7 +726,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Kobold Warrior |
 | Type | Small Dragon, Neutral |
 | AC | 14 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 7 (3d6 − 3) |
 | Speed | 30 ft. |
 | Abilities | STR 7 (-2), DEX 15 (+2), CON 9 (-1), INT 8 (-1), WIS 7 (-2), CHA 8 (-1) |
@@ -657,6 +745,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Pack Tactics as printed. The cart is cover, not hit points.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Snack-Cart Kobold. Level 1. Unit.
 
 **[GM]** Today's special is stabbing. Sides are also stabbing.
@@ -670,6 +760,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Dagger.** Melee or Ranged Attack Roll: +4, reach 5 ft. or range 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Concession Steam
 
 `f01-u-04` · unit · Concession Steam. Level 1. "The popcorn machine unionized."
@@ -679,7 +773,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Steam Mephit |
 | Type | Small Elemental, Neutral Evil |
 | AC | 10 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 17 (5d6) |
 | Speed | 30 ft., Fly 30 ft. |
 | Abilities | STR 5 (-3), DEX 11 (+0), CON 10 (+0), INT 11 (+0), WIS 10 (+0), CHA 12 (+1) |
@@ -699,6 +793,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Fire damage stays fire. Call the cloud butter smoke.
 
+**House check.** Steam Breath is recharge 6, one pending use. Death Burst happens when it dies. Neither is a spell slot.
+
 **[SYSTEM]** Concession Steam. Level 1. Elemental.
 
 **[GM]** It smells like a county fair and it will end you.
@@ -710,7 +806,14 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Attacks
 
-- **Claw.** Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Slashing damage plus 2 (1d4) Fire damage. Steam Breath (Recharge 6). Constitution Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) Fire damage, and the target’s Speed decreases by 10 feet until the end of the mephit’s next turn. Success: Half damage only. Failure or Success: Being underwater doesn’t grant Resistance to this Fire damage. Merfolk
+- **Claw.** Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Slashing damage plus 2 (1d4) Fire damage.
+- **Steam Breath (Recharge 6).** Constitution Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) Fire damage, and the target’s Speed decreases by 10 feet until the end of the mephit’s next turn. Success: Half damage only. Failure or Success: Being underwater doesn’t grant Resistance to this Fire damage.
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Steam Breath** (recharge, max 1). Starts ready. After Steam Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 
 ## Acolyte of the PA
 
@@ -721,7 +824,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Priest Acolyte |
 | Type | Medium or Small Humanoid (Cleric), Neutral |
 | AC | 13 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 11 (2d8 + 2) |
 | Speed | 30 ft. |
 | Abilities | STR 14 (+2), DEX 10 (+0), CON 12 (+1), INT 10 (+0), WIS 14 (+2), CHA 11 (+0) |
@@ -741,6 +844,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Spells as printed. The microphone is a holy symbol.
 
+**House check.** Cantrips are at will. Divine Aid is one cast of Bless, Healing Word, or Sanctuary, not one of each. At 0, Mace and Radiant Flame only.
+
 **[SYSTEM]** Acolyte of the PA. Level 1. Unit support.
 
 **[GM]** Please hold. Your death is important to us.
@@ -753,7 +858,15 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Bonus actions
 
-- **Effect.** Divine Aid (1/Day). The priest casts Bless, Healing Word, or Sanctuary, using the same spellcasting ability as Spellcasting.
+- **Divine Aid (1/Day).** The priest casts Bless, Healing Word, or Sanctuary, using the same spellcasting ability as Spellcasting.
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Divine Aid** (shared_spell_pool, max 1). 1 cast(s) total, any mix of Bless, Healing Word, Sanctuary. Not that many of each spell. At 0, weapon attacks and at-will cantrips only.
+- **Light** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
+- **Thaumaturgy** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
 
 ## Hall Centipede
 
@@ -764,7 +877,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Centipede |
 | Type | Small Beast, Unaligned |
 | AC | 14 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 9 (2d6 + 2) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 5 (-3), DEX 14 (+2), CON 12 (+1), INT 1 (-5), WIS 7 (-2), CHA 3 (-4) |
@@ -782,6 +895,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Poison as printed.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Hall Centipede. Level 1. Unit.
 
 **[GM]** Hundreds of legs, one bad idea, all of them aimed at you.
@@ -789,6 +904,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage, and the target has the Poisoned condition until the start of the centipede’s next turn
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Empty Mascot Suit
 
@@ -799,7 +918,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Animated Armor |
 | Type | Medium Construct, Unaligned |
 | AC | 18 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 33 (6d8 + 6) |
 | Speed | 25 ft. |
 | Abilities | STR 14 (+2), DEX 11 (+0), CON 13 (+1), INT 1 (-5), WIS 3 (-4), CHA 1 (-5) |
@@ -818,6 +937,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Describe foam. Numbers stay Animated Armor.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Empty Mascot Suit. Level 1. Elite. Construct.
 
 **[GM]** The mascot is empty, which is the worst kind of mascot.
@@ -826,6 +947,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The armor makes two Slam attacks
 - **Slam.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Bludgeoning damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Breakroom Bugbear
 
@@ -836,7 +961,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Bugbear Warrior |
 | Type | Medium Fey (Goblinoid), Chaotic Evil |
 | AC | 14 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 33 (6d8 + 6) |
 | Speed | 30 ft. |
 | Abilities | STR 15 (+2), DEX 14 (+2), CON 13 (+1), INT 8 (-1), WIS 11 (+0), CHA 9 (-1) |
@@ -856,6 +981,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** The Break Room is a saferoom through Day 3 and goes offline on Day 4. A bugbear here is a fight. It does not grant a rest.
+
 **[SYSTEM]** Breakroom Bugbear. Level 1. Elite.
 
 **[GM]** Break room means it breaks you. The sign was accurate.
@@ -869,6 +996,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Grab.** Melee Attack Roll: +4, reach 10 ft. Hit: 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12)
 - **Light Hammer.** Melee or Ranged Attack Roll: +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. Hit: 9 (3d4 + 2) Bludgeoning damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Greenroom Ghoul
 
 `f01-e-03` · elite · Greenroom Ghoul. Level 1. "Talent relations, after the talent died."
@@ -878,7 +1009,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Ghoul |
 | Type | Medium Undead, Chaotic Evil |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 22 (5d8) |
 | Speed | 30 ft. |
 | Abilities | STR 13 (+1), DEX 15 (+2), CON 10 (+0), INT 7 (-2), WIS 10 (+0), CHA 6 (-2) |
@@ -897,6 +1028,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** The Green Room stays open and is where level 2 is granted. This ghoul is not the saferoom.
+
 **[SYSTEM]** Greenroom Ghoul. Level 1. Elite. Undead.
 
 **[GM]** The green room is not saferoom. Learn the difference or get eaten in it.
@@ -907,6 +1040,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 3 (1d6) Necrotic damage
 - **Claw.** Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Night-Shift Specter
 
 `f01-e-04` · elite · Night-Shift Specter. Level 1. "What the lights do when they go out."
@@ -916,7 +1053,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Specter |
 | Type | Medium Undead, Chaotic Evil |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 22 (5d8) |
 | Speed | 30 ft., Fly 50 ft. (hover) |
 | Abilities | STR 1 (-5), DEX 14 (+2), CON 11 (+0), INT 10 (+0), WIS 10 (+0), CHA 11 (+0) |
@@ -936,6 +1073,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Incorporeal as printed.
 
+**House check.** Lights-Out and Ceiling Ticks are floor hazards. They are not attacks on this stat block. Do not add them.
+
 **[SYSTEM]** Night-Shift Specter. Level 1. Elite. Undead.
 
 **[GM]** The lights did not go out. They got up and swung.
@@ -947,7 +1086,11 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Attacks
 
-- **Life Drain.** Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken. Sphinxes
+- **Life Drain.** Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Concession Spider
 
@@ -958,7 +1101,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Spider |
 | Type | Large Beast, Unaligned |
 | AC | 14 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 26 (4d10 + 4) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 14 (+2), DEX 16 (+3), CON 12 (+1), INT 2 (-4), WIS 11 (+0), CHA 4 (-3) |
@@ -977,6 +1120,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. This is the Level 1 boss cap for four Crawlers.
 
+**House check.** Legal Level 1 boss cap for four Crawlers (CR 1). Web is recharge 5–6, not every turn.
+
 **[SYSTEM]** Concession Spider. Level 1. Boss.
 
 **[GM]** The concession stand has a manager. The manager has eight legs.
@@ -988,7 +1133,14 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Attacks
 
-- **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage. Web (Recharge 5–6). Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage)
+- **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage.
+- **Web (Recharge 5–6).** Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage)
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Web** (recharge, max 1). Starts ready. After Web is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.
 
 ## Podium Ogre
 
@@ -1018,6 +1170,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** The club is a podium. Damage stays the ogre club. Floor 1 Level 2 boss day only.
 
+**House check.** Legal on the Floor 1 Level 2 boss budget only. The live floor boss is Dean Thudd on the Day pages. Do not field this card as a second dean.
+
 **[SYSTEM]** Podium Ogre. Level 2. Boss.
 
 **[GM]** Orientation is over. The dean is the size of a mistake.
@@ -1027,7 +1181,14 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Greatclub.** Melee Attack Roll: +6, reach 5 ft. Hit: 13 (2d8 + 4) Bludgeoning damage
 - **Javelin.** Melee or Ranged Attack Roll: +6, reach 5 ft. or range 30/120 ft. Hit: 11 (2d6 + 4) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
+
 # Floor 2 — Soft Open
+
+Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).
 
 ## Soft-Open Hobgoblin
 
@@ -1038,7 +1199,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Hobgoblin Warrior |
 | Type | Medium Fey (Goblinoid), Lawful Evil |
 | AC | 18 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 11 (2d8 + 2) |
 | Speed | 30 ft. |
 | Abilities | STR 13 (+1), DEX 12 (+1), CON 12 (+1), INT 10 (+0), WIS 10 (+0), CHA 9 (-1) |
@@ -1057,6 +1218,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Soft-Open Hobgoblin. Level 1. Formation.
 
 **[GM]** Opening night. The ushers brought discipline and a longsword.
@@ -1069,6 +1232,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Longsword.** Melee Attack Roll: +3, reach 5 ft. Hit: 12 (2d10 + 1) Slashing damage
 - **Longbow.** Ranged Attack Roll: +3, range 150/600 ft. Hit: 5 (1d8 + 1) Piercing damage plus 7 (3d4) Poison damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Gray Mop Ooze
 
@@ -1100,6 +1267,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Gray Mop Ooze. Level 1. Ooze.
 
 **[GM]** You just stepped in management. Management is acidic.
@@ -1111,7 +1280,11 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Attacks
 
-- **Pseudopod.** Melee Attack Roll: +3, reach 5 ft. Hit: 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor. Green Dragons
+- **Pseudopod.** Melee Attack Roll: +3, reach 5 ft. Hit: 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Clipboard Scout
 
@@ -1122,7 +1295,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Scout |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 13 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 16 (3d8 + 3) |
 | Speed | 30 ft. |
 | Abilities | STR 11 (+0), DEX 14 (+2), CON 12 (+1), INT 11 (+0), WIS 13 (+1), CHA 11 (+0) |
@@ -1142,6 +1315,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Clipboard Scout. Level 1. Skirmisher.
 
 **[GM]** It is taking notes. The notes are arrows.
@@ -1152,6 +1327,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Shortsword.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage
 - **Longbow.** Ranged Attack Roll: +4, range 150/600 ft. Hit: 6 (1d8 + 2) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Ratings Gnoll
 
 `f02-m-04` · mob · Ratings Gnoll. Level 1. "The laugh track learned hunger."
@@ -1161,7 +1340,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Gnoll Warrior |
 | Type | Medium Fiend, Chaotic Evil |
 | AC | 15 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 27 (6d8) |
 | Speed | 30 ft. |
 | Abilities | STR 14 (+2), DEX 12 (+1), CON 11 (+0), INT 6 (-2), WIS 10 (+0), CHA 7 (-2) |
@@ -1179,6 +1358,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Ratings Gnoll. Level 1. Hostile.
 
 **[GM]** The audience laughs when something falls over. You are the something.
@@ -1190,7 +1371,13 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Bonus actions
 
-- **Effect.** Rampage (1/Day). Immediately after dealing damage to a creature that is already Bloodied, the gnoll moves up to half its Speed, and it makes one Rend attack. Goblins
+- **Rampage (1/Day).** Immediately after dealing damage to a creature that is already Bloodied, the gnoll moves up to half its Speed, and it makes one Rend attack.
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Rampage** (daily, max 1). 1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.
 
 ## Loading-Dock Worg
 
@@ -1201,7 +1388,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Worg |
 | Type | Large Fey, Neutral Evil |
 | AC | 13 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 26 (4d10 + 4) |
 | Speed | 50 ft. |
 | Abilities | STR 16 (+3), DEX 13 (+1), CON 13 (+1), INT 7 (-2), WIS 11 (+0), CHA 8 (-1) |
@@ -1220,6 +1407,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Loading-Dock Worg. Level 1.
 
 **[GM]** The dock accepts deliveries. You are a delivery.
@@ -1227,6 +1416,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage, and the next attack roll made against the target before the start of the worg’s next turn has Advantage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Rusted Prop
 
@@ -1237,7 +1430,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Rust Monster |
 | Type | Medium Monstrosity, Unaligned |
 | AC | 14 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 33 (6d8 + 6) |
 | Speed | 40 ft. |
 | Abilities | STR 13 (+1), DEX 12 (+1), CON 13 (+1), INT 2 (-4), WIS 13 (+1), CHA 6 (-2) |
@@ -1254,6 +1447,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 **Tactics.** Antennae the shiniest armor.
 
 **Reskin.** None. Losing a weapon is the cheese and the tax.
+
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
 **[SYSTEM]** Rusted Prop. Level 1. Monstrosity.
 
@@ -1272,7 +1467,11 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Reactions
 
-- **Reflexive Antennae.** Trigger: An attack roll hits the rust monster. Response: The rust monster uses Antennae. Sahuagin
+- **Reflexive Antennae.** Trigger: An attack roll hits the rust monster. Response: The rust monster uses Antennae.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Dimmer Shadow
 
@@ -1283,7 +1482,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Shadow |
 | Type | Medium Undead, Chaotic Evil |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 27 (5d8 + 5) |
 | Speed | 40 ft. |
 | Abilities | STR 6 (-2), DEX 14 (+2), CON 13 (+1), INT 6 (-2), WIS 10 (+0), CHA 8 (-1) |
@@ -1292,8 +1491,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | PB | +2 |
 | Skills | Stealth +6 |
 | Resistances | Acid, Cold, Fire, Lightning, Thunder |
-| Immunities | Necrotic, Poison; Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious |
 | Vulnerabilities | Radiant |
+| Immunities | Necrotic, Poison; Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious |
 | Senses | Darkvision 60 ft.; Passive Perception 10 |
 | Languages | None |
 
@@ -1304,6 +1503,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 **Tactics.** Strength drain, then hide in dim light.
 
 **Reskin.** None.
+
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
 **[SYSTEM]** Dimmer Shadow. Level 1. Undead.
 
@@ -1322,6 +1523,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Shadow Stealth.** While in Dim Light or Darkness, the shadow takes the Hide action
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Warmup Satyr
 
 `f02-m-08` · mob · Warmup Satyr. Level 1. "Opens for the real monster."
@@ -1331,7 +1536,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Satyr |
 | Type | Medium Fey, Chaotic Neutral |
 | AC | 13 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 31 (7d8) |
 | Speed | 40 ft. |
 | Abilities | STR 12 (+1), DEX 16 (+3), CON 11 (+0), INT 12 (+1), WIS 10 (+0), CHA 14 (+2) |
@@ -1350,6 +1555,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Warmup Satyr. Level 1. Fey.
 
 **[GM]** The opening act is a goat with a work visa and a flute.
@@ -1363,6 +1570,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Hooves.** Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself
 - **Mockery.** Wisdom Saving Throw: DC 12, one creature the satyr can see within 90 feet. Failure: 5 (1d6 + 2) Psychic damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Magma Concession
 
 `f02-m-09` · mob · Magma Concession. Level 1. "The fryer walked out."
@@ -1372,7 +1583,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Magmin |
 | Type | Small Elemental, Chaotic Neutral |
 | AC | 14 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 13 (3d6 + 3) |
 | Speed | 30 ft. |
 | Abilities | STR 7 (-2), DEX 15 (+2), CON 12 (+1), INT 8 (-1), WIS 11 (+0), CHA 10 (+0) |
@@ -1391,6 +1602,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Fire as printed.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Magma Concession. Level 1. Elemental.
 
 **[GM]** Fresh fried Crawler. Limited time.
@@ -1407,6 +1620,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Ignited Illumination.** The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Dust in the Lights
 
 `f02-m-10` · mob · Dust in the Lights. Level 1. "A blinding bit."
@@ -1416,7 +1633,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Dust Mephit |
 | Type | Small Elemental, Neutral Evil |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 17 (5d6) |
 | Speed | 30 ft., Fly 30 ft. |
 | Abilities | STR 5 (-3), DEX 14 (+2), CON 10 (+0), INT 9 (-1), WIS 11 (+0), CHA 10 (+0) |
@@ -1424,8 +1641,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | XP | 100 |
 | PB | +2 |
 | Skills | Perception +2, Stealth +4 |
-| Immunities | Poison; Exhaustion, Poisoned |
 | Vulnerabilities | Fire |
+| Immunities | Poison; Exhaustion, Poisoned |
 | Senses | Darkvision 60 ft.; Passive Perception 12 |
 | Languages | Primordial (Auran, Terran) |
 
@@ -1437,6 +1654,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** Sleep is once per day, spell save DC 10, Charisma. Blinding Breath is recharge 6. At 0 Sleep, Claw only.
+
 **[SYSTEM]** Dust in the Lights. Level 1. Elemental.
 
 **[GM]** Cough, then apologize, then get clawed. That is the act.
@@ -1447,7 +1666,16 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Attacks
 
-- **Claw.** Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage. Blinding Breath (Recharge 6). Dexterity Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: The target has the Blinded condition until the end of the mephit’s next turn. Sleep (1/Day). The mephit casts the Sleep spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 10)
+- **Claw.** Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage.
+- **Blinding Breath (Recharge 6).** Dexterity Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: The target has the Blinded condition until the end of the mephit’s next turn.
+- **Sleep (1/Day).** The mephit casts the Sleep spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 10)
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Blinding Breath** (recharge, max 1). Starts ready. After Blinding Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
+- **Sleep** (daily_spell, max 1, spell level 1). Once per day. Level 1 Sleep, Charisma, spell save DC 10. Not a slot that refills. At 0, do not cast Sleep.
 
 ## Pool Unit
 
@@ -1458,7 +1686,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Sahuagin Warrior |
 | Type | Medium Fiend, Lawful Evil |
 | AC | 12 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 22 (4d8 + 4) |
 | Speed | 30 ft., Swim 40 ft. |
 | Abilities | STR 13 (+1), DEX 11 (+0), CON 12 (+1), INT 12 (+1), WIS 13 (+1), CHA 9 (-1) |
@@ -1477,6 +1705,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 **Tactics.** They stay in the water and spear the edge.
 
 **Reskin.** None. The tank is the arena, not a new power.
+
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
 
 **[SYSTEM]** Pool Unit. Level 1. Unit.
 
@@ -1497,6 +1727,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Aquatic Charge.** The sahuagin swims up to its Swim Speed straight toward an enemy it can see
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Cockatrice Extra
 
 `f02-u-02` · unit · Cockatrice Extra. Level 1. "Wardrobe sent a bird."
@@ -1506,7 +1740,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Cockatrice |
 | Type | Small Monstrosity, Unaligned |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 22 (5d6 + 5) |
 | Speed | 20 ft., Fly 40 ft. |
 | Abilities | STR 6 (-2), DEX 12 (+1), CON 12 (+1), INT 2 (-4), WIS 13 (+1), CHA 5 (-3) |
@@ -1525,6 +1759,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Cockatrice Extra. Level 1. Unit.
 
 **[GM]** It is not a chicken. The chicken did not petrify your friend.
@@ -1532,6 +1768,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Petrifying Bite.** Melee Attack Roll: +3, reach 5 ft. Hit: 3 (1d4 + 1) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 11. First Failure: The target has the Restrained condition. The target repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. Second Failure: The target has the Petrified condition, instead of the Restrained condition, for 24 hours
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Wasp Usher
 
@@ -1542,7 +1782,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Wasp |
 | Type | Medium Beast, Unaligned |
 | AC | 13 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 22 (5d8) |
 | Speed | 10 ft., Fly 50 ft. |
 | Abilities | STR 10 (+0), DEX 14 (+2), CON 10 (+0), INT 1 (-5), WIS 10 (+0), CHA 3 (-4) |
@@ -1560,6 +1800,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Wasp Usher. Level 1. Unit.
 
 **[GM]** Your seat is wherever it stings you.
@@ -1572,6 +1814,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Sting.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 5 (2d4) Poison damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Ape Grip
 
 `f02-u-04` · unit · Ape Grip. Level 1. "Stagehand. Literal."
@@ -1581,7 +1827,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Ape |
 | Type | Medium Beast, Unaligned |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 19 (3d8 + 6) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 16 (+3), DEX 14 (+2), CON 14 (+2), INT 6 (-2), WIS 12 (+1), CHA 7 (-2) |
@@ -1600,6 +1846,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Ape Grip. Level 1. Unit.
 
 **[GM]** The stagehand is union, furry, and holding a rock with your name on it.
@@ -1607,7 +1855,14 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Multiattack.** The ape makes two Fist attacks
-- **Fist.** Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning damage. Rock (Recharge 6). Ranged Attack Roll: +5, range 25/50 ft. Hit: 10 (2d6 + 3) Bludgeoning damage
+- **Fist.** Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning damage.
+- **Rock (Recharge 6).** Ranged Attack Roll: +5, range 25/50 ft. Hit: 10 (2d6 + 3) Bludgeoning damage
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Rock** (recharge, max 1). Starts ready. After Rock is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 
 ## Bear Bouncer
 
@@ -1618,7 +1873,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Black Bear |
 | Type | Medium Beast, Unaligned |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 19 (3d8 + 6) |
 | Speed | 30 ft., Climb 30 ft., Swim 30 ft. |
 | Abilities | STR 15 (+2), DEX 12 (+1), CON 14 (+2), INT 2 (-4), WIS 12 (+1), CHA 7 (-2) |
@@ -1637,6 +1892,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Bear Bouncer. Level 1. Unit.
 
 **[GM]** No shoes, no shirt, no surviving the door.
@@ -1645,6 +1902,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The bear makes two Rend attacks
 - **Rend.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Slashing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Tank Shark
 
@@ -1655,7 +1916,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Reef Shark |
 | Type | Medium Beast, Unaligned |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 22 (4d8 + 4) |
 | Speed | 5 ft., Swim 30 ft. |
 | Abilities | STR 14 (+2), DEX 15 (+2), CON 13 (+1), INT 1 (-5), WIS 10 (+0), CHA 4 (-3) |
@@ -1674,6 +1935,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Tank Shark. Level 1. Unit.
 
 **[GM]** The exhibit is closed. The exhibit disagrees.
@@ -1687,6 +1950,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Imp Producer
 
 `f02-e-01` · elite · Imp Producer. Level 1. "Notes from the booth."
@@ -1696,7 +1963,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Imp |
 | Type | Tiny Fiend (Devil), Lawful Evil |
 | AC | 13 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 21 (6d4 + 6) |
 | Speed | 20 ft., Fly 40 ft. |
 | Abilities | STR 6 (-2), DEX 17 (+3), CON 13 (+1), INT 11 (+0), WIS 12 (+1), CHA 14 (+2) |
@@ -1717,6 +1984,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** Invisibility is an at-will action printed with no daily cap. It is not a spell slot. Do not add slots.
+
 **[SYSTEM]** Imp Producer. Level 1. Elite. Fiend.
 
 **[GM]** A little red executive with a stinger and a note about your lighting.
@@ -1731,6 +2000,12 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Invisibility.** The imp casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability
 - **Shape-Shift.** The imp shape-shifts to resemble a rat (Speed 20 ft.), a raven (20 ft., Fly 60 ft.), or a spider (20 ft., Climb 20 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed
 
+### Tracked uses
+
+These are at-will. They are not spell slots. Do not add a daily cap the block does not print.
+
+- **Invisibility** (at_will_innate, no cap (at will), spell level 2). Printed as an action with no daily cap. Not a spell slot. Do not add slots.
+
 ## Dire Wolf Security
 
 `f02-e-02` · elite · Dire Wolf Security. Level 1. "The good boy left."
@@ -1740,7 +2015,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Dire Wolf |
 | Type | Large Beast, Unaligned |
 | AC | 14 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 22 (3d10 + 6) |
 | Speed | 50 ft. |
 | Abilities | STR 17 (+3), DEX 15 (+2), CON 15 (+2), INT 3 (-4), WIS 12 (+1), CHA 7 (-2) |
@@ -1759,6 +2034,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Dire Wolf Security. Level 1. Elite.
 
 **[GM]** Security is a wolf the size of a couch. Pet at your own funeral.
@@ -1771,6 +2048,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 + 3) Piercing damage. If the target is a Large or smaller creature, it has the Prone condition
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Harpy Headliner
 
 `f02-e-03` · elite · Harpy Headliner. Level 1. "Song, then the drop."
@@ -1780,7 +2061,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Harpy |
 | Type | Medium Monstrosity, Chaotic Evil |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 38 (7d8 + 7) |
 | Speed | 20 ft., Fly 40 ft. |
 | Abilities | STR 12 (+1), DEX 13 (+1), CON 12 (+1), INT 7 (-2), WIS 10 (+0), CHA 13 (+1) |
@@ -1798,6 +2079,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Harpy Headliner. Level 1. Elite.
 
 **[GM]** She hits the high note. You hit the floor.
@@ -1806,6 +2089,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Claw.** Melee Attack Roll: +3, reach 5 ft. Hit: 6 (2d4 + 1) Slashing damage
 - **Luring Song.** The harpy sings a magical melody, which lasts until the harpy’s Concentration ends on it. Wisdom Saving Throw: DC 11, each Humanoid and Giant in a 300-foot Emanation originating from the harpy when the song starts. Failure: The target has the Charmed condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the Incapacitated condition and ignores the Luring Song of other harpies. If the target is more than 5 feet from the harpy, the target moves on its turn toward the harpy by the most direct route, trying to get within 5 feet of the harpy. It doesn’t avoid Opportunity Attacks; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the harpy, the target repeats the save. Success: The target is immune to this harpy’s Luring Song for 24 hours
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Gargoyle Camera
 
@@ -1816,7 +2103,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Gargoyle |
 | Type | Medium Elemental, Chaotic Evil |
 | AC | 15 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 67 (9d8 + 27) |
 | Speed | 30 ft., Fly 60 ft. |
 | Abilities | STR 15 (+2), DEX 11 (+0), CON 16 (+3), INT 6 (-2), WIS 11 (+0), CHA 7 (-2) |
@@ -1836,6 +2123,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Gargoyle Camera. Level 2. Elite.
 
 **[GM]** Smile. The architecture is filming, and it has claws.
@@ -1848,6 +2137,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The gargoyle makes two Claw attacks
 - **Claw.** Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Gelatinous Janitor
 
@@ -1877,6 +2170,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Transparent as printed.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Gelatinous Janitor. Level 2. Elite. Ooze.
 
 **[GM]** The hallway looks clean because the hallway ate the mess. You are mess.
@@ -1891,6 +2186,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Pseudopod.** Melee Attack Roll: +4, reach 5 ft. Hit: 12 (3d6 + 2) Acid damage
 - **Engulf.** The cube moves up to its Speed without provoking Opportunity Attacks. The cube can move through the spaces of Large or smaller creatures if it has room inside itself to contain them (see the Ooze Cube trait). Dexterity Saving Throw: DC 12, each creature whose space the cube enters for the first time during this move. Failure: 10 (3d6) Acid damage, and the target is engulfed. An engulfed target is suffocating, can’t cast spells with a Verbal component, has the Restrained condition, and takes 10 (3d6) Acid damage at the start of each of the cube’s turns. When the cube moves, the engulfed target moves with it. An engulfed target can try to escape by taking an action to make a DC 12 Strength (Athletics) check. On a successful check, the target escapes and enters the nearest unoccupied space. Success: Half damage, and the target moves to an unoccupied space within 5 feet of the cube. If there is no unoccupied space, the target fails the save instead
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Ratings Hound
 
 `f02-b-01` · boss · Ratings Hound. Level 3. Boss. "The focus group is on fire."
@@ -1900,7 +2199,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Hell Hound |
 | Type | Medium Fiend, Lawful Evil |
 | AC | 15 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 58 (9d8 + 18) |
 | Speed | 50 ft. |
 | Abilities | STR 17 (+3), DEX 12 (+1), CON 14 (+2), INT 6 (-2), WIS 13 (+1), CHA 6 (-2) |
@@ -1920,6 +2219,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Fire breath unchanged.
 
+**House check.** Fire Breath is recharge 5–6. One breath, then it is down until the die hits. Bite still works.
+
 **[SYSTEM]** Ratings Hound. Level 3. Boss. Fiend.
 
 **[GM]** The audience wanted heat. The hound took that personally.
@@ -1931,7 +2232,14 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Multiattack.** The hound makes two Bite attacks
-- **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 3 (1d6) Fire damage. Fire Breath (Recharge 5–6). Dexterity Saving Throw: DC 12, each creature in a 15-foot Cone. Failure: 17 (5d6) Fire damage. Success: Half damage
+- **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 3 (1d6) Fire damage.
+- **Fire Breath (Recharge 5–6).** Dexterity Saving Throw: DC 12, each creature in a 15-foot Cone. Failure: 17 (5d6) Fire damage. Success: Half damage
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Fire Breath** (recharge, max 1). Starts ready. After Fire Breath is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.
 
 ## Live Mascot
 
@@ -1942,7 +2250,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Owlbear |
 | Type | Large Monstrosity, Unaligned |
 | AC | 13 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 59 (7d10 + 21) |
 | Speed | 40 ft., Climb 40 ft. |
 | Abilities | STR 20 (+5), DEX 12 (+1), CON 17 (+3), INT 3 (-4), WIS 12 (+1), CHA 7 (-2) |
@@ -1961,6 +2269,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Live Mascot. Level 3. Boss.
 
 **[GM]** Hug the mascot, the poster said. The poster is evidence.
@@ -1969,6 +2279,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The owlbear makes two Rend attacks
 - **Rend.** Melee Attack Roll: +7 , reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Knight of the Soft Open
 
@@ -1979,7 +2293,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Knight |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 18 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 52 (8d8 + 16) |
 | Speed | 30 ft. |
 | Abilities | STR 16 (+3), DEX 11 (+0), CON 14 (+2), INT 11 (+0), WIS 11 (+0), CHA 15 (+2) |
@@ -1999,6 +2313,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Leadership is already on the block.
 
+**House check.** House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.
+
 **[SYSTEM]** Knight of the Soft Open. Level 3. Boss.
 
 **[GM]** They sent a knight to cut a ribbon. The ribbon is you.
@@ -2011,9 +2327,16 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Reactions
 
-- **Parry.** Trigger: The knight is hit by a melee attack roll while holding a weapon. Response: The knight adds 2 to its AC against that attack, possibly causing it to miss. Kobold
+- **Parry.** Trigger: The knight is hit by a melee attack roll while holding a weapon. Response: The knight adds 2 to its AC against that attack, possibly causing it to miss.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 
 # Floor 3 — Continuum, rural
+
+Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.
 
 ## Road Grimlock
 
@@ -2024,7 +2347,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Grimlock |
 | Type | Medium Aberration, Neutral Evil |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 11 (2d8 + 2) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 16 (+3), DEX 12 (+1), CON 12 (+1), INT 9 (-1), WIS 8 (-1), CHA 6 (-2) |
@@ -2043,6 +2366,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Road Grimlock. Level 1. Blind and armed.
 
 **[GM]** No eyes. Plenty of axe. The countryside is not quaint.
@@ -2050,6 +2375,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Bone Cudgel.** Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Fieldhand Dretch
 
@@ -2060,7 +2389,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Dretch |
 | Type | Small Fiend (Demon), Chaotic Evil |
 | AC | 11 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 18 (4d6 + 4) |
 | Speed | 20 ft. |
 | Abilities | STR 12 (+1), DEX 11 (+0), CON 12 (+1), INT 5 (-3), WIS 8 (-1), CHA 3 (-4) |
@@ -2080,13 +2409,22 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** Fetid Cloud is once per day. It is not a slot that refills when the cloud ends.
+
 **[SYSTEM]** Fieldhand Dretch. Level 1. Fiend.
 
 **[GM]** Farm labor, imported. The import smell arrives first.
 
 ### Attacks
 
-- **Rend.** Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage. Fetid Cloud (1/Day). Constitution Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can’t take Reactions
+- **Rend.** Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.
+- **Fetid Cloud (1/Day).** Constitution Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can’t take Reactions
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Fetid Cloud** (daily, max 1). 1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.
 
 ## Fence Blink Dog
 
@@ -2097,7 +2435,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Blink Dog |
 | Type | Medium Fey, Lawful Good |
 | AC | 13 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 22 (4d8 + 4) |
 | Speed | 40 ft. |
 | Abilities | STR 12 (+1), DEX 17 (+3), CON 12 (+1), INT 10 (+0), WIS 13 (+1), CHA 11 (+0) |
@@ -2116,6 +2454,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** Teleport is recharge 4–6. It is not a spell slot.
+
 **[SYSTEM]** Fence Blink Dog. Level 1. Fey.
 
 **[GM]** Good dog. Bad jurisdiction.
@@ -2126,7 +2466,13 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Bonus actions
 
-- **Effect.** Teleport (Recharge 4–6). The dog teleports up to 40 feet to an unoccupied space it can see. Blue Dragons
+- **Teleport (Recharge 4–6).** The dog teleports up to 40 feet to an unoccupied space it can see.
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Teleport** (recharge, max 1). Starts ready. After Teleport is used, it is down until a d6 at the start of this creature's turn shows 4–6. It cannot be used every turn.
 
 ## Critic Pseudodragon
 
@@ -2137,7 +2483,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Pseudodragon |
 | Type | Tiny Dragon, Neutral Good |
 | AC | 14 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 10 (3d4 + 3) |
 | Speed | 15 ft., Fly 60 ft. |
 | Abilities | STR 6 (-2), DEX 15 (+2), CON 13 (+1), INT 10 (+0), WIS 12 (+1), CHA 10 (+0) |
@@ -2156,6 +2502,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Critic Pseudodragon. Level 1. Dragon.
 
 **[GM]** Two stars. Would sting again.
@@ -2169,6 +2517,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Multiattack.** The pseudodragon makes two Bite attacks
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage
 - **Sting.** Constitution Saving Throw: DC 12, one creature the pseudodragon can see within 5 feet. Failure: 5 (2d4) Poison damage, and the target has the Poisoned condition for 1 hour. Failure by 5 or More: While Poisoned, the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Violet Crop
 
@@ -2198,6 +2550,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Violet Crop. Level 1. Plant.
 
 **[GM]** Do not eat the pretty ones. The pretty ones eat.
@@ -2206,6 +2560,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The fungus makes two Rotting Touch attacks
 - **Rotting Touch.** Melee Attack Roll: +2, reach 10 ft. Hit: 4 (1d8) Necrotic damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Axe Beak Livestock
 
@@ -2216,7 +2574,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Axe Beak |
 | Type | Large Monstrosity, Unaligned |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 19 (3d10 + 3) |
 | Speed | 50 ft. |
 | Abilities | STR 14 (+2), DEX 12 (+1), CON 12 (+1), INT 2 (-4), WIS 10 (+0), CHA 5 (-3) |
@@ -2234,13 +2592,19 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Axe Beak Livestock. Level 1.
 
 **[GM]** Free range. The range includes your ribs.
 
 ### Attacks
 
-- **Beak.** Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage. Azer
+- **Beak.** Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Pteranodon Post
 
@@ -2251,7 +2615,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Pteranodon |
 | Type | Medium Beast (Dinosaur), Unaligned |
 | AC | 13 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 13 (3d8) |
 | Speed | 10 ft., Fly 60 ft. |
 | Abilities | STR 12 (+1), DEX 15 (+2), CON 10 (+0), INT 2 (-4), WIS 9 (-1), CHA 5 (-3) |
@@ -2270,6 +2634,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Pteranodon Post. Level 1.
 
 **[GM]** The mail is late because the mail is a mouth.
@@ -2282,6 +2648,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Piercing damage
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Death Dog
 
 `f03-m-08` · mob · Death Dog. Level 1. "Two heads, one opinion."
@@ -2291,7 +2661,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Death Dog |
 | Type | Medium Monstrosity, Neutral Evil |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 39 (6d8 + 12) |
 | Speed | 40 ft. |
 | Abilities | STR 15 (+2), DEX 14 (+2), CON 14 (+2), INT 3 (-4), WIS 13 (+1), CHA 6 (-2) |
@@ -2311,6 +2681,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Death Dog. Level 1.
 
 **[GM]** Pet one head. The other head files a complaint in your blood.
@@ -2319,6 +2691,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The death dog makes two Bite attacks
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 12. First Failure: The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures: The Poisoned target’s Hit Point maximum decreases by 5 (1d10)
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Quasit Auditor
 
@@ -2329,7 +2705,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Quasit |
 | Type | Tiny Fiend (Demon), Chaotic Evil |
 | AC | 13 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 25 (10d4) |
 | Speed | 40 ft. |
 | Abilities | STR 5 (-3), DEX 17 (+3), CON 10 (+0), INT 7 (-2), WIS 10 (+0), CHA 10 (+0) |
@@ -2350,6 +2726,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** Invisibility is an at-will action, not a slot. Scare is once per day, Wisdom DC 10. At 0 Scare, claws and Invisibility remain.
+
 **[SYSTEM]** Quasit Auditor. Level 1. Fiend.
 
 **[GM]** It has a clipboard and a tail. Only one of those is standard.
@@ -2361,8 +2739,16 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Rend.** Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn
-- **Invisibility.** The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability. Scare (1/Day). Wisdom Saving Throw: DC 10, one creature within 20 feet. Failure: The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically
+- **Invisibility.** The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.
+- **Scare (1/Day).** Wisdom Saving Throw: DC 10, one creature within 20 feet. Failure: The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically
 - **Shape-Shift.** The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Scare** (daily_spell, max 1). Once per day. Wisdom save DC 10. At 0, do not use Scare.
+- **Invisibility** (at_will_innate, no cap (at will), spell level 2). Printed as an action with no daily cap. Not a spell slot. Do not add slots.
 
 ## Boundary Dryad
 
@@ -2373,7 +2759,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Dryad |
 | Type | Medium Fey, Neutral |
 | AC | 16 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 22 (5d8) |
 | Speed | 30 ft. |
 | Abilities | STR 10 (+0), DEX 12 (+1), CON 11 (+0), INT 14 (+2), WIS 15 (+2), CHA 18 (+4) |
@@ -2391,6 +2777,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 **Tactics.** Charm, then the forest does the work.
 
 **Reskin.** None. The tree is the anchor, as printed.
+
+**House check.** Entangle and Pass without Trace are once each per day. Charm Monster is at will but only one charm stays active; casting it again ends the previous one. At 0 on the daily spells, use the vine, the thorns, or the single charm.
 
 **[SYSTEM]** Boundary Dryad. Level 1. Fey.
 
@@ -2411,6 +2799,16 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Tree Stride.** If within 5 feet of a Large or bigger tree, the dryad teleports to an unoccupied space within 5 feet of a second Large or bigger tree that is within 60 feet of the previous tree
 
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Animal Friendship** (at_will, no cap (at will), spell level 1). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
+- **Charm Monster** (at_will_single, no cap (at will), spell level 4). Printed at will, and only one charm stays active. Casting it again ends the previous one. Not a slot. Do not stack charms.
+- **Druidcraft** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
+- **Entangle** (daily_spell, max 1, spell level 1). Once per day for this spell alone (1/Day Each). Not a level-1 slot that refills in the fight. At 0, do not cast it again.
+- **Pass without Trace** (daily_spell, max 1, spell level 2). Once per day for this spell alone (1/Day Each). Not a level-2 slot that refills in the fight. At 0, do not cast it again.
+
 ## Press-Gang Pirate
 
 `f03-u-01` · unit · Press-Gang Pirate. Level 1. "Rural river, urban morals."
@@ -2420,7 +2818,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Pirate |
 | Type | Medium or Small Humanoid, Neutral |
 | AC | 14 |
-| Initiative | 5 |
+| Initiative | +5 |
 | HP | 33 (6d8 + 6) |
 | Speed | 30 ft. |
 | Abilities | STR 10 (+0), DEX 16 (+3), CON 12 (+1), INT 8 (-1), WIS 12 (+1), CHA 14 (+2) |
@@ -2439,6 +2837,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Press-Gang Pirate. Level 1. Unit.
 
 **[GM]** The river tax is a person. Decline.
@@ -2449,6 +2849,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Dagger.** Melee or Ranged Attack Roll: +5, reach 5 ft. or range 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage
 - **Enthralling Panache.** Wisdom Saving Throw: DC 12, one creature the pirate can see within 30 feet. Failure: The target has the Charmed condition until the start of the pirate’s next turn
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Hyena Pack
 
 `f03-u-02` · unit · Hyena Pack. Level 1. "They laugh on the ridge."
@@ -2458,7 +2862,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Hyena |
 | Type | Large Beast, Unaligned |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 45 (6d10 + 12) |
 | Speed | 50 ft. |
 | Abilities | STR 16 (+3), DEX 14 (+2), CON 14 (+2), INT 2 (-4), WIS 12 (+1), CHA 7 (-2) |
@@ -2477,6 +2881,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Hyena Pack. Level 1. Unit.
 
 **[GM]** The laugh is not joy. It is a headcount.
@@ -2487,7 +2893,13 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Bonus actions
 
-- **Effect.** Rampage (1/Day). Immediately after dealing damage to a creature that was already Bloodied, the hyena can move up to half its Speed, and it makes one Bite attack.
+- **Rampage (1/Day).** Immediately after dealing damage to a creature that was already Bloodied, the hyena can move up to half its Speed, and it makes one Bite attack.
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Rampage** (daily, max 1). 1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.
 
 ## Lion of the Green
 
@@ -2498,7 +2910,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Lion |
 | Type | Large Beast, Unaligned |
 | AC | 12 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 22 (4d10) |
 | Speed | 50 ft. |
 | Abilities | STR 17 (+3), DEX 15 (+2), CON 11 (+0), INT 3 (-4), WIS 12 (+1), CHA 8 (-1) |
@@ -2517,6 +2929,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Lion of the Green. Level 1. Unit.
 
 **[GM]** Royal symbol. Actual lion. The symbol bites.
@@ -2532,6 +2946,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Rend.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage
 - **Roar.** Wisdom Saving Throw: DC 11, one creature within 15 feet. Failure: The target has the Frightened condition until the start of the lion’s next turn
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Bear Warden
 
 `f03-u-04` · unit · Bear Warden. Level 1. "The woods have a warden and it is hungry."
@@ -2541,7 +2959,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Brown Bear |
 | Type | Large Beast, Unaligned |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 22 (3d10 + 6) |
 | Speed | 40 ft., Climb 30 ft. |
 | Abilities | STR 17 (+3), DEX 12 (+1), CON 15 (+2), INT 2 (-4), WIS 13 (+1), CHA 7 (-2) |
@@ -2560,6 +2978,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Bear Warden. Level 1. Unit.
 
 **[GM]** The warden does not check permits. The warden checks bones.
@@ -2570,6 +2990,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Bite.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage
 - **Claw.** Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Hippogriff Courier
 
 `f03-u-05` · unit · Hippogriff Courier. Level 1. "Airmail with talons."
@@ -2579,7 +3003,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Hippogriff |
 | Type | Large Monstrosity, Unaligned |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 26 (4d10 + 4) |
 | Speed | 40 ft., Fly 60 ft. |
 | Abilities | STR 17 (+3), DEX 13 (+1), CON 13 (+1), INT 2 (-4), WIS 12 (+1), CHA 8 (-1) |
@@ -2598,6 +3022,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Hippogriff Courier. Level 1. Unit.
 
 **[GM]** Sign here. The pen is a talon.
@@ -2609,7 +3035,11 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 ### Attacks
 
 - **Multiattack.** The hippogriff makes two Rend attacks
-- **Rend.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage. Hobgoblins
+- **Rend.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Mill Toad
 
@@ -2620,7 +3050,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Giant Toad |
 | Type | Large Beast, Unaligned |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 39 (6d10 + 6) |
 | Speed | 30 ft., Swim 30 ft. |
 | Abilities | STR 15 (+2), DEX 13 (+1), CON 13 (+1), INT 2 (-4), WIS 10 (+0), CHA 3 (-4) |
@@ -2638,6 +3068,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Mill Toad. Level 1. Unit.
 
 **[GM]** The pond is not scenic. The pond is pre-digesting.
@@ -2652,6 +3084,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 5 (2d4) Poison damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12)
 - **Swallow.** The toad swallows a Medium or smaller target it is grappling. While swallowed, the target isn’t Grappled but has the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the toad. In addition, the target takes 10 (3d6) Acid damage at the end of each of the toad’s turns. The toad can have only one target swallowed at a time, and it can’t use Bite while it has a swallowed target. If the toad dies, a swallowed creature is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the Prone condition
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Road Ankheg
 
 `f03-e-01` · elite · Road Ankheg. Level 2. "The road has a basement."
@@ -2661,7 +3097,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Ankheg |
 | Type | Large Monstrosity, Unaligned |
 | AC | 14 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 45 (6d10 + 12) |
 | Speed | 30 ft., Burrow 10 ft. |
 | Abilities | STR 17 (+3), DEX 11 (+0), CON 14 (+2), INT 1 (-5), WIS 13 (+1), CHA 6 (-2) |
@@ -2679,6 +3115,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Road Ankheg. Level 2. Elite.
 
 **[GM]** The dirt moved. That is not weather.
@@ -2689,7 +3127,14 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Attacks
 
-- **Bite.** Melee Attack Roll: +5 (with Advantage if the target is Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 3 (1d6) Acid damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13). Acid Spray (Recharge 6). Dexterity Saving Throw: DC 12, each creature in a 30-foot-long, 5-foot-wide Line. Failure: 14 (4d6) Acid damage. Success: Half damage
+- **Bite.** Melee Attack Roll: +5 (with Advantage if the target is Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 3 (1d6) Acid damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13).
+- **Acid Spray (Recharge 6).** Dexterity Saving Throw: DC 12, each creature in a 30-foot-long, 5-foot-wide Line. Failure: 14 (4d6) Acid damage. Success: Half damage
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Acid Spray** (recharge, max 1). Starts ready. After Acid Spray is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
 
 ## Barn Ettercap
 
@@ -2700,7 +3145,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Ettercap |
 | Type | Medium Monstrosity, Neutral Evil |
 | AC | 13 |
-| Initiative | 2 |
+| Initiative | +2 |
 | HP | 44 (8d8 + 8) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 14 (+2), DEX 15 (+2), CON 13 (+1), INT 7 (-2), WIS 12 (+1), CHA 8 (-1) |
@@ -2719,6 +3164,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. It may have Giant Wolf Spiders as the block allows. Do not add extra XP without counting them.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Barn Ettercap. Level 2. Elite.
 
 **[GM]** Fresh hay. Older guests.
@@ -2732,11 +3179,18 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Multiattack.** The ettercap makes one Bite attack and one Claw attack
 - **Bite.** Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 2 (1d4) Poison damage, and the target has the Poisoned condition until the start of the ettercap’s next turn
-- **Claw.** Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage. Web Strand (Recharge 5–6). Dexterity Saving Throw: DC 12, one Large or smaller creature the ettercap can see within 30 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage)
+- **Claw.** Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage.
+- **Web Strand (Recharge 5–6).** Dexterity Saving Throw: DC 12, one Large or smaller creature the ettercap can see within 30 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage)
 
 ### Bonus actions
 
 - **Reel.** The ettercap pulls one creature within 30 feet of itself that is Restrained by its Web Strand up to 25 feet straight toward itself
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Web Strand** (recharge, max 1). Starts ready. After Web Strand is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.
 
 ## Wayside Priest
 
@@ -2747,7 +3201,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Priest |
 | Type | Medium or Small Humanoid (Cleric), Neutral |
 | AC | 13 |
-| Initiative | 0 |
+| Initiative | +0 |
 | HP | 38 (7d8 + 7) |
 | Speed | 30 ft. |
 | Abilities | STR 16 (+3), DEX 10 (+0), CON 12 (+1), INT 13 (+1), WIS 16 (+3), CHA 13 (+1) |
@@ -2767,6 +3221,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** Radiant stays radiant. The shrine is a set.
 
+**House check.** Spirit Guardians is once per day, not a 3rd-level slot that refills. Divine Aid is three casts total, any mix of Bless, Dispel Magic, Healing Word, or Lesser Restoration, not three of each. At 0, Mace and Radiant Flame only.
+
 **[SYSTEM]** Wayside Priest. Level 2. Elite.
 
 **[GM]** Pilgrims welcome. The welcome is a damage aura.
@@ -2780,7 +3236,16 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Bonus actions
 
-- **Effect.** Divine Aid (3/Day). The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting.
+- **Divine Aid (3/Day).** The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting.
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Divine Aid** (shared_spell_pool, max 3). 3 cast(s) total, any mix of Bless, Dispel Magic, Healing Word, Lesser Restoration. Not that many of each spell. At 0, weapon attacks and at-will cantrips only.
+- **Light** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
+- **Thaumaturgy** (at_will, no cap (at will), spell level 0). At will. Not a spell slot. May be repeated. Do not spend a slot for it.
+- **Spirit Guardians** (daily_spell, max 1, spell level 3). 1 per day. Not a slot of spell level 3 that comes back each turn. At 0, do not cast it.
 
 ## Gate Spider
 
@@ -2791,7 +3256,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Phase Spider |
 | Type | Large Monstrosity, Unaligned |
 | AC | 14 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 45 (7d10 + 7) |
 | Speed | 30 ft., Climb 30 ft. |
 | Abilities | STR 15 (+2), DEX 16 (+3), CON 12 (+1), INT 6 (-2), WIS 10 (+0), CHA 6 (-2) |
@@ -2810,6 +3275,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Gate Spider. Level 3. Elite.
 
 **[GM]** The door blinked. So did the thing on your back.
@@ -2827,7 +3294,11 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 ### Bonus actions
 
-- **Ethereal Jaunt.** The spider teleports from the Material Plane to the Ethereal Plane or vice versa. Pirates
+- **Ethereal Jaunt.** The spider teleports from the Material Plane to the Ethereal Plane or vice versa.
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Billboard Manticore
 
@@ -2838,7 +3309,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Manticore |
 | Type | Large Monstrosity, Lawful Evil |
 | AC | 14 |
-| Initiative | 3 |
+| Initiative | +3 |
 | HP | 68 (8d10 + 24) |
 | Speed | 30 ft., Fly 50 ft. |
 | Abilities | STR 17 (+3), DEX 16 (+3), CON 17 (+3), INT 7 (-2), WIS 12 (+1), CHA 8 (-1) |
@@ -2856,6 +3327,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** House set dressing. Numbers stay the SRD block. Nameplate level is flavor.
+
 **[SYSTEM]** Billboard Manticore. Level 3. Elite.
 
 **[GM]** The billboard has a face. The face has a magazine.
@@ -2865,6 +3338,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Multiattack.** The manticore makes three attacks, using Rend or Tail Spike in any combination
 - **Rend.** Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage
 - **Tail Spike.** Ranged Attack Roll: +5, range 100/200 ft. Hit: 7 (1d8 + 3) Piercing damage
+
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
 
 ## Toll Ettin
 
@@ -2896,6 +3373,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Two heads are already the block.
 
+**House check.** Boss card for a random draw that fits the rules/70 cap. It does not replace a boss already printed on a Day page. A dead boss does not auto-clear other encounters.
+
 **[SYSTEM]** Toll Ettin. Level 4. Boss.
 
 **[GM]** The toll is a fight. Both cashiers agree, which is rare.
@@ -2906,6 +3385,10 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Battleaxe.** Melee Attack Roll: +7 , reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition
 - **Morningstar.** Melee Attack Roll: +7 , reach 5 ft. Hit: 14 (2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end of its next turn
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.
+
 ## Grant Ghost
 
 `f03-b-02` · boss · Grant Ghost. Level 4. Boss. "The land grant never died."
@@ -2915,7 +3398,7 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 | SRD block | Ghost |
 | Type | Medium Undead, Neutral |
 | AC | 11 |
-| Initiative | 1 |
+| Initiative | +1 |
 | HP | 45 (10d8) |
 | Speed | 5 ft., Fly 40 ft. (hover) |
 | Abilities | STR 7 (-2), DEX 13 (+1), CON 10 (+0), INT 10 (+0), WIS 12 (+1), CHA 17 (+3) |
@@ -2935,6 +3418,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None.
 
+**House check.** Etherealness is printed as an at-will plane step, not a damage spell and not a slot. Do not add a slot table. Possession is recharge 6. Horrific Visage is not a slot; a success makes that creature immune for 24 hours, as printed.
+
 **[SYSTEM]** Grant Ghost. Level 4. Boss. Undead.
 
 **[GM]** The deed is haunted. So is the deed-holder. That is you if you stand still.
@@ -2949,7 +3434,15 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 - **Multiattack.** The ghost makes two Withering Touch attacks
 - **Withering Touch.** Melee Attack Roll: +5, reach 5 ft. Hit: 19 (3d10 + 3) Necrotic damage
 - **Etherealness.** The ghost casts the Etherealness spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can’t affect or be affected by anything on the other plane
-- **Horrific Visage.** Wisdom Saving Throw: DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. Failure: 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. Success: The target is immune to this ghost’s Horrific Visage for 24 hours. Possession (Recharge 6). Charisma Saving Throw: DC 13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. The possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. Success: The target is immune to this ghost’s Possession for 24 hours
+- **Horrific Visage.** Wisdom Saving Throw: DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. Failure: 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. Success: The target is immune to this ghost’s Horrific Visage for 24 hours.
+- **Possession (Recharge 6).** Charisma Saving Throw: DC 13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. The possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. Success: The target is immune to this ghost’s Possession for 24 hours
+
+### Tracked uses
+
+A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.
+
+- **Possession** (recharge, max 1). Starts ready. After Possession is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.
+- **Etherealness** (at_will_innate, no cap (at will), spell level 7). Printed without a daily cap. It is not a spell slot. Do not add slots, and do not treat it as a repeating damage spell unless the action itself deals damage.
 
 ## Silo Pudding
 
@@ -2979,6 +3472,8 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 **Reskin.** None. Resistances are the cheese.
 
+**House check.** Split is a printed reaction with a trigger. It is not a spell. Do not add a daily cap the block does not have.
+
 **[SYSTEM]** Silo Pudding. Level 4. Boss. Ooze.
 
 **[GM]** Do not open the silo. You opened the silo.
@@ -2997,3 +3492,6 @@ Nameplate level is CR rounded up, minimum 1 (core §8.4). A boss card says Boss.
 
 - **Split.** Trigger: While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down)
 
+### Tracked uses
+
+No limited spells and no recharge tricks. Weapon and natural attacks may repeat.

@@ -1,5 +1,5 @@
 # How a grok bot draws an encounter
-Owner: Cursor (R&D) | Status: draft | Version: 0.1.0 | Updated: 2026-10-09
+Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
 Summary: Steps for building a random Floor 1–3 fight from this folder without inventing a budget.
 
 1. Read the party size and the floor. Floor 1 before the Green Room is budget level `L1`. Floor 1 boss day after the Green Room is `L2`. Floor 2 is `L2`. Floor 3 is `L3`.
@@ -10,10 +10,12 @@ Summary: Steps for building a random Floor 1–3 fight from this folder without 
 6. Add `xp` times count. Stop at or under the budget. Going over is not a draw.
 7. On a clear, grant that XP through the existing state tools. The card's `state_hooks.on_clear_xp` is the per-creature XP, not a new award.
 8. A toast, if any, comes from `achievements/catalog.json`. R0 is snark. R2 is Heroic Inspiration. Do not attach a box from this folder.
-9. Gear, if any, comes from `items/catalog.json` and still uses the SRD item. List price is the reskin file. It is not a new vending price.
-10. Announce with the card's `system_line`, then a [GM] line. Nameplate format is core §8.4.
-11. Do not write `sessions/`, `sessions-data/`, `characters/`, or a credit ledger from this folder.
-12. If a live Day page already has this fight, use the Day page.
+9. On each creature, read `tracked_uses`. Spend one from a pool when that spell or trick is used. At-will rows have `max` null and may repeat. A `shared_spell_pool` spends one use no matter which listed spell was chosen. A `recharge` row stays down until a d6 at the start of that creature's turn hits `recharge_on`. When a numbered pool is 0, use weapon or natural attacks. Do not refill daily uses until a Long Rest in a saferoom, and do not invent slots.
+10. Mundane gear comes from `items/catalog.json`. List price is the reskin file. It is not a new vending price. Category headers with `resolve_to_variant` true are not for sale until a variant id is picked.
+11. A loot box, if a deck already allows one, comes from `items/loot-boxes.json`. Use the filed deck card. Spend `tracked_uses` on charges (a wand at 0 does not fire; a healer's kit at 0 does not stabilize). `rules_40` rows with status `candidate` are proposals, `draw_weight` 0. Do not roll them.
+12. Announce with the card's `system_line`, then a [GM] line. Nameplate format is core §8.4. Read `house_flavor.card_note` before you invent a story. Dean Thudd on the Day pages is the Floor 1 boss. This pack does not replace him.
+13. Do not write `sessions/`, `sessions-data/`, `characters/`, or a credit ledger from this folder.
+14. If a live Day page already has this fight, use the Day page.
 
 `encounters/sample-recipes.json` is eleven lineups already checked against the 4-Crawler budgets. Copy the shape. Do not treat them as Day specs.
 

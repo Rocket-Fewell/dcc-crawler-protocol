@@ -1,10 +1,11 @@
 {
  "floor": 3,
  "count": 24,
+ "schema": "cursor-dcc-cards/0.2.0",
  "cards": [
   {
    "id": "f03-m-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -84,7 +85,7 @@
      "Senses": "Blindsight 30 ft.; Passive Perception 13",
      "Languages": "None"
     },
-    "stat_block_text": "Grimlock\nMedium Aberration, Neutral Evil\nAC 11  Initiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 16 +3 +3 Dex 12 +1 +1 Con 12 +1 +1\nInt 9 \u22121 \u22121 WIS 8 \u22121 \u22121 Cha 6 \u22122 \u22122\nSkills Athletics +5, Perception +3, Stealth +5\nSenses Blindsight 30 ft.; Passive Perception 13\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nBone Cudgel. Melee Attack Roll: +5, reach 5 ft. Hit:\n6 (1d6 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage."
+    "stat_block_text": "Grimlock\nMedium Aberration, Neutral Evil\nAC 11  Initiative +1 (11)\nHP 11 (2d8 + 2)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 16 +3 +3 Dex 12 +1 +1 Con 12 +1 +1\nInt 9 −1 −1 WIS 8 −1 −1 Cha 6 −2 −2\nSkills Athletics +5, Perception +3, Stealth +5\nSenses Blindsight 30 ft.; Passive Perception 13\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nBone Cudgel. Melee Attack Roll: +5, reach 5 ft. Hit:\n6 (1d6 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -120,12 +121,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -194,7 +208,11 @@
     "actions": [
      {
       "name": "Rend",
-      "text": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage. Fetid Cloud (1/Day). Constitution Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can\u2019t take Reactions"
+      "text": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage."
+     },
+     {
+      "name": "Fetid Cloud (1/Day)",
+      "text": "Constitution Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can’t take Reactions"
      }
     ],
     "bonus_actions": [],
@@ -206,7 +224,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 9",
      "Languages": "Abyssal; telepathy 60 ft. (works only with creatures that understand Abyssal)"
     },
-    "stat_block_text": "Dretch\nSmall Fiend (Demon), Chaotic Evil\nAC 11  Initiative +0 (10)\nHP 18 (4d6 + 4)\nSpeed 20 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex 11 +0 +0 Con 12 +1 +1\nInt 5 \u22123 \u22123 WIS 8 \u22121 \u22121 Cha 3 \u22124 \u22124\nResistances Cold, Fire, Lightning\nImmunities Poison; Poisoned\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Abyssal; telepathy 60 ft. (works only with\ncreatures that understand Abyssal)\nCR 1/4 (XP 50; PB +2)\nActions\nRend. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1)\nSlashing damage.\nFetid Cloud (1/Day). Constitution Saving Throw: DC 11,\neach creature in a 10-foot Emanation originating from\nthe dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the\ncreature can take either an action or a Bonus Action on\nits turn, not both, and it can\u2019t take Reactions."
+    "stat_block_text": "Dretch\nSmall Fiend (Demon), Chaotic Evil\nAC 11  Initiative +0 (10)\nHP 18 (4d6 + 4)\nSpeed 20 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex 11 +0 +0 Con 12 +1 +1\nInt 5 −3 −3 WIS 8 −1 −1 Cha 3 −4 −4\nResistances Cold, Fire, Lightning\nImmunities Poison; Poisoned\nSenses Darkvision 60 ft.; Passive Perception 9\nLanguages Abyssal; telepathy 60 ft. (works only with\ncreatures that understand Abyssal)\nCR 1/4 (XP 50; PB +2)\nActions\nRend. Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1)\nSlashing damage.\nFetid Cloud (1/Day). Constitution Saving Throw: DC 11,\neach creature in a 10-foot Emanation originating from\nthe dretch. Failure: The target has the Poisoned condition until the end of its next turn. While Poisoned, the\ncreature can take either an action or a Bonus Action on\nits turn, not both, and it can’t take Reactions."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -242,12 +260,37 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Fetid Cloud",
+     "name": "Fetid Cloud",
+     "kind": "daily",
+     "spell_level": null,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.",
+     "key": "f03-m-02.fetid-cloud"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Fetid Cloud is once per day. It is not a slot that refills when the cloud ends.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -321,8 +364,8 @@
     ],
     "bonus_actions": [
      {
-      "name": "Effect",
-      "text": "Teleport (Recharge 4\u20136). The dog teleports up to 40 feet to an unoccupied space it can see. Blue Dragons"
+      "name": "Teleport (Recharge 4–6)",
+      "text": "The dog teleports up to 40 feet to an unoccupied space it can see."
      }
     ],
     "reactions": [],
@@ -330,9 +373,9 @@
     "labels": {
      "Skills": "Perception +5, Stealth +5",
      "Senses": "Darkvision 60 ft.; Passive Perception 15",
-     "Languages": "Blink Dog; understands Elvish and Sylvan but can\u2019t speak them"
+     "Languages": "Blink Dog; understands Elvish and Sylvan but can’t speak them"
     },
-    "stat_block_text": "Blink Dog\nMedium Fey, Lawful Good\nAC 13  Initiative +3 (13)\nHP 22 (4d8 + 4)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex 17 +3 +3 Con 12 +1 +1\nInt 10 +0 +0 WIS 13 +1 +1 Cha 11 +0 +0\nSkills Perception +5, Stealth +5\nSenses Darkvision 60 ft.; Passive Perception 15\nLanguages Blink Dog; understands Elvish and Sylvan but\ncan\u2019t speak them\nCR 1/4 (XP 50; PB +2)\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3)\nPiercing damage.\nBonus Actions\nTeleport (Recharge 4\u20136). The dog teleports up to 40\nfeet to an unoccupied space it can see.\nBlue Dragons"
+    "stat_block_text": "Blink Dog\nMedium Fey, Lawful Good\nAC 13  Initiative +3 (13)\nHP 22 (4d8 + 4)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex 17 +3 +3 Con 12 +1 +1\nInt 10 +0 +0 WIS 13 +1 +1 Cha 11 +0 +0\nSkills Perception +5, Stealth +5\nSenses Darkvision 60 ft.; Passive Perception 15\nLanguages Blink Dog; understands Elvish and Sylvan but\ncan’t speak them\nCR 1/4 (XP 50; PB +2)\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3)\nPiercing damage.\nBonus Actions\nTeleport (Recharge 4–6). The dog teleports up to 40\nfeet to an unoccupied space it can see."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -368,12 +411,43 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Teleport",
+     "name": "Teleport",
+     "kind": "recharge",
+     "spell_level": null,
+     "max": 1,
+     "available": true,
+     "die": "d6",
+     "recharge_on": [
+      4,
+      5,
+      6
+     ],
+     "recover": "start of this creature's turn, d6 in [4, 5, 6]",
+     "rule": "Starts ready. After Teleport is used, it is down until a d6 at the start of this creature's turn shows 4–6. It cannot be used every turn.",
+     "key": "f03-m-03.teleport"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Teleport is recharge 4–6. It is not a spell slot.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-04",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -464,9 +538,9 @@
     "labels": {
      "Skills": "Perception +5, Stealth +4",
      "Senses": "Blindsight 10 ft., Darkvision 60 ft.; Passive Perception 15",
-     "Languages": "Understands Common and Draconic but can\u2019t speak"
+     "Languages": "Understands Common and Draconic but can’t speak"
     },
-    "stat_block_text": "Pseudodragon\nTiny Dragon, Neutral Good\nAC 14   Initiative +2 (12)\nHP 10 (3d4 + 3)\nSpeed 15 ft., Fly 60 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 6 \u22122 \u22122 Dex 15 +2 +2 Con 13 +1 +1\nInt 10 +0 +0 WIS 12 +1 +1 Cha 10 +0 +0\nSkills Perception +5, Stealth +4\nSenses Blindsight 10 ft., Darkvision 60 ft.;\nPassive Perception 15\nLanguages Understands Common and Draconic but can\u2019t\nspeak\nCR 1/4 (XP 50; PB +2)\nTraits\nMagic Resistance. The pseudodragon has Advantage on saving throws against spells and other magical effects.\nActions\nMultiattack. The pseudodragon makes two Bite attacks.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2)\nPiercing damage.\nSting. Constitution Saving Throw: DC 12, one creature\nthe pseudodragon can see within 5 feet. Failure: 5 (2d4)\nPoison damage, and the target has the Poisoned condition for 1 hour. Failure by 5 or More: While Poisoned,\nthe target also has the Unconscious condition, which\nends early if the target takes damage or a creature\nwithin 5 feet of it takes an action to wake it."
+    "stat_block_text": "Pseudodragon\nTiny Dragon, Neutral Good\nAC 14   Initiative +2 (12)\nHP 10 (3d4 + 3)\nSpeed 15 ft., Fly 60 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 6 −2 −2 Dex 15 +2 +2 Con 13 +1 +1\nInt 10 +0 +0 WIS 12 +1 +1 Cha 10 +0 +0\nSkills Perception +5, Stealth +4\nSenses Blindsight 10 ft., Darkvision 60 ft.;\nPassive Perception 15\nLanguages Understands Common and Draconic but can’t\nspeak\nCR 1/4 (XP 50; PB +2)\nTraits\nMagic Resistance. The pseudodragon has Advantage on saving throws against spells and other magical effects.\nActions\nMultiattack. The pseudodragon makes two Bite attacks.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2)\nPiercing damage.\nSting. Constitution Saving Throw: DC 12, one creature\nthe pseudodragon can see within 5 feet. Failure: 5 (2d4)\nPoison damage, and the target has the Poisoned condition for 1 hour. Failure by 5 or More: While Poisoned,\nthe target also has the Unconscious condition, which\nends early if the target takes damage or a creature\nwithin 5 feet of it takes an action to wake it."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -502,12 +576,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-05",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -591,7 +678,7 @@
      "Senses": "Blindsight 30 ft.; Passive Perception 6",
      "Languages": "None"
     },
-    "stat_block_text": "Violet Fungus\nMedium Plant, Unaligned\nAC 5  Initiative \u22125 (5)\nHP 18 (4d8)\nSpeed 5 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 3 \u22124 \u22124 Dex 1 \u22125 \u22125 Con 10 +0 +0\nInt 1 \u22125 \u22125 WIS 3 \u22124 \u22124 Cha 1 \u22125 \u22125\nImmunities Blinded, Charmed, Deafened, Frightened\nSenses Blindsight 30 ft.; Passive Perception 6\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nMultiattack. The fungus makes two Rotting\nTouch attacks.\nRotting Touch. Melee Attack Roll: +2, reach 10 ft. Hit:\n4 (1d8) Necrotic damage."
+    "stat_block_text": "Violet Fungus\nMedium Plant, Unaligned\nAC 5  Initiative −5 (5)\nHP 18 (4d8)\nSpeed 5 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 3 −4 −4 Dex 1 −5 −5 Con 10 +0 +0\nInt 1 −5 −5 WIS 3 −4 −4 Cha 1 −5 −5\nImmunities Blinded, Charmed, Deafened, Frightened\nSenses Blindsight 30 ft.; Passive Perception 6\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nMultiattack. The fungus makes two Rotting\nTouch attacks.\nRotting Touch. Melee Attack Roll: +2, reach 10 ft. Hit:\n4 (1d8) Necrotic damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -627,12 +714,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-06",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -701,7 +801,7 @@
     "actions": [
      {
       "name": "Beak",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage. Azer"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage."
      }
     ],
     "bonus_actions": [],
@@ -711,7 +811,7 @@
      "Senses": "Passive Perception 10",
      "Languages": "None"
     },
-    "stat_block_text": "Axe Beak\nLarge Monstrosity, Unaligned\nAC 11  Initiative +1 (11)\nHP 19 (3d10 + 3)\nSpeed 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 12 +1 +1 Con 12 +1 +1\nInt 2 \u22124 \u22124 WIS 10 +0 +0 Cha 5 \u22123 \u22123\nSenses Passive Perception 10\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nBeak. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2)\nSlashing damage.\nAzer"
+    "stat_block_text": "Axe Beak\nLarge Monstrosity, Unaligned\nAC 11  Initiative +1 (11)\nHP 19 (3d10 + 3)\nSpeed 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 12 +1 +1 Con 12 +1 +1\nInt 2 −4 −4 WIS 10 +0 +0 Cha 5 −3 −3\nSenses Passive Perception 10\nLanguages None\nCR 1/4 (XP 50; PB +2)\nActions\nBeak. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2)\nSlashing damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -747,12 +847,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-07",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -820,7 +933,7 @@
     "traits": [
      {
       "name": "Flyby",
-      "text": "The pteranodon doesn\u2019t provoke an Opportunity Attack when it flies out of an enemy\u2019s reach"
+      "text": "The pteranodon doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach"
      }
     ],
     "actions": [
@@ -837,7 +950,7 @@
      "Senses": "Passive Perception 11",
      "Languages": "None"
     },
-    "stat_block_text": "Pteranodon\nMedium Beast (Dinosaur), Unaligned\nAC 13   Initiative +2 (12)\nHP 13 (3d8)\nSpeed 10 ft., Fly 60 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex\t15 +2 +2 Con 10 +0 +0\nInt 2 \u22124 \u22124 WIS 9 \u22121 \u22121 Cha\t5 \u22123 \u22123\nSkills Perception +1\nSenses Passive Perception 11\nLanguages None\nCR 1/4 (XP 50; PB +2)\nTraits\nFlyby. The pteranodon doesn\u2019t provoke an Opportunity\nAttack when it flies out of an enemy\u2019s reach.\nActions\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2)\nPiercing damage."
+    "stat_block_text": "Pteranodon\nMedium Beast (Dinosaur), Unaligned\nAC 13   Initiative +2 (12)\nHP 13 (3d8)\nSpeed 10 ft., Fly 60 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 12 +1 +1 Dex\t15 +2 +2 Con 10 +0 +0\nInt 2 −4 −4 WIS 9 −1 −1 Cha\t5 −3 −3\nSkills Perception +1\nSenses Passive Perception 11\nLanguages None\nCR 1/4 (XP 50; PB +2)\nTraits\nFlyby. The pteranodon doesn’t provoke an Opportunity\nAttack when it flies out of an enemy’s reach.\nActions\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2)\nPiercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -873,12 +986,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-08",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -951,7 +1077,7 @@
      },
      {
       "name": "Bite",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 12. First Failure: The target has the Poisoned condition. While Poisoned, the target\u2019s Hit Point maximum doesn\u2019t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures: The Poisoned target\u2019s Hit Point maximum decreases by 5 (1d10)"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 12. First Failure: The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures: The Poisoned target’s Hit Point maximum decreases by 5 (1d10)"
      }
     ],
     "bonus_actions": [],
@@ -963,7 +1089,7 @@
      "Senses": "Darkvision 120 ft.; Passive Perception 15",
      "Languages": "None"
     },
-    "stat_block_text": "Death Dog\nMedium Monstrosity, Neutral Evil\nAC 12  Initiative +2 (12)\nHP 39 (6d8 + 12)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 14 +2 +2 Con 14 +2 +2\nInt 3 \u22124 \u22124 WIS 13 +1 +1 Cha 6 \u22122 \u22122\nSkills Perception +5, Stealth +4\nImmunities Blinded, Charmed, Deafened, Frightened,\nStunned, Unconscious\nSenses Darkvision 120 ft.; Passive Perception 15\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The death dog makes two Bite attacks.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4\n+ 2) Piercing damage. If the target is a creature, it is\nsubjected to the following effect. Constitution Saving\nThrow: DC 12. First Failure: The target has the Poisoned\ncondition. While Poisoned, the target\u2019s Hit Point maximum doesn\u2019t return to normal when finishing a Long\nRest, and it repeats the save every 24 hours that elapse,\nending the effect on itself on a success. Subsequent\nFailures: The Poisoned target\u2019s Hit Point maximum decreases by 5 (1d10)."
+    "stat_block_text": "Death Dog\nMedium Monstrosity, Neutral Evil\nAC 12  Initiative +2 (12)\nHP 39 (6d8 + 12)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 14 +2 +2 Con 14 +2 +2\nInt 3 −4 −4 WIS 13 +1 +1 Cha 6 −2 −2\nSkills Perception +5, Stealth +4\nImmunities Blinded, Charmed, Deafened, Frightened,\nStunned, Unconscious\nSenses Darkvision 120 ft.; Passive Perception 15\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The death dog makes two Bite attacks.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4\n+ 2) Piercing damage. If the target is a creature, it is\nsubjected to the following effect. Constitution Saving\nThrow: DC 12. First Failure: The target has the Poisoned\ncondition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long\nRest, and it repeats the save every 24 hours that elapse,\nending the effect on itself on a success. Subsequent\nFailures: The Poisoned target’s Hit Point maximum decreases by 5 (1d10)."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -999,12 +1125,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-09",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1078,15 +1217,19 @@
     "actions": [
      {
       "name": "Rend",
-      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit\u2019s next turn"
+      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn"
      },
      {
       "name": "Invisibility",
-      "text": "The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability. Scare (1/Day). Wisdom Saving Throw: DC 10, one creature within 20 feet. Failure: The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically"
+      "text": "The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability."
+     },
+     {
+      "name": "Scare (1/Day)",
+      "text": "Wisdom Saving Throw: DC 10, one creature within 20 feet. Failure: The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically"
      },
      {
       "name": "Shape-Shift",
-      "text": "The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn\u2019t transformed"
+      "text": "The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed"
      }
     ],
     "bonus_actions": [],
@@ -1099,7 +1242,7 @@
      "Senses": "Darkvision 120 ft.; Passive Perception 10",
      "Languages": "Abyssal, Common"
     },
-    "stat_block_text": "Quasit\nTiny Fiend (Demon), Chaotic Evil\nAC 13   Initiative +3 (13)\nHP 25 (10d4)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 5 \u22123 \u22123 Dex 17 +3 +3 Con 10 +0 +0\nInt 7 \u22122 \u22122 WIS 10 +0 +0 Cha 10 +0 +0\nSkills Stealth +5\nResistances Cold, Fire, Lightning\nImmunities Poison; Poisoned\nSenses Darkvision 120 ft.; Passive Perception 10\nLanguages Abyssal, Common\nCR 1 (XP 200; PB +2)\nTraits\nMagic Resistance. The quasit has Advantage on saving\nthrows against spells and other magical effects.\nActions\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3)\nSlashing damage, and the target has the Poisoned condition until the start of the quasit\u2019s next turn.\nInvisibility. The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the\nspellcasting ability.\nScare (1/Day). Wisdom Saving Throw: DC 10, one\ncreature within 20 feet. Failure: The target has the\nFrightened condition. At the end of each of its turns, the\ntarget repeats the save, ending the effect on itself on a\nsuccess. After 1 minute, it succeeds automatically.\nShape-Shift. The quasit shape-shifts to resemble a bat\n(Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40\nft.), or a toad (40 ft., Swim 40 ft.), or it returns to its\ntrue form. Its game statistics are the same in each form,\nexcept for its Speed. Any equipment it is wearing or\ncarrying isn\u2019t transformed."
+    "stat_block_text": "Quasit\nTiny Fiend (Demon), Chaotic Evil\nAC 13   Initiative +3 (13)\nHP 25 (10d4)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 5 −3 −3 Dex 17 +3 +3 Con 10 +0 +0\nInt 7 −2 −2 WIS 10 +0 +0 Cha 10 +0 +0\nSkills Stealth +5\nResistances Cold, Fire, Lightning\nImmunities Poison; Poisoned\nSenses Darkvision 120 ft.; Passive Perception 10\nLanguages Abyssal, Common\nCR 1 (XP 200; PB +2)\nTraits\nMagic Resistance. The quasit has Advantage on saving\nthrows against spells and other magical effects.\nActions\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3)\nSlashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn.\nInvisibility. The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the\nspellcasting ability.\nScare (1/Day). Wisdom Saving Throw: DC 10, one\ncreature within 20 feet. Failure: The target has the\nFrightened condition. At the end of each of its turns, the\ntarget repeats the save, ending the effect on itself on a\nsuccess. After 1 minute, it succeeds automatically.\nShape-Shift. The quasit shape-shifts to resemble a bat\n(Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40\nft.), or a toad (40 ft., Swim 40 ft.), or it returns to its\ntrue form. Its game statistics are the same in each form,\nexcept for its Speed. Any equipment it is wearing or\ncarrying isn’t transformed."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -1135,12 +1278,50 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Scare",
+     "name": "Scare",
+     "kind": "daily_spell",
+     "spell_level": null,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "Once per day. Wisdom save DC 10. At 0, do not use Scare.",
+     "key": "f03-m-09.scare",
+     "ability": "Wisdom",
+     "save_dc": 10
+    },
+    {
+     "key_name": "Invisibility",
+     "name": "Invisibility",
+     "kind": "at_will_innate",
+     "spell_level": 2,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (printed without a daily cap)",
+     "rule": "Printed as an action with no daily cap. Not a spell slot. Do not add slots.",
+     "key": "f03-m-09.invisibility"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Invisibility is an at-will action, not a slot. Scare is once per day, Wisdom DC 10. At 0 Scare, claws and Invisibility remain.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-m-10",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1278,12 +1459,92 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Animal Friendship",
+     "name": "Animal Friendship",
+     "kind": "at_will",
+     "spell_level": 1,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+     "ability": "Charisma",
+     "save_dc": 14,
+     "key": "f03-m-10.animal-friendship"
+    },
+    {
+     "key_name": "Charm Monster",
+     "name": "Charm Monster",
+     "kind": "at_will_single",
+     "spell_level": 4,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "Printed at will, and only one charm stays active. Casting it again ends the previous one. Not a slot. Do not stack charms.",
+     "ability": "Charisma",
+     "save_dc": 14,
+     "max_active": 1,
+     "key": "f03-m-10.charm-monster"
+    },
+    {
+     "key_name": "Druidcraft",
+     "name": "Druidcraft",
+     "kind": "at_will",
+     "spell_level": 0,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+     "ability": "Charisma",
+     "save_dc": 14,
+     "key": "f03-m-10.druidcraft"
+    },
+    {
+     "key_name": "Entangle",
+     "name": "Entangle",
+     "kind": "daily_spell",
+     "spell_level": 1,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "Once per day for this spell alone (1/Day Each). Not a level-1 slot that refills in the fight. At 0, do not cast it again.",
+     "ability": "Charisma",
+     "save_dc": 14,
+     "key": "f03-m-10.entangle"
+    },
+    {
+     "key_name": "Pass without Trace",
+     "name": "Pass without Trace",
+     "kind": "daily_spell",
+     "spell_level": 2,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "Once per day for this spell alone (1/Day Each). Not a level-2 slot that refills in the fight. At 0, do not cast it again.",
+     "ability": "Charisma",
+     "save_dc": 14,
+     "key": "f03-m-10.pass-without-trace"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Entangle and Pass without Trace are once each per day. Charm Monster is at will but only one charm stays active; casting it again ends the previous one. At 0 on the daily spells, use the vine, the thorns, or the single charm.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-u-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1360,7 +1621,7 @@
      },
      {
       "name": "Enthralling Panache",
-      "text": "Wisdom Saving Throw: DC 12, one creature the pirate can see within 30 feet. Failure: The target has the Charmed condition until the start of the pirate\u2019s next turn"
+      "text": "Wisdom Saving Throw: DC 12, one creature the pirate can see within 30 feet. Failure: The target has the Charmed condition until the start of the pirate’s next turn"
      }
     ],
     "bonus_actions": [],
@@ -1371,7 +1632,7 @@
      "Senses": "Passive Perception 11",
      "Languages": "Common plus one other language"
     },
-    "stat_block_text": "Pirate\nMedium or Small Humanoid, Neutral\nAC 14  Initiative +5 (15)\nHP 33 (6d8 + 6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 10 +0 +0 Dex 16 +3 +5 Con 12 +1 +1\nInt 8 \u22121 \u22121 WIS 12 +1 +1 Cha 14 +2 +4\nGear Daggers (6), Leather Armor\nSenses Passive Perception 11\nLanguages Common plus one other language\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The pirate makes two Dagger attacks.\nIt can replace one attack with a use of Enthralling Panache.\nDagger. Melee or Ranged Attack Roll: +5, reach 5 ft. or\nrange 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage.\nEnthralling Panache. Wisdom Saving Throw: DC 12,\none creature the pirate can see within 30 feet. Failure:\nThe target has the Charmed condition until the start of\nthe pirate\u2019s next turn."
+    "stat_block_text": "Pirate\nMedium or Small Humanoid, Neutral\nAC 14  Initiative +5 (15)\nHP 33 (6d8 + 6)\nSpeed 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 10 +0 +0 Dex 16 +3 +5 Con 12 +1 +1\nInt 8 −1 −1 WIS 12 +1 +1 Cha 14 +2 +4\nGear Daggers (6), Leather Armor\nSenses Passive Perception 11\nLanguages Common plus one other language\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The pirate makes two Dagger attacks.\nIt can replace one attack with a use of Enthralling Panache.\nDagger. Melee or Ranged Attack Roll: +5, reach 5 ft. or\nrange 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage.\nEnthralling Panache. Wisdom Saving Throw: DC 12,\none creature the pirate can see within 30 feet. Failure:\nThe target has the Charmed condition until the start of\nthe pirate’s next turn."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -1407,12 +1668,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-u-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1486,8 +1760,8 @@
     ],
     "bonus_actions": [
      {
-      "name": "Effect",
-      "text": "Rampage (1/Day). Immediately after dealing damage to a creature that was already Bloodied, the hyena can move up to half its Speed, and it makes one Bite attack."
+      "name": "Rampage (1/Day)",
+      "text": "Immediately after dealing damage to a creature that was already Bloodied, the hyena can move up to half its Speed, and it makes one Bite attack."
      }
     ],
     "reactions": [],
@@ -1497,7 +1771,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 13",
      "Languages": "None"
     },
-    "stat_block_text": "Giant Hyena\nLarge Beast, Unaligned\nAC 12  Initiative +2 (12)\nHP 45 (6d10 + 12)\nSpeed 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 16 +3 +3 Dex 14 +2 +2 Con 14 +2 +2\nInt 2 \u22124 \u22124 WIS 12 +1 +1 Cha 7 \u22122 \u22122\nSkills Perception +3\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 10 (2d6 + 3)\nPiercing damage.\nBonus Actions\nRampage (1/Day). Immediately after dealing damage\nto a creature that was already Bloodied, the hyena can\nmove up to half its Speed, and it makes one Bite attack."
+    "stat_block_text": "Giant Hyena\nLarge Beast, Unaligned\nAC 12  Initiative +2 (12)\nHP 45 (6d10 + 12)\nSpeed 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 16 +3 +3 Dex 14 +2 +2 Con 14 +2 +2\nInt 2 −4 −4 WIS 12 +1 +1 Cha 7 −2 −2\nSkills Perception +3\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 10 (2d6 + 3)\nPiercing damage.\nBonus Actions\nRampage (1/Day). Immediately after dealing damage\nto a creature that was already Bloodied, the hyena can\nmove up to half its Speed, and it makes one Bite attack."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -1533,12 +1807,37 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Rampage",
+     "name": "Rampage",
+     "kind": "daily",
+     "spell_level": null,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.",
+     "key": "f03-u-02.rampage"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-u-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1606,7 +1905,7 @@
     "traits": [
      {
       "name": "Pack Tactics",
-      "text": "The lion has Advantage on an attack roll against a creature if at least one of the lion\u2019s allies is within 5 feet of the creature and the ally doesn\u2019t have the Incapacitated condition"
+      "text": "The lion has Advantage on an attack roll against a creature if at least one of the lion’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition"
      },
      {
       "name": "Running Leap",
@@ -1624,7 +1923,7 @@
      },
      {
       "name": "Roar",
-      "text": "Wisdom Saving Throw: DC 11, one creature within 15 feet. Failure: The target has the Frightened condition until the start of the lion\u2019s next turn"
+      "text": "Wisdom Saving Throw: DC 11, one creature within 15 feet. Failure: The target has the Frightened condition until the start of the lion’s next turn"
      }
     ],
     "bonus_actions": [],
@@ -1635,7 +1934,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 13",
      "Languages": "None"
     },
-    "stat_block_text": "Lion\nLarge Beast, Unaligned\nAC 12   Initiative +2 (12)\nHP 22 (4d10)\nSpeed 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 15 +2 +2 Con 11 +0 +0\nInt 3 \u22124 \u22124 WIS 12 +1 +1 Cha 8 \u22121 \u22121\nSkills Perception +3, Stealth +4\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nPack Tactics. The lion has Advantage on an attack roll\nagainst a creature if at least one of the lion\u2019s allies is\nwithin 5 feet of the creature and the ally doesn\u2019t have\nthe Incapacitated condition.\nRunning Leap. With a 10-foot running start, the lion\ncan Long Jump up to 25 feet.\nActions\nMultiattack. The lion makes two Rend attacks. It can\nreplace one attack with a use of Roar.\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nSlashing damage.\nRoar. Wisdom Saving Throw: DC 11, one creature\nwithin 15 feet. Failure: The target has the Frightened\ncondition until the start of the lion\u2019s next turn."
+    "stat_block_text": "Lion\nLarge Beast, Unaligned\nAC 12   Initiative +2 (12)\nHP 22 (4d10)\nSpeed 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 15 +2 +2 Con 11 +0 +0\nInt 3 −4 −4 WIS 12 +1 +1 Cha 8 −1 −1\nSkills Perception +3, Stealth +4\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nPack Tactics. The lion has Advantage on an attack roll\nagainst a creature if at least one of the lion’s allies is\nwithin 5 feet of the creature and the ally doesn’t have\nthe Incapacitated condition.\nRunning Leap. With a 10-foot running start, the lion\ncan Long Jump up to 25 feet.\nActions\nMultiattack. The lion makes two Rend attacks. It can\nreplace one attack with a use of Roar.\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nSlashing damage.\nRoar. Wisdom Saving Throw: DC 11, one creature\nwithin 15 feet. Failure: The target has the Frightened\ncondition until the start of the lion’s next turn."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -1671,12 +1970,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-u-04",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1764,7 +2076,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 13",
      "Languages": "None"
     },
-    "stat_block_text": "Brown Bear\nLarge Beast, Unaligned\nAC 11  Initiative +1 (11)\nHP 22 (3d10 + 6)\nSpeed 40 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 12 +1 +1 Con 15 +2 +2\nInt 2 \u22124 \u22124 WIS 13 +1 +1 Cha 7 \u22122 \u22122\nSkills Perception +3\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The bear makes one Bite attack and one\nClaw attack.\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nPiercing damage.\nClaw. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3)\nSlashing damage. If the target is a Large or smaller creature, it has the Prone condition."
+    "stat_block_text": "Brown Bear\nLarge Beast, Unaligned\nAC 11  Initiative +1 (11)\nHP 22 (3d10 + 6)\nSpeed 40 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 12 +1 +1 Con 15 +2 +2\nInt 2 −4 −4 WIS 13 +1 +1 Cha 7 −2 −2\nSkills Perception +3\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 1 (XP 200; PB +2)\nActions\nMultiattack. The bear makes one Bite attack and one\nClaw attack.\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nPiercing damage.\nClaw. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3)\nSlashing damage. If the target is a Large or smaller creature, it has the Prone condition."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -1800,12 +2112,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-u-05",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -1873,7 +2198,7 @@
     "traits": [
      {
       "name": "Flyby",
-      "text": "The hippogriff doesn\u2019t provoke an Opportunity Attack when it flies out of an enemy\u2019s reach"
+      "text": "The hippogriff doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach"
      }
     ],
     "actions": [
@@ -1883,7 +2208,7 @@
      },
      {
       "name": "Rend",
-      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage. Hobgoblins"
+      "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage."
      }
     ],
     "bonus_actions": [],
@@ -1894,7 +2219,7 @@
      "Senses": "Passive Perception 15",
      "Languages": "None"
     },
-    "stat_block_text": "Hippogriff\nLarge Monstrosity, Unaligned\nAC 11  Initiative +1 (11)\nHP 26 (4d10 + 4)\nSpeed 40 ft., Fly 60 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 13 +1 +1 Con 13 +1 +1\nInt 2 \u22124 \u22124 WIS 12 +1 +1 Cha 8 \u22121 \u22121\nSkills Perception +5\nSenses Passive Perception 15\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nFlyby. The hippogriff doesn\u2019t provoke an Opportunity\nAttack when it flies out of an enemy\u2019s reach.\nActions\nMultiattack. The hippogriff makes two Rend attacks.\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nSlashing damage.\nHobgoblins"
+    "stat_block_text": "Hippogriff\nLarge Monstrosity, Unaligned\nAC 11  Initiative +1 (11)\nHP 26 (4d10 + 4)\nSpeed 40 ft., Fly 60 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 13 +1 +1 Con 13 +1 +1\nInt 2 −4 −4 WIS 12 +1 +1 Cha 8 −1 −1\nSkills Perception +5\nSenses Passive Perception 15\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nFlyby. The hippogriff doesn’t provoke an Opportunity\nAttack when it flies out of an enemy’s reach.\nActions\nMultiattack. The hippogriff makes two Rend attacks.\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nSlashing damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -1930,12 +2255,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-u-06",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2007,7 +2345,7 @@
      },
      {
       "name": "Standing Leap",
-      "text": "The toad\u2019s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start"
+      "text": "The toad’s Long Jump is up to 20 feet and its High Jump is up to 10 feet with or without a running start"
      }
     ],
     "actions": [
@@ -2017,7 +2355,7 @@
      },
      {
       "name": "Swallow",
-      "text": "The toad swallows a Medium or smaller target it is grappling. While swallowed, the target isn\u2019t Grappled but has the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the toad. In addition, the target takes 10 (3d6) Acid damage at the end of each of the toad\u2019s turns. The toad can have only one target swallowed at a time, and it can\u2019t use Bite while it has a swallowed target. If the toad dies, a swallowed creature is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the Prone condition"
+      "text": "The toad swallows a Medium or smaller target it is grappling. While swallowed, the target isn’t Grappled but has the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the toad. In addition, the target takes 10 (3d6) Acid damage at the end of each of the toad’s turns. The toad can have only one target swallowed at a time, and it can’t use Bite while it has a swallowed target. If the toad dies, a swallowed creature is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the Prone condition"
      }
     ],
     "bonus_actions": [],
@@ -2027,7 +2365,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 10",
      "Languages": "None"
     },
-    "stat_block_text": "Giant Toad\nLarge Beast, Unaligned\nAC 11   Initiative +1 (11)\nHP 39 (6d10 + 6)\nSpeed 30 ft., Swim 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 13 +1 +1 Con 13 +1 +1\nInt 2 \u22124 \u22124 WIS 10 +0 +0 Cha 3 \u22124 \u22124\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nAmphibious. The toad can breathe air and water.\nStanding Leap. The toad\u2019s Long Jump is up to 20 feet\nand its High Jump is up to 10 feet with or without a\nrunning start.\nActions\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nPiercing damage plus 5 (2d4) Poison damage. If the target is a Medium or smaller creature, it has the Grappled\ncondition (escape DC 12).\nSwallow. The toad swallows a Medium or smaller target\nit is grappling. While swallowed, the target isn\u2019t Grappled but has the Blinded and Restrained conditions,\nand it has Total Cover against attacks and other effects\noutside the toad. In addition, the target takes 10 (3d6)\nAcid damage at the end of each of the toad\u2019s turns. The\ntoad can have only one target swallowed at a time, and\nit can\u2019t use Bite while it has a swallowed target. If the\ntoad dies, a swallowed creature is no longer Restrained\nand can escape from the corpse using 5 feet of movement, exiting with the Prone condition."
+    "stat_block_text": "Giant Toad\nLarge Beast, Unaligned\nAC 11   Initiative +1 (11)\nHP 39 (6d10 + 6)\nSpeed 30 ft., Swim 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 13 +1 +1 Con 13 +1 +1\nInt 2 −4 −4 WIS 10 +0 +0 Cha 3 −4 −4\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages None\nCR 1 (XP 200; PB +2)\nTraits\nAmphibious. The toad can breathe air and water.\nStanding Leap. The toad’s Long Jump is up to 20 feet\nand its High Jump is up to 10 feet with or without a\nrunning start.\nActions\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nPiercing damage plus 5 (2d4) Poison damage. If the target is a Medium or smaller creature, it has the Grappled\ncondition (escape DC 12).\nSwallow. The toad swallows a Medium or smaller target\nit is grappling. While swallowed, the target isn’t Grappled but has the Blinded and Restrained conditions,\nand it has Total Cover against attacks and other effects\noutside the toad. In addition, the target takes 10 (3d6)\nAcid damage at the end of each of the toad’s turns. The\ntoad can have only one target swallowed at a time, and\nit can’t use Bite while it has a swallowed target. If the\ntoad dies, a swallowed creature is no longer Restrained\nand can escape from the corpse using 5 feet of movement, exiting with the Prone condition."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -2063,12 +2401,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-e-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2142,7 +2493,11 @@
     "actions": [
      {
       "name": "Bite",
-      "text": "Melee Attack Roll: +5 (with Advantage if the target is Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 3 (1d6) Acid damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13). Acid Spray (Recharge 6). Dexterity Saving Throw: DC 12, each creature in a 30-foot-long, 5-foot-wide Line. Failure: 14 (4d6) Acid damage. Success: Half damage"
+      "text": "Melee Attack Roll: +5 (with Advantage if the target is Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 3 (1d6) Acid damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 13)."
+     },
+     {
+      "name": "Acid Spray (Recharge 6)",
+      "text": "Dexterity Saving Throw: DC 12, each creature in a 30-foot-long, 5-foot-wide Line. Failure: 14 (4d6) Acid damage. Success: Half damage"
      }
     ],
     "bonus_actions": [],
@@ -2152,7 +2507,7 @@
      "Senses": "Darkvision 60 ft., Tremorsense 60 ft.; Passive Perception 11",
      "Languages": "None"
     },
-    "stat_block_text": "Ankheg\nLarge Monstrosity, Unaligned\nAC 14  Initiative +0 (10)\nHP 45 (6d10 + 12)\nSpeed 30 ft., Burrow 10 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 11 +0 +0 Con 14 +2 +2\nInt 1 \u22125 \u22125 WIS 13 +1 +1 Cha 6 \u22122 \u22122\nSenses Darkvision 60 ft., Tremorsense 60 ft.;\nPassive Perception 11\nLanguages None\nCR 2 (XP 450; PB +2)\nTraits\nTunneler. The ankheg can burrow through solid rock\nat half its Burrow Speed and leaves a 10-foot-diameter\ntunnel in its wake.\nActions\nBite. Melee Attack Roll: +5 (with Advantage if the target\nis Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3)\nSlashing damage plus 3 (1d6) Acid damage. If the target\nis a Large or smaller creature, it has the Grappled condition (escape DC 13).\nAcid Spray (Recharge 6). Dexterity Saving Throw: DC\n12, each creature in a 30-foot-long, 5-foot-wide Line.\nFailure: 14 (4d6) Acid damage. Success: Half damage."
+    "stat_block_text": "Ankheg\nLarge Monstrosity, Unaligned\nAC 14  Initiative +0 (10)\nHP 45 (6d10 + 12)\nSpeed 30 ft., Burrow 10 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 11 +0 +0 Con 14 +2 +2\nInt 1 −5 −5 WIS 13 +1 +1 Cha 6 −2 −2\nSenses Darkvision 60 ft., Tremorsense 60 ft.;\nPassive Perception 11\nLanguages None\nCR 2 (XP 450; PB +2)\nTraits\nTunneler. The ankheg can burrow through solid rock\nat half its Burrow Speed and leaves a 10-foot-diameter\ntunnel in its wake.\nActions\nBite. Melee Attack Roll: +5 (with Advantage if the target\nis Grappled by the ankheg), reach 5 ft. Hit: 10 (2d6 + 3)\nSlashing damage plus 3 (1d6) Acid damage. If the target\nis a Large or smaller creature, it has the Grappled condition (escape DC 13).\nAcid Spray (Recharge 6). Dexterity Saving Throw: DC\n12, each creature in a 30-foot-long, 5-foot-wide Line.\nFailure: 14 (4d6) Acid damage. Success: Half damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -2188,12 +2543,41 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Acid Spray",
+     "name": "Acid Spray",
+     "kind": "recharge",
+     "spell_level": null,
+     "max": 1,
+     "available": true,
+     "die": "d6",
+     "recharge_on": [
+      6
+     ],
+     "recover": "start of this creature's turn, d6 in [6]",
+     "rule": "Starts ready. After Acid Spray is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+     "key": "f03-e-01.acid-spray"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-e-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2275,11 +2659,15 @@
      },
      {
       "name": "Bite",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 2 (1d4) Poison damage, and the target has the Poisoned condition until the start of the ettercap\u2019s next turn"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 2 (1d4) Poison damage, and the target has the Poisoned condition until the start of the ettercap’s next turn"
      },
      {
       "name": "Claw",
-      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage. Web Strand (Recharge 5\u20136). Dexterity Saving Throw: DC 12, one Large or smaller creature the ettercap can see within 30 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage)"
+      "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage."
+     },
+     {
+      "name": "Web Strand (Recharge 5–6)",
+      "text": "Dexterity Saving Throw: DC 12, one Large or smaller creature the ettercap can see within 30 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage)"
      }
     ],
     "bonus_actions": [
@@ -2295,7 +2683,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 13",
      "Languages": "None"
     },
-    "stat_block_text": "Ettercap\nMedium Monstrosity, Neutral Evil\nAC 13   Initiative +2 (12)\nHP 44 (8d8 + 8)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 15 +2 +2 Con 13 +1 +1\nInt 7 \u22122 \u22122 WIS 12 +1 +1 Cha 8 \u22121 \u22121\nSkills Perception +3, Stealth +4, Survival +3\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 2 (XP 450; PB +2)\nTraits\nSpider Climb. The ettercap can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nWeb Walker. The ettercap ignores movement restrictions caused by webs, and the ettercap knows\nthe location of any other creature in contact with\nthe same web.\nActions\nMultiattack. The ettercap makes one Bite attack and\none Claw attack.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nPiercing damage plus 2 (1d4) Poison damage, and the\ntarget has the Poisoned condition until the start of the\nettercap\u2019s next turn.\nClaw. Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2)\nSlashing damage.\nWeb Strand (Recharge 5\u20136). Dexterity Saving Throw:\nDC 12, one Large or smaller creature the ettercap can\nsee within 30 feet. Failure: The target has the Restrained\ncondition until the web is destroyed (AC 10; HP 5;\nVulnerability to Fire damage; Immunity to Bludgeoning,\nPoison, and Psychic damage).\nBonus Actions\nReel. The ettercap pulls one creature within 30 feet of\nitself that is Restrained by its Web Strand up to 25 feet\nstraight toward itself."
+    "stat_block_text": "Ettercap\nMedium Monstrosity, Neutral Evil\nAC 13   Initiative +2 (12)\nHP 44 (8d8 + 8)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 14 +2 +2 Dex 15 +2 +2 Con 13 +1 +1\nInt 7 −2 −2 WIS 12 +1 +1 Cha 8 −1 −1\nSkills Perception +3, Stealth +4, Survival +3\nSenses Darkvision 60 ft.; Passive Perception 13\nLanguages None\nCR 2 (XP 450; PB +2)\nTraits\nSpider Climb. The ettercap can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nWeb Walker. The ettercap ignores movement restrictions caused by webs, and the ettercap knows\nthe location of any other creature in contact with\nthe same web.\nActions\nMultiattack. The ettercap makes one Bite attack and\none Claw attack.\nBite. Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2)\nPiercing damage plus 2 (1d4) Poison damage, and the\ntarget has the Poisoned condition until the start of the\nettercap’s next turn.\nClaw. Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2)\nSlashing damage.\nWeb Strand (Recharge 5–6). Dexterity Saving Throw:\nDC 12, one Large or smaller creature the ettercap can\nsee within 30 feet. Failure: The target has the Restrained\ncondition until the web is destroyed (AC 10; HP 5;\nVulnerability to Fire damage; Immunity to Bludgeoning,\nPoison, and Psychic damage).\nBonus Actions\nReel. The ettercap pulls one creature within 30 feet of\nitself that is Restrained by its Web Strand up to 25 feet\nstraight toward itself."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -2331,12 +2719,42 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Web Strand",
+     "name": "Web Strand",
+     "kind": "recharge",
+     "spell_level": null,
+     "max": 1,
+     "available": true,
+     "die": "d6",
+     "recharge_on": [
+      5,
+      6
+     ],
+     "recover": "start of this creature's turn, d6 in [5, 6]",
+     "rule": "Starts ready. After Web Strand is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.",
+     "key": "f03-e-02.web-strand"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-e-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2422,8 +2840,8 @@
     ],
     "bonus_actions": [
      {
-      "name": "Effect",
-      "text": "Divine Aid (3/Day). The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting."
+      "name": "Divine Aid (3/Day)",
+      "text": "The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting."
      }
     ],
     "reactions": [],
@@ -2470,12 +2888,95 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Divine Aid",
+     "name": "Divine Aid",
+     "kind": "shared_spell_pool",
+     "spell_level": null,
+     "max": 3,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "3 cast(s) total, any mix of Bless, Dispel Magic, Healing Word, Lesser Restoration. Not that many of each spell. At 0, weapon attacks and at-will cantrips only.",
+     "key": "f03-e-03.divine-aid",
+     "choices": [
+      {
+       "name": "Bless",
+       "spell_level": 1
+      },
+      {
+       "name": "Dispel Magic",
+       "spell_level": 3
+      },
+      {
+       "name": "Healing Word",
+       "spell_level": 1
+      },
+      {
+       "name": "Lesser Restoration",
+       "spell_level": 2
+      }
+     ],
+     "ability": "Wisdom"
+    },
+    {
+     "key_name": "Light",
+     "name": "Light",
+     "kind": "at_will",
+     "spell_level": 0,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+     "ability": "Wisdom",
+     "save_dc": 13,
+     "key": "f03-e-03.light"
+    },
+    {
+     "key_name": "Thaumaturgy",
+     "name": "Thaumaturgy",
+     "kind": "at_will",
+     "spell_level": 0,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (at will)",
+     "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+     "ability": "Wisdom",
+     "save_dc": 13,
+     "key": "f03-e-03.thaumaturgy"
+    },
+    {
+     "key_name": "Spirit Guardians",
+     "name": "Spirit Guardians",
+     "kind": "daily_spell",
+     "spell_level": 3,
+     "max": 1,
+     "spent": 0,
+     "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+     "rule": "1 per day. Not a slot of spell level 3 that comes back each turn. At 0, do not cast it.",
+     "ability": "Wisdom",
+     "save_dc": 13,
+     "key": "f03-e-03.spirit-guardians"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Spirit Guardians is once per day, not a 3rd-level slot that refills. Divine Aid is three casts total, any mix of Bless, Dispel Magic, Healing Word, or Lesser Restoration, not three of each. At 0, Mace and Radiant Flame only.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-e-04",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2567,7 +3068,7 @@
     "bonus_actions": [
      {
       "name": "Ethereal Jaunt",
-      "text": "The spider teleports from the Material Plane to the Ethereal Plane or vice versa. Pirates"
+      "text": "The spider teleports from the Material Plane to the Ethereal Plane or vice versa."
      }
     ],
     "reactions": [],
@@ -2577,7 +3078,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 10",
      "Languages": "None"
     },
-    "stat_block_text": "Phase Spider\nLarge Monstrosity, Unaligned\nAC 14  Initiative +3 (13)\nHP 45 (7d10 + 7)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 16 +3 +3 Con 12 +1 +1\nInt 6 \u22122 \u22122 WIS 10 +0 +0 Cha 6 \u22122 \u22122\nSkills Stealth +7\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages None\nCR 3 (XP 700; PB +2)\nTraits\nEthereal Sight. The spider can see 60 feet into the Ethereal Plane while on the Material Plane and vice versa.\nSpider Climb. The spider can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nWeb Walker. The spider ignores movement restrictions\ncaused by webs, and the spider knows the location of\nany other creature in contact with the same web.\nActions\nMultiattack. The spider makes two Bite attacks.\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 +\n3) Piercing damage plus 9 (2d8) Poison damage. If this\ndamage reduces the target to 0 Hit Points, the target\nbecomes Stable, and it has the Poisoned condition for 1\nhour. While Poisoned, the target also has the Paralyzed\ncondition.\nBonus Actions\nEthereal Jaunt. The spider teleports from the Material\nPlane to the Ethereal Plane or vice versa.\nPirates"
+    "stat_block_text": "Phase Spider\nLarge Monstrosity, Unaligned\nAC 14  Initiative +3 (13)\nHP 45 (7d10 + 7)\nSpeed 30 ft., Climb 30 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 15 +2 +2 Dex 16 +3 +3 Con 12 +1 +1\nInt 6 −2 −2 WIS 10 +0 +0 Cha 6 −2 −2\nSkills Stealth +7\nSenses Darkvision 60 ft.; Passive Perception 10\nLanguages None\nCR 3 (XP 700; PB +2)\nTraits\nEthereal Sight. The spider can see 60 feet into the Ethereal Plane while on the Material Plane and vice versa.\nSpider Climb. The spider can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nWeb Walker. The spider ignores movement restrictions\ncaused by webs, and the spider knows the location of\nany other creature in contact with the same web.\nActions\nMultiattack. The spider makes two Bite attacks.\nBite. Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 +\n3) Piercing damage plus 9 (2d8) Poison damage. If this\ndamage reduces the target to 0 Hit Points, the target\nbecomes Stable, and it has the Poisoned condition for 1\nhour. While Poisoned, the target also has the Paralyzed\ncondition.\nBonus Actions\nEthereal Jaunt. The spider teleports from the Material\nPlane to the Ethereal Plane or vice versa."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -2613,12 +3114,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-e-05",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2705,7 +3219,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 11",
      "Languages": "Common"
     },
-    "stat_block_text": "Manticore\nLarge Monstrosity, Lawful Evil\nAC 14  Initiative +3 (13)\nHP 68 (8d10 + 24)\nSpeed 30 ft., Fly 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 16 +3 +3 Con 17 +3 +3\nInt 7 \u22122 \u22122 WIS 12 +1 +1 Cha 8 \u22121 \u22121\nSenses Darkvision 60 ft.; Passive Perception 11\nLanguages Common\nCR 3 (XP 700; PB +2)\nActions\nMultiattack. The manticore makes three attacks, using\nRend or Tail Spike in any combination.\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nSlashing damage.\nTail Spike. Ranged Attack Roll: +5, range 100/200 ft.\nHit: 7 (1d8 + 3) Piercing damage."
+    "stat_block_text": "Manticore\nLarge Monstrosity, Lawful Evil\nAC 14  Initiative +3 (13)\nHP 68 (8d10 + 24)\nSpeed 30 ft., Fly 50 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 17 +3 +3 Dex 16 +3 +3 Con 17 +3 +3\nInt 7 −2 −2 WIS 12 +1 +1 Cha 8 −1 −1\nSenses Darkvision 60 ft.; Passive Perception 11\nLanguages Common\nCR 3 (XP 700; PB +2)\nActions\nMultiattack. The manticore makes three attacks, using\nRend or Tail Spike in any combination.\nRend. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3)\nSlashing damage.\nTail Spike. Ranged Attack Roll: +5, range 100/200 ft.\nHit: 7 (1d8 + 3) Piercing damage."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -2741,12 +3255,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-b-01",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2836,7 +3363,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 14",
      "Languages": "Giant"
     },
-    "stat_block_text": "Ettin\nLarge Giant, Chaotic Evil\nAC 12   Initiative \u22121 (9)\nHP 85 (10d10 + 30)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 21 +5 +5 Dex 8 \u22121 \u22121 Con 17 +3 +3\nInt 6 \u22122 \u22122 WIS 10 +0 +0 Cha 8 \u22121 \u22121\nSkills Perception +4\nImmunities Blinded, Charmed, Deafened, Frightened,\nStunned, Unconscious\nGear Battleaxe, Morningstar\nSenses Darkvision 60 ft.; Passive Perception 14\nLanguages Giant\nCR 4 (XP 1,100; PB +2)\nActions\nMultiattack. The ettin makes one Battleaxe attack and\none Morningstar attack.\nBattleaxe. Melee Attack Roll: +7 , reach 5 ft. Hit: 14\n(2d8 + 5) Slashing damage. If the target is a Large or\nsmaller creature, it has the Prone condition.\nMorningstar. Melee Attack Roll: +7 , reach 5 ft. Hit: 14\n(2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end\nof its next turn."
+    "stat_block_text": "Ettin\nLarge Giant, Chaotic Evil\nAC 12   Initiative −1 (9)\nHP 85 (10d10 + 30)\nSpeed 40 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 21 +5 +5 Dex 8 −1 −1 Con 17 +3 +3\nInt 6 −2 −2 WIS 10 +0 +0 Cha 8 −1 −1\nSkills Perception +4\nImmunities Blinded, Charmed, Deafened, Frightened,\nStunned, Unconscious\nGear Battleaxe, Morningstar\nSenses Darkvision 60 ft.; Passive Perception 14\nLanguages Giant\nCR 4 (XP 1,100; PB +2)\nActions\nMultiattack. The ettin makes one Battleaxe attack and\none Morningstar attack.\nBattleaxe. Melee Attack Roll: +7 , reach 5 ft. Hit: 14\n(2d8 + 5) Slashing damage. If the target is a Large or\nsmaller creature, it has the Prone condition.\nMorningstar. Melee Attack Roll: +7 , reach 5 ft. Hit: 14\n(2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end\nof its next turn."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -2872,12 +3399,25 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Boss card for a random draw that fits the rules/70 cap. It does not replace a boss already printed on a Day page. A dead boss does not auto-clear other encounters.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-b-02",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -2963,11 +3503,15 @@
      },
      {
       "name": "Etherealness",
-      "text": "The ghost casts the Etherealness spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can\u2019t affect or be affected by anything on the other plane"
+      "text": "The ghost casts the Etherealness spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can’t affect or be affected by anything on the other plane"
      },
      {
       "name": "Horrific Visage",
-      "text": "Wisdom Saving Throw: DC 13, each creature in a 60-foot Cone that can see the ghost and isn\u2019t an Undead. Failure: 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost\u2019s next turn. Success: The target is immune to this ghost\u2019s Horrific Visage for 24 hours. Possession (Recharge 6). Charisma Saving Throw: DC 13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can\u2019t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost\u2019s game statistics are the same, except it uses the possessed target\u2019s Speed, as well as the target\u2019s Strength, Dexterity, and Constitution modifiers. The possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost\u2019s Possession for 24 hours. Success: The target is immune to this ghost\u2019s Possession for 24 hours"
+      "text": "Wisdom Saving Throw: DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. Failure: 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. Success: The target is immune to this ghost’s Horrific Visage for 24 hours."
+     },
+     {
+      "name": "Possession (Recharge 6)",
+      "text": "Charisma Saving Throw: DC 13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. The possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. Success: The target is immune to this ghost’s Possession for 24 hours"
      }
     ],
     "bonus_actions": [],
@@ -2979,7 +3523,7 @@
      "Senses": "Darkvision 60 ft.; Passive Perception 11",
      "Languages": "Common plus one other language"
     },
-    "stat_block_text": "Ghost\nMedium Undead, Neutral\nAC 11  Initiative +1 (11)\nHP 45 (10d8)\nSpeed 5 ft., Fly 40 ft. (hover)\nMOD SAVE MOD SAVE MOD SAVE\nStr 7 \u22122 \u22122 Dex 13 +1 +1 Con 10 +0 +0\nInt 10 +0 +0 WIS 12 +1 +1 Cha 17 +3 +3\nResistances Acid, Bludgeoning, Cold, Fire, Lightning,\nPiercing, Slashing, Thunder\nImmunities Necrotic, Poison; Charmed, Exhaustion,\nFrightened, Grappled, Paralyzed, Petrified, Poisoned,\nProne, Restrained\nSenses Darkvision 60 ft.; Passive Perception 11\nLanguages Common plus one other language\nCR 4 (XP 1,100; PB +2)\nTraits\nEthereal Sight. The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane.\nIncorporeal Movement. The ghost can move through\nother creatures and objects as if they were Difficult\nTerrain. It takes 5 (1d10) Force damage if it ends its turn\ninside an object.\nActions\nMultiattack. The ghost makes two Withering\nTouch attacks.\nWithering Touch. Melee Attack Roll: +5, reach 5 ft.\nHit: 19 (3d10 + 3) Necrotic damage.\nEtherealness. The ghost casts the Etherealness spell,\nrequiring no spell components and using Charisma as\nthe spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa,\nbut it can\u2019t affect or be affected by anything on the\nother plane.\nHorrific Visage. Wisdom Saving Throw: DC 13, each\ncreature in a 60-foot Cone that can see the ghost and\nisn\u2019t an Undead. Failure: 10 (2d6 + 3) Psychic damage,\nand the target has the Frightened condition until the\nstart of the ghost\u2019s next turn. Success: The target is immune to this ghost\u2019s Horrific Visage for 24 hours.\nPossession (Recharge 6). Charisma Saving Throw: DC\n13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition\nand loses control of its body. The ghost now controls\nthe body, but the target retains awareness. The ghost\ncan\u2019t be targeted by any attack, spell, or other effect,\nexcept ones that specifically target Undead. The ghost\u2019s\ngame statistics are the same, except it uses the possessed target\u2019s Speed, as well as the target\u2019s Strength,\nDexterity, and Constitution modifiers.\nThe possession lasts until the body drops to 0 Hit\nPoints or the ghost leaves as a Bonus Action. When the\npossession ends, the ghost appears in an unoccupied\nspace within 5 feet of the target, and the target is immune to this ghost\u2019s Possession for 24 hours.\nSuccess: The target is immune to this ghost\u2019s Possession for 24 hours."
+    "stat_block_text": "Ghost\nMedium Undead, Neutral\nAC 11  Initiative +1 (11)\nHP 45 (10d8)\nSpeed 5 ft., Fly 40 ft. (hover)\nMOD SAVE MOD SAVE MOD SAVE\nStr 7 −2 −2 Dex 13 +1 +1 Con 10 +0 +0\nInt 10 +0 +0 WIS 12 +1 +1 Cha 17 +3 +3\nResistances Acid, Bludgeoning, Cold, Fire, Lightning,\nPiercing, Slashing, Thunder\nImmunities Necrotic, Poison; Charmed, Exhaustion,\nFrightened, Grappled, Paralyzed, Petrified, Poisoned,\nProne, Restrained\nSenses Darkvision 60 ft.; Passive Perception 11\nLanguages Common plus one other language\nCR 4 (XP 1,100; PB +2)\nTraits\nEthereal Sight. The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane.\nIncorporeal Movement. The ghost can move through\nother creatures and objects as if they were Difficult\nTerrain. It takes 5 (1d10) Force damage if it ends its turn\ninside an object.\nActions\nMultiattack. The ghost makes two Withering\nTouch attacks.\nWithering Touch. Melee Attack Roll: +5, reach 5 ft.\nHit: 19 (3d10 + 3) Necrotic damage.\nEtherealness. The ghost casts the Etherealness spell,\nrequiring no spell components and using Charisma as\nthe spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa,\nbut it can’t affect or be affected by anything on the\nother plane.\nHorrific Visage. Wisdom Saving Throw: DC 13, each\ncreature in a 60-foot Cone that can see the ghost and\nisn’t an Undead. Failure: 10 (2d6 + 3) Psychic damage,\nand the target has the Frightened condition until the\nstart of the ghost’s next turn. Success: The target is immune to this ghost’s Horrific Visage for 24 hours.\nPossession (Recharge 6). Charisma Saving Throw: DC\n13, one Humanoid the ghost can see within 5 feet. Failure: The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition\nand loses control of its body. The ghost now controls\nthe body, but the target retains awareness. The ghost\ncan’t be targeted by any attack, spell, or other effect,\nexcept ones that specifically target Undead. The ghost’s\ngame statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength,\nDexterity, and Constitution modifiers.\nThe possession lasts until the body drops to 0 Hit\nPoints or the ghost leaves as a Bonus Action. When the\npossession ends, the ghost appears in an unoccupied\nspace within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours.\nSuccess: The target is immune to this ghost’s Possession for 24 hours."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -3015,12 +3559,52 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [
+    {
+     "key_name": "Possession",
+     "name": "Possession",
+     "kind": "recharge",
+     "spell_level": null,
+     "max": 1,
+     "available": true,
+     "die": "d6",
+     "recharge_on": [
+      6
+     ],
+     "recover": "start of this creature's turn, d6 in [6]",
+     "rule": "Starts ready. After Possession is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+     "key": "f03-b-02.possession"
+    },
+    {
+     "key_name": "Etherealness",
+     "name": "Etherealness",
+     "kind": "at_will_innate",
+     "spell_level": 7,
+     "max": null,
+     "spent": 0,
+     "recover": "n/a (printed without a daily cap)",
+     "rule": "Printed without a daily cap. It is not a spell slot. Do not add slots, and do not treat it as a repeating damage spell unless the action itself deals damage.",
+     "key": "f03-b-02.etherealness"
+    }
+   ],
+   "when_empty": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Etherealness is printed as an at-will plane step, not a damage spell and not a slot. Do not add a slot table. Possession is recharge 6. Horrific Visage is not a slot; a success makes that creature immune for 24 hours, as printed.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   },
   {
    "id": "f03-b-03",
-   "schema": "cursor-dcc-cards/monster/0.1.0",
+   "schema": "cursor-dcc-cards/monster/0.2.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 3,
@@ -3092,7 +3676,7 @@
      },
      {
       "name": "Corrosive Form",
-      "text": "A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting the pudding and dealing any damage. Any nonmagical weapon takes a cumulative \u22121 penalty to attack rolls immediately after dealing damage to the pudding and coming into contact with it. The weapon is destroyed if the penalty reaches \u22125. The penalty can be removed by casting the Mending spell on the weapon. In 1 minute, the pudding can eat through 2 feet of nonmagical wood or metal"
+      "text": "A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting the pudding and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the pudding and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the Mending spell on the weapon. In 1 minute, the pudding can eat through 2 feet of nonmagical wood or metal"
      },
      {
       "name": "Spider Climb",
@@ -3102,14 +3686,14 @@
     "actions": [
      {
       "name": "Dissolving Pseudopod",
-      "text": "Melee Attack Roll: +5, reach 10 ft. Hit: 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a \u22121 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor"
+      "text": "Melee Attack Roll: +5, reach 10 ft. Hit: 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor"
      }
     ],
     "bonus_actions": [],
     "reactions": [
      {
       "name": "Split",
-      "text": "Trigger: While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding\u2019s Hit Points are divided evenly between the new puddings (round down)"
+      "text": "Trigger: While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down)"
      }
     ],
     "legendary_actions": [],
@@ -3118,7 +3702,7 @@
      "Senses": "Blindsight 60 ft.; Passive Perception 8",
      "Languages": "None"
     },
-    "stat_block_text": "Black Pudding\nLarge Ooze, Unaligned\nAC 7  Initiative \u22123 (7)\nHP 68 (8d10 + 24)\nSpeed 20 ft., Climb 20 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 16 +3 +3 Dex 5 \u22123 \u22123 Con 16 +3 +3\nInt 1 \u22125 \u22125 WIS 6 \u22122 \u22122 Cha 1 \u22125 \u22125\nImmunities Acid, Cold, Lightning, Slashing; Charmed,\nDeafened, Exhaustion, Frightened, Grappled, Prone,\nRestrained\nSenses Blindsight 60 ft.; Passive Perception 8\nLanguages None\nCR 4 (XP 1,100; PB +2)\nTraits\nAmorphous. The pudding can move through a space\nas narrow as 1 inch without expending extra movement to do so.\nCorrosive Form. A creature that hits the pudding with a\nmelee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting\nthe pudding and dealing any damage. Any nonmagical\nweapon takes a cumulative \u22121 penalty to attack rolls\nimmediately after dealing damage to the pudding and\ncoming into contact with it. The weapon is destroyed if\nthe penalty reaches \u22125. The penalty can be removed by\ncasting the Mending spell on the weapon.\nIn 1 minute, the pudding can eat through 2 feet of\nnonmagical wood or metal.\nSpider Climb. The pudding can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nActions\nDissolving Pseudopod. Melee Attack Roll: +5, reach\n10 ft. Hit: 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a \u22121 penalty to the AC it\noffers. The armor is destroyed if the penalty reduces its\nAC to 10. The penalty can be removed by casting the\nMending spell on the armor.\nReactions\nSplit. Trigger: While the pudding is Large or Medium\nand has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The\npudding splits into two new Black Puddings. Each new\npudding is one size smaller than the original pudding\nand acts on its Initiative. The original pudding\u2019s Hit\nPoints are divided evenly between the new puddings\n(round down)."
+    "stat_block_text": "Black Pudding\nLarge Ooze, Unaligned\nAC 7  Initiative −3 (7)\nHP 68 (8d10 + 24)\nSpeed 20 ft., Climb 20 ft.\nMOD SAVE MOD SAVE MOD SAVE\nStr 16 +3 +3 Dex 5 −3 −3 Con 16 +3 +3\nInt 1 −5 −5 WIS 6 −2 −2 Cha 1 −5 −5\nImmunities Acid, Cold, Lightning, Slashing; Charmed,\nDeafened, Exhaustion, Frightened, Grappled, Prone,\nRestrained\nSenses Blindsight 60 ft.; Passive Perception 8\nLanguages None\nCR 4 (XP 1,100; PB +2)\nTraits\nAmorphous. The pudding can move through a space\nas narrow as 1 inch without expending extra movement to do so.\nCorrosive Form. A creature that hits the pudding with a\nmelee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting\nthe pudding and dealing any damage. Any nonmagical\nweapon takes a cumulative −1 penalty to attack rolls\nimmediately after dealing damage to the pudding and\ncoming into contact with it. The weapon is destroyed if\nthe penalty reaches −5. The penalty can be removed by\ncasting the Mending spell on the weapon.\nIn 1 minute, the pudding can eat through 2 feet of\nnonmagical wood or metal.\nSpider Climb. The pudding can climb difficult surfaces,\nincluding along ceilings, without needing to make an\nability check.\nActions\nDissolving Pseudopod. Melee Attack Roll: +5, reach\n10 ft. Hit: 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it\noffers. The armor is destroyed if the penalty reduces its\nAC to 10. The penalty can be removed by casting the\nMending spell on the armor.\nReactions\nSplit. Trigger: While the pudding is Large or Medium\nand has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. Response: The\npudding splits into two new Black Puddings. Each new\npudding is one size smaller than the original pudding\nand acts on its Initiative. The original pudding’s Hit\nPoints are divided evenly between the new puddings\n(round down)."
    },
    "fits_rules_70_cr_cap": {
     "L3": {
@@ -3154,7 +3738,20 @@
      "characters/",
      "credit ledgers"
     ],
-    "live_pages_win": "floors/ and rules/70 win if this card disagrees"
+    "live_pages_win": "floors/ and rules/70 win if this card disagrees",
+    "uses_ref": "tracked_uses",
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+   },
+   "tracked_uses": [],
+   "when_empty": null,
+   "house_flavor": {
+    "checked_against": [
+     "rules/10-core-rules-5e.md",
+     "rules/70-encounter-budget-5e.json"
+    ],
+    "floor_frame": "Twenty-day clock (decision 026). Gold boxes can exist from Floor 3. No Platinum on Floors 1–8. Road, fence, and silo are house set dressing. A Long Rest finishes in a saferoom (core saferoom overlay). Live Day pages win if a card disagrees.",
+    "card_note": "Split is a printed reaction with a trigger. It is not a spell. Do not add a daily cap the block does not have.",
+    "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
    }
   }
  ]
