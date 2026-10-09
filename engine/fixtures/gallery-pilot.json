@@ -1,0 +1,23 @@
+{
+  "schema": "cursor-dcc-cards/crawler-state/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "note": "Seat for the Shooting Gallery slice only. Not a live crawler. Never copy this file into characters/ or sessions/.",
+  "card": {
+    "id": "gallery-pilot",
+    "player": "",
+    "name": "Gallery Pilot",
+    "species": "",
+    "class": "Rogue",
+    "level": 1,
+    "hp": {"current": 11, "max": 11, "temp": 0},
+    "ac": 14,
+    "speed_ft": 30,
+    "abilities": {"str": 10, "dex": 16, "con": 12, "int": 10, "wis": 10, "cha": 10},
+    "proficiency_bonus": 2,
+    "skills": ["stealth"],
+    "attacks": [
+      {"name": "Shortbow", "to_hit": 5, "damage": "1d6+3", "type": "piercing"}
+    ]
+  }
+}
