@@ -208,7 +208,7 @@ GM_HTML = """<!DOCTYPE html>
   h1 { margin: 0 0 4px; font-size: 22px; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .card { background: #1c222b; border: 1px solid #3d4a5c; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
-  pre { white-space: pre-wrap; font: inherit; margin: 0; }
+  pre, #cards { white-space: pre-wrap; font: inherit; margin: 0; }
   form, .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   input, button, select { font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid #3d4a5c; background: #121418; color: inherit; }
   button { background: #d7c4a3; color: #121418; border: 0; cursor: pointer; }
