@@ -1,0 +1,90 @@
+{
+ "id": "enc-d01-07",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z01",
+ "zone_name": "The Atrium",
+ "name": "The Atrium: Proctor Bell's Meet-and-Greet",
+ "kind": "non-combat (d20 tests)",
+ "source": "floors/f01/day-01.json#enc-d01-07",
+ "routes": [
+  "clever",
+  "dash",
+  "loot"
+ ],
+ "read_aloud": "A glass booth squeals along its ceiling rail and stops in front of you. The wooden fortune-teller inside clacks its jaw and introduces itself as your teacher. It points at a security shutter jammed halfway up, which is apparently the way out.",
+ "narrator_line": "A glass booth squeals along its ceiling rail and stops in front of you.",
+ "layout": "A three-story concrete atrium around a dead fountain, smooth jazz from the ceiling speakers, and a glass booth on ceiling rails holding Proctor Bell, a painted wooden fortune-teller.",
+ "exits": [
+  {
+   "name": "The jammed security shutter, onward to Vent Row (Z2).",
+   "to": "enc-d01-08",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Back to the Intake Hall booths (Z0).",
+   "to": "enc-d01-06",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "The fountain rim (half cover if it ever matters).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "The jammed shutter (Strength (Athletics); check value in 00-overview.md section 5.1).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Sharp-edged fountain coins (Dexterity (Sleight of Hand); section 5.1).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-07",
+  "enemies": [],
+  "quick_run": {
+   "setup": "A dead fountain, smooth jazz, and a fortune-teller booth that glides in to teach d20 tests.",
+   "decision": "Lift the stuck shutter together, read the directory, or pay Proctor Bell for a hint?",
+   "on_success": "The shutter goes up, the System Map shows Z1 to Z6, and the Crawlers move on.",
+   "on_failure": "They fumble the shutter; Proctor Bell sells a hint and the Help action gets them through.",
+   "minutes": 8,
+   "tag": "pacing guide",
+   "cut_short": "One Athletics check with Help for the shutter; skip the fountain and the directory.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Fountain coins (corroded, a sharp edge) and Proctor Bell's one-credit hint (00-overview.md section 5.1).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0079"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

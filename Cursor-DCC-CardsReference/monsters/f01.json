@@ -1,17 +1,17 @@
 {
  "floor": 1,
  "count": 24,
- "schema": "cursor-dcc-cards/0.2.0",
+ "schema": "cursor-dcc-cards/0.3.0",
  "cards": [
   {
    "id": "f01-m-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Duct Rat",
-   "nameplate": "Duct Rat. Level 1. \"Union member of the vents.\"",
+   "display_name": "Ankle-Biting Vent Rat",
+   "nameplate": "Ankle-Biting Vent Rat. Level 1. \"Union member of the vents.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Rat",
    "srd_id": "giant-rat",
@@ -25,7 +25,7 @@
    "what_it_wants": "It wants the crumbs and the ankles.",
    "how_to_cheese": "Hold a doorway. Pack Tactics dies if they cannot stand together.",
    "tactics": "Swarm the nearest ankles. They do not open doors.",
-   "system_line": "Duct Rat. Level 1. Hostile.",
+   "system_line": "Ankle-Biting Vent Rat. Level 1. Hostile.",
    "gm_line": "Something in the vent just filed a grievance with your ankle.",
    "stat_block": {
     "srd_name": "Giant Rat",
@@ -148,7 +148,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Ankle-Biting Vent Rat"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -162,17 +163,45 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Vent Row rats on the floor page carry nothing. Do not hang credits on this corpse. Pack Tactics is the combat lesson.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Duct Rat",
+   "picture": "A cat-sized rat in the ductwork, going for ankles, and it brought friends.",
+   "lore_floor_name": "Vent Rat",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A cat-sized rat in the ductwork, going for ankles, and it brought friends.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 feet. Hit: 5 (1d4 + 3) Piercing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+3",
+       "type": "piercing",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Badge Moth",
-   "nameplate": "Badge Moth. Level 1. \"It clocks in through your neck.\"",
+   "display_name": "Latch-On Ceiling Mosquito",
+   "nameplate": "Latch-On Ceiling Mosquito. Level 1. \"It files your blood under samples.\"",
    "nameplate_level": 1,
    "srd_name": "Stirge",
    "srd_id": "stirge",
@@ -186,7 +215,7 @@
    "what_it_wants": "It wants blood and then a nap.",
    "how_to_cheese": "Pull it off. Do not let a second one sit while you peel the first.",
    "tactics": "Attach, then stop attacking and drink.",
-   "system_line": "Badge Moth. Level 1. Attaches.",
+   "system_line": "Latch-On Ceiling Mosquito. Level 1. Attaches.",
    "gm_line": "Congratulations. You are the open bar.",
    "stat_block": {
     "srd_name": "Stirge",
@@ -303,7 +332,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Latch-On Ceiling Mosquito"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -317,17 +347,45 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Badge Moth",
+   "picture": "A fist-sized mosquito with a drinking-straw nose. It drops off the ceiling, sticks to you, and sips.",
+   "lore_floor_name": "Ceiling Tick",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A fist-sized mosquito with a drinking-straw nose. It drops off the ceiling, sticks to you, and sips.",
+    "attacks": [
+     {
+      "name": "Proboscis",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage, and the stirge attaches to the target. While attached, the stirge can’t make Proboscis attacks, and the target takes 5 (2d4) Necrotic damage at the start of each of the stirge’s turns. The stirge can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the stirge as an action",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+3",
+       "type": "piercing",
+       "average": 6
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Intern with a Lanyard",
-   "nameplate": "Intern with a Lanyard. Level 1. \"Still on probation.\"",
+   "display_name": "Probation Goblin, Plastic Badge",
+   "nameplate": "Probation Goblin, Plastic Badge. Level 1. \"Still on probation.\"",
    "nameplate_level": 1,
    "srd_name": "Goblin Minion",
    "srd_id": "goblin-minion",
@@ -341,7 +399,7 @@
    "what_it_wants": "It wants a veteran to notice it.",
    "how_to_cheese": "They fold if the veteran drops. Focus the one giving orders.",
    "tactics": "Dagger, then Disengage. They screen for the real staff.",
-   "system_line": "Intern with a Lanyard. Level 1. Probationary.",
+   "system_line": "Probation Goblin, Plastic Badge. Level 1. Probationary.",
    "gm_line": "Kill the intern and the show still finds another intern.",
    "stat_block": {
     "srd_name": "Goblin Minion",
@@ -465,7 +523,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Probation Goblin, Plastic Badge"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -479,17 +538,60 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Intern with a Lanyard",
+   "picture": "A small green intern. The badge is real. The job is to get hit first.",
+   "lore_floor_name": "Exit Greeter (Trainee)",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A small green intern. The badge is real. The job is to get hit first.",
+    "attacks": [
+     {
+      "name": "Dagger",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +4, reach 5 ft. or range 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "range_ft": [
+       20,
+       60
+      ],
+      "damage": {
+       "dice": "1d4+2",
+       "type": "piercing",
+       "average": 4
+      }
+     },
+     {
+      "name": "Nimble Escape",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "The goblin takes the Disengage or Hide action",
+      "options": [
+       "disengage",
+       "hide"
+      ]
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Pamphlet Cultist",
-   "nameplate": "Pamphlet Cultist. Level 1. \"Faith, but the pamphlet is the weapon.\"",
+   "display_name": "Hoodie Pamphleteer",
+   "nameplate": "Hoodie Pamphleteer. Level 1. \"Faith, but the pamphlet is the weapon.\"",
    "nameplate_level": 1,
    "srd_name": "Cultist",
    "srd_id": "cultist",
@@ -503,7 +605,7 @@
    "what_it_wants": "It wants a signature and then a sacrifice.",
    "how_to_cheese": "Take the pamphlet away and it is just a nervous person with a knife.",
    "tactics": "Stay in a clump. They chant only if two of them still stand.",
-   "system_line": "Pamphlet Cultist. Level 1. Unregistered faith.",
+   "system_line": "Hoodie Pamphleteer. Level 1. Unregistered faith.",
    "gm_line": "They will explain the end of the world after they stab you. Priorities.",
    "stat_block": {
     "srd_name": "Cultist",
@@ -622,7 +724,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Hoodie Pamphleteer"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -636,17 +739,43 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Pamphlet Cultist",
+   "picture": "A person in a hoodie pressing a pamphlet into your chest. The pamphlet is not the weapon. The knife is.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A person in a hoodie pressing a pamphlet into your chest. The pamphlet is not the weapon. The knife is.",
+    "attacks": [
+     {
+      "name": "Ritual Sickle",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 3 (1d4 + 1) Slashing damage plus 1 Necrotic damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+1",
+       "type": "slashing",
+       "average": 3
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Lobby Crab",
-   "nameplate": "Lobby Crab. Level 1. \"The floor hired a crustacean.\"",
+   "display_name": "Suitcase Lobby Crab",
+   "nameplate": "Suitcase Lobby Crab. Level 1. \"The floor hired a crustacean.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Crab",
    "srd_id": "giant-crab",
@@ -660,7 +789,7 @@
    "what_it_wants": "It wants to be left in the fountain.",
    "how_to_cheese": "Grapple is the whole threat. Don't stand in the water with it.",
    "tactics": "Pin one Crawler. Ignore the others until the pin breaks.",
-   "system_line": "Lobby Crab. Level 1. Amphibious.",
+   "system_line": "Suitcase Lobby Crab. Level 1. Amphibious.",
    "gm_line": "Guest services sent a crab. Guest services is not your friend.",
    "stat_block": {
     "srd_name": "Giant Crab",
@@ -783,7 +912,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Suitcase Lobby Crab"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -797,17 +927,43 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Lobby Crab",
+   "picture": "A crab the size of a carry-on, clicking across the lobby tile like it pays rent.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A crab the size of a carry-on, clicking across the lobby tile like it pays rent.",
+    "attacks": [
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 11) from one of two claws",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+1",
+       "type": "bludgeoning",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-06",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Lost Mascot Dog",
-   "nameplate": "Lost Mascot Dog. Level 1. \"Somebody's prop that learned teeth.\"",
+   "display_name": "Foam-Head Mascot Dog",
+   "nameplate": "Foam-Head Mascot Dog. Level 1. \"Somebody's prop that learned teeth.\"",
    "nameplate_level": 1,
    "srd_name": "Mastiff",
    "srd_id": "mastiff",
@@ -821,7 +977,7 @@
    "what_it_wants": "It wants a handler.",
    "how_to_cheese": "A loud noise or a shut door. Do not kick it for sport.",
    "tactics": "Bite the closest. It does not coordinate.",
-   "system_line": "Lost Mascot Dog. Level 1. Unleashed.",
+   "system_line": "Foam-Head Mascot Dog. Level 1. Unleashed.",
    "gm_line": "The costume came off. The dog did not get nicer.",
    "stat_block": {
     "srd_name": "Mastiff",
@@ -939,7 +1095,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Foam-Head Mascot Dog"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -953,17 +1110,43 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Lost Mascot Dog",
+   "picture": "A real mastiff wearing a mascot head it will not take off. The head is the bit. The teeth are not.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A real mastiff wearing a mascot head it will not take off. The head is the bit. The teeth are not.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+1",
+       "type": "piercing",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-07",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Name-Tag Bandit",
-   "nameplate": "Name-Tag Bandit. Level 1. \"Robbery with a hello sticker.\"",
+   "display_name": "Name-Tag Thief",
+   "nameplate": "Name-Tag Thief. Level 1. \"Robbery with a hello sticker.\"",
    "nameplate_level": 1,
    "srd_name": "Bandit",
    "srd_id": "bandit",
@@ -977,7 +1160,7 @@
    "what_it_wants": "It wants the pouch, not the duel.",
    "how_to_cheese": "Drop a coin and walk. They chase loot before they chase you.",
    "tactics": "Crossbow if you run. Scimitar if you stay.",
-   "system_line": "Name-Tag Bandit. Level 1. Armed.",
+   "system_line": "Name-Tag Thief. Level 1. Armed.",
    "gm_line": "Hi, my name is Hands Off. It is not a joke. It is a threat.",
    "stat_block": {
     "srd_name": "Bandit",
@@ -1099,7 +1282,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Name-Tag Thief"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1113,17 +1297,60 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Name-Tag Bandit",
+   "picture": "A person wearing a stolen staff badge, with your wallet already in the other hand.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A person wearing a stolen staff badge, with your wallet already in the other hand.",
+    "attacks": [
+     {
+      "name": "Scimitar",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+1",
+       "type": "slashing",
+       "average": 4
+      }
+     },
+     {
+      "name": "Light Crossbow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +3, range 80/320 ft. Hit: 5 (1d8 + 1) Piercing damage",
+      "to_hit": 3,
+      "range_ft": [
+       80,
+       320
+      ],
+      "damage": {
+       "dice": "1d8+1",
+       "type": "piercing",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-08",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Turnstile Guard",
-   "nameplate": "Turnstile Guard. Level 1. \"The gate is a personality.\"",
+   "display_name": "Flashlight Turnstile Guard",
+   "nameplate": "Flashlight Turnstile Guard. Level 1. \"The gate is a personality.\"",
    "nameplate_level": 1,
    "srd_name": "Guard",
    "srd_id": "guard",
@@ -1137,7 +1364,7 @@
    "what_it_wants": "It wants the line to stay in order.",
    "how_to_cheese": "Go around. Fighting the turnstile is how you donate hit points.",
    "tactics": "Spear from behind the bar. They do not chase past the gate.",
-   "system_line": "Turnstile Guard. Level 1. On post.",
+   "system_line": "Flashlight Turnstile Guard. Level 1. On post.",
    "gm_line": "The gate has a spear and a opinion about your ticket.",
    "stat_block": {
     "srd_name": "Guard",
@@ -1256,7 +1483,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Flashlight Turnstile Guard"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1270,17 +1498,47 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Turnstile Guard",
+   "picture": "A bored guard at a waist-high turnstile, flashlight in your eyes, spear not for show.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A bored guard at a waist-high turnstile, flashlight in your eyes, spear not for show.",
+    "attacks": [
+     {
+      "name": "Spear",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "range_ft": [
+       20,
+       60
+      ],
+      "damage": {
+       "dice": "1d6+1",
+       "type": "piercing",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-09",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Kiosk Bones",
-   "nameplate": "Kiosk Bones. Level 1. \"Customer service after the employee left.\"",
+   "display_name": "Smiling Polo Mannequin",
+   "nameplate": "Smiling Polo Mannequin. Level 1. \"Customer service, wrong number of bones.\"",
    "nameplate_level": 1,
    "srd_name": "Skeleton",
    "srd_id": "skeleton",
@@ -1294,7 +1552,7 @@
    "what_it_wants": "It wants the script finished.",
    "how_to_cheese": "Bludgeoning. A chair leg is a thesis.",
    "tactics": "Shortbow from the booth, then the shortsword if you climb in.",
-   "system_line": "Kiosk Bones. Level 1. Undead.",
+   "system_line": "Smiling Polo Mannequin. Level 1. Undead.",
    "gm_line": "Ask it for a refund. It answers with arrows.",
    "stat_block": {
     "srd_name": "Skeleton",
@@ -1418,7 +1676,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Smiling Polo Mannequin"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1432,17 +1691,62 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Kiosk Bones",
+   "picture": "A department-store dummy in a staff polo. The smile is painted on. The bow is not a toy. There is nobody inside.",
+   "lore_floor_name": "Mannequin Staff",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A department-store dummy in a staff polo. The smile is painted on. The bow is not a toy. There is nobody inside.",
+    "attacks": [
+     {
+      "name": "Shortsword",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+3",
+       "type": "piercing",
+       "average": 6
+      }
+     },
+     {
+      "name": "Shortbow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +5, range 80/320 ft. Hit: 6 (1d6 + 3) Piercing damage",
+      "to_hit": 5,
+      "range_ft": [
+       80,
+       320
+      ],
+      "damage": {
+       "dice": "1d6+3",
+       "type": "piercing",
+       "average": 6
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-10",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Clipboard Goblin",
-   "nameplate": "Clipboard Goblin. Level 1. \"Armed middle management.\"",
+   "display_name": "Pineapple-Club Goblin",
+   "nameplate": "Pineapple-Club Goblin. Level 1. \"Armed middle management.\"",
    "nameplate_level": 1,
    "srd_name": "Goblin Warrior",
    "srd_id": "goblin-warrior",
@@ -1456,7 +1760,7 @@
    "what_it_wants": "It wants the form signed in blood.",
    "how_to_cheese": "Break line of sight. Nimble Escape is a free exit.",
    "tactics": "Shortbow from cover, scimitar if you close.",
-   "system_line": "Clipboard Goblin. Level 1. On the clock.",
+   "system_line": "Pineapple-Club Goblin. Level 1. On the clock.",
    "gm_line": "It has a clipboard. You are the incident report.",
    "stat_block": {
     "srd_name": "Goblin Warrior",
@@ -1584,7 +1888,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Pineapple-Club Goblin"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1598,17 +1903,87 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Clipboard Goblin",
+   "picture": "A small green goblin with a clipboard and a club topped like a pineapple. Kill one and the rest take it personally.",
+   "lore_floor_name": "Exit Greeter",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A small green goblin with a clipboard and a club topped like a pineapple. Kill one and the rest take it personally.",
+    "attacks": [
+     {
+      "name": "Scimitar",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Slashing damage, plus 2 (1d4) Slashing damage if the attack roll had Advantage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "slashing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "1d4",
+        "type": "slashing",
+        "average": 2
+       }
+      ]
+     },
+     {
+      "name": "Shortbow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +4, range 80/320 ft. Hit: 5 (1d6 + 2) Piercing damage, plus 2 (1d4) Piercing damage if the attack roll had Advantage",
+      "to_hit": 4,
+      "range_ft": [
+       80,
+       320
+      ],
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "1d4",
+        "type": "piercing",
+        "average": 2
+       }
+      ]
+     },
+     {
+      "name": "Nimble Escape",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "The goblin takes the Disengage or Hide action",
+      "options": [
+       "disengage",
+       "hide"
+      ]
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-11",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Mop Zombie",
-   "nameplate": "Mop Zombie. Level 1. \"Janitorial, posthumous.\"",
+   "display_name": "Mop-Dragging Janitor Zombie",
+   "nameplate": "Mop-Dragging Janitor Zombie. Level 1. \"Janitorial, posthumous.\"",
    "nameplate_level": 1,
    "srd_name": "Zombie",
    "srd_id": "zombie",
@@ -1622,7 +1997,7 @@
    "what_it_wants": "It wants to finish the hallway.",
    "how_to_cheese": "Undead Fortitude is the trick. Don't tap it. Finish it.",
    "tactics": "Slam the nearest. It does not chase a runner if a body is closer.",
-   "system_line": "Mop Zombie. Level 1. Undead.",
+   "system_line": "Mop-Dragging Janitor Zombie. Level 1. Undead.",
    "gm_line": "It mops. You are the spill.",
    "stat_block": {
     "srd_name": "Zombie",
@@ -1745,7 +2120,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Mop-Dragging Janitor Zombie"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1759,17 +2135,52 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "The mop is set dressing. Tanya Ruiz's corpse cache on the Day page is a separate loot pile, not this zombie.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Mop Zombie",
+   "picture": "A corpse in a janitor shirt, still pushing the mop, still biting whoever steps in the bucket.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A corpse in a janitor shirt, still pushing the mop, still biting whoever steps in the bucket.",
+    "attacks": [
+     {
+      "name": "Slam",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 5 (1d8 + 1) Bludgeoning damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+1",
+       "type": "bludgeoning",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [
+     {
+      "name": "Undead Fortitude",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "If damage reduces the zombie to 0 Hit Points, it makes a Constitution saving throw (DC 5 plus the damage taken) unless the damage is Radiant or from a Critical Hit. On a successful save, the zombie drops to 1 Hit Point instead",
+      "effect": "drop_to_1_on_save"
+     }
+    ],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-m-12",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "mob",
-   "display_name": "Speaker Fungus",
-   "nameplate": "Speaker Fungus. Level 1. \"The intercom grew legs. Sort of.\"",
+   "display_name": "Screaming PA Mushroom",
+   "nameplate": "Screaming PA Mushroom. Level 1. \"The intercom grew legs. Sort of.\"",
    "nameplate_level": 1,
    "srd_name": "Shrieker Fungus",
    "srd_id": "shrieker-fungus",
@@ -1783,7 +2194,7 @@
    "what_it_wants": "It wants to be heard.",
    "how_to_cheese": "Silence it or kill it before the shriek pulls the next room.",
    "tactics": "It does not chase. It screams.",
-   "system_line": "Speaker Fungus. Level 1. Alarm.",
+   "system_line": "Screaming PA Mushroom. Level 1. Alarm.",
    "gm_line": "Turn that down. You cannot. That is the encounter.",
    "stat_block": {
     "srd_name": "Shrieker Fungus",
@@ -1901,7 +2312,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Screaming PA Mushroom"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1915,17 +2327,38 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Shriek is a reaction, not a spell and not a slot. CR 0, XP 0, matching rules/70.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Speaker Fungus",
+   "picture": "A mushroom wired into the ceiling speakers. Get close and it shrieks the whole hallway awake.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A mushroom wired into the ceiling speakers. Get close and it shrieks the whole hallway awake.",
+    "attacks": [
+     {
+      "name": "Shriek",
+      "slot": "reactions",
+      "kind": "reaction",
+      "parsed": true,
+      "raw": "Trigger: A creature or a source of Bright Light moves within 30 feet of the shrieker. Response: The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies",
+      "trigger": "A creature or a source of Bright Light moves within 30 feet of the shrieker",
+      "response": "The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-u-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "unit",
-   "display_name": "Pike Intern",
-   "nameplate": "Pike Intern. Level 1. \"Front rank of orientation.\"",
+   "display_name": "Safety-Vest Pike Intern",
+   "nameplate": "Safety-Vest Pike Intern. Level 1. \"Front rank of orientation.\"",
    "nameplate_level": 1,
    "srd_name": "Warrior Infantry",
    "srd_id": "warrior-infantry",
@@ -1939,7 +2372,7 @@
    "what_it_wants": "It wants the line to hold.",
    "how_to_cheese": "Kill the one in back giving the count. The pikes are dumb without a voice.",
    "tactics": "They hold a lane. They do not split.",
-   "system_line": "Pike Intern. Level 1. Unit.",
+   "system_line": "Safety-Vest Pike Intern. Level 1. Unit.",
    "gm_line": "A hallway full of unpaid spears. Classic onboarding.",
    "stat_block": {
     "srd_name": "Warrior Infantry",
@@ -2062,7 +2495,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Safety-Vest Pike Intern"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2076,17 +2510,47 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Pike Intern",
+   "picture": "A trainee in a neon vest holding a pole with a spearhead zip-tied to the end.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A trainee in a neon vest holding a pole with a spearhead zip-tied to the end.",
+    "attacks": [
+     {
+      "name": "Spear",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +3, reach 5 ft. or range 20/60 ft. Hit: 4 (1d6 + 1) Piercing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "range_ft": [
+       20,
+       60
+      ],
+      "damage": {
+       "dice": "1d6+1",
+       "type": "piercing",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-u-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "unit",
-   "display_name": "Lanyard Blade",
-   "nameplate": "Lanyard Blade. Level 1. \"HR found a use for compliance.\"",
+   "display_name": "Flying Razor Lanyard",
+   "nameplate": "Flying Razor Lanyard. Level 1. \"HR found a use for compliance.\"",
    "nameplate_level": 1,
    "srd_name": "Animated Flying Sword",
    "srd_id": "animated-flying-sword",
@@ -2100,7 +2564,7 @@
    "what_it_wants": "It wants a neck.",
    "how_to_cheese": "It is a sword. It dies to whatever kills a sword. Don't duel it in a closet.",
    "tactics": "Strafe one target. It does not guard a square.",
-   "system_line": "Lanyard Blade. Level 1. Construct.",
+   "system_line": "Flying Razor Lanyard. Level 1. Construct.",
    "gm_line": "Your ID badge just tried to promote itself into your throat.",
    "stat_block": {
     "srd_name": "Animated Flying Sword",
@@ -2218,7 +2682,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Flying Razor Lanyard"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2232,17 +2697,45 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Lanyard Blade",
+   "picture": "An ID badge on a cord that flies by itself and tries to file itself in your neck.",
+   "lore_floor_name": "Lanyard Blade",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "An ID badge on a cord that flies by itself and tries to file itself in your neck.",
+    "attacks": [
+     {
+      "name": "Slash",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+2",
+       "type": "slashing",
+       "average": 6
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-u-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "unit",
-   "display_name": "Snack-Cart Kobold",
-   "nameplate": "Snack-Cart Kobold. Level 1. \"Catering with a spear.\"",
+   "display_name": "Paper-Hat Snack Dog",
+   "nameplate": "Paper-Hat Snack Dog. Level 1. \"Catering with a spear.\"",
    "nameplate_level": 1,
    "srd_name": "Kobold Warrior",
    "srd_id": "kobold-warrior",
@@ -2256,7 +2749,7 @@
    "what_it_wants": "It wants the cart between it and you.",
    "how_to_cheese": "Flip the cart. They pack-tactic only while the cart gives them a buddy.",
    "tactics": "They fight from behind the cart. Half cover if the cart is upright.",
-   "system_line": "Snack-Cart Kobold. Level 1. Unit.",
+   "system_line": "Paper-Hat Snack Dog. Level 1. Unit.",
    "gm_line": "Today's special is stabbing. Sides are also stabbing.",
    "stat_block": {
     "srd_name": "Kobold Warrior",
@@ -2383,7 +2876,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Paper-Hat Snack Dog"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2397,17 +2891,47 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Snack-Cart Kobold",
+   "picture": "A small dog-person in a paper hat at the nacho cart. The cart is a prop. The knife is not.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A small dog-person in a paper hat at the nacho cart. The cart is a prop. The knife is not.",
+    "attacks": [
+     {
+      "name": "Dagger",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +4, reach 5 ft. or range 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "range_ft": [
+       20,
+       60
+      ],
+      "damage": {
+       "dice": "1d4+2",
+       "type": "piercing",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-u-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "unit",
-   "display_name": "Concession Steam",
-   "nameplate": "Concession Steam. Level 1. \"The popcorn machine unionized.\"",
+   "display_name": "Nacho-Cheese Steam Cloud",
+   "nameplate": "Nacho-Cheese Steam Cloud. Level 1. \"The popcorn machine unionized.\"",
    "nameplate_level": 1,
    "srd_name": "Steam Mephit",
    "srd_id": "steam-mephit",
@@ -2421,7 +2945,7 @@
    "what_it_wants": "It wants the room hot and blinded.",
    "how_to_cheese": "Kill it before it dies on purpose. The death burst is the bit.",
    "tactics": "Blind, then explode if bloodied.",
-   "system_line": "Concession Steam. Level 1. Elemental.",
+   "system_line": "Nacho-Cheese Steam Cloud. Level 1. Elemental.",
    "gm_line": "It smells like a county fair and it will end you.",
    "stat_block": {
     "srd_name": "Steam Mephit",
@@ -2553,7 +3077,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Nacho-Cheese Steam Cloud"
    },
    "tracked_uses": [
     {
@@ -2583,17 +3108,102 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Steam Breath is recharge 6, one pending use. Death Burst happens when it dies. Neither is a spell slot.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Concession Steam",
+   "picture": "A little cloud of hot concession steam with a face, claws, and a bad attitude about the heat lamp.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A little cloud of hot concession steam with a face, claws, and a bad attitude about the heat lamp.",
+    "attacks": [
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +2, reach 5 ft. Hit: 2 (1d4) Slashing damage plus 2 (1d4) Fire damage.",
+      "to_hit": 2,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4",
+       "type": "slashing",
+       "average": 2
+      },
+      "extra_damage": [
+       {
+        "dice": "1d4",
+        "type": "fire",
+        "average": 2
+       }
+      ]
+     },
+     {
+      "name": "Steam Breath (Recharge 6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Constitution Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: 5 (2d4) Fire damage, and the target’s Speed decreases by 10 feet until the end of the mephit’s next turn. Success: Half damage only. Failure or Success: Being underwater doesn’t grant Resistance to this Fire damage.",
+      "save": {
+       "ability": "Constitution",
+       "dc": 10,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "2d4",
+       "type": "fire",
+       "average": 5
+      },
+      "recharge": "6"
+     }
+    ],
+    "riders": [
+     {
+      "name": "Death Burst",
+      "slot": "trait",
+      "kind": "save",
+      "parsed": true,
+      "raw": "The mephit explodes when it dies. Dexterity Saving Throw: DC 10, each creature in a 5-foot Emanation originating from the mephit. Failure: 5 (2d4) Fire damage. Success: Half damage",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 10,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "2d4",
+       "type": "fire",
+       "average": 5
+      }
+     }
+    ],
+    "tracked_uses": [
+     {
+      "key_name": "Steam Breath",
+      "name": "Steam Breath",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [6]",
+      "rule": "Starts ready. After Steam Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+      "key": "f01-u-04.steam-breath"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-u-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "unit",
-   "display_name": "Acolyte of the PA",
-   "nameplate": "Acolyte of the PA. Level 1. \"The announcement voice has a congregation.\"",
+   "display_name": "Hold-Music Choir Intern",
+   "nameplate": "Hold-Music Choir Intern. Level 1. \"The announcement voice has a congregation.\"",
    "nameplate_level": 1,
    "srd_name": "Priest Acolyte",
    "srd_id": "priest-acolyte",
@@ -2607,7 +3217,7 @@
    "what_it_wants": "It wants the squad healed.",
    "how_to_cheese": "Drop the acolyte first. The pikes get brave when someone is praying.",
    "tactics": "Stays behind the Pike Interns. Heals the front.",
-   "system_line": "Acolyte of the PA. Level 1. Unit support.",
+   "system_line": "Hold-Music Choir Intern. Level 1. Unit support.",
    "gm_line": "Please hold. Your death is important to us.",
    "stat_block": {
     "srd_name": "Priest Acolyte",
@@ -2739,7 +3349,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Hold-Music Choir Intern"
    },
    "tracked_uses": [
     {
@@ -2806,17 +3417,139 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Cantrips are at will. Divine Aid is one cast of Bless, Healing Word, or Sanctuary, not one of each. At 0, Mace and Radiant Flame only.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Acolyte of the PA",
+   "picture": "A junior priest chanting the hold music, holy symbol in one hand and a mace in the other.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A junior priest chanting the hold music, holy symbol in one hand and a mace in the other.",
+    "attacks": [
+     {
+      "name": "Mace",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Bludgeoning damage plus 2 (1d4) Radiant damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "bludgeoning",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "1d4",
+        "type": "radiant",
+        "average": 2
+       }
+      ]
+     },
+     {
+      "name": "Radiant Flame",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +4, range 60 ft. Hit: 7 (2d6) Radiant damage",
+      "to_hit": 4,
+      "range_ft": [
+       60,
+       60
+      ],
+      "damage": {
+       "dice": "2d6",
+       "type": "radiant",
+       "average": 7
+      }
+     },
+     {
+      "name": "Spellcasting",
+      "slot": "actions",
+      "kind": "spellcasting",
+      "parsed": true,
+      "raw": "The priest casts one of the following spells, using Wisdom as the spellcasting ability: At Will: Light, Thaumaturgy",
+      "at_will": [
+       "Light",
+       "Thaumaturgy"
+      ]
+     },
+     {
+      "name": "Divine Aid (1/Day)",
+      "slot": "bonus_actions",
+      "kind": "spellcasting",
+      "parsed": true,
+      "raw": "The priest casts Bless, Healing Word, or Sanctuary, using the same spellcasting ability as Spellcasting.",
+      "per_day": 1
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Divine Aid",
+      "name": "Divine Aid",
+      "kind": "shared_spell_pool",
+      "spell_level": null,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "1 cast(s) total, any mix of Bless, Healing Word, Sanctuary. Not that many of each spell. At 0, weapon attacks and at-will cantrips only.",
+      "key": "f01-u-05.divine-aid",
+      "choices": [
+       {
+        "name": "Bless",
+        "spell_level": 1
+       },
+       {
+        "name": "Healing Word",
+        "spell_level": 1
+       },
+       {
+        "name": "Sanctuary",
+        "spell_level": 1
+       }
+      ],
+      "ability": "Wisdom"
+     },
+     {
+      "key_name": "Light",
+      "name": "Light",
+      "kind": "at_will",
+      "spell_level": 0,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+      "ability": "Wisdom",
+      "save_dc": null,
+      "key": "f01-u-05.light"
+     },
+     {
+      "key_name": "Thaumaturgy",
+      "name": "Thaumaturgy",
+      "kind": "at_will",
+      "spell_level": 0,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (at will)",
+      "rule": "At will. Not a spell slot. May be repeated. Do not spend a slot for it.",
+      "ability": "Wisdom",
+      "save_dc": null,
+      "key": "f01-u-05.thaumaturgy"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-u-06",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "unit",
-   "display_name": "Hall Centipede",
-   "nameplate": "Hall Centipede. Level 1. \"The baseboard's night shift.\"",
+   "display_name": "Mop-Length Hall Centipede",
+   "nameplate": "Mop-Length Hall Centipede. Level 1. \"The baseboard's night shift.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Centipede",
    "srd_id": "giant-centipede",
@@ -2830,7 +3563,7 @@
    "what_it_wants": "It wants a boot.",
    "how_to_cheese": "Don't let it bite and run. The poison is the whole job.",
    "tactics": "One bite, then they skitter under the bench.",
-   "system_line": "Hall Centipede. Level 1. Unit.",
+   "system_line": "Mop-Length Hall Centipede. Level 1. Unit.",
    "gm_line": "Hundreds of legs, one bad idea, all of them aimed at you.",
    "stat_block": {
     "srd_name": "Giant Centipede",
@@ -2947,7 +3680,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Mop-Length Hall Centipede"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2961,17 +3695,43 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Hall Centipede",
+   "picture": "A centipede as long as a mop handle, in the hallway, with a bite that makes you sick.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A centipede as long as a mop handle, in the hallway, with a bite that makes you sick.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage, and the target has the Poisoned condition until the start of the centipede’s next turn",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+2",
+       "type": "piercing",
+       "average": 4
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-e-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "elite",
-   "display_name": "Empty Mascot Suit",
-   "nameplate": "Empty Mascot Suit. Level 1. \"Foam outside. Felony inside.\"",
+   "display_name": "Walking Empty Pit-Bull Suit",
+   "nameplate": "Walking Empty Pit-Bull Suit. Level 1. \"Foam outside. Felony inside.\"",
    "nameplate_level": 1,
    "srd_name": "Animated Armor",
    "srd_id": "animated-armor",
@@ -2985,7 +3745,7 @@
    "what_it_wants": "It wants to be worn, or to wear you.",
    "how_to_cheese": "It is a construct. Poison is a compliment it ignores. Bludgeon the seams.",
    "tactics": "Slam the closest. It does not speak.",
-   "system_line": "Empty Mascot Suit. Level 1. Elite. Construct.",
+   "system_line": "Walking Empty Pit-Bull Suit. Level 1. Elite. Construct.",
    "gm_line": "The mascot is empty, which is the worst kind of mascot.",
    "stat_block": {
     "srd_name": "Animated Armor",
@@ -3107,7 +3867,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Walking Empty Pit-Bull Suit"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3121,17 +3882,56 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "House set dressing. Numbers stay the SRD block. Nameplate level is flavor.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Empty Mascot Suit",
+   "picture": "An empty pit-bull mascot costume walking around. Foam outside. Nobody inside. It still swings.",
+   "lore_floor_name": "Bruiser the Mascot (Unoccupied)",
+   "lore_floor_note": "Lore's Floor 1 draft name for this body. The live Day page wins if it uses that name.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "An empty pit-bull mascot costume walking around. Foam outside. Nobody inside. It still swings.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The armor makes two Slam attacks",
+      "count": 2,
+      "uses": [
+       "Slam"
+      ]
+     },
+     {
+      "name": "Slam",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Bludgeoning damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "bludgeoning",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-e-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "elite",
-   "display_name": "Breakroom Bugbear",
-   "nameplate": "Breakroom Bugbear. Level 1. \"Took the last chair and the reach.\"",
+   "display_name": "Seven-Foot Hairy Break-Room Bully",
+   "nameplate": "Seven-Foot Hairy Break-Room Bully. Level 1. \"Took the last chair and the reach.\"",
    "nameplate_level": 1,
    "srd_name": "Bugbear Warrior",
    "srd_id": "bugbear-warrior",
@@ -3145,7 +3945,7 @@
    "what_it_wants": "It wants one Crawler in its hands.",
    "how_to_cheese": "Don't stand in a line. Ten feet of reach plus a grab.",
    "tactics": "Grab, then hammer the grabbed one.",
-   "system_line": "Breakroom Bugbear. Level 1. Elite.",
+   "system_line": "Seven-Foot Hairy Break-Room Bully. Level 1. Elite.",
    "gm_line": "Break room means it breaks you. The sign was accurate.",
    "stat_block": {
     "srd_name": "Bugbear Warrior",
@@ -3273,7 +4073,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Seven-Foot Hairy Break-Room Bully"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3287,17 +4088,62 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "The Break Room is a saferoom through Day 3 and goes offline on Day 4. A bugbear here is a fight. It does not grant a rest.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Breakroom Bugbear",
+   "picture": "A huge hairy goblin-cousin who reaches you from a step farther away than your eyes agreed to.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A huge hairy goblin-cousin who reaches you from a step farther away than your eyes agreed to.",
+    "attacks": [
+     {
+      "name": "Grab",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 10 ft. Hit: 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12)",
+      "to_hit": 4,
+      "reach_ft": 10,
+      "damage": {
+       "dice": "2d6+2",
+       "type": "bludgeoning",
+       "average": 9
+      }
+     },
+     {
+      "name": "Light Hammer",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. Hit: 9 (3d4 + 2) Bludgeoning damage",
+      "to_hit": 4,
+      "attack_note": "with Advantage if the target is Grappled by the bugbear",
+      "reach_ft": 10,
+      "range_ft": [
+       20,
+       60
+      ],
+      "damage": {
+       "dice": "3d4+2",
+       "type": "bludgeoning",
+       "average": 9
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-e-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "elite",
-   "display_name": "Greenroom Ghoul",
-   "nameplate": "Greenroom Ghoul. Level 1. \"Talent relations, after the talent died.\"",
+   "display_name": "Craft-Services Corpse",
+   "nameplate": "Craft-Services Corpse. Level 1. \"Talent relations, after the talent died.\"",
    "nameplate_level": 1,
    "srd_name": "Ghoul",
    "srd_id": "ghoul",
@@ -3311,7 +4157,7 @@
    "what_it_wants": "It wants a body that stays down.",
    "how_to_cheese": "Paralysis is the fight. Spread out. Don't all stand in claw range.",
    "tactics": "Claw the softest looking Crawler.",
-   "system_line": "Greenroom Ghoul. Level 1. Elite. Undead.",
+   "system_line": "Craft-Services Corpse. Level 1. Elite. Undead.",
    "gm_line": "The green room is not saferoom. Learn the difference or get eaten in it.",
    "stat_block": {
     "srd_name": "Ghoul",
@@ -3437,7 +4283,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Craft-Services Corpse"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3451,17 +4298,79 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "The Green Room stays open and is where level 2 is granted. This ghoul is not the saferoom.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Greenroom Ghoul",
+   "picture": "A hungry corpse in the green room, eating whoever stopped moving, including the sandwich tray.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A hungry corpse in the green room, eating whoever stopped moving, including the sandwich tray.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The ghoul makes two Bite attacks",
+      "count": 2,
+      "uses": [
+       "Bite"
+      ]
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 3 (1d6) Necrotic damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "1d6",
+        "type": "necrotic",
+        "average": 3
+       }
+      ]
+     },
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+2",
+       "type": "slashing",
+       "average": 4
+      },
+      "on_hit_save": {
+       "ability": "Constitution",
+       "dc": 10
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-e-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "elite",
-   "display_name": "Night-Shift Specter",
-   "nameplate": "Night-Shift Specter. Level 1. \"What the lights do when they go out.\"",
+   "display_name": "Janitor-Vest Night Ghost",
+   "nameplate": "Janitor-Vest Night Ghost. Level 1. \"What the lights do when they go out.\"",
    "nameplate_level": 1,
    "srd_name": "Specter",
    "srd_id": "specter",
@@ -3475,7 +4384,7 @@
    "what_it_wants": "It wants life, specifically yours.",
    "how_to_cheese": "It hates sunlight and turning. If you have neither, don't clump.",
    "tactics": "Life drain the wounded.",
-   "system_line": "Night-Shift Specter. Level 1. Elite. Undead.",
+   "system_line": "Janitor-Vest Night Ghost. Level 1. Elite. Undead.",
    "gm_line": "The lights did not go out. They got up and swung.",
    "stat_block": {
     "srd_name": "Specter",
@@ -3603,7 +4512,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Janitor-Vest Night Ghost"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3617,17 +4527,43 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Lights-Out and Ceiling Ticks are floor hazards. They are not attacks on this stat block. Do not add them.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Night-Shift Specter",
+   "picture": "A see-through night-shift janitor. The mop passes through the floor. The cold does not pass through you.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A see-through night-shift janitor. The mop passes through the floor. The cold does not pass through you.",
+    "attacks": [
+     {
+      "name": "Life Drain",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d6",
+       "type": "necrotic",
+       "average": 7
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-b-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "boss",
-   "display_name": "Concession Spider",
-   "nameplate": "Concession Spider. Level 1. Boss. \"The snack ceiling.\"",
+   "display_name": "Golf-Cart Concession Spider",
+   "nameplate": "Golf-Cart Concession Spider. Level 1. Boss. \"The snack ceiling.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Spider",
    "srd_id": "giant-spider",
@@ -3641,7 +4577,7 @@
    "what_it_wants": "It wants the party webbed and quiet.",
    "how_to_cheese": "Burn or cut the web. Don't all rush the stairs.",
    "tactics": "Web the front, bite the stuck.",
-   "system_line": "Concession Spider. Level 1. Boss.",
+   "system_line": "Golf-Cart Concession Spider. Level 1. Boss.",
    "gm_line": "The concession stand has a manager. The manager has eight legs.",
    "stat_block": {
     "srd_name": "Giant Spider",
@@ -3772,7 +4708,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Golf-Cart Concession Spider"
    },
    "tracked_uses": [
     {
@@ -3803,17 +4740,79 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Legal Level 1 boss cap for four Crawlers (CR 1). Web is recharge 5–6, not every turn.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Concession Spider",
+   "picture": "A spider the size of a golf cart, webbing the gap between the nacho warmers.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A spider the size of a golf cart, webbing the gap between the nacho warmers.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage.",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "piercing",
+       "average": 7
+      },
+      "extra_damage": [
+       {
+        "dice": "2d6",
+        "type": "poison",
+        "average": 7
+       }
+      ]
+     },
+     {
+      "name": "Web (Recharge 5–6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage)",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 13
+      },
+      "recharge": "5-6"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Web",
+      "name": "Web",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       5,
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [5, 6]",
+      "rule": "Starts ready. After Web is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.",
+      "key": "f01-b-01.web"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f01-b-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 1,
    "role": "boss",
-   "display_name": "Podium Ogre",
-   "nameplate": "Podium Ogre. Level 2. Boss. \"Has not taken a break in nine years.\"",
+   "display_name": "Adjunct Smash, Podium Giant",
+   "nameplate": "Adjunct Smash, Podium Giant. Level 2. Boss. \"Tenure denied. Podium granted.\"",
    "nameplate_level": 2,
    "srd_name": "Ogre",
    "srd_id": "ogre",
@@ -3827,7 +4826,7 @@
    "what_it_wants": "It wants the group in front of the podium.",
    "how_to_cheese": "Split. The club is one target. Do not pose for it.",
    "tactics": "Greatclub the clustered, javelin the runner.",
-   "system_line": "Podium Ogre. Level 2. Boss.",
+   "system_line": "Adjunct Smash, Podium Giant. Level 2. Boss.",
    "gm_line": "Orientation is over. The dean is the size of a mistake.",
    "stat_block": {
     "srd_name": "Ogre",
@@ -3949,7 +4948,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Adjunct Smash, Podium Giant"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3963,6 +4963,50 @@
     "floor_frame": "Orientation Pit, five-day clock (decision 026). Nameplate level is flavor; the math is CR. The Break Room is the saferoom through Day 3 and loses service on Day 4. The Green Room stays open and is the level-2 milestone. Boxes open in a saferoom. A Long Rest finishes in a saferoom. Credits, not coins. Dean Thudd on the Day pages is the live Floor 1 boss. These cards do not replace him. A neighborhood boss stopping its own adds is canon staging, not a rule this card enforces. Book-proper mob names stay out of this pack.",
     "card_note": "Legal on the Floor 1 Level 2 boss budget only. The live floor boss is Dean Thudd on the Day pages. Do not field this card as a second dean.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Podium Ogre",
+   "picture": "A ten-foot teacher with a podium for a club. This is not Dean Thudd. The live floor still has the Dean.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A ten-foot teacher with a podium for a club. This is not Dean Thudd. The live floor still has the Dean.",
+    "attacks": [
+     {
+      "name": "Greatclub",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +6, reach 5 ft. Hit: 13 (2d8 + 4) Bludgeoning damage",
+      "to_hit": 6,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d8+4",
+       "type": "bludgeoning",
+       "average": 13
+      }
+     },
+     {
+      "name": "Javelin",
+      "slot": "actions",
+      "kind": "melee_or_ranged",
+      "parsed": true,
+      "raw": "Melee or Ranged Attack Roll: +6, reach 5 ft. or range 30/120 ft. Hit: 11 (2d6 + 4) Piercing damage",
+      "to_hit": 6,
+      "reach_ft": 5,
+      "range_ft": [
+       30,
+       120
+      ],
+      "damage": {
+       "dice": "2d6+4",
+       "type": "piercing",
+       "average": 11
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   }
  ]

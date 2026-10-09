@@ -1,5 +1,5 @@
 # Gear cards
-Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
+Owner: Cursor (R&D) | Status: draft | Version: 0.3.0 | Updated: 2026-10-09
 Summary: 191 gear cards, one per filed reskin. Names and list prices are copied. Mechanics stay the SRD item, or the filed mechanic note on the two canon items.
 
 A bot does not invent a credit price from the list price. Vending still belongs to the Accountant. Bronze boxes may offer mundane gear only after a filed deck names that pull.
@@ -14,13 +14,13 @@ A bot does not invent a credit price from the list price. Vending still belongs 
 | `cdr-gear-light-hammer` | weapon | Claw Hammer, Borrowed Indefinitely | `light-hammer` | 2 gp | Bronze mundane |
 | `cdr-gear-mace` | weapon | Crowbar-Headed Mace | `mace` | 5 gp | Bronze mundane |
 | `cdr-gear-quarterstaff` | weapon | Duct-Taped Mop | `quarterstaff` | 2 sp | Bronze mundane |
-| `cdr-gear-sickle` | weapon | Garden Sickle | `sickle` | 1 gp | Bronze mundane |
+| `cdr-gear-sickle` | weapon | Orange Weed-Whacker Sickle | `sickle` | 1 gp | Bronze mundane |
 | `cdr-gear-spear` | weapon | Broom Handle With a Kitchen Knife Taped On | `spear` | 1 gp | Bronze mundane |
-| `cdr-gear-dart` | weapon | Bar-Room Dart | `dart` | 5 cp | Bronze mundane |
+| `cdr-gear-dart` | weapon | Sticky Bar Dart, Two Short of a Set | `dart` | 5 cp | Bronze mundane |
 | `cdr-gear-light-crossbow` | weapon | Nail Gun With a Homemade Stock | `light-crossbow` | 25 gp | Bronze mundane |
 | `cdr-gear-shortbow` | weapon | Compound Bow From a Sporting-Goods Display | `shortbow` | 25 gp | Bronze mundane |
 | `cdr-gear-sling` | weapon | Slingshot Confiscated From a Kid | `sling` | 1 sp | Bronze mundane |
-| `cdr-gear-battleaxe` | weapon | Wood-Splitting Axe | `battleaxe` | 10 gp | Bronze mundane |
+| `cdr-gear-battleaxe` | weapon | Firewood Axe, People Count as Wood | `battleaxe` | 10 gp | Bronze mundane |
 | `cdr-gear-flail` | weapon | Chain With a Padlock On It | `flail` | 10 gp | Bronze mundane |
 | `cdr-gear-glaive` | weapon | Lawn Edger on a Pole | `glaive` | 20 gp | Bronze mundane |
 | `cdr-gear-greataxe` | weapon | Fire Axe, BREAK GLASS Sticker Intact | `greataxe` | 30 gp | Bronze mundane |
@@ -35,7 +35,7 @@ A bot does not invent a credit price from the list price. Vending still belongs 
 | `cdr-gear-scimitar` | weapon | Curved Souvenir Machete | `scimitar` | 25 gp | Bronze mundane |
 | `cdr-gear-shortsword` | weapon | Pawnshop Shortsword | `shortsword` | 10 gp | Bronze mundane |
 | `cdr-gear-trident` | weapon | Pitchfork From a Haunted Hayride | `trident` | 5 gp | Bronze mundane |
-| `cdr-gear-warhammer` | weapon | Framing Hammer | `warhammer` | 15 gp | Bronze mundane |
+| `cdr-gear-warhammer` | weapon | Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Framing Hammer | `warhammer` | 15 gp | Bronze mundane |
 | `cdr-gear-war-pick` | weapon | Roofing Pick, Gently Used | `war-pick` | 5 gp | Bronze mundane |
 | `cdr-gear-whip` | weapon | Bullwhip From a Costume Shop | `whip` | 2 gp | Bronze mundane |
 | `cdr-gear-blowgun` | weapon | Pea Shooter, Industrial Strength | `blowgun` | 10 gp | Bronze mundane |
@@ -122,20 +122,20 @@ A bot does not invent a credit price from the list price. Vending still belongs 
 | `cdr-gear-net` | gear | Volleyball Net, Reclaimed | `net` | 1 gp | Bronze mundane |
 | `cdr-gear-oil` | gear | Cooking Spray, Industrial Drum Size | `oil` | 1 sp | Bronze mundane |
 | `cdr-gear-paper` | gear | Sticky-Note Pad, Neon | `paper` | 2 sp | Bronze mundane |
-| `cdr-gear-parchment` | gear | Printer Paper | `parchment` | 1 sp | Bronze mundane |
+| `cdr-gear-parchment` | gear | Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Printer Paper | `parchment` | 1 sp | Bronze mundane |
 | `cdr-gear-perfume` | gear | Dressing-Room Body Spray, Industrial Lilac | `perfume` | 5 gp | Bronze mundane |
 | `cdr-gear-basic-poison` | gear | Unlabeled Bottle From Under the Sink | `basic-poison` | 100 gp | Bronze mundane |
 | `cdr-gear-pole` | gear | Telescoping Light-Bulb Pole | `pole` | 5 cp | Bronze mundane |
-| `cdr-gear-iron-pot` | gear | Cast-Iron Pot | `iron-pot` | 2 gp | Bronze mundane |
+| `cdr-gear-iron-pot` | gear | Cast-Iron Pot, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili | `iron-pot` | 2 gp | Bronze mundane |
 | `cdr-gear-potion-of-healing` | gear | Sports Drink, Mystery Flavor | `potion-of-healing` | 50 gp | Bronze mundane |
-| `cdr-gear-pouch` | gear | Ziplock Pouch | `pouch` | 5 sp | Bronze mundane |
+| `cdr-gear-pouch` | gear | Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Ziplock Pouch | `pouch` | 5 sp | Bronze mundane |
 | `cdr-gear-quiver` | gear | Quiver Made From a Cut-Up Backpack | `quiver` | 1 gp | Bronze mundane |
 | `cdr-gear-portable-ram` | gear | Fire-Department Door Ram, Surplus | `portable-ram` | 4 gp | Bronze mundane |
 | `cdr-gear-rations` | gear | Gas-Station Jerky Cubes (Mystery Meat, Sealed Since 2019) | `rations` | 5 sp | Bronze mundane |
 | `cdr-gear-robe` | gear | Sad Hotel Robe | `robe` | 1 gp | Bronze mundane |
 | `cdr-gear-rope` | gear | Extension Cord, Fifty Feet, Unplugged | `rope` | 1 gp | Bronze mundane |
 | `cdr-gear-sack` | gear | Plastic Grocery Bag, Reused 40 Times | `sack` | 1 cp | Bronze mundane |
-| `cdr-gear-shovel` | gear | Snow Shovel | `shovel` | 2 gp | Bronze mundane |
+| `cdr-gear-shovel` | gear | Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Snow Shovel | `shovel` | 2 gp | Bronze mundane |
 | `cdr-gear-signal-whistle` | gear | Hotel Desk Bell, Ding Ding | `signal-whistle` | 5 cp | Bronze mundane |
 | `cdr-gear-spell-scroll-cantrip` | gear | Cantrip Sticky Note | `spell-scroll-cantrip` | 30 gp | Bronze mundane |
 | `cdr-gear-spell-scroll-level-1` | gear | Level 1 Index Card | `spell-scroll-level-1` | 50 gp | Bronze mundane |
@@ -143,7 +143,7 @@ A bot does not invent a credit price from the list price. Vending still belongs 
 | `cdr-gear-spyglass` | gear | Souvenir Telescope From a Scenic Overlook | `spyglass` | 1,000 gp | Bronze mundane |
 | `cdr-gear-string` | gear | Ball of Twine, Kitten-Tested | `string` | 1 sp | Bronze mundane |
 | `cdr-gear-tent` | gear | Dorm-Room Pup Tent | `tent` | 2 gp | Bronze mundane |
-| `cdr-gear-tinderbox` | gear | Matchbook | `tinderbox` | 5 sp | Bronze mundane |
+| `cdr-gear-tinderbox` | gear | Matchbook from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned | `tinderbox` | 5 sp | Bronze mundane |
 | `cdr-gear-torch` | gear | Tiki Torch, Unlicensed | `torch` | 1 cp | Bronze mundane |
 | `cdr-gear-vial` | gear | Sample Vial From the Clinic | `vial` | 1 gp | Bronze mundane |
 | `cdr-gear-waterskin` | gear | Squeeze Water Bottle | `waterskin` | 2 sp | Bronze mundane |
@@ -181,7 +181,7 @@ A bot does not invent a credit price from the list price. Vending still belongs 
 | `cdr-gear-navigators-tools` | tool | Gas-Station GPS Kit | `navigators-tools` | 25 gp | Bronze mundane |
 | `cdr-gear-poisoners-kit` | tool | Pest-Control Tech's Toolkit | `poisoners-kit` | 50 gp | Bronze mundane |
 | `cdr-gear-thieves-tools` | tool | Bobby Pins and a Gift Card | `thieves-tools` | 25 gp | Bronze mundane |
-| `cdr-gear-gaming-set` | tool | Deck of Cards | `gaming-set` | — | no |
+| `cdr-gear-gaming-set` | tool | Deck of Cards, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing | `gaming-set` | — | no |
 | `cdr-gear-dice` | tool | Bag of Mismatched Casino Dice | `dice` | 1 sp | Bronze mundane |
 | `cdr-gear-dragonchess` | tool | Chess Set, Several Kings Missing | `dragonchess` | 1 gp | Bronze mundane |
 | `cdr-gear-playing-cards` | tool | Pinochle Deck, Sticky | `playing-cards` | 5 sp | Bronze mundane |
@@ -208,7 +208,7 @@ List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Furniture, but angrier.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 bludgeoning. light, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -220,7 +220,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Safety first. Not yours, though.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 piercing. finesse, light, thrown, thrown 20/60, mastery Nick. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -232,7 +232,7 @@ List price: 2 sp (lore/tables/item-reskins.json).
 
 Snark. Still has concrete on one end. Nobody asked where the other end has been.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 bludgeoning. two_handed, mastery Push. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -244,7 +244,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. The tag says 'Not For Use'. The floor disagrees.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 slashing. light, thrown, thrown 20/60, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -256,7 +256,7 @@ List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Pointed end goes toward the problem.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 piercing. thrown, thrown 30/120, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -268,7 +268,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. The neighbor wants it back. The neighbor is not on this floor.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 bludgeoning. light, thrown, thrown 20/60, mastery Nick. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -280,7 +280,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Half tool, half apology.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 bludgeoning. mastery Sap. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -292,19 +292,19 @@ List price: 2 sp (lore/tables/item-reskins.json).
 
 Snark. Cleans up after you, one way or another.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 bludgeoning. versatile, versatile 1d8, mastery Topple. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Garden Sickle
+### Orange Weed-Whacker Sickle
 
-`cdr-gear-sickle` · Garden Sickle (Sickle)
+`cdr-gear-sickle` · Orange Weed-Whacker Sickle (Sickle)
 
 List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Please do not harvest the party.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 slashing. light, mastery Nick. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -316,19 +316,19 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Reach, courtesy of a junk drawer.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 piercing. thrown, versatile, thrown 20/60, versatile 1d8, mastery Sap. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Bar-Room Dart
+### Sticky Bar Dart, Two Short of a Set
 
-`cdr-gear-dart` · Bar-Room Dart (Dart)
+`cdr-gear-dart` · Sticky Bar Dart, Two Short of a Set (Dart)
 
 List price: 5 cp (lore/tables/item-reskins.json).
 
 Snark. Sharp, cheap, and always one short in the set.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 piercing. finesse, thrown, thrown 20/60, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -340,7 +340,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Workplace safety training not included.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 piercing. ammunition, loading, two_handed, ammo 80/320, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -352,7 +352,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Floor model. Sold as-is. All sales final.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 piercing. ammunition, two_handed, ammo 80/320, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -364,19 +364,19 @@ List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Returned to nobody. He's fine. Probably.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 bludgeoning. ammunition, ammo 30/120, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Wood-Splitting Axe
+### Firewood Axe, People Count as Wood
 
-`cdr-gear-battleaxe` · Wood-Splitting Axe (Battleaxe)
+`cdr-gear-battleaxe` · Firewood Axe, People Count as Wood (Battleaxe)
 
 List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Firewood is a state of mind.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 slashing. versatile, versatile 1d10, mastery Topple. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -388,7 +388,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. The lock is the weapon. The chain is moral support.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 bludgeoning. mastery Sap. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -400,7 +400,7 @@ List price: 20 gp (lore/tables/item-reskins.json).
 
 Snark. Edges everything. Including your enemies.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d10 slashing. heavy, reach, two_handed, mastery Graze. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -412,7 +412,7 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. In case of emergency, this is the emergency.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d12 slashing. heavy, two_handed, mastery Cleave. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -424,7 +424,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Subtle, like a car door slamming.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 2d6 slashing. heavy, two_handed, mastery Graze. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -436,7 +436,7 @@ List price: 20 gp (lore/tables/item-reskins.json).
 
 Snark. Municipal property. Nobody will check.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d10 slashing. heavy, reach, two_handed, mastery Cleave. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -448,7 +448,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Best used by someone who has recently regretted something.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d10 piercing. heavy, reach, two_handed, mastery Topple. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -460,7 +460,7 @@ List price: 15 gp (lore/tables/item-reskins.json).
 
 Snark. It said STOP. Nobody listened.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 slashing. versatile, versatile 1d10, mastery Sap. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -472,7 +472,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. For problems that cannot be talked down, only knocked down.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 2d6 bludgeoning. heavy, two_handed, mastery Topple. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -484,7 +484,7 @@ List price: 15 gp (lore/tables/item-reskins.json).
 
 Snark. Building codes weep.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 piercing. mastery Sap. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -496,7 +496,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Patriotic and extremely poorly secured.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d10 piercing. heavy, reach, two_handed, mastery Push. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -508,7 +508,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Fancy drapes optional.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 piercing. finesse, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -520,7 +520,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Bought at a gift shop. Used at a dungeon.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 slashing. finesse, light, mastery Nick. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -532,7 +532,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Previous owner's initials still on the grip.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 piercing. finesse, light, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -544,19 +544,19 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Three tines, zero customer reviews.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 piercing. thrown, versatile, thrown 20/60, versatile 1d10, mastery Topple. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Framing Hammer
+### Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Framing Hammer
 
-`cdr-gear-warhammer` · Framing Hammer (Warhammer)
+`cdr-gear-warhammer` · Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Stud-Finder Framing Hammer (Warhammer)
 
 List price: 15 gp (lore/tables/item-reskins.json).
 
 Snark. Builds things. Also unbuilds them.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 bludgeoning. versatile, versatile 1d10, mastery Push. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -568,7 +568,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. The roof was not the only thing it opened.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 piercing. versatile, versatile 1d10, mastery Sap. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -580,7 +580,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Comes with a hat nobody is allowed to wear.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d4 slashing. finesse, reach, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -592,7 +592,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Surprisingly rude for a drinking straw.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1 piercing. ammunition, loading, ammo 25/100, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -604,7 +604,7 @@ List price: 75 gp (lore/tables/item-reskins.json).
 
 Snark. Binds paperwork. Binds enemies to paperwork.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d6 piercing. ammunition, light, loading, ammo 30/120, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -616,7 +616,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. The teacher gave it a C-minus and a restraining order.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d10 piercing. ammunition, heavy, loading, two_handed, ammo 100/400, mastery Push. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -628,7 +628,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Retail value remains a mystery to everyone but the tag.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d8 piercing. ammunition, heavy, two_handed, ammo 150/600, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -640,7 +640,7 @@ List price: 500 gp (lore/tables/item-reskins.json).
 
 Snark. Historically accurate until it wasn't.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d12 piercing. ammunition, loading, two_handed, ammo 40/120, mastery Slow. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -652,7 +652,7 @@ List price: 250 gp (lore/tables/item-reskins.json).
 
 Snark. Meant to start races. Now ends arguments.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1d10 piercing. ammunition, loading, ammo 30/90, mastery Vex. Source: srd/srd.txt#Weapons. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -664,7 +664,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Smells like a stranger's apartment.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 11 + Dex. Stealth disadvantage. Light armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -676,7 +676,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Looks great. Will not save you from asphalt, or from a goblin.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 11 + Dex. Light armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -688,7 +688,7 @@ List price: 45 gp (lore/tables/item-reskins.json).
 
 Snark. Rivets for personality.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 12 + Dex. Light armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -700,7 +700,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. The bear is not consenting but is not objecting either.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 12 + Dex (max 2). Medium armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -712,7 +712,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Fence by day, armor by Floor 1.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 13 + Dex (max 2). Medium armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -724,7 +724,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Convention-grade. Bring a friend to help you sit.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 14 + Dex (max 2). Stealth disadvantage. Medium armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -736,7 +736,7 @@ List price: 400 gp (lore/tables/item-reskins.json).
 
 Snark. Hammered flat by someone with strong feelings.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 14 + Dex (max 2). Medium armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -748,7 +748,7 @@ List price: 750 gp (lore/tables/item-reskins.json).
 
 Snark. Still faintly says 'Ford'.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 15 + Dex (max 2). Stealth disadvantage. Medium armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -760,7 +760,7 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. Hardware aisle couture.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 14. Stealth disadvantage. Heavy armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -772,7 +772,7 @@ List price: 75 gp (lore/tables/item-reskins.json).
 
 Snark. Stops attacks. Also stops you from sitting.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 16. Needs Str 13. Stealth disadvantage. Heavy armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -784,7 +784,7 @@ List price: 200 gp (lore/tables/item-reskins.json).
 
 Snark. Open, close, survive.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 17. Needs Str 15. Stealth disadvantage. Heavy armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -796,7 +796,7 @@ List price: 1,500 gp (lore/tables/item-reskins.json).
 
 Snark. The window still rolls down. Do not roll it down.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. AC 18. Needs Str 15. Stealth disadvantage. Heavy armor. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -808,7 +808,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Traffic law says STOP. Combat law says maybe.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. +2 AC while wielded. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -820,7 +820,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Props department did not authorize this.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Ammunition for bows; 20 arrows. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -832,7 +832,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Still has the store sticker. Still a hazard.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Ammunition for crossbows; 20 bolts. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -844,7 +844,7 @@ List price: 3 gp (lore/tables/item-reskins.json).
 
 Snark. Counted twice, still wrong.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -856,7 +856,7 @@ List price: 4 cp (lore/tables/item-reskins.json).
 
 Snark. Free from nature. Priced by the dungeon anyway.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -868,7 +868,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Fifty tiny reasons to avoid the sewing aisle.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -880,7 +880,7 @@ List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Pick one. The shop will try to sell you three.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Not a box card and not a vending line. Resolve to one of variants before it is shown.
 
@@ -892,7 +892,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Bought for the vibes. Kept for the spellcasting.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Spellcasting focus for Sorcerers, Warlocks, Wizards. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -904,7 +904,7 @@ List price: 20 gp (lore/tables/item-reskins.json).
 
 Snark. Shake it. Something small and sad happens.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Spellcasting focus for Sorcerers, Warlocks, Wizards. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -916,7 +916,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Tunes in to the fundamental frequencies of nonsense.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -928,7 +928,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. A craft project with real consequences.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Quarterstaff (1d6 bludgeoning, Versatile 1d8, Topple) that is also your spellcasting focus. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -940,7 +940,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Takeout never felt so magical.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -952,7 +952,7 @@ List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Everything in it is technically alive.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Not a box card and not a vending line. Resolve to one of variants before it is shown.
 
@@ -964,7 +964,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Nature, but the Dollar-Store cut.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Spellcasting focus for Druids and Rangers. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -976,7 +976,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. The ficus is the senior druid here.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Quarterstaff that is also your Druid spellcasting focus. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -988,7 +988,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Pruned by a trespasser with intentions.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1000,7 +1000,7 @@ List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Protects drivers, travelers, and the occasional Crawler.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Spellcasting focus for Clerics and Paladins. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Not a box card and not a vending line. Resolve to one of variants before it is shown.
 
@@ -1012,7 +1012,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Blessed by a clerk who took a coffee break.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1024,7 +1024,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Faith, sold in packs of two.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1036,7 +1036,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Contains what the label says. Probably.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1048,7 +1048,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Brain freeze is the least of your concerns.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1060,7 +1060,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Extra hot. Extra cheese. Extra problem.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1072,7 +1072,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Chalky cure for dubious meals.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1084,7 +1084,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Someone is missing this. They have bigger problems now.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds 30 lb. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1096,7 +1096,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Sorry, kid. The dungeon needs them.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Spill on a 10 ft square: DC 10 Dex save or fall prone. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1108,7 +1108,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Smells like a decision made years ago.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1120,7 +1120,7 @@ List price: 4 sp (lore/tables/item-reskins.json).
 
 Snark. Plastic grass still in the corners.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1132,7 +1132,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Faint hint of old sneaker. Surprisingly comfortable.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Sleeping gear. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1144,7 +1144,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Rings for attention. Receives none.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1156,7 +1156,7 @@ List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Warm. Damp. Do not ask.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1168,7 +1168,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Lifts heavy things. Drops heavier ones.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1180,7 +1180,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. The margin notes are better than the plot.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. A bound book of lore or prayers. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1192,7 +1192,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Worth five cents somewhere nicer.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1204,7 +1204,7 @@ List price: 5 cp (lore/tables/item-reskins.json).
 
 Snark. Do not look. Do not smell.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1216,7 +1216,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Every parent's nightmare, now weaponized.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Cover a 5 ft square: DC 15 Dex save or take 1 piercing and stop moving. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1228,7 +1228,7 @@ List price: 1 cp (lore/tables/item-reskins.json).
 
 Snark. Mood lighting for the end times.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1240,7 +1240,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. No fish. Many regrets.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1252,7 +1252,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Home to many maps and one confused spider.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1264,7 +1264,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Missing the lock, long on attitude.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 10 HP, DC 20 Strength to burst. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1276,7 +1276,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Whoever owned it left in a hurry.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1288,7 +1288,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Assembly required. Instructions in a language of screaming.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1300,7 +1300,7 @@ List price: 15 gp (lore/tables/item-reskins.json).
 
 Snark. Wear it to look important. Do not get caught.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Clothing; shows wealth and rank. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1312,7 +1312,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Slightly stained. Fully committed.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Clothing; no mechanics. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1324,7 +1324,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Contains everything and nothing, depending on the spell.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds spell material components; usable as a focus where allowed. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1336,7 +1336,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. The head stays on. The questions stay unanswered.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Clothing for performing or disguise. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1348,7 +1348,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Opens cans. Opens crates. Opens opportunities.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Advantage on Strength checks where leverage helps. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1360,7 +1360,7 @@ List price: 2 cp (lore/tables/item-reskins.json).
 
 Snark. Never ask who Dave was.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1372,7 +1372,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Bent into hope.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Attach to a rope; throw to anchor on a ledge. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1384,7 +1384,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. One bandage left and it has teeth marks.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 10 uses. Utilize action: stabilize a creature at 0 HP without a check. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1396,7 +1396,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Served cold. Banishes things warm.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1408,7 +1408,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Catches raccoons, Crawlers, and bad ideas.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1420,7 +1420,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Ink is expensive; leaks are free.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1432,7 +1432,7 @@ List price: 2 cp (lore/tables/item-reskins.json).
 
 Snark. Property of a better establishment.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1444,7 +1444,7 @@ List price: 2 cp (lore/tables/item-reskins.json).
 
 Snark. Once is optimistic.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1456,7 +1456,7 @@ List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Rated for exactly one hopeful Crawler.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1468,7 +1468,7 @@ List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Unplugged and unbothered.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Bright light 15 ft + dim 15 ft; oil lasts 6 hours. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1480,7 +1480,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Everyone gets their moment. Aim it where you want.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1492,7 +1492,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Batteries sold separately. The dungeon doesn't sell batteries.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Bright light 30 ft + dim 30 ft (or dim only when hooded); 1 flask of oil lasts 6 hours. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1504,7 +1504,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Keeps out the problem you do not have yet.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1516,7 +1516,7 @@ List price: 100 gp (lore/tables/item-reskins.json).
 
 Snark. Finds clues, spiders, and your own mistakes.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1528,7 +1528,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Great for detaining. Terrible at being a long-term solution.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Bind a Small/Medium creature: DC 20 Dex to escape, DC 20 Str to break. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1540,7 +1540,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. You are here. Probably. Under the stain.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1552,7 +1552,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Reflects poorly on everyone.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. A small handheld mirror. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1564,7 +1564,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Match point. For the enemy.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1576,7 +1576,7 @@ List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Slips, burns, and ruins pans.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Fuel a lamp for 6 hours, or throw: 5 fire damage on a hit (ignited). Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1588,19 +1588,19 @@ List price: 2 sp (lore/tables/item-reskins.json).
 
 Snark. Reminders. Bright ones. Unwelcome ones.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Printer Paper
+### Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Printer Paper
 
-`cdr-gear-parchment` · Printer Paper (Parchment)
+`cdr-gear-parchment` · Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Shrink-Wrapped Ream of Printer Paper (Parchment)
 
 List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Jam not included. Jam guaranteed.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. One sheet for writing. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1612,7 +1612,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Fragrant enough to qualify as a weapon.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. A vial of scent. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1624,7 +1624,7 @@ List price: 100 gp (lore/tables/item-reskins.json).
 
 Snark. Do not mix with bleach. Do mix with enemies.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1636,19 +1636,19 @@ List price: 5 cp (lore/tables/item-reskins.json).
 
 Snark. Ten feet of poking reach, with a socket on the end.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Cast-Iron Pot
+### Cast-Iron Pot, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili
 
-`cdr-gear-iron-pot` · Cast-Iron Pot (Pot, Iron)
+`cdr-gear-iron-pot` · Cast-Iron Pot, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili, Still Has Chili (Pot, Iron)
 
 List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Heavy, durable, and judgmental.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds 1 gallon. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1660,19 +1660,19 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Tastes like the color blue and a minor miracle.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Ziplock Pouch
+### Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Ziplock Pouch
 
-`cdr-gear-pouch` · Ziplock Pouch (Pouch)
+`cdr-gear-pouch` · Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Suspicious Ziplock Pouch (Pouch)
 
 List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Zip slightly cracked. Shows its age.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds 6 lb of small items. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1684,7 +1684,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Upcycling is a coping strategy.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds 20 arrows or 20 bolts. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1696,7 +1696,7 @@ List price: 4 gp (lore/tables/item-reskins.json).
 
 Snark. Knocks. Then really knocks.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1708,7 +1708,7 @@ List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Chewy, salty, and nobody asks what animal.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 1 day of food, 2 lb. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1720,7 +1720,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Monogrammed. Stolen. Fits nobody.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Clothing; no AC. Source: tables/chargen-5e.json. Not a new number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1732,7 +1732,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Strong enough to climb. Weak enough to disappoint.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. 2 HP, DC 17 Strength to burst. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1744,19 +1744,19 @@ List price: 1 cp (lore/tables/item-reskins.json).
 
 Snark. Holds the world, barely.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Snow Shovel
+### Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Snow Shovel
 
-`cdr-gear-shovel` · Snow Shovel (Shovel)
+`cdr-gear-shovel` · Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Off-Season Snow Shovel (Shovel)
 
 List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Out of season. Out of options.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Dig. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1768,7 +1768,7 @@ List price: 5 cp (lore/tables/item-reskins.json).
 
 Snark. Ring for service. Service is a crawler horde.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1780,7 +1780,7 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. Say it quick before the glue gives out.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1792,7 +1792,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. One use only. Laminate at your own risk.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1804,7 +1804,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Holds doors shut. Holds grudges tighter.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1816,7 +1816,7 @@ List price: 1,000 gp (lore/tables/item-reskins.json).
 
 Snark. Costs a quarter at the overlook. Costs far more here.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1828,7 +1828,7 @@ List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Frayed on one end, claimed by a cat.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1840,19 +1840,19 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Fits two, if they are very good friends.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Sleeps two. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Matchbook
+### Matchbook from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned
 
-`cdr-gear-tinderbox` · Matchbook (Tinderbox)
+`cdr-gear-tinderbox` · Matchbook from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned from a Bar That Burned (Tinderbox)
 
 List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Last match lit. Please do not ask who lit the others.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Light a fire (1 minute, or 1 action for a torch). Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1864,7 +1864,7 @@ List price: 1 cp (lore/tables/item-reskins.json).
 
 Snark. Backyard luau energy in a very dark room.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Bright light 20 ft + dim 20 ft, burns 1 hour. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1876,7 +1876,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Previously contained something. Previously.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1888,7 +1888,7 @@ List price: 2 sp (lore/tables/item-reskins.json).
 
 Snark. BPA status unknown. Dungeon doesn't care.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds 4 pints. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1900,7 +1900,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Spells autosave. Rarely sync.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Holds your wizard spells; ritual-cast from it. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1911,6 +1911,8 @@ Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit
 List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Only works if the pet drinks it. Ordinary healing does nothing for pets. Do not drink it yourself.
+
+Local. Restores hit points of a pet-class creature only; ordinary healing potions and scrolls do nothing on pets (M-090). The pet must drink it (K-121). Suggested dice, mirroring Potion of Healing (2d4 + 2 HP): Syndicate to set. Source: card.mechanics. Not a confirmed roll, so the engine will not invent a number.
 
 Restores hit points of a pet-class creature only; ordinary healing potions and scrolls do nothing on pets (M-090). The pet must drink it (K-121). Suggested dice, mirroring Potion of Healing (2d4 + 2 HP): Syndicate to set.
 
@@ -1924,6 +1926,8 @@ List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Fits one bonded pet in your inventory, safely. Where the pet goes while inside is not our department.
 
+Local. Magical carrier: lets a bonded pet ride in the owner's inventory without harm (I-012, canon: 'the dungeon's equivalent of a pokeball'). Slot and weight rules: Syndicate to set in the pets rule. Source: card.mechanics. Not a confirmed roll, so the engine will not invent a number.
+
 Magical carrier: lets a bonded pet ride in the owner's inventory without harm (I-012, canon: 'the dungeon's equivalent of a pokeball'). Slot and weight rules: Syndicate to set in the pets rule.
 
 Canon item with no SRD entry. price_credits_proposed is copied from the reskin file. It is an Accountant proposal, not a new price, and Syndicate still confirms the pets rule.
@@ -1936,7 +1940,7 @@ List price: 16 gp (lore/tables/item-reskins.json).
 
 Snark. The zipper never quite closes. Neither does the explanation.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Backpack, ball bearings, bell, 10 candles, crowbar, hooded lantern, 7 oil flasks, 5 days rations, 50 ft rope, tinderbox, waterskin. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1948,7 +1952,7 @@ List price: 39 gp (lore/tables/item-reskins.json).
 
 Snark. Network or die. Possibly both.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1960,7 +1964,7 @@ List price: 12 gp (lore/tables/item-reskins.json).
 
 Snark. Everything you need to maintain a dungeon you'll never leave.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Backpack, caltrops, crowbar, 2 oil flasks, 10 days rations, 50 ft rope, tinderbox, 10 torches, waterskin. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1972,7 +1976,7 @@ List price: 40 gp (lore/tables/item-reskins.json).
 
 Snark. One wheel squeaks, as foretold.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Backpack, bedroll, bell, bullseye lantern, 3 costumes, mirror, 8 oil flasks, 9 days rations, tinderbox, waterskin. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1984,7 +1988,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Pack light, smell heavy.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Backpack, bedroll, 2 oil flasks, 10 days rations, 50 ft rope, tinderbox, 10 torches, waterskin. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -1996,7 +2000,7 @@ List price: 33 gp (lore/tables/item-reskins.json).
 
 Snark. Folding chairs sold separately. Guilt included.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Backpack, blanket, holy water, lamp, 7 days rations, robe, tinderbox. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2008,7 +2012,7 @@ List price: 40 gp (lore/tables/item-reskins.json).
 
 Snark. Everything is highlighted. Nothing is understood.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Backpack, book, ink and pen, lamp, 10 oil flasks, parchment, tinderbox. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2020,7 +2024,7 @@ List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Pick a trade. The roll covers it. Mostly.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. A set of artisan's tools; proficiency applies to checks with it. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Not a box card and not a vending line. Resolve to one of variants before it is shown.
 
@@ -2032,7 +2036,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Half the vials say DO NOT.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2044,7 +2048,7 @@ List price: 20 gp (lore/tables/item-reskins.json).
 
 Snark. Smells like bread. Hits like a Tuesday.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2056,7 +2060,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Elegant penmanship at a 2-for-1.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Fine writing kit; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2068,7 +2072,7 @@ List price: 8 gp (lore/tables/item-reskins.json).
 
 Snark. The tape measure is a suggestion.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Build wood structures; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2080,7 +2084,7 @@ List price: 15 gp (lore/tables/item-reskins.json).
 
 Snark. Draw the dungeon. Hope it holds still.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Draw maps; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2092,7 +2096,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Fixes soles. Not souls.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2104,7 +2108,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. The truck is gone. The seasoning remains.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2116,7 +2120,7 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. Hot, delicate, and poorly insured.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2128,7 +2132,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Appraises everything. Values nothing.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2140,7 +2144,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Holes in everything, including the plan.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2152,7 +2156,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Level is crooked. Wall is crooked. Life is crooked.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2164,7 +2168,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Every number is a lie. Color anyway.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2176,7 +2180,7 @@ List price: 10 gp (lore/tables/item-reskins.json).
 
 Snark. Throws pots. Throws up. Same chair.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2188,7 +2192,7 @@ List price: 20 gp (lore/tables/item-reskins.json).
 
 Snark. Heats things up. Smacks things down.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2200,7 +2204,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Somewhere in here is the one spare part you need.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2212,7 +2216,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Binds friends. Binds enemies when finished.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2224,7 +2228,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Carves anything you do not need.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2236,7 +2240,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Transforms you into someone else, badly.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2248,7 +2252,7 @@ List price: 15 gp (lore/tables/item-reskins.json).
 
 Snark. Stamps, pens, tape. The raw materials of fraud.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Forge documents; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2260,7 +2264,7 @@ List price: 5 gp (lore/tables/item-reskins.json).
 
 Snark. Chamomile fixes almost nothing. The bottom layer fixes the rest.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Identify plants, make antitoxin and potions of healing (crafting); proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2272,7 +2276,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Recalculating. Recalculating. Recalculating.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Plot a course and navigate; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2284,7 +2288,7 @@ List price: 50 gp (lore/tables/item-reskins.json).
 
 Snark. Rats not included. Rats are the first victims.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2296,19 +2300,19 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Opens locks. Closes accounts.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Pick locks and disarm traps; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
-### Deck of Cards
+### Deck of Cards, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing
 
-`cdr-gear-gaming-set` · Deck of Cards (Gaming Set)
+`cdr-gear-gaming-set` · Deck of Cards, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing, Ace Already Missing (Gaming Set)
 
 List price: none filed (lore/tables/item-reskins.json).
 
 Snark. Stacked, marked, or just sticky.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Tool kit for a game of your choice; proficiency applies to checks with it. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Not a box card and not a vending line. Resolve to one of variants before it is shown.
 
@@ -2320,7 +2324,7 @@ List price: 1 sp (lore/tables/item-reskins.json).
 
 Snark. Some are loaded. Some are just heavy.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2332,7 +2336,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Replaced with salt shakers. Kings are lucky to be missing.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2344,7 +2348,7 @@ List price: 5 sp (lore/tables/item-reskins.json).
 
 Snark. Do not ask about the stickiness.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2356,7 +2360,7 @@ List price: 1 gp (lore/tables/item-reskins.json).
 
 Snark. Three dragons, one rare, many regrets.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2368,7 +2372,7 @@ List price: none filed (lore/tables/item-reskins.json).
 
 Snark. The song is always the same. The audience is always doomed.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. Tool for performing music; proficiency applies. Source: tables/chargen-5e.json. Not a confirmed roll, so the engine will not invent a number.
 
 Not a box card and not a vending line. Resolve to one of variants before it is shown.
 
@@ -2380,7 +2384,7 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. Sounds like a dirge. Is a dirge.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2392,7 +2396,7 @@ List price: 6 gp (lore/tables/item-reskins.json).
 
 Snark. Street-corner percussion with a side of gravity.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2404,7 +2408,7 @@ List price: 25 gp (lore/tables/item-reskins.json).
 
 Snark. Three strings, one story, no refunds.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2416,7 +2420,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. Still has someone's teeth marks.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2428,7 +2432,7 @@ List price: 3 gp (lore/tables/item-reskins.json).
 
 Snark. Announces you from three rooms away.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2440,7 +2444,7 @@ List price: 35 gp (lore/tables/item-reskins.json).
 
 Snark. Thinks it is a lute. Is fooled by the lighting.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2452,7 +2456,7 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. Plucked from a spa's lobby.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2464,7 +2468,7 @@ List price: 12 gp (lore/tables/item-reskins.json).
 
 Snark. Comes with a tiny plastic Pan. Nobody knows why.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2476,7 +2480,7 @@ List price: 2 gp (lore/tables/item-reskins.json).
 
 Snark. The extension does nothing. The kazoo knows.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.
 
@@ -2488,6 +2492,6 @@ List price: 30 gp (lore/tables/item-reskins.json).
 
 Snark. The fourth string wanted a better life.
 
-Use the SRD 5.2 entry. This card does not restate damage, AC, or weight.
+Local. No attack or AC line is filed for this srd_id. The engine will not invent damage, AC, or weight.
 
 Mundane gear may sit in a Bronze box (core §4.1). This card does not set credit_value. A filed deck has to name it before a bot draws it. List price is not a credit price. Core §5.10 rounds a purchase up to a whole credit per line.

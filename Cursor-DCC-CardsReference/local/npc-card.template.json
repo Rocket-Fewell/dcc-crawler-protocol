@@ -1,0 +1,18 @@
+{
+  "schema": "cursor-dcc-cards/npc/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "note": "Blank. Do not invent a live NPC here. voice must match tables/npc-voices.json before a session uses it.",
+  "card": {
+    "id": "npc-blank",
+    "name": "",
+    "voice": "",
+    "room_id": null,
+    "position": null,
+    "disposition": "",
+    "knows": [],
+    "sells": [],
+    "lines": {"greet": "", "refuse": ""}
+  }
+}

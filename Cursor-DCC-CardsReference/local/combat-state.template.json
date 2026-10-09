@@ -1,0 +1,23 @@
+{
+  "schema": "cursor-dcc-cards/combat-state/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "note": "Lives in the engine's memory for the fight. Not a git commit. One line is consumed by the turn that resolves it.",
+  "card": {
+    "active": false,
+    "round": 1,
+    "turn_index": 0,
+    "order": [],
+    "whose_turn": null,
+    "room_id": null,
+    "surprised": [],
+    "rules": {
+      "only_active_player_acts": true,
+      "question_does_not_end_turn": "anyone saying AI",
+      "join_speech_window_s": 4,
+      "enemies_skip_downed": true,
+      "only_caleb_ends_a_campaign": true
+    }
+  }
+}

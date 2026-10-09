@@ -1,0 +1,124 @@
+{
+ "id": "enc-d01-02",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z07",
+ "zone_name": "The Big Green EXIT (stair bait, dead end)",
+ "name": "The Big Green EXIT (Clock Edition)",
+ "kind": "combat + trap",
+ "source": "floors/f01/day-01.json#enc-d01-02",
+ "routes": [
+  "loot"
+ ],
+ "read_aloud": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
+ "narrator_line": "EXIT. A marked stairwell sign is ahead, with a countdown.",
+ "layout": "A short stair down from a side passage ends at a landing with alcoves on both sides and a floor that is not a floor.",
+ "exits": [
+  {
+   "name": "Back up the stair to the Break Room.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The left alcove hides the Back Office door (found when the Greeters are gone, see 00-overview.md section 5.7).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "No other exit; it is a dead end.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Alcove frames and clipboard stands (half cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Trapdoor over a pit with broken glass (T4, check values in 00-overview.md section 5.7).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Birdsong speaker and fan that make the sign convincing.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-02",
+  "enemies": [
+   {
+    "slot": "greeter-warrior",
+    "srd_id": "goblin-warrior",
+    "spoken_name": "Exit Greeter",
+    "live_name": "Exit Greeter (Goblin Warrior)",
+    "stat_card": "f01-m-10",
+    "counts_by_party_size": {
+     "2": 1,
+     "3": 1,
+     "4": 2
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   },
+   {
+    "slot": "greeter-minion",
+    "srd_id": "goblin-minion",
+    "spoken_name": "Exit Greeter (Trainee)",
+    "live_name": "Exit Greeter (Trainee) (Goblin Minion)",
+    "stat_card": "f01-m-03",
+    "counts_by_party_size": {
+     "2": 2,
+     "3": 3,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "A short stair ends at a landing with a floor that is not a floor, and goblin greeters wait on it.",
+   "decision": "Charge the greeters, or look for a way past the false stairs?",
+   "on_success": "The greeters fall or are bypassed and the Back Office gear is theirs.",
+   "on_failure": "A Crawler drops into the pit and the greeters press from above.",
+   "minutes": 10,
+   "tag": "pacing guide",
+   "cut_short": "Run one round of landing combat and one check for the trapdoor; skip the alcoves.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Greeters' Back Office cache (Jug O' Boom recipe card, goblin oil, worn Tinker's Tools). Not a box and not a permanent magic item.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0084",
+  "ACH-0871",
+  "ACH-0867",
+  "ACH-0861"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

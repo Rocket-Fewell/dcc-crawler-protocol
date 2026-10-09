@@ -1,0 +1,98 @@
+{
+ "id": "enc-d01-01",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z06",
+ "zone_name": "The Break Room (Saferoom A)",
+ "name": "The Break Room: First Saferoom and Briefing",
+ "kind": "non-combat",
+ "source": "floors/f01/day-01.json#enc-d01-01",
+ "routes": [
+  "clever",
+  "dash",
+  "loot"
+ ],
+ "read_aloud": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have 5 days. A day ends at Long Rest or at twenty-four in-game hours. Find the stairwell before the floor ends.",
+ "narrator_line": "ATTENTION, CRAWLERS. The Orientation Pit is on a schedule: you have 5 days.",
+ "layout": "One carpeted saferoom: couch and fridge along one wall, the vending terminal and corkboard on the other, a crackling ceiling speaker.",
+ "exits": [
+  {
+   "name": "Back door to the Shooting Gallery (Z5, a mid zone, closes Day 3), with Z4 beyond it (outer, closes Day 2).",
+   "to": "enc-d01-11",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Side passage to Z7 (the Big Green EXIT).",
+   "to": "enc-d01-02",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Door to Z8 (Mascot Locker Room).",
+   "to": "enc-d01-03",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Couch and fridge (half cover if it ever matters).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; honest saferoom on Floor 1 (00-overview.md section 2 rule 5).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "The coffee (flavor only).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-01",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The Crawlers reach the first saferoom: a Welcome Box each, the clock briefing, and a terminal that sells a spare key.",
+   "decision": "Spend credits on the terminal key now, or leave and earn a key in the Locker Room?",
+   "on_success": "They open their Welcome Boxes, pick a route and leave with a plan, or take the Long Rest here and end Day 1 early.",
+   "on_failure": "They dither; the speaker repeats the day count and the Lights-Out hour starts the pressure.",
+   "minutes": 8,
+   "tag": "pacing guide",
+   "cut_short": "Skip the corkboard rumors; read only the terminal offer and ask for the route.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Welcome Box ceremony: every Crawler receives a Bronze Welcome Box here and opens it during the rest (one tailored pull per overview).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0188",
+  "ACH-0025",
+  "ACH-0899"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

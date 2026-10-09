@@ -1,0 +1,93 @@
+{
+ "id": "enc-d05-04",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 5,
+ "zone": "z11",
+ "zone_name": "The Stairwell",
+ "name": "The Stairwell: The Last Six Hours",
+ "kind": "non-combat (descent)",
+ "source": "floors/f01/day-05.json#enc-d05-04",
+ "routes": [
+  "dash",
+  "loot",
+  "clever"
+ ],
+ "read_aloud": "Stairwell. Last six hours: free descent. Collapse follows the posted hour.",
+ "narrator_line": "Stairwell. Last six hours: free descent.",
+ "layout": "The plain concrete stairwell behind the stage, spiral steps down, an index card on the rail.",
+ "exits": [
+  {
+   "name": "Back to the stage.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Down to Floor 2.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The service stairwell joins here.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Rail and landing.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d05-04",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The stairwell behind the stage in the last six hours of the floor.",
+   "decision": "Descend now with the whole party, or wait for stragglers and risk the clock?",
+   "on_success": "Everyone who reaches a stairwell lives and the Floor Summary posts.",
+   "on_failure": "A Crawler still on the floor at the collapse is dead; the Reprieve does not apply.",
+   "minutes": 6,
+   "tag": "pacing guide",
+   "cut_short": "Count heads, read the six-hours line, and run the descent in one beat.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Stairwell Checkpoint, Floor Summary and descent procedure.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0022",
+  "ACH-0200",
+  "ACH-0180"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

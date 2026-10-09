@@ -1,0 +1,119 @@
+{
+ "id": "enc-d03-02",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 3,
+ "zone": "z08",
+ "zone_name": "Mascot Locker Room corridor (closed zone)",
+ "name": "The Collapsing Hall: Displaced Vermin",
+ "kind": "combat + hazard",
+ "source": "floors/f01/day-03.json#enc-d03-02",
+ "routes": [
+  "dash",
+  "loot"
+ ],
+ "read_aloud": "Zone-close traffic. Hostile units are exiting offline zones into this hall. Clear the corridor.",
+ "narrator_line": "Zone-close traffic. Hostile units are exiting offline zones into this hall.",
+ "layout": "The Locker Room corridor after closure: lockers sealed, lights stuttering, rubbery shutters coming down over side doors, a single clear path to the Green Room.",
+ "exits": [
+  {
+   "name": "Doorway back to the Break Room.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Doorway on to the Green Room (Z9).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Side doors sealed by shutters.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Benches and tipped lockers (half cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Shutters and flickering lights; the main path is never cut.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Rats and Ceiling Ticks displaced from closed zones.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d03-02",
+  "enemies": [
+   {
+    "slot": "displaced-rats",
+    "srd_id": "giant-rat",
+    "spoken_name": "Vent Rat",
+    "live_name": "Vent Rat (Giant Rat)",
+    "stat_card": "f01-m-01",
+    "counts_by_party_size": {
+     "2": 2,
+     "3": 3,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   },
+   {
+    "slot": "displaced-ticks",
+    "srd_id": "stirge",
+    "spoken_name": "Ceiling Tick",
+    "live_name": "Ceiling Tick (Stirge)",
+    "stat_card": "f01-m-02",
+    "counts_by_party_size": {
+     "2": 2,
+     "3": 3,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "A hall of sealed lockers with one clear path to the Green Room, and vermin fleeing the closing zones.",
+   "decision": "Fight through the displaced vermin, or hold the hall so everyone gets clear?",
+   "on_success": "The party reaches the Green Room and the zone behind them is gone.",
+   "on_failure": "The shutters seal and a Crawler is cut off, paying a lost round and a short-rest slot.",
+   "minutes": 8,
+   "tag": "pacing guide",
+   "cut_short": "Run one combat round and one hazard check; skip the second mob group.",
+   "audience": "gm"
+  }
+ },
+ "loot": [],
+ "achievement_ids": [
+  "ACH-0860",
+  "ACH-0861",
+  "ACH-0205"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

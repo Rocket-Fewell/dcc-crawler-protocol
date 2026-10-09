@@ -1,0 +1,91 @@
+{
+ "id": "enc-d05-02",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 5,
+ "zone": "zS",
+ "zone_name": "Zone S: Service Corridor",
+ "name": "Zone S: The Toll Turnstile",
+ "kind": "hazard (non-combat) + toll",
+ "source": "floors/f01/day-05.json#enc-d05-02",
+ "routes": [
+  "clever",
+  "loot"
+ ],
+ "read_aloud": "Service door turnstile. Accepted: credits at posted fee, valid key, or forced entry.",
+ "narrator_line": "Service door turnstile. Accepted: credits at posted fee, valid key, or forced entry.",
+ "layout": "The same utility hall, now with a System turnstile bolted across the service door and a slot that says PLEASE INSERT CREDITS.",
+ "exits": [
+  {
+   "name": "Back to the stage wings.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The service door and the stairs beyond.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Pipe runs.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "The door itself (key, tools, force or toll).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Force is loud: the boss and ushers follow.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d05-02",
+  "enemies": [],
+  "quick_run": {
+   "setup": "A turnstile bolted across the service door says PLEASE INSERT CREDITS.",
+   "decision": "Pay the Detour Tax, pick the lock, force it, or take the stage instead?",
+   "on_success": "The gate opens to the stairs below.",
+   "on_failure": "Forcing it is loud and the Dean arrives.",
+   "minutes": 6,
+   "tag": "pacing guide",
+   "cut_short": "One choice, one roll, one consequence.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Toll at the door: cited at rules/70-encounter-budget-5e.json#floors.1.prices.detour_tax (the Detour Tax, a missed Stairwell key only). House idea (inspired); a missed key costs, never wipes.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0180",
+  "ACH-0177",
+  "ACH-0877"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

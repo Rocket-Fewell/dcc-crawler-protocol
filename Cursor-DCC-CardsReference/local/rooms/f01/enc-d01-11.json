@@ -1,0 +1,106 @@
+{
+ "id": "enc-d01-11",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z05",
+ "zone_name": "Shooting Gallery",
+ "name": "Shooting Gallery: Range and Cover",
+ "kind": "combat",
+ "source": "floors/f01/day-01.json#enc-d01-11",
+ "routes": [
+  "dash",
+  "loot",
+  "clever"
+ ],
+ "read_aloud": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware. Each one raises a pink plastic bow that is very clearly not a toy. Somewhere above, Proctor Bell suggests getting behind things.",
+ "narrator_line": "Behind the far counter, mannequins in staff polos turn their heads all at once, with a sound like a dropped tray of silverware.",
+ "layout": "A carnival shooting gallery scaled up to a big room: plywood cutouts on squeaking conveyors, overturned counters, sandbags, a cash register on a stool, and mannequins in staff polos behind the far counter.",
+ "exits": [
+  {
+   "name": "Back to the Hall of Fair Warnings (Z4).",
+   "to": "enc-d01-10",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "A door with a cartoon coffee cup on it: the Break Room (Z6).",
+   "to": "enc-d01-01",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Counters and sandbags (half cover); the brick prize booth (three-quarters cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Conveyors carry a standing Crawler 10 ft at the end of each round (00-overview.md section 5.5).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "The mannequins shoot from behind the far counter and close to melee only if the Crawlers do.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-11",
+  "enemies": [
+   {
+    "slot": "mannequin",
+    "srd_id": "skeleton",
+    "spoken_name": "Mannequin Staff",
+    "live_name": "Mannequin Staff (Skeleton)",
+    "stat_card": "f01-m-09",
+    "counts_by_party_size": {
+     "2": 2,
+     "3": 2,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "A carnival shooting gallery where smiling mannequins shoot from behind counters.",
+   "decision": "Use cover and close carefully, or rush the counter?",
+   "on_success": "The mannequins fall, the cover lesson lands and the register pays out.",
+   "on_failure": "Crawlers caught in the open take the shots; someone needs a short-rest slot in the Break Room.",
+   "minutes": 12,
+   "tag": "pacing guide",
+   "cut_short": "Run two rounds with cover, then resolve the rest as one group check.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Cash register: credits and a raffle ticket that does nothing (00-overview.md section 5.5).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0867",
+  "ACH-0861",
+  "ACH-0894"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

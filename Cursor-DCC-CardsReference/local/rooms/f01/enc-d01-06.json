@@ -1,0 +1,101 @@
+{
+ "id": "enc-d01-06",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z00",
+ "zone_name": "Surface stairwell, down into Zone 0: Intake Hall",
+ "name": "Cold Open: The Glowing Stairwell",
+ "kind": "non-combat (cold open and intake)",
+ "source": "floors/f01/day-01.json#enc-d01-06",
+ "routes": [
+  "dash",
+  "loot",
+  "clever"
+ ],
+ "read_aloud": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky. The entrances stay open for one hour. Anyone still on the surface when they close remains a Native. Walk down: you become a Crawler the moment your foot touches Floor 1, not one stair sooner.",
+ "narrator_line": "A horn sounds across the city, and stairwells open in the pavement, each firing a beam of light into the sky.",
+ "layout": "Street level: a stairwell has opened in the pavement with a beam of light shooting straight up out of it, and concrete steps lead down into the light. At the bottom is the Intake Hall, a long hallway of identical booths.",
+ "exits": [
+  {
+   "name": "Down the stairs onto Floor 1; the first step onto the floor makes a Crawler (canon M-547).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Back up to the surface, until the one-hour window closes (canon M-539).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The booth doors open onto the Atrium (Z1) once intake is done.",
+   "to": "enc-d01-07",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "None that matters.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "The one-hour entrance window: the System counts it down (canon M-539, M-545).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Standing on the stairs is not entering (canon M-547).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "A stairwell can open under a bystander and swallow them (canon M-548).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-06",
+  "enemies": [],
+  "quick_run": {
+   "setup": "Stairwells with light beams open in the pavement; the one-hour entrance window is running and the characters stand at the top.",
+   "decision": "Go down now, or linger on the surface while the window runs?",
+   "on_success": "Everyone steps onto Floor 1, becomes a Crawler and finishes intake in the booths.",
+   "on_failure": "Someone lingers; the System counts down and the window closes on anyone still up top.",
+   "minutes": 10,
+   "tag": "pacing guide",
+   "cut_short": "Read the System intro, have everyone step down together, and run intake from the booths.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Nothing to loot on the stairs. Start the audience-nickname plant: the hallway screen misspells one Crawler's name (00-overview.md section 8.5).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0079"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

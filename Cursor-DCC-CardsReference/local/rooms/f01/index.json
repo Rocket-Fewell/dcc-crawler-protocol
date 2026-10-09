@@ -1,0 +1,262 @@
+{
+ "schema": "cursor-dcc-cards/room-index/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "floor": 1,
+ "count": 25,
+ "note": "Plugs for a future local engine. floors/f01 day pages win. Nothing here writes sessions or credits.",
+ "rooms": [
+  {
+   "id": "enc-d01-06",
+   "day": 1,
+   "zone": "z00",
+   "name": "Cold Open: The Glowing Stairwell",
+   "kind": "non-combat (cold open and intake)",
+   "file": "local/rooms/f01/enc-d01-06.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d01-07",
+   "day": 1,
+   "zone": "z01",
+   "name": "The Atrium: Proctor Bell's Meet-and-Greet",
+   "kind": "non-combat (d20 tests)",
+   "file": "local/rooms/f01/enc-d01-07.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d01-08",
+   "day": 1,
+   "zone": "z02",
+   "name": "Vent Row: Combat 101",
+   "kind": "combat",
+   "file": "local/rooms/f01/enc-d01-08.json",
+   "stat_cards": [
+    "f01-m-01"
+   ]
+  },
+  {
+   "id": "enc-d01-09",
+   "day": 1,
+   "zone": "z03",
+   "name": "Vending Gore Arcade: The Loot Lesson",
+   "kind": "non-combat (hazard and loot)",
+   "file": "local/rooms/f01/enc-d01-09.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d01-10",
+   "day": 1,
+   "zone": "z04",
+   "name": "Hall of Fair Warnings: Read the Signs",
+   "kind": "trap + rescue",
+   "file": "local/rooms/f01/enc-d01-10.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d01-11",
+   "day": 1,
+   "zone": "z05",
+   "name": "Shooting Gallery: Range and Cover",
+   "kind": "combat",
+   "file": "local/rooms/f01/enc-d01-11.json",
+   "stat_cards": [
+    "f01-m-09"
+   ]
+  },
+  {
+   "id": "enc-d01-01",
+   "day": 1,
+   "zone": "z06",
+   "name": "The Break Room: First Saferoom and Briefing",
+   "kind": "non-combat",
+   "file": "local/rooms/f01/enc-d01-01.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d01-02",
+   "day": 1,
+   "zone": "z07",
+   "name": "The Big Green EXIT (Clock Edition)",
+   "kind": "combat + trap",
+   "file": "local/rooms/f01/enc-d01-02.json",
+   "stat_cards": [
+    "f01-m-10",
+    "f01-m-03"
+   ]
+  },
+  {
+   "id": "enc-d01-03",
+   "day": 1,
+   "zone": "z08",
+   "name": "Mascot Locker Room",
+   "kind": "combat",
+   "file": "local/rooms/f01/enc-d01-03.json",
+   "stat_cards": [
+    "f01-e-01",
+    "f01-u-02"
+   ]
+  },
+  {
+   "id": "enc-d01-04",
+   "day": 1,
+   "zone": "wandering",
+   "name": "Lights-Out: Ceiling Ticks",
+   "kind": "wandering combat + hazard",
+   "file": "local/rooms/f01/enc-d01-04.json",
+   "stat_cards": [
+    "f01-m-02"
+   ]
+  },
+  {
+   "id": "enc-d01-05",
+   "day": 1,
+   "zone": "z09",
+   "name": "Day Close: The Green Room",
+   "kind": "non-combat (rest and day close)",
+   "file": "local/rooms/f01/enc-d01-05.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d02-01",
+   "day": 2,
+   "zone": "z09",
+   "name": "Morning Notice: Outer Zones Close, Stairwell Opens",
+   "kind": "non-combat",
+   "file": "local/rooms/f01/enc-d02-01.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d02-02",
+   "day": 2,
+   "zone": "zS",
+   "name": "Zone S: The Service Door",
+   "kind": "hazard + optional fight",
+   "file": "local/rooms/f01/enc-d02-02.json",
+   "stat_cards": [
+    "f01-m-09"
+   ]
+  },
+  {
+   "id": "enc-d02-03",
+   "day": 2,
+   "zone": "z11",
+   "name": "The Stairwell Threshold: Descend Now or Wait",
+   "kind": "non-combat (choice)",
+   "file": "local/rooms/f01/enc-d02-03.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d03-01",
+   "day": 3,
+   "zone": "z06",
+   "name": "Last Call at the Break Room",
+   "kind": "non-combat",
+   "file": "local/rooms/f01/enc-d03-01.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d03-02",
+   "day": 3,
+   "zone": "z08",
+   "name": "The Collapsing Hall: Displaced Vermin",
+   "kind": "combat + hazard",
+   "file": "local/rooms/f01/enc-d03-02.json",
+   "stat_cards": [
+    "f01-m-01",
+    "f01-m-02"
+   ]
+  },
+  {
+   "id": "enc-d03-03",
+   "day": 3,
+   "zone": "z10",
+   "name": "Stage Wings Recon",
+   "kind": "non-combat scouting (optional fight)",
+   "file": "local/rooms/f01/enc-d03-03.json",
+   "stat_cards": [
+    "f01-m-09"
+   ]
+  },
+  {
+   "id": "enc-d04-01",
+   "day": 4,
+   "zone": "z06",
+   "name": "Service Outage: The Break Room Goes Dark",
+   "kind": "non-combat (hazard)",
+   "file": "local/rooms/f01/enc-d04-01.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d04-02",
+   "day": 4,
+   "zone": "wandering",
+   "name": "Field Rest in the Dark Halls",
+   "kind": "hazard + wandering combat",
+   "file": "local/rooms/f01/enc-d04-02.json",
+   "stat_cards": [
+    "f01-m-02"
+   ]
+  },
+  {
+   "id": "enc-d04-03",
+   "day": 4,
+   "zone": "z10",
+   "name": "Ushers at the Stage Door",
+   "kind": "combat",
+   "file": "local/rooms/f01/enc-d04-03.json",
+   "stat_cards": [
+    "f01-m-09"
+   ]
+  },
+  {
+   "id": "enc-d04-04",
+   "day": 4,
+   "zone": "z09",
+   "name": "Green Room Night Shift",
+   "kind": "non-combat (rest)",
+   "file": "local/rooms/f01/enc-d04-04.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d05-01",
+   "day": 5,
+   "zone": "z09",
+   "name": "Final Morning: Only the Corridor Stays",
+   "kind": "non-combat",
+   "file": "local/rooms/f01/enc-d05-01.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d05-02",
+   "day": 5,
+   "zone": "zS",
+   "name": "Zone S: The Toll Turnstile",
+   "kind": "hazard (non-combat) + toll",
+   "file": "local/rooms/f01/enc-d05-02.json",
+   "stat_cards": []
+  },
+  {
+   "id": "enc-d05-03",
+   "day": 5,
+   "zone": "z10",
+   "name": "Graduation Stage: Dean Thudd",
+   "kind": "boss",
+   "file": "local/rooms/f01/enc-d05-03.json",
+   "stat_cards": [
+    "f01-b-02",
+    "f01-m-09",
+    "f01-e-02"
+   ]
+  },
+  {
+   "id": "enc-d05-04",
+   "day": 5,
+   "zone": "z11",
+   "name": "The Stairwell: The Last Six Hours",
+   "kind": "non-combat (descent)",
+   "file": "local/rooms/f01/enc-d05-04.json",
+   "stat_cards": []
+  }
+ ]
+}

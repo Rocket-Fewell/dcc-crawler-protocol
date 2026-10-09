@@ -1,0 +1,105 @@
+{
+ "id": "enc-d04-03",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 4,
+ "zone": "z10",
+ "zone_name": "Graduation Stage (approach)",
+ "name": "Ushers at the Stage Door",
+ "kind": "combat",
+ "source": "floors/f01/day-04.json#enc-d04-03",
+ "routes": [
+  "dash",
+  "loot"
+ ],
+ "read_aloud": "Usher patrol between you and the auditorium door. Flashlight contact established.",
+ "narrator_line": "Usher patrol between you and the auditorium door.",
+ "layout": "The corridor into the auditorium: STAFF ONLY doors, flashlights in the dark, rolled diplomas on a table, camera lights above.",
+ "exits": [
+  {
+   "name": "Back to the Green Room (Z9).",
+   "to": "enc-d04-04",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Onto the stage (Z10).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "To the service hall (Z S).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Trophy table and podium (half cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Flashlight beams spot the party.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Camera drones watching.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d04-03",
+  "enemies": [
+   {
+    "slot": "ushers",
+    "srd_id": "skeleton",
+    "spoken_name": "Usher",
+    "live_name": "Usher (Skeleton)",
+    "stat_card": "f01-m-09",
+    "counts_by_party_size": {
+     "2": 2,
+     "3": 2,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "The stage door is guarded by Ushers sweeping the corridor with flashlights.",
+   "decision": "Fight the Ushers, or sneak past their beams?",
+   "on_success": "The Ushers are down or avoided and the stage door is open.",
+   "on_failure": "The beams catch the party and the Dean is warned.",
+   "minutes": 8,
+   "tag": "pacing guide",
+   "cut_short": "Run it as a single stealth check; combat only if it fails.",
+   "audience": "gm"
+  }
+ },
+ "loot": [],
+ "achievement_ids": [
+  "ACH-0867",
+  "ACH-0861"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

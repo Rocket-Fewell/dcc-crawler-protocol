@@ -1,0 +1,27 @@
+{
+  "schema": "cursor-dcc-cards/conditions/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "rule": "Code applies these flags. A narrator does not decide that Prone grants advantage. If rules/10-core-rules-5e.md disagrees, the core rules win and this card gets edited.",
+  "cards": [
+    {"id": "cond-blinded", "name": "Blinded", "effects": {"sight_checks": "auto_fail", "attacks": "disadvantage", "attacked_by": "advantage"}},
+    {"id": "cond-charmed", "name": "Charmed", "effects": {"cannot_harm": "charmer", "social_by_charmer": "advantage"}},
+    {"id": "cond-deafened", "name": "Deafened", "effects": {"hearing_checks": "auto_fail"}},
+    {"id": "cond-frightened", "name": "Frightened", "effects": {"while_source_in_sight": "disadvantage on checks and attacks", "cannot_willingly_move_closer": true}},
+    {"id": "cond-grappled", "name": "Grappled", "effects": {"speed": 0, "ends_if": "grappler incapacitated or out of reach"}},
+    {"id": "cond-incapacitated", "name": "Incapacitated", "effects": {"actions": false, "bonus_actions": false, "reactions": false, "concentration": "ends"}},
+    {"id": "cond-invisible", "name": "Invisible", "effects": {"attacks": "advantage", "attacked_by": "disadvantage"}},
+    {"id": "cond-paralyzed", "name": "Paralyzed", "effects": {"also": ["incapacitated"], "speed": 0, "str_dex_saves": "auto_fail", "attacked_by": "advantage", "hit_within_5ft": "critical"}},
+    {"id": "cond-petrified", "name": "Petrified", "effects": {"also": ["incapacitated"], "speed": 0, "damage_resistance": "all", "immune": ["poison"], "str_dex_saves": "auto_fail"}},
+    {"id": "cond-poisoned", "name": "Poisoned", "effects": {"attacks": "disadvantage", "checks": "disadvantage"}},
+    {"id": "cond-prone", "name": "Prone", "effects": {"attacks": "disadvantage", "attacked_within_5ft": "advantage", "attacked_beyond_5ft": "disadvantage", "stand": "half movement"}},
+    {"id": "cond-restrained", "name": "Restrained", "effects": {"speed": 0, "attacks": "disadvantage", "dex_saves": "disadvantage", "attacked_by": "advantage"}},
+    {"id": "cond-stunned", "name": "Stunned", "effects": {"also": ["incapacitated"], "speed": 0, "str_dex_saves": "auto_fail", "attacked_by": "advantage"}},
+    {"id": "cond-unconscious", "name": "Unconscious", "effects": {"also": ["incapacitated", "prone"], "speed": 0, "drop_held": true, "str_dex_saves": "auto_fail", "attacked_by": "advantage", "hit_within_5ft": "critical", "unaware": true}},
+    {"id": "cond-exhaustion", "name": "Exhaustion", "effects": {"levels": "1 to 5, dead at 6", "d20_penalty_per_level": -2, "speed_penalty_ft_per_level": -5, "long_rest_removes": 1}, "source": "5e 2024"},
+    {"id": "cond-stable", "name": "Stable", "effects": {"at_zero_hp": true, "death_saves": false, "wake": "healed, or 1d4 hours then 1 HP"}},
+    {"id": "cond-burning", "name": "Burning", "house": true, "effects": {"start_of_turn": "the dice on the effect that set this", "end": "the effect's own save, or an action to smother"}, "note": "No default damage. The card that sets Burning brings the dice."},
+    {"id": "cond-potion-cooldown", "name": "Potion cooldown", "house": true, "source": "rules/10-core-rules-5e.md section 5.11", "effects": {"until": "start of next turn", "second_potion": "still works, then Poisoned for 1 minute, DC 12 Constitution save at end of each turn ends it", "exempt": ["spell scroll", "cooked meal", "hit dice"]}}
+  ]
+}

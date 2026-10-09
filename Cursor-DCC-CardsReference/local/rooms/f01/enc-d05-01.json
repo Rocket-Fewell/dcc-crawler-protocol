@@ -1,0 +1,80 @@
+{
+ "id": "enc-d05-01",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 5,
+ "zone": "z09",
+ "zone_name": "The Green Room (Saferoom B)",
+ "name": "Final Morning: Only the Corridor Stays",
+ "kind": "non-combat",
+ "source": "floors/f01/day-05.json#enc-d05-01",
+ "routes": [
+  "clever",
+  "loot",
+  "dash"
+ ],
+ "read_aloud": "GOOD MORNING, CRAWLERS. This is the final day. Lighting and corridor access remain active on schedule.",
+ "narrator_line": "GOOD MORNING, CRAWLERS. This is the final day.",
+ "layout": "The Green Room at the end of the world: the mirror's last bulbs, the fruit plate, the framed photo. A countdown ticks on a wall screen.",
+ "exits": [
+  {
+   "name": "Back to Z8 (closed, passable).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "STAFF ONLY door to the stage (Z10).",
+   "to": "enc-d05-03",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Chairs and the dressing table.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; honest saferoom, open to the end (inspired).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d05-01",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The last morning: the countdown ticks and only the corridor remains.",
+   "decision": "Rest and plan, or head straight for the stairs?",
+   "on_success": "The party leaves with a plan and enough time.",
+   "on_failure": "They dawdle; the countdown does not wait and any rest is cut short.",
+   "minutes": 5,
+   "tag": "pacing guide",
+   "cut_short": "Read the final-morning reminder and ask for the plan in one sentence.",
+   "audience": "gm"
+  }
+ },
+ "loot": [],
+ "achievement_ids": [
+  "ACH-0025"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

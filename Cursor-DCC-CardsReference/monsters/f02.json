@@ -1,17 +1,17 @@
 {
  "floor": 2,
  "count": 24,
- "schema": "cursor-dcc-cards/0.2.0",
+ "schema": "cursor-dcc-cards/0.3.0",
  "cards": [
   {
    "id": "f02-m-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Soft-Open Hobgoblin",
-   "nameplate": "Soft-Open Hobgoblin. Level 1. \"They rehearsed.\"",
+   "display_name": "Sash-Wearing Tall Goblin Sergeant",
+   "nameplate": "Sash-Wearing Tall Goblin Sergeant. Level 1. \"They rehearsed.\"",
    "nameplate_level": 1,
    "srd_name": "Hobgoblin Warrior",
    "srd_id": "hobgoblin-warrior",
@@ -25,7 +25,7 @@
    "what_it_wants": "It wants a formation.",
    "how_to_cheese": "Kill them out of order and Martial Advantage gets lonely.",
    "tactics": "They strike whoever is already next to an ally.",
-   "system_line": "Soft-Open Hobgoblin. Level 1. Formation.",
+   "system_line": "Sash-Wearing Tall Goblin Sergeant. Level 1. Formation.",
    "gm_line": "Opening night. The ushers brought discipline and a longsword.",
    "stat_block": {
     "srd_name": "Hobgoblin Warrior",
@@ -132,7 +132,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Sash-Wearing Tall Goblin Sergeant"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -144,17 +145,67 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Soft-Open Hobgoblin",
+   "picture": "A tall, drilled goblin in a soft-open sash. Meaner than the interns and better at standing in a line.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A tall, drilled goblin in a soft-open sash. Meaner than the interns and better at standing in a line.",
+    "attacks": [
+     {
+      "name": "Longsword",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 12 (2d10 + 1) Slashing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d10+1",
+       "type": "slashing",
+       "average": 12
+      }
+     },
+     {
+      "name": "Longbow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +3, range 150/600 ft. Hit: 5 (1d8 + 1) Piercing damage plus 7 (3d4) Poison damage",
+      "to_hit": 3,
+      "range_ft": [
+       150,
+       600
+      ],
+      "damage": {
+       "dice": "1d8+1",
+       "type": "piercing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "3d4",
+        "type": "poison",
+        "average": 7
+       }
+      ]
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Gray Mop Ooze",
-   "nameplate": "Gray Mop Ooze. Level 1. \"It eats the cleaning budget.\"",
+   "display_name": "Boot-Eating Mop Water",
+   "nameplate": "Boot-Eating Mop Water. Level 1. \"It eats the cleaning budget.\"",
    "nameplate_level": 1,
    "srd_name": "Gray Ooze",
    "srd_id": "gray-ooze",
@@ -168,7 +219,7 @@
    "what_it_wants": "It wants metal and stillness.",
    "how_to_cheese": "Don't stand in it. It is hard to see and rude to armor.",
    "tactics": "Pseudopod the armored one.",
-   "system_line": "Gray Mop Ooze. Level 1. Ooze.",
+   "system_line": "Boot-Eating Mop Water. Level 1. Ooze.",
    "gm_line": "You just stepped in management. Management is acidic.",
    "stat_block": {
     "srd_name": "Gray Ooze",
@@ -277,7 +328,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Boot-Eating Mop Water"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -289,17 +341,43 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Gray Mop Ooze",
+   "picture": "A puddle of gray mop water that climbs your boots and digests the metal while you are still wearing them.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A puddle of gray mop water that climbs your boots and digests the metal while you are still wearing them.",
+    "attacks": [
+     {
+      "name": "Pseudopod",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor.",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d8+1",
+       "type": "acid",
+       "average": 10
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Clipboard Scout",
-   "nameplate": "Clipboard Scout. Level 1. \"Maps you while you talk.\"",
+   "display_name": "Route-Knowing Clipboard Scout",
+   "nameplate": "Route-Knowing Clipboard Scout. Level 1. \"Maps you while you talk.\"",
    "nameplate_level": 1,
    "srd_name": "Scout",
    "srd_id": "scout",
@@ -313,7 +391,7 @@
    "what_it_wants": "It wants your route.",
    "how_to_cheese": "Close fast. The bow is the job.",
    "tactics": "Shoot, fall back, shoot.",
-   "system_line": "Clipboard Scout. Level 1. Skirmisher.",
+   "system_line": "Route-Knowing Clipboard Scout. Level 1. Skirmisher.",
    "gm_line": "It is taking notes. The notes are arrows.",
    "stat_block": {
     "srd_name": "Scout",
@@ -420,7 +498,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Route-Knowing Clipboard Scout"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -432,17 +511,70 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Clipboard Scout",
+   "picture": "A scout who already highlighted your path on a clipboard. The bow is for when the highlight is not enough.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A scout who already highlighted your path on a clipboard. The bow is for when the highlight is not enough.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The scout makes two attacks, using Shortsword and Longbow in any combination",
+      "uses": [
+       "Shortsword"
+      ]
+     },
+     {
+      "name": "Shortsword",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      }
+     },
+     {
+      "name": "Longbow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +4, range 150/600 ft. Hit: 6 (1d8 + 2) Piercing damage",
+      "to_hit": 4,
+      "range_ft": [
+       150,
+       600
+      ],
+      "damage": {
+       "dice": "1d8+2",
+       "type": "piercing",
+       "average": 6
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Ratings Gnoll",
-   "nameplate": "Ratings Gnoll. Level 1. \"The laugh track learned hunger.\"",
+   "display_name": "Laughing Hyena Person",
+   "nameplate": "Laughing Hyena Person. Level 1. \"The laugh track learned hunger.\"",
    "nameplate_level": 1,
    "srd_name": "Gnoll Warrior",
    "srd_id": "gnoll-warrior",
@@ -456,7 +588,7 @@
    "what_it_wants": "It wants a downed Crawler.",
    "how_to_cheese": "Don't leave a body in reach. Rampage is a second meal.",
    "tactics": "They pile the wounded.",
-   "system_line": "Ratings Gnoll. Level 1. Hostile.",
+   "system_line": "Laughing Hyena Person. Level 1. Hostile.",
    "gm_line": "The audience laughs when something falls over. You are the something.",
    "stat_block": {
     "srd_name": "Gnoll Warrior",
@@ -562,7 +694,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Laughing Hyena Person"
    },
    "tracked_uses": [
     {
@@ -586,17 +719,81 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Ratings Gnoll",
+   "picture": "A hyena-headed person with a spear. The laugh is the warning. The spear is the sentence.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A hyena-headed person with a spear. The laugh is the warning. The spear is the sentence.",
+    "attacks": [
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      }
+     },
+     {
+      "name": "Bone Bow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +3, range 150/600 ft. Hit: 6 (1d10 + 1) Piercing damage",
+      "to_hit": 3,
+      "range_ft": [
+       150,
+       600
+      ],
+      "damage": {
+       "dice": "1d10+1",
+       "type": "piercing",
+       "average": 6
+      }
+     },
+     {
+      "name": "Rampage (1/Day)",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "Immediately after dealing damage to a creature that is already Bloodied, the gnoll moves up to half its Speed, and it makes one Rend attack.",
+      "per_day": 1,
+      "effect": "rampage"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Rampage",
+      "name": "Rampage",
+      "kind": "daily",
+      "spell_level": null,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "1 use(s) per day, shared by this ability, not per target and not per round. At 0 it does not fire again until a Long Rest in a saferoom.",
+      "key": "f02-m-04.rampage"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Loading-Dock Worg",
-   "nameplate": "Loading-Dock Worg. Level 1. \"Freight with opinions.\"",
+   "display_name": "Couch-Sized Saddle Wolf",
+   "nameplate": "Couch-Sized Saddle Wolf. Level 1. \"Freight with opinions.\"",
    "nameplate_level": 1,
    "srd_name": "Worg",
    "srd_id": "worg",
@@ -610,7 +807,7 @@
    "what_it_wants": "It wants a chase.",
    "how_to_cheese": "Don't run down the dock. Bite, then they drag.",
    "tactics": "Knock a Crawler prone and hold the lane.",
-   "system_line": "Loading-Dock Worg. Level 1.",
+   "system_line": "Couch-Sized Saddle Wolf. Level 1.",
    "gm_line": "The dock accepts deliveries. You are a delivery.",
    "stat_block": {
     "srd_name": "Worg",
@@ -708,7 +905,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Couch-Sized Saddle Wolf"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -720,17 +918,43 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Loading-Dock Worg",
+   "picture": "A wolf the size of a couch, saddle worn shiny, looking for a rider or a meal.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A wolf the size of a couch, saddle worn shiny, looking for a rider or a meal.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage, and the next attack roll made against the target before the start of the worg’s next turn has Advantage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "piercing",
+       "average": 7
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-06",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Rusted Prop",
-   "nameplate": "Rusted Prop. Level 1. \"Props are food.\"",
+   "display_name": "Sword-Eating Antenna Bug",
+   "nameplate": "Sword-Eating Antenna Bug. Level 1. \"Props are food.\"",
    "nameplate_level": 1,
    "srd_name": "Rust Monster",
    "srd_id": "rust-monster",
@@ -744,7 +968,7 @@
    "what_it_wants": "It wants the metal, not the person.",
    "how_to_cheese": "Throw a spare weapon. It will go eat that.",
    "tactics": "Antennae the shiniest armor.",
-   "system_line": "Rusted Prop. Level 1. Monstrosity.",
+   "system_line": "Sword-Eating Antenna Bug. Level 1. Monstrosity.",
    "gm_line": "Your sword just became a suggestion.",
    "stat_block": {
     "srd_name": "Rust Monster",
@@ -863,7 +1087,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Sword-Eating Antenna Bug"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -875,17 +1100,78 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Rusted Prop",
+   "picture": "A bug with long feelers that rusts the sword in your hand down to orange flakes.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A bug with long feelers that rusts the sword in your hand down to orange flakes.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The rust monster makes one Bite attack and uses Antennae twice"
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 5 (1d8 + 1) Piercing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+1",
+       "type": "piercing",
+       "average": 5
+      }
+     },
+     {
+      "name": "Antennae",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. Dexterity Saving Throw: DC 11, the creature with the object. Failure: The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the Mending spell on the armor or weapon",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 11
+      }
+     },
+     {
+      "name": "Destroy Metal",
+      "slot": "actions",
+      "kind": "object",
+      "parsed": true,
+      "raw": "The rust monster touches a nonmagical metal object within 5 feet of itself that isn’t being worn or carried. The touch destroys a 1-foot Cube of the object",
+      "effect": "destroy_metal_cube"
+     },
+     {
+      "name": "Reflexive Antennae",
+      "slot": "reactions",
+      "kind": "reaction",
+      "parsed": true,
+      "raw": "Trigger: An attack roll hits the rust monster. Response: The rust monster uses Antennae.",
+      "trigger": "An attack roll hits the rust monster",
+      "response": "The rust monster uses Antennae."
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-07",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Dimmer Shadow",
-   "nameplate": "Dimmer Shadow. Level 1. \"The lighting board got jealous.\"",
+   "display_name": "Your Shadow, On Payroll",
+   "nameplate": "Your Shadow, On Payroll. Level 1. \"The lighting board got jealous.\"",
    "nameplate_level": 1,
    "srd_name": "Shadow",
    "srd_id": "shadow",
@@ -899,7 +1185,7 @@
    "what_it_wants": "It wants Strength.",
    "how_to_cheese": "Light. Spread out. Don't let it sit on the Strength 8.",
    "tactics": "Strength drain, then hide in dim light.",
-   "system_line": "Dimmer Shadow. Level 1. Undead.",
+   "system_line": "Your Shadow, On Payroll. Level 1. Undead.",
    "gm_line": "The lights are not your friend. The dark applied for the job.",
    "stat_block": {
     "srd_name": "Shadow",
@@ -1014,7 +1300,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Your Shadow, On Payroll"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1026,17 +1313,54 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Dimmer Shadow",
+   "picture": "Your own shadow, peeled off the floor, wearing nothing, hungry for the strength in your arms.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "Your own shadow, peeled off the floor, wearing nothing, hungry for the strength in your arms.",
+    "attacks": [
+     {
+      "name": "Draining Swipe",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Necrotic damage, and the target’s Strength score decreases by 1d4. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a Shadow rises from the corpse 1d4 hours later",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "necrotic",
+       "average": 5
+      }
+     },
+     {
+      "name": "Shadow Stealth",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "While in Dim Light or Darkness, the shadow takes the Hide action",
+      "options": [
+       "hide"
+      ],
+      "requires": "dim light or darkness"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-08",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Warmup Satyr",
-   "nameplate": "Warmup Satyr. Level 1. \"Opens for the real monster.\"",
+   "display_name": "Goat-Legged Warmup Comic",
+   "nameplate": "Goat-Legged Warmup Comic. Level 1. \"Opens for the real monster.\"",
    "nameplate_level": 1,
    "srd_name": "Satyr",
    "srd_id": "satyr",
@@ -1050,7 +1374,7 @@
    "what_it_wants": "It wants you charmed and clumsy.",
    "how_to_cheese": "Stuff your ears or drop the piper first.",
    "tactics": "Pipes, then ram the charmed.",
-   "system_line": "Warmup Satyr. Level 1. Fey.",
+   "system_line": "Goat-Legged Warmup Comic. Level 1. Fey.",
    "gm_line": "The opening act is a goat with a work visa and a flute.",
    "stat_block": {
     "srd_name": "Satyr",
@@ -1157,7 +1481,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Goat-Legged Warmup Comic"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1169,17 +1494,68 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Warmup Satyr",
+   "picture": "Goat legs, little horns, pan pipes, and a tight five about your hit points.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "Goat legs, little horns, pan pipes, and a tight five about your hit points.",
+    "attacks": [
+     {
+      "name": "Hooves",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+3",
+       "type": "bludgeoning",
+       "average": 5
+      }
+     },
+     {
+      "name": "Mockery",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Wisdom Saving Throw: DC 12, one creature the satyr can see within 90 feet. Failure: 5 (1d6 + 2) Psychic damage",
+      "save": {
+       "ability": "Wisdom",
+       "dc": 12
+      },
+      "damage": {
+       "dice": "1d6+2",
+       "type": "psychic",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [
+     {
+      "name": "Magic Resistance",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "The satyr has Advantage on saving throws against spells and other magical effects",
+      "effect": "advantage_on_spell_saves"
+     }
+    ],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-09",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Magma Concession",
-   "nameplate": "Magma Concession. Level 1. \"The fryer walked out.\"",
+   "display_name": "Walking Charcoal Briquette",
+   "nameplate": "Walking Charcoal Briquette. Level 1. \"The fryer walked out.\"",
    "nameplate_level": 1,
    "srd_name": "Magmin",
    "srd_id": "magmin",
@@ -1193,7 +1569,7 @@
    "what_it_wants": "It wants the floor on fire.",
    "how_to_cheese": "Don't bunch on the oil. Kill it away from the paper stock.",
    "tactics": "Touch, ignite, waddle.",
-   "system_line": "Magma Concession. Level 1. Elemental.",
+   "system_line": "Walking Charcoal Briquette. Level 1. Elemental.",
    "gm_line": "Fresh fried Crawler. Limited time.",
    "stat_block": {
     "srd_name": "Magmin",
@@ -1301,7 +1677,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Walking Charcoal Briquette"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1313,17 +1690,69 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Magma Concession",
+   "picture": "A little person made of hot coals. Touching it is the whole mistake.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A little person made of hot coals. Touching it is the whole mistake.",
+    "attacks": [
+     {
+      "name": "Touch",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn’t being worn or carried, it starts burning",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d4+2",
+       "type": "fire",
+       "average": 7
+      }
+     },
+     {
+      "name": "Ignited Illumination",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet",
+      "effect": "light_toggle"
+     }
+    ],
+    "riders": [
+     {
+      "name": "Death Burst",
+      "slot": "trait",
+      "kind": "save",
+      "parsed": true,
+      "raw": "The magmin explodes when it dies. Dexterity Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the magmin. Failure: 7 (2d6) Fire damage. Success: Half damage",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 11,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "2d6",
+       "type": "fire",
+       "average": 7
+      }
+     }
+    ],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-m-10",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "mob",
-   "display_name": "Dust in the Lights",
-   "nameplate": "Dust in the Lights. Level 1. \"A blinding bit.\"",
+   "display_name": "Coughing Dust Cloud",
+   "nameplate": "Coughing Dust Cloud. Level 1. \"A blinding bit.\"",
    "nameplate_level": 1,
    "srd_name": "Dust Mephit",
    "srd_id": "dust-mephit",
@@ -1337,7 +1766,7 @@
    "what_it_wants": "It wants you coughing.",
    "how_to_cheese": "Ranged attacks before it closes. The breath is the encounter.",
    "tactics": "Blinding breath, then claws.",
-   "system_line": "Dust in the Lights. Level 1. Elemental.",
+   "system_line": "Coughing Dust Cloud. Level 1. Elemental.",
    "gm_line": "Cough, then apologize, then get clawed. That is the act.",
    "stat_block": {
     "srd_name": "Dust Mephit",
@@ -1450,7 +1879,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Coughing Dust Cloud"
    },
    "tracked_uses": [
     {
@@ -1491,17 +1921,113 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "Sleep is once per day, spell save DC 10, Charisma. Blinding Breath is recharge 6. At 0 Sleep, Claw only.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Dust in the Lights",
+   "picture": "A dust cloud with a face. It makes you cough, then it claws you for coughing.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A dust cloud with a face. It makes you cough, then it claws you for coughing.",
+    "attacks": [
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Slashing damage.",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+2",
+       "type": "slashing",
+       "average": 4
+      }
+     },
+     {
+      "name": "Blinding Breath (Recharge 6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Dexterity Saving Throw: DC 10, each creature in a 15-foot Cone. Failure: The target has the Blinded condition until the end of the mephit’s next turn.",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 10
+      },
+      "recharge": "6"
+     },
+     {
+      "name": "Sleep (1/Day)",
+      "slot": "actions",
+      "kind": "spell",
+      "parsed": true,
+      "raw": "The mephit casts the Sleep spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 10)",
+      "per_day": 1,
+      "spell": "Sleep",
+      "save_dc": 10,
+      "ability": "charisma"
+     }
+    ],
+    "riders": [
+     {
+      "name": "Death Burst",
+      "slot": "trait",
+      "kind": "save",
+      "parsed": true,
+      "raw": "The mephit explodes when it dies. Dexterity Saving Throw: DC 10, each creature in a 5-foot Emanation originating from the mephit. Failure: 5 (2d4) Bludgeoning damage. Success: Half damage",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 10,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "2d4",
+       "type": "bludgeoning",
+       "average": 5
+      }
+     }
+    ],
+    "tracked_uses": [
+     {
+      "key_name": "Blinding Breath",
+      "name": "Blinding Breath",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [6]",
+      "rule": "Starts ready. After Blinding Breath is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+      "key": "f02-m-10.blinding-breath"
+     },
+     {
+      "key_name": "Sleep",
+      "name": "Sleep",
+      "kind": "daily_spell",
+      "spell_level": 1,
+      "max": 1,
+      "spent": 0,
+      "recover": "Long Rest. The crawl's saferoom overlay applies: a Long Rest finishes in a saferoom. Do not refill this in a hallway.",
+      "rule": "Once per day. Level 1 Sleep, Charisma, spell save DC 10. Not a slot that refills. At 0, do not cast Sleep.",
+      "key": "f02-m-10.sleep",
+      "ability": "Charisma",
+      "save_dc": 10
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-u-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "unit",
-   "display_name": "Pool Unit",
-   "nameplate": "Pool Unit. Level 1. \"The decorative tank is staffed.\"",
+   "display_name": "Trident Lifeguard Fish-Person",
+   "nameplate": "Trident Lifeguard Fish-Person. Level 1. \"The decorative tank is staffed.\"",
    "nameplate_level": 1,
    "srd_name": "Sahuagin Warrior",
    "srd_id": "sahuagin-warrior",
@@ -1515,7 +2041,7 @@
    "what_it_wants": "It wants you in the water.",
    "how_to_cheese": "Stay on the dry walk. Blood frenzy only matters if someone is already hurt in the pool.",
    "tactics": "They stay in the water and spear the edge.",
-   "system_line": "Pool Unit. Level 1. Unit.",
+   "system_line": "Trident Lifeguard Fish-Person. Level 1. Unit.",
    "gm_line": "No diving. The sign means the fish have spears.",
    "stat_block": {
     "srd_name": "Sahuagin Warrior",
@@ -1636,7 +2162,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Trident Lifeguard Fish-Person"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1648,17 +2175,62 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Pool Unit",
+   "picture": "A fish-person with a whistle and a trident. The pool is decorative until it is not.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A fish-person with a whistle and a trident. The pool is decorative until it is not.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The sahuagin makes two Claw attacks",
+      "count": 2,
+      "uses": [
+       "Claw"
+      ]
+     },
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+1",
+       "type": "slashing",
+       "average": 4
+      }
+     },
+     {
+      "name": "Aquatic Charge",
+      "slot": "bonus_actions",
+      "kind": "bonus",
+      "parsed": true,
+      "raw": "The sahuagin swims up to its Swim Speed straight toward an enemy it can see",
+      "effect": "swim_toward_enemy"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-u-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "unit",
-   "display_name": "Cockatrice Extra",
-   "nameplate": "Cockatrice Extra. Level 1. \"Wardrobe sent a bird.\"",
+   "display_name": "Petrifying Chicken-Lizard",
+   "nameplate": "Petrifying Chicken-Lizard. Level 1. \"Wardrobe sent a bird.\"",
    "nameplate_level": 1,
    "srd_name": "Cockatrice",
    "srd_id": "cockatrice",
@@ -1672,7 +2244,7 @@
    "what_it_wants": "It wants a statue.",
    "how_to_cheese": "Don't let it peck the front liner twice. Stone is a condition, not a joke.",
    "tactics": "Peck and flutter back to the rack.",
-   "system_line": "Cockatrice Extra. Level 1. Unit.",
+   "system_line": "Petrifying Chicken-Lizard. Level 1. Unit.",
    "gm_line": "It is not a chicken. The chicken did not petrify your friend.",
    "stat_block": {
     "srd_name": "Cockatrice",
@@ -1770,7 +2342,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Petrifying Chicken-Lizard"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1782,17 +2355,47 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Cockatrice Extra",
+   "picture": "A chicken with a lizard tail and a mean beak. One peck and you are a lawn statue.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A chicken with a lizard tail and a mean beak. One peck and you are a lawn statue.",
+    "attacks": [
+     {
+      "name": "Petrifying Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 3 (1d4 + 1) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 11. First Failure: The target has the Restrained condition. The target repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. Second Failure: The target has the Petrified condition, instead of the Restrained condition, for 24 hours",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+1",
+       "type": "piercing",
+       "average": 3
+      },
+      "on_hit_save": {
+       "ability": "Constitution",
+       "dc": 11
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-u-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "unit",
-   "display_name": "Wasp Usher",
-   "nameplate": "Wasp Usher. Level 1. \"Seating, but airborne.\"",
+   "display_name": "Motorcycle-Sized Usher Wasp",
+   "nameplate": "Motorcycle-Sized Usher Wasp. Level 1. \"Seating, but airborne.\"",
    "nameplate_level": 1,
    "srd_name": "Giant Wasp",
    "srd_id": "giant-wasp",
@@ -1806,7 +2409,7 @@
    "what_it_wants": "It wants a sting that stays.",
    "how_to_cheese": "Swat it before the poison stacks with a second usher.",
    "tactics": "Dive, sting, climb.",
-   "system_line": "Wasp Usher. Level 1. Unit.",
+   "system_line": "Motorcycle-Sized Usher Wasp. Level 1. Unit.",
    "gm_line": "Your seat is wherever it stings you.",
    "stat_block": {
     "srd_name": "Giant Wasp",
@@ -1908,7 +2511,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Motorcycle-Sized Usher Wasp"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -1920,17 +2524,50 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Wasp Usher",
+   "picture": "A wasp the size of a motorcycle, stuffed into an usher vest, stinger first.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A wasp the size of a motorcycle, stuffed into an usher vest, stinger first.",
+    "attacks": [
+     {
+      "name": "Sting",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage plus 5 (2d4) Poison damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "piercing",
+       "average": 5
+      },
+      "extra_damage": [
+       {
+        "dice": "2d4",
+        "type": "poison",
+        "average": 5
+       }
+      ]
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-u-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "unit",
-   "display_name": "Ape Grip",
-   "nameplate": "Ape Grip. Level 1. \"Stagehand. Literal.\"",
+   "display_name": "Bouncer Ape Named Grip",
+   "nameplate": "Bouncer Ape Named Grip. Level 1. \"Stagehand. Literal.\"",
    "nameplate_level": 1,
    "srd_name": "Ape",
    "srd_id": "ape",
@@ -1944,7 +2581,7 @@
    "what_it_wants": "It wants the rigging.",
    "how_to_cheese": "Don't climb after it. Make it come down.",
    "tactics": "Rock from the catwalk, fist if you climb.",
-   "system_line": "Ape Grip. Level 1. Unit.",
+   "system_line": "Bouncer Ape Named Grip. Level 1. Unit.",
    "gm_line": "The stagehand is union, furry, and holding a rock with your name on it.",
    "stat_block": {
     "srd_name": "Ape",
@@ -2050,7 +2687,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Bouncer Ape Named Grip"
    },
    "tracked_uses": [
     {
@@ -2078,17 +2716,88 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Ape Grip",
+   "picture": "An ape at the velvet rope. The name tag says GRIP. The fists already agreed.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "An ape at the velvet rope. The name tag says GRIP. The fists already agreed.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The ape makes two Fist attacks",
+      "count": 2,
+      "uses": [
+       "Fist"
+      ]
+     },
+     {
+      "name": "Fist",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning damage.",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d4+3",
+       "type": "bludgeoning",
+       "average": 5
+      }
+     },
+     {
+      "name": "Rock (Recharge 6)",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +5, range 25/50 ft. Hit: 10 (2d6 + 3) Bludgeoning damage",
+      "to_hit": 5,
+      "range_ft": [
+       25,
+       50
+      ],
+      "damage": {
+       "dice": "2d6+3",
+       "type": "bludgeoning",
+       "average": 10
+      },
+      "recharge": "6"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Rock",
+      "name": "Rock",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [6]",
+      "rule": "Starts ready. After Rock is used, it is down until a d6 at the start of this creature's turn shows 6–6. It cannot be used every turn.",
+      "key": "f02-u-04.rock"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-u-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "unit",
-   "display_name": "Bear Bouncer",
-   "nameplate": "Bear Bouncer. Level 1. \"The door has a policy.\"",
+   "display_name": "Bow-Tie Black Bear",
+   "nameplate": "Bow-Tie Black Bear. Level 1. \"The door has a policy.\"",
    "nameplate_level": 1,
    "srd_name": "Black Bear",
    "srd_id": "black-bear",
@@ -2102,7 +2811,7 @@
    "what_it_wants": "It wants the threshold.",
    "how_to_cheese": "Don't shove the door. Lure it off the step.",
    "tactics": "They hold the door square. Two of them means a wall.",
-   "system_line": "Bear Bouncer. Level 1. Unit.",
+   "system_line": "Bow-Tie Black Bear. Level 1. Unit.",
    "gm_line": "No shoes, no shirt, no surviving the door.",
    "stat_block": {
     "srd_name": "Black Bear",
@@ -2204,7 +2913,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Bow-Tie Black Bear"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2216,17 +2926,54 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Bear Bouncer",
+   "picture": "A black bear in a bow tie, checking a list you are not on.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A black bear in a bow tie, checking a list you are not on.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The bear makes two Rend attacks",
+      "count": 2,
+      "uses": [
+       "Rend"
+      ]
+     },
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Slashing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+2",
+       "type": "slashing",
+       "average": 5
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-u-06",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "unit",
-   "display_name": "Tank Shark",
-   "nameplate": "Tank Shark. Level 1. \"Sponsored by the aquarium.\"",
+   "display_name": "Decorative Tank Shark",
+   "nameplate": "Decorative Tank Shark. Level 1. \"Sponsored by the aquarium.\"",
    "nameplate_level": 1,
    "srd_name": "Reef Shark",
    "srd_id": "reef-shark",
@@ -2240,7 +2987,7 @@
    "what_it_wants": "It wants blood in the water.",
    "how_to_cheese": "Stay out of the tank. This is not a puzzle if you can read.",
    "tactics": "They only fight in the water.",
-   "system_line": "Tank Shark. Level 1. Unit.",
+   "system_line": "Decorative Tank Shark. Level 1. Unit.",
    "gm_line": "The exhibit is closed. The exhibit disagrees.",
    "stat_block": {
     "srd_name": "Reef Shark",
@@ -2347,7 +3094,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Decorative Tank Shark"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2359,17 +3107,43 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Tank Shark",
+   "picture": "A reef shark in the lobby aquarium. The glass is a suggestion it has not accepted.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A reef shark in the lobby aquarium. The glass is a suggestion it has not accepted.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Piercing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d4+2",
+       "type": "piercing",
+       "average": 7
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-e-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "elite",
-   "display_name": "Imp Producer",
-   "nameplate": "Imp Producer. Level 1. \"Notes from the booth.\"",
+   "display_name": "Headset Shoulder Devil",
+   "nameplate": "Headset Shoulder Devil. Level 1. \"Notes from the booth.\"",
    "nameplate_level": 1,
    "srd_name": "Imp",
    "srd_id": "imp",
@@ -2383,7 +3157,7 @@
    "what_it_wants": "It wants the fight to go badly on camera.",
    "how_to_cheese": "Detect it. Invisibility is the whole career.",
    "tactics": "Sting from invisibility, then fly to the lights.",
-   "system_line": "Imp Producer. Level 1. Elite. Fiend.",
+   "system_line": "Headset Shoulder Devil. Level 1. Elite. Fiend.",
    "gm_line": "A little red executive with a stinger and a note about your lighting.",
    "stat_block": {
     "srd_name": "Imp",
@@ -2496,7 +3270,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Headset Shoulder Devil"
    },
    "tracked_uses": [
     {
@@ -2520,17 +3295,87 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "Invisibility is an at-will action printed with no daily cap. It is not a spell slot. Do not add slots.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Imp Producer",
+   "picture": "A tiny red devil on a shoulder, wearing a producer headset, offering a deal that is already bad.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A tiny red devil on a shoulder, wearing a producer headset, offering a deal that is already bad.",
+    "attacks": [
+     {
+      "name": "Sting",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage plus 7 (2d6) Poison damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d6+3",
+       "type": "piercing",
+       "average": 6
+      },
+      "extra_damage": [
+       {
+        "dice": "2d6",
+        "type": "poison",
+        "average": 7
+       }
+      ]
+     },
+     {
+      "name": "Invisibility",
+      "slot": "actions",
+      "kind": "spell",
+      "parsed": true,
+      "raw": "The imp casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability",
+      "spell": "Invisibility on itself",
+      "ability": "charisma"
+     },
+     {
+      "name": "Shape-Shift",
+      "slot": "actions",
+      "kind": "shapechange",
+      "parsed": true,
+      "raw": "The imp shape-shifts to resemble a rat (Speed 20 ft.), a raven (20 ft., Fly 60 ft.), or a spider (20 ft., Climb 20 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed"
+     }
+    ],
+    "riders": [
+     {
+      "name": "Magic Resistance",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "The imp has Advantage on saving throws against spells and other magical effects",
+      "effect": "advantage_on_spell_saves"
+     }
+    ],
+    "tracked_uses": [
+     {
+      "key_name": "Invisibility",
+      "name": "Invisibility",
+      "kind": "at_will_innate",
+      "spell_level": 2,
+      "max": null,
+      "spent": 0,
+      "recover": "n/a (printed without a daily cap)",
+      "rule": "Printed as an action with no daily cap. Not a spell slot. Do not add slots.",
+      "key": "f02-e-01.invisibility"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-e-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "elite",
-   "display_name": "Dire Wolf Security",
-   "nameplate": "Dire Wolf Security. Level 1. \"The good boy left.\"",
+   "display_name": "Golf-Cart Security Wolf",
+   "nameplate": "Golf-Cart Security Wolf. Level 1. \"The good boy left.\"",
    "nameplate_level": 1,
    "srd_name": "Dire Wolf",
    "srd_id": "dire-wolf",
@@ -2544,7 +3389,7 @@
    "what_it_wants": "It wants a prone Crawler.",
    "how_to_cheese": "Don't let it knock the front rank. Spears set against a charge.",
    "tactics": "Charge, bite, stand on them.",
-   "system_line": "Dire Wolf Security. Level 1. Elite.",
+   "system_line": "Golf-Cart Security Wolf. Level 1. Elite.",
    "gm_line": "Security is a wolf the size of a couch. Pet at your own funeral.",
    "stat_block": {
     "srd_name": "Dire Wolf",
@@ -2647,7 +3492,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Golf-Cart Security Wolf"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2659,17 +3505,43 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Dire Wolf Security",
+   "picture": "A wolf bigger than the couch wolf, on a security contract, with the night shift's attitude.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A wolf bigger than the couch wolf, on a security contract, with the night shift's attitude.",
+    "attacks": [
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 + 3) Piercing damage. If the target is a Large or smaller creature, it has the Prone condition",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d10+3",
+       "type": "piercing",
+       "average": 8
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-e-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "elite",
-   "display_name": "Harpy Headliner",
-   "nameplate": "Harpy Headliner. Level 1. \"Song, then the drop.\"",
+   "display_name": "Marquee Bird-Woman",
+   "nameplate": "Marquee Bird-Woman. Level 1. \"Song, then the drop.\"",
    "nameplate_level": 1,
    "srd_name": "Harpy",
    "srd_id": "harpy",
@@ -2683,7 +3555,7 @@
    "what_it_wants": "It wants you walking off the catwalk.",
    "how_to_cheese": "Plug ears. Kill the song before the ledge.",
    "tactics": "Luring song, then claws on whoever obeyed.",
-   "system_line": "Harpy Headliner. Level 1. Elite.",
+   "system_line": "Marquee Bird-Woman. Level 1. Elite.",
    "gm_line": "She hits the high note. You hit the floor.",
    "stat_block": {
     "srd_name": "Harpy",
@@ -2784,7 +3656,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Marquee Bird-Woman"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2796,17 +3669,54 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Harpy Headliner",
+   "picture": "A woman with vulture wings on the marquee. Her song walks your feet off the catwalk.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A woman with vulture wings on the marquee. Her song walks your feet off the catwalk.",
+    "attacks": [
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +3, reach 5 ft. Hit: 6 (2d4 + 1) Slashing damage",
+      "to_hit": 3,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d4+1",
+       "type": "slashing",
+       "average": 6
+      }
+     },
+     {
+      "name": "Luring Song",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "The harpy sings a magical melody, which lasts until the harpy’s Concentration ends on it. Wisdom Saving Throw: DC 11, each Humanoid and Giant in a 300-foot Emanation originating from the harpy when the song starts. Failure: The target has the Charmed condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the Incapacitated condition and ignores the Luring Song of other harpies. If the target is more than 5 feet from the harpy, the target moves on its turn toward the harpy by the most direct route, trying to get within 5 feet of the harpy. It doesn’t avoid Opportunity Attacks; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the harpy, the target repeats the save. Success: The target is immune to this harpy’s Luring Song for 24 hours",
+      "save": {
+       "ability": "Wisdom",
+       "dc": 11
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-e-04",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "elite",
-   "display_name": "Gargoyle Camera",
-   "nameplate": "Gargoyle Camera. Level 2. \"The statue was the shot.\"",
+   "display_name": "Swooping Stone Security Camera",
+   "nameplate": "Swooping Stone Security Camera. Level 2. \"The statue was the shot.\"",
    "nameplate_level": 2,
    "srd_name": "Gargoyle",
    "srd_id": "gargoyle",
@@ -2820,7 +3730,7 @@
    "what_it_wants": "It wants a still picture of a still Crawler.",
    "how_to_cheese": "Don't rest under the stone faces. False appearance is the ambush.",
    "tactics": "Dive, claw, back to the perch.",
-   "system_line": "Gargoyle Camera. Level 2. Elite.",
+   "system_line": "Swooping Stone Security Camera. Level 2. Elite.",
    "gm_line": "Smile. The architecture is filming, and it has claws.",
    "stat_block": {
     "srd_name": "Gargoyle",
@@ -2928,7 +3838,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Swooping Stone Security Camera"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -2940,17 +3851,54 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Gargoyle Camera",
+   "picture": "A stone statue carved like a security camera. It sits still, then it dives.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A stone statue carved like a security camera. It sits still, then it dives.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The gargoyle makes two Claw attacks",
+      "count": 2,
+      "uses": [
+       "Claw"
+      ]
+     },
+     {
+      "name": "Claw",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d4+2",
+       "type": "slashing",
+       "average": 7
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-e-05",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "elite",
-   "display_name": "Gelatinous Janitor",
-   "nameplate": "Gelatinous Janitor. Level 2. \"It cleans by deletion.\"",
+   "display_name": "Ten-Foot Cube of Floor Cleaner",
+   "nameplate": "Ten-Foot Cube of Floor Cleaner. Level 2. \"It cleans by deletion.\"",
    "nameplate_level": 2,
    "srd_name": "Gelatinous Cube",
    "srd_id": "gelatinous-cube",
@@ -2964,7 +3912,7 @@
    "what_it_wants": "It wants the hallway full.",
    "how_to_cheese": "Side passages. Don't walk the obvious clean hall.",
    "tactics": "Engulf the one who didn't look down.",
-   "system_line": "Gelatinous Janitor. Level 2. Elite. Ooze.",
+   "system_line": "Ten-Foot Cube of Floor Cleaner. Level 2. Elite. Ooze.",
    "gm_line": "The hallway looks clean because the hallway ate the mess. You are mess.",
    "stat_block": {
     "srd_name": "Gelatinous Cube",
@@ -3075,7 +4023,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Ten-Foot Cube of Floor Cleaner"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3087,17 +4036,69 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Gelatinous Janitor",
+   "picture": "A transparent cube of janitor jelly, ten feet on a side, with old mops floating in it. It moves. You do not want to be inside.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A transparent cube of janitor jelly, ten feet on a side, with old mops floating in it. It moves. You do not want to be inside.",
+    "attacks": [
+     {
+      "name": "Pseudopod",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +4, reach 5 ft. Hit: 12 (3d6 + 2) Acid damage",
+      "to_hit": 4,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "3d6+2",
+       "type": "acid",
+       "average": 12
+      }
+     },
+     {
+      "name": "Engulf",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "The cube moves up to its Speed without provoking Opportunity Attacks. The cube can move through the spaces of Large or smaller creatures if it has room inside itself to contain them (see the Ooze Cube trait). Dexterity Saving Throw: DC 12, each creature whose space the cube enters for the first time during this move. Failure: 10 (3d6) Acid damage, and the target is engulfed. An engulfed target is suffocating, can’t cast spells with a Verbal component, has the Restrained condition, and takes 10 (3d6) Acid damage at the start of each of the cube’s turns. When the cube moves, the engulfed target moves with it. An engulfed target can try to escape by taking an action to make a DC 12 Strength (Athletics) check. On a successful check, the target escapes and enters the nearest unoccupied space. Success: Half damage, and the target moves to an unoccupied space within 5 feet of the cube. If there is no unoccupied space, the target fails the save instead",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 12,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "3d6",
+       "type": "acid",
+       "average": 10
+      }
+     }
+    ],
+    "riders": [
+     {
+      "name": "Ooze Cube",
+      "slot": "trait",
+      "kind": "trait",
+      "parsed": true,
+      "raw": "The cube fills its entire space and is transparent. Other creatures can enter that space, but a creature that does so is subjected to the cube’s Engulf and has Disadvantage on the saving throw. Creatures inside the cube have Total Cover, and the cube can hold one Large creature or up to four Medium or Small creatures inside itself at a time. As an action, a creature within 5 feet of the cube can pull a creature or an object out of the cube by succeeding on a DC 12 Strength (Athletics) check, and the puller takes 10 (3d6) Acid damage",
+      "effect": "fills_space"
+     }
+    ],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-b-01",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "boss",
-   "display_name": "Ratings Hound",
-   "nameplate": "Ratings Hound. Level 3. Boss. \"The focus group is on fire.\"",
+   "display_name": "Fire-Breathing Exit Dog",
+   "nameplate": "Fire-Breathing Exit Dog. Level 3. Boss. \"The focus group is on fire.\"",
    "nameplate_level": 3,
    "srd_name": "Hell Hound",
    "srd_id": "hell-hound",
@@ -3111,7 +4112,7 @@
    "what_it_wants": "It wants a cone of the whole party.",
    "how_to_cheese": "Split the cone. Don't line up for the breath.",
    "tactics": "Breath when two or more stand together. Bite the scout.",
-   "system_line": "Ratings Hound. Level 3. Boss. Fiend.",
+   "system_line": "Fire-Breathing Exit Dog. Level 3. Boss. Fiend.",
    "gm_line": "The audience wanted heat. The hound took that personally.",
    "stat_block": {
     "srd_name": "Hell Hound",
@@ -3223,7 +4224,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Fire-Breathing Exit Dog"
    },
    "tracked_uses": [
     {
@@ -3252,17 +4254,96 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "Fire Breath is recharge 5–6. One breath, then it is down until the die hits. Bite still works.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Ratings Hound",
+   "picture": "A big black dog. Its bark is a cone of fire down the hallway. The exit sign is not a suggestion.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A big black dog. Its bark is a cone of fire down the hallway. The exit sign is not a suggestion.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The hound makes two Bite attacks",
+      "count": 2,
+      "uses": [
+       "Bite"
+      ]
+     },
+     {
+      "name": "Bite",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 3 (1d6) Fire damage.",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "1d8+3",
+       "type": "piercing",
+       "average": 7
+      },
+      "extra_damage": [
+       {
+        "dice": "1d6",
+        "type": "fire",
+        "average": 3
+       }
+      ]
+     },
+     {
+      "name": "Fire Breath (Recharge 5–6)",
+      "slot": "actions",
+      "kind": "save",
+      "parsed": true,
+      "raw": "Dexterity Saving Throw: DC 12, each creature in a 15-foot Cone. Failure: 17 (5d6) Fire damage. Success: Half damage",
+      "save": {
+       "ability": "Dexterity",
+       "dc": 12,
+       "success": "half"
+      },
+      "damage": {
+       "dice": "5d6",
+       "type": "fire",
+       "average": 17
+      },
+      "recharge": "5-6"
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [
+     {
+      "key_name": "Fire Breath",
+      "name": "Fire Breath",
+      "kind": "recharge",
+      "spell_level": null,
+      "max": 1,
+      "available": true,
+      "die": "d6",
+      "recharge_on": [
+       5,
+       6
+      ],
+      "recover": "start of this creature's turn, d6 in [5, 6]",
+      "rule": "Starts ready. After Fire Breath is used, it is down until a d6 at the start of this creature's turn shows 5–6. It cannot be used every turn.",
+      "key": "f02-b-01.fire-breath"
+     }
+    ],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-b-02",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "boss",
-   "display_name": "Live Mascot",
-   "nameplate": "Live Mascot. Level 3. Boss. \"The costume filled in.\"",
+   "display_name": "Occupied Owl-Bear Mascot",
+   "nameplate": "Occupied Owl-Bear Mascot. Level 3. Boss. \"The costume filled in.\"",
    "nameplate_level": 3,
    "srd_name": "Owlbear",
    "srd_id": "owlbear",
@@ -3276,7 +4357,7 @@
    "what_it_wants": "It wants a hug that is a maul.",
    "how_to_cheese": "Kite it. Don't stand in the hug.",
    "tactics": "Multiattack the nearest.",
-   "system_line": "Live Mascot. Level 3. Boss.",
+   "system_line": "Occupied Owl-Bear Mascot. Level 3. Boss.",
    "gm_line": "Hug the mascot, the poster said. The poster is evidence.",
    "stat_block": {
     "srd_name": "Owlbear",
@@ -3378,7 +4459,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Occupied Owl-Bear Mascot"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3390,17 +4472,54 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Live Mascot",
+   "picture": "An owl's head on a bear's body, and it is not a costume. The beak and the hug both count.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "An owl's head on a bear's body, and it is not a costume. The beak and the hug both count.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The owlbear makes two Rend attacks",
+      "count": 2,
+      "uses": [
+       "Rend"
+      ]
+     },
+     {
+      "name": "Rend",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +7 , reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage",
+      "to_hit": 7,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d8+5",
+       "type": "slashing",
+       "average": 14
+      }
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   },
   {
    "id": "f02-b-03",
-   "schema": "cursor-dcc-cards/monster/0.2.0",
+   "schema": "cursor-dcc-cards/monster/0.3.0",
    "status": "R&D",
    "authoritative": false,
    "floor": 2,
    "role": "boss",
-   "display_name": "Knight of the Soft Open",
-   "nameplate": "Knight of the Soft Open. Level 3. Boss. \"Ribbon-cutting with a real sword.\"",
+   "display_name": "Rental-Plate Sponsor Knight",
+   "nameplate": "Rental-Plate Sponsor Knight. Level 3. Boss. \"Ribbon-cutting with a real sword.\"",
    "nameplate_level": 3,
    "srd_name": "Knight",
    "srd_id": "knight",
@@ -3414,7 +4533,7 @@
    "what_it_wants": "It wants a duel on the stage.",
    "how_to_cheese": "Don't duel. Swarm, or drop the stage lights. The knight wants honor. Decline.",
    "tactics": "Leadership if any unit remains, then the sword.",
-   "system_line": "Knight of the Soft Open. Level 3. Boss.",
+   "system_line": "Rental-Plate Sponsor Knight. Level 3. Boss.",
    "gm_line": "They sent a knight to cut a ribbon. The ribbon is you.",
    "stat_block": {
     "srd_name": "Knight",
@@ -3526,7 +4645,8 @@
     ],
     "live_pages_win": "floors/ and rules/70 win if this card disagrees",
     "uses_ref": "tracked_uses",
-    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print."
+    "spell_policy": "A numbered pool at 0 does not fire again until it recovers. The creature uses its weapon or natural attacks. A recharge trick stays down until the d6 hits the printed range. At-will cantrips may still be cast. Do not refill a pool in the same fight, and do not add slots the block does not print.",
+    "display": "Rental-Plate Sponsor Knight"
    },
    "tracked_uses": [],
    "when_empty": null,
@@ -3538,6 +4658,81 @@
     "floor_frame": "Ten-day clock (decision 026). The Floor 2 canon table is reserve and was not copied onto these cards. Soft-open and ratings are house set dressing. Floors 1–2 stay Bronze and Silver: Common default, Uncommon peak. No Gold from a random draw. A Long Rest finishes in a saferoom (core saferoom overlay).",
     "card_note": "House set dressing. The Floor 2 reserve canon table was not used. Numbers stay the SRD block.",
     "voice": "system_line is [SYSTEM]. gm_line is [GM]. Do not swap them."
+   },
+   "previous_display_name": "Knight of the Soft Open",
+   "picture": "A knight in full plate with a sponsor logo on the breastplate and a renaissance-faire lance.",
+   "local": {
+    "schema": "cursor-dcc-cards/local-monster/0.3.0",
+    "resolves_in": "code",
+    "picture": "A knight in full plate with a sponsor logo on the breastplate and a renaissance-faire lance.",
+    "attacks": [
+     {
+      "name": "Multiattack",
+      "slot": "actions",
+      "kind": "multiattack",
+      "parsed": true,
+      "raw": "The knight makes two attacks, using Greatsword or Heavy Crossbow in any combination",
+      "uses": []
+     },
+     {
+      "name": "Greatsword",
+      "slot": "actions",
+      "kind": "melee",
+      "parsed": true,
+      "raw": "Melee Attack Roll: +5, reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 4 (1d8) Radiant damage",
+      "to_hit": 5,
+      "reach_ft": 5,
+      "damage": {
+       "dice": "2d6+3",
+       "type": "slashing",
+       "average": 10
+      },
+      "extra_damage": [
+       {
+        "dice": "1d8",
+        "type": "radiant",
+        "average": 4
+       }
+      ]
+     },
+     {
+      "name": "Heavy Crossbow",
+      "slot": "actions",
+      "kind": "ranged",
+      "parsed": true,
+      "raw": "Ranged Attack Roll: +2, range 100/400 ft. Hit: 11 (2d10) Piercing damage plus 4 (1d8) Radiant damage",
+      "to_hit": 2,
+      "range_ft": [
+       100,
+       400
+      ],
+      "damage": {
+       "dice": "2d10",
+       "type": "piercing",
+       "average": 11
+      },
+      "extra_damage": [
+       {
+        "dice": "1d8",
+        "type": "radiant",
+        "average": 4
+       }
+      ]
+     },
+     {
+      "name": "Parry",
+      "slot": "reactions",
+      "kind": "reaction",
+      "parsed": true,
+      "raw": "Trigger: The knight is hit by a melee attack roll while holding a weapon. Response: The knight adds 2 to its AC against that attack, possibly causing it to miss.",
+      "trigger": "The knight is hit by a melee attack roll while holding a weapon",
+      "response": "The knight adds 2 to its AC against that attack, possibly causing it to miss.",
+      "ac_bonus": 2
+     }
+    ],
+    "riders": [],
+    "tracked_uses": [],
+    "note": "Numbers are the SRD block already on this card. The engine rolls these fields. It does not ask a model what the dice were."
    }
   }
  ]

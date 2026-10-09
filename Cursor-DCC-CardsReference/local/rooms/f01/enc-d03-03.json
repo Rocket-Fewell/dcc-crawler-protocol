@@ -1,0 +1,110 @@
+{
+ "id": "enc-d03-03",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 3,
+ "zone": "z10",
+ "zone_name": "Graduation Stage (wings)",
+ "name": "Stage Wings Recon",
+ "kind": "non-combat scouting (optional fight)",
+ "source": "floors/f01/day-03.json#enc-d03-03",
+ "routes": [
+  "clever",
+  "dash"
+ ],
+ "read_aloud": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
+ "narrator_line": "Stage wings. Observation position before the pit.",
+ "layout": "The wings of the vast auditorium: rolled diplomas, a trophy table, camera lights in the dark, the orchestra pit at the front edge.",
+ "exits": [
+  {
+   "name": "Back to the Green Room (Z9).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Onto the stage (Z10).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "To the service hall (Z S).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Trophy table and podium (half cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Camera drones watching.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "The orchestra pit edge (a usable hazard).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Ushers on watch if the party is spotted.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d03-03",
+  "enemies": [
+   {
+    "slot": "watch-ushers",
+    "srd_id": "skeleton",
+    "spoken_name": "Usher",
+    "live_name": "Usher (Skeleton)",
+    "stat_card": "f01-m-09",
+    "counts_by_party_size": {
+     "2": 1,
+     "3": 1,
+     "4": 2
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "The stage wings: a trophy table, camera lights and the orchestra pit.",
+   "decision": "Scout quietly for the Dean's weak points, or loot the table and risk being spotted?",
+   "on_success": "The party learns a cheese route and the Ushers' watch pattern.",
+   "on_failure": "The Ushers spot them and raise the alert for Day 4.",
+   "minutes": 6,
+   "tag": "pacing guide",
+   "cut_short": "Give the three scouting facts (pit, spotlight, watch pattern) and roll one stealth check.",
+   "audience": "gm"
+  }
+ },
+ "loot": [],
+ "achievement_ids": [
+  "ACH-0873",
+  "ACH-0173"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

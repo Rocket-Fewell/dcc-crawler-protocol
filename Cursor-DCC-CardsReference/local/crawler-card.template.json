@@ -1,0 +1,44 @@
+{
+  "schema": "cursor-dcc-cards/crawler-state/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "note": "Blank state card a local engine loads at session start. Do not put a live crawler in this file. sessions/ and characters/ stay untouched. Shape follows gm-notes/30-player-channel-card-format.md.",
+  "card": {
+    "id": "crawler-blank",
+    "player": "",
+    "name": "",
+    "species": "",
+    "class": "",
+    "level": 1,
+    "hp": {"current": 0, "max": 0, "temp": 0},
+    "ac": 10,
+    "initiative_bonus": 0,
+    "speed_ft": 30,
+    "credits": 0,
+    "xp": 0,
+    "abilities": {
+      "str": 10, "dex": 10, "con": 10, "int": 10, "wis": 10, "cha": 10
+    },
+    "proficiency_bonus": 2,
+    "saves": [],
+    "skills": [],
+    "conditions": [],
+    "death_saves": {"successes": 0, "failures": 0, "show_when": "hp is 0"},
+    "attacks": [],
+    "spellcasting": {
+      "save_dc": null,
+      "attack_bonus": null,
+      "slots": [],
+      "spells": []
+    },
+    "features": [],
+    "hit_dice": {"die": "d8", "used": 0, "max": 1},
+    "inventory": [],
+    "boxes": [],
+    "titles": [],
+    "floor1_reprieve_used": false,
+    "benched": false,
+    "action_economy": {"action": true, "bonus": true, "reaction": true, "object_interaction": true, "movement_ft_left": 30}
+  }
+}

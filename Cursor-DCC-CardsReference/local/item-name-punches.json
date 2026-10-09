@@ -1,0 +1,16 @@
+{
+  "schema": "cursor-dcc-cards/item-name-pass/0.3.0",
+  "rule": "Lore's filed reskin names stay when they already show the object and the joke. These are the flat ones. lore_display_name keeps the filed name so a live table can still match item-reskins.json. display_name is what the future local engine shows.",
+  "by_old_display_name": {
+    "Garden Sickle": "Orange Weed-Whacker Sickle",
+    "Bar-Room Dart": "Sticky Bar Dart, Two Short of a Set",
+    "Wood-Splitting Axe": "Firewood Axe, People Count as Wood",
+    "Framing Hammer": "Stud-Finder Framing Hammer",
+    "Printer Paper": "Shrink-Wrapped Ream of Printer Paper",
+    "Matchbook": "Matchbook from a Bar That Burned",
+    "Deck of Cards": "Deck of Cards, Ace Already Missing",
+    "Ziplock Pouch": "Suspicious Ziplock Pouch",
+    "Cast-Iron Pot": "Cast-Iron Pot, Still Has Chili",
+    "Snow Shovel": "Off-Season Snow Shovel"
+  }
+}

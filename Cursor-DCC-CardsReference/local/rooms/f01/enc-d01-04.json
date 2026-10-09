@@ -1,0 +1,92 @@
+{
+ "id": "enc-d01-04",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "wandering",
+ "zone_name": "Wandering (any non-saferoom area during Lights-Out)",
+ "name": "Lights-Out: Ceiling Ticks",
+ "kind": "wandering combat + hazard",
+ "source": "floors/f01/day-01.json#enc-d01-04",
+ "routes": [
+  "dash"
+ ],
+ "read_aloud": "LIGHTS OUT. Red emergency lighting only. Remain in place until the cycle ends.",
+ "narrator_line": "LIGHTS OUT. Red emergency lighting only.",
+ "layout": "Whatever room the party is in when the Pit goes dark for the hour; red emergency light only, everything reads as dim.",
+ "exits": [
+  {
+   "name": "The nearest saferoom (Z6 or Z9).",
+   "to": "enc-d01-01",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Whatever the room provides; furniture and doorways.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Red dim light for the hour.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Ceiling Ticks drop from vents and light fixtures.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-04",
+  "enemies": [
+   {
+    "slot": "ticks",
+    "srd_id": "stirge",
+    "spoken_name": "Ceiling Tick",
+    "live_name": "Ceiling Tick (Stirge)",
+    "stat_card": "f01-m-02",
+    "counts_by_party_size": {
+     "2": 2,
+     "3": 3,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "The Pit goes dark for an hour and Ceiling Ticks drop from the vents.",
+   "decision": "Fight in the red light, or retreat to somewhere with a door?",
+   "on_success": "The Ticks are cleared and the dark hour passes.",
+   "on_failure": "Bitten and shaken, the party loses time and a short-rest slot.",
+   "minutes": 5,
+   "tag": "pacing guide",
+   "cut_short": "Resolve it as a single exchange: one roll for the party, one cost.",
+   "audience": "gm"
+  }
+ },
+ "loot": [],
+ "achievement_ids": [
+  "ACH-0860",
+  "ACH-0205"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}
