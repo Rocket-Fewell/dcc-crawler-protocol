@@ -1,11 +1,6 @@
 """Player eyes and the GM correction door. Speech still belongs to Discord."""
 
 _SHARED_JS = r"""
-function signed(n) {
-  const num = Number(n);
-  if (!Number.isFinite(num)) return "";
-  return (num >= 0 ? "+" : "") + num;
-}
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -63,6 +58,50 @@ function sheetSections(crawler) {
   }
   return wrap;
 }
+function roomPanel(card) {
+  const box = el("section", "card room");
+  if (!card) return box;
+  box.appendChild(el("h2", "", card.name || "Room"));
+  if (card.read_aloud) {
+    const read = el("p", "read");
+    fillRich(read, card.read_aloud);
+    box.appendChild(read);
+  }
+  if (card.layout) box.appendChild(el("p", "", card.layout));
+  if ((card.features || []).length) {
+    box.appendChild(el("h3", "", "In the room"));
+    for (const feature of card.features) box.appendChild(el("p", "", feature));
+  }
+  if ((card.exits || []).length) {
+    box.appendChild(el("h3", "", "Exits"));
+    for (const exit of card.exits) box.appendChild(el("p", "", exit));
+  }
+  return box;
+}
+function pip(on, label) {
+  return (on ? "ready" : "spent") + " " + label;
+}
+function turnStrip(crawler) {
+  const box = el("div", "");
+  const ac = crawler.ac + (crawler.ac_bonus ? "+" + crawler.ac_bonus : "");
+  const temp = crawler.temp_hp ? " +" + crawler.temp_hp + " temp" : "";
+  box.appendChild(el("p", "vitals", crawler.name + "  HP " + crawler.hp + "/" + crawler.hp_max + temp + "  AC " + ac + (crawler.cover ? "  your cover " + crawler.cover : "")));
+  box.appendChild(bar(crawler.hp, crawler.hp_max));
+  box.appendChild(el("p", "", pip(crawler.action, "action") + "  ·  " + pip(crawler.bonus, "bonus") + "  ·  " + pip(crawler.reaction, "reaction") + "  ·  " + pip(crawler.object, "object")));
+  let move = "Movement " + crawler.movement_left + " ft";
+  if (crawler.hidden) move += "  ·  hidden";
+  if (crawler.hp <= 0) move += "  ·  death saves " + crawler.death_success + " success, " + crawler.death_fail + " fail";
+  box.appendChild(el("p", "", move));
+  return box;
+}
+"""
+
+_TABLE_JS = r"""
+function signed(n) {
+  const num = Number(n);
+  if (!Number.isFinite(num)) return "";
+  return (num >= 0 ? "+" : "") + num;
+}
 function namedList(parent, title, rows) {
   if (!rows || !rows.length) return;
   parent.appendChild(el("h3", "", title));
@@ -70,9 +109,7 @@ function namedList(parent, title, rows) {
     const p = el("p", "action");
     const name = el("strong", "", row.name);
     p.appendChild(name);
-    if (row.text) {
-      p.appendChild(document.createTextNode(". " + row.text));
-    }
+    if (row.text) p.appendChild(document.createTextNode(". " + row.text));
     parent.appendChild(p);
   }
 }
@@ -131,42 +168,6 @@ function enemyCard(enemy) {
   if (card.tactics) article.appendChild(el("p", "", "Tactics: " + card.tactics));
   return article;
 }
-function roomPanel(card) {
-  const box = el("section", "card room");
-  if (!card) return box;
-  box.appendChild(el("h2", "", card.name || "Room"));
-  if (card.read_aloud) {
-    const read = el("p", "read");
-    fillRich(read, card.read_aloud);
-    box.appendChild(read);
-  }
-  if (card.layout) box.appendChild(el("p", "", card.layout));
-  if ((card.features || []).length) {
-    box.appendChild(el("h3", "", "In the room"));
-    for (const feature of card.features) box.appendChild(el("p", "", feature));
-  }
-  if ((card.exits || []).length) {
-    box.appendChild(el("h3", "", "Exits"));
-    for (const exit of card.exits) box.appendChild(el("p", "", exit));
-  }
-  return box;
-}
-function pip(on, label) {
-  return (on ? "ready" : "spent") + " " + label;
-}
-function turnStrip(crawler) {
-  const box = el("div", "");
-  const ac = crawler.ac + (crawler.ac_bonus ? "+" + crawler.ac_bonus : "");
-  const temp = crawler.temp_hp ? " +" + crawler.temp_hp + " temp" : "";
-  box.appendChild(el("p", "vitals", crawler.name + "  HP " + crawler.hp + "/" + crawler.hp_max + temp + "  AC " + ac + (crawler.cover ? "  your cover " + crawler.cover : "")));
-  box.appendChild(bar(crawler.hp, crawler.hp_max));
-  box.appendChild(el("p", "", pip(crawler.action, "action") + "  ·  " + pip(crawler.bonus, "bonus") + "  ·  " + pip(crawler.reaction, "reaction") + "  ·  " + pip(crawler.object, "object")));
-  let move = "Movement " + crawler.movement_left + " ft";
-  if (crawler.hidden) move += "  ·  hidden";
-  if (crawler.hp <= 0) move += "  ·  death saves " + crawler.death_success + " success, " + crawler.death_fail + " fail";
-  box.appendChild(el("p", "", move));
-  return box;
-}
 """
 
 PLAYER_HTML = """<!DOCTYPE html>
@@ -176,43 +177,44 @@ PLAYER_HTML = """<!DOCTYPE html>
 <title>Shooting Gallery</title>
 <style>
   :root { color-scheme: dark; }
-  body { margin: 0; font: 16px/1.45 system-ui, sans-serif; background: #1a120c; color: #f3e6d0; }
-  header { position: sticky; top: 0; z-index: 2; padding: 12px 20px; background: #2a1c12; border-bottom: 1px solid #6b4a2a; }
-  main { padding: 16px 20px 48px; }
-  h1 { margin: 0 0 4px; font-size: 22px; }
-  h2 { margin: 0 0 6px; font-size: 16px; letter-spacing: 0.03em; }
-  h3 { margin: 12px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #f0d78c; }
+  html, body { height: 100%; }
+  body { margin: 0; display: flex; flex-direction: column; overflow: hidden; font: 15px/1.4 system-ui, sans-serif; background: #1a120c; color: #f3e6d0; }
+  header { flex: none; padding: 8px 14px; background: #2a1c12; border-bottom: 1px solid #6b4a2a; }
+  main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(280px, 1.15fr) minmax(280px, 0.85fr); grid-template-rows: auto auto minmax(0, 1fr) auto; gap: 8px; padding: 8px 12px 10px; }
+  h1 { margin: 0; font-size: 18px; }
+  h2 { margin: 0 0 4px; font-size: 15px; }
+  h3 { margin: 8px 0 2px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #f0d78c; }
   .muted, header p { color: #c8b497; margin: 0; }
-  .grid { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr); gap: 16px; align-items: start; }
-  .foes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; margin: 12px 0; }
-  .card { background: #2c2118; border: 1px solid #6b4a2a; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
+  #room-card { grid-column: 1 / -1; max-height: 14vh; overflow: auto; }
+  .foes { grid-column: 1 / -1; max-height: 22vh; overflow: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; align-items: start; }
+  #sheet { grid-column: 1; grid-row: 3; min-height: 0; overflow: auto; margin: 0; }
+  .play { grid-column: 2; grid-row: 3; min-height: 0; display: flex; flex-direction: column; gap: 8px; }
+  .card { background: #2c2118; border: 1px solid #6b4a2a; border-radius: 8px; padding: 8px 10px; margin: 0; }
   .foe.down { opacity: 0.55; }
-  .plate { color: #f0d78c; }
-  .picture, .read { color: #e7d7bd; }
-  .system { color: #d7c4a3; }
-  .vuln { color: #f0b429; }
-  .rolls { color: #9fd0c3; }
-  .prose { white-space: pre-wrap; font: 14px/1.4 ui-monospace, monospace; margin: 0; }
-  .block { margin-top: 14px; }
-  .abilities { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 8px 0; }
-  .abilities div { background: #1a120c; border-radius: 4px; padding: 4px; text-align: center; }
-  .ab-key { font-size: 11px; letter-spacing: 0.04em; color: #c8b497; }
-  .ab-score { font-size: 18px; }
-  .ab-mod { font-size: 11px; color: #c8b497; }
-  .hp { height: 8px; background: #3a2a1c; border-radius: 4px; overflow: hidden; margin: 6px 0; }
+  .plate { color: #f0d78c; margin: 2px 0; }
+  .picture, .read { color: #e7d7bd; margin: 2px 0; }
+  .system { color: #d7c4a3; margin: 2px 0; }
+  .card p { margin: 2px 0; }
+  .prose { white-space: pre-wrap; font: 13px/1.35 ui-monospace, monospace; margin: 0; }
+  .block { margin-top: 10px; }
+  .hp { height: 8px; background: #3a2a1c; border-radius: 4px; overflow: hidden; margin: 4px 0; }
   .hp span { display: block; height: 100%; background: #c4542c; }
-  .log { min-height: 180px; max-height: 360px; overflow: auto; }
+  #turn { flex: none; }
+  #log { flex: 1; min-height: 0; overflow: auto; }
+  #line-form, #actions { flex: none; }
   .you { color: #f3e6d0; }
   .gm { color: #f0d78c; }
   .roll { color: #9fd0c3; }
-  form, .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  input, button, select { font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid #6b4a2a; background: #1a120c; color: inherit; }
+  form, .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  input, button, select { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid #6b4a2a; background: #1a120c; color: inherit; }
   button { background: #c4542c; color: #1a120c; border: 0; cursor: pointer; }
   button.quiet { background: #3a2a1c; color: #f3e6d0; }
-  .action { margin: 4px 0; }
+  details.seat { grid-column: 1 / -1; max-height: 22vh; overflow: auto; }
+  summary { cursor: pointer; }
   @media (max-width: 800px) {
-    .grid, .abilities { grid-template-columns: repeat(3, 1fr); }
-    .grid { grid-template-columns: 1fr; }
+    main { grid-template-columns: 1fr; grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 1fr) auto; }
+    #sheet { grid-column: 1; grid-row: 3; }
+    .play { grid-column: 1; grid-row: 4; }
   }
 </style>
 </head>
@@ -224,21 +226,20 @@ PLAYER_HTML = """<!DOCTYPE html>
 <main>
   <div id="room-card"></div>
   <div id="enemies" class="foes"></div>
-  <div class="grid">
-    <article class="card" id="sheet"></article>
-    <section>
-      <div class="card" id="turn"></div>
-      <div class="card log" id="log" aria-live="polite"></div>
-      <form id="line-form">
-        <label for="line">What you do</label>
-        <input id="line" name="line" size="50" autocomplete="off" placeholder="I get behind the sandbags, then I cast eldritch blast at the first mannequin">
-        <button type="submit">Send</button>
-      </form>
-      <p class="row" id="actions"></p>
-    </section>
-  </div>
-  <form id="seat-form" class="card">
-    <strong>Or seat a different Crawler</strong>
+  <article class="card" id="sheet"></article>
+  <section class="play">
+    <div class="card" id="turn"></div>
+    <div class="card log" id="log" aria-live="polite"></div>
+    <form id="line-form">
+      <label for="line">What you do</label>
+      <input id="line" name="line" size="42" autocomplete="off" placeholder="I get behind the sandbags, then I cast eldritch blast at the first mannequin">
+      <button type="submit">Send</button>
+    </form>
+    <p class="row" id="actions"></p>
+  </section>
+  <details class="card seat">
+    <summary>Seat a different Crawler</summary>
+    <form id="seat-form">
     <p class="muted">This replaces the copy of Raithen for a fresh fight. It does not write the live sheet.</p>
     <label>Name <input name="name" required maxlength="40"></label>
     <label>Class <input name="class_name" value="Rogue"></label>
@@ -257,10 +258,24 @@ PLAYER_HTML = """<!DOCTYPE html>
     </label>
     <button type="submit">Seat</button>
     <span id="seat-note" class="muted"></span>
-  </form>
+    </form>
+  </details>
 </main>
 <script>
 """ + _SHARED_JS + """
+function enemySeen(enemy) {
+  const article = el("article", "card foe" + (enemy.hp <= 0 ? " down" : ""));
+  article.appendChild(el("h2", "", enemy.name));
+  if (enemy.nameplate) article.appendChild(el("p", "plate", enemy.nameplate));
+  if (enemy.spoken_name) article.appendChild(el("p", "spoken", enemy.spoken_name));
+  if (enemy.picture) article.appendChild(el("p", "picture", enemy.picture));
+  if (enemy.system_line) article.appendChild(el("p", "system", enemy.system_line));
+  article.appendChild(bar(enemy.hp, enemy.hp_max));
+  article.appendChild(el("p", "vitals", "HP " + enemy.hp + "/" + enemy.hp_max));
+  if (enemy.where) article.appendChild(el("p", "", enemy.where));
+  if ((enemy.conditions || []).length) article.appendChild(el("p", "", enemy.conditions.join(", ")));
+  return article;
+}
 const logEl = document.getElementById("log");
 let last = "";
 function render(data) {
@@ -269,7 +284,7 @@ function render(data) {
   document.getElementById("room-card").replaceChildren(roomPanel(data.room_card));
   const foes = document.getElementById("enemies");
   foes.replaceChildren();
-  for (const enemy of data.enemies) foes.appendChild(enemyCard(enemy));
+  for (const enemy of data.enemies) foes.appendChild(enemySeen(enemy));
   document.getElementById("sheet").replaceChildren(sheetSections(data.crawler));
   document.getElementById("turn").replaceChildren(turnStrip(data.crawler));
   logEl.replaceChildren();
@@ -378,34 +393,44 @@ GM_HTML = """<!DOCTYPE html>
 <title>Table</title>
 <style>
   :root { color-scheme: dark; }
-  body { margin: 0; font: 16px/1.45 system-ui, sans-serif; background: #121418; color: #e6e1d6; }
-  header { position: sticky; top: 0; z-index: 2; padding: 12px 20px; background: #1c222b; border-bottom: 1px solid #3d4a5c; }
-  main { padding: 16px 20px 48px; }
-  h1 { margin: 0 0 4px; font-size: 22px; }
-  h2 { margin: 0 0 6px; font-size: 16px; }
-  h3 { margin: 12px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #d7c4a3; }
+  html, body { height: 100%; }
+  body { margin: 0; display: flex; flex-direction: column; overflow: hidden; font: 15px/1.4 system-ui, sans-serif; background: #121418; color: #e6e1d6; }
+  header { flex: none; padding: 8px 14px; background: #1c222b; border-bottom: 1px solid #3d4a5c; }
+  main { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; padding: 8px 12px 10px; }
+  h1 { margin: 0; font-size: 18px; }
+  h2 { margin: 0 0 4px; font-size: 15px; }
+  h3 { margin: 8px 0 2px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #d7c4a3; }
   .note, header p { color: #d7c4a3; margin: 0; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-  .foes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
-  .card { background: #1c222b; border: 1px solid #3d4a5c; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
+  .controls { flex: none; }
+  .top { flex: none; max-height: 16vh; min-height: 0; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 8px; }
+  .top > * { min-height: 0; overflow: auto; }
+  .stage { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1.3fr) minmax(0, 0.7fr); gap: 8px; }
+  .foes { grid-column: 1 / -1; min-height: 0; overflow: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); grid-auto-rows: minmax(180px, 100%); gap: 8px; }
+  #sheet { min-height: 0; overflow: auto; margin: 0; }
+  .logs { min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .logs .card { min-height: 0; overflow: auto; margin: 0; }
+  .card { background: #1c222b; border: 1px solid #3d4a5c; border-radius: 8px; padding: 8px 10px; margin: 0; }
+  .foe { margin: 0; overflow: auto; min-height: 0; max-height: 100%; }
   .foe.down { opacity: 0.55; }
-  .secret { margin-top: 10px; padding-top: 8px; border-top: 1px dashed #d7c4a3; color: #f0d78c; }
-  .prose, pre { white-space: pre-wrap; font: 14px/1.4 ui-monospace, monospace; margin: 0; }
-  .block { margin-top: 14px; }
-  .abilities { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 8px 0; }
+  .secret { margin-top: 8px; padding-top: 6px; border-top: 1px dashed #d7c4a3; color: #f0d78c; }
+  .prose, pre { white-space: pre-wrap; font: 13px/1.35 ui-monospace, monospace; margin: 0; }
+  .block { margin-top: 10px; }
+  .abilities { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 6px 0; }
   .abilities div { background: #121418; border-radius: 4px; padding: 4px; text-align: center; }
   .ab-key, .ab-mod { font-size: 11px; color: #d7c4a3; }
-  .ab-score { font-size: 18px; }
-  .hp { height: 8px; background: #121418; border-radius: 4px; overflow: hidden; margin: 6px 0; }
+  .ab-score { font-size: 16px; }
+  .hp { height: 8px; background: #121418; border-radius: 4px; overflow: hidden; margin: 4px 0; }
   .hp span { display: block; height: 100%; background: #d7c4a3; }
   .vuln { color: #f0b429; }
-  .picture, .read { color: #e6e1d6; }
-  form, .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  input, button, select { font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid #3d4a5c; background: #121418; color: inherit; }
+  .rolls { color: #9fd0c3; }
+  .picture, .read { color: #e6e1d6; margin: 2px 0; }
+  .card p { margin: 2px 0; }
+  form, .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  input, button, select { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid #3d4a5c; background: #121418; color: inherit; }
   button { background: #d7c4a3; color: #121418; border: 0; cursor: pointer; }
   .action { margin: 4px 0; }
   @media (max-width: 800px) {
-    .grid { grid-template-columns: 1fr; }
+    .top, .stage, .logs { grid-template-columns: 1fr; }
     .abilities { grid-template-columns: repeat(3, 1fr); }
   }
 </style>
@@ -416,7 +441,7 @@ GM_HTML = """<!DOCTYPE html>
   <p>Every card, the cheese notes, and the raw line. Players do not get this page.</p>
 </header>
 <main>
-  <div class="row card">
+  <div class="row card controls">
     <button type="button" id="undo">Undo last resolution</button>
     <form id="fix">
       <label>Combatant <select id="who" name="who"></select></label>
@@ -425,18 +450,24 @@ GM_HTML = """<!DOCTYPE html>
     </form>
     <span id="note"></span>
   </div>
-  <div id="room-card"></div>
-  <section class="card"><strong>GM note from the room stub</strong><pre id="secret"></pre></section>
-  <section class="card" id="pacing"></section>
-  <div id="enemies" class="foes"></div>
-  <article class="card" id="sheet"></article>
-  <div class="grid">
-    <section class="card"><strong>Heard</strong><pre id="raw"></pre></section>
-    <section class="card"><strong>Spoken back</strong><pre id="log"></pre></section>
+  <div class="top">
+    <div id="room-card"></div>
+    <div class="notes">
+      <section class="card"><strong>GM note from the room stub</strong><pre id="secret"></pre></section>
+      <section class="card" id="pacing"></section>
+    </div>
+  </div>
+  <div class="stage">
+    <div id="enemies" class="foes"></div>
+    <article class="card" id="sheet"></article>
+    <div class="logs">
+      <section class="card"><strong>Heard</strong><pre id="raw"></pre></section>
+      <section class="card"><strong>Spoken back</strong><pre id="log"></pre></section>
+    </div>
   </div>
 </main>
 <script>
-""" + _SHARED_JS + """
+""" + _SHARED_JS + _TABLE_JS + """
 let last = "";
 function withSecret(article, enemy) {
   const secret = el("div", "secret");

@@ -29,7 +29,7 @@ Table: `http://127.0.0.1:8765/gm`
 
 It binds to localhost. `--host` or `DCC_TABLE_HOST` changes that. `--port` or `DCC_TABLE_PORT` changes the port. `--party-size` is 2, 3, or 4, matching the counts already on the room card.
 
-The seat is a copy of Raithen (Hornn's Warlock) in `engine/fixtures/raithen-copy.json`. The player page shows the whole channel card: attacks, spellcasting, features, rests, gear, standing orders, signature, achievements. Attacks are the numbers `tools/card_rules.py` already prints. The live sheet in `sessions-data/` is not written, and the copy leaves out the fan profile, the survey, and the quirk. Each mannequin shows the printed R&D stat block (`f01-m-09`), including the bludgeoning vulnerability and the full shortbow and shortsword lines. The chair-leg note, the GM line, and the room pacing guide stay on the table page. The shortbow roll is still +5.
+The seat is a copy of Raithen (Hornn's Warlock) in `engine/fixtures/raithen-copy.json`. The player page shows the whole channel card: attacks, spellcasting, features, rests, gear, standing orders, signature, achievements. Attacks are the numbers `tools/card_rules.py` already prints. The live sheet in `sessions-data/` is not written, and the copy leaves out the fan profile, the survey, and the quirk. A Crawler sees the System nameplate, the picture, and hit points. The printed stat block (`f01-m-09`), including armor class, the shortbow and shortsword lines, and the bludgeoning vulnerability, stays on the table page with the chair-leg note. The shortbow roll is still +5. The long card and the log scroll inside the window.
 
 ## Check
 

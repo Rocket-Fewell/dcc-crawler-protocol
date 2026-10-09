@@ -99,9 +99,7 @@ class Table:
         view["undo_depth"] = len(self._undo)
         view["resolutions"] = self.resolutions
         for shown, enemy in zip(view["enemies"], self.enemies):
-            shown["gm_line"] = enemy.get("gm_line") or ""
-            shown["how_to_cheese"] = enemy.get("how_to_cheese") or ""
-            shown["what_it_wants"] = enemy.get("what_it_wants") or ""
+            shown.update(_table_enemy(enemy, self.in_melee))
         return view
 
     def seat(self, card):
@@ -775,23 +773,35 @@ def _public_crawler(crawler):
 
 
 def _public_enemy(enemy, in_melee):
-    attacks = [enemy["ranged"], enemy["melee"]]
+    """What a Crawler is shown. The stat block stays on the GM page."""
     return {
         "id": enemy["id"],
         "name": enemy["name"],
         "picture": enemy["picture"],
         "spoken_name": enemy["spoken_name"],
+        "nameplate": (enemy.get("card") or {}).get("nameplate") or "",
         "system_line": enemy.get("system_line") or "",
-        "card": enemy.get("card") or {},
         "hp": enemy["hp"],
         "hp_max": enemy["hp_max"],
+        "conditions": list(enemy["conditions"]),
+        "where": "In the booth with you." if in_melee else "Behind the far counter.",
+    }
+
+
+def _table_enemy(enemy, in_melee):
+    """The printed block, the rolls, and the notes that are not for the player page."""
+    attacks = [enemy["ranged"], enemy["melee"]]
+    return {
         "ac": enemy["ac"],
         "cover": None if in_melee else "half",
-        "conditions": list(enemy["conditions"]),
+        "card": enemy.get("card") or {},
         "attacks": [
             {"name": attack["name"], "to_hit": attack["to_hit"], "damage": attack["damage"], "type": attack["type"], "kind": attack["kind"]}
             for attack in attacks
         ],
+        "gm_line": enemy.get("gm_line") or "",
+        "how_to_cheese": enemy.get("how_to_cheese") or "",
+        "what_it_wants": enemy.get("what_it_wants") or "",
     }
 
 
