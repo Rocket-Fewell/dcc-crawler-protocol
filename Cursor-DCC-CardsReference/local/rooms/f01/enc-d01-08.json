@@ -1,0 +1,107 @@
+{
+ "id": "enc-d01-08",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z02",
+ "zone_name": "Vent Row",
+ "name": "Vent Row: Combat 101",
+ "kind": "combat",
+ "source": "floors/f01/day-01.json#enc-d01-08",
+ "routes": [
+  "dash",
+  "loot",
+  "clever"
+ ],
+ "read_aloud": "The vents start skittering the second the shutter is up. Red brackets pop up over every grate. This is Combat 101.",
+ "narrator_line": "The vents start skittering the second the shutter is up.",
+ "layout": "A service hallway lined with floor vents, every grate bent outward, with red UI brackets over the openings.",
+ "exits": [
+  {
+   "name": "Back through the shutter to the Atrium (Z1).",
+   "to": "enc-d01-07",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "On to the Vending Gore Arcade (Z3).",
+   "to": "enc-d01-09",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Bent grates and wall pipes (half cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Two vents 20 ft apart spill the rats in two groups (00-overview.md section 5.2).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Backing away from a rat triggers the first Opportunity Attack popup.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-08",
+  "enemies": [
+   {
+    "slot": "vent-rat",
+    "srd_id": "giant-rat",
+    "spoken_name": "Vent Rat",
+    "live_name": "Vent Rat (Giant Rat)",
+    "stat_card": "f01-m-01",
+    "counts_by_party_size": {
+     "2": 3,
+     "3": 4,
+     "4": 6
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "A vent-lined hall and two waves of giant rats: the floor's first fight.",
+   "decision": "Hold the line together, or chase rats down the hall?",
+   "on_success": "The rats fall and the Crawlers learn initiative, flanking and Opportunity Attacks.",
+   "on_failure": "A Crawler drops and the party spends its first short-rest slot early.",
+   "minutes": 12,
+   "tag": "pacing guide",
+   "cut_short": "Run one wave only and resolve the second with a single group check.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Dropped change in the vents; the rats carry nothing (00-overview.md section 5.2).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0001",
+  "ACH-0860",
+  "ACH-0894",
+  "ACH-0205"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

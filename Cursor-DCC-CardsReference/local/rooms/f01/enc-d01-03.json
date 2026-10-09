@@ -1,0 +1,126 @@
+{
+ "id": "enc-d01-03",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z08",
+ "zone_name": "Mascot Locker Room (Elite)",
+ "name": "Mascot Locker Room",
+ "kind": "combat",
+ "source": "floors/f01/day-01.json#enc-d01-03",
+ "routes": [
+  "dash",
+  "clever"
+ ],
+ "read_aloud": "Mascot Locker Room. Costume station empty; crowd audio active. This zone covers the dying lesson. Absorb what you need.",
+ "narrator_line": "Mascot Locker Room. Costume station empty; crowd audio active.",
+ "layout": "A foam-smelling locker room: rows of lockers, benches, a cracked mirror wall, a giant mascot costume hanging from a hook in the middle.",
+ "exits": [
+  {
+   "name": "Doorway back to the Break Room.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Doorway on to the Green Room (Z9).",
+   "to": "enc-d01-05",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Benches and locker banks (half cover); the mirror wall gives no cover.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Searching lockers is loud: a Ceiling Ticks roll after a few banks (00-overview.md section 5.8).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Reflections in the cracked mirror are slightly late (flavor, no mechanics).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-03",
+  "enemies": [
+   {
+    "slot": "elite-armor",
+    "srd_id": "animated-armor",
+    "spoken_name": "Bruiser the Mascot (Unoccupied)",
+    "live_name": "Bruiser the Mascot (Unoccupied) (Animated Armor)",
+    "stat_card": "f01-e-01",
+    "counts_by_party_size": {
+     "2": 1,
+     "3": 1,
+     "4": 1
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   },
+   {
+    "slot": "lanyard-blade",
+    "srd_id": "animated-flying-sword",
+    "spoken_name": "Lanyard Blade",
+    "live_name": "Lanyard Blade (Animated Flying Sword)",
+    "stat_card": "f01-u-02",
+    "counts_by_party_size": {
+     "2": 0,
+     "3": 0,
+     "4": 2
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "A foam-smelling locker room, a mascot suit on a hook, and a service key somewhere inside it.",
+   "decision": "Fight the animated armor head-on, or use the room (lockers, mirror, noise) against it?",
+   "on_success": "The costume falls and the service key is theirs.",
+   "on_failure": "A Crawler drops and the party must spend a short-rest slot or retreat.",
+   "minutes": 12,
+   "tag": "pacing guide",
+   "cut_short": "Drop the locker-search noise and run the fight as armor plus blades only.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Bruiser's service key (opens the Zone S door).",
+   "when": "see the Day page"
+  },
+  {
+   "text": "Bruiser's head also holds a Potion of Healing, the third placed potion (Sports Drink, Green Flavor per overview).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0078",
+  "ACH-0085",
+  "ACH-0015",
+  "ACH-0018",
+  "ACH-0016",
+  "ACH-0020",
+  "ACH-0082"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

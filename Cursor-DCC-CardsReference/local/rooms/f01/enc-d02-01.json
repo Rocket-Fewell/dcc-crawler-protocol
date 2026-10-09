@@ -1,0 +1,97 @@
+{
+ "id": "enc-d02-01",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 2,
+ "zone": "z09",
+ "zone_name": "The Green Room (Saferoom B)",
+ "name": "Morning Notice: Outer Zones Close, Stairwell Opens",
+ "kind": "non-combat",
+ "source": "floors/f01/day-02.json#enc-d02-01",
+ "routes": [
+  "clever",
+  "dash",
+  "loot"
+ ],
+ "read_aloud": "GOOD MORNING, CRAWLERS. House rules update is posted. Outer zones are closed; stairwell access is open. Read the schedule.",
+ "narrator_line": "GOOD MORNING, CRAWLERS. House rules update is posted.",
+ "layout": "The backstage green room: ring-lit mirror, folding chairs, the fruit plate, the framed photo. It is the quiet end of the building.",
+ "exits": [
+  {
+   "name": "Back to the Locker Room (Z8).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "STAFF ONLY door to the Graduation Stage (Z10).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The stage wings toward the service corridor (Z S).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Chairs and the dressing table (half cover if it ever matters).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; honest saferoom, open to the end (inspired).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "The announcements are loud.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d02-01",
+  "enemies": [],
+  "quick_run": {
+   "setup": "Morning in the Green Room: the System announces the outer zones are gone and the stairwell is open.",
+   "decision": "Spend the day on loot, on the stairs, or on both?",
+   "on_success": "They leave with a plan and know the early-descent choice is theirs alone.",
+   "on_failure": "They ignore the notices; the speaker repeats them every hour until someone reacts.",
+   "minutes": 5,
+   "tag": "pacing guide",
+   "cut_short": "Read the collapse notice and the stairwell announcement; skip the zone color.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Box opening during the Long Rest: all earned boxes at once, lowest tier first.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0025",
+  "ACH-0899"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

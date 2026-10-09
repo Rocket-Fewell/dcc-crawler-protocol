@@ -1,0 +1,106 @@
+{
+ "id": "enc-d02-02",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 2,
+ "zone": "zS",
+ "zone_name": "Zone S: Service Corridor (side path)",
+ "name": "Zone S: The Service Door",
+ "kind": "hazard + optional fight",
+ "source": "floors/f01/day-02.json#enc-d02-02",
+ "routes": [
+  "loot",
+  "clever",
+  "dash"
+ ],
+ "read_aloud": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
+ "narrator_line": "Behind the stage there's a hall that smells like pipes and quiet resentment.",
+ "layout": "A narrow utility hall behind the stage: pipes, junction boxes, a single locked service door at the end that leads to a service stairwell.",
+ "exits": [
+  {
+   "name": "Back to the stage wings (Z10 edge).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The service door, leading to the stairwell that drops to Z11.",
+   "to": "enc-d02-03",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Pipe runs and junction boxes (half cover).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Locked service door (inspired): key, tools or force; force is loud and the noise draws the boss and ushers (00-overview.md section 5.10).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Open stage within earshot.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d02-02",
+  "enemies": [
+   {
+    "slot": "noise-ushers",
+    "srd_id": "skeleton",
+    "spoken_name": "Usher",
+    "live_name": "Usher (Skeleton)",
+    "stat_card": "f01-m-09",
+    "counts_by_party_size": {
+     "2": 1,
+     "3": 1,
+     "4": 2
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "A utility hall behind the stage ends at a locked service door.",
+   "decision": "Open it quietly with a key or tools, or force it loudly?",
+   "on_success": "The door opens and the service stairs lie below.",
+   "on_failure": "Forcing it draws the Ushers, and the Dean a minute later.",
+   "minutes": 8,
+   "tag": "pacing guide",
+   "cut_short": "Resolve the door in one check; narrate the Ushers only if it fails.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Bruiser's service key opens the door, if still held.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0180",
+  "ACH-0179",
+  "ACH-0877"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

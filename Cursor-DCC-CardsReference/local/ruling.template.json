@@ -1,0 +1,15 @@
+{
+  "schema": "cursor-dcc-cards/ruling/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "source": "engine-design/01-rules-engine-scope.md section 5. Used only when no action card matched.",
+  "card": {
+    "ruling": "one sentence",
+    "resolve_as": "attack",
+    "resolve_as_allowed": ["attack", "save", "check", "damage", "heal", "condition", "move", "item", "none"],
+    "params": {},
+    "log": "why",
+    "on_invalid": "[SYSTEM] The System doesn't support that. Try something else."
+  }
+}

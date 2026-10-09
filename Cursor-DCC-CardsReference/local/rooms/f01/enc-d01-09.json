@@ -1,0 +1,110 @@
+{
+ "id": "enc-d01-09",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z03",
+ "zone_name": "Vending Gore Arcade",
+ "name": "Vending Gore Arcade: The Loot Lesson",
+ "kind": "non-combat (hazard and loot)",
+ "source": "floors/f01/day-01.json#enc-d01-09",
+ "routes": [
+  "loot",
+  "clever",
+  "dash"
+ ],
+ "read_aloud": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman in scrubs lies face-down in the wrappers, one arm still reaching for it. This is the loot lesson, and she is the first page.",
+ "narrator_line": "Rows of vending machines hum in a dozen colors, and some of them are breathing.",
+ "layout": "A long hall of vending machines, half smashed and half glowing and faintly breathing, with a body in scrubs face-down in the middle of the floor.",
+ "exits": [
+  {
+   "name": "Back to Vent Row (Z2).",
+   "to": "enc-d01-08",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "On to the Hall of Fair Warnings (Z4).",
+   "to": "enc-d01-10",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "A false panel behind the change machine opens the back cage (3b; hidden, check values in 00-overview.md section 5.3).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Machines (half cover; the breathing ones are a bad idea).",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Hungry vendors bite a reaching arm (a Dexterity save, then Strength (Athletics) to pull free; section 5.3).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Prying a machine open is loud: one Ceiling Ticks roll (section 5.11).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-09",
+  "enemies": [],
+  "quick_run": {
+   "setup": "A hall of hungry vending machines, a fallen Crawler's cache, and a crate with a strange stamped coin.",
+   "decision": "Reach into the machines, pry them open loudly, or search the body and the crate first?",
+   "on_success": "They loot the hall, read Tanya's note and pocket the stamped coin.",
+   "on_failure": "Arms get bitten, a loud pry draws a Ceiling Ticks roll, and the cache behind the change machine stays hidden.",
+   "minutes": 12,
+   "tag": "pacing guide",
+   "cut_short": "One roll per Crawler on the vending table; hand over Tanya's cache and the coin without checks.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Tanya Ruiz's corpse cache: a Mop-Handle Staff, a lore scrap, a Potion of Healing reskinned as Sports Drink, Red Flavor, and some credits (00-overview.md sections 5.3 and 8.3, potion #1).",
+   "when": "see the Day page"
+  },
+  {
+   "text": "Lost & Found crate: junk and the Odd Coin (spine plant; log the holder; never explain it). 00-overview.md sections 5.3 and 8.4.",
+   "when": "see the Day page"
+  },
+  {
+   "text": "Back cage (3b) hidden cache: a Potion of Healing (potion #2), a riot shield, credits, and the scrawled map that reveals Zone S (00-overview.md section 5.3).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0083",
+  "ACH-0871",
+  "ACH-0872",
+  "ACH-0077",
+  "ACH-0081",
+  "ACH-0177",
+  "ACH-0179"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

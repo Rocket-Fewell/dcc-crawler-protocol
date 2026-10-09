@@ -1,6 +1,6 @@
 # Cursor DCC cards reference
-Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
-Summary: House encounter cards for grok bots. SRD 5.2.1 numbers, Dungeon Crawler Carl tone, tracked spell uses, full gear and loot-box cards. Not a live floor.
+Owner: Cursor (R&D) | Status: draft | Version: 0.3.0 | Updated: 2026-10-09
+Summary: House encounter cards for a future local engine. Picture names, SRD 5.2.1 numbers, tracked uses, gear and loot cards with the roll on the card. Not a live floor.
 
 This folder is an R&D draw pile. Caleb asked for it without a room vote. It does not change `rules/`, `floors/`, `lore/CANON-LEDGER.md`, sessions, or credit ledgers.
 
@@ -20,6 +20,8 @@ Live Day pages and `rules/70-encounter-budget-5e.json` win if a card disagrees w
 | `items/loot-box-book.md` | The same loot cards, readable. |
 | `achievements/catalog.json` | 24 house toasts. Snark or Heroic Inspiration. No new credit amounts and no boxes. |
 | `00-how-bots-draw.md` | How a grok bot builds a random encounter from this pile. |
+| `local/00-how-local-play-works.md` | Which cards a future engine loads so a turn does not wake an agent. |
+| `local/rooms/f01/` | 25 Floor 1 room stubs. The day page wins. |
 | `ATTRIBUTION.md` | CC BY 4.0 credit for the SRD text. |
 
 ## Counts
@@ -45,6 +47,16 @@ Live Day pages and `rules/70-encounter-budget-5e.json` win if a card disagrees w
 - Floors 1–2 random boxes stay Bronze, or Silver on a boss box. Gold starts at Floor 3. No Platinum on Floors 1–8.
 - A leveled spell, a 1/Day trick, a recharge breath, and an item charge all spend a counter. At-will cantrips do not. At 0, that spell or charge is done. Daily uses come back on a Long Rest in a saferoom. Do not add slots the stat block does not print.
 - House flavor was checked against the live Floor 1 module and core rules. The Floor 2 reserve canon table was not copied. Dean Thudd on the Day pages stays the live Floor 1 boss. Book-proper mob names were not added.
+
+## Names (0.3.0)
+
+A display name is a picture. A Crawler who has never opened a Monster Manual should know what they are looking at. "Latch-On Ceiling Mosquito" is the stirge. "Smiling Polo Mannequin" is the skeleton. The SRD name stays on `srd_name` for the math. The audit is `local/monster-name-audit.md`.
+
+Lore's filed gear jokes stay when they already show the object. Ten flat gear names were punched up. The filed reskin is `lore_display_name`. `lore/tables/item-reskins.json` was not edited.
+
+`local.attacks` on a monster and `local.damage` or `local.ac_base` on a weapon or armor are what code rolls. If a gear card has no filed attack or AC line, `local.playable` is false and the engine must not invent a number.
+
+Dean Thudd on the Day pages is still the Floor 1 boss. Room stubs keep his name. Adjunct Smash is only the random-draw giant.
 
 ## Voice
 

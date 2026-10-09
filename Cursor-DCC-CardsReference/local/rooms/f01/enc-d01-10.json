@@ -1,0 +1,98 @@
+{
+ "id": "enc-d01-10",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z04",
+ "zone_name": "Hall of Fair Warnings",
+ "name": "Hall of Fair Warnings: Read the Signs",
+ "kind": "trap + rescue",
+ "source": "floors/f01/day-01.json#enc-d01-10",
+ "routes": [
+  "clever",
+  "loot",
+  "dash"
+ ],
+ "read_aloud": "Three cheerful signs line the corridor, and each one says TRAP louder than the last. Halfway along, a man in a net turns slowly upside down and waves, which only makes him spin. He calls out that his name is Dale and that you should avoid the square tiles.",
+ "narrator_line": "Three cheerful signs line the corridor, and each one says TRAP louder than the last.",
+ "layout": "A clean, well-lit corridor about 100 feet long, caution tape on both walls and a row of ever-louder TRAP signs; Dale Pruitt hangs upside down in a snare net halfway along.",
+ "exits": [
+  {
+   "name": "Back to the Arcade (Z3).",
+   "to": "enc-d01-09",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "On to the Shooting Gallery (Z5).",
+   "to": "enc-d01-11",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "None worth naming; the hazard is the floor.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "Welcome Mat pressure plates and a swinging WET FLOOR sign (check values in 00-overview.md section 5.4).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Ticket, Please turnstile with a hidden needle (poison; section 5.4).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "The snare net holding Dale, with a plate right under him.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-10",
+  "enemies": [],
+  "quick_run": {
+   "setup": "An honest, signed trap hall with a man hanging in a net above a pressure plate.",
+   "decision": "Disarm the plates and get Dale down carefully, or rush through and hope?",
+   "on_success": "Dale is rescued and joins as a helper, and the Crawlers learn saving throws.",
+   "on_failure": "A plate drops Dale or a Crawler; the cost is HP and, at worst, Dale.",
+   "minutes": 10,
+   "tag": "pacing guide",
+   "cut_short": "One Perception check for the plates and one check to catch Dale; skip the turnstile.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Dale Pruitt, rescued: he tags along and gives Advantage on one check per zone involving vents, doors or machinery (00-overview.md section 5.4).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0869",
+  "ACH-0870",
+  "ACH-0877",
+  "ACH-0198"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

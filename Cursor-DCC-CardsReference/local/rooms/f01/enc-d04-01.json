@@ -1,0 +1,84 @@
+{
+ "id": "enc-d04-01",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 4,
+ "zone": "z06",
+ "zone_name": "The Break Room (closed)",
+ "name": "Service Outage: The Break Room Goes Dark",
+ "kind": "non-combat (hazard)",
+ "source": "floors/f01/day-04.json#enc-d04-01",
+ "routes": [
+  "clever",
+  "loot"
+ ],
+ "read_aloud": "SERVICE OUTAGE. Terminal offline. Vendors offline. Break Room rest unsupported.",
+ "narrator_line": "SERVICE OUTAGE. Terminal offline.",
+ "layout": "The Break Room with the lights half off, the terminal dark, the corkboard blank and a sign taped to the door: OUT OF ORDER, BOTH OF US.",
+ "exits": [
+  {
+   "name": "Door to Z8 (closed, passable).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The rest of the route runs through Z8 to Z9.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Couch and fridge.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "No services: no terminal, no vendors, no corkboard. It is no longer a saferoom (decision 026); the Green Room is the only saferoom.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d04-01",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The Break Room is dark and the door sign reads OUT OF ORDER, BOTH OF US.",
+   "decision": "Spend the last of the supplies and say goodbye to the room, or walk past it?",
+   "on_success": "They leave with leftovers shared and no illusions about resting here.",
+   "on_failure": "A Crawler tries to rest here and finds it is no longer a saferoom.",
+   "minutes": 4,
+   "tag": "pacing guide",
+   "cut_short": "Read the sign, say it is no longer a saferoom, and move on.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Break Room services end today; no box ceremony or terminal.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0899"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

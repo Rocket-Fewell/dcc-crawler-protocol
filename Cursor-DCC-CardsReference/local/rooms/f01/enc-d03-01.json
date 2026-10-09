@@ -1,0 +1,92 @@
+{
+ "id": "enc-d03-01",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 3,
+ "zone": "z06",
+ "zone_name": "The Break Room (Saferoom A)",
+ "name": "Last Call at the Break Room",
+ "kind": "non-combat",
+ "source": "floors/f01/day-03.json#enc-d03-01",
+ "routes": [
+  "clever",
+  "loot"
+ ],
+ "read_aloud": "LAST CALL. Snakk-Matic and vendor services close at end of day. Complete purchases now.",
+ "narrator_line": "LAST CALL. Snakk-Matic and vendor services close at end of day.",
+ "layout": "The same carpeted saferoom, but the terminal's screen is dimmed and a hand-lettered CLOSING SOON sign has appeared on the fridge.",
+ "exits": [
+  {
+   "name": "Back door toward Z5 (closed).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Side passage to Z7 (closed).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Door to Z8 (closed, still passable).",
+   "to": "enc-d03-02",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Couch and fridge.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; honest saferoom through today.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "The lights flicker as zones close.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d03-01",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The Break Room is on its last day of service and CLOSING SOON is taped to the fridge.",
+   "decision": "Buy the terminal key and supplies now, or gamble on the other key routes?",
+   "on_success": "The party leaves stocked and with a key way settled.",
+   "on_failure": "They leave empty-handed and must use the Detour Tax, tools or force at the door.",
+   "minutes": 6,
+   "tag": "pacing guide",
+   "cut_short": "Skip the receipts and the corkboard; take only the key and the supplies.",
+   "audience": "gm"
+  }
+ },
+ "loot": [],
+ "achievement_ids": [
+  "ACH-0188",
+  "ACH-0899",
+  "ACH-0197"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

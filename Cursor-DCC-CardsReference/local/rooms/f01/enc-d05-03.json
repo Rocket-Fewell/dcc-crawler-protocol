@@ -1,0 +1,145 @@
+{
+ "id": "enc-d05-03",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 5,
+ "zone": "z10",
+ "zone_name": "Graduation Stage (Zone 10)",
+ "name": "Graduation Stage: Dean Thudd",
+ "kind": "boss",
+ "source": "floors/f01/day-05.json#enc-d05-03",
+ "routes": [
+  "dash",
+  "clever",
+  "loot"
+ ],
+ "read_aloud": "GRADUATION. Dean Thudd is on stage. Engagement rules are as posted.",
+ "narrator_line": "GRADUATION. Dean Thudd is on stage.",
+ "layout": "A vast auditorium: the stage is a podium, a stack of diplomas and a trophy table, the orchestra pit runs along the front edge, hundreds of camera lights glow in the dark, and a booth window glows BROADCAST.",
+ "exits": [
+  {
+   "name": "Back to the Green Room (Z9).",
+   "to": "enc-d05-01",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The wings toward the service hall (Z S).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The stairwell behind the stage (Z11).",
+   "to": "enc-d05-04",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Podium and trophy table (half cover); the Ushers hold the wings.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "The orchestra pit: shove or lure the boss in (00-overview.md section 6.4).",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Group Photo: a telegraphed spotlight and countdown; step out or pay.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Camera drones overhead.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d05-03",
+  "enemies": [
+   {
+    "slot": "dean",
+    "srd_id": "ogre",
+    "spoken_name": "Dean Thudd, Head of Orientation",
+    "live_name": "Dean Thudd, Head of Orientation (Ogre)",
+    "stat_card": "f01-b-02",
+    "counts_by_party_size": {
+     "2": 0,
+     "3": 1,
+     "4": 1
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   },
+   {
+    "slot": "ushers",
+    "srd_id": "skeleton",
+    "spoken_name": "Usher",
+    "live_name": "Usher (Skeleton)",
+    "stat_card": "f01-m-09",
+    "counts_by_party_size": {
+     "2": 4,
+     "3": 2,
+     "4": 4
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   },
+   {
+    "slot": "dean-jv",
+    "srd_id": "bugbear-warrior",
+    "spoken_name": "Dean Thudd (JV)",
+    "live_name": "Dean Thudd (JV) (Bugbear Warrior)",
+    "stat_card": "f01-e-02",
+    "counts_by_party_size": {
+     "2": 1,
+     "3": 0,
+     "4": 0
+    },
+    "note": "spoken_name is the live Day-page name. stat_card is the SRD body in this pack. Dean Thudd is not renamed."
+   }
+  ],
+  "quick_run": {
+   "setup": "Dean Thudd, the Ushers and the audience on the Graduation Stage.",
+   "decision": "Fight, talk him down, use the pit and the spotlight, or skip him through Zone S?",
+   "on_success": "The Dean is down, thrown out or talked down and the stage is clear.",
+   "on_failure": "A Crawler drops in the fight; a death in the fight is real unless that Crawler's Floor 1 Reprieve is unused (Core Book Ch1, Reprieve).",
+   "minutes": 25,
+   "tag": "pacing guide",
+   "cut_short": "Run one phase only, skip the Phase 2 Ushers, and resolve a talk-down or a pit shove in one scene.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Thudd's corpse cache and the diploma stack; the Silver Boss Box for every Crawler who fought or talked him down.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0170",
+  "ACH-0868",
+  "ACH-0173",
+  "ACH-0189",
+  "ACH-0873"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

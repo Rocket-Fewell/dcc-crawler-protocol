@@ -1,0 +1,86 @@
+{
+ "id": "enc-d04-04",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 4,
+ "zone": "z09",
+ "zone_name": "The Green Room (Saferoom B)",
+ "name": "Green Room Night Shift",
+ "kind": "non-combat (rest)",
+ "source": "floors/f01/day-04.json#enc-d04-04",
+ "routes": [
+  "clever",
+  "loot",
+  "dash"
+ ],
+ "read_aloud": "SAFEROOM CERTIFIED. Green Room remains the only active saferoom. Long Rest available.",
+ "narrator_line": "SAFEROOM CERTIFIED. Green Room remains the only active saferoom.",
+ "layout": "The same backstage room, now the only honest saferoom left: a lone bulb in the mirror, the fruit plate, the photo.",
+ "exits": [
+  {
+   "name": "Back to the corridor to Z8.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "STAFF ONLY door to Z10.",
+   "to": "enc-d04-03",
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Chairs and the dressing table.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; honest saferoom, open to the end (inspired).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d04-04",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The Green Room is the only saferoom left.",
+   "decision": "Take the Long Rest and open the boxes, or plan the last day first?",
+   "on_success": "Rested, boxed up and briefed for the last day.",
+   "on_failure": "They skip the rest and start Day 5 worn.",
+   "minutes": 6,
+   "tag": "pacing guide",
+   "cut_short": "Open boxes quickly and read only the day-close line.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Box opening during the Long Rest: all earned boxes at once, lowest tier first.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0025",
+  "ACH-0899"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

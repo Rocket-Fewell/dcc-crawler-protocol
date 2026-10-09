@@ -1,0 +1,22 @@
+{
+  "schema": "cursor-dcc-cards/local-index/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "loads": [
+    {"kind": "monster", "path": "monsters/catalog.json"},
+    {"kind": "gear", "path": "items/catalog.json"},
+    {"kind": "loot", "path": "items/loot-boxes.json"},
+    {"kind": "achievement", "path": "achievements/catalog.json"},
+    {"kind": "action", "path": "local/actions.json"},
+    {"kind": "condition", "path": "local/conditions.json"},
+    {"kind": "crawler-state", "path": "local/crawler-card.template.json"},
+    {"kind": "combat-state", "path": "local/combat-state.template.json"},
+    {"kind": "clock", "path": "local/clock.template.json"},
+    {"kind": "secret", "path": "local/secret-card.template.json"},
+    {"kind": "npc", "path": "local/npc-card.template.json"},
+    {"kind": "snapshot", "path": "local/snapshot.template.json"},
+    {"kind": "ruling", "path": "local/ruling.template.json"},
+    {"kind": "room-index", "path": "local/rooms/f01/index.json"}
+  ]
+}

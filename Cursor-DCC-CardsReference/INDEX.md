@@ -1,6 +1,6 @@
 # Cursor DCC cards reference index
-Owner: Cursor (R&D) | Status: draft | Version: 0.2.0 | Updated: 2026-10-09
-Summary: Files in this R&D folder.
+Owner: Cursor (R&D) | Status: draft | Version: 0.3.0 | Updated: 2026-10-09
+Summary: Picture-named monster and gear cards, plus the local-play card set (actions, conditions, blank state, Floor 1 room stubs).
 
 | Path | Description | Owner | Status |
 |---|---|---|---|
@@ -18,3 +18,10 @@ Summary: Files in this R&D folder.
 | Cursor-DCC-CardsReference/items/loot-boxes.json | 112 filed loot-deck cards plus 46 rules/40 rows, with charge counters | Cursor | draft |
 | Cursor-DCC-CardsReference/items/loot-box-book.md | Readable loot-box cards | Cursor | draft |
 | Cursor-DCC-CardsReference/achievements/catalog.json | 24 house toasts, no new credits | Cursor | draft |
+| Cursor-DCC-CardsReference/local/00-how-local-play-works.md | How a future engine loads cards so a turn does not wake an agent | Cursor | draft |
+| Cursor-DCC-CardsReference/local/index.json | Loader list for monsters, gear, loot, actions, conditions, state, rooms | Cursor | draft |
+| Cursor-DCC-CardsReference/local/monster-name-audit.md | Old monster name, picture name, what you are looking at | Cursor | draft |
+| Cursor-DCC-CardsReference/local/item-name-audit.md | Gear names kept from Lore, and the ten that were punched up | Cursor | draft |
+| Cursor-DCC-CardsReference/local/actions.json | Action cards code resolves without a model | Cursor | draft |
+| Cursor-DCC-CardsReference/local/conditions.json | Condition flags code applies | Cursor | draft |
+| Cursor-DCC-CardsReference/local/rooms/f01/index.json | 25 Floor 1 room stubs. Day pages win | Cursor | draft |

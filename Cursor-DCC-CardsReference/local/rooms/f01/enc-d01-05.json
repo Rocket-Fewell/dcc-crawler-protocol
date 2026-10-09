@@ -1,0 +1,97 @@
+{
+ "id": "enc-d01-05",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 1,
+ "zone": "z09",
+ "zone_name": "The Green Room (Saferoom B)",
+ "name": "Day Close: The Green Room",
+ "kind": "non-combat (rest and day close)",
+ "source": "floors/f01/day-01.json#enc-d01-05",
+ "routes": [
+  "dash",
+  "loot",
+  "clever"
+ ],
+ "read_aloud": "SAFEROOM CERTIFIED. Midterm Onboarding is complete. Level granted; fruit plate issued. Mandatory briefing follows.",
+ "narrator_line": "SAFEROOM CERTIFIED. Midterm Onboarding is complete.",
+ "layout": "A backstage green room: a mirror ringed with half-dead bulbs, folding chairs, a fruit plate that has become something else, a framed photo on the wall.",
+ "exits": [
+  {
+   "name": "Back to the Locker Room (Z8).",
+   "to": "enc-d01-03",
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "STAFF ONLY door to Z10 (Graduation Stage).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The service corridor (Z S) reached from the stage side.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Chairs and the dressing table.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; honest saferoom on Floor 1.",
+   "kind": "hazard",
+   "visible": true
+  },
+  {
+   "name": "Stays open to the end of the floor (house exception, inspired).",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d01-05",
+  "enemies": [],
+  "quick_run": {
+   "setup": "The party reaches the Green Room as the day ends.",
+   "decision": "Take the Long Rest and open the boxes now, or push on tired?",
+   "on_success": "Long Rest taken, level reached, boxes opened, and Day 2 starts rested.",
+   "on_failure": "They skip the rest; the 24-hour mark rolls the day anyway and they start Day 2 worn.",
+   "minutes": 6,
+   "tag": "pacing guide",
+   "cut_short": "Open all boxes at once, lowest tier first, and skip the mirror and photo flavor.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Box opening during the Long Rest: all earned boxes at once, lowest tier first (00-overview.md section 8.2).",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0025",
+  "ACH-0899"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}

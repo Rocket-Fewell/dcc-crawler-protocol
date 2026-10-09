@@ -1,0 +1,20 @@
+{
+  "schema": "cursor-dcc-cards/clock/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "source": "decisions/026-timed-floor-clock-override.md as already copied onto floors/f01/day-01.json clock. This file does not set a new timer.",
+  "card": {
+    "floor": 1,
+    "floor_name": "The Orientation Pit",
+    "day": 1,
+    "days": 5,
+    "hour_in_day": 0,
+    "short_rests_used_today": 0,
+    "short_rest_cap": 4,
+    "lights_out": "Every 8 hours the pit goes dark for 1 hour. Outside a saferoom, the Ceiling Tick roll on the floor overview applies.",
+    "day_ends": "At a saferoom Long Rest, or at 24 in-game hours.",
+    "collapse": "Day 5, at 24 in-game hours, the floor collapses. A missed collapse is death.",
+    "saferooms": ["Break Room through Day 3", "Green Room stays open"]
+  }
+}

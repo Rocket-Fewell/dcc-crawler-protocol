@@ -1,0 +1,19 @@
+{
+  "schema": "cursor-dcc-cards/narrator-snapshot/0.3.0",
+  "status": "R&D",
+  "authoritative": false,
+  "updated": "2026-10-09",
+  "source": "engine-design/01-rules-engine-scope.md section 4 and engine-design/04-narrator-prompt.md. Built by code after the roll. The fast model only writes 2 to 4 sentences.",
+  "never_include": ["unrevealed secrets", "unrevealed rooms", "rules text", "hp the model is allowed to change"],
+  "card": {
+    "room": "",
+    "visible": [],
+    "actor": {"crawler": "", "player": "", "hp": "", "max": "", "conditions": []},
+    "action": "",
+    "result": "",
+    "others": [],
+    "events": [],
+    "hint": null,
+    "next": ""
+  }
+}

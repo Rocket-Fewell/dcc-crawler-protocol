@@ -1,0 +1,94 @@
+{
+ "id": "enc-d02-03",
+ "schema": "cursor-dcc-cards/room/0.3.0",
+ "status": "R&D",
+ "authoritative": false,
+ "live_day_page_wins": true,
+ "floor": 1,
+ "day": 2,
+ "zone": "z11",
+ "zone_name": "The Stairwell",
+ "name": "The Stairwell Threshold: Descend Now or Wait",
+ "kind": "non-combat (choice)",
+ "source": "floors/f01/day-02.json#enc-d02-03",
+ "routes": [
+  "dash",
+  "loot",
+  "clever"
+ ],
+ "read_aloud": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
+ "narrator_line": "Stairwell Threshold. Concrete stairwell.",
+ "layout": "A plain concrete stairwell behind the stage, spiral steps down into the dark, a handwritten card taped to the rail.",
+ "exits": [
+  {
+   "name": "Back to the stage (Z10).",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "Down the stairs to Floor 2.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  },
+  {
+   "name": "The Z S service stairwell joins here.",
+   "to": null,
+   "locked": false,
+   "hidden": false
+  }
+ ],
+ "features": [
+  {
+   "name": "Rail and landing.",
+   "kind": "cover",
+   "visible": true
+  },
+  {
+   "name": "None; the choice is the hazard.",
+   "kind": "hazard",
+   "visible": true
+  }
+ ],
+ "encounter": {
+  "id": "enc-d02-03",
+  "enemies": [],
+  "quick_run": {
+   "setup": "A concrete stairwell behind the stage with a card taped to the rail.",
+   "decision": "Each Crawler chooses alone: descend now into stasis, or wait for the free descent?",
+   "on_success": "Every Crawler has chosen and the table knows who is where.",
+   "on_failure": "A Crawler is pushed to choose; the GM must log a reason or decline.",
+   "minutes": 5,
+   "tag": "pacing guide",
+   "cut_short": "Read the prompt once to the whole table and take four quick answers.",
+   "audience": "gm"
+  }
+ },
+ "loot": [
+  {
+   "text": "Stairwell Checkpoint and descent procedure.",
+   "when": "see the Day page"
+  }
+ ],
+ "achievement_ids": [
+  "ACH-0022",
+  "ACH-0180",
+  "ACH-1825",
+  "ACH-1826"
+ ],
+ "narrator_sees": [
+  "name",
+  "narrator_line",
+  "read_aloud",
+  "features"
+ ],
+ "code_sees": [
+  "layout",
+  "exits",
+  "encounter",
+  "loot",
+  "achievement_ids"
+ ],
+ "gm_notes": "Strong-model notes stay on the Day page. This stub does not copy if_they_do_something_dumb."
+}
