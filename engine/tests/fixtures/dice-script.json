@@ -1,0 +1,4 @@
+{
+  "note": "Hand-written dice script for the Shooting Gallery replay. The session roll log is not on this branch until the nightly backup merges.",
+  "rolls": [18, 6, 11, 4]
+}

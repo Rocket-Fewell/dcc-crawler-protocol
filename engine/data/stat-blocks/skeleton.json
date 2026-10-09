@@ -1,0 +1,18 @@
+{
+  "id": "skeleton",
+  "name": "skeleton",
+  "ac": 14,
+  "hp": 13,
+  "attacks": [
+    {
+      "name": "Shortbow",
+      "to_hit": 5,
+      "damage": "1d6+3",
+      "type": "piercing"
+    }
+  ],
+  "vulnerable": [
+    "bludgeoning"
+  ],
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
+}

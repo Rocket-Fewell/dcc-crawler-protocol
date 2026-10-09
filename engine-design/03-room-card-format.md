@@ -1,50 +1,62 @@
 # Room card format v1
-Owner: Architect (format), Encounter (rooms, fights), Lore (secrets, loot, NPCs, achievements), Accountant (counts) | Version: 0.1.0 | Updated: 2026-10-07
+Owner: Architect (format), Encounter (rooms, fights), Lore (secrets, loot, NPCs, achievements), Accountant (counts) | Version: 0.1.2 | Updated: 2026-10-08
 
-One JSON file per room: `content/f01/rooms/<room-id>.json`. Stat blocks are shared: `content/stat-blocks/<stat-id>.json`. The engine loads the current room and its neighbours. The fast narrator only ever sees `name`, `narrator_line`, visible `features`, revealed secrets and live combat state. Everything else is for code and the strong model.
+One JSON file per room: `engine/data/rooms/f01/<room-id>.json` (id style `f01-z05`). Stat blocks are shared: `engine/data/stat-blocks/<stat-id>.json`. Day overlays: `engine/data/layers/f01/day-NN.json`. There is no second schema file.
+
+From the repo root, `python3 engine/dcc_engine/validate.py engine/data` runs the check with no `PYTHONPATH`. `PYTHONPATH=engine python3 -m dcc_engine.validate engine/data` is the same check. There is no package install.
+
+The fast narrator only ever sees `name`, `narrator_line`, the map lines, revealed secrets and live combat state. That snapshot stays at or under 150 tokens. Everything else is for code and the strong model.
+
+Counts are never copied into the card. `count_ref` and `cr_ref` are field paths in `rules/70-encounter-budget-5e.json`. The loader fills the number for the party size.
 
 ## Room
 ```json
 {
-  "id": "f01-d01-shooting-gallery",
-  "floor": 1, "day": 1, "zone": 5,
+  "id": "f01-z05",
+  "floor": 1,
+  "zone": "z05",
   "name": "Shooting Gallery",
-  "source": "floors/f01/day-01.md#enc-d01-11",
+  "days_open": [1, 2],
+  "narrator_line": "Mannequins in staff polos raise pink bows from behind the counter.",
   "read_aloud": "Exact text read on first entry.",
-  "narrator_line": "One line the fast model may use every turn.",
   "positions": [
     {"id": "door", "name": "Doorway"},
-    {"id": "turnstile", "name": "Turnstile", "distance_ft": {"door": 15}},
-    {"id": "counter", "name": "Far counter", "distance_ft": {"door": 55}, "cover": "half"}
+    {"id": "counter", "name": "Far counter", "cover": "half"}
   ],
-  "features": [
-    {"id": "prize-shelf", "name": "Prize shelf", "visible": true, "notes": "Can be toppled: DC 13 Athletics, 2d6 bludgeoning in a 10 ft line."}
-  ],
-  "exits": [
-    {"to": "f01-d01-break-room", "from_position": "door", "locked": false, "hidden": false, "unlock_trigger": null}
-  ],
-  "encounter": {
-    "id": "enc-d01-11",
-    "by_party_size": {
-      "1": [{"stat": "mannequin-staff", "count": 1, "position": "counter"}],
-      "2": [{"stat": "mannequin-staff", "count": 2, "position": "counter"}],
-      "3": [{"stat": "mannequin-staff", "count": 2, "position": "counter"}]
-    },
-    "tactics": "Stay behind the counter; focus the nearest standing Crawler.",
-    "quick_run": "Short version if the table stalls.",
-    "xp": {"3": 100},
-    "budget_ref": "rules/70-encounter-budget-5e.json#f01-d01-z05"
+  "map": {
+    "layout": "Carnival gallery, counters, sandbags, mannequins at the far counter.",
+    "cover": "Counters and sandbags are half cover. The prize booth is three-quarters.",
+    "hazards": "A conveyor carries a standing Crawler 10 ft at the end of each round."
   },
-  "loot": [
-    {"id": "register", "when": "on_clear", "roll": "1d4*2", "per": "crawler", "unit": "credits"}
+  "exits": [
+    {"to": "f01-z04", "kind": "door"},
+    {"to": "f01-z06", "kind": "door"}
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-11",
+      "srd_id": "skeleton",
+      "our_name": "Mannequin Staff (Skeleton)",
+      "count_ref": {"path": "floors.1.fixed_encounters.z05.counts_by_party_size", "key": "skeleton"},
+      "cr_ref": {"path": "floors.1.fixed_encounters.z05.creatures", "key": "skeleton"},
+      "trigger": "on_enter"
+    }
   ],
   "secrets": [],
-  "npcs": [],
-  "achievements": [],
+  "loot": [
+    {"dice_ref": "floors.1.fixed_encounters.z05.cash_dice_per_crawler"}
+  ],
+  "npcs": [{"name": "Proctor Bell", "voice": "Proctor Bell"}],
+  "voice_lines": {"intro": "...", "twist": "...", "win": "..."},
+  "item_hooks": [],
   "rest": null,
-  "gm_notes": "Strong-model and post-session notes only. Never sent to the narrator."
+  "gm_notes": "Strong-model and post-session notes only. Never sent to the narrator.",
+  "flags": {"cleared": false, "looted": false, "rested": false},
+  "source": {"spec": "floors/f01/day-01.spec.json", "enc_id": "enc-d01-11"}
 }
 ```
+
+`map` is at most four lines (layout, cover, hazards, and one optional extra). Each of those lines, plus `narrator_line`, `read_aloud`, and the voice lines, ends a sentence. The narrator snapshot (`narrator_line` plus the map lines) is counted as characters divided by 4, and it stays at or under 150. Exit `kind` is `door`, `vent`, or `stairs`. Optional exit fields: `locked_by`, `hidden_by_secret`. Encounter `trigger` is `on_enter`, `on_search`, `clock`, or `noise`. A secret has `trigger` or `triggers`. Each `type` is `check`, `item`, `action`, or `clock`. `reveal_text` is the read-aloud line. `gm_note` stays off that line. `positions` is a list of `{id, name}`. `read_aloud` is the entry text. `rest` is null or an object. `gm_notes` stays off the narrator snapshot. `voice` on an NPC is a name in `tables/npc-voices.json`. Lore owns `reveal_text`.
 
 ## Stat block
 ```json
@@ -88,10 +100,12 @@ Each trigger can carry `who: "any|first|each"` and `requires: [flags]`.
 `voice` must match a name in `tables/npc-voices.json`.
 
 ## Day layers and generation (Encounter's additions)
-- Rooms are generated by a script from the Day specs (`floors/f01/day-NN.spec.json`); hand edits go in the spec, not the card.
-- Counts are never copied in: `encounter.by_party_size` may instead hold `{"budget_ref": "..."}` and the loader resolves the numbers from `rules/70-encounter-budget-5e.json`, so a balance fix stays a one-file change.
-- Day changes are layers: `content/f01/layers/day-NN.json` holds `{"room_id": {patch}}` overrides (collapses, Lights-Out, vendors closed on Day 4), applied on top of the base room.
-- Tests: every exit resolves, every room is reachable from the Intake Hall, every budget_ref resolves, and `narrator_line` plus visible features stay under 150 tokens.
+- `engine/build_rooms.py` reads `floors/f01/day-0*.spec.json` and the zone graph in `floors/f01/00-overview.md` section 4.2. Hand edits go in the spec, then the script is run again.
+- Counts stay as `count_ref` / `cr_ref`. The loader resolves them for the party size.
+- Day changes are layers: `engine/data/layers/f01/day-NN.json` holds `{"room_id": {patch}}` overrides (collapses, Lights-Out, vendors closed on Day 4), applied on top of the base room. A collapse is not a new room. Patches merge. A later clock note does not wipe `day_encounters`.
+- `day_encounters` on a layer is the fight for that day. The loader uses it instead of the base `encounters` list. A fight that is not on the room's first open day lives only on its day layer. Wandering ticks live on `f01-wandering`, which is not a room in the zone graph.
+- `positions`, `read_aloud`, `rest`, and `gm_notes` stay on the card. The loader keeps them when it applies a layer. The validator requires them.
+- Tests (`engine/tests/`): every exit target exists; every room is reachable from the Intake Hall (`f01-z00`); the stairwell (`f01-z11`) is reachable; every budget ref resolves; every NPC voice key exists; each room's narration snapshot is 150 tokens or less.
 
 ## Validation
-The engine ships a JSON Schema for these files (Cursor job C1). `python -m dcc_engine.validate content/` must report 0 errors before a content PR goes to the vote. Pilot room: Shooting Gallery, written by Encounter (layout, fight) and Lore (secrets, loot), then the format is frozen at 1.0.
+`python3 engine/dcc_engine/validate.py engine/data` must report 0 errors before a content PR goes to the vote. The schema lives in `engine/dcc_engine/schema.py` and matches this file. Pilot fight: Shooting Gallery, replayed from `engine/tests/fixtures` with a hand-written dice script until the session roll log is on main.

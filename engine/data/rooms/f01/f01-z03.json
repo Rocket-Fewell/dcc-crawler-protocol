@@ -1,0 +1,144 @@
+{
+  "id": "f01-z03",
+  "floor": 1,
+  "zone": "z03",
+  "name": "Vending Gore Arcade",
+  "days_open": [
+    1
+  ],
+  "narrator_line": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this.",
+  "read_aloud": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this. A woman in scrubs lies face-down in the wrappers, one arm still reaching for it. This is the loot lesson, and she is the first page.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Machines (half cover; the breathing ones are a"
+    }
+  ],
+  "map": {
+    "layout": "A long hall of vending machines, half smashed and half glowing and faintly breathing, with a body in scrubs face-down in the middle of the floor.",
+    "cover": "Machines (half cover; the breathing ones are a bad idea).",
+    "hazards": "Hungry vendors bite a reaching arm (a Dexterity save, then Strength (Athletics) to pull free; section 5.3)."
+  },
+  "exits": [
+    {
+      "to": "f01-z02",
+      "kind": "vent"
+    },
+    {
+      "to": "f01-z03b",
+      "kind": "door",
+      "hidden_by_secret": "back-cage"
+    },
+    {
+      "to": "f01-z04",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-09",
+      "srd_id": null,
+      "our_name": "Vending Gore Arcade: The Loot Lesson",
+      "count_ref": null,
+      "cr_ref": null,
+      "trigger": "on_search"
+    }
+  ],
+  "secrets": [
+    {
+      "id": "unclaimed-crate",
+      "trigger": {
+        "type": "action",
+        "verb": "open",
+        "target": "UNCLAIMED crate"
+      },
+      "reveal_text": "Oddity logged.",
+      "gm_only": false,
+      "grants": {
+        "item": "Vendor Oddity (Unappraised)",
+        "box_text": "╔══ ITEM ════════════════════════════════════════════╗\n  Vendor Oddity (Unappraised)\n  A coin. Probably. Value: ???\n  This item cannot be sold. Please don't try. It's\n  embarrassing for everyone.\n╚════════════════════════════════════════════════════╝"
+      },
+      "sets_flag": "SEED-ODDCOIN",
+      "flag_holder": "opener",
+      "achievement": {
+        "id": "ACH-0081",
+        "name": "Odd Coin Pocketed",
+        "hidden": true,
+        "toast": "Oddity logged.",
+        "reward": null
+      },
+      "gm_note": "No check. If the crate is never opened, the coin comes as a Weird pull in the first Green Room box (lore card f01-z09-0001), or from Dale's pocket if he dies. Must be planted on Floor 1."
+    },
+    {
+      "id": "odd-coin-identify",
+      "trigger": {
+        "type": "item",
+        "item": "Vendor Oddity (Unappraised)",
+        "actions": [
+          "sell",
+          "identify",
+          "appraise"
+        ]
+      },
+      "reveal_text": "ITEM NOT RECOGNIZED.",
+      "gm_only": false,
+      "gm_note": "Same reply for sell, identify or appraise (Snakk-Matic, spell, check, or asking an NPC). Selling can instead get a 500-credit offer that cancels mid-animation. Never name a floor, fee or time. Never explain it."
+    },
+    {
+      "id": "back-cage",
+      "triggers": [
+        {
+          "type": "check",
+          "skill": "Perception",
+          "dc": 15,
+          "passive": true
+        },
+        {
+          "type": "check",
+          "skill": "Investigation",
+          "dc": 13,
+          "when": "someone says they are checking behind the machines"
+        }
+      ],
+      "reveal_text": "A false panel behind the change machine opens the back cage.",
+      "opens_exit": "f01-z03b",
+      "gm_only": false
+    }
+  ],
+  "loot": [
+    {
+      "deck": "f01-z03-0004"
+    },
+    {
+      "deck": "f01-z03-0005"
+    },
+    {
+      "deck": "f01-z03-0008"
+    }
+  ],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "Rows of vending machines hum in a dozen colors, and some of them are breathing. One screen promises that you deserve this.",
+    "twist": "A machine closes on someone's arm with a satisfied little click. The screen thanks you for your patronage.",
+    "win": "Pockets full, one arm slightly chewed, and a stamped coin that feels heavier than it should."
+  },
+  "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-09"
+  }
+}

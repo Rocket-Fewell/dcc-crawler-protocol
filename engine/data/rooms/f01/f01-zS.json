@@ -1,0 +1,65 @@
+{
+  "id": "f01-zS",
+  "floor": 1,
+  "zone": "zS",
+  "name": "Zone S: Service Corridor (side path)",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
+  "read_aloud": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Pipe runs and junction boxes (half cover)."
+    }
+  ],
+  "map": {
+    "layout": "A narrow utility hall behind the stage: pipes, junction boxes, a single locked service door at the end that leads to a service stairwell.",
+    "cover": "Pipe runs and junction boxes (half cover).",
+    "hazards": "Locked service door (inspired): key, tools or force; force is loud and the noise draws the boss and ushers (00-overview.md section 5.10)."
+  },
+  "exits": [
+    {
+      "to": "f01-z10",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z11",
+      "kind": "stairs",
+      "locked_by": "service-key"
+    }
+  ],
+  "encounters": [],
+  "secrets": [],
+  "loot": [],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "Behind the stage there's a hall that smells like pipes and quiet resentment. One door. Locked. Obviously.",
+    "twist": "The lock gives, or the door does; either way the hall echoes. Somewhere on the stage, something big stops humming.",
+    "win": "Door open, stairs below. You went around the final exam through the janitor's entrance. The audience is calling you a raccoon. Fondly."
+  },
+  "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-02.spec.json",
+    "enc_id": "enc-d02-02"
+  }
+}

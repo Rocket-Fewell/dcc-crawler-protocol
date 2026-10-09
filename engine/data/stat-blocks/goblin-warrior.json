@@ -1,0 +1,16 @@
+{
+  "id": "goblin-warrior",
+  "name": "goblin-warrior",
+  "ac": 15,
+  "hp": 10,
+  "attacks": [
+    {
+      "name": "Scimitar",
+      "to_hit": 4,
+      "damage": "1d6+2",
+      "type": "slashing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
+}

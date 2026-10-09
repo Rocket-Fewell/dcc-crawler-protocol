@@ -1,0 +1,16 @@
+{
+  "id": "stirge",
+  "name": "stirge",
+  "ac": 13,
+  "hp": 5,
+  "attacks": [
+    {
+      "name": "Blood Drain",
+      "to_hit": 5,
+      "damage": "1d6+3",
+      "type": "piercing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
+}

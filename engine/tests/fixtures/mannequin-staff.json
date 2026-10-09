@@ -1,0 +1,9 @@
+{
+  "id": "mannequin-staff",
+  "name": "Mannequin Staff",
+  "ac": 14,
+  "hp": 13,
+  "attacks": [
+    {"name": "Pricing gun", "kind": "ranged", "to_hit": 5, "damage": "1d6+3", "type": "piercing"}
+  ]
+}

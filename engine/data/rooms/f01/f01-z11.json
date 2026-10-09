@@ -1,0 +1,64 @@
+{
+  "id": "f01-z11",
+  "floor": 1,
+  "zone": "z11",
+  "name": "The Stairwell",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
+  "read_aloud": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Rail and landing."
+    }
+  ],
+  "map": {
+    "layout": "A plain concrete stairwell behind the stage, spiral steps down into the dark, a handwritten card taped to the rail.",
+    "cover": "Rail and landing.",
+    "hazards": "None; the choice is the hazard."
+  },
+  "exits": [
+    {
+      "to": "f01-z10",
+      "kind": "stairs"
+    },
+    {
+      "to": "f01-zS",
+      "kind": "stairs"
+    }
+  ],
+  "encounters": [],
+  "secrets": [],
+  "loot": [],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "Stairwell Threshold. Concrete stairwell. Marking: FLOOR 2. This marking is correct.",
+    "twist": "STASIS WARNING displayed over the first step. Descent with more than six hours remaining triggers stasis until collapse.",
+    "win": "Descent recorded for departing Crawlers. Remaining Crawlers continue on-floor. Status updated."
+  },
+  "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-02.spec.json",
+    "enc_id": "enc-d02-03"
+  }
+}

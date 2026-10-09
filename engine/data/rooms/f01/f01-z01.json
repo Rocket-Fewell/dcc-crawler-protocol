@@ -1,0 +1,69 @@
+{
+  "id": "f01-z01",
+  "floor": 1,
+  "zone": "z01",
+  "name": "The Atrium",
+  "days_open": [
+    1
+  ],
+  "narrator_line": "A glass booth squeals along its ceiling rail and stops in front of you. The wooden fortune-teller inside clacks its jaw and introduces itself as your teacher.",
+  "read_aloud": "A glass booth squeals along its ceiling rail and stops in front of you. The wooden fortune-teller inside clacks its jaw and introduces itself as your teacher. It points at a security shutter jammed halfway up, which is apparently the way out.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "The fountain rim (half cover if it ever"
+    }
+  ],
+  "map": {
+    "layout": "A three-story concrete atrium around a dead fountain, smooth jazz from the ceiling speakers, and a glass booth on ceiling rails holding Proctor Bell, a painted wooden fortune-teller.",
+    "cover": "The fountain rim (half cover if it ever matters).",
+    "hazards": "The jammed shutter (Strength (Athletics); check value in 00-overview.md section 5.1)."
+  },
+  "exits": [
+    {
+      "to": "f01-z00",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z02",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-07",
+      "srd_id": null,
+      "our_name": "The Atrium: Proctor Bell's Meet-and-Greet",
+      "count_ref": null,
+      "cr_ref": null,
+      "trigger": "on_search"
+    }
+  ],
+  "secrets": [],
+  "loot": [],
+  "npcs": [],
+  "voice_lines": {
+    "intro": "A glass booth squeals along its ceiling rail and stops in front of you. The wooden fortune-teller inside clacks its jaw and introduces itself as your teacher.",
+    "twist": "Under the graffiti, the wall directory still mostly reads. Somebody lettered GREEN ROOM, STAFF ONLY far too neatly for it to be a joke.",
+    "win": "The shutter screams up into the ceiling. Proctor Bell rings once, which is either applause or a warning. Beyond the shutter, something skitters."
+  },
+  "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-07"
+  }
+}

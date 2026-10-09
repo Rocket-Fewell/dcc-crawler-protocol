@@ -1,0 +1,16 @@
+{
+  "id": "ogre",
+  "name": "ogre",
+  "ac": 11,
+  "hp": 68,
+  "attacks": [
+    {
+      "name": "Greatclub",
+      "to_hit": 6,
+      "damage": "2d8+4",
+      "type": "bludgeoning"
+    }
+  ],
+  "vulnerable": [],
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
+}

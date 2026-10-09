@@ -1,0 +1,16 @@
+{
+  "id": "goblin-minion",
+  "name": "goblin-minion",
+  "ac": 12,
+  "hp": 7,
+  "attacks": [
+    {
+      "name": "Dagger",
+      "to_hit": 4,
+      "damage": "1d4+2",
+      "type": "piercing"
+    }
+  ],
+  "vulnerable": [],
+  "source": "5e 2024 where the C1 review named a number; Encounter owns the final block. Floor specs do not print these figures."
+}

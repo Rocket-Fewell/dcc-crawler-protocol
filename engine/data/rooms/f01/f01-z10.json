@@ -1,0 +1,78 @@
+{
+  "id": "f01-z10",
+  "floor": 1,
+  "zone": "z10",
+  "name": "Graduation Stage (wings)",
+  "days_open": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "narrator_line": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
+  "read_aloud": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Trophy table and podium (half cover)."
+    }
+  ],
+  "map": {
+    "layout": "The wings of the vast auditorium: rolled diplomas, a trophy table, camera lights in the dark, the orchestra pit at the front edge.",
+    "cover": "Trophy table and podium (half cover).",
+    "hazards": "Camera drones watching. The orchestra pit edge (a usable hazard). Ushers on watch if the party is spotted."
+  },
+  "exits": [
+    {
+      "to": "f01-z09",
+      "kind": "door"
+    },
+    {
+      "to": "f01-z11",
+      "kind": "stairs"
+    },
+    {
+      "to": "f01-zS",
+      "kind": "door"
+    }
+  ],
+  "encounters": [],
+  "secrets": [],
+  "loot": [],
+  "npcs": [
+    {
+      "name": "Dean Thudd",
+      "voice": "Dean Thudd"
+    }
+  ],
+  "voice_lines": {
+    "intro": "Stage wings. Observation position before the pit. Pit entrance is adjacent.",
+    "twist": "A drone swings your way, its little red light blinking like a nervous bird. The audience would love for you to break it.",
+    "win": "You've seen enough. The stage is a plan, now, and not a surprise."
+  },
+  "item_hooks": [
+    "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check"
+  ],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "audience": "gm",
+    "flavor": [
+      "Snow Ghost capsule: once per session, add a d4 to one Performance or Persuasion check made to the audience. Check only."
+    ]
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-03.spec.json",
+    "enc_id": "enc-d03-03"
+  }
+}

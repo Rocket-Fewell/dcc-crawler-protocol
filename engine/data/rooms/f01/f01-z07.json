@@ -1,0 +1,104 @@
+{
+  "id": "f01-z07",
+  "floor": 1,
+  "zone": "z07",
+  "name": "The Big Green EXIT (stair bait, dead end)",
+  "days_open": [
+    1,
+    2
+  ],
+  "narrator_line": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
+  "read_aloud": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
+  "positions": [
+    {
+      "id": "entry",
+      "name": "Entry"
+    },
+    {
+      "id": "cover-1",
+      "name": "Alcove frames and clipboard stands (half cover)."
+    }
+  ],
+  "map": {
+    "layout": "A short stair down from a side passage ends at a landing with alcoves on both sides and a floor that is not a floor.",
+    "cover": "Alcove frames and clipboard stands (half cover).",
+    "hazards": "Trapdoor over a pit with broken glass (T4, check values in 00-overview.md section 5.7)."
+  },
+  "exits": [
+    {
+      "to": "f01-z06",
+      "kind": "door"
+    }
+  ],
+  "encounters": [
+    {
+      "enc_id": "enc-d01-02",
+      "srd_id": "goblin-warrior",
+      "our_name": "Exit Greeter (Goblin Warrior)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.z07.counts_by_party_size",
+        "key": "goblin-warrior"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z07.creatures",
+        "key": "goblin-warrior"
+      },
+      "trigger": "on_enter"
+    },
+    {
+      "enc_id": "enc-d01-02",
+      "srd_id": "goblin-minion",
+      "our_name": "Exit Greeter (Trainee) (Goblin Minion)",
+      "count_ref": {
+        "path": "floors.1.fixed_encounters.z07.counts_by_party_size",
+        "key": "goblin-minion"
+      },
+      "cr_ref": {
+        "path": "floors.1.fixed_encounters.z07.creatures",
+        "key": "goblin-minion"
+      },
+      "trigger": "on_enter"
+    }
+  ],
+  "secrets": [],
+  "loot": [
+    {
+      "dice_ref": "floors.1.fixed_encounters.z07.cash_dice_per_crawler"
+    },
+    {
+      "deck": "f01-any-0033"
+    },
+    {
+      "deck": "f01-any-0014"
+    },
+    {
+      "deck": "f01-any-0065"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Exit Greeter",
+      "voice": "Exit Greeter"
+    }
+  ],
+  "voice_lines": {
+    "intro": "EXIT. A marked stairwell sign is ahead, with a countdown. Audio: birds. There are no birds on this floor.",
+    "twist": "The floor drops out, the clipboards come out, and a very polite goblin in a green vest asks if you have an appointment.",
+    "win": "The greeters are down and the back office is open: a workshop full of unapproved inventory. Management is furious and also taking notes."
+  },
+  "item_hooks": [],
+  "rest": null,
+  "gm_notes": {
+    "tag": "[GM-FACING]",
+    "flavor": []
+  },
+  "flags": {
+    "cleared": false,
+    "looted": false,
+    "rested": false
+  },
+  "source": {
+    "spec": "floors/f01/day-01.spec.json",
+    "enc_id": "enc-d01-02"
+  }
+}
