@@ -1,0 +1,488 @@
+{
+ "schema": "cursor-dcc-cards/achievements/0.1.0",
+ "status": "R&D",
+ "authoritative": false,
+ "count": 24,
+ "cards": [
+  {
+   "id": "cdr-ach-01",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "First Blood on the Clock",
+   "criteria": "First hostile dropped on this floor.",
+   "reward_rung": "R0",
+   "reward": "Title only. No box.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. First Blood on the Clock.",
+   "gm_line": "Title only. No box.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-01",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-02",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Read the Nameplate",
+   "criteria": "A Crawler asked what the monster was before swinging.",
+   "reward_rung": "R0",
+   "reward": "Snark. The System answers with the nameplate.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Read the Nameplate.",
+   "gm_line": "Snark. The System answers with the nameplate.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-02",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-03",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Cheese Acknowledged",
+   "criteria": "The party used the card's cheese and the fight got shorter.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration. No item.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Cheese Acknowledged.",
+   "gm_line": "Heroic Inspiration. No item.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-03",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-04",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Not in the Hall",
+   "criteria": "A Crawler waited for a saferoom to open a box.",
+   "reward_rung": "R0",
+   "reward": "Snark. Boxes still open only in a saferoom.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Not in the Hall.",
+   "gm_line": "Snark. Boxes still open only in a saferoom.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-04",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-05",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Held the Door",
+   "criteria": "A Crawler blocked a doorway for a full round so the party could set.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Held the Door.",
+   "gm_line": "Heroic Inspiration.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-05",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-06",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Shared the Hit",
+   "criteria": "A Crawler took a hit meant for another, or stabilized them.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Shared the Hit.",
+   "gm_line": "Heroic Inspiration.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-06",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-07",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Ran the Math",
+   "criteria": "The party left a fight that was over the rules/70 cap.",
+   "reward_rung": "R0",
+   "reward": "Snark. Retreat is legal.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Ran the Math.",
+   "gm_line": "Snark. Retreat is legal.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-07",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-08",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Union Break",
+   "criteria": "A mob was spared after it stopped fighting.",
+   "reward_rung": "R0",
+   "reward": "Title: Soft Touch. No loot.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Union Break.",
+   "gm_line": "Title: Soft Touch. No loot.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-08",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-09",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Camera Hog",
+   "criteria": "One Crawler took every kill in the fight.",
+   "reward_rung": "R0",
+   "reward": "Snark only. The System is bored.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Camera Hog.",
+   "gm_line": "Snark only. The System is bored.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-09",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-10",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Quiet Intake",
+   "criteria": "The fight ended with nobody at 0 hit points.",
+   "reward_rung": "R0",
+   "reward": "Title: Still Standing.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Quiet Intake.",
+   "gm_line": "Title: Still Standing.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-10",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-11",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Wrong Tool",
+   "criteria": "An improvised object mattered, and the numbers stayed a normal attack or check.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration. The GM still calls the check.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Wrong Tool.",
+   "gm_line": "Heroic Inspiration. The GM still calls the check.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-11",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-12",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Asked for a Box",
+   "criteria": "A Crawler asked for a specific reward.",
+   "reward_rung": "R0",
+   "reward": "Snark. Asking is the achievement. Core \u00a73.4.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Asked for a Box.",
+   "gm_line": "Snark. Asking is the achievement. Core \u00a73.4.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-12",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-13",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Named the Unit",
+   "criteria": "The party named the unit doctrine before the second round.",
+   "reward_rung": "R0",
+   "reward": "Snark.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Named the Unit.",
+   "gm_line": "Snark.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-13",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-14",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Waited Out the Breath",
+   "criteria": "The party split a cone or recharge instead of lining up.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Waited Out the Breath.",
+   "gm_line": "Heroic Inspiration.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-14",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-15",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Logged the Pouch",
+   "criteria": "Loot was logged, not pocketed off-book.",
+   "reward_rung": "R0",
+   "reward": "No extra credits.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Logged the Pouch.",
+   "gm_line": "No extra credits.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-15",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-16",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Saferoom Manners",
+   "criteria": "Nobody drew steel in the saferoom.",
+   "reward_rung": "R0",
+   "reward": "Snark. The ban still exists.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Saferoom Manners.",
+   "gm_line": "Snark. The ban still exists.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-16",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-17",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Brought a Friend",
+   "criteria": "A filed pet or ally changed the fight without a new stat block.",
+   "reward_rung": "R0",
+   "reward": "Snark.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Brought a Friend.",
+   "gm_line": "Snark.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-17",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-18",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Clock Watcher",
+   "criteria": "A Crawler named the floor clock before the System warning.",
+   "reward_rung": "R0",
+   "reward": "Snark.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Clock Watcher.",
+   "gm_line": "Snark.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-18",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-19",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Not the Mascot",
+   "criteria": "A Crawler refused to climb into the Empty Mascot Suit.",
+   "reward_rung": "R0",
+   "reward": "Snark.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Not the Mascot.",
+   "gm_line": "Snark.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-19",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-20",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Split and Sorry",
+   "criteria": "The party split and someone paid for it.",
+   "reward_rung": "R0",
+   "reward": "Snark. No consolation prize.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Split and Sorry.",
+   "gm_line": "Snark. No consolation prize.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-20",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-21",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Read the Card",
+   "criteria": "A Crawler used a printed resistance or weakness on purpose.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Read the Card.",
+   "gm_line": "Heroic Inspiration.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-21",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-22",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Let Them Talk",
+   "criteria": "The party tried words before initiative.",
+   "reward_rung": "R0",
+   "reward": "Snark if it fails. Still no loot.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Let Them Talk.",
+   "gm_line": "Snark if it fails. Still no loot.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-22",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-23",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Carried the Downed",
+   "criteria": "A Crawler dragged a downed Crawler out of the reach.",
+   "reward_rung": "R2",
+   "reward": "Heroic Inspiration.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Carried the Downed.",
+   "gm_line": "Heroic Inspiration.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-23",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  },
+  {
+   "id": "cdr-ach-24",
+   "schema": "cursor-dcc-cards/achievement/0.1.0",
+   "status": "R&D",
+   "authoritative": false,
+   "name": "Left the Shiny",
+   "criteria": "Nobody stopped mid-fight to loot.",
+   "reward_rung": "R0",
+   "reward": "Snark. The shiny will wait.",
+   "has_box": false,
+   "canon_status": "HOUSE",
+   "notes": "Not in tables/achievements.csv. Do not renumber that catalog. Snark-only and Heroic Inspiration only, so this pack invents no credits.",
+   "system_line": "Achievement. Left the Shiny.",
+   "gm_line": "Snark. The shiny will wait.",
+   "state_hooks": {
+    "log_as": "achievement cdr-ach-24",
+    "opens_box": false,
+    "saferoom_required_for_loot": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,285 @@
+{
+ "schema": "cursor-dcc-cards/recipes/0.1.0",
+ "status": "R&D",
+ "authoritative": false,
+ "party_size_shown": 4,
+ "recipes": [
+  {
+   "id": "rnd-f01-trivial-rats",
+   "floor": 1,
+   "budget_level": "L1",
+   "tier": "trivial",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.1.tiers.L1.xp_budget_total.4.trivial",
+   "lineup": [
+    {
+     "id": "f01-m-01",
+     "count": 4
+    }
+   ],
+   "xp_total": 100,
+   "xp_budget": 100,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f01-standard-greeters",
+   "floor": 1,
+   "budget_level": "L1",
+   "tier": "standard",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.1.tiers.L1.xp_budget_total.4.standard",
+   "lineup": [
+    {
+     "id": "f01-m-10",
+     "count": 2
+    },
+    {
+     "id": "f01-m-03",
+     "count": 4
+    }
+   ],
+   "xp_total": 200,
+   "xp_budget": 200,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f01-hard-mascot",
+   "floor": 1,
+   "budget_level": "L1",
+   "tier": "hard",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.1.tiers.L1.xp_budget_total.4.hard",
+   "lineup": [
+    {
+     "id": "f01-e-01",
+     "count": 1
+    },
+    {
+     "id": "f01-m-09",
+     "count": 2
+    }
+   ],
+   "xp_total": 300,
+   "xp_budget": 300,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f01-boss-spider",
+   "floor": 1,
+   "budget_level": "L1",
+   "tier": "boss",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.1.tiers.L1.xp_budget_total.4.boss",
+   "lineup": [
+    {
+     "id": "f01-b-01",
+     "count": 1
+    },
+    {
+     "id": "f01-m-09",
+     "count": 4
+    }
+   ],
+   "xp_total": 400,
+   "xp_budget": 400,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f01-boss-podium",
+   "floor": 1,
+   "budget_level": "L2",
+   "tier": "boss",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.1.tiers.L2.xp_budget_total.4.boss",
+   "lineup": [
+    {
+     "id": "f01-b-02",
+     "count": 1
+    },
+    {
+     "id": "f01-e-02",
+     "count": 1
+    },
+    {
+     "id": "f01-m-09",
+     "count": 3
+    }
+   ],
+   "note": "Floor 1 boss day after the Green Room. Do not use the ogre on Level 1.",
+   "xp_total": 800,
+   "xp_budget": 800,
+   "under_budget_by": 0,
+   "authoritative": false
+  },
+  {
+   "id": "rnd-f02-standard-formation",
+   "floor": 2,
+   "budget_level": "L2",
+   "tier": "standard",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total.4.standard",
+   "lineup": [
+    {
+     "id": "f02-m-01",
+     "count": 2
+    },
+    {
+     "id": "f02-m-04",
+     "count": 2
+    },
+    {
+     "id": "f02-m-05",
+     "count": 2
+    }
+   ],
+   "xp_total": 600,
+   "xp_budget": 600,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f02-hard-camera",
+   "floor": 2,
+   "budget_level": "L2",
+   "tier": "hard",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total.4.hard",
+   "lineup": [
+    {
+     "id": "f02-e-04",
+     "count": 1
+    },
+    {
+     "id": "f02-m-01",
+     "count": 2
+    },
+    {
+     "id": "f02-m-03",
+     "count": 1
+    }
+   ],
+   "xp_total": 750,
+   "xp_budget": 800,
+   "under_budget_by": 50,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f02-boss-knight",
+   "floor": 2,
+   "budget_level": "L2",
+   "tier": "boss",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.2.tiers.L2.xp_budget_total.4.boss",
+   "lineup": [
+    {
+     "id": "f02-b-03",
+     "count": 1
+    },
+    {
+     "id": "f02-m-03",
+     "count": 1
+    }
+   ],
+   "xp_total": 800,
+   "xp_budget": 800,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f03-standard-road",
+   "floor": 3,
+   "budget_level": "L3",
+   "tier": "standard",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.3.tiers.L3.xp_budget_total.4.standard",
+   "lineup": [
+    {
+     "id": "f03-m-08",
+     "count": 2
+    },
+    {
+     "id": "f03-m-10",
+     "count": 2
+    },
+    {
+     "id": "f03-m-01",
+     "count": 1
+    },
+    {
+     "id": "f03-m-02",
+     "count": 1
+    }
+   ],
+   "xp_total": 900,
+   "xp_budget": 900,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f03-hard-billboard",
+   "floor": 3,
+   "budget_level": "L3",
+   "tier": "hard",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.3.tiers.L3.xp_budget_total.4.hard",
+   "lineup": [
+    {
+     "id": "f03-e-05",
+     "count": 1
+    },
+    {
+     "id": "f03-e-01",
+     "count": 1
+    },
+    {
+     "id": "f03-e-03",
+     "count": 1
+    }
+   ],
+   "xp_total": 1600,
+   "xp_budget": 1600,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  },
+  {
+   "id": "rnd-f03-boss-toll",
+   "floor": 3,
+   "budget_level": "L3",
+   "tier": "boss",
+   "party_size": 4,
+   "budget_ref": "rules/70-encounter-budget-5e.json#floors.3.tiers.L3.xp_budget_total.4.boss",
+   "lineup": [
+    {
+     "id": "f03-b-01",
+     "count": 1
+    },
+    {
+     "id": "f03-e-03",
+     "count": 1
+    },
+    {
+     "id": "f03-m-01",
+     "count": 1
+    }
+   ],
+   "xp_total": 1600,
+   "xp_budget": 1600,
+   "under_budget_by": 0,
+   "authoritative": false,
+   "note": "R&D draw. Not a Day page. Counts are an example that fits rules/70, not a new budget."
+  }
+ ]
+}
