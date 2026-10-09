@@ -8,7 +8,8 @@ A Discord bot that connects a tabletop RPG voice channel to an AI Game Master �
 ```
 
 * **STT** – per-user receive streams (`@discordjs/voice`) → Opus decode → 16 kHz mono WAV → OpenAI transcription. End of utterance = ~1 s of silence. Short/quiet clips and known Whisper hallucinations ("Thanks for watching") are dropped. Posts `**DisplayName**: "text"`. Other bots and the bot itself are never transcribed.
-* **TTS** – every new message in the GM output channel is parsed for voice tags (see below), stripped of markdown/emoji/code, split into sentence-size chunks, synthesized (prefetching a couple of chunks ahead) and played in order, using the narrator or the System voice per line. `/skip` and `/say` included.
+* **TTS** – every new message in the GM output channel is parsed for voice tags (see below), stripped of markdown/emoji/code, split into sentence-size chunks, synthesized (prefetching a couple of chunks ahead) and played in order, using the narrator or the System voice per line. `/skip` and `/say` included. The bot's own posts in that channel are not spoken again.
+* **Local table (optional, off)** – if `DCC_TABLE_URL` is `http://127.0.0.1:8765` while `python3 engine/serve.py` is running, new speech is posted there instead of waking the agent GM. `[GM]` and `[SYSTEM]` are spoken. `[ROLL]` is not. See [Local table hook](#local-table-hook-optional).
 * **Slash commands:** `/join [channel]`, `/leave`, `/skip [all]`, `/say <text> [voice: gm|system]`, `/voicecap [action: reset|set] [minutes]`, `/shush`, `/gm <pause|resume|status>`, `/session <status|list|use>`, `/create` (character creation, below), `/crawlers`, `/delete <name>`, `/encounter` (GM only, below). Twelve in all (`/encounter` is built and tested but NOT registered yet); `npm run register` is only needed when a command's name, options or description changes.
 
 ---
@@ -147,6 +148,16 @@ The DCC AI GM runs "spotlight" exchanges: it addresses one player and listens on
 * **Backlog safeguard:** if more than `MAX_QUEUED_CHUNKS` (12) chunks or `MAX_QUEUED_SECONDS` (90, estimated as chars / `TTS_USAGE_CHARS_PER_MINUTE`) are pending, the **oldest pending messages are dropped** and the newest is kept (the message currently being spoken and the newest are never dropped, even if one huge message exceeds the limit). One notice is posted in the transcript channel (at most one per minute) and the drop is logged. `0` disables a limit.
 * Dropped duplicates, backlog trims and flushes are counted in `logs/voice-events.jsonl` (no message text) and reported by `npm run usage`.
 
+## Local table hook (optional)
+
+The Shooting Gallery table (`engine/serve.py`) can take the transcript instead of the wake webhook. **It is OFF unless `DCC_TABLE_URL` is set.** Restart the bot after changing `.env`. The live game stays on the wake webhook until that variable is set. No new bot token: the bridge uses the token it already has. Do not paste that token into the repo or into `#agents`.
+
+```
+DCC_TABLE_URL=http://127.0.0.1:8765
+```
+
+The value has to be `http` or `https` on `localhost`, `127.0.0.1`, or `[::1]`, with no username or password. Anything else is refused at startup. Each new transcript line is `POST`ed as `{"text":"..."}` to `{origin}/api/line`. One line is in flight at a time. From the reply, lines with `speak: true` and voice `SYSTEM` or `GM` are spoken through the same tag parser as `/say`, and the tagged text is posted in the GM output channel as the bot (those posts are not spoken a second time). `[ROLL]` is left on the table page. A network error or a non-2xx response is logged as a status or an error code, never the line, and the bot keeps running. While the hook is on, that speech does not wake the agent.
+
 ## GM wake webhook (optional)
 
 The AI GM is an agent that only runs when woken. With the wake notifier enabled, the bot POSTs a small JSON webhook whenever **new player speech** lands in the transcript channel (`#table-transcript`, formerly `#dcc_ears`; the channel NAME was changed, the bridge uses IDs; the payload `channel` label stays `dcc_ears`, written by this bot's own STT; GM posts and slash-command text never trigger it).
@@ -280,6 +291,7 @@ See `.env.example` — every variable is documented there. Highlights:
 | `MAX_QUEUED_CHUNKS` / `MAX_QUEUED_SECONDS` | `12` / `90` (`0` = off) | Backlog safeguard: drop the oldest pending messages |
 | `VOICE_CONTROL_ENABLED` / `VOICE_CONTROL_FILE` / `VOICE_CONTROL_POLL_MS` | `true` / `<campaign>/sessions/voice-control.json` / `500` | File kill switch (`discord_gm.py stop`) |
 | `VOICE_EVENTS_LOG_ENABLED` / `VOICE_EVENTS_LOG` | `true` / `logs/voice-events.jsonl` | Counts of duplicates dropped, backlog trims, flushes |
+| `DCC_TABLE_URL` | unset (feature OFF) | Local table origin, localhost only. When set, speech goes there instead of the wake webhook; see [Local table hook](#local-table-hook-optional) |
 | `GM_WEBHOOK_URL` / `GM_WEBHOOK_KEY` | unset (feature OFF) | GM wake webhook endpoint and secret; see [GM wake webhook](#gm-wake-webhook-optional) |
 | `GM_WEBHOOK_AUTH_HEADER` / `GM_WEBHOOK_AUTH_SCHEME` / `GM_WEBHOOK_KEY_IN_QUERY` | `Authorization` / `Bearer` / off | How the key is sent |
 | `GM_WAKE_DEBOUNCE_MS` / `GM_WAKE_MAX_WAIT_MS` / `GM_WAKE_MIN_INTERVAL_MS` / `GM_WAKE_IDLE_MAX_WAIT_MS` | `2500` / `8000` / `4000` / `15000` | Wake batching and rate limits |

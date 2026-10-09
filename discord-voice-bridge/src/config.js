@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { campaignDir, charactersDir, dataDir, DEFAULT_SESSION } from './session.js';
+import { loadTableConfig } from './tablehook.js';
 
 const PROJECT_ROOT = fileURLToPath(new URL('..', import.meta.url));
 
@@ -97,6 +98,8 @@ export class ConfigError extends Error {
  */
 export function loadConfig(env = process.env, { mode = 'bot' } = {}) {
   const problems = [];
+  const table = loadTableConfig(env);
+  problems.push(...table.problems);
   const need = (key, { snowflake = false } = {}) => {
     const v = str(env, key);
     if (!v) problems.push(`${key} is required`);
@@ -216,6 +219,8 @@ export function loadConfig(env = process.env, { mode = 'bot' } = {}) {
       wakeLogPath: str(env, 'WAKE_USAGE_LOG', `${PROJECT_ROOT}logs/wake-usage.jsonl`),
     },
     wake: loadWakeConfig(env),
+    // Local table. OFF unless DCC_TABLE_URL is a localhost http(s) URL. When on, new speech goes there instead of the wake webhook.
+    table,
     // /gm pause|resume: persisted runtime switch for the wake webhook.
     gmWakeStateFile: str(env, 'GM_WAKE_STATE_FILE', `${PROJECT_ROOT}logs/gm-wake-state.json`),
     // Voice-side protections.

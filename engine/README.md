@@ -12,7 +12,7 @@ One room: the Shooting Gallery (`enc-d01-11`). Two Smiling Polo Mannequins, the 
 
 A typed line stands in for a transcript. The line is split on "and" / "then" and walked left to right. Movement, one free object interaction, one action, one bonus action. A second action stops the chain, and the System names what did not happen. Those leftovers are not saved for later. Cunning Action is refused at Rogue 1. "Pick up the body and swing it" is a ruling, then code rolls an improvised bludgeoning attack. The mannequins are vulnerable to bludgeoning, so that damage is doubled. The model stand-in never sets hit points.
 
-`[ROLL]` lines are on the page and marked `speak: false`. `[GM]` and `[SYSTEM]` are marked `speak: true` so a later bridge hook can say them.
+`[ROLL]` lines are on the page and marked `speak: false`. `[GM]` and `[SYSTEM]` are marked `speak: true`. The bridge can say those when `DCC_TABLE_URL` points at this process. That hook is off until the variable is set, so the live game keeps waking the agent GM.
 
 The GM page can undo the last resolution or set one combatant's hit points. The player page does not show the room's GM note.
 
@@ -37,6 +37,12 @@ The seat is a copy of Raithen (Hornn's Warlock) in `engine/fixtures/raithen-copy
 PYTHONPATH=tools:engine python3 -m unittest discover -s engine/tests -p 'test_*.py'
 ```
 
+## Voice hook
+
+The bridge already has its bot token. Nothing new is pasted into the repo or into `#agents`.
+
+With `python3 engine/serve.py` running, set `DCC_TABLE_URL=http://127.0.0.1:8765` on the bridge and restart it. A transcript line is posted to `/api/line`. `[GM]` and `[SYSTEM]` are spoken and copied into the GM output channel. `[ROLL]` stays on the page. While that variable is set, new lines do not wake the agent. Leave it unset and the live game is unchanged. The URL has to be localhost. A public address is refused.
+
 ## Not in this slice
 
-Character creation beyond seating a card. A map. Fog of war. The bridge posting transcripts into `/api/line` and speaking the `say` list. When that hook is added, it uses the bot tokens the bridge already has. Do not paste those into the repo or into `#agents`.
+Character creation beyond seating a card. A map. Fog of war. A live narrator model. The rest of Floor 1.
