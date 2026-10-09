@@ -23,6 +23,8 @@ import { UsageLogger, VoiceEventLogger, WakeUsageLogger, meteredSynthesize } fro
 import { SttBridge } from './stt.js';
 import { GmOutputBridge, createTtsProvider } from './tts.js';
 import { GmWakeNotifier } from './wake.js';
+import { prepareSpeechDetailed } from './text.js';
+import { routeTranscript, TableHook } from './tablehook.js';
 import { VoiceSession } from './voice.js';
 import { PlayerRoles, createVoiceGuard, detectMembersIntent, formatReport } from './roles.js';
 import { NpcVoiceMap, npcVoicesFile } from './npcvoices.js';
@@ -215,7 +217,49 @@ if (wake.enabled) {
     `GM wake webhook: ON (debounce ${config.wake.debounceMs}ms, max wait ${config.wake.maxWaitMs}ms, min interval ${config.wake.minIntervalMs}ms)`
   );
 }
-const stt = new SttBridge({ client, config, logger: log.child('stt'), onTranscript: (line) => wake.notify(line) });
+async function speakTableLines(lines) {
+  const tagged = lines.map((l) => String(l.text ?? '')).filter((t) => t.trim()).join('\n');
+  if (!tagged) return;
+  if (config.tts.enabled && !sessionCap.isReached()) {
+    const { chunks } = prepareSpeechDetailed(tagged, {
+      chunkMaxChars: config.tts.chunkMaxChars,
+      maxMessageChars: config.tts.maxMessageChars,
+      maxTotalChars: config.tts.maxTotalChars,
+    });
+    if (chunks.length) queue.enqueue(chunks, { label: 'table' });
+  } else if (config.tts.enabled && sessionCap.isReached()) {
+    sessionCap.block();
+  }
+  const channelId = config.discord.gmOutputChannelId;
+  if (!channelId) return;
+  try {
+    const ch = await client.channels.fetch(channelId);
+    if (!ch?.isTextBased?.()) return;
+    let rest = tagged;
+    while (rest) {
+      const slice = rest.slice(0, 2000);
+      rest = rest.slice(slice.length);
+      await ch.send({ content: slice });
+    }
+  } catch (err) {
+    const code = err?.code ?? err?.name ?? 'error';
+    log.error(`table hook could not record the reply: ${String(code).slice(0, 40)}`);
+  }
+}
+const tableHook = new TableHook({
+  table: config.table,
+  logger: log.child('table'),
+  onSay: speakTableLines,
+});
+if (config.table.enabled) {
+  log.info('Table hook: ON. New speech goes to the local table. The GM wake webhook is not used for those lines.');
+}
+const stt = new SttBridge({
+  client,
+  config,
+  logger: log.child('stt'),
+  onTranscript: (line) => routeTranscript(line, { tableHook, wake }),
+});
 const gm = new GmOutputBridge({ client, config, session, queue, logger: log.child('tts'), sessionCap, dedupe, events });
 const ctx = { config, client, session, queue, stt, sessionCap, dedupe, gmState, flushVoice, wake, logger: log, roles };
 /** /create calls this right after the sheet channel is made (before the first card is posted): lock it to its owner's role. */
@@ -260,7 +304,7 @@ ctx.applySession = (id, by = null) => {
   sessionCap.reset();
   monthly.invalidate();
   dedupe.clear();
-  log.info(`Active campaign session is now "${id}" (data ${config.campaign.dataDir}, ears ${config.discord.transcriptChannelId || '-'}, mouth ${config.discord.gmOutputChannelId || '-'}, wake ${config.wake.enabled ? 'ON' : 'off'})`);
+  log.info(`Active campaign session is now "${id}" (data ${config.campaign.dataDir}, ears ${config.discord.transcriptChannelId || '-'}, mouth ${config.discord.gmOutputChannelId || '-'}, wake ${config.wake.enabled ? 'ON' : 'off'}, table ${config.table.enabled ? 'ON' : 'off'})`);
   return { id, guildId: config.discord.guildId, wake: config.wake.enabled, ears: config.discord.transcriptChannelId, mouth: config.discord.gmOutputChannelId };
 };
 ctx.monthly = monthly;

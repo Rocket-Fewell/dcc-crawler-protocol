@@ -2,7 +2,7 @@
 Owner: Cursor (R&D) | Status: draft | Version: 0.3.0 | Updated: 2026-10-09
 Summary: The card pile a future engine loads so a turn does not wake an agent.
 
-Source: `engine-design/00-source-grok-conversation.md` and `engine-design/01-rules-engine-scope.md`. This folder does not start that engine. It is the content the engine will read.
+Source: `engine-design/00-source-grok-conversation.md` and `engine-design/01-rules-engine-scope.md`. This folder does not start that engine. It is the content the engine will read. The first process that loads the Gallery room from here is `engine/` (`python3 engine/serve.py`).
 
 ## The split
 Code owns the numbers. It loads these cards at session start and keeps them in memory. A player line maps to an action card. Code rolls, spends uses, and writes the new numbers onto the crawler card and the combat-state card. Then a fast model gets the snapshot card and speaks two to four sentences. A strong model is called only when no action card matched, and it returns the ruling card for code to validate.
