@@ -112,8 +112,19 @@ def parse_spells(block):
     return spells
 
 
-def render_card(sheet, conditions, party_short_used=0):
-    """Plain text in the same order as the channel card. Secrets never get here."""
+def _section_title(text):
+    first = text.splitlines()[0]
+    if first.startswith("**"):
+        end = first.find("**", 2)
+        if end > 2:
+            return first[2:end]
+    if ":" in first and not first.startswith("-"):
+        return first.split(":", 1)[0].strip()
+    return "Card"
+
+
+def card_sections(sheet, conditions, party_short_used=0):
+    """Same pieces as the channel card, split so the page can show every block."""
     rules, labels = _rules()
     species = labels.species_label(sheet.get("species") or "")
     klass = labels.class_label(sheet.get("class") or "")
@@ -122,14 +133,16 @@ def render_card(sheet, conditions, party_short_used=0):
     abilities = sheet.get("abilities") or {}
     scores = "  ".join(f"{key.upper()} {abilities[key]}" for key in ("str", "dex", "con", "int", "wis", "cha") if key in abilities)
     dice = sheet.get("hit_dice") or {}
-    lines = [
+    header = [
         f"Credits: {sheet.get('credits', 0)}",
         f"**{sheet.get('name', '').upper()}** - {species} {klass} {sheet.get('level')} ({sheet.get('player', '')})",
         f"HP {hp.get('current')}/{hp.get('max')}{temp}  AC {sheet.get('ac')}  XP {sheet.get('xp', 0)}  Hit Dice {dice.get('current')}/{dice.get('max')}",
         scores,
         "Conditions: " + (", ".join(conditions) or "none"),
     ]
-    lines.extend(rules.combat_blocks(sheet, {"short_used": party_short_used, "short_max": 4}))
+    sections = [{"title": "Crawler", "text": "\n".join(header)}]
+    for block in rules.combat_blocks(sheet, {"short_used": party_short_used, "short_max": 4}):
+        sections.append({"title": _section_title(block), "text": block})
     cats = (
         ("weapons", "Weapons & focus"),
         ("armor", "Armor & clothing"),
@@ -145,18 +158,23 @@ def render_card(sheet, conditions, party_short_used=0):
             qty = f" x{item['qty']}" if (item.get("qty") or 1) > 1 else ""
             rows.append(f"- **{item.get('name')}**{qty}: {mechanics}")
         if rows:
-            lines.append(f"**{title}**\n" + "\n".join(rows))
+            sections.append({"title": title, "text": f"**{title}**\n" + "\n".join(rows)})
     for label, field in (
         ("Standing Orders", "standing_orders"),
         ("Signature attack", "signature"),
         ("Standing Reaction", "standing_reaction"),
     ):
         if sheet.get(field):
-            lines.append(f"{label}: {sheet[field]}")
+            sections.append({"title": label, "text": f"{label}: {sheet[field]}"})
     names = [a.get("name") for a in sheet.get("achievements") or [] if isinstance(a, dict) and a.get("name")]
     if names:
-        lines.append("**Achievements**\n" + "\n".join("- " + name for name in names))
-    return "\n".join(lines)
+        sections.append({"title": "Achievements", "text": "**Achievements**\n" + "\n".join("- " + name for name in names)})
+    return sections
+
+
+def render_card(sheet, conditions, party_short_used=0):
+    """Plain text in the same order as the channel card. Secrets never get here."""
+    return "\n".join(section["text"] for section in card_sections(sheet, conditions, party_short_used))
 
 
 def sync_card(crawler):
@@ -164,6 +182,7 @@ def sync_card(crawler):
     sheet = crawler.get("sheet")
     if not sheet:
         crawler["card_text"] = ""
+        crawler["card_sections"] = []
         return crawler
     sheet.setdefault("hp", {})
     sheet["hp"]["current"] = crawler["hp"]
@@ -174,7 +193,9 @@ def sync_card(crawler):
         "successes": crawler.get("death_success") or 0,
         "fails": crawler.get("death_fail") or 0,
     }
-    crawler["card_text"] = render_card(sheet, crawler.get("conditions") or [])
+    sections = card_sections(sheet, crawler.get("conditions") or [])
+    crawler["card_sections"] = sections
+    crawler["card_text"] = "\n".join(section["text"] for section in sections)
     return crawler
 
 

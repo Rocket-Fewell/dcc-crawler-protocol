@@ -29,7 +29,7 @@ Table: `http://127.0.0.1:8765/gm`
 
 It binds to localhost. `--host` or `DCC_TABLE_HOST` changes that. `--port` or `DCC_TABLE_PORT` changes the port. `--party-size` is 2, 3, or 4, matching the counts already on the room card.
 
-The seat is a copy of Raithen (Hornn's Warlock) in `engine/fixtures/raithen-copy.json`. The player page shows that channel card: Eldritch Blast +6, the mop, Pact Magic, the gear. Attacks are the numbers `tools/card_rules.py` already prints. The live sheet in `sessions-data/` is not written, and the copy leaves out the fan profile, the survey, and the quirk. The enemies are the R&D Smiling Polo Mannequin cards (`f01-m-09`), shortbow +5.
+The seat is a copy of Raithen (Hornn's Warlock) in `engine/fixtures/raithen-copy.json`. The player page shows the whole channel card: attacks, spellcasting, features, rests, gear, standing orders, signature, achievements. Attacks are the numbers `tools/card_rules.py` already prints. The live sheet in `sessions-data/` is not written, and the copy leaves out the fan profile, the survey, and the quirk. Each mannequin shows the printed R&D stat block (`f01-m-09`), including the bludgeoning vulnerability and the full shortbow and shortsword lines. The chair-leg note, the GM line, and the room pacing guide stay on the table page. The shortbow roll is still +5.
 
 ## Check
 

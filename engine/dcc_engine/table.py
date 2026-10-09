@@ -47,6 +47,9 @@ class Table:
         self.room_name = room["name"]
         self.narrator_line = room["narrator_line"]
         self.gm_note = room.get("gm_notes") or ""
+        self.room_card = _room_card(room)
+        quick = (room.get("encounter") or {}).get("quick_run") or {}
+        self.room_gm = quick if quick.get("audience") == "gm" else {}
         self.party_size = party_size if str(party_size) in {"2", "3", "4"} else 2
         self.enemies = [monster_combatant(monster, index) for index in range(1, count + 1)]
         self.crawler = crawler_from_card(crawler) if crawler else seat_raithen()
@@ -80,6 +83,7 @@ class Table:
             "room": self.room_name,
             "round": self.round,
             "narrator_line": self.narrator_line,
+            "room_card": self.room_card,
             "in_melee": self.in_melee,
             "crawler": _public_crawler(crawler),
             "enemies": [_public_enemy(enemy, self.in_melee) for enemy in self.enemies],
@@ -91,11 +95,13 @@ class Table:
         view = self.player_view()
         view["raw"] = list(self.raw)
         view["gm_note"] = self.gm_note
+        view["room_gm"] = self.room_gm
         view["undo_depth"] = len(self._undo)
         view["resolutions"] = self.resolutions
         for shown, enemy in zip(view["enemies"], self.enemies):
             shown["gm_line"] = enemy.get("gm_line") or ""
             shown["how_to_cheese"] = enemy.get("how_to_cheese") or ""
+            shown["what_it_wants"] = enemy.get("what_it_wants") or ""
         return view
 
     def seat(self, card):
@@ -758,6 +764,13 @@ def _public_crawler(crawler):
         "temp_hp": crawler.get("temp_hp") or 0,
         "ac_bonus": crawler.get("ac_bonus") or 0,
         "card_text": crawler.get("card_text") or "",
+        "death_success": crawler.get("death_success") or 0,
+        "death_fail": crawler.get("death_fail") or 0,
+        "card_sections": list(crawler.get("card_sections") or []),
+        "spells": [
+            {"name": spell.get("name") or "", "cost": spell.get("cost") or ""}
+            for spell in (crawler.get("spells") or {}).values()
+        ],
     }
 
 
@@ -769,6 +782,7 @@ def _public_enemy(enemy, in_melee):
         "picture": enemy["picture"],
         "spoken_name": enemy["spoken_name"],
         "system_line": enemy.get("system_line") or "",
+        "card": enemy.get("card") or {},
         "hp": enemy["hp"],
         "hp_max": enemy["hp_max"],
         "ac": enemy["ac"],
@@ -777,6 +791,21 @@ def _public_enemy(enemy, in_melee):
         "attacks": [
             {"name": attack["name"], "to_hit": attack["to_hit"], "damage": attack["damage"], "type": attack["type"], "kind": attack["kind"]}
             for attack in attacks
+        ],
+    }
+
+
+def _room_card(room):
+    """What a Crawler can see in the room. The pacing guide stays on the GM page."""
+    return {
+        "name": room.get("name") or "",
+        "read_aloud": room.get("read_aloud") or "",
+        "layout": room.get("layout") or "",
+        "exits": [item.get("name") or "" for item in room.get("exits") or [] if not item.get("hidden")],
+        "features": [
+            item.get("name") or ""
+            for item in room.get("features") or []
+            if item.get("visible", True)
         ],
     }
 

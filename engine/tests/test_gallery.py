@@ -182,6 +182,51 @@ class GalleryTests(unittest.TestCase):
         self.assertIn("Pact Magic slots: 0/1", text)
         self.assertIn("2d12", " ".join(line["text"] for line in self.table.log))
 
+    def test_full_cards_reach_the_player_and_cheese_stays_on_the_table(self):
+        view = self.table.player_view()
+        titles = [section["title"] for section in view["crawler"]["card_sections"]]
+        for title in (
+            "Attacks",
+            "Spellcasting",
+            "Features & traits",
+            "Rests",
+            "Gear",
+            "Achievements",
+            "Standing Orders",
+        ):
+            self.assertIn(title, titles)
+        gear = next(section["text"] for section in view["crawler"]["card_sections"] if section["title"] == "Gear")
+        self.assertIn("Extension Cord", gear)
+        achievements = next(section["text"] for section in view["crawler"]["card_sections"] if section["title"] == "Achievements")
+        self.assertIn("Intake Bag", achievements)
+        self.assertEqual(
+            view["crawler"]["card_text"],
+            "\n".join(section["text"] for section in view["crawler"]["card_sections"]),
+        )
+        self.assertEqual(
+            [spell["name"] for spell in view["crawler"]["spells"]],
+            ["Witch Bolt", "Armor of Agathys", "Shield"],
+        )
+        enemy = view["enemies"][0]
+        card = enemy["card"]
+        labels = {label["name"]: label["text"] for label in card["labels"]}
+        self.assertEqual(labels["Vulnerabilities"], "Bludgeoning")
+        self.assertIn("Darkvision 60 ft.", labels["Senses"])
+        actions = {action["name"]: action["text"] for action in card["actions"]}
+        self.assertIn("80/320", actions["Shortbow"])
+        self.assertIn("1d6 + 3", actions["Shortsword"])
+        self.assertEqual(card["abilities"][1]["key"], "dex")
+        self.assertEqual(card["abilities"][1]["score"], 16)
+        self.assertNotIn("how_to_cheese", enemy)
+        self.assertNotIn("what_it_wants", enemy)
+        self.assertNotIn("chair leg", json.dumps(enemy).lower())
+        self.assertIn("sandbags", " ".join(view["room_card"]["features"]))
+        self.assertNotIn("room_gm", view)
+        gm_enemy = self.table.gm_view()["enemies"][0]
+        self.assertIn("chair leg", gm_enemy["how_to_cheese"].lower())
+        self.assertIn("script", gm_enemy["what_it_wants"].lower())
+        self.assertEqual(self.table.gm_view()["room_gm"]["audience"], "gm")
+
 
 class HttpTests(unittest.TestCase):
     def test_player_page_and_gm_undo(self):
@@ -194,6 +239,9 @@ class HttpTests(unittest.TestCase):
         page = urllib.request.urlopen(base + "/player").read().decode("utf-8")
         self.assertIn("Shooting Gallery", page)
         self.assertIn("What you do", page)
+        self.assertNotIn("max-height: 380px", page)
+        self.assertNotIn("how_to_cheese", page)
+        self.assertNotIn("chair leg", page.lower())
 
         before = json.load(urllib.request.urlopen(base + "/api/player"))
         self.assertEqual(before["crawler"]["name"], "Raithen")
@@ -203,6 +251,11 @@ class HttpTests(unittest.TestCase):
         self.assertEqual(before["enemies"][0]["hp"], 13)
         self.assertNotIn("gm_note", before)
         self.assertNotIn("how_to_cheese", before["enemies"][0])
+        self.assertIn("Gear", [section["title"] for section in before["crawler"]["card_sections"]])
+        self.assertEqual(
+            next(label["text"] for label in before["enemies"][0]["card"]["labels"] if label["name"] == "Vulnerabilities"),
+            "Bludgeoning",
+        )
 
         httpd.scripts.append([15, 4])
         request = urllib.request.Request(

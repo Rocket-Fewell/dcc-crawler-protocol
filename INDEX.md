@@ -8,7 +8,7 @@ Summary: Every file in the campaign workspace, one line each.
 | STATE-OF-BUILD.md | Handoff: who owns what, what needs Caleb, what is live vs pending, open questions, standing rulings, backlog, how to update, live/ops runbook (v0.1.10) | Syndicate + Architect | living |
 | ENV-SETUP.md | Agent/contributor briefing: what this is, how it runs, how to treat it, priority files, env vars (fresh-checkout portable) | Syndicate + Architect | living |
 | Cursor-DCC-CardsReference/INDEX.md | R&D card pack: 72 picture-named Floor 1–3 monsters, 191 gear cards, loot boxes, and a local-play set (actions, conditions, blank state, Floor 1 room stubs). Not a live floor. | Cursor | draft |
-| engine/README.md | Local table process for the Shooting Gallery slice: speech line in, dice from the cards, player page and GM undo. Discord stays the voice. Not the live bridge. | Cursor | draft |
+| engine/README.md | Local table process for the Shooting Gallery slice: full channel card, full mob stat blocks, dice from the cards, player page and GM undo. Discord stays the voice. Not the live bridge. | Cursor | draft |
 | lore/INDEX.md | Canon catalogs, sources and research tools | DCC Lore | living |
 | lore/CANON-LEDGER.md | Verified/unverified canon findings with sources | DCC Lore | in progress |
 | rules/_source-crawler-protocol/02-core-rules-5e.md | 5e (2024) overlay: loot boxes, death and revival | Syndicate | draft v0.2.2 |

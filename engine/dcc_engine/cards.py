@@ -44,6 +44,52 @@ def attack_record(raw):
     }
 
 
+def _named(items):
+    return [
+        {"name": item.get("name") or "", "text": item.get("text") or ""}
+        for item in items or []
+        if item.get("name") or item.get("text")
+    ]
+
+
+def public_block(monster):
+    """Printed stat block. GM lines and cheese notes stay off this object."""
+    block = monster.get("stat_block") or {}
+    abilities = []
+    for key in ("str", "dex", "con", "int", "wis", "cha"):
+        row = (block.get("abilities") or {}).get(key) or {}
+        abilities.append({
+            "key": key,
+            "score": row.get("score"),
+            "mod": row.get("mod"),
+            "save": row.get("save"),
+        })
+    labels = [
+        {"name": name, "text": text}
+        for name, text in (block.get("labels") or {}).items()
+    ]
+    return {
+        "nameplate": monster.get("nameplate") or "",
+        "picture": monster.get("picture") or "",
+        "system_line": monster.get("system_line") or "",
+        "tactics": monster.get("tactics") or "",
+        "type_line": block.get("type_line") or "",
+        "ac": block.get("ac"),
+        "initiative": block.get("initiative"),
+        "hp_formula": block.get("hp_formula") or "",
+        "speed": block.get("speed") or "",
+        "cr": block.get("cr"),
+        "xp": block.get("xp"),
+        "pb": block.get("pb"),
+        "abilities": abilities,
+        "labels": labels,
+        "traits": _named(block.get("traits")),
+        "actions": _named(block.get("actions")),
+        "bonus_actions": _named(block.get("bonus_actions")),
+        "reactions": _named(block.get("reactions")),
+    }
+
+
 def monster_combatant(monster, number):
     """One enemy in memory. to-hit and damage are copied off local.attacks."""
     labels = monster["stat_block"].get("labels") or {}
@@ -71,6 +117,8 @@ def monster_combatant(monster, number):
         "system_line": monster.get("system_line") or "",
         "gm_line": monster.get("gm_line") or "",
         "how_to_cheese": monster.get("how_to_cheese") or "",
+        "what_it_wants": monster.get("what_it_wants") or "",
+        "card": public_block(monster),
         "conditions": [],
     }
 
