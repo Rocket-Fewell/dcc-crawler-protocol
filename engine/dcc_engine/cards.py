@@ -170,11 +170,30 @@ def monster_combatant(monster, number):
     }
 
 
+def filed_party(party_size):
+    """Room cards file counts for 2, 3, and 4 Crawlers. One Crawler uses the 2 column."""
+    try:
+        size = int(party_size)
+    except (TypeError, ValueError):
+        size = 2
+    if size in (2, 3, 4):
+        return size, str(size)
+    if size == 1:
+        return 1, "2"
+    return 2, "2"
+
+
+def party_note(party_size, count_key):
+    if int(party_size) == 1:
+        return "One Crawler. Counts are the filed column for 2 Crawlers."
+    return f"Party of {int(party_size)}. Counts are the filed column for {count_key} Crawlers."
+
+
 def gallery_count(room, party_size):
     """Filed counts only. A solo seat uses the smallest filed party, which is 2."""
     slot = room["encounter"]["enemies"][0]
     counts = slot["counts_by_party_size"]
-    key = str(party_size)
+    _, key = filed_party(party_size)
     if key not in counts:
         key = "2"
     return int(counts[key]), slot["stat_card"]

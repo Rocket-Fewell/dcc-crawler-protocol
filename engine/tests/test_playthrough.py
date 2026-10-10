@@ -1,15 +1,16 @@
 """Floors 1–3 on the local table. The day-page lines stay the voice."""
 
+import json
 import unittest
+from urllib.error import HTTPError
+from urllib.request import Request, urlopen
 
 from dcc_engine.cards import attack_record, load_monster, monster_combatant
 from dcc_engine.narrate import attack_gm
-from urllib.request import urlopen
-
 from dcc_engine.playthrough import Playthrough
 from dcc_engine.script import load_script, npc_names
 from dcc_engine.server import serve_background
-from dcc_engine.table import ScriptedRng
+from dcc_engine.table import ScriptedRng, Table
 from tools import roll
 
 
@@ -197,6 +198,111 @@ class PlaythroughTests(unittest.TestCase):
         finally:
             roll.append_log = previous
 
+    def test_one_crawler_uses_the_two_column_and_three_and_four_use_their_own(self):
+        expected = {
+            1: {
+                "enc-d01-08": ["Vent Rat 1", "Vent Rat 2", "Vent Rat 3"],
+                "enc-d01-11": ["Mannequin Staff 1", "Mannequin Staff 2"],
+                "enc-d01-02": ["Exit Greeter", "Exit Greeter (Trainee) 1", "Exit Greeter (Trainee) 2"],
+                "enc-d01-03": ["Bruiser the Mascot (Unoccupied)"],
+                "enc-d05-03": ["Usher 1", "Usher 2", "Usher 3", "Usher 4", "Dean Thudd (JV)"],
+            },
+            3: {
+                "enc-d01-08": ["Vent Rat 1", "Vent Rat 2", "Vent Rat 3", "Vent Rat 4"],
+                "enc-d01-11": ["Mannequin Staff 1", "Mannequin Staff 2"],
+                "enc-d01-02": ["Exit Greeter", "Exit Greeter (Trainee) 1", "Exit Greeter (Trainee) 2", "Exit Greeter (Trainee) 3"],
+                "enc-d01-03": ["Bruiser the Mascot (Unoccupied)"],
+                "enc-d05-03": ["Dean Thudd, Head of Orientation", "Usher 1", "Usher 2"],
+            },
+            4: {
+                "enc-d01-08": ["Vent Rat 1", "Vent Rat 2", "Vent Rat 3", "Vent Rat 4", "Vent Rat 5", "Vent Rat 6"],
+                "enc-d01-11": ["Mannequin Staff 1", "Mannequin Staff 2", "Mannequin Staff 3", "Mannequin Staff 4"],
+                "enc-d01-02": ["Exit Greeter 1", "Exit Greeter 2", "Exit Greeter (Trainee) 1", "Exit Greeter (Trainee) 2", "Exit Greeter (Trainee) 3", "Exit Greeter (Trainee) 4"],
+                "enc-d01-03": ["Bruiser the Mascot (Unoccupied)", "Lanyard Blade 1", "Lanyard Blade 2"],
+                "enc-d05-03": ["Dean Thudd, Head of Orientation", "Usher 1", "Usher 2", "Usher 3", "Usher 4"],
+            },
+        }
+        calls = []
+        previous = roll.append_log
+        roll.append_log = lambda *args, **kwargs: calls.append(1)
+        try:
+            for size, scenes in expected.items():
+                play = Playthrough(party_size=size, rng=_Hit())
+                self.assertEqual(play.party_size, size)
+                self.assertEqual(play.count_key, "2" if size == 1 else str(size))
+                while play.scene and play.scene["floor"] == 1:
+                    scene = play.scene
+                    if scene["id"] in scenes:
+                        self.assertIsNotNone(play.fight, scene["id"])
+                        names = [enemy["name"] for enemy in play.fight.enemies]
+                        self.assertEqual(names, scenes[scene["id"]], f"party {size} {scene['id']}")
+                        blob = " ".join(names)
+                        self.assertNotIn("Adjunct Smash", blob)
+                        before = play.fight.enemies[0]["hp"]
+                        play.resolve_line("I cast eldritch blast at the first one")
+                        self.assertLess(play.fight.enemies[0]["hp"], before, f"party {size} {scene['id']}")
+                        if scene["id"] == "enc-d05-03" and size in (3, 4):
+                            dean = play.fight.enemies[0]
+                            self.assertEqual(dean["melee"]["name"], "Greatclub")
+                            self.assertEqual(dean["melee"]["to_hit"], 6)
+                            self.assertEqual(dean["melee"]["damage"], "2d8+4")
+                            self.assertEqual(dean["ranged"]["name"], "Javelin")
+                        if scene["id"] == "enc-d01-03" and size == 4:
+                            blade = play.fight.enemies[1]
+                            self.assertEqual(blade["melee"]["name"], "Slash")
+                            self.assertEqual(blade["melee"]["to_hit"], 4)
+                            self.assertEqual(blade["melee"]["damage"], "1d8+2")
+                    play.advance()
+            solo = Table(party_size=1)
+            self.assertEqual(len(solo.enemies), 2)
+            self.assertEqual(solo.enemies[0]["name"], "Smiling Polo Mannequin 1")
+            four = Table(party_size=4)
+            self.assertEqual(len(four.enemies), 4)
+            self.assertEqual(four.enemies[3]["name"], "Smiling Polo Mannequin 4")
+            self.assertEqual(calls, [])
+        finally:
+            roll.append_log = previous
+
+    def test_the_page_can_switch_the_filed_party_column(self):
+        server = serve_background("127.0.0.1", 0)
+        self.addCleanup(server.shutdown)
+        self.addCleanup(server.server_close)
+        base = f"http://127.0.0.1:{server.server_address[1]}"
+
+        def post(path, payload):
+            request = Request(
+                base + path,
+                data=json.dumps(payload).encode("utf-8"),
+                headers={"Content-Type": "application/json"},
+            )
+            with urlopen(request, timeout=5) as response:
+                return json.loads(response.read().decode("utf-8"))
+
+        four = post("/api/party", {"size": 4})
+        self.assertEqual(four["party_size"], 4)
+        self.assertEqual(four["count_key"], "4")
+        self.assertIn("4 Crawlers", four["party_line"])
+        with urlopen(base + "/api/player", timeout=5) as response:
+            gallery = json.loads(response.read().decode("utf-8"))
+        self.assertEqual(gallery["party_size"], 4)
+        self.assertEqual(len(gallery["enemies"]), 4)
+        self.assertEqual(gallery["enemies"][0]["name"], "Smiling Polo Mannequin 1")
+        one = post("/api/party", {"size": 1})
+        self.assertEqual(one["party_size"], 1)
+        self.assertEqual(one["count_key"], "2")
+        self.assertIn("One Crawler", one["party_line"])
+        with urlopen(base + "/api/player", timeout=5) as response:
+            gallery = json.loads(response.read().decode("utf-8"))
+        self.assertEqual(len(gallery["enemies"]), 2)
+        request = Request(
+            base + "/api/party",
+            data=json.dumps({"size": 9}).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+        )
+        with self.assertRaises(HTTPError) as caught:
+            urlopen(request, timeout=5)
+        self.assertEqual(caught.exception.code, 400)
+
     def test_pages_keep_the_gallery_and_open_the_walk(self):
         server = serve_background("127.0.0.1", 0)
         self.addCleanup(server.shutdown)
@@ -206,6 +312,8 @@ class PlaythroughTests(unittest.TestCase):
             page = response.read().decode("utf-8")
         self.assertIn("Floors 1", page)
         self.assertIn('id="listen"', page)
+        self.assertIn('data-party="1"', page)
+        self.assertIn('data-party="4"', page)
         with urlopen(base + "/player", timeout=5) as response:
             gallery = response.read().decode("utf-8")
         self.assertIn("Shooting Gallery", gallery)

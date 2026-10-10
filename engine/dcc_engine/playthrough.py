@@ -1,5 +1,6 @@
 """Floor 1 through Floor 3 on the local table. Day pages stay the voice. Nothing here writes the live game."""
 
+from dcc_engine.cards import filed_party, party_note
 from dcc_engine.player_card import seat_raithen
 from dcc_engine.script import load_script, npc_names
 from dcc_engine.table import Table
@@ -75,7 +76,7 @@ class Playthrough:
     """One seat, every filed scene, then the local Floor 3 script."""
 
     def __init__(self, party_size=2, rng=None):
-        self.party_size = party_size if party_size in (2, 3, 4) else 2
+        self.party_size, self.count_key = filed_party(party_size)
         self.rng = rng
         self.scenes = load_script()
         self.index = 0
@@ -220,6 +221,9 @@ class Playthrough:
         }
         return {
             "mode": "playthrough",
+            "party_size": self.party_size,
+            "count_key": self.count_key,
+            "party_line": party_note(self.party_size, self.count_key),
             "done": self.done,
             "index": self.index,
             "count": len(self.scenes),

@@ -528,6 +528,13 @@ PLAY_HTML = """<!DOCTYPE html>
     <button type="button" id="next" class="quiet">Next</button>
     <span id="listen-note"></span>
   </form>
+  <p class="row" id="party">
+    <span>Party</span>
+    <button type="button" class="quiet" data-party="1" title="One Crawler. Uses the filed counts for 2. Restarts the walk.">1</button>
+    <button type="button" class="quiet" data-party="2" title="Filed counts for 2 Crawlers. Restarts the walk.">2</button>
+    <button type="button" class="quiet" data-party="3" title="Filed counts for 3 Crawlers. Restarts the walk.">3</button>
+    <button type="button" class="quiet" data-party="4" title="Filed counts for 4 Crawlers. Restarts the walk.">4</button>
+  </p>
   <p class="row" id="actions"></p>
 </main>
 <script>
@@ -591,7 +598,11 @@ function startListen() {
 function render(data) {
   document.getElementById("title").textContent = data.title || "Floors 1–3";
   const place = data.done ? "The walk is over." : ("Floor " + data.floor + " · day " + data.day + " · " + (data.index + 1) + " / " + data.count);
-  document.getElementById("where").textContent = place + (data.crawler ? (" · " + data.crawler.name + " " + data.crawler.hp + "/" + data.crawler.hp_max) : "");
+  const party = data.party_line ? (data.party_line + " · ") : "";
+  document.getElementById("where").textContent = party + place + (data.crawler ? (" · " + data.crawler.name + " " + data.crawler.hp + "/" + data.crawler.hp_max) : "");
+  for (const button of document.querySelectorAll("#party button")) {
+    button.disabled = String(data.party_size) === button.getAttribute("data-party");
+  }
   yourTurn = Boolean(data.your_turn);
   if (!yourTurn && listening) stopListen();
   else paintListen();
@@ -665,6 +676,20 @@ document.getElementById("line-form").addEventListener("submit", (event) => {
   lineInput.value = "";
   spokenPrefix = "";
   send(text);
+});
+document.getElementById("party").addEventListener("click", async (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+  if (listening) stopListen();
+  const res = await fetch("/api/party", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({size: Number(button.getAttribute("data-party"))})
+  });
+  const data = await res.json();
+  if (!res.ok) { listenNote.textContent = data.error || "party refused"; return; }
+  last = JSON.stringify(data);
+  render(data);
 });
 document.getElementById("next").addEventListener("click", async () => {
   const res = await fetch("/api/play/next", {method: "POST", headers: {"Content-Type": "application/json"}, body: "{}"});

@@ -91,7 +91,7 @@ Floor 1 room stubs and the picture-name card pack are in `Cursor-DCC-CardsRefere
 
 The order changed on 2026-10-10. Read `engine/NEXT.md`. Do not start at the hook.
 
-1. Done in this folder: Floor 1, days 1–5. Every party-of-2 fight spawns from the card that room already names. A roll is only a line with `to_hit` and damage dice (`melee`, `ranged`, or `melee_or_ranged`). Nimble Escape and a Multiattack header are not rolls. Bruiser's Multiattack is two Slams, the count printed on `f01-e-01`. No new Floor 1 card. Dean Thudd stays Dean Thudd (JV) at a party of 2. Discord stays on the Gallery.
+1. Done in this folder: Floor 1, days 1–5, for a party of 1, 2, 3, or 4. One Crawler uses the filed 2-Crawler counts. 3 and 4 use their own column, including Dean Thudd on `f01-b-02` (spoken name, not Adjunct Smash) and the party-of-4 Lanyard Blades. Every fight spawns from the card that room already names. A roll is only a line with `to_hit` and damage dice (`melee`, `ranged`, or `melee_or_ranged`). Nimble Escape and a Multiattack header are not rolls. Bruiser's Multiattack is two Slams, the count printed on `f01-e-01`. No new Floor 1 card. Dean Thudd stays Dean Thudd (JV) at a party of 2. Discord stays on the Gallery.
 2. Point the hook at the Floor 1 scene you are standing in. Not at the 85-scene tour.
 3. Then the missing attack cards, starting with Krakaren Clone. Do not rename Dean Thudd to the picture on `f01-b-02`.
 4. Wire the fast narrator the way `engine-design/04-narrator-prompt.md` says: code finishes the roll, then a short call writes 2–4 sentences from the snapshot. The strong model only when the parser has no rule, and only as ruling JSON that code then rolls. No tools on either call.

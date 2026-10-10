@@ -55,6 +55,19 @@ No new stat card. Nothing on Floor 1's twenty-five rooms points at a missing id.
 
 `python3 engine/serve.py`, the Raithen copy, party of 2. Every Floor 1 fight in the table above spawns from its card and a shot changes hit points. EXIT is the greeter and the trainees. The locker is Bruiser, and his two Slams are the card's count. Graduation names Dean Thudd (JV), not Adjunct Smash. Talk scenes speak the filed lines. A test walks those five days with scripted dice and does not write `sessions/`. The Gallery page still calls the dummies Smiling Polo Mannequin.
 
+## Party size
+
+The same floor converts from the counts already on the room cards. There is no separate 1-Crawler floor and no invented count.
+
+| Who sits down | Column used |
+|---|---|
+| 1 Crawler | the filed 2-Crawler counts |
+| 2 Crawlers | 2 |
+| 3 Crawlers | 3. Graduation is Dean Thudd, Head of Orientation (`f01-b-02`, Greatclub and Javelin), plus 2 Ushers. Not the JV bugbear. Not Adjunct Smash. |
+| 4 Crawlers | 4. Same Dean, 4 Ushers. The locker adds 2 Lanyard Blades. The Gallery is 4 mannequins. Vent Row is 6 rats. |
+
+`--party-size` or `DCC_PARTY_SIZE` sets it at startup. The Party buttons on the walk restart that walk on the chosen column. The Gallery uses the same number.
+
 ## After this floor fights
 
 1. Point the hook at the Floor 1 scene you are standing in.
