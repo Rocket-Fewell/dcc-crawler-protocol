@@ -10,6 +10,7 @@ Summary: Every file in the campaign workspace, one line each.
 | Cursor-DCC-CardsReference/INDEX.md | R&D card pack: 72 picture-named Floor 1–3 monsters, 191 gear cards, loot boxes, and a local-play set (actions, conditions, blank state, Floor 1 room stubs). Not a live floor. | Cursor | draft |
 | engine/README.md | Local table process. `/` walks Floor 1 and Floor 2 from the day-page voice lines, then a local Floor 3 script. `/player` is still the Shooting Gallery slice. Listen is on only during that Crawler's turn. Discord stays the voice. Opt-in `DCC_TABLE_URL` hook is off until set. | Cursor | draft |
 | engine/FOR-GROKS.md | Handoff for the Grok bots: what the local table is, where it is saved, progress against the 2026-10-07 conversation, and what is still open. | Cursor | handoff |
+| engine/NEXT.md | Plan: next build is Floor 1 Day 1 as one session. Do not point Discord at the long walk yet. | Cursor | plan |
 | lore/INDEX.md | Canon catalogs, sources and research tools | DCC Lore | living |
 | lore/CANON-LEDGER.md | Verified/unverified canon findings with sources | DCC Lore | in progress |
 | rules/_source-crawler-protocol/02-core-rules-5e.md | 5e (2024) overlay: loot boxes, death and revival | Syndicate | draft v0.2.2 |

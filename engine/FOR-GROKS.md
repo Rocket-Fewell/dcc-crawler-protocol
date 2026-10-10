@@ -89,13 +89,14 @@ Floor 1 room stubs and the picture-name card pack are in `Cursor-DCC-CardsRefere
 
 ## What still needs to be done
 
-In the order that makes the conversation true:
+The order changed on 2026-10-10. Read `engine/NEXT.md`. Do not start at the hook.
 
-1. Point the hook at the scene you are standing in. A Discord line should hit the Floor 1–3 walk, the table should resolve it, and the bridge should speak that scene's `[GM]` and `[NPC]` lines. Until then the campaign is a tour and the fight is a separate demo.
-2. Give every fight the walk names a local attack card, starting with Krakaren Clone. Do not rename Dean Thudd to the picture on `f01-b-02`.
-3. Wire the fast narrator the way `engine-design/04-narrator-prompt.md` says: code finishes the roll, then a short call writes 2–4 sentences from the snapshot. The strong model only when the parser has no rule, and only as ruling JSON that code then rolls. No tools on either call.
-4. Pass C1's own finish line: replay the 2026-10-07 Gallery with the logged dice and match the numbers.
-5. Keep session state in the process (SQLite after each resolved action, when Caleb wants a session that survives a restart). Git stays out of the turn.
-6. Then C3: a dry run on a test channel. The live bridge stays the live bridge until that passes and Caleb says switch.
+1. Floor 1, Day 1, as one session. Five fights must take a shot: Vent Row, the Gallery, the Big Green EXIT, the Mascot Locker, and Lights-Out. The EXIT and the locker currently fail because `local.attacks` has no `to_hit`. Talk scenes stay talk scenes. Stop at the Green Room. Discord stays on the Gallery until that day plays.
+2. Point the hook at the Day 1 scene you are standing in. Not at the 85-scene tour.
+3. Day 2 through Dean Thudd, then the missing attack cards, starting with Krakaren Clone. Do not rename Dean Thudd to the picture on `f01-b-02`.
+4. Wire the fast narrator the way `engine-design/04-narrator-prompt.md` says: code finishes the roll, then a short call writes 2–4 sentences from the snapshot. The strong model only when the parser has no rule, and only as ruling JSON that code then rolls. No tools on either call.
+5. Pass C1's own finish line: replay the 2026-10-07 Gallery with the logged dice and match the numbers.
+6. Keep session state in the process (SQLite after each resolved action, when Caleb wants a session that survives a restart). Git stays out of the turn.
+7. Then C3: a dry run on a test channel. The live bridge stays the live bridge until that passes and Caleb says switch.
 
 Leave `floors/`, `rules/`, live sheets, and credit ledgers to their owners. Propose in the handoff channel. Do not invent a species, a fee, or a Crawler into the live campaign.
