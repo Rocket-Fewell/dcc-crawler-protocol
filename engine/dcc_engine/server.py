@@ -54,6 +54,17 @@ class TableHandler(BaseHTTPRequestHandler):
                 if path == "/api/play/next":
                     self._json(200, self.server.play.advance())
                     return
+                if path == "/api/party":
+                    try:
+                        asked = int(body.get("size"))
+                    except (TypeError, ValueError):
+                        raise ValueError("party size is 1, 2, 3, or 4")
+                    if asked not in (1, 2, 3, 4):
+                        raise ValueError("party size is 1, 2, 3, or 4")
+                    self.server.table = Table(party_size=asked)
+                    self.server.play = Playthrough(party_size=asked)
+                    self._json(200, self.server.play.view())
+                    return
                 if path == "/api/line":
                     rng = None
                     scripts = getattr(self.server, "scripts", None)

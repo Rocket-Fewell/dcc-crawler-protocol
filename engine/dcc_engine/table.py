@@ -5,6 +5,7 @@ import re
 
 from dcc_engine.cards import (
     crawler_from_card,
+    filed_party,
     gallery_count,
     has_cunning,
     load_monster,
@@ -26,7 +27,7 @@ CLOSE_FT = 30
 def enemies_from_slots(room, party_size):
     """Filed counts. A spoken_name from the day page replaces the picture name."""
     made = []
-    key = str(party_size) if str(party_size) in {"2", "3", "4"} else "2"
+    _, key = filed_party(party_size)
     number = 1
     for slot in (room.get("encounter") or {}).get("enemies") or []:
         counts = slot.get("counts_by_party_size") or {"2": 1, "3": 1, "4": 1}
@@ -71,7 +72,7 @@ class Table:
         self.room_card = _room_card(room)
         quick = (room.get("encounter") or {}).get("quick_run") or {}
         self.room_gm = quick if quick.get("audience") == "gm" else {}
-        self.party_size = party_size if str(party_size) in {"2", "3", "4"} else 2
+        self.party_size, self.count_key = filed_party(party_size)
         if use_slot_names:
             self.enemies = enemies_from_slots(room, self.party_size)
         else:
@@ -113,6 +114,8 @@ class Table:
             sync_card(crawler)
         return {
             "room": self.room_name,
+            "party_size": self.party_size,
+            "count_key": self.count_key,
             "round": self.round,
             "narrator_line": self.narrator_line,
             "room_card": self.room_card,
@@ -574,7 +577,10 @@ class Table:
         if all(enemy["hp"] <= 0 for enemy in self.enemies):
             events.append({
                 "channel": "gm",
-                "text": "The gallery is clear. The Day page still owns the register. This slice does not pay credits.",
+                "text": (
+                    f"{self.room_name} is clear. The Day page still owns the register. "
+                    "This slice does not pay credits."
+                ),
             })
             self._refresh()
             return {"stop": False, "reason": "", "events": events}
@@ -585,22 +591,26 @@ class Table:
         for enemy in self.enemies:
             if enemy["hp"] <= 0:
                 continue
-            attack = dict(enemy["melee"] if self.in_melee else enemy["ranged"])
-            ac = self.crawler["ac"] + (self.crawler.get("ac_bonus") or 0)
-            if self.crawler["cover"] == "half":
-                ac += 2
-            elif self.crawler["cover"] == "three-quarters":
-                ac += 5
-            events.extend(_strike(
-                rng,
-                enemy["name"],
-                attack,
-                self.crawler,
-                ac,
-                advantage=False,
-                disadvantage=self.crawler["dodging"],
-                who_phrase="enemy",
-            ))
+            times = int(enemy.get("strikes") or 1)
+            for _ in range(times):
+                if self.crawler["hp"] <= 0:
+                    break
+                attack = dict(enemy["melee"] if self.in_melee else enemy["ranged"])
+                ac = self.crawler["ac"] + (self.crawler.get("ac_bonus") or 0)
+                if self.crawler["cover"] == "half":
+                    ac += 2
+                elif self.crawler["cover"] == "three-quarters":
+                    ac += 5
+                events.extend(_strike(
+                    rng,
+                    enemy["name"],
+                    attack,
+                    self.crawler,
+                    ac,
+                    advantage=False,
+                    disadvantage=self.crawler["dodging"],
+                    who_phrase="enemy",
+                ))
             if self.crawler["hp"] <= 0:
                 events.append({"channel": "system", "text": "The remaining enemies skip a downed Crawler."})
                 break

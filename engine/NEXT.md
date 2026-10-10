@@ -1,62 +1,76 @@
-# Next slice: Floor 1, Day 1, as one session
-Owner: Cursor | Status: plan | Version: 0.1.0 | Updated: 2026-10-10
-Summary: Do not wire Discord to the 85-scene walk yet. The next build is Day 1 of Floor 1, played in order, with every combat room using the same rules as the Gallery.
+# Floor 1, days 1–5, on the lean table
+Owner: Cursor | Status: done for this slice | Version: 0.2.0 | Updated: 2026-10-10
+Summary: Rebuild the Floor 1 the Discord game already runs (the five day pages) onto `engine/`. Use the room cards and the stat cards that already exist. Do not rewrite `floors/`. Do not point Discord at this walk yet. The code in this change is that rebuild.
 
-Read `engine/FOR-GROKS.md` for what already exists. This file is the decision about what to build next. It does not change `floors/`, `rules/`, or the live game.
+This file is the plan. The code in this same change is the execution of it.
 
-## Where we actually are
+## What "the Discord floor" is
 
-One fight is real. The Shooting Gallery (`enc-d01-11`) rolls from the card, spends the action, and sets hit points. The player page, the Listen button, and the GM correction page all sit on that fight.
+`floors/f01/day-01.md` through `day-05.md` are the live Floor 1. Twenty-five encounters, plus the day notice at the top of each page. The card pack already has one room file per encounter in `Cursor-DCC-CardsReference/local/rooms/f01/`. Those stubs say the day page wins on names and on voice. The lean table reads the day page for the spoken line and the room file for who is in the fight.
 
-The Floor 1–3 walk is a reader with a few fights attached. Say `next` and it speaks the filed lines. Discord does not drive it. `DCC_TABLE_URL` still posts to the Gallery only.
+A party of 2, which is the seat this process uses:
 
-Floor 1, Day 1 is 12 scenes. At a party of 2, this is what the process can do with them today:
+| Day | Fight | Who shows up | Card | Roll the table uses |
+|---|---|---|---|---|
+| 1 | Vent Row | 3 Vent Rats | `f01-m-01` | Bite, melee |
+| 1 | Shooting Gallery | 2 mannequins, spoken as the room names them | `f01-m-09` | Shortbow +5, `1d6+3` piercing. Shortsword in melee |
+| 1 | Big Green EXIT | 1 Exit Greeter, 2 Trainees | `f01-m-10`, `f01-m-03` | Scimitar +4 `1d6+2` and Shortbow +4 `1d6+2`. Trainee dagger +4 `1d4+2`, melee or thrown |
+| 1 | Mascot Locker | 1 Bruiser. Lanyard Blade count is 0 | `f01-e-01` | Slam +4 `1d6+2`. The card's Multiattack is two Slams |
+| 1 | Lights-Out | 2 Ceiling Ticks | `f01-m-02` | the printed melee bite |
+| 2 | Service Door | the filed mannequin count | `f01-m-09` | same shortbow / shortsword |
+| 3 | Collapsing Hall | rats and ticks at the filed counts | `f01-m-01`, `f01-m-02` | their printed bites |
+| 3 | Stage Wings | the filed mannequin count | `f01-m-09` | same |
+| 4 | Dark halls | ticks at the filed count | `f01-m-02` | same |
+| 4 | Stage door | Ushers | `f01-m-09` | same, spoken name Usher |
+| 5 | Graduation | Dean Thudd (JV) and 4 Ushers. The ogre body `f01-b-02` count is 0 | `f01-e-02`, `f01-m-09` | Grab +4 `2d6+2` in melee. Light Hammer +4 `3d4+2` when they are not in melee |
 
-| Scene | What happens now |
-|---|---|
-| Day notice, Cold Open, Proctor Bell | Spoken. No fight. |
-| Vent Row (`enc-d01-08`) | Fight. Three Vent Rats. A shot lands. |
-| Vending Gore, Hall of Fair Warnings | Spoken. No fight. |
-| Shooting Gallery (`enc-d01-11`) | Fight. Two mannequins. This is the proven one. |
-| Break Room | Spoken. No fight. |
-| Big Green EXIT (`enc-d01-02`) | Does not start. The card is there. `local.attacks` has no `to_hit`, so the spawn dies. |
-| Mascot Locker (`enc-d01-03`) | Same failure. Bruiser and the lanyard blade never reach the table. |
-| Lights-Out (`enc-d01-04`) | Fight. Two Ceiling Ticks. |
-| Green Room | Spoken. Day 1 ends. |
+Talk scenes stay talk scenes. Cold open, Proctor Bell, vending, warnings, break room, green room, the day notices, the stair choice, last call, the outage, the night shift, the toll, and the last six hours have no enemy count. Hear the filed line. Say next.
 
-So "the whole campaign" is a script you can click through. "A game" is three fights, and one of them is the one we trust.
+Dean Thudd stays Dean Thudd. The picture name on `f01-b-02` (Adjunct Smash) is not his name. At a party of 2 he is the bugbear card with the spoken name Dean Thudd (JV).
 
-## The decision
+## What was actually broken
 
-The next build is Floor 1, Day 1, from the opening notice through the Green Room. Same seat (the Raithen copy). Same dice rules as the Gallery. Filed lines stay the voice. No new day pages.
+The cards were already there. Two Day 1 fights never reached the table: the Big Green EXIT and the Mascot Locker. `attack_record` demanded `to_hit` on every line in `local.attacks`. Nimble Escape is a bonus (Disengage or Hide) and has no to-hit. Bruiser's Multiattack line says "two Slam attacks" and has no to-hit. The Slam under it does. `melee_or_ranged` is a real attack (the trainee dagger, Dean's hammer) and the spawner was only looking for `melee` and `ranged`, so a dagger-only body had no attack after the bonus line crashed it.
 
-Discord stays on the Gallery until that day can be played in the browser without a missing fight. Pointing the hook at the long walk first would let people talk at a tour.
+No new stat card. Nothing on Floor 1's twenty-five rooms points at a missing id.
 
-## What that slice includes
+## What this build does
 
-1. Fix the two spawns that already have cards and no `to_hit` (Exit Greeter, Exit Greeter trainee, Bruiser, Lanyard Blade). Read the bonus off the card if it is stored under another field. Do not invent a to-hit.
-2. Walk Day 1 in order. Talk scenes stay talk scenes: hear the line, say next.
-3. Every Day 1 fight accepts the same kind of line the Gallery accepts: move, one action, one bonus, one reaction, one object. A second action stops. Code sets the hit points.
-4. Hit points carry from Vent Row to the Gallery to the EXIT to the locker to Lights-Out.
-5. Stop at the Green Room. Do not auto-continue into Day 2.
+1. A line is a roll only when it has `to_hit`, damage dice, and kind `melee`, `ranged`, or `melee_or_ranged`. Bonus, trait, reaction, save, and the Multiattack header are skipped. Their numbers are not invented.
+2. `melee_or_ranged` can fill the ranged slot and the melee slot. A real `melee` line stays the melee attack when one is printed (Grab stays Grab; the hammer is the ranged one).
+3. When a Multiattack header names that melee attack and prints a count, the enemy turn uses that count. Bruiser swings Slam twice. Everyone else swings once. The Gallery mannequins are unchanged: one Shortbow.
+4. Days 1 through 5 play in the order the day pages already have, on the same seated copy. Hit points carry. A fight accepts the same line the Gallery accepts. Code sets the hit points. The filed `[SYSTEM]` and `[GM]` lines stay the voice.
+5. The walk still continues into Floor 2 after the stairwell. This change does not rebuild Floor 2 or Floor 3.
 
-## What that slice does not include
+## What this build does not do
 
-- Retargeting `DCC_TABLE_URL`. The live bridge stays as it is.
-- A model call. Narration stays the filed line plus the short sentence after a roll.
-- Krakaren, the rest of Floor 2, and Floor 3 fights.
-- Credits, rests, boxes, level-up math, or a second Crawler.
-- Rewriting `floors/` or adding a Floor 3 day page.
-- SQLite. The session can still die when the process stops.
+- Retarget `DCC_TABLE_URL`. It still posts to the Gallery.
+- Call a model. Narration stays the filed line plus the short sentence after a roll.
+- Spend credits, open boxes, take a rest, or level anyone. The day pages may say those words. Code does not apply them.
+- Rewrite `floors/` or `rules/`.
+- Add a Krakaren card. That body is Floor 2.
+- Store the session. It still dies when the process stops.
 
 ## Done means
 
-One person can open `python3 engine/serve.py`, sit the Raithen copy, and play Day 1 to the Green Room. Vent Row, the Gallery, the Big Green EXIT, the Mascot Locker, and Lights-Out each take a shot and change hit points from the card. The other scenes speak the filed `[SYSTEM]` and `[GM]` lines. A test walks that day with scripted dice and does not write `sessions/`.
+`python3 engine/serve.py`, the Raithen copy, party of 2. Every Floor 1 fight in the table above spawns from its card and a shot changes hit points. EXIT is the greeter and the trainees. The locker is Bruiser, and his two Slams are the card's count. Graduation names Dean Thudd (JV), not Adjunct Smash. Talk scenes speak the filed lines. A test walks those five days with scripted dice and does not write `sessions/`. The Gallery page still calls the dummies Smiling Polo Mannequin.
 
-## After that day works
+## Party size
 
-1. Point the hook at the scene you are in, for Day 1 only.
-2. Day 2 through Dean Thudd, same rule: a fight starts only when the card can supply the roll.
-3. Then Floor 2 bodies that have no attack card, starting with Krakaren. Dean Thudd is not renamed.
-4. Fast narrator and the strong-model ruling, as in `engine-design/04-narrator-prompt.md`, only after the Day 1 numbers are already final.
-5. The 2026-10-07 Gallery replay. Then a dry run. The live game switches when Caleb says so.
+The same floor converts from the counts already on the room cards. There is no separate 1-Crawler floor and no invented count.
+
+| Who sits down | Column used |
+|---|---|
+| 1 Crawler | the filed 2-Crawler counts |
+| 2 Crawlers | 2 |
+| 3 Crawlers | 3. Graduation is Dean Thudd, Head of Orientation (`f01-b-02`, Greatclub and Javelin), plus 2 Ushers. Not the JV bugbear. Not Adjunct Smash. |
+| 4 Crawlers | 4. Same Dean, 4 Ushers. The locker adds 2 Lanyard Blades. The Gallery is 4 mannequins. Vent Row is 6 rats. |
+
+`--party-size` or `DCC_PARTY_SIZE` sets it at startup. The Party buttons on the walk restart that walk on the chosen column. The Gallery uses the same number.
+
+## After this floor fights
+
+1. Point the hook at the Floor 1 scene you are standing in.
+2. Floor 2 bodies that have no attack card, starting with Krakaren. Do not rename Dean.
+3. Fast narrator, then the strong-model ruling, as in `engine-design/04-narrator-prompt.md`.
+4. The 2026-10-07 Gallery replay. Then a dry run. The live game switches when Caleb says so.
