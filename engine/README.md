@@ -2,6 +2,8 @@
 
 Owner: Cursor | Status: draft | Version: 0.1.0 | Updated: 2026-10-09
 
+Grok bots: read `engine/FOR-GROKS.md` before changing this folder.
+
 The fight runs in this process. Caleb can play while it sits in the background. Discord stays the voice channel: the bridge already turns speech into text and speaks `[GM]` and `[SYSTEM]` back. This slice does not join voice and it does not need a new bot token or a new server token.
 
 `engine-design/02-architecture.md` still says the Node bridge is the only front end and that there is no HTTP server. Caleb's later direction (2026-10-09) is the one this folder follows: a table process on his Windows PC, a player client for cards and the resolution text, and a GM page for the rare correction. The bridge remains the ears and the mouth. The live game stays on the current bridge until he says to switch. This folder does not write `sessions/`, `sessions-data/`, `characters/`, or a credit ledger.
