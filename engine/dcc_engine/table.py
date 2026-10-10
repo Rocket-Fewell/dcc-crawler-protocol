@@ -574,7 +574,10 @@ class Table:
         if all(enemy["hp"] <= 0 for enemy in self.enemies):
             events.append({
                 "channel": "gm",
-                "text": "The gallery is clear. The Day page still owns the register. This slice does not pay credits.",
+                "text": (
+                    f"{self.room_name} is clear. The Day page still owns the register. "
+                    "This slice does not pay credits."
+                ),
             })
             self._refresh()
             return {"stop": False, "reason": "", "events": events}
@@ -585,22 +588,26 @@ class Table:
         for enemy in self.enemies:
             if enemy["hp"] <= 0:
                 continue
-            attack = dict(enemy["melee"] if self.in_melee else enemy["ranged"])
-            ac = self.crawler["ac"] + (self.crawler.get("ac_bonus") or 0)
-            if self.crawler["cover"] == "half":
-                ac += 2
-            elif self.crawler["cover"] == "three-quarters":
-                ac += 5
-            events.extend(_strike(
-                rng,
-                enemy["name"],
-                attack,
-                self.crawler,
-                ac,
-                advantage=False,
-                disadvantage=self.crawler["dodging"],
-                who_phrase="enemy",
-            ))
+            times = int(enemy.get("strikes") or 1)
+            for _ in range(times):
+                if self.crawler["hp"] <= 0:
+                    break
+                attack = dict(enemy["melee"] if self.in_melee else enemy["ranged"])
+                ac = self.crawler["ac"] + (self.crawler.get("ac_bonus") or 0)
+                if self.crawler["cover"] == "half":
+                    ac += 2
+                elif self.crawler["cover"] == "three-quarters":
+                    ac += 5
+                events.extend(_strike(
+                    rng,
+                    enemy["name"],
+                    attack,
+                    self.crawler,
+                    ac,
+                    advantage=False,
+                    disadvantage=self.crawler["dodging"],
+                    who_phrase="enemy",
+                ))
             if self.crawler["hp"] <= 0:
                 events.append({"channel": "system", "text": "The remaining enemies skip a downed Crawler."})
                 break

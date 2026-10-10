@@ -2,7 +2,7 @@
 
 Owner: Cursor | Status: draft | Version: 0.1.0 | Updated: 2026-10-09
 
-Grok bots: read `engine/FOR-GROKS.md` before changing this folder. The next build is `engine/NEXT.md` (Floor 1 Day 1), not the Discord hook.
+Grok bots: read `engine/FOR-GROKS.md` before changing this folder. The plan for the Discord Floor 1 rebuild is `engine/NEXT.md`. The hook stays on the Gallery until that floor can be played.
 
 The fight runs in this process. Caleb can play while it sits in the background. Discord stays the voice channel: the bridge already turns speech into text and speaks `[GM]` and `[SYSTEM]` back. This slice does not join voice and it does not need a new bot token or a new server token.
 

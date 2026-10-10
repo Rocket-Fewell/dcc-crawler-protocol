@@ -45,14 +45,43 @@ def _words(label):
     return [part.strip().lower() for part in re.split(r"[;,]", label) if part.strip()]
 
 
+_ROLL_KINDS = ("melee", "ranged", "melee_or_ranged")
+
+
 def attack_record(raw):
+    """A line the table can roll. Bonus, multiattack, and traits are not rolls."""
+    damage = raw.get("damage") or {}
+    dice = damage.get("dice")
+    kind = raw.get("kind") or ""
+    if kind not in _ROLL_KINDS or "to_hit" not in raw or not dice:
+        return None
     return {
         "name": raw["name"],
         "to_hit": int(raw["to_hit"]),
-        "damage": raw["damage"]["dice"],
-        "type": raw["damage"]["type"].lower(),
-        "kind": raw["kind"],
+        "damage": dice,
+        "type": str(damage.get("type") or "untyped").lower(),
+        "kind": kind,
     }
+
+
+def _rollable(monster):
+    attacks = []
+    for raw in (monster.get("local") or {}).get("attacks") or []:
+        record = attack_record(raw)
+        if record:
+            attacks.append(record)
+    return attacks
+
+
+def _strike_count(monster, attack_name):
+    """Multiattack's printed count, when it names this weapon. Otherwise one swing."""
+    for raw in (monster.get("local") or {}).get("attacks") or []:
+        if raw.get("kind") != "multiattack":
+            continue
+        if attack_name and attack_name in (raw.get("uses") or []):
+            count = int(raw.get("count") or 1)
+            return count if count > 1 else 1
+    return 1
 
 
 def _named(items):
@@ -108,9 +137,9 @@ def monster_combatant(monster, number):
     found = _PASSIVE.search(senses)
     if not found:
         raise ValueError(f"{monster['id']} has no Passive Perception on the stat card")
-    attacks = [attack_record(raw) for raw in monster["local"]["attacks"]]
-    ranged = next((item for item in attacks if item["kind"] == "ranged"), None)
-    melee = next((item for item in attacks if item["kind"] == "melee"), None)
+    attacks = _rollable(monster)
+    ranged = next((item for item in attacks if item["kind"] in ("ranged", "melee_or_ranged")), None)
+    melee = next((item for item in attacks if item["kind"] in ("melee", "melee_or_ranged")), None)
     if ranged is None and melee is None:
         raise ValueError(f"{monster['id']} has no local attack")
     if ranged is None:
@@ -131,6 +160,7 @@ def monster_combatant(monster, number):
         "passive_perception": int(found.group(1)),
         "ranged": ranged,
         "melee": melee,
+        "strikes": _strike_count(monster, melee["name"]),
         "system_line": monster.get("system_line") or "",
         "gm_line": monster.get("gm_line") or "",
         "how_to_cheese": monster.get("how_to_cheese") or "",
