@@ -61,11 +61,11 @@ test('speakable keeps SYSTEM and GM and drops rolls', () => {
     { voice: 'ROLL', speak: true, text: '[ROLL] this must stay unspoken' },
     { voice: 'GM', speak: true, text: '[GM] Your shot hits.' },
     { voice: 'GM', speak: false, text: '[GM] hidden' },
-    { voice: 'NPC', speak: true, text: 'no' },
+    { voice: 'NPC', speak: true, text: '[NPC: Proctor Bell] The shutter is the way out.' },
     { voice: 'SYSTEM', speak: true, text: '   ' },
   ];
   const kept = speakable(say);
-  assert.deepEqual(kept.map((l) => l.voice), ['SYSTEM', 'GM']);
+  assert.deepEqual(kept.map((l) => l.voice), ['SYSTEM', 'GM', 'NPC']);
   const { chunks } = prepareSpeechDetailed(kept.map((l) => l.text).join('\n'));
   assert.ok(chunks.some((c) => c.voice === 'system'));
   assert.ok(chunks.some((c) => c.voice === 'gm'));
@@ -194,7 +194,7 @@ test('a real gallery line posts to /api/line and the roll is not spoken', async 
     assert.ok(raw.say.some((s) => s.voice === 'SYSTEM' && s.text.startsWith('[SYSTEM]')));
     const spoken = speakable(raw.say);
     assert.ok(spoken.length >= 1);
-    assert.ok(spoken.every((s) => s.speak === true && (s.voice === 'SYSTEM' || s.voice === 'GM')));
+    assert.ok(spoken.every((s) => s.speak === true && (s.voice === 'SYSTEM' || s.voice === 'GM' || s.voice === 'NPC')));
     const { chunks } = prepareSpeechDetailed([...spoken.map((s) => s.text), '[ROLL] to hit stays on the page'].join('\n'));
     assert.equal(chunks.some((c) => c.text.includes('stays on the page')), false);
     const { logger, lines } = capture();
@@ -206,7 +206,7 @@ test('a real gallery line posts to /api/line and the roll is not spoken', async 
     });
     await hook.notify({ speaker: 'Raithen', text: SECRET_LINE });
     assert.equal(said.length, 1);
-    assert.ok(said[0].every((s) => s.voice === 'SYSTEM' || s.voice === 'GM'));
+    assert.ok(said[0].every((s) => s.voice === 'SYSTEM' || s.voice === 'GM' || s.voice === 'NPC'));
     assert.equal(lines.join('\n').includes('xylophone'), false);
   } finally {
     await stop();

@@ -479,6 +479,207 @@ setInterval(refresh, 1000);
 </html>
 """
 
+PLAY_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Floors 1–3</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { height: 100%; }
+  body { margin: 0; display: flex; flex-direction: column; overflow: hidden; font: 16px/1.45 system-ui, sans-serif; background: #1a120c; color: #f3e6d0; }
+  header { flex: none; padding: 10px 14px; background: #2a1c12; border-bottom: 1px solid #6b4a2a; }
+  h1 { margin: 0; font-size: 20px; }
+  header p { margin: 2px 0 0; color: #c8b497; }
+  main { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; padding: 8px 12px 10px; }
+  #log { flex: 1; min-height: 0; overflow: auto; background: #2c2118; border: 1px solid #6b4a2a; border-radius: 8px; padding: 10px 12px; }
+  .gm { color: #f0d78c; margin: 0 0 8px; }
+  .system { color: #d7c4a3; margin: 0 0 8px; }
+  .npc { color: #f0b48a; margin: 0 0 8px; }
+  .roll, .you { color: #9fd0c3; margin: 0 0 8px; }
+  .foes { display: flex; flex-wrap: wrap; gap: 8px; }
+  .foe { background: #2c2118; border: 1px solid #6b4a2a; border-radius: 8px; padding: 8px 10px; min-width: 180px; }
+  .foe.down { opacity: 0.55; }
+  .hp { height: 8px; background: #3a2a1c; border-radius: 4px; overflow: hidden; margin: 4px 0; }
+  .hp span { display: block; height: 100%; background: #c4542c; }
+  form, .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  input, button { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid #6b4a2a; background: #1a120c; color: inherit; }
+  button { background: #c4542c; color: #1a120c; border: 0; cursor: pointer; }
+  button.quiet { background: #3a2a1c; color: #f3e6d0; }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  #listen.listening { background: #f0d78c; color: #1a120c; }
+  #listen-note, .muted { color: #c8b497; }
+  #line { flex: 1; min-width: 12rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Floors 1–3</h1>
+  <p id="where"></p>
+</header>
+<main>
+  <div id="log" aria-live="polite"></div>
+  <div id="enemies" class="foes"></div>
+  <form id="line-form">
+    <label for="line">What you do</label>
+    <input id="line" name="line" autocomplete="off" placeholder="next, or what you do in the fight">
+    <button type="button" id="listen" disabled>Listen</button>
+    <button type="submit">Send</button>
+    <button type="button" id="next" class="quiet">Next</button>
+    <span id="listen-note"></span>
+  </form>
+  <p class="row" id="actions"></p>
+</main>
+<script>
+const logEl = document.getElementById("log");
+const lineInput = document.getElementById("line");
+const listenBtn = document.getElementById("listen");
+const listenNote = document.getElementById("listen-note");
+let last = "";
+let recognition = null;
+let listening = false;
+let yourTurn = false;
+let noSpeech = false;
+let listenSession = 0;
+let spokenPrefix = "";
+function paintListen() {
+  listenBtn.classList.toggle("listening", listening);
+  listenBtn.setAttribute("aria-pressed", listening ? "true" : "false");
+  if (listening) {
+    listenBtn.disabled = false;
+    listenBtn.textContent = "Stop";
+    listenNote.textContent = "Listening. The words land in the line. Stop, then send, or keep typing.";
+    return;
+  }
+  listenBtn.textContent = "Listen";
+  listenBtn.disabled = !yourTurn;
+  listenNote.textContent = yourTurn ? (noSpeech ? "This browser cannot listen. Type the line." : "") : "Listen turns on when it is your turn. You can still type, or hit Next.";
+}
+function stopListen() {
+  listenSession += 1;
+  listening = false;
+  const rec = recognition;
+  recognition = null;
+  paintListen();
+  if (!rec) return;
+  rec.onresult = null;
+  try { rec.stop(); } catch (err) {}
+}
+function startListen() {
+  if (!yourTurn || listening) return;
+  const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Ctor) { noSpeech = true; paintListen(); return; }
+  const mine = ++listenSession;
+  spokenPrefix = lineInput.value.trim();
+  recognition = new Ctor();
+  recognition.lang = "en-US";
+  recognition.interimResults = true;
+  recognition.continuous = true;
+  recognition.onresult = (event) => {
+    if (mine !== listenSession) return;
+    let spoken = "";
+    for (let i = 0; i < event.results.length; i++) spoken += event.results[i][0].transcript;
+    spoken = spoken.trim();
+    lineInput.value = spokenPrefix ? (spokenPrefix + " " + spoken).trim() : spoken;
+  };
+  recognition.onerror = () => { if (mine !== listenSession) return; listening = false; recognition = null; paintListen(); };
+  recognition.onend = () => { if (mine !== listenSession) return; listening = false; recognition = null; paintListen(); };
+  listening = true;
+  paintListen();
+  try { recognition.start(); } catch (err) { listening = false; recognition = null; noSpeech = true; paintListen(); }
+}
+function render(data) {
+  document.getElementById("title").textContent = data.title || "Floors 1–3";
+  const place = data.done ? "The walk is over." : ("Floor " + data.floor + " · day " + data.day + " · " + (data.index + 1) + " / " + data.count);
+  document.getElementById("where").textContent = place + (data.crawler ? (" · " + data.crawler.name + " " + data.crawler.hp + "/" + data.crawler.hp_max) : "");
+  yourTurn = Boolean(data.your_turn);
+  if (!yourTurn && listening) stopListen();
+  else paintListen();
+  logEl.replaceChildren();
+  for (const entry of data.log || []) {
+    const p = document.createElement("p");
+    p.className = (entry.voice || "gm").toLowerCase();
+    p.textContent = entry.text;
+    logEl.appendChild(p);
+  }
+  logEl.scrollTop = logEl.scrollHeight;
+  const foes = document.getElementById("enemies");
+  foes.replaceChildren();
+  for (const enemy of data.enemies || []) {
+    const card = document.createElement("article");
+    card.className = "foe" + (enemy.hp <= 0 ? " down" : "");
+    const h = document.createElement("strong");
+    h.textContent = enemy.name;
+    card.appendChild(h);
+    const hp = document.createElement("div");
+    hp.className = "hp";
+    const span = document.createElement("span");
+    span.style.width = (enemy.hp_max ? Math.max(0, Math.min(100, enemy.hp / enemy.hp_max * 100)) : 0) + "%";
+    hp.appendChild(span);
+    card.appendChild(hp);
+    const vitals = document.createElement("div");
+    vitals.textContent = "HP " + enemy.hp + "/" + enemy.hp_max;
+    card.appendChild(vitals);
+    foes.appendChild(card);
+  }
+  const row = document.getElementById("actions");
+  row.replaceChildren();
+  if ((data.enemies || []).some((enemy) => enemy.hp > 0)) {
+    const attacks = (data.crawler && data.crawler.attacks) || [];
+    const shot = attacks.find((atk) => /eldritch blast/i.test(atk.name)) || attacks[0];
+    if (shot) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "quiet";
+      button.textContent = shot.name;
+      button.addEventListener("click", () => send("I use " + shot.name + " at the first one"));
+      row.appendChild(button);
+    }
+  }
+}
+async function refresh() {
+  const res = await fetch("/api/play");
+  const data = await res.json();
+  const key = JSON.stringify(data);
+  if (key === last) return;
+  last = key;
+  render(data);
+}
+async function send(text) {
+  const res = await fetch("/api/play/line", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({text})
+  });
+  const data = await res.json();
+  if (!res.ok) { listenNote.textContent = data.error || "line refused"; return; }
+  last = JSON.stringify(data.view);
+  render(data.view);
+}
+listenBtn.addEventListener("click", () => { if (listening) stopListen(); else startListen(); });
+document.getElementById("line-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const text = lineInput.value.trim();
+  if (listening) stopListen();
+  if (!text) return;
+  lineInput.value = "";
+  spokenPrefix = "";
+  send(text);
+});
+document.getElementById("next").addEventListener("click", async () => {
+  const res = await fetch("/api/play/next", {method: "POST", headers: {"Content-Type": "application/json"}, body: "{}"});
+  const data = await res.json();
+  if (!res.ok) return;
+  last = JSON.stringify(data.view);
+  render(data.view);
+});
+refresh();
+setInterval(refresh, 1000);
+</script>
+</body>
+</html>
+"""
+
 GM_HTML = """<!DOCTYPE html>
 <html lang="en">
 <head>

@@ -3,7 +3,8 @@
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from dcc_engine.pages import GM_HTML, PLAYER_HTML
+from dcc_engine.pages import GM_HTML, PLAY_HTML, PLAYER_HTML
+from dcc_engine.playthrough import Playthrough
 from dcc_engine.table import Table
 
 
@@ -15,7 +16,10 @@ class TableHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         path = self.path.split("?", 1)[0]
-        if path in {"/", "/player"}:
+        if path in {"/", "/play"}:
+            self._bytes(200, PLAY_HTML.encode("utf-8"), "text/html; charset=utf-8")
+            return
+        if path == "/player":
             self._bytes(200, PLAYER_HTML.encode("utf-8"), "text/html; charset=utf-8")
             return
         if path == "/gm":
@@ -24,6 +28,9 @@ class TableHandler(BaseHTTPRequestHandler):
         with self.server.lock:
             if path == "/api/player":
                 self._json(200, self.server.table.player_view())
+                return
+            if path == "/api/play":
+                self._json(200, self.server.play.view())
                 return
             if path == "/api/gm":
                 self._json(200, self.server.table.gm_view())
@@ -40,6 +47,13 @@ class TableHandler(BaseHTTPRequestHandler):
         try:
             with self.server.lock:
                 table = self.server.table
+                if path == "/api/play/line":
+                    result = self.server.play.resolve_line(body.get("text", ""))
+                    self._json(200, result)
+                    return
+                if path == "/api/play/next":
+                    self._json(200, self.server.play.advance())
+                    return
                 if path == "/api/line":
                     rng = None
                     scripts = getattr(self.server, "scripts", None)
@@ -94,6 +108,7 @@ def make_server(host, port, party_size=2):
 
     httpd = ThreadingHTTPServer((host, port), TableHandler)
     httpd.table = Table(party_size=party_size)
+    httpd.play = Playthrough(party_size=party_size)
     httpd.scripts = []
     httpd.lock = threading.Lock()
     return httpd
