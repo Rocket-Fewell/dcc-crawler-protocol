@@ -17,4 +17,6 @@ This repo is a FULL private backup of the project, refreshed by `ops/backup-push
 ## What is left out
 Only live credentials (`.env`, `.env.*`, any file matching a credential pattern, named in `CREDENTIAL_EXCLUDES` in `ops/backup-sync.py`), dependency/cache folders (`node_modules`, `__pycache__`, `*.pyc`, `.venv`, nested `.git`) and files over 50 MB.
 
+Delete-sync removes a repo file the live sources no longer have. Tracked files under `core-book/build/` stay when the live core-book tree is missing them (Caleb, 2026-10-07): the branch version when that commit still has the path, otherwise `origin/main`. When the live tree has one of those files, the mirror copies the live file.
+
 Note: `tools/check_repo_safe.py` and `tools/hooks/pre-commit` here are faithful copies of the campaign's own (older, path-blocking) versions. The backup does NOT use them; it uses `ops/check_repo_safe.py`, which checks credentials only.

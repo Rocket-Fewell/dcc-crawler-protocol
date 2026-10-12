@@ -124,7 +124,8 @@ main() {
     fi
   fi
 
-  # 2. mirror live -> staging, safety checks, commit, push
+  # 2. mirror live -> staging, safety checks, commit, push.
+  # Tracked core-book/build/ files missing from the live tree stay (backup-sync.py PRESERVE_IF_SOURCE_MISSING).
   python3 "$SYNC"   # rsync-like full mirror (rsync is not installed)
   cp ops/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # credential-only hook
   # --force: mirrored folders carry their own .gitignore (e.g. discord-voice-bridge ignores logs/ and *.log); the
